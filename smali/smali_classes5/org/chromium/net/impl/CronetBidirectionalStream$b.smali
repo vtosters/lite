@@ -79,7 +79,7 @@
     :try_start_1
     iget-object v0, p0, Lorg/chromium/net/impl/CronetBidirectionalStream$b;->a:Lorg/chromium/net/impl/CronetBidirectionalStream;
 
-    invoke-static {v0}, Lorg/chromium/net/impl/CronetBidirectionalStream;->f(Lorg/chromium/net/impl/CronetBidirectionalStream;)Lorg/chromium/net/impl/VersionSafeCallbacks3;
+    invoke-static {v0}, Lorg/chromium/net/impl/CronetBidirectionalStream;->f(Lorg/chromium/net/impl/CronetBidirectionalStream;)Lorg/chromium/net/impl/m;
 
     move-result-object v0
 
@@ -88,12 +88,12 @@
     iget-object v2, p0, Lorg/chromium/net/impl/CronetBidirectionalStream$b;->a:Lorg/chromium/net/impl/CronetBidirectionalStream;
 
     .line 7
-    invoke-static {v2}, Lorg/chromium/net/impl/CronetBidirectionalStream;->e(Lorg/chromium/net/impl/CronetBidirectionalStream;)Lorg/chromium/net/impl/UrlResponseInfoImpl;
+    invoke-static {v2}, Lorg/chromium/net/impl/CronetBidirectionalStream;->e(Lorg/chromium/net/impl/CronetBidirectionalStream;)Lorg/chromium/net/impl/k;
 
     move-result-object v2
 
     .line 8
-    invoke-virtual {v0, v1, v2}, Lorg/chromium/net/impl/VersionSafeCallbacks3;->b(Lorg/chromium/net/BidirectionalStream;Lorg/chromium/net/UrlResponseInfo;)V
+    invoke-virtual {v0, v1, v2}, Lorg/chromium/net/impl/m;->b(Lorg/chromium/net/e;Lorg/chromium/net/x;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 

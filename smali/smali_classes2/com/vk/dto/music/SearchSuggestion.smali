@@ -22,10 +22,10 @@
     .end annotation
 .end field
 
-.field public static final f:Lcom/vk/dto/common/data/JsonParser;
+.field public static final f:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/dto/music/SearchSuggestion;",
             ">;"
         }
@@ -53,7 +53,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/music/SearchSuggestion$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/music/SearchSuggestion$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/music/SearchSuggestion$a;
@@ -68,7 +68,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/music/SearchSuggestion$b;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/music/SearchSuggestion;->f:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/dto/music/SearchSuggestion;->f:Lcom/vk/dto/common/data/c;
 
     return-void
 .end method
@@ -192,7 +192,7 @@
 
     const-string v0, "o.optString(ServerKeys.ID)"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "title"
 
@@ -203,7 +203,7 @@
 
     const-string v0, "o.optString(ServerKeys.TITLE)"
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "subtitle"
 
@@ -214,7 +214,7 @@
 
     const-string v0, "o.optString(ServerKeys.SUBTITLE)"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "context"
 
@@ -225,7 +225,7 @@
 
     const-string v0, "o.optString(ServerKeys.CONTEXT)"
 
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "type"
 
@@ -236,7 +236,7 @@
 
     const-string p1, "o.optString(ServerKeys.TYPE)"
 
-    invoke-static {v6, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v1, p0
 
@@ -306,7 +306,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/music/SearchSuggestion;->a:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -322,7 +322,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/music/SearchSuggestion;->b:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -338,7 +338,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/music/SearchSuggestion;->c:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -354,7 +354,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/music/SearchSuggestion;->d:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -370,7 +370,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/music/SearchSuggestion;->e:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

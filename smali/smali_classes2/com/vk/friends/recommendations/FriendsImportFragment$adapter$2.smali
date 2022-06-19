@@ -3,7 +3,7 @@
 .source "FriendsImportFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/friends/recommendations/c;",
         ">;"
     }
 .end annotation
@@ -45,25 +45,25 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
+.method public final invoke()Lcom/vk/friends/recommendations/c;
     .locals 4
 
     .line 2
-    new-instance v0, Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
+    new-instance v0, Lcom/vk/friends/recommendations/c;
 
     iget-object v1, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$adapter$2;->this$0:Lcom/vk/friends/recommendations/FriendsImportFragment;
 
-    invoke-static {v1}, Lcom/vk/friends/recommendations/FriendsImportFragment;->d(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/common/g/VoidF1;
+    invoke-static {v1}, Lcom/vk/friends/recommendations/FriendsImportFragment;->d(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/common/g/g;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$adapter$2;->this$0:Lcom/vk/friends/recommendations/FriendsImportFragment;
 
-    invoke-static {v3}, Lcom/vk/friends/recommendations/FriendsImportFragment;->a(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/common/g/VoidF2Int;
+    invoke-static {v3}, Lcom/vk/friends/recommendations/FriendsImportFragment;->a(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/common/g/j;
 
     move-result-object v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;-><init>(Lcom/vk/core/fragments/BaseFragment1;Lcom/vk/common/g/VoidF1;Lcom/vk/common/g/VoidF2Int;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/friends/recommendations/c;-><init>(Lcom/vk/core/fragments/b;Lcom/vk/common/g/g;Lcom/vk/common/g/j;)V
 
     .line 3
     iget-object v1, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$adapter$2;->this$0:Lcom/vk/friends/recommendations/FriendsImportFragment;
@@ -76,7 +76,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;->j(Ljava/lang/String;)Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
+    invoke-virtual {v0, v1}, Lcom/vk/friends/recommendations/c;->j(Ljava/lang/String;)Lcom/vk/friends/recommendations/c;
 
     return-object v0
 .end method
@@ -85,7 +85,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/friends/recommendations/FriendsImportFragment$adapter$2;->invoke()Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
+    invoke-virtual {p0}, Lcom/vk/friends/recommendations/FriendsImportFragment$adapter$2;->invoke()Lcom/vk/friends/recommendations/c;
 
     move-result-object v0
 

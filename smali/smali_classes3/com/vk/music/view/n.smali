@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vk/music/model/MusicModel;
+.field private final synthetic a:Lcom/vk/music/model/m;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vk/music/model/MusicModel;)V
+.method public synthetic constructor <init>(Lcom/vk/music/model/m;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/music/view/n;->a:Lcom/vk/music/model/MusicModel;
+    iput-object p1, p0, Lcom/vk/music/view/n;->a:Lcom/vk/music/model/m;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/music/view/n;->a:Lcom/vk/music/model/MusicModel;
+    iget-object v0, p0, Lcom/vk/music/view/n;->a:Lcom/vk/music/model/m;
 
-    invoke-static {v0, p1}, Lcom/vk/music/view/ToolbarMusicContainer;->a(Lcom/vk/music/model/MusicModel;Landroid/view/View;)V
+    invoke-static {v0, p1}, Lcom/vk/music/view/u;->a(Lcom/vk/music/model/m;Landroid/view/View;)V
 
     return-void
 .end method

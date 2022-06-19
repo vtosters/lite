@@ -50,7 +50,7 @@
 
     move v5, p2
 
-    invoke-static/range {v0 .. v5}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Landroid/widget/AutoCompleteTextView;Landroidx/preference/Preference;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface;I)V
+    invoke-static/range {v0 .. v5}, Lcom/vtosters/lite/fragments/n2/q0;->a(Landroid/widget/AutoCompleteTextView;Landroidx/preference/Preference;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface;I)V
 
     return-void
 .end method

@@ -40,7 +40,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/market/orders/MarketCartFragment$i;->a:Lcom/vk/market/common/ui/QuantityEditText;
 
-    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
+    invoke-static {p1}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
 
     return-void
 .end method

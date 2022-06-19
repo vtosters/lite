@@ -57,7 +57,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/core/widget/LifecycleListener;",
+            "Lcom/vk/core/widget/a;",
             ">;"
         }
     .end annotation
@@ -182,12 +182,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/widget/LifecycleListener;
+    check-cast v1, Lcom/vk/core/widget/a;
 
     .line 13
     iget-object v2, p0, Lcom/vk/core/widget/LifecycleHandler;->a:Landroid/app/Activity;
 
-    invoke-virtual {v1, v2}, Lcom/vk/core/widget/LifecycleListener;->a(Landroid/app/Activity;)V
+    invoke-virtual {v1, v2}, Lcom/vk/core/widget/a;->a(Landroid/app/Activity;)V
 
     goto :goto_0
 
@@ -207,7 +207,7 @@
     .end param
 
     .line 3
-    invoke-static {p0}, Lcom/vk/core/extensions/ActivityExt;->c(Landroid/app/Activity;)Z
+    invoke-static {p0}, Lcom/vk/core/extensions/a;->c(Landroid/app/Activity;)Z
 
     move-result v0
 
@@ -364,7 +364,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/core/widget/LifecycleListener;)V
+.method public a(Lcom/vk/core/widget/a;)V
     .locals 4
 
     if-nez p1, :cond_0
@@ -495,7 +495,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/core/widget/LifecycleListener;)V
+.method public b(Lcom/vk/core/widget/a;)V
     .locals 1
 
     .line 5
@@ -559,10 +559,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/widget/LifecycleListener;
+    check-cast v1, Lcom/vk/core/widget/a;
 
     .line 3
-    invoke-virtual {v1, p1}, Lcom/vk/core/widget/LifecycleListener;->b(Landroid/app/Activity;)V
+    invoke-virtual {v1, p1}, Lcom/vk/core/widget/a;->b(Landroid/app/Activity;)V
 
     goto :goto_0
 
@@ -605,10 +605,10 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/core/widget/LifecycleListener;
+    check-cast v2, Lcom/vk/core/widget/a;
 
     .line 4
-    invoke-virtual {v2, v0, p1, p2, p3}, Lcom/vk/core/widget/LifecycleListener;->a(Ljava/lang/String;IILandroid/content/Intent;)V
+    invoke-virtual {v2, v0, p1, p2, p3}, Lcom/vk/core/widget/a;->a(Ljava/lang/String;IILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -642,10 +642,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/widget/LifecycleListener;
+    check-cast v1, Lcom/vk/core/widget/a;
 
     .line 3
-    invoke-virtual {v1, p1}, Lcom/vk/core/widget/LifecycleListener;->c(Landroid/app/Activity;)V
+    invoke-virtual {v1, p1}, Lcom/vk/core/widget/a;->c(Landroid/app/Activity;)V
 
     goto :goto_0
 
@@ -685,10 +685,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/widget/LifecycleListener;
+    check-cast v1, Lcom/vk/core/widget/a;
 
     .line 3
-    invoke-virtual {v1, p1}, Lcom/vk/core/widget/LifecycleListener;->d(Landroid/app/Activity;)V
+    invoke-virtual {v1, p1}, Lcom/vk/core/widget/a;->d(Landroid/app/Activity;)V
 
     goto :goto_0
 
@@ -722,10 +722,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/widget/LifecycleListener;
+    check-cast v1, Lcom/vk/core/widget/a;
 
     .line 3
-    invoke-virtual {v1, p1}, Lcom/vk/core/widget/LifecycleListener;->e(Landroid/app/Activity;)V
+    invoke-virtual {v1, p1}, Lcom/vk/core/widget/a;->e(Landroid/app/Activity;)V
 
     goto :goto_0
 
@@ -798,10 +798,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/widget/LifecycleListener;
+    check-cast v1, Lcom/vk/core/widget/a;
 
     .line 4
-    invoke-virtual {v1, p1}, Lcom/vk/core/widget/LifecycleListener;->a(Landroid/content/res/Configuration;)V
+    invoke-virtual {v1, p1}, Lcom/vk/core/widget/a;->a(Landroid/content/res/Configuration;)V
 
     goto :goto_0
 
@@ -917,10 +917,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/widget/LifecycleListener;
+    check-cast v1, Lcom/vk/core/widget/a;
 
     .line 3
-    invoke-virtual {v1, p1, p2}, Lcom/vk/core/widget/LifecycleListener;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-virtual {v1, p1, p2}, Lcom/vk/core/widget/a;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     goto :goto_0
 
@@ -996,10 +996,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/widget/LifecycleListener;
+    check-cast v1, Lcom/vk/core/widget/a;
 
     .line 2
-    invoke-virtual {v1, p1}, Lcom/vk/core/widget/LifecycleListener;->a(Landroid/view/MenuItem;)Z
+    invoke-virtual {v1, p1}, Lcom/vk/core/widget/a;->a(Landroid/view/MenuItem;)Z
 
     move-result v1
 
@@ -1042,10 +1042,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/widget/LifecycleListener;
+    check-cast v1, Lcom/vk/core/widget/a;
 
     .line 3
-    invoke-virtual {v1, p1}, Lcom/vk/core/widget/LifecycleListener;->a(Landroid/view/Menu;)V
+    invoke-virtual {v1, p1}, Lcom/vk/core/widget/a;->a(Landroid/view/Menu;)V
 
     goto :goto_0
 
@@ -1096,10 +1096,10 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/core/widget/LifecycleListener;
+    check-cast v2, Lcom/vk/core/widget/a;
 
     .line 4
-    invoke-virtual {v2, v0, p1, p2, p3}, Lcom/vk/core/widget/LifecycleListener;->a(Ljava/lang/String;I[Ljava/lang/String;[I)V
+    invoke-virtual {v2, v0, p1, p2, p3}, Lcom/vk/core/widget/a;->a(Ljava/lang/String;I[Ljava/lang/String;[I)V
 
     goto :goto_0
 
@@ -1170,10 +1170,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/widget/LifecycleListener;
+    check-cast v1, Lcom/vk/core/widget/a;
 
     .line 2
-    invoke-virtual {v1, p1}, Lcom/vk/core/widget/LifecycleListener;->a(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {v1, p1}, Lcom/vk/core/widget/a;->a(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 

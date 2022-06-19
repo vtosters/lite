@@ -3,7 +3,7 @@
 .source "LoadHistoryViaNetworkTask.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;",
+        "Lc/a/z/g<",
+        "Lcom/vk/im/ui/components/msg_list/k/a;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;)V
+.method public final a(Lcom/vk/im/ui/components/msg_list/k/a;)V
     .locals 1
 
     .line 1
@@ -61,7 +61,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask$a;->a:Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;
 
-    invoke-static {v0, p1}, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->a(Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;)V
+    invoke-static {v0, p1}, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;->a(Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask;Lcom/vk/im/ui/components/msg_list/k/a;)V
 
     :cond_0
     return-void
@@ -71,9 +71,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;
+    check-cast p1, Lcom/vk/im/ui/components/msg_list/k/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask$a;->a(Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_list/tasks/LoadHistoryViaNetworkTask$a;->a(Lcom/vk/im/ui/components/msg_list/k/a;)V
 
     return-void
 .end method

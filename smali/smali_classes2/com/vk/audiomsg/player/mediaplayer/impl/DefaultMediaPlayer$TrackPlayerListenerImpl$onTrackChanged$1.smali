@@ -3,12 +3,12 @@
 .source "DefaultMediaPlayer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;->e(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+    value = Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;->e(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,31 +19,31 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/audiomsg/player/j/MediaPlayerListener;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/audiomsg/player/j/b;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $source:Lcom/vk/audiomsg/player/Source;
+.field final synthetic $source:Lcom/vk/audiomsg/player/f;
 
-.field final synthetic $track:Lcom/vk/audiomsg/player/AudioMsgTrack;
+.field final synthetic $track:Lcom/vk/audiomsg/player/d;
 
 .field final synthetic this$0:Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+.method constructor <init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onTrackChanged$1;->this$0:Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;
 
-    iput-object p2, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onTrackChanged$1;->$source:Lcom/vk/audiomsg/player/Source;
+    iput-object p2, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onTrackChanged$1;->$source:Lcom/vk/audiomsg/player/f;
 
-    iput-object p3, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onTrackChanged$1;->$track:Lcom/vk/audiomsg/player/AudioMsgTrack;
+    iput-object p3, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onTrackChanged$1;->$track:Lcom/vk/audiomsg/player/d;
 
     const/4 p1, 0x1
 
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/audiomsg/player/j/MediaPlayerListener;)V
+.method public final a(Lcom/vk/audiomsg/player/j/b;)V
     .locals 3
 
     .line 1
@@ -64,11 +64,11 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onTrackChanged$1;->$source:Lcom/vk/audiomsg/player/Source;
+    iget-object v1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onTrackChanged$1;->$source:Lcom/vk/audiomsg/player/f;
 
-    iget-object v2, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onTrackChanged$1;->$track:Lcom/vk/audiomsg/player/AudioMsgTrack;
+    iget-object v2, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onTrackChanged$1;->$track:Lcom/vk/audiomsg/player/d;
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/vk/audiomsg/player/j/MediaPlayerListener;->a(Lcom/vk/audiomsg/player/j/MediaPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+    invoke-interface {p1, v0, v1, v2}, Lcom/vk/audiomsg/player/j/b;->a(Lcom/vk/audiomsg/player/j/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
 
     return-void
 .end method
@@ -77,11 +77,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/audiomsg/player/j/MediaPlayerListener;
+    check-cast p1, Lcom/vk/audiomsg/player/j/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onTrackChanged$1;->a(Lcom/vk/audiomsg/player/j/MediaPlayerListener;)V
+    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onTrackChanged$1;->a(Lcom/vk/audiomsg/player/j/b;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

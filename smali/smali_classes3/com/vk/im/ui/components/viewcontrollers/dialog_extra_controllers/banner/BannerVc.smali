@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic r:[Lkotlin/u/KProperty5;
+.field static final synthetic r:[Lkotlin/u/j;
 
 
 # instance fields
@@ -31,19 +31,19 @@
 
 .field private final f:Landroid/view/View;
 
-.field private final g:Lkotlin/Lazy2;
+.field private final g:Lkotlin/e;
 
-.field private final h:Lkotlin/Lazy2;
+.field private final h:Lkotlin/e;
 
-.field private final i:Lkotlin/Lazy2;
+.field private final i:Lkotlin/e;
 
-.field private final j:Lkotlin/Lazy2;
+.field private final j:Lkotlin/e;
 
-.field private final k:Lkotlin/Lazy2;
+.field private final k:Lkotlin/e;
 
 .field private final l:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc$a;
 
-.field private m:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;
+.field private m:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;
 
 .field private final n:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;
 
@@ -51,7 +51,7 @@
 
 .field private final p:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
 
-.field private final q:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+.field private final q:Lcom/vk/im/ui/components/audio_msg_player/a;
 
 
 # direct methods
@@ -62,11 +62,11 @@
 
     const/4 v1, 0x5
 
-    new-array v1, v1, [Lkotlin/u/KProperty5;
+    new-array v1, v1, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -74,9 +74,9 @@
 
     const-string v5, "getPinnedAnimator()Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
@@ -84,7 +84,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -92,9 +92,9 @@
 
     const-string v5, "getBarAnimator()Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x1
 
@@ -102,7 +102,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -110,9 +110,9 @@
 
     const-string v5, "getBusinessNotifyAnimator()Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x2
 
@@ -120,7 +120,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -128,9 +128,9 @@
 
     const-string v5, "getPlayerAnimator()Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x3
 
@@ -138,7 +138,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -146,20 +146,20 @@
 
     const-string v4, "getSeparatorAnimator()Lcom/vk/im/ui/utils/animators/AlphaViewAnimator;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v0, 0x4
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->r:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->r:[Lkotlin/u/j;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)V
+.method public constructor <init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;Lcom/vk/im/ui/components/audio_msg_player/a;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)V
     .locals 0
 
     .line 1
@@ -171,14 +171,14 @@
 
     iput-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->p:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
 
-    iput-object p4, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iput-object p4, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/a;
 
     const/4 p1, 0x0
 
     if-nez p7, :cond_1
 
     .line 2
-    sget p2, Lcom/vk/im/ui/R13;->vkim_banner_container:I
+    sget p2, Lcom/vk/im/ui/j;->vkim_banner_container:I
 
     const/4 p3, 0x0
 
@@ -191,7 +191,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p1
 
@@ -200,7 +200,7 @@
     invoke-virtual {p7, p5}, Landroid/view/ViewStub;->setLayoutInflater(Landroid/view/LayoutInflater;)V
 
     .line 4
-    sget p2, Lcom/vk/im/ui/R13;->vkim_banner_container:I
+    sget p2, Lcom/vk/im/ui/j;->vkim_banner_container:I
 
     invoke-virtual {p7, p2}, Landroid/view/ViewStub;->setLayoutResource(I)V
 
@@ -222,7 +222,7 @@
     .line 7
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->a:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->pinned_msg_container:I
+    sget p2, Lcom/vk/im/ui/h;->pinned_msg_container:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -235,7 +235,7 @@
     .line 8
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->a:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->bar_container:I
+    sget p2, Lcom/vk/im/ui/h;->bar_container:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -248,7 +248,7 @@
     .line 9
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->a:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->business_notify_container:I
+    sget p2, Lcom/vk/im/ui/h;->business_notify_container:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -261,7 +261,7 @@
     .line 10
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->a:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->player_container:I
+    sget p2, Lcom/vk/im/ui/h;->player_container:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -274,7 +274,7 @@
     .line 11
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->a:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->separator:I
+    sget p2, Lcom/vk/im/ui/h;->separator:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -287,55 +287,55 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc$pinnedAnimator$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->g:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->g:Lkotlin/e;
 
     .line 13
     new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc$barAnimator$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc$barAnimator$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->h:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->h:Lkotlin/e;
 
     .line 14
     new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc$businessNotifyAnimator$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc$businessNotifyAnimator$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->i:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->i:Lkotlin/e;
 
     .line 15
     new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc$playerAnimator$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc$playerAnimator$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->j:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->j:Lkotlin/e;
 
     .line 16
     new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc$separatorAnimator$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc$separatorAnimator$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->k:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->k:Lkotlin/e;
 
     .line 17
     new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc$a;
@@ -349,7 +349,7 @@
 
     const-string p2, "pinnedContainerView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 p2, 0x8
 
@@ -360,7 +360,7 @@
 
     const-string p3, "barContainerView"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
@@ -369,7 +369,7 @@
 
     const-string p3, "businessNotifyContainerView"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
@@ -378,7 +378,7 @@
 
     const-string p3, "playerContainerView"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
@@ -387,7 +387,7 @@
 
     const-string p3, "separatorView"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
 
@@ -405,7 +405,7 @@
 
     .line 24
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p1
 .end method
@@ -449,15 +449,15 @@
 .method private final d()Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->h:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->h:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->r:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->r:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -478,15 +478,15 @@
 .method private final e()Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->i:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->i:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->r:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->r:[Lkotlin/u/j;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -498,15 +498,15 @@
 .method private final f()Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->g:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->g:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->r:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->r:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -527,15 +527,15 @@
 .method private final g()Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->j:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->j:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->r:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->r:[Lkotlin/u/j;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -544,22 +544,22 @@
     return-object v0
 .end method
 
-.method private final h()Lcom/vk/im/ui/utils/animators/AlphaViewAnimator;
+.method private final h()Lcom/vk/im/ui/utils/animators/a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->k:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->k:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->r:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->r:[Lkotlin/u/j;
 
     const/4 v2, 0x4
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/utils/animators/AlphaViewAnimator;
+    check-cast v0, Lcom/vk/im/ui/utils/animators/a;
 
     return-object v0
 .end method
@@ -587,7 +587,7 @@
 
     const-string v3, "pinnedContainerView"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getMeasuredHeight()I
 
@@ -595,7 +595,7 @@
 
     iget-object v4, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->b:Landroid/view/ViewGroup;
 
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
@@ -631,7 +631,7 @@
 
     const-string v4, "barContainerView"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/ViewGroup;->getMeasuredHeight()I
 
@@ -639,7 +639,7 @@
 
     iget-object v5, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->c:Landroid/view/ViewGroup;
 
-    invoke-static {v5, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
@@ -675,7 +675,7 @@
 
     const-string v5, "businessNotifyContainerView"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Landroid/view/ViewGroup;->getMeasuredHeight()I
 
@@ -683,7 +683,7 @@
 
     iget-object v6, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->d:Landroid/view/ViewGroup;
 
-    invoke-static {v6, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
@@ -719,7 +719,7 @@
 
     const-string v5, "playerContainerView"
 
-    invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getMeasuredHeight()I
 
@@ -727,7 +727,7 @@
 
     iget-object v6, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->e:Landroid/view/ViewGroup;
 
-    invoke-static {v6, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Landroid/view/ViewGroup;->getPaddingBottom()I
 
@@ -746,7 +746,7 @@
 
     .line 15
     :goto_3
-    invoke-static {v0, v3, v4, v2}, Lb/h/g/r/MathExt;->a(IIII)I
+    invoke-static {v0, v3, v4, v2}, Lb/h/g/r/c;->a(IIII)I
 
     move-result v0
 
@@ -759,11 +759,11 @@
     add-int/2addr v0, v1
 
     .line 16
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->m:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->m:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;
 
     if-eqz v1, :cond_4
 
-    invoke-interface {v1, v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;->a(I)V
+    invoke-interface {v1, v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;->a(I)V
 
     :cond_4
     return-void
@@ -809,7 +809,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->n:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -827,7 +827,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->n:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->h()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->h()V
 
     .line 6
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->b:Landroid/view/ViewGroup;
@@ -838,7 +838,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->o:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -854,7 +854,7 @@
     .line 9
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->o:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->h()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->h()V
 
     .line 10
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->c:Landroid/view/ViewGroup;
@@ -865,7 +865,7 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->p:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -881,7 +881,7 @@
     .line 13
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->p:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->h()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->h()V
 
     .line 14
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->d:Landroid/view/ViewGroup;
@@ -890,9 +890,9 @@
 
     .line 15
     :cond_2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -906,9 +906,9 @@
     invoke-virtual {v0, v1}, Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;->a(Z)V
 
     .line 17
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->h()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->h()V
 
     .line 18
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->e:Landroid/view/ViewGroup;
@@ -919,11 +919,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;)V
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->m:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->m:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;
 
     return-void
 .end method
@@ -934,7 +934,7 @@
     .line 19
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->o:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -957,22 +957,22 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->n:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->o:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->p:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
 
     return-void
 .end method
@@ -983,7 +983,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->p:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -1006,22 +1006,22 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->n:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->r()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->r()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->o:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->r()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->r()V
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->p:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->r()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->r()V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->r()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->r()V
 
     return-void
 .end method
@@ -1032,7 +1032,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->n:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -1053,9 +1053,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -1076,11 +1076,11 @@
     .locals 1
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->h()Lcom/vk/im/ui/utils/animators/AlphaViewAnimator;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->h()Lcom/vk/im/ui/utils/animators/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/utils/animators/AlphaViewAnimator;->a(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/utils/animators/a;->a(Z)V
 
     return-void
 .end method
@@ -1091,7 +1091,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->o:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -1104,7 +1104,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/q/Component;->a(Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/q/c;->a(Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1146,7 +1146,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->p:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -1159,7 +1159,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/q/Component;->a(Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/q/c;->a(Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1201,7 +1201,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->n:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -1214,7 +1214,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/q/Component;->a(Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/q/c;->a(Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1254,22 +1254,22 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->q:Lcom/vk/im/ui/components/audio_msg_player/a;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->e:Landroid/view/ViewGroup;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/q/Component;->a(Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/q/c;->a(Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1309,11 +1309,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->h()Lcom/vk/im/ui/utils/animators/AlphaViewAnimator;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->h()Lcom/vk/im/ui/utils/animators/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/utils/animators/AlphaViewAnimator;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/utils/animators/a;->b(Z)V
 
     return-void
 .end method

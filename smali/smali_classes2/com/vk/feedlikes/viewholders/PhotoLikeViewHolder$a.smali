@@ -3,7 +3,7 @@
 .source "PhotoLikeViewHolder.kt"
 
 # interfaces
-.implements Lcom/vk/bridges/ImageViewer$a;
+.implements Lcom/vk/bridges/p$a;
 
 
 # annotations
@@ -44,7 +44,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/bridges/ImageViewer$a$a;->a(Lcom/vk/bridges/ImageViewer$a;II)Ljava/lang/String;
+    invoke-static {p0, p1, p2}, Lcom/vk/bridges/p$a$a;->a(Lcom/vk/bridges/p$a;II)Ljava/lang/String;
 
     move-result-object p1
 
@@ -55,7 +55,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/bridges/ImageViewer$a$a;->b(Lcom/vk/bridges/ImageViewer$a;I)V
+    invoke-static {p0, p1}, Lcom/vk/bridges/p$a$a;->b(Lcom/vk/bridges/p$a;I)V
 
     return-void
 .end method
@@ -64,7 +64,7 @@
     .locals 1
 
     .line 3
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->g(Lcom/vk/bridges/ImageViewer$a;)Z
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->g(Lcom/vk/bridges/p$a;)Z
 
     move-result v0
 
@@ -77,7 +77,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder$a;->a:Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -122,18 +122,18 @@
     .line 7
     check-cast v5, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;
 
-    invoke-virtual {v5}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->c0()Ljava/lang/Object;
+    invoke-virtual {v5}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Lcom/vk/dto/photo/Photo;
 
     .line 8
-    invoke-virtual {v5}, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;->g0()Lcom/vk/feedlikes/c/PhotosLikeAdapter;
+    invoke-virtual {v5}, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;->g0()Lcom/vk/feedlikes/c/d;
 
     move-result-object v5
 
-    invoke-virtual {v5, v6}, Lcom/vk/lists/SimpleAdapter;->indexOf(Ljava/lang/Object;)I
+    invoke-virtual {v5, v6}, Lcom/vk/lists/i0;->indexOf(Ljava/lang/Object;)I
 
     move-result v5
 
@@ -154,7 +154,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->c(Lcom/vk/bridges/ImageViewer$a;)Ljava/lang/Integer;
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->c(Lcom/vk/bridges/p$a;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -167,7 +167,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder$a;->a:Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -190,7 +190,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->f(Lcom/vk/bridges/ImageViewer$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->f(Lcom/vk/bridges/p$a;)V
 
     return-void
 .end method
@@ -199,7 +199,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->h(Lcom/vk/bridges/ImageViewer$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->h(Lcom/vk/bridges/p$a;)V
 
     return-void
 .end method
@@ -208,16 +208,16 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->d(Lcom/vk/bridges/ImageViewer$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->d(Lcom/vk/bridges/p$a;)V
 
     return-void
 .end method
 
-.method public g()Lcom/vk/bridges/ImageViewer$c;
+.method public g()Lcom/vk/bridges/p$c;
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->a(Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$c;
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->a(Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$c;
 
     move-result-object v0
 
@@ -232,7 +232,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;->a(Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;Lcom/vk/bridges/ImageViewer$d;)V
+    invoke-static {v0, v1}, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;->a(Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;Lcom/vk/bridges/p$d;)V
 
     return-void
 .end method

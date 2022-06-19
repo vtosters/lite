@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/api/friends/FriendsGetRequests$b;
+.method public final a()Lcom/vk/api/friends/i$b;
     .locals 1
 
     .line 1

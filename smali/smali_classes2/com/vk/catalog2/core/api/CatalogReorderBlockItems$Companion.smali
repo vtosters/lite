@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -50,40 +50,40 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;",
+            "Lcom/vk/catalog2/core/util/k;",
             ">;)",
             "Lorg/json/JSONArray;"
         }
     .end annotation
 
     .line 2
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object p1
 
     .line 3
     sget-object v0, Lcom/vk/catalog2/core/api/CatalogReorderBlockItems$Companion$createReplacementIdsJson$1;->a:Lcom/vk/catalog2/core/api/CatalogReorderBlockItems$Companion$createReplacementIdsJson$1;
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p1
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/api/CatalogReorderBlockItems$Companion;->a(Lkotlin/sequences/Sequence;)Lorg/json/JSONArray;
+    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/api/CatalogReorderBlockItems$Companion;->a(Lkotlin/sequences/j;)Lorg/json/JSONArray;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final a(Lkotlin/sequences/Sequence;)Lorg/json/JSONArray;
+.method private final a(Lkotlin/sequences/j;)Lorg/json/JSONArray;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/Sequence<",
+            "Lkotlin/sequences/j<",
             "+TT;>;)",
             "Lorg/json/JSONArray;"
         }
@@ -92,7 +92,7 @@
     .line 5
     new-instance v0, Lorg/json/JSONArray;
 
-    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
+    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
 
     move-result-object p1
 

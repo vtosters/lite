@@ -3,12 +3,12 @@
 .source "MilkshakeOnboardingHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/milkshake/MilkshakeOnboardingHelper;->e(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/Functions;)Z
+    value = Lcom/vk/milkshake/MilkshakeOnboardingHelper;->e(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/a;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $dialog:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+.field final synthetic $dialog:Lcom/vk/core/dialogs/bottomsheet/e;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+.method constructor <init>(Lcom/vk/core/dialogs/bottomsheet/e;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/milkshake/MilkshakeOnboardingHelper$tryToShowWelcomeOnboarding$1;->$dialog:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    iput-object p1, p0, Lcom/vk/milkshake/MilkshakeOnboardingHelper$tryToShowWelcomeOnboarding$1;->$dialog:Lcom/vk/core/dialogs/bottomsheet/e;
 
     const/4 p1, 0x1
 
@@ -50,9 +50,9 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/milkshake/MilkshakeOnboardingHelper$tryToShowWelcomeOnboarding$1;->$dialog:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    iget-object p1, p0, Lcom/vk/milkshake/MilkshakeOnboardingHelper$tryToShowWelcomeOnboarding$1;->$dialog:Lcom/vk/core/dialogs/bottomsheet/e;
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismiss()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->dismiss()V
 
     return-void
 .end method
@@ -65,7 +65,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/milkshake/MilkshakeOnboardingHelper$tryToShowWelcomeOnboarding$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

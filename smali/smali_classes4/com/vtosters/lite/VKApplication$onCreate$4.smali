@@ -3,7 +3,7 @@
 .source "VKApplication.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -61,7 +61,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vtosters/lite/VKApplication$onCreate$4;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -70,11 +70,11 @@
     .locals 2
 
     .line 2
-    sget-object v0, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
+    sget-object v0, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
 
-    sget-object v1, Lcom/vk/navigation/VKNavigator;->INSTANCE:Lcom/vk/navigation/VKNavigator;
+    sget-object v1, Lcom/vk/navigation/a0;->a:Lcom/vk/navigation/a0;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator$b;->a(Lcom/vk/navigation/NavigatorConfig;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/o$b;->a(Lcom/vk/navigation/p;)V
 
     return-void
 .end method

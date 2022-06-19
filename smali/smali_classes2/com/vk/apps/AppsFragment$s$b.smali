@@ -3,12 +3,12 @@
 .source "AppsFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/apps/AppsFragment$s;->a()Lio/reactivex/Observable;
+    value = Lcom/vk/apps/AppsFragment$s;->a()Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,7 +57,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/common/data/VKList;)Lcom/vk/dto/apps/AppsEntity;
+.method public final a(Lcom/vk/dto/common/data/VKList;)Lcom/vk/dto/apps/a;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -65,18 +65,18 @@
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/apps/AppsSection;",
             ">;)",
-            "Lcom/vk/dto/apps/AppsEntity;"
+            "Lcom/vk/dto/apps/a;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vk/dto/apps/AppsEntity;
+    new-instance v0, Lcom/vk/dto/apps/a;
 
     new-instance v1, Lcom/vk/dto/common/data/VKList;
 
     invoke-direct {v1}, Lcom/vk/dto/common/data/VKList;-><init>()V
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/dto/apps/AppsEntity;-><init>(Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKList;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/dto/apps/a;-><init>(Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKList;)V
 
     return-object v0
 .end method
@@ -87,7 +87,7 @@
     .line 1
     check-cast p1, Lcom/vk/dto/common/data/VKList;
 
-    invoke-virtual {p0, p1}, Lcom/vk/apps/AppsFragment$s$b;->a(Lcom/vk/dto/common/data/VKList;)Lcom/vk/dto/apps/AppsEntity;
+    invoke-virtual {p0, p1}, Lcom/vk/apps/AppsFragment$s$b;->a(Lcom/vk/dto/common/data/VKList;)Lcom/vk/dto/apps/a;
 
     move-result-object p1
 

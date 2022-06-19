@@ -3,7 +3,7 @@
 .source "HomeFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Predicate;
+.implements Lc/a/z/l;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Predicate<",
+        "Lc/a/z/l<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -60,7 +60,7 @@
     .locals 0
 
     .line 1
-    instance-of p1, p1, Lcom/vk/newsfeed/NewsfeedListsUpdatedEvent;
+    instance-of p1, p1, Lcom/vk/newsfeed/s;
 
     return p1
 .end method

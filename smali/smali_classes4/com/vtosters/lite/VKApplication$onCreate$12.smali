@@ -3,7 +3,7 @@
 .source "VKApplication.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $postponedErrorTracker:Lkotlin/jvm/b/Functions2;
+.field final synthetic $postponedErrorTracker:Lkotlin/jvm/b/b;
 
 .field final synthetic this$0:Lcom/vtosters/lite/VKApplication;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/VKApplication;Lkotlin/jvm/b/Functions2;)V
+.method constructor <init>(Lcom/vtosters/lite/VKApplication;Lkotlin/jvm/b/b;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vtosters/lite/VKApplication$onCreate$12;->this$0:Lcom/vtosters/lite/VKApplication;
 
-    iput-object p2, p0, Lcom/vtosters/lite/VKApplication$onCreate$12;->$postponedErrorTracker:Lkotlin/jvm/b/Functions2;
+    iput-object p2, p0, Lcom/vtosters/lite/VKApplication$onCreate$12;->$postponedErrorTracker:Lkotlin/jvm/b/b;
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vtosters/lite/VKApplication$onCreate$12;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -66,9 +66,9 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/VKApplication$onCreate$12;->this$0:Lcom/vtosters/lite/VKApplication;
 
-    iget-object v1, p0, Lcom/vtosters/lite/VKApplication$onCreate$12;->$postponedErrorTracker:Lkotlin/jvm/b/Functions2;
+    iget-object v1, p0, Lcom/vtosters/lite/VKApplication$onCreate$12;->$postponedErrorTracker:Lkotlin/jvm/b/b;
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/VKApplication;->a(Lcom/vtosters/lite/VKApplication;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/VKApplication;->a(Lcom/vtosters/lite/VKApplication;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method

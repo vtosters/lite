@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/vk/instantjobs/impl/InstantJobInfo;)V
+.method public abstract a(Lcom/vk/instantjobs/impl/b;)V
 .end method
 
-.method public abstract a(Lcom/vk/instantjobs/impl/InstantJobInfo;II)V
+.method public abstract a(Lcom/vk/instantjobs/impl/b;II)V
 .end method
 
-.method public abstract a(Lcom/vk/instantjobs/impl/InstantJobInfo;Z)V
+.method public abstract a(Lcom/vk/instantjobs/impl/b;Z)V
 .end method

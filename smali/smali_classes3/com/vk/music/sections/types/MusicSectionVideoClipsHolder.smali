@@ -1,5 +1,5 @@
 .class public Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;
-.super Lcom/vk/music/ui/common/MusicViewHolder;
+.super Lcom/vk/music/ui/common/o;
 .source "MusicSectionVideoClipsHolder.kt"
 
 # interfaces
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/music/ui/common/MusicViewHolder<",
+        "Lcom/vk/music/ui/common/o<",
         "Lcom/vk/dto/common/VideoFile;",
         ">;",
         "Lcom/vk/music/sections/types/MusicSectionHolder$c;"
@@ -22,7 +22,7 @@
 
 .field private final C:Landroid/graphics/drawable/Drawable;
 
-.field private D:Lio/reactivex/disposables/Disposable;
+.field private D:Lio/reactivex/disposables/b;
 
 .field private E:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
@@ -58,7 +58,7 @@
     move-object v2, p1
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/ui/common/MusicViewHolder;-><init>(ILandroid/view/ViewGroup;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/ui/common/o;-><init>(ILandroid/view/ViewGroup;ZILkotlin/jvm/internal/i;)V
 
     .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -71,7 +71,7 @@
 
     const-string v1, "itemView.findViewById(R.id.avatar)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/imageloader/view/VKCircleImageView;
 
@@ -88,7 +88,7 @@
 
     const-string v1, "itemView.findViewById(R.id.subtitle_views)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -105,7 +105,7 @@
 
     const-string v1, "itemView.findViewById(R.id.title)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -122,7 +122,7 @@
 
     const-string v1, "itemView.findViewById(R.id.preview)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/imageloader/view/VKImageView;
 
@@ -139,7 +139,7 @@
 
     const-string v1, "itemView.findViewById(R.id.duration)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/libvideo/ui/DurationView;
 
@@ -156,7 +156,7 @@
 
     const-string v1, "itemView.findViewById(R.id.explicit)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/ImageView;
 
@@ -173,7 +173,7 @@
 
     const-string v1, "itemView.findViewById(R.\u2026r_small_item_restriction)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/libvideo/ui/VideoRestrictionView;
 
@@ -184,7 +184,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -207,7 +207,7 @@
 
     const-string v1, "parent.context"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x6
 
@@ -226,7 +226,7 @@
 
     const-string v0, "MusicPlaybackLaunchContext.NONE"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;->E:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
@@ -281,16 +281,16 @@
     move-object v1, p1
 
     .line 21
-    invoke-static/range {v0 .. v10}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Landroid/view/View;ZILjava/lang/Object;)V
+    invoke-static/range {v0 .. v10}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Landroid/view/View;ZILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;Lio/reactivex/disposables/Disposable;)V
+.method public static final synthetic a(Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;Lio/reactivex/disposables/b;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;->D:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;->D:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -340,11 +340,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic g(Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;)Lio/reactivex/disposables/Disposable;
+.method public static final synthetic g(Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;)Lio/reactivex/disposables/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;->D:Lio/reactivex/disposables/Disposable;
+    iget-object p0, p0, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;->D:Lio/reactivex/disposables/b;
 
     return-object p0
 .end method
@@ -376,7 +376,7 @@
 
     const-string v2, "itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -384,7 +384,7 @@
 
     const-string v3, "itemView.context"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v4, p1
 
@@ -412,15 +412,15 @@
 
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v1, p1}, Lcom/vk/libvideo/VideoUtils;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;)Ljava/lang/String;
+    invoke-static {v1, p1}, Lcom/vk/libvideo/t;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -434,7 +434,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
     .line 10
-    sget-object v5, Lcom/vk/core/utils/CustomImageUtils;->INSTANCE:Lcom/vk/core/utils/CustomImageUtils;
+    sget-object v5, Lcom/vk/core/utils/b;->a:Lcom/vk/core/utils/b;
 
     iget-object v6, p0, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;->b:Lcom/vk/imageloader/view/VKCircleImageView;
 
@@ -446,7 +446,7 @@
 
     const-string v7, "artist_not_transparent"
 
-    invoke-static/range {v5 .. v10}, Lcom/vk/core/utils/CustomImageUtils;->a(Lcom/vk/core/utils/CustomImageUtils;Lcom/vk/imageloader/view/VKImageView;Ljava/lang/String;FILjava/lang/Object;)V
+    invoke-static/range {v5 .. v10}, Lcom/vk/core/utils/b;->a(Lcom/vk/core/utils/b;Lcom/vk/imageloader/view/VKImageView;Ljava/lang/String;FILjava/lang/Object;)V
 
     .line 11
     iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;->b:Lcom/vk/imageloader/view/VKCircleImageView;
@@ -467,13 +467,13 @@
     .line 13
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder$onBind$1;
 
     invoke-direct {v1, p0, p1}, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder$onBind$1;-><init>(Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;Lcom/vk/dto/common/VideoFile;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method

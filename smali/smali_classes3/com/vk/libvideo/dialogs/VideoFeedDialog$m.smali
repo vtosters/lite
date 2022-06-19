@@ -3,12 +3,12 @@
 .source "VideoFeedDialog.kt"
 
 # interfaces
-.implements Lcom/vk/lists/OnRetryClickListener;
+.implements Lcom/vk/lists/r;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/dialogs/VideoFeedDialog;-><init>(Landroid/app/Activity;Lcom/vk/libvideo/autoplay/VideoAutoPlay;Ljava/lang/String;Lcom/vk/libvideo/dialogs/AnimationDialogCallback;)V
+    value = Lcom/vk/libvideo/dialogs/VideoFeedDialog;-><init>(Landroid/app/Activity;Lcom/vk/libvideo/autoplay/VideoAutoPlay;Ljava/lang/String;Lcom/vk/libvideo/dialogs/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,11 +40,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$m;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->e(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/VideoDiscoverController;
+    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->e(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/n;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/VideoDiscoverController;->c()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/n;->c()V
 
     return-void
 .end method

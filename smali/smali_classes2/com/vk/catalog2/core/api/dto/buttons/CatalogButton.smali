@@ -12,10 +12,10 @@
 
 
 # static fields
-.field public static final a:Lcom/vk/dto/common/data/JsonParser;
+.field public static final a:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/catalog2/core/api/dto/buttons/CatalogButton;",
             ">;"
         }
@@ -31,14 +31,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/buttons/CatalogButton$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/buttons/CatalogButton$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/catalog2/core/api/dto/buttons/CatalogButton$a;
 
     invoke-direct {v0}, Lcom/vk/catalog2/core/api/dto/buttons/CatalogButton$a;-><init>()V
 
-    sput-object v0, Lcom/vk/catalog2/core/api/dto/buttons/CatalogButton;->a:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/catalog2/core/api/dto/buttons/CatalogButton;->a:Lcom/vk/dto/common/data/c;
 
     return-void
 .end method
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2

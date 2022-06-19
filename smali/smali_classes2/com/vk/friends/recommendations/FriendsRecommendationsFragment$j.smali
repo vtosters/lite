@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Landroid/accounts/Account;Lcom/vk/core/fragments/BaseFragment1;Landroid/app/Activity;)V
+    value = Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Landroid/accounts/Account;Lcom/vk/core/fragments/b;Landroid/app/Activity;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -31,18 +31,18 @@
 # instance fields
 .field final synthetic a:Landroid/accounts/Account;
 
-.field final synthetic b:Lcom/vk/core/fragments/BaseFragment1;
+.field final synthetic b:Lcom/vk/core/fragments/b;
 
 .field final synthetic c:Landroid/app/Activity;
 
 
 # direct methods
-.method constructor <init>(Landroid/accounts/Account;Lcom/vk/core/fragments/BaseFragment1;Landroid/app/Activity;)V
+.method constructor <init>(Landroid/accounts/Account;Lcom/vk/core/fragments/b;Landroid/app/Activity;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$j;->a:Landroid/accounts/Account;
 
-    iput-object p2, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$j;->b:Lcom/vk/core/fragments/BaseFragment1;
+    iput-object p2, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$j;->b:Lcom/vk/core/fragments/b;
 
     iput-object p3, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$j;->c:Landroid/app/Activity;
 
@@ -72,11 +72,11 @@
 
     iget-object v1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$j;->a:Landroid/accounts/Account;
 
-    iget-object v2, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$j;->b:Lcom/vk/core/fragments/BaseFragment1;
+    iget-object v2, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$j;->b:Lcom/vk/core/fragments/b;
 
     iget-object v3, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$j;->c:Landroid/app/Activity;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$b;->a(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$b;Landroid/accounts/Account;Lcom/vk/core/fragments/BaseFragment1;Landroid/app/Activity;)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$b;->a(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$b;Landroid/accounts/Account;Lcom/vk/core/fragments/b;Landroid/app/Activity;)Ljava/lang/String;
 
     move-result-object v0
 

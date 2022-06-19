@@ -3,12 +3,12 @@
 .source "ContactsModel.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/ContactsModel;->f()Lio/reactivex/Observable;
+    value = Lcom/vk/im/ui/components/contacts/ContactsModel;->f()Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,11 +57,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/contacts/ContactsModel1;)Z
+.method public final a(Lcom/vk/im/ui/components/contacts/e;)Z
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/ContactsModel1;->e()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/e;->e()Z
 
     move-result p1
 
@@ -72,9 +72,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/contacts/ContactsModel1;
+    check-cast p1, Lcom/vk/im/ui/components/contacts/e;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel$g;->a(Lcom/vk/im/ui/components/contacts/ContactsModel1;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel$g;->a(Lcom/vk/im/ui/components/contacts/e;)Z
 
     move-result p1
 

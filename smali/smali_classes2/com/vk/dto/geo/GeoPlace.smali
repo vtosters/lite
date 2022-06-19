@@ -1,5 +1,5 @@
 .class public Lcom/vk/dto/geo/GeoPlace;
-.super Lcom/vk/dto/common/Model;
+.super Lcom/vk/dto/common/e;
 .source "GeoPlace.java"
 
 # interfaces
@@ -67,7 +67,7 @@
     .locals 1
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     const/4 v0, 0x0
 
@@ -92,7 +92,7 @@
     .locals 2
 
     .line 17
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     const/4 v0, 0x0
 
@@ -205,7 +205,7 @@
     const-string v0, "place"
 
     .line 7
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     const/4 v1, 0x0
 

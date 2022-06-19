@@ -189,7 +189,7 @@
     invoke-virtual {p0, v0, v1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
     .line 5
-    sget-object v1, Lb/h/z/R3;->PageIndicator:[I
+    sget-object v1, Lb/h/z/m;->PageIndicator:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -200,7 +200,7 @@
     if-eqz v1, :cond_0
 
     .line 6
-    sget v3, Lb/h/z/R3;->PageIndicator_PIType:I
+    sget v3, Lb/h/z/m;->PageIndicator_PIType:I
 
     invoke-virtual {v1, v3, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 

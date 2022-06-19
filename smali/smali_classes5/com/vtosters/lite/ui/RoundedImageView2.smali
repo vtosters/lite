@@ -254,7 +254,7 @@
     if-eqz p2, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vtosters/lite/R;->RoundedImageView:[I
+    sget-object v0, Lcom/vtosters/lite/a0;->RoundedImageView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

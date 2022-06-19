@@ -3,12 +3,12 @@
 .source "MusicPlayerAuthorizationManager.kt"
 
 # interfaces
-.implements Lio/reactivex/SingleOnSubscribe;
+.implements Lc/a/w;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->e()Lio/reactivex/Single;
+    value = Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->e()Lc/a/t;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/SingleOnSubscribe<",
+        "Lc/a/w<",
         "TT;>;"
     }
 .end annotation
@@ -45,13 +45,13 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/SingleEmitter;)V
+.method public final a(Lc/a/u;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/SingleEmitter<",
-            "Lkotlin/Unit;",
+            "Lc/a/u<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -62,7 +62,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$updateFeatureManager$1;->a:Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;
 
-    invoke-static {v0}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->c(Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;)Lio/reactivex/disposables/CompositeDisposable;
+    invoke-static {v0}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->c(Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;)Lio/reactivex/disposables/a;
 
     move-result-object v0
 
@@ -70,26 +70,26 @@
 
     new-instance v2, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$updateFeatureManager$1$1;
 
-    invoke-direct {v2, p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$updateFeatureManager$1$1;-><init>(Lio/reactivex/SingleEmitter;)V
+    invoke-direct {v2, p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$updateFeatureManager$1$1;-><init>(Lc/a/u;)V
 
     new-instance v3, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$updateFeatureManager$1$2;
 
-    invoke-direct {v3, p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$updateFeatureManager$1$2;-><init>(Lio/reactivex/SingleEmitter;)V
+    invoke-direct {v3, p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$updateFeatureManager$1$2;-><init>(Lc/a/u;)V
 
-    invoke-virtual {v1, v2, v3}, Lcom/vk/toggle/FeatureManager;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v1, v2, v3}, Lcom/vk/toggle/FeatureManager;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     .line 3
-    sget-object p1, Lcom/vk/audioipc/communication/y/AudioServiceHelper;->INSTANCE:Lcom/vk/audioipc/communication/y/AudioServiceHelper;
+    sget-object p1, Lcom/vk/audioipc/communication/y/a;->g:Lcom/vk/audioipc/communication/y/a;
 
-    invoke-virtual {p1}, Lcom/vk/audioipc/communication/y/AudioServiceHelper;->e()Lkotlin/jvm/b/Functions;
+    invoke-virtual {p1}, Lcom/vk/audioipc/communication/y/a;->e()Lkotlin/jvm/b/a;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

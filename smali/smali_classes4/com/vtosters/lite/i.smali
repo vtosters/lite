@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lcom/vk/core/network/proxy/ProxyReporter$b;
+.implements Lcom/vk/core/network/proxy/h$b;
 
 
 # static fields
@@ -36,7 +36,7 @@
 .method public final a()Ljava/lang/String;
     .locals 1
 
-    invoke-static {}, Lcom/vtosters/lite/NetworkProxyPreferences;->j()Ljava/lang/String;
+    invoke-static {}, Lcom/vtosters/lite/y;->j()Ljava/lang/String;
 
     move-result-object v0
 

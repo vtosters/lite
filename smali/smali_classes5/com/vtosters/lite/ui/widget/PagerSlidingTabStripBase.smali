@@ -3,7 +3,7 @@
 .source "PagerSlidingTabStripBase.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/Themable;
+.implements Lcom/vk/core/ui/themes/f;
 
 
 # annotations
@@ -449,7 +449,7 @@
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 47
-    sget-object v1, Lcom/vtosters/lite/R;->PagerSlidingTabStrip:[I
+    sget-object v1, Lcom/vtosters/lite/a0;->PagerSlidingTabStrip:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -778,15 +778,15 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setFocusable(Z)V
 
     .line 70
-    invoke-virtual {v0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
+    invoke-virtual {v0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
 
     move-result-object v1
 
-    check-cast v1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    check-cast v1, Lcom/facebook/drawee/generic/a;
 
-    sget-object v2, Lcom/facebook/drawee/drawable/ScalingUtils$b;->n:Lcom/facebook/drawee/drawable/ScalingUtils$b;
+    sget-object v2, Lcom/facebook/drawee/drawable/r$b;->n:Lcom/facebook/drawee/drawable/r$b;
 
-    invoke-virtual {v1, v2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
+    invoke-virtual {v1, v2}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/drawable/r$b;)V
 
     .line 71
     invoke-interface {p2, p1}, Lcom/vtosters/lite/ui/widget/PagerSlidingTabStripBase$m;->a(I)Ljava/lang/String;

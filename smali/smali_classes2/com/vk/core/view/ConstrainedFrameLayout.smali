@@ -70,7 +70,7 @@
     .locals 0
 
     .line 1
-    sget-object p3, Lb/h/z/R3;->ConstrainedFrameLayout:[I
+    sget-object p3, Lb/h/z/m;->ConstrainedFrameLayout:[I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -78,7 +78,7 @@
 
     .line 2
     :try_start_0
-    sget p2, Lb/h/z/R3;->ConstrainedFrameLayout_cfl_maxHeight:I
+    sget p2, Lb/h/z/m;->ConstrainedFrameLayout_cfl_maxHeight:I
 
     const/high16 p3, 0x4f000000
 
@@ -91,7 +91,7 @@
     iput p2, p0, Lcom/vk/core/view/ConstrainedFrameLayout;->b:I
 
     .line 3
-    sget p2, Lb/h/z/R3;->ConstrainedFrameLayout_cfl_maxWidth:I
+    sget p2, Lb/h/z/m;->ConstrainedFrameLayout_cfl_maxWidth:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getDimension(IF)F
 

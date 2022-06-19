@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/single/SingleCreate;
-.super Lio/reactivex/Single;
+.super Lc/a/t;
 .source "SingleCreate.java"
 
 
@@ -15,17 +15,17 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/Single<",
+        "Lc/a/t<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final a:Lio/reactivex/SingleOnSubscribe;
+.field final a:Lc/a/w;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/SingleOnSubscribe<",
+            "Lc/a/w<",
             "TT;>;"
         }
     .end annotation
@@ -33,33 +33,33 @@
 
 
 # direct methods
-.method public constructor <init>(Lio/reactivex/SingleOnSubscribe;)V
+.method public constructor <init>(Lc/a/w;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/SingleOnSubscribe<",
+            "Lc/a/w<",
             "TT;>;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lio/reactivex/Single;-><init>()V
+    invoke-direct {p0}, Lc/a/t;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleCreate;->a:Lio/reactivex/SingleOnSubscribe;
+    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleCreate;->a:Lc/a/w;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected b(Lio/reactivex/SingleObserver;)V
+.method protected b(Lc/a/v;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/SingleObserver<",
+            "Lc/a/v<",
             "-TT;>;)V"
         }
     .end annotation
@@ -67,16 +67,16 @@
     .line 1
     new-instance v0, Lio/reactivex/internal/operators/single/SingleCreate$Emitter;
 
-    invoke-direct {v0, p1}, Lio/reactivex/internal/operators/single/SingleCreate$Emitter;-><init>(Lio/reactivex/SingleObserver;)V
+    invoke-direct {v0, p1}, Lio/reactivex/internal/operators/single/SingleCreate$Emitter;-><init>(Lc/a/v;)V
 
     .line 2
-    invoke-interface {p1, v0}, Lio/reactivex/SingleObserver;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p1, v0}, Lc/a/v;->a(Lio/reactivex/disposables/b;)V
 
     .line 3
     :try_start_0
-    iget-object p1, p0, Lio/reactivex/internal/operators/single/SingleCreate;->a:Lio/reactivex/SingleOnSubscribe;
+    iget-object p1, p0, Lio/reactivex/internal/operators/single/SingleCreate;->a:Lc/a/w;
 
-    invoke-interface {p1, v0}, Lio/reactivex/SingleOnSubscribe;->a(Lio/reactivex/SingleEmitter;)V
+    invoke-interface {p1, v0}, Lc/a/w;->a(Lc/a/u;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -86,7 +86,7 @@
     move-exception p1
 
     .line 4
-    invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
 
     .line 5
     invoke-virtual {v0, p1}, Lio/reactivex/internal/operators/single/SingleCreate$Emitter;->a(Ljava/lang/Throwable;)V

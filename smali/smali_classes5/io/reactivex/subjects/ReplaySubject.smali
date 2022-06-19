@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/subjects/ReplaySubject;
-.super Lio/reactivex/subjects/Subject;
+.super Lio/reactivex/subjects/c;
 .source "ReplaySubject.java"
 
 
@@ -17,7 +17,7 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/subjects/Subject<",
+        "Lio/reactivex/subjects/c<",
         "TT;>;"
     }
 .end annotation
@@ -83,7 +83,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lio/reactivex/subjects/Subject;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/subjects/c;-><init>()V
 
     .line 2
     iput-object p1, p0, Lio/reactivex/subjects/ReplaySubject;->a:Lio/reactivex/subjects/ReplaySubject$a;
@@ -128,7 +128,7 @@
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 1
 
     .line 1
@@ -137,7 +137,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     return-void
@@ -149,7 +149,7 @@
     const-string v0, "onError called with null. Null values are generally not allowed in 2.x operators and sources."
 
     .line 3
-    invoke-static {p1, v0}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 4
     iget-boolean v0, p0, Lio/reactivex/subjects/ReplaySubject;->c:Z
@@ -157,7 +157,7 @@
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -313,12 +313,12 @@
     return-void
 .end method
 
-.method protected b(Lio/reactivex/Observer;)V
+.method protected b(Lc/a/r;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;)V"
         }
     .end annotation
@@ -326,10 +326,10 @@
     .line 1
     new-instance v0, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;
 
-    invoke-direct {v0, p1, p0}, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;-><init>(Lio/reactivex/Observer;Lio/reactivex/subjects/ReplaySubject;)V
+    invoke-direct {v0, p1, p0}, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;-><init>(Lc/a/r;Lio/reactivex/subjects/ReplaySubject;)V
 
     .line 2
-    invoke-interface {p1, v0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p1, v0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
 
     .line 3
     iget-boolean p1, v0, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;->cancelled:Z
@@ -483,7 +483,7 @@
     const-string v0, "onNext called with null. Null values are generally not allowed in 2.x operators and sources."
 
     .line 8
-    invoke-static {p1, v0}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 9
     iget-boolean v0, p0, Lio/reactivex/subjects/ReplaySubject;->c:Z

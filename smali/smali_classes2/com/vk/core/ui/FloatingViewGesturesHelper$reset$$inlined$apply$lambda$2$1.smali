@@ -3,7 +3,7 @@
 .source "FloatingViewGesturesHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/core/ui/FloatingViewGesturesHelper$reset$$inlined$apply$lambda$2$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -64,7 +64,7 @@
 
     iget-object v0, v0, Lcom/vk/core/ui/FloatingViewGesturesHelper$reset$$inlined$apply$lambda$2;->a:Lcom/vk/core/ui/FloatingViewGesturesHelper;
 
-    invoke-static {v0}, Lcom/vk/core/ui/FloatingViewGesturesHelper;->c(Lcom/vk/core/ui/FloatingViewGesturesHelper;)Lkotlin/jvm/b/Functions2;
+    invoke-static {v0}, Lcom/vk/core/ui/FloatingViewGesturesHelper;->c(Lcom/vk/core/ui/FloatingViewGesturesHelper;)Lkotlin/jvm/b/b;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lcom/vtosters/lite/audio/player/PlayerConnection$b;
+.implements Lcom/vtosters/lite/audio/player/v$b;
 
 
 # instance fields
@@ -27,14 +27,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/audio/player/Player;)V
+.method public final a(Lcom/vtosters/lite/audio/player/u;)V
     .locals 2
 
     iget-object v0, p0, Lcom/vtosters/lite/audio/a;->a:Lcom/vk/music/player/PauseReason;
 
     iget-object v1, p0, Lcom/vtosters/lite/audio/a;->b:Ljava/lang/Runnable;
 
-    invoke-static {v0, v1, p1}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/player/PauseReason;Ljava/lang/Runnable;Lcom/vtosters/lite/audio/player/Player;)V
+    invoke-static {v0, v1, p1}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/player/PauseReason;Ljava/lang/Runnable;Lcom/vtosters/lite/audio/player/u;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "MusicRestrictionManagerImpl.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/dto/common/data/Subscription;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -58,7 +58,7 @@
 
     iget-object v0, v0, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1;->a:Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;
 
-    invoke-static {v0}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)Lcom/vk/music/stats/MusicStatsTracker;
+    invoke-static {v0}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)Lcom/vk/music/stats/d;
 
     move-result-object v0
 
@@ -68,12 +68,12 @@
 
     const-string v2, "buy"
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/music/stats/MusicStatsTracker;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/music/stats/d;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;
+    new-instance v0, Lcom/vtosters/lite/fragments/money/r/a;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/money/r/a;-><init>()V
 
     iget-object v1, p0, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1$$special$$inlined$let$lambda$1;->$activity:Lcom/vtosters/lite/VKActivity;
 
@@ -81,7 +81,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1$$special$$inlined$let$lambda$1$a;-><init>(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1$$special$$inlined$let$lambda$1;)V
 
-    invoke-virtual {v0, v1, p1, v2}, Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;->a(Landroid/app/Activity;Lcom/vk/dto/common/data/Purchase1;Lcom/vtosters/lite/data/PurchasesManager$o;)V
+    invoke-virtual {v0, v1, p1, v2}, Lcom/vtosters/lite/fragments/money/r/a;->a(Landroid/app/Activity;Lcom/vk/dto/common/data/e;Lcom/vtosters/lite/data/PurchasesManager$o;)V
 
     return-void
 .end method
@@ -94,7 +94,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1$$special$$inlined$let$lambda$1;->a(Lcom/vk/dto/common/data/Subscription;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

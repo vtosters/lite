@@ -145,14 +145,14 @@
     iput-object v0, p0, Lcom/facebook/login/LoginClient$Result;->e:Lcom/facebook/login/LoginClient$Request;
 
     .line 15
-    invoke-static {p1}, Lcom/facebook/internal/Utility;->a(Landroid/os/Parcel;)Ljava/util/Map;
+    invoke-static {p1}, Lcom/facebook/internal/r;->a(Landroid/os/Parcel;)Ljava/util/Map;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/login/LoginClient$Result;->f:Ljava/util/Map;
 
     .line 16
-    invoke-static {p1}, Lcom/facebook/internal/Utility;->a(Landroid/os/Parcel;)Ljava/util/Map;
+    invoke-static {p1}, Lcom/facebook/internal/r;->a(Landroid/os/Parcel;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -179,7 +179,7 @@
     const-string v0, "code"
 
     .line 3
-    invoke-static {p2, v0}, Lcom/facebook/internal/Validate;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lcom/facebook/internal/s;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     iput-object p1, p0, Lcom/facebook/login/LoginClient$Result;->e:Lcom/facebook/login/LoginClient$Request;
@@ -274,7 +274,7 @@
     aput-object p2, v0, p1
 
     .line 4
-    invoke-static {v0}, Lcom/facebook/internal/Utility;->a([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Lcom/facebook/internal/r;->a([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
@@ -348,12 +348,12 @@
     .line 6
     iget-object p2, p0, Lcom/facebook/login/LoginClient$Result;->f:Ljava/util/Map;
 
-    invoke-static {p1, p2}, Lcom/facebook/internal/Utility;->a(Landroid/os/Parcel;Ljava/util/Map;)V
+    invoke-static {p1, p2}, Lcom/facebook/internal/r;->a(Landroid/os/Parcel;Ljava/util/Map;)V
 
     .line 7
     iget-object p2, p0, Lcom/facebook/login/LoginClient$Result;->g:Ljava/util/Map;
 
-    invoke-static {p1, p2}, Lcom/facebook/internal/Utility;->a(Landroid/os/Parcel;Ljava/util/Map;)V
+    invoke-static {p1, p2}, Lcom/facebook/internal/r;->a(Landroid/os/Parcel;Ljava/util/Map;)V
 
     return-void
 .end method

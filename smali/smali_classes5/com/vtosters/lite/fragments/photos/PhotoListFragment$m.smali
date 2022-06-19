@@ -140,11 +140,11 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$m;->a:Lcom/vtosters/lite/fragments/photos/PhotoListFragment;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->i(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;)Lme/grishka/appkit/utils/Preloader;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->i(Lcom/vtosters/lite/fragments/photos/PhotoListFragment;)Ld/a/a/c/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lme/grishka/appkit/utils/Preloader;->d()Z
+    invoke-virtual {v0}, Ld/a/a/c/c;->d()Z
 
     move-result v0
 
@@ -153,7 +153,7 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$m;->a:Lcom/vtosters/lite/fragments/photos/PhotoListFragment;
 
-    invoke-virtual {v0}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->s2()V
+    invoke-virtual {v0}, Ld/a/a/a/i;->s2()V
 
     :cond_0
     return-void
@@ -167,7 +167,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->y0:Lcom/vk/bridges/ImageViewer$d;
+    iput-object v1, v0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->y0:Lcom/vk/bridges/p$d;
 
     return-void
 .end method

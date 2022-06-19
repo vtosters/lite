@@ -3,7 +3,7 @@
 .source "StoryNarrativeStubDelegate.kt"
 
 # interfaces
-.implements Lcom/vk/imageloader/OnLoadCallback;
+.implements Lcom/vk/imageloader/g;
 
 
 # annotations

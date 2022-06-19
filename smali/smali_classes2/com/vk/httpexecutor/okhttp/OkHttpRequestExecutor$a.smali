@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -52,7 +52,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lokhttp3/f0/Util;->a(Ljava/lang/String;Z)Ljava/util/concurrent/ThreadFactory;
+    invoke-static {v0, v1}, Lokhttp3/f0/c;->a(Ljava/lang/String;Z)Ljava/util/concurrent/ThreadFactory;
 
     move-result-object v7
 

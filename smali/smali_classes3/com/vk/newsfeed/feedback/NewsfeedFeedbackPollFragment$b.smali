@@ -1,5 +1,5 @@
 .class final Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment$b;
-.super Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;
+.super Lcom/vk/core/fragments/h;
 .source "NewsfeedFeedbackPollFragment.kt"
 
 
@@ -44,7 +44,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-direct {p0, p1, v0}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;Z)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/core/fragments/h;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;Z)V
 
     .line 2
     new-instance p1, Ljava/util/ArrayList;
@@ -143,7 +143,7 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollPageFragment$b;
+    new-instance v0, Lcom/vk/newsfeed/feedback/d$b;
 
     iget-object v1, p0, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment$b;->h:Ljava/util/ArrayList;
 
@@ -157,9 +157,9 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollPageFragment$b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/feedback/d$b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
 
-    invoke-virtual {v0}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v0}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v0
 

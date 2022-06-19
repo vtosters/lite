@@ -368,7 +368,7 @@
     if-lt v2, v3, :cond_3
 
     .line 2
-    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->d(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/g;->d(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v2
 
@@ -425,7 +425,7 @@
     if-lt v2, v3, :cond_2
 
     .line 7
-    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi22;->a(Ljava/lang/Object;)Landroid/os/Bundle;
+    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/h;->a(Ljava/lang/Object;)Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -438,44 +438,44 @@
     move-object v5, v1
 
     .line 9
-    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->i(Ljava/lang/Object;)I
+    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/g;->i(Ljava/lang/Object;)I
 
     move-result v6
 
     .line 10
-    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->h(Ljava/lang/Object;)J
+    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/g;->h(Ljava/lang/Object;)J
 
     move-result-wide v7
 
     .line 11
-    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->c(Ljava/lang/Object;)J
+    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/g;->c(Ljava/lang/Object;)J
 
     move-result-wide v9
 
     .line 12
-    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->g(Ljava/lang/Object;)F
+    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/g;->g(Ljava/lang/Object;)F
 
     move-result v11
 
     .line 13
-    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->a(Ljava/lang/Object;)J
+    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/g;->a(Ljava/lang/Object;)J
 
     move-result-wide v12
 
     const/4 v14, 0x0
 
     .line 14
-    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->e(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/g;->e(Ljava/lang/Object;)Ljava/lang/CharSequence;
 
     move-result-object v15
 
     .line 15
-    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->f(Ljava/lang/Object;)J
+    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/g;->f(Ljava/lang/Object;)J
 
     move-result-wide v16
 
     .line 16
-    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->b(Ljava/lang/Object;)J
+    invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/g;->b(Ljava/lang/Object;)J
 
     move-result-wide v19
 
@@ -611,7 +611,7 @@
 
     move-object/from16 v18, v3
 
-    invoke-static/range {v4 .. v18}, Landroid/support/v4/media/session/PlaybackStateCompatApi22;->a(IJJFJLjava/lang/CharSequence;JLjava/util/List;JLandroid/os/Bundle;)Ljava/lang/Object;
+    invoke-static/range {v4 .. v18}, Landroid/support/v4/media/session/h;->a(IJJFJLjava/lang/CharSequence;JLjava/util/List;JLandroid/os/Bundle;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -639,7 +639,7 @@
 
     move-wide/from16 v16, v1
 
-    invoke-static/range {v4 .. v17}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->a(IJJFJLjava/lang/CharSequence;JLjava/util/List;J)Ljava/lang/Object;
+    invoke-static/range {v4 .. v17}, Landroid/support/v4/media/session/g;->a(IJJFJLjava/lang/CharSequence;JLjava/util/List;J)Ljava/lang/Object;
 
     move-result-object v1
 

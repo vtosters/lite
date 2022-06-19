@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;)V
+    value = Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_send/picker/location/f;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -49,7 +49,7 @@
     const-string p1, "event"
 
     .line 2
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -71,13 +71,13 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh$a;->a:Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->e0()Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->e0()Lcom/vk/im/ui/components/msg_send/picker/location/f;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;->q()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/f;->q()V
 
     goto :goto_0
 
@@ -85,13 +85,13 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh$a;->a:Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->e0()Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->e0()Lcom/vk/im/ui/components/msg_send/picker/location/f;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;->p()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/f;->p()V
 
     :cond_2
     :goto_0

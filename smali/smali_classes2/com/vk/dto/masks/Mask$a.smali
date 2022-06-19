@@ -242,13 +242,13 @@
     move/from16 v15, v28
 
     .line 20
-    invoke-direct/range {v1 .. v24}, Lcom/vk/dto/masks/Mask;-><init>(Lcom/vk/dto/user/UserProfile;Lcom/vk/dto/group/Group;IIZLjava/lang/String;IJJLjava/lang/String;Lcom/vk/dto/common/NotificationImage;ZIILcom/vk/dto/masks/MaskDisableReason;Ljava/lang/String;Lcom/vk/dto/masks/MaskGeo;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v24}, Lcom/vk/dto/masks/Mask;-><init>(Lcom/vk/dto/user/UserProfile;Lcom/vk/dto/group/Group;IIZLjava/lang/String;IJJLjava/lang/String;Lcom/vk/dto/common/NotificationImage;ZIILcom/vk/dto/masks/MaskDisableReason;Ljava/lang/String;Lcom/vk/dto/masks/MaskGeo;ZZILkotlin/jvm/internal/i;)V
 
     return-object v25
 
     .line 21
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 

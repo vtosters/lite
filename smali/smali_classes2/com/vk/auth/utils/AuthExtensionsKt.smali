@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/KProperty5;
+.field static final synthetic a:[Lkotlin/u/j;
 
-.field private static final b:Lkotlin/Lazy2;
+.field private static final b:Lkotlin/e;
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference0Impl;
 
@@ -23,7 +23,7 @@
 
     const-string v3, "libauth-common_release"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/KDeclarationContainer;
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/e;
 
     move-result-object v2
 
@@ -31,24 +31,24 @@
 
     const-string v4, "getClickLock()Lcom/vk/auth/utils/TimeoutLock;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/KProperty1;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/k;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/auth/utils/AuthExtensionsKt;->a:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/auth/utils/AuthExtensionsKt;->a:[Lkotlin/u/j;
 
     .line 1
     sget-object v0, Lcom/vk/auth/utils/AuthExtensionsKt$clickLock$2;->a:Lcom/vk/auth/utils/AuthExtensionsKt$clickLock$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/auth/utils/AuthExtensionsKt;->b:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/auth/utils/AuthExtensionsKt;->b:Lkotlin/e;
 
     return-void
 .end method
@@ -85,15 +85,15 @@
     return-object p0
 .end method
 
-.method private static final a(Lkotlin/jvm/b/Functions2;)Landroid/view/View$OnClickListener;
+.method private static final a(Lkotlin/jvm/b/b;)Landroid/view/View$OnClickListener;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)",
             "Landroid/view/View$OnClickListener;"
         }
@@ -102,7 +102,7 @@
     .line 8
     new-instance v0, Lcom/vk/auth/utils/AuthExtensionsKt$a;
 
-    invoke-direct {v0, p0}, Lcom/vk/auth/utils/AuthExtensionsKt$a;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p0}, Lcom/vk/auth/utils/AuthExtensionsKt$a;-><init>(Lkotlin/jvm/b/b;)V
 
     return-object v0
 .end method
@@ -118,13 +118,13 @@
     return-object v0
 .end method
 
-.method public static final a(Landroid/widget/TextView;)Lcom/vk/auth/utils/AuthExtensions1;
+.method public static final a(Landroid/widget/TextView;)Lcom/vk/auth/utils/b;
     .locals 1
 
     .line 4
-    new-instance v0, Lcom/vk/auth/utils/AuthExtensions1;
+    new-instance v0, Lcom/vk/auth/utils/b;
 
-    invoke-direct {v0, p0}, Lcom/vk/auth/utils/AuthExtensions1;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {v0, p0}, Lcom/vk/auth/utils/b;-><init>(Landroid/widget/TextView;)V
 
     return-object v0
 .end method
@@ -140,22 +140,22 @@
     return-void
 .end method
 
-.method public static final a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+.method public static final a(Landroid/view/View;Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 3
-    invoke-static {p1}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Lkotlin/jvm/b/Functions2;)Landroid/view/View$OnClickListener;
+    invoke-static {p1}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Lkotlin/jvm/b/b;)Landroid/view/View$OnClickListener;
 
     move-result-object p1
 
@@ -167,15 +167,15 @@
 .method private static final b()Lcom/vk/auth/utils/TimeoutLock;
     .locals 3
 
-    sget-object v0, Lcom/vk/auth/utils/AuthExtensionsKt;->b:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/auth/utils/AuthExtensionsKt;->b:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/auth/utils/AuthExtensionsKt;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/auth/utils/AuthExtensionsKt;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

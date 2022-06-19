@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final c:Lkotlin/u/KProperty4;
+.field public static final c:Lkotlin/u/h;
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     invoke-direct {v0}, Lcom/vk/market/picker/FaveLinksDataProvider$convertToViewModel$1;-><init>()V
 
-    sput-object v0, Lcom/vk/market/picker/FaveLinksDataProvider$convertToViewModel$1;->c:Lkotlin/u/KProperty4;
+    sput-object v0, Lcom/vk/market/picker/FaveLinksDataProvider$convertToViewModel$1;->c:Lkotlin/u/h;
 
     return-void
 .end method
@@ -38,12 +38,12 @@
     return-object v0
 .end method
 
-.method public f()Lkotlin/u/KDeclarationContainer;
+.method public f()Lkotlin/u/e;
     .locals 1
 
     const-class v0, Lcom/vk/fave/entities/FaveItem;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -56,7 +56,7 @@
     check-cast p1, Lcom/vk/fave/entities/FaveItem;
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/Favable;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/a;
 
     move-result-object p1
 

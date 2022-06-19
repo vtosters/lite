@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/Functions;)Landroid/animation/ValueAnimator;
+    value = Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/a;)Landroid/animation/ValueAnimator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,17 +17,17 @@
 # instance fields
 .field final synthetic a:Landroid/animation/ValueAnimator;
 
-.field final synthetic b:Lkotlin/jvm/b/Functions;
+.field final synthetic b:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/a;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vk/core/extensions/AnimationExtKt$g;->a:Landroid/animation/ValueAnimator;
 
-    iput-object p2, p0, Lcom/vk/core/extensions/AnimationExtKt$g;->b:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/core/extensions/AnimationExtKt$g;->b:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -45,9 +45,9 @@
     invoke-virtual {p1, p0}, Landroid/animation/ValueAnimator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/core/extensions/AnimationExtKt$g;->b:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/core/extensions/AnimationExtKt$g;->b:Lkotlin/jvm/b/a;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

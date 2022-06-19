@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->a(Landroid/net/Uri;Ljava/io/File;Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;)V
+    value = Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->a(Landroid/net/Uri;Ljava/io/File;Lcom/vk/audiomsg/player/fileloader/impl/c;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,11 +26,11 @@
 
 .field final synthetic d:J
 
-.field final synthetic e:Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;
+.field final synthetic e:Lcom/vk/audiomsg/player/fileloader/impl/c;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;Landroid/net/Uri;Ljava/io/File;JLcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;)V
+.method constructor <init>(Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;Landroid/net/Uri;Ljava/io/File;JLcom/vk/audiomsg/player/fileloader/impl/c;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$b;->a:Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;
@@ -41,7 +41,7 @@
 
     iput-wide p4, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$b;->d:J
 
-    iput-object p6, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$b;->e:Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;
+    iput-object p6, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$b;->e:Lcom/vk/audiomsg/player/fileloader/impl/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,7 +56,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$b;->a:Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;
 
-    invoke-static {v0}, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->a(Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;)Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListener;
+    invoke-static {v0}, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->a(Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;)Lcom/vk/audiomsg/player/fileloader/impl/b;
 
     move-result-object v1
 
@@ -70,26 +70,26 @@
     iget-wide v4, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$b;->d:J
 
     .line 3
-    iget-object v0, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$b;->e:Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$b;->e:Lcom/vk/audiomsg/player/fileloader/impl/c;
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;->a()J
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/fileloader/impl/c;->a()J
 
     move-result-wide v6
 
-    iget-object v0, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$b;->e:Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$b;->e:Lcom/vk/audiomsg/player/fileloader/impl/c;
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;->b()I
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/fileloader/impl/c;->b()I
 
     move-result v8
 
-    iget-object v0, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$b;->e:Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$b;->e:Lcom/vk/audiomsg/player/fileloader/impl/c;
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/fileloader/impl/c;->c()Ljava/lang/String;
 
     move-result-object v9
 
     .line 4
-    invoke-interface/range {v1 .. v9}, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListener;->a(Landroid/net/Uri;Ljava/io/File;JJILjava/lang/String;)V
+    invoke-interface/range {v1 .. v9}, Lcom/vk/audiomsg/player/fileloader/impl/b;->a(Landroid/net/Uri;Ljava/io/File;JJILjava/lang/String;)V
 
     :cond_0
     return-void

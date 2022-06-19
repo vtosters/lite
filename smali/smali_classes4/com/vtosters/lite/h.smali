@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/NetworkProxyPreferences;
+.field private final synthetic a:Lcom/vtosters/lite/y;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/NetworkProxyPreferences;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/y;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/h;->a:Lcom/vtosters/lite/NetworkProxyPreferences;
+    iput-object p1, p0, Lcom/vtosters/lite/h;->a:Lcom/vtosters/lite/y;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/h;->a:Lcom/vtosters/lite/NetworkProxyPreferences;
+    iget-object v0, p0, Lcom/vtosters/lite/h;->a:Lcom/vtosters/lite/y;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/NetworkProxyPreferences;->d()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/y;->d()V
 
     return-void
 .end method

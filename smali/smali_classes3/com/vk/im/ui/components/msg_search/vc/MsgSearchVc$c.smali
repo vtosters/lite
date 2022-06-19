@@ -3,7 +3,7 @@
 .source "MsgSearchVc.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lb/h/v/TextViewTextChangeEvent;",
+        "Lc/a/z/g<",
+        "Lb/h/v/e;",
         ">;"
     }
 .end annotation
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lb/h/v/TextViewTextChangeEvent;)V
+.method public final a(Lb/h/v/e;)V
     .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$c;->a:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->e(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->e(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/f;
 
     move-result-object v0
 
@@ -66,18 +66,18 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;->a(I)Lcom/vk/im/ui/components/msg_search/vc/SearchPageData;
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/f;->a(I)Lcom/vk/im/ui/components/msg_search/vc/l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/SearchPageData;->e()Lcom/vk/im/engine/models/SearchMode;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/l;->e()Lcom/vk/im/engine/models/SearchMode;
 
     move-result-object v0
 
     .line 2
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$c;->a:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;
 
-    invoke-virtual {p1}, Lb/h/v/TextViewTextChangeEvent;->d()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lb/h/v/e;->d()Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -96,9 +96,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/v/TextViewTextChangeEvent;
+    check-cast p1, Lb/h/v/e;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$c;->a(Lb/h/v/TextViewTextChangeEvent;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$c;->a(Lb/h/v/e;)V
 
     return-void
 .end method

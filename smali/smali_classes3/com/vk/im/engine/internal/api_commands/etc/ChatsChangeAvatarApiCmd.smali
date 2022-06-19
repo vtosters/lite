@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;
-.super Lcom/vk/api/sdk/internal/ApiCommand;
+.super Lcom/vk/api/sdk/internal/a;
 .source "ChatsChangeAvatarApiCmd.kt"
 
 
@@ -15,18 +15,18 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/sdk/internal/ApiCommand<",
-        "Lkotlin/Unit;",
+        "Lcom/vk/api/sdk/internal/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private final a:Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;
+.field private final a:Lcom/vk/im/engine/internal/upload/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/internal/upload/FallbackUploadHelper<",
+            "Lcom/vk/im/engine/internal/upload/b<",
             "Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd$b;",
             ">;"
         }
@@ -45,7 +45,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/api/sdk/internal/ApiCommand;-><init>()V
+    invoke-direct {p0}, Lcom/vk/api/sdk/internal/a;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;->b:I
 
@@ -54,7 +54,7 @@
     iput-boolean p3, p0, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;->d:Z
 
     .line 2
-    new-instance p1, Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;
+    new-instance p1, Lcom/vk/im/engine/internal/upload/b;
 
     new-instance p2, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd$uploadHelper$1;
 
@@ -64,34 +64,34 @@
 
     invoke-direct {p3}, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd$a;-><init>()V
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;-><init>(Lkotlin/jvm/b/Functions2;Lcom/vk/api/sdk/VKApiResponseParser;)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/im/engine/internal/upload/b;-><init>(Lkotlin/jvm/b/b;Lcom/vk/api/sdk/h;)V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;->a:Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;->a:Lcom/vk/im/engine/internal/upload/b;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;Ljava/lang/String;)Lcom/vk/api/internal/c;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;->b(Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;->b(Ljava/lang/String;)Lcom/vk/api/internal/c;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final b(Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall;
+.method private final b(Ljava/lang/String;)Lcom/vk/api/internal/c;
     .locals 2
 
     .line 9
-    new-instance v0, Lcom/vk/api/internal/HttpPostCall$a;
+    new-instance v0, Lcom/vk/api/internal/c$a;
 
-    invoke-direct {v0}, Lcom/vk/api/internal/HttpPostCall$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/internal/c$a;-><init>()V
 
     .line 10
-    invoke-virtual {v0, p1}, Lcom/vk/api/internal/HttpPostCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall$a;
+    invoke-virtual {v0, p1}, Lcom/vk/api/internal/c$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/c$a;
 
     .line 11
     iget-object p1, p0, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;->c:Ljava/lang/String;
@@ -102,19 +102,19 @@
 
     const-string v1, "Uri.parse(filePath)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "file"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/api/internal/HttpPostCall$a;->a(Ljava/lang/String;Landroid/net/Uri;)Lcom/vk/api/internal/HttpPostCall$a;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/api/internal/c$a;->a(Ljava/lang/String;Landroid/net/Uri;)Lcom/vk/api/internal/c$a;
 
     .line 12
     iget-boolean p1, p0, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;->d:Z
 
-    invoke-virtual {v0, p1}, Lcom/vk/api/internal/HttpPostCall$a;->a(Z)Lcom/vk/api/internal/HttpPostCall$a;
+    invoke-virtual {v0, p1}, Lcom/vk/api/internal/c$a;->a(Z)Lcom/vk/api/internal/c$a;
 
     .line 13
-    invoke-virtual {v0}, Lcom/vk/api/internal/HttpPostCall$a;->e()Lcom/vk/api/internal/HttpPostCall;
+    invoke-virtual {v0}, Lcom/vk/api/internal/c$a;->e()Lcom/vk/api/internal/c;
 
     move-result-object p1
 
@@ -125,14 +125,14 @@
     .locals 7
 
     .line 1
-    new-instance v0, Lcom/vk/api/internal/MethodCall$a;
+    new-instance v0, Lcom/vk/api/internal/k$a;
 
-    invoke-direct {v0}, Lcom/vk/api/internal/MethodCall$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/internal/k$a;-><init>()V
 
     const-string v1, "photos.getChatUploadServer"
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
 
     .line 3
     iget v1, p0, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;->b:I
@@ -143,15 +143,15 @@
 
     const-string v2, "chat_id"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/k$a;
 
     .line 4
     iget-boolean v1, p0, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;->d:Z
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->b(Z)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->b(Z)Lcom/vk/api/internal/k$a;
 
     .line 5
-    invoke-virtual {v0}, Lcom/vk/api/internal/MethodCall$a;->a()Lcom/vk/api/internal/MethodCall;
+    invoke-virtual {v0}, Lcom/vk/api/internal/k$a;->a()Lcom/vk/api/internal/k;
 
     move-result-object v0
 
@@ -160,19 +160,19 @@
 
     invoke-direct {v1}, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd$d;-><init>()V
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/VKMethodCall;Lcom/vk/api/sdk/VKApiResponseParser;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/l;Lcom/vk/api/sdk/h;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd$c;
 
     .line 7
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd$c;->a()Lcom/vk/im/engine/models/upload/UploadServer;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd$c;->a()Lcom/vk/im/engine/models/upload/a;
 
     move-result-object v3
 
     .line 8
-    iget-object v1, p0, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;->a:Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;->a:Lcom/vk/im/engine/internal/upload/b;
 
     const/4 v4, 0x0
 
@@ -182,7 +182,7 @@
 
     move-object v2, p1
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;->a(Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;Lcom/vk/api/sdk/VKApiManager;Lcom/vk/im/engine/models/upload/UploadServer;Lcom/vk/api/sdk/VKApiProgressListener;ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-static/range {v1 .. v6}, Lcom/vk/im/engine/internal/upload/b;->a(Lcom/vk/im/engine/internal/upload/b;Lcom/vk/api/sdk/VKApiManager;Lcom/vk/im/engine/models/upload/a;Lcom/vk/api/sdk/g;ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -199,7 +199,7 @@
     .line 1
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;->b(Lcom/vk/api/sdk/VKApiManager;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
@@ -213,14 +213,14 @@
     move-result-object v0
 
     .line 3
-    new-instance v1, Lcom/vk/api/internal/MethodCall$a;
+    new-instance v1, Lcom/vk/api/internal/k$a;
 
-    invoke-direct {v1}, Lcom/vk/api/internal/MethodCall$a;-><init>()V
+    invoke-direct {v1}, Lcom/vk/api/internal/k$a;-><init>()V
 
     const-string v2, "messages.setChatPhoto"
 
     .line 4
-    invoke-virtual {v1, v2}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v1, v2}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
 
     .line 5
     invoke-virtual {v0}, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd$b;->a()Ljava/lang/String;
@@ -229,20 +229,20 @@
 
     const-string v2, "file"
 
-    invoke-virtual {v1, v2, v0}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v1, v2, v0}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
 
     .line 6
     iget-boolean v0, p0, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd;->d:Z
 
-    invoke-virtual {v1, v0}, Lcom/vk/api/internal/MethodCall$a;->b(Z)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v1, v0}, Lcom/vk/api/internal/k$a;->b(Z)Lcom/vk/api/internal/k$a;
 
     .line 7
-    invoke-virtual {v1}, Lcom/vk/api/internal/MethodCall$a;->a()Lcom/vk/api/internal/MethodCall;
+    invoke-virtual {v1}, Lcom/vk/api/internal/k$a;->a()Lcom/vk/api/internal/k;
 
     move-result-object v0
 
     .line 8
-    invoke-virtual {p1, v0}, Lcom/vk/api/sdk/VKApiManager;->a(Lcom/vk/api/sdk/VKMethodCall;)V
+    invoke-virtual {p1, v0}, Lcom/vk/api/sdk/VKApiManager;->a(Lcom/vk/api/sdk/l;)V
 
     return-void
 .end method

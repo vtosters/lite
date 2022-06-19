@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # static fields
@@ -38,7 +38,7 @@
 
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {p1}, Lcom/vtosters/lite/data/Analytics;->a(Ljava/lang/Throwable;)Ljava/lang/Boolean;
+    invoke-static {p1}, Lcom/vtosters/lite/data/n;->a(Ljava/lang/Throwable;)Ljava/lang/Boolean;
 
     move-result-object p1
 

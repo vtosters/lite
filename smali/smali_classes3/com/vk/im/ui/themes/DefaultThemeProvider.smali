@@ -3,17 +3,17 @@
 .source "DefaultThemeProvider.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/j/DialogThemesProvider;
+.implements Lcom/vk/im/engine/j/a;
 
 
 # static fields
-.field static final synthetic c:[Lkotlin/u/KProperty5;
+.field static final synthetic c:[Lkotlin/u/j;
 
 
 # instance fields
-.field private final a:Lkotlin/Lazy2;
+.field private final a:Lkotlin/e;
 
-.field private final b:Lkotlin/Lazy2;
+.field private final b:Lkotlin/e;
 
 
 # direct methods
@@ -24,11 +24,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/KProperty5;
+    new-array v1, v1, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -36,9 +36,9 @@
 
     const-string v5, "getDefaultTheme()Lcom/vk/im/engine/models/dialogs/DialogTheme;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
@@ -46,7 +46,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -54,15 +54,15 @@
 
     const-string v4, "getThemes()Ljava/util/Map;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/im/ui/themes/DefaultThemeProvider;->c:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/im/ui/themes/DefaultThemeProvider;->c:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -78,22 +78,22 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/im/ui/themes/DefaultThemeProvider$defaultTheme$2;-><init>(Lcom/vk/im/ui/themes/DefaultThemeProvider;Lcom/vk/core/ui/themes/VKThemeHelper;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->a:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->a:Lkotlin/e;
 
     .line 3
     new-instance p1, Lcom/vk/im/ui/themes/DefaultThemeProvider$themes$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/themes/DefaultThemeProvider$themes$2;-><init>(Lcom/vk/im/ui/themes/DefaultThemeProvider;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->b:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->b:Lkotlin/e;
 
     return-void
 .end method
@@ -107,77 +107,77 @@
     new-instance v28, Lcom/vk/im/engine/models/dialogs/BubbleColors;
 
     .line 19
-    sget v1, Lcom/vk/im/engine/R;->accent:I
+    sget v1, Lcom/vk/im/engine/h;->accent:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v2
 
     .line 20
-    sget v1, Lcom/vk/im/engine/R;->im_attach_tint:I
+    sget v1, Lcom/vk/im/engine/h;->im_attach_tint:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v3
 
     .line 21
-    sget v1, Lcom/vk/im/engine/R;->text_primary:I
+    sget v1, Lcom/vk/im/engine/h;->text_primary:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v4
 
     .line 22
-    sget v1, Lcom/vk/im/engine/R;->text_link:I
+    sget v1, Lcom/vk/im/engine/h;->text_link:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v5
 
     .line 23
-    sget v1, Lcom/vk/im/engine/R;->text_placeholder:I
+    sget v1, Lcom/vk/im/engine/h;->text_placeholder:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v6
 
     .line 24
-    sget v1, Lcom/vk/im/engine/R;->text_primary:I
+    sget v1, Lcom/vk/im/engine/h;->text_primary:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v7
 
     .line 25
-    sget v1, Lcom/vk/im/engine/R;->text_secondary:I
+    sget v1, Lcom/vk/im/engine/h;->text_secondary:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v8
 
     .line 26
-    sget v1, Lcom/vk/im/engine/R;->text_tertiary:I
+    sget v1, Lcom/vk/im/engine/h;->text_tertiary:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v9
 
     .line 27
-    sget v1, Lcom/vk/im/engine/R;->im_text_name:I
+    sget v1, Lcom/vk/im/engine/h;->im_text_name:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v10
 
     .line 28
-    sget v1, Lcom/vk/im/engine/R;->im_forward_line_tint:I
+    sget v1, Lcom/vk/im/engine/h;->im_forward_line_tint:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v13
 
     .line 29
-    sget v1, Lcom/vk/im/engine/R;->im_forward_line_tint:I
+    sget v1, Lcom/vk/im/engine/h;->im_forward_line_tint:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -186,7 +186,7 @@
     if-eqz p2, :cond_0
 
     .line 30
-    sget v1, Lcom/vk/im/engine/R;->im_bubble_incoming:I
+    sget v1, Lcom/vk/im/engine/h;->im_bubble_incoming:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -196,7 +196,7 @@
 
     .line 31
     :cond_0
-    sget v1, Lcom/vk/im/engine/R;->im_bubble_outgoing:I
+    sget v1, Lcom/vk/im/engine/h;->im_bubble_outgoing:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -208,7 +208,7 @@
     if-eqz p2, :cond_1
 
     .line 32
-    sget v1, Lcom/vk/im/engine/R;->im_bubble_incoming_highlighted:I
+    sget v1, Lcom/vk/im/engine/h;->im_bubble_incoming_highlighted:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -218,7 +218,7 @@
 
     .line 33
     :cond_1
-    sget v1, Lcom/vk/im/engine/R;->im_bubble_outgoing_highlighted:I
+    sget v1, Lcom/vk/im/engine/h;->im_bubble_outgoing_highlighted:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -230,7 +230,7 @@
     if-eqz p2, :cond_2
 
     .line 34
-    sget v1, Lcom/vk/im/engine/R;->im_bubble_wallpaper_incoming:I
+    sget v1, Lcom/vk/im/engine/h;->im_bubble_wallpaper_incoming:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -240,7 +240,7 @@
 
     .line 35
     :cond_2
-    sget v1, Lcom/vk/im/engine/R;->im_bubble_wallpaper_outgoing:I
+    sget v1, Lcom/vk/im/engine/h;->im_bubble_wallpaper_outgoing:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -252,7 +252,7 @@
     if-eqz p2, :cond_3
 
     .line 36
-    sget v1, Lcom/vk/im/engine/R;->im_bubble_wallpaper_incoming_highlighted:I
+    sget v1, Lcom/vk/im/engine/h;->im_bubble_wallpaper_incoming_highlighted:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -262,7 +262,7 @@
 
     .line 37
     :cond_3
-    sget v1, Lcom/vk/im/engine/R;->im_bubble_wallpaper_outgoing_highlighted:I
+    sget v1, Lcom/vk/im/engine/h;->im_bubble_wallpaper_outgoing_highlighted:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -272,49 +272,49 @@
     move/from16 v21, v1
 
     .line 38
-    sget v1, Lcom/vk/im/engine/R;->im_bubble_gift_background:I
+    sget v1, Lcom/vk/im/engine/h;->im_bubble_gift_background:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v18
 
     .line 39
-    sget v1, Lcom/vk/im/engine/R;->im_bubble_gift_background_highlighted:I
+    sget v1, Lcom/vk/im/engine/h;->im_bubble_gift_background_highlighted:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v19
 
     .line 40
-    sget v1, Lcom/vk/im/engine/R;->accent:I
+    sget v1, Lcom/vk/im/engine/h;->accent:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v17
 
     .line 41
-    sget v1, Lcom/vk/im/engine/R;->separator_alternate:I
+    sget v1, Lcom/vk/im/engine/h;->separator_alternate:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v22
 
     .line 42
-    sget v1, Lcom/vk/im/engine/R;->im_bubble_expiring:I
+    sget v1, Lcom/vk/im/engine/h;->im_bubble_expiring:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v23
 
     .line 43
-    sget v1, Lcom/vk/im/engine/R;->im_bubble_expiring_highlighted:I
+    sget v1, Lcom/vk/im/engine/h;->im_bubble_expiring_highlighted:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v24
 
     .line 44
-    sget v1, Lcom/vk/im/engine/R;->im_bubble_sending_status_tint_color:I
+    sget v1, Lcom/vk/im/engine/h;->im_bubble_sending_status_tint_color:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -331,7 +331,7 @@
     move-object/from16 v1, v28
 
     .line 45
-    invoke-direct/range {v1 .. v27}, Lcom/vk/im/engine/models/dialogs/BubbleColors;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v27}, Lcom/vk/im/engine/models/dialogs/BubbleColors;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIILkotlin/jvm/internal/i;)V
 
     return-object v28
 .end method
@@ -340,7 +340,7 @@
     .locals 10
 
     .line 2
-    sget-object p1, Lcom/vk/im/engine/models/dialogs/DialogThemeName$b;->INSTANCE:Lcom/vk/im/engine/models/dialogs/DialogThemeName$b;
+    sget-object p1, Lcom/vk/im/engine/models/dialogs/f$b;->d:Lcom/vk/im/engine/models/dialogs/f$b;
 
     .line 3
     invoke-static {}, Lcom/vk/core/ui/themes/VKTheme;->values()[Lcom/vk/core/ui/themes/VKTheme;
@@ -377,40 +377,40 @@
     invoke-direct {v7}, Landroid/util/SparseIntArray;-><init>()V
 
     .line 8
-    sget v8, Lcom/vk/im/engine/R;->accent:I
+    sget v8, Lcom/vk/im/engine/h;->accent:I
 
     invoke-static {v6, v8}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v9
 
-    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
 
     .line 9
-    sget v8, Lcom/vk/im/engine/R;->header_tint:I
+    sget v8, Lcom/vk/im/engine/h;->header_tint:I
 
     invoke-static {v6, v8}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v9
 
-    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
 
     .line 10
-    sget v8, Lcom/vk/im/engine/R;->header_text:I
+    sget v8, Lcom/vk/im/engine/h;->header_text:I
 
     invoke-static {v6, v8}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v9
 
-    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
 
     .line 11
-    sget v8, Lcom/vk/im/engine/R;->toolbar_title_textColor:I
+    sget v8, Lcom/vk/im/engine/h;->toolbar_title_textColor:I
 
     invoke-static {v6, v8}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result v9
 
-    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
 
     const/4 v8, 0x1
 
@@ -437,7 +437,7 @@
 
     invoke-direct {v9, v7, v8, v6}, Lcom/vk/im/engine/models/dialogs/DialogThemeImpl;-><init>(Landroid/util/SparseIntArray;Ljava/util/List;Ljava/util/List;)V
 
-    invoke-static {v5, v9}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v5, v9}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v5
 
@@ -457,7 +457,7 @@
     .line 17
     new-instance v1, Lcom/vk/im/engine/models/dialogs/DialogTheme;
 
-    invoke-direct {v1, p1, v0}, Lcom/vk/im/engine/models/dialogs/DialogTheme;-><init>(Lcom/vk/im/engine/models/dialogs/DialogThemeName;Ljava/util/Map;)V
+    invoke-direct {v1, p1, v0}, Lcom/vk/im/engine/models/dialogs/DialogTheme;-><init>(Lcom/vk/im/engine/models/dialogs/f;Ljava/util/Map;)V
 
     return-object v1
 .end method
@@ -481,21 +481,21 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lcom/vk/im/engine/models/dialogs/DialogThemeName;",
+            "Lcom/vk/im/engine/models/dialogs/f;",
             "Lcom/vk/im/engine/models/dialogs/DialogTheme;",
             ">;"
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->b:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->b:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/themes/DefaultThemeProvider;->c:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/themes/DefaultThemeProvider;->c:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -507,15 +507,15 @@
 .method public final b()Lcom/vk/im/engine/models/dialogs/DialogTheme;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->a:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->a:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/themes/DefaultThemeProvider;->c:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/themes/DefaultThemeProvider;->c:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

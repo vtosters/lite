@@ -12,19 +12,19 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/KProperty5;
+.field static final synthetic a:[Lkotlin/u/j;
 
-.field private static final b:Lkotlin/Lazy2;
+.field private static final b:Lkotlin/e;
 
-.field private static final c:Lkotlin/Lazy2;
+.field private static final c:Lkotlin/e;
 
-.field private static final d:Lkotlin/Lazy2;
+.field private static final d:Lkotlin/e;
 
-.field private static final e:Lkotlin/Lazy2;
+.field private static final e:Lkotlin/e;
 
-.field private static final f:Lkotlin/Lazy2;
+.field private static final f:Lkotlin/e;
 
-.field private static final g:Lkotlin/Lazy2;
+.field private static final g:Lkotlin/e;
 
 .field public static final h:Lcom/vk/core/utils/VerifyInfoHelper;
 
@@ -37,11 +37,11 @@
 
     const/4 v1, 0x6
 
-    new-array v1, v1, [Lkotlin/u/KProperty5;
+    new-array v1, v1, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -49,9 +49,9 @@
 
     const-string v5, "getColorLightBlue()I"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
@@ -59,7 +59,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -67,9 +67,9 @@
 
     const-string v5, "getColorAccentBlue()I"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x1
 
@@ -77,7 +77,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -85,9 +85,9 @@
 
     const-string v5, "getColorBlue200()I"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x2
 
@@ -95,7 +95,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -103,9 +103,9 @@
 
     const-string v5, "getColorFireOrange()I"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x3
 
@@ -113,7 +113,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -121,9 +121,9 @@
 
     const-string v5, "getColorWhite()I"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x4
 
@@ -131,7 +131,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -139,15 +139,15 @@
 
     const-string v4, "getColorProfile()I"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v0, 0x5
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/core/utils/VerifyInfoHelper;->a:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/core/utils/VerifyInfoHelper;->a:[Lkotlin/u/j;
 
     .line 1
     new-instance v0, Lcom/vk/core/utils/VerifyInfoHelper;
@@ -159,56 +159,56 @@
     .line 2
     sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper$colorLightBlue$2;->a:Lcom/vk/core/utils/VerifyInfoHelper$colorLightBlue$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->b:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->b:Lkotlin/e;
 
     .line 3
     sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper$colorAccentBlue$2;->a:Lcom/vk/core/utils/VerifyInfoHelper$colorAccentBlue$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->c:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->c:Lkotlin/e;
 
     .line 4
     sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper$colorBlue200$2;->a:Lcom/vk/core/utils/VerifyInfoHelper$colorBlue200$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->d:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->d:Lkotlin/e;
 
     .line 5
     sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper$colorFireOrange$2;->a:Lcom/vk/core/utils/VerifyInfoHelper$colorFireOrange$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->e:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->e:Lkotlin/e;
 
     .line 6
     sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper$colorWhite$2;->a:Lcom/vk/core/utils/VerifyInfoHelper$colorWhite$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->f:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->f:Lkotlin/e;
 
     .line 7
     sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper$colorProfile$2;->a:Lcom/vk/core/utils/VerifyInfoHelper$colorProfile$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->g:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->g:Lkotlin/e;
 
     return-void
 .end method
@@ -225,15 +225,15 @@
 .method private final a()I
     .locals 3
 
-    sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->c:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->c:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/core/utils/VerifyInfoHelper;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/core/utils/VerifyInfoHelper;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -308,15 +308,15 @@
 .method private final b()I
     .locals 3
 
-    sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->d:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->d:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/core/utils/VerifyInfoHelper;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/core/utils/VerifyInfoHelper;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -350,15 +350,15 @@
 .method private final c()I
     .locals 3
 
-    sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->e:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->e:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/core/utils/VerifyInfoHelper;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/core/utils/VerifyInfoHelper;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -374,15 +374,15 @@
 .method private final d()I
     .locals 3
 
-    sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->b:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->b:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/core/utils/VerifyInfoHelper;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/core/utils/VerifyInfoHelper;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -398,15 +398,15 @@
 .method private final e()I
     .locals 3
 
-    sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->g:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->g:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/core/utils/VerifyInfoHelper;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/core/utils/VerifyInfoHelper;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x5
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -422,15 +422,15 @@
 .method private final f()I
     .locals 3
 
-    sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->f:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->f:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/core/utils/VerifyInfoHelper;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/core/utils/VerifyInfoHelper;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x4
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -529,7 +529,7 @@
 
     if-eqz v0, :cond_0
 
-    sget p2, Lb/h/z/R8;->ic_fire_verified_border_composite_20_xml:I
+    sget p2, Lb/h/z/e;->ic_fire_verified_border_composite_20_xml:I
 
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -545,7 +545,7 @@
 
     if-eqz v0, :cond_1
 
-    sget p2, Lb/h/z/R8;->ic_fire_border_composite_20_xml:I
+    sget p2, Lb/h/z/e;->ic_fire_border_composite_20_xml:I
 
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -567,7 +567,7 @@
 
     if-eqz v0, :cond_2
 
-    sget p2, Lb/h/z/R8;->verified_badge_light_24:I
+    sget p2, Lb/h/z/e;->verified_badge_light_24:I
 
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -589,7 +589,7 @@
 
     if-eqz p2, :cond_3
 
-    sget p2, Lb/h/z/R8;->verified_badge_dark_24:I
+    sget p2, Lb/h/z/e;->verified_badge_dark_24:I
 
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -677,7 +677,7 @@
     if-eqz p1, :cond_0
 
     .line 13
-    sget p1, Lb/h/z/R8;->ic_fire_verified_12:I
+    sget p1, Lb/h/z/e;->ic_fire_verified_12:I
 
     .line 14
     invoke-virtual {p0, p4}, Lcom/vk/core/utils/VerifyInfoHelper;->b(Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;)I
@@ -690,7 +690,7 @@
     if-eqz p2, :cond_1
 
     .line 15
-    sget p1, Lb/h/z/R8;->ic_fire_12:I
+    sget p1, Lb/h/z/e;->ic_fire_12:I
 
     .line 16
     invoke-virtual {p0, p4}, Lcom/vk/core/utils/VerifyInfoHelper;->a(Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;)I
@@ -703,7 +703,7 @@
     if-eqz p1, :cond_2
 
     .line 17
-    sget p1, Lb/h/z/R8;->verified_12:I
+    sget p1, Lb/h/z/e;->verified_12:I
 
     .line 18
     invoke-virtual {p0, p4}, Lcom/vk/core/utils/VerifyInfoHelper;->c(Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;)I
@@ -712,13 +712,13 @@
 
     .line 19
     :goto_0
-    new-instance p4, Lcom/vk/core/drawable/RecoloredDrawable;
+    new-instance p4, Lcom/vk/core/drawable/i;
 
     invoke-static {p3, p1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    invoke-direct {p4, p1, p2}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {p4, p1, p2}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     return-object p4
 
@@ -756,7 +756,7 @@
 
     move-result-object p2
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, p2, p3}, Lcom/vk/core/utils/VerifyInfoHelper;->a(Landroid/content/Context;Lcom/vk/dto/common/VerifyInfo;)Landroid/graphics/drawable/Drawable;
 
@@ -769,7 +769,7 @@
 
     move-result-object p2
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, p2, p3}, Lcom/vk/core/utils/VerifyInfoHelper;->b(Landroid/content/Context;Lcom/vk/dto/common/VerifyInfo;)Landroid/graphics/drawable/Drawable;
 
@@ -831,7 +831,7 @@
 
     .line 25
     :goto_0
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -863,7 +863,7 @@
 
     if-eqz v0, :cond_0
 
-    sget p2, Lb/h/z/R8;->ic_fire_verified_border_composite_20_xml:I
+    sget p2, Lb/h/z/e;->ic_fire_verified_border_composite_20_xml:I
 
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -879,7 +879,7 @@
 
     if-eqz v0, :cond_1
 
-    sget p2, Lb/h/z/R8;->ic_fire_border_composite_20_xml:I
+    sget p2, Lb/h/z/e;->ic_fire_border_composite_20_xml:I
 
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -895,9 +895,9 @@
 
     if-eqz p2, :cond_2
 
-    new-instance p2, Lcom/vk/core/drawable/RecoloredDrawable;
+    new-instance p2, Lcom/vk/core/drawable/i;
 
-    sget v0, Lb/h/z/R8;->verified_16:I
+    sget v0, Lb/h/z/e;->verified_16:I
 
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -909,7 +909,7 @@
 
     move-result v0
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     move-object p1, p2
 
@@ -949,7 +949,7 @@
     if-eqz p1, :cond_0
 
     .line 7
-    sget p1, Lb/h/z/R8;->ic_fire_verified_16:I
+    sget p1, Lb/h/z/e;->ic_fire_verified_16:I
 
     .line 8
     invoke-virtual {p0, p4}, Lcom/vk/core/utils/VerifyInfoHelper;->b(Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;)I
@@ -962,7 +962,7 @@
     if-eqz p2, :cond_1
 
     .line 9
-    sget p1, Lb/h/z/R8;->ic_fire_16:I
+    sget p1, Lb/h/z/e;->ic_fire_16:I
 
     .line 10
     invoke-virtual {p0, p4}, Lcom/vk/core/utils/VerifyInfoHelper;->a(Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;)I
@@ -975,7 +975,7 @@
     if-eqz p1, :cond_2
 
     .line 11
-    sget p1, Lb/h/z/R8;->verified_16:I
+    sget p1, Lb/h/z/e;->verified_16:I
 
     .line 12
     invoke-virtual {p0, p4}, Lcom/vk/core/utils/VerifyInfoHelper;->c(Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;)I
@@ -984,13 +984,13 @@
 
     .line 13
     :goto_0
-    new-instance p4, Lcom/vk/core/drawable/RecoloredDrawable;
+    new-instance p4, Lcom/vk/core/drawable/i;
 
     invoke-static {p3, p1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    invoke-direct {p4, p1, p2}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {p4, p1, p2}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     return-object p4
 
@@ -1065,7 +1065,7 @@
 
     .line 5
     :cond_3
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result p1
 

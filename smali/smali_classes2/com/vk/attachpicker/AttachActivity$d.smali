@@ -3,7 +3,7 @@
 .source "AttachActivity.java"
 
 # interfaces
-.implements Lcom/vk/common/g/F0;
+.implements Lcom/vk/common/g/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/F0<",
+        "Lcom/vk/common/g/a<",
         "Lcom/vk/core/fragments/FragmentImpl;",
         ">;"
     }

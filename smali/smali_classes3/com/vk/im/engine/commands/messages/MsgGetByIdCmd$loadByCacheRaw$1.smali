@@ -3,12 +3,12 @@
 .source "MsgGetByIdCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$a;
+    value = Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
         "Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$a;",
         ">;"
@@ -28,18 +28,18 @@
 
 
 # instance fields
-.field final synthetic $msgIds:Lcom/vk/im/engine/utils/collection/IntCollection;
+.field final synthetic $msgIds:Lcom/vk/im/engine/utils/collection/d;
 
 .field final synthetic $type:Lcom/vk/im/engine/models/messages/MsgIdType;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;)V
+.method constructor <init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$loadByCacheRaw$1;->$type:Lcom/vk/im/engine/models/messages/MsgIdType;
 
-    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$loadByCacheRaw$1;->$msgIds:Lcom/vk/im/engine/utils/collection/IntCollection;
+    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$loadByCacheRaw$1;->$msgIds:Lcom/vk/im/engine/utils/collection/d;
 
     const/4 p1, 0x1
 
@@ -77,9 +77,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$loadByCacheRaw$1;->$msgIds:Lcom/vk/im/engine/utils/collection/IntCollection;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$loadByCacheRaw$1;->$msgIds:Lcom/vk/im/engine/utils/collection/d;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->e(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->e(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object v0
 
@@ -98,19 +98,19 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$loadByCacheRaw$1;->$msgIds:Lcom/vk/im/engine/utils/collection/IntCollection;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$loadByCacheRaw$1;->$msgIds:Lcom/vk/im/engine/utils/collection/d;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->d(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->d(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object v0
 
     .line 4
     :goto_0
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->d()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
 
     move-result p1
 

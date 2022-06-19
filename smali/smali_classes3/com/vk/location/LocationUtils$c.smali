@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/location/LocationUtils;->a(Landroid/content/Context;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/location/LocationUtils;->a(Landroid/content/Context;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Landroid/content/Context;
 
-.field final synthetic b:Lkotlin/jvm/b/Functions;
+.field final synthetic b:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/location/LocationUtils$c;->a:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/location/LocationUtils$c;->b:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/location/LocationUtils$c;->b:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,15 +53,15 @@
     invoke-virtual {p1, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/location/LocationUtils$c;->b:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/location/LocationUtils$c;->b:Lkotlin/jvm/b/a;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_0
     return-void

@@ -24,7 +24,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/httpexecutor/api/exceptions/HttpRedirectException$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/httpexecutor/api/exceptions/HttpRedirectException$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const-wide v0, 0x44d1fe803081b9f3L    # 3.398997609159103E23
 

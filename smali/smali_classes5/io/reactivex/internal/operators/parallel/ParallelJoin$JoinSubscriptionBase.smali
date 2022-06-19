@@ -3,7 +3,7 @@
 .source "ParallelJoin.java"
 
 # interfaces
-.implements Le/b/Subscription;
+.implements Le/b/d;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Le/b/Subscription;"
+        "Le/b/d;"
     }
 .end annotation
 
@@ -36,10 +36,10 @@
 
 .field final done:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field final downstream:Le/b/Subscriber;
+.field final downstream:Le/b/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Le/b/Subscriber<",
+            "Le/b/c<",
             "-TT;>;"
         }
     .end annotation
@@ -61,12 +61,12 @@
 
 
 # direct methods
-.method constructor <init>(Le/b/Subscriber;II)V
+.method constructor <init>(Le/b/c;II)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/Subscriber<",
+            "Le/b/c<",
             "-TT;>;II)V"
         }
     .end annotation
@@ -96,7 +96,7 @@
     iput-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionBase;->done:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 5
-    iput-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionBase;->downstream:Le/b/Subscriber;
+    iput-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionBase;->downstream:Le/b/c;
 
     .line 6
     new-array p1, p2, [Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;
@@ -170,7 +170,7 @@
     .line 2
     iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionBase;->requested:Ljava/util/concurrent/atomic/AtomicLong;
 
-    invoke-static {v0, p1, p2}, Lio/reactivex/internal/util/BackpressureHelper;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+    invoke-static {v0, p1, p2}, Lio/reactivex/internal/util/b;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
     .line 3
     invoke-virtual {p0}, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionBase;->c()V
@@ -210,7 +210,7 @@
     const/4 v4, 0x0
 
     .line 2
-    iput-object v4, v3, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->queue:Lc/a/a0/b/SimplePlainQueue;
+    iput-object v4, v3, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->queue:Lc/a/a0/b/j;
 
     add-int/lit8 v2, v2, 0x1
 

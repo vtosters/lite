@@ -71,7 +71,7 @@
     invoke-static {p1}, Lcom/vtosters/lite/data/PurchasesManager;->a(Lcom/android/vending/billing/IInAppBillingService;)Lcom/android/vending/billing/IInAppBillingService;
 
     .line 3
-    invoke-static {}, Lcom/vtosters/lite/data/PurchasesManager;->b()Lio/reactivex/subjects/BehaviorSubject;
+    invoke-static {}, Lcom/vtosters/lite/data/PurchasesManager;->b()Lio/reactivex/subjects/a;
 
     move-result-object p1
 
@@ -79,7 +79,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lio/reactivex/subjects/BehaviorSubject;->b(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lio/reactivex/subjects/a;->b(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -124,7 +124,7 @@
     invoke-static {p1}, Lcom/vtosters/lite/data/PurchasesManager;->a(Lcom/android/vending/billing/IInAppBillingService;)Lcom/android/vending/billing/IInAppBillingService;
 
     .line 3
-    invoke-static {}, Lcom/vtosters/lite/data/PurchasesManager;->b()Lio/reactivex/subjects/BehaviorSubject;
+    invoke-static {}, Lcom/vtosters/lite/data/PurchasesManager;->b()Lio/reactivex/subjects/a;
 
     move-result-object p1
 
@@ -132,7 +132,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/subjects/BehaviorSubject;->b(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lio/reactivex/subjects/a;->b(Ljava/lang/Object;)V
 
     return-void
 .end method

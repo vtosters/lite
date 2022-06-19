@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lb/h/g/k/VKProgressDialog;
+.field private final synthetic a:Lb/h/g/k/a;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lb/h/g/k/VKProgressDialog;)V
+.method public synthetic constructor <init>(Lb/h/g/k/a;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/a0;->a:Lb/h/g/k/VKProgressDialog;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/a0;->a:Lb/h/g/k/a;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/a0;->a:Lb/h/g/k/VKProgressDialog;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/a0;->a:Lb/h/g/k/a;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/SettingsGeneralFragment;->a(Lb/h/g/k/VKProgressDialog;)V
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/z1;->a(Lb/h/g/k/a;)V
 
     return-void
 .end method

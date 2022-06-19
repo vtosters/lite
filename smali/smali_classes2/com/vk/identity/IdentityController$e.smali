@@ -3,7 +3,7 @@
 .source "IdentityController.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
+.implements Lcom/vk/core/dialogs/bottomsheet/h$d;
 
 
 # annotations

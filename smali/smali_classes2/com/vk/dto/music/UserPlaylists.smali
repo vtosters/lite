@@ -3,7 +3,7 @@
 .source "UserPlaylists.kt"
 
 # interfaces
-.implements Lcom/vk/core/serialize/JSONSerialize;
+.implements Lcom/vk/core/serialize/a;
 
 
 # instance fields
@@ -54,7 +54,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/dto/music/UserPlaylists$toJSONObject$1;-><init>(Lcom/vk/dto/music/UserPlaylists;)V
 
-    invoke-static {v0}, Lcom/vk/dto/common/data/JsonObj1;->a(Lkotlin/jvm/b/Functions2;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lcom/vk/dto/common/data/b;->a(Lkotlin/jvm/b/b;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -102,7 +102,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/music/UserPlaylists;->a:Lcom/vk/dto/common/data/VKList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -112,7 +112,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/music/UserPlaylists;->b:Lcom/vk/dto/music/PlaylistOwner;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

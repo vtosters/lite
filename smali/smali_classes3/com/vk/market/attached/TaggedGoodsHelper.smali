@@ -32,7 +32,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;IILjava/lang/String;Lcom/vk/dto/tags/Tag$ContentType;Lkotlin/jvm/b/Functions2;)V
+.method public final a(Landroid/content/Context;IILjava/lang/String;Lcom/vk/dto/tags/Tag$ContentType;Lkotlin/jvm/b/b;)V
     .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -41,10 +41,10 @@
             "II",
             "Ljava/lang/String;",
             "Lcom/vk/dto/tags/Tag$ContentType;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/dto/tags/Tag;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -52,9 +52,9 @@
     move-object/from16 v0, p6
 
     .line 1
-    new-instance v1, Lcom/vk/market/attached/TaggedGoodsHelper1;
+    new-instance v1, Lcom/vk/market/attached/b;
 
-    invoke-direct {v1, v0}, Lcom/vk/market/attached/TaggedGoodsHelper1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v1, v0}, Lcom/vk/market/attached/b;-><init>(Lkotlin/jvm/b/b;)V
 
     .line 2
     invoke-static {p1}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -74,12 +74,12 @@
 
     const-string v4, "view"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     new-instance v11, Lcom/vk/market/attached/TaggedGoodsHelper$showTaggedGoodsDialog$controller$1;
 
-    invoke-direct {v11, v1}, Lcom/vk/market/attached/TaggedGoodsHelper$showTaggedGoodsDialog$controller$1;-><init>(Lcom/vk/market/attached/TaggedGoodsHelper1;)V
+    invoke-direct {v11, v1}, Lcom/vk/market/attached/TaggedGoodsHelper$showTaggedGoodsDialog$controller$1;-><init>(Lcom/vk/market/attached/b;)V
 
     move-object v6, v2
 
@@ -92,7 +92,7 @@
     move-object/from16 v10, p5
 
     .line 5
-    invoke-virtual/range {v5 .. v11}, Lcom/vk/market/attached/TaggedGoodsViewController$Companion;->a(Landroid/view/View;IILjava/lang/String;Lcom/vk/dto/tags/Tag$ContentType;Lkotlin/jvm/b/Functions2;)Lcom/vk/market/attached/TaggedGoodsViewController;
+    invoke-virtual/range {v5 .. v11}, Lcom/vk/market/attached/TaggedGoodsViewController$Companion;->a(Landroid/view/View;IILjava/lang/String;Lcom/vk/dto/tags/Tag$ContentType;Lkotlin/jvm/b/b;)Lcom/vk/market/attached/TaggedGoodsViewController;
 
     move-result-object v4
 
@@ -102,50 +102,50 @@
     .line 7
     new-instance v4, Lcom/vk/market/attached/TaggedGoodsHelper$a;
 
-    invoke-direct {v4, v0}, Lcom/vk/market/attached/TaggedGoodsHelper$a;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v4, v0}, Lcom/vk/market/attached/TaggedGoodsHelper$a;-><init>(Lkotlin/jvm/b/b;)V
 
     .line 8
-    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     move-object v5, p1
 
-    invoke-direct {v0, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     const v5, 0x7f120a6c
 
     .line 9
-    invoke-virtual {v0, v5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v0, v5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 10
-    invoke-virtual {v0, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v0, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 11
-    new-instance v2, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy3;
+    new-instance v2, Lcom/vk/core/dialogs/bottomsheet/i;
 
-    invoke-direct {v2}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy3;-><init>()V
+    invoke-direct {v2}, Lcom/vk/core/dialogs/bottomsheet/i;-><init>()V
 
-    invoke-virtual {v0, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v0, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 v2, 0x1
 
     .line 12
-    invoke-virtual {v0, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Z)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v0, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Z)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 v5, 0x0
 
     .line 13
-    invoke-virtual {v0, v5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->f(Z)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v0, v5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->f(Z)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 14
-    invoke-virtual {v0, v4}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v0, v4}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$d;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 15
-    invoke-static {v0, v3, v2, v3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-static {v0, v3, v2, v3}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object v0
 
     .line 16
-    invoke-virtual {v1, v0}, Lcom/vk/market/attached/TaggedGoodsHelper1;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+    invoke-virtual {v1, v0}, Lcom/vk/market/attached/b;->a(Lcom/vk/core/dialogs/bottomsheet/e;)V
 
     return-void
 .end method

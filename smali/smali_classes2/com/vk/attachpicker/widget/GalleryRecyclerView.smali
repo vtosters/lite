@@ -129,14 +129,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/attachpicker/adapter/PhotoSmallAdapter;
+    check-cast v0, Lcom/vk/attachpicker/adapter/e;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/adapter/PhotoSmallAdapter;->k()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/adapter/e;->k()I
 
     move-result v4
 
     .line 11
-    new-instance v0, Lcom/vk/attachpicker/widget/GridItemDecoration;
+    new-instance v0, Lcom/vk/attachpicker/widget/h;
 
     iget v2, p0, Lcom/vk/attachpicker/widget/GalleryRecyclerView;->a:I
 
@@ -146,7 +146,7 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/attachpicker/widget/GridItemDecoration;-><init>(IIIIZ)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/attachpicker/widget/h;-><init>(IIIIZ)V
 
     invoke-direct {p0, v0}, Lcom/vk/attachpicker/widget/GalleryRecyclerView;->setItemDecorator(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 

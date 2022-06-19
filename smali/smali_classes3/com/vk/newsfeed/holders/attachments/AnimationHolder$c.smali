@@ -40,7 +40,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder$c;->a:Lcom/vk/newsfeed/holders/attachments/AnimationHolder;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->b(Lcom/vk/newsfeed/holders/attachments/AnimationHolder;)Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;
+    invoke-static {p1}, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->b(Lcom/vk/newsfeed/holders/attachments/AnimationHolder;)Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;
 
     move-result-object p1
 
@@ -48,11 +48,11 @@
 
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder$c;->a:Lcom/vk/newsfeed/holders/attachments/AnimationHolder;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;->b(Lcom/vk/dto/common/Attachment;)V
+    invoke-interface {p1, v0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;->b(Lcom/vk/dto/common/Attachment;)V
 
     :cond_0
     return-void

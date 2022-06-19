@@ -29,7 +29,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 4
-    invoke-static {p1}, Lcom/facebook/internal/Utility;->a(Landroid/os/Parcel;)Ljava/util/Map;
+    invoke-static {p1}, Lcom/facebook/internal/r;->a(Landroid/os/Parcel;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -64,7 +64,7 @@
 
     const-string v4, "com.facebook.platform.extra.EXPIRES_SECONDS_SINCE_EPOCH"
 
-    invoke-static {v0, v4, v1}, Lcom/facebook/internal/Utility;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/util/Date;)Ljava/util/Date;
+    invoke-static {v0, v4, v1}, Lcom/facebook/internal/r;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/util/Date;)Ljava/util/Date;
 
     move-result-object v13
 
@@ -89,12 +89,12 @@
 
     const-string v2, "com.facebook.platform.extra.EXTRA_DATA_ACCESS_EXPIRATION_TIME"
 
-    invoke-static {v0, v2, v1}, Lcom/facebook/internal/Utility;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/util/Date;)Ljava/util/Date;
+    invoke-static {v0, v2, v1}, Lcom/facebook/internal/r;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/util/Date;)Ljava/util/Date;
 
     move-result-object v15
 
     .line 11
-    invoke-static {v6}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
+    invoke-static {v6}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -165,7 +165,7 @@
 
     const-string v2, "expires_in"
 
-    invoke-static {p1, v2, v1}, Lcom/facebook/internal/Utility;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/util/Date;)Ljava/util/Date;
+    invoke-static {p1, v2, v1}, Lcom/facebook/internal/r;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/util/Date;)Ljava/util/Date;
 
     move-result-object v11
 
@@ -185,7 +185,7 @@
 
     const-string v2, "data_access_expiration_time"
 
-    invoke-static {p1, v2, v1}, Lcom/facebook/internal/Utility;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/util/Date;)Ljava/util/Date;
+    invoke-static {p1, v2, v1}, Lcom/facebook/internal/r;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/util/Date;)Ljava/util/Date;
 
     move-result-object v13
 
@@ -197,7 +197,7 @@
     move-result-object v1
 
     .line 18
-    invoke-static {v1}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -235,7 +235,7 @@
     move-result-object v1
 
     .line 22
-    invoke-static {v1}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -273,7 +273,7 @@
     move-result-object v1
 
     .line 26
-    invoke-static {v1}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -302,7 +302,7 @@
 
     .line 29
     :goto_2
-    invoke-static {v4}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -605,7 +605,7 @@
     move-result-object v0
 
     .line 2
-    new-instance v1, Lcom/facebook/appevents/InternalAppEventsLogger;
+    new-instance v1, Lcom/facebook/appevents/h;
 
     iget-object v2, p0, Lcom/facebook/login/LoginMethodHandler;->b:Lcom/facebook/login/LoginClient;
 
@@ -614,7 +614,7 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2, v0}, Lcom/facebook/appevents/InternalAppEventsLogger;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v0}, Lcom/facebook/appevents/h;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 4
     new-instance v2, Landroid/os/Bundle;
@@ -646,7 +646,7 @@
     const/4 v0, 0x0
 
     .line 9
-    invoke-virtual {v1, p1, v0, v2}, Lcom/facebook/appevents/InternalAppEventsLogger;->a(Ljava/lang/String;Ljava/lang/Double;Landroid/os/Bundle;)V
+    invoke-virtual {v1, p1, v0, v2}, Lcom/facebook/appevents/h;->a(Ljava/lang/String;Ljava/lang/Double;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -657,7 +657,7 @@
     .line 1
     iget-object p2, p0, Lcom/facebook/login/LoginMethodHandler;->a:Ljava/util/Map;
 
-    invoke-static {p1, p2}, Lcom/facebook/internal/Utility;->a(Landroid/os/Parcel;Ljava/util/Map;)V
+    invoke-static {p1, p2}, Lcom/facebook/internal/r;->a(Landroid/os/Parcel;Ljava/util/Map;)V
 
     return-void
 .end method

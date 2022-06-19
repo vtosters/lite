@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -39,7 +39,7 @@
     .locals 2
 
     .line 1
-    sget v0, Lcom/vk/im/ui/R13;->vkim_msg_part_call:I
+    sget v0, Lcom/vk/im/ui/j;->vkim_msg_part_call:I
 
     const/4 v1, 0x0
 

@@ -1,9 +1,9 @@
 .class public Lcom/facebook/drawee/drawable/RoundedCornersDrawable;
-.super Lcom/facebook/drawee/drawable/ForwardingDrawable;
+.super Lcom/facebook/drawee/drawable/h;
 .source "RoundedCornersDrawable.java"
 
 # interfaces
-.implements Lcom/facebook/drawee/drawable/Rounded;
+.implements Lcom/facebook/drawee/drawable/l;
 
 
 # annotations
@@ -53,11 +53,11 @@
     .locals 1
 
     .line 1
-    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {p0, p1}, Lcom/facebook/drawee/drawable/ForwardingDrawable;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0, p1}, Lcom/facebook/drawee/drawable/h;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     .line 2
     sget-object p1, Lcom/facebook/drawee/drawable/RoundedCornersDrawable$Type;->OVERLAY_COLOR:Lcom/facebook/drawee/drawable/RoundedCornersDrawable$Type;
@@ -465,7 +465,7 @@
     :goto_0
     const-string v3, "radii should have exactly 8 values"
 
-    invoke-static {v0, v3}, Lcom/facebook/common/internal/Preconditions;->a(ZLjava/lang/Object;)V
+    invoke-static {v0, v3}, Lcom/facebook/common/internal/g;->a(ZLjava/lang/Object;)V
 
     .line 6
     iget-object v0, p0, Lcom/facebook/drawee/drawable/RoundedCornersDrawable;->B:[F
@@ -617,7 +617,7 @@
     invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
 
     .line 13
-    invoke-super {p0, p1}, Lcom/facebook/drawee/drawable/ForwardingDrawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Lcom/facebook/drawee/drawable/h;->draw(Landroid/graphics/Canvas;)V
 
     .line 14
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
@@ -626,7 +626,7 @@
 
     .line 15
     :cond_2
-    invoke-super {p0, p1}, Lcom/facebook/drawee/drawable/ForwardingDrawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Lcom/facebook/drawee/drawable/h;->draw(Landroid/graphics/Canvas;)V
 
     .line 16
     :goto_1
@@ -807,7 +807,7 @@
     invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
 
     .line 31
-    invoke-super {p0, p1}, Lcom/facebook/drawee/drawable/ForwardingDrawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Lcom/facebook/drawee/drawable/h;->draw(Landroid/graphics/Canvas;)V
 
     .line 32
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
@@ -862,7 +862,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Lcom/facebook/drawee/drawable/ForwardingDrawable;->onBoundsChange(Landroid/graphics/Rect;)V
+    invoke-super {p0, p1}, Lcom/facebook/drawee/drawable/h;->onBoundsChange(Landroid/graphics/Rect;)V
 
     .line 2
     invoke-direct {p0}, Lcom/facebook/drawee/drawable/RoundedCornersDrawable;->d()V

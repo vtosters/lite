@@ -3,12 +3,12 @@
 .source "ImEngineProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6;->invoke()Lcom/vtosters/lite/im/converters/ImPhotoConverter;
+    value = Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6;->invoke()Lcom/vtosters/lite/im/converters/a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -66,11 +66,11 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6$1;->this$0:Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6;
 
-    iget-object v1, v0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6;->$sp:Lkotlin/Lazy2;
+    iget-object v1, v0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6;->$sp:Lkotlin/e;
 
-    iget-object v0, v0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6;->$sp$metadata:Lkotlin/u/KProperty5;
+    iget-object v0, v0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6;->$sp$metadata:Lkotlin/u/j;
 
-    invoke-interface {v1}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

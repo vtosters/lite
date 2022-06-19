@@ -3,7 +3,7 @@
 .source "DynamicGridLayout.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/catalog2/core/ui/view/c;",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;)I
+.method public final a(Lcom/vk/catalog2/core/ui/view/c;)I
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;->b()I
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/ui/view/c;->b()I
 
     move-result p1
 
@@ -75,12 +75,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 1
 
-    const-class v0, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;
+    const-class v0, Lcom/vk/catalog2/core/ui/view/c;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -99,9 +99,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;
+    check-cast p1, Lcom/vk/catalog2/core/ui/view/c;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/ui/view/Grid$height$1;->a(Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;)I
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/ui/view/Grid$height$1;->a(Lcom/vk/catalog2/core/ui/view/c;)I
 
     move-result p1
 

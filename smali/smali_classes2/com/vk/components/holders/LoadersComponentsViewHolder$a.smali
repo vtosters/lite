@@ -75,13 +75,13 @@
     .line 4
     iget-object v0, p0, Lcom/vk/components/holders/LoadersComponentsViewHolder$a;->a:Lcom/vk/components/holders/LoadersComponentsViewHolder;
 
-    invoke-static {v0}, Lcom/vk/components/holders/LoadersComponentsViewHolder;->a(Lcom/vk/components/holders/LoadersComponentsViewHolder;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0}, Lcom/vk/components/holders/LoadersComponentsViewHolder;->a(Lcom/vk/components/holders/LoadersComponentsViewHolder;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 5
     :cond_0
@@ -94,16 +94,16 @@
     .line 6
     sget-object v5, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {v3, v4, v5}, Lio/reactivex/Observable;->i(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
+    invoke-static {v3, v4, v5}, Lc/a/m;->i(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
 
     move-result-object v3
 
     .line 7
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {v3, v4}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object v3
 
@@ -112,11 +112,11 @@
 
     invoke-direct {v4, p0, p1, v1, v2}, Lcom/vk/components/holders/LoadersComponentsViewHolder$a$a;-><init>(Lcom/vk/components/holders/LoadersComponentsViewHolder$a;Lkotlin/jvm/internal/Ref$IntRef;II)V
 
-    invoke-virtual {v3, v4}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v3, v4}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/components/holders/LoadersComponentsViewHolder;->a(Lcom/vk/components/holders/LoadersComponentsViewHolder;Lio/reactivex/disposables/Disposable;)V
+    invoke-static {v0, p1}, Lcom/vk/components/holders/LoadersComponentsViewHolder;->a(Lcom/vk/components/holders/LoadersComponentsViewHolder;Lio/reactivex/disposables/b;)V
 
     return-void
 .end method

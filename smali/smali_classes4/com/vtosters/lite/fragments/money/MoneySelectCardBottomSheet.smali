@@ -13,17 +13,17 @@
 
 
 # instance fields
-.field private a:Lcom/vtosters/lite/ui/adapters/MoneySelectCardAdapter;
+.field private a:Lcom/vtosters/lite/ui/adapters/d;
 
-.field private b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+.field private b:Lcom/vk/core/dialogs/bottomsheet/e;
 
-.field private final c:Lcom/vtosters/lite/ui/c0/d/AddCardItem;
+.field private final c:Lcom/vtosters/lite/ui/c0/d/a;
 
 .field private final d:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/common/i/RecyclerItem;",
+            "Lcom/vk/common/i/b;",
             ">;"
         }
     .end annotation
@@ -38,7 +38,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -50,11 +50,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vtosters/lite/ui/c0/d/AddCardItem;
+    new-instance v0, Lcom/vtosters/lite/ui/c0/d/a;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/ui/c0/d/AddCardItem;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/ui/c0/d/a;-><init>()V
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->c:Lcom/vtosters/lite/ui/c0/d/AddCardItem;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->c:Lcom/vtosters/lite/ui/c0/d/a;
 
     .line 3
     new-instance v0, Ljava/util/ArrayList;
@@ -66,11 +66,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+.method public static final synthetic a(Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/e;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/e;
 
     if-eqz p0, :cond_0
 
@@ -79,7 +79,7 @@
     :cond_0
     const-string p0, "modalBottomSheet"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -90,46 +90,46 @@
     .locals 3
 
     .line 7
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->a:Lcom/vtosters/lite/ui/adapters/MoneySelectCardAdapter;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->a:Lcom/vtosters/lite/ui/adapters/d;
 
     if-eqz v0, :cond_0
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->d:Ljava/util/List;
 
-    iget-object v2, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->c:Lcom/vtosters/lite/ui/c0/d/AddCardItem;
+    iget-object v2, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->c:Lcom/vtosters/lite/ui/c0/d/a;
 
     invoke-static {v1, v2}, Lkotlin/collections/l;->a(Ljava/util/Collection;Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
 
     return-void
 
     :cond_0
     const-string v0, "adapter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+.method public static final synthetic a(Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;Lcom/vk/core/dialogs/bottomsheet/e;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;Lcom/vtosters/lite/ui/adapters/MoneySelectCardAdapter;)V
+.method public static final synthetic a(Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;Lcom/vtosters/lite/ui/adapters/d;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->a:Lcom/vtosters/lite/ui/adapters/MoneySelectCardAdapter;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->a:Lcom/vtosters/lite/ui/adapters/d;
 
     return-void
 .end method
@@ -213,17 +213,17 @@
     .line 7
     iget-object v2, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->d:Ljava/util/List;
 
-    new-instance v3, Lcom/vtosters/lite/ui/c0/d/CardItem;
+    new-instance v3, Lcom/vtosters/lite/ui/c0/d/b;
 
     invoke-virtual {v1}, Lcom/vk/dto/money/MoneyCard;->getId()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
-    invoke-direct {v3, v1, v4}, Lcom/vtosters/lite/ui/c0/d/CardItem;-><init>(Lcom/vk/dto/money/MoneyCard;Z)V
+    invoke-direct {v3, v1, v4}, Lcom/vtosters/lite/ui/c0/d/b;-><init>(Lcom/vk/dto/money/MoneyCard;Z)V
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -239,20 +239,20 @@
     .locals 2
 
     .line 6
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/e;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->a(Ljava/lang/String;Landroidx/fragment/app/FragmentManager;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/core/dialogs/bottomsheet/e;->a(Ljava/lang/String;Landroidx/fragment/app/FragmentManager;)V
 
     return-void
 
     :cond_0
     const-string p1, "modalBottomSheet"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method

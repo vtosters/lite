@@ -15,14 +15,14 @@
 
 
 # virtual methods
-.method public abstract getAccessToken(Ljava/lang/String;Ljava/lang/String;)Lretrofit2/Call;
+.method public abstract getAccessToken(Ljava/lang/String;Ljava/lang/String;)Lf/b;
     .param p1    # Ljava/lang/String;
-        .annotation runtime Lf/q/Header;
+        .annotation runtime Lf/q/h;
             value = "Authorization"
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation runtime Lf/q/Query;
+        .annotation runtime Lf/q/r;
             value = "oauth_verifier"
         .end annotation
     .end param
@@ -32,20 +32,20 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ")",
-            "Lretrofit2/Call<",
-            "Lokhttp3/ResponseBody;",
+            "Lf/b<",
+            "Lokhttp3/c0;",
             ">;"
         }
     .end annotation
 
-    .annotation runtime Lf/q/POST;
+    .annotation runtime Lf/q/m;
         value = "/oauth/access_token"
     .end annotation
 .end method
 
-.method public abstract getTempToken(Ljava/lang/String;)Lretrofit2/Call;
+.method public abstract getTempToken(Ljava/lang/String;)Lf/b;
     .param p1    # Ljava/lang/String;
-        .annotation runtime Lf/q/Header;
+        .annotation runtime Lf/q/h;
             value = "Authorization"
         .end annotation
     .end param
@@ -54,13 +54,13 @@
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lretrofit2/Call<",
-            "Lokhttp3/ResponseBody;",
+            "Lf/b<",
+            "Lokhttp3/c0;",
             ">;"
         }
     .end annotation
 
-    .annotation runtime Lf/q/POST;
+    .annotation runtime Lf/q/m;
         value = "/oauth/request_token"
     .end annotation
 .end method

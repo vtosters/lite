@@ -56,7 +56,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$l;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-static {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->d(Lcom/vtosters/lite/audio/player/PlayerAdapter;)Lcom/vtosters/lite/audio/player/OldPlayerListenerAdapter;
+    invoke-static {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->d(Lcom/vtosters/lite/audio/player/PlayerAdapter;)Lcom/vtosters/lite/audio/player/t;
 
     move-result-object v0
 
@@ -67,19 +67,19 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/player/OldPlayerListenerAdapter;->b(Lcom/vk/audioipc/core/AudioPlayerListener;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/player/t;->b(Lcom/vk/audioipc/core/e;)V
 
     .line 4
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/OldPlayerListenerAdapter;->g()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/t;->g()V
 
     .line 5
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$l;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->B()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->B()V
 
     .line 6
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$l;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;

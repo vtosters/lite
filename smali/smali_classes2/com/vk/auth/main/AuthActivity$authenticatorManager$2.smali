@@ -3,7 +3,7 @@
 .source "AuthActivity.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/auth/main/AuthenticatorManager;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/auth/main/j;",
         ">;"
     }
 .end annotation
@@ -45,15 +45,15 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/auth/main/AuthenticatorManager;
+.method public final invoke()Lcom/vk/auth/main/j;
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/auth/main/AuthenticatorManager;
+    new-instance v0, Lcom/vk/auth/main/j;
 
     iget-object v1, p0, Lcom/vk/auth/main/AuthActivity$authenticatorManager$2;->this$0:Lcom/vk/auth/main/AuthActivity;
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/main/AuthenticatorManager;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/main/j;-><init>(Landroid/app/Activity;)V
 
     return-object v0
 .end method
@@ -62,7 +62,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/main/AuthActivity$authenticatorManager$2;->invoke()Lcom/vk/auth/main/AuthenticatorManager;
+    invoke-virtual {p0}, Lcom/vk/auth/main/AuthActivity$authenticatorManager$2;->invoke()Lcom/vk/auth/main/j;
 
     move-result-object v0
 

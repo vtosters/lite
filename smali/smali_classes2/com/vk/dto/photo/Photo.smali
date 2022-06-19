@@ -20,10 +20,10 @@
 
 .field public static final c0:[C
 
-.field public static final d0:Lcom/vk/dto/common/data/JsonParser;
+.field public static final d0:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/dto/photo/Photo;",
             ">;"
         }
@@ -62,7 +62,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/photo/PhotoTag;",
+            "Lcom/vk/dto/photo/a;",
             ">;"
         }
     .end annotation
@@ -164,7 +164,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/photo/Photo$b;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/photo/Photo;->d0:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/dto/photo/Photo;->d0:Lcom/vk/dto/common/data/c;
 
     return-void
 
@@ -1223,7 +1223,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lb/h/g/i/ImageSizeExt;->a(Ljava/lang/Iterable;)Lcom/vk/dto/common/ImageSize;
+    invoke-static {p1}, Lb/h/g/i/a;->a(Ljava/lang/Iterable;)Lcom/vk/dto/common/ImageSize;
 
     move-result-object p1
 

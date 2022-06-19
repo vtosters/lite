@@ -3,7 +3,7 @@
 .source "PhotosLikeHeaderBlockViewHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result p1
 
@@ -59,43 +59,43 @@
     if-eqz p1, :cond_0
 
     .line 2
-    new-instance p1, Lcom/vk/feedlikes/d/FeedLikesPhotoFragment$a;
+    new-instance p1, Lcom/vk/feedlikes/d/c$a;
 
-    invoke-direct {p1}, Lcom/vk/feedlikes/d/FeedLikesPhotoFragment$a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/feedlikes/d/c$a;-><init>()V
 
     iget-object v1, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder$1;->this$0:Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;
 
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    new-instance p1, Lcom/vk/feedlikes/d/FavePhotoListFragment$a;
+    new-instance p1, Lcom/vk/feedlikes/d/a$a;
 
-    invoke-direct {p1}, Lcom/vk/feedlikes/d/FavePhotoListFragment$a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/feedlikes/d/a$a;-><init>()V
 
-    invoke-virtual {p1}, Lcom/vk/feedlikes/d/FavePhotoListFragment$a;->h()Lcom/vk/feedlikes/d/FavePhotoListFragment$a;
+    invoke-virtual {p1}, Lcom/vk/feedlikes/d/a$a;->h()Lcom/vk/feedlikes/d/a$a;
 
     iget-object v1, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder$1;->this$0:Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;
 
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     :goto_0
     return-void
@@ -109,7 +109,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

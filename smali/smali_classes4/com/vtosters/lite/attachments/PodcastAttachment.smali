@@ -3,9 +3,9 @@
 .source "PodcastAttachment.kt"
 
 # interfaces
-.implements Lb/h/h/f/Favable;
-.implements Lcom/vk/dto/common/WithOwner;
-.implements Lcom/vk/dto/attachments/ImageAttachment;
+.implements Lb/h/h/f/a;
+.implements Lcom/vk/dto/common/k;
+.implements Lcom/vk/dto/attachments/b;
 
 
 # annotations
@@ -44,7 +44,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/attachments/PodcastAttachment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/attachments/PodcastAttachment$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vtosters/lite/attachments/PodcastAttachment;->g:Lcom/vtosters/lite/attachments/PodcastAttachment$b;
 
@@ -72,7 +72,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/dto/music/MusicTrack;Lcom/vk/dto/newsfeed/Owner;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/dto/music/MusicTrack;Lcom/vk/dto/newsfeed/Owner;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -125,7 +125,7 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const/4 v1, 0x0
 
@@ -236,7 +236,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -374,7 +374,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v1, 0x7f12089e
 
@@ -384,7 +384,7 @@
 
     const-string v1, "AppContextHolder.context\u2026ring.music_title_podcast)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -393,7 +393,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->k:I
+    sget v0, Lcom/vk/dto/attachments/a;->k:I
 
     return v0
 .end method

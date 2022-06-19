@@ -3,12 +3,12 @@
 .source "AttachmentsPostingViewController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->a(Lcom/vtosters/lite/attachments/PendingAttachment;)Lcom/vtosters/lite/upload/UploadTask;
+    value = Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->a(Lcom/vtosters/lite/attachments/b;)Lcom/vtosters/lite/upload/j;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/attachments/PendingAttachment;)V
+.method constructor <init>(Lcom/vtosters/lite/attachments/b;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -47,14 +47,14 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 2
 
-    const-class v0, Lcom/vk/core/extensions/GeneralFunctions;
+    const-class v0, Lcom/vk/core/extensions/k;
 
     const-string v1, "app_armUpload"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/KDeclarationContainer;
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/e;
 
     move-result-object v0
 
@@ -85,10 +85,10 @@
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vtosters/lite/attachments/PendingAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/b;
 
     .line 2
-    invoke-static {v0}, Lcom/vk/core/extensions/GeneralFunctions;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/core/extensions/k;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 

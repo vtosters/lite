@@ -4,16 +4,16 @@
 
 
 # direct methods
-.method public static final runOnEachConfigurationChanged(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
+.method public static final runOnEachConfigurationChanged(Landroid/content/Context;Lkotlin/jvm/b/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/content/res/Configuration;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -29,7 +29,7 @@
 
     new-instance v0, Landroidx/recyclerview/widget/internal/ContextExtKt$runOnEachConfigurationChanged$1;
 
-    invoke-direct {v0, p1}, Landroidx/recyclerview/widget/internal/ContextExtKt$runOnEachConfigurationChanged$1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p1}, Landroidx/recyclerview/widget/internal/ContextExtKt$runOnEachConfigurationChanged$1;-><init>(Lkotlin/jvm/b/b;)V
 
     invoke-virtual {p0, v0}, Landroid/app/Application;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 
@@ -45,14 +45,14 @@
     throw p0
 .end method
 
-.method public static final runOnEachLowMemory(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
+.method public static final runOnEachLowMemory(Landroid/content/Context;Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -68,7 +68,7 @@
 
     new-instance v0, Landroidx/recyclerview/widget/internal/ContextExtKt$runOnEachLowMemory$1;
 
-    invoke-direct {v0, p1}, Landroidx/recyclerview/widget/internal/ContextExtKt$runOnEachLowMemory$1;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, p1}, Landroidx/recyclerview/widget/internal/ContextExtKt$runOnEachLowMemory$1;-><init>(Lkotlin/jvm/b/a;)V
 
     invoke-virtual {p0, v0}, Landroid/app/Application;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 

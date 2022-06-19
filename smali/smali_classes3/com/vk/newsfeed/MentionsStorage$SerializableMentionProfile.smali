@@ -50,7 +50,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/MentionsStorage$SerializableMentionProfile$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/MentionsStorage$SerializableMentionProfile$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/newsfeed/MentionsStorage$SerializableMentionProfile$a;
@@ -80,26 +80,26 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/mentions/MentionModels2;)V
+.method public constructor <init>(Lcom/vk/mentions/h;)V
     .locals 3
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/mentions/MentionModels2;->d()I
+    invoke-virtual {p1}, Lcom/vk/mentions/h;->d()I
 
     move-result v0
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/mentions/MentionModels2;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/mentions/h;->c()Ljava/lang/String;
 
     move-result-object v1
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/mentions/MentionModels2;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/mentions/h;->a()Ljava/lang/String;
 
     move-result-object v2
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/mentions/MentionModels2;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/mentions/h;->b()Ljava/lang/String;
 
     move-result-object p1
 

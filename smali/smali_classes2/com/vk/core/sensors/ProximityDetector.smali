@@ -14,17 +14,17 @@
 
 
 # static fields
-.field static final synthetic i:[Lkotlin/u/KProperty5;
+.field static final synthetic i:[Lkotlin/u/j;
 
 
 # instance fields
 .field private final a:Landroid/os/Handler;
 
-.field private final b:Lkotlin/Lazy2;
+.field private final b:Lkotlin/e;
 
-.field private final c:Lkotlin/Lazy2;
+.field private final c:Lkotlin/e;
 
-.field private final d:Lkotlin/Lazy2;
+.field private final d:Lkotlin/e;
 
 .field private final e:Lcom/vk/core/sensors/ProximityDetector$c;
 
@@ -51,11 +51,11 @@
 
     const/4 v1, 0x3
 
-    new-array v1, v1, [Lkotlin/u/KProperty5;
+    new-array v1, v1, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -63,9 +63,9 @@
 
     const-string v5, "getSensorManager()Landroid/hardware/SensorManager;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
@@ -73,7 +73,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -81,9 +81,9 @@
 
     const-string v5, "getProximitySensor()Landroid/hardware/Sensor;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x1
 
@@ -91,7 +91,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -99,21 +99,21 @@
 
     const-string v4, "getProximitySensorMaxValue()F"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v0, 0x2
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/core/sensors/ProximityDetector;->i:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/core/sensors/ProximityDetector;->i:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/core/sensors/ProximityDetector$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/sensors/ProximityDetector$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/sensors/ProximityDetector$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -142,33 +142,33 @@
 
     invoke-direct {p1, p0}, Lcom/vk/core/sensors/ProximityDetector$sensorManager$2;-><init>(Lcom/vk/core/sensors/ProximityDetector;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/core/sensors/ProximityDetector;->b:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/core/sensors/ProximityDetector;->b:Lkotlin/e;
 
     .line 4
     new-instance p1, Lcom/vk/core/sensors/ProximityDetector$proximitySensor$2;
 
     invoke-direct {p1, p0}, Lcom/vk/core/sensors/ProximityDetector$proximitySensor$2;-><init>(Lcom/vk/core/sensors/ProximityDetector;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/core/sensors/ProximityDetector;->c:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/core/sensors/ProximityDetector;->c:Lkotlin/e;
 
     .line 5
     new-instance p1, Lcom/vk/core/sensors/ProximityDetector$proximitySensorMaxValue$2;
 
     invoke-direct {p1, p0}, Lcom/vk/core/sensors/ProximityDetector$proximitySensorMaxValue$2;-><init>(Lcom/vk/core/sensors/ProximityDetector;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/core/sensors/ProximityDetector;->d:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/core/sensors/ProximityDetector;->d:Lkotlin/e;
 
     .line 6
     new-instance p1, Lcom/vk/core/sensors/ProximityDetector$c;
@@ -279,15 +279,15 @@
 .method private final b()Landroid/hardware/Sensor;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/sensors/ProximityDetector;->c:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/core/sensors/ProximityDetector;->c:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/core/sensors/ProximityDetector;->i:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/core/sensors/ProximityDetector;->i:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -310,15 +310,15 @@
 .method private final c()F
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/sensors/ProximityDetector;->d:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/core/sensors/ProximityDetector;->d:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/core/sensors/ProximityDetector;->i:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/core/sensors/ProximityDetector;->i:[Lkotlin/u/j;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -345,15 +345,15 @@
 .method private final d()Landroid/hardware/SensorManager;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/sensors/ProximityDetector;->b:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/core/sensors/ProximityDetector;->b:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/core/sensors/ProximityDetector;->i:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/core/sensors/ProximityDetector;->i:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

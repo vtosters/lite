@@ -67,11 +67,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/attachpicker/AttachActivity$o;->a:Lcom/vk/attachpicker/AttachActivity;
 
-    invoke-static {p1}, Lcom/vk/attachpicker/AttachActivity;->b(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/SelectionContext;
+    invoke-static {p1}, Lcom/vk/attachpicker/AttachActivity;->b(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/p;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/SelectionContext;->d()Landroid/content/Intent;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/p;->d()Landroid/content/Intent;
 
     move-result-object v0
 

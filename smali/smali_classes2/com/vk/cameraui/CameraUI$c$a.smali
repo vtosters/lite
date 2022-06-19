@@ -18,7 +18,7 @@
 .method public static a(Lcom/vk/cameraui/CameraUI$c;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/cameraui/i/BasePresenter$a;->d(Lcom/vk/cameraui/i/BasePresenter;)V
+    invoke-static {p0}, Lcom/vk/cameraui/i/a$a;->d(Lcom/vk/cameraui/i/a;)V
 
     return-void
 .end method

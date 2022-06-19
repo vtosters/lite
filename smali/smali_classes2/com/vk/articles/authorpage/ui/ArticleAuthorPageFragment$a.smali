@@ -1,5 +1,5 @@
 .class public final Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$a;
-.super Lcom/vk/navigation/Navigator;
+.super Lcom/vk/navigation/o;
 .source "ArticleAuthorPageFragment.kt"
 
 
@@ -32,7 +32,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$a$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$a$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$a;->S0:Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$a$a;
 
@@ -45,12 +45,12 @@
     .line 1
     const-class v0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -63,7 +63,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object p0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     return-object p0
 .end method

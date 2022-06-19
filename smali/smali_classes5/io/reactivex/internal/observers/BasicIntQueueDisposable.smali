@@ -3,7 +3,7 @@
 .source "BasicIntQueueDisposable.java"
 
 # interfaces
-.implements Lc/a/a0/b/QueueDisposable;
+.implements Lc/a/a0/b/f;
 
 
 # annotations
@@ -13,7 +13,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Lc/a/a0/b/QueueDisposable<",
+        "Lc/a/a0/b/f<",
         "TT;>;"
     }
 .end annotation

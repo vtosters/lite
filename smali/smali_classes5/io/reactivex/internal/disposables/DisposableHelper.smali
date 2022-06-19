@@ -3,7 +3,7 @@
 .source "DisposableHelper.java"
 
 # interfaces
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations
@@ -12,7 +12,7 @@
         "Ljava/lang/Enum<",
         "Lio/reactivex/internal/disposables/DisposableHelper;",
         ">;",
-        "Lio/reactivex/disposables/Disposable;"
+        "Lio/reactivex/disposables/b;"
     }
 .end annotation
 
@@ -76,12 +76,12 @@
 
     invoke-direct {v0, v1}, Lio/reactivex/exceptions/ProtocolViolationException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public static a(Lio/reactivex/disposables/Disposable;)Z
+.method public static a(Lio/reactivex/disposables/b;)Z
     .locals 1
 
     .line 1
@@ -100,7 +100,7 @@
     return p0
 .end method
 
-.method public static a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/Disposable;)Z
+.method public static a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/b;)Z
     .locals 1
 
     const/4 v0, 0x0
@@ -114,7 +114,7 @@
 
     invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p0}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     return v0
 
@@ -122,7 +122,7 @@
     if-eqz p0, :cond_1
 
     .line 11
-    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
 
     .line 12
     invoke-static {}, Lio/reactivex/internal/disposables/DisposableHelper;->a()V
@@ -141,7 +141,7 @@
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lio/reactivex/disposables/Disposable;",
+            "Lio/reactivex/disposables/b;",
             ">;)Z"
         }
     .end annotation
@@ -151,7 +151,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
     .line 7
     sget-object v1, Lio/reactivex/internal/disposables/DisposableHelper;->DISPOSED:Lio/reactivex/internal/disposables/DisposableHelper;
@@ -163,14 +163,14 @@
 
     move-result-object p0
 
-    check-cast p0, Lio/reactivex/disposables/Disposable;
+    check-cast p0, Lio/reactivex/disposables/b;
 
     if-eq p0, v1, :cond_1
 
     if-eqz p0, :cond_0
 
     .line 9
-    invoke-interface {p0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p0}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     const/4 p0, 0x1
@@ -183,15 +183,15 @@
     return p0
 .end method
 
-.method public static a(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
+.method public static a(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lio/reactivex/disposables/Disposable;",
+            "Lio/reactivex/disposables/b;",
             ">;",
-            "Lio/reactivex/disposables/Disposable;",
+            "Lio/reactivex/disposables/b;",
             ")Z"
         }
     .end annotation
@@ -202,7 +202,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
     .line 3
     sget-object v1, Lio/reactivex/internal/disposables/DisposableHelper;->DISPOSED:Lio/reactivex/internal/disposables/DisposableHelper;
@@ -212,7 +212,7 @@
     if-eqz p1, :cond_1
 
     .line 4
-    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
 
     :cond_1
     const/4 p0, 0x0
@@ -232,15 +232,15 @@
     return p0
 .end method
 
-.method public static b(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
+.method public static b(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lio/reactivex/disposables/Disposable;",
+            "Lio/reactivex/disposables/b;",
             ">;",
-            "Lio/reactivex/disposables/Disposable;",
+            "Lio/reactivex/disposables/b;",
             ")Z"
         }
     .end annotation
@@ -251,7 +251,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
     .line 2
     sget-object v1, Lio/reactivex/internal/disposables/DisposableHelper;->DISPOSED:Lio/reactivex/internal/disposables/DisposableHelper;
@@ -261,7 +261,7 @@
     if-eqz p1, :cond_1
 
     .line 3
-    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
 
     :cond_1
     const/4 p0, 0x0
@@ -279,7 +279,7 @@
     if-eqz v0, :cond_3
 
     .line 5
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     :cond_3
     const/4 p0, 0x1
@@ -287,15 +287,15 @@
     return p0
 .end method
 
-.method public static c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
+.method public static c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lio/reactivex/disposables/Disposable;",
+            "Lio/reactivex/disposables/b;",
             ">;",
-            "Lio/reactivex/disposables/Disposable;",
+            "Lio/reactivex/disposables/b;",
             ")Z"
         }
     .end annotation
@@ -303,7 +303,7 @@
     const-string v0, "d is null"
 
     .line 1
-    invoke-static {p1, v0}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x0
 
@@ -315,7 +315,7 @@
     if-nez v0, :cond_1
 
     .line 3
-    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
 
     .line 4
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -340,15 +340,15 @@
     return p0
 .end method
 
-.method public static d(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
+.method public static d(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lio/reactivex/disposables/Disposable;",
+            "Lio/reactivex/disposables/b;",
             ">;",
-            "Lio/reactivex/disposables/Disposable;",
+            "Lio/reactivex/disposables/b;",
             ")Z"
         }
     .end annotation
@@ -372,7 +372,7 @@
     if-ne p0, v0, :cond_0
 
     .line 3
-    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     const/4 p0, 0x0

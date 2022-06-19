@@ -50,15 +50,15 @@
 
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper$hideAnimated$1$a;->a:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper$hideAnimated$1;
 
-    iget-object v0, v0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper$hideAnimated$1;->$endAction:Lkotlin/jvm/b/Functions;
+    iget-object v0, v0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper$hideAnimated$1;->$endAction:Lkotlin/jvm/b/a;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/Unit;
+    check-cast v0, Lkotlin/m;
 
     .line 2
     :cond_0
@@ -97,13 +97,13 @@
     invoke-static {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper;->a(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper;Z)V
 
     .line 5
-    sget-object v0, Lb/h/k/IdleTaskHandler;->f:Lb/h/k/IdleTaskHandler$a;
+    sget-object v0, Lb/h/k/a;->f:Lb/h/k/a$a;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper$hideAnimated$1$a;->a:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper$hideAnimated$1;
 
     iget-object v1, v1, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper$hideAnimated$1;->this$0:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper;
 
-    invoke-virtual {v0, v1}, Lb/h/k/IdleTaskHandler$a;->b(Lb/h/k/IdleTaskHandler2;)Z
+    invoke-virtual {v0, v1}, Lb/h/k/a$a;->b(Lb/h/k/b;)Z
 
     return-void
 .end method

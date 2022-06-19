@@ -1,0 +1,50 @@
+.class Lcom/vk/attachpicker/screen/h0$d;
+.super Landroid/animation/AnimatorListenerAdapter;
+.source "ViewerScreen.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/vk/attachpicker/screen/h0;->a(ZZ)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/vk/attachpicker/screen/h0;
+
+
+# direct methods
+.method constructor <init>(Lcom/vk/attachpicker/screen/h0;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/vk/attachpicker/screen/h0$d;->a:Lcom/vk/attachpicker/screen/h0;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    .line 1
+    iget-object p1, p0, Lcom/vk/attachpicker/screen/h0$d;->a:Lcom/vk/attachpicker/screen/h0;
+
+    invoke-static {p1}, Lcom/vk/attachpicker/screen/h0;->c(Lcom/vk/attachpicker/screen/h0;)Lcom/vk/attachpicker/widget/EditButton;
+
+    move-result-object p1
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/widget/EditButton;->setVisibility(I)V
+
+    return-void
+.end method

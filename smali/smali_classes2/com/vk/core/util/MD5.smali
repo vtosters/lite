@@ -4,11 +4,11 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/KProperty5;
+.field static final synthetic a:[Lkotlin/u/j;
 
 .field private static final b:[C
 
-.field private static final c:Lcom/vk/core/util/ThreadLocalDelegate;
+.field private static final c:Lcom/vk/core/util/d1;
 
 .field public static final d:Lcom/vk/core/util/MD5;
 
@@ -19,13 +19,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/core/util/MD5;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -33,15 +33,15 @@
 
     const-string v4, "getTmpBuilder()Ljava/lang/StringBuilder;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/core/util/MD5;->a:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/core/util/MD5;->a:[Lkotlin/u/j;
 
     .line 1
     new-instance v0, Lcom/vk/core/util/MD5;
@@ -62,11 +62,11 @@
     .line 3
     sget-object v0, Lcom/vk/core/util/MD5$tmpBuilder$2;->a:Lcom/vk/core/util/MD5$tmpBuilder$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
+    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/util/MD5;->c:Lcom/vk/core/util/ThreadLocalDelegate;
+    sput-object v0, Lcom/vk/core/util/MD5;->c:Lcom/vk/core/util/d1;
 
     return-void
 
@@ -122,7 +122,7 @@
 
     const-string v2, "Charset.forName(charsetName)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
@@ -130,7 +130,7 @@
 
     const-string v1, "(this as java.lang.String).getBytes(charset)"
 
-    invoke-static {p0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->digest([B)[B
 
@@ -150,7 +150,7 @@
     const-string v0, "md5"
 
     .line 4
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p0}, Lcom/vk/core/util/MD5;->a([B)V
 
@@ -167,7 +167,7 @@
 
     const-string v0, "tmpBuilder.toString()"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -182,15 +182,15 @@
 .method private final a()Ljava/lang/StringBuilder;
     .locals 3
 
-    sget-object v0, Lcom/vk/core/util/MD5;->c:Lcom/vk/core/util/ThreadLocalDelegate;
+    sget-object v0, Lcom/vk/core/util/MD5;->c:Lcom/vk/core/util/d1;
 
-    sget-object v1, Lcom/vk/core/util/MD5;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/core/util/MD5;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
 
     move-result-object v0
 

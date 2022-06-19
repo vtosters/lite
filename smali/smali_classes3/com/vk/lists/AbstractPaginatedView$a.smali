@@ -3,7 +3,7 @@
 .source "AbstractPaginatedView.java"
 
 # interfaces
-.implements Lcom/vk/lists/OnRetryClickListener;
+.implements Lcom/vk/lists/r;
 
 
 # annotations
@@ -41,7 +41,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/lists/AbstractPaginatedView$a;->a:Lcom/vk/lists/AbstractPaginatedView;
 
-    invoke-static {v0}, Lcom/vk/lists/AbstractPaginatedView;->a(Lcom/vk/lists/AbstractPaginatedView;)Lkotlin/jvm/b/Functions;
+    invoke-static {v0}, Lcom/vk/lists/AbstractPaginatedView;->a(Lcom/vk/lists/AbstractPaginatedView;)Lkotlin/jvm/b/a;
 
     move-result-object v0
 
@@ -50,11 +50,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/lists/AbstractPaginatedView$a;->a:Lcom/vk/lists/AbstractPaginatedView;
 
-    invoke-static {v0}, Lcom/vk/lists/AbstractPaginatedView;->a(Lcom/vk/lists/AbstractPaginatedView;)Lkotlin/jvm/b/Functions;
+    invoke-static {v0}, Lcom/vk/lists/AbstractPaginatedView;->a(Lcom/vk/lists/AbstractPaginatedView;)Lkotlin/jvm/b/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void

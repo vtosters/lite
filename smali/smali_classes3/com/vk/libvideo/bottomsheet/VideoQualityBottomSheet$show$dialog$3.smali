@@ -3,12 +3,12 @@
 .source "VideoQualityBottomSheet.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->a(Landroid/app/Activity;ILjava/util/List;Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;Lcom/vk/navigation/ModalDialogCallback;)Lcom/vk/core/util/Dismissable;
+    value = Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->a(Landroid/app/Activity;ILjava/util/List;Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;Lcom/vk/navigation/k;)Lcom/vk/core/util/w;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -62,13 +62,13 @@
     .line 1
     sget-object p1, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->c:Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;
 
-    invoke-static {p1}, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->b(Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-static {p1}, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->b(Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->H4()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->H4()V
 
     :cond_0
     return-void
@@ -82,7 +82,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet$show$dialog$3;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

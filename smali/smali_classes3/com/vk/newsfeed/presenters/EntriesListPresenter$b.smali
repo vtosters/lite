@@ -3,7 +3,7 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lb/h/g/l/NotificationListener;
+.implements Lb/h/g/l/e;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lb/h/g/l/NotificationListener<",
-        "Lcom/vk/wall/CommentsListContract1;",
+        "Lb/h/g/l/e<",
+        "Lcom/vk/wall/d;",
         ">;"
     }
 .end annotation
@@ -49,11 +49,11 @@
 
 
 # virtual methods
-.method public a(IILcom/vk/wall/CommentsListContract1;)V
+.method public a(IILcom/vk/wall/d;)V
     .locals 1
 
     .line 2
-    invoke-virtual {p3}, Lcom/vk/wall/CommentsListContract1;->a()Lcom/vtosters/lite/Comment;
+    invoke-virtual {p3}, Lcom/vk/wall/d;->a()Lcom/vtosters/lite/q;
 
     move-result-object p1
 
@@ -69,12 +69,12 @@
     if-eqz p1, :cond_2
 
     .line 3
-    invoke-virtual {p3}, Lcom/vk/wall/CommentsListContract1;->c()I
+    invoke-virtual {p3}, Lcom/vk/wall/d;->c()I
 
     move-result p2
 
     .line 4
-    invoke-virtual {p3}, Lcom/vk/wall/CommentsListContract1;->b()I
+    invoke-virtual {p3}, Lcom/vk/wall/d;->b()I
 
     move-result p3
 
@@ -105,9 +105,9 @@
     .locals 0
 
     .line 1
-    check-cast p3, Lcom/vk/wall/CommentsListContract1;
+    check-cast p3, Lcom/vk/wall/d;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$b;->a(IILcom/vk/wall/CommentsListContract1;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$b;->a(IILcom/vk/wall/d;)V
 
     return-void
 .end method

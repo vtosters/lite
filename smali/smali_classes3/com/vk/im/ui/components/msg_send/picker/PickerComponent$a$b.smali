@@ -23,7 +23,7 @@
     return-object p0
 .end method
 
-.method public static a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;)V
+.method public static a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -35,7 +35,7 @@
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;",
             "Ljava/lang/String;",
-            "Lcom/vk/im/engine/models/messages/MsgSendSource;",
+            "Lcom/vk/im/engine/models/messages/e;",
             ")V"
         }
     .end annotation
@@ -43,7 +43,7 @@
     return-void
 .end method
 
-.method public static a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+.method public static a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;Landroid/view/View;Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -55,10 +55,10 @@
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;",
             "Ljava/lang/String;",
-            "Lcom/vk/im/engine/models/messages/MsgSendSource;",
+            "Lcom/vk/im/engine/models/messages/e;",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -66,7 +66,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Landroid/view/View;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;Landroid/view/View;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
     .locals 7
 
     if-nez p8, :cond_3
@@ -115,7 +115,7 @@
     move-object v5, p5
 
     .line 1
-    invoke-interface/range {v0 .. v6}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;->a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+    invoke-interface/range {v0 .. v6}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;->a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;Landroid/view/View;Lkotlin/jvm/b/a;)V
 
     return-void
 

@@ -56,7 +56,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/api/stories/StoriesGetFeedSettings$Response$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/stories/StoriesGetFeedSettings$Response$Companion;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/api/stories/StoriesGetFeedSettings$Response;->d:Lcom/vk/api/stories/StoriesGetFeedSettings$Response$Companion;
 

@@ -3,7 +3,7 @@
 .source "MarketCartCheckoutFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,29 +19,29 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $data:Lcom/vk/market/orders/checkout/DeliveryInfo9;
+.field final synthetic $data:Lcom/vk/market/orders/checkout/r;
 
-.field final synthetic $it:Lcom/vk/market/orders/checkout/DeliveryInfo8;
+.field final synthetic $it:Lcom/vk/market/orders/checkout/l;
 
 .field final synthetic this$0:Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/market/orders/checkout/DeliveryInfo8;Lcom/vk/market/orders/checkout/DeliveryInfo9;Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment;)V
+.method constructor <init>(Lcom/vk/market/orders/checkout/l;Lcom/vk/market/orders/checkout/r;Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$inputFieldsToAdapterItems$$inlined$map$lambda$3;->$it:Lcom/vk/market/orders/checkout/DeliveryInfo8;
+    iput-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$inputFieldsToAdapterItems$$inlined$map$lambda$3;->$it:Lcom/vk/market/orders/checkout/l;
 
-    iput-object p2, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$inputFieldsToAdapterItems$$inlined$map$lambda$3;->$data:Lcom/vk/market/orders/checkout/DeliveryInfo9;
+    iput-object p2, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$inputFieldsToAdapterItems$$inlined$map$lambda$3;->$data:Lcom/vk/market/orders/checkout/r;
 
     iput-object p3, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$inputFieldsToAdapterItems$$inlined$map$lambda$3;->this$0:Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment;
 
@@ -64,26 +64,26 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$inputFieldsToAdapterItems$$inlined$map$lambda$3;->this$0:Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment;
 
-    iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$inputFieldsToAdapterItems$$inlined$map$lambda$3;->$it:Lcom/vk/market/orders/checkout/DeliveryInfo8;
+    iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$inputFieldsToAdapterItems$$inlined$map$lambda$3;->$it:Lcom/vk/market/orders/checkout/l;
 
-    invoke-virtual {v0}, Lcom/vk/market/orders/checkout/DeliveryInfo8;->g()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/market/orders/checkout/l;->g()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$inputFieldsToAdapterItems$$inlined$map$lambda$3;->$data:Lcom/vk/market/orders/checkout/DeliveryInfo9;
+    iget-object v1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$inputFieldsToAdapterItems$$inlined$map$lambda$3;->$data:Lcom/vk/market/orders/checkout/r;
 
-    invoke-virtual {v1}, Lcom/vk/market/orders/checkout/DeliveryInfo9;->b()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/market/orders/checkout/r;->b()Ljava/util/List;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$inputFieldsToAdapterItems$$inlined$map$lambda$3;->$data:Lcom/vk/market/orders/checkout/DeliveryInfo9;
+    iget-object v2, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$inputFieldsToAdapterItems$$inlined$map$lambda$3;->$data:Lcom/vk/market/orders/checkout/r;
 
-    invoke-virtual {v2}, Lcom/vk/market/orders/checkout/DeliveryInfo9;->c()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/market/orders/checkout/r;->c()Ljava/lang/String;
 
     move-result-object v2
 
@@ -100,7 +100,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$inputFieldsToAdapterItems$$inlined$map$lambda$3;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

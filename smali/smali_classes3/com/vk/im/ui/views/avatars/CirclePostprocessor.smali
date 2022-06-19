@@ -1,14 +1,14 @@
 .class public final Lcom/vk/im/ui/views/avatars/CirclePostprocessor;
-.super Lcom/facebook/imagepipeline/request/BasePostprocessor;
+.super Lcom/facebook/imagepipeline/request/a;
 .source "CirclePostprocessor.kt"
 
 
 # static fields
-.field static final synthetic b:[Lkotlin/u/KProperty5;
+.field static final synthetic b:[Lkotlin/u/j;
 
-.field private static final c:Lcom/facebook/cache/common/SimpleCacheKey;
+.field private static final c:Lcom/facebook/cache/common/g;
 
-.field private static final d:Lcom/vk/core/util/ThreadLocalDelegate;
+.field private static final d:Lcom/vk/core/util/d1;
 
 .field public static final e:Lcom/vk/im/ui/views/avatars/CirclePostprocessor;
 
@@ -19,13 +19,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -33,15 +33,15 @@
 
     const-string v4, "getCirclePaint()Landroid/graphics/Paint;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->b:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->b:[Lkotlin/u/j;
 
     .line 1
     new-instance v0, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;
@@ -51,22 +51,22 @@
     sput-object v0, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->e:Lcom/vk/im/ui/views/avatars/CirclePostprocessor;
 
     .line 2
-    new-instance v0, Lcom/facebook/cache/common/SimpleCacheKey;
+    new-instance v0, Lcom/facebook/cache/common/g;
 
     const-string v1, "CirclePostprocessor"
 
-    invoke-direct {v0, v1}, Lcom/facebook/cache/common/SimpleCacheKey;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/facebook/cache/common/g;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->c:Lcom/facebook/cache/common/SimpleCacheKey;
+    sput-object v0, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->c:Lcom/facebook/cache/common/g;
 
     .line 3
     sget-object v0, Lcom/vk/im/ui/views/avatars/CirclePostprocessor$circlePaint$2;->a:Lcom/vk/im/ui/views/avatars/CirclePostprocessor$circlePaint$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
+    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->d:Lcom/vk/core/util/ThreadLocalDelegate;
+    sput-object v0, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->d:Lcom/vk/core/util/d1;
 
     return-void
 .end method
@@ -75,7 +75,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/facebook/imagepipeline/request/BasePostprocessor;-><init>()V
+    invoke-direct {p0}, Lcom/facebook/imagepipeline/request/a;-><init>()V
 
     return-void
 .end method
@@ -83,15 +83,15 @@
 .method private final b()Landroid/graphics/Paint;
     .locals 3
 
-    sget-object v0, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->d:Lcom/vk/core/util/ThreadLocalDelegate;
+    sget-object v0, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->d:Lcom/vk/core/util/d1;
 
-    sget-object v1, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->b:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->b:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -102,11 +102,11 @@
 
 
 # virtual methods
-.method public a()Lcom/facebook/cache/common/CacheKey;
+.method public a()Lcom/facebook/cache/common/b;
     .locals 1
 
     .line 5
-    sget-object v0, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->c:Lcom/facebook/cache/common/SimpleCacheKey;
+    sget-object v0, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->c:Lcom/facebook/cache/common/g;
 
     return-object v0
 .end method

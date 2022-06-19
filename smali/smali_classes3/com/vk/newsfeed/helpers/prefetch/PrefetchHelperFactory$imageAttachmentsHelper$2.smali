@@ -3,7 +3,7 @@
 .source "PrefetchHelperFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/newsfeed/helpers/prefetch/ImageAttachmentsPrefetchHelper;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/newsfeed/helpers/prefetch/j;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/newsfeed/helpers/prefetch/ImageAttachmentsPrefetchHelper;
+.method public final invoke()Lcom/vk/newsfeed/helpers/prefetch/j;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/newsfeed/helpers/prefetch/ImageAttachmentsPrefetchHelper;
+    new-instance v0, Lcom/vk/newsfeed/helpers/prefetch/j;
 
-    invoke-direct {v0}, Lcom/vk/newsfeed/helpers/prefetch/ImageAttachmentsPrefetchHelper;-><init>()V
+    invoke-direct {v0}, Lcom/vk/newsfeed/helpers/prefetch/j;-><init>()V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$imageAttachmentsHelper$2;->invoke()Lcom/vk/newsfeed/helpers/prefetch/ImageAttachmentsPrefetchHelper;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$imageAttachmentsHelper$2;->invoke()Lcom/vk/newsfeed/helpers/prefetch/j;
 
     move-result-object v0
 

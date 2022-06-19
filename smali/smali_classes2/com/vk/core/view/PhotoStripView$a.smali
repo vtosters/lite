@@ -63,11 +63,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/core/view/PhotoStripView$a;->a:Lcom/vk/core/view/PhotoStripView;
 
-    invoke-static {v0}, Lcom/vk/core/view/PhotoStripView;->b(Lcom/vk/core/view/PhotoStripView;)Lcom/facebook/drawee/view/MultiDraweeHolder;
+    invoke-static {v0}, Lcom/vk/core/view/PhotoStripView;->b(Lcom/vk/core/view/PhotoStripView;)Lcom/facebook/drawee/view/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/MultiDraweeHolder;->d()I
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/c;->d()I
 
     move-result v0
 

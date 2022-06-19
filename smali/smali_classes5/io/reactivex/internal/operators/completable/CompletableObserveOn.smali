@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/completable/CompletableObserveOn;
-.super Lio/reactivex/Completable;
+.super Lc/a/a;
 .source "CompletableObserveOn.java"
 
 
@@ -12,42 +12,42 @@
 
 
 # instance fields
-.field final a:Lio/reactivex/CompletableSource;
+.field final a:Lc/a/e;
 
-.field final b:Lio/reactivex/Scheduler;
+.field final b:Lc/a/s;
 
 
 # direct methods
-.method public constructor <init>(Lio/reactivex/CompletableSource;Lio/reactivex/Scheduler;)V
+.method public constructor <init>(Lc/a/e;Lc/a/s;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lio/reactivex/Completable;-><init>()V
+    invoke-direct {p0}, Lc/a/a;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/completable/CompletableObserveOn;->a:Lio/reactivex/CompletableSource;
+    iput-object p1, p0, Lio/reactivex/internal/operators/completable/CompletableObserveOn;->a:Lc/a/e;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/completable/CompletableObserveOn;->b:Lio/reactivex/Scheduler;
+    iput-object p2, p0, Lio/reactivex/internal/operators/completable/CompletableObserveOn;->b:Lc/a/s;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected b(Lio/reactivex/CompletableObserver;)V
+.method protected b(Lc/a/c;)V
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/completable/CompletableObserveOn;->a:Lio/reactivex/CompletableSource;
+    iget-object v0, p0, Lio/reactivex/internal/operators/completable/CompletableObserveOn;->a:Lc/a/e;
 
     new-instance v1, Lio/reactivex/internal/operators/completable/CompletableObserveOn$ObserveOnCompletableObserver;
 
-    iget-object v2, p0, Lio/reactivex/internal/operators/completable/CompletableObserveOn;->b:Lio/reactivex/Scheduler;
+    iget-object v2, p0, Lio/reactivex/internal/operators/completable/CompletableObserveOn;->b:Lc/a/s;
 
-    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/completable/CompletableObserveOn$ObserveOnCompletableObserver;-><init>(Lio/reactivex/CompletableObserver;Lio/reactivex/Scheduler;)V
+    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/completable/CompletableObserveOn$ObserveOnCompletableObserver;-><init>(Lc/a/c;Lc/a/s;)V
 
-    invoke-interface {v0, v1}, Lio/reactivex/CompletableSource;->a(Lio/reactivex/CompletableObserver;)V
+    invoke-interface {v0, v1}, Lc/a/e;->a(Lc/a/c;)V
 
     return-void
 .end method

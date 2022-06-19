@@ -3,7 +3,7 @@
 .source "MsgSearchAnimationHelper.kt"
 
 # interfaces
-.implements Lb/h/k/IdleTaskHandler2;
+.implements Lb/h/k/b;
 
 
 # instance fields
@@ -93,28 +93,28 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 11
-    sget-object v0, Lb/h/k/IdleTaskHandler;->f:Lb/h/k/IdleTaskHandler$a;
+    sget-object v0, Lb/h/k/a;->f:Lb/h/k/a$a;
 
-    invoke-virtual {v0, p0}, Lb/h/k/IdleTaskHandler$a;->b(Lb/h/k/IdleTaskHandler2;)Z
+    invoke-virtual {v0, p0}, Lb/h/k/a$a;->b(Lb/h/k/b;)Z
 
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/Functions;)V
+.method public final a(Lkotlin/jvm/b/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 3
-    sget-object v0, Lb/h/k/IdleTaskHandler;->f:Lb/h/k/IdleTaskHandler$a;
+    sget-object v0, Lb/h/k/a;->f:Lb/h/k/a$a;
 
-    invoke-virtual {v0, p0}, Lb/h/k/IdleTaskHandler$a;->a(Lb/h/k/IdleTaskHandler2;)Z
+    invoke-virtual {v0, p0}, Lb/h/k/a$a;->a(Lb/h/k/b;)Z
 
     const/4 v0, 0x1
 
@@ -140,28 +140,28 @@
 
     new-instance v1, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper$hideAnimated$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper$hideAnimated$1;-><init>(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper$hideAnimated$1;-><init>(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper;Lkotlin/jvm/b/a;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final b(Lkotlin/jvm/b/Functions;)V
+.method public final b(Lkotlin/jvm/b/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 3
-    sget-object v0, Lb/h/k/IdleTaskHandler;->f:Lb/h/k/IdleTaskHandler$a;
+    sget-object v0, Lb/h/k/a;->f:Lb/h/k/a$a;
 
-    invoke-virtual {v0, p0}, Lb/h/k/IdleTaskHandler$a;->a(Lb/h/k/IdleTaskHandler2;)Z
+    invoke-virtual {v0, p0}, Lb/h/k/a$a;->a(Lb/h/k/b;)Z
 
     const/4 v0, 0x1
 
@@ -205,9 +205,9 @@
 
     new-instance v1, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper$showAnimated$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper$showAnimated$1;-><init>(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper$showAnimated$1;-><init>(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper;Lkotlin/jvm/b/a;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
 
     return-void
 .end method

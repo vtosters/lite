@@ -14,13 +14,13 @@
 # instance fields
 .field private a:Z
 
-.field private b:Lio/reactivex/disposables/Disposable;
+.field private b:Lio/reactivex/disposables/b;
 
 .field private final c:Ljava/lang/String;
 
 .field private final d:Ljava/lang/String;
 
-.field private final e:Lcom/vk/music/n/IntentPlayerHelper;
+.field private final e:Lcom/vk/music/n/e;
 
 
 # direct methods
@@ -31,12 +31,12 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/notification/MusicPlayerNotification$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/notification/MusicPlayerNotification$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/support/v4/media/session/MediaSessionCompat;Lcom/vk/dto/music/MusicTrack;ZZLcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/music/n/IntentPlayerHelper;Lkotlin/jvm/b/Functions2;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/support/v4/media/session/MediaSessionCompat;Lcom/vk/dto/music/MusicTrack;ZZLcom/vk/music/l/a;Lcom/vk/music/n/e;Lkotlin/jvm/b/b;)V
     .locals 13
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -47,12 +47,12 @@
             "Landroid/support/v4/media/session/MediaSessionCompat;",
             "Lcom/vk/dto/music/MusicTrack;",
             "ZZ",
-            "Lcom/vk/music/l/ModernMusicTrackModel;",
-            "Lcom/vk/music/n/IntentPlayerHelper;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lcom/vk/music/l/a;",
+            "Lcom/vk/music/n/e;",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/app/Notification;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -74,7 +74,7 @@
 
     move-object/from16 v0, p9
 
-    iput-object v0, v9, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/IntentPlayerHelper;
+    iput-object v0, v9, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/e;
 
     .line 2
     invoke-static {p1}, Lcom/vk/core/util/Screen;->a(Landroid/content/Context;)I
@@ -120,7 +120,7 @@
 
     const-string v0, "Uri.parse(url)"
 
-    invoke-static {v10, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v11, Lcom/vk/music/notification/MusicPlayerNotification$2;
 
@@ -142,9 +142,9 @@
 
     move-object/from16 v8, p8
 
-    invoke-direct/range {v0 .. v8}, Lcom/vk/music/notification/MusicPlayerNotification$2;-><init>(Lcom/vk/music/notification/MusicPlayerNotification;Lcom/vk/dto/music/MusicTrack;Landroid/content/Context;Lkotlin/jvm/b/Functions2;Landroid/support/v4/media/session/MediaSessionCompat;ZZLcom/vk/music/l/ModernMusicTrackModel;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/music/notification/MusicPlayerNotification$2;-><init>(Lcom/vk/music/notification/MusicPlayerNotification;Lcom/vk/dto/music/MusicTrack;Landroid/content/Context;Lkotlin/jvm/b/b;Landroid/support/v4/media/session/MediaSessionCompat;ZZLcom/vk/music/l/a;)V
 
-    invoke-direct {p0, v10, v11}, Lcom/vk/music/notification/MusicPlayerNotification;->a(Landroid/net/Uri;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, v10, v11}, Lcom/vk/music/notification/MusicPlayerNotification;->a(Landroid/net/Uri;Lkotlin/jvm/b/b;)V
 
     goto :goto_3
 
@@ -161,7 +161,7 @@
 
     const-string v0, "context.resources"
 
-    invoke-static {v11, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v11, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v12, Lcom/vk/music/notification/MusicPlayerNotification$1;
 
@@ -183,9 +183,9 @@
 
     move-object/from16 v8, p5
 
-    invoke-direct/range {v0 .. v8}, Lcom/vk/music/notification/MusicPlayerNotification$1;-><init>(Lcom/vk/music/notification/MusicPlayerNotification;Lkotlin/jvm/b/Functions2;Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;ZZLcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/dto/music/MusicTrack;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/music/notification/MusicPlayerNotification$1;-><init>(Lcom/vk/music/notification/MusicPlayerNotification;Lkotlin/jvm/b/b;Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;ZZLcom/vk/music/l/a;Lcom/vk/dto/music/MusicTrack;)V
 
-    invoke-direct {p0, v10, v11, v12}, Lcom/vk/music/notification/MusicPlayerNotification;->a(ILandroid/content/res/Resources;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, v10, v11, v12}, Lcom/vk/music/notification/MusicPlayerNotification;->a(ILandroid/content/res/Resources;Lkotlin/jvm/b/b;)V
 
     :goto_3
     return-void
@@ -201,13 +201,13 @@
 
     if-eqz p1, :cond_0
 
-    sget p1, Lcom/vk/music/m/R6;->placeholder_podcast_96:I
+    sget p1, Lcom/vk/music/m/d;->placeholder_podcast_96:I
 
     goto :goto_0
 
     .line 91
     :cond_0
-    sget p1, Lcom/vk/music/m/R6;->placeholder_song_96:I
+    sget p1, Lcom/vk/music/m/d;->placeholder_song_96:I
 
     :goto_0
     return p1
@@ -224,13 +224,13 @@
     return p0
 .end method
 
-.method private final a(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Landroid/graphics/Bitmap;ZZLcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/dto/music/MusicTrack;)Landroid/app/Notification;
+.method private final a(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Landroid/graphics/Bitmap;ZZLcom/vk/music/l/a;Lcom/vk/dto/music/MusicTrack;)Landroid/app/Notification;
     .locals 4
 
     .line 6
-    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/IntentPlayerHelper;
+    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/e;
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/n/IntentPlayerHelper;->k(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v0, p1}, Lcom/vk/music/n/e;->k(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -306,12 +306,12 @@
     if-eqz p5, :cond_2
 
     .line 14
-    sget v1, Lcom/vk/music/m/R6;->ic_stat_notify_play:I
+    sget v1, Lcom/vk/music/m/d;->ic_stat_notify_play:I
 
     goto :goto_2
 
     :cond_2
-    sget v1, Lcom/vk/music/m/R6;->ic_stat_notify_pause:I
+    sget v1, Lcom/vk/music/m/d;->ic_stat_notify_pause:I
 
     :goto_2
     invoke-virtual {p2, v1}, Landroidx/core/app/NotificationCompat$Builder;->setSmallIcon(I)Landroidx/core/app/NotificationCompat$Builder;
@@ -323,7 +323,7 @@
     if-eqz p4, :cond_3
 
     .line 15
-    sget v2, Lcom/vk/music/m/R4;->audio_ad_title:I
+    sget v2, Lcom/vk/music/m/i;->audio_ad_title:I
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -331,18 +331,18 @@
 
     const-string v3, "context.getString(R.string.audio_ad_title)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_3
 
     :cond_3
     if-eqz p7, :cond_4
 
-    sget-object v2, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->INSTANCE:Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;
+    sget-object v2, Lcom/vk/music/ui/common/formatting/b;->a:Lcom/vk/music/ui/common/formatting/b;
 
-    sget v3, Lcom/vk/music/m/R1;->text_secondary:I
+    sget v3, Lcom/vk/music/m/a;->text_secondary:I
 
-    invoke-virtual {v2, p1, p7, v3}, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->b(Landroid/content/Context;Lcom/vk/dto/music/MusicTrack;I)Ljava/lang/CharSequence;
+    invoke-virtual {v2, p1, p7, v3}, Lcom/vk/music/ui/common/formatting/b;->b(Landroid/content/Context;Lcom/vk/dto/music/MusicTrack;I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -366,9 +366,9 @@
     if-eqz p7, :cond_6
 
     .line 16
-    sget-object v2, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->INSTANCE:Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;
+    sget-object v2, Lcom/vk/music/ui/common/formatting/b;->a:Lcom/vk/music/ui/common/formatting/b;
 
-    invoke-virtual {v2, p7}, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->a(Lcom/vk/dto/music/MusicTrack;)Ljava/lang/CharSequence;
+    invoke-virtual {v2, p7}, Lcom/vk/music/ui/common/formatting/b;->a(Lcom/vk/dto/music/MusicTrack;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -397,9 +397,9 @@
     move-result-object p2
 
     .line 19
-    iget-object v2, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/IntentPlayerHelper;
+    iget-object v2, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/e;
 
-    invoke-virtual {v2, p1}, Lcom/vk/music/n/IntentPlayerHelper;->j(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v2, p1}, Lcom/vk/music/n/e;->j(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v2
 
@@ -531,7 +531,7 @@
     if-eqz p6, :cond_b
 
     .line 31
-    invoke-interface {p6, p7}, Lcom/vk/music/l/ModernMusicTrackModel;->b(Lcom/vk/dto/music/MusicTrack;)Z
+    invoke-interface {p6, p7}, Lcom/vk/music/l/a;->b(Lcom/vk/dto/music/MusicTrack;)Z
 
     move-result p3
 
@@ -559,7 +559,7 @@
     const-string p2, "notification"
 
     .line 35
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -600,13 +600,13 @@
     if-eqz v2, :cond_0
 
     .line 37
-    sget v6, Lcom/vk/music/m/R6;->ic_stat_notify_play:I
+    sget v6, Lcom/vk/music/m/d;->ic_stat_notify_play:I
 
     goto :goto_0
 
     .line 38
     :cond_0
-    sget v6, Lcom/vk/music/m/R6;->ic_stat_notify_pause:I
+    sget v6, Lcom/vk/music/m/d;->ic_stat_notify_pause:I
 
     .line 39
     :goto_0
@@ -641,9 +641,9 @@
     iput v7, v5, Landroid/app/Notification;->flags:I
 
     .line 44
-    iget-object v7, v0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/IntentPlayerHelper;
+    iget-object v7, v0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/e;
 
-    invoke-virtual {v7, v1}, Lcom/vk/music/n/IntentPlayerHelper;->j(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v7, v1}, Lcom/vk/music/n/e;->j(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v7
 
@@ -665,16 +665,16 @@
 
     iget-object v10, v3, Lcom/vk/dto/music/MusicTrack;->g:Ljava/lang/String;
 
-    sget v11, Lcom/vk/music/m/R3;->white_alpha60:I
+    sget v11, Lcom/vk/music/m/b;->white_alpha60:I
 
     invoke-static {v1, v9, v10, v11}, Lcom/vk/core/utils/MediaFormatter;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/CharSequence;
 
     move-result-object v9
 
     .line 47
-    sget-object v10, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->INSTANCE:Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;
+    sget-object v10, Lcom/vk/music/ui/common/formatting/b;->a:Lcom/vk/music/ui/common/formatting/b;
 
-    invoke-virtual {v10, v3}, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->a(Lcom/vk/dto/music/MusicTrack;)Ljava/lang/CharSequence;
+    invoke-virtual {v10, v3}, Lcom/vk/music/ui/common/formatting/b;->a(Lcom/vk/dto/music/MusicTrack;)Ljava/lang/CharSequence;
 
     move-result-object v10
 
@@ -716,9 +716,9 @@
     if-eqz v3, :cond_4
 
     .line 49
-    iget-object v3, v0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/IntentPlayerHelper;
+    iget-object v3, v0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/e;
 
-    invoke-virtual {v3, v1, v2}, Lcom/vk/music/n/IntentPlayerHelper;->a(Landroid/content/Context;Z)Landroid/content/Intent;
+    invoke-virtual {v3, v1, v2}, Lcom/vk/music/n/e;->a(Landroid/content/Context;Z)Landroid/content/Intent;
 
     move-result-object v3
 
@@ -740,18 +740,18 @@
 
     .line 50
     :cond_5
-    iget-object v14, v0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/IntentPlayerHelper;
+    iget-object v14, v0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/e;
 
     if-eqz v11, :cond_6
 
-    invoke-virtual {v14, v1}, Lcom/vk/music/n/IntentPlayerHelper;->c(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v14, v1}, Lcom/vk/music/n/e;->c(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v14
 
     goto :goto_5
 
     :cond_6
-    invoke-virtual {v14, v1}, Lcom/vk/music/n/IntentPlayerHelper;->d(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v14, v1}, Lcom/vk/music/n/e;->d(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v14
 
@@ -767,18 +767,18 @@
 
     .line 51
     :cond_7
-    iget-object v8, v0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/IntentPlayerHelper;
+    iget-object v8, v0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/e;
 
     if-eqz v11, :cond_8
 
-    invoke-virtual {v8, v1}, Lcom/vk/music/n/IntentPlayerHelper;->f(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v8, v1}, Lcom/vk/music/n/e;->f(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v8
 
     goto :goto_7
 
     :cond_8
-    invoke-virtual {v8, v1}, Lcom/vk/music/n/IntentPlayerHelper;->g(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v8, v1}, Lcom/vk/music/n/e;->g(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v8
 
@@ -789,9 +789,9 @@
 
     .line 52
     :goto_8
-    iget-object v15, v0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/IntentPlayerHelper;
+    iget-object v15, v0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/e;
 
-    invoke-virtual {v15, v1}, Lcom/vk/music/n/IntentPlayerHelper;->k(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v15, v1}, Lcom/vk/music/n/e;->k(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v15
 
@@ -806,57 +806,57 @@
 
     move-result-object v6
 
-    sget v0, Lcom/vk/music/m/R;->audio_notification:I
+    sget v0, Lcom/vk/music/m/g;->audio_notification:I
 
     invoke-direct {v7, v6, v0}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
     .line 54
-    sget v0, Lcom/vk/music/m/R5;->title:I
+    sget v0, Lcom/vk/music/m/e;->title:I
 
     invoke-virtual {v7, v0, v9}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 55
-    sget v0, Lcom/vk/music/m/R5;->content:I
+    sget v0, Lcom/vk/music/m/e;->content:I
 
     invoke-virtual {v7, v0, v10}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 56
-    sget v0, Lcom/vk/music/m/R5;->cover:I
+    sget v0, Lcom/vk/music/m/e;->cover:I
 
     if-eqz v11, :cond_9
 
-    sget v6, Lcom/vk/music/m/R6;->aplayer_cover_placeholder_podcast:I
+    sget v6, Lcom/vk/music/m/d;->aplayer_cover_placeholder_podcast:I
 
     goto :goto_9
 
     :cond_9
-    sget v6, Lcom/vk/music/m/R6;->aplayer_cover_placeholder:I
+    sget v6, Lcom/vk/music/m/d;->aplayer_cover_placeholder:I
 
     :goto_9
     invoke-virtual {v7, v0, v6}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
     .line 57
-    sget v0, Lcom/vk/music/m/R5;->playpause:I
+    sget v0, Lcom/vk/music/m/e;->playpause:I
 
     if-eqz v2, :cond_a
 
-    sget v6, Lcom/vk/music/m/R6;->ic_pause_24:I
+    sget v6, Lcom/vk/music/m/d;->ic_pause_24:I
 
     goto :goto_a
 
     :cond_a
-    sget v6, Lcom/vk/music/m/R6;->ic_play_24:I
+    sget v6, Lcom/vk/music/m/d;->ic_play_24:I
 
     :goto_a
     invoke-virtual {v7, v0, v6}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
     .line 58
-    sget v0, Lcom/vk/music/m/R5;->playpause:I
+    sget v0, Lcom/vk/music/m/e;->playpause:I
 
     invoke-virtual {v7, v0, v3}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
     .line 59
-    sget v0, Lcom/vk/music/m/R5;->next:I
+    sget v0, Lcom/vk/music/m/e;->next:I
 
     const/high16 v6, 0x42990000    # 76.5f
 
@@ -877,7 +877,7 @@
     invoke-virtual {v7, v0, v6, v1}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
     .line 60
-    sget v0, Lcom/vk/music/m/R5;->next:I
+    sget v0, Lcom/vk/music/m/e;->next:I
 
     if-nez v14, :cond_c
 
@@ -892,17 +892,17 @@
     invoke-virtual {v7, v0, v1}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 61
-    sget v0, Lcom/vk/music/m/R5;->next:I
+    sget v0, Lcom/vk/music/m/e;->next:I
 
     invoke-virtual {v7, v0, v14}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
     .line 62
-    sget v0, Lcom/vk/music/m/R5;->stop:I
+    sget v0, Lcom/vk/music/m/e;->stop:I
 
     invoke-virtual {v7, v0, v15}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
     .line 63
-    sget v0, Lcom/vk/music/m/R5;->prev:I
+    sget v0, Lcom/vk/music/m/e;->prev:I
 
     if-nez v8, :cond_d
 
@@ -919,7 +919,7 @@
     invoke-virtual {v7, v0, v6, v4}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
     .line 64
-    sget v0, Lcom/vk/music/m/R5;->prev:I
+    sget v0, Lcom/vk/music/m/e;->prev:I
 
     if-nez v8, :cond_e
 
@@ -934,36 +934,36 @@
     invoke-virtual {v7, v0, v1}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     .line 65
-    sget v0, Lcom/vk/music/m/R5;->prev:I
+    sget v0, Lcom/vk/music/m/e;->prev:I
 
     invoke-virtual {v7, v0, v8}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
     .line 66
-    sget v0, Lcom/vk/music/m/R5;->next:I
+    sget v0, Lcom/vk/music/m/e;->next:I
 
     if-eqz v11, :cond_f
 
-    sget v1, Lcom/vk/music/m/R6;->ic_forward_15_20:I
+    sget v1, Lcom/vk/music/m/d;->ic_forward_15_20:I
 
     goto :goto_f
 
     :cond_f
-    sget v1, Lcom/vk/music/m/R6;->ic_next_24:I
+    sget v1, Lcom/vk/music/m/d;->ic_next_24:I
 
     :goto_f
     invoke-virtual {v7, v0, v1}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
     .line 67
-    sget v0, Lcom/vk/music/m/R5;->prev:I
+    sget v0, Lcom/vk/music/m/e;->prev:I
 
     if-eqz v11, :cond_10
 
-    sget v1, Lcom/vk/music/m/R6;->ic_backward_15_20:I
+    sget v1, Lcom/vk/music/m/d;->ic_backward_15_20:I
 
     goto :goto_10
 
     :cond_10
-    sget v1, Lcom/vk/music/m/R6;->ic_previous_24:I
+    sget v1, Lcom/vk/music/m/d;->ic_previous_24:I
 
     :goto_10
     invoke-virtual {v7, v0, v1}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
@@ -1001,57 +1001,57 @@
 
     move-result-object v1
 
-    sget v4, Lcom/vk/music/m/R;->audio_notification_expanded:I
+    sget v4, Lcom/vk/music/m/g;->audio_notification_expanded:I
 
     invoke-direct {v0, v1, v4}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
     .line 73
-    sget v1, Lcom/vk/music/m/R5;->title:I
+    sget v1, Lcom/vk/music/m/e;->title:I
 
     invoke-virtual {v0, v1, v9}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 74
-    sget v1, Lcom/vk/music/m/R5;->content:I
+    sget v1, Lcom/vk/music/m/e;->content:I
 
     invoke-virtual {v0, v1, v10}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 75
-    sget v1, Lcom/vk/music/m/R5;->cover:I
+    sget v1, Lcom/vk/music/m/e;->cover:I
 
     if-eqz v11, :cond_12
 
-    sget v4, Lcom/vk/music/m/R6;->aplayer_cover_placeholder_podcast:I
+    sget v4, Lcom/vk/music/m/d;->aplayer_cover_placeholder_podcast:I
 
     goto :goto_12
 
     :cond_12
-    sget v4, Lcom/vk/music/m/R6;->aplayer_cover_placeholder:I
+    sget v4, Lcom/vk/music/m/d;->aplayer_cover_placeholder:I
 
     :goto_12
     invoke-virtual {v0, v1, v4}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
     .line 76
-    sget v1, Lcom/vk/music/m/R5;->playpause:I
+    sget v1, Lcom/vk/music/m/e;->playpause:I
 
     if-eqz v2, :cond_13
 
-    sget v2, Lcom/vk/music/m/R6;->ic_pause_36:I
+    sget v2, Lcom/vk/music/m/d;->ic_pause_36:I
 
     goto :goto_13
 
     :cond_13
-    sget v2, Lcom/vk/music/m/R6;->ic_play_36:I
+    sget v2, Lcom/vk/music/m/d;->ic_play_36:I
 
     :goto_13
     invoke-virtual {v0, v1, v2}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
     .line 77
-    sget v1, Lcom/vk/music/m/R5;->playpause:I
+    sget v1, Lcom/vk/music/m/e;->playpause:I
 
     invoke-virtual {v0, v1, v3}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
     .line 78
-    sget v1, Lcom/vk/music/m/R5;->next:I
+    sget v1, Lcom/vk/music/m/e;->next:I
 
     const/high16 v2, 0x42990000    # 76.5f
 
@@ -1068,12 +1068,12 @@
     invoke-virtual {v0, v1, v6, v3}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
     .line 79
-    sget v1, Lcom/vk/music/m/R5;->next:I
+    sget v1, Lcom/vk/music/m/e;->next:I
 
     invoke-virtual {v0, v1, v14}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
     .line 80
-    sget v1, Lcom/vk/music/m/R5;->prev:I
+    sget v1, Lcom/vk/music/m/e;->prev:I
 
     if-nez v8, :cond_15
 
@@ -1088,55 +1088,55 @@
     invoke-virtual {v0, v1, v6, v2}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
     .line 81
-    sget v1, Lcom/vk/music/m/R5;->prev:I
+    sget v1, Lcom/vk/music/m/e;->prev:I
 
     invoke-virtual {v0, v1, v8}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
     .line 82
-    sget v1, Lcom/vk/music/m/R5;->stop:I
+    sget v1, Lcom/vk/music/m/e;->stop:I
 
     invoke-virtual {v0, v1, v15}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
     .line 83
-    sget v1, Lcom/vk/music/m/R5;->prev:I
+    sget v1, Lcom/vk/music/m/e;->prev:I
 
     if-eqz v12, :cond_16
 
-    sget v2, Lcom/vk/music/m/R6;->ic_skip_previous_alpha_40_28:I
+    sget v2, Lcom/vk/music/m/d;->ic_skip_previous_alpha_40_28:I
 
     goto :goto_16
 
     :cond_16
     if-eqz v11, :cond_17
 
-    sget v2, Lcom/vk/music/m/R6;->ic_backward_15_24:I
+    sget v2, Lcom/vk/music/m/d;->ic_backward_15_24:I
 
     goto :goto_16
 
     :cond_17
-    sget v2, Lcom/vk/music/m/R6;->ic_previous_36:I
+    sget v2, Lcom/vk/music/m/d;->ic_previous_36:I
 
     :goto_16
     invoke-virtual {v0, v1, v2}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
     .line 84
-    sget v1, Lcom/vk/music/m/R5;->next:I
+    sget v1, Lcom/vk/music/m/e;->next:I
 
     if-eqz v13, :cond_18
 
-    sget v2, Lcom/vk/music/m/R6;->ic_skip_next_alpha_40_28:I
+    sget v2, Lcom/vk/music/m/d;->ic_skip_next_alpha_40_28:I
 
     goto :goto_17
 
     :cond_18
     if-eqz v11, :cond_19
 
-    sget v2, Lcom/vk/music/m/R6;->ic_forward_15_24:I
+    sget v2, Lcom/vk/music/m/d;->ic_forward_15_24:I
 
     goto :goto_17
 
     :cond_19
-    sget v2, Lcom/vk/music/m/R6;->ic_next_36:I
+    sget v2, Lcom/vk/music/m/d;->ic_next_36:I
 
     :goto_17
     invoke-virtual {v0, v1, v2}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
@@ -1168,14 +1168,14 @@
     .line 87
     iget-object v1, v5, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
 
-    sget v2, Lcom/vk/music/m/R5;->cover:I
+    sget v2, Lcom/vk/music/m/e;->cover:I
 
     invoke-virtual {v1, v2, v0}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
 
     .line 88
     iget-object v1, v5, Landroid/app/Notification;->bigContentView:Landroid/widget/RemoteViews;
 
-    sget v2, Lcom/vk/music/m/R5;->cover:I
+    sget v2, Lcom/vk/music/m/e;->cover:I
 
     invoke-virtual {v1, v2, v0}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
 
@@ -1183,16 +1183,16 @@
     const-string v0, "notification"
 
     .line 89
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v5
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/notification/MusicPlayerNotification;Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Landroid/graphics/Bitmap;ZZLcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/dto/music/MusicTrack;)Landroid/app/Notification;
+.method public static final synthetic a(Lcom/vk/music/notification/MusicPlayerNotification;Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Landroid/graphics/Bitmap;ZZLcom/vk/music/l/a;Lcom/vk/dto/music/MusicTrack;)Landroid/app/Notification;
     .locals 0
 
     .line 1
-    invoke-direct/range {p0 .. p7}, Lcom/vk/music/notification/MusicPlayerNotification;->b(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Landroid/graphics/Bitmap;ZZLcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/dto/music/MusicTrack;)Landroid/app/Notification;
+    invoke-direct/range {p0 .. p7}, Lcom/vk/music/notification/MusicPlayerNotification;->b(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Landroid/graphics/Bitmap;ZZLcom/vk/music/l/a;Lcom/vk/dto/music/MusicTrack;)Landroid/app/Notification;
 
     move-result-object p0
 
@@ -1220,7 +1220,7 @@
 
     const-string p2, "PendingIntent.getService\u2026tent.FLAG_UPDATE_CURRENT)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -1231,9 +1231,9 @@
     .line 116
     new-instance v0, Landroidx/core/app/NotificationCompat$Action;
 
-    sget v1, Lcom/vk/music/m/R6;->ic_close_24:I
+    sget v1, Lcom/vk/music/m/d;->ic_close_24:I
 
-    sget v2, Lcom/vk/music/m/R4;->ui_accessibility_close:I
+    sget v2, Lcom/vk/music/m/i;->ui_accessibility_close:I
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1248,19 +1248,19 @@
     .locals 3
 
     .line 117
-    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/IntentPlayerHelper;
+    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/e;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/music/n/IntentPlayerHelper;->a(Landroid/content/Context;Lcom/vk/dto/music/MusicTrack;)Landroid/content/Intent;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/music/n/e;->a(Landroid/content/Context;Lcom/vk/dto/music/MusicTrack;)Landroid/content/Intent;
 
     move-result-object p2
 
     .line 118
-    sget v0, Lcom/vk/music/m/R6;->ic_add_24:I
+    sget v0, Lcom/vk/music/m/d;->ic_add_24:I
 
     .line 119
     new-instance v1, Landroidx/core/app/NotificationCompat$Action;
 
-    sget v2, Lcom/vk/music/m/R4;->music_talkback_add_audio:I
+    sget v2, Lcom/vk/music/m/i;->music_talkback_add_audio:I
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1279,23 +1279,23 @@
     .locals 3
 
     .line 113
-    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/IntentPlayerHelper;
+    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/e;
 
     xor-int/lit8 v1, p2, 0x1
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/music/n/IntentPlayerHelper;->a(Landroid/content/Context;Z)Landroid/content/Intent;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/music/n/e;->a(Landroid/content/Context;Z)Landroid/content/Intent;
 
     move-result-object v0
 
     if-nez p2, :cond_0
 
     .line 114
-    sget v1, Lcom/vk/music/m/R6;->ic_pause_28:I
+    sget v1, Lcom/vk/music/m/d;->ic_pause_28:I
 
     goto :goto_0
 
     :cond_0
-    sget v1, Lcom/vk/music/m/R6;->ic_play_28:I
+    sget v1, Lcom/vk/music/m/d;->ic_play_28:I
 
     .line 115
     :goto_0
@@ -1303,12 +1303,12 @@
 
     if-eqz p2, :cond_1
 
-    sget p2, Lcom/vk/music/m/R4;->music_talkback_play:I
+    sget p2, Lcom/vk/music/m/i;->music_talkback_play:I
 
     goto :goto_1
 
     :cond_1
-    sget p2, Lcom/vk/music/m/R4;->music_talkback_pause:I
+    sget p2, Lcom/vk/music/m/i;->music_talkback_pause:I
 
     :goto_1
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1330,9 +1330,9 @@
     if-eqz p2, :cond_0
 
     .line 107
-    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/IntentPlayerHelper;
+    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/e;
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/n/IntentPlayerHelper;->c(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v0, p1}, Lcom/vk/music/n/e;->c(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -1340,9 +1340,9 @@
 
     .line 108
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/IntentPlayerHelper;
+    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/e;
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/n/IntentPlayerHelper;->d(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v0, p1}, Lcom/vk/music/n/e;->d(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -1350,7 +1350,7 @@
     if-eqz p2, :cond_1
 
     .line 109
-    sget v1, Lcom/vk/music/m/R6;->ic_forward_15_28:I
+    sget v1, Lcom/vk/music/m/d;->ic_forward_15_28:I
 
     goto :goto_1
 
@@ -1358,13 +1358,13 @@
     if-eqz p3, :cond_2
 
     .line 110
-    sget v1, Lcom/vk/music/m/R6;->ic_skip_next_alpha_40_28:I
+    sget v1, Lcom/vk/music/m/d;->ic_skip_next_alpha_40_28:I
 
     goto :goto_1
 
     .line 111
     :cond_2
-    sget v1, Lcom/vk/music/m/R6;->ic_skip_next_28:I
+    sget v1, Lcom/vk/music/m/d;->ic_skip_next_28:I
 
     .line 112
     :goto_1
@@ -1372,12 +1372,12 @@
 
     if-eqz p2, :cond_3
 
-    sget p2, Lcom/vk/music/m/R4;->accessibility_rewind_on_15_sec_forward:I
+    sget p2, Lcom/vk/music/m/i;->accessibility_rewind_on_15_sec_forward:I
 
     goto :goto_2
 
     :cond_3
-    sget p2, Lcom/vk/music/m/R4;->music_talkback_next:I
+    sget p2, Lcom/vk/music/m/i;->music_talkback_next:I
 
     :goto_2
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1401,88 +1401,88 @@
     return-object v2
 .end method
 
-.method private final a(ILandroid/content/res/Resources;Lkotlin/jvm/b/Functions2;)V
+.method private final a(ILandroid/content/res/Resources;Lkotlin/jvm/b/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
             "Landroid/content/res/Resources;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/graphics/Bitmap;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 101
-    invoke-static {p1, p2}, Lcom/vk/imageloader/VKImageLoader;->a(ILandroid/content/res/Resources;)Lio/reactivex/Observable;
+    invoke-static {p1, p2}, Lcom/vk/imageloader/VKImageLoader;->a(ILandroid/content/res/Resources;)Lc/a/m;
 
     move-result-object p1
 
     .line 102
-    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, p2}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     .line 103
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, p2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     .line 104
     new-instance p2, Lcom/vk/music/notification/MusicPlayerNotification$d;
 
-    invoke-direct {p2, p0, p3}, Lcom/vk/music/notification/MusicPlayerNotification$d;-><init>(Lcom/vk/music/notification/MusicPlayerNotification;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p2, p0, p3}, Lcom/vk/music/notification/MusicPlayerNotification$d;-><init>(Lcom/vk/music/notification/MusicPlayerNotification;Lkotlin/jvm/b/b;)V
 
     .line 105
     new-instance v0, Lcom/vk/music/notification/MusicPlayerNotification$e;
 
-    invoke-direct {v0, p0, p3}, Lcom/vk/music/notification/MusicPlayerNotification$e;-><init>(Lcom/vk/music/notification/MusicPlayerNotification;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p0, p3}, Lcom/vk/music/notification/MusicPlayerNotification$e;-><init>(Lcom/vk/music/notification/MusicPlayerNotification;Lkotlin/jvm/b/b;)V
 
     .line 106
-    invoke-virtual {p1, p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, p2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/music/notification/MusicPlayerNotification;->b:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vk/music/notification/MusicPlayerNotification;->b:Lio/reactivex/disposables/b;
 
     return-void
 .end method
 
-.method private final a(Landroid/net/Uri;Lkotlin/jvm/b/Functions2;)V
+.method private final a(Landroid/net/Uri;Lkotlin/jvm/b/b;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/net/Uri;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/graphics/Bitmap;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 94
-    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lc/a/m;
 
     move-result-object p1
 
     .line 95
-    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
@@ -1491,53 +1491,53 @@
 
     const-wide/16 v1, 0x3
 
-    invoke-virtual {p1, v1, v2, v0}, Lio/reactivex/Observable;->h(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v1, v2, v0}, Lc/a/m;->h(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
 
     move-result-object p1
 
     .line 97
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     .line 98
     new-instance v0, Lcom/vk/music/notification/MusicPlayerNotification$b;
 
-    invoke-direct {v0, p0, p2}, Lcom/vk/music/notification/MusicPlayerNotification$b;-><init>(Lcom/vk/music/notification/MusicPlayerNotification;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p0, p2}, Lcom/vk/music/notification/MusicPlayerNotification$b;-><init>(Lcom/vk/music/notification/MusicPlayerNotification;Lkotlin/jvm/b/b;)V
 
     .line 99
     new-instance v1, Lcom/vk/music/notification/MusicPlayerNotification$c;
 
-    invoke-direct {v1, p0, p2}, Lcom/vk/music/notification/MusicPlayerNotification$c;-><init>(Lcom/vk/music/notification/MusicPlayerNotification;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v1, p0, p2}, Lcom/vk/music/notification/MusicPlayerNotification$c;-><init>(Lcom/vk/music/notification/MusicPlayerNotification;Lkotlin/jvm/b/b;)V
 
     .line 100
-    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/music/notification/MusicPlayerNotification;->b:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vk/music/notification/MusicPlayerNotification;->b:Lio/reactivex/disposables/b;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/notification/MusicPlayerNotification;ILandroid/content/res/Resources;Lkotlin/jvm/b/Functions2;)V
+.method public static final synthetic a(Lcom/vk/music/notification/MusicPlayerNotification;ILandroid/content/res/Resources;Lkotlin/jvm/b/b;)V
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/music/notification/MusicPlayerNotification;->a(ILandroid/content/res/Resources;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/music/notification/MusicPlayerNotification;->a(ILandroid/content/res/Resources;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/notification/MusicPlayerNotification;Lio/reactivex/disposables/Disposable;)V
+.method public static final synthetic a(Lcom/vk/music/notification/MusicPlayerNotification;Lio/reactivex/disposables/b;)V
     .locals 0
 
     .line 5
-    iput-object p1, p0, Lcom/vk/music/notification/MusicPlayerNotification;->b:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vk/music/notification/MusicPlayerNotification;->b:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -1551,11 +1551,11 @@
     return p0
 .end method
 
-.method private final b(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Landroid/graphics/Bitmap;ZZLcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/dto/music/MusicTrack;)Landroid/app/Notification;
+.method private final b(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Landroid/graphics/Bitmap;ZZLcom/vk/music/l/a;Lcom/vk/dto/music/MusicTrack;)Landroid/app/Notification;
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/core/util/Device;->e()Z
+    invoke-static {}, Lcom/vk/core/util/t;->e()Z
 
     move-result v0
 
@@ -1570,7 +1570,7 @@
 
     .line 3
     :cond_0
-    invoke-direct/range {p0 .. p7}, Lcom/vk/music/notification/MusicPlayerNotification;->a(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Landroid/graphics/Bitmap;ZZLcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/dto/music/MusicTrack;)Landroid/app/Notification;
+    invoke-direct/range {p0 .. p7}, Lcom/vk/music/notification/MusicPlayerNotification;->a(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Landroid/graphics/Bitmap;ZZLcom/vk/music/l/a;Lcom/vk/dto/music/MusicTrack;)Landroid/app/Notification;
 
     move-result-object p1
 
@@ -1599,7 +1599,7 @@
 
     const-string p2, "PendingIntent.getActivit\u2026tent.FLAG_UPDATE_CURRENT)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -1610,9 +1610,9 @@
     if-eqz p2, :cond_0
 
     .line 4
-    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/IntentPlayerHelper;
+    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/e;
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/n/IntentPlayerHelper;->f(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v0, p1}, Lcom/vk/music/n/e;->f(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -1620,9 +1620,9 @@
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/IntentPlayerHelper;
+    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->e:Lcom/vk/music/n/e;
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/n/IntentPlayerHelper;->g(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v0, p1}, Lcom/vk/music/n/e;->g(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -1630,7 +1630,7 @@
     if-eqz p2, :cond_1
 
     .line 6
-    sget v1, Lcom/vk/music/m/R6;->ic_backward_15_28:I
+    sget v1, Lcom/vk/music/m/d;->ic_backward_15_28:I
 
     goto :goto_1
 
@@ -1638,13 +1638,13 @@
     if-eqz p3, :cond_2
 
     .line 7
-    sget v1, Lcom/vk/music/m/R6;->ic_skip_previous_alpha_40_28:I
+    sget v1, Lcom/vk/music/m/d;->ic_skip_previous_alpha_40_28:I
 
     goto :goto_1
 
     .line 8
     :cond_2
-    sget v1, Lcom/vk/music/m/R6;->ic_skip_previous_28:I
+    sget v1, Lcom/vk/music/m/d;->ic_skip_previous_28:I
 
     .line 9
     :goto_1
@@ -1652,12 +1652,12 @@
 
     if-eqz p2, :cond_3
 
-    sget p2, Lcom/vk/music/m/R4;->accessibility_rewind_on_15_sec_backward:I
+    sget p2, Lcom/vk/music/m/i;->accessibility_rewind_on_15_sec_backward:I
 
     goto :goto_2
 
     :cond_3
-    sget p2, Lcom/vk/music/m/R4;->music_talkback_prev:I
+    sget p2, Lcom/vk/music/m/i;->music_talkback_prev:I
 
     :goto_2
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1692,11 +1692,11 @@
     iput-boolean v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->a:Z
 
     .line 93
-    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->b:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification;->b:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     return-void

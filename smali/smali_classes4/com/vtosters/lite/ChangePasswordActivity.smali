@@ -57,22 +57,22 @@
     .locals 1
 
     .line 3
-    new-instance v0, Lcom/vk/api/account/AccountChangePassword;
+    new-instance v0, Lcom/vk/api/account/b;
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/api/account/AccountChangePassword;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p1, p2}, Lcom/vk/api/account/b;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance p1, Lcom/vtosters/lite/ChangePasswordActivity$e;
 
     invoke-direct {p1, p0, p0}, Lcom/vtosters/lite/ChangePasswordActivity$e;-><init>(Lcom/vtosters/lite/ChangePasswordActivity;Landroid/content/Context;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
+    invoke-virtual {v0, p1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
 
     move-result-object p1
 
     .line 4
-    invoke-virtual {p1, p0}, Lcom/vk/api/base/ApiCallbackDisposable;->a(Landroid/content/Context;)Lcom/vk/api/base/ApiCallbackDisposable;
+    invoke-virtual {p1, p0}, Lcom/vk/api/base/b;->a(Landroid/content/Context;)Lcom/vk/api/base/b;
 
-    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
 
     return-void
 .end method

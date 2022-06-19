@@ -12,11 +12,11 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/KProperty5;
+.field static final synthetic a:[Lkotlin/u/j;
 
 .field private static volatile b:Z = false
 
-.field private static c:Lcom/vk/im/engine/ImEngine; = null
+.field private static c:Lcom/vk/im/engine/a; = null
 
 .field private static d:Lcom/vk/im/engine/ImConfig; = null
 
@@ -29,7 +29,7 @@
 
 .field private static h:I
 
-.field private static i:Lio/reactivex/disposables/Disposable;
+.field private static i:Lio/reactivex/disposables/b;
 
 .field public static final j:Lcom/vtosters/lite/im/ImEngineProvider;
 
@@ -40,13 +40,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference0Impl;
 
     const-class v2, Lcom/vtosters/lite/im/ImEngineProvider;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -54,15 +54,15 @@
 
     const-string v4, "<v#0>"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/KProperty1;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/k;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->a:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->a:[Lkotlin/u/j;
 
     .line 1
     new-instance v0, Lcom/vtosters/lite/im/ImEngineProvider;
@@ -117,7 +117,7 @@
 
     invoke-direct {v0, v3}, Lcom/vtosters/lite/im/ImEngineProvider$getApiManager$apiLogLevel$1;-><init>(Landroid/content/SharedPreferences;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v7
 
@@ -134,7 +134,7 @@
 
     invoke-direct {v4, v3}, Lcom/vtosters/lite/im/ImEngineProvider$getApiManager$apiConfig$1;-><init>(Landroid/content/SharedPreferences;)V
 
-    invoke-static {v4}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v4}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v17
 
@@ -143,48 +143,48 @@
 
     invoke-direct {v3, v5}, Lcom/vtosters/lite/im/ImEngineProvider$getApiManager$apiConfig$2;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v3}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v3}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v4
 
     .line 50
-    sget-object v3, Lcom/vk/core/util/AppLangProvider;->INSTANCE:Lcom/vk/core/util/AppLangProvider;
+    sget-object v3, Lcom/vk/core/util/j;->a:Lcom/vk/core/util/j;
 
-    invoke-virtual {v3}, Lcom/vk/core/util/AppLangProvider;->a()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/vk/core/util/j;->a()Ljava/lang/String;
 
     move-result-object v18
 
     .line 51
-    invoke-direct/range {p0 .. p0}, Lcom/vtosters/lite/im/ImEngineProvider;->c()Lcom/vk/api/sdk/VKOkHttpProvider;
+    invoke-direct/range {p0 .. p0}, Lcom/vtosters/lite/im/ImEngineProvider;->c()Lcom/vk/api/sdk/m;
 
     move-result-object v6
 
     .line 52
     sget-object v3, Lcom/vtosters/lite/im/ImEngineProvider$getApiManager$apiConfig$3;->a:Lcom/vtosters/lite/im/ImEngineProvider$getApiManager$apiConfig$3;
 
-    invoke-static {v3}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v3}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v15
 
     .line 53
-    new-instance v8, Lcom/vtosters/lite/api/DefaultValidationHandler;
+    new-instance v8, Lcom/vtosters/lite/api/h;
 
     move-object v3, v8
 
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v9
 
-    invoke-direct {v8, v5, v9}, Lcom/vtosters/lite/api/DefaultValidationHandler;-><init>(Landroid/content/Context;Lcom/vk/bridges/AuthBridge3;)V
+    invoke-direct {v8, v5, v9}, Lcom/vtosters/lite/api/h;-><init>(Landroid/content/Context;Lcom/vk/bridges/f;)V
 
     .line 54
-    new-instance v5, Lcom/vtosters/lite/im/l/ImApiLogger;
+    new-instance v5, Lcom/vtosters/lite/im/l/b;
 
     move-object v11, v5
 
     const-string v8, "ImApi"
 
-    invoke-direct {v5, v7, v8}, Lcom/vtosters/lite/im/l/ImApiLogger;-><init>(Lkotlin/Lazy2;Ljava/lang/String;)V
+    invoke-direct {v5, v7, v8}, Lcom/vtosters/lite/im/l/b;-><init>(Lkotlin/e;Ljava/lang/String;)V
 
     .line 55
     sget-object v5, Lcom/vk/core/network/Network;->l:Lcom/vk/core/network/Network;
@@ -221,7 +221,7 @@
     const/16 v20, 0x0
 
     .line 57
-    invoke-direct/range {v0 .. v20}, Lcom/vk/api/sdk/VKApiConfig;-><init>(Landroid/content/Context;ILcom/vk/api/sdk/VKApiValidationHandler;Lkotlin/Lazy2;Ljava/lang/String;Lcom/vk/api/sdk/VKOkHttpProvider;JJLcom/vk/api/sdk/utils/log/Logger;Lkotlin/Lazy2;Lkotlin/Lazy2;ZLkotlin/Lazy2;ILkotlin/Lazy2;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v20}, Lcom/vk/api/sdk/VKApiConfig;-><init>(Landroid/content/Context;ILcom/vk/api/sdk/i;Lkotlin/e;Ljava/lang/String;Lcom/vk/api/sdk/m;JJLcom/vk/api/sdk/utils/log/Logger;Lkotlin/e;Lkotlin/e;ZLkotlin/e;ILkotlin/e;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     .line 58
     new-instance v0, Lcom/vk/api/internal/ApiManager;
@@ -267,7 +267,7 @@
     :try_start_1
     const-string v1, "defaultConfig"
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -283,7 +283,7 @@
     throw v1
 .end method
 
-.method private final a(Lcom/vk/bridges/AuthBridge3;)Lcom/vk/im/engine/UserCredentialsProvider;
+.method private final a(Lcom/vk/bridges/f;)Lcom/vk/im/engine/UserCredentialsProvider;
     .locals 2
 
     .line 43
@@ -291,18 +291,18 @@
 
     new-instance v1, Lcom/vtosters/lite/im/ImEngineProvider$createLazyCredentialsProvider$1;
 
-    invoke-direct {v1, p1}, Lcom/vtosters/lite/im/ImEngineProvider$createLazyCredentialsProvider$1;-><init>(Lcom/vk/bridges/AuthBridge3;)V
+    invoke-direct {v1, p1}, Lcom/vtosters/lite/im/ImEngineProvider$createLazyCredentialsProvider$1;-><init>(Lcom/vk/bridges/f;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/UserCredentialsProvider$Lazy;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/UserCredentialsProvider$Lazy;-><init>(Lkotlin/jvm/b/a;)V
 
     return-object v0
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/im/ImEngineProvider;)Lcom/vk/im/engine/ImEngine;
+.method public static final synthetic a(Lcom/vtosters/lite/im/ImEngineProvider;)Lcom/vk/im/engine/a;
     .locals 0
 
     .line 2
-    sget-object p0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sget-object p0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
 
     if-eqz p0, :cond_0
 
@@ -311,24 +311,24 @@
     :cond_0
     const-string p0, "instance"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method private final a(Lb/h/g/l/NotificationCenter;[ILkotlin/jvm/b/Functions2;)V
+.method private final a(Lb/h/g/l/d;[ILkotlin/jvm/b/b;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lb/h/g/l/NotificationCenter;",
+            "Lb/h/g/l/d;",
             "[I",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/dto/stories/model/StoryEntry;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -346,9 +346,9 @@
     .line 77
     new-instance v3, Lcom/vtosters/lite/im/ImEngineProvider$subscribe$$inlined$forEach$lambda$1;
 
-    invoke-direct {v3, p1, p3}, Lcom/vtosters/lite/im/ImEngineProvider$subscribe$$inlined$forEach$lambda$1;-><init>(Lb/h/g/l/NotificationCenter;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v3, p1, p3}, Lcom/vtosters/lite/im/ImEngineProvider$subscribe$$inlined$forEach$lambda$1;-><init>(Lb/h/g/l/d;Lkotlin/jvm/b/b;)V
 
-    invoke-virtual {p1, v2, v3}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
+    invoke-virtual {p1, v2, v3}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -362,29 +362,29 @@
     .locals 2
 
     .line 75
-    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/vk/im/engine/commands/etc/InvalidateMsgsWithAttachesCmd;
+    new-instance v1, Lcom/vk/im/engine/commands/etc/d;
 
-    invoke-direct {v1, p1}, Lcom/vk/im/engine/commands/etc/InvalidateMsgsWithAttachesCmd;-><init>(Lcom/vk/im/engine/models/attaches/AttachWithId;)V
+    invoke-direct {v1, p1}, Lcom/vk/im/engine/commands/etc/d;-><init>(Lcom/vk/im/engine/models/attaches/AttachWithId;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
 
     return-void
 
     :cond_0
     const-string p1, "instance"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method private final a(Lcom/vk/im/engine/utils/collection/IntCollection;)V
+.method private final a(Lcom/vk/im/engine/utils/collection/d;)V
     .locals 12
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
@@ -425,7 +425,7 @@
     invoke-virtual {v2, v0, v1}, Lcom/vk/im/ui/ImUiPrefs;->b(J)V
 
     .line 71
-    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
 
     const/4 v1, 0x0
 
@@ -433,17 +433,17 @@
 
     if-eqz v0, :cond_3
 
-    new-instance v3, Lcom/vk/im/engine/commands/storage/GetStorageMetricsCmd;
+    new-instance v3, Lcom/vk/im/engine/commands/storage/a;
 
-    invoke-direct {v3}, Lcom/vk/im/engine/commands/storage/GetStorageMetricsCmd;-><init>()V
+    invoke-direct {v3}, Lcom/vk/im/engine/commands/storage/a;-><init>()V
 
-    invoke-virtual {v0, p0, v3}, Lcom/vk/im/engine/ImEngine;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, v3}, Lcom/vk/im/engine/a;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/models/StorageMetrics;
+    check-cast v0, Lcom/vk/im/engine/models/o;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/StorageMetrics;->a()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/o;->a()I
 
     move-result v0
 
@@ -473,25 +473,25 @@
 
     move-object v8, p1
 
-    invoke-direct/range {v4 .. v11}, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;-><init>(IIILcom/vk/im/engine/utils/collection/IntCollection;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v4 .. v11}, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;-><init>(IIILcom/vk/im/engine/utils/collection/d;ZILkotlin/jvm/internal/i;)V
 
     .line 73
-    sget-object p1, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sget-object p1, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1, p0, v0}, Lcom/vk/im/engine/ImEngine;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
+    invoke-virtual {p1, p0, v0}, Lcom/vk/im/engine/a;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
 
     return-void
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 74
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -514,11 +514,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/im/ImEngineProvider;Lcom/vk/im/engine/utils/collection/IntCollection;)V
+.method public static final synthetic a(Lcom/vtosters/lite/im/ImEngineProvider;Lcom/vk/im/engine/utils/collection/d;)V
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/im/ImEngineProvider;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/im/ImEngineProvider;->a(Lcom/vk/im/engine/utils/collection/d;)V
 
     return-void
 .end method
@@ -527,12 +527,12 @@
     .locals 3
 
     .line 60
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v0
 
     .line 61
-    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->a()Z
+    invoke-interface {v0}, Lcom/vk/bridges/f;->a()Z
 
     move-result v1
 
@@ -543,7 +543,7 @@
     .line 62
     new-instance v1, Lcom/vk/im/engine/models/credentials/UserCredentials;
 
-    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->b()I
+    invoke-interface {v0}, Lcom/vk/bridges/f;->b()I
 
     move-result v0
 
@@ -556,12 +556,12 @@
 
     .line 63
     :goto_0
-    sget-object p0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sget-object p0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
 
     if-eqz p0, :cond_1
 
     .line 64
-    invoke-virtual {p0}, Lcom/vk/im/engine/ImEngine;->g()Lcom/vk/im/engine/ImConfig;
+    invoke-virtual {p0}, Lcom/vk/im/engine/a;->g()Lcom/vk/im/engine/ImConfig;
 
     move-result-object p1
 
@@ -570,7 +570,7 @@
     move-result-object p1
 
     .line 65
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/ImConfig;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/ImConfig;)V
 
     return-void
 
@@ -578,7 +578,7 @@
     const-string p0, "instance"
 
     .line 66
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -592,7 +592,7 @@
     return-wide v0
 .end method
 
-.method public static final declared-synchronized b()Lcom/vk/im/engine/ImEngine;
+.method public static final declared-synchronized b()Lcom/vk/im/engine/a;
     .locals 2
 
     const-class v0, Lcom/vtosters/lite/im/ImEngineProvider;
@@ -601,7 +601,7 @@
 
     .line 7
     :try_start_0
-    sget-object v1, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sget-object v1, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -615,7 +615,7 @@
     :try_start_1
     const-string v1, "instance"
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -639,14 +639,14 @@
             "Landroid/content/Context;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/j/DialogThemesProvider;",
+            "Lcom/vk/im/engine/j/a;",
             ">;"
         }
     .end annotation
 
     const/4 v0, 0x2
 
-    new-array v0, v0, [Lcom/vk/im/engine/j/DialogThemesProvider;
+    new-array v0, v0, [Lcom/vk/im/engine/j/a;
 
     .line 4
     new-instance v1, Lcom/vk/im/ui/themes/AssetsDialogThemesProvider;
@@ -691,22 +691,22 @@
     .locals 2
 
     .line 8
-    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/vk/im/engine/commands/etc/ReplaceMsgsAttachesCmd;
+    new-instance v1, Lcom/vk/im/engine/commands/etc/h;
 
-    invoke-direct {v1, p1}, Lcom/vk/im/engine/commands/etc/ReplaceMsgsAttachesCmd;-><init>(Lcom/vk/im/engine/models/attaches/AttachWithId;)V
+    invoke-direct {v1, p1}, Lcom/vk/im/engine/commands/etc/h;-><init>(Lcom/vk/im/engine/models/attaches/AttachWithId;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
 
     return-void
 
     :cond_0
     const-string p1, "instance"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -722,7 +722,7 @@
     return-void
 .end method
 
-.method private final c()Lcom/vk/api/sdk/VKOkHttpProvider;
+.method private final c()Lcom/vk/api/sdk/m;
     .locals 1
 
     .line 3
@@ -733,7 +733,7 @@
     return-object v0
 .end method
 
-.method private final c(Landroid/content/Context;)Lcom/vk/im/engine/j/ImJobManagerFactory;
+.method private final c(Landroid/content/Context;)Lcom/vk/im/engine/j/c;
     .locals 1
 
     .line 2
@@ -771,7 +771,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -780,22 +780,22 @@
     if-eqz v0, :cond_1
 
     .line 3
-    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/vk/im/engine/i/i/ExpireAllUsersCmd;
+    new-instance v1, Lcom/vk/im/engine/i/i/a;
 
-    invoke-direct {v1}, Lcom/vk/im/engine/i/i/ExpireAllUsersCmd;-><init>()V
+    invoke-direct {v1}, Lcom/vk/im/engine/i/i/a;-><init>()V
 
-    invoke-virtual {v0, p0, v1}, Lcom/vk/im/engine/ImEngine;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, v1}, Lcom/vk/im/engine/a;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
     const-string v0, "instance"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -815,13 +815,13 @@
     return-void
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 5
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 .end method
@@ -843,7 +843,7 @@
     .line 2
     sget v0, Lcom/vtosters/lite/im/ImEngineProvider;->h:I
 
-    invoke-static {v0}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(I)Lcom/vk/im/engine/utils/collection/IntArrayList;
+    invoke-static {v0}, Lcom/vk/im/engine/utils/collection/e;->a(I)Lcom/vk/im/engine/utils/collection/IntArrayList;
 
     move-result-object v0
 
@@ -853,31 +853,31 @@
     invoke-direct {v1, v0}, Lcom/vtosters/lite/im/ImEngineProvider$runTrimIfNeeded$action$1;-><init>(Lcom/vk/im/engine/utils/collection/IntArrayList;)V
 
     .line 4
-    new-instance v0, Lcom/vtosters/lite/im/ImEngineProvider1;
+    new-instance v0, Lcom/vtosters/lite/im/e;
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/ImEngineProvider1;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/e;-><init>(Lkotlin/jvm/b/a;)V
 
-    invoke-static {v0}, Lio/reactivex/Completable;->c(Lio/reactivex/functions/Action;)Lio/reactivex/Completable;
+    invoke-static {v0}, Lc/a/a;->c(Lc/a/z/a;)Lc/a/a;
 
     move-result-object v0
 
     .line 5
     sget-object v1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->i()Lio/reactivex/Scheduler;
+    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->i()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Completable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Completable;
+    invoke-virtual {v0, v1}, Lc/a/a;->b(Lc/a/s;)Lc/a/a;
 
     move-result-object v0
 
     .line 6
-    invoke-virtual {v0}, Lio/reactivex/Completable;->a()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0}, Lc/a/a;->a()Lio/reactivex/disposables/b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->i:Lio/reactivex/disposables/Disposable;
+    sput-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->i:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -900,34 +900,34 @@
     .end annotation
 
     .line 2
-    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->j()Lio/reactivex/Observable;
+    invoke-virtual {v0}, Lcom/vk/im/engine/a;->j()Lc/a/m;
 
     move-result-object v0
 
     .line 3
-    const-class v1, Lcom/vk/im/engine/events/OnImEngineInvalidateEvent;
+    const-class v1, Lcom/vk/im/engine/events/y;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Ljava/lang/Class;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->b(Ljava/lang/Class;)Lc/a/m;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object v0
 
     .line 5
     sget-object v1, Lcom/vtosters/lite/im/ImEngineProvider$c;->a:Lcom/vtosters/lite/im/ImEngineProvider$c;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     return-void
 
@@ -935,7 +935,7 @@
     const-string v0, "instance"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -955,13 +955,13 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lb/h/n/AppLifecycleDispatcher;->INSTANCE:Lb/h/n/AppLifecycleDispatcher;
+    sget-object v0, Lb/h/n/c;->h:Lb/h/n/c;
 
     new-instance v1, Lcom/vtosters/lite/im/ImEngineProvider$d;
 
     invoke-direct {v1}, Lcom/vtosters/lite/im/ImEngineProvider$d;-><init>()V
 
-    invoke-virtual {v0, v1}, Lb/h/n/AppLifecycleDispatcher;->a(Lb/h/n/AppLifecycleDispatcher$a;)V
+    invoke-virtual {v0, v1}, Lb/h/n/c;->a(Lb/h/n/c$a;)V
 
     return-void
 .end method
@@ -975,48 +975,48 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->j()Lio/reactivex/Observable;
+    invoke-virtual {v0}, Lcom/vk/im/engine/a;->j()Lc/a/m;
 
     move-result-object v0
 
     .line 2
-    const-class v1, Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;
+    const-class v1, Lcom/vk/im/engine/events/h;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Ljava/lang/Class;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->b(Ljava/lang/Class;)Lc/a/m;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Lcom/vtosters/lite/im/ImEngineProvider$e;->a:Lcom/vtosters/lite/im/ImEngineProvider$e;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
 
     move-result-object v0
 
     const-wide/16 v1, 0x1
 
     .line 5
-    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->d(J)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1, v2}, Lc/a/m;->d(J)Lc/a/m;
 
     move-result-object v0
 
     .line 6
     sget-object v1, Lcom/vtosters/lite/im/ImEngineProvider$f;->a:Lcom/vtosters/lite/im/ImEngineProvider$f;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     return-void
 
@@ -1024,7 +1024,7 @@
     const-string v0, "instance"
 
     .line 7
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1043,7 +1043,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
 
     const/4 v1, 0x0
 
@@ -1051,81 +1051,81 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->j()Lio/reactivex/Observable;
+    invoke-virtual {v0}, Lcom/vk/im/engine/a;->j()Lc/a/m;
 
     move-result-object v0
 
     .line 2
-    const-class v3, Lcom/vk/im/engine/events/OnConversationOpenedEvent;
+    const-class v3, Lcom/vk/im/engine/events/n;
 
-    invoke-virtual {v0, v3}, Lio/reactivex/Observable;->b(Ljava/lang/Class;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v3}, Lc/a/m;->b(Ljava/lang/Class;)Lc/a/m;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v3}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object v0
 
     .line 4
     sget-object v3, Lcom/vtosters/lite/im/ImEngineProvider$g;->a:Lcom/vtosters/lite/im/ImEngineProvider$g;
 
-    invoke-virtual {v0, v3}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v3}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     .line 5
-    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->j()Lio/reactivex/Observable;
+    invoke-virtual {v0}, Lcom/vk/im/engine/a;->j()Lc/a/m;
 
     move-result-object v0
 
     .line 6
-    const-class v1, Lcom/vk/im/engine/events/OnConversationClosedEvent;
+    const-class v1, Lcom/vk/im/engine/events/m;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Ljava/lang/Class;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->b(Ljava/lang/Class;)Lc/a/m;
 
     move-result-object v0
 
     .line 7
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object v0
 
     .line 8
     sget-object v1, Lcom/vtosters/lite/im/ImEngineProvider$h;->a:Lcom/vtosters/lite/im/ImEngineProvider$h;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     .line 9
-    sget-object v0, Lb/h/n/AppLifecycleDispatcher;->INSTANCE:Lb/h/n/AppLifecycleDispatcher;
+    sget-object v0, Lb/h/n/c;->h:Lb/h/n/c;
 
     new-instance v1, Lcom/vtosters/lite/im/ImEngineProvider$i;
 
     invoke-direct {v1}, Lcom/vtosters/lite/im/ImEngineProvider$i;-><init>()V
 
-    invoke-virtual {v0, v1}, Lb/h/n/AppLifecycleDispatcher;->a(Lb/h/n/AppLifecycleDispatcher$a;)V
+    invoke-virtual {v0, v1}, Lb/h/n/c;->a(Lb/h/n/c$a;)V
 
     return-void
 
     .line 10
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 11
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1136,17 +1136,17 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->i:Lio/reactivex/disposables/Disposable;
+    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->i:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    sput-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->i:Lio/reactivex/disposables/Disposable;
+    sput-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->i:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -1175,25 +1175,25 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
+    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
 
-    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
+    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
 
     move-result-object v0
 
-    const-class v1, Lb/h/t/l/a/PollUpdatedEvent;
+    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Ljava/lang/Class;)Lio/reactivex/Observable;
+    move-result-object v0
+
+    const-class v1, Lb/h/t/l/a/a;
+
+    invoke-virtual {v0, v1}, Lc/a/m;->b(Ljava/lang/Class;)Lc/a/m;
 
     move-result-object v0
 
     sget-object v1, Lcom/vtosters/lite/im/ImEngineProvider$j;->a:Lcom/vtosters/lite/im/ImEngineProvider$j;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -1202,14 +1202,14 @@
     .locals 4
 
     .line 1
-    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/NotificationCenter;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/d;
 
     move-result-object v0
 
     const-string v1, "notificationCenter"
 
     .line 2
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x2
 
@@ -1221,7 +1221,7 @@
     sget-object v3, Lcom/vtosters/lite/im/ImEngineProvider$subscribeToStoriesSeenEvents$1;->a:Lcom/vtosters/lite/im/ImEngineProvider$subscribeToStoriesSeenEvents$1;
 
     .line 4
-    invoke-direct {p0, v0, v2, v3}, Lcom/vtosters/lite/im/ImEngineProvider;->a(Lb/h/g/l/NotificationCenter;[ILkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, v0, v2, v3}, Lcom/vtosters/lite/im/ImEngineProvider;->a(Lb/h/g/l/d;[ILkotlin/jvm/b/b;)V
 
     new-array v1, v1, [I
 
@@ -1232,7 +1232,7 @@
     sget-object v2, Lcom/vtosters/lite/im/ImEngineProvider$subscribeToStoriesSeenEvents$2;->a:Lcom/vtosters/lite/im/ImEngineProvider$subscribeToStoriesSeenEvents$2;
 
     .line 7
-    invoke-direct {p0, v0, v1, v2}, Lcom/vtosters/lite/im/ImEngineProvider;->a(Lb/h/g/l/NotificationCenter;[ILkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/vtosters/lite/im/ImEngineProvider;->a(Lb/h/g/l/d;[ILkotlin/jvm/b/b;)V
 
     return-void
 
@@ -1255,26 +1255,26 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/libvideo/y/VideoEventBus;->a()Lio/reactivex/Observable;
+    invoke-static {}, Lcom/vk/libvideo/y/m;->a()Lc/a/m;
 
     move-result-object v0
 
-    const-class v1, Lcom/vk/libvideo/y/VideoEvents3;
+    const-class v1, Lcom/vk/libvideo/y/n;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Ljava/lang/Class;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->b(Ljava/lang/Class;)Lc/a/m;
 
     move-result-object v0
 
     sget-object v1, Lcom/vtosters/lite/im/ImEngineProvider$k;->a:Lcom/vtosters/lite/im/ImEngineProvider$k;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lcom/vk/im/engine/reporters/ImReporters;Lcom/vk/bridges/AuthBridge3;)Lcom/vk/im/engine/ImConfig;
+.method public final a(Landroid/content/Context;Lcom/vk/im/engine/reporters/k;Lcom/vk/bridges/f;)Lcom/vk/im/engine/ImConfig;
     .locals 87
 
     move-object/from16 v2, p1
@@ -1286,11 +1286,11 @@
     .line 20
     sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$sp$2;->a:Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$sp$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v14
 
-    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->a:[Lkotlin/u/KProperty5;
+    sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->a:[Lkotlin/u/j;
 
     const/4 v3, 0x0
 
@@ -1316,7 +1316,7 @@
     move-object/from16 v5, p3
 
     .line 24
-    invoke-direct {v11, v5}, Lcom/vtosters/lite/im/ImEngineProvider;->a(Lcom/vk/bridges/AuthBridge3;)Lcom/vk/im/engine/UserCredentialsProvider;
+    invoke-direct {v11, v5}, Lcom/vtosters/lite/im/ImEngineProvider;->a(Lcom/vk/bridges/f;)Lcom/vk/im/engine/UserCredentialsProvider;
 
     move-result-object v12
 
@@ -1328,19 +1328,19 @@
     invoke-direct {v6, v2}, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$3;-><init>(Landroid/content/Context;)V
 
     .line 26
-    invoke-direct/range {p0 .. p1}, Lcom/vtosters/lite/im/ImEngineProvider;->c(Landroid/content/Context;)Lcom/vk/im/engine/j/ImJobManagerFactory;
+    invoke-direct/range {p0 .. p1}, Lcom/vtosters/lite/im/ImEngineProvider;->c(Landroid/content/Context;)Lcom/vk/im/engine/j/c;
 
     move-result-object v6
 
     .line 27
-    new-instance v8, Lcom/vtosters/lite/im/ImJobNotificationFactoryImpl;
+    new-instance v8, Lcom/vtosters/lite/im/f;
 
     move-object v7, v8
 
-    invoke-direct {v8, v2}, Lcom/vtosters/lite/im/ImJobNotificationFactoryImpl;-><init>(Landroid/content/Context;)V
+    invoke-direct {v8, v2}, Lcom/vtosters/lite/im/f;-><init>(Landroid/content/Context;)V
 
     .line 28
-    sget-object v8, Lcom/vtosters/lite/im/ImTmpFileCache;->INSTANCE:Lcom/vtosters/lite/im/ImTmpFileCache;
+    sget-object v8, Lcom/vtosters/lite/im/j;->a:Lcom/vtosters/lite/im/j;
 
     .line 29
     new-instance v9, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$4;
@@ -1363,14 +1363,14 @@
     move-object/from16 v84, v0
 
     .line 33
-    sget-object v0, Lcom/vk/core/util/GooglePlayUtils;->INSTANCE:Lcom/vk/core/util/GooglePlayUtils;
+    sget-object v0, Lcom/vk/core/util/h0;->a:Lcom/vk/core/util/h0;
 
     .line 34
-    sget-object v16, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
+    sget-object v16, Lb/h/v/d;->c:Lb/h/v/d$a;
 
     move-object/from16 v85, v1
 
-    invoke-virtual/range {v16 .. v16}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
+    invoke-virtual/range {v16 .. v16}, Lb/h/v/d$a;->a()Lb/h/v/d;
 
     move-result-object v1
 
@@ -1379,38 +1379,38 @@
     move-object/from16 v3, p2
 
     .line 35
-    invoke-direct {v3, v2, v11, v0, v1}, Lcom/vtosters/lite/im/VkAppExperiments;-><init>(Landroid/content/Context;Lcom/vk/toggle/FeatureManager;Lcom/vk/core/util/GooglePlayUtils;Lb/h/v/RxBus;)V
+    invoke-direct {v3, v2, v11, v0, v1}, Lcom/vtosters/lite/im/VkAppExperiments;-><init>(Landroid/content/Context;Lcom/vk/toggle/FeatureManager;Lcom/vk/core/util/h0;Lb/h/v/d;)V
 
     .line 36
-    sget-object v11, Lcom/vk/im/ui/t/StickersAnimationLoaderBridge;->INSTANCE:Lcom/vk/im/ui/t/StickersAnimationLoaderBridge;
+    sget-object v11, Lcom/vk/im/ui/t/b;->a:Lcom/vk/im/ui/t/b;
 
     .line 37
-    new-instance v0, Lcom/vtosters/lite/im/k/ArticleCacheControllerBridge;
+    new-instance v0, Lcom/vtosters/lite/im/k/a;
 
     move-object/from16 v66, v0
 
-    invoke-direct {v0}, Lcom/vtosters/lite/im/k/ArticleCacheControllerBridge;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/im/k/a;-><init>()V
 
     .line 38
     new-instance v0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$5;
 
     move-object/from16 v68, v0
 
-    invoke-direct {v0, v14, v15}, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$5;-><init>(Lkotlin/Lazy2;Lkotlin/u/KProperty5;)V
+    invoke-direct {v0, v14, v15}, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$5;-><init>(Lkotlin/e;Lkotlin/u/j;)V
 
     .line 39
     new-instance v0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6;
 
     move-object/from16 v63, v0
 
-    invoke-direct {v0, v14, v15}, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6;-><init>(Lkotlin/Lazy2;Lkotlin/u/KProperty5;)V
+    invoke-direct {v0, v14, v15}, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$6;-><init>(Lkotlin/e;Lkotlin/u/j;)V
 
     .line 40
     new-instance v0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$7;
 
     move-object/from16 v64, v0
 
-    invoke-direct {v0, v14, v15}, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$7;-><init>(Lkotlin/Lazy2;Lkotlin/u/KProperty5;)V
+    invoke-direct {v0, v14, v15}, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$7;-><init>(Lkotlin/e;Lkotlin/u/j;)V
 
     .line 41
     sget-object v65, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$8;->a:Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$8;
@@ -1514,12 +1514,12 @@
     move-object/from16 v3, v86
 
     .line 42
-    invoke-direct/range {v0 .. v82}, Lcom/vk/im/engine/ImConfig;-><init>(Landroid/content/Context;ZLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lcom/vk/im/engine/j/ImJobManagerFactory;Lcom/vk/im/engine/j/ImJobNotificationFactory;Lcom/vk/im/engine/j/TmpFileCache;Lcom/vk/metrics/eventtracking/Tracker;Lcom/vk/im/engine/models/ImExperiments;Lcom/vk/im/engine/j/StickersAnimationLoader;Lcom/vk/im/engine/UserCredentialsProvider;Lkotlin/jvm/b/Functions;Ljava/lang/String;JIJIIJIJJIZJLjava/util/Set;IIIJLcom/vk/im/engine/utils/collection/IntCollection;JJJJJJJJJLkotlin/jvm/b/Functions;JJLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lcom/vk/im/engine/j/WebUrlCacheController;ZLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ZLcom/vk/im/engine/reporters/ImReporters;Lcom/vk/im/log/LogLevel;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/util/List;Ljava/util/List;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v82}, Lcom/vk/im/engine/ImConfig;-><init>(Landroid/content/Context;ZLkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lcom/vk/im/engine/j/c;Lcom/vk/im/engine/j/d;Lcom/vk/im/engine/j/i;Lcom/vk/metrics/eventtracking/c;Lcom/vk/im/engine/models/e;Lcom/vk/im/engine/j/g;Lcom/vk/im/engine/UserCredentialsProvider;Lkotlin/jvm/b/a;Ljava/lang/String;JIJIIJIJJIZJLjava/util/Set;IIIJLcom/vk/im/engine/utils/collection/d;JJJJJJJJJLkotlin/jvm/b/a;JJLkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lcom/vk/im/engine/j/j;ZLkotlin/jvm/b/a;Lkotlin/jvm/b/a;ZLcom/vk/im/engine/reporters/k;Lcom/vk/im/log/LogLevel;ILkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/util/List;Ljava/util/List;IIILkotlin/jvm/internal/i;)V
 
     return-object v83
 .end method
 
-.method public final a(Lcom/vk/im/engine/ImConfig;)Lcom/vk/im/engine/ImEngine;
+.method public final a(Lcom/vk/im/engine/ImConfig;)Lcom/vk/im/engine/a;
     .locals 4
 
     .line 6
@@ -1532,14 +1532,14 @@
     if-eqz v0, :cond_1
 
     .line 7
-    sget-object p1, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sget-object p1, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
 
     if-eqz p1, :cond_0
 
     return-object p1
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1548,7 +1548,7 @@
     sput-object p1, Lcom/vtosters/lite/im/ImEngineProvider;->d:Lcom/vk/im/engine/ImConfig;
 
     .line 9
-    new-instance p1, Lcom/vk/im/engine/ImEngine;
+    new-instance p1, Lcom/vk/im/engine/a;
 
     sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->d:Lcom/vk/im/engine/ImConfig;
 
@@ -1556,9 +1556,9 @@
 
     if-eqz v0, :cond_4
 
-    invoke-direct {p1, v0}, Lcom/vk/im/engine/ImEngine;-><init>(Lcom/vk/im/engine/ImConfig;)V
+    invoke-direct {p1, v0}, Lcom/vk/im/engine/a;-><init>(Lcom/vk/im/engine/ImConfig;)V
 
-    sput-object p1, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sput-object p1, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
 
     .line 10
     sget-object p1, Lcom/vtosters/lite/im/ImEngineProvider;->d:Lcom/vk/im/engine/ImConfig;
@@ -1592,26 +1592,26 @@
     sput-boolean p1, Lcom/vtosters/lite/im/ImEngineProvider;->b:Z
 
     .line 17
-    sget-object p1, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/ImEngine;
+    sget-object p1, Lcom/vtosters/lite/im/ImEngineProvider;->c:Lcom/vk/im/engine/a;
 
     if-eqz p1, :cond_2
 
     return-object p1
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 18
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 19
     :cond_4
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method

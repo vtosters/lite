@@ -1,9 +1,9 @@
 .class public final Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;
-.super Lcom/vk/im/ui/q/Component;
+.super Lcom/vk/im/ui/q/c;
 .source "LocationComponent.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/ActivityResulter;
+.implements Lcom/vk/navigation/c;
 
 
 # annotations
@@ -34,7 +34,7 @@
 
 .field private final E:Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$a;
 
-.field private final F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+.field private final F:Lcom/vk/im/ui/components/msg_send/picker/location/d;
 
 .field private final G:Z
 
@@ -51,14 +51,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->J:Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$b;
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    sget v1, Lcom/vk/im/ui/R4;->vkim_current_location:I
+    sget v1, Lcom/vk/im/ui/m;->vkim_current_location:I
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -66,14 +66,14 @@
 
     const-string v1, "AppContextHolder.context\u2026ng.vkim_current_location)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->H:Ljava/lang/String;
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    sget v1, Lcom/vk/im/ui/R4;->loading:I
+    sget v1, Lcom/vk/im/ui/m;->loading:I
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -81,24 +81,24 @@
 
     const-string v1, "AppContextHolder.context\u2026tString(R.string.loading)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->I:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/app/Activity;Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$a;Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;Z)V
+.method public constructor <init>(Landroid/app/Activity;Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$a;Lcom/vk/im/ui/components/msg_send/picker/location/d;Z)V
     .locals 0
 
     .line 3
-    invoke-direct {p0}, Lcom/vk/im/ui/q/Component;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/q/c;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->D:Landroid/app/Activity;
 
     iput-object p2, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->E:Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$a;
 
-    iput-object p3, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+    iput-object p3, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/d;
 
     iput-boolean p4, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->G:Z
 
@@ -126,7 +126,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/app/Activity;Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$a;Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/app/Activity;Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$a;Lcom/vk/im/ui/components/msg_send/picker/location/d;ZILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p6, p5, 0x4
@@ -147,7 +147,7 @@
 
     .line 2
     :cond_1
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;-><init>(Landroid/app/Activity;Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$a;Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;Z)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;-><init>(Landroid/app/Activity;Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$a;Lcom/vk/im/ui/components/msg_send/picker/location/d;Z)V
 
     return-void
 .end method
@@ -161,7 +161,7 @@
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/dto/geo/GeoLocation;Ljava/lang/CharSequence;)Lio/reactivex/Observable;
+.method private final a(Lcom/vk/dto/geo/GeoLocation;Ljava/lang/CharSequence;)Lc/a/m;
     .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -169,7 +169,7 @@
             "Lcom/vk/dto/geo/GeoLocation;",
             "Ljava/lang/CharSequence;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Ljava/util/List<",
             "Lcom/vk/dto/geo/GeoLocation;",
             ">;>;"
@@ -203,17 +203,17 @@
 
     move-object v0, v11
 
-    invoke-direct/range {v0 .. v10}, Lcom/vk/api/places/PlacesSearchGeo;-><init>(DDLjava/lang/String;IILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v10}, Lcom/vk/api/places/PlacesSearchGeo;-><init>(DDLjava/lang/String;IILjava/lang/String;ILkotlin/jvm/internal/i;)V
 
     const/4 p1, 0x1
 
     .line 21
-    invoke-virtual {v11, p1}, Lcom/vk/api/base/ApiRequest;->a(Z)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {v11, p1}, Lcom/vk/api/base/d;->a(Z)Lcom/vk/api/base/d;
 
     const/4 p2, 0x0
 
     .line 22
-    invoke-static {v11, p2, p1, p2}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v11, p2, p1, p2}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
@@ -222,22 +222,22 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$i;-><init>(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;)V
 
-    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {p1, p2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
     move-result-object p1
 
     const-string p2, "PlacesSearchGeo(geo.lati\u2026 result\n                }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;Lcom/vk/dto/geo/GeoLocation;Ljava/lang/CharSequence;)Lio/reactivex/Observable;
+.method public static final synthetic a(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;Lcom/vk/dto/geo/GeoLocation;Ljava/lang/CharSequence;)Lc/a/m;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->a(Lcom/vk/dto/geo/GeoLocation;Ljava/lang/CharSequence;)Lio/reactivex/Observable;
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->a(Lcom/vk/dto/geo/GeoLocation;Ljava/lang/CharSequence;)Lc/a/m;
 
     move-result-object p0
 
@@ -309,14 +309,14 @@
     return-void
 .end method
 
-.method private final b(Ljava/lang/CharSequence;)Lio/reactivex/Observable;
+.method private final b(Ljava/lang/CharSequence;)Lc/a/m;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/CharSequence;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Ljava/util/List<",
             "Lcom/vk/dto/geo/GeoLocation;",
             ">;>;"
@@ -324,29 +324,29 @@
     .end annotation
 
     .line 6
-    invoke-direct {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->w()Lio/reactivex/Observable;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->w()Lc/a/m;
 
     move-result-object v0
 
     .line 7
     sget-object v1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->m()Lio/reactivex/Scheduler;
+    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->m()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object v0
 
     .line 8
     sget-object v1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->m()Lio/reactivex/Scheduler;
+    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->m()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
 
     move-result-object v0
 
@@ -355,7 +355,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$g;-><init>(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
     move-result-object v0
 
@@ -364,27 +364,27 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$h;-><init>(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
 
     move-result-object p1
 
     .line 11
-    invoke-virtual {p1}, Lio/reactivex/Observable;->f()Lio/reactivex/Observable;
+    invoke-virtual {p1}, Lc/a/m;->f()Lc/a/m;
 
     move-result-object p1
 
     .line 12
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     const-string v0, "getAnchorGeoSlow()\n     \u2026dSchedulers.mainThread())"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -427,11 +427,11 @@
     return p0
 .end method
 
-.method public static final synthetic f(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;)Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+.method public static final synthetic f(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;)Lcom/vk/im/ui/components/msg_send/picker/location/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+    iget-object p0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/d;
 
     return-object p0
 .end method
@@ -491,7 +491,7 @@
 
     sget-object v4, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$getAnchorFast$1;->a:Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$getAnchorFast$1;
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vk/core/util/ThreadUtils;->a(Ljava/lang/Object;JLkotlin/jvm/b/Functions;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vk/core/util/ThreadUtils;->a(Ljava/lang/Object;JLkotlin/jvm/b/a;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -501,12 +501,12 @@
     return-object v0
 .end method
 
-.method private final w()Lio/reactivex/Observable;
+.method private final w()Lc/a/m;
     .locals 19
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/dto/geo/GeoLocation;",
             ">;"
         }
@@ -522,25 +522,25 @@
     .line 2
     sget-object v1, Lcom/vk/location/LocationUtils;->b:Lcom/vk/location/LocationUtils;
 
-    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const-string v3, "AppContextHolder.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/location/LocationUtils;->b(Landroid/content/Context;)Lio/reactivex/Observable;
+    invoke-virtual {v1, v2}, Lcom/vk/location/LocationUtils;->b(Landroid/content/Context;)Lc/a/m;
 
     move-result-object v1
 
     sget-object v2, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$e;->a:Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$e;
 
-    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {v1, v2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
     move-result-object v1
 
     const-string v2, "LocationUtils.getCurrent\u2026T_LOCATION)\n            }"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -583,27 +583,27 @@
     move-result-object v1
 
     .line 4
-    invoke-static {v1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
 
     move-result-object v1
 
     .line 5
     sget-object v2, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$f;->a:Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$f;
 
-    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {v1, v2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
     move-result-object v1
 
     const-string v2, "Observable.just(\n       \u2026.map { it.fillAddress() }"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object v1
 
     .line 6
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v1, 0x0
 
@@ -614,19 +614,19 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/Component;->f()V
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/c;->f()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/d;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->b(Z)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->g:Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->b(Ljava/lang/CharSequence;)Lio/reactivex/Observable;
+    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->b(Ljava/lang/CharSequence;)Lc/a/m;
 
     move-result-object v0
 
@@ -640,16 +640,16 @@
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$k;-><init>(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;)V
 
     .line 5
-    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     const-string v1, "query(EMPTY_QUERY).subsc\u2026earch = false)\n        })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-static {v0, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
+    invoke-static {v0, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
 
     return-void
 .end method
@@ -664,7 +664,7 @@
 
     const/4 v1, 0x0
 
-    invoke-super {p0, v0, p1, v1, v1}, Lcom/vk/im/ui/q/Component;->a(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-super {p0, v0, p1, v1, v1}, Lcom/vk/im/ui/q/c;->a(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object p1
 
@@ -688,7 +688,7 @@
     const-string v0, "view"
 
     .line 9
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -697,9 +697,9 @@
     .locals 1
 
     .line 19
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/d;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->a(F)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->a(F)V
 
     return-void
 .end method
@@ -708,7 +708,7 @@
     .locals 2
 
     .line 10
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/Component;->f()V
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/c;->f()V
 
     .line 11
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
@@ -739,12 +739,12 @@
     iput-boolean v1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->C:Z
 
     .line 14
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/d;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->b(Z)V
 
     .line 15
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->b(Ljava/lang/CharSequence;)Lio/reactivex/Observable;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->b(Ljava/lang/CharSequence;)Lc/a/m;
 
     move-result-object p1
 
@@ -758,16 +758,16 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$m;-><init>(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;)V
 
     .line 17
-    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     const-string v0, "query(query).subscribe (\u2026ch = true)\n            })"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 18
-    invoke-static {p1, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
+    invoke-static {p1, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
 
     :goto_1
     return-void
@@ -777,31 +777,31 @@
     .locals 0
 
     .line 2
-    iget-object p3, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+    iget-object p3, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/d;
 
     new-instance p4, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$d;
 
     invoke-direct {p4, p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$d;-><init>(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;)V
 
-    invoke-virtual {p3, p4}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->a(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$a;)V
+    invoke-virtual {p3, p4}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->a(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$a;)V
 
     .line 3
     iget-object p3, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->D:Landroid/app/Activity;
 
-    instance-of p4, p3, Lcom/vk/navigation/ResulterProvider;
+    instance-of p4, p3, Lcom/vk/navigation/u;
 
     if-eqz p4, :cond_0
 
     .line 4
-    check-cast p3, Lcom/vk/navigation/ResulterProvider;
+    check-cast p3, Lcom/vk/navigation/u;
 
-    invoke-interface {p3, p0}, Lcom/vk/navigation/ResulterProvider;->b(Lcom/vk/navigation/ActivityResulter;)V
+    invoke-interface {p3, p0}, Lcom/vk/navigation/u;->b(Lcom/vk/navigation/c;)V
 
     .line 5
     :cond_0
-    iget-object p3, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+    iget-object p3, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/d;
 
-    invoke-virtual {p3, p1, p2}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {p3, p1, p2}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
@@ -814,14 +814,14 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->D:Landroid/app/Activity;
 
-    instance-of v1, v0, Lcom/vk/navigation/ResulterProvider;
+    instance-of v1, v0, Lcom/vk/navigation/u;
 
     if-eqz v1, :cond_0
 
     .line 2
-    check-cast v0, Lcom/vk/navigation/ResulterProvider;
+    check-cast v0, Lcom/vk/navigation/u;
 
-    invoke-interface {v0, p0}, Lcom/vk/navigation/ResulterProvider;->a(Lcom/vk/navigation/ActivityResulter;)V
+    invoke-interface {v0, p0}, Lcom/vk/navigation/u;->a(Lcom/vk/navigation/c;)V
 
     .line 3
     :cond_0
@@ -832,9 +832,9 @@
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->a()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->a()V
 
     return-void
 .end method
@@ -843,9 +843,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->d()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->d()V
 
     return-void
 .end method
@@ -863,9 +863,9 @@
     if-nez p2, :cond_1
 
     .line 1
-    iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+    iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/d;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->c()V
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->c()V
 
     :cond_1
     return-void
@@ -875,9 +875,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->e()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->e()V
 
     return-void
 .end method
@@ -893,13 +893,13 @@
     invoke-virtual {v0, v1}, Lcom/vk/location/LocationUtils;->a(Landroid/app/Activity;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->F:Lcom/vk/im/ui/components/msg_send/picker/location/d;
 
     invoke-direct {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->v()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->a(Lcom/vk/dto/geo/GeoLocation;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->a(Lcom/vk/dto/geo/GeoLocation;)V
 
     .line 3
     invoke-direct {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->x()V

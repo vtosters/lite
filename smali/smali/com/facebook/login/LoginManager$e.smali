@@ -15,22 +15,22 @@
 
 
 # static fields
-.field private static a:Lcom/facebook/login/LoginLogger;
+.field private static a:Lcom/facebook/login/c;
 
 
 # direct methods
-.method static synthetic a(Landroid/content/Context;)Lcom/facebook/login/LoginLogger;
+.method static synthetic a(Landroid/content/Context;)Lcom/facebook/login/c;
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/facebook/login/LoginManager$e;->b(Landroid/content/Context;)Lcom/facebook/login/LoginLogger;
+    invoke-static {p0}, Lcom/facebook/login/LoginManager$e;->b(Landroid/content/Context;)Lcom/facebook/login/c;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static declared-synchronized b(Landroid/content/Context;)Lcom/facebook/login/LoginLogger;
+.method private static declared-synchronized b(Landroid/content/Context;)Lcom/facebook/login/c;
     .locals 3
 
     const-class v0, Lcom/facebook/login/LoginManager$e;
@@ -44,7 +44,7 @@
     .line 1
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/facebook/FacebookSdk;->e()Landroid/content/Context;
+    invoke-static {}, Lcom/facebook/e;->e()Landroid/content/Context;
 
     move-result-object p0
     :try_end_0
@@ -63,24 +63,24 @@
     .line 3
     :cond_1
     :try_start_1
-    sget-object v1, Lcom/facebook/login/LoginManager$e;->a:Lcom/facebook/login/LoginLogger;
+    sget-object v1, Lcom/facebook/login/LoginManager$e;->a:Lcom/facebook/login/c;
 
     if-nez v1, :cond_2
 
     .line 4
-    new-instance v1, Lcom/facebook/login/LoginLogger;
+    new-instance v1, Lcom/facebook/login/c;
 
-    invoke-static {}, Lcom/facebook/FacebookSdk;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/e;->f()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-direct {v1, p0, v2}, Lcom/facebook/login/LoginLogger;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v1, p0, v2}, Lcom/facebook/login/c;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    sput-object v1, Lcom/facebook/login/LoginManager$e;->a:Lcom/facebook/login/LoginLogger;
+    sput-object v1, Lcom/facebook/login/LoginManager$e;->a:Lcom/facebook/login/c;
 
     .line 5
     :cond_2
-    sget-object p0, Lcom/facebook/login/LoginManager$e;->a:Lcom/facebook/login/LoginLogger;
+    sget-object p0, Lcom/facebook/login/LoginManager$e;->a:Lcom/facebook/login/c;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

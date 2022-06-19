@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -69,7 +69,7 @@
     .line 5
     new-instance v3, Lcom/vk/catalog2/core/api/dto/Banner;
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v3, v0, v2, p1}, Lcom/vk/catalog2/core/api/dto/Banner;-><init>(ILjava/lang/String;Lcom/vk/dto/common/NotificationImage;)V
 

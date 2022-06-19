@@ -3,7 +3,7 @@
 .source "VideoAutoPlay.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "Ljava/lang/String;",
-        "Lcom/vk/media/player/video/ExoVideoSource;",
+        "Lcom/vk/media/player/video/a;",
         "Lcom/vk/media/player/ExoPlayerBase;",
         ">;"
     }
@@ -41,7 +41,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Lcom/vk/media/player/video/ExoVideoSource;)Lcom/vk/media/player/ExoPlayerBase;
+.method public final a(Ljava/lang/String;Lcom/vk/media/player/video/a;)Lcom/vk/media/player/ExoPlayerBase;
     .locals 1
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
@@ -49,7 +49,7 @@
     check-cast v0, Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     .line 2
-    invoke-static {v0, p1, p2}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Ljava/lang/String;Lcom/vk/media/player/video/ExoVideoSource;)Lcom/vk/media/player/ExoPlayerBase;
+    invoke-static {v0, p1, p2}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Ljava/lang/String;Lcom/vk/media/player/video/a;)Lcom/vk/media/player/ExoPlayerBase;
 
     move-result-object p1
 
@@ -62,9 +62,9 @@
     .line 1
     check-cast p1, Ljava/lang/String;
 
-    check-cast p2, Lcom/vk/media/player/video/ExoVideoSource;
+    check-cast p2, Lcom/vk/media/player/video/a;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/libvideo/autoplay/VideoAutoPlay$initAdDelegate$7;->a(Ljava/lang/String;Lcom/vk/media/player/video/ExoVideoSource;)Lcom/vk/media/player/ExoPlayerBase;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/libvideo/autoplay/VideoAutoPlay$initAdDelegate$7;->a(Ljava/lang/String;Lcom/vk/media/player/video/a;)Lcom/vk/media/player/ExoPlayerBase;
 
     move-result-object p1
 
@@ -79,12 +79,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 1
 
     const-class v0, Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 

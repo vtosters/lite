@@ -3,12 +3,12 @@
 .source "MsgSearchVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->a(Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->a(Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $endAction:Lkotlin/jvm/b/Functions;
+.field final synthetic $endAction:Lkotlin/jvm/b/a;
 
 .field final synthetic this$0:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;Lkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$showAnimated$1;->this$0:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$showAnimated$1;->$endAction:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$showAnimated$1;->$endAction:Lkotlin/jvm/b/a;
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$showAnimated$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -82,15 +82,15 @@
     invoke-virtual {v0}, Lcom/vk/core/view/search/MilkshakeSearchView;->f()V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$showAnimated$1;->$endAction:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$showAnimated$1;->$endAction:Lkotlin/jvm/b/a;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/Unit;
+    check-cast v0, Lkotlin/m;
 
     :cond_0
     return-void

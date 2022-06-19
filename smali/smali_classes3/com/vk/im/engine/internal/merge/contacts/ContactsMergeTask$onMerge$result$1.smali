@@ -3,12 +3,12 @@
 .source "ContactsMergeTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/merge/contacts/ContactsMergeTask;->b(Lcom/vk/im/engine/ImEnvironment;)Landroid/util/SparseArray;
+    value = Lcom/vk/im/engine/internal/merge/contacts/ContactsMergeTask;->b(Lcom/vk/im/engine/d;)Landroid/util/SparseArray;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/models/contacts/Contact;",
         "Lcom/vk/im/engine/models/contacts/Contact;",
         ">;"

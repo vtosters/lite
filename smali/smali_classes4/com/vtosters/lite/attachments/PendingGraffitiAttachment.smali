@@ -3,7 +3,7 @@
 .source "PendingGraffitiAttachment.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/attachments/PendingAttachment;
+.implements Lcom/vtosters/lite/attachments/b;
 
 
 # static fields
@@ -61,28 +61,28 @@
     return v0
 .end method
 
-.method public V0()Lcom/vtosters/lite/upload/UploadTask;
+.method public V0()Lcom/vtosters/lite/upload/j;
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/upload/l/GraffitiUploadTask;
+    new-instance v0, Lcom/vtosters/lite/upload/l/h;
 
     iget-object v1, p0, Lcom/vtosters/lite/attachments/GraffitiAttachment;->g:Ljava/lang/String;
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {v2}, Lb/h/h/d/c;->D0()I
 
     move-result v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/upload/l/GraffitiUploadTask;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/upload/l/h;-><init>(Ljava/lang/String;I)V
 
     .line 2
     iget v1, p0, Lcom/vtosters/lite/attachments/GraffitiAttachment;->e:I
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/upload/UploadTask;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/upload/j;->a(I)V
 
     return-object v0
 .end method

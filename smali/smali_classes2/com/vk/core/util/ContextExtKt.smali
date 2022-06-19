@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/KProperty5;
+.field static final synthetic a:[Lkotlin/u/j;
 
-.field private static final b:Lcom/vk/core/util/ThreadLocalDelegate;
+.field private static final b:Lcom/vk/core/util/d1;
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference0Impl;
 
@@ -23,7 +23,7 @@
 
     const-string v3, "libcore_release"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/KDeclarationContainer;
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/e;
 
     move-result-object v2
 
@@ -31,24 +31,24 @@
 
     const-string v4, "getTypedValue()Landroid/util/TypedValue;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/KProperty1;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/k;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/core/util/ContextExtKt;->a:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/core/util/ContextExtKt;->a:[Lkotlin/u/j;
 
     .line 1
     sget-object v0, Lcom/vk/core/util/ContextExtKt$typedValue$2;->a:Lcom/vk/core/util/ContextExtKt$typedValue$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
+    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/util/ContextExtKt;->b:Lcom/vk/core/util/ThreadLocalDelegate;
+    sput-object v0, Lcom/vk/core/util/ContextExtKt;->b:Lcom/vk/core/util/d1;
 
     return-void
 .end method
@@ -109,7 +109,7 @@
 
     const-string p1, "DrawableCompat.wrap(getD\u2026bleCompat(id)!!).mutate()"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     invoke-static {p0, p2}, Landroidx/core/graphics/drawable/DrawableCompat;->setTint(Landroid/graphics/drawable/Drawable;I)V
@@ -118,7 +118,7 @@
 
     .line 11
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p0, 0x0
 
@@ -164,7 +164,7 @@
     const-string p0, "sp"
 
     .line 15
-    invoke-static {v0, p0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -172,9 +172,9 @@
 .method private static final a()Landroid/util/TypedValue;
     .locals 3
 
-    sget-object v0, Lcom/vk/core/util/ContextExtKt;->b:Lcom/vk/core/util/ThreadLocalDelegate;
+    sget-object v0, Lcom/vk/core/util/ContextExtKt;->b:Lcom/vk/core/util/d1;
 
-    sget-object v1, Lcom/vk/core/util/ContextExtKt;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/core/util/ContextExtKt;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
@@ -182,7 +182,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
+    invoke-static {v0, v2, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -191,7 +191,7 @@
     return-object v0
 .end method
 
-.method public static synthetic a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/Unit;
+.method public static synthetic a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/m;
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -202,14 +202,14 @@
 
     .line 4
     :cond_0
-    invoke-static {p0, p1, p2}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;II)Lkotlin/Unit;
+    invoke-static {p0, p1, p2}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;II)Lkotlin/m;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic a(Landroid/content/Context;IILjava/lang/Object;)Lkotlin/Unit;
+.method public static synthetic a(Landroid/content/Context;IILjava/lang/Object;)Lkotlin/m;
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -217,10 +217,10 @@
     if-eqz p2, :cond_0
 
     .line 5
-    sget p1, Lb/h/g/R4;->error:I
+    sget p1, Lb/h/g/d;->error:I
 
     :cond_0
-    invoke-static {p0, p1}, Lcom/vk/core/util/ContextExtKt;->m(Landroid/content/Context;I)Lkotlin/Unit;
+    invoke-static {p0, p1}, Lcom/vk/core/util/ContextExtKt;->m(Landroid/content/Context;I)Lkotlin/m;
 
     move-result-object p0
 
@@ -248,14 +248,14 @@
     return-void
 .end method
 
-.method public static final a(Landroid/content/Context;Landroid/content/Intent;Lio/reactivex/functions/Consumer;)V
+.method public static final a(Landroid/content/Context;Landroid/content/Intent;Lc/a/z/g;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Landroid/content/Intent;",
-            "Lio/reactivex/functions/Consumer<",
+            "Lc/a/z/g<",
             "Ljava/lang/Throwable;",
             ">;)V"
         }
@@ -275,7 +275,7 @@
     if-eqz p2, :cond_0
 
     .line 17
-    invoke-interface {p2, p0}, Lio/reactivex/functions/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-interface {p2, p0}, Lc/a/z/g;->accept(Ljava/lang/Object;)V
 
     :cond_0
     :goto_0
@@ -565,7 +565,7 @@
     return-object p0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p0, 0x0
 
@@ -598,7 +598,7 @@
 
     const-string p1, "resources.getQuantityStr\u2026ngId, quantity, quantity)"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
@@ -673,7 +673,7 @@
 
     const-string v0, "context.baseContext"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -707,7 +707,7 @@
     return-object p0
 .end method
 
-.method public static final e(Landroid/content/Context;II)Lkotlin/Unit;
+.method public static final e(Landroid/content/Context;II)Lkotlin/m;
     .locals 0
 
     if-eqz p0, :cond_0
@@ -719,7 +719,7 @@
 
     invoke-static {p0, p1, p2}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
-    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p0, Lkotlin/m;->a:Lkotlin/m;
 
     goto :goto_0
 
@@ -743,7 +743,7 @@
     return-object p0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p0, 0x0
 
@@ -850,7 +850,7 @@
 
     const-string v0, "resources"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -993,7 +993,7 @@
     return p0
 .end method
 
-.method public static final m(Landroid/content/Context;I)Lkotlin/Unit;
+.method public static final m(Landroid/content/Context;I)Lkotlin/m;
     .locals 3
 
     const/4 v0, 0x0
@@ -1003,14 +1003,14 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-static {p0, p1, v0, v1, v2}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/Unit;
+    invoke-static {p0, p1, v0, v1, v2}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/m;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final n(Landroid/content/Context;I)Lkotlin/Unit;
+.method public static final n(Landroid/content/Context;I)Lkotlin/m;
     .locals 3
 
     const/4 v0, 0x0
@@ -1019,7 +1019,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p0, p1, v0, v1, v2}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/Unit;
+    invoke-static {p0, p1, v0, v1, v2}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/m;
 
     move-result-object p0
 

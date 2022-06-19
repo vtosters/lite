@@ -96,7 +96,7 @@
 
     iget-object v1, p1, Lcom/vk/auth/api/models/ValidatePhoneResult;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -112,7 +112,7 @@
 
     iget-object v1, p1, Lcom/vk/auth/api/models/ValidatePhoneResult;->c:Lcom/vk/auth/api/models/ValidatePhoneResult$ValidationType;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -122,7 +122,7 @@
 
     iget-object v1, p1, Lcom/vk/auth/api/models/ValidatePhoneResult;->d:Lcom/vk/auth/api/models/ValidatePhoneResult$ValidationType;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

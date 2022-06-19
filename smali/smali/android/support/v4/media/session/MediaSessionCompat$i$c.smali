@@ -1,5 +1,5 @@
 .class Landroid/support/v4/media/session/MediaSessionCompat$i$c;
-.super Landroid/support/v4/media/session/IMediaSession$a;
+.super Landroid/support/v4/media/session/b$a;
 .source "MediaSessionCompat.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$i$c;->a:Landroid/support/v4/media/session/MediaSessionCompat$i;
 
-    invoke-direct {p0}, Landroid/support/v4/media/session/IMediaSession$a;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/media/session/b$a;-><init>()V
 
     return-void
 .end method
@@ -471,7 +471,7 @@
     return-void
 .end method
 
-.method public a(Landroid/support/v4/media/session/IMediaControllerCallback;)V
+.method public a(Landroid/support/v4/media/session/a;)V
     .locals 4
 
     .line 4
@@ -483,7 +483,7 @@
 
     .line 5
     :try_start_0
-    invoke-interface {p1}, Landroid/support/v4/media/session/IMediaControllerCallback;->k()V
+    invoke-interface {p1}, Landroid/support/v4/media/session/a;->k()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -660,7 +660,7 @@
     return-void
 .end method
 
-.method public b(Landroid/support/v4/media/session/IMediaControllerCallback;)V
+.method public b(Landroid/support/v4/media/session/a;)V
     .locals 1
 
     .line 1

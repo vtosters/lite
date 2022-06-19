@@ -68,39 +68,39 @@
 # instance fields
 .field private final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field private final b:Lcom/crashlytics/android/core/CrashlyticsCore;
+.field private final b:Lcom/crashlytics/android/core/j;
 
-.field private final c:Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;
+.field private final c:Lcom/crashlytics/android/core/i;
 
-.field private final d:Lio/fabric/sdk/android/services/network/HttpRequestFactory;
+.field private final d:Lio/fabric/sdk/android/services/network/c;
 
 .field private final e:Lio/fabric/sdk/android/services/common/IdManager;
 
-.field private final f:Lcom/crashlytics/android/core/PreferenceManager;
+.field private final f:Lcom/crashlytics/android/core/h0;
 
-.field private final g:Lio/fabric/sdk/android/m/c/FileStore;
+.field private final g:Lio/fabric/sdk/android/m/c/a;
 
-.field private final h:Lcom/crashlytics/android/core/AppData;
+.field private final h:Lcom/crashlytics/android/core/a;
 
 .field private final i:Lcom/crashlytics/android/core/CrashlyticsController$b0;
 
-.field private final j:Lcom/crashlytics/android/core/LogFileManager;
+.field private final j:Lcom/crashlytics/android/core/y;
 
-.field private final k:Lcom/crashlytics/android/core/ReportUploader$c;
+.field private final k:Lcom/crashlytics/android/core/m0$c;
 
-.field private final l:Lcom/crashlytics/android/core/ReportUploader$b;
+.field private final l:Lcom/crashlytics/android/core/m0$b;
 
-.field private final m:Lcom/crashlytics/android/core/DevicePowerStateListener;
+.field private final m:Lcom/crashlytics/android/core/u;
 
-.field private final n:Lcom/crashlytics/android/core/StackTraceTrimmingStrategy;
+.field private final n:Lcom/crashlytics/android/core/q0;
 
 .field private final o:Ljava/lang/String;
 
-.field private final p:Lcom/crashlytics/android/core/AppMeasurementEventListenerRegistrar;
+.field private final p:Lcom/crashlytics/android/core/b;
 
-.field private final q:Lcom/crashlytics/android/answers/EventLogger;
+.field private final q:Lcom/crashlytics/android/answers/q;
 
-.field private r:Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler;
+.field private r:Lcom/crashlytics/android/core/p;
 
 
 # direct methods
@@ -182,7 +182,7 @@
     return-void
 .end method
 
-.method constructor <init>(Lcom/crashlytics/android/core/CrashlyticsCore;Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;Lio/fabric/sdk/android/services/network/HttpRequestFactory;Lio/fabric/sdk/android/services/common/IdManager;Lcom/crashlytics/android/core/PreferenceManager;Lio/fabric/sdk/android/m/c/FileStore;Lcom/crashlytics/android/core/AppData;Lcom/crashlytics/android/core/UnityVersionProvider;Lcom/crashlytics/android/core/AppMeasurementEventListenerRegistrar;Lcom/crashlytics/android/answers/EventLogger;)V
+.method constructor <init>(Lcom/crashlytics/android/core/j;Lcom/crashlytics/android/core/i;Lio/fabric/sdk/android/services/network/c;Lio/fabric/sdk/android/services/common/IdManager;Lcom/crashlytics/android/core/h0;Lio/fabric/sdk/android/m/c/a;Lcom/crashlytics/android/core/a;Lcom/crashlytics/android/core/s0;Lcom/crashlytics/android/core/b;Lcom/crashlytics/android/answers/q;)V
     .locals 2
 
     .line 1
@@ -198,59 +198,59 @@
     iput-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 3
-    iput-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iput-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
     .line 4
-    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;
+    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/i;
 
     .line 5
-    iput-object p3, p0, Lcom/crashlytics/android/core/CrashlyticsController;->d:Lio/fabric/sdk/android/services/network/HttpRequestFactory;
+    iput-object p3, p0, Lcom/crashlytics/android/core/CrashlyticsController;->d:Lio/fabric/sdk/android/services/network/c;
 
     .line 6
     iput-object p4, p0, Lcom/crashlytics/android/core/CrashlyticsController;->e:Lio/fabric/sdk/android/services/common/IdManager;
 
     .line 7
-    iput-object p5, p0, Lcom/crashlytics/android/core/CrashlyticsController;->f:Lcom/crashlytics/android/core/PreferenceManager;
+    iput-object p5, p0, Lcom/crashlytics/android/core/CrashlyticsController;->f:Lcom/crashlytics/android/core/h0;
 
     .line 8
-    iput-object p6, p0, Lcom/crashlytics/android/core/CrashlyticsController;->g:Lio/fabric/sdk/android/m/c/FileStore;
+    iput-object p6, p0, Lcom/crashlytics/android/core/CrashlyticsController;->g:Lio/fabric/sdk/android/m/c/a;
 
     .line 9
-    iput-object p7, p0, Lcom/crashlytics/android/core/CrashlyticsController;->h:Lcom/crashlytics/android/core/AppData;
+    iput-object p7, p0, Lcom/crashlytics/android/core/CrashlyticsController;->h:Lcom/crashlytics/android/core/a;
 
     .line 10
-    invoke-interface {p8}, Lcom/crashlytics/android/core/UnityVersionProvider;->a()Ljava/lang/String;
+    invoke-interface {p8}, Lcom/crashlytics/android/core/s0;->a()Ljava/lang/String;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->o:Ljava/lang/String;
 
     .line 11
-    iput-object p9, p0, Lcom/crashlytics/android/core/CrashlyticsController;->p:Lcom/crashlytics/android/core/AppMeasurementEventListenerRegistrar;
+    iput-object p9, p0, Lcom/crashlytics/android/core/CrashlyticsController;->p:Lcom/crashlytics/android/core/b;
 
     .line 12
-    iput-object p10, p0, Lcom/crashlytics/android/core/CrashlyticsController;->q:Lcom/crashlytics/android/answers/EventLogger;
+    iput-object p10, p0, Lcom/crashlytics/android/core/CrashlyticsController;->q:Lcom/crashlytics/android/answers/q;
 
     .line 13
-    invoke-virtual {p1}, Lio/fabric/sdk/android/Kit;->d()Landroid/content/Context;
+    invoke-virtual {p1}, Lio/fabric/sdk/android/h;->d()Landroid/content/Context;
 
     move-result-object p1
 
     .line 14
     new-instance p2, Lcom/crashlytics/android/core/CrashlyticsController$b0;
 
-    invoke-direct {p2, p6}, Lcom/crashlytics/android/core/CrashlyticsController$b0;-><init>(Lio/fabric/sdk/android/m/c/FileStore;)V
+    invoke-direct {p2, p6}, Lcom/crashlytics/android/core/CrashlyticsController$b0;-><init>(Lio/fabric/sdk/android/m/c/a;)V
 
     iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->i:Lcom/crashlytics/android/core/CrashlyticsController$b0;
 
     .line 15
-    new-instance p2, Lcom/crashlytics/android/core/LogFileManager;
+    new-instance p2, Lcom/crashlytics/android/core/y;
 
     iget-object p3, p0, Lcom/crashlytics/android/core/CrashlyticsController;->i:Lcom/crashlytics/android/core/CrashlyticsController$b0;
 
-    invoke-direct {p2, p1, p3}, Lcom/crashlytics/android/core/LogFileManager;-><init>(Landroid/content/Context;Lcom/crashlytics/android/core/LogFileManager$b;)V
+    invoke-direct {p2, p1, p3}, Lcom/crashlytics/android/core/y;-><init>(Landroid/content/Context;Lcom/crashlytics/android/core/y$b;)V
 
-    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->j:Lcom/crashlytics/android/core/LogFileManager;
+    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->j:Lcom/crashlytics/android/core/y;
 
     .line 16
     new-instance p2, Lcom/crashlytics/android/core/CrashlyticsController$d0;
@@ -259,53 +259,53 @@
 
     invoke-direct {p2, p0, p3}, Lcom/crashlytics/android/core/CrashlyticsController$d0;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;Lcom/crashlytics/android/core/CrashlyticsController$j;)V
 
-    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->k:Lcom/crashlytics/android/core/ReportUploader$c;
+    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->k:Lcom/crashlytics/android/core/m0$c;
 
     .line 17
     new-instance p2, Lcom/crashlytics/android/core/CrashlyticsController$e0;
 
     invoke-direct {p2, p0, p3}, Lcom/crashlytics/android/core/CrashlyticsController$e0;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;Lcom/crashlytics/android/core/CrashlyticsController$j;)V
 
-    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->l:Lcom/crashlytics/android/core/ReportUploader$b;
+    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->l:Lcom/crashlytics/android/core/m0$b;
 
     .line 18
-    new-instance p2, Lcom/crashlytics/android/core/DevicePowerStateListener;
+    new-instance p2, Lcom/crashlytics/android/core/u;
 
-    invoke-direct {p2, p1}, Lcom/crashlytics/android/core/DevicePowerStateListener;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/crashlytics/android/core/u;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->m:Lcom/crashlytics/android/core/DevicePowerStateListener;
+    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->m:Lcom/crashlytics/android/core/u;
 
     .line 19
-    new-instance p1, Lcom/crashlytics/android/core/MiddleOutFallbackStrategy;
+    new-instance p1, Lcom/crashlytics/android/core/b0;
 
     const/4 p2, 0x1
 
-    new-array p2, p2, [Lcom/crashlytics/android/core/StackTraceTrimmingStrategy;
+    new-array p2, p2, [Lcom/crashlytics/android/core/q0;
 
-    new-instance p3, Lcom/crashlytics/android/core/RemoveRepeatsStrategy;
+    new-instance p3, Lcom/crashlytics/android/core/l0;
 
     const/16 p4, 0xa
 
-    invoke-direct {p3, p4}, Lcom/crashlytics/android/core/RemoveRepeatsStrategy;-><init>(I)V
+    invoke-direct {p3, p4}, Lcom/crashlytics/android/core/l0;-><init>(I)V
 
     aput-object p3, p2, v1
 
     const/16 p3, 0x400
 
-    invoke-direct {p1, p3, p2}, Lcom/crashlytics/android/core/MiddleOutFallbackStrategy;-><init>(I[Lcom/crashlytics/android/core/StackTraceTrimmingStrategy;)V
+    invoke-direct {p1, p3, p2}, Lcom/crashlytics/android/core/b0;-><init>(I[Lcom/crashlytics/android/core/q0;)V
 
-    iput-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->n:Lcom/crashlytics/android/core/StackTraceTrimmingStrategy;
+    iput-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->n:Lcom/crashlytics/android/core/q0;
 
     return-void
 .end method
 
-.method private a(Ljava/lang/String;Ljava/lang/String;)Lcom/crashlytics/android/core/CreateReportSpiCall;
+.method private a(Ljava/lang/String;Ljava/lang/String;)Lcom/crashlytics/android/core/r;
     .locals 4
 
     .line 276
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/Kit;->d()Landroid/content/Context;
+    invoke-virtual {v0}, Lio/fabric/sdk/android/h;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -317,36 +317,36 @@
     move-result-object v0
 
     .line 278
-    new-instance v1, Lcom/crashlytics/android/core/DefaultCreateReportSpiCall;
+    new-instance v1, Lcom/crashlytics/android/core/t;
 
-    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
-    iget-object v3, p0, Lcom/crashlytics/android/core/CrashlyticsController;->d:Lio/fabric/sdk/android/services/network/HttpRequestFactory;
+    iget-object v3, p0, Lcom/crashlytics/android/core/CrashlyticsController;->d:Lio/fabric/sdk/android/services/network/c;
 
-    invoke-direct {v1, v2, v0, p1, v3}, Lcom/crashlytics/android/core/DefaultCreateReportSpiCall;-><init>(Lio/fabric/sdk/android/Kit;Ljava/lang/String;Ljava/lang/String;Lio/fabric/sdk/android/services/network/HttpRequestFactory;)V
+    invoke-direct {v1, v2, v0, p1, v3}, Lcom/crashlytics/android/core/t;-><init>(Lio/fabric/sdk/android/h;Ljava/lang/String;Ljava/lang/String;Lio/fabric/sdk/android/services/network/c;)V
 
     .line 279
-    new-instance p1, Lcom/crashlytics/android/core/NativeCreateReportSpiCall;
+    new-instance p1, Lcom/crashlytics/android/core/d0;
 
-    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
-    iget-object v3, p0, Lcom/crashlytics/android/core/CrashlyticsController;->d:Lio/fabric/sdk/android/services/network/HttpRequestFactory;
+    iget-object v3, p0, Lcom/crashlytics/android/core/CrashlyticsController;->d:Lio/fabric/sdk/android/services/network/c;
 
-    invoke-direct {p1, v2, v0, p2, v3}, Lcom/crashlytics/android/core/NativeCreateReportSpiCall;-><init>(Lio/fabric/sdk/android/Kit;Ljava/lang/String;Ljava/lang/String;Lio/fabric/sdk/android/services/network/HttpRequestFactory;)V
+    invoke-direct {p1, v2, v0, p2, v3}, Lcom/crashlytics/android/core/d0;-><init>(Lio/fabric/sdk/android/h;Ljava/lang/String;Ljava/lang/String;Lio/fabric/sdk/android/services/network/c;)V
 
     .line 280
-    new-instance p2, Lcom/crashlytics/android/core/CompositeCreateReportSpiCall;
+    new-instance p2, Lcom/crashlytics/android/core/g;
 
-    invoke-direct {p2, v1, p1}, Lcom/crashlytics/android/core/CompositeCreateReportSpiCall;-><init>(Lcom/crashlytics/android/core/DefaultCreateReportSpiCall;Lcom/crashlytics/android/core/NativeCreateReportSpiCall;)V
+    invoke-direct {p2, v1, p1}, Lcom/crashlytics/android/core/g;-><init>(Lcom/crashlytics/android/core/t;Lcom/crashlytics/android/core/d0;)V
 
     return-object p2
 .end method
 
-.method static synthetic a(Lcom/crashlytics/android/core/CrashlyticsController;)Lcom/crashlytics/android/core/LogFileManager;
+.method static synthetic a(Lcom/crashlytics/android/core/CrashlyticsController;)Lcom/crashlytics/android/core/y;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->j:Lcom/crashlytics/android/core/LogFileManager;
+    iget-object p0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->j:Lcom/crashlytics/android/core/y;
 
     return-object p0
 .end method
@@ -383,30 +383,30 @@
     if-eqz v0, :cond_0
 
     .line 282
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p1
 
     const-string p2, "Skipping logging Crashlytics event to Firebase, FirebaseCrash exists"
 
-    invoke-interface {p1, v1, p2}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v1, p2}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     .line 283
     :cond_0
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->q:Lcom/crashlytics/android/answers/EventLogger;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->q:Lcom/crashlytics/android/answers/q;
 
     if-eqz v0, :cond_1
 
     .line 284
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v0
 
     const-string v2, "Logging Crashlytics event to Firebase"
 
-    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 285
     new-instance v0, Landroid/os/Bundle;
@@ -431,25 +431,25 @@
     invoke-virtual {v0, v1, p1, p2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     .line 289
-    iget-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->q:Lcom/crashlytics/android/answers/EventLogger;
+    iget-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->q:Lcom/crashlytics/android/answers/q;
 
     const-string p2, "clx"
 
     const-string v1, "_ae"
 
-    invoke-interface {p1, p2, v1, v0}, Lcom/crashlytics/android/answers/EventLogger;->a(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p1, p2, v1, v0}, Lcom/crashlytics/android/answers/q;->a(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
 
     goto :goto_0
 
     .line 290
     :cond_1
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p1
 
     const-string p2, "Skipping logging Crashlytics event to Firebase, no Firebase Analytics"
 
-    invoke-interface {p1, v1, p2}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v1, p2}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -464,17 +464,17 @@
     .end annotation
 
     .line 96
-    invoke-static {p2}, Lcom/crashlytics/android/core/NativeFileUtils;->b(Ljava/io/File;)[B
+    invoke-static {p2}, Lcom/crashlytics/android/core/e0;->b(Ljava/io/File;)[B
 
     move-result-object v0
 
     .line 97
-    invoke-static {p2}, Lcom/crashlytics/android/core/NativeFileUtils;->a(Ljava/io/File;)[B
+    invoke-static {p2}, Lcom/crashlytics/android/core/e0;->a(Ljava/io/File;)[B
 
     move-result-object v1
 
     .line 98
-    invoke-static {p2, p1}, Lcom/crashlytics/android/core/NativeFileUtils;->b(Ljava/io/File;Landroid/content/Context;)[B
+    invoke-static {p2, p1}, Lcom/crashlytics/android/core/e0;->b(Ljava/io/File;Landroid/content/Context;)[B
 
     move-result-object p1
 
@@ -524,72 +524,72 @@
     move-result-object v5
 
     .line 105
-    new-instance v6, Lcom/crashlytics/android/core/MetaDataStore;
+    new-instance v6, Lcom/crashlytics/android/core/a0;
 
     .line 106
     invoke-virtual {p0}, Lcom/crashlytics/android/core/CrashlyticsController;->c()Ljava/io/File;
 
     move-result-object v7
 
-    invoke-direct {v6, v7}, Lcom/crashlytics/android/core/MetaDataStore;-><init>(Ljava/io/File;)V
+    invoke-direct {v6, v7}, Lcom/crashlytics/android/core/a0;-><init>(Ljava/io/File;)V
 
-    invoke-virtual {v6, p3}, Lcom/crashlytics/android/core/MetaDataStore;->b(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {v6, p3}, Lcom/crashlytics/android/core/a0;->b(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v6
 
     .line 107
-    invoke-static {v6}, Lcom/crashlytics/android/core/NativeFileUtils;->d(Ljava/io/File;)[B
+    invoke-static {v6}, Lcom/crashlytics/android/core/e0;->d(Ljava/io/File;)[B
 
     move-result-object v6
 
     .line 108
-    new-instance v7, Lcom/crashlytics/android/core/LogFileManager;
+    new-instance v7, Lcom/crashlytics/android/core/y;
 
-    iget-object v8, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object v8, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
     .line 109
-    invoke-virtual {v8}, Lio/fabric/sdk/android/Kit;->d()Landroid/content/Context;
+    invoke-virtual {v8}, Lio/fabric/sdk/android/h;->d()Landroid/content/Context;
 
     move-result-object v8
 
     iget-object v9, p0, Lcom/crashlytics/android/core/CrashlyticsController;->i:Lcom/crashlytics/android/core/CrashlyticsController$b0;
 
-    invoke-direct {v7, v8, v9, p3}, Lcom/crashlytics/android/core/LogFileManager;-><init>(Landroid/content/Context;Lcom/crashlytics/android/core/LogFileManager$b;Ljava/lang/String;)V
+    invoke-direct {v7, v8, v9, p3}, Lcom/crashlytics/android/core/y;-><init>(Landroid/content/Context;Lcom/crashlytics/android/core/y$b;Ljava/lang/String;)V
 
     .line 110
-    invoke-virtual {v7}, Lcom/crashlytics/android/core/LogFileManager;->c()[B
+    invoke-virtual {v7}, Lcom/crashlytics/android/core/y;->c()[B
 
     move-result-object v8
 
     .line 111
-    invoke-virtual {v7}, Lcom/crashlytics/android/core/LogFileManager;->a()V
+    invoke-virtual {v7}, Lcom/crashlytics/android/core/y;->a()V
 
     .line 112
-    new-instance v7, Lcom/crashlytics/android/core/MetaDataStore;
+    new-instance v7, Lcom/crashlytics/android/core/a0;
 
     .line 113
     invoke-virtual {p0}, Lcom/crashlytics/android/core/CrashlyticsController;->c()Ljava/io/File;
 
     move-result-object v9
 
-    invoke-direct {v7, v9}, Lcom/crashlytics/android/core/MetaDataStore;-><init>(Ljava/io/File;)V
+    invoke-direct {v7, v9}, Lcom/crashlytics/android/core/a0;-><init>(Ljava/io/File;)V
 
-    invoke-virtual {v7, p3}, Lcom/crashlytics/android/core/MetaDataStore;->a(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {v7, p3}, Lcom/crashlytics/android/core/a0;->a(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v7
 
     .line 114
-    invoke-static {v7}, Lcom/crashlytics/android/core/NativeFileUtils;->d(Ljava/io/File;)[B
+    invoke-static {v7}, Lcom/crashlytics/android/core/e0;->d(Ljava/io/File;)[B
 
     move-result-object v7
 
     .line 115
     new-instance v9, Ljava/io/File;
 
-    iget-object v10, p0, Lcom/crashlytics/android/core/CrashlyticsController;->g:Lio/fabric/sdk/android/m/c/FileStore;
+    iget-object v10, p0, Lcom/crashlytics/android/core/CrashlyticsController;->g:Lio/fabric/sdk/android/m/c/a;
 
     .line 116
-    invoke-interface {v10}, Lio/fabric/sdk/android/m/c/FileStore;->a()Ljava/io/File;
+    invoke-interface {v10}, Lio/fabric/sdk/android/m/c/a;->a()Ljava/io/File;
 
     move-result-object v10
 
@@ -603,14 +603,14 @@
     if-nez p3, :cond_1
 
     .line 118
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p1
 
     const-string p2, "Couldn\'t create native sessions directory"
 
     .line 119
-    invoke-interface {p1, v2, p2}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, p2}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -710,7 +710,7 @@
     .line 130
     :cond_2
     :goto_0
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p1
 
@@ -728,7 +728,7 @@
 
     move-result-object p2
 
-    invoke-interface {p1, v2, p2}, Lio/fabric/sdk/android/Logger;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, p2}, Lio/fabric/sdk/android/k;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -753,7 +753,7 @@
     if-nez v1, :cond_0
 
     .line 262
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p0
 
@@ -779,7 +779,7 @@
     const-string v0, "CrashlyticsCore"
 
     .line 264
-    invoke-interface {p0, v0, p1, v2}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p0, v0, p1, v2}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 
@@ -883,7 +883,7 @@
     if-nez v6, :cond_0
 
     .line 258
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v5
 
@@ -907,13 +907,13 @@
 
     const/4 v6, 0x0
 
-    invoke-interface {v5, v8, v4, v6}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v5, v8, v4, v6}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_1
 
     .line 259
     :cond_0
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v6
 
@@ -935,7 +935,7 @@
 
     move-result-object v4
 
-    invoke-interface {v6, v8, v4}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v6, v8, v4}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 260
     aget-object v4, v5, v2
@@ -962,18 +962,18 @@
     move-object/from16 v0, p0
 
     .line 177
-    new-instance v5, Lcom/crashlytics/android/core/TrimmedThrowableData;
+    new-instance v5, Lcom/crashlytics/android/core/r0;
 
-    iget-object v1, v0, Lcom/crashlytics/android/core/CrashlyticsController;->n:Lcom/crashlytics/android/core/StackTraceTrimmingStrategy;
+    iget-object v1, v0, Lcom/crashlytics/android/core/CrashlyticsController;->n:Lcom/crashlytics/android/core/q0;
 
     move-object/from16 v2, p4
 
-    invoke-direct {v5, v2, v1}, Lcom/crashlytics/android/core/TrimmedThrowableData;-><init>(Ljava/lang/Throwable;Lcom/crashlytics/android/core/StackTraceTrimmingStrategy;)V
+    invoke-direct {v5, v2, v1}, Lcom/crashlytics/android/core/r0;-><init>(Ljava/lang/Throwable;Lcom/crashlytics/android/core/q0;)V
 
     .line 178
-    iget-object v1, v0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object v1, v0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
-    invoke-virtual {v1}, Lio/fabric/sdk/android/Kit;->d()Landroid/content/Context;
+    invoke-virtual {v1}, Lio/fabric/sdk/android/h;->d()Landroid/content/Context;
 
     move-result-object v1
 
@@ -992,10 +992,10 @@
     move-result-object v16
 
     .line 181
-    iget-object v4, v0, Lcom/crashlytics/android/core/CrashlyticsController;->m:Lcom/crashlytics/android/core/DevicePowerStateListener;
+    iget-object v4, v0, Lcom/crashlytics/android/core/CrashlyticsController;->m:Lcom/crashlytics/android/core/u;
 
     .line 182
-    invoke-virtual {v4}, Lcom/crashlytics/android/core/DevicePowerStateListener;->c()Z
+    invoke-virtual {v4}, Lcom/crashlytics/android/core/u;->c()Z
 
     move-result v4
 
@@ -1060,12 +1060,12 @@
     invoke-direct {v9}, Ljava/util/LinkedList;-><init>()V
 
     .line 191
-    iget-object v7, v5, Lcom/crashlytics/android/core/TrimmedThrowableData;->c:[Ljava/lang/StackTraceElement;
+    iget-object v7, v5, Lcom/crashlytics/android/core/r0;->c:[Ljava/lang/StackTraceElement;
 
     .line 192
-    iget-object v4, v0, Lcom/crashlytics/android/core/CrashlyticsController;->h:Lcom/crashlytics/android/core/AppData;
+    iget-object v4, v0, Lcom/crashlytics/android/core/CrashlyticsController;->h:Lcom/crashlytics/android/core/a;
 
-    iget-object v15, v4, Lcom/crashlytics/android/core/AppData;->b:Ljava/lang/String;
+    iget-object v15, v4, Lcom/crashlytics/android/core/a;->b:Ljava/lang/String;
 
     .line 193
     iget-object v4, v0, Lcom/crashlytics/android/core/CrashlyticsController;->e:Lio/fabric/sdk/android/services/common/IdManager;
@@ -1122,7 +1122,7 @@
     aput-object v23, v10, v4
 
     .line 198
-    iget-object v6, v0, Lcom/crashlytics/android/core/CrashlyticsController;->n:Lcom/crashlytics/android/core/StackTraceTrimmingStrategy;
+    iget-object v6, v0, Lcom/crashlytics/android/core/CrashlyticsController;->n:Lcom/crashlytics/android/core/q0;
 
     invoke-interface {v11}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -1130,7 +1130,7 @@
 
     check-cast v11, [Ljava/lang/StackTraceElement;
 
-    invoke-interface {v6, v11}, Lcom/crashlytics/android/core/StackTraceTrimmingStrategy;->a([Ljava/lang/StackTraceElement;)[Ljava/lang/StackTraceElement;
+    invoke-interface {v6, v11}, Lcom/crashlytics/android/core/q0;->a([Ljava/lang/StackTraceElement;)[Ljava/lang/StackTraceElement;
 
     move-result-object v6
 
@@ -1175,9 +1175,9 @@
 
     .line 201
     :cond_2
-    iget-object v1, v0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object v1, v0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
-    invoke-virtual {v1}, Lcom/crashlytics/android/core/CrashlyticsCore;->p()Ljava/util/Map;
+    invoke-virtual {v1}, Lcom/crashlytics/android/core/j;->p()Ljava/util/Map;
 
     move-result-object v1
 
@@ -1205,7 +1205,7 @@
 
     .line 204
     :goto_3
-    iget-object v11, v0, Lcom/crashlytics/android/core/CrashlyticsController;->j:Lcom/crashlytics/android/core/LogFileManager;
+    iget-object v11, v0, Lcom/crashlytics/android/core/CrashlyticsController;->j:Lcom/crashlytics/android/core/y;
 
     move-object/from16 v1, p1
 
@@ -1213,7 +1213,7 @@
 
     move-object/from16 v6, p3
 
-    invoke-static/range {v1 .. v22}, Lcom/crashlytics/android/core/SessionProtobufHelper;->a(Lcom/crashlytics/android/core/CodedOutputStream;JLjava/lang/String;Lcom/crashlytics/android/core/TrimmedThrowableData;Ljava/lang/Thread;[Ljava/lang/StackTraceElement;[Ljava/lang/Thread;Ljava/util/List;Ljava/util/Map;Lcom/crashlytics/android/core/LogFileManager;Landroid/app/ActivityManager$RunningAppProcessInfo;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Float;IZJJ)V
+    invoke-static/range {v1 .. v22}, Lcom/crashlytics/android/core/n0;->a(Lcom/crashlytics/android/core/CodedOutputStream;JLjava/lang/String;Lcom/crashlytics/android/core/r0;Ljava/lang/Thread;[Ljava/lang/StackTraceElement;[Ljava/lang/Thread;Ljava/util/List;Ljava/util/Map;Lcom/crashlytics/android/core/y;Landroid/app/ActivityManager$RunningAppProcessInfo;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Float;IZJJ)V
 
     return-void
 .end method
@@ -1242,7 +1242,7 @@
 
     .line 248
     :try_start_0
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v5
 
@@ -1271,7 +1271,7 @@
     move-result-object v6
 
     .line 251
-    invoke-interface {v5, v0, v6}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v5, v0, v6}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 252
     invoke-static {p0, v4}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/io/File;)V
@@ -1284,14 +1284,14 @@
     move-exception v4
 
     .line 253
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v5
 
     const-string v6, "Error writting non-fatal to session."
 
     .line 254
-    invoke-interface {v5, v0, v6, v4}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v5, v0, v6, v4}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_1
     add-int/lit8 v3, v3, 0x1
@@ -1325,7 +1325,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/crashlytics/android/core/CrashlyticsController;Lio/fabric/sdk/android/services/settings/SessionSettingsData;Z)V
+.method static synthetic a(Lcom/crashlytics/android/core/CrashlyticsController;Lio/fabric/sdk/android/services/settings/q;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1334,7 +1334,7 @@
     .end annotation
 
     .line 3
-    invoke-direct {p0, p1, p2}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Lio/fabric/sdk/android/services/settings/SessionSettingsData;Z)V
+    invoke-direct {p0, p1, p2}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Lio/fabric/sdk/android/services/settings/q;Z)V
 
     return-void
 .end method
@@ -1357,7 +1357,7 @@
     return-void
 .end method
 
-.method private a(Lcom/crashlytics/android/core/ClsFileOutputStream;)V
+.method private a(Lcom/crashlytics/android/core/f;)V
     .locals 3
 
     if-nez p1, :cond_0
@@ -1367,7 +1367,7 @@
     .line 49
     :cond_0
     :try_start_0
-    invoke-virtual {p1}, Lcom/crashlytics/android/core/ClsFileOutputStream;->a()V
+    invoke-virtual {p1}, Lcom/crashlytics/android/core/f;->a()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1377,7 +1377,7 @@
     move-exception p1
 
     .line 50
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v0
 
@@ -1385,13 +1385,13 @@
 
     const-string v2, "Error closing session file stream in the presence of an exception"
 
-    invoke-interface {v0, v1, v2, p1}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, v2, p1}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
 .end method
 
-.method private a(Lio/fabric/sdk/android/services/settings/SessionSettingsData;Z)V
+.method private a(Lio/fabric/sdk/android/services/settings/q;Z)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1417,13 +1417,13 @@
     if-gt v1, p2, :cond_0
 
     .line 37
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p1
 
     const-string p2, "No open sessions to be closed."
 
-    invoke-interface {p1, v2, p2}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, p2}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -1442,19 +1442,19 @@
     if-nez p1, :cond_1
 
     .line 41
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p1
 
     const-string p2, "Unable to close session. Settings are not loaded."
 
-    invoke-interface {p1, v2, p2}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, p2}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     .line 42
     :cond_1
-    iget p1, p1, Lio/fabric/sdk/android/services/settings/SessionSettingsData;->a:I
+    iget p1, p1, Lio/fabric/sdk/android/services/settings/q;->a:I
 
     invoke-direct {p0, v0, p2, p1}, Lcom/crashlytics/android/core/CrashlyticsController;->a([Ljava/io/File;II)V
 
@@ -1465,7 +1465,7 @@
     .locals 11
 
     .line 205
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v0
 
@@ -1485,7 +1485,7 @@
 
     const-string v2, "CrashlyticsCore"
 
-    invoke-interface {v0, v2, v1}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 206
     new-instance v0, Lcom/crashlytics/android/core/CrashlyticsController$y;
@@ -1530,7 +1530,7 @@
 
     .line 208
     :goto_0
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v5
 
@@ -1556,7 +1556,7 @@
 
     move-result-object v6
 
-    invoke-interface {v5, v2, v6}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v5, v2, v6}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 211
     new-instance v5, Lcom/crashlytics/android/core/CrashlyticsController$y;
@@ -1597,7 +1597,7 @@
 
     .line 213
     :goto_1
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v8
 
@@ -1621,7 +1621,7 @@
 
     move-result-object v1
 
-    invoke-interface {v8, v2, v1}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v8, v2, v1}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez v4, :cond_3
 
@@ -1631,7 +1631,7 @@
 
     .line 216
     :cond_2
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p1
 
@@ -1650,7 +1650,7 @@
     move-result-object p3
 
     .line 217
-    invoke-interface {p1, v2, p3}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, p3}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_4
 
@@ -1677,7 +1677,7 @@
 
     .line 221
     :goto_4
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p1
 
@@ -1696,7 +1696,7 @@
     move-result-object p3
 
     .line 222
-    invoke-interface {p1, v2, p3}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, p3}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 223
     invoke-direct {p0, p2}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Ljava/lang/String;)V
@@ -1761,9 +1761,9 @@
 
     .line 227
     :try_start_0
-    new-instance v10, Lcom/crashlytics/android/core/ClsFileOutputStream;
+    new-instance v10, Lcom/crashlytics/android/core/f;
 
-    invoke-direct {v10, v8, v2}, Lcom/crashlytics/android/core/ClsFileOutputStream;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    invoke-direct {v10, v8, v2}, Lcom/crashlytics/android/core/f;-><init>(Ljava/io/File;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1775,7 +1775,7 @@
     move-result-object v9
 
     .line 229
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v8
 
@@ -1793,7 +1793,7 @@
 
     move-result-object v11
 
-    invoke-interface {v8, v4, v11}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v8, v4, v11}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object/from16 v8, p1
 
@@ -1879,7 +1879,7 @@
     .line 240
     :goto_2
     :try_start_2
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v6
 
@@ -1897,7 +1897,7 @@
 
     move-result-object v2
 
-    invoke-interface {v6, v4, v2, v0}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v6, v4, v2, v0}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -1905,7 +1905,7 @@
     invoke-static {v9, v5}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
 
     .line 242
-    invoke-direct {p0, v10}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Lcom/crashlytics/android/core/ClsFileOutputStream;)V
+    invoke-direct {p0, v10}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Lcom/crashlytics/android/core/f;)V
 
     :goto_3
     return-void
@@ -2021,7 +2021,7 @@
 
     sget-object p1, Lcom/crashlytics/android/core/CrashlyticsController;->w:Ljava/util/Comparator;
 
-    invoke-static {v0, v1, p2, p1}, Lcom/crashlytics/android/core/Utils;->a(Ljava/io/File;Ljava/io/FilenameFilter;ILjava/util/Comparator;)I
+    invoke-static {v0, v1, p2, p1}, Lcom/crashlytics/android/core/u0;->a(Ljava/io/File;Ljava/io/FilenameFilter;ILjava/util/Comparator;)I
 
     return-void
 .end method
@@ -2044,7 +2044,7 @@
 
     .line 159
     :try_start_0
-    new-instance v4, Lcom/crashlytics/android/core/ClsFileOutputStream;
+    new-instance v4, Lcom/crashlytics/android/core/f;
 
     invoke-virtual {p0}, Lcom/crashlytics/android/core/CrashlyticsController;->c()Ljava/io/File;
 
@@ -2062,7 +2062,7 @@
 
     move-result-object p1
 
-    invoke-direct {v4, v5, p1}, Lcom/crashlytics/android/core/ClsFileOutputStream;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    invoke-direct {v4, v5, p1}, Lcom/crashlytics/android/core/f;-><init>(Ljava/io/File;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
@@ -2275,10 +2275,10 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
     .line 172
-    invoke-virtual {v2}, Lcom/crashlytics/android/core/CrashlyticsCore;->j()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/crashlytics/android/core/j;->j()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2356,13 +2356,13 @@
     if-nez v11, :cond_0
 
     .line 138
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v0
 
     const-string v2, "Tried to write a non-fatal exception while no session was open."
 
-    invoke-interface {v0, v12, v2, v1}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v12, v2, v1}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 
@@ -2380,7 +2380,7 @@
 
     .line 140
     :try_start_0
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v0
 
@@ -2412,7 +2412,7 @@
     move-result-object v2
 
     .line 142
-    invoke-interface {v0, v12, v2}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v12, v2}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 143
     iget-object v0, v8, Lcom/crashlytics/android/core/CrashlyticsController;->a:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -2445,13 +2445,13 @@
     move-result-object v0
 
     .line 147
-    new-instance v13, Lcom/crashlytics/android/core/ClsFileOutputStream;
+    new-instance v13, Lcom/crashlytics/android/core/f;
 
     invoke-virtual {p0}, Lcom/crashlytics/android/core/CrashlyticsController;->c()Ljava/io/File;
 
     move-result-object v2
 
-    invoke-direct {v13, v2, v0}, Lcom/crashlytics/android/core/ClsFileOutputStream;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    invoke-direct {v13, v2, v0}, Lcom/crashlytics/android/core/f;-><init>(Ljava/io/File;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
@@ -2525,13 +2525,13 @@
     .line 151
     :goto_0
     :try_start_3
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v2
 
     const-string v3, "An error occurred in the non-fatal exception logger"
 
-    invoke-interface {v2, v12, v3, v0}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v2, v12, v3, v0}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
@@ -2558,13 +2558,13 @@
     move-object v1, v0
 
     .line 155
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v0
 
     const-string v2, "An error occurred when trimming non-fatal files."
 
-    invoke-interface {v0, v12, v2, v1}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v12, v2, v1}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_2
     return-void
@@ -2678,7 +2678,7 @@
     .locals 6
 
     .line 43
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v0
 
@@ -2686,7 +2686,7 @@
 
     const-string v2, "Closing open sessions."
 
-    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 44
     :goto_0
@@ -2703,7 +2703,7 @@
     move-result-object v2
 
     .line 47
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v3
 
@@ -2721,7 +2721,7 @@
 
     move-result-object v4
 
-    invoke-interface {v3, v1, v4}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v3, v1, v4}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 48
     invoke-direct {p0, v0, v2, p3}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Ljava/io/File;Ljava/lang/String;I)V
@@ -2778,7 +2778,7 @@
     if-nez v5, :cond_0
 
     .line 66
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v4
 
@@ -2796,7 +2796,7 @@
 
     move-result-object v3
 
-    invoke-interface {v4, v6, v3}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v4, v6, v3}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 67
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
@@ -2819,7 +2819,7 @@
     if-nez v4, :cond_1
 
     .line 70
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v4
 
@@ -2838,7 +2838,7 @@
     move-result-object v3
 
     .line 71
-    invoke-interface {v4, v6, v3}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v4, v6, v3}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 72
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
@@ -2853,11 +2853,11 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/crashlytics/android/core/CrashlyticsController;Lio/fabric/sdk/android/services/settings/SettingsData;)Z
+.method static synthetic a(Lcom/crashlytics/android/core/CrashlyticsController;Lio/fabric/sdk/android/services/settings/t;)Z
     .locals 0
 
     .line 8
-    invoke-direct {p0, p1}, Lcom/crashlytics/android/core/CrashlyticsController;->c(Lio/fabric/sdk/android/services/settings/SettingsData;)Z
+    invoke-direct {p0, p1}, Lcom/crashlytics/android/core/CrashlyticsController;->c(Lio/fabric/sdk/android/services/settings/t;)Z
 
     move-result p0
 
@@ -2933,7 +2933,7 @@
     if-le v0, p3, :cond_0
 
     .line 74
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p2
 
@@ -2962,7 +2962,7 @@
     const-string v1, "CrashlyticsCore"
 
     .line 77
-    invoke-interface {p2, v1, v0}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, v1, v0}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 78
     invoke-direct {p0, p1, p3}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Ljava/lang/String;I)V
@@ -2994,7 +2994,7 @@
     return-object p2
 .end method
 
-.method private b(Ljava/lang/String;)Lcom/crashlytics/android/core/UserMetaData;
+.method private b(Ljava/lang/String;)Lcom/crashlytics/android/core/t0;
     .locals 3
 
     .line 30
@@ -3004,44 +3004,44 @@
 
     if-eqz v0, :cond_0
 
-    new-instance p1, Lcom/crashlytics/android/core/UserMetaData;
+    new-instance p1, Lcom/crashlytics/android/core/t0;
 
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
     .line 31
-    invoke-virtual {v0}, Lcom/crashlytics/android/core/CrashlyticsCore;->s()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/crashlytics/android/core/j;->s()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
     .line 32
-    invoke-virtual {v1}, Lcom/crashlytics/android/core/CrashlyticsCore;->t()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/crashlytics/android/core/j;->t()Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
     .line 33
-    invoke-virtual {v2}, Lcom/crashlytics/android/core/CrashlyticsCore;->r()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/crashlytics/android/core/j;->r()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-direct {p1, v0, v1, v2}, Lcom/crashlytics/android/core/UserMetaData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1, v2}, Lcom/crashlytics/android/core/t0;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lcom/crashlytics/android/core/MetaDataStore;
+    new-instance v0, Lcom/crashlytics/android/core/a0;
 
     .line 34
     invoke-virtual {p0}, Lcom/crashlytics/android/core/CrashlyticsController;->c()Ljava/io/File;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/crashlytics/android/core/MetaDataStore;-><init>(Ljava/io/File;)V
+    invoke-direct {v0, v1}, Lcom/crashlytics/android/core/a0;-><init>(Ljava/io/File;)V
 
-    invoke-virtual {v0, p1}, Lcom/crashlytics/android/core/MetaDataStore;->c(Ljava/lang/String;)Lcom/crashlytics/android/core/UserMetaData;
+    invoke-virtual {v0, p1}, Lcom/crashlytics/android/core/a0;->c(Ljava/lang/String;)Lcom/crashlytics/android/core/t0;
 
     move-result-object p1
 
@@ -3101,9 +3101,9 @@
 
     .line 11
     :cond_0
-    iget-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->j:Lcom/crashlytics/android/core/LogFileManager;
+    iget-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->j:Lcom/crashlytics/android/core/y;
 
-    invoke-virtual {p1, v0}, Lcom/crashlytics/android/core/LogFileManager;->a(Ljava/util/Set;)V
+    invoke-virtual {p1, v0}, Lcom/crashlytics/android/core/y;->a(Ljava/util/Set;)V
 
     .line 12
     new-instance p1, Lcom/crashlytics/android/core/CrashlyticsController$v;
@@ -3121,11 +3121,11 @@
     return-void
 .end method
 
-.method static synthetic b(Lcom/crashlytics/android/core/CrashlyticsController;Lio/fabric/sdk/android/services/settings/SettingsData;)V
+.method static synthetic b(Lcom/crashlytics/android/core/CrashlyticsController;Lio/fabric/sdk/android/services/settings/t;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/crashlytics/android/core/CrashlyticsController;->b(Lio/fabric/sdk/android/services/settings/SettingsData;)V
+    invoke-direct {p0, p1}, Lcom/crashlytics/android/core/CrashlyticsController;->b(Lio/fabric/sdk/android/services/settings/t;)V
 
     return-void
 .end method
@@ -3139,13 +3139,13 @@
     return-void
 .end method
 
-.method private b(Lio/fabric/sdk/android/services/settings/SettingsData;)V
+.method private b(Lio/fabric/sdk/android/services/settings/t;)V
     .locals 7
 
     if-nez p1, :cond_0
 
     .line 36
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p1
 
@@ -3153,41 +3153,41 @@
 
     const-string v1, "Cannot send reports. Settings are unavailable."
 
-    invoke-interface {p1, v0, v1}, Lio/fabric/sdk/android/Logger;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Lio/fabric/sdk/android/k;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     .line 37
     :cond_0
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/Kit;->d()Landroid/content/Context;
+    invoke-virtual {v0}, Lio/fabric/sdk/android/h;->d()Landroid/content/Context;
 
     move-result-object v0
 
     .line 38
-    iget-object p1, p1, Lio/fabric/sdk/android/services/settings/SettingsData;->a:Lio/fabric/sdk/android/services/settings/AppSettingsData;
+    iget-object p1, p1, Lio/fabric/sdk/android/services/settings/t;->a:Lio/fabric/sdk/android/services/settings/e;
 
-    iget-object v1, p1, Lio/fabric/sdk/android/services/settings/AppSettingsData;->c:Ljava/lang/String;
+    iget-object v1, p1, Lio/fabric/sdk/android/services/settings/e;->c:Ljava/lang/String;
 
-    iget-object p1, p1, Lio/fabric/sdk/android/services/settings/AppSettingsData;->d:Ljava/lang/String;
+    iget-object p1, p1, Lio/fabric/sdk/android/services/settings/e;->d:Ljava/lang/String;
 
-    invoke-direct {p0, v1, p1}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/crashlytics/android/core/CreateReportSpiCall;
+    invoke-direct {p0, v1, p1}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/crashlytics/android/core/r;
 
     move-result-object p1
 
     .line 39
-    new-instance v1, Lcom/crashlytics/android/core/ReportUploader;
+    new-instance v1, Lcom/crashlytics/android/core/m0;
 
-    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->h:Lcom/crashlytics/android/core/AppData;
+    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->h:Lcom/crashlytics/android/core/a;
 
-    iget-object v2, v2, Lcom/crashlytics/android/core/AppData;->a:Ljava/lang/String;
+    iget-object v2, v2, Lcom/crashlytics/android/core/a;->a:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/crashlytics/android/core/CrashlyticsController;->k:Lcom/crashlytics/android/core/ReportUploader$c;
+    iget-object v3, p0, Lcom/crashlytics/android/core/CrashlyticsController;->k:Lcom/crashlytics/android/core/m0$c;
 
-    iget-object v4, p0, Lcom/crashlytics/android/core/CrashlyticsController;->l:Lcom/crashlytics/android/core/ReportUploader$b;
+    iget-object v4, p0, Lcom/crashlytics/android/core/CrashlyticsController;->l:Lcom/crashlytics/android/core/m0$b;
 
-    invoke-direct {v1, v2, p1, v3, v4}, Lcom/crashlytics/android/core/ReportUploader;-><init>(Ljava/lang/String;Lcom/crashlytics/android/core/CreateReportSpiCall;Lcom/crashlytics/android/core/ReportUploader$c;Lcom/crashlytics/android/core/ReportUploader$b;)V
+    invoke-direct {v1, v2, p1, v3, v4}, Lcom/crashlytics/android/core/m0;-><init>(Ljava/lang/String;Lcom/crashlytics/android/core/r;Lcom/crashlytics/android/core/m0$c;Lcom/crashlytics/android/core/m0$b;)V
 
     .line 40
     invoke-virtual {p0}, Lcom/crashlytics/android/core/CrashlyticsController;->g()[Ljava/io/File;
@@ -3204,20 +3204,20 @@
     aget-object v4, p1, v3
 
     .line 41
-    new-instance v5, Lcom/crashlytics/android/core/SessionReport;
+    new-instance v5, Lcom/crashlytics/android/core/o0;
 
     sget-object v6, Lcom/crashlytics/android/core/CrashlyticsController;->y:Ljava/util/Map;
 
-    invoke-direct {v5, v4, v6}, Lcom/crashlytics/android/core/SessionReport;-><init>(Ljava/io/File;Ljava/util/Map;)V
+    invoke-direct {v5, v4, v6}, Lcom/crashlytics/android/core/o0;-><init>(Ljava/io/File;Ljava/util/Map;)V
 
     .line 42
-    iget-object v4, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;
+    iget-object v4, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/i;
 
     new-instance v6, Lcom/crashlytics/android/core/CrashlyticsController$f0;
 
-    invoke-direct {v6, v0, v5, v1}, Lcom/crashlytics/android/core/CrashlyticsController$f0;-><init>(Landroid/content/Context;Lcom/crashlytics/android/core/Report;Lcom/crashlytics/android/core/ReportUploader;)V
+    invoke-direct {v6, v0, v5, v1}, Lcom/crashlytics/android/core/CrashlyticsController$f0;-><init>(Landroid/content/Context;Lcom/crashlytics/android/core/Report;Lcom/crashlytics/android/core/m0;)V
 
-    invoke-virtual {v4, v6}, Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;->a(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    invoke-virtual {v4, v6}, Lcom/crashlytics/android/core/i;->a(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
     add-int/lit8 v3, v3, 0x1
 
@@ -3247,13 +3247,13 @@
     if-nez v0, :cond_0
 
     .line 16
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v0
 
     const-string v5, "Tried to write a fatal exception while no session was open."
 
-    invoke-interface {v0, v1, v5, v4}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, v5, v4}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3280,7 +3280,7 @@
     invoke-static {v0, v5}, Lcom/crashlytics/android/core/CrashlyticsController;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 20
-    new-instance v5, Lcom/crashlytics/android/core/ClsFileOutputStream;
+    new-instance v5, Lcom/crashlytics/android/core/f;
 
     invoke-virtual {p0}, Lcom/crashlytics/android/core/CrashlyticsController;->c()Ljava/io/File;
 
@@ -3300,7 +3300,7 @@
 
     move-result-object v0
 
-    invoke-direct {v5, v6, v0}, Lcom/crashlytics/android/core/ClsFileOutputStream;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    invoke-direct {v5, v6, v0}, Lcom/crashlytics/android/core/f;-><init>(Ljava/io/File;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -3353,13 +3353,13 @@
     .line 23
     :goto_0
     :try_start_3
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v6
 
     const-string v7, "An error occurred in the fatal exception logger"
 
-    invoke-interface {v6, v1, v7, v0}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v6, v1, v7, v0}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -3432,7 +3432,7 @@
 
     invoke-direct {v0, v1, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/crashlytics/android/core/NativeFileUtils;->d(Ljava/io/File;)[B
+    invoke-static {v0}, Lcom/crashlytics/android/core/e0;->d(Ljava/io/File;)[B
 
     move-result-object p1
 
@@ -3520,18 +3520,18 @@
     .locals 2
 
     .line 10
-    const-class v0, Lcom/crashlytics/android/answers/Answers;
+    const-class v0, Lcom/crashlytics/android/answers/b;
 
-    invoke-static {v0}, Lio/fabric/sdk/android/Fabric;->a(Ljava/lang/Class;)Lio/fabric/sdk/android/Kit;
+    invoke-static {v0}, Lio/fabric/sdk/android/c;->a(Ljava/lang/Class;)Lio/fabric/sdk/android/h;
 
     move-result-object v0
 
-    check-cast v0, Lcom/crashlytics/android/answers/Answers;
+    check-cast v0, Lcom/crashlytics/android/answers/b;
 
     if-nez v0, :cond_0
 
     .line 11
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p0
 
@@ -3539,22 +3539,22 @@
 
     const-string v0, "Answers is not available"
 
-    invoke-interface {p0, p1, v0}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p0, p1, v0}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     .line 12
     :cond_0
-    new-instance v1, Lio/fabric/sdk/android/services/common/Crash$a;
+    new-instance v1, Lio/fabric/sdk/android/services/common/i$a;
 
-    invoke-direct {v1, p0, p1}, Lio/fabric/sdk/android/services/common/Crash$a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1}, Lio/fabric/sdk/android/services/common/i$a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/answers/Answers;->a(Lio/fabric/sdk/android/services/common/Crash$a;)V
+    invoke-virtual {v0, v1}, Lcom/crashlytics/android/answers/b;->a(Lio/fabric/sdk/android/services/common/i$a;)V
 
     return-void
 .end method
 
-.method private c(Lio/fabric/sdk/android/services/settings/SettingsData;)Z
+.method private c(Lio/fabric/sdk/android/services/settings/t;)Z
     .locals 1
 
     const/4 v0, 0x0
@@ -3565,16 +3565,16 @@
 
     .line 8
     :cond_0
-    iget-object p1, p1, Lio/fabric/sdk/android/services/settings/SettingsData;->d:Lio/fabric/sdk/android/services/settings/FeaturesSettingsData;
+    iget-object p1, p1, Lio/fabric/sdk/android/services/settings/t;->d:Lio/fabric/sdk/android/services/settings/n;
 
-    iget-boolean p1, p1, Lio/fabric/sdk/android/services/settings/FeaturesSettingsData;->a:Z
+    iget-boolean p1, p1, Lio/fabric/sdk/android/services/settings/n;->a:Z
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->f:Lcom/crashlytics/android/core/PreferenceManager;
+    iget-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->f:Lcom/crashlytics/android/core/h0;
 
     .line 9
-    invoke-virtual {p1}, Lcom/crashlytics/android/core/PreferenceManager;->a()Z
+    invoke-virtual {p1}, Lcom/crashlytics/android/core/h0;->a()Z
 
     move-result p1
 
@@ -3601,11 +3601,11 @@
     return-object p1
 .end method
 
-.method static synthetic d(Lcom/crashlytics/android/core/CrashlyticsController;)Lcom/crashlytics/android/core/AppData;
+.method static synthetic d(Lcom/crashlytics/android/core/CrashlyticsController;)Lcom/crashlytics/android/core/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->h:Lcom/crashlytics/android/core/AppData;
+    iget-object p0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->h:Lcom/crashlytics/android/core/a;
 
     return-object p0
 .end method
@@ -3626,12 +3626,12 @@
     move-result-object v0
 
     .line 3
-    iget-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->h:Lcom/crashlytics/android/core/AppData;
+    iget-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->h:Lcom/crashlytics/android/core/a;
 
-    iget-object v8, v1, Lcom/crashlytics/android/core/AppData;->e:Ljava/lang/String;
+    iget-object v8, v1, Lcom/crashlytics/android/core/a;->e:Ljava/lang/String;
 
     .line 4
-    iget-object v9, v1, Lcom/crashlytics/android/core/AppData;->f:Ljava/lang/String;
+    iget-object v9, v1, Lcom/crashlytics/android/core/a;->f:Ljava/lang/String;
 
     .line 5
     iget-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->e:Lio/fabric/sdk/android/services/common/IdManager;
@@ -3641,9 +3641,9 @@
     move-result-object v10
 
     .line 6
-    iget-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->h:Lcom/crashlytics/android/core/AppData;
+    iget-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->h:Lcom/crashlytics/android/core/a;
 
-    iget-object v1, v1, Lcom/crashlytics/android/core/AppData;->c:Ljava/lang/String;
+    iget-object v1, v1, Lcom/crashlytics/android/core/a;->c:Ljava/lang/String;
 
     .line 7
     invoke-static {v1}, Lio/fabric/sdk/android/services/common/DeliveryMechanism;->a(Ljava/lang/String;)Lio/fabric/sdk/android/services/common/DeliveryMechanism;
@@ -3695,18 +3695,18 @@
     .locals 2
 
     .line 11
-    const-class v0, Lcom/crashlytics/android/answers/Answers;
+    const-class v0, Lcom/crashlytics/android/answers/b;
 
-    invoke-static {v0}, Lio/fabric/sdk/android/Fabric;->a(Ljava/lang/Class;)Lio/fabric/sdk/android/Kit;
+    invoke-static {v0}, Lio/fabric/sdk/android/c;->a(Ljava/lang/Class;)Lio/fabric/sdk/android/h;
 
     move-result-object v0
 
-    check-cast v0, Lcom/crashlytics/android/answers/Answers;
+    check-cast v0, Lcom/crashlytics/android/answers/b;
 
     if-nez v0, :cond_0
 
     .line 12
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p0
 
@@ -3714,17 +3714,17 @@
 
     const-string v0, "Answers is not available"
 
-    invoke-interface {p0, p1, v0}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p0, p1, v0}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     .line 13
     :cond_0
-    new-instance v1, Lio/fabric/sdk/android/services/common/Crash$b;
+    new-instance v1, Lio/fabric/sdk/android/services/common/i$b;
 
-    invoke-direct {v1, p0, p1}, Lio/fabric/sdk/android/services/common/Crash$b;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1}, Lio/fabric/sdk/android/services/common/i$b;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/answers/Answers;->a(Lio/fabric/sdk/android/services/common/Crash$b;)V
+    invoke-virtual {v0, v1}, Lcom/crashlytics/android/answers/b;->a(Lio/fabric/sdk/android/services/common/i$b;)V
 
     return-void
 .end method
@@ -3751,9 +3751,9 @@
     move-object/from16 v12, p1
 
     .line 2
-    iget-object v0, v11, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object v0, v11, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/Kit;->d()Landroid/content/Context;
+    invoke-virtual {v0}, Lio/fabric/sdk/android/h;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -3869,11 +3869,11 @@
     return-void
 .end method
 
-.method static synthetic f(Lcom/crashlytics/android/core/CrashlyticsController;)Lcom/crashlytics/android/core/CrashlyticsCore;
+.method static synthetic f(Lcom/crashlytics/android/core/CrashlyticsController;)Lcom/crashlytics/android/core/j;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object p0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
     return-object p0
 .end method
@@ -3887,9 +3887,9 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/Kit;->d()Landroid/content/Context;
+    invoke-virtual {v0}, Lio/fabric/sdk/android/h;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -3941,14 +3941,14 @@
     .end annotation
 
     .line 10
-    invoke-direct {p0, p1}, Lcom/crashlytics/android/core/CrashlyticsController;->b(Ljava/lang/String;)Lcom/crashlytics/android/core/UserMetaData;
+    invoke-direct {p0, p1}, Lcom/crashlytics/android/core/CrashlyticsController;->b(Ljava/lang/String;)Lcom/crashlytics/android/core/t0;
 
     move-result-object v0
 
     .line 11
     new-instance v1, Lcom/crashlytics/android/core/CrashlyticsController$m;
 
-    invoke-direct {v1, p0, v0}, Lcom/crashlytics/android/core/CrashlyticsController$m;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;Lcom/crashlytics/android/core/UserMetaData;)V
+    invoke-direct {v1, p0, v0}, Lcom/crashlytics/android/core/CrashlyticsController$m;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;Lcom/crashlytics/android/core/t0;)V
 
     const-string v0, "SessionUser"
 
@@ -3980,18 +3980,18 @@
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
     .line 2
-    new-instance v1, Lcom/crashlytics/android/core/CLSUUID;
+    new-instance v1, Lcom/crashlytics/android/core/e;
 
     iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->e:Lio/fabric/sdk/android/services/common/IdManager;
 
-    invoke-direct {v1, v2}, Lcom/crashlytics/android/core/CLSUUID;-><init>(Lio/fabric/sdk/android/services/common/IdManager;)V
+    invoke-direct {v1, v2}, Lcom/crashlytics/android/core/e;-><init>(Lio/fabric/sdk/android/services/common/IdManager;)V
 
-    invoke-virtual {v1}, Lcom/crashlytics/android/core/CLSUUID;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/crashlytics/android/core/e;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     .line 3
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v2
 
@@ -4011,7 +4011,7 @@
 
     const-string v4, "CrashlyticsCore"
 
-    invoke-interface {v2, v4, v3}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v2, v4, v3}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     invoke-direct {p0, v1, v0}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Ljava/lang/String;Ljava/util/Date;)V
@@ -4026,9 +4026,9 @@
     invoke-direct {p0, v1}, Lcom/crashlytics/android/core/CrashlyticsController;->e(Ljava/lang/String;)V
 
     .line 8
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->j:Lcom/crashlytics/android/core/LogFileManager;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->j:Lcom/crashlytics/android/core/y;
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/LogFileManager;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/y;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -4219,24 +4219,24 @@
     .locals 2
 
     .line 80
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/i;
 
     new-instance v1, Lcom/crashlytics/android/core/CrashlyticsController$e;
 
     invoke-direct {v1, p0}, Lcom/crashlytics/android/core/CrashlyticsController$e;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;)V
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;->a(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/i;->a(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
     return-void
 .end method
 
-.method a(FLio/fabric/sdk/android/services/settings/SettingsData;)V
+.method a(FLio/fabric/sdk/android/services/settings/t;)V
     .locals 5
 
     if-nez p2, :cond_0
 
     .line 20
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p1
 
@@ -4244,26 +4244,26 @@
 
     const-string v0, "Could not send reports. Settings are not available."
 
-    invoke-interface {p1, p2, v0}, Lio/fabric/sdk/android/Logger;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, p2, v0}, Lio/fabric/sdk/android/k;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     .line 21
     :cond_0
-    iget-object v0, p2, Lio/fabric/sdk/android/services/settings/SettingsData;->a:Lio/fabric/sdk/android/services/settings/AppSettingsData;
+    iget-object v0, p2, Lio/fabric/sdk/android/services/settings/t;->a:Lio/fabric/sdk/android/services/settings/e;
 
-    iget-object v1, v0, Lio/fabric/sdk/android/services/settings/AppSettingsData;->c:Ljava/lang/String;
+    iget-object v1, v0, Lio/fabric/sdk/android/services/settings/e;->c:Ljava/lang/String;
 
     .line 22
-    iget-object v0, v0, Lio/fabric/sdk/android/services/settings/AppSettingsData;->d:Ljava/lang/String;
+    iget-object v0, v0, Lio/fabric/sdk/android/services/settings/e;->d:Ljava/lang/String;
 
     .line 23
-    invoke-direct {p0, v1, v0}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/crashlytics/android/core/CreateReportSpiCall;
+    invoke-direct {p0, v1, v0}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/crashlytics/android/core/r;
 
     move-result-object v0
 
     .line 24
-    invoke-direct {p0, p2}, Lcom/crashlytics/android/core/CrashlyticsController;->c(Lio/fabric/sdk/android/services/settings/SettingsData;)Z
+    invoke-direct {p0, p2}, Lcom/crashlytics/android/core/CrashlyticsController;->c(Lio/fabric/sdk/android/services/settings/t;)Z
 
     move-result v1
 
@@ -4271,37 +4271,37 @@
 
     new-instance v1, Lcom/crashlytics/android/core/CrashlyticsController$c0;
 
-    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/CrashlyticsCore;
+    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->b:Lcom/crashlytics/android/core/j;
 
-    iget-object v3, p0, Lcom/crashlytics/android/core/CrashlyticsController;->f:Lcom/crashlytics/android/core/PreferenceManager;
+    iget-object v3, p0, Lcom/crashlytics/android/core/CrashlyticsController;->f:Lcom/crashlytics/android/core/h0;
 
-    iget-object p2, p2, Lio/fabric/sdk/android/services/settings/SettingsData;->c:Lio/fabric/sdk/android/services/settings/PromptSettingsData;
+    iget-object p2, p2, Lio/fabric/sdk/android/services/settings/t;->c:Lio/fabric/sdk/android/services/settings/p;
 
-    invoke-direct {v1, v2, v3, p2}, Lcom/crashlytics/android/core/CrashlyticsController$c0;-><init>(Lio/fabric/sdk/android/Kit;Lcom/crashlytics/android/core/PreferenceManager;Lio/fabric/sdk/android/services/settings/PromptSettingsData;)V
+    invoke-direct {v1, v2, v3, p2}, Lcom/crashlytics/android/core/CrashlyticsController$c0;-><init>(Lio/fabric/sdk/android/h;Lcom/crashlytics/android/core/h0;Lio/fabric/sdk/android/services/settings/p;)V
 
     goto :goto_0
 
     :cond_1
-    new-instance v1, Lcom/crashlytics/android/core/ReportUploader$a;
+    new-instance v1, Lcom/crashlytics/android/core/m0$a;
 
-    invoke-direct {v1}, Lcom/crashlytics/android/core/ReportUploader$a;-><init>()V
+    invoke-direct {v1}, Lcom/crashlytics/android/core/m0$a;-><init>()V
 
     .line 25
     :goto_0
-    new-instance p2, Lcom/crashlytics/android/core/ReportUploader;
+    new-instance p2, Lcom/crashlytics/android/core/m0;
 
-    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->h:Lcom/crashlytics/android/core/AppData;
+    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController;->h:Lcom/crashlytics/android/core/a;
 
-    iget-object v2, v2, Lcom/crashlytics/android/core/AppData;->a:Ljava/lang/String;
+    iget-object v2, v2, Lcom/crashlytics/android/core/a;->a:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/crashlytics/android/core/CrashlyticsController;->k:Lcom/crashlytics/android/core/ReportUploader$c;
+    iget-object v3, p0, Lcom/crashlytics/android/core/CrashlyticsController;->k:Lcom/crashlytics/android/core/m0$c;
 
-    iget-object v4, p0, Lcom/crashlytics/android/core/CrashlyticsController;->l:Lcom/crashlytics/android/core/ReportUploader$b;
+    iget-object v4, p0, Lcom/crashlytics/android/core/CrashlyticsController;->l:Lcom/crashlytics/android/core/m0$b;
 
-    invoke-direct {p2, v2, v0, v3, v4}, Lcom/crashlytics/android/core/ReportUploader;-><init>(Ljava/lang/String;Lcom/crashlytics/android/core/CreateReportSpiCall;Lcom/crashlytics/android/core/ReportUploader$c;Lcom/crashlytics/android/core/ReportUploader$b;)V
+    invoke-direct {p2, v2, v0, v3, v4}, Lcom/crashlytics/android/core/m0;-><init>(Ljava/lang/String;Lcom/crashlytics/android/core/r;Lcom/crashlytics/android/core/m0$c;Lcom/crashlytics/android/core/m0$b;)V
 
     .line 26
-    invoke-virtual {p2, p1, v1}, Lcom/crashlytics/android/core/ReportUploader;->a(FLcom/crashlytics/android/core/ReportUploader$d;)V
+    invoke-virtual {p2, p1, v1}, Lcom/crashlytics/android/core/m0;->a(FLcom/crashlytics/android/core/m0$d;)V
 
     return-void
 .end method
@@ -4316,7 +4316,7 @@
 
     sget-object v1, Lcom/crashlytics/android/core/CrashlyticsController;->w:Ljava/util/Comparator;
 
-    invoke-static {v0, p1, v1}, Lcom/crashlytics/android/core/Utils;->a(Ljava/io/File;ILjava/util/Comparator;)I
+    invoke-static {v0, p1, v1}, Lcom/crashlytics/android/core/u0;->a(Ljava/io/File;ILjava/util/Comparator;)I
 
     move-result v0
 
@@ -4329,7 +4329,7 @@
 
     sget-object v1, Lcom/crashlytics/android/core/CrashlyticsController;->w:Ljava/util/Comparator;
 
-    invoke-static {v0, p1, v1}, Lcom/crashlytics/android/core/Utils;->a(Ljava/io/File;ILjava/util/Comparator;)I
+    invoke-static {v0, p1, v1}, Lcom/crashlytics/android/core/u0;->a(Ljava/io/File;ILjava/util/Comparator;)I
 
     move-result v0
 
@@ -4344,7 +4344,7 @@
 
     sget-object v2, Lcom/crashlytics/android/core/CrashlyticsController;->w:Ljava/util/Comparator;
 
-    invoke-static {v0, v1, p1, v2}, Lcom/crashlytics/android/core/Utils;->a(Ljava/io/File;Ljava/io/FilenameFilter;ILjava/util/Comparator;)I
+    invoke-static {v0, v1, p1, v2}, Lcom/crashlytics/android/core/u0;->a(Ljava/io/File;Ljava/io/FilenameFilter;ILjava/util/Comparator;)I
 
     return-void
 .end method
@@ -4353,25 +4353,25 @@
     .locals 2
 
     .line 27
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/i;
 
     new-instance v1, Lcom/crashlytics/android/core/CrashlyticsController$t;
 
     invoke-direct {v1, p0, p1, p2, p3}, Lcom/crashlytics/android/core/CrashlyticsController$t;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;JLjava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;->a(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/i;->a(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     return-void
 .end method
 
-.method declared-synchronized a(Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler$b;Ljava/lang/Thread;Ljava/lang/Throwable;Z)V
+.method declared-synchronized a(Lcom/crashlytics/android/core/p$b;Ljava/lang/Thread;Ljava/lang/Throwable;Z)V
     .locals 9
 
     monitor-enter p0
 
     .line 13
     :try_start_0
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v0
 
@@ -4403,12 +4403,12 @@
     move-result-object v2
 
     .line 15
-    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 16
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->m:Lcom/crashlytics/android/core/DevicePowerStateListener;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->m:Lcom/crashlytics/android/core/u;
 
-    invoke-virtual {v0}, Lcom/crashlytics/android/core/DevicePowerStateListener;->a()V
+    invoke-virtual {v0}, Lcom/crashlytics/android/core/u;->a()V
 
     .line 17
     new-instance v3, Ljava/util/Date;
@@ -4416,7 +4416,7 @@
     invoke-direct {v3}, Ljava/util/Date;-><init>()V
 
     .line 18
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/i;
 
     new-instance v8, Lcom/crashlytics/android/core/CrashlyticsController$s;
 
@@ -4432,9 +4432,9 @@
 
     move v7, p4
 
-    invoke-direct/range {v1 .. v7}, Lcom/crashlytics/android/core/CrashlyticsController$s;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;Ljava/util/Date;Ljava/lang/Thread;Ljava/lang/Throwable;Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler$b;Z)V
+    invoke-direct/range {v1 .. v7}, Lcom/crashlytics/android/core/CrashlyticsController$s;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;Ljava/util/Date;Ljava/lang/Thread;Ljava/lang/Throwable;Lcom/crashlytics/android/core/p$b;Z)V
 
-    invoke-virtual {v0, v8}, Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;->b(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+    invoke-virtual {v0, v8}, Lcom/crashlytics/android/core/i;->b(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -4451,7 +4451,7 @@
     throw p1
 .end method
 
-.method a(Lio/fabric/sdk/android/services/settings/SessionSettingsData;)V
+.method a(Lio/fabric/sdk/android/services/settings/q;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4462,32 +4462,32 @@
     const/4 v0, 0x0
 
     .line 33
-    invoke-direct {p0, p1, v0}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Lio/fabric/sdk/android/services/settings/SessionSettingsData;Z)V
+    invoke-direct {p0, p1, v0}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Lio/fabric/sdk/android/services/settings/q;Z)V
 
     return-void
 .end method
 
-.method a(Lio/fabric/sdk/android/services/settings/SettingsData;)V
+.method a(Lio/fabric/sdk/android/services/settings/t;)V
     .locals 2
 
     .line 273
-    iget-object p1, p1, Lio/fabric/sdk/android/services/settings/SettingsData;->d:Lio/fabric/sdk/android/services/settings/FeaturesSettingsData;
+    iget-object p1, p1, Lio/fabric/sdk/android/services/settings/t;->d:Lio/fabric/sdk/android/services/settings/n;
 
-    iget-boolean p1, p1, Lio/fabric/sdk/android/services/settings/FeaturesSettingsData;->d:Z
+    iget-boolean p1, p1, Lio/fabric/sdk/android/services/settings/n;->d:Z
 
     if-eqz p1, :cond_0
 
     .line 274
-    iget-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->p:Lcom/crashlytics/android/core/AppMeasurementEventListenerRegistrar;
+    iget-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->p:Lcom/crashlytics/android/core/b;
 
-    invoke-interface {p1}, Lcom/crashlytics/android/core/AppMeasurementEventListenerRegistrar;->a()Z
+    invoke-interface {p1}, Lcom/crashlytics/android/core/b;->a()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
     .line 275
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object p1
 
@@ -4495,7 +4495,7 @@
 
     const-string v1, "Registered Firebase Analytics event listener"
 
-    invoke-interface {p1, v0, v1}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -4505,13 +4505,13 @@
     .locals 2
 
     .line 30
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/i;
 
     new-instance v1, Lcom/crashlytics/android/core/CrashlyticsController$a;
 
     invoke-direct {v1, p0, p1, p2, p3}, Lcom/crashlytics/android/core/CrashlyticsController$a;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;->a(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/i;->a(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     return-void
 .end method
@@ -4528,7 +4528,7 @@
     invoke-direct {v0, p0}, Lcom/crashlytics/android/core/CrashlyticsController$r;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;)V
 
     .line 11
-    new-instance v1, Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler;
+    new-instance v1, Lcom/crashlytics/android/core/p;
 
     new-instance v2, Lcom/crashlytics/android/core/CrashlyticsController$x;
 
@@ -4536,12 +4536,12 @@
 
     invoke-direct {v2, v3}, Lcom/crashlytics/android/core/CrashlyticsController$x;-><init>(Lcom/crashlytics/android/core/CrashlyticsController$j;)V
 
-    invoke-direct {v1, v0, v2, p2, p1}, Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler;-><init>(Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler$a;Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler$b;ZLjava/lang/Thread$UncaughtExceptionHandler;)V
+    invoke-direct {v1, v0, v2, p2, p1}, Lcom/crashlytics/android/core/p;-><init>(Lcom/crashlytics/android/core/p$a;Lcom/crashlytics/android/core/p$b;ZLjava/lang/Thread$UncaughtExceptionHandler;)V
 
-    iput-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->r:Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler;
+    iput-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->r:Lcom/crashlytics/android/core/p;
 
     .line 12
-    iget-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->r:Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler;
+    iget-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->r:Lcom/crashlytics/android/core/p;
 
     invoke-static {p1}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
 
@@ -4557,13 +4557,13 @@
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
     .line 29
-    iget-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;
+    iget-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/i;
 
     new-instance v2, Lcom/crashlytics/android/core/CrashlyticsController$u;
 
     invoke-direct {v2, p0, v0, p1, p2}, Lcom/crashlytics/android/core/CrashlyticsController$u;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;Ljava/util/Date;Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v1, v2}, Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;->a(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    invoke-virtual {v1, v2}, Lcom/crashlytics/android/core/i;->a(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
     return-void
 .end method
@@ -4581,13 +4581,13 @@
     .end annotation
 
     .line 31
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/i;
 
     new-instance v1, Lcom/crashlytics/android/core/CrashlyticsController$b;
 
     invoke-direct {v1, p0, p1}, Lcom/crashlytics/android/core/CrashlyticsController$b;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;Ljava/util/Map;)V
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;->a(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/i;->a(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     return-void
 .end method
@@ -4615,7 +4615,7 @@
     aget-object v5, p1, v3
 
     .line 83
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v6
 
@@ -4633,7 +4633,7 @@
 
     move-result-object v7
 
-    invoke-interface {v6, v4, v7}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v6, v4, v7}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 84
     invoke-static {v5}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Ljava/io/File;)Ljava/lang/String;
@@ -4691,7 +4691,7 @@
     aget-object v3, v0, v2
 
     .line 91
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v5
 
@@ -4709,7 +4709,7 @@
 
     move-result-object v6
 
-    invoke-interface {v5, v4, v6}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v5, v4, v6}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 92
     new-instance v5, Ljava/io/File;
@@ -4727,7 +4727,7 @@
     if-nez v5, :cond_3
 
     .line 93
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v5
 
@@ -4745,7 +4745,7 @@
 
     move-result-object v6
 
-    invoke-interface {v5, v4, v6}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v5, v4, v6}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 94
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
@@ -4762,7 +4762,7 @@
     return-void
 .end method
 
-.method a(Lcom/crashlytics/android/core/CrashlyticsNdkData;)Z
+.method a(Lcom/crashlytics/android/core/m;)Z
     .locals 2
 
     if-nez p1, :cond_0
@@ -4773,13 +4773,13 @@
 
     .line 131
     :cond_0
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/i;
 
     new-instance v1, Lcom/crashlytics/android/core/CrashlyticsController$g;
 
-    invoke-direct {v1, p0, p1}, Lcom/crashlytics/android/core/CrashlyticsController$g;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;Lcom/crashlytics/android/core/CrashlyticsNdkData;)V
+    invoke-direct {v1, p0, p1}, Lcom/crashlytics/android/core/CrashlyticsController$g;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;Lcom/crashlytics/android/core/m;)V
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;->b(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/i;->b(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -4809,17 +4809,17 @@
     return-object v0
 .end method
 
-.method b(Lio/fabric/sdk/android/services/settings/SessionSettingsData;)Z
+.method b(Lio/fabric/sdk/android/services/settings/q;)Z
     .locals 2
 
     .line 4
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/i;
 
     new-instance v1, Lcom/crashlytics/android/core/CrashlyticsController$d;
 
-    invoke-direct {v1, p0, p1}, Lcom/crashlytics/android/core/CrashlyticsController$d;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;Lio/fabric/sdk/android/services/settings/SessionSettingsData;)V
+    invoke-direct {v1, p0, p1}, Lcom/crashlytics/android/core/CrashlyticsController$d;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;Lio/fabric/sdk/android/services/settings/q;)V
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;->b(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/i;->b(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -4836,9 +4836,9 @@
     .locals 1
 
     .line 7
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->g:Lio/fabric/sdk/android/m/c/FileStore;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->g:Lio/fabric/sdk/android/m/c/a;
 
-    invoke-interface {v0}, Lio/fabric/sdk/android/m/c/FileStore;->a()Ljava/io/File;
+    invoke-interface {v0}, Lio/fabric/sdk/android/m/c/a;->a()Ljava/io/File;
 
     move-result-object v0
 
@@ -4883,11 +4883,11 @@
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->r:Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->r:Lcom/crashlytics/android/core/p;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler;->a()Z
+    invoke-virtual {v0}, Lcom/crashlytics/android/core/p;->a()Z
 
     move-result v0
 
@@ -5000,13 +5000,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->c:Lcom/crashlytics/android/core/i;
 
     new-instance v1, Lcom/crashlytics/android/core/CrashlyticsController$c;
 
     invoke-direct {v1, p0}, Lcom/crashlytics/android/core/CrashlyticsController$c;-><init>(Lcom/crashlytics/android/core/CrashlyticsController;)V
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/CrashlyticsBackgroundWorker;->a(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/i;->a(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     return-void
 .end method
@@ -5015,9 +5015,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->m:Lcom/crashlytics/android/core/DevicePowerStateListener;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController;->m:Lcom/crashlytics/android/core/u;
 
-    invoke-virtual {v0}, Lcom/crashlytics/android/core/DevicePowerStateListener;->b()V
+    invoke-virtual {v0}, Lcom/crashlytics/android/core/u;->b()V
 
     return-void
 .end method

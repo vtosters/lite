@@ -59,7 +59,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/activities/Comment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/activities/Comment$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/newsfeed/activities/Comment;->B:Lcom/vk/dto/newsfeed/activities/Comment$b;
 
@@ -99,7 +99,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v11}, Lcom/vk/dto/newsfeed/activities/Comment;-><init>(IIIJLjava/lang/String;ZLjava/util/List;[IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v11}, Lcom/vk/dto/newsfeed/activities/Comment;-><init>(IIIJLjava/lang/String;ZLjava/util/List;[IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -139,7 +139,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIIJLjava/lang/String;ZLjava/util/List;[IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(IIIJLjava/lang/String;ZLjava/util/List;[IILkotlin/jvm/internal/i;)V
     .locals 10
 
     move/from16 v0, p10
@@ -434,7 +434,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 

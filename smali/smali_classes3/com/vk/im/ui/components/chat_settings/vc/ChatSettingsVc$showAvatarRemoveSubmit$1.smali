@@ -3,7 +3,7 @@
 .source "ChatSettingsVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$showAvatarRemoveSubmit$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -62,7 +62,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$showAvatarRemoveSubmit$1;->this$0:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     move-result-object v0
 
@@ -70,7 +70,7 @@
 
     sget-object v1, Lcom/vk/im/ui/components/common/AvatarAction;->REMOVE:Lcom/vk/im/ui/components/common/AvatarAction;
 
-    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->b(Lcom/vk/im/ui/components/common/AvatarAction;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/chat_settings/vc/d;->b(Lcom/vk/im/ui/components/common/AvatarAction;)V
 
     :cond_0
     return-void

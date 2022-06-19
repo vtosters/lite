@@ -111,7 +111,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/high16 v0, 0x41400000    # 12.0f
 
@@ -184,7 +184,7 @@
     const v0, 0x7f060218
 
     .line 4
-    invoke-static {v0}, Lcom/vk/core/util/ResUtils;->b(I)I
+    invoke-static {v0}, Lcom/vk/core/util/y0;->b(I)I
 
     move-result v0
 
@@ -350,15 +350,15 @@
     return-void
 .end method
 
-.method private final a(ZLandroid/graphics/Paint;ILkotlin/jvm/b/Functions;)V
+.method private final a(ZLandroid/graphics/Paint;ILkotlin/jvm/b/a;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
             "Landroid/graphics/Paint;",
             "I",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -412,14 +412,14 @@
     .line 136
     new-instance v1, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer$b;
 
-    invoke-direct {v1, p0, p2, p3, p4}, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer$b;-><init>(Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;Landroid/graphics/Paint;ILkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, p0, p2, p3, p4}, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer$b;-><init>(Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;Landroid/graphics/Paint;ILkotlin/jvm/b/a;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     const-string v1, "animator"
 
     .line 137
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/graphics/Paint;->getAlpha()I
 
@@ -452,7 +452,7 @@
     .line 138
     new-instance v1, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer$c;
 
-    invoke-direct {v1, p0, p2, p3, p4}, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer$c;-><init>(Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;Landroid/graphics/Paint;ILkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, p0, p2, p3, p4}, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer$c;-><init>(Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;Landroid/graphics/Paint;ILkotlin/jvm/b/a;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -530,7 +530,7 @@
 
     const-string v6, "headerView.findViewById<\u2026stub_story_view_progress)"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v5, Lcom/vk/stories/view/StoryProgressView;
 
@@ -547,15 +547,15 @@
 
     const-string v6, "headerView.findViewById<\u2026tub_story_view_name_text)"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v5, Landroid/widget/TextView;
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/vk/auth/api/VKAccount;->Z()Ljava/lang/String;
+    invoke-virtual {v6}, Lb/h/h/d/c;->Z()Ljava/lang/String;
 
     move-result-object v6
 
@@ -586,7 +586,7 @@
 
     const-string v6, "headerView"
 
-    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -609,7 +609,7 @@
 
     const-string v6, "Bitmap.createBitmap(widt\u2026 Bitmap.Config.ARGB_8888)"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v5, p0, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;->o:Landroid/graphics/Bitmap;
 
@@ -650,7 +650,7 @@
 
     const-string v2, "footerView"
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -671,7 +671,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;->p:Landroid/graphics/Bitmap;
 
@@ -693,7 +693,7 @@
     const-string v0, "footerBitmap"
 
     .line 19
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
@@ -701,7 +701,7 @@
     const-string v0, "headerBitmap"
 
     .line 20
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 .end method
@@ -942,7 +942,7 @@
 
     int-to-float v1, v1
 
-    invoke-static {p1, v1}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
+    invoke-static {p1, v1}, Lcom/vk/core/util/m;->a(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -998,7 +998,7 @@
     :cond_0
     const-string p1, "headerBitmap"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1045,12 +1045,12 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1327,7 +1327,7 @@
 
     invoke-direct {v9, v0, v5}, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer$onMove$1;-><init>(Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;Z)V
 
-    invoke-direct {v0, v2, v8, v4, v9}, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;->a(ZLandroid/graphics/Paint;ILkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, v2, v8, v4, v9}, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;->a(ZLandroid/graphics/Paint;ILkotlin/jvm/b/a;)V
 
     .line 35
     :cond_3
@@ -1393,7 +1393,7 @@
 
     invoke-direct {v7, v0, v5}, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer$onMove$2;-><init>(Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;Z)V
 
-    invoke-direct {v0, v3, v4, v6, v7}, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;->a(ZLandroid/graphics/Paint;ILkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, v3, v4, v6, v7}, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;->a(ZLandroid/graphics/Paint;ILkotlin/jvm/b/a;)V
 
     .line 38
     :cond_6
@@ -1447,7 +1447,7 @@
 
     const-string v5, "velocityTracker"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Landroid/view/VelocityTracker;->getXVelocity()F
 
@@ -1458,7 +1458,7 @@
     .line 43
     iget-object v4, v0, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;->a:Landroid/view/VelocityTracker;
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Landroid/view/VelocityTracker;->getYVelocity()F
 
@@ -2082,7 +2082,7 @@
     const-string v1, "footerBitmap"
 
     .line 111
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
@@ -2090,7 +2090,7 @@
     const-string v1, "headerBitmap"
 
     .line 112
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 .end method

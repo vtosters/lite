@@ -78,13 +78,13 @@
     return-object v0
 .end method
 
-.method public static a(Lio/reactivex/disposables/Disposable;)Ljava/lang/Object;
+.method public static a(Lio/reactivex/disposables/b;)Ljava/lang/Object;
     .locals 1
 
     .line 3
     new-instance v0, Lio/reactivex/internal/util/NotificationLite$DisposableNotification;
 
-    invoke-direct {v0, p0}, Lio/reactivex/internal/util/NotificationLite$DisposableNotification;-><init>(Lio/reactivex/disposables/Disposable;)V
+    invoke-direct {v0, p0}, Lio/reactivex/internal/util/NotificationLite$DisposableNotification;-><init>(Lio/reactivex/disposables/b;)V
 
     return-object v0
 .end method
@@ -111,7 +111,7 @@
     return-object p0
 .end method
 
-.method public static a(Ljava/lang/Object;Lio/reactivex/Observer;)Z
+.method public static a(Ljava/lang/Object;Lc/a/r;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -119,7 +119,7 @@
             "Ljava/lang/Object;",
             ">(",
             "Ljava/lang/Object;",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;)Z"
         }
     .end annotation
@@ -132,7 +132,7 @@
     if-ne p0, v0, :cond_0
 
     .line 6
-    invoke-interface {p1}, Lio/reactivex/Observer;->b()V
+    invoke-interface {p1}, Lc/a/r;->b()V
 
     return v1
 
@@ -147,13 +147,13 @@
 
     iget-object p0, p0, Lio/reactivex/internal/util/NotificationLite$ErrorNotification;->e:Ljava/lang/Throwable;
 
-    invoke-interface {p1, p0}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, p0}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     return v1
 
     .line 9
     :cond_1
-    invoke-interface {p1, p0}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
+    invoke-interface {p1, p0}, Lc/a/r;->b(Ljava/lang/Object;)V
 
     const/4 p0, 0x0
 
@@ -175,7 +175,7 @@
     return-object p0
 .end method
 
-.method public static b(Ljava/lang/Object;Lio/reactivex/Observer;)Z
+.method public static b(Ljava/lang/Object;Lc/a/r;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -183,7 +183,7 @@
             "Ljava/lang/Object;",
             ">(",
             "Ljava/lang/Object;",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;)Z"
         }
     .end annotation
@@ -196,7 +196,7 @@
     if-ne p0, v0, :cond_0
 
     .line 2
-    invoke-interface {p1}, Lio/reactivex/Observer;->b()V
+    invoke-interface {p1}, Lc/a/r;->b()V
 
     return v1
 
@@ -211,7 +211,7 @@
 
     iget-object p0, p0, Lio/reactivex/internal/util/NotificationLite$ErrorNotification;->e:Ljava/lang/Throwable;
 
-    invoke-interface {p1, p0}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, p0}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     return v1
 
@@ -226,15 +226,15 @@
     .line 6
     check-cast p0, Lio/reactivex/internal/util/NotificationLite$DisposableNotification;
 
-    iget-object p0, p0, Lio/reactivex/internal/util/NotificationLite$DisposableNotification;->upstream:Lio/reactivex/disposables/Disposable;
+    iget-object p0, p0, Lio/reactivex/internal/util/NotificationLite$DisposableNotification;->upstream:Lio/reactivex/disposables/b;
 
-    invoke-interface {p1, p0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p1, p0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
 
     return v1
 
     .line 7
     :cond_2
-    invoke-interface {p1, p0}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
+    invoke-interface {p1, p0}, Lc/a/r;->b(Ljava/lang/Object;)V
 
     return v1
 .end method

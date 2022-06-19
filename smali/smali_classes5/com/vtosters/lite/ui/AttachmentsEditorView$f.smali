@@ -51,7 +51,7 @@
     move-result-object v0
 
     .line 3
-    instance-of v1, v0, Lcom/vtosters/lite/attachments/PendingAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v1, :cond_1
 
@@ -93,7 +93,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2}, Lcom/vtosters/lite/ViewUtils;->b(Landroid/view/View;I)V
+    invoke-static {v3, v2}, Lcom/vtosters/lite/f0;->b(Landroid/view/View;I)V
 
     const v3, 0x7f0a00d7
 
@@ -104,7 +104,7 @@
 
     const/16 v4, 0x8
 
-    invoke-static {v3, v4}, Lcom/vtosters/lite/ViewUtils;->b(Landroid/view/View;I)V
+    invoke-static {v3, v4}, Lcom/vtosters/lite/f0;->b(Landroid/view/View;I)V
 
     .line 7
     instance-of v3, v0, Lcom/vtosters/lite/attachments/PendingVideoAttachment;
@@ -131,19 +131,19 @@
     invoke-virtual {p1, v2}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 10
-    check-cast v0, Lcom/vtosters/lite/attachments/PendingAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/b;
 
     .line 11
     invoke-static {}, Lcom/vtosters/lite/upload/Upload;->a()I
 
     move-result p1
 
-    invoke-interface {v0, p1}, Lcom/vtosters/lite/attachments/PendingAttachment;->d(I)V
+    invoke-interface {v0, p1}, Lcom/vtosters/lite/attachments/b;->d(I)V
 
     .line 12
     iget-object p1, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView$f;->a:Lcom/vtosters/lite/ui/AttachmentsEditorView;
 
-    invoke-static {p1, v0}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vtosters/lite/ui/AttachmentsEditorView;Lcom/vtosters/lite/attachments/PendingAttachment;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vtosters/lite/ui/AttachmentsEditorView;Lcom/vtosters/lite/attachments/b;)V
 
     :cond_1
     :goto_0

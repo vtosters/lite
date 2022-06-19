@@ -3,7 +3,7 @@
 .source "PaginationView.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/Themable;
+.implements Lcom/vk/core/ui/themes/f;
 
 
 # annotations
@@ -65,7 +65,7 @@
     const/high16 v0, 0x40000000    # 2.0f
 
     .line 1
-    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
 
     move-result v0
 
@@ -74,7 +74,7 @@
     const/high16 v0, 0x40400000    # 3.0f
 
     .line 2
-    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
 
     move-result v0
 
@@ -97,7 +97,7 @@
     const/high16 v0, 0x41200000    # 10.0f
 
     .line 5
-    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
 
     move-result v0
 
@@ -113,7 +113,7 @@
     const/high16 v0, 0x42000000    # 32.0f
 
     .line 7
-    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
 
     move-result v0
 
@@ -1186,7 +1186,7 @@
     const v1, 0x7f08041c
 
     .line 4
-    invoke-static {v1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
+    invoke-static {v1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
 
     move-result-object v1
 
@@ -1195,7 +1195,7 @@
     const v1, 0x7f08041d
 
     .line 5
-    invoke-static {v1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
+    invoke-static {v1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
 
     move-result-object v0
 

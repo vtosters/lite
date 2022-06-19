@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/NewsfeedFragment$a;
-.super Lcom/vk/navigation/Navigator;
+.super Lcom/vk/navigation/o;
 .source "NewsfeedFragment.kt"
 
 
@@ -21,7 +21,7 @@
     .line 1
     const-class v0, Lcom/vk/newsfeed/NewsfeedFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 
     return-void
 .end method
@@ -32,7 +32,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "home_fragment_id"
 
@@ -45,7 +45,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const/4 v1, 0x1
 
@@ -54,7 +54,7 @@
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v2, "disable_app_use_time"
 

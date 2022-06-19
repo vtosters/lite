@@ -3,7 +3,7 @@
 .source "BroadcastFriendsView.kt"
 
 # interfaces
-.implements Lcom/vk/cameraui/widgets/friends/BroadcastFriends1;
+.implements Lcom/vk/cameraui/widgets/friends/b;
 
 
 # annotations
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/cameraui/widgets/friends/BroadcastFriends;
+.field private a:Lcom/vk/cameraui/widgets/friends/a;
 
 .field private final b:Landroid/widget/LinearLayout;
 
@@ -41,7 +41,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/cameraui/widgets/friends/BroadcastFriendsView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/cameraui/widgets/friends/BroadcastFriendsView$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/4 v0, 0x3
 
@@ -128,7 +128,7 @@
 
     const-string v0, "findViewById(R.id.live_broadcast_friends_text)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Landroid/widget/TextView;
 
@@ -143,7 +143,7 @@
 
     const-string v0, "findViewById(R.id.live_b\u2026ast_friends_users_holder)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Landroid/widget/LinearLayout;
 
@@ -169,7 +169,7 @@
     if-eqz p2, :cond_0
 
     .line 10
-    sget-object v0, Lcom/vtosters/lite/R;->BroadcastFriendsView:[I
+    sget-object v0, Lcom/vtosters/lite/a0;->BroadcastFriendsView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -312,7 +312,7 @@
 
     .line 62
     :cond_3
-    invoke-static {p1}, Lcom/vk/libvideo/live/base/DelimiterDigits;->a(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/libvideo/live/base/d;->a(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -469,7 +469,7 @@
 
     const-string p2, "textForeEnd.toString()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -512,7 +512,7 @@
 
     const-string p2, "context.getString(if (is\u2026friends_watch_text\n    })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -538,7 +538,7 @@
 
     int-to-float v1, v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;F)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;F)V
 
     const/16 v1, 0x8
 
@@ -597,7 +597,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lcom/vk/core/util/StringUtils;->a(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/core/util/b1;->a(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -707,7 +707,7 @@
 
     const-string v2, "oval.paint"
 
-    invoke-static {p4, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v2, -0x1000000
 
@@ -998,42 +998,42 @@
     return-void
 .end method
 
-.method public bridge synthetic getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+.method public bridge synthetic getPresenter()Lcom/vk/cameraui/i/a;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/friends/BroadcastFriendsView;->getPresenter()Lcom/vk/cameraui/widgets/friends/BroadcastFriends;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/friends/BroadcastFriendsView;->getPresenter()Lcom/vk/cameraui/widgets/friends/a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vk/cameraui/widgets/friends/BroadcastFriends;
+.method public getPresenter()Lcom/vk/cameraui/widgets/friends/a;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/friends/BroadcastFriendsView;->a:Lcom/vk/cameraui/widgets/friends/BroadcastFriends;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/friends/BroadcastFriendsView;->a:Lcom/vk/cameraui/widgets/friends/a;
 
     return-object v0
 .end method
 
-.method public bridge synthetic setPresenter(Lcom/vk/cameraui/i/BasePresenter;)V
+.method public bridge synthetic setPresenter(Lcom/vk/cameraui/i/a;)V
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/cameraui/widgets/friends/BroadcastFriends;
+    check-cast p1, Lcom/vk/cameraui/widgets/friends/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/cameraui/widgets/friends/BroadcastFriendsView;->setPresenter(Lcom/vk/cameraui/widgets/friends/BroadcastFriends;)V
+    invoke-virtual {p0, p1}, Lcom/vk/cameraui/widgets/friends/BroadcastFriendsView;->setPresenter(Lcom/vk/cameraui/widgets/friends/a;)V
 
     return-void
 .end method
 
-.method public setPresenter(Lcom/vk/cameraui/widgets/friends/BroadcastFriends;)V
+.method public setPresenter(Lcom/vk/cameraui/widgets/friends/a;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/cameraui/widgets/friends/BroadcastFriendsView;->a:Lcom/vk/cameraui/widgets/friends/BroadcastFriends;
+    iput-object p1, p0, Lcom/vk/cameraui/widgets/friends/BroadcastFriendsView;->a:Lcom/vk/cameraui/widgets/friends/a;
 
     return-void
 .end method

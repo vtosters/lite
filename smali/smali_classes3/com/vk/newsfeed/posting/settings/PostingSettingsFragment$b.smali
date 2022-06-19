@@ -3,7 +3,7 @@
 .source "PostingSettingsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/posting/settings/PostingSettingsProviders;
+.implements Lcom/vk/newsfeed/posting/settings/e;
 
 
 # annotations
@@ -33,11 +33,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->z()Z
+    invoke-virtual {v0}, Lb/h/h/d/c;->z()Z
 
     move-result v0
 
@@ -48,11 +48,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->A()Z
+    invoke-virtual {v0}, Lb/h/h/d/c;->A()Z
 
     move-result v0
 

@@ -18,18 +18,18 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/instantjobs/impl/InstantJobInfo;
+.field private final a:Lcom/vk/instantjobs/impl/b;
 
 .field final synthetic b:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;)V
+.method public constructor <init>(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/instantjobs/impl/InstantJobInfo;",
+            "Lcom/vk/instantjobs/impl/b;",
             ")V"
         }
     .end annotation
@@ -39,7 +39,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$a;->a:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iput-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$a;->a:Lcom/vk/instantjobs/impl/b;
 
     return-void
 .end method
@@ -57,9 +57,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$a;->a:Lcom/vk/instantjobs/impl/InstantJobInfo;
+    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$a;->a:Lcom/vk/instantjobs/impl/b;
 
-    invoke-interface {v0, v1, p1, p2}, Lcom/vk/instantjobs/impl/InstantJobExecutor$c;->a(Lcom/vk/instantjobs/impl/InstantJobInfo;II)V
+    invoke-interface {v0, v1, p1, p2}, Lcom/vk/instantjobs/impl/InstantJobExecutor$c;->a(Lcom/vk/instantjobs/impl/b;II)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

@@ -29,10 +29,10 @@
 
 
 # instance fields
-.field final downstream:Lc/a/a0/b/ConditionalSubscriber;
+.field final downstream:Lc/a/a0/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/a0/b/ConditionalSubscriber<",
+            "Lc/a/a0/b/a<",
             "-TT;>;"
         }
     .end annotation
@@ -40,12 +40,12 @@
 
 
 # direct methods
-.method constructor <init>(Lc/a/a0/b/ConditionalSubscriber;[Ljava/lang/Object;)V
+.method constructor <init>(Lc/a/a0/b/a;[Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/a0/b/ConditionalSubscriber<",
+            "Lc/a/a0/b/a<",
             "-TT;>;[TT;)V"
         }
     .end annotation
@@ -54,7 +54,7 @@
     invoke-direct {p0, p2}, Lio/reactivex/internal/operators/flowable/FlowableFromArray$BaseArraySubscription;-><init>([Ljava/lang/Object;)V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableFromArray$ArrayConditionalSubscription;->downstream:Lc/a/a0/b/ConditionalSubscriber;
+    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableFromArray$ArrayConditionalSubscription;->downstream:Lc/a/a0/b/a;
 
     return-void
 .end method
@@ -71,7 +71,7 @@
     array-length v1, v0
 
     .line 3
-    iget-object v2, p0, Lio/reactivex/internal/operators/flowable/FlowableFromArray$ArrayConditionalSubscription;->downstream:Lc/a/a0/b/ConditionalSubscriber;
+    iget-object v2, p0, Lio/reactivex/internal/operators/flowable/FlowableFromArray$ArrayConditionalSubscription;->downstream:Lc/a/a0/b/a;
 
     .line 4
     iget v3, p0, Lio/reactivex/internal/operators/flowable/FlowableFromArray$BaseArraySubscription;->index:I
@@ -115,13 +115,13 @@
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v2, v0}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v2, v0}, Le/b/c;->a(Ljava/lang/Throwable;)V
 
     return-void
 
     .line 8
     :cond_1
-    invoke-interface {v2, v4}, Lc/a/a0/b/ConditionalSubscriber;->c(Ljava/lang/Object;)Z
+    invoke-interface {v2, v4}, Lc/a/a0/b/a;->c(Ljava/lang/Object;)Z
 
     add-int/lit8 v3, v3, 0x1
 
@@ -137,7 +137,7 @@
 
     .line 10
     :cond_3
-    invoke-interface {v2}, Le/b/Subscriber;->b()V
+    invoke-interface {v2}, Le/b/c;->b()V
 
     return-void
 .end method
@@ -155,7 +155,7 @@
     iget v2, p0, Lio/reactivex/internal/operators/flowable/FlowableFromArray$BaseArraySubscription;->index:I
 
     .line 4
-    iget-object v3, p0, Lio/reactivex/internal/operators/flowable/FlowableFromArray$ArrayConditionalSubscription;->downstream:Lc/a/a0/b/ConditionalSubscriber;
+    iget-object v3, p0, Lio/reactivex/internal/operators/flowable/FlowableFromArray$ArrayConditionalSubscription;->downstream:Lc/a/a0/b/a;
 
     const-wide/16 v4, 0x0
 
@@ -208,13 +208,13 @@
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v3, p1}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v3, p1}, Le/b/c;->a(Ljava/lang/Throwable;)V
 
     return-void
 
     .line 8
     :cond_3
-    invoke-interface {v3, v8}, Lc/a/a0/b/ConditionalSubscriber;->c(Ljava/lang/Object;)Z
+    invoke-interface {v3, v8}, Lc/a/a0/b/a;->c(Ljava/lang/Object;)Z
 
     move-result v8
 
@@ -238,7 +238,7 @@
     if-nez p1, :cond_6
 
     .line 10
-    invoke-interface {v3}, Le/b/Subscriber;->b()V
+    invoke-interface {v3}, Le/b/c;->b()V
 
     :cond_6
     return-void

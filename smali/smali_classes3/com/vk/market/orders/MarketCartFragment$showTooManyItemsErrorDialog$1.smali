@@ -50,7 +50,7 @@
 
     const-wide/16 v0, 0x1f4
 
-    invoke-virtual {p1, p2, v0, v1}, Lcom/vk/core/fragments/BaseFragment1;->b(Lkotlin/jvm/b/Functions;J)V
+    invoke-virtual {p1, p2, v0, v1}, Lcom/vk/core/fragments/b;->b(Lkotlin/jvm/b/a;J)V
 
     return-void
 .end method

@@ -10,17 +10,17 @@
 
 .field private final c:Ljava/util/concurrent/ExecutorService;
 
-.field private final d:Lcom/vk/im/engine/ImEnvironment;
+.field private final d:Lcom/vk/im/engine/d;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/ImEnvironment;)V
+.method public constructor <init>(Lcom/vk/im/engine/d;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->d:Lcom/vk/im/engine/ImEnvironment;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->d:Lcom/vk/im/engine/d;
 
     const/4 p1, 0x1
 
@@ -39,22 +39,22 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;)Lcom/vk/im/engine/ImEnvironment;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;)Lcom/vk/im/engine/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->d:Lcom/vk/im/engine/ImEnvironment;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->d:Lcom/vk/im/engine/d;
 
     return-object p0
 .end method
 
-.method private final a(Lkotlin/jvm/b/Functions;)V
+.method private final a(Lkotlin/jvm/b/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -64,7 +64,7 @@
 
     new-instance v1, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler$b;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler$b;-><init>(Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler$b;-><init>(Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;Lkotlin/jvm/b/a;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
@@ -104,7 +104,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler$invalidateAccountInfo$1;-><init>(Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -113,15 +113,15 @@
     .locals 3
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->d:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->d:Lcom/vk/im/engine/d;
 
-    new-instance v1, Lcom/vk/im/engine/events/OnMsgRequestChangedEvent;
+    new-instance v1, Lcom/vk/im/engine/events/e0;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2, p1, p2, p3}, Lcom/vk/im/engine/events/OnMsgRequestChangedEvent;-><init>(Ljava/lang/Object;ILcom/vk/im/engine/models/MsgRequestStatus;Lcom/vk/im/engine/models/MsgRequestStatus;)V
+    invoke-direct {v1, v2, p1, p2, p3}, Lcom/vk/im/engine/events/e0;-><init>(Ljava/lang/Object;ILcom/vk/im/engine/models/MsgRequestStatus;Lcom/vk/im/engine/models/MsgRequestStatus;)V
 
-    invoke-interface {v0, p0, v1}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/Event;)V
+    invoke-interface {v0, p0, v1}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/a;)V
 
     return-void
 .end method
@@ -144,7 +144,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler$invalidateDialogsCount$2;-><init>(Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;Lcom/vk/im/engine/models/dialogs/DialogsFilter;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -201,9 +201,9 @@
     .locals 4
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->d:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->d:Lcom/vk/im/engine/d;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -214,9 +214,9 @@
     invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->a()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->d:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->d:Lcom/vk/im/engine/d;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -227,7 +227,7 @@
     invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->a()V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->d:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->d:Lcom/vk/im/engine/d;
 
     new-instance v1, Lcom/vk/im/engine/events/OnCacheInvalidateEvent;
 
@@ -241,7 +241,7 @@
 
     invoke-direct {v1, v2, v3}, Lcom/vk/im/engine/events/OnCacheInvalidateEvent;-><init>(Ljava/lang/Object;Lcom/vk/im/engine/events/OnCacheInvalidateEvent$Reason;)V
 
-    invoke-interface {v0, p0, v1}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/Event;)V
+    invoke-interface {v0, p0, v1}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/a;)V
 
     return-void
 .end method
@@ -254,7 +254,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler$invalidateDialogsFilterEnabled$1;-><init>(Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;Lcom/vk/im/engine/models/dialogs/DialogsFilter;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method

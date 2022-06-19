@@ -138,7 +138,7 @@
 
     new-instance v0, Lcom/vk/feedlikes/views/FeedLikesFilter$Companion;
 
-    invoke-direct {v0, v2}, Lcom/vk/feedlikes/views/FeedLikesFilter$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v2}, Lcom/vk/feedlikes/views/FeedLikesFilter$Companion;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/feedlikes/views/FeedLikesFilter;->Companion:Lcom/vk/feedlikes/views/FeedLikesFilter$Companion;
 

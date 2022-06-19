@@ -80,7 +80,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -90,7 +90,7 @@
 
     const v2, 0x7f0600f7
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v1, v2}, Lcom/vk/core/util/z;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -101,14 +101,14 @@
 
     invoke-direct {p1, p0}, Lcom/vk/identity/adapters/IdentityAdapter$Holder$1;-><init>(Lcom/vk/identity/adapters/IdentityAdapter$Holder;)V
 
-    invoke-static {p2, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p2, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/vk/identity/b/IdentityAdapterItem5;)V
+.method public final a(Lcom/vk/identity/b/e;)V
     .locals 2
 
     .line 1
@@ -116,9 +116,9 @@
 
     const-string v1, "titleView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem5;->b()Lcom/vk/dto/identity/IdentityCard;
+    invoke-virtual {p1}, Lcom/vk/identity/b/e;->b()Lcom/vk/dto/identity/IdentityCard;
 
     move-result-object v1
 
@@ -133,9 +133,9 @@
 
     const-string v1, "subtitleView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem5;->b()Lcom/vk/dto/identity/IdentityCard;
+    invoke-virtual {p1}, Lcom/vk/identity/b/e;->b()Lcom/vk/dto/identity/IdentityCard;
 
     move-result-object v1
 
@@ -148,7 +148,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/identity/adapters/IdentityAdapter$Holder;->d:Lcom/vk/identity/adapters/IdentityAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem5;->b()Lcom/vk/dto/identity/IdentityCard;
+    invoke-virtual {p1}, Lcom/vk/identity/b/e;->b()Lcom/vk/dto/identity/IdentityCard;
 
     move-result-object p1
 
@@ -167,7 +167,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityAdapter$Holder;->c:Landroid/widget/ImageView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -179,7 +179,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityAdapter$Holder;->c:Landroid/widget/ImageView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v0, 0x8
 

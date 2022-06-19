@@ -127,7 +127,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v14}, Lcom/vk/im/ui/components/msg_search/MsgSearchState;-><init>(Ljava/util/List;Ljava/util/List;Landroid/util/SparseArray;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lcom/vk/im/engine/models/Member;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;ZZLcom/vk/im/engine/models/SearchMode;Lcom/vk/im/engine/models/Source;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v14}, Lcom/vk/im/ui/components/msg_search/MsgSearchState;-><init>(Ljava/util/List;Ljava/util/List;Landroid/util/SparseArray;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lcom/vk/im/engine/models/Member;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;ZZLcom/vk/im/engine/models/SearchMode;Lcom/vk/im/engine/models/Source;ILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -216,7 +216,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/List;Ljava/util/List;Landroid/util/SparseArray;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lcom/vk/im/engine/models/Member;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;ZZLcom/vk/im/engine/models/SearchMode;Lcom/vk/im/engine/models/Source;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Ljava/util/List;Ljava/util/List;Landroid/util/SparseArray;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lcom/vk/im/engine/models/Member;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;ZZLcom/vk/im/engine/models/SearchMode;Lcom/vk/im/engine/models/Source;ILkotlin/jvm/internal/i;)V
     .locals 12
 
     move/from16 v0, p13
@@ -504,7 +504,7 @@
 
     iget-object v1, p1, Lcom/vk/im/ui/components/msg_search/MsgSearchState;->j:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -645,7 +645,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/msg_search/MsgSearchState$merge$1;-><init>(Lcom/vk/im/ui/components/msg_search/MsgSearchState;)V
 
-    invoke-static {v0, p1}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
+    invoke-static {v0, p1}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
 
     .line 19
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchState;->e:Ljava/util/List;
@@ -660,7 +660,7 @@
     .line 21
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchState;->g:Landroid/util/SparseArray;
 
-    invoke-static {p1, p3}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    invoke-static {p1, p3}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     .line 22
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchState;->f:Ljava/util/List;
@@ -670,12 +670,12 @@
     .line 23
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchState;->a:Landroid/util/SparseArray;
 
-    invoke-static {p1, p5}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    invoke-static {p1, p5}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     .line 24
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchState;->b:Landroid/util/SparseArray;
 
-    invoke-static {p1, p6}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    invoke-static {p1, p6}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     return-void
 .end method

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->a(Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->a(Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,7 +40,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation$d;->a:Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;
 
-    invoke-static {v0}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->c(Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;)Lcom/vk/core/dialogs/actionspopup/PopupAnimator;
+    invoke-static {v0}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->c(Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;)Lcom/vk/core/dialogs/actionspopup/b;
 
     move-result-object v0
 
@@ -48,7 +48,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/actionspopup/PopupAnimator;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/actionspopup/b;->b(Z)V
 
     :cond_0
     return-void

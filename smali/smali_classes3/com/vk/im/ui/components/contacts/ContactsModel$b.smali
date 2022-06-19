@@ -3,12 +3,12 @@
 .source "ContactsModel.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/ContactsModel;-><init>(Lcom/vk/im/engine/models/ImExperiments;Ljava/util/Set;ZLjava/lang/String;Ljava/util/Set;)V
+    value = Lcom/vk/im/ui/components/contacts/ContactsModel;-><init>(Lcom/vk/im/engine/models/e;Ljava/util/Set;ZLjava/lang/String;Ljava/util/Set;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,10 +22,10 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
+        "Lcom/vk/im/ui/views/adapter_delegate/c;",
         ">;>;"
     }
 .end annotation
@@ -55,7 +55,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
+            "Lcom/vk/im/ui/views/adapter_delegate/c;",
             ">;)V"
         }
     .end annotation
@@ -65,7 +65,7 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->b(Lcom/vk/im/ui/components/contacts/ContactsModel;Ljava/util/List;)V
 

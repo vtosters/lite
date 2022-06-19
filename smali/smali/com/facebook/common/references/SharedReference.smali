@@ -44,10 +44,10 @@
 
 .field private b:I
 
-.field private final c:Lcom/facebook/common/references/ResourceReleaser;
+.field private final c:Lcom/facebook/common/references/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/facebook/common/references/ResourceReleaser<",
+            "Lcom/facebook/common/references/c<",
             "TT;>;"
         }
     .end annotation
@@ -68,12 +68,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Object;Lcom/facebook/common/references/ResourceReleaser;)V
+.method public constructor <init>(Ljava/lang/Object;Lcom/facebook/common/references/c;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
-            "Lcom/facebook/common/references/ResourceReleaser<",
+            "Lcom/facebook/common/references/c<",
             "TT;>;)V"
         }
     .end annotation
@@ -82,16 +82,16 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/facebook/common/references/SharedReference;->a:Ljava/lang/Object;
 
     .line 3
-    invoke-static {p2}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p2, Lcom/facebook/common/references/ResourceReleaser;
+    check-cast p2, Lcom/facebook/common/references/c;
 
-    iput-object p2, p0, Lcom/facebook/common/references/SharedReference;->c:Lcom/facebook/common/references/ResourceReleaser;
+    iput-object p2, p0, Lcom/facebook/common/references/SharedReference;->c:Lcom/facebook/common/references/c;
 
     const/4 p2, 0x1
 
@@ -237,7 +237,7 @@
     aput-object p0, v2, v4
 
     .line 4
-    invoke-static {v1, v3, v2}, Lcom/facebook/common/h/FLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v2}, Lcom/facebook/common/h/a;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -312,7 +312,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-static {v0}, Lcom/facebook/common/internal/Preconditions;->a(Z)V
+    invoke-static {v0}, Lcom/facebook/common/internal/g;->a(Z)V
 
     .line 3
     iget v0, p0, Lcom/facebook/common/references/SharedReference;->b:I
@@ -420,9 +420,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 14
-    iget-object v1, p0, Lcom/facebook/common/references/SharedReference;->c:Lcom/facebook/common/references/ResourceReleaser;
+    iget-object v1, p0, Lcom/facebook/common/references/SharedReference;->c:Lcom/facebook/common/references/c;
 
-    invoke-interface {v1, v0}, Lcom/facebook/common/references/ResourceReleaser;->release(Ljava/lang/Object;)V
+    invoke-interface {v1, v0}, Lcom/facebook/common/references/c;->release(Ljava/lang/Object;)V
 
     .line 15
     invoke-static {v0}, Lcom/facebook/common/references/SharedReference;->b(Ljava/lang/Object;)V

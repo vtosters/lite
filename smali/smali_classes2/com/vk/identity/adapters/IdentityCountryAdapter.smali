@@ -35,12 +35,12 @@
 # instance fields
 .field private a:Ljava/lang/Integer;
 
-.field private final b:Lkotlin/jvm/b/Functions2;
+.field private final b:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lcom/vk/dto/common/Country;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -55,7 +55,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/identity/adapters/IdentityCountryAdapter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/identity/adapters/IdentityCountryAdapter$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     sget-object v0, Lcom/vk/search/view/BaseSearchParamsView;->C:Lcom/vk/search/view/BaseSearchParamsView$b;
@@ -73,15 +73,15 @@
     return-void
 .end method
 
-.method public constructor <init>(Lkotlin/jvm/b/Functions2;)V
+.method public constructor <init>(Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/dto/common/Country;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -89,7 +89,7 @@
     .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/identity/adapters/IdentityCountryAdapter;->b:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/identity/adapters/IdentityCountryAdapter;->b:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -123,11 +123,11 @@
     return v1
 .end method
 
-.method public static final synthetic a(Lcom/vk/identity/adapters/IdentityCountryAdapter;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic a(Lcom/vk/identity/adapters/IdentityCountryAdapter;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/identity/adapters/IdentityCountryAdapter;->b:Lkotlin/jvm/b/Functions2;
+    iget-object p0, p0, Lcom/vk/identity/adapters/IdentityCountryAdapter;->b:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
@@ -190,7 +190,7 @@
 
     const-string v0, "countries[position]"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/dto/common/Country;
 
@@ -216,7 +216,7 @@
     .line 2
     new-instance p2, Lcom/vk/identity/adapters/IdentityCountryAdapter$Holder;
 
-    new-instance v6, Lcom/vk/identity/c/CheckedTextView;
+    new-instance v6, Lcom/vk/identity/c/a;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -224,7 +224,7 @@
 
     const-string p1, "parent.context"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -236,7 +236,7 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/identity/c/CheckedTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/identity/c/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     invoke-direct {p2, p0, v6}, Lcom/vk/identity/adapters/IdentityCountryAdapter$Holder;-><init>(Lcom/vk/identity/adapters/IdentityCountryAdapter;Landroid/view/View;)V
 

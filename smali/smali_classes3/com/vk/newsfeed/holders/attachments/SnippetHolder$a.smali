@@ -44,7 +44,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->a(Landroid/view/View;)V
+    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/holders/h;->a(Landroid/view/View;)V
 
     return-void
 .end method

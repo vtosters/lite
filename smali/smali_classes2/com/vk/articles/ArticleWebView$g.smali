@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/my/target/common/MyTargetUtils;->a(Landroid/content/Context;)Ljava/util/Map;
+    invoke-static {v0}, Lcom/my/target/common/d;->a(Landroid/content/Context;)Ljava/util/Map;
 
     move-result-object v0
 

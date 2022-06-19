@@ -48,16 +48,16 @@
     if-eqz v0, :cond_0
 
     .line 6
-    invoke-static {p2, p3}, Lorg/slf4j/helpers/MessageFormatter;->a(Ljava/lang/String;[Ljava/lang/Object;)Lorg/slf4j/helpers/FormattingTuple;
+    invoke-static {p2, p3}, Lorg/slf4j/helpers/b;->a(Ljava/lang/String;[Ljava/lang/Object;)Lorg/slf4j/helpers/a;
 
     move-result-object p2
 
     .line 7
-    invoke-virtual {p2}, Lorg/slf4j/helpers/FormattingTuple;->a()Ljava/lang/String;
+    invoke-virtual {p2}, Lorg/slf4j/helpers/a;->a()Ljava/lang/String;
 
     move-result-object p3
 
-    invoke-virtual {p2}, Lorg/slf4j/helpers/FormattingTuple;->b()Ljava/lang/Throwable;
+    invoke-virtual {p2}, Lorg/slf4j/helpers/a;->b()Ljava/lang/Throwable;
 
     move-result-object p2
 

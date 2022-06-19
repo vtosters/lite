@@ -1,5 +1,5 @@
 .class public final Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;
-.super Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
+.super Lcom/vk/libvideo/autoplay/g;
 .source "VideoFeedDialog.kt"
 
 
@@ -21,20 +21,20 @@
 
 .field private X:Z
 
-.field private Y:Lcom/vk/libvideo/autoplay/AutoPlay;
+.field private Y:Lcom/vk/libvideo/autoplay/a;
 
 .field final synthetic Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Landroid/content/Context;Lcom/vk/libvideo/autoplay/AutoPlayProvider;Lcom/vk/libvideo/autoplay/j/OnScreenPlayStrategy;)V
+.method public constructor <init>(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Landroid/content/Context;Lcom/vk/libvideo/autoplay/b;Lcom/vk/libvideo/autoplay/j/a;)V
     .locals 13
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lcom/vk/libvideo/autoplay/AutoPlayProvider;",
-            "Lcom/vk/libvideo/autoplay/j/OnScreenPlayStrategy;",
+            "Lcom/vk/libvideo/autoplay/b;",
+            "Lcom/vk/libvideo/autoplay/j/a;",
             ")V"
         }
     .end annotation
@@ -71,7 +71,7 @@
     move-object/from16 v3, p4
 
     .line 2
-    invoke-direct/range {v0 .. v11}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;-><init>(Landroid/content/Context;Lcom/vk/libvideo/autoplay/AutoPlayProvider;Lcom/vk/libvideo/autoplay/j/OnScreenPlayStrategy;Lcom/vk/bridges/AuthBridge3;Landroid/os/Handler;Lcom/vk/libvideo/autoplay/j/VisibilityCalculator;Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper$c;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v11}, Lcom/vk/libvideo/autoplay/g;-><init>(Landroid/content/Context;Lcom/vk/libvideo/autoplay/b;Lcom/vk/libvideo/autoplay/j/a;Lcom/vk/bridges/f;Landroid/os/Handler;Lcom/vk/libvideo/autoplay/j/d;Lcom/vk/libvideo/autoplay/g$c;ZZILkotlin/jvm/internal/i;)V
 
     const/4 v0, 0x1
 
@@ -83,7 +83,7 @@
 
 
 # virtual methods
-.method protected a(Lcom/vk/libvideo/autoplay/AutoPlay;)V
+.method protected a(Lcom/vk/libvideo/autoplay/a;)V
     .locals 12
 
     .line 2
@@ -101,11 +101,11 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->e(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/VideoDiscoverController;
+    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->e(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/n;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/VideoDiscoverController;->b()Z
+    invoke-virtual {v0}, Lcom/vk/libvideo/n;->b()Z
 
     move-result v0
 
@@ -115,7 +115,7 @@
 
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/dialogs/AnimationFeedDialog;->K()Z
+    invoke-virtual {v0}, Lcom/vk/libvideo/dialogs/c;->K()Z
 
     move-result v0
 
@@ -136,7 +136,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0, p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Lcom/vk/libvideo/autoplay/AutoPlay;)Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-static {v0, p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Lcom/vk/libvideo/autoplay/a;)Lcom/vk/libvideo/ui/e;
 
     move-result-object p1
 
@@ -145,17 +145,17 @@
     .line 5
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->m(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/c0/VideoSnapHelper;
+    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->m(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/c0/a;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/ui/VideoListItemView;->getListPosition()I
+    invoke-virtual {p1}, Lcom/vk/libvideo/ui/e;->getListPosition()I
 
     move-result p1
 
     add-int/lit8 p1, p1, 0x1
 
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/c0/VideoSnapHelper;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/libvideo/c0/a;->a(I)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
@@ -200,7 +200,7 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0, p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Lcom/vk/libvideo/autoplay/AutoPlay;)Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-static {v0, p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Lcom/vk/libvideo/autoplay/a;)Lcom/vk/libvideo/ui/e;
 
     move-result-object p1
 
@@ -252,7 +252,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/libvideo/autoplay/AutoPlay;)V
+.method public b(Lcom/vk/libvideo/autoplay/a;)V
     .locals 7
 
     .line 18
@@ -290,30 +290,30 @@
     invoke-static {v1}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 20
-    iget-object v1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Y:Lcom/vk/libvideo/autoplay/AutoPlay;
+    iget-object v1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Y:Lcom/vk/libvideo/autoplay/a;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
     .line 21
-    invoke-interface {p1}, Lcom/vk/libvideo/autoplay/AutoPlay;->f()V
+    invoke-interface {p1}, Lcom/vk/libvideo/autoplay/a;->f()V
 
     .line 22
-    iput-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Y:Lcom/vk/libvideo/autoplay/AutoPlay;
+    iput-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Y:Lcom/vk/libvideo/autoplay/a;
 
     .line 23
     :cond_0
     new-instance v1, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c$a;-><init>(Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;Lcom/vk/libvideo/autoplay/AutoPlay;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c$a;-><init>(Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;Lcom/vk/libvideo/autoplay/a;)V
 
     invoke-static {v1}, Lcom/vk/core/util/ThreadUtils;->b(Ljava/lang/Runnable;)V
 
     .line 24
     iget-object v1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-virtual {v1, p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/autoplay/AutoPlay;)Lcom/vk/libvideo/z/VideoItemHolder;
+    invoke-virtual {v1, p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/autoplay/a;)Lcom/vk/libvideo/z/a;
 
     move-result-object p1
 
@@ -345,13 +345,13 @@
 
     .line 27
     :goto_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->e()Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/g;->e()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v5
 
     if-eqz v5, :cond_1
 
-    invoke-static {v5, v1}, Lcom/vk/extensions/RecyclerViewExt;->a(Landroidx/recyclerview/widget/RecyclerView;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+    invoke-static {v5, v1}, Lcom/vk/extensions/i;->a(Landroidx/recyclerview/widget/RecyclerView;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object v5
 
@@ -361,14 +361,14 @@
     move-object v5, v2
 
     :goto_1
-    instance-of v6, v5, Lcom/vk/libvideo/z/VideoItemHolder;
+    instance-of v6, v5, Lcom/vk/libvideo/z/a;
 
     if-nez v6, :cond_2
 
     move-object v5, v2
 
     :cond_2
-    check-cast v5, Lcom/vk/libvideo/z/VideoItemHolder;
+    check-cast v5, Lcom/vk/libvideo/z/a;
 
     if-eqz v5, :cond_5
 
@@ -382,15 +382,15 @@
     if-eqz v6, :cond_3
 
     .line 29
-    invoke-virtual {v5}, Lcom/vk/libvideo/z/VideoItemHolder;->d0()Lcom/vk/libvideo/ui/VideoListContainerView;
+    invoke-virtual {v5}, Lcom/vk/libvideo/z/a;->d0()Lcom/vk/libvideo/ui/d;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {v5}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object v5
 
-    invoke-virtual {v5, v0, v3}, Lcom/vk/libvideo/ui/VideoListItemView;->a(ZZ)V
+    invoke-virtual {v5, v0, v3}, Lcom/vk/libvideo/ui/e;->a(ZZ)V
 
     .line 30
     iput-boolean v3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->X:Z
@@ -399,29 +399,29 @@
 
     .line 31
     :cond_3
-    invoke-virtual {v5}, Lcom/vk/libvideo/z/VideoItemHolder;->d0()Lcom/vk/libvideo/ui/VideoListContainerView;
+    invoke-virtual {v5}, Lcom/vk/libvideo/z/a;->d0()Lcom/vk/libvideo/ui/d;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {v5}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object v5
 
-    invoke-virtual {v5, v0, v0}, Lcom/vk/libvideo/ui/VideoListItemView;->a(ZZ)V
+    invoke-virtual {v5, v0, v0}, Lcom/vk/libvideo/ui/e;->a(ZZ)V
 
     goto :goto_2
 
     .line 32
     :cond_4
-    invoke-virtual {v5}, Lcom/vk/libvideo/z/VideoItemHolder;->d0()Lcom/vk/libvideo/ui/VideoListContainerView;
+    invoke-virtual {v5}, Lcom/vk/libvideo/z/a;->d0()Lcom/vk/libvideo/ui/d;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {v5}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object v5
 
-    invoke-virtual {v5, v3, v0}, Lcom/vk/libvideo/ui/VideoListItemView;->a(ZZ)V
+    invoke-virtual {v5, v3, v0}, Lcom/vk/libvideo/ui/e;->a(ZZ)V
 
     :cond_5
     :goto_2
@@ -435,7 +435,7 @@
     return-void
 .end method
 
-.method protected b(Lcom/vk/libvideo/autoplay/AutoPlay;II)V
+.method protected b(Lcom/vk/libvideo/autoplay/a;II)V
     .locals 12
 
     .line 1
@@ -453,11 +453,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/v/DiscoverAdapter;
+    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/v/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->size()I
+    invoke-virtual {p1}, Lcom/vk/lists/i0;->size()I
 
     move-result p1
 
@@ -480,11 +480,11 @@
     :goto_0
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->r(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/lists/PaginatedRecyclerAdapter;
+    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->r(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/lists/s;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginatedRecyclerAdapter;->w()Z
+    invoke-virtual {v0}, Lcom/vk/lists/s;->w()Z
 
     move-result v0
 
@@ -498,13 +498,13 @@
     .line 5
     iget-object v3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-virtual {v3}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {v3}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v3
 
     if-eqz v3, :cond_2
 
-    invoke-interface {v3}, Lcom/vk/libvideo/autoplay/AutoPlay;->p()Z
+    invoke-interface {v3}, Lcom/vk/libvideo/autoplay/a;->p()Z
 
     move-result v3
 
@@ -567,13 +567,13 @@
     .line 9
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->M()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1}, Lcom/vk/libvideo/autoplay/AutoPlay;->s()Z
+    invoke-interface {p1}, Lcom/vk/libvideo/autoplay/a;->s()Z
 
     move-result p1
 
@@ -660,13 +660,13 @@
     .line 16
     iget-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {p2}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->q(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-static {p2}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->q(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/ui/e;
 
     move-result-object p2
 
     if-eqz p2, :cond_7
 
-    invoke-virtual {p2}, Lcom/vk/libvideo/ui/VideoListItemView;->getListPosition()I
+    invoke-virtual {p2}, Lcom/vk/libvideo/ui/e;->getListPosition()I
 
     move-result p2
 
@@ -686,7 +686,7 @@
     return-void
 .end method
 
-.method protected c(Lcom/vk/libvideo/autoplay/AutoPlay;)V
+.method protected c(Lcom/vk/libvideo/autoplay/a;)V
     .locals 1
 
     .line 1
@@ -699,25 +699,25 @@
     return-void
 .end method
 
-.method public d(Lcom/vk/libvideo/autoplay/AutoPlay;)V
+.method public d(Lcom/vk/libvideo/autoplay/a;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Z:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/autoplay/AutoPlay;)Lcom/vk/libvideo/z/VideoItemHolder;
+    invoke-virtual {v0, p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/autoplay/a;)Lcom/vk/libvideo/z/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/z/VideoItemHolder;->d0()Lcom/vk/libvideo/ui/VideoListContainerView;
+    invoke-virtual {p1}, Lcom/vk/libvideo/z/a;->d0()Lcom/vk/libvideo/ui/d;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/ui/VideoListContainerView;->getVideoListView()Lcom/vk/libvideo/ui/VideoListItemView;
+    invoke-virtual {p1}, Lcom/vk/libvideo/ui/d;->getVideoListView()Lcom/vk/libvideo/ui/e;
 
     move-result-object p1
 
@@ -727,7 +727,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/libvideo/ui/VideoListItemView;->a(ZZ)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/libvideo/ui/e;->a(ZZ)V
 
     :cond_0
     return-void
@@ -737,7 +737,7 @@
     .locals 1
 
     .line 2
-    invoke-super {p0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->f()V
+    invoke-super {p0}, Lcom/vk/libvideo/autoplay/g;->f()V
 
     const/4 v0, 0x0
 
@@ -747,11 +747,11 @@
     return-void
 .end method
 
-.method public final f(Lcom/vk/libvideo/autoplay/AutoPlay;)V
+.method public final f(Lcom/vk/libvideo/autoplay/a;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Y:Lcom/vk/libvideo/autoplay/AutoPlay;
+    iput-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$c;->Y:Lcom/vk/libvideo/autoplay/a;
 
     return-void
 .end method

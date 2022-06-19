@@ -1,11 +1,11 @@
 .class public final Lcom/vk/newsfeed/holders/attachments/AnimationHolder;
-.super Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;
+.super Lcom/vk/newsfeed/holders/attachments/k;
 .source "AnimationHolder.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces3;
+.implements Lcom/vk/newsfeed/posting/viewpresenter/attachments/f;
 .implements Landroid/view/View$OnClickListener;
-.implements Lcom/vk/libvideo/VideoUI$b;
+.implements Lcom/vk/libvideo/s$b;
 .implements Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$c;
 
 
@@ -32,9 +32,9 @@
 
 .field private R:Lcom/vk/dto/common/ImageSize;
 
-.field private S:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;
+.field private S:Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;
 
-.field private final T:Lcom/vk/newsfeed/holders/zhukov/PostingHolders1;
+.field private final T:Lcom/vk/newsfeed/holders/zhukov/k;
 
 
 # direct methods
@@ -48,7 +48,7 @@
     move-object/from16 v2, p1
 
     .line 1
-    invoke-direct {v0, v1, v2}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/newsfeed/holders/attachments/k;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     new-instance v1, Lcom/vk/newsfeed/holders/attachments/AnimationHolder$a;
@@ -76,7 +76,7 @@
 
     move-object v2, v1
 
-    invoke-direct/range {v2 .. v9}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;-><init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v2 .. v9}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;-><init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
 
     iput-object v1, v0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->O:Lcom/vk/libvideo/autoplay/AutoPlayConfig;
 
@@ -91,14 +91,14 @@
 
     const-string v2, "itemView.findViewById(R.id.container)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
     iput-object v1, v0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->P:Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
     .line 5
-    new-instance v1, Lcom/vk/newsfeed/holders/zhukov/PostingHolders1;
+    new-instance v1, Lcom/vk/newsfeed/holders/zhukov/k;
 
     iget-object v2, v0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->P:Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
@@ -106,16 +106,16 @@
 
     invoke-direct {v3, v0}, Lcom/vk/newsfeed/holders/attachments/AnimationHolder$c;-><init>(Lcom/vk/newsfeed/holders/attachments/AnimationHolder;)V
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/newsfeed/holders/zhukov/PostingHolders1;-><init>(Landroid/widget/FrameLayout;Landroid/view/View$OnClickListener;)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/newsfeed/holders/zhukov/k;-><init>(Landroid/widget/FrameLayout;Landroid/view/View$OnClickListener;)V
 
-    iput-object v1, v0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->T:Lcom/vk/newsfeed/holders/zhukov/PostingHolders1;
+    iput-object v1, v0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->T:Lcom/vk/newsfeed/holders/zhukov/k;
 
     .line 6
     iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v2, "itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "animation"
 
@@ -132,7 +132,7 @@
 
     const-string v2, "itemView.findViewById(R.id.video_display)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Lcom/vk/media/player/video/view/VideoTextureView;
 
@@ -163,7 +163,7 @@
 
     const-string v3, "itemView.findViewById(R.id.att_doc_thumb)"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Lcom/vk/newsfeed/FrescoImageView;
 
@@ -185,7 +185,7 @@
 
     const-string v3, "itemView.findViewById(R.id.duration)"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Lcom/vk/libvideo/ui/DurationView;
 
@@ -202,7 +202,7 @@
 
     const-string v3, "itemView.findViewById(R.id.play)"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, v0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->M:Landroid/view/View;
 
@@ -217,7 +217,7 @@
 
     const-string v3, "itemView.findViewById(R.id.error)"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, v0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->N:Landroid/view/View;
 
@@ -322,7 +322,7 @@
     move-object v5, v1
 
     .line 25
-    invoke-direct/range {v5 .. v26}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;-><init>(Lcom/vk/core/util/AdapterPosition;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/ViewGroup;FLandroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/widget/ProgressBar;Landroid/view/View;Lcom/vk/libvideo/ui/DurationView;Lcom/google/android/exoplayer2/ui/VKSubtitleView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/libvideo/ui/VideoErrorView;Landroid/view/ViewGroup;Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;ZZLcom/vk/libvideo/ui/ActionLinkView;Lcom/vk/libvideo/ad/VideoAdLayout;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v5 .. v26}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;-><init>(Lcom/vk/core/util/b;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/ViewGroup;FLandroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/widget/ProgressBar;Landroid/view/View;Lcom/vk/libvideo/ui/DurationView;Lcom/google/android/exoplayer2/ui/VKSubtitleView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/libvideo/ui/VideoErrorView;Landroid/view/ViewGroup;Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;ZZLcom/vk/libvideo/ui/ActionLinkView;Lcom/vk/libvideo/ad/VideoAdLayout;ILkotlin/jvm/internal/i;)V
 
     iput-object v1, v0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->I:Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;
 
@@ -362,11 +362,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/newsfeed/holders/attachments/AnimationHolder;)Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;
+.method public static final synthetic b(Lcom/vk/newsfeed/holders/attachments/AnimationHolder;)Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->S:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;
+    iget-object p0, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->S:Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;
 
     return-object p0
 .end method
@@ -375,7 +375,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->n0()Z
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->n0()Z
 
     move-result p0
 
@@ -388,7 +388,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->I:Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -433,7 +433,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v3, v4}, Lcom/vtosters/lite/ui/b0/o/DocumentHolder;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {v2, v3, v4}, Lcom/vtosters/lite/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -451,7 +451,7 @@
     :cond_1
     const-string v0, "docAttach"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -464,7 +464,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces$a;->a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces3;Landroid/view/View$OnClickListener;)V
+    invoke-static {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/f$a;->a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/f;Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method
@@ -511,11 +511,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;)V
+.method public a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;)V
     .locals 0
 
     .line 18
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->S:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->S:Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;
 
     return-void
 .end method
@@ -563,7 +563,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->I:Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;->z1()Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;->z1()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object p1
 
@@ -593,9 +593,9 @@
 
     invoke-direct {v1, p0}, Lcom/vk/newsfeed/holders/attachments/AnimationHolder$bind$2;-><init>(Lcom/vk/newsfeed/holders/attachments/AnimationHolder;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/attachments/AnimationHolder$bind$1;-><init>(Lkotlin/u/KProperty1;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/attachments/AnimationHolder$bind$1;-><init>(Lkotlin/u/k;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/FrescoImageView;->setIgnoreTrafficSaverPredicate(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/FrescoImageView;->setIgnoreTrafficSaverPredicate(Lkotlin/jvm/b/a;)V
 
     .line 9
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->K:Lcom/vk/newsfeed/FrescoImageView;
@@ -620,7 +620,7 @@
     const-string p1, "thumb"
 
     .line 12
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -636,17 +636,17 @@
 
     .line 14
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -659,7 +659,7 @@
     .locals 2
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object p1
 
@@ -716,9 +716,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->T:Lcom/vk/newsfeed/holders/zhukov/PostingHolders1;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->T:Lcom/vk/newsfeed/holders/zhukov/k;
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/holders/zhukov/PostingHolders1;->a(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/holders/zhukov/k;->a(Z)V
 
     return-void
 .end method
@@ -727,7 +727,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces$a;->a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces3;Z)V
+    invoke-static {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/f$a;->a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/f;Z)V
 
     return-void
 .end method
@@ -741,7 +741,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic o()Lcom/vk/libvideo/VideoUI;
+.method public bridge synthetic o()Lcom/vk/libvideo/r;
     .locals 1
 
     .line 1
@@ -762,7 +762,7 @@
 
     const-string v0, "view.context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -771,7 +771,7 @@
     if-eqz p1, :cond_1
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/ImageViewer1;->a()Lcom/vk/bridges/ImageViewer;
+    invoke-static {}, Lcom/vk/bridges/q;->a()Lcom/vk/bridges/p;
 
     move-result-object v0
 
@@ -789,14 +789,14 @@
 
     invoke-direct {v3, p0}, Lcom/vk/newsfeed/holders/attachments/AnimationHolder$b;-><init>(Lcom/vk/newsfeed/holders/attachments/AnimationHolder;)V
 
-    invoke-interface {v0, v1, v2, p1, v3}, Lcom/vk/bridges/ImageViewer;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
+    invoke-interface {v0, v1, v2, p1, v3}, Lcom/vk/bridges/p;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
 
     return-void
 
     :cond_0
     const-string p1, "docAttach"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

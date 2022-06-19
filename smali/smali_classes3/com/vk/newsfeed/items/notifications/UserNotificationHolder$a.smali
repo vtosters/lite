@@ -3,7 +3,7 @@
 .source "UserNotificationHolder.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/utils/PostPublisher$c;
+.implements Lcom/vtosters/lite/utils/g$c;
 
 
 # annotations
@@ -54,13 +54,13 @@
 
     iget-object v1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$a;->a:Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->c0()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v1
 
     const-string v2, "getItem()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Lcom/vk/dto/common/data/UserNotification;
 
@@ -83,7 +83,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/api/base/ApiExt;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Landroid/content/Context;)V
+    invoke-static {p1, v0}, Lcom/vk/api/base/c;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Landroid/content/Context;)V
 
     :cond_0
     return-void

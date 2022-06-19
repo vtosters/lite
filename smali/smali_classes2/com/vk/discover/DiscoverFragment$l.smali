@@ -3,12 +3,12 @@
 .source "DiscoverFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/discover/DiscoverFragment;->a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
+    value = Lcom/vk/discover/DiscoverFragment;->a(Lcom/vk/lists/t;Z)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/discover/DiscoverItemsContainer;",
         ">;"
     }
@@ -52,11 +52,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/discover/DiscoverFragment$l;->a:Lcom/vk/discover/DiscoverFragment;
 
-    invoke-static {p1}, Lcom/vk/discover/DiscoverFragment;->b(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/discover/DiscoverAdapter;
+    invoke-static {p1}, Lcom/vk/discover/DiscoverFragment;->b(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/discover/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->clear()V
+    invoke-virtual {p1}, Lcom/vk/lists/i0;->clear()V
 
     .line 2
     iget-object p1, p0, Lcom/vk/discover/DiscoverFragment$l;->a:Lcom/vk/discover/DiscoverFragment;

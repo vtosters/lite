@@ -3,12 +3,12 @@
 .source "MoneyRequestUpdateHandler.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->b(Lcom/vk/im/engine/ImEnvironment;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;)Landroid/util/SparseIntArray;
+    value = Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->b(Lcom/vk/im/engine/d;Lb/h/u/b/b$a;)Landroid/util/SparseIntArray;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/models/attaches/Attach;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -28,20 +28,20 @@
 
 
 # instance fields
-.field final synthetic $env$inlined:Lcom/vk/im/engine/ImEnvironment;
+.field final synthetic $env$inlined:Lcom/vk/im/engine/d;
 
-.field final synthetic $event$inlined:Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;
+.field final synthetic $event$inlined:Lb/h/u/b/b$a;
 
 .field final synthetic $msgStorage$inlined:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;
 
 
 # direct methods
-.method constructor <init>(Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;)V
+.method constructor <init>(Lb/h/u/b/b$a;Lcom/vk/im/engine/d;Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updateMsg$$inlined$forEach$lambda$1;->$event$inlined:Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updateMsg$$inlined$forEach$lambda$1;->$event$inlined:Lb/h/u/b/b$a;
 
-    iput-object p2, p0, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updateMsg$$inlined$forEach$lambda$1;->$env$inlined:Lcom/vk/im/engine/ImEnvironment;
+    iput-object p2, p0, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updateMsg$$inlined$forEach$lambda$1;->$env$inlined:Lcom/vk/im/engine/d;
 
     iput-object p3, p0, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updateMsg$$inlined$forEach$lambda$1;->$msgStorage$inlined:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;
 
@@ -60,9 +60,9 @@
     .line 1
     sget-object v0, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->a:Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;
 
-    iget-object v1, p0, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updateMsg$$inlined$forEach$lambda$1;->$event$inlined:Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updateMsg$$inlined$forEach$lambda$1;->$event$inlined:Lb/h/u/b/b$a;
 
-    invoke-static {v0, p1, v1}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->a(Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;Lcom/vk/im/engine/models/attaches/Attach;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;)Z
+    invoke-static {v0, p1, v1}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->a(Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;Lcom/vk/im/engine/models/attaches/Attach;Lb/h/u/b/b$a;)Z
 
     move-result p1
 

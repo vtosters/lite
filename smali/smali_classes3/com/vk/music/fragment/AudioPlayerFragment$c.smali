@@ -1,5 +1,5 @@
 .class public Lcom/vk/music/fragment/AudioPlayerFragment$c;
-.super Lcom/vk/navigation/Navigator;
+.super Lcom/vk/navigation/o;
 .source "AudioPlayerFragment.java"
 
 
@@ -23,7 +23,7 @@
 
     const-class v1, Lcom/vk/music/AudioPlayerActivity;
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
 
     return-void
 .end method

@@ -3,8 +3,8 @@
 .source "NavigationDelegateActivity.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/VKNavigationDelegateProvider;
-.implements Lpub/devrel/easypermissions/EasyPermissions$a;
+.implements Lcom/vk/navigation/z;
+.implements Lpub/devrel/easypermissions/b$a;
 
 
 # annotations
@@ -20,10 +20,10 @@
 
 
 # instance fields
-.field private G:Lcom/vk/navigation/VKNavigationDelegate;
+.field private G:Lcom/vk/navigation/y;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/navigation/VKNavigationDelegate<",
+            "Lcom/vk/navigation/y<",
             "+",
             "Lcom/vk/navigation/NavigationDelegateActivity;",
             ">;"
@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/navigation/NavigationDelegateActivity$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/navigation/NavigationDelegateActivity$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/navigation/NavigationDelegateActivity;->H:Lcom/vk/navigation/NavigationDelegateActivity$a;
 
@@ -56,14 +56,14 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/navigation/NavigationDelegateActivity;)Lcom/vk/navigation/VKNavigationDelegate;
+.method private final a(Lcom/vk/navigation/NavigationDelegateActivity;)Lcom/vk/navigation/y;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/navigation/NavigationDelegateActivity;",
             ")",
-            "Lcom/vk/navigation/VKNavigationDelegate<",
+            "Lcom/vk/navigation/y<",
             "Lcom/vk/navigation/NavigationDelegateActivity;",
             ">;"
         }
@@ -78,7 +78,7 @@
 
     sget-object v0, Lcom/vk/navigation/NavigationDelegateActivity;->H:Lcom/vk/navigation/NavigationDelegateActivity$a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/NavigationDelegateActivity$a;->b(Lcom/vk/navigation/NavigationDelegateActivity;)Lcom/vtosters/lite/ui/e0/NavigationDelegateLeftMenu;
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/NavigationDelegateActivity$a;->b(Lcom/vk/navigation/NavigationDelegateActivity;)Lcom/vtosters/lite/ui/e0/a;
 
     move-result-object p1
 
@@ -102,46 +102,46 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public E0()Lcom/vk/navigation/VKNavigationDelegate;
+.method public E0()Lcom/vk/navigation/y;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/navigation/VKNavigationDelegate<",
+            "Lcom/vk/navigation/y<",
             "Lcom/vk/navigation/NavigationDelegateActivity;",
             ">;"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateActivity;->G:Lcom/vk/navigation/VKNavigationDelegate;
+    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateActivity;->G:Lcom/vk/navigation/y;
 
     if-nez v0, :cond_0
 
     .line 3
-    invoke-direct {p0, p0}, Lcom/vk/navigation/NavigationDelegateActivity;->a(Lcom/vk/navigation/NavigationDelegateActivity;)Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-direct {p0, p0}, Lcom/vk/navigation/NavigationDelegateActivity;->a(Lcom/vk/navigation/NavigationDelegateActivity;)Lcom/vk/navigation/y;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/navigation/NavigationDelegateActivity;->G:Lcom/vk/navigation/VKNavigationDelegate;
+    iput-object v0, p0, Lcom/vk/navigation/NavigationDelegateActivity;->G:Lcom/vk/navigation/y;
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateActivity;->G:Lcom/vk/navigation/VKNavigationDelegate;
+    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateActivity;->G:Lcom/vk/navigation/y;
 
     if-eqz v0, :cond_1
 
     return-object v0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -160,22 +160,22 @@
     .end annotation
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
     invoke-virtual {v0, p1, p2}, Lcom/vk/navigation/NavigationDelegate;->a(ILjava/util/List;)V
 
     .line 4
-    sget-object v0, Lcom/vk/permission/PermissionFragment;->b:Lcom/vk/permission/PermissionFragment$a;
+    sget-object v0, Lcom/vk/permission/b;->b:Lcom/vk/permission/b$a;
 
-    invoke-virtual {v0, p0}, Lcom/vk/permission/PermissionFragment$a;->a(Landroid/app/Activity;)Lcom/vk/permission/PermissionFragment;
+    invoke-virtual {v0, p0}, Lcom/vk/permission/b$a;->a(Landroid/app/Activity;)Lcom/vk/permission/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/permission/PermissionFragment;->a(ILjava/util/List;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/permission/b;->a(ILjava/util/List;)V
 
     :cond_0
     return-void
@@ -193,22 +193,22 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
     invoke-virtual {v0, p1, p2}, Lcom/vk/navigation/NavigationDelegate;->b(ILjava/util/List;)V
 
     .line 2
-    sget-object v0, Lcom/vk/permission/PermissionFragment;->b:Lcom/vk/permission/PermissionFragment$a;
+    sget-object v0, Lcom/vk/permission/b;->b:Lcom/vk/permission/b$a;
 
-    invoke-virtual {v0, p0}, Lcom/vk/permission/PermissionFragment$a;->a(Landroid/app/Activity;)Lcom/vk/permission/PermissionFragment;
+    invoke-virtual {v0, p0}, Lcom/vk/permission/b$a;->a(Landroid/app/Activity;)Lcom/vk/permission/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/permission/PermissionFragment;->b(ILjava/util/List;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/permission/b;->b(ILjava/util/List;)V
 
     :cond_0
     return-void
@@ -218,7 +218,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -258,13 +258,13 @@
     move-result-object v0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/navigation/NavigationDelegateActivity;->G:Lcom/vk/navigation/VKNavigationDelegate;
+    iget-object v1, p0, Lcom/vk/navigation/NavigationDelegateActivity;->G:Lcom/vk/navigation/y;
 
     const-string v2, "it"
 
     if-eqz v1, :cond_0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/navigation/NavigationDelegate;->a(Landroid/content/res/Resources;)Landroid/content/res/Resources;
 
@@ -284,7 +284,7 @@
 
     .line 3
     :cond_1
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_1
     return-object v0
@@ -297,7 +297,7 @@
     invoke-super {p0, p1, p2, p3}, Lcom/vtosters/lite/VKActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -310,7 +310,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -321,7 +321,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -342,7 +342,7 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -365,7 +365,7 @@
     invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -381,18 +381,18 @@
     invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-direct {p0, p0}, Lcom/vk/navigation/NavigationDelegateActivity;->a(Lcom/vk/navigation/NavigationDelegateActivity;)Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-direct {p0, p0}, Lcom/vk/navigation/NavigationDelegateActivity;->a(Lcom/vk/navigation/NavigationDelegateActivity;)Lcom/vk/navigation/y;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/navigation/NavigationDelegateActivity;->G:Lcom/vk/navigation/VKNavigationDelegate;
+    iput-object v0, p0, Lcom/vk/navigation/NavigationDelegateActivity;->G:Lcom/vk/navigation/y;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/VKNavigationDelegate;->a(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/y;->a(Landroid/os/Bundle;)V
 
     .line 4
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -401,7 +401,7 @@
 
     const-string v0, "intent"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -447,11 +447,11 @@
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/navigation/VKNavigationDelegate;->m()V
+    invoke-virtual {v0}, Lcom/vk/navigation/y;->m()V
 
     return-void
 .end method
@@ -460,11 +460,11 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v1
 
@@ -486,7 +486,7 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onNewIntent(Landroid/content/Intent;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -499,7 +499,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -537,7 +537,7 @@
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onPause()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -553,7 +553,7 @@
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onPostCreate(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -566,7 +566,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -587,7 +587,7 @@
     invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/FragmentActivity;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -603,7 +603,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onRestoreInstanceState(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -619,7 +619,7 @@
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onResume()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -649,7 +649,7 @@
 
     .line 3
     :goto_0
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
@@ -665,11 +665,11 @@
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStart()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/navigation/VKNavigationDelegate;->t()V
+    invoke-virtual {v0}, Lcom/vk/navigation/y;->t()V
 
     return-void
 .end method
@@ -681,11 +681,11 @@
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStop()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/navigation/VKNavigationDelegate;->r()V
+    invoke-virtual {v0}, Lcom/vk/navigation/y;->r()V
 
     return-void
 .end method
@@ -702,24 +702,24 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/vtosters/lite/ui/e0/NavigationDelegateLeftMenu;
+    instance-of v0, v0, Lcom/vtosters/lite/ui/e0/a;
 
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vtosters/lite/ui/e0/NavigationDelegateLeftMenu;
+    check-cast v0, Lcom/vtosters/lite/ui/e0/a;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/e0/NavigationDelegateLeftMenu;->y()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/e0/a;->y()V
 
     goto :goto_0
 

@@ -3,7 +3,7 @@
 .source "CameraUIPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function4;
+.implements Lc/a/z/h;
 
 
 # annotations
@@ -30,7 +30,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function4<",
+        "Lc/a/z/h<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/dto/group/Group;",
@@ -40,7 +40,7 @@
         "Lcom/vk/dto/user/UserProfile;",
         ">;",
         "Lcom/vk/dto/actionlinks/ActionLinks;",
-        "Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;",
+        "Lcom/vk/api/video/m$c;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -74,9 +74,9 @@
 
     check-cast p3, Lcom/vk/dto/actionlinks/ActionLinks;
 
-    check-cast p4, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;
+    check-cast p4, Lcom/vk/api/video/m$c;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/cameraui/CameraUIPresenter$l;->a(Ljava/util/List;Ljava/util/List;Lcom/vk/dto/actionlinks/ActionLinks;Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;)Z
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/cameraui/CameraUIPresenter$l;->a(Ljava/util/List;Ljava/util/List;Lcom/vk/dto/actionlinks/ActionLinks;Lcom/vk/api/video/m$c;)Z
 
     move-result p1
 
@@ -87,7 +87,7 @@
     return-object p1
 .end method
 
-.method public final a(Ljava/util/List;Ljava/util/List;Lcom/vk/dto/actionlinks/ActionLinks;Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;)Z
+.method public final a(Ljava/util/List;Ljava/util/List;Lcom/vk/dto/actionlinks/ActionLinks;Lcom/vk/api/video/m$c;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -101,7 +101,7 @@
             "Lcom/vk/dto/user/UserProfile;",
             ">;",
             "Lcom/vk/dto/actionlinks/ActionLinks;",
-            "Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;",
+            "Lcom/vk/api/video/m$c;",
             ")Z"
         }
     .end annotation
@@ -109,7 +109,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIPresenter$l;->a:Lcom/vk/cameraui/CameraUIPresenter;
 
-    invoke-static {v0, p4}, Lcom/vk/cameraui/CameraUIPresenter;->a(Lcom/vk/cameraui/CameraUIPresenter;Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;)V
+    invoke-static {v0, p4}, Lcom/vk/cameraui/CameraUIPresenter;->a(Lcom/vk/cameraui/CameraUIPresenter;Lcom/vk/api/video/m$c;)V
 
     .line 3
     iget-object p4, p0, Lcom/vk/cameraui/CameraUIPresenter$l;->a:Lcom/vk/cameraui/CameraUIPresenter;

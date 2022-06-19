@@ -3,12 +3,12 @@
 .source "ReplaceMsgsAttachesJob.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->a(Lcom/vk/im/engine/models/attaches/AttachWithId;)Lkotlin/jvm/b/Functions2;
+    value = Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->a(Lcom/vk/im/engine/models/attaches/AttachWithId;)Lkotlin/jvm/b/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/models/attaches/Attach;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -60,7 +60,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -68,13 +68,13 @@
 
     check-cast p1, Lcom/vk/im/engine/models/attaches/AttachWithId;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/WithId;->getId()I
+    invoke-interface {p1}, Lcom/vk/im/engine/models/u;->getId()I
 
     move-result p1
 
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob$createCondition$1;->$attach:Lcom/vk/im/engine/models/attaches/AttachWithId;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/WithId;->getId()I
+    invoke-interface {v0}, Lcom/vk/im/engine/models/u;->getId()I
 
     move-result v0
 

@@ -39,11 +39,11 @@
     .locals 2
 
     .line 1
-    new-instance p1, Lb/h/g/k/VKProgressDialog;
+    new-instance p1, Lb/h/g/k/a;
 
     iget-object p2, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$a;->a:Landroid/app/Activity;
 
-    invoke-direct {p1, p2}, Lb/h/g/k/VKProgressDialog;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Lb/h/g/k/a;-><init>(Landroid/content/Context;)V
 
     .line 2
     iget-object p2, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$a;->a:Landroid/app/Activity;
@@ -75,25 +75,25 @@
 
     invoke-direct {p2, v0}, Lcom/vtosters/lite/fragments/SettingsListFragment$d;-><init>(Lcom/vtosters/lite/fragments/SettingsListFragment$a;)V
 
-    invoke-static {p2}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
+    invoke-static {p2}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
 
     move-result-object p2
 
     .line 6
-    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->c()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/f0/b;->c()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p2, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
 
     move-result-object p2
 
     .line 7
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p2, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object p2
 
@@ -104,18 +104,18 @@
     invoke-direct {v0, v1, p1}, Lcom/vtosters/lite/fragments/SettingsListFragment$e;-><init>(Landroid/app/Activity;Landroid/app/Dialog;)V
 
     .line 8
-    invoke-static {}, Lcom/vk/core/util/RxUtil;->c()Lio/reactivex/functions/Consumer;
+    invoke-static {}, Lcom/vk/core/util/z0;->c()Lc/a/z/g;
 
     move-result-object p1
 
-    invoke-virtual {p2, v0, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p2, v0, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     .line 9
     iget-object p2, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$a;->a:Landroid/app/Activity;
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Landroid/app/Activity;)Lio/reactivex/disposables/Disposable;
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Landroid/app/Activity;)Lio/reactivex/disposables/b;
 
     return-void
 .end method

@@ -31,7 +31,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/common/widget/BottomSwipePaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/common/widget/BottomSwipePaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -51,7 +51,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/common/widget/BottomSwipePaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/common/widget/BottomSwipePaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -65,7 +65,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -88,11 +88,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/common/widget/BottomSwipePaginatedView;)Lkotlin/jvm/b/Functions;
+.method public static final synthetic a(Lcom/vk/common/widget/BottomSwipePaginatedView;)Lkotlin/jvm/b/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/lists/RecyclerPaginatedView;->P:Lkotlin/jvm/b/Functions;
+    iget-object p0, p0, Lcom/vk/lists/RecyclerPaginatedView;->P:Lkotlin/jvm/b/a;
 
     return-object p0
 .end method
@@ -124,7 +124,7 @@
 
     const-string v0, "v.findViewById(R.id.swipe_refresh_layout)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
@@ -173,13 +173,13 @@
     return-object p1
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 7
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -201,7 +201,7 @@
     :cond_0
     const-string v0, "swipeRefreshLayout"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -223,7 +223,7 @@
     :cond_0
     const-string p1, "swipeRefreshLayout"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

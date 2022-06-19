@@ -3,7 +3,7 @@
 .source "CartQuantity.kt"
 
 # interfaces
-.implements Lcom/vk/dto/common/data/ServerKeys;
+.implements Lcom/vk/dto/common/data/h;
 
 
 # annotations
@@ -46,7 +46,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/common/CartQuantity$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/common/CartQuantity$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/common/CartQuantity$a;

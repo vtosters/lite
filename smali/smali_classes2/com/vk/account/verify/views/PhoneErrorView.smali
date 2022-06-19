@@ -23,9 +23,9 @@
 
 
 # instance fields
-.field private a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+.field private a:Lcom/vk/core/dialogs/bottomsheet/e;
 
-.field private final b:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;
+.field private final b:Lcom/vk/core/dialogs/bottomsheet/h$c;
 
 
 # direct methods
@@ -36,49 +36,49 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/account/verify/views/PhoneErrorView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/account/verify/views/PhoneErrorView$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/account/verify/views/PhoneErrorView;->c:Lcom/vk/account/verify/views/PhoneErrorView$a;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/core/dialogs/bottomsheet/h$c;)V
     .locals 0
 
     .line 1
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/vk/account/verify/views/PhoneErrorView;->b:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;
+    iput-object p2, p0, Lcom/vk/account/verify/views/PhoneErrorView;->b:Lcom/vk/core/dialogs/bottomsheet/h$c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getDialog()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+.method public final getDialog()Lcom/vk/core/dialogs/bottomsheet/e;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/account/verify/views/PhoneErrorView;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    iget-object v0, p0, Lcom/vk/account/verify/views/PhoneErrorView;->a:Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-object v0
 .end method
 
-.method public final getListener()Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;
+.method public final getListener()Lcom/vk/core/dialogs/bottomsheet/h$c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/account/verify/views/PhoneErrorView;->b:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;
+    iget-object v0, p0, Lcom/vk/account/verify/views/PhoneErrorView;->b:Lcom/vk/core/dialogs/bottomsheet/h$c;
 
     return-object v0
 .end method
 
-.method public final setDialog(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+.method public final setDialog(Lcom/vk/core/dialogs/bottomsheet/e;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/account/verify/views/PhoneErrorView;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    iput-object p1, p0, Lcom/vk/account/verify/views/PhoneErrorView;->a:Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-void
 .end method

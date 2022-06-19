@@ -3,7 +3,7 @@
 .source "DefaultDiskStorage.java"
 
 # interfaces
-.implements Lcom/facebook/common/file/FileTreeVisitor;
+.implements Lcom/facebook/common/file/b;
 
 
 # annotations
@@ -22,7 +22,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/facebook/cache/disk/DiskStorage$a;",
+            "Lcom/facebook/cache/disk/c$a;",
             ">;"
         }
     .end annotation
@@ -67,7 +67,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/facebook/cache/disk/DiskStorage$a;",
+            "Lcom/facebook/cache/disk/c$a;",
             ">;"
         }
     .end annotation

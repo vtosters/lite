@@ -3,7 +3,7 @@
 .source "FriendsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/common/g/VoidF1;
+.implements Lcom/vk/common/g/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/VoidF1<",
+        "Lcom/vk/common/g/g<",
         "Ljava/util/ArrayList<",
         "Lcom/vk/dto/user/UserProfile;",
         ">;>;"

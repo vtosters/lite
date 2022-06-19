@@ -3,7 +3,7 @@
 .source "SearchMenuPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/common/data/VkAppsList;",
         ">;"
     }
@@ -78,28 +78,28 @@
     .line 5
     iget-object p1, p0, Lcom/vk/menu/SearchMenuPresenter$a;->a:Lcom/vk/menu/SearchMenuPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/SearchMenuContract1;
+    invoke-virtual {p1}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/f;
 
     move-result-object p1
 
-    invoke-interface {p1, v2}, Lcom/vk/menu/SearchMenuContract1;->x(I)V
+    invoke-interface {p1, v2}, Lcom/vk/menu/f;->x(I)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/menu/SearchMenuPresenter$a;->a:Lcom/vk/menu/SearchMenuPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/SearchMenuContract1;
+    invoke-virtual {p1}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/f;
 
     move-result-object p1
 
-    invoke-interface {p1, v2, v0}, Lcom/vk/menu/SearchMenuContract1;->d(ILjava/util/List;)V
+    invoke-interface {p1, v2, v0}, Lcom/vk/menu/f;->d(ILjava/util/List;)V
 
     goto :goto_1
 
     .line 7
     :cond_0
-    new-instance v1, Lcom/vk/menu/g/SearchMenuHeaderItem;
+    new-instance v1, Lcom/vk/menu/g/b;
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v3
 
@@ -115,19 +115,19 @@
     :goto_0
     const v4, 0x7f0a07ed
 
-    invoke-direct {v1, v3, v4}, Lcom/vk/menu/g/SearchMenuHeaderItem;-><init>(II)V
+    invoke-direct {v1, v3, v4}, Lcom/vk/menu/g/b;-><init>(II)V
 
     .line 8
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     .line 9
-    new-instance v1, Lcom/vk/menu/g/SearchMenuServicesItem;
+    new-instance v1, Lcom/vk/menu/g/d;
 
     const-string v3, "it"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, p1, v4}, Lcom/vk/menu/g/SearchMenuServicesItem;-><init>(Lcom/vk/dto/common/data/VkAppsList;I)V
+    invoke-direct {v1, p1, v4}, Lcom/vk/menu/g/d;-><init>(Lcom/vk/dto/common/data/VkAppsList;I)V
 
     .line 10
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
@@ -135,20 +135,20 @@
     .line 11
     iget-object p1, p0, Lcom/vk/menu/SearchMenuPresenter$a;->a:Lcom/vk/menu/SearchMenuPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/SearchMenuContract1;
+    invoke-virtual {p1}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/f;
 
     move-result-object p1
 
-    invoke-interface {p1, v2}, Lcom/vk/menu/SearchMenuContract1;->x(I)V
+    invoke-interface {p1, v2}, Lcom/vk/menu/f;->x(I)V
 
     .line 12
     iget-object p1, p0, Lcom/vk/menu/SearchMenuPresenter$a;->a:Lcom/vk/menu/SearchMenuPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/SearchMenuContract1;
+    invoke-virtual {p1}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/f;
 
     move-result-object p1
 
-    invoke-interface {p1, v2, v0}, Lcom/vk/menu/SearchMenuContract1;->d(ILjava/util/List;)V
+    invoke-interface {p1, v2, v0}, Lcom/vk/menu/f;->d(ILjava/util/List;)V
 
     :goto_1
     return-void

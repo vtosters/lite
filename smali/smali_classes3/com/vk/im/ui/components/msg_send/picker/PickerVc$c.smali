@@ -44,7 +44,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$c;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerVc;

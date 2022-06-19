@@ -3,7 +3,7 @@
 .source "ShareOpenGraphValueContainer.java"
 
 # interfaces
-.implements Lcom/facebook/share/model/ShareModelBuilder;
+.implements Lcom/facebook/share/model/a;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Lcom/facebook/share/model/ShareOpenGraphValueContainer$a;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/facebook/share/model/ShareModelBuilder<",
+        "Lcom/facebook/share/model/a<",
         "TP;TE;>;"
     }
 .end annotation

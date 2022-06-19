@@ -3,7 +3,7 @@
 .source "UsersStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -106,10 +106,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/utils/collection/IntCollection;
+    check-cast v1, Lcom/vk/im/engine/utils/collection/d;
 
     .line 3
-    invoke-interface {v1}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
+    invoke-interface {v1}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
 
     move-result v4
 
@@ -119,10 +119,10 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p1, v1}, Lcom/vk/im/engine/utils/collection/IntArrayList;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)V
+    invoke-virtual {p1, v1}, Lcom/vk/im/engine/utils/collection/IntArrayList;->a(Lcom/vk/im/engine/utils/collection/d;)V
 
     .line 5
-    invoke-interface {v1, v2}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v1, v2}, Lcom/vk/im/engine/utils/collection/d;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -136,9 +136,9 @@
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 7
-    sget-object v4, Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;->INSTANCE:Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;
+    sget-object v4, Lcom/vk/im/engine/internal/storage/delegates/users/c;->a:Lcom/vk/im/engine/internal/storage/delegates/users/c;
 
-    invoke-virtual {v4, v3}, Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;->a(Lcom/vk/dto/user/Platform;)I
+    invoke-virtual {v4, v3}, Lcom/vk/im/engine/internal/storage/delegates/users/c;->a(Lcom/vk/dto/user/Platform;)I
 
     move-result v3
 
@@ -259,7 +259,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$updateOnlines$1;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

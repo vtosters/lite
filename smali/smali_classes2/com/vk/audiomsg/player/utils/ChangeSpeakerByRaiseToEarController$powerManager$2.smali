@@ -3,12 +3,12 @@
 .source "ChangeSpeakerByRaiseToEarController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audiomsg/player/utils/ChangeSpeakerByRaiseToEarController;-><init>(Landroid/content/Context;Lcom/vk/audiomsg/player/AudioMsgPlayer;)V
+    value = Lcom/vk/audiomsg/player/utils/ChangeSpeakerByRaiseToEarController;-><init>(Landroid/content/Context;Lcom/vk/audiomsg/player/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Landroid/os/PowerManager;",
         ">;"
     }

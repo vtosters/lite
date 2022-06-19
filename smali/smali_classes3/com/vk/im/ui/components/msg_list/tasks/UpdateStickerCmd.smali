@@ -1,13 +1,13 @@
 .class public final Lcom/vk/im/ui/components/msg_list/tasks/UpdateStickerCmd;
-.super Lcom/vk/im/engine/i/BaseImEngineCmd;
+.super Lcom/vk/im/engine/i/a;
 .source "UpdateStickerCmd.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
-        "Lkotlin/Unit;",
+        "Lcom/vk/im/engine/i/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -26,7 +26,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateStickerCmd;->b:Lcom/vk/im/engine/models/messages/Msg;
 
@@ -57,18 +57,18 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_list/tasks/UpdateStickerCmd;->a(Lcom/vk/im/engine/ImEnvironment;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_list/tasks/UpdateStickerCmd;->a(Lcom/vk/im/engine/d;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/ImEnvironment;)V
+.method public a(Lcom/vk/im/engine/d;)V
     .locals 4
 
     .line 3
@@ -100,7 +100,7 @@
 
     .line 5
     :cond_1
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -109,7 +109,7 @@
     move-result-object v0
 
     .line 6
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v1
 
@@ -117,10 +117,10 @@
 
     invoke-direct {v2, p0, v0}, Lcom/vk/im/ui/components/msg_list/tasks/UpdateStickerCmd$onExecute$1;-><init>(Lcom/vk/im/ui/components/msg_list/tasks/UpdateStickerCmd;Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     .line 7
-    new-instance v0, Lcom/vk/im/engine/events/OnMsgUpdateEvent;
+    new-instance v0, Lcom/vk/im/engine/events/h0;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateStickerCmd;->d:Ljava/lang/Object;
 
@@ -136,9 +136,9 @@
 
     move-result v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/events/OnMsgUpdateEvent;-><init>(Ljava/lang/Object;II)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/events/h0;-><init>(Ljava/lang/Object;II)V
 
-    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/Event;)V
+    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/a;)V
 
     return-void
 .end method
@@ -168,7 +168,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -191,7 +191,7 @@
 
     iget-object v3, p1, Lcom/vk/im/ui/components/msg_list/tasks/UpdateStickerCmd;->b:Lcom/vk/im/engine/models/messages/Msg;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -207,7 +207,7 @@
 
     iget-object p1, p1, Lcom/vk/im/ui/components/msg_list/tasks/UpdateStickerCmd;->c:Lcom/vk/im/engine/models/Sticker;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

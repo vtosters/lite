@@ -3,7 +3,7 @@
 .source "MsgHistoryGetCmdCacheHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/im/engine/internal/storage/models/e;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;)Z
+.method public final a(Lcom/vk/im/engine/internal/storage/models/e;)Z
     .locals 1
 
     .line 1
@@ -56,7 +56,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->c()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/e;->c()I
 
     move-result p1
 
@@ -81,9 +81,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/e;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$createMsgHistory$1;->a(Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$createMsgHistory$1;->a(Lcom/vk/im/engine/internal/storage/models/e;)Z
 
     move-result p1
 

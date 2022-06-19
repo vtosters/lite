@@ -33,20 +33,20 @@
     .locals 0
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/AuthBridge3;->a()Z
+    invoke-interface {p1}, Lcom/vk/bridges/f;->a()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
     .line 3
-    sget-object p1, Lcom/vtosters/lite/sync/online/VkOnlineServiceManager;->INSTANCE:Lcom/vtosters/lite/sync/online/VkOnlineServiceManager;
+    sget-object p1, Lcom/vtosters/lite/sync/online/h;->b:Lcom/vtosters/lite/sync/online/h;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/sync/online/VkOnlineServiceManager;->a()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/sync/online/h;->a()V
 
     :cond_0
     return-void
@@ -65,7 +65,7 @@
     .locals 2
 
     .line 1
-    sget-object p1, Lcom/vtosters/lite/sync/online/VkOnlineServiceManager;->INSTANCE:Lcom/vtosters/lite/sync/online/VkOnlineServiceManager;
+    sget-object p1, Lcom/vtosters/lite/sync/online/h;->b:Lcom/vtosters/lite/sync/online/h;
 
     sget-object p2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -75,7 +75,7 @@
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/sync/online/VkOnlineServiceManager;->a(J)V
+    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/sync/online/h;->a(J)V
 
     return-void
 .end method

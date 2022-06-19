@@ -3,7 +3,7 @@
 .source "ContactsModel.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/im/ui/views/adapter_delegate/c;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)Z
+.method public final a(Lcom/vk/im/ui/views/adapter_delegate/c;)Z
     .locals 0
 
     const/4 p1, 0x1
@@ -68,9 +68,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/views/adapter_delegate/ListItem;
+    check-cast p1, Lcom/vk/im/ui/views/adapter_delegate/c;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel$filter$3;->a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel$filter$3;->a(Lcom/vk/im/ui/views/adapter_delegate/c;)Z
 
     move-result p1
 

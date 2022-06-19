@@ -74,7 +74,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/Html5Entry$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/Html5Entry$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/newsfeed/entries/Html5Entry;->M:Lcom/vk/dto/newsfeed/entries/Html5Entry$b;
 
@@ -168,7 +168,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/Image;Lcom/vk/dto/common/Image;Lcom/vk/dto/common/Action;Lcom/vk/dto/newsfeed/entries/Html5Entry$Html5App;Ljava/lang/String;Lcom/vk/statistic/StatisticUrl;Lcom/vk/statistic/Statistic$a;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/Image;Lcom/vk/dto/common/Image;Lcom/vk/dto/common/Action;Lcom/vk/dto/newsfeed/entries/Html5Entry$Html5App;Ljava/lang/String;Lcom/vk/statistic/StatisticUrl;Lcom/vk/statistic/Statistic$a;ILkotlin/jvm/internal/i;)V
     .locals 19
 
     const v0, 0x8000
@@ -387,7 +387,7 @@
     check-cast v1, Lcom/vk/statistic/StatisticUrl;
 
     .line 2
-    invoke-static {v1}, Lcom/vtosters/lite/data/Analytics;->a(Lcom/vk/statistic/StatisticUrl;)V
+    invoke-static {v1}, Lcom/vtosters/lite/data/n;->a(Lcom/vk/statistic/StatisticUrl;)V
 
     goto :goto_0
 
@@ -417,7 +417,7 @@
 
     const-string v0, "statistics.getStatisticByType(type)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

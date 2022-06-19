@@ -94,7 +94,7 @@
     const-string v2, "ERR_MISSING_AUTH_CREDENTIALS: No account provided for the kerberos authentication. Please verify the configuration policies and that the CONTACTS runtime permission is granted. "
 
     .line 3
-    invoke-static {v0, v2, p1}, Lorg/chromium/base/Log;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, p1}, Lorg/chromium/base/e;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 4
     iget-object p1, p0, Lorg/chromium/net/HttpNegotiateAuthenticator$a;->b:Lorg/chromium/net/HttpNegotiateAuthenticator;
@@ -128,7 +128,7 @@
     const-string p1, "ERR_MISSING_AUTH_CREDENTIALS: Found %d accounts eligible for the kerberos authentication. Please fix the configuration by providing a single account."
 
     .line 8
-    invoke-static {v0, p1, v2}, Lorg/chromium/base/Log;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, p1, v2}, Lorg/chromium/base/e;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 9
     iget-object p1, p0, Lorg/chromium/net/HttpNegotiateAuthenticator$a;->b:Lorg/chromium/net/HttpNegotiateAuthenticator;
@@ -145,7 +145,7 @@
     :cond_1
     iget-object v4, p0, Lorg/chromium/net/HttpNegotiateAuthenticator$a;->b:Lorg/chromium/net/HttpNegotiateAuthenticator;
 
-    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
 
     move-result-object v5
 
@@ -162,7 +162,7 @@
     const-string v2, "ERR_MISCONFIGURED_AUTH_ENVIRONMENT: USE_CREDENTIALS permission not granted. Aborting authentication."
 
     .line 11
-    invoke-static {v0, v2, p1}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, p1}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 12
     iget-object p1, p0, Lorg/chromium/net/HttpNegotiateAuthenticator$a;->b:Lorg/chromium/net/HttpNegotiateAuthenticator;
@@ -237,7 +237,7 @@
     const-string p1, "ERR_UNEXPECTED: Error while attempting to retrieve accounts."
 
     .line 17
-    invoke-static {v0, p1, v2}, Lorg/chromium/base/Log;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, p1, v2}, Lorg/chromium/base/e;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 18
     iget-object p1, p0, Lorg/chromium/net/HttpNegotiateAuthenticator$a;->b:Lorg/chromium/net/HttpNegotiateAuthenticator;

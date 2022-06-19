@@ -3,12 +3,12 @@
 .source "MsgSendVc.kt"
 
 # interfaces
-.implements Lcom/vk/stickers/f0/KeyboardPopup$j;
+.implements Lcom/vk/stickers/f0/a$j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->j()Lcom/vk/stickers/f0/KeyboardPopup;
+    value = Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->j()Lcom/vk/stickers/f0/a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -64,7 +64,7 @@
 
     .line 2
     :cond_1
-    sget-object v1, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardDimensionsCalculator;->INSTANCE:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardDimensionsCalculator;
+    sget-object v1, Lcom/vk/im/ui/components/bot_keyboard/e;->a:Lcom/vk/im/ui/components/bot_keyboard/e;
 
     iget-object v2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$e;->a:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
@@ -72,7 +72,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2, v0}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardDimensionsCalculator;->a(Landroid/content/Context;Lcom/vk/im/engine/models/conversations/BotKeyboard;)I
+    invoke-virtual {v1, v2, v0}, Lcom/vk/im/ui/components/bot_keyboard/e;->a(Landroid/content/Context;Lcom/vk/im/engine/models/conversations/BotKeyboard;)I
 
     move-result v0
 

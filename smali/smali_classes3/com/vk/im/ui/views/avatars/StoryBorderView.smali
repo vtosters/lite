@@ -51,7 +51,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/StoryBorderView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/StoryBorderView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/StoryBorderView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/StoryBorderView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -101,14 +101,14 @@
     iput-object p3, p0, Lcom/vk/im/ui/views/avatars/StoryBorderView;->a:Landroid/graphics/Paint;
 
     .line 7
-    sget-object p3, Lcom/vk/im/ui/R2;->StoryBorderView:[I
+    sget-object p3, Lcom/vk/im/ui/o;->StoryBorderView:[I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 8
-    sget p2, Lcom/vk/im/ui/R2;->StoryBorderView_vkim_borderColor:I
+    sget p2, Lcom/vk/im/ui/o;->StoryBorderView_vkim_borderColor:I
 
     const/4 p3, 0x0
 
@@ -119,7 +119,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/avatars/StoryBorderView;->setBorderColor(I)V
 
     .line 9
-    sget p2, Lcom/vk/im/ui/R2;->StoryBorderView_vkim_borderGradientStartColor:I
+    sget p2, Lcom/vk/im/ui/o;->StoryBorderView_vkim_borderGradientStartColor:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -128,7 +128,7 @@
     iput p2, p0, Lcom/vk/im/ui/views/avatars/StoryBorderView;->g:I
 
     .line 10
-    sget p2, Lcom/vk/im/ui/R2;->StoryBorderView_vkim_borderGradientEndColor:I
+    sget p2, Lcom/vk/im/ui/o;->StoryBorderView_vkim_borderGradientEndColor:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -137,7 +137,7 @@
     iput p2, p0, Lcom/vk/im/ui/views/avatars/StoryBorderView;->h:I
 
     .line 11
-    sget p2, Lcom/vk/im/ui/R2;->StoryBorderView_vkim_borderWidth:I
+    sget p2, Lcom/vk/im/ui/o;->StoryBorderView_vkim_borderWidth:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -151,7 +151,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2

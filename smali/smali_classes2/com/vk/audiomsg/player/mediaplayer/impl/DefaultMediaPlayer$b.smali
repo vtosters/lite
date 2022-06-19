@@ -3,7 +3,7 @@
 .source "DefaultMediaPlayer.kt"
 
 # interfaces
-.implements Lcom/vk/audiofocus/AudioFocusManager$a;
+.implements Lcom/vk/audiofocus/a$a;
 
 
 # annotations

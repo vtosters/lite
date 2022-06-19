@@ -1,5 +1,5 @@
 .class public final Lorg/chromium/net/impl/CronetUploadDataStream;
-.super Lorg/chromium/net/UploadDataSink;
+.super Lorg/chromium/net/v;
 .source "CronetUploadDataStream.java"
 
 
@@ -10,7 +10,7 @@
 # instance fields
 .field private final a:Ljava/util/concurrent/Executor;
 
-.field private final b:Lorg/chromium/net/impl/VersionSafeCallbacks4;
+.field private final b:Lorg/chromium/net/impl/r;
 
 .field private final c:Lorg/chromium/net/impl/CronetUrlRequest;
 
@@ -36,11 +36,11 @@
 
 
 # direct methods
-.method public constructor <init>(Lorg/chromium/net/UploadDataProvider;Ljava/util/concurrent/Executor;Lorg/chromium/net/impl/CronetUrlRequest;)V
+.method public constructor <init>(Lorg/chromium/net/s;Ljava/util/concurrent/Executor;Lorg/chromium/net/impl/CronetUrlRequest;)V
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lorg/chromium/net/UploadDataSink;-><init>()V
+    invoke-direct {p0}, Lorg/chromium/net/v;-><init>()V
 
     .line 2
     new-instance v0, Lorg/chromium/net/impl/CronetUploadDataStream$a;
@@ -65,11 +65,11 @@
     iput-object p2, p0, Lorg/chromium/net/impl/CronetUploadDataStream;->a:Ljava/util/concurrent/Executor;
 
     .line 6
-    new-instance p2, Lorg/chromium/net/impl/VersionSafeCallbacks4;
+    new-instance p2, Lorg/chromium/net/impl/r;
 
-    invoke-direct {p2, p1}, Lorg/chromium/net/impl/VersionSafeCallbacks4;-><init>(Lorg/chromium/net/UploadDataProvider;)V
+    invoke-direct {p2, p1}, Lorg/chromium/net/impl/r;-><init>(Lorg/chromium/net/s;)V
 
-    iput-object p2, p0, Lorg/chromium/net/impl/CronetUploadDataStream;->b:Lorg/chromium/net/impl/VersionSafeCallbacks4;
+    iput-object p2, p0, Lorg/chromium/net/impl/CronetUploadDataStream;->b:Lorg/chromium/net/impl/r;
 
     .line 7
     iput-object p3, p0, Lorg/chromium/net/impl/CronetUploadDataStream;->c:Lorg/chromium/net/impl/CronetUrlRequest;
@@ -182,9 +182,9 @@
 
     .line 13
     :try_start_1
-    iget-object v0, p0, Lorg/chromium/net/impl/CronetUploadDataStream;->b:Lorg/chromium/net/impl/VersionSafeCallbacks4;
+    iget-object v0, p0, Lorg/chromium/net/impl/CronetUploadDataStream;->b:Lorg/chromium/net/impl/r;
 
-    invoke-virtual {v0}, Lorg/chromium/net/impl/VersionSafeCallbacks4;->close()V
+    invoke-virtual {v0}, Lorg/chromium/net/impl/r;->close()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -202,7 +202,7 @@
 
     const-string v0, "Failure closing data provider"
 
-    invoke-static {v1, v0, v2}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 15
     :cond_1
@@ -309,11 +309,11 @@
     return-void
 .end method
 
-.method static synthetic e(Lorg/chromium/net/impl/CronetUploadDataStream;)Lorg/chromium/net/impl/VersionSafeCallbacks4;
+.method static synthetic e(Lorg/chromium/net/impl/CronetUploadDataStream;)Lorg/chromium/net/impl/r;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lorg/chromium/net/impl/CronetUploadDataStream;->b:Lorg/chromium/net/impl/VersionSafeCallbacks4;
+    iget-object p0, p0, Lorg/chromium/net/impl/CronetUploadDataStream;->b:Lorg/chromium/net/impl/r;
 
     return-object p0
 .end method
@@ -811,9 +811,9 @@
     invoke-virtual {v0}, Lorg/chromium/net/impl/CronetUrlRequest;->d()V
 
     .line 7
-    iget-object v0, p0, Lorg/chromium/net/impl/CronetUploadDataStream;->b:Lorg/chromium/net/impl/VersionSafeCallbacks4;
+    iget-object v0, p0, Lorg/chromium/net/impl/CronetUploadDataStream;->b:Lorg/chromium/net/impl/r;
 
-    invoke-virtual {v0}, Lorg/chromium/net/impl/VersionSafeCallbacks4;->a()J
+    invoke-virtual {v0}, Lorg/chromium/net/impl/r;->a()J
 
     move-result-wide v0
 

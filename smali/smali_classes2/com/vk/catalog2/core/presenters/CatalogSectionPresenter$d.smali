@@ -3,12 +3,12 @@
 .source "CatalogSectionPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
+.implements Lcom/vk/catalog2/core/holders/common/i;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/w/e/CatalogCommand2;)Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
+    value = Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/w/e/o;)Lcom/vk/catalog2/core/holders/common/i;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/catalog2/core/w/e/CatalogCommand2;
+.field final synthetic a:Lcom/vk/catalog2/core/w/e/o;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/catalog2/core/w/e/CatalogCommand2;)V
+.method constructor <init>(Lcom/vk/catalog2/core/w/e/o;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$d;->a:Lcom/vk/catalog2/core/w/e/CatalogCommand2;
+    iput-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$d;->a:Lcom/vk/catalog2/core/w/e/o;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,9 +43,9 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$d;->a:Lcom/vk/catalog2/core/w/e/CatalogCommand2;
+    iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$d;->a:Lcom/vk/catalog2/core/w/e/o;
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/w/e/CatalogCommand2;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/w/e/o;->a()Ljava/lang/String;
 
     move-result-object v0
 

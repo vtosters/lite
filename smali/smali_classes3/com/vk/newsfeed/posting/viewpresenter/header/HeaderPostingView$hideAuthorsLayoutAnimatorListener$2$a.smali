@@ -104,13 +104,13 @@
 
     iget-object p1, p1, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$hideAuthorsLayoutAnimatorListener$2;->this$0:Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts13;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/f;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts13;->a3()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/f;->a3()V
 
     :cond_1
     return-void

@@ -22,10 +22,10 @@
     .end annotation
 .end field
 
-.field public static final d:Lcom/vk/dto/common/data/JsonParser;
+.field public static final d:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/dto/tags/Target;",
             ">;"
         }
@@ -51,7 +51,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/tags/Target$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/tags/Target$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/tags/Target;->e:Lcom/vk/dto/tags/Target$c;
 
@@ -71,7 +71,7 @@
 
     invoke-direct {v1, v0}, Lcom/vk/dto/tags/Target$a;-><init>(Lcom/vk/dto/tags/Target$c;)V
 
-    sput-object v1, Lcom/vk/dto/tags/Target;->d:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v1, Lcom/vk/dto/tags/Target;->d:Lcom/vk/dto/common/data/c;
 
     return-void
 .end method
@@ -142,7 +142,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/tags/Target;->a:Lcom/vk/dto/tags/ContentType;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

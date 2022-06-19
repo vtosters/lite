@@ -42,15 +42,15 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/vk/api/sdk/utils/VKLoader;->INSTANCE:Lcom/vk/api/sdk/utils/VKLoader;
+    sget-object v0, Lcom/vk/api/sdk/utils/f;->a:Lcom/vk/api/sdk/utils/f;
 
     iget-object v1, p0, Lcom/vk/api/sdk/ui/VKCaptchaActivity$c;->b:Ljava/lang/String;
 
     const-string v2, "url"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/sdk/utils/VKLoader;->a(Ljava/lang/String;)[B
+    invoke-virtual {v0, v1}, Lcom/vk/api/sdk/utils/f;->a(Ljava/lang/String;)[B
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
 
     const-string v2, "BitmapFactory.decodeByteArray(data, 0, data.size)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1, v0}, Lcom/vk/api/sdk/ui/VKCaptchaActivity;->a(Lcom/vk/api/sdk/ui/VKCaptchaActivity;Landroid/graphics/Bitmap;)V
 

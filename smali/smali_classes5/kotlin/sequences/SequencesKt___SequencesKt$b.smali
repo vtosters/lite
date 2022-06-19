@@ -3,12 +3,12 @@
 .source "_Sequences.kt"
 
 # interfaces
-.implements Lkotlin/sequences/Sequence;
+.implements Lkotlin/sequences/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkotlin/sequences/SequencesKt___SequencesKt;->a(Lkotlin/sequences/Sequence;Ljava/util/Comparator;)Lkotlin/sequences/Sequence;
+    value = Lkotlin/sequences/SequencesKt___SequencesKt;->a(Lkotlin/sequences/j;Ljava/util/Comparator;)Lkotlin/sequences/j;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,25 +19,25 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/sequences/Sequence<",
+        "Lkotlin/sequences/j<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lkotlin/sequences/Sequence;
+.field final synthetic a:Lkotlin/sequences/j;
 
 .field final synthetic b:Ljava/util/Comparator;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/sequences/Sequence;Ljava/util/Comparator;)V
+.method constructor <init>(Lkotlin/sequences/j;Ljava/util/Comparator;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/sequences/Sequence<",
+            "Lkotlin/sequences/j<",
             "+TT;>;",
             "Ljava/util/Comparator;",
             ")V"
@@ -45,7 +45,7 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lkotlin/sequences/SequencesKt___SequencesKt$b;->a:Lkotlin/sequences/Sequence;
+    iput-object p1, p0, Lkotlin/sequences/SequencesKt___SequencesKt$b;->a:Lkotlin/sequences/j;
 
     iput-object p2, p0, Lkotlin/sequences/SequencesKt___SequencesKt$b;->b:Ljava/util/Comparator;
 
@@ -67,9 +67,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lkotlin/sequences/SequencesKt___SequencesKt$b;->a:Lkotlin/sequences/Sequence;
+    iget-object v0, p0, Lkotlin/sequences/SequencesKt___SequencesKt$b;->a:Lkotlin/sequences/j;
 
-    invoke-static {v0}, Lkotlin/sequences/m;->m(Lkotlin/sequences/Sequence;)Ljava/util/List;
+    invoke-static {v0}, Lkotlin/sequences/m;->m(Lkotlin/sequences/j;)Ljava/util/List;
 
     move-result-object v0
 

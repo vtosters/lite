@@ -12,52 +12,52 @@
 
 
 # virtual methods
-.method public abstract followersList(JI)Lretrofit2/Call;
+.method public abstract followersList(JI)Lf/b;
     .param p1    # J
-        .annotation runtime Lf/q/Query;
+        .annotation runtime Lf/q/r;
             value = "user_id"
         .end annotation
     .end param
     .param p3    # I
-        .annotation runtime Lf/q/Query;
+        .annotation runtime Lf/q/r;
             value = "count"
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(JI)",
-            "Lretrofit2/Call<",
+            "Lf/b<",
             "Lcom/vtosters/lite/utils/TwitterService$a;",
             ">;"
         }
     .end annotation
 
-    .annotation runtime Lf/q/GET;
+    .annotation runtime Lf/q/e;
         value = "/1.1/followers/ids.json"
     .end annotation
 .end method
 
-.method public abstract friendsList(JI)Lretrofit2/Call;
+.method public abstract friendsList(JI)Lf/b;
     .param p1    # J
-        .annotation runtime Lf/q/Query;
+        .annotation runtime Lf/q/r;
             value = "user_id"
         .end annotation
     .end param
     .param p3    # I
-        .annotation runtime Lf/q/Query;
+        .annotation runtime Lf/q/r;
             value = "count"
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(JI)",
-            "Lretrofit2/Call<",
+            "Lf/b<",
             "Lcom/vtosters/lite/utils/TwitterService$a;",
             ">;"
         }
     .end annotation
 
-    .annotation runtime Lf/q/GET;
+    .annotation runtime Lf/q/e;
         value = "/1.1/friends/ids.json"
     .end annotation
 .end method

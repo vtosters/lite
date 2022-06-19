@@ -47,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/podcast/PodcastPage$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/podcast/PodcastPage$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/podcast/PodcastPage$a;
@@ -137,7 +137,7 @@
 
     const-string v2, "o.getJSONObject(\"current\")"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/dto/music/MusicTrack;-><init>(Lorg/json/JSONObject;)V
 
@@ -150,9 +150,9 @@
 
     move-result-object v2
 
-    sget-object v3, Lcom/vk/dto/music/MusicTrack;->W:Lcom/vk/dto/common/data/JsonParser;
+    sget-object v3, Lcom/vk/dto/music/MusicTrack;->W:Lcom/vk/dto/common/data/c;
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)V
 
     const-string v2, "can_subscribe"
 

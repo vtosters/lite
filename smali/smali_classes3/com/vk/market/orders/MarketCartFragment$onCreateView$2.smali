@@ -3,7 +3,7 @@
 .source "MarketCartFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions4;
+.implements Lkotlin/jvm/b/d;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions4<",
+        "Lkotlin/jvm/b/d<",
         "Landroid/view/View;",
         "Ljava/lang/Integer;",
         "Ljava/lang/Integer;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -68,7 +68,7 @@
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/vk/market/orders/MarketCartFragment$onCreateView$2;->a(Landroid/view/View;II)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

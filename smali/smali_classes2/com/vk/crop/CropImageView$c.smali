@@ -115,11 +115,11 @@
     .line 5
     iget-object v1, p0, Lcom/vk/crop/CropImageView$c;->C:Lcom/vk/crop/CropImageView;
 
-    invoke-static {v1}, Lcom/vk/crop/CropImageView;->b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/CropController;
+    invoke-static {v1}, Lcom/vk/crop/CropImageView;->b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/f;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/crop/CropController;->e()Lcom/vk/crop/GeometryState;
+    invoke-virtual {v1}, Lcom/vk/crop/f;->e()Lcom/vk/crop/j;
 
     move-result-object v1
 
@@ -127,7 +127,7 @@
 
     iget v4, p0, Lcom/vk/crop/CropImageView$c;->d:F
 
-    invoke-virtual {v1, v0, v3, v4}, Lcom/vk/crop/GeometryState;->b(FFF)V
+    invoke-virtual {v1, v0, v3, v4}, Lcom/vk/crop/j;->b(FFF)V
 
     .line 6
     iget v0, p0, Lcom/vk/crop/CropImageView$c;->e:F
@@ -156,15 +156,15 @@
     .line 10
     iget-object v4, p0, Lcom/vk/crop/CropImageView$c;->C:Lcom/vk/crop/CropImageView;
 
-    invoke-static {v4}, Lcom/vk/crop/CropImageView;->b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/CropController;
+    invoke-static {v4}, Lcom/vk/crop/CropImageView;->b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/f;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/crop/CropController;->e()Lcom/vk/crop/GeometryState;
+    invoke-virtual {v4}, Lcom/vk/crop/f;->e()Lcom/vk/crop/j;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/crop/GeometryState;->g()F
+    invoke-virtual {v4}, Lcom/vk/crop/j;->g()F
 
     move-result v4
 
@@ -182,15 +182,15 @@
     .line 12
     iget-object v4, p0, Lcom/vk/crop/CropImageView$c;->C:Lcom/vk/crop/CropImageView;
 
-    invoke-static {v4}, Lcom/vk/crop/CropImageView;->b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/CropController;
+    invoke-static {v4}, Lcom/vk/crop/CropImageView;->b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/f;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/crop/CropController;->e()Lcom/vk/crop/GeometryState;
+    invoke-virtual {v4}, Lcom/vk/crop/f;->e()Lcom/vk/crop/j;
 
     move-result-object v4
 
-    invoke-virtual {v4, v1, v3}, Lcom/vk/crop/GeometryState;->a(FF)V
+    invoke-virtual {v4, v1, v3}, Lcom/vk/crop/j;->a(FF)V
 
     .line 13
     iget-object v1, p0, Lcom/vk/crop/CropImageView$c;->g:[F
@@ -205,11 +205,11 @@
     .line 15
     iget-object p1, p0, Lcom/vk/crop/CropImageView$c;->C:Lcom/vk/crop/CropImageView;
 
-    invoke-static {p1}, Lcom/vk/crop/CropImageView;->b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/CropController;
+    invoke-static {p1}, Lcom/vk/crop/CropImageView;->b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/f;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/crop/CropController;->i()V
+    invoke-virtual {p1}, Lcom/vk/crop/f;->i()V
 
     return-void
 .end method

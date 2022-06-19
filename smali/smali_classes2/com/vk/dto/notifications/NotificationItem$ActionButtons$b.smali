@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -35,13 +35,13 @@
 
 
 # virtual methods
-.method public final a(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)Lcom/vk/dto/notifications/NotificationItem$ActionButtons;
+.method public final a(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)Lcom/vk/dto/notifications/NotificationItem$ActionButtons;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lorg/json/JSONObject;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lorg/json/JSONObject;",
             "Lcom/vk/dto/notifications/NotificationButton;",
@@ -88,7 +88,7 @@
 
     if-eqz v6, :cond_0
 
-    invoke-interface {p2, v6}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v6}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -135,7 +135,7 @@
 
     if-eqz v4, :cond_3
 
-    invoke-interface {p2, v4}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v4}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 

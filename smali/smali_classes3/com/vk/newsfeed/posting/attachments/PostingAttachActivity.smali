@@ -3,9 +3,9 @@
 .source "PostingAttachActivity.kt"
 
 # interfaces
-.implements Lcom/vk/attachpicker/AttachResulter;
-.implements Lpub/devrel/easypermissions/EasyPermissions$a;
-.implements Lcom/vk/core/ui/v/j/UiTracking;
+.implements Lcom/vk/attachpicker/j;
+.implements Lpub/devrel/easypermissions/b$a;
+.implements Lcom/vk/core/ui/v/j/c;
 
 
 # annotations
@@ -89,11 +89,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;)V
+.method public static final synthetic a(Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;Lcom/vk/newsfeed/posting/attachments/b;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;->a(Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;)V
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;->a(Lcom/vk/newsfeed/posting/attachments/b;)V
 
     return-void
 .end method
@@ -107,7 +107,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;)V
+.method private final a(Lcom/vk/newsfeed/posting/attachments/b;)V
     .locals 3
 
     .line 17
@@ -121,7 +121,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setTitle(I)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
     .line 19
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;->f4()I
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/attachments/b;->f4()I
 
     move-result v1
 
@@ -139,7 +139,7 @@
     .line 21
     new-instance v1, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity$d;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity$d;-><init>(Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity$d;-><init>(Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;Lcom/vk/newsfeed/posting/attachments/b;)V
 
     const p1, 0x7f12018a
 
@@ -163,7 +163,7 @@
     invoke-virtual {p1}, Landroidx/appcompat/app/AlertDialog$Builder;->show()Landroidx/appcompat/app/AlertDialog;
 
     .line 25
-    invoke-static {p0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -232,18 +232,18 @@
     .line 7
     iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;->e0:Lcom/vk/core/fragments/FragmentImpl;
 
-    instance-of v1, v0, Lpub/devrel/easypermissions/EasyPermissions$a;
+    instance-of v1, v0, Lpub/devrel/easypermissions/b$a;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lpub/devrel/easypermissions/EasyPermissions$a;
+    check-cast v0, Lpub/devrel/easypermissions/b$a;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1, p2}, Lpub/devrel/easypermissions/EasyPermissions$a;->a(ILjava/util/List;)V
+    invoke-interface {v0, p1, p2}, Lpub/devrel/easypermissions/b$a;->a(ILjava/util/List;)V
 
     :cond_1
     return-void
@@ -263,7 +263,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
+.method public a(Lcom/vk/core/ui/v/g;)V
     .locals 2
 
     .line 8
@@ -327,7 +327,7 @@
 
     .line 16
     :goto_0
-    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/g;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     return-void
 
@@ -362,18 +362,18 @@
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;->e0:Lcom/vk/core/fragments/FragmentImpl;
 
-    instance-of v1, v0, Lpub/devrel/easypermissions/EasyPermissions$a;
+    instance-of v1, v0, Lpub/devrel/easypermissions/b$a;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lpub/devrel/easypermissions/EasyPermissions$a;
+    check-cast v0, Lpub/devrel/easypermissions/b$a;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1, p2}, Lpub/devrel/easypermissions/EasyPermissions$a;->b(ILjava/util/List;)V
+    invoke-interface {v0, p1, p2}, Lpub/devrel/easypermissions/b$a;->b(ILjava/util/List;)V
 
     :cond_1
     return-void
@@ -483,9 +483,9 @@
     invoke-direct {v0}, Lcom/vtosters/lite/TabletDialogActivity$b;-><init>()V
 
     .line 3
-    sget-object v2, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->T0:Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;
+    sget-object v2, Lcom/vk/newsfeed/posting/l;->T0:Lcom/vk/newsfeed/posting/l$a;
 
-    invoke-virtual {v2, v0, p0}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;->a(Lcom/vtosters/lite/TabletDialogActivity$b;Landroid/content/Context;)Lcom/vtosters/lite/TabletDialogActivity$b;
+    invoke-virtual {v2, v0, p0}, Lcom/vk/newsfeed/posting/l$a;->a(Lcom/vtosters/lite/TabletDialogActivity$b;Landroid/content/Context;)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     const/16 v2, 0x20
 
@@ -500,7 +500,7 @@
 
     move-result-object v2
 
-    iget-object v0, v0, Lcom/vk/navigation/Navigator$a;->b:Landroid/os/Bundle;
+    iget-object v0, v0, Lcom/vk/navigation/o$a;->b:Landroid/os/Bundle;
 
     invoke-virtual {v2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
@@ -508,7 +508,7 @@
 
     const-string v2, "intent.putExtras(builder.args)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -543,7 +543,7 @@
 
     .line 11
     :goto_1
-    invoke-static {p0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcom/vk/core/util/l0;->a(Landroid/app/Activity;)V
 
     .line 12
     invoke-super {p0, p1}, Lcom/vtosters/lite/TabletDialogActivity;->onCreate(Landroid/os/Bundle;)V
@@ -555,7 +555,7 @@
 
     const-string v0, "window"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -603,16 +603,16 @@
 
     const v1, 0x7f0d0028
 
-    iget-object v2, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
+    iget-object v2, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/a;
 
     const/4 v3, 0x1
 
     invoke-virtual {p1, v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 20
-    iget-object p1, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
+    iget-object p1, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/a;
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;->setStatusBarBackgroundColor(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/view/a;->setStatusBarBackgroundColor(I)V
 
     const p1, 0x7f0a0a5e
 
@@ -722,7 +722,7 @@
 
     const-string v3, "intent"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -822,7 +822,7 @@
 
     const-string v3, "intent.getParcelableExtr\u2026KEY_ATTACHMENT_POLL_EDIT)"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Lcom/vtosters/lite/attachments/PollAttachment;
 
@@ -831,7 +831,7 @@
     move-result-object v0
 
     .line 39
-    invoke-virtual {v0}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v0}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v0
 
@@ -885,7 +885,7 @@
 
     .line 45
     :cond_8
-    invoke-virtual {v1}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v1}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v0
 
@@ -932,7 +932,7 @@
     invoke-virtual {v0, v4}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$a;->d(I)Lcom/vk/attachpicker/base/BaseAttachPickerFragment$a;
 
     .line 52
-    invoke-virtual {v0}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v0}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v0
 
@@ -953,7 +953,7 @@
     invoke-virtual {v0, v4}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$a;->d(I)Lcom/vk/attachpicker/base/BaseAttachPickerFragment$a;
 
     .line 56
-    invoke-virtual {v0}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v0}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v0
 
@@ -961,9 +961,9 @@
 
     .line 57
     :pswitch_5
-    new-instance v0, Lcom/vk/attachpicker/fragment/AttachMusicFragment$a;
+    new-instance v0, Lcom/vk/attachpicker/fragment/n$a;
 
-    invoke-direct {v0}, Lcom/vk/attachpicker/fragment/AttachMusicFragment$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/attachpicker/fragment/n$a;-><init>()V
 
     sub-int v1, v4, v1
 
@@ -974,7 +974,7 @@
     invoke-virtual {v0, v4}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$a;->d(I)Lcom/vk/attachpicker/base/BaseAttachPickerFragment$a;
 
     .line 60
-    invoke-virtual {v0}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v0}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v0
 
@@ -982,9 +982,9 @@
 
     .line 61
     :pswitch_6
-    new-instance v5, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryFragment;
+    new-instance v5, Lcom/vk/newsfeed/posting/attachments/gallery/e;
 
-    invoke-direct {v5}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryFragment;-><init>()V
+    invoke-direct {v5}, Lcom/vk/newsfeed/posting/attachments/gallery/e;-><init>()V
 
     .line 62
     new-instance v7, Landroid/os/Bundle;
@@ -1024,7 +1024,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/FragmentManagerImplSimple;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/f;
 
     move-result-object v0
 
@@ -1032,7 +1032,7 @@
 
     if-eqz v1, :cond_b
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/core/fragments/FragmentManagerImplSimple;->a(ILcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/core/fragments/f;->a(ILcom/vk/core/fragments/FragmentImpl;)V
 
     .line 69
     iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;->c0:Landroid/widget/FrameLayout;
@@ -1052,7 +1052,7 @@
 
     .line 70
     :cond_b
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 

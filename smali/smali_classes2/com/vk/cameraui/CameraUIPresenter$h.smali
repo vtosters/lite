@@ -3,12 +3,12 @@
 .source "CameraUIPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/cameraui/CameraUIPresenter;->a(Lcom/vk/dto/stories/model/web/StoryBox;FFLkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/cameraui/CameraUIPresenter;->a(Lcom/vk/dto/stories/model/web/StoryBox;FFLkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -64,11 +64,11 @@
     const/4 v1, 0x1
 
     .line 1
-    invoke-static {v0, v1, v0}, Lcom/vk/core/util/RxUtil;->a(Ljava/lang/String;ILjava/lang/Object;)Lio/reactivex/functions/Consumer;
+    invoke-static {v0, v1, v0}, Lcom/vk/core/util/z0;->a(Ljava/lang/String;ILjava/lang/Object;)Lc/a/z/g;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lio/reactivex/functions/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lc/a/z/g;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method

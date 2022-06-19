@@ -3,12 +3,12 @@
 .source "WriteBar.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "Landroid/net/Uri;",
         "Ljava/io/File;",
         ">;"
@@ -58,12 +58,12 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lb/h/g/m/FileUtils;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lb/h/g/m/d;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 2
-    invoke-static {v0}, Lb/h/g/m/FileUtils;->f(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, Lb/h/g/m/d;->f(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, p1, v0, v2}, Lb/h/g/m/FileUtils$a;->a(Landroid/content/Context;Landroid/net/Uri;Ljava/io/File;Lb/h/g/m/FileUtils$a$a;)Z
+    invoke-static {v1, p1, v0, v2}, Lb/h/g/m/d$a;->a(Landroid/content/Context;Landroid/net/Uri;Ljava/io/File;Lb/h/g/m/d$a$a;)Z
 
     return-object v0
 .end method

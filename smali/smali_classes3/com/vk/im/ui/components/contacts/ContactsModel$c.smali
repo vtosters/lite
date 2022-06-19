@@ -3,12 +3,12 @@
 .source "ContactsModel.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/ContactsModel;-><init>(Lcom/vk/im/engine/models/ImExperiments;Ljava/util/Set;ZLjava/lang/String;Ljava/util/Set;)V
+    value = Lcom/vk/im/ui/components/contacts/ContactsModel;-><init>(Lcom/vk/im/engine/models/e;Ljava/util/Set;ZLjava/lang/String;Ljava/util/Set;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -64,11 +64,11 @@
             "(",
             "Ljava/util/List<",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
+            "Lcom/vk/im/ui/views/adapter_delegate/c;",
             ">;>;)",
             "Lkotlin/Pair<",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
+            "Lcom/vk/im/ui/views/adapter_delegate/c;",
             ">;",
             "Landroidx/recyclerview/widget/DiffUtil$DiffResult;",
             ">;"
@@ -94,17 +94,17 @@
     check-cast p1, Ljava/util/List;
 
     .line 3
-    new-instance v1, Lcom/vk/im/ui/components/contacts/vc/ContactsDiffCallback;
+    new-instance v1, Lcom/vk/im/ui/components/contacts/vc/b;
 
     const-string v2, "previous"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "next"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, v0, p1}, Lcom/vk/im/ui/components/contacts/vc/ContactsDiffCallback;-><init>(Ljava/util/List;Ljava/util/List;)V
+    invoke-direct {v1, v0, p1}, Lcom/vk/im/ui/components/contacts/vc/b;-><init>(Ljava/util/List;Ljava/util/List;)V
 
     invoke-static {v1}, Landroidx/recyclerview/widget/DiffUtil;->calculateDiff(Landroidx/recyclerview/widget/DiffUtil$Callback;)Landroidx/recyclerview/widget/DiffUtil$DiffResult;
 
@@ -112,7 +112,7 @@
 
     const-string v1, "DiffUtil.calculateDiff(C\u2026Callback(previous, next))"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     new-instance v1, Lkotlin/Pair;

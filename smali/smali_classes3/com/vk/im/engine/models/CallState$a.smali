@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -39,11 +39,11 @@
     .locals 4
 
     .line 1
-    invoke-static {}, Lcom/vk/im/engine/models/CallState;->a()Lkotlin/sequences/Sequence;
+    invoke-static {}, Lcom/vk/im/engine/models/CallState;->a()Lkotlin/sequences/j;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -93,7 +93,7 @@
     return-object v1
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 .end method

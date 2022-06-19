@@ -13,7 +13,7 @@
 
 
 # instance fields
-.field private final a:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+.field private final a:Lcom/facebook/imagepipeline/animated/base/a;
 
 .field private final b:Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor$b;
 
@@ -21,14 +21,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor$b;)V
+.method public constructor <init>(Lcom/facebook/imagepipeline/animated/base/a;Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor$b;)V
     .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+    iput-object p1, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/a;
 
     .line 3
     iput-object p2, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->b:Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor$b;
@@ -112,16 +112,16 @@
 
     .line 20
     :cond_2
-    iget-object v0, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/a;
 
-    invoke-interface {v0, p1}, Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;->a(I)Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableFrameInfo;
+    invoke-interface {v0, p1}, Lcom/facebook/imagepipeline/animated/base/a;->a(I)Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableFrameInfo;
 
     move-result-object v0
 
     .line 21
     iget-object v2, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->b:Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor$b;
 
-    invoke-interface {v2, p1}, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor$b;->a(I)Lcom/facebook/common/references/CloseableReference;
+    invoke-interface {v2, p1}, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor$b;->a(I)Lcom/facebook/common/references/a;
 
     move-result-object v2
 
@@ -129,7 +129,7 @@
 
     .line 22
     :try_start_0
-    invoke-virtual {v2}, Lcom/facebook/common/references/CloseableReference;->b()Ljava/lang/Object;
+    invoke-virtual {v2}, Lcom/facebook/common/references/a;->b()Ljava/lang/Object;
 
     move-result-object v3
 
@@ -157,14 +157,14 @@
     add-int/2addr p1, v1
 
     .line 25
-    invoke-virtual {v2}, Lcom/facebook/common/references/CloseableReference;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/references/a;->close()V
 
     return p1
 
     :catchall_0
     move-exception p1
 
-    invoke-virtual {v2}, Lcom/facebook/common/references/CloseableReference;->close()V
+    invoke-virtual {v2}, Lcom/facebook/common/references/a;->close()V
 
     throw p1
 
@@ -194,9 +194,9 @@
     .locals 2
 
     .line 28
-    iget-object v0, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/a;
 
-    invoke-interface {v0, p1}, Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;->a(I)Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableFrameInfo;
+    invoke-interface {v0, p1}, Lcom/facebook/imagepipeline/animated/base/a;->a(I)Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableFrameInfo;
 
     move-result-object p1
 
@@ -302,10 +302,10 @@
 
     iget v0, p1, Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableFrameInfo;->c:I
 
-    iget-object v1, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+    iget-object v1, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/a;
 
     .line 40
-    invoke-interface {v1}, Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;->d()I
+    invoke-interface {v1}, Lcom/facebook/imagepipeline/animated/base/a;->d()I
 
     move-result v1
 
@@ -313,10 +313,10 @@
 
     iget p1, p1, Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableFrameInfo;->d:I
 
-    iget-object v0, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/a;
 
     .line 41
-    invoke-interface {v0}, Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;->c()I
+    invoke-interface {v0}, Lcom/facebook/imagepipeline/animated/base/a;->c()I
 
     move-result v0
 
@@ -344,18 +344,18 @@
 
     .line 1
     :cond_0
-    iget-object v1, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+    iget-object v1, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/a;
 
-    invoke-interface {v1, p1}, Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;->a(I)Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableFrameInfo;
+    invoke-interface {v1, p1}, Lcom/facebook/imagepipeline/animated/base/a;->a(I)Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableFrameInfo;
 
     move-result-object v1
 
     .line 2
-    iget-object v2, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+    iget-object v2, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/a;
 
     sub-int/2addr p1, v0
 
-    invoke-interface {v2, p1}, Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;->a(I)Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableFrameInfo;
+    invoke-interface {v2, p1}, Lcom/facebook/imagepipeline/animated/base/a;->a(I)Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableFrameInfo;
 
     move-result-object p1
 
@@ -438,9 +438,9 @@
     if-ge v1, p1, :cond_4
 
     .line 5
-    iget-object v2, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+    iget-object v2, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/a;
 
-    invoke-interface {v2, v1}, Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;->a(I)Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableFrameInfo;
+    invoke-interface {v2, v1}, Lcom/facebook/imagepipeline/animated/base/a;->a(I)Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableFrameInfo;
 
     move-result-object v2
 
@@ -467,9 +467,9 @@
 
     .line 10
     :cond_2
-    iget-object v4, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+    iget-object v4, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/a;
 
-    invoke-interface {v4, v1, v0}, Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;->a(ILandroid/graphics/Canvas;)V
+    invoke-interface {v4, v1, v0}, Lcom/facebook/imagepipeline/animated/base/a;->a(ILandroid/graphics/Canvas;)V
 
     .line 11
     iget-object v4, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->b:Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor$b;
@@ -492,9 +492,9 @@
 
     .line 14
     :cond_4
-    iget-object p2, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+    iget-object p2, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/a;
 
-    invoke-interface {p2, p1}, Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;->a(I)Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableFrameInfo;
+    invoke-interface {p2, p1}, Lcom/facebook/imagepipeline/animated/base/a;->a(I)Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableFrameInfo;
 
     move-result-object p2
 
@@ -510,9 +510,9 @@
 
     .line 17
     :cond_5
-    iget-object p2, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+    iget-object p2, p0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;->a:Lcom/facebook/imagepipeline/animated/base/a;
 
-    invoke-interface {p2, p1, v0}, Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;->a(ILandroid/graphics/Canvas;)V
+    invoke-interface {p2, p1, v0}, Lcom/facebook/imagepipeline/animated/base/a;->a(ILandroid/graphics/Canvas;)V
 
     return-void
 .end method

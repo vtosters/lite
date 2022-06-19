@@ -3,7 +3,7 @@
 .source "RightMenuPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/navigation/right/RightMenuPresenter$openMenu$$inlined$let$lambda$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -68,7 +68,7 @@
 
     iget v1, p0, Lcom/vk/navigation/right/RightMenuPresenter$openMenu$$inlined$let$lambda$1;->$id$inlined:I
 
-    invoke-static {v0, v1}, Lcom/vk/menu/MenuUtils;->a(Lcom/vk/navigation/NavigationDelegate;I)V
+    invoke-static {v0, v1}, Lcom/vk/menu/c;->a(Lcom/vk/navigation/NavigationDelegate;I)V
 
     return-void
 .end method

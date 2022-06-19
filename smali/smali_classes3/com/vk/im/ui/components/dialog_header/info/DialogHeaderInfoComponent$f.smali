@@ -3,7 +3,7 @@
 .source "DialogHeaderInfoComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/im/engine/models/dialogs/DialogMembersListExt;",
+        "Lc/a/z/g<",
+        "Lcom/vk/im/engine/models/dialogs/e;",
         ">;"
     }
 .end annotation
@@ -46,19 +46,19 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/dialogs/DialogMembersListExt;)V
+.method public final a(Lcom/vk/im/engine/models/dialogs/e;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent$f;->a:Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;->x()Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponentCallback;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;->x()Lcom/vk/im/ui/components/dialog_header/info/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponentCallback;->a(Lcom/vk/im/engine/models/dialogs/DialogMembersListExt;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_header/info/b;->a(Lcom/vk/im/engine/models/dialogs/e;)V
 
     :cond_0
     return-void
@@ -68,9 +68,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/dialogs/DialogMembersListExt;
+    check-cast p1, Lcom/vk/im/engine/models/dialogs/e;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent$f;->a(Lcom/vk/im/engine/models/dialogs/DialogMembersListExt;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent$f;->a(Lcom/vk/im/engine/models/dialogs/e;)V
 
     return-void
 .end method

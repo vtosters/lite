@@ -3,8 +3,8 @@
 .source "ObservablePublish.java"
 
 # interfaces
-.implements Lio/reactivex/Observer;
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lc/a/r;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations
@@ -23,9 +23,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/Observer<",
+        "Lc/a/r<",
         "TT;>;",
-        "Lio/reactivex/disposables/Disposable;"
+        "Lio/reactivex/disposables/b;"
     }
 .end annotation
 
@@ -64,7 +64,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lio/reactivex/disposables/Disposable;",
+            "Lio/reactivex/disposables/b;",
             ">;"
         }
     .end annotation
@@ -135,13 +135,13 @@
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservablePublish$a;->d:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -183,9 +183,9 @@
     aget-object v3, v0, v2
 
     .line 6
-    iget-object v3, v3, Lio/reactivex/internal/operators/observable/ObservablePublish$InnerDisposable;->child:Lio/reactivex/Observer;
+    iget-object v3, v3, Lio/reactivex/internal/operators/observable/ObservablePublish$InnerDisposable;->child:Lc/a/r;
 
-    invoke-interface {v3, p1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v3, p1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -193,7 +193,7 @@
 
     .line 7
     :cond_0
-    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     :cond_1
     return-void
@@ -288,9 +288,9 @@
     aget-object v3, v0, v2
 
     .line 5
-    iget-object v3, v3, Lio/reactivex/internal/operators/observable/ObservablePublish$InnerDisposable;->child:Lio/reactivex/Observer;
+    iget-object v3, v3, Lio/reactivex/internal/operators/observable/ObservablePublish$InnerDisposable;->child:Lc/a/r;
 
-    invoke-interface {v3}, Lio/reactivex/Observer;->b()V
+    invoke-interface {v3}, Lc/a/r;->b()V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -431,9 +431,9 @@
     aget-object v3, v0, v2
 
     .line 2
-    iget-object v3, v3, Lio/reactivex/internal/operators/observable/ObservablePublish$InnerDisposable;->child:Lio/reactivex/Observer;
+    iget-object v3, v3, Lio/reactivex/internal/operators/observable/ObservablePublish$InnerDisposable;->child:Lc/a/r;
 
-    invoke-interface {v3, p1}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
+    invoke-interface {v3, p1}, Lc/a/r;->b(Ljava/lang/Object;)V
 
     add-int/lit8 v2, v2, 0x1
 

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p1, p2, v1}, Lcom/vk/cameraui/entities/StoryMediaData;-><init>(Ljava/io/File;Lcom/vk/stories/util/CameraVideoEncoder$Parameters;Lcom/vk/dto/stories/model/StoryUploadParams;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1, p1, p2, v1}, Lcom/vk/cameraui/entities/StoryMediaData;-><init>(Ljava/io/File;Lcom/vk/stories/util/CameraVideoEncoder$Parameters;Lcom/vk/dto/stories/model/StoryUploadParams;Lkotlin/jvm/internal/i;)V
 
     return-object v0
 .end method
@@ -56,7 +56,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1, p2, v1}, Lcom/vk/cameraui/entities/StoryMediaData;-><init>(Ljava/io/File;Lcom/vk/stories/util/CameraVideoEncoder$Parameters;Lcom/vk/dto/stories/model/StoryUploadParams;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, p1, v1, p2, v1}, Lcom/vk/cameraui/entities/StoryMediaData;-><init>(Ljava/io/File;Lcom/vk/stories/util/CameraVideoEncoder$Parameters;Lcom/vk/dto/stories/model/StoryUploadParams;Lkotlin/jvm/internal/i;)V
 
     return-object v0
 .end method

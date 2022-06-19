@@ -20,10 +20,10 @@
 
 
 # instance fields
-.field protected final downstream:Lio/reactivex/Observer;
+.field protected final downstream:Lc/a/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;"
         }
     .end annotation
@@ -39,12 +39,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lio/reactivex/Observer;)V
+.method public constructor <init>(Lc/a/r;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;)V"
         }
     .end annotation
@@ -53,7 +53,7 @@
     invoke-direct {p0}, Lio/reactivex/internal/observers/BasicIntQueueDisposable;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/observers/DeferredScalarDisposable;->downstream:Lio/reactivex/Observer;
+    iput-object p1, p0, Lio/reactivex/internal/observers/DeferredScalarDisposable;->downstream:Lc/a/r;
 
     return-void
 .end method
@@ -95,7 +95,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -106,9 +106,9 @@
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
 
     .line 4
-    iget-object v0, p0, Lio/reactivex/internal/observers/DeferredScalarDisposable;->downstream:Lio/reactivex/Observer;
+    iget-object v0, p0, Lio/reactivex/internal/observers/DeferredScalarDisposable;->downstream:Lc/a/r;
 
-    invoke-interface {v0, p1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -134,7 +134,7 @@
 
     .line 2
     :cond_0
-    iget-object v1, p0, Lio/reactivex/internal/observers/DeferredScalarDisposable;->downstream:Lio/reactivex/Observer;
+    iget-object v1, p0, Lio/reactivex/internal/observers/DeferredScalarDisposable;->downstream:Lc/a/r;
 
     const/16 v2, 0x8
 
@@ -151,7 +151,7 @@
     const/4 p1, 0x0
 
     .line 5
-    invoke-interface {v1, p1}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
+    invoke-interface {v1, p1}, Lc/a/r;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -162,7 +162,7 @@
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
 
     .line 7
-    invoke-interface {v1, p1}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
+    invoke-interface {v1, p1}, Lc/a/r;->b(Ljava/lang/Object;)V
 
     .line 8
     :goto_0
@@ -175,7 +175,7 @@
     if-eq p1, v0, :cond_2
 
     .line 9
-    invoke-interface {v1}, Lio/reactivex/Observer;->b()V
+    invoke-interface {v1}, Lc/a/r;->b()V
 
     :cond_2
     return-void
@@ -218,9 +218,9 @@
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/observers/DeferredScalarDisposable;->downstream:Lio/reactivex/Observer;
+    iget-object v0, p0, Lio/reactivex/internal/observers/DeferredScalarDisposable;->downstream:Lc/a/r;
 
-    invoke-interface {v0}, Lio/reactivex/Observer;->b()V
+    invoke-interface {v0}, Lc/a/r;->b()V
 
     return-void
 .end method

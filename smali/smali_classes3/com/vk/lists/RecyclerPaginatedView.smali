@@ -3,7 +3,7 @@
 .source "RecyclerPaginatedView.java"
 
 # interfaces
-.implements Lcom/vk/lists/PaginationHelper$q;
+.implements Lcom/vk/lists/t$q;
 
 
 # annotations
@@ -20,7 +20,7 @@
 
 .field protected J:Landroidx/recyclerview/widget/RecyclerView;
 
-.field protected K:Lcom/vk/lists/PaginatedRecyclerAdapter;
+.field protected K:Lcom/vk/lists/s;
 
 .field private L:Lcom/vk/lists/AbstractPaginatedView$d;
 
@@ -30,21 +30,21 @@
 
 .field private O:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
-.field protected P:Lkotlin/jvm/b/Functions;
+.field protected P:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private Q:Lkotlin/jvm/b/Functions;
+.field private Q:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -52,7 +52,7 @@
 
 .field protected R:Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
 
-.field private final S:Lcom/vk/lists/PaginationHelper$l;
+.field private final S:Lcom/vk/lists/t$l;
 
 .field private final T:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
@@ -80,17 +80,17 @@
     iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->O:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     .line 5
-    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->P:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->P:Lkotlin/jvm/b/a;
 
     .line 6
-    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->Q:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->Q:Lkotlin/jvm/b/a;
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/lists/RecyclerPaginatedView;->i()Lcom/vk/lists/PaginationHelper$l;
+    invoke-virtual {p0}, Lcom/vk/lists/RecyclerPaginatedView;->i()Lcom/vk/lists/t$l;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->S:Lcom/vk/lists/PaginationHelper$l;
+    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->S:Lcom/vk/lists/t$l;
 
     .line 8
     new-instance p1, Lcom/vk/lists/RecyclerPaginatedView$j;
@@ -129,17 +129,17 @@
     iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->O:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     .line 14
-    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->P:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->P:Lkotlin/jvm/b/a;
 
     .line 15
-    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->Q:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->Q:Lkotlin/jvm/b/a;
 
     .line 16
-    invoke-virtual {p0}, Lcom/vk/lists/RecyclerPaginatedView;->i()Lcom/vk/lists/PaginationHelper$l;
+    invoke-virtual {p0}, Lcom/vk/lists/RecyclerPaginatedView;->i()Lcom/vk/lists/t$l;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->S:Lcom/vk/lists/PaginationHelper$l;
+    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->S:Lcom/vk/lists/t$l;
 
     .line 17
     new-instance p1, Lcom/vk/lists/RecyclerPaginatedView$j;
@@ -178,17 +178,17 @@
     iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->O:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
     .line 23
-    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->P:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->P:Lkotlin/jvm/b/a;
 
     .line 24
-    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->Q:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->Q:Lkotlin/jvm/b/a;
 
     .line 25
-    invoke-virtual {p0}, Lcom/vk/lists/RecyclerPaginatedView;->i()Lcom/vk/lists/PaginationHelper$l;
+    invoke-virtual {p0}, Lcom/vk/lists/RecyclerPaginatedView;->i()Lcom/vk/lists/t$l;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->S:Lcom/vk/lists/PaginationHelper$l;
+    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->S:Lcom/vk/lists/t$l;
 
     .line 26
     new-instance p1, Lcom/vk/lists/RecyclerPaginatedView$j;
@@ -258,11 +258,11 @@
     return-object p0
 .end method
 
-.method static synthetic d(Lcom/vk/lists/RecyclerPaginatedView;)Lkotlin/jvm/b/Functions;
+.method static synthetic d(Lcom/vk/lists/RecyclerPaginatedView;)Lkotlin/jvm/b/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/lists/RecyclerPaginatedView;->Q:Lkotlin/jvm/b/Functions;
+    iget-object p0, p0, Lcom/vk/lists/RecyclerPaginatedView;->Q:Lkotlin/jvm/b/a;
 
     return-object p0
 .end method
@@ -332,30 +332,30 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/lists/PagingOnScrollListener;)V
+.method public a(Lcom/vk/lists/w;)V
     .locals 2
 
     .line 2
     iget-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView;->J:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v1, Lcom/vk/lists/PagingOnScrollListenerWrapper;
+    new-instance v1, Lcom/vk/lists/x;
 
-    invoke-direct {v1, p1}, Lcom/vk/lists/PagingOnScrollListenerWrapper;-><init>(Lcom/vk/lists/PagingOnScrollListener;)V
+    invoke-direct {v1, p1}, Lcom/vk/lists/x;-><init>(Lcom/vk/lists/w;)V
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->removeOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
     return-void
 .end method
 
-.method public b(Lcom/vk/lists/PagingOnScrollListener;)V
+.method public b(Lcom/vk/lists/w;)V
     .locals 2
 
     .line 2
     iget-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView;->J:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v1, Lcom/vk/lists/PagingOnScrollListenerWrapper;
+    new-instance v1, Lcom/vk/lists/x;
 
-    invoke-direct {v1, p1}, Lcom/vk/lists/PagingOnScrollListenerWrapper;-><init>(Lcom/vk/lists/PagingOnScrollListener;)V
+    invoke-direct {v1, p1}, Lcom/vk/lists/x;-><init>(Lcom/vk/lists/w;)V
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
@@ -372,7 +372,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/lists/RecyclerPaginatedView$i;-><init>(Lcom/vk/lists/RecyclerPaginatedView;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/RecyclerViewExt;->c(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/Functions;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/i;->c(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -385,7 +385,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/lists/R2;->view_recycler_paginated_view:I
+    sget v1, Lcom/vk/lists/d0;->view_recycler_paginated_view:I
 
     const/4 v2, 0x0
 
@@ -394,7 +394,7 @@
     move-result-object v0
 
     .line 3
-    sget v1, Lcom/vk/lists/R5;->swipe_refresh_layout:I
+    sget v1, Lcom/vk/lists/c0;->swipe_refresh_layout:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -403,7 +403,7 @@
     check-cast v1, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
     .line 4
-    sget v3, Lcom/vk/lists/R5;->recycler:I
+    sget v3, Lcom/vk/lists/c0;->recycler:I
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -414,14 +414,14 @@
     iput-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView;->J:Landroidx/recyclerview/widget/RecyclerView;
 
     .line 5
-    sget-object v0, Lcom/vk/lists/R4;->RecyclerPaginatedView:[I
+    sget-object v0, Lcom/vk/lists/f0;->RecyclerPaginatedView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 6
-    sget p2, Lcom/vk/lists/R4;->RecyclerPaginatedView_enableItemAnimations:I
+    sget p2, Lcom/vk/lists/f0;->RecyclerPaginatedView_enableItemAnimations:I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -469,7 +469,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/lists/RecyclerPaginatedView$h;-><init>(Lcom/vk/lists/RecyclerPaginatedView;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/RecyclerViewExt;->c(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/Functions;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/i;->c(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -484,7 +484,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/lists/RecyclerPaginatedView$g;-><init>(Lcom/vk/lists/RecyclerPaginatedView;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/RecyclerViewExt;->c(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/Functions;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/i;->c(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -499,16 +499,16 @@
 
     invoke-direct {v1, p0}, Lcom/vk/lists/RecyclerPaginatedView$f;-><init>(Lcom/vk/lists/RecyclerPaginatedView;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/RecyclerViewExt;->c(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/Functions;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/i;->c(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method protected getDataInfoProvider()Lcom/vk/lists/PaginationHelper$l;
+.method protected getDataInfoProvider()Lcom/vk/lists/t$l;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView;->S:Lcom/vk/lists/PaginationHelper$l;
+    iget-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView;->S:Lcom/vk/lists/t$l;
 
     return-object v0
 .end method
@@ -533,7 +533,7 @@
     return-object v0
 .end method
 
-.method protected i()Lcom/vk/lists/PaginationHelper$l;
+.method protected i()Lcom/vk/lists/t$l;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -602,13 +602,13 @@
             "V:",
             "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
             "TT;>;:",
-            "Lcom/vk/lists/Clearable;",
+            "Lcom/vk/lists/c;",
             ">(TV;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/PaginatedRecyclerAdapter;
+    iget-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/s;
 
     if-eqz v0, :cond_0
 
@@ -619,33 +619,33 @@
 
     .line 3
     :cond_0
-    new-instance v0, Lcom/vk/lists/PaginatedRecyclerAdapter;
+    new-instance v0, Lcom/vk/lists/s;
 
-    iget-object v4, p0, Lcom/vk/lists/AbstractPaginatedView;->g:Lcom/vk/lists/FooterErrorViewProvider;
+    iget-object v4, p0, Lcom/vk/lists/AbstractPaginatedView;->g:Lcom/vk/lists/k;
 
-    iget-object v5, p0, Lcom/vk/lists/AbstractPaginatedView;->h:Lcom/vk/lists/FooterLoadingViewProvider;
+    iget-object v5, p0, Lcom/vk/lists/AbstractPaginatedView;->h:Lcom/vk/lists/l;
 
-    iget-object v6, p0, Lcom/vk/lists/AbstractPaginatedView;->B:Lcom/vk/lists/FooterEmptyViewProvider;
+    iget-object v6, p0, Lcom/vk/lists/AbstractPaginatedView;->B:Lcom/vk/lists/j;
 
-    iget-object v7, p0, Lcom/vk/lists/AbstractPaginatedView;->H:Lcom/vk/lists/OnRetryClickListener;
+    iget-object v7, p0, Lcom/vk/lists/AbstractPaginatedView;->H:Lcom/vk/lists/r;
 
     move-object v2, v0
 
     move-object v3, p1
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/lists/PaginatedRecyclerAdapter;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Lcom/vk/lists/FooterErrorViewProvider;Lcom/vk/lists/FooterLoadingViewProvider;Lcom/vk/lists/FooterEmptyViewProvider;Lcom/vk/lists/OnRetryClickListener;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/lists/s;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Lcom/vk/lists/k;Lcom/vk/lists/l;Lcom/vk/lists/j;Lcom/vk/lists/r;)V
 
-    iput-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/PaginatedRecyclerAdapter;
+    iput-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/s;
 
     .line 4
     iget-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->J:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/PaginatedRecyclerAdapter;
+    iget-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/s;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 5
-    iget-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/PaginatedRecyclerAdapter;
+    iget-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/s;
 
     if-eqz p1, :cond_1
 
@@ -699,19 +699,19 @@
     return-void
 .end method
 
-.method public setDataObserver(Lkotlin/jvm/b/Functions;)V
+.method public setDataObserver(Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->Q:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->Q:Lkotlin/jvm/b/a;
 
     return-void
 .end method
@@ -946,19 +946,19 @@
     return-void
 .end method
 
-.method public setOnRefreshListener(Lkotlin/jvm/b/Functions;)V
+.method public setOnRefreshListener(Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->P:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->P:Lkotlin/jvm/b/a;
 
     return-void
 .end method

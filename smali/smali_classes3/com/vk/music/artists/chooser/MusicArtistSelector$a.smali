@@ -3,12 +3,12 @@
 .source "MusicArtistSelector.kt"
 
 # interfaces
-.implements Lcom/vk/music/view/v/ItemViewHolder$a;
+.implements Lcom/vk/music/view/v/d$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/artists/chooser/MusicArtistSelector;->n0(I)Lcom/vk/music/view/v/ItemAdapter;
+    value = Lcom/vk/music/artists/chooser/MusicArtistSelector;->n0(I)Lcom/vk/music/view/v/c;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/music/view/v/ItemViewHolder$a<",
+        "Lcom/vk/music/view/v/d$a<",
         "Lcom/vk/dto/music/Artist;",
         ">;"
     }
@@ -49,11 +49,11 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;)Lcom/vk/music/view/v/ViewRefs;
+.method public a(Landroid/view/View;)Lcom/vk/music/view/v/g;
     .locals 5
 
     .line 2
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
@@ -68,7 +68,7 @@
 
     .line 3
     :goto_0
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v1
 
@@ -109,34 +109,34 @@
 
     const-string v4, "itemView.context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v3, v0, v1}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/vk/core/extensions/TextViewExt;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v2, v0}, Lcom/vk/core/extensions/a0;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     .line 5
     :cond_3
-    new-instance v0, Lcom/vk/music/view/v/ViewRefs;
+    new-instance v0, Lcom/vk/music/view/v/g;
 
-    invoke-direct {v0}, Lcom/vk/music/view/v/ViewRefs;-><init>()V
+    invoke-direct {v0}, Lcom/vk/music/view/v/g;-><init>()V
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/view/v/ViewRefs;->a(Landroid/view/View;)Lcom/vk/music/view/v/ViewRefs;
+    invoke-virtual {v0, p1}, Lcom/vk/music/view/v/g;->a(Landroid/view/View;)Lcom/vk/music/view/v/g;
 
     const-string p1, "ViewRefs().put(itemView)"
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public a(Lcom/vk/music/view/v/ViewRefs;Lcom/vk/dto/music/Artist;I)V
+.method public a(Lcom/vk/music/view/v/g;Lcom/vk/dto/music/Artist;I)V
     .locals 5
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/music/view/v/ViewRefs;->a()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/vk/music/view/v/g;->a()Landroid/view/View;
 
     move-result-object p1
 
@@ -145,7 +145,7 @@
     const-string v0, "label"
 
     .line 7
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Lcom/vk/dto/music/Artist;->A1()Z
 
@@ -306,13 +306,13 @@
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/music/view/v/ViewRefs;Ljava/lang/Object;I)V
+.method public bridge synthetic a(Lcom/vk/music/view/v/g;Ljava/lang/Object;I)V
     .locals 0
 
     .line 1
     check-cast p2, Lcom/vk/dto/music/Artist;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/music/artists/chooser/MusicArtistSelector$a;->a(Lcom/vk/music/view/v/ViewRefs;Lcom/vk/dto/music/Artist;I)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/music/artists/chooser/MusicArtistSelector$a;->a(Lcom/vk/music/view/v/g;Lcom/vk/dto/music/Artist;I)V
 
     return-void
 .end method

@@ -28,7 +28,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/broadcast/BecomingNoisyReceiver$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/broadcast/BecomingNoisyReceiver$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/music/broadcast/BecomingNoisyReceiver;->b:Lcom/vk/music/broadcast/BecomingNoisyReceiver$b;
 
@@ -70,7 +70,7 @@
 
     const-string p2, "android.media.AUDIO_BECOMING_NOISY"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

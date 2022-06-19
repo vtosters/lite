@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Landroid/os/Parcelable;
-.implements Lcom/vk/dto/common/data/ServerKeys;
+.implements Lcom/vk/dto/common/data/h;
 
 
 # static fields
@@ -328,11 +328,11 @@
 
     iget-object p3, p3, Lcom/vk/dto/common/data/ApiApplication;->c:Lcom/vk/dto/photo/Photo;
 
-    sget-object v3, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
+    sget-object v3, Lb/h/h/a;->b:Lb/h/h/a$a;
 
     const/high16 v4, 0x42400000    # 48.0f
 
-    invoke-interface {v3, v4}, Lb/h/h/ModelConfig$a;->a(F)I
+    invoke-interface {v3, v4}, Lb/h/h/a$a;->a(F)I
 
     move-result v3
 

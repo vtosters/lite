@@ -3,12 +3,12 @@
 .source "StickersCatalogConfiguration.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/BiFunction;
+.implements Lc/a/z/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/fragment/StickersCatalogConfiguration;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
+    value = Lcom/vk/music/fragment/StickersCatalogConfiguration;->a(Lc/a/m;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/BiFunction<",
+        "Lc/a/z/c<",
         "Ljava/util/Collection<",
         "+",
         "Ljava/lang/Integer;",

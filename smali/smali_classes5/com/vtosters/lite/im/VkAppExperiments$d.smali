@@ -40,7 +40,7 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/im/VkAppExperiments$d;->a:Lcom/vtosters/lite/im/VkAppExperiments;
 
-    invoke-static {v0}, Lcom/vtosters/lite/im/VkAppExperiments;->d(Lcom/vtosters/lite/im/VkAppExperiments;)Lcom/vk/core/util/GooglePlayUtils;
+    invoke-static {v0}, Lcom/vtosters/lite/im/VkAppExperiments;->d(Lcom/vtosters/lite/im/VkAppExperiments;)Lcom/vk/core/util/h0;
 
     move-result-object v0
 
@@ -50,7 +50,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/util/GooglePlayUtils;->a(Landroid/content/Context;)Z
+    invoke-virtual {v0, v1}, Lcom/vk/core/util/h0;->a(Landroid/content/Context;)Z
 
     move-result v0
 

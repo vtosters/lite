@@ -50,7 +50,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/dto/music/Thumb;-><init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/dto/music/Thumb;-><init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
 
     return-object v0
 .end method

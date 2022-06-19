@@ -3,7 +3,7 @@
 .source "MusicCatalogSelector.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/music/stories/MusicCatalogSelector$configureSearchView$$inlined$apply$lambda$2;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -64,7 +64,7 @@
     .locals 4
 
     .line 2
-    invoke-static {}, Lcom/vk/core/utils/VoiceUtils;->b()Z
+    invoke-static {}, Lcom/vk/core/utils/i;->b()Z
 
     move-result v0
 
@@ -79,7 +79,7 @@
     const/4 v3, 0x0
 
     .line 3
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -96,29 +96,29 @@
     .line 5
     iget-object v2, p0, Lcom/vk/music/stories/MusicCatalogSelector$configureSearchView$$inlined$apply$lambda$2;->this$0:Lcom/vk/music/stories/MusicCatalogSelector;
 
-    invoke-static {v2}, Lcom/vk/music/stories/MusicCatalogSelector;->e(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;
+    invoke-static {v2}, Lcom/vk/music/stories/MusicCatalogSelector;->e(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/core/dialogs/bottomsheet/k/a;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    invoke-interface {v2}, Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;->U3()Lcom/vk/core/dialogs/bottomsheet/k/b/ModalBottomSheetController;
+    invoke-interface {v2}, Lcom/vk/core/dialogs/bottomsheet/k/a;->U3()Lcom/vk/core/dialogs/bottomsheet/k/b/b;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    invoke-interface {v2, v1}, Lcom/vk/core/dialogs/bottomsheet/k/b/ModalBottomSheetController;->a(Z)V
+    invoke-interface {v2, v1}, Lcom/vk/core/dialogs/bottomsheet/k/b/b;->a(Z)V
 
     .line 6
     :cond_1
     iget-object v1, p0, Lcom/vk/music/stories/MusicCatalogSelector$configureSearchView$$inlined$apply$lambda$2;->$listener$inlined:Lcom/vk/music/stories/MusicCatalogSelector$d;
 
-    invoke-virtual {v1}, Lcom/vk/core/widget/LifecycleListener;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/core/widget/a;->b()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/utils/VoiceUtils;->a(Lcom/vk/core/widget/LifecycleHandler;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/core/utils/i;->a(Lcom/vk/core/widget/LifecycleHandler;Ljava/lang/String;)V
 
     :cond_2
     :goto_0

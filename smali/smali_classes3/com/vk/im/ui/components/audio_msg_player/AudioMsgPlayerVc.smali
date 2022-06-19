@@ -71,7 +71,7 @@
     if-nez p3, :cond_1
 
     .line 3
-    sget p3, Lcom/vk/im/ui/R13;->vkim_audio_msg_player:I
+    sget p3, Lcom/vk/im/ui/j;->vkim_audio_msg_player:I
 
     invoke-virtual {p1, p3, p2, p4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -82,7 +82,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p5
 
@@ -91,7 +91,7 @@
     invoke-virtual {p3, p1}, Landroid/view/ViewStub;->setLayoutInflater(Landroid/view/LayoutInflater;)V
 
     .line 5
-    sget p1, Lcom/vk/im/ui/R13;->vkim_audio_msg_player:I
+    sget p1, Lcom/vk/im/ui/j;->vkim_audio_msg_player:I
 
     invoke-virtual {p3, p1}, Landroid/view/ViewStub;->setLayoutResource(I)V
 
@@ -113,7 +113,7 @@
     .line 8
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->b:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->play_pause:I
+    sget p2, Lcom/vk/im/ui/h;->play_pause:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
     .line 9
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->b:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->title:I
+    sget p2, Lcom/vk/im/ui/h;->title:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -139,7 +139,7 @@
     .line 10
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->b:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->play_progress:I
+    sget p2, Lcom/vk/im/ui/h;->play_progress:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -152,7 +152,7 @@
     .line 11
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->b:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->duration:I
+    sget p2, Lcom/vk/im/ui/h;->duration:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -165,7 +165,7 @@
     .line 12
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->b:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->speed_container:I
+    sget p2, Lcom/vk/im/ui/h;->speed_container:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -178,7 +178,7 @@
     .line 13
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->b:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->speed_value:I
+    sget p2, Lcom/vk/im/ui/h;->speed_value:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -191,7 +191,7 @@
     .line 14
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->b:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->close:I
+    sget p2, Lcom/vk/im/ui/h;->close:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -222,20 +222,20 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc$1;-><init>(Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 18
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->i:Landroid/widget/ImageView;
 
     const-string p2, "closeView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc$2;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc$2;-><init>(Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 19
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->c:Landroid/widget/ImageView;
@@ -281,9 +281,9 @@
 
     const-string p3, "playPauseView"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget p3, Lcom/vk/im/ui/R5;->accent:I
+    sget p3, Lcom/vk/im/ui/c;->accent:I
 
     invoke-virtual {p1, p2, p3}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/widget/ImageView;I)V
 
@@ -294,20 +294,20 @@
 
     const-string p3, "progressView"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget p4, Lcom/vk/im/ui/R5;->accent:I
+    sget p4, Lcom/vk/im/ui/c;->accent:I
 
     invoke-virtual {p1, p2, p4}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/widget/ProgressBar;I)V
 
     .line 28
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->e:Landroid/widget/ProgressBar;
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->a:Landroid/content/Context;
 
-    sget p4, Lcom/vk/im/ui/R12;->vkim_audio_msg_player_progress:I
+    sget p4, Lcom/vk/im/ui/f;->vkim_audio_msg_player_progress:I
 
     invoke-virtual {p2, p4}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -318,7 +318,7 @@
     .line 29
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->e:Landroid/widget/ProgressBar;
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/core/drawable/IndeterminateHorizontalProgressDrawable;
 
@@ -327,7 +327,7 @@
     .line 30
     iget-object p3, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->a:Landroid/content/Context;
 
-    sget p4, Lcom/vk/im/ui/R5;->accent:I
+    sget p4, Lcom/vk/im/ui/c;->accent:I
 
     invoke-static {p3, p4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -352,13 +352,13 @@
 
     .line 33
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p5
 
     .line 34
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p5
 .end method
@@ -386,7 +386,7 @@
     const/high16 v1, 0x3f800000    # 1.0f
 
     .line 3
-    invoke-static {p1, v0, v1}, Lcom/vk/core/util/MathUtils;->a(FFF)F
+    invoke-static {p1, v0, v1}, Lcom/vk/core/util/o0;->a(FFF)F
 
     move-result p1
 
@@ -395,7 +395,7 @@
 
     const-string v1, "progressView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -404,7 +404,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->e:Landroid/widget/ProgressBar;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v2, 0x3e8
 
@@ -413,7 +413,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->e:Landroid/widget/ProgressBar;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     int-to-float v1, v2
 
@@ -471,7 +471,7 @@
 
     const-string v1, "progressView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -539,7 +539,7 @@
 
     const-string v1, "speedContainerView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-nez p1, :cond_1
 
@@ -558,7 +558,7 @@
 
     const-string v1, "speedValueView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-nez p1, :cond_2
 
@@ -617,18 +617,18 @@
 
     const-string v1, "titleView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 9
     iget-object v0, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->d:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->a:Landroid/content/Context;
 
-    sget v2, Lcom/vk/im/ui/R4;->vkim_audio_msg_player_accessibility_author:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_audio_msg_player_accessibility_author:I
 
     const/4 v3, 0x1
 
@@ -657,7 +657,7 @@
     .line 12
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->f:Landroid/widget/TextView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v0, 0x8
 
@@ -669,7 +669,7 @@
     :cond_0
     iget-object v1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->f:Landroid/widget/TextView;
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -678,7 +678,7 @@
     .line 14
     iget-object v1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->f:Landroid/widget/TextView;
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->j:Lcom/vk/core/util/DurationFormatter;
 
@@ -695,12 +695,12 @@
     .line 15
     iget-object v1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->f:Landroid/widget/TextView;
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->a:Landroid/content/Context;
 
     .line 16
-    sget v3, Lcom/vk/im/ui/R4;->vkim_audio_msg_player_accessibility_duration:I
+    sget v3, Lcom/vk/im/ui/m;->vkim_audio_msg_player_accessibility_duration:I
 
     const/4 v4, 0x1
 
@@ -734,7 +734,7 @@
     .locals 0
 
     .line 23
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -752,18 +752,18 @@
     .line 4
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->c:Landroid/widget/ImageView;
 
-    sget v1, Lcom/vk/im/ui/R12;->ic_pause_24:I
+    sget v1, Lcom/vk/im/ui/f;->ic_pause_24:I
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->c:Landroid/widget/ImageView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->a:Landroid/content/Context;
 
-    sget v1, Lcom/vk/im/ui/R4;->vkim_audio_msg_player_accessibility_pause:I
+    sget v1, Lcom/vk/im/ui/m;->vkim_audio_msg_player_accessibility_pause:I
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -777,18 +777,18 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->c:Landroid/widget/ImageView;
 
-    sget v1, Lcom/vk/im/ui/R12;->ic_play_24:I
+    sget v1, Lcom/vk/im/ui/f;->ic_play_24:I
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->c:Landroid/widget/ImageView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerVc;->a:Landroid/content/Context;
 
-    sget v1, Lcom/vk/im/ui/R4;->vkim_audio_msg_player_accessibility_play:I
+    sget v1, Lcom/vk/im/ui/m;->vkim_audio_msg_player_accessibility_play:I
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vk/mediastore/a/e/DownloadManager1;
+.field private final synthetic a:Lcom/vk/mediastore/a/e/f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vk/mediastore/a/e/DownloadManager1;)V
+.method public synthetic constructor <init>(Lcom/vk/mediastore/a/e/f;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/mediastore/a/e/a;->a:Lcom/vk/mediastore/a/e/DownloadManager1;
+    iput-object p1, p0, Lcom/vk/mediastore/a/e/a;->a:Lcom/vk/mediastore/a/e/f;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final handleMessage(Landroid/os/Message;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/mediastore/a/e/a;->a:Lcom/vk/mediastore/a/e/DownloadManager1;
+    iget-object v0, p0, Lcom/vk/mediastore/a/e/a;->a:Lcom/vk/mediastore/a/e/f;
 
-    invoke-static {v0, p1}, Lcom/vk/mediastore/a/e/DownloadManager1;->a(Lcom/vk/mediastore/a/e/DownloadManager1;Landroid/os/Message;)Z
+    invoke-static {v0, p1}, Lcom/vk/mediastore/a/e/f;->a(Lcom/vk/mediastore/a/e/f;Landroid/os/Message;)Z
 
     move-result p1
 

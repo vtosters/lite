@@ -3,7 +3,7 @@
 .source "MsgFailAudioTranscriptWithDelayJob.kt"
 
 # interfaces
-.implements Lcom/vk/instantjobs/InstantJobSerializer;
+.implements Lcom/vk/instantjobs/c;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/instantjobs/InstantJobSerializer<",
+        "Lcom/vk/instantjobs/c<",
         "Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;",
         ">;"
     }
@@ -61,7 +61,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/instantjobs/PersistedArgs;)Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;
+.method public a(Lcom/vk/instantjobs/d;)Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;
     .locals 5
 
     .line 5
@@ -70,21 +70,21 @@
     .line 6
     iget-object v1, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$a;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, v1}, Lcom/vk/instantjobs/PersistedArgs;->c(Ljava/lang/String;)I
+    invoke-virtual {p1, v1}, Lcom/vk/instantjobs/d;->c(Ljava/lang/String;)I
 
     move-result v1
 
     .line 7
     iget-object v2, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$a;->b:Ljava/lang/String;
 
-    invoke-virtual {p1, v2}, Lcom/vk/instantjobs/PersistedArgs;->c(Ljava/lang/String;)I
+    invoke-virtual {p1, v2}, Lcom/vk/instantjobs/d;->c(Ljava/lang/String;)I
 
     move-result v2
 
     .line 8
     iget-object v3, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$a;->c:Ljava/lang/String;
 
-    invoke-virtual {p1, v3}, Lcom/vk/instantjobs/PersistedArgs;->d(Ljava/lang/String;)J
+    invoke-virtual {p1, v3}, Lcom/vk/instantjobs/d;->d(Ljava/lang/String;)J
 
     move-result-wide v3
 
@@ -94,18 +94,18 @@
     return-object v0
 .end method
 
-.method public bridge synthetic a(Lcom/vk/instantjobs/PersistedArgs;)Lcom/vk/instantjobs/InstantJob;
+.method public bridge synthetic a(Lcom/vk/instantjobs/d;)Lcom/vk/instantjobs/InstantJob;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$a;->a(Lcom/vk/instantjobs/PersistedArgs;)Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$a;->a(Lcom/vk/instantjobs/d;)Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;Lcom/vk/instantjobs/PersistedArgs;)V
+.method public a(Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;Lcom/vk/instantjobs/d;)V
     .locals 3
 
     .line 3
@@ -115,7 +115,7 @@
 
     move-result v1
 
-    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/PersistedArgs;->a(Ljava/lang/String;I)V
+    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/d;->a(Ljava/lang/String;I)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$a;->c:Ljava/lang/String;
@@ -124,18 +124,18 @@
 
     move-result-wide v1
 
-    invoke-virtual {p2, v0, v1, v2}, Lcom/vk/instantjobs/PersistedArgs;->a(Ljava/lang/String;J)V
+    invoke-virtual {p2, v0, v1, v2}, Lcom/vk/instantjobs/d;->a(Ljava/lang/String;J)V
 
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/instantjobs/InstantJob;Lcom/vk/instantjobs/PersistedArgs;)V
+.method public bridge synthetic a(Lcom/vk/instantjobs/InstantJob;Lcom/vk/instantjobs/d;)V
     .locals 0
 
     .line 2
     check-cast p1, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$a;->a(Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;Lcom/vk/instantjobs/PersistedArgs;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$a;->a(Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;Lcom/vk/instantjobs/d;)V
 
     return-void
 .end method

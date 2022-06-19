@@ -33,9 +33,9 @@
     .locals 0
 
     .line 2
-    sget-object p1, Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;->INSTANCE:Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;
+    sget-object p1, Lcom/vk/core/network/interceptors/d;->f:Lcom/vk/core/network/interceptors/d;
 
-    invoke-virtual {p1}, Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;->c()V
+    invoke-virtual {p1}, Lcom/vk/core/network/interceptors/d;->c()V
 
     return-void
 .end method
@@ -53,9 +53,9 @@
     .locals 0
 
     .line 1
-    sget-object p1, Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;->INSTANCE:Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;
+    sget-object p1, Lcom/vk/core/network/interceptors/d;->f:Lcom/vk/core/network/interceptors/d;
 
-    invoke-virtual {p1}, Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/network/interceptors/d;->b()V
 
     return-void
 .end method

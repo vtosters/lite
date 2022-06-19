@@ -3,7 +3,7 @@
 .source "MusicPlaylistFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/PreloadCallback;
+.implements Lcom/vk/lists/y;
 
 
 # annotations
@@ -50,15 +50,15 @@
 
     iget-object v1, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$f;->b:Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-virtual {v1}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual {v1}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
+    check-cast v1, Lcom/vk/music/playlist/modern/d;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->e()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/d;->e()Lcom/vk/dto/music/Playlist;
 
     move-result-object v1
 
@@ -73,7 +73,7 @@
     if-eqz v1, :cond_3
 
     .line 2
-    invoke-virtual {v0, p1}, Lcom/vk/lists/MergedAdapter;->I(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    invoke-virtual {v0, p1}, Lcom/vk/lists/p;->I(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v0
 
@@ -82,7 +82,7 @@
 
     const-string v3, "collection"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -92,7 +92,7 @@
 
     const-string v2, "playlist"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -123,7 +123,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, p1}, Lcom/vk/core/extensions/ListExt;->a(Ljava/util/List;I)Z
+    invoke-static {v1, p1}, Lcom/vk/core/extensions/n;->a(Ljava/util/List;I)Z
 
     move-result v1
 

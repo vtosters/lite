@@ -3,7 +3,7 @@
 .source "EntriesListFragment.kt"
 
 # interfaces
-.implements Lcom/vk/libvideo/autoplay/AutoPlayProvider;
+.implements Lcom/vk/libvideo/autoplay/b;
 
 
 # annotations
@@ -91,17 +91,17 @@
     return v0
 .end method
 
-.method public v(I)Lcom/vk/libvideo/autoplay/AutoPlay;
+.method public v(I)Lcom/vk/libvideo/autoplay/a;
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/EntriesListFragment$b;->a:Lcom/vk/newsfeed/EntriesListFragment;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/EntriesListContract;->f(I)Lcom/vk/libvideo/autoplay/AutoPlay;
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/e;->f(I)Lcom/vk/libvideo/autoplay/a;
 
     move-result-object p1
 
@@ -114,11 +114,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/EntriesListFragment$b;->a:Lcom/vk/newsfeed/EntriesListFragment;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/contracts/EntriesListContract;->v0()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/newsfeed/contracts/e;->v0()Ljava/lang/String;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "NamedLoggerBase.java"
 
 # interfaces
-.implements Lorg/slf4j/Logger;
+.implements Lorg/slf4j/b;
 .implements Ljava/io/Serializable;
 
 
@@ -49,7 +49,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lorg/slf4j/LoggerFactory;->a(Ljava/lang/String;)Lorg/slf4j/Logger;
+    invoke-static {v0}, Lorg/slf4j/c;->a(Ljava/lang/String;)Lorg/slf4j/b;
 
     move-result-object v0
 

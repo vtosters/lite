@@ -3,7 +3,7 @@
 .source "CameraUIView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -66,7 +66,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -76,12 +76,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->a(Lcom/vk/cameraui/widgets/TabsRecycler;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->a(Lcom/vk/cameraui/widgets/TabsRecycler;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -91,7 +91,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->o(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->o(Landroid/view/View;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
@@ -105,7 +105,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -115,13 +115,13 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->p(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->p(Landroid/view/View;)V
 
     .line 6
     :cond_0
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -131,12 +131,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->d(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->d(Landroid/view/View;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -146,12 +146,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->x(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->x(Landroid/view/View;)V
 
     .line 8
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -161,12 +161,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->m(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->m(Landroid/view/View;)V
 
     .line 9
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -176,12 +176,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->y(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->y(Landroid/view/View;)V
 
     .line 10
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -191,12 +191,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->v(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->v(Landroid/view/View;)V
 
     .line 11
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -206,7 +206,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->f(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->f(Landroid/view/View;)V
 
     .line 12
     iget-boolean v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->$isCodeReaderMode:Z
@@ -216,7 +216,7 @@
     .line 13
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -226,13 +226,13 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->A(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->A(Landroid/view/View;)V
 
     .line 14
     :cond_1
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -242,12 +242,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->z(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->z(Landroid/view/View;)V
 
     .line 15
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -257,12 +257,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->a(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->a(Landroid/view/View;)V
 
     .line 16
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -272,12 +272,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->a(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->a(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)V
 
     .line 17
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -287,12 +287,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->k(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->k(Landroid/view/View;)V
 
     .line 18
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -302,12 +302,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->w(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->w(Landroid/view/View;)V
 
     .line 19
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -317,12 +317,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->c(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->c(Landroid/view/View;)V
 
     .line 20
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
 
     move-result-object v0
 
@@ -332,7 +332,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->B(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->B(Landroid/view/View;)V
 
     .line 21
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$13;->this$0:Lcom/vk/cameraui/CameraUIView;

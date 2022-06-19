@@ -3,7 +3,7 @@
 .source "CreateChatComponent.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/new_chat/VcCallback;
+.implements Lcom/vk/im/ui/components/new_chat/f;
 
 
 # annotations
@@ -85,11 +85,11 @@
     .line 6
     iget-object v1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl;->a:Lcom/vk/im/ui/components/new_chat/CreateChatComponent;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->w()Lcom/vk/navigation/ActivityLauncher;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->w()Lcom/vk/navigation/a;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/navigation/ActivityLauncher;->a()Landroid/content/Context;
+    invoke-interface {v1}, Lcom/vk/navigation/a;->a()Landroid/content/Context;
 
     move-result-object v1
 
@@ -101,7 +101,7 @@
     move-result-object v2
 
     .line 8
-    sget v4, Lcom/vk/im/ui/R4;->permissions_storage:I
+    sget v4, Lcom/vk/im/ui/m;->permissions_storage:I
 
     .line 9
     new-instance v5, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl$selectAvatarFromGallery$1;
@@ -117,7 +117,7 @@
     move v3, v4
 
     .line 10
-    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
 
     return-void
 .end method
@@ -128,17 +128,17 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl;->a:Lcom/vk/im/ui/components/new_chat/CreateChatComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->a(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)Lcom/vk/im/ui/components/new_chat/Model;
+    invoke-static {v0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->a(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)Lcom/vk/im/ui/components/new_chat/e;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl;->a:Lcom/vk/im/ui/components/new_chat/CreateChatComponent;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->a(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)Lcom/vk/im/ui/components/new_chat/Model;
+    invoke-static {v1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->a(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)Lcom/vk/im/ui/components/new_chat/e;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/new_chat/Model;->d()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/new_chat/e;->d()Ljava/util/List;
 
     move-result-object v1
 
@@ -151,10 +151,10 @@
 
     invoke-direct {v2, p1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl$removeUser$$inlined$let$lambda$1;-><init>(I)V
 
-    invoke-static {v1, v2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
+    invoke-static {v1, v2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/new_chat/Model;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/new_chat/e;->a(Ljava/util/List;)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl;->a:Lcom/vk/im/ui/components/new_chat/CreateChatComponent;
@@ -165,11 +165,11 @@
 
     iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl;->a:Lcom/vk/im/ui/components/new_chat/CreateChatComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->a(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)Lcom/vk/im/ui/components/new_chat/Model;
+    invoke-static {v0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->a(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)Lcom/vk/im/ui/components/new_chat/e;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/new_chat/CreateChatVC;->a(Lcom/vk/im/ui/components/new_chat/Model;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/new_chat/CreateChatVC;->a(Lcom/vk/im/ui/components/new_chat/e;)V
 
     return-void
 .end method
@@ -183,11 +183,11 @@
     .line 2
     iget-object v1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl;->a:Lcom/vk/im/ui/components/new_chat/CreateChatComponent;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->w()Lcom/vk/navigation/ActivityLauncher;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->w()Lcom/vk/navigation/a;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/navigation/ActivityLauncher;->a()Landroid/content/Context;
+    invoke-interface {v1}, Lcom/vk/navigation/a;->a()Landroid/content/Context;
 
     move-result-object v1
 
@@ -199,7 +199,7 @@
     move-result-object v2
 
     .line 4
-    sget v4, Lcom/vk/im/ui/R4;->permissions_intent_photo:I
+    sget v4, Lcom/vk/im/ui/m;->permissions_intent_photo:I
 
     .line 5
     new-instance v5, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl$selectAvatarByCamera$1;
@@ -215,7 +215,7 @@
     move v3, v4
 
     .line 6
-    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
 
     return-void
 .end method

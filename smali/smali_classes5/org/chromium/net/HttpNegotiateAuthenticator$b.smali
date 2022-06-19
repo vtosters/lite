@@ -91,7 +91,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
 
     move-result-object p1
 
@@ -149,7 +149,7 @@
     const-string v1, "ERR_UNEXPECTED: Error while attempting to obtain a token."
 
     .line 7
-    invoke-static {p1, v1, v0}, Lorg/chromium/base/Log;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p1, v1, v0}, Lorg/chromium/base/e;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 8
     iget-object p1, p0, Lorg/chromium/net/HttpNegotiateAuthenticator$b;->b:Lorg/chromium/net/HttpNegotiateAuthenticator;

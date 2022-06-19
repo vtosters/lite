@@ -3,7 +3,7 @@
 .source "LibVerifySignUpPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/auth/y/a/LibVerifyPresenter;
+.implements Lcom/vk/auth/y/a/c;
 
 
 # annotations
@@ -16,11 +16,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter<",
-        "Lcom/vk/auth/y/a/LibVerifyView$a;",
+        "Lcom/vk/auth/y/a/d$a;",
         "Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;",
         ">;",
-        "Lcom/vk/auth/y/a/LibVerifyPresenter<",
-        "Lcom/vk/auth/y/a/LibVerifyView$a;",
+        "Lcom/vk/auth/y/a/c<",
+        "Lcom/vk/auth/y/a/d$a;",
         "Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;",
         ">;"
     }
@@ -48,31 +48,31 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;)Lcom/vk/auth/main/SignUpModel;
+.method public static final synthetic a(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;)Lcom/vk/auth/main/s;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/SignUpModel;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/s;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;Lio/reactivex/Observable;)V
+.method public static final synthetic a(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;Lc/a/m;)V
     .locals 0
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lio/reactivex/Observable;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lc/a/m;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;Lcom/vk/auth/main/SignUpModel;)V
+.method public static final synthetic a(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;Lcom/vk/auth/main/s;)V
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/main/SignUpModel;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/main/s;)V
 
     return-void
 .end method
@@ -83,20 +83,20 @@
     .locals 1
 
     .line 5
-    invoke-static {p0}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->b(Lcom/vk/auth/y/a/LibVerifyPresenter;)Lcom/vk/auth/main/AuthStatSender$Screen;
+    invoke-static {p0}, Lcom/vk/auth/y/a/c$b;->b(Lcom/vk/auth/y/a/c;)Lcom/vk/auth/main/AuthStatSender$Screen;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public bridge synthetic a(Lcom/vk/auth/y/a/LibVerifyView;)V
+.method public bridge synthetic a(Lcom/vk/auth/y/a/d;)V
     .locals 0
 
     .line 4
-    check-cast p1, Lcom/vk/auth/verification/base/CheckView$a;
+    check-cast p1, Lcom/vk/auth/verification/base/c$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lcom/vk/auth/verification/base/CheckView$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lcom/vk/auth/verification/base/c$a;)V
 
     return-void
 .end method
@@ -105,7 +105,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->g(Lcom/vk/auth/y/a/LibVerifyPresenter;)V
+    invoke-static {p0}, Lcom/vk/auth/y/a/c$b;->g(Lcom/vk/auth/y/a/c;)V
 
     return-void
 .end method
@@ -114,7 +114,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->e(Lcom/vk/auth/y/a/LibVerifyPresenter;)V
+    invoke-static {p0}, Lcom/vk/auth/y/a/c$b;->e(Lcom/vk/auth/y/a/c;)V
 
     return-void
 .end method
@@ -123,7 +123,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->b(Lcom/vk/auth/y/a/LibVerifyPresenter;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/vk/auth/y/a/c$b;->b(Lcom/vk/auth/y/a/c;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -134,7 +134,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->a(Lcom/vk/auth/y/a/LibVerifyPresenter;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/vk/auth/y/a/c$b;->a(Lcom/vk/auth/y/a/c;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -143,7 +143,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->f(Lcom/vk/auth/y/a/LibVerifyPresenter;)V
+    invoke-static {p0}, Lcom/vk/auth/y/a/c$b;->f(Lcom/vk/auth/y/a/c;)V
 
     .line 2
     invoke-super {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->onPause()V
@@ -155,7 +155,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->h(Lcom/vk/auth/y/a/LibVerifyPresenter;)V
+    invoke-static {p0}, Lcom/vk/auth/y/a/c$b;->h(Lcom/vk/auth/y/a/c;)V
 
     .line 2
     invoke-super {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->onResume()V
@@ -163,7 +163,7 @@
     return-void
 .end method
 
-.method public bridge synthetic p2()Lcom/vk/auth/verification/base/CheckPresenter$a;
+.method public bridge synthetic p2()Lcom/vk/auth/verification/base/b$a;
     .locals 1
 
     .line 1
@@ -174,7 +174,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic p2()Lcom/vk/auth/verification/base/CheckPresenter;
+.method public bridge synthetic p2()Lcom/vk/auth/verification/base/b;
     .locals 1
 
     .line 2
@@ -194,7 +194,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic p2()Lcom/vk/auth/y/a/LibVerifyPresenter$a;
+.method public bridge synthetic p2()Lcom/vk/auth/y/a/c$a;
     .locals 1
 
     .line 3
@@ -209,7 +209,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->c(Lcom/vk/auth/y/a/LibVerifyPresenter;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/vk/auth/y/a/c$b;->c(Lcom/vk/auth/y/a/c;)Ljava/lang/String;
 
     move-result-object v0
 

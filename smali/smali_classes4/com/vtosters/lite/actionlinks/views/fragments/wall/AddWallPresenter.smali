@@ -3,26 +3,26 @@
 .source "AddWallPresenter.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall1;
+.implements Lcom/vtosters/lite/actionlinks/views/fragments/wall/b;
 
 
 # instance fields
 .field private B:I
 
-.field public C:Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall;
+.field public C:Lcom/vtosters/lite/actionlinks/views/fragments/wall/c;
 
 .field private D:Lcom/vtosters/lite/actionlinks/AL$d;
 
-.field private E:Lio/reactivex/disposables/Disposable;
+.field private E:Lio/reactivex/disposables/b;
 
-.field private F:Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipPresenter;
+.field private F:Lcom/vtosters/lite/actionlinks/views/holders/tip/c;
 
-.field private G:Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;
+.field private G:Lcom/vtosters/lite/actionlinks/c/a/b;
 
-.field private final H:Lcom/vk/lists/PaginationHelper$p;
+.field private final H:Lcom/vk/lists/t$p;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/lists/PaginationHelper$p<",
+            "Lcom/vk/lists/t$p<",
             "Lcom/vk/dto/actionlinks/ActionLinksResponse;",
             ">;"
         }
@@ -41,11 +41,11 @@
 
 .field private f:Ljava/lang/Integer;
 
-.field private g:Lkotlin/jvm/b/Functions;
+.field private g:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -67,29 +67,29 @@
     iput-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->h:Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall$Type;
 
     .line 3
-    new-instance v0, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipPresenter;
+    new-instance v0, Lcom/vtosters/lite/actionlinks/views/holders/tip/c;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipPresenter;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/actionlinks/views/holders/tip/c;-><init>()V
 
-    iput-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->F:Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipPresenter;
+    iput-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->F:Lcom/vtosters/lite/actionlinks/views/holders/tip/c;
 
     .line 4
-    new-instance v0, Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;
+    new-instance v0, Lcom/vtosters/lite/actionlinks/c/a/b;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/actionlinks/c/a/b;-><init>()V
 
     .line 5
-    invoke-virtual {v0, p0}, Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;->a(Lcom/vtosters/lite/actionlinks/AL$i;)V
+    invoke-virtual {v0, p0}, Lcom/vtosters/lite/actionlinks/c/a/b;->a(Lcom/vtosters/lite/actionlinks/AL$i;)V
 
     .line 6
-    iput-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->G:Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;
+    iput-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->G:Lcom/vtosters/lite/actionlinks/c/a/b;
 
     .line 7
     new-instance v0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter$dataProvider$1;
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter$dataProvider$1;-><init>(Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->H:Lcom/vk/lists/PaginationHelper$p;
+    iput-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->H:Lcom/vk/lists/t$p;
 
     return-void
 .end method
@@ -118,7 +118,7 @@
     .locals 3
 
     .line 10
-    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;
+    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/b;
 
     move-result-object v0
 
@@ -130,41 +130,41 @@
     invoke-virtual {p1, v0}, Lcom/vk/lists/RecyclerPaginatedView;->setSwipeRefreshEnabled(Z)V
 
     .line 12
-    iget-object v1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->H:Lcom/vk/lists/PaginationHelper$p;
+    iget-object v1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->H:Lcom/vk/lists/t$p;
 
-    invoke-static {v1}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$p;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-static {v1}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$p;)Lcom/vk/lists/t$k;
 
     move-result-object v1
 
     const/16 v2, 0x14
 
     .line 13
-    invoke-virtual {v1, v2}, Lcom/vk/lists/PaginationHelper$k;->c(I)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {v1, v2}, Lcom/vk/lists/t$k;->c(I)Lcom/vk/lists/t$k;
 
     .line 14
-    invoke-virtual {v1, v0}, Lcom/vk/lists/PaginationHelper$k;->c(Z)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {v1, v0}, Lcom/vk/lists/t$k;->c(Z)Lcom/vk/lists/t$k;
 
     .line 15
-    invoke-virtual {v1, v0}, Lcom/vk/lists/PaginationHelper$k;->a(Z)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {v1, v0}, Lcom/vk/lists/t$k;->a(Z)Lcom/vk/lists/t$k;
 
     .line 16
-    invoke-virtual {v1, v0}, Lcom/vk/lists/PaginationHelper$k;->b(Z)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {v1, v0}, Lcom/vk/lists/t$k;->b(Z)Lcom/vk/lists/t$k;
 
     const-string v0, "PaginationHelper\n       \u2026ingEnabledByDefault(true)"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 17
-    invoke-static {v1, p1}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
+    invoke-static {v1, p1}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->a(Lcom/vk/lists/PaginationHelper;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->a(Lcom/vk/lists/t;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/lists/PaginationHelper;)V
+.method public a(Lcom/vk/lists/t;)V
     .locals 0
 
     return-void
@@ -188,20 +188,20 @@
     return-void
 .end method
 
-.method public a(Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall;)V
+.method public a(Lcom/vtosters/lite/actionlinks/views/fragments/wall/c;)V
     .locals 0
 
     .line 7
-    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->C:Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall;
+    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->C:Lcom/vtosters/lite/actionlinks/views/fragments/wall/c;
 
     return-void
 .end method
 
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 0
 
     .line 9
-    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->E:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->E:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -215,19 +215,19 @@
     return-void
 .end method
 
-.method public a(Lkotlin/jvm/b/Functions;)V
+.method public a(Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 4
-    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->g:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->g:Lkotlin/jvm/b/a;
 
     return-void
 .end method
@@ -245,18 +245,18 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall$a;->a(Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall1;)Z
+    invoke-static {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/b$a;->a(Lcom/vtosters/lite/actionlinks/views/fragments/wall/b;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public b()Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;
+.method public b()Lcom/vtosters/lite/actionlinks/c/a/b;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->G:Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;
+    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->G:Lcom/vtosters/lite/actionlinks/c/a/b;
 
     return-object v0
 .end method
@@ -288,19 +288,19 @@
     return-void
 .end method
 
-.method public d()Lkotlin/jvm/b/Functions;
+.method public d()Lkotlin/jvm/b/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->g:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->g:Lkotlin/jvm/b/a;
 
     return-object v0
 .end method
@@ -341,11 +341,11 @@
     return-object v0
 .end method
 
-.method public getView()Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall;
+.method public getView()Lcom/vtosters/lite/actionlinks/views/fragments/wall/c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->C:Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall;
+    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->C:Lcom/vtosters/lite/actionlinks/views/fragments/wall/c;
 
     if-eqz v0, :cond_0
 
@@ -354,7 +354,7 @@
     :cond_0
     const-string v0, "view"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -370,11 +370,11 @@
     return-object v0
 .end method
 
-.method public i()Lio/reactivex/disposables/Disposable;
+.method public i()Lio/reactivex/disposables/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->E:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->E:Lio/reactivex/disposables/b;
 
     return-object v0
 .end method
@@ -408,31 +408,31 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall;
+    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/wall/c;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall;->V2()Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTip1;
+    invoke-interface {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/c;->V2()Lcom/vtosters/lite/actionlinks/views/holders/tip/b;
 
     move-result-object v0
 
     .line 3
-    iget-object v1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->F:Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipPresenter;
+    iget-object v1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->F:Lcom/vtosters/lite/actionlinks/views/holders/tip/c;
 
-    invoke-interface {v0, v1}, Lb/h/r/BaseContract1;->setPresenter(Lb/h/r/BaseContract;)V
+    invoke-interface {v0, v1}, Lb/h/r/b;->setPresenter(Lb/h/r/a;)V
 
     .line 4
-    iget-object v1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->F:Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipPresenter;
+    iget-object v1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->F:Lcom/vtosters/lite/actionlinks/views/holders/tip/c;
 
-    invoke-virtual {v1, v0}, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipPresenter;->a(Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTip1;)V
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/actionlinks/views/holders/tip/c;->a(Lcom/vtosters/lite/actionlinks/views/holders/tip/b;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->F:Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipPresenter;
+    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->F:Lcom/vtosters/lite/actionlinks/views/holders/tip/c;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipPresenter;->start()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/holders/tip/c;->start()V
 
     .line 6
-    iget-object v1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->F:Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipPresenter;
+    iget-object v1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->F:Lcom/vtosters/lite/actionlinks/views/holders/tip/c;
 
     invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->g()Ljava/lang/Integer;
 
@@ -448,7 +448,7 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->d()Lkotlin/jvm/b/Functions;
+    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->d()Lkotlin/jvm/b/a;
 
     move-result-object v6
 
@@ -456,7 +456,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v1 .. v8}, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTip$a;->a(Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTip;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v8}, Lcom/vtosters/lite/actionlinks/views/holders/tip/a$a;->a(Lcom/vtosters/lite/actionlinks/views/holders/tip/a;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -475,7 +475,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall$a;->b(Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall1;)V
+    invoke-static {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/b$a;->b(Lcom/vtosters/lite/actionlinks/views/fragments/wall/b;)V
 
     return-void
 .end method

@@ -3,8 +3,8 @@
 .source "ObservableUnsubscribeOn.java"
 
 # interfaces
-.implements Lio/reactivex/Observer;
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lc/a/r;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations
@@ -29,9 +29,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicBoolean;",
-        "Lio/reactivex/Observer<",
+        "Lc/a/r<",
         "TT;>;",
-        "Lio/reactivex/disposables/Disposable;"
+        "Lio/reactivex/disposables/b;"
     }
 .end annotation
 
@@ -41,29 +41,29 @@
 
 
 # instance fields
-.field final downstream:Lio/reactivex/Observer;
+.field final downstream:Lc/a/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;"
         }
     .end annotation
 .end field
 
-.field final scheduler:Lio/reactivex/Scheduler;
+.field final scheduler:Lc/a/s;
 
-.field upstream:Lio/reactivex/disposables/Disposable;
+.field upstream:Lio/reactivex/disposables/b;
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/Observer;Lio/reactivex/Scheduler;)V
+.method constructor <init>(Lc/a/r;Lc/a/s;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;",
-            "Lio/reactivex/Scheduler;",
+            "Lc/a/s;",
             ")V"
         }
     .end annotation
@@ -72,35 +72,35 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->downstream:Lio/reactivex/Observer;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->downstream:Lc/a/r;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->scheduler:Lio/reactivex/Scheduler;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->scheduler:Lc/a/s;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->upstream:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->upstream:Lio/reactivex/disposables/b;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/b;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->upstream:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->upstream:Lio/reactivex/disposables/b;
 
     .line 3
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->downstream:Lio/reactivex/Observer;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->downstream:Lc/a/r;
 
-    invoke-interface {p1, p0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p1, p0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
 
     :cond_0
     return-void
@@ -117,15 +117,15 @@
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     return-void
 
     .line 6
     :cond_0
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->downstream:Lio/reactivex/Observer;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->downstream:Lc/a/r;
 
-    invoke-interface {v0, p1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -141,9 +141,9 @@
     if-nez v0, :cond_0
 
     .line 4
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->downstream:Lio/reactivex/Observer;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->downstream:Lc/a/r;
 
-    invoke-interface {v0}, Lio/reactivex/Observer;->b()V
+    invoke-interface {v0}, Lc/a/r;->b()V
 
     :cond_0
     return-void
@@ -165,9 +165,9 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->downstream:Lio/reactivex/Observer;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->downstream:Lc/a/r;
 
-    invoke-interface {v0, p1}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lc/a/r;->b(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -199,13 +199,13 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->scheduler:Lio/reactivex/Scheduler;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;->scheduler:Lc/a/s;
 
     new-instance v1, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver$a;
 
     invoke-direct {v1, p0}, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver$a;-><init>(Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Scheduler;->a(Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1}, Lc/a/s;->a(Ljava/lang/Runnable;)Lio/reactivex/disposables/b;
 
     :cond_0
     return-void

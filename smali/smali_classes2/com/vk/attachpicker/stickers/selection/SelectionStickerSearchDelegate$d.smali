@@ -3,12 +3,12 @@
 .source "SelectionStickerSearchDelegate.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
+    value = Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->a(Lc/a/m;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,14 +49,14 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lio/reactivex/Observable;
+.method public final a(Ljava/lang/String;)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/stickers/StickerSearcher$a;",
             ">;"
         }
@@ -71,7 +71,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/stickers/StickerSearcher;->a(Ljava/lang/String;)Lio/reactivex/Observable;
+    invoke-virtual {v0, p1}, Lcom/vk/stickers/StickerSearcher;->a(Ljava/lang/String;)Lc/a/m;
 
     move-result-object p1
 
@@ -90,7 +90,7 @@
     .line 1
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$d;->a(Ljava/lang/String;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$d;->a(Ljava/lang/String;)Lc/a/m;
 
     move-result-object p1
 

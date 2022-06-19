@@ -3,10 +3,10 @@
 .source "BottomPanelPostingControllerImpl.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/posting/PostingContracts9;
+.implements Lcom/vk/newsfeed/posting/e;
 .implements Landroid/view/View$OnClickListener;
-.implements Lcom/vk/core/util/ItemClickListener;
-.implements Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter$b;
+.implements Lcom/vk/core/util/k0;
+.implements Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$b;
 
 
 # annotations
@@ -19,18 +19,18 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/newsfeed/posting/PostingContracts9;",
+        "Lcom/vk/newsfeed/posting/e;",
         "Landroid/view/View$OnClickListener;",
-        "Lcom/vk/core/util/ItemClickListener<",
-        "Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;",
+        "Lcom/vk/core/util/k0<",
+        "Lcom/vk/newsfeed/posting/dto/b;",
         ">;",
-        "Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter$b;"
+        "Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$b;"
     }
 .end annotation
 
 
 # static fields
-.field static final synthetic U:[Lkotlin/u/KProperty5;
+.field static final synthetic U:[Lkotlin/u/j;
 
 .field private static final V:I
 
@@ -72,29 +72,29 @@
 
 .field private Q:I
 
-.field private final R:Lkotlin/Lazy2;
+.field private final R:Lkotlin/e;
 
-.field private final S:Lkotlin/Lazy2;
+.field private final S:Lkotlin/e;
 
 .field private final T:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;",
+            "Lcom/vk/newsfeed/posting/r/b;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private a:Lcom/vk/newsfeed/posting/PostingContracts14;
+.field private a:Lcom/vk/newsfeed/posting/j;
 
-.field private final b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+.field private final b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
 .field private c:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-.field private final d:Lcom/vk/core/util/TimeoutLock;
+.field private final d:Lcom/vk/core/util/j1;
 
-.field private final e:Lcom/vk/core/util/TimeoutLock;
+.field private final e:Lcom/vk/core/util/j1;
 
 .field private final f:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -116,7 +116,7 @@
     .end annotation
 .end field
 
-.field private h:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+.field private h:Lcom/vk/newsfeed/posting/r/a;
 
 
 # direct methods
@@ -125,13 +125,13 @@
 
     const/4 v0, 0x2
 
-    new-array v1, v0, [Lkotlin/u/KProperty5;
+    new-array v1, v0, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v3, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;
 
-    invoke-static {v3}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v3}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -139,9 +139,9 @@
 
     const-string v5, "getMoreMenu()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
@@ -151,7 +151,7 @@
 
     const-class v3, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;
 
-    invoke-static {v3}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v3}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -159,28 +159,28 @@
 
     const-string v5, "getMoreMenuClickListener()Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl$moreMenuClickListener$2$1;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x1
 
     aput-object v2, v1, v3
 
-    sput-object v1, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->U:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->U:[Lkotlin/u/j;
 
     new-instance v1, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl$a;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v1, v2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
-    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const-string v2, "AppContextHolder.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -218,16 +218,16 @@
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v1, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    new-instance v1, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-direct {v1, v0, v0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;-><init>(Lcom/vk/core/util/ItemClickListener;Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter$b;)V
+    invoke-direct {v1, v0, v0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;-><init>(Lcom/vk/core/util/k0;Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$b;)V
 
-    iput-object v1, v0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iput-object v1, v0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
     .line 3
     new-instance v1, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const/4 v3, 0x0
 
@@ -236,22 +236,22 @@
     iput-object v1, v0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->c:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     .line 4
-    new-instance v1, Lcom/vk/core/util/TimeoutLock;
+    new-instance v1, Lcom/vk/core/util/j1;
 
     const-wide/16 v4, 0x3e8
 
-    invoke-direct {v1, v4, v5}, Lcom/vk/core/util/TimeoutLock;-><init>(J)V
+    invoke-direct {v1, v4, v5}, Lcom/vk/core/util/j1;-><init>(J)V
 
-    iput-object v1, v0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->d:Lcom/vk/core/util/TimeoutLock;
+    iput-object v1, v0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->d:Lcom/vk/core/util/j1;
 
     .line 5
-    new-instance v1, Lcom/vk/core/util/TimeoutLock;
+    new-instance v1, Lcom/vk/core/util/j1;
 
     const-wide/16 v4, 0x12c
 
-    invoke-direct {v1, v4, v5}, Lcom/vk/core/util/TimeoutLock;-><init>(J)V
+    invoke-direct {v1, v4, v5}, Lcom/vk/core/util/j1;-><init>(J)V
 
-    iput-object v1, v0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->e:Lcom/vk/core/util/TimeoutLock;
+    iput-object v1, v0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->e:Lcom/vk/core/util/j1;
 
     .line 6
     new-instance v1, Ljava/util/ArrayList;
@@ -277,31 +277,31 @@
 
     invoke-direct {v2, v0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl$moreMenu$2;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;)V
 
-    invoke-static {v2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->R:Lkotlin/Lazy2;
+    iput-object v2, v0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->R:Lkotlin/e;
 
     .line 10
     new-instance v2, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl$moreMenuClickListener$2;
 
     invoke-direct {v2, v0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl$moreMenuClickListener$2;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;)V
 
-    invoke-static {v2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->S:Lkotlin/Lazy2;
+    iput-object v2, v0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->S:Lkotlin/e;
 
     const/4 v2, 0x4
 
-    new-array v2, v2, [Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-array v2, v2, [Lcom/vk/newsfeed/posting/r/b;
 
     .line 11
-    new-instance v10, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-instance v10, Lcom/vk/newsfeed/posting/r/b;
 
-    sget-object v4, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v4, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v5, 0x7f120ac6
 
@@ -311,7 +311,7 @@
 
     const-string v4, "AppContextHolder.context\u2026ng(R.string.picker_video)"
 
-    invoke-static {v6, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x2
 
@@ -323,14 +323,14 @@
 
     move-object v4, v10
 
-    invoke-direct/range {v4 .. v9}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/newsfeed/posting/r/b;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
 
     aput-object v10, v2, v3
 
     .line 12
-    new-instance v3, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-instance v3, Lcom/vk/newsfeed/posting/r/b;
 
-    sget-object v4, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v4, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v5, 0x7f12010e
 
@@ -340,7 +340,7 @@
 
     const-string v4, "AppContextHolder.context\u2026R.string.attach_document)"
 
-    invoke-static {v13, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v13, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v12, 0x4
 
@@ -352,14 +352,14 @@
 
     move-object v11, v3
 
-    invoke-direct/range {v11 .. v16}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v11 .. v16}, Lcom/vk/newsfeed/posting/r/b;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
 
     aput-object v3, v2, v1
 
     .line 13
-    new-instance v1, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-instance v1, Lcom/vk/newsfeed/posting/r/b;
 
-    sget-object v3, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v3, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v4, 0x7f120116
 
@@ -369,22 +369,22 @@
 
     const-string v3, "AppContextHolder.context\u2026ing(R.string.attach_poll)"
 
-    invoke-static {v6, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x5
 
     move-object v4, v1
 
-    invoke-direct/range {v4 .. v9}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/newsfeed/posting/r/b;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
 
     const/4 v3, 0x2
 
     aput-object v1, v2, v3
 
     .line 14
-    new-instance v1, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-instance v1, Lcom/vk/newsfeed/posting/r/b;
 
-    sget-object v3, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v3, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v4, 0x7f120aca
 
@@ -394,13 +394,13 @@
 
     const-string v3, "AppContextHolder.context.getString(R.string.place)"
 
-    invoke-static {v6, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x3
 
     move-object v4, v1
 
-    invoke-direct/range {v4 .. v9}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/newsfeed/posting/r/b;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
 
     const/4 v3, 0x3
 
@@ -488,9 +488,9 @@
     invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 64
-    new-instance p1, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-instance p1, Lcom/vk/newsfeed/posting/r/b;
 
-    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     invoke-virtual {v1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -498,7 +498,7 @@
 
     const-string p3, "AppContextHolder.context.getString(titleResId)"
 
-    invoke-static {v3, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -510,7 +510,7 @@
 
     move v2, p2
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/newsfeed/posting/r/b;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
 
     if-eqz p4, :cond_0
 
@@ -529,20 +529,20 @@
 
     .line 67
     :goto_0
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/a;
 
     if-eqz p1, :cond_1
 
     iget-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->T:Ljava/util/List;
 
-    invoke-virtual {p1, p2}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {p1, p2}, Lcom/vk/newsfeed/posting/r/a;->setItems(Ljava/util/List;)V
 
     return-void
 
     :cond_1
     const-string p1, "moreMenuAdapter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -567,11 +567,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;)Lcom/vk/core/util/TimeoutLock;
+.method public static final synthetic b(Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;)Lcom/vk/core/util/j1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->e:Lcom/vk/core/util/TimeoutLock;
+    iget-object p0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->e:Lcom/vk/core/util/j1;
 
     return-object p0
 .end method
@@ -647,7 +647,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v2, v0}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/Dismissable;
+    invoke-virtual {v2, v0}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/w;
 
     goto :goto_0
 
@@ -655,13 +655,13 @@
     return-void
 
     :cond_1
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 23
     :cond_2
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -695,7 +695,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -720,13 +720,13 @@
     :cond_2
     const-string p1, "posterPreviewShadow"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 27
     :cond_3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -744,29 +744,29 @@
     :cond_0
     const-string p0, "moreButton"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method private final c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+.method private final c()Lcom/vk/core/dialogs/actionspopup/a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->R:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->R:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->U:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->U:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    check-cast v0, Lcom/vk/core/dialogs/actionspopup/a;
 
     return-object v0
 .end method
@@ -867,7 +867,7 @@
     const-string p1, "posterButton"
 
     .line 19
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -945,11 +945,11 @@
     return-void
 .end method
 
-.method public static final synthetic d(Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+.method public static final synthetic d(Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;)Lcom/vk/core/dialogs/actionspopup/a;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->c()Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object p0
 
@@ -959,15 +959,15 @@
 .method private final d()Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl$moreMenuClickListener$2$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->S:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->S:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->U:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->U:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -976,11 +976,11 @@
     return-object v0
 .end method
 
-.method public static final synthetic e(Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;)Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+.method public static final synthetic e(Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;)Lcom/vk/newsfeed/posting/r/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object p0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/a;
 
     if-eqz p0, :cond_0
 
@@ -989,7 +989,7 @@
     :cond_0
     const-string p0, "moreMenuAdapter"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -1022,7 +1022,7 @@
     :cond_0
     const-string p0, "posterButton"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -1035,20 +1035,20 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/a;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x5
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;->H(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/posting/r/a;->H(I)V
 
     return-void
 
     :cond_0
     const-string v0, "moreMenuAdapter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1072,7 +1072,7 @@
     :cond_0
     const-string v0, "nameHintText"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1083,20 +1083,20 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/a;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x3
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;->H(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/posting/r/a;->H(I)V
 
     return-void
 
     :cond_0
     const-string v0, "moreMenuAdapter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1107,11 +1107,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->c()Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
 
     return-void
 .end method
@@ -1120,20 +1120,20 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/a;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x6
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;->H(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/posting/r/a;->H(I)V
 
     return-void
 
     :cond_0
     const-string v0, "moreMenuAdapter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1213,7 +1213,7 @@
     const-string v0, "posterPreviewShadow"
 
     .line 9
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1221,7 +1221,7 @@
     const-string v0, "nameHintText"
 
     .line 10
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1229,7 +1229,7 @@
     const-string v0, "posterRecyclerView"
 
     .line 11
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1238,13 +1238,13 @@
     .locals 1
 
     .line 70
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts14;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/j;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts14;->f0()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/j;->f0()V
 
     :cond_0
     return-void
@@ -1254,9 +1254,9 @@
     .locals 7
 
     .line 72
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;->g()I
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;->g()I
 
     move-result v0
 
@@ -1278,9 +1278,9 @@
 
     move-result v1
 
-    sget-object v2, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter$e;->G:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter$e$a;
+    sget-object v2, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->G:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e$a;
 
-    invoke-virtual {v2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter$e$a;->b()I
+    invoke-virtual {v2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e$a;->b()I
 
     move-result v2
 
@@ -1300,9 +1300,9 @@
 
     .line 75
     :cond_0
-    iget-object v2, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v2, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {v2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;->getItemCount()I
+    invoke-virtual {v2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;->getItemCount()I
 
     move-result v2
 
@@ -1321,15 +1321,15 @@
 
     .line 76
     :goto_0
-    iget-object v2, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v2, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {v2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;->getItemCount()I
+    invoke-virtual {v2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;->getItemCount()I
 
     move-result v2
 
-    iget-object v4, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v4, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {v4}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;->g()I
+    invoke-virtual {v4}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;->g()I
 
     move-result v4
 
@@ -1359,18 +1359,18 @@
 
     .line 80
     :goto_1
-    iget-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {p2, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;
+    check-cast p2, Lcom/vk/newsfeed/posting/dto/b;
 
     if-eqz p2, :cond_3
 
     .line 81
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
     const/4 v4, 0x0
 
@@ -1380,23 +1380,23 @@
 
     move-object v2, p2
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/attachpicker/base/SingleChoiceSelectionProvider$a;->a(Lcom/vk/attachpicker/base/SingleChoiceSelectionProvider;Ljava/lang/Object;ILandroidx/recyclerview/widget/RecyclerView$ViewHolder;ILjava/lang/Object;)Z
+    invoke-static/range {v1 .. v6}, Lcom/vk/attachpicker/base/e$a;->a(Lcom/vk/attachpicker/base/e;Ljava/lang/Object;ILandroidx/recyclerview/widget/RecyclerView$ViewHolder;ILjava/lang/Object;)Z
 
     .line 82
-    invoke-virtual {p0, p2, p1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->a(Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;I)V
+    invoke-virtual {p0, p2, p1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->a(Lcom/vk/newsfeed/posting/dto/b;I)V
 
     :cond_3
     return-void
 
     .line 83
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 84
     :cond_5
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1405,18 +1405,18 @@
     .locals 9
 
     .line 6
-    new-instance v0, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    new-instance v0, Lcom/vk/newsfeed/posting/r/a;
 
     invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->d()Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl$moreMenuClickListener$2$a;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;-><init>(Lcom/vk/core/util/ItemClickListener;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/r/a;-><init>(Lcom/vk/core/util/k0;)V
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/a;
 
     .line 7
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/a;
 
     const/4 v1, 0x0
 
@@ -1424,7 +1424,7 @@
 
     iget-object v2, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->T:Ljava/util/List;
 
-    invoke-virtual {v0, v2}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v2}, Lcom/vk/newsfeed/posting/r/a;->setItems(Ljava/util/List;)V
 
     const v0, 0x7f0a0a99
 
@@ -1440,7 +1440,7 @@
     const-string v3, "it"
 
     .line 9
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v2, p0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
@@ -1457,7 +1457,7 @@
     const-string v2, "view.findViewById<ImageV\u2026Buttons.add(it)\n        }"
 
     .line 12
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f0a0a96
 
@@ -1480,7 +1480,7 @@
     if-eqz v5, :cond_0
 
     .line 15
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v4, p0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
@@ -1498,7 +1498,7 @@
 
     .line 18
     :cond_0
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x6
 
@@ -1510,7 +1510,7 @@
     const-string v4, "view.findViewById<ImageV\u2026)\n            }\n        }"
 
     .line 19
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f0a0a98
 
@@ -1524,7 +1524,7 @@
     check-cast v4, Landroid/widget/ImageView;
 
     .line 21
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v4, p0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
@@ -1539,7 +1539,7 @@
     invoke-interface {v5, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 24
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->B:Landroid/view/View;
 
@@ -1555,7 +1555,7 @@
     check-cast v4, Landroid/widget/ImageView;
 
     .line 26
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v4, p0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
@@ -1570,7 +1570,7 @@
     invoke-interface {v5, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 29
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->C:Landroid/view/View;
 
@@ -1581,7 +1581,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
@@ -1591,7 +1591,7 @@
 
     const-string v2, "view.findViewById<View>(\u2026(this); buttons.add(it) }"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->E:Landroid/view/View;
 
@@ -1602,7 +1602,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
@@ -1610,7 +1610,7 @@
 
     invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->D:Landroid/view/View;
 
@@ -1621,7 +1621,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
@@ -1629,7 +1629,7 @@
 
     invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->H:Landroid/view/View;
 
@@ -1642,7 +1642,7 @@
 
     const-string v2, "view.findViewById(R.id.p\u2026ster_preview_shadow_view)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->J:Landroid/view/View;
 
@@ -1690,14 +1690,14 @@
     check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
 
     .line 39
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->c:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
     .line 40
-    iget-object v3, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v3, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
     invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -1709,18 +1709,18 @@
     move-result v3
 
     .line 42
-    new-instance v4, Lcom/vk/lists/l0/BoundariesSpacesItemDecoration;
+    new-instance v4, Lcom/vk/lists/l0/a;
 
     sget v5, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->X:I
 
-    invoke-direct {v4, v5, v5, v3, v8}, Lcom/vk/lists/l0/BoundariesSpacesItemDecoration;-><init>(IIIZ)V
+    invoke-direct {v4, v5, v5, v3, v8}, Lcom/vk/lists/l0/a;-><init>(IIIZ)V
 
     invoke-virtual {v2, v4}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     const-string v3, "view.findViewById<Recycl\u2026ilSpace, true))\n        }"
 
     .line 43
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v2, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->I:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -1731,7 +1731,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/view/View;)V
+    invoke-static {v2}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;)V
 
     .line 45
     sget v2, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->V:I
@@ -1764,7 +1764,7 @@
     :cond_1
     const-string p1, "musicButton"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1837,7 +1837,7 @@
 
     const-string v2, "view.findViewById(R.id.p\u2026ting_bottom_progress_bar)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/ProgressBar;
 
@@ -1852,7 +1852,7 @@
 
     const-string v2, "view.findViewById(R.id.p\u2026ng_bottom_name_hint_text)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/TextView;
 
@@ -1867,7 +1867,7 @@
 
     const-string v2, "view.findViewById(R.id.top_divider)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->K:Landroid/view/View;
 
@@ -1880,7 +1880,7 @@
 
     const-string v2, "view.findViewById(R.id.bottom_divider)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->L:Landroid/view/View;
 
@@ -1906,7 +1906,7 @@
     const-string p1, "posterPreviewShadow"
 
     .line 59
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1914,43 +1914,43 @@
     const-string p1, "moreMenuAdapter"
 
     .line 60
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
-.method public a(Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;)V
+.method public a(Lcom/vk/newsfeed/posting/dto/b;)V
     .locals 1
 
     .line 71
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;->a(Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;->a(Lcom/vk/newsfeed/posting/dto/b;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;I)V
+.method public a(Lcom/vk/newsfeed/posting/dto/b;I)V
     .locals 0
 
     .line 69
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts14;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/j;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2, p1}, Lcom/vk/newsfeed/posting/PostingContracts14;->a(Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;)V
+    invoke-interface {p2, p1}, Lcom/vk/newsfeed/posting/j;->a(Lcom/vk/newsfeed/posting/dto/b;)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lcom/vk/newsfeed/posting/PostingContracts14;)V
+.method public a(Lcom/vk/newsfeed/posting/j;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->a:Lcom/vk/newsfeed/posting/PostingContracts14;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->a:Lcom/vk/newsfeed/posting/j;
 
     return-void
 .end method
@@ -1959,9 +1959,9 @@
     .locals 0
 
     .line 3
-    check-cast p1, Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;
+    check-cast p1, Lcom/vk/newsfeed/posting/dto/b;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->a(Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->a(Lcom/vk/newsfeed/posting/dto/b;I)V
 
     return-void
 .end method
@@ -1981,33 +1981,33 @@
     :cond_0
     const-string p1, "progressBar"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public b(Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;)V
+.method public b(Lcom/vk/newsfeed/posting/dto/b;)V
     .locals 8
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;->i()I
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;->i()I
 
     move-result v0
 
     .line 3
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {v1}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v1
 
     const-string v2, "previewAdapter.list"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2034,16 +2034,16 @@
     move-result-object v4
 
     .line 5
-    check-cast v4, Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;
+    check-cast v4, Lcom/vk/newsfeed/posting/dto/b;
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;->a()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/b;->a()I
 
     move-result v7
 
     if-eqz v4, :cond_0
 
-    invoke-virtual {v4}, Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;->a()I
+    invoke-virtual {v4}, Lcom/vk/newsfeed/posting/dto/b;->a()I
 
     move-result v4
 
@@ -2076,9 +2076,9 @@
     const/4 v3, -0x1
 
     :goto_3
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;->g()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;->g()I
 
     move-result p1
 
@@ -2111,9 +2111,9 @@
     if-lt v4, v3, :cond_6
 
     .line 10
-    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter$e;->G:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter$e$a;
+    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->G:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e$a;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter$e$a;->b()I
+    invoke-virtual {v1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e$a;->b()I
 
     move-result v1
 
@@ -2151,26 +2151,26 @@
     const-string p1, "posterRecyclerView"
 
     .line 14
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public c(Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;)V
+.method public c(Lcom/vk/newsfeed/posting/dto/b;)V
     .locals 6
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v0
 
     const-string v1, "previewAdapter.list"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2195,16 +2195,16 @@
     move-result-object v3
 
     .line 4
-    check-cast v3, Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;
+    check-cast v3, Lcom/vk/newsfeed/posting/dto/b;
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;->a()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/b;->a()I
 
     move-result v5
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v3}, Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;->a()I
+    invoke-virtual {v3}, Lcom/vk/newsfeed/posting/dto/b;->a()I
 
     move-result v4
 
@@ -2235,15 +2235,15 @@
     if-ltz v2, :cond_5
 
     .line 6
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;->getItemCount()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;->g()I
+    invoke-virtual {v1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;->g()I
 
     move-result v1
 
@@ -2255,20 +2255,20 @@
 
     .line 7
     :cond_4
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;->g()I
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;->g()I
 
     move-result v0
 
     add-int/2addr v2, v0
 
     .line 8
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;->a(Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;ILcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter$e;)Z
+    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;->a(Lcom/vk/newsfeed/posting/dto/b;ILcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;)Z
 
     :cond_5
     :goto_3
@@ -2281,15 +2281,15 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/newsfeed/posting/dto/PosterPreviewItem;",
+            "Lcom/vk/newsfeed/posting/dto/b;",
             ">;)V"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
 
     return-void
 .end method
@@ -2462,7 +2462,7 @@
     const-string v1, "bottomDivider"
 
     .line 16
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2470,7 +2470,7 @@
     const-string v1, "topDivider"
 
     .line 17
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2478,7 +2478,7 @@
     const-string v1, "posterPreviewShadow"
 
     .line 18
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2486,7 +2486,7 @@
     const-string v1, "progressBar"
 
     .line 19
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2494,7 +2494,7 @@
     const-string v1, "nameHintText"
 
     .line 20
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2502,7 +2502,7 @@
     const-string v1, "mentionButton"
 
     .line 21
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2510,7 +2510,7 @@
     const-string v1, "settingsButton"
 
     .line 22
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2518,7 +2518,7 @@
     const-string v1, "posterRecyclerView"
 
     .line 23
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2526,7 +2526,7 @@
     const-string v1, "posterButton"
 
     .line 24
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -2558,18 +2558,18 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/PosterPreviewAdapter;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;->b(Z)V
 
     return-void
 .end method
 
-.method public getPresenter()Lcom/vk/newsfeed/posting/PostingContracts14;
+.method public getPresenter()Lcom/vk/newsfeed/posting/j;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->a:Lcom/vk/newsfeed/posting/PostingContracts14;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->a:Lcom/vk/newsfeed/posting/j;
 
     return-object v0
 .end method
@@ -2591,7 +2591,7 @@
     :cond_0
     const-string v0, "nameHintText"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2761,7 +2761,7 @@
     const-string v1, "bottomDivider"
 
     .line 17
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -2769,7 +2769,7 @@
     const-string v1, "topDivider"
 
     .line 18
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -2777,7 +2777,7 @@
     const-string v1, "posterPreviewShadow"
 
     .line 19
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -2785,7 +2785,7 @@
     const-string v1, "posterRecyclerView"
 
     .line 20
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -2793,7 +2793,7 @@
     const-string v1, "progressBar"
 
     .line 21
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -2801,7 +2801,7 @@
     const-string v1, "nameHintText"
 
     .line 22
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -2809,7 +2809,7 @@
     const-string v1, "mentionButton"
 
     .line 23
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -2817,7 +2817,7 @@
     const-string v1, "settingsButton"
 
     .line 24
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 .end method
@@ -2875,22 +2875,22 @@
     if-ne v3, v1, :cond_2
 
     .line 3
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->d:Lcom/vk/core/util/TimeoutLock;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->d:Lcom/vk/core/util/j1;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/TimeoutLock;->a()Z
+    invoke-virtual {p1}, Lcom/vk/core/util/j1;->a()Z
 
     move-result p1
 
     if-nez p1, :cond_19
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts14;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/j;
 
     move-result-object p1
 
     if-eqz p1, :cond_19
 
-    invoke-interface {p1, v2}, Lcom/vk/newsfeed/posting/PostingContracts14;->i(I)V
+    invoke-interface {p1, v2}, Lcom/vk/newsfeed/posting/j;->i(I)V
 
     goto/16 :goto_b
 
@@ -2913,22 +2913,22 @@
     if-ne v4, v1, :cond_4
 
     .line 6
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->d:Lcom/vk/core/util/TimeoutLock;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->d:Lcom/vk/core/util/j1;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/TimeoutLock;->a()Z
+    invoke-virtual {p1}, Lcom/vk/core/util/j1;->a()Z
 
     move-result p1
 
     if-nez p1, :cond_19
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts14;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/j;
 
     move-result-object p1
 
     if-eqz p1, :cond_19
 
-    invoke-interface {p1, v3}, Lcom/vk/newsfeed/posting/PostingContracts14;->i(I)V
+    invoke-interface {p1, v3}, Lcom/vk/newsfeed/posting/j;->i(I)V
 
     goto/16 :goto_b
 
@@ -2951,22 +2951,22 @@
     if-ne v5, v1, :cond_6
 
     .line 9
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->d:Lcom/vk/core/util/TimeoutLock;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->d:Lcom/vk/core/util/j1;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/TimeoutLock;->a()Z
+    invoke-virtual {p1}, Lcom/vk/core/util/j1;->a()Z
 
     move-result p1
 
     if-nez p1, :cond_19
 
     .line 10
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts14;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/j;
 
     move-result-object p1
 
     if-eqz p1, :cond_19
 
-    invoke-interface {p1, v4}, Lcom/vk/newsfeed/posting/PostingContracts14;->i(I)V
+    invoke-interface {p1, v4}, Lcom/vk/newsfeed/posting/j;->i(I)V
 
     goto/16 :goto_b
 
@@ -2987,25 +2987,25 @@
     if-ne v5, v1, :cond_12
 
     .line 12
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->e:Lcom/vk/core/util/TimeoutLock;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->e:Lcom/vk/core/util/j1;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/TimeoutLock;->c()V
+    invoke-virtual {p1}, Lcom/vk/core/util/j1;->c()V
 
     .line 13
-    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->c()Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
 
     .line 14
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts14;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/j;
 
     move-result-object p1
 
     if-eqz p1, :cond_8
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts14;->i0()Z
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/j;->i0()Z
 
     move-result p1
 
@@ -3016,7 +3016,7 @@
 
     .line 15
     :goto_4
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/a;
 
     const-string v5, "moreMenuAdapter"
 
@@ -3024,19 +3024,19 @@
 
     const/4 v6, 0x2
 
-    invoke-virtual {v1, v6, p1}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;->a(IZ)V
+    invoke-virtual {v1, v6, p1}, Lcom/vk/newsfeed/posting/r/a;->a(IZ)V
 
     .line 16
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/a;
 
     if-eqz v1, :cond_10
 
     const/4 v6, 0x4
 
-    invoke-virtual {v1, v6, p1}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;->a(IZ)V
+    invoke-virtual {v1, v6, p1}, Lcom/vk/newsfeed/posting/r/a;->a(IZ)V
 
     .line 17
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/a;
 
     if-eqz v1, :cond_f
 
@@ -3044,13 +3044,13 @@
 
     if-eqz p1, :cond_a
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts14;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/j;
 
     move-result-object v7
 
     if-eqz v7, :cond_9
 
-    invoke-interface {v7}, Lcom/vk/newsfeed/posting/PostingContracts14;->J()Z
+    invoke-interface {v7}, Lcom/vk/newsfeed/posting/j;->J()Z
 
     move-result v7
 
@@ -3070,31 +3070,31 @@
     const/4 v7, 0x0
 
     :goto_6
-    invoke-virtual {v1, v6, v7}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;->a(IZ)V
+    invoke-virtual {v1, v6, v7}, Lcom/vk/newsfeed/posting/r/a;->a(IZ)V
 
     .line 18
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/a;
 
     if-eqz v1, :cond_e
 
     const/4 v6, 0x3
 
-    invoke-virtual {v1, v6, p1}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;->a(IZ)V
+    invoke-virtual {v1, v6, p1}, Lcom/vk/newsfeed/posting/r/a;->a(IZ)V
 
     .line 19
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->h:Lcom/vk/newsfeed/posting/r/a;
 
     if-eqz v1, :cond_d
 
     if-eqz p1, :cond_c
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts14;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/j;
 
     move-result-object p1
 
     if-eqz p1, :cond_b
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts14;->Y()Z
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/j;->Y()Z
 
     move-result p1
 
@@ -3109,44 +3109,44 @@
     const/4 v2, 0x1
 
     :cond_c
-    invoke-virtual {v1, v3, v2}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;->a(IZ)V
+    invoke-virtual {v1, v3, v2}, Lcom/vk/newsfeed/posting/r/a;->a(IZ)V
 
     .line 20
-    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->c()Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->d()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->d()Lcom/vk/core/dialogs/actionspopup/a;
 
     goto :goto_b
 
     .line 21
     :cond_d
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 22
     :cond_e
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 23
     :cond_f
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 24
     :cond_10
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 25
     :cond_11
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -3167,13 +3167,13 @@
     if-ne v1, v0, :cond_14
 
     .line 27
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts14;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/j;
 
     move-result-object p1
 
     if-eqz p1, :cond_19
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts14;->U()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/j;->U()V
 
     goto :goto_b
 
@@ -3194,13 +3194,13 @@
     if-ne v1, v0, :cond_17
 
     .line 29
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts14;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/j;
 
     move-result-object p1
 
     if-eqz p1, :cond_16
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts14;->I()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/j;->I()V
 
     .line 30
     :cond_16
@@ -3229,13 +3229,13 @@
     if-ne p1, v0, :cond_19
 
     .line 32
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts14;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/j;
 
     move-result-object p1
 
     if-eqz p1, :cond_19
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts14;->l0()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/j;->l0()V
 
     :cond_19
     :goto_b
@@ -3246,11 +3246,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->c()Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
 
     return-void
 .end method
@@ -3296,7 +3296,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3365,7 +3365,7 @@
     :cond_3
     const-string p1, "posterRecyclerView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3380,7 +3380,7 @@
     :cond_5
     const-string p1, "posterPreviewShadow"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3393,7 +3393,7 @@
     throw p1
 
     :cond_7
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3401,7 +3401,7 @@
     const-string p1, "settingsButton"
 
     .line 11
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -3410,13 +3410,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts14;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/j;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts14;->h0()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/j;->h0()V
 
     :cond_0
     return-void

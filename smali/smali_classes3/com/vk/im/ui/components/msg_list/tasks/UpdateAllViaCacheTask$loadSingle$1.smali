@@ -3,12 +3,12 @@
 .source "UpdateAllViaCacheTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask;->b(Lcom/vk/im/engine/ImEngine;ILcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;I)Lio/reactivex/Single;
+    value = Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask;->b(Lcom/vk/im/engine/a;ILcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;I)Lc/a/t;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/core/util/Optional<",
-        "Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/core/util/q0<",
+        "Lcom/vk/im/ui/components/msg_list/k/a;",
         ">;>;"
     }
 .end annotation
@@ -30,9 +30,9 @@
 # instance fields
 .field final synthetic $dialogId:I
 
-.field final synthetic $imEngine:Lcom/vk/im/engine/ImEngine;
+.field final synthetic $imEngine:Lcom/vk/im/engine/a;
 
-.field final synthetic $oldEntryList:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+.field final synthetic $oldEntryList:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
 
 .field final synthetic $oldHistory:Lcom/vk/im/engine/models/messages/MsgHistory;
 
@@ -42,18 +42,18 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask;Lcom/vk/im/engine/ImEngine;ILcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;I)V
+.method constructor <init>(Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask;Lcom/vk/im/engine/a;ILcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->this$0:Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->$imEngine:Lcom/vk/im/engine/ImEngine;
+    iput-object p2, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->$imEngine:Lcom/vk/im/engine/a;
 
     iput p3, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->$dialogId:I
 
     iput-object p4, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->$oldHistory:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iput-object p5, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->$oldEntryList:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+    iput-object p5, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->$oldEntryList:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
 
     iput p6, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->$oldReadTill:I
 
@@ -66,13 +66,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/core/util/Optional;
+.method public final invoke()Lcom/vk/core/util/q0;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/core/util/Optional<",
-            "Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;",
+            "Lcom/vk/core/util/q0<",
+            "Lcom/vk/im/ui/components/msg_list/k/a;",
             ">;"
         }
     .end annotation
@@ -80,17 +80,17 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->this$0:Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->$imEngine:Lcom/vk/im/engine/ImEngine;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->$imEngine:Lcom/vk/im/engine/a;
 
     iget v2, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->$dialogId:I
 
     iget-object v3, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->$oldHistory:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v4, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->$oldEntryList:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+    iget-object v4, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->$oldEntryList:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
 
     iget v5, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->$oldReadTill:I
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask;->a(Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask;Lcom/vk/im/engine/ImEngine;ILcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;I)Lcom/vk/core/util/Optional;
+    invoke-static/range {v0 .. v5}, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask;->a(Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask;Lcom/vk/im/engine/a;ILcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;I)Lcom/vk/core/util/q0;
 
     move-result-object v0
 
@@ -101,7 +101,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->invoke()Lcom/vk/core/util/Optional;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_list/tasks/UpdateAllViaCacheTask$loadSingle$1;->invoke()Lcom/vk/core/util/q0;
 
     move-result-object v0
 

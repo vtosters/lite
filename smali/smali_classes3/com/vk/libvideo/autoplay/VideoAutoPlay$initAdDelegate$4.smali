@@ -3,7 +3,7 @@
 .source "VideoAutoPlay.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions5;
+.implements Lkotlin/jvm/b/f;
 
 
 # annotations
@@ -19,13 +19,13 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions5<",
-        "Lcom/vk/libvideo/ad/AdBannerData;",
+        "Lkotlin/jvm/b/f<",
+        "Lcom/vk/libvideo/ad/b;",
         "Ljava/lang/Float;",
         "Ljava/lang/Float;",
         "Ljava/lang/Boolean;",
         "Ljava/lang/Integer;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
     .line 1
     move-object v1, p1
 
-    check-cast v1, Lcom/vk/libvideo/ad/AdBannerData;
+    check-cast v1, Lcom/vk/libvideo/ad/b;
 
     check-cast p2, Ljava/lang/Number;
 
@@ -76,14 +76,14 @@
 
     move-object v0, p0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/libvideo/autoplay/VideoAutoPlay$initAdDelegate$4;->a(Lcom/vk/libvideo/ad/AdBannerData;FFZLjava/lang/Integer;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/libvideo/autoplay/VideoAutoPlay$initAdDelegate$4;->a(Lcom/vk/libvideo/ad/b;FFZLjava/lang/Integer;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
 
-.method public final a(Lcom/vk/libvideo/ad/AdBannerData;FFZLjava/lang/Integer;)V
+.method public final a(Lcom/vk/libvideo/ad/b;FFZLjava/lang/Integer;)V
     .locals 7
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
@@ -103,7 +103,7 @@
     move-object v6, p5
 
     .line 2
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/libvideo/autoplay/VideoUIEventDispatcher;->a(Lcom/vk/libvideo/ad/AdBannerData;FFZLjava/lang/Integer;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/libvideo/autoplay/VideoUIEventDispatcher;->a(Lcom/vk/libvideo/ad/b;FFZLjava/lang/Integer;)V
 
     return-void
 .end method
@@ -116,12 +116,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 1
 
     const-class v0, Lcom/vk/libvideo/autoplay/VideoUIEventDispatcher;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 

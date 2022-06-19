@@ -206,7 +206,7 @@
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 21
-    sget-object v1, Lcom/vk/im/ui/R2;->MsgRequestCountLabelView:[I
+    sget-object v1, Lcom/vk/im/ui/o;->MsgRequestCountLabelView:[I
 
     invoke-virtual {p1, p2, v1, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -220,7 +220,7 @@
 
     if-eqz p2, :cond_5
 
-    sget p3, Lcom/vk/im/ui/R2;->MsgRequestCountLabelView_vkim_labelTextAppearance:I
+    sget p3, Lcom/vk/im/ui/o;->MsgRequestCountLabelView_vkim_labelTextAppearance:I
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -233,7 +233,7 @@
 
     if-eqz p2, :cond_4
 
-    sget p3, Lcom/vk/im/ui/R2;->MsgRequestCountLabelView_vkim_icon:I
+    sget p3, Lcom/vk/im/ui/o;->MsgRequestCountLabelView_vkim_icon:I
 
     invoke-virtual {p1, p3}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -246,7 +246,7 @@
 
     if-eqz p2, :cond_3
 
-    sget p3, Lcom/vk/im/ui/R2;->MsgRequestCountLabelView_vkim_iconWidth:I
+    sget p3, Lcom/vk/im/ui/o;->MsgRequestCountLabelView_vkim_iconWidth:I
 
     const/16 p4, 0x10
 
@@ -261,7 +261,7 @@
 
     if-eqz p2, :cond_2
 
-    sget p3, Lcom/vk/im/ui/R2;->MsgRequestCountLabelView_vkim_iconHeight:I
+    sget p3, Lcom/vk/im/ui/o;->MsgRequestCountLabelView_vkim_iconHeight:I
 
     invoke-virtual {p1, p3, p4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -270,7 +270,7 @@
     invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->h(Landroid/view/View;I)V
 
     .line 27
-    sget p2, Lcom/vk/im/ui/R2;->MsgRequestCountLabelView_vkim_iconTint:I
+    sget p2, Lcom/vk/im/ui/o;->MsgRequestCountLabelView_vkim_iconTint:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -283,7 +283,7 @@
 
     if-eqz p2, :cond_0
 
-    sget p3, Lcom/vk/im/ui/R2;->MsgRequestCountLabelView_vkim_iconTint:I
+    sget p3, Lcom/vk/im/ui/o;->MsgRequestCountLabelView_vkim_iconTint:I
 
     const/high16 p4, -0x1000000
 
@@ -296,7 +296,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -309,37 +309,37 @@
 
     .line 30
     :cond_2
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 31
     :cond_3
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 32
     :cond_4
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 33
     :cond_5
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 34
     :cond_6
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 35
     :cond_7
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -404,7 +404,7 @@
     :cond_0
     const-string v0, "iconView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -430,7 +430,7 @@
     :cond_0
     const-string v0, "iconView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -456,7 +456,7 @@
     :cond_0
     const-string v0, "iconView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -476,9 +476,9 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v1, Lcom/vk/im/ui/R7;->vkim_msg_request_label:I
+    sget v1, Lcom/vk/im/ui/l;->vkim_msg_request_label:I
 
     invoke-static {v0, v1, p1}, Lcom/vk/core/util/ContextExtKt;->d(Landroid/content/Context;II)Ljava/lang/String;
 
@@ -500,7 +500,7 @@
     const-string p1, "labelView"
 
     .line 5
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -522,7 +522,7 @@
     :cond_0
     const-string p1, "iconView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -544,7 +544,7 @@
     :cond_0
     const-string p1, "iconView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -566,7 +566,7 @@
     :cond_0
     const-string p1, "iconView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

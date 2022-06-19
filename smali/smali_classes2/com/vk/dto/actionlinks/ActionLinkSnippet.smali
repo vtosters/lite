@@ -47,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/actionlinks/ActionLinkSnippet$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/actionlinks/ActionLinkSnippet$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/actionlinks/ActionLinkSnippet$b;
@@ -170,7 +170,7 @@
 
     const-string v1, "o.optString(ServerKeys.TITLE)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/dto/actionlinks/ActionLinkSnippet;->a:Ljava/lang/String;
 
@@ -183,7 +183,7 @@
 
     const-string v1, "o.optString(ServerKeys.OPEN_TITLE)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/dto/actionlinks/ActionLinkSnippet;->d:Ljava/lang/String;
 
@@ -196,7 +196,7 @@
 
     const-string v1, "o.optString(ServerKeys.DESCRIPTION)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/dto/actionlinks/ActionLinkSnippet;->b:Ljava/lang/String;
 
@@ -209,7 +209,7 @@
 
     const-string v1, "o.optString(ServerKeys.TYPE_NAME)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/dto/actionlinks/ActionLinkSnippet;->c:Ljava/lang/String;
 

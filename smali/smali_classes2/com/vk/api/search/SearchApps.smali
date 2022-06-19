@@ -1,5 +1,5 @@
 .class public final Lcom/vk/api/search/SearchApps;
-.super Lcom/vk/api/search/SearchRequest;
+.super Lcom/vk/api/search/g;
 .source "SearchApps.kt"
 
 
@@ -27,7 +27,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/api/search/SearchApps$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/search/SearchApps$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
     const-string v0, "execute.searchApps"
 
     .line 1
-    invoke-direct {p0, v0, p1, p3, p4}, Lcom/vk/api/search/SearchRequest;-><init>(Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct {p0, v0, p1, p3, p4}, Lcom/vk/api/search/g;-><init>(Ljava/lang/String;Ljava/lang/String;II)V
 
     iput-object p1, p0, Lcom/vk/api/search/SearchApps;->G:Ljava/lang/String;
 
@@ -63,7 +63,7 @@
     :goto_0
     const-string p3, "for_platform"
 
-    invoke-virtual {p0, p3, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p3, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     .line 3
     iget-boolean p1, p0, Lcom/vk/api/search/SearchApps;->I:Z
@@ -75,7 +75,7 @@
     :cond_1
     const-string p1, "filters"
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     return-void
 .end method
@@ -90,7 +90,7 @@
             "Lorg/json/JSONObject;",
             ")",
             "Lcom/vk/dto/common/data/VKList<",
-            "Lcom/vk/common/i/RecyclerItem;",
+            "Lcom/vk/common/i/b;",
             ">;"
         }
     .end annotation
@@ -120,7 +120,7 @@
 
     sget-object v3, Lcom/vk/api/search/SearchApps$parse$recents$1$1;->a:Lcom/vk/api/search/SearchApps$parse$recents$1$1;
 
-    invoke-direct {v2, v1, v3}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v2, v1, v3}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)V
 
     .line 5
     invoke-static {v2}, Lkotlin/collections/l;->g(Ljava/lang/Iterable;)Ljava/util/List;
@@ -151,7 +151,7 @@
 
     sget-object v2, Lcom/vk/api/search/SearchApps$parse$apps$1$1;->a:Lcom/vk/api/search/SearchApps$parse$apps$1$1;
 
-    invoke-direct {v0, p1, v2}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p1, v2}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)V
 
     .line 8
     invoke-virtual {v0}, Lcom/vk/dto/common/data/VKList;->a()I
@@ -213,7 +213,7 @@
     check-cast v5, Lcom/vk/dto/common/data/ApiApplication;
 
     .line 15
-    new-instance v6, Lcom/vk/dto/discover/b/SearchAppItem;
+    new-instance v6, Lcom/vk/dto/discover/b/a;
 
     iget-boolean v7, p0, Lcom/vk/api/search/SearchApps;->I:Z
 
@@ -221,7 +221,7 @@
 
     iget-object v9, p0, Lcom/vk/api/search/SearchApps;->H:Ljava/lang/String;
 
-    invoke-direct {v6, v5, v7, v8, v9}, Lcom/vk/dto/discover/b/SearchAppItem;-><init>(Lcom/vk/dto/common/data/ApiApplication;ZLjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v6, v5, v7, v8, v9}, Lcom/vk/dto/discover/b/a;-><init>(Lcom/vk/dto/common/data/ApiApplication;ZLjava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v4, v6}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -233,16 +233,16 @@
 
     if-eqz v1, :cond_3
 
-    new-instance v1, Lcom/vk/dto/discover/b/SearchGameListItem;
+    new-instance v1, Lcom/vk/dto/discover/b/b;
 
-    invoke-direct {v1, v4}, Lcom/vk/dto/discover/b/SearchGameListItem;-><init>(Ljava/util/List;)V
+    invoke-direct {v1, v4}, Lcom/vk/dto/discover/b/b;-><init>(Ljava/util/List;)V
 
     goto :goto_2
 
     :cond_3
-    new-instance v1, Lcom/vk/dto/discover/b/SearchRecentAppsItems;
+    new-instance v1, Lcom/vk/dto/discover/b/f;
 
-    invoke-direct {v1, v4}, Lcom/vk/dto/discover/b/SearchRecentAppsItems;-><init>(Ljava/util/List;)V
+    invoke-direct {v1, v4}, Lcom/vk/dto/discover/b/f;-><init>(Ljava/util/List;)V
 
     :goto_2
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -279,7 +279,7 @@
     check-cast v3, Lcom/vk/dto/common/data/ApiApplication;
 
     .line 20
-    new-instance v4, Lcom/vk/dto/discover/b/SearchAppItem;
+    new-instance v4, Lcom/vk/dto/discover/b/a;
 
     iget-boolean v5, p0, Lcom/vk/api/search/SearchApps;->I:Z
 
@@ -287,7 +287,7 @@
 
     iget-object v7, p0, Lcom/vk/api/search/SearchApps;->H:Ljava/lang/String;
 
-    invoke-direct {v4, v3, v5, v6, v7}, Lcom/vk/dto/discover/b/SearchAppItem;-><init>(Lcom/vk/dto/common/data/ApiApplication;ZLjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v4, v3, v5, v6, v7}, Lcom/vk/dto/discover/b/a;-><init>(Lcom/vk/dto/common/data/ApiApplication;ZLjava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v1, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 

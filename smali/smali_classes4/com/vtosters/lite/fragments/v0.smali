@@ -3,20 +3,20 @@
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/fragments/WebViewFragment;
+.field private final synthetic a:Lcom/vtosters/lite/fragments/j2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/WebViewFragment;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/j2;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/v0;->a:Lcom/vtosters/lite/fragments/WebViewFragment;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/v0;->a:Lcom/vtosters/lite/fragments/j2;
 
     return-void
 .end method
@@ -26,11 +26,11 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/v0;->a:Lcom/vtosters/lite/fragments/WebViewFragment;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/v0;->a:Lcom/vtosters/lite/fragments/j2;
 
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/WebViewFragment;->N(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/j2;->N(Ljava/lang/String;)V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/holders/WidgetHolder;
-.super Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;
+.super Lcom/vk/newsfeed/holders/h;
 .source "WidgetHolder.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/newsfeed/holders/BaseNewsEntryHolder<",
+        "Lcom/vk/newsfeed/holders/h<",
         "Lcom/vk/dto/newsfeed/entries/widget/Widget;",
         ">;"
     }
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field private final F:Lcom/vtosters/lite/ui/widget/WidgetView;
+.field private final F:Lcom/vtosters/lite/ui/widget/v;
 
 
 # direct methods
@@ -35,18 +35,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/WidgetHolder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/WidgetHolder$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/newsfeed/holders/WidgetHolder;->G:Lcom/vk/newsfeed/holders/WidgetHolder$a;
 
     return-void
 .end method
 
-.method private constructor <init>(Lcom/vtosters/lite/ui/widget/WidgetView;Landroid/view/ViewGroup;)V
+.method private constructor <init>(Lcom/vtosters/lite/ui/widget/v;Landroid/view/ViewGroup;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/newsfeed/holders/h;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -59,38 +59,38 @@
 
     const-string p2, "itemView.findViewById(R.id.root_view)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/vtosters/lite/ui/widget/WidgetView;
+    check-cast p1, Lcom/vtosters/lite/ui/widget/v;
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vtosters/lite/ui/widget/WidgetView;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vtosters/lite/ui/widget/v;
 
     .line 4
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vtosters/lite/ui/widget/WidgetView;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vtosters/lite/ui/widget/v;
 
     new-instance p2, Lcom/vk/newsfeed/holders/WidgetHolder$1;
 
     invoke-direct {p2, p0}, Lcom/vk/newsfeed/holders/WidgetHolder$1;-><init>(Lcom/vk/newsfeed/holders/WidgetHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vtosters/lite/ui/widget/WidgetView;Landroid/view/ViewGroup;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/ui/widget/v;Landroid/view/ViewGroup;Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/newsfeed/holders/WidgetHolder;-><init>(Lcom/vtosters/lite/ui/widget/WidgetView;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/newsfeed/holders/WidgetHolder;-><init>(Lcom/vtosters/lite/ui/widget/v;Landroid/view/ViewGroup;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/holders/WidgetHolder;)Lcom/vtosters/lite/ui/widget/WidgetView;
+.method public static final synthetic a(Lcom/vk/newsfeed/holders/WidgetHolder;)Lcom/vtosters/lite/ui/widget/v;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vtosters/lite/ui/widget/WidgetView;
+    iget-object p0, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vtosters/lite/ui/widget/v;
 
     return-object p0
 .end method
@@ -101,9 +101,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vtosters/lite/ui/widget/WidgetView;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vtosters/lite/ui/widget/v;
 
-    invoke-interface {v0, p1}, Lcom/vtosters/lite/ui/widget/WidgetBinder;->a(Lcom/vk/dto/newsfeed/entries/widget/Widget;)V
+    invoke-interface {v0, p1}, Lcom/vtosters/lite/ui/widget/g;->a(Lcom/vk/dto/newsfeed/entries/widget/Widget;)V
 
     return-void
 .end method

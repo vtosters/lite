@@ -3,7 +3,7 @@
 .source "ChatPresenter.java"
 
 # interfaces
-.implements Lcom/vk/libvideo/live/views/chat/ChatContract2;
+.implements Lcom/vk/libvideo/live/views/chat/b;
 
 
 # annotations
@@ -15,19 +15,19 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/libvideo/a0/h/LiveVideoController;
+.field private final a:Lcom/vk/libvideo/a0/h/f;
 
-.field private final b:Lcom/vk/libvideo/a0/h/LiveUsersController;
+.field private final b:Lcom/vk/libvideo/a0/h/e;
 
-.field private final c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+.field private final c:Lcom/vk/libvideo/live/views/chat/c;
 
-.field private final d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+.field private final d:Lcom/vk/libvideo/live/views/chat/e;
 
 .field private final e:Lcom/vk/dto/user/UserProfile;
 
 .field private final f:Lcom/vk/dto/group/Group;
 
-.field private g:Lio/reactivex/disposables/Disposable;
+.field private g:Lio/reactivex/disposables/b;
 
 .field private h:I
 
@@ -37,7 +37,7 @@
 
 .field private k:Z
 
-.field private l:Lio/reactivex/disposables/Disposable;
+.field private l:Lio/reactivex/disposables/b;
 
 .field private m:Lcom/vk/libvideo/live/base/LiveStatNew;
 
@@ -64,25 +64,25 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/dto/video/VideoOwner;Lcom/vk/dto/user/UserProfile;Lcom/vk/dto/group/Group;ZLcom/vk/libvideo/live/views/chat/ChatContract1;)V
+.method public constructor <init>(Lcom/vk/dto/video/VideoOwner;Lcom/vk/dto/user/UserProfile;Lcom/vk/dto/group/Group;ZLcom/vk/libvideo/live/views/chat/c;)V
     .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {}, Lcom/vk/libvideo/a0/h/LiveVideoController;->l()Lcom/vk/libvideo/a0/h/LiveVideoController;
+    invoke-static {}, Lcom/vk/libvideo/a0/h/f;->l()Lcom/vk/libvideo/a0/h/f;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a:Lcom/vk/libvideo/a0/h/LiveVideoController;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a:Lcom/vk/libvideo/a0/h/f;
 
     .line 3
-    invoke-static {}, Lcom/vk/libvideo/a0/h/LiveUsersController;->a()Lcom/vk/libvideo/a0/h/LiveUsersController;
+    invoke-static {}, Lcom/vk/libvideo/a0/h/e;->a()Lcom/vk/libvideo/a0/h/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/LiveUsersController;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/e;
 
     .line 4
     new-instance v0, Lcom/vk/libvideo/live/views/chat/ChatPresenter$1;
@@ -108,37 +108,37 @@
     iput-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->i:Lcom/vk/dto/video/VideoOwner;
 
     .line 9
-    iput-object p5, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iput-object p5, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
     .line 10
     iput-boolean p4, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->k:Z
 
     .line 11
-    new-instance p1, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    new-instance p1, Lcom/vk/libvideo/live/views/chat/e;
 
     iget-boolean p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->k:Z
 
-    invoke-direct {p1, p0, p2}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;-><init>(Lcom/vk/libvideo/live/views/chat/ChatContract2;Z)V
+    invoke-direct {p1, p0, p2}, Lcom/vk/libvideo/live/views/chat/e;-><init>(Lcom/vk/libvideo/live/views/chat/b;Z)V
 
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/libvideo/live/views/chat/ChatPresenter;)Lcom/vk/libvideo/live/views/chat/ChatContract1;
+.method static synthetic a(Lcom/vk/libvideo/live/views/chat/ChatPresenter;)Lcom/vk/libvideo/live/views/chat/c;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object p0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
     return-object p0
 .end method
 
-.method static synthetic a(Lcom/vk/libvideo/live/views/chat/ChatPresenter;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
+.method static synthetic a(Lcom/vk/libvideo/live/views/chat/ChatPresenter;Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     return-object p1
 .end method
@@ -528,11 +528,11 @@
     return v2
 .end method
 
-.method static synthetic c(Lcom/vk/libvideo/live/views/chat/ChatPresenter;)Lcom/vk/libvideo/a0/h/LiveUsersController;
+.method static synthetic c(Lcom/vk/libvideo/live/views/chat/ChatPresenter;)Lcom/vk/libvideo/a0/h/e;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/LiveUsersController;
+    iget-object p0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/e;
 
     return-object p0
 .end method
@@ -541,9 +541,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;->j()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/chat/e;->j()Ljava/util/List;
 
     move-result-object v0
 
@@ -595,17 +595,17 @@
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
     .line 6
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     const/4 v0, 0x0
 
     .line 7
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     :cond_0
     return-void
@@ -624,13 +624,13 @@
 
     .line 79
     :cond_0
-    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
+    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BaseView;->getContext()Landroid/content/Context;
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/b;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -644,7 +644,7 @@
 
     move v3, p1
 
-    invoke-interface/range {v1 .. v7}, Lcom/vk/bridges/UsersBridge;->a(Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;)V
+    invoke-interface/range {v1 .. v7}, Lcom/vk/bridges/i0;->a(Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;)V
 
     return-void
 .end method
@@ -653,26 +653,26 @@
     .locals 2
 
     .line 61
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
     .line 62
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     const/4 v0, 0x0
 
     .line 63
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     .line 64
     :cond_0
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a:Lcom/vk/libvideo/a0/h/LiveVideoController;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a:Lcom/vk/libvideo/a0/h/f;
 
     const/4 v1, 0x0
 
     .line 65
-    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/libvideo/a0/h/LiveVideoController;->a(ZII)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/libvideo/a0/h/f;->a(ZII)Lc/a/m;
 
     move-result-object p1
 
@@ -681,11 +681,11 @@
     invoke-direct {p2, p0}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$g;-><init>(Lcom/vk/libvideo/live/views/chat/ChatPresenter;)V
 
     .line 66
-    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {p1, p2}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast p2, Lio/reactivex/disposables/Disposable;
+    check-cast p2, Lio/reactivex/disposables/b;
 
-    iput-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -694,26 +694,26 @@
     .locals 2
 
     .line 55
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
     .line 56
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     const/4 v0, 0x0
 
     .line 57
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     .line 58
     :cond_0
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a:Lcom/vk/libvideo/a0/h/LiveVideoController;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a:Lcom/vk/libvideo/a0/h/f;
 
     const/4 v1, 0x1
 
     .line 59
-    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/libvideo/a0/h/LiveVideoController;->a(ZII)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/libvideo/a0/h/f;->a(ZII)Lc/a/m;
 
     move-result-object p1
 
@@ -722,11 +722,11 @@
     invoke-direct {p2, p0, p3}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$f;-><init>(Lcom/vk/libvideo/live/views/chat/ChatPresenter;I)V
 
     .line 60
-    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {p1, p2}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast p2, Lio/reactivex/disposables/Disposable;
+    check-cast p2, Lio/reactivex/disposables/b;
 
-    iput-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -735,24 +735,24 @@
     .locals 1
 
     .line 71
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
     .line 72
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     const/4 v0, 0x0
 
     .line 73
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     .line 74
     :cond_0
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a:Lcom/vk/libvideo/a0/h/LiveVideoController;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a:Lcom/vk/libvideo/a0/h/f;
 
     .line 75
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/libvideo/a0/h/LiveVideoController;->a(III)Lio/reactivex/Observable;
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/libvideo/a0/h/f;->a(III)Lc/a/m;
 
     move-result-object p1
 
@@ -761,11 +761,11 @@
     invoke-direct {p2, p0, p3, p4}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$c;-><init>(Lcom/vk/libvideo/live/views/chat/ChatPresenter;IZ)V
 
     .line 76
-    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {p1, p2}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast p2, Lio/reactivex/disposables/Disposable;
+    check-cast p2, Lio/reactivex/disposables/b;
 
-    iput-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -783,14 +783,14 @@
 
     .line 69
     :cond_0
-    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    invoke-static {p1, p3}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    invoke-static {p1, p3}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
     .line 70
-    sget p1, Lcom/vk/libvideo/R11;->live_comment_copied:I
+    sget p1, Lcom/vk/libvideo/j;->live_comment_copied:I
 
-    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
 
     return-void
 .end method
@@ -799,14 +799,14 @@
     .locals 6
 
     .line 45
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
     if-eqz v0, :cond_2
 
     .line 46
     new-instance v1, Landroid/text/SpannableString;
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BaseView;->getContext()Landroid/content/Context;
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/b;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -816,12 +816,12 @@
 
     if-eqz v2, :cond_0
 
-    sget v2, Lcom/vk/libvideo/R11;->live_announce_friend_enter_female1:I
+    sget v2, Lcom/vk/libvideo/j;->live_announce_friend_enter_female1:I
 
     goto :goto_0
 
     :cond_0
-    sget v2, Lcom/vk/libvideo/R11;->live_announce_friend_enter_male1:I
+    sget v2, Lcom/vk/libvideo/j;->live_announce_friend_enter_male1:I
 
     :goto_0
     invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -833,9 +833,9 @@
     .line 47
     new-instance v0, Landroid/text/SpannableString;
 
-    iget-object v2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object v2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {v2}, Lcom/vk/libvideo/live/base/BaseView;->getContext()Landroid/content/Context;
+    invoke-interface {v2}, Lcom/vk/libvideo/live/base/b;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -845,12 +845,12 @@
 
     if-eqz v3, :cond_1
 
-    sget v3, Lcom/vk/libvideo/R11;->live_announce_friend_enter_female2:I
+    sget v3, Lcom/vk/libvideo/j;->live_announce_friend_enter_female2:I
 
     goto :goto_1
 
     :cond_1
-    sget v3, Lcom/vk/libvideo/R11;->live_announce_friend_enter_male2:I
+    sget v3, Lcom/vk/libvideo/j;->live_announce_friend_enter_male2:I
 
     :goto_1
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -860,7 +860,7 @@
     invoke-direct {v0, v2}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
     .line 48
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object v2
 
@@ -884,7 +884,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v2, v3}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -940,18 +940,18 @@
     iput-object v0, p1, Lcom/vk/dto/live/LiveEventModel;->K:Ljava/lang/CharSequence;
 
     .line 52
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;->j()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/chat/e;->j()Ljava/util/List;
 
     move-result-object v0
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 53
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;->j()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/chat/e;->j()Ljava/util/List;
 
     move-result-object v0
 
@@ -964,9 +964,9 @@
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
 
     .line 54
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {p1}, Lcom/vk/libvideo/live/views/chat/ChatContract1;->e1()V
+    invoke-interface {p1}, Lcom/vk/libvideo/live/views/chat/c;->e1()V
 
     :cond_2
     return-void
@@ -976,12 +976,12 @@
     .locals 5
 
     .line 18
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
     if-eqz v0, :cond_3
 
     .line 19
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object v0
 
@@ -1003,7 +1003,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v1}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -1017,9 +1017,9 @@
     .line 21
     new-instance p3, Landroid/text/SpannableString;
 
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {v1}, Lcom/vk/libvideo/live/base/BaseView;->getContext()Landroid/content/Context;
+    invoke-interface {v1}, Lcom/vk/libvideo/live/base/b;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1029,12 +1029,12 @@
 
     if-eqz v3, :cond_0
 
-    sget v3, Lcom/vk/libvideo/R11;->live_announce_subscribed_group_female:I
+    sget v3, Lcom/vk/libvideo/j;->live_announce_subscribed_group_female:I
 
     goto :goto_0
 
     :cond_0
-    sget v3, Lcom/vk/libvideo/R11;->live_announce_subscribed_group_male:I
+    sget v3, Lcom/vk/libvideo/j;->live_announce_subscribed_group_male:I
 
     :goto_0
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1052,13 +1052,13 @@
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object v2
 
     iget-object p2, p2, Lcom/vk/dto/group/Group;->c:Ljava/lang/String;
 
-    invoke-virtual {v2, p2}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v2, p2}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p2
 
@@ -1078,9 +1078,9 @@
     :cond_1
     new-instance p2, Landroid/text/SpannableString;
 
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {v1}, Lcom/vk/libvideo/live/base/BaseView;->getContext()Landroid/content/Context;
+    invoke-interface {v1}, Lcom/vk/libvideo/live/base/b;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1090,12 +1090,12 @@
 
     if-eqz v3, :cond_2
 
-    sget v3, Lcom/vk/libvideo/R11;->live_announce_subscribed_user_female:I
+    sget v3, Lcom/vk/libvideo/j;->live_announce_subscribed_user_female:I
 
     goto :goto_1
 
     :cond_2
-    sget v3, Lcom/vk/libvideo/R11;->live_announce_subscribed_user_male:I
+    sget v3, Lcom/vk/libvideo/j;->live_announce_subscribed_user_male:I
 
     :goto_1
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1113,13 +1113,13 @@
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object v2
 
     iget-object p3, p3, Lcom/vk/dto/user/UserProfile;->d:Ljava/lang/String;
 
-    invoke-virtual {v2, p3}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v2, p3}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p3
 
@@ -1206,18 +1206,18 @@
     iput-object p2, p1, Lcom/vk/dto/live/LiveEventModel;->K:Ljava/lang/CharSequence;
 
     .line 30
-    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-virtual {p2}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;->j()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/vk/libvideo/live/views/chat/e;->j()Ljava/util/List;
 
     move-result-object p2
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 31
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;->j()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/chat/e;->j()Ljava/util/List;
 
     move-result-object p2
 
@@ -1230,9 +1230,9 @@
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
 
     .line 32
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {p1}, Lcom/vk/libvideo/live/views/chat/ChatContract1;->e1()V
+    invoke-interface {p1}, Lcom/vk/libvideo/live/views/chat/c;->e1()V
 
     :cond_3
     return-void
@@ -1242,12 +1242,12 @@
     .locals 4
 
     .line 33
-    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
     if-eqz p2, :cond_1
 
     .line 34
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object p2
 
@@ -1269,7 +1269,7 @@
 
     move-result-object p3
 
-    invoke-virtual {p2, p3}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {p2, p3}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p2
 
@@ -1278,9 +1278,9 @@
     .line 35
     new-instance p3, Landroid/text/SpannableString;
 
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {v1}, Lcom/vk/libvideo/live/base/BaseView;->getContext()Landroid/content/Context;
+    invoke-interface {v1}, Lcom/vk/libvideo/live/base/b;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1290,12 +1290,12 @@
 
     if-eqz v2, :cond_0
 
-    sget v2, Lcom/vk/libvideo/R11;->live_announce_shared_female:I
+    sget v2, Lcom/vk/libvideo/j;->live_announce_shared_female:I
 
     goto :goto_0
 
     :cond_0
-    sget v2, Lcom/vk/libvideo/R11;->live_announce_shared_male:I
+    sget v2, Lcom/vk/libvideo/j;->live_announce_shared_male:I
 
     :goto_0
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1313,13 +1313,13 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object v0
 
     iget-object p4, p4, Lcom/vk/dto/common/VideoFile;->I:Ljava/lang/String;
 
-    invoke-virtual {v0, p4}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p4}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p4
 
@@ -1405,18 +1405,18 @@
     iput-object p3, p1, Lcom/vk/dto/live/LiveEventModel;->K:Ljava/lang/CharSequence;
 
     .line 42
-    iget-object p3, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object p3, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-virtual {p3}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;->j()Ljava/util/List;
+    invoke-virtual {p3}, Lcom/vk/libvideo/live/views/chat/e;->j()Ljava/util/List;
 
     move-result-object p3
 
     invoke-interface {p3, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 43
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;->j()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/chat/e;->j()Ljava/util/List;
 
     move-result-object p3
 
@@ -1429,9 +1429,9 @@
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
 
     .line 44
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {p1}, Lcom/vk/libvideo/live/views/chat/ChatContract1;->e1()V
+    invoke-interface {p1}, Lcom/vk/libvideo/live/views/chat/c;->e1()V
 
     :cond_1
     return-void
@@ -1441,9 +1441,9 @@
     .locals 3
 
     .line 14
-    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-virtual {p2}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;->j()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/vk/libvideo/live/views/chat/e;->j()Ljava/util/List;
 
     move-result-object p2
 
@@ -1474,16 +1474,16 @@
     if-ne v1, v2, :cond_0
 
     .line 16
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;->j()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/chat/e;->j()Ljava/util/List;
 
     move-result-object p1
 
     invoke-interface {p1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     .line 17
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRemoved(I)V
 
@@ -1508,33 +1508,33 @@
     return-void
 .end method
 
-.method public b(II)Lio/reactivex/Observable;
+.method public b(II)Lc/a/m;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II)",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/libvideo/live/views/chat/ChatPresenter$n;",
             ">;"
         }
     .end annotation
 
     .line 17
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->l:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->l:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
     .line 18
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     const/4 v0, 0x0
 
     .line 19
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->l:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->l:Lio/reactivex/disposables/b;
 
     .line 20
     :cond_0
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a:Lcom/vk/libvideo/a0/h/LiveVideoController;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a:Lcom/vk/libvideo/a0/h/f;
 
     iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->i:Lcom/vk/dto/video/VideoOwner;
 
@@ -1544,23 +1544,23 @@
 
     iget v1, v1, Lcom/vk/dto/common/VideoFile;->a:I
 
-    invoke-virtual {v0, v2, v1, p2}, Lcom/vk/libvideo/a0/h/LiveVideoController;->b(III)Lio/reactivex/Observable;
+    invoke-virtual {v0, v2, v1, p2}, Lcom/vk/libvideo/a0/h/f;->b(III)Lc/a/m;
 
     move-result-object p2
 
     .line 21
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/LiveUsersController;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/e;
 
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/LiveUsersController;->h(I)Lio/reactivex/Observable;
+    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/e;->h(I)Lc/a/m;
 
     move-result-object v0
 
     .line 22
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/LiveUsersController;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/e;
 
     mul-int/lit8 v2, p1, -0x1
 
-    invoke-virtual {v1, v2}, Lcom/vk/libvideo/a0/h/LiveUsersController;->g(I)Lio/reactivex/Observable;
+    invoke-virtual {v1, v2}, Lcom/vk/libvideo/a0/h/e;->g(I)Lc/a/m;
 
     move-result-object v1
 
@@ -1572,7 +1572,7 @@
     invoke-direct {v0, p0, p1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$d;-><init>(Lcom/vk/libvideo/live/views/chat/ChatPresenter;I)V
 
     .line 24
-    invoke-static {p2, v1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/ObservableSource;Lio/reactivex/ObservableSource;Lio/reactivex/functions/BiFunction;)Lio/reactivex/Observable;
+    invoke-static {p2, v1, v0}, Lc/a/m;->b(Lc/a/p;Lc/a/p;Lc/a/z/c;)Lc/a/m;
 
     move-result-object p1
 
@@ -1584,7 +1584,7 @@
     invoke-direct {v1, p0, p1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$e;-><init>(Lcom/vk/libvideo/live/views/chat/ChatPresenter;I)V
 
     .line 25
-    invoke-static {p2, v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/ObservableSource;Lio/reactivex/ObservableSource;Lio/reactivex/functions/BiFunction;)Lio/reactivex/Observable;
+    invoke-static {p2, v0, v1}, Lc/a/m;->b(Lc/a/p;Lc/a/p;Lc/a/z/c;)Lc/a/m;
 
     move-result-object p1
 
@@ -1605,13 +1605,13 @@
 
     .line 16
     :cond_0
-    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
+    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
 
     move-result-object p1
 
-    iget-object p3, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object p3, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {p3}, Lcom/vk/libvideo/live/base/BaseView;->getContext()Landroid/content/Context;
+    invoke-interface {p3}, Lcom/vk/libvideo/live/base/b;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
@@ -1619,7 +1619,7 @@
 
     iget-object v0, v0, Lcom/vk/dto/video/VideoOwner;->e:Lcom/vk/dto/common/VideoFile;
 
-    invoke-interface {p1, p3, v0, p2}, Lcom/vk/bridges/VideoBridge1;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;I)V
+    invoke-interface {p1, p3, v0, p2}, Lcom/vk/bridges/k0;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;I)V
 
     return-void
 .end method
@@ -1628,23 +1628,23 @@
     .locals 1
 
     .line 11
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;->j()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/chat/e;->j()Ljava/util/List;
 
     move-result-object v0
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     .line 12
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     .line 13
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {p1}, Lcom/vk/libvideo/live/views/chat/ChatContract1;->c1()V
+    invoke-interface {p1}, Lcom/vk/libvideo/live/views/chat/c;->c1()V
 
     return-void
 .end method
@@ -1653,23 +1653,23 @@
     .locals 1
 
     .line 6
-    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
     if-eqz p2, :cond_0
 
     .line 7
-    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-virtual {p2}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;->j()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/vk/libvideo/live/views/chat/e;->j()Ljava/util/List;
 
     move-result-object p2
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 8
-    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-virtual {p2}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;->j()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/vk/libvideo/live/views/chat/e;->j()Ljava/util/List;
 
     move-result-object v0
 
@@ -1682,14 +1682,14 @@
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
 
     .line 9
-    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {p2}, Lcom/vk/libvideo/live/views/chat/ChatContract1;->e1()V
+    invoke-interface {p2}, Lcom/vk/libvideo/live/views/chat/c;->e1()V
 
     .line 10
-    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {p2, p1}, Lcom/vk/libvideo/live/views/chat/ChatContract1;->a(Lcom/vk/dto/live/LiveEventModel;)V
+    invoke-interface {p2, p1}, Lcom/vk/libvideo/live/views/chat/c;->a(Lcom/vk/dto/live/LiveEventModel;)V
 
     :cond_0
     return-void
@@ -1699,17 +1699,17 @@
     .locals 2
 
     .line 15
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
     .line 16
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     const/4 v0, 0x0
 
     .line 17
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     .line 18
     :cond_0
@@ -1718,12 +1718,12 @@
     if-eqz v0, :cond_1
 
     .line 19
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/LiveUsersController;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/e;
 
     iget v0, v0, Lcom/vk/dto/group/Group;->b:I
 
     .line 20
-    invoke-virtual {v1, v0, p1}, Lcom/vk/libvideo/a0/h/LiveUsersController;->b(II)Lio/reactivex/Observable;
+    invoke-virtual {v1, v0, p1}, Lcom/vk/libvideo/a0/h/e;->b(II)Lc/a/m;
 
     move-result-object v0
 
@@ -1732,11 +1732,11 @@
     invoke-direct {v1, p0, p1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$a;-><init>(Lcom/vk/libvideo/live/views/chat/ChatPresenter;I)V
 
     .line 21
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast v1, Lio/reactivex/disposables/Disposable;
+    check-cast v1, Lio/reactivex/disposables/b;
 
-    iput-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     goto :goto_0
 
@@ -1744,10 +1744,10 @@
     if-lez p1, :cond_2
 
     .line 22
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/LiveUsersController;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/e;
 
     .line 23
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/LiveUsersController;->j(I)Lio/reactivex/Observable;
+    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/e;->j(I)Lc/a/m;
 
     move-result-object v0
 
@@ -1756,11 +1756,11 @@
     invoke-direct {v1, p0, p1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$b;-><init>(Lcom/vk/libvideo/live/views/chat/ChatPresenter;I)V
 
     .line 24
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast v1, Lio/reactivex/disposables/Disposable;
+    check-cast v1, Lio/reactivex/disposables/b;
 
-    iput-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     :cond_2
     :goto_0
@@ -1771,7 +1771,7 @@
     .locals 8
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
     if-eqz v0, :cond_2
 
@@ -1826,13 +1826,13 @@
     if-eqz p2, :cond_1
 
     .line 8
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object p2
 
     iget-object v0, p1, Lcom/vk/dto/live/LiveEventModel;->H:Ljava/lang/String;
 
-    invoke-virtual {p2, v0}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {p2, v0}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p2
 
@@ -1842,21 +1842,21 @@
 
     .line 9
     :cond_1
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object p2
 
-    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
+    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
 
     move-result-object v0
 
     iget-object v2, p1, Lcom/vk/dto/live/LiveEventModel;->H:Ljava/lang/String;
 
-    invoke-interface {v0, v2}, Lcom/vk/bridges/VideoBridge1;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-interface {v0, v2}, Lcom/vk/bridges/k0;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {p2, v0}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p2
 
@@ -1864,7 +1864,7 @@
 
     .line 10
     :goto_0
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object p2
 
@@ -1880,25 +1880,25 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {p2, v0}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p2
 
     iput-object p2, p1, Lcom/vk/dto/live/LiveEventModel;->L:Ljava/lang/CharSequence;
 
     .line 11
-    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-virtual {p2}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;->j()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/vk/libvideo/live/views/chat/e;->j()Ljava/util/List;
 
     move-result-object p2
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 12
-    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-virtual {p2}, Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;->j()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/vk/libvideo/live/views/chat/e;->j()Ljava/util/List;
 
     move-result-object v0
 
@@ -1911,14 +1911,14 @@
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemInserted(I)V
 
     .line 13
-    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {p2}, Lcom/vk/libvideo/live/views/chat/ChatContract1;->e1()V
+    invoke-interface {p2}, Lcom/vk/libvideo/live/views/chat/c;->e1()V
 
     .line 14
-    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {p2, p1}, Lcom/vk/libvideo/live/views/chat/ChatContract1;->a(Lcom/vk/dto/live/LiveEventModel;)V
+    invoke-interface {p2, p1}, Lcom/vk/libvideo/live/views/chat/c;->a(Lcom/vk/dto/live/LiveEventModel;)V
 
     :cond_2
     return-void
@@ -1928,28 +1928,28 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     :cond_0
     if-gez p1, :cond_1
 
     .line 4
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/LiveUsersController;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/e;
 
     neg-int p1, p1
 
     .line 5
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/LiveUsersController;->e(I)Lio/reactivex/Observable;
+    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/e;->e(I)Lc/a/m;
 
     move-result-object p1
 
@@ -1958,20 +1958,20 @@
     invoke-direct {v0, p0}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$h;-><init>(Lcom/vk/libvideo/live/views/chat/ChatPresenter;)V
 
     .line 6
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {p1, v0}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     goto :goto_0
 
     .line 7
     :cond_1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/LiveUsersController;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/e;
 
     .line 8
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/LiveUsersController;->a(I)Lio/reactivex/Observable;
+    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/e;->a(I)Lc/a/m;
 
     move-result-object p1
 
@@ -1980,11 +1980,11 @@
     invoke-direct {v0, p0}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$i;-><init>(Lcom/vk/libvideo/live/views/chat/ChatPresenter;)V
 
     .line 9
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {p1, v0}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     :goto_0
     return-void
@@ -2000,17 +2000,17 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     .line 4
     :cond_0
@@ -2019,12 +2019,12 @@
     if-eqz v0, :cond_1
 
     .line 5
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/LiveUsersController;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/e;
 
     iget v0, v0, Lcom/vk/dto/group/Group;->b:I
 
     .line 6
-    invoke-virtual {v1, v0, p1}, Lcom/vk/libvideo/a0/h/LiveUsersController;->a(II)Lio/reactivex/Observable;
+    invoke-virtual {v1, v0, p1}, Lcom/vk/libvideo/a0/h/e;->a(II)Lc/a/m;
 
     move-result-object v0
 
@@ -2033,11 +2033,11 @@
     invoke-direct {v1, p0, p1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$l;-><init>(Lcom/vk/libvideo/live/views/chat/ChatPresenter;I)V
 
     .line 7
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast v1, Lio/reactivex/disposables/Disposable;
+    check-cast v1, Lio/reactivex/disposables/b;
 
-    iput-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     goto :goto_0
 
@@ -2045,10 +2045,10 @@
     if-lez p1, :cond_2
 
     .line 8
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/LiveUsersController;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/e;
 
     .line 9
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/LiveUsersController;->b(I)Lio/reactivex/Observable;
+    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/e;->b(I)Lc/a/m;
 
     move-result-object v0
 
@@ -2057,11 +2057,11 @@
     invoke-direct {v1, p0, p1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$m;-><init>(Lcom/vk/libvideo/live/views/chat/ChatPresenter;I)V
 
     .line 10
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast v1, Lio/reactivex/disposables/Disposable;
+    check-cast v1, Lio/reactivex/disposables/b;
 
-    iput-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     :cond_2
     :goto_0
@@ -2072,28 +2072,28 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     :cond_0
     if-gez p1, :cond_1
 
     .line 4
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/LiveUsersController;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/e;
 
     neg-int p1, p1
 
     .line 5
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/LiveUsersController;->f(I)Lio/reactivex/Observable;
+    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/e;->f(I)Lc/a/m;
 
     move-result-object p1
 
@@ -2102,20 +2102,20 @@
     invoke-direct {v0, p0}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$j;-><init>(Lcom/vk/libvideo/live/views/chat/ChatPresenter;)V
 
     .line 6
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {p1, v0}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     goto :goto_0
 
     .line 7
     :cond_1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/LiveUsersController;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b:Lcom/vk/libvideo/a0/h/e;
 
     .line 8
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/LiveUsersController;->i(I)Lio/reactivex/Observable;
+    invoke-virtual {v0, p1}, Lcom/vk/libvideo/a0/h/e;->i(I)Lc/a/m;
 
     move-result-object p1
 
@@ -2124,11 +2124,11 @@
     invoke-direct {v0, p0}, Lcom/vk/libvideo/live/views/chat/ChatPresenter$k;-><init>(Lcom/vk/libvideo/live/views/chat/ChatPresenter;)V
 
     .line 9
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
+    invoke-virtual {p1, v0}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
 
-    check-cast v0, Lio/reactivex/disposables/Disposable;
+    check-cast v0, Lio/reactivex/disposables/b;
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->g:Lio/reactivex/disposables/b;
 
     :goto_0
     return-void
@@ -2147,13 +2147,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BaseView;->getContext()Landroid/content/Context;
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/b;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v1, Lcom/vk/libvideo/R3;->live_white_chat_transparent:I
+    sget v1, Lcom/vk/libvideo/c;->live_white_chat_transparent:I
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -2162,16 +2162,16 @@
     iput v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->h:I
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->d:Lcom/vk/libvideo/live/views/chat/e;
 
-    invoke-interface {v0, v1}, Lcom/vk/libvideo/live/views/chat/ChatContract1;->setAdapter(Lcom/vk/libvideo/live/views/chat/ChatRecyclerAdapter;)V
+    invoke-interface {v0, v1}, Lcom/vk/libvideo/live/views/chat/c;->setAdapter(Lcom/vk/libvideo/live/views/chat/e;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/ChatContract1;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c:Lcom/vk/libvideo/live/views/chat/c;
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/chat/ChatContract1;->d1()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/chat/c;->d1()V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "DialogHeaderController.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponentCallback;
+.implements Lcom/vk/im/ui/components/dialog_header/info/b;
 
 
 # annotations
@@ -46,11 +46,11 @@
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$c;->a:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/ImBridge8;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
 
     long-to-int p2, p1
 
-    invoke-interface {v0, v1, p2}, Lcom/vk/im/ui/p/ImBridge11;->a(Landroid/content/Context;I)V
+    invoke-interface {v0, v1, p2}, Lcom/vk/im/ui/p/e;->a(Landroid/content/Context;I)V
 
     return-void
 .end method
@@ -73,7 +73,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$c;->a:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->e(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/bridges/StoriesBridge;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->e(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/bridges/d0;
 
     move-result-object v0
 
@@ -83,7 +83,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1, p1, p2, p3}, Lcom/vk/bridges/StoriesBridge;->a(Landroid/content/Context;Landroid/view/View;ILjava/lang/String;)V
+    invoke-interface {v0, v1, p1, p2, p3}, Lcom/vk/bridges/d0;->a(Landroid/content/Context;Landroid/view/View;ILjava/lang/String;)V
 
     return-void
 .end method
@@ -94,11 +94,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$c;->a:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/ImBridge8;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->e()Lcom/vk/bridges/UsersBridge;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->e()Lcom/vk/bridges/i0;
 
     move-result-object v1
 
@@ -124,7 +124,7 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -135,11 +135,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$c;->a:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/ImBridge8;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->l()Lcom/vk/im/ui/p/ImBridge12;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->l()Lcom/vk/im/ui/p/d;
 
     move-result-object v0
 
@@ -155,7 +155,7 @@
 
     const-string v2, "im_header"
 
-    invoke-interface {v0, v1, p1, v2, p2}, Lcom/vk/im/ui/p/ImBridge12;->a(Landroid/content/Context;ILjava/lang/String;Z)V
+    invoke-interface {v0, v1, p1, v2, p2}, Lcom/vk/im/ui/p/d;->a(Landroid/content/Context;ILjava/lang/String;Z)V
 
     return-void
 .end method
@@ -166,26 +166,26 @@
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$c;->a:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->a(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->a(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/components/dialog_header/a;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;->a(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_header/a;->a(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/models/dialogs/DialogMembersListExt;)V
+.method public a(Lcom/vk/im/engine/models/dialogs/e;)V
     .locals 1
 
     .line 6
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$c;->a:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->a(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->a(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/components/dialog_header/a;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;->a(Lcom/vk/im/engine/models/dialogs/DialogMembersListExt;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_header/a;->a(Lcom/vk/im/engine/models/dialogs/e;)V
 
     return-void
 .end method
@@ -196,11 +196,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$c;->a:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->a(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;
+    invoke-static {p1}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->a(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/components/dialog_header/a;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;->R1()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/dialog_header/a;->R1()V
 
     return-void
 .end method
@@ -211,11 +211,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$c;->a:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/ImBridge8;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
 
     move-result-object v0
 
@@ -225,7 +225,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/im/ui/p/ImBridge11;->b(Landroid/content/Context;Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/im/ui/p/e;->b(Landroid/content/Context;Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
     return-void
 .end method
@@ -236,11 +236,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController$c;->a:Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/ImBridge8;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;->c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderController;)Lcom/vk/im/ui/p/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
 
     move-result-object v0
 
@@ -250,7 +250,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/im/ui/p/ImBridge11;->a(Landroid/content/Context;Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/im/ui/p/e;->a(Landroid/content/Context;Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
     return-void
 .end method

@@ -65,11 +65,11 @@
     new-instance v7, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView$LiveOptions;
 
     .line 1
-    sget v4, Lcom/vk/libvideo/R;->live_video_repost:I
+    sget v4, Lcom/vk/libvideo/g;->live_video_repost:I
 
-    sget v5, Lcom/vk/libvideo/R7;->ic_share_outline_28:I
+    sget v5, Lcom/vk/libvideo/e;->ic_share_outline_28:I
 
-    sget v6, Lcom/vk/libvideo/R11;->live_video_menu_share:I
+    sget v6, Lcom/vk/libvideo/j;->live_video_menu_share:I
 
     const-string v2, "SHARE"
 
@@ -88,11 +88,11 @@
     new-instance v1, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView$LiveOptions;
 
     .line 2
-    sget v11, Lcom/vk/libvideo/R;->live_video_copy:I
+    sget v11, Lcom/vk/libvideo/g;->live_video_copy:I
 
-    sget v12, Lcom/vk/libvideo/R7;->ic_copy_outline_28:I
+    sget v12, Lcom/vk/libvideo/e;->ic_copy_outline_28:I
 
-    sget v13, Lcom/vk/libvideo/R11;->copy_link:I
+    sget v13, Lcom/vk/libvideo/j;->copy_link:I
 
     const-string v9, "COPY"
 
@@ -111,11 +111,11 @@
     new-instance v1, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView$LiveOptions;
 
     .line 3
-    sget v6, Lcom/vk/libvideo/R;->live_video_save_to_my_videos:I
+    sget v6, Lcom/vk/libvideo/g;->live_video_save_to_my_videos:I
 
-    sget v7, Lcom/vk/libvideo/R7;->ic_add_outline_28:I
+    sget v7, Lcom/vk/libvideo/e;->ic_add_outline_28:I
 
-    sget v8, Lcom/vk/libvideo/R11;->video_add_to_added:I
+    sget v8, Lcom/vk/libvideo/j;->video_add_to_added:I
 
     const-string v4, "ADD_TO_MY"
 
@@ -134,11 +134,11 @@
     new-instance v1, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView$LiveOptions;
 
     .line 4
-    sget v6, Lcom/vk/libvideo/R;->live_video_block_notifications:I
+    sget v6, Lcom/vk/libvideo/g;->live_video_block_notifications:I
 
-    sget v7, Lcom/vk/libvideo/R7;->ic_notifications_outline_28:I
+    sget v7, Lcom/vk/libvideo/e;->ic_notifications_outline_28:I
 
-    sget v8, Lcom/vk/libvideo/R11;->live_video_menu_block_notifications:I
+    sget v8, Lcom/vk/libvideo/j;->live_video_menu_block_notifications:I
 
     const-string v4, "BLOCK_NOTIFICATION"
 
@@ -157,11 +157,11 @@
     new-instance v1, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView$LiveOptions;
 
     .line 5
-    sget v6, Lcom/vk/libvideo/R;->live_video_unblock_notifications:I
+    sget v6, Lcom/vk/libvideo/g;->live_video_unblock_notifications:I
 
-    sget v7, Lcom/vk/libvideo/R7;->ic_notifications_outline_28:I
+    sget v7, Lcom/vk/libvideo/e;->ic_notifications_outline_28:I
 
-    sget v8, Lcom/vk/libvideo/R11;->live_video_menu_unblock_notifications:I
+    sget v8, Lcom/vk/libvideo/j;->live_video_menu_unblock_notifications:I
 
     const-string v4, "UNBLOCK_NOTIFICATION"
 
@@ -180,11 +180,11 @@
     new-instance v1, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView$LiveOptions;
 
     .line 6
-    sget v6, Lcom/vk/libvideo/R;->live_video_hide_from_stories:I
+    sget v6, Lcom/vk/libvideo/g;->live_video_hide_from_stories:I
 
-    sget v7, Lcom/vk/libvideo/R7;->ic_hide_outline_28:I
+    sget v7, Lcom/vk/libvideo/e;->ic_hide_outline_28:I
 
-    sget v8, Lcom/vk/libvideo/R11;->live_hide_from_stories:I
+    sget v8, Lcom/vk/libvideo/j;->live_hide_from_stories:I
 
     const-string v4, "HIDE_FROM_STORIES"
 
@@ -203,11 +203,11 @@
     new-instance v1, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView$LiveOptions;
 
     .line 7
-    sget v6, Lcom/vk/libvideo/R;->live_video_remove_ban:I
+    sget v6, Lcom/vk/libvideo/g;->live_video_remove_ban:I
 
-    sget v7, Lcom/vk/libvideo/R7;->ic_cancel_outline_28:I
+    sget v7, Lcom/vk/libvideo/e;->ic_cancel_outline_28:I
 
-    sget v8, Lcom/vk/libvideo/R11;->live_unhide_from_recommendations:I
+    sget v8, Lcom/vk/libvideo/j;->live_unhide_from_recommendations:I
 
     const-string v4, "RESUME_TO_RECOMENDATIONS"
 
@@ -226,11 +226,11 @@
     new-instance v1, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView$LiveOptions;
 
     .line 8
-    sget v6, Lcom/vk/libvideo/R;->live_video_add_ban:I
+    sget v6, Lcom/vk/libvideo/g;->live_video_add_ban:I
 
-    sget v7, Lcom/vk/libvideo/R7;->ic_cancel_outline_28:I
+    sget v7, Lcom/vk/libvideo/e;->ic_cancel_outline_28:I
 
-    sget v8, Lcom/vk/libvideo/R11;->live_hide_from_recommendations:I
+    sget v8, Lcom/vk/libvideo/j;->live_hide_from_recommendations:I
 
     const-string v4, "HIDE_FROM_RECOMENDATIONS"
 
@@ -249,11 +249,11 @@
     new-instance v1, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView$LiveOptions;
 
     .line 9
-    sget v6, Lcom/vk/libvideo/R;->live_video_report:I
+    sget v6, Lcom/vk/libvideo/g;->live_video_report:I
 
-    sget v7, Lcom/vk/libvideo/R7;->ic_report_outline_28:I
+    sget v7, Lcom/vk/libvideo/e;->ic_report_outline_28:I
 
-    sget v8, Lcom/vk/libvideo/R11;->report_content:I
+    sget v8, Lcom/vk/libvideo/j;->report_content:I
 
     const-string v4, "REPORT"
 
@@ -272,11 +272,11 @@
     new-instance v1, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView$LiveOptions;
 
     .line 10
-    sget v6, Lcom/vk/libvideo/R;->live_video_remove_from_my_videos:I
+    sget v6, Lcom/vk/libvideo/g;->live_video_remove_from_my_videos:I
 
-    sget v7, Lcom/vk/libvideo/R7;->ic_delete_outline_28:I
+    sget v7, Lcom/vk/libvideo/e;->ic_delete_outline_28:I
 
-    sget v8, Lcom/vk/libvideo/R11;->video_remove_from_added:I
+    sget v8, Lcom/vk/libvideo/j;->video_remove_from_added:I
 
     const-string v4, "REMOVE_FROM_MY"
 

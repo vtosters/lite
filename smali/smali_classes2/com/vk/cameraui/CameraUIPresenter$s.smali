@@ -3,7 +3,7 @@
 .source "CameraUIPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/ObservableOnSubscribe;
+.implements Lc/a/o;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/ObservableOnSubscribe<",
+        "Lc/a/o<",
         "TT;>;"
     }
 .end annotation
@@ -45,14 +45,14 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/ObservableEmitter;)V
+.method public final a(Lc/a/n;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/ObservableEmitter<",
+            "Lc/a/n<",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/mediastore/system/AlbumEntry;",
+            "Lcom/vk/mediastore/system/a;",
             ">;>;)V"
         }
     .end annotation
@@ -60,12 +60,12 @@
     .line 1
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIPresenter$s;->a:Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lcom/vk/stories/util/StoriesUtil;->c(Ljava/util/List;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/vk/stories/util/k;->c(Ljava/util/List;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     .line 2
-    invoke-interface {p1, v0}, Lio/reactivex/Emitter;->b(Ljava/lang/Object;)V
+    invoke-interface {p1, v0}, Lc/a/f;->b(Ljava/lang/Object;)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "CatalogRecyclerAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/lists/ListDataSet;Lcom/vk/catalog2/core/CatalogEntryPointParams;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/lists/o;Lcom/vk/catalog2/core/e;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "Ljava/lang/Integer;",
         "Lcom/vk/catalog2/core/blocks/UIBlock;",
         "Ljava/lang/Integer;",

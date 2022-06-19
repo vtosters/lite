@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/functions/Action;
+.implements Lc/a/z/a;
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/vk/attachpicker/fragment/d;->a:Lcom/vk/mediastore/system/MediaStoreEntry;
 
-    invoke-static {v0}, Lcom/vk/attachpicker/fragment/GalleryFragment;->b(Lcom/vk/mediastore/system/MediaStoreEntry;)V
+    invoke-static {v0}, Lcom/vk/attachpicker/fragment/s;->b(Lcom/vk/mediastore/system/MediaStoreEntry;)V
 
     return-void
 .end method

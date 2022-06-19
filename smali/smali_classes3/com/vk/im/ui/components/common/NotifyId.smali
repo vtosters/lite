@@ -92,7 +92,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 1
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_internal:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_internal:I
 
     const/4 v3, 0x0
 
@@ -107,7 +107,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 2
-    sget v2, Lcom/vk/im/ui/R4;->vkim_copy_to_clipboard_done:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_copy_to_clipboard_done:I
 
     const/4 v3, 0x1
 
@@ -122,7 +122,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 3
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_network:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_network:I
 
     const/4 v3, 0x2
 
@@ -137,7 +137,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 4
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_network_na:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_network_na:I
 
     const/4 v3, 0x3
 
@@ -152,7 +152,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 5
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_api:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_api:I
 
     const/4 v3, 0x4
 
@@ -167,7 +167,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 6
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_internal:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_internal:I
 
     const/4 v3, 0x5
 
@@ -182,7 +182,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 7
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_account_invalid_old_password:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_account_invalid_old_password:I
 
     const/4 v3, 0x6
 
@@ -197,7 +197,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 8
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_user_cannot_be_invited:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_user_cannot_be_invited:I
 
     const/4 v3, 0x7
 
@@ -212,7 +212,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 9
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_incorrect_avatar:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_incorrect_avatar:I
 
     const/16 v3, 0x8
 
@@ -227,7 +227,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 10
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_too_many_users:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_too_many_users:I
 
     const/16 v3, 0x9
 
@@ -242,7 +242,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 11
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_invite_invalid_link:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_invite_invalid_link:I
 
     const/16 v3, 0xa
 
@@ -257,7 +257,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 12
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_access_denied:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_access_denied:I
 
     const/16 v3, 0xb
 
@@ -272,7 +272,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 13
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_make_link_denied:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_make_link_denied:I
 
     const/16 v3, 0xc
 
@@ -287,7 +287,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 14
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_messages_too_many:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_messages_too_many:I
 
     const/16 v3, 0xd
 
@@ -302,7 +302,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 15
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_delete_for_all_failed:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_delete_for_all_failed:I
 
     const/16 v3, 0xe
 
@@ -317,7 +317,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 16
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_change_title_permission_denied:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_change_title_permission_denied:I
 
     const-string v3, "CHAT_CHANGE_TITLE_PERMISSION_DENIED"
 
@@ -334,7 +334,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 17
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_change_title_empty:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_change_title_empty:I
 
     const-string v3, "CHAT_CHANGE_TITLE_EMPTY"
 
@@ -351,7 +351,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 18
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_change_avatar_permission_denied:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_change_avatar_permission_denied:I
 
     const-string v3, "CHAT_CHANGE_AVATAR_PERMISSION_DENIED"
 
@@ -368,7 +368,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 19
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_invite_permission_denied:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_invite_permission_denied:I
 
     const-string v3, "CHAT_INVITE_PERMISSION_DENIED"
 
@@ -385,7 +385,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 20
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_kick_permission_denied:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_kick_permission_denied:I
 
     const-string v3, "CHAT_KICK_PERMISSION_DENIED"
 
@@ -402,7 +402,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 21
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_pin_permission_denied:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_pin_permission_denied:I
 
     const-string v3, "CHAT_PIN_PERMISSION_DENIED"
 
@@ -419,7 +419,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 22
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_unpin_permission_denied:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_unpin_permission_denied:I
 
     const-string v3, "CHAT_UNPIN_PERMISSION_DENIED"
 
@@ -436,7 +436,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 23
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_etc_permission_denied:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_etc_permission_denied:I
 
     const-string v3, "CHAT_ETC_PERMISSION_DENIED"
 
@@ -453,7 +453,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 24
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_chat_invite_group_inaccessible:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_chat_invite_group_inaccessible:I
 
     const-string v3, "CHAT_INVITE_GROUP_INACCESSIBLE"
 
@@ -470,7 +470,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 25
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_auth_invalid_phone_format:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_auth_invalid_phone_format:I
 
     const-string v3, "AUTH_PHONE_PARAM_PHONE"
 
@@ -487,7 +487,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 26
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_auth_code_incorrect:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_auth_code_incorrect:I
 
     const-string v3, "AUTH_CODE_INCORRECT"
 
@@ -504,7 +504,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 27
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_too_many_similar_requests:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_too_many_similar_requests:I
 
     const-string v3, "TOO_MANY_SIMILAR_REQUESTS"
 
@@ -521,7 +521,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 28
-    sget v2, Lcom/vk/im/ui/R4;->vkim_screen_name_status_illegal:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_screen_name_status_illegal:I
 
     const-string v3, "SCREEN_NAME_FORMAT_ERROR"
 
@@ -538,7 +538,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 29
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_mr_already_sent:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_mr_already_sent:I
 
     const-string v3, "CODE_CHAT_MR_ALREADY_SEND"
 
@@ -555,7 +555,7 @@
     new-instance v1, Lcom/vk/im/ui/components/common/NotifyId;
 
     .line 30
-    sget v2, Lcom/vk/im/ui/R4;->vkim_error_auth:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_error_auth:I
 
     const-string v3, "ERROR_AUTH"
 

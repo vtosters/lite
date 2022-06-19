@@ -3,7 +3,7 @@
 .source "ChatFragment.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
+.implements Lcom/vk/im/ui/q/h/f/b;
 
 
 # annotations
@@ -68,11 +68,11 @@
     .line 8
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$j;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/IMsgSendVc;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/q/h/f/IMsgSendVc;->f()V
+    invoke-interface {v0}, Lcom/vk/im/ui/q/h/f/a;->f()V
 
     :cond_0
     return-void
@@ -80,7 +80,7 @@
 
 
 # virtual methods
-.method public a(ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/MsgSendSource;Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/commands/messages/MsgSendConfig;)V
+.method public a(ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/e;Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/commands/messages/z;)V
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -92,9 +92,9 @@
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;",
             "Ljava/lang/Integer;",
-            "Lcom/vk/im/engine/models/messages/MsgSendSource;",
-            "Lcom/vk/im/engine/utils/collection/IntSet;",
-            "Lcom/vk/im/engine/commands/messages/MsgSendConfig;",
+            "Lcom/vk/im/engine/models/messages/e;",
+            "Lcom/vk/im/engine/utils/collection/h;",
+            "Lcom/vk/im/engine/commands/messages/z;",
             ")V"
         }
     .end annotation
@@ -141,7 +141,7 @@
 
     move-object/from16 v9, p8
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/im/ui/fragments/ChatFragment;->a(Lcom/vk/im/ui/fragments/ChatFragment;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/IntSet;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/MsgSendSource;Lcom/vk/im/engine/commands/messages/MsgSendConfig;)V
+    invoke-static/range {v1 .. v9}, Lcom/vk/im/ui/fragments/ChatFragment;->a(Lcom/vk/im/ui/fragments/ChatFragment;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/h;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/e;Lcom/vk/im/engine/commands/messages/z;)V
 
     .line 5
     invoke-direct {p0}, Lcom/vk/im/ui/fragments/ChatFragment$j;->a()V
@@ -155,11 +155,11 @@
     .line 22
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$j;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->f(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/ImEngine;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->f(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/a;
 
     move-result-object v0
 
-    new-instance v7, Lcom/vk/im/engine/commands/dialogs/DialogKeyboardUpdateVisibility;
+    new-instance v7, Lcom/vk/im/engine/commands/dialogs/e;
 
     const/4 v4, 0x0
 
@@ -173,9 +173,9 @@
 
     move v3, p2
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/dialogs/DialogKeyboardUpdateVisibility;-><init>(IZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/dialogs/e;-><init>(IZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
 
-    invoke-virtual {v0, v7}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
+    invoke-virtual {v0, v7}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
 
     return-void
 .end method
@@ -275,14 +275,14 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/models/messages/MsgFromUser;Lkotlin/jvm/b/Functions;)V
+.method public a(Lcom/vk/im/engine/models/messages/MsgFromUser;Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/im/engine/models/messages/MsgFromUser;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -299,7 +299,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->a(Lcom/vk/im/engine/models/messages/Msg;Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->a(Lcom/vk/im/engine/models/messages/Msg;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -354,13 +354,13 @@
     return-void
 .end method
 
-.method public c()Lcom/vk/navigation/ActivityLauncher;
+.method public c()Lcom/vk/navigation/a;
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$j;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->h(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/navigation/ActivityLauncher;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->h(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/navigation/a;
 
     move-result-object v0
 
@@ -432,7 +432,7 @@
     .locals 9
 
     .line 1
-    new-instance v8, Lcom/vk/im/engine/commands/dialogs/DialogsInviteCmd;
+    new-instance v8, Lcom/vk/im/engine/commands/dialogs/z;
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$j;->a:Lcom/vk/im/ui/fragments/ChatFragment;
@@ -444,17 +444,17 @@
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$j;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->f(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/ImEngine;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->f(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->c()Lcom/vk/im/engine/models/Member;
+    invoke-virtual {v0}, Lcom/vk/im/engine/a;->c()Lcom/vk/im/engine/models/Member;
 
     move-result-object v2
 
     const-string v0, "engine.currentMember"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -469,16 +469,16 @@
     move-object v0, v8
 
     .line 4
-    invoke-direct/range {v0 .. v7}, Lcom/vk/im/engine/commands/dialogs/DialogsInviteCmd;-><init>(ILcom/vk/im/engine/models/Member;IZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/im/engine/commands/dialogs/z;-><init>(ILcom/vk/im/engine/models/Member;IZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$j;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->f(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/ImEngine;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->f(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v8}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
+    invoke-virtual {v0, v8}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
 
     return-void
 .end method
@@ -487,11 +487,11 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/vk/im/engine/commands/messages/SetUserActivityCmd;->h:Lcom/vk/im/engine/commands/messages/SetUserActivityCmd$a;
+    sget-object v0, Lcom/vk/im/engine/commands/messages/e0;->h:Lcom/vk/im/engine/commands/messages/e0$a;
 
     iget-object v1, p0, Lcom/vk/im/ui/fragments/ChatFragment$j;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v1}, Lcom/vk/im/ui/fragments/ChatFragment;->f(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/ImEngine;
+    invoke-static {v1}, Lcom/vk/im/ui/fragments/ChatFragment;->f(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/a;
 
     move-result-object v1
 
@@ -503,7 +503,7 @@
 
     sget-object v3, Lcom/vk/im/engine/models/typing/ComposingType;->AUDIO:Lcom/vk/im/engine/models/typing/ComposingType;
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/im/engine/commands/messages/SetUserActivityCmd$a;->a(Lcom/vk/im/engine/ImEngine;ILcom/vk/im/engine/models/typing/ComposingType;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/im/engine/commands/messages/e0$a;->a(Lcom/vk/im/engine/a;ILcom/vk/im/engine/models/typing/ComposingType;)V
 
     return-void
 .end method
@@ -532,11 +532,11 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/vk/im/engine/commands/messages/SetUserActivityCmd;->h:Lcom/vk/im/engine/commands/messages/SetUserActivityCmd$a;
+    sget-object v0, Lcom/vk/im/engine/commands/messages/e0;->h:Lcom/vk/im/engine/commands/messages/e0$a;
 
     iget-object v1, p0, Lcom/vk/im/ui/fragments/ChatFragment$j;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v1}, Lcom/vk/im/ui/fragments/ChatFragment;->f(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/ImEngine;
+    invoke-static {v1}, Lcom/vk/im/ui/fragments/ChatFragment;->f(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/a;
 
     move-result-object v1
 
@@ -548,7 +548,7 @@
 
     sget-object v3, Lcom/vk/im/engine/models/typing/ComposingType;->TEXT:Lcom/vk/im/engine/models/typing/ComposingType;
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/im/engine/commands/messages/SetUserActivityCmd$a;->a(Lcom/vk/im/engine/ImEngine;ILcom/vk/im/engine/models/typing/ComposingType;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/im/engine/commands/messages/e0$a;->a(Lcom/vk/im/engine/a;ILcom/vk/im/engine/models/typing/ComposingType;)V
 
     return-void
 .end method
@@ -578,16 +578,16 @@
     move-result v0
 
     .line 2
-    new-instance v1, Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;
+    new-instance v1, Lcom/vk/im/engine/commands/dialogs/c0$b;
 
-    invoke-direct {v1}, Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;-><init>()V
+    invoke-direct {v1}, Lcom/vk/im/engine/commands/dialogs/c0$b;-><init>()V
 
     xor-int/lit8 v0, v0, 0x1
 
     const-wide/16 v2, -0x1
 
     .line 3
-    invoke-virtual {v1, v0, v2, v3}, Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;->a(ZJ)Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;
+    invoke-virtual {v1, v0, v2, v3}, Lcom/vk/im/engine/commands/dialogs/c0$b;->a(ZJ)Lcom/vk/im/engine/commands/dialogs/c0$b;
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$j;->a:Lcom/vk/im/ui/fragments/ChatFragment;
@@ -602,7 +602,7 @@
 
     iget-boolean v0, v0, Lcom/vk/im/engine/models/dialogs/Dialog;->notificationsIsUseSound:Z
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;->a(Z)Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/commands/dialogs/c0$b;->a(Z)Lcom/vk/im/engine/commands/dialogs/c0$b;
 
     .line 5
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$j;->a:Lcom/vk/im/ui/fragments/ChatFragment;
@@ -611,21 +611,21 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;->a(I)Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/commands/dialogs/c0$b;->a(I)Lcom/vk/im/engine/commands/dialogs/c0$b;
 
     .line 6
-    invoke-virtual {v1}, Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;->a()Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd;
+    invoke-virtual {v1}, Lcom/vk/im/engine/commands/dialogs/c0$b;->a()Lcom/vk/im/engine/commands/dialogs/c0;
 
     move-result-object v0
 
     .line 7
     iget-object v1, p0, Lcom/vk/im/ui/fragments/ChatFragment$j;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v1}, Lcom/vk/im/ui/fragments/ChatFragment;->f(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/ImEngine;
+    invoke-static {v1}, Lcom/vk/im/ui/fragments/ChatFragment;->f(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/a;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
 
     return-void
 .end method

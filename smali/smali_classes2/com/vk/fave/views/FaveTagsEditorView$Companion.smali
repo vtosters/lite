@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -56,29 +56,29 @@
     iput-object v1, p2, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
     .line 4
-    new-instance v2, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance v2, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
-    invoke-direct {v2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     .line 5
     sget-object v3, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FAVE_TAGS_CUSTOMIZE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-virtual {v2, v3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v3}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const v3, 0x7f1203e9
 
     .line 6
-    invoke-virtual {v2, v3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v3}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 7
-    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 8
     invoke-static {}, Lcom/vk/core/ui/themes/VKThemeHelper;->n()I
 
     move-result v0
 
-    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->i(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->i(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 9
     sget-object v0, Lcom/vk/fave/FaveUtils;->a:Lcom/vk/fave/FaveUtils;
@@ -87,22 +87,22 @@
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 10
     new-instance v0, Lcom/vk/fave/views/FaveTagsEditorView$Companion$openChangeTag$builder$1;
 
     invoke-direct {v0, p2}, Lcom/vk/fave/views/FaveTagsEditorView$Companion$openChangeTag$builder$1;-><init>(Lkotlin/jvm/internal/Ref$ObjectRef;)V
 
-    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 v0, 0x1
 
     .line 11
-    invoke-static {v2, v1, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static {v2, v1, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/bottomsheet/b;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 12
-    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Z)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Z)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 13
     invoke-static {}, Lcom/vk/fave/FaveController;->e()Z
@@ -140,9 +140,9 @@
     if-eqz p1, :cond_2
 
     .line 15
-    sget-object v0, Lcom/vk/fave/views/FaveBaseHalfScreenView;->f:Lcom/vk/fave/views/FaveBaseHalfScreenView$a;
+    sget-object v0, Lcom/vk/fave/views/c;->f:Lcom/vk/fave/views/c$a;
 
-    invoke-virtual {v0}, Lcom/vk/fave/views/FaveBaseHalfScreenView$a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/fave/views/c$a;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -156,19 +156,19 @@
     move-object p1, v1
 
     :goto_1
-    instance-of v0, p1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    instance-of v0, p1, Lcom/vk/core/dialogs/bottomsheet/e;
 
     if-nez v0, :cond_3
 
     move-object p1, v1
 
     :cond_3
-    check-cast p1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    check-cast p1, Lcom/vk/core/dialogs/bottomsheet/e;
 
     if-eqz p1, :cond_4
 
     .line 16
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismiss()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->dismiss()V
 
     .line 17
     :cond_4
@@ -178,7 +178,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-virtual {v2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object p1
 
@@ -192,7 +192,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-virtual {v2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object p1
 

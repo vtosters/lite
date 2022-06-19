@@ -50,7 +50,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/ui/AuthExchangeUserControlView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/ui/AuthExchangeUserControlView$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/auth/ui/AuthExchangeUserControlView;->F:Lcom/vk/auth/ui/AuthExchangeUserControlView$a;
 
@@ -103,7 +103,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/AuthExchangeUserControlView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/AuthExchangeUserControlView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -123,7 +123,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/AuthExchangeUserControlView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/AuthExchangeUserControlView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -233,12 +233,12 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/auth/r/R8;->vk_auth_exchange_user_layout:I
+    sget v1, Lcom/vk/auth/r/f;->vk_auth_exchange_user_layout:I
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 22
-    sget-object v0, Lcom/vk/auth/r/R4;->AuthExchangeUserControlView:[I
+    sget-object v0, Lcom/vk/auth/r/i;->AuthExchangeUserControlView:[I
 
     invoke-virtual {p1, p2, v0, p3, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -246,7 +246,7 @@
 
     .line 23
     :try_start_0
-    sget p3, Lcom/vk/auth/r/R4;->AuthExchangeUserControlView_vk_selection_style:I
+    sget p3, Lcom/vk/auth/r/i;->AuthExchangeUserControlView_vk_selection_style:I
 
     invoke-virtual {p2, p3, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -255,7 +255,7 @@
     iput p3, p0, Lcom/vk/auth/ui/AuthExchangeUserControlView;->h:I
 
     .line 24
-    sget p3, Lcom/vk/auth/r/R4;->AuthExchangeUserControlView_vk_border_selection_color:I
+    sget p3, Lcom/vk/auth/r/i;->AuthExchangeUserControlView_vk_border_selection_color:I
 
     sget-object v0, Lcom/vk/auth/ui/AuthExchangeUserControlView;->F:Lcom/vk/auth/ui/AuthExchangeUserControlView$a;
 
@@ -285,7 +285,7 @@
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -423,34 +423,34 @@
 
     .line 11
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 12
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 13
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_5
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -543,7 +543,7 @@
     :cond_0
     const-string p1, "avatar"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -562,7 +562,7 @@
     move-result p2
 
     .line 3
-    sget p3, Lcom/vk/auth/r/R5;->avatar_container:I
+    sget p3, Lcom/vk/auth/r/e;->avatar_container:I
 
     if-ne p2, p3, :cond_0
 
@@ -574,7 +574,7 @@
 
     .line 4
     :cond_0
-    sget p3, Lcom/vk/auth/r/R5;->selected_icon:I
+    sget p3, Lcom/vk/auth/r/e;->selected_icon:I
 
     if-ne p2, p3, :cond_1
 
@@ -584,7 +584,7 @@
 
     .line 5
     :cond_1
-    sget p3, Lcom/vk/auth/r/R5;->delete_icon:I
+    sget p3, Lcom/vk/auth/r/e;->delete_icon:I
 
     if-ne p2, p3, :cond_2
 
@@ -594,7 +594,7 @@
 
     .line 6
     :cond_2
-    sget p3, Lcom/vk/auth/r/R5;->notifications_counter:I
+    sget p3, Lcom/vk/auth/r/e;->notifications_counter:I
 
     if-ne p2, p3, :cond_3
 
@@ -622,7 +622,7 @@
 
     if-eqz p4, :cond_4
 
-    invoke-static {p2, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -664,7 +664,7 @@
     :cond_1
     const-string p1, "deleteButton"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -672,7 +672,7 @@
     const-string p1, "selectedIcon"
 
     .line 7
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -684,7 +684,7 @@
     const-string p1, "avatar"
 
     .line 8
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -702,7 +702,7 @@
     :cond_0
     const-string v0, "deleteButton"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -722,7 +722,7 @@
     :cond_0
     const-string v0, "notificationsIcon"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -742,7 +742,7 @@
     :cond_0
     const-string v0, "selectedIcon"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -844,7 +844,7 @@
     :cond_1
     const-string p1, "deleteButton"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -910,26 +910,26 @@
 
     if-eqz p1, :cond_0
 
-    sget v0, Lcom/vk/auth/r/R6;->vk_auth_bg_exchange_notifications_oval:I
+    sget v0, Lcom/vk/auth/r/d;->vk_auth_bg_exchange_notifications_oval:I
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 7
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 8
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -965,7 +965,7 @@
 
     if-eqz p1, :cond_5
 
-    sget v0, Lcom/vk/auth/r/R6;->vk_auth_bg_exchange_notifications_rect:I
+    sget v0, Lcom/vk/auth/r/d;->vk_auth_bg_exchange_notifications_rect:I
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
@@ -980,31 +980,31 @@
     return-void
 
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 13
     :cond_5
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 14
     :cond_6
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 15
     :cond_7
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 16
     :cond_8
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1034,7 +1034,7 @@
     :cond_1
     const-string p1, "notificationsIcon"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1088,7 +1088,7 @@
     :cond_3
     const-string p1, "selectedIcon"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

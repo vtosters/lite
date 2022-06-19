@@ -3,7 +3,7 @@
 .source "MoneySelectCardBottomSheet.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/core/dialogs/bottomsheet/e;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+.method public final a(Lcom/vk/core/dialogs/bottomsheet/e;)V
     .locals 3
 
     .line 1
@@ -64,7 +64,7 @@
 
     iget-object v2, p0, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$Builder$setOnNewCardAddedListener$1;->$addCardUrl:Ljava/lang/String;
 
-    invoke-static {v0, p1, v1, v2}, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$Builder;->a(Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$Builder;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;Lcom/vk/core/fragments/FragmentImpl;Ljava/lang/String;)V
+    invoke-static {v0, p1, v1, v2}, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$Builder;->a(Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$Builder;Lcom/vk/core/dialogs/bottomsheet/e;Lcom/vk/core/fragments/FragmentImpl;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -73,11 +73,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    check-cast p1, Lcom/vk/core/dialogs/bottomsheet/e;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$Builder$setOnNewCardAddedListener$1;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/money/MoneySelectCardBottomSheet$Builder$setOnNewCardAddedListener$1;->a(Lcom/vk/core/dialogs/bottomsheet/e;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

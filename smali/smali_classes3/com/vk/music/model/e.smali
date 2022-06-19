@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # static fields
@@ -38,7 +38,7 @@
 
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {p1}, Lcom/vk/music/model/PlayerModelImpl;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/music/model/s;->b(Ljava/lang/Throwable;)V
 
     return-void
 .end method

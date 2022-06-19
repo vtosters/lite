@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lcom/vk/music/sections/MusicSectionsModel;)Lcom/vk/music/sections/MusicSectionsContainer;
+.method public final a(Landroid/content/Context;Lcom/vk/music/sections/f;)Lcom/vk/music/sections/MusicSectionsContainer;
     .locals 3
 
     .line 1
@@ -45,16 +45,16 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, p1, p2, v1, v2}, Lcom/vk/music/sections/MusicSectionsContainer;-><init>(Landroid/content/Context;Lcom/vk/music/sections/MusicSectionsModel;ZZ)V
+    invoke-direct {v0, p1, p2, v1, v2}, Lcom/vk/music/sections/MusicSectionsContainer;-><init>(Landroid/content/Context;Lcom/vk/music/sections/f;ZZ)V
 
     return-object v0
 .end method
 
-.method public final b(Landroid/content/Context;Lcom/vk/music/sections/MusicSectionsModel;)Lcom/vk/music/sections/MusicSectionsContainer;
+.method public final b(Landroid/content/Context;Lcom/vk/music/sections/f;)Lcom/vk/music/sections/MusicSectionsContainer;
     .locals 8
 
     .line 1
-    new-instance v7, Lcom/vk/music/sections/RecommendedMusicSectionsContainer;
+    new-instance v7, Lcom/vk/music/sections/i;
 
     const/4 v3, 0x0
 
@@ -70,12 +70,12 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/music/sections/RecommendedMusicSectionsContainer;-><init>(Landroid/content/Context;Lcom/vk/music/sections/MusicSectionsModel;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/music/sections/i;-><init>(Landroid/content/Context;Lcom/vk/music/sections/f;ZZILkotlin/jvm/internal/i;)V
 
     return-object v7
 .end method
 
-.method public final c(Landroid/content/Context;Lcom/vk/music/sections/MusicSectionsModel;)Lcom/vk/music/sections/MusicSectionsContainer;
+.method public final c(Landroid/content/Context;Lcom/vk/music/sections/f;)Lcom/vk/music/sections/MusicSectionsContainer;
     .locals 8
 
     .line 1
@@ -95,7 +95,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/music/sections/MusicSectionsContainer;-><init>(Landroid/content/Context;Lcom/vk/music/sections/MusicSectionsModel;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/music/sections/MusicSectionsContainer;-><init>(Landroid/content/Context;Lcom/vk/music/sections/f;ZZILkotlin/jvm/internal/i;)V
 
     return-object v7
 .end method

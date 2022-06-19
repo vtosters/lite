@@ -6,13 +6,13 @@
 # instance fields
 .field private a:Lcom/vk/dto/common/data/UserNotification;
 
-.field private b:Lkotlin/jvm/b/Functions2;
+.field private b:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/dto/common/data/UserNotification;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -43,7 +43,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/common/view/ActionUserNotificationView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/common/view/ActionUserNotificationView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -63,7 +63,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/common/view/ActionUserNotificationView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/common/view/ActionUserNotificationView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -104,7 +104,7 @@
     const p3, 0x7f0a05f8
 
     .line 6
-    invoke-static {p0, p3, p2, p1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p3, p2, p1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -115,7 +115,7 @@
     const p3, 0x7f0a0e2e
 
     .line 7
-    invoke-static {p0, p3, p2, p1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p3, p2, p1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -126,7 +126,7 @@
     const p3, 0x7f0a0e29
 
     .line 8
-    invoke-static {p0, p3, p2, p1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p3, p2, p1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -141,7 +141,7 @@
 
     const p2, 0x7f0a05d5
 
-    invoke-static {p0, p2, p1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-static {p0, p2, p1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
 
     .line 10
     new-instance p1, Lcom/vk/common/view/ActionUserNotificationView$3;
@@ -150,7 +150,7 @@
 
     const p2, 0x7f0a0918
 
-    invoke-static {p0, p2, p1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-static {p0, p2, p1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
 
     move-result-object p1
 
@@ -161,7 +161,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -212,18 +212,18 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/vk/api/internal/InternalHideNotificationRequest;
+    new-instance v1, Lcom/vk/api/internal/h;
 
     iget v2, v0, Lcom/vk/dto/common/data/UserNotification;->a:I
 
-    invoke-direct {v1, p1, v2}, Lcom/vk/api/internal/InternalHideNotificationRequest;-><init>(ZI)V
+    invoke-direct {v1, p1, v2}, Lcom/vk/api/internal/h;-><init>(ZI)V
 
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
     .line 4
-    invoke-static {v1, v3, v2, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v1, v3, v2, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v4
 
@@ -244,7 +244,7 @@
 
     const/4 v12, 0x0
 
-    invoke-static/range {v4 .. v12}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v4 .. v12}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object v1
 
@@ -253,7 +253,7 @@
 
     invoke-direct {v2, v0, p0, p1}, Lcom/vk/common/view/ActionUserNotificationView$a;-><init>(Lcom/vk/dto/common/data/UserNotification;Lcom/vk/common/view/ActionUserNotificationView;Z)V
 
-    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v1, v2}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     :cond_0
     return-void
@@ -270,20 +270,20 @@
     return-object v0
 .end method
 
-.method public final getOnHideCallback()Lkotlin/jvm/b/Functions2;
+.method public final getOnHideCallback()Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lcom/vk/dto/common/data/UserNotification;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/common/view/ActionUserNotificationView;->b:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/common/view/ActionUserNotificationView;->b:Lkotlin/jvm/b/b;
 
     return-object v0
 .end method
@@ -294,7 +294,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/common/view/ActionUserNotificationView;->a:Lcom/vk/dto/common/data/UserNotification;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -400,21 +400,21 @@
     return-void
 .end method
 
-.method public final setOnHideCallback(Lkotlin/jvm/b/Functions2;)V
+.method public final setOnHideCallback(Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/dto/common/data/UserNotification;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/common/view/ActionUserNotificationView;->b:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/common/view/ActionUserNotificationView;->b:Lkotlin/jvm/b/b;
 
     return-void
 .end method

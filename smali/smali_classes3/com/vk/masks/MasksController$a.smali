@@ -3,12 +3,12 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lio/reactivex/functions/BiFunction;
+.implements Lc/a/z/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/masks/MasksController;->c(Lcom/vk/dto/masks/Mask;)Lio/reactivex/Observable;
+    value = Lcom/vk/masks/MasksController;->c(Lcom/vk/dto/masks/Mask;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/BiFunction<",
+        "Lc/a/z/c<",
         "Lcom/vk/core/network/RxFileDownloader$c;",
         "Lcom/vk/core/network/RxFileDownloader$c;",
         "Lcom/vk/core/network/RxFileDownloader$c;",

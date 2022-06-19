@@ -54,7 +54,7 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v1, v2, v3}, Lcom/vk/dto/common/VerifyInfo;-><init>(ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1, v1, v2, v3}, Lcom/vk/dto/common/VerifyInfo;-><init>(ZZILkotlin/jvm/internal/i;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/dto/common/VerifyInfo;->b(Lcom/vk/core/serialize/Serializer;)Lcom/vk/dto/common/VerifyInfo;
 

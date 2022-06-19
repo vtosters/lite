@@ -1,5 +1,5 @@
 .class public final Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$c;
-.super Lcom/vk/core/util/TextWatcherAdapter;
+.super Lcom/vk/core/util/c1;
 .source "VkAlertDialog.kt"
 
 
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/core/dialogs/alert/InputView;
+.field final synthetic a:Lcom/vk/core/dialogs/alert/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/dialogs/alert/InputView;)V
+.method constructor <init>(Lcom/vk/core/dialogs/alert/a;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$c;->a:Lcom/vk/core/dialogs/alert/InputView;
+    iput-object p1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$c;->a:Lcom/vk/core/dialogs/alert/a;
 
-    invoke-direct {p0}, Lcom/vk/core/util/TextWatcherAdapter;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/util/c1;-><init>()V
 
     return-void
 .end method
@@ -38,9 +38,9 @@
     .line 1
     sget-object v0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->A:Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;
 
-    iget-object v1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$c;->a:Lcom/vk/core/dialogs/alert/InputView;
+    iget-object v1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$c;->a:Lcom/vk/core/dialogs/alert/a;
 
-    invoke-static {v0, v1, p1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;->a(Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;Lcom/vk/core/dialogs/alert/InputView;Ljava/lang/CharSequence;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;->a(Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;Lcom/vk/core/dialogs/alert/a;Ljava/lang/CharSequence;)V
 
     return-void
 .end method

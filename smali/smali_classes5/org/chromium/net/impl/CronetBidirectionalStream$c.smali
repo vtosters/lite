@@ -18,19 +18,19 @@
 
 
 # instance fields
-.field final synthetic a:Lorg/chromium/net/UrlResponseInfo$a;
+.field final synthetic a:Lorg/chromium/net/x$a;
 
 .field final synthetic b:Lorg/chromium/net/impl/CronetBidirectionalStream;
 
 
 # direct methods
-.method constructor <init>(Lorg/chromium/net/impl/CronetBidirectionalStream;Lorg/chromium/net/UrlResponseInfo$a;)V
+.method constructor <init>(Lorg/chromium/net/impl/CronetBidirectionalStream;Lorg/chromium/net/x$a;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lorg/chromium/net/impl/CronetBidirectionalStream$c;->b:Lorg/chromium/net/impl/CronetBidirectionalStream;
 
-    iput-object p2, p0, Lorg/chromium/net/impl/CronetBidirectionalStream$c;->a:Lorg/chromium/net/UrlResponseInfo$a;
+    iput-object p2, p0, Lorg/chromium/net/impl/CronetBidirectionalStream$c;->a:Lorg/chromium/net/x$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -76,7 +76,7 @@
     :try_start_1
     iget-object v0, p0, Lorg/chromium/net/impl/CronetBidirectionalStream$c;->b:Lorg/chromium/net/impl/CronetBidirectionalStream;
 
-    invoke-static {v0}, Lorg/chromium/net/impl/CronetBidirectionalStream;->f(Lorg/chromium/net/impl/CronetBidirectionalStream;)Lorg/chromium/net/impl/VersionSafeCallbacks3;
+    invoke-static {v0}, Lorg/chromium/net/impl/CronetBidirectionalStream;->f(Lorg/chromium/net/impl/CronetBidirectionalStream;)Lorg/chromium/net/impl/m;
 
     move-result-object v0
 
@@ -85,14 +85,14 @@
     iget-object v2, p0, Lorg/chromium/net/impl/CronetBidirectionalStream$c;->b:Lorg/chromium/net/impl/CronetBidirectionalStream;
 
     .line 6
-    invoke-static {v2}, Lorg/chromium/net/impl/CronetBidirectionalStream;->e(Lorg/chromium/net/impl/CronetBidirectionalStream;)Lorg/chromium/net/impl/UrlResponseInfoImpl;
+    invoke-static {v2}, Lorg/chromium/net/impl/CronetBidirectionalStream;->e(Lorg/chromium/net/impl/CronetBidirectionalStream;)Lorg/chromium/net/impl/k;
 
     move-result-object v2
 
-    iget-object v3, p0, Lorg/chromium/net/impl/CronetBidirectionalStream$c;->a:Lorg/chromium/net/UrlResponseInfo$a;
+    iget-object v3, p0, Lorg/chromium/net/impl/CronetBidirectionalStream$c;->a:Lorg/chromium/net/x$a;
 
     .line 7
-    invoke-virtual {v0, v1, v2, v3}, Lorg/chromium/net/impl/VersionSafeCallbacks3;->a(Lorg/chromium/net/BidirectionalStream;Lorg/chromium/net/UrlResponseInfo;Lorg/chromium/net/UrlResponseInfo$a;)V
+    invoke-virtual {v0, v1, v2, v3}, Lorg/chromium/net/impl/m;->a(Lorg/chromium/net/e;Lorg/chromium/net/x;Lorg/chromium/net/x$a;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 

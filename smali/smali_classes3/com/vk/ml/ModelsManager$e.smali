@@ -3,12 +3,12 @@
 .source "ModelsManager.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/ml/ModelsManager;->a(Lcom/vk/ml/MLModelDto1;Lkotlin/jvm/b/Functions;I)V
+    value = Lcom/vk/ml/ModelsManager;->a(Lcom/vk/ml/b;Lkotlin/jvm/b/a;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -33,16 +33,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/ml/ModelsManager;
 
-.field final synthetic b:Lcom/vk/ml/MLModelDto1;
+.field final synthetic b:Lcom/vk/ml/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/ml/ModelsManager;Lcom/vk/ml/MLModelDto1;)V
+.method constructor <init>(Lcom/vk/ml/ModelsManager;Lcom/vk/ml/b;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/ml/ModelsManager$e;->a:Lcom/vk/ml/ModelsManager;
 
-    iput-object p2, p0, Lcom/vk/ml/ModelsManager$e;->b:Lcom/vk/ml/MLModelDto1;
+    iput-object p2, p0, Lcom/vk/ml/ModelsManager$e;->b:Lcom/vk/ml/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -79,16 +79,16 @@
     check-cast p1, Ljava/io/File;
 
     .line 1
-    invoke-static {p1}, Lb/h/g/m/FileUtils;->j(Ljava/io/File;)Ljava/lang/String;
+    invoke-static {p1}, Lb/h/g/m/d;->j(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v5
 
     .line 2
-    new-instance v7, Lcom/vk/ml/MLModelDto;
+    new-instance v7, Lcom/vk/ml/c;
 
-    iget-object v1, p0, Lcom/vk/ml/ModelsManager$e;->b:Lcom/vk/ml/MLModelDto1;
+    iget-object v1, p0, Lcom/vk/ml/ModelsManager$e;->b:Lcom/vk/ml/b;
 
-    invoke-virtual {v1}, Lcom/vk/ml/MLModelDto1;->a()Lcom/vk/ml/MLFeatures$MLFeature;
+    invoke-virtual {v1}, Lcom/vk/ml/b;->a()Lcom/vk/ml/MLFeatures$MLFeature;
 
     move-result-object v1
 
@@ -102,41 +102,41 @@
 
     const-string v0, "modelFile.absolutePath"
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/vk/ml/ModelsManager$e;->b:Lcom/vk/ml/MLModelDto1;
+    iget-object v0, p0, Lcom/vk/ml/ModelsManager$e;->b:Lcom/vk/ml/b;
 
-    invoke-virtual {v0}, Lcom/vk/ml/MLModelDto1;->e()I
+    invoke-virtual {v0}, Lcom/vk/ml/b;->e()I
 
     move-result v4
 
     const-string v0, "metaString"
 
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/vk/ml/ModelsManager$e;->b:Lcom/vk/ml/MLModelDto1;
+    iget-object v0, p0, Lcom/vk/ml/ModelsManager$e;->b:Lcom/vk/ml/b;
 
-    invoke-virtual {v0}, Lcom/vk/ml/MLModelDto1;->c()I
+    invoke-virtual {v0}, Lcom/vk/ml/b;->c()I
 
     move-result v6
 
     move-object v1, v7
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/ml/MLModelDto;-><init>(ILjava/lang/String;ILjava/lang/String;I)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/ml/c;-><init>(ILjava/lang/String;ILjava/lang/String;I)V
 
     .line 3
-    invoke-static {p1}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
+    invoke-static {p1}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
 
     .line 4
     iget-object p1, p0, Lcom/vk/ml/ModelsManager$e;->a:Lcom/vk/ml/ModelsManager;
 
-    invoke-static {p1}, Lcom/vk/ml/ModelsManager;->b(Lcom/vk/ml/ModelsManager;)Lcom/vk/ml/ModelsStorage;
+    invoke-static {p1}, Lcom/vk/ml/ModelsManager;->b(Lcom/vk/ml/ModelsManager;)Lcom/vk/ml/e;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1, v7}, Lcom/vk/ml/ModelsStorage;->a(Lcom/vk/ml/MLModelDto;)J
+    invoke-virtual {p1, v7}, Lcom/vk/ml/e;->a(Lcom/vk/ml/c;)J
 
     move-result-wide v0
 

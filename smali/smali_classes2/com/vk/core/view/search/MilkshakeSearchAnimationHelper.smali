@@ -57,7 +57,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/view/search/MilkshakeSearchView;Landroid/view/View;JILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/core/view/search/MilkshakeSearchView;Landroid/view/View;JILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x4
@@ -82,7 +82,7 @@
     return-object p0
 .end method
 
-.method public static synthetic a(Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -93,7 +93,7 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;->b(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p0, p1}, Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;->b(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -109,13 +109,13 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/jvm/b/Functions;)V
+.method public final a(Lkotlin/jvm/b/a;)V
     .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -191,10 +191,10 @@
     .line 15
     new-instance v8, Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper$hideAnimated$1;
 
-    invoke-direct {v8, p0, p1}, Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper$hideAnimated$1;-><init>(Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v8, p0, p1}, Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper$hideAnimated$1;-><init>(Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;Lkotlin/jvm/b/a;)V
 
     .line 16
-    invoke-static/range {v1 .. v8}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;IIFFJLkotlin/jvm/b/Functions;)Landroid/animation/Animator;
+    invoke-static/range {v1 .. v8}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;IIFFJLkotlin/jvm/b/a;)Landroid/animation/Animator;
 
     return-void
 .end method
@@ -208,13 +208,13 @@
     return v0
 .end method
 
-.method public final b(Lkotlin/jvm/b/Functions;)V
+.method public final b(Lkotlin/jvm/b/a;)V
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -288,10 +288,10 @@
     .line 11
     new-instance v8, Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper$showAnimated$1;
 
-    invoke-direct {v8, p0, p1}, Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper$showAnimated$1;-><init>(Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v8, p0, p1}, Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper$showAnimated$1;-><init>(Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;Lkotlin/jvm/b/a;)V
 
     .line 12
-    invoke-static/range {v1 .. v8}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;IIFFJLkotlin/jvm/b/Functions;)Landroid/animation/Animator;
+    invoke-static/range {v1 .. v8}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;IIFFJLkotlin/jvm/b/a;)Landroid/animation/Animator;
 
     return-void
 .end method

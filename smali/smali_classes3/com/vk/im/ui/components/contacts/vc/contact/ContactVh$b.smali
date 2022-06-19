@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/contacts/vc/contact/ContactCallback;)V
+    value = Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/contacts/vc/contact/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,11 +40,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh$b;->a:Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->b(Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;)Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;
+    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->b(Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;)Lcom/vk/im/ui/components/contacts/vc/contact/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;->c()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/b;->c()Z
 
     move-result p1
 

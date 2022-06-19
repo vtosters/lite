@@ -3,7 +3,7 @@
 .source "EnterNamePresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -68,11 +68,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/auth/entername/EnterNamePresenter$f;->a:Lcom/vk/auth/entername/EnterNamePresenter;
 
-    invoke-static {p1}, Lcom/vk/auth/entername/EnterNamePresenter;->a(Lcom/vk/auth/entername/EnterNamePresenter;)Lio/reactivex/disposables/CompositeDisposable;
+    invoke-static {p1}, Lcom/vk/auth/entername/EnterNamePresenter;->a(Lcom/vk/auth/entername/EnterNamePresenter;)Lio/reactivex/disposables/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lio/reactivex/disposables/CompositeDisposable;->a()V
+    invoke-virtual {p1}, Lio/reactivex/disposables/a;->a()V
 
     .line 2
     iget-object p1, p0, Lcom/vk/auth/entername/EnterNamePresenter$f;->a:Lcom/vk/auth/entername/EnterNamePresenter;

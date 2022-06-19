@@ -3,7 +3,7 @@
 .source "ImDraftsHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -64,7 +64,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/SerializerExt;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/core/extensions/w;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)Ljava/lang/String;
 
     move-result-object v0
 

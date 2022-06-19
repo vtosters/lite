@@ -3,7 +3,7 @@
 .source "AttachActivity.java"
 
 # interfaces
-.implements Lcom/vk/common/g/F0;
+.implements Lcom/vk/common/g/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/F0<",
+        "Lcom/vk/common/g/a<",
         "Lcom/vk/core/fragments/FragmentImpl;",
         ">;"
     }
@@ -55,11 +55,11 @@
     iget-object v1, p0, Lcom/vk/attachpicker/AttachActivity$g;->a:Lcom/vk/attachpicker/AttachActivity;
 
     .line 3
-    invoke-static {v1}, Lcom/vk/attachpicker/AttachActivity;->b(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/SelectionContext;
+    invoke-static {v1}, Lcom/vk/attachpicker/AttachActivity;->b(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/p;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/attachpicker/SelectionContext;->c()I
+    invoke-virtual {v1}, Lcom/vk/attachpicker/p;->c()I
 
     move-result v1
 
@@ -68,11 +68,11 @@
     iget-object v1, p0, Lcom/vk/attachpicker/AttachActivity$g;->a:Lcom/vk/attachpicker/AttachActivity;
 
     .line 4
-    invoke-static {v1}, Lcom/vk/attachpicker/AttachActivity;->b(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/SelectionContext;
+    invoke-static {v1}, Lcom/vk/attachpicker/AttachActivity;->b(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/p;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/attachpicker/SelectionContext;->c()I
+    invoke-virtual {v1}, Lcom/vk/attachpicker/p;->c()I
 
     move-result v1
 
@@ -82,7 +82,7 @@
     invoke-virtual {v0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$a;->h()Lcom/vk/attachpicker/base/BaseAttachPickerFragment$a;
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v0}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v0
 

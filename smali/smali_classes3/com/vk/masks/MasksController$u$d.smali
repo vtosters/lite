@@ -3,12 +3,12 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/masks/MasksController$u;->a(Lcom/vk/dto/masks/Mask;)Lio/reactivex/ObservableSource;
+    value = Lcom/vk/masks/MasksController$u;->a(Lcom/vk/dto/masks/Mask;)Lc/a/p;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lio/reactivex/Notification<",
+        "Lc/a/z/g<",
+        "Lc/a/l<",
         "Lcom/vk/core/network/RxFileDownloader$c;",
         ">;>;"
     }
@@ -45,12 +45,12 @@
 
 
 # virtual methods
-.method public a(Lio/reactivex/Notification;)V
+.method public a(Lc/a/l;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Notification<",
+            "Lc/a/l<",
             "Lcom/vk/core/network/RxFileDownloader$c;",
             ">;)V"
         }
@@ -89,9 +89,9 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lio/reactivex/Notification;
+    check-cast p1, Lc/a/l;
 
-    invoke-virtual {p0, p1}, Lcom/vk/masks/MasksController$u$d;->a(Lio/reactivex/Notification;)V
+    invoke-virtual {p0, p1}, Lcom/vk/masks/MasksController$u$d;->a(Lc/a/l;)V
 
     return-void
 .end method

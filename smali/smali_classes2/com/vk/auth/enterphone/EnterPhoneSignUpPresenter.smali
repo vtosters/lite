@@ -3,7 +3,7 @@
 .source "EnterPhoneSignUpPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/auth/enterphone/EnterPhonePresenter;
+.implements Lcom/vk/auth/enterphone/c;
 
 
 # annotations
@@ -16,19 +16,19 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/auth/base/BaseAuthPresenter<",
-        "Lcom/vk/auth/enterphone/EnterPhoneView;",
+        "Lcom/vk/auth/enterphone/e;",
         ">;",
-        "Lcom/vk/auth/enterphone/EnterPhonePresenter;"
+        "Lcom/vk/auth/enterphone/c;"
     }
 .end annotation
 
 
 # static fields
-.field static final synthetic u:[Lkotlin/u/KProperty5;
+.field static final synthetic u:[Lkotlin/u/j;
 
 
 # instance fields
-.field private final t:Lkotlin/Lazy2;
+.field private final t:Lkotlin/e;
 
 
 # direct methods
@@ -37,13 +37,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -51,15 +51,15 @@
 
     const-string v4, "getDelegate()Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter$SignUpDelegate;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter;->u:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter;->u:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -75,11 +75,11 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter$delegate$2;-><init>(Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter;->t:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter;->t:Lkotlin/e;
 
     return-void
 .end method
@@ -128,20 +128,20 @@
     .locals 1
 
     .line 3
-    invoke-static {p0}, Lcom/vk/auth/enterphone/EnterPhonePresenter$b;->b(Lcom/vk/auth/enterphone/EnterPhonePresenter;)Lcom/vk/auth/main/AuthStatSender$Screen;
+    invoke-static {p0}, Lcom/vk/auth/enterphone/c$b;->b(Lcom/vk/auth/enterphone/c;)Lcom/vk/auth/main/AuthStatSender$Screen;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public bridge synthetic a(Lcom/vk/auth/base/AuthView;)V
+.method public bridge synthetic a(Lcom/vk/auth/base/b;)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/auth/enterphone/EnterPhoneView;
+    check-cast p1, Lcom/vk/auth/enterphone/e;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter;->a(Lcom/vk/auth/enterphone/EnterPhoneView;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter;->a(Lcom/vk/auth/enterphone/e;)V
 
     return-void
 .end method
@@ -150,19 +150,19 @@
     .locals 0
 
     .line 4
-    invoke-static {p0, p1}, Lcom/vk/auth/enterphone/EnterPhonePresenter$b;->b(Lcom/vk/auth/enterphone/EnterPhonePresenter;Lcom/vk/auth/enterphone/choosecountry/Country;)V
+    invoke-static {p0, p1}, Lcom/vk/auth/enterphone/c$b;->b(Lcom/vk/auth/enterphone/c;Lcom/vk/auth/enterphone/choosecountry/Country;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/auth/enterphone/EnterPhoneView;)V
+.method public a(Lcom/vk/auth/enterphone/e;)V
     .locals 0
 
     .line 6
-    invoke-super {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/base/AuthView;)V
+    invoke-super {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/base/b;)V
 
     .line 7
-    invoke-static {p0, p1}, Lcom/vk/auth/enterphone/EnterPhonePresenter$b;->a(Lcom/vk/auth/enterphone/EnterPhonePresenter;Lcom/vk/auth/enterphone/EnterPhoneView;)V
+    invoke-static {p0, p1}, Lcom/vk/auth/enterphone/c$b;->a(Lcom/vk/auth/enterphone/c;Lcom/vk/auth/enterphone/e;)V
 
     return-void
 .end method
@@ -171,7 +171,7 @@
     .locals 0
 
     .line 5
-    invoke-static {p0, p1}, Lcom/vk/auth/enterphone/EnterPhonePresenter$b;->a(Lcom/vk/auth/enterphone/EnterPhonePresenter;Z)V
+    invoke-static {p0, p1}, Lcom/vk/auth/enterphone/c$b;->a(Lcom/vk/auth/enterphone/c;Z)V
 
     return-void
 .end method
@@ -180,7 +180,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/auth/enterphone/EnterPhonePresenter$b;->a(Lcom/vk/auth/enterphone/EnterPhonePresenter;Lcom/vk/auth/enterphone/choosecountry/Country;)V
+    invoke-static {p0, p1}, Lcom/vk/auth/enterphone/c$b;->a(Lcom/vk/auth/enterphone/c;Lcom/vk/auth/enterphone/choosecountry/Country;)V
 
     return-void
 .end method
@@ -189,7 +189,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/auth/enterphone/EnterPhonePresenter$b;->a(Lcom/vk/auth/enterphone/EnterPhonePresenter;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/vk/auth/enterphone/c$b;->a(Lcom/vk/auth/enterphone/c;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -201,7 +201,7 @@
     invoke-super {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o2()V
 
     .line 2
-    invoke-static {p0}, Lcom/vk/auth/enterphone/EnterPhonePresenter$b;->a(Lcom/vk/auth/enterphone/EnterPhonePresenter;)V
+    invoke-static {p0}, Lcom/vk/auth/enterphone/c$b;->a(Lcom/vk/auth/enterphone/c;)V
 
     return-void
 .end method
@@ -209,15 +209,15 @@
 .method public p2()Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter;->t:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter;->t:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter;->u:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/auth/enterphone/EnterPhoneSignUpPresenter;->u:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -226,7 +226,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic p2()Lcom/vk/auth/enterphone/EnterPhonePresenter;
+.method public bridge synthetic p2()Lcom/vk/auth/enterphone/c;
     .locals 1
 
     .line 1
@@ -241,7 +241,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/enterphone/EnterPhonePresenter$b;->g(Lcom/vk/auth/enterphone/EnterPhonePresenter;)V
+    invoke-static {p0}, Lcom/vk/auth/enterphone/c$b;->g(Lcom/vk/auth/enterphone/c;)V
 
     return-void
 .end method
@@ -250,7 +250,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/enterphone/EnterPhonePresenter$b;->f(Lcom/vk/auth/enterphone/EnterPhonePresenter;)V
+    invoke-static {p0}, Lcom/vk/auth/enterphone/c$b;->f(Lcom/vk/auth/enterphone/c;)V
 
     return-void
 .end method
@@ -259,7 +259,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/enterphone/EnterPhonePresenter$b;->e(Lcom/vk/auth/enterphone/EnterPhonePresenter;)V
+    invoke-static {p0}, Lcom/vk/auth/enterphone/c$b;->e(Lcom/vk/auth/enterphone/c;)V
 
     return-void
 .end method
@@ -268,7 +268,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/enterphone/EnterPhonePresenter$b;->h(Lcom/vk/auth/enterphone/EnterPhonePresenter;)V
+    invoke-static {p0}, Lcom/vk/auth/enterphone/c$b;->h(Lcom/vk/auth/enterphone/c;)V
 
     return-void
 .end method
@@ -277,7 +277,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/enterphone/EnterPhonePresenter$b;->d(Lcom/vk/auth/enterphone/EnterPhonePresenter;)Z
+    invoke-static {p0}, Lcom/vk/auth/enterphone/c$b;->d(Lcom/vk/auth/enterphone/c;)Z
 
     move-result v0
 

@@ -3,12 +3,12 @@
 .source "HeaderVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
+.implements Lcom/vk/catalog2/core/holders/common/n;
 .implements Landroid/view/View$OnClickListener;
 
 
 # static fields
-.field static final synthetic g:[Lkotlin/u/KProperty5;
+.field static final synthetic g:[Lkotlin/u/j;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
 .field private d:Lcom/vk/catalog2/core/blocks/UIBlockHeader;
 
-.field private final e:Lkotlin/Lazy2;
+.field private final e:Lkotlin/e;
 
 .field private final f:I
 
@@ -31,13 +31,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/catalog2/core/holders/common/HeaderVh;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -45,15 +45,15 @@
 
     const-string v4, "getExpandBadge()Lcom/vk/core/drawable/RecoloredDrawable;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/catalog2/core/holders/common/HeaderVh;->g:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/catalog2/core/holders/common/HeaderVh;->g:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -67,7 +67,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/vk/catalog2/core/holders/common/HeaderVh;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/vk/catalog2/core/holders/common/HeaderVh;-><init>(IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -87,16 +87,16 @@
     .line 2
     sget-object p1, Lcom/vk/catalog2/core/holders/common/HeaderVh$expandBadge$2;->a:Lcom/vk/catalog2/core/holders/common/HeaderVh$expandBadge$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/common/HeaderVh;->e:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/common/HeaderVh;->e:Lkotlin/e;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -104,7 +104,7 @@
     if-eqz p2, :cond_0
 
     .line 3
-    sget p1, Lcom/vk/catalog2/core/R7;->catalog_header_item_view:I
+    sget p1, Lcom/vk/catalog2/core/r;->catalog_header_item_view:I
 
     :cond_0
     invoke-direct {p0, p1}, Lcom/vk/catalog2/core/holders/common/HeaderVh;-><init>(I)V
@@ -266,7 +266,7 @@
 
     if-eqz p1, :cond_9
 
-    sget v0, Lcom/vk/catalog2/core/R1;->catalog_header_badge_primary:I
+    sget v0, Lcom/vk/catalog2/core/p;->catalog_header_badge_primary:I
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
@@ -281,7 +281,7 @@
 
     move-result-object v0
 
-    sget v5, Lcom/vk/catalog2/core/R4;->white:I
+    sget v5, Lcom/vk/catalog2/core/n;->white:I
 
     invoke-static {v0, v5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -299,24 +299,24 @@
     goto/16 :goto_4
 
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 30
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 31
     :cond_9
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -335,7 +335,7 @@
 
     if-eqz p1, :cond_d
 
-    sget v0, Lcom/vk/catalog2/core/R1;->catalog_header_badge_prominent:I
+    sget v0, Lcom/vk/catalog2/core/p;->catalog_header_badge_prominent:I
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
@@ -350,7 +350,7 @@
 
     move-result-object v0
 
-    sget v5, Lcom/vk/catalog2/core/R4;->white:I
+    sget v5, Lcom/vk/catalog2/core/n;->white:I
 
     invoke-static {v0, v5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -368,24 +368,24 @@
     goto/16 :goto_4
 
     :cond_a
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 36
     :cond_b
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_c
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 37
     :cond_d
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -404,7 +404,7 @@
 
     if-eqz p1, :cond_11
 
-    sget v0, Lcom/vk/catalog2/core/R1;->catalog_header_badge_secondary:I
+    sget v0, Lcom/vk/catalog2/core/p;->catalog_header_badge_secondary:I
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
@@ -419,7 +419,7 @@
 
     move-result-object v0
 
-    sget v5, Lcom/vk/catalog2/core/R4;->white:I
+    sget v5, Lcom/vk/catalog2/core/n;->white:I
 
     invoke-static {v0, v5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -437,24 +437,24 @@
     goto :goto_4
 
     :cond_e
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 42
     :cond_f
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_10
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 43
     :cond_11
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -473,7 +473,7 @@
 
     if-eqz p1, :cond_15
 
-    sget v0, Lcom/vk/catalog2/core/R1;->transparent:I
+    sget v0, Lcom/vk/catalog2/core/p;->transparent:I
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
@@ -488,7 +488,7 @@
 
     move-result-object v0
 
-    sget v3, Lcom/vk/catalog2/core/R4;->gray_400:I
+    sget v3, Lcom/vk/catalog2/core/n;->gray_400:I
 
     invoke-static {v0, v3}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -508,30 +508,30 @@
     goto :goto_4
 
     :cond_12
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 48
     :cond_13
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_14
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 49
     :cond_15
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 50
     :cond_16
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -541,7 +541,7 @@
 
     .line 51
     :cond_18
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -608,22 +608,22 @@
     return-void
 .end method
 
-.method private final l()Lcom/vk/core/drawable/RecoloredDrawable;
+.method private final l()Lcom/vk/core/drawable/i;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/HeaderVh;->e:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/HeaderVh;->e:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/catalog2/core/holders/common/HeaderVh;->g:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/catalog2/core/holders/common/HeaderVh;->g:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/drawable/RecoloredDrawable;
+    check-cast v0, Lcom/vk/core/drawable/i;
 
     return-object v0
 .end method
@@ -652,7 +652,7 @@
 
     if-eqz v0, :cond_0
 
-    sget v1, Lcom/vk/catalog2/core/R9;->catalog_lists:I
+    sget v1, Lcom/vk/catalog2/core/u;->catalog_lists:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -676,7 +676,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-direct {p0}, Lcom/vk/catalog2/core/holders/common/HeaderVh;->l()Lcom/vk/core/drawable/RecoloredDrawable;
+    invoke-direct {p0}, Lcom/vk/catalog2/core/holders/common/HeaderVh;->l()Lcom/vk/core/drawable/i;
 
     move-result-object v1
 
@@ -704,7 +704,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
+    invoke-static {p0, p1}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
 
     move-result-object p1
 
@@ -724,7 +724,7 @@
     move-result-object p1
 
     .line 5
-    sget p2, Lcom/vk/catalog2/core/R10;->title:I
+    sget p2, Lcom/vk/catalog2/core/q;->title:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -732,14 +732,14 @@
 
     const-string p3, "it.findViewById(R.id.title)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/common/HeaderVh;->a:Landroid/widget/TextView;
 
     .line 6
-    sget p2, Lcom/vk/catalog2/core/R10;->badge:I
+    sget p2, Lcom/vk/catalog2/core/q;->badge:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -747,14 +747,14 @@
 
     const-string p3, "it.findViewById(R.id.badge)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/common/HeaderVh;->b:Landroid/widget/TextView;
 
     .line 7
-    sget p2, Lcom/vk/catalog2/core/R10;->show_all_btn:I
+    sget p2, Lcom/vk/catalog2/core/q;->show_all_btn:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -779,7 +779,7 @@
     const-string p2, "inflater.inflate(layoutR\u2026this@HeaderVh))\n        }"
 
     .line 9
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -866,7 +866,7 @@
     const-string p1, "title"
 
     .line 17
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -878,7 +878,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
 
     return-void
 .end method
@@ -887,7 +887,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
 
     return-void
 .end method

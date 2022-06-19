@@ -42,13 +42,13 @@
     .line 4
     sget-object v0, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;->c:Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;
 
-    invoke-static {v0}, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;->b(Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-static {v0}, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;->b(Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismiss()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e;->dismiss()V
 
     .line 5
     :cond_0
@@ -56,7 +56,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;->a(Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+    invoke-static {v0, v1}, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;->a(Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;Lcom/vk/core/dialogs/bottomsheet/e;)V
 
     return-void
 .end method

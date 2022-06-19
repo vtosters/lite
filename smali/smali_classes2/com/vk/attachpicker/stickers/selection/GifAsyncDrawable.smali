@@ -21,7 +21,7 @@
 # instance fields
 .field private B:Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;
 
-.field private C:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+.field private C:Lcom/facebook/imagepipeline/animated/base/a;
 
 .field private volatile D:I
 
@@ -38,7 +38,7 @@
     .end annotation
 .end field
 
-.field private final H:Lcom/facebook/x/g/CloseableAnimatedImage;
+.field private final H:Lcom/facebook/x/g/a;
 
 .field private final a:Landroid/graphics/Paint;
 
@@ -65,20 +65,20 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->I:Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable$a;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/facebook/x/g/CloseableAnimatedImage;)V
+.method public constructor <init>(Lcom/facebook/x/g/a;)V
     .locals 1
 
     .line 1
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->H:Lcom/facebook/x/g/CloseableAnimatedImage;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->H:Lcom/facebook/x/g/a;
 
     .line 2
     new-instance p1, Landroid/graphics/Paint;
@@ -90,9 +90,9 @@
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->a:Landroid/graphics/Paint;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->H:Lcom/facebook/x/g/CloseableAnimatedImage;
+    iget-object p1, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->H:Lcom/facebook/x/g/a;
 
-    invoke-virtual {p1}, Lcom/facebook/x/g/CloseableAnimatedImage;->d()Lcom/facebook/imagepipeline/animated/base/AnimatedImage;
+    invoke-virtual {p1}, Lcom/facebook/x/g/a;->d()Lcom/facebook/imagepipeline/animated/base/b;
 
     move-result-object p1
 
@@ -100,7 +100,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/animated/base/AnimatedImage;->a()I
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/animated/base/b;->a()I
 
     move-result p1
 
@@ -127,15 +127,15 @@
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->d:Ljava/lang/Runnable;
 
     .line 6
-    iget-object p1, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->H:Lcom/facebook/x/g/CloseableAnimatedImage;
+    iget-object p1, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->H:Lcom/facebook/x/g/a;
 
-    invoke-virtual {p1}, Lcom/facebook/x/g/CloseableAnimatedImage;->d()Lcom/facebook/imagepipeline/animated/base/AnimatedImage;
+    invoke-virtual {p1}, Lcom/facebook/x/g/a;->d()Lcom/facebook/imagepipeline/animated/base/b;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/animated/base/AnimatedImage;->e()[I
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/animated/base/b;->e()[I
 
     move-result-object p1
 
@@ -248,12 +248,12 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -618,20 +618,20 @@
     invoke-static {}, Lcom/vk/core/util/ThreadUtils;->b()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->H:Lcom/facebook/x/g/CloseableAnimatedImage;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->H:Lcom/facebook/x/g/a;
 
-    invoke-virtual {v0}, Lcom/facebook/x/g/CloseableAnimatedImage;->d()Lcom/facebook/imagepipeline/animated/base/AnimatedImage;
+    invoke-virtual {v0}, Lcom/facebook/x/g/a;->d()Lcom/facebook/imagepipeline/animated/base/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
     .line 3
-    invoke-interface {v0}, Lcom/facebook/imagepipeline/animated/base/AnimatedImage;->getWidth()I
+    invoke-interface {v0}, Lcom/facebook/imagepipeline/animated/base/b;->getWidth()I
 
     move-result v1
 
-    invoke-interface {v0}, Lcom/facebook/imagepipeline/animated/base/AnimatedImage;->getHeight()I
+    invoke-interface {v0}, Lcom/facebook/imagepipeline/animated/base/b;->getHeight()I
 
     move-result v0
 
@@ -764,17 +764,17 @@
     .locals 5
 
     .line 1
-    new-instance v0, Lcom/facebook/imagepipeline/animated/impl/AnimatedDrawableBackendImpl;
+    new-instance v0, Lcom/facebook/imagepipeline/animated/impl/a;
 
     .line 2
-    new-instance v1, Lcom/facebook/x/a/b/AnimatedDrawableUtil;
+    new-instance v1, Lcom/facebook/x/a/b/a;
 
-    invoke-direct {v1}, Lcom/facebook/x/a/b/AnimatedDrawableUtil;-><init>()V
+    invoke-direct {v1}, Lcom/facebook/x/a/b/a;-><init>()V
 
     .line 3
-    iget-object v2, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->H:Lcom/facebook/x/g/CloseableAnimatedImage;
+    iget-object v2, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->H:Lcom/facebook/x/g/a;
 
-    invoke-virtual {v2}, Lcom/facebook/x/g/CloseableAnimatedImage;->e()Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;
+    invoke-virtual {v2}, Lcom/facebook/x/g/a;->e()Lcom/facebook/imagepipeline/animated/base/d;
 
     move-result-object v2
 
@@ -786,14 +786,14 @@
     const/4 v4, 0x1
 
     .line 5
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/facebook/imagepipeline/animated/impl/AnimatedDrawableBackendImpl;-><init>(Lcom/facebook/x/a/b/AnimatedDrawableUtil;Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;Landroid/graphics/Rect;Z)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/facebook/imagepipeline/animated/impl/a;-><init>(Lcom/facebook/x/a/b/a;Lcom/facebook/imagepipeline/animated/base/d;Landroid/graphics/Rect;Z)V
 
-    iput-object v0, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->C:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+    iput-object v0, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->C:Lcom/facebook/imagepipeline/animated/base/a;
 
     .line 6
     new-instance v0, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;
 
-    iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->C:Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
+    iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->C:Lcom/facebook/imagepipeline/animated/base/a;
 
     .line 7
     new-instance v2, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable$updateRenderMachine$1;
@@ -801,7 +801,7 @@
     invoke-direct {v2, p0}, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable$updateRenderMachine$1;-><init>(Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;)V
 
     .line 8
-    invoke-direct {v0, v1, v2}, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;-><init>(Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor$b;)V
+    invoke-direct {v0, v1, v2}, Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;-><init>(Lcom/facebook/imagepipeline/animated/base/a;Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor$b;)V
 
     iput-object v0, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->B:Lcom/facebook/imagepipeline/animated/impl/AnimatedImageCompositor;
 
@@ -825,9 +825,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->H:Lcom/facebook/x/g/CloseableAnimatedImage;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->H:Lcom/facebook/x/g/a;
 
-    invoke-virtual {v0}, Lcom/facebook/x/g/CloseableAnimatedImage;->getHeight()I
+    invoke-virtual {v0}, Lcom/facebook/x/g/a;->getHeight()I
 
     move-result v0
 
@@ -838,9 +838,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->H:Lcom/facebook/x/g/CloseableAnimatedImage;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;->H:Lcom/facebook/x/g/a;
 
-    invoke-virtual {v0}, Lcom/facebook/x/g/CloseableAnimatedImage;->getWidth()I
+    invoke-virtual {v0}, Lcom/facebook/x/g/a;->getWidth()I
 
     move-result v0
 

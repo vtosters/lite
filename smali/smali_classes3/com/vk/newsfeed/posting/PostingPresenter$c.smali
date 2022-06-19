@@ -46,11 +46,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$c;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts11;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/h;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts11;->K()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/h;->K()V
 
     return-void
 .end method
@@ -61,11 +61,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$c;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts11;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/h;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts11;->D0()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/h;->D0()V
 
     return-void
 .end method
@@ -76,11 +76,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$c;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts11;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/h;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts11;->K2()Ljava/lang/Integer;
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/h;->K2()Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -110,11 +110,11 @@
     :goto_0
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$c;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->f(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts13;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->f(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts13;->B()Lcom/vk/sharing/target/Target;
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/f;->B()Lcom/vk/sharing/target/Target;
 
     move-result-object v0
 
@@ -138,11 +138,11 @@
 
     .line 6
     :cond_3
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {v0}, Lb/h/h/d/c;->D0()I
 
     move-result v0
 
@@ -156,11 +156,11 @@
     .line 7
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$c;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts11;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/h;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/vk/newsfeed/posting/PostingContracts11;->a(ILjava/lang/String;Z)V
+    invoke-interface {v0, p1, p2, p3}, Lcom/vk/newsfeed/posting/h;->a(ILjava/lang/String;Z)V
 
     return-void
 .end method
@@ -171,11 +171,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$c;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts11;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/h;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts11;->F2()Ljava/lang/Integer;
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/h;->F2()Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -198,11 +198,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$c;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts11;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/h;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts11;->e(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/h;->e(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -213,11 +213,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$c;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts11;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/h;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts11;->getText()Ljava/lang/CharSequence;
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/h;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -230,11 +230,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$c;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts11;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/h;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts11;->requestFocus()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/h;->requestFocus()V
 
     return-void
 .end method
@@ -245,11 +245,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$c;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts11;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->i(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/h;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts11;->y()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/h;->y()Ljava/lang/String;
 
     move-result-object v0
 

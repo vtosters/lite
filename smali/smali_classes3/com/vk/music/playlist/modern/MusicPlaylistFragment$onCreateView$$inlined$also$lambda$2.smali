@@ -3,7 +3,7 @@
 .source "MusicPlaylistFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroidx/recyclerview/widget/RecyclerView;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -52,7 +52,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$onCreateView$$inlined$also$lambda$2;->this$0:Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/PaginatedRecyclerAdapter;
+    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/s;
 
     move-result-object v0
 
@@ -90,7 +90,7 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/core/ui/TabletUiHelper;-><init>(Landroidx/recyclerview/widget/RecyclerView;ZZLkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/core/ui/TabletUiHelper;-><init>(Landroidx/recyclerview/widget/RecyclerView;ZZLkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
 
     invoke-static {v0, v8}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->a(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;Lcom/vk/core/ui/TabletUiHelper;)V
 
@@ -107,9 +107,9 @@
     invoke-static {v0, p1}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->a(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 6
-    new-instance v0, Lcom/vk/music/ui/common/VerticalOffsetItemDecoration;
+    new-instance v0, Lcom/vk/music/ui/common/p;
 
-    invoke-direct {v0}, Lcom/vk/music/ui/common/VerticalOffsetItemDecoration;-><init>()V
+    invoke-direct {v0}, Lcom/vk/music/ui/common/p;-><init>()V
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -124,7 +124,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$onCreateView$$inlined$also$lambda$2;->a(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

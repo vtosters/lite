@@ -1,13 +1,13 @@
 .class public final Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;
-.super Lcom/vk/im/engine/i/BaseImEngineCmd;
+.super Lcom/vk/im/engine/i/a;
 .source "DialogsCountGetCmd.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
-        "Lcom/vk/im/engine/models/EntityValue<",
+        "Lcom/vk/im/engine/i/a<",
+        "Lcom/vk/im/engine/models/b<",
         "Ljava/lang/Integer;",
         ">;>;"
     }
@@ -27,7 +27,7 @@
     .locals 0
 
     .line 3
-    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
@@ -38,7 +38,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Source;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Source;ZILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -62,48 +62,48 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+.method private final b(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             ")",
-            "Lcom/vk/im/engine/models/EntityValue<",
+            "Lcom/vk/im/engine/models/b<",
             "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->d()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
 
     move-result v0
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
 
     move-result-object p1
 
     sget-object v1, Lcom/vk/im/engine/models/dialogs/DialogsFilter;->BUSINESS_NOTIFY:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
-    invoke-virtual {p1, v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/models/dialogs/DialogsFilter;)Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
+    invoke-virtual {p1, v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/models/dialogs/DialogsFilter;)Lcom/vk/im/engine/internal/storage/models/b;
 
     move-result-object p1
 
@@ -112,19 +112,19 @@
     if-nez p1, :cond_0
 
     .line 3
-    new-instance p1, Lcom/vk/im/engine/models/EntityValue;
+    new-instance p1, Lcom/vk/im/engine/models/b;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/im/engine/models/EntityValue;-><init>(Ljava/lang/Object;Z)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/im/engine/models/b;-><init>(Ljava/lang/Object;Z)V
 
     goto :goto_1
 
     .line 4
     :cond_0
-    new-instance v2, Lcom/vk/im/engine/models/EntityValue;
+    new-instance v2, Lcom/vk/im/engine/models/b;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;->a()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/b;->a()I
 
     move-result v3
 
@@ -132,7 +132,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;->c()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/b;->c()I
 
     move-result p1
 
@@ -144,7 +144,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-direct {v2, v3, v1}, Lcom/vk/im/engine/models/EntityValue;-><init>(Ljava/lang/Object;Z)V
+    invoke-direct {v2, v3, v1}, Lcom/vk/im/engine/models/b;-><init>(Ljava/lang/Object;Z)V
 
     move-object p1, v2
 
@@ -152,26 +152,26 @@
     return-object p1
 .end method
 
-.method private final c(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+.method private final c(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             ")",
-            "Lcom/vk/im/engine/models/EntityValue<",
+            "Lcom/vk/im/engine/models/b<",
             "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->d(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->d(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityValue;->f()Z
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/b;->f()Z
 
     move-result v1
 
@@ -180,7 +180,7 @@
     if-ne v1, v2, :cond_0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->e(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->e(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
 
     move-result-object v0
 
@@ -201,14 +201,14 @@
     throw p1
 .end method
 
-.method private final d(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+.method private final d(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             ")",
-            "Lcom/vk/im/engine/models/EntityValue<",
+            "Lcom/vk/im/engine/models/b<",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -238,7 +238,7 @@
     if-ne v0, v1, :cond_0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->b(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->b(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
 
     move-result-object p1
 
@@ -254,7 +254,7 @@
 
     .line 4
     :cond_1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->f(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->f(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
 
     move-result-object p1
 
@@ -262,7 +262,7 @@
 
     .line 5
     :cond_2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->g(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->g(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
 
     move-result-object p1
 
@@ -270,14 +270,14 @@
     return-object p1
 .end method
 
-.method private final e(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+.method private final e(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             ")",
-            "Lcom/vk/im/engine/models/EntityValue<",
+            "Lcom/vk/im/engine/models/b<",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -286,112 +286,112 @@
     .line 1
     iget-boolean v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->d:Z
 
-    invoke-interface {p1, v0}, Lcom/vk/im/engine/ImEnvironment;->b(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/im/engine/d;->b(Z)V
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetCountersApiCmd;
+    new-instance v1, Lcom/vk/im/engine/internal/api_commands/messages/p;
 
     iget-boolean v2, p0, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->d:Z
 
-    invoke-direct {v1, v2}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetCountersApiCmd;-><init>(Z)V
+    invoke-direct {v1, v2}, Lcom/vk/im/engine/internal/api_commands/messages/p;-><init>(Z)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/ApiCommand;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/a;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/models/messages/MsgCounters;
+    check-cast v0, Lcom/vk/im/engine/models/messages/a;
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v1
 
     new-instance v2, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadByNetwork$1;
 
-    invoke-direct {v2, v0}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadByNetwork$1;-><init>(Lcom/vk/im/engine/models/messages/MsgCounters;)V
+    invoke-direct {v2, v0}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadByNetwork$1;-><init>(Lcom/vk/im/engine/models/messages/a;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->d(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->d(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final f(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+.method private final f(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             ")",
-            "Lcom/vk/im/engine/models/EntityValue<",
+            "Lcom/vk/im/engine/models/b<",
             "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
     sget-object v0, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadRequestsByCache$1;->a:Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadRequestsByCache$1;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/models/EntityValue;
+    check-cast p1, Lcom/vk/im/engine/models/b;
 
     return-object p1
 .end method
 
-.method private final g(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+.method private final g(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             ")",
-            "Lcom/vk/im/engine/models/EntityValue<",
+            "Lcom/vk/im/engine/models/b<",
             "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
     sget-object v0, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadUnreadByCache$1;->a:Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd$loadUnreadByCache$1;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/models/EntityValue;
+    check-cast p1, Lcom/vk/im/engine/models/b;
 
     return-object p1
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+.method public a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             ")",
-            "Lcom/vk/im/engine/models/EntityValue<",
+            "Lcom/vk/im/engine/models/b<",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -428,7 +428,7 @@
     if-ne v0, v1, :cond_0
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->e(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->e(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
 
     move-result-object p1
 
@@ -443,7 +443,7 @@
 
     .line 5
     :cond_1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->c(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->c(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
 
     move-result-object p1
 
@@ -451,7 +451,7 @@
 
     .line 6
     :cond_2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->d(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->d(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
 
     move-result-object p1
 
@@ -487,11 +487,11 @@
     throw p1
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
 
     move-result-object p1
 
@@ -513,7 +513,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -523,7 +523,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/dialogs/DialogsCountGetCmd;->c:Lcom/vk/im/engine/models/Source;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

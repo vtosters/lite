@@ -1,9 +1,9 @@
 .class public final Lcom/vk/debug/TogglesFragment$c;
-.super Lcom/vk/lists/SimpleAdapter;
+.super Lcom/vk/lists/i0;
 .source "TogglesFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/Provider;
+.implements Lcom/vk/core/ui/o;
 
 
 # annotations
@@ -18,11 +18,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/SimpleAdapter<",
-        "Lkotlin/Unit;",
-        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+        "Lcom/vk/lists/i0<",
+        "Lkotlin/m;",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "*>;>;",
-        "Lcom/vk/core/ui/Provider;"
+        "Lcom/vk/core/ui/o;"
     }
 .end annotation
 
@@ -55,7 +55,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
 
     .line 2
     sget-object v0, Lcom/vk/toggle/FeatureManager$c;->e:Lcom/vk/toggle/FeatureManager$c$a;
@@ -76,12 +76,12 @@
 
 
 # virtual methods
-.method public a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
+.method public a(Lcom/vtosters/lite/ui/b0/i;I)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "*>;I)V"
         }
     .end annotation
@@ -95,7 +95,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -171,9 +171,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/debug/TogglesFragment$c;->a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/debug/TogglesFragment$c;->a(Lcom/vtosters/lite/ui/b0/i;I)V
 
     return-void
 .end method
@@ -182,21 +182,21 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/debug/TogglesFragment$c;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/debug/TogglesFragment$c;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "*>;"
         }
     .end annotation

@@ -1,5 +1,5 @@
 .class public Lcom/vtosters/lite/fragments/MaterialPreferenceFragment;
-.super Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;
+.super Lcom/vtosters/lite/fragments/u2/b;
 .source "MaterialPreferenceFragment.java"
 
 
@@ -33,7 +33,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/u2/b;-><init>()V
 
     const/4 v0, 0x0
 
@@ -62,39 +62,39 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->D:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/u2/b;->D:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/vk/core/ui/MilkshakeProvider;
+    instance-of v0, v0, Lcom/vk/core/ui/n;
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->D:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/u2/b;->D:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment;->K:Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->removeItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->D:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/u2/b;->D:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/ui/MilkshakeProvider;
+    check-cast v1, Lcom/vk/core/ui/n;
 
-    invoke-virtual {p0, v1}, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment;->a(Lcom/vk/core/ui/MilkshakeProvider;)Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
+    invoke-virtual {p0, v1}, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment;->a(Lcom/vk/core/ui/n;)Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
 
     move-result-object v1
 
@@ -106,25 +106,25 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->D:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/u2/b;->D:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/vk/core/ui/Provider;
+    instance-of v0, v0, Lcom/vk/core/ui/o;
 
     if-eqz v0, :cond_1
 
     .line 5
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->D:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/u2/b;->D:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment;->K:Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->removeItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     .line 6
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->D:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/u2/b;->D:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p0}, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment;->Q4()Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
 
@@ -151,7 +151,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->D:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/u2/b;->D:Landroidx/recyclerview/widget/RecyclerView;
 
     return-object p0
 .end method
@@ -178,7 +178,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->D:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/u2/b;->D:Landroidx/recyclerview/widget/RecyclerView;
 
     return-object p0
 .end method
@@ -234,7 +234,7 @@
 
     int-to-float v2, v2
 
-    invoke-static {v2}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v2}, Ld/a/a/c/e;->a(F)I
 
     move-result v2
 
@@ -245,39 +245,39 @@
 
     .line 3
     :goto_0
-    iget-object v3, p0, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->D:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v3, p0, Lcom/vtosters/lite/fragments/u2/b;->D:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v3, v2, v1, v2, v1}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
     .line 4
-    new-instance v2, Lcom/vk/core/ui/CardItemDecorator;
+    new-instance v2, Lcom/vk/core/ui/d;
 
-    iget-object v3, p0, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->D:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v3, p0, Lcom/vtosters/lite/fragments/u2/b;->D:Landroidx/recyclerview/widget/RecyclerView;
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-direct {v2, v3, v0}, Lcom/vk/core/ui/CardItemDecorator;-><init>(Landroidx/recyclerview/widget/RecyclerView;Z)V
+    invoke-direct {v2, v3, v0}, Lcom/vk/core/ui/d;-><init>(Landroidx/recyclerview/widget/RecyclerView;Z)V
 
     const/high16 v0, 0x40000000    # 2.0f
 
     .line 5
-    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
 
     move-result v0
 
     const/high16 v3, 0x40400000    # 3.0f
 
-    invoke-static {v3}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v3}, Ld/a/a/c/e;->a(F)I
 
     move-result v3
 
     const/high16 v4, 0x41000000    # 8.0f
 
-    invoke-static {v4}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v4}, Ld/a/a/c/e;->a(F)I
 
     move-result v4
 
-    invoke-virtual {v2, v0, v3, v4, v1}, Lcom/vk/core/ui/CardItemDecorator;->a(IIII)V
+    invoke-virtual {v2, v0, v3, v4, v1}, Lcom/vk/core/ui/d;->a(IIII)V
 
     return-object v2
 .end method
@@ -312,7 +312,7 @@
     return-void
 .end method
 
-.method protected a(Lcom/vk/core/ui/MilkshakeProvider;)Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
+.method protected a(Lcom/vk/core/ui/n;)Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
     .locals 3
 
     .line 4
@@ -343,7 +343,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
 
     move-result v0
 
@@ -354,16 +354,16 @@
 
     .line 6
     :goto_0
-    iget-object v2, p0, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->D:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v2, p0, Lcom/vtosters/lite/fragments/u2/b;->D:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v2, v0, v1, v0, v1}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
     .line 7
-    new-instance v0, Lcom/vk/core/ui/MilkshakeDecoration;
+    new-instance v0, Lcom/vk/core/ui/m;
 
-    invoke-direct {v0}, Lcom/vk/core/ui/MilkshakeDecoration;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/ui/m;-><init>()V
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/ui/MilkshakeDecoration;->a(Lcom/vk/core/ui/MilkshakeProvider;)Lcom/vk/core/ui/MilkshakeDecoration;
+    invoke-virtual {v0, p1}, Lcom/vk/core/ui/m;->a(Lcom/vk/core/ui/n;)Lcom/vk/core/ui/m;
 
     return-object v0
 .end method
@@ -372,7 +372,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->bindPreferences()V
+    invoke-super {p0}, Lcom/vtosters/lite/fragments/u2/b;->bindPreferences()V
 
     .line 2
     invoke-direct {p0}, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment;->S4()V
@@ -396,7 +396,7 @@
     .locals 4
 
     .line 1
-    invoke-super {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->onBindPreferences()V
+    invoke-super {p0}, Lcom/vtosters/lite/fragments/u2/b;->onBindPreferences()V
 
     .line 2
     iget v0, p0, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment;->P:I
@@ -404,7 +404,7 @@
     if-ltz v0, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->D:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/u2/b;->D:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance v1, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment$a;
 
@@ -437,7 +437,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/u2/b;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -463,7 +463,7 @@
     .line 1
     new-instance v0, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment$c;
 
-    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->onCreateAdapter(Landroidx/preference/PreferenceScreen;)Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/u2/b;->onCreateAdapter(Landroidx/preference/PreferenceScreen;)Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object p1
 
@@ -499,19 +499,19 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1, p2, p3}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->onCreateRecyclerView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroidx/recyclerview/widget/RecyclerView;
+    invoke-super {p0, p1, p2, p3}, Lcom/vtosters/lite/fragments/u2/b;->onCreateRecyclerView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object p1
 
     .line 2
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result p2
 
     if-nez p2, :cond_0
 
     .line 3
-    new-instance p2, Lme/grishka/appkit/views/DividerItemDecoration;
+    new-instance p2, Lme/grishka/appkit/views/a;
 
     new-instance p3, Landroid/graphics/drawable/ColorDrawable;
 
@@ -525,18 +525,18 @@
 
     const/high16 v0, 0x3f000000    # 0.5f
 
-    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
 
     move-result v0
 
-    invoke-direct {p2, p3, v0}, Lme/grishka/appkit/views/DividerItemDecoration;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {p2, p3, v0}, Lme/grishka/appkit/views/a;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     .line 4
     new-instance p3, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment$b;
 
     invoke-direct {p3, p0}, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment$b;-><init>(Lcom/vtosters/lite/fragments/MaterialPreferenceFragment;)V
 
-    invoke-virtual {p2, p3}, Lme/grishka/appkit/views/DividerItemDecoration;->a(Lme/grishka/appkit/views/DividerItemDecoration$a;)Lme/grishka/appkit/views/DividerItemDecoration;
+    invoke-virtual {p2, p3}, Lme/grishka/appkit/views/a;->a(Lme/grishka/appkit/views/a$a;)Lme/grishka/appkit/views/a;
 
     .line 5
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
@@ -549,7 +549,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->onDestroyView()V
+    invoke-super {p0}, Lcom/vtosters/lite/fragments/u2/b;->onDestroyView()V
 
     const/4 v0, 0x0
 
@@ -566,7 +566,7 @@
     invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/FragmentImpl;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->D:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/u2/b;->D:Landroidx/recyclerview/widget/RecyclerView;
 
     const/high16 p2, 0x2000000
 

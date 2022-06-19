@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/artists/MusicArtistHeaderContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/sections/MusicSectionsModel;Z)V
+    value = Lcom/vk/music/artists/MusicArtistHeaderContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/sections/f;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -44,11 +44,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer$b;->b:Lcom/vk/music/artists/MusicArtistHeaderContainer;
 
-    invoke-static {p1}, Lcom/vk/music/artists/MusicArtistHeaderContainer;->i(Lcom/vk/music/artists/MusicArtistHeaderContainer;)Lcom/vk/music/sections/MusicSectionsModel;
+    invoke-static {p1}, Lcom/vk/music/artists/MusicArtistHeaderContainer;->i(Lcom/vk/music/artists/MusicArtistHeaderContainer;)Lcom/vk/music/sections/f;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/music/sections/MusicSectionsModel;->e0()Ljava/util/ArrayList;
+    invoke-interface {p1}, Lcom/vk/music/sections/f;->e0()Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -135,30 +135,30 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/sharing/Sharing;->a(Landroid/content/Context;)Lcom/vk/sharing/Sharing$a;
+    invoke-static {p1}, Lcom/vk/sharing/m;->a(Landroid/content/Context;)Lcom/vk/sharing/m$a;
 
     move-result-object p1
 
     .line 7
     iget-object v1, v2, Lcom/vk/dto/music/Section;->D:Lcom/vk/dto/music/Artist;
 
-    invoke-static {v1}, Lcom/vk/sharing/attachment/Attachments;->a(Lcom/vk/dto/music/Artist;)Lcom/vk/sharing/attachment/AttachmentInfo;
+    invoke-static {v1}, Lcom/vk/sharing/attachment/k;->a(Lcom/vk/dto/music/Artist;)Lcom/vk/sharing/attachment/AttachmentInfo;
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/sharing/Sharing$a;->a(Lcom/vk/sharing/attachment/AttachmentInfo;)Lcom/vk/sharing/Sharing$a;
+    invoke-virtual {p1, v1}, Lcom/vk/sharing/m$a;->a(Lcom/vk/sharing/attachment/AttachmentInfo;)Lcom/vk/sharing/m$a;
 
     .line 8
     iget-object v1, v2, Lcom/vk/dto/music/Section;->D:Lcom/vk/dto/music/Artist;
 
-    invoke-static {v1}, Lcom/vk/sharing/action/Actions;->a(Lcom/vk/dto/music/Artist;)Lcom/vk/sharing/action/ActionsInfo;
+    invoke-static {v1}, Lcom/vk/sharing/action/a;->a(Lcom/vk/dto/music/Artist;)Lcom/vk/sharing/action/ActionsInfo;
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/sharing/Sharing$a;->a(Lcom/vk/sharing/action/ActionsInfo;)Lcom/vk/sharing/Sharing$a;
+    invoke-virtual {p1, v1}, Lcom/vk/sharing/m$a;->a(Lcom/vk/sharing/action/ActionsInfo;)Lcom/vk/sharing/m$a;
 
     .line 9
-    invoke-virtual {p1}, Lcom/vk/sharing/Sharing$a;->a()V
+    invoke-virtual {p1}, Lcom/vk/sharing/m$a;->a()V
 
     :cond_5
     return v0

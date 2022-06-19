@@ -102,7 +102,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -252,18 +252,18 @@
     return-object v3
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/attaches/Attach;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+.method private final a(Lcom/vk/im/engine/models/attaches/Attach;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/im/engine/models/attaches/Attach;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             "Ljava/lang/Boolean;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             "+",
@@ -308,7 +308,7 @@
     check-cast v0, Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 35
-    invoke-interface {p2, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -321,7 +321,7 @@
     if-eqz v1, :cond_1
 
     .line 36
-    invoke-interface {p3, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -351,11 +351,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/models/messages/WithUserContent$Companion;Lcom/vk/im/engine/models/messages/WithUserContent;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+.method public static final synthetic a(Lcom/vk/im/engine/models/messages/WithUserContent$Companion;Lcom/vk/im/engine/models/messages/WithUserContent;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
     .locals 0
 
     .line 5
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/models/messages/WithUserContent$Companion;->a(Lcom/vk/im/engine/models/messages/WithUserContent;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/models/messages/WithUserContent$Companion;->a(Lcom/vk/im/engine/models/messages/WithUserContent;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -387,21 +387,21 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object v0
 
     .line 8
     const-class v1, Lcom/vk/im/engine/models/attaches/AttachWall;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Ljava/lang/Class;)Lkotlin/sequences/Sequence;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Ljava/lang/Class;)Lkotlin/sequences/j;
 
     move-result-object v0
 
     .line 9
     sget-object v1, Lcom/vk/im/engine/models/messages/WithUserContent$Companion$getAttachOfType$attachesFromWallPosts$1;->a:Lcom/vk/im/engine/models/messages/WithUserContent$Companion$getAttachOfType$attachesFromWallPosts$1;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->d(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->d(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object v0
 
@@ -410,11 +410,11 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {v1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Lkotlin/sequences/j;)Lkotlin/sequences/j;
 
     move-result-object v0
 
@@ -423,12 +423,12 @@
 
     invoke-direct {v1, p2}, Lcom/vk/im/engine/models/messages/WithUserContent$Companion$getAttachOfType$1;-><init>(Ljava/lang/Class;)V
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object v0
 
     .line 12
-    invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -507,19 +507,19 @@
     move-result-object v0
 
     .line 39
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object v0
 
     .line 40
     const-class v1, Lcom/vk/im/engine/models/attaches/AttachWall;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Ljava/lang/Class;)Lkotlin/sequences/Sequence;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Ljava/lang/Class;)Lkotlin/sequences/j;
 
     move-result-object v0
 
     .line 41
-    invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -567,19 +567,19 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/messages/WithUserContent;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+.method private final a(Lcom/vk/im/engine/models/messages/WithUserContent;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/im/engine/models/messages/WithUserContent;",
             "Z",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             "Ljava/lang/Boolean;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             "+",
@@ -613,7 +613,7 @@
     check-cast v1, Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 27
-    invoke-interface {p3, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -626,7 +626,7 @@
     if-eqz v2, :cond_0
 
     .line 28
-    invoke-interface {p4, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p4, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -636,7 +636,7 @@
 
     .line 29
     :cond_0
-    invoke-direct {p0, v1, p3, p4}, Lcom/vk/im/engine/models/messages/WithUserContent$Companion;->a(Lcom/vk/im/engine/models/attaches/Attach;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, v1, p3, p4}, Lcom/vk/im/engine/models/messages/WithUserContent$Companion;->a(Lcom/vk/im/engine/models/attaches/Attach;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     goto :goto_0
 
@@ -648,7 +648,7 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/models/messages/WithUserContent$Companion;->a(Ljava/util/List;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/models/messages/WithUserContent$Companion;->a(Ljava/util/List;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     :cond_2
     return-void
@@ -741,7 +741,7 @@
     return-void
 .end method
 
-.method private final a(Ljava/util/List;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+.method private final a(Ljava/util/List;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -750,12 +750,12 @@
             "+",
             "Lcom/vk/im/engine/models/messages/WithUserContent;",
             ">;Z",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             "Ljava/lang/Boolean;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             "+",
@@ -781,7 +781,7 @@
     check-cast v2, Lcom/vk/im/engine/models/messages/WithUserContent;
 
     .line 51
-    invoke-direct {p0, v2, p2, p3, p4}, Lcom/vk/im/engine/models/messages/WithUserContent$Companion;->a(Lcom/vk/im/engine/models/messages/WithUserContent;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, v2, p2, p3, p4}, Lcom/vk/im/engine/models/messages/WithUserContent$Companion;->a(Lcom/vk/im/engine/models/messages/WithUserContent;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     add-int/lit8 v1, v1, 0x1
 

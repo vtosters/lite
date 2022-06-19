@@ -3,8 +3,8 @@
 .source "PollAttachment.java"
 
 # interfaces
-.implements Lcom/vk/newsfeed/i0/PostingDraftJsonItem;
-.implements Lcom/vk/dto/common/WithOwner;
+.implements Lcom/vk/newsfeed/i0/b;
+.implements Lcom/vk/dto/common/k;
 
 
 # static fields
@@ -253,9 +253,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/newsfeed/i0/PostingDraftJsonItem;->w:Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;
+    sget-object v0, Lcom/vk/newsfeed/i0/b;->w:Lcom/vk/newsfeed/i0/b$a;
 
-    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;->a(Lcom/vk/newsfeed/i0/PostingDraftJsonItem;)Lorg/json/JSONObject;
+    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/b$a;->a(Lcom/vk/newsfeed/i0/b;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -433,7 +433,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v1, 0x7f120116
 
@@ -448,7 +448,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->i:I
+    sget v0, Lcom/vk/dto/attachments/a;->i:I
 
     return v0
 .end method

@@ -1,17 +1,17 @@
 .class public Lcom/vk/discover/DiscoverFragment;
-.super Lcom/vk/core/fragments/BaseFragment1;
+.super Lcom/vk/core/fragments/b;
 .source "DiscoverFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/PaginationHelper$p;
-.implements Lcom/vk/navigation/ScrolledToTop;
-.implements Lcom/vk/discover/holders/BasePostHolder$a;
+.implements Lcom/vk/lists/t$p;
+.implements Lcom/vk/navigation/v;
+.implements Lcom/vk/discover/holders/e$a;
 .implements Landroid/view/View$OnLayoutChangeListener;
-.implements Lcom/vk/core/ui/v/j/h/OnScreenTimeChecker$a;
-.implements Lcom/vk/navigation/b0/FragmentWithAutoPlay;
-.implements Lcom/vk/hints/HintDismissable;
-.implements Lcom/vk/navigation/SelectableFragment;
-.implements Lcom/vk/discover/FragmentWithDiscoverCache;
+.implements Lcom/vk/core/ui/v/j/h/b$a;
+.implements Lcom/vk/navigation/b0/c;
+.implements Lcom/vk/hints/a;
+.implements Lcom/vk/navigation/w;
+.implements Lcom/vk/discover/l;
 
 
 # annotations
@@ -27,26 +27,26 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/BaseFragment1;",
-        "Lcom/vk/lists/PaginationHelper$p<",
+        "Lcom/vk/core/fragments/b;",
+        "Lcom/vk/lists/t$p<",
         "Lcom/vk/discover/DiscoverItemsContainer;",
         ">;",
-        "Lcom/vk/navigation/ScrolledToTop;",
-        "Lcom/vk/discover/holders/BasePostHolder$a;",
+        "Lcom/vk/navigation/v;",
+        "Lcom/vk/discover/holders/e$a;",
         "Landroid/view/View$OnLayoutChangeListener;",
-        "Lcom/vk/core/ui/v/j/h/OnScreenTimeChecker$a<",
+        "Lcom/vk/core/ui/v/j/h/b$a<",
         "Ljava/lang/Object;",
         ">;",
-        "Lcom/vk/navigation/b0/FragmentWithAutoPlay;",
-        "Lcom/vk/hints/HintDismissable;",
-        "Lcom/vk/navigation/SelectableFragment;",
-        "Lcom/vk/discover/FragmentWithDiscoverCache;"
+        "Lcom/vk/navigation/b0/c;",
+        "Lcom/vk/hints/a;",
+        "Lcom/vk/navigation/w;",
+        "Lcom/vk/discover/l;"
     }
 .end annotation
 
 
 # static fields
-.field static final synthetic g0:[Lkotlin/u/KProperty5;
+.field static final synthetic g0:[Lkotlin/u/j;
 
 .field public static final h0:Lcom/vk/discover/DiscoverFragment$b;
 
@@ -54,15 +54,15 @@
 # instance fields
 .field private F:Lcom/vk/discover/DiscoverItemsContainer;
 
-.field private G:Lcom/vk/lists/PaginationHelper;
+.field private G:Lcom/vk/lists/t;
 
-.field private final H:Lcom/vk/music/player/PlayerModel;
+.field private final H:Lcom/vk/music/player/d;
 
-.field private final I:Lkotlin/Lazy2;
+.field private final I:Lkotlin/e;
 
 .field private final J:Lcom/vk/discover/DiscoverFragment$m;
 
-.field private K:Lcom/vk/discover/DiscoverItemDecorator;
+.field private K:Lcom/vk/discover/i;
 
 .field private L:Landroidx/appcompat/widget/Toolbar;
 
@@ -70,39 +70,39 @@
 
 .field private N:Lcom/vk/lists/RecyclerPaginatedView;
 
-.field private O:Lcom/vk/discover/ViewTimeChecker;
+.field private O:Lcom/vk/discover/r;
 
-.field private P:Lcom/vk/newsfeed/RecyclerHolderVisibilityTracker;
+.field private P:Lcom/vk/newsfeed/d0;
 
 .field private Q:Landroid/widget/TextView;
 
 .field private R:Lcom/vk/discover/DiscoverFragment$e;
 
-.field private S:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
+.field private S:Lcom/vk/libvideo/autoplay/g;
 
-.field private T:Lkotlin/jvm/b/Functions;
+.field private T:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private U:Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;
+.field private U:Lcom/vk/articles/preload/c;
 
-.field private V:Lcom/vk/core/util/Dismissable;
+.field private V:Lcom/vk/core/util/w;
 
 .field private final W:Lcom/vk/discover/DiscoverFragment$c;
 
-.field private final X:Lkotlin/Lazy2;
+.field private final X:Lkotlin/e;
 
-.field private final Y:Lkotlin/Lazy2;
+.field private final Y:Lkotlin/e;
 
 .field private Z:Ljava/lang/String;
 
-.field private a0:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+.field private a0:Lcom/vk/core/dialogs/actionspopup/a;
 
 .field private b0:Ljava/lang/String;
 
@@ -121,13 +121,13 @@
 
     const/4 v0, 0x3
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/discover/DiscoverFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -135,9 +135,9 @@
 
     const-string v4, "getAdapter()Lcom/vk/discover/DiscoverAdapter;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
@@ -147,7 +147,7 @@
 
     const-class v2, Lcom/vk/discover/DiscoverFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -155,9 +155,9 @@
 
     const-string v4, "isShadowOnScroll()Z"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x1
 
@@ -167,7 +167,7 @@
 
     const-class v2, Lcom/vk/discover/DiscoverFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -175,21 +175,21 @@
 
     const-string v4, "isSkipHeaderViewMod()Z"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/discover/DiscoverFragment;->g0:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/discover/DiscoverFragment;->g0:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/discover/DiscoverFragment$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/discover/DiscoverFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/discover/DiscoverFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/discover/DiscoverFragment;->h0:Lcom/vk/discover/DiscoverFragment$b;
 
@@ -200,7 +200,7 @@
     .locals 14
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
 
     .line 2
     new-instance v13, Lcom/vk/discover/DiscoverItemsContainer;
@@ -229,33 +229,33 @@
 
     move-object v0, v13
 
-    invoke-direct/range {v0 .. v12}, Lcom/vk/discover/DiscoverItemsContainer;-><init>(Ljava/util/List;Ljava/lang/String;Lcom/vk/dto/discover/DiscoverCategoryType;Lcom/vk/dto/discover/DiscoverItem;Ljava/lang/String;JLjava/util/concurrent/atomic/AtomicLong;ZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v12}, Lcom/vk/discover/DiscoverItemsContainer;-><init>(Ljava/util/List;Ljava/lang/String;Lcom/vk/dto/discover/DiscoverCategoryType;Lcom/vk/dto/discover/DiscoverItem;Ljava/lang/String;JLjava/util/concurrent/atomic/AtomicLong;ZLjava/lang/String;ILkotlin/jvm/internal/i;)V
 
     iput-object v13, p0, Lcom/vk/discover/DiscoverFragment;->F:Lcom/vk/discover/DiscoverItemsContainer;
 
     .line 3
-    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
+    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->i()Lcom/vk/music/common/Music$c;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
+    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->i()Lcom/vk/music/common/c$c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->H:Lcom/vk/music/player/PlayerModel;
+    invoke-interface {v0}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->H:Lcom/vk/music/player/d;
 
     .line 4
     new-instance v0, Lcom/vk/discover/DiscoverFragment$adapter$2;
 
     invoke-direct {v0, p0}, Lcom/vk/discover/DiscoverFragment$adapter$2;-><init>(Lcom/vk/discover/DiscoverFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->I:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->I:Lkotlin/e;
 
     .line 5
     new-instance v0, Lcom/vk/discover/DiscoverFragment$m;
@@ -276,22 +276,22 @@
 
     invoke-direct {v0, p0}, Lcom/vk/discover/DiscoverFragment$isShadowOnScroll$2;-><init>(Lcom/vk/discover/DiscoverFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->X:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->X:Lkotlin/e;
 
     .line 8
     new-instance v0, Lcom/vk/discover/DiscoverFragment$isSkipHeaderViewMod$2;
 
     invoke-direct {v0, p0}, Lcom/vk/discover/DiscoverFragment$isSkipHeaderViewMod$2;-><init>(Lcom/vk/discover/DiscoverFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->Y:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->Y:Lkotlin/e;
 
     const-string v0, "0"
 
@@ -356,7 +356,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p0}, Lcom/vk/extensions/FragmentImplExt;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
+    invoke-static {p0}, Lcom/vk/extensions/d;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
 
     move-result v0
 
@@ -391,27 +391,27 @@
 
     const-wide/16 v1, 0x64
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/fragments/BaseFragment1;->b(Lkotlin/jvm/b/Functions;J)V
+    invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/fragments/b;->b(Lkotlin/jvm/b/a;J)V
 
     return-void
 .end method
 
-.method private final Q4()Lcom/vk/discover/DiscoverAdapter;
+.method private final Q4()Lcom/vk/discover/b;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->I:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->I:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/discover/DiscoverFragment;->g0:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/discover/DiscoverFragment;->g0:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/discover/DiscoverAdapter;
+    check-cast v0, Lcom/vk/discover/b;
 
     return-object v0
 .end method
@@ -480,15 +480,15 @@
 .method private final T4()Z
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->X:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->X:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/discover/DiscoverFragment;->g0:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/discover/DiscoverFragment;->g0:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -504,15 +504,15 @@
 .method private final U4()Z
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->Y:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->Y:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/discover/DiscoverFragment;->g0:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/discover/DiscoverFragment;->g0:[Lkotlin/u/j;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -696,7 +696,7 @@
 
     invoke-direct {v1, p0, v0}, Lcom/vk/discover/DiscoverFragment$showQRTooltipIfNeed$1;-><init>(Lcom/vk/discover/DiscoverFragment;Lcom/vk/core/view/search/ModernSearchView;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -731,13 +731,13 @@
     return v1
 .end method
 
-.method private final a(Landroidx/recyclerview/widget/RecyclerView;)Lkotlin/Unit;
+.method private final a(Landroidx/recyclerview/widget/RecyclerView;)Lkotlin/m;
     .locals 6
 
     if-eqz p1, :cond_2
 
     .line 49
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->K:Lcom/vk/discover/DiscoverItemDecorator;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->K:Lcom/vk/discover/i;
 
     if-eqz v0, :cond_0
 
@@ -761,7 +761,7 @@
 
     const-string v2, "resources"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -784,7 +784,7 @@
 
     int-to-float v1, v1
 
-    invoke-static {v1}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v1}, Ld/a/a/c/e;->a(F)I
 
     move-result v1
 
@@ -795,9 +795,9 @@
 
     .line 54
     :goto_0
-    new-instance v3, Lcom/vk/discover/DiscoverItemDecorator;
+    new-instance v3, Lcom/vk/discover/i;
 
-    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/DiscoverAdapter;
+    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/b;
 
     move-result-object v4
 
@@ -805,18 +805,18 @@
 
     move-result-object v5
 
-    invoke-static {v5, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v3, v4, v5, v1, v0}, Lcom/vk/discover/DiscoverItemDecorator;-><init>(Lcom/vk/discover/DiscoverAdapter;Landroid/content/res/Resources;IZ)V
+    invoke-direct {v3, v4, v5, v1, v0}, Lcom/vk/discover/i;-><init>(Lcom/vk/discover/b;Landroid/content/res/Resources;IZ)V
 
     .line 55
     invoke-virtual {p1, v3}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     .line 56
-    iput-object v3, p0, Lcom/vk/discover/DiscoverFragment;->K:Lcom/vk/discover/DiscoverItemDecorator;
+    iput-object v3, p0, Lcom/vk/discover/DiscoverFragment;->K:Lcom/vk/discover/i;
 
     .line 57
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     goto :goto_1
 
@@ -827,7 +827,7 @@
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/vk/discover/DiscoverFragment;Landroidx/recyclerview/widget/RecyclerView;ILjava/lang/Object;)Lkotlin/Unit;
+.method static synthetic a(Lcom/vk/discover/DiscoverFragment;Landroidx/recyclerview/widget/RecyclerView;ILjava/lang/Object;)Lkotlin/m;
     .locals 0
 
     if-nez p3, :cond_2
@@ -852,7 +852,7 @@
 
     :cond_1
     :goto_0
-    invoke-direct {p0, p1}, Lcom/vk/discover/DiscoverFragment;->a(Landroidx/recyclerview/widget/RecyclerView;)Lkotlin/Unit;
+    invoke-direct {p0, p1}, Lcom/vk/discover/DiscoverFragment;->a(Landroidx/recyclerview/widget/RecyclerView;)Lkotlin/m;
 
     move-result-object p0
 
@@ -1151,11 +1151,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/discover/DiscoverFragment;Lcom/vk/core/dialogs/actionspopup/ActionsPopup;)V
+.method public static final synthetic a(Lcom/vk/discover/DiscoverFragment;Lcom/vk/core/dialogs/actionspopup/a;)V
     .locals 0
 
     .line 5
-    iput-object p1, p0, Lcom/vk/discover/DiscoverFragment;->a0:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    iput-object p1, p0, Lcom/vk/discover/DiscoverFragment;->a0:Lcom/vk/core/dialogs/actionspopup/a;
 
     return-void
 .end method
@@ -1178,11 +1178,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/discover/DiscoverFragment;Lkotlin/jvm/b/Functions;)V
+.method public static final synthetic a(Lcom/vk/discover/DiscoverFragment;Lkotlin/jvm/b/a;)V
     .locals 0
 
     .line 6
-    iput-object p1, p0, Lcom/vk/discover/DiscoverFragment;->T:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/discover/DiscoverFragment;->T:Lkotlin/jvm/b/a;
 
     return-void
 .end method
@@ -1209,7 +1209,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1221,7 +1221,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1229,22 +1229,22 @@
     return p1
 .end method
 
-.method public static final synthetic b(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/discover/DiscoverAdapter;
+.method public static final synthetic b(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/discover/b;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/DiscoverAdapter;
+    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/b;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
+.method public static final synthetic c(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/libvideo/autoplay/g;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
+    iget-object p0, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/g;
 
     return-object p0
 .end method
@@ -1278,20 +1278,20 @@
     return-object p0
 .end method
 
-.method public static final synthetic g(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/lists/PaginationHelper;
+.method public static final synthetic g(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/lists/t;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/discover/DiscoverFragment;->G:Lcom/vk/lists/PaginationHelper;
+    iget-object p0, p0, Lcom/vk/discover/DiscoverFragment;->G:Lcom/vk/lists/t;
 
     return-object p0
 .end method
 
-.method public static final synthetic h(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/music/player/PlayerModel;
+.method public static final synthetic h(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/music/player/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/discover/DiscoverFragment;->H:Lcom/vk/music/player/PlayerModel;
+    iget-object p0, p0, Lcom/vk/discover/DiscoverFragment;->H:Lcom/vk/music/player/d;
 
     return-object p0
 .end method
@@ -1358,16 +1358,16 @@
 
     if-eqz p1, :cond_0
 
-    new-instance v0, Lcom/vk/discover/DiscoverFragment1;
+    new-instance v0, Lcom/vk/discover/f;
 
-    invoke-direct {v0, v1}, Lcom/vk/discover/DiscoverFragment1;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, v1}, Lcom/vk/discover/f;-><init>(Lkotlin/jvm/b/a;)V
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->isRunning(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener;)Z
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     :cond_1
     :goto_0
@@ -1383,20 +1383,20 @@
     return-object p0
 .end method
 
-.method public static final synthetic n(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/discover/ViewTimeChecker;
+.method public static final synthetic n(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/discover/r;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/ViewTimeChecker;
+    iget-object p0, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/r;
 
     return-object p0
 .end method
 
-.method public static final synthetic o(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/newsfeed/RecyclerHolderVisibilityTracker;
+.method public static final synthetic o(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/newsfeed/d0;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/discover/DiscoverFragment;->P:Lcom/vk/newsfeed/RecyclerHolderVisibilityTracker;
+    iget-object p0, p0, Lcom/vk/discover/DiscoverFragment;->P:Lcom/vk/newsfeed/d0;
 
     return-object p0
 .end method
@@ -1447,11 +1447,11 @@
     .locals 4
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/DiscoverAdapter;
+    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/discover/DiscoverAdapter;->F()Z
+    invoke-virtual {v0}, Lcom/vk/discover/b;->F()Z
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
@@ -1466,7 +1466,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v3, v2, v3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v0, v1, v3, v2, v3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1536,7 +1536,7 @@
     check-cast v0, Landroidx/recyclerview/widget/LinearLayoutManager;
 
     .line 2
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v1
 
@@ -1574,17 +1574,17 @@
     invoke-super {p0}, Lcom/vk/core/fragments/FragmentImpl;->M4()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->a0:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->a0:Lcom/vk/core/dialogs/actionspopup/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->a0:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->a0:Lcom/vk/core/dialogs/actionspopup/a;
 
     return-void
 .end method
@@ -1606,14 +1606,14 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
+.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/PaginationHelper;",
+            "Lcom/vk/lists/t;",
             "Z)",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/discover/DiscoverItemsContainer;",
             ">;"
         }
@@ -1626,7 +1626,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0, p2}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider$DiscoverId;Z)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0, p2}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider$DiscoverId;Z)Lc/a/m;
 
     move-result-object p1
 
@@ -1634,26 +1634,26 @@
 
     invoke-direct {p2, p0}, Lcom/vk/discover/DiscoverFragment$l;-><init>(Lcom/vk/discover/DiscoverFragment;)V
 
-    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p1, p2}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p1
 
     const-string p2, "DiscoverDataProvider.rel\u2026ner.clear()\n            }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
+.method public a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lcom/vk/lists/PaginationHelper;",
+            "Lcom/vk/lists/t;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/discover/DiscoverItemsContainer;",
             ">;"
         }
@@ -1674,7 +1674,7 @@
 
     move-object v2, p1
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider;Lcom/vk/discover/DiscoverDataProvider$DiscoverId;Ljava/lang/String;Lcom/vk/dto/discover/DiscoverIntent;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v0 .. v5}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider;Lcom/vk/discover/DiscoverDataProvider$DiscoverId;Ljava/lang/String;Lcom/vk/dto/discover/DiscoverIntent;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
@@ -1685,42 +1685,42 @@
     .locals 2
 
     .line 20
-    new-instance v0, Lcom/vk/newsfeed/NewsEntryActionsMenuBuilder;
+    new-instance v0, Lcom/vk/newsfeed/k;
 
-    invoke-direct {v0, p2}, Lcom/vk/newsfeed/NewsEntryActionsMenuBuilder;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
+    invoke-direct {v0, p2}, Lcom/vk/newsfeed/k;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
 
     const/4 v1, 0x1
 
     .line 21
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/NewsEntryActionsMenuBuilder;->b(Z)Lcom/vk/newsfeed/NewsEntryActionsMenuBuilder;
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/k;->b(Z)Lcom/vk/newsfeed/k;
 
     const/4 v1, 0x0
 
     .line 22
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/NewsEntryActionsMenuBuilder;->a(Z)Lcom/vk/newsfeed/NewsEntryActionsMenuBuilder;
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/k;->a(Z)Lcom/vk/newsfeed/k;
 
     .line 23
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/NewsEntryActionsMenuBuilder;->c(Z)Lcom/vk/newsfeed/NewsEntryActionsMenuBuilder;
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/k;->c(Z)Lcom/vk/newsfeed/k;
 
     .line 24
     new-instance v1, Lcom/vk/discover/DiscoverFragment$i;
 
     invoke-direct {v1, p0, p2}, Lcom/vk/discover/DiscoverFragment$i;-><init>(Lcom/vk/discover/DiscoverFragment;Lcom/vk/dto/newsfeed/entries/Post;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/NewsEntryActionsMenuBuilder;->a(Lcom/vk/newsfeed/NewsEntryActionsAdapter3;)Lcom/vk/newsfeed/NewsEntryActionsMenuBuilder;
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/k;->a(Lcom/vk/newsfeed/j;)Lcom/vk/newsfeed/k;
 
     .line 25
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/NewsEntryActionsMenuBuilder;->a(Landroid/view/View;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/k;->a(Landroid/view/View;)Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object p1
 
     .line 26
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->d()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->d()Lcom/vk/core/dialogs/actionspopup/a;
 
-    iput-object p1, p0, Lcom/vk/discover/DiscoverFragment;->a0:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    iput-object p1, p0, Lcom/vk/discover/DiscoverFragment;->a0:Lcom/vk/core/dialogs/actionspopup/a;
 
     .line 27
-    iget-object p1, p0, Lcom/vk/discover/DiscoverFragment;->a0:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    iget-object p1, p0, Lcom/vk/discover/DiscoverFragment;->a0:Lcom/vk/core/dialogs/actionspopup/a;
 
     if-eqz p1, :cond_0
 
@@ -1728,21 +1728,21 @@
 
     invoke-direct {p2, p0}, Lcom/vk/discover/DiscoverFragment$onDiscoverMenuClicked$2;-><init>(Lcom/vk/discover/DiscoverFragment;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p1, p2}, Lcom/vk/core/dialogs/actionspopup/a;->a(Lkotlin/jvm/b/a;)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
+.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/discover/DiscoverItemsContainer;",
             ">;Z",
-            "Lcom/vk/lists/PaginationHelper;",
+            "Lcom/vk/lists/t;",
             ")V"
         }
     .end annotation
@@ -1750,33 +1750,33 @@
     .line 67
     new-instance v0, Lcom/vk/discover/DiscoverFragment$j;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/vk/discover/DiscoverFragment$j;-><init>(Lcom/vk/discover/DiscoverFragment;ZLcom/vk/lists/PaginationHelper;)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/vk/discover/DiscoverFragment$j;-><init>(Lcom/vk/discover/DiscoverFragment;ZLcom/vk/lists/t;)V
 
     .line 68
     new-instance v1, Lcom/vk/discover/DiscoverFragment$k;
 
-    invoke-direct {v1, p0, p2, p3}, Lcom/vk/discover/DiscoverFragment$k;-><init>(Lcom/vk/discover/DiscoverFragment;ZLcom/vk/lists/PaginationHelper;)V
+    invoke-direct {v1, p0, p2, p3}, Lcom/vk/discover/DiscoverFragment$k;-><init>(Lcom/vk/discover/DiscoverFragment;ZLcom/vk/lists/t;)V
 
     .line 69
-    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     const-string p2, "it"
 
     .line 70
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->b(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/b;->b(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
 
     return-void
 .end method
 
-.method public a(Lcom/vk/core/util/Dismissable;)V
+.method public a(Lcom/vk/core/util/w;)V
     .locals 0
 
     .line 10
-    iput-object p1, p0, Lcom/vk/discover/DiscoverFragment;->V:Lcom/vk/core/util/Dismissable;
+    iput-object p1, p0, Lcom/vk/discover/DiscoverFragment;->V:Lcom/vk/core/util/w;
 
     return-void
 .end method
@@ -1869,14 +1869,14 @@
 
     const-string p2, "discover_category_common/discover"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
     .line 17
-    new-instance p1, Lcom/vk/discover/DiscoverFullFeedFragment$a;
+    new-instance p1, Lcom/vk/discover/g$a;
 
     iget-object v2, p0, Lcom/vk/discover/DiscoverFragment;->F:Lcom/vk/discover/DiscoverItemsContainer;
 
@@ -1888,7 +1888,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/discover/DiscoverFullFeedFragment$a;-><init>(Lcom/vk/discover/DiscoverItemsContainer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/discover/DiscoverDataProvider$DiscoverId;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/discover/g$a;-><init>(Lcom/vk/discover/DiscoverItemsContainer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/discover/DiscoverDataProvider$DiscoverId;)V
 
     goto :goto_2
 
@@ -1912,13 +1912,13 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v9}, Lcom/vk/discover/DiscoverFeedFragment$a;-><init>(Lcom/vk/discover/DiscoverItemsContainer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/discover/DiscoverDataProvider$DiscoverId;Ljava/lang/Class;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v9}, Lcom/vk/discover/DiscoverFeedFragment$a;-><init>(Lcom/vk/discover/DiscoverItemsContainer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/discover/DiscoverDataProvider$DiscoverId;Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
 
     :goto_2
     const/16 p2, 0x400
 
     .line 19
-    invoke-virtual {p1, p0, p2}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {p1, p0, p2}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     :cond_4
     return-void
@@ -1941,11 +1941,11 @@
     if-eqz v0, :cond_0
 
     .line 29
-    invoke-static {}, Lcom/vk/bridges/PostsBridge1;->a()Lcom/vk/bridges/PostsBridge2;
+    invoke-static {}, Lcom/vk/bridges/x;->a()Lcom/vk/bridges/w;
 
     move-result-object v1
 
-    invoke-interface {v1, p1}, Lcom/vk/bridges/PostsBridge2;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vk/bridges/PostsBridge;
+    invoke-interface {v1, p1}, Lcom/vk/bridges/w;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vk/bridges/y;
 
     move-result-object p1
 
@@ -1954,13 +1954,13 @@
 
     iget-object v2, p0, Lcom/vk/discover/DiscoverFragment;->d0:Ljava/lang/String;
 
-    invoke-virtual {p1, v1, v2}, Lcom/vk/bridges/PostsBridge;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/bridges/PostsBridge;
+    invoke-virtual {p1, v1, v2}, Lcom/vk/bridges/y;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/bridges/y;
 
     .line 31
-    invoke-virtual {p1}, Lcom/vk/bridges/PostsBridge;->h()Lcom/vk/bridges/PostsBridge;
+    invoke-virtual {p1}, Lcom/vk/bridges/y;->h()Lcom/vk/bridges/y;
 
     .line 32
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     :cond_0
     return-void
@@ -1970,7 +1970,7 @@
     .locals 0
 
     .line 8
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/core/ui/v/j/h/OnScreenTimeChecker$a$a;->a(Lcom/vk/core/ui/v/j/h/OnScreenTimeChecker$a;Ljava/lang/Object;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/core/ui/v/j/h/b$a$a;->a(Lcom/vk/core/ui/v/j/h/b$a;Ljava/lang/Object;II)V
 
     return-void
 .end method
@@ -2005,13 +2005,13 @@
     if-eqz v0, :cond_0
 
     .line 62
-    invoke-static {}, Lcom/vtosters/lite/data/Analytics;->j()Lcom/vtosters/lite/data/Analytics;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->j()Lcom/vtosters/lite/data/n;
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics;->a()Lcom/vtosters/lite/data/Analytics$q;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n;->a()Lcom/vtosters/lite/data/n$q;
 
     move-result-object v0
 
@@ -2029,7 +2029,7 @@
 
     long-to-int v5, p2
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vtosters/lite/data/Analytics$q;->a(Ljava/lang/String;Ljava/lang/String;III)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vtosters/lite/data/n$q;->a(Ljava/lang/String;Ljava/lang/String;III)V
 
     goto :goto_0
 
@@ -2040,13 +2040,13 @@
     if-eqz v0, :cond_1
 
     .line 64
-    invoke-static {}, Lcom/vtosters/lite/data/Analytics;->j()Lcom/vtosters/lite/data/Analytics;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->j()Lcom/vtosters/lite/data/n;
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics;->a()Lcom/vtosters/lite/data/Analytics$q;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n;->a()Lcom/vtosters/lite/data/n$q;
 
     move-result-object v0
 
@@ -2072,7 +2072,7 @@
 
     long-to-int v5, p2
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vtosters/lite/data/Analytics$q;->a(Ljava/lang/String;Ljava/lang/String;III)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vtosters/lite/data/n$q;->a(Ljava/lang/String;Ljava/lang/String;III)V
 
     :cond_1
     :goto_0
@@ -2083,33 +2083,33 @@
     .locals 0
 
     .line 9
-    invoke-static/range {p0 .. p5}, Lcom/vk/core/ui/v/j/h/OnScreenTimeChecker$a$a;->a(Lcom/vk/core/ui/v/j/h/OnScreenTimeChecker$a;Ljava/lang/Object;JJ)V
+    invoke-static/range {p0 .. p5}, Lcom/vk/core/ui/v/j/h/b$a$a;->a(Lcom/vk/core/ui/v/j/h/b$a;Ljava/lang/Object;JJ)V
 
     return-void
 .end method
 
-.method public d(Lkotlin/jvm/b/Functions;)V
+.method public d(Lkotlin/jvm/b/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->T:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->T:Lkotlin/jvm/b/a;
 
     if-nez v0, :cond_0
 
     .line 3
     new-instance v0, Lcom/vk/discover/DiscoverFragment$setOnResumeCallback$1;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/discover/DiscoverFragment$setOnResumeCallback$1;-><init>(Lcom/vk/discover/DiscoverFragment;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/discover/DiscoverFragment$setOnResumeCallback$1;-><init>(Lcom/vk/discover/DiscoverFragment;Lkotlin/jvm/b/a;)V
 
-    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->T:Lkotlin/jvm/b/Functions;
+    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->T:Lkotlin/jvm/b/a;
 
     .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isResumed()Z
@@ -2118,15 +2118,15 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lcom/vk/discover/DiscoverFragment;->T:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/discover/DiscoverFragment;->T:Lkotlin/jvm/b/a;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     goto :goto_0
 
@@ -2237,17 +2237,17 @@
     invoke-virtual {v3, v4}, Lcom/vk/discover/DiscoverItemsContainer;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
 
     .line 8
-    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/DiscoverAdapter;
+    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/b;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {v3}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v3
 
     const-string v4, "adapter.list"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -2274,7 +2274,7 @@
     const-string v7, "itemAdapter"
 
     .line 10
-    invoke-static {v4, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1, v4}, Lcom/vk/discover/DiscoverFragment;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/discover/DiscoverItem;)Z
 
@@ -2315,11 +2315,11 @@
     invoke-direct {p0, p1}, Lcom/vk/discover/DiscoverFragment;->l(Z)V
 
     .line 14
-    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/DiscoverAdapter;
+    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/b;
 
     move-result-object p1
 
-    invoke-virtual {p1, v2}, Lcom/vk/lists/SimpleAdapter;->j(I)V
+    invoke-virtual {p1, v2}, Lcom/vk/lists/i0;->j(I)V
 
     .line 15
     invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->P4()V
@@ -2328,7 +2328,7 @@
 
     .line 16
     :cond_6
-    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/DiscoverAdapter;
+    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/b;
 
     move-result-object p1
 
@@ -2392,7 +2392,7 @@
 
     move-result-object v5
 
-    invoke-static {v5, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -2494,11 +2494,11 @@
     invoke-virtual {p0}, Lcom/vk/discover/DiscoverFragment;->V3()V
 
     .line 10
-    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/DiscoverAdapter;
+    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/b;
 
     move-result-object v3
 
-    invoke-virtual {v3, v2}, Lcom/vk/discover/DiscoverAdapter;->H(I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+    invoke-virtual {v3, v2}, Lcom/vk/discover/b;->H(I)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object v3
 
@@ -2508,7 +2508,7 @@
     invoke-direct {p0, v8}, Lcom/vk/discover/DiscoverFragment;->l(Z)V
 
     .line 12
-    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/DiscoverAdapter;
+    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/b;
 
     move-result-object v3
 
@@ -2570,7 +2570,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider$DiscoverId;)Lio/reactivex/Observable;
+    invoke-virtual {p1, p2}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider$DiscoverId;)Lc/a/m;
 
     move-result-object p1
 
@@ -2582,7 +2582,7 @@
     sget-object p3, Lcom/vk/discover/DiscoverFragment$g;->a:Lcom/vk/discover/DiscoverFragment$g;
 
     .line 4
-    invoke-virtual {p1, p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, p2, p3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     :cond_0
     return-void
@@ -2599,14 +2599,14 @@
     const/4 v0, 0x1
 
     .line 2
-    invoke-static {p0, p1, v0, p1}, Lcom/vk/discover/DiscoverFragment;->a(Lcom/vk/discover/DiscoverFragment;Landroidx/recyclerview/widget/RecyclerView;ILjava/lang/Object;)Lkotlin/Unit;
+    invoke-static {p0, p1, v0, p1}, Lcom/vk/discover/DiscoverFragment;->a(Lcom/vk/discover/DiscoverFragment;Landroidx/recyclerview/widget/RecyclerView;ILjava/lang/Object;)Lkotlin/m;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/discover/DiscoverFragment;->V:Lcom/vk/core/util/Dismissable;
+    iget-object p1, p0, Lcom/vk/discover/DiscoverFragment;->V:Lcom/vk/core/util/w;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/core/util/Dismissable;->dismiss()V
+    invoke-interface {p1}, Lcom/vk/core/util/w;->dismiss()V
 
     :cond_0
     return-void
@@ -2616,10 +2616,10 @@
     .locals 12
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    new-instance p1, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
+    new-instance p1, Lcom/vk/libvideo/autoplay/g;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -2627,9 +2627,9 @@
 
     const-string v0, "requireActivity()"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/DiscoverAdapter;
+    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/b;
 
     move-result-object v2
 
@@ -2653,12 +2653,12 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v11}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;-><init>(Landroid/content/Context;Lcom/vk/libvideo/autoplay/AutoPlayProvider;Lcom/vk/libvideo/autoplay/j/OnScreenPlayStrategy;Lcom/vk/bridges/AuthBridge3;Landroid/os/Handler;Lcom/vk/libvideo/autoplay/j/VisibilityCalculator;Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper$c;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v11}, Lcom/vk/libvideo/autoplay/g;-><init>(Landroid/content/Context;Lcom/vk/libvideo/autoplay/b;Lcom/vk/libvideo/autoplay/j/a;Lcom/vk/bridges/f;Landroid/os/Handler;Lcom/vk/libvideo/autoplay/j/d;Lcom/vk/libvideo/autoplay/g$c;ZZILkotlin/jvm/internal/i;)V
 
-    iput-object p1, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
+    iput-object p1, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/g;
 
     .line 3
-    new-instance p1, Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;
+    new-instance p1, Lcom/vk/articles/preload/c;
 
     const/4 v0, 0x0
 
@@ -2666,17 +2666,17 @@
 
     const/4 v2, 0x2
 
-    invoke-direct {p1, v1, v0, v2, v0}, Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;-><init>(ILcom/vk/articles/preload/QueryParameters;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {p1, v1, v0, v2, v0}, Lcom/vk/articles/preload/c;-><init>(ILcom/vk/articles/preload/QueryParameters;ILkotlin/jvm/internal/i;)V
 
     .line 4
-    iput-object p1, p0, Lcom/vk/discover/DiscoverFragment;->U:Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;
+    iput-object p1, p0, Lcom/vk/discover/DiscoverFragment;->U:Lcom/vk/articles/preload/c;
 
     .line 5
-    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/DiscoverAdapter;
+    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/b;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;->a(Lcom/vk/articles/preload/WebCacheProvider;)V
+    invoke-virtual {p1, v0}, Lcom/vk/articles/preload/c;->a(Lcom/vk/articles/preload/b;)V
 
     .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -2686,7 +2686,7 @@
     if-eqz p1, :cond_1
 
     .line 7
-    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->Z:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/q;->Z:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2696,13 +2696,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->b0:Ljava/lang/String;
 
     .line 8
     :cond_0
-    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->b0:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/q;->b0:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2710,15 +2710,15 @@
 
     if-eqz p1, :cond_1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/discover/DiscoverFragment;->d0:Ljava/lang/String;
 
     .line 9
     :cond_1
-    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
 
     move-result-object p1
 
@@ -2726,12 +2726,12 @@
 
     iget-object v1, p0, Lcom/vk/discover/DiscoverFragment;->W:Lcom/vk/discover/DiscoverFragment$c;
 
-    invoke-virtual {p1, v0, v1}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
+    invoke-virtual {p1, v0, v1}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
 
     .line 10
-    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
 
     move-result-object p1
 
@@ -2739,7 +2739,7 @@
 
     iget-object v1, p0, Lcom/vk/discover/DiscoverFragment;->W:Lcom/vk/discover/DiscoverFragment$c;
 
-    invoke-virtual {p1, v0, v1}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
+    invoke-virtual {p1, v0, v1}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
 
     return-void
 .end method
@@ -2784,7 +2784,7 @@
     const-string p2, "view"
 
     .line 4
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f0a0d9d
 
@@ -2792,7 +2792,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/discover/DiscoverFragment$onCreateView$1;-><init>(Lcom/vk/discover/DiscoverFragment;)V
 
-    invoke-static {p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-static {p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
 
     move-result-object p2
 
@@ -2809,7 +2809,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/discover/DiscoverFragment$onCreateView$2;-><init>(Lcom/vk/discover/DiscoverFragment;)V
 
-    invoke-static {p2, p0, p3}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p2, p0, p3}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
 
     :cond_2
     const p2, 0x7f0a05e9
@@ -2819,7 +2819,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/discover/DiscoverFragment$onCreateView$3;-><init>(Lcom/vk/discover/DiscoverFragment;)V
 
-    invoke-static {p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-static {p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
 
     const p2, 0x7f0a0b45
 
@@ -2828,7 +2828,7 @@
     const/4 v1, 0x0
 
     .line 7
-    invoke-static {p1, p2, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -2856,60 +2856,60 @@
     invoke-virtual {v2}, Lcom/vk/lists/AbstractPaginatedView$c;->a()V
 
     .line 13
-    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/DiscoverAdapter;
+    invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->Q4()Lcom/vk/discover/b;
 
     move-result-object p3
 
     invoke-virtual {p2, p3}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 14
-    invoke-static {p0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$p;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-static {p0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$p;)Lcom/vk/lists/t$k;
 
     move-result-object p3
 
     const/16 v2, 0x14
 
     .line 15
-    invoke-virtual {p3, v2}, Lcom/vk/lists/PaginationHelper$k;->c(I)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {p3, v2}, Lcom/vk/lists/t$k;->c(I)Lcom/vk/lists/t$k;
 
     .line 16
-    invoke-virtual {p3, v0}, Lcom/vk/lists/PaginationHelper$k;->a(Z)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {p3, v0}, Lcom/vk/lists/t$k;->a(Z)Lcom/vk/lists/t$k;
 
     const/4 v2, 0x4
 
     .line 17
-    invoke-virtual {p3, v2}, Lcom/vk/lists/PaginationHelper$k;->d(I)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {p3, v2}, Lcom/vk/lists/t$k;->d(I)Lcom/vk/lists/t$k;
 
     .line 18
-    invoke-virtual {p3, v0}, Lcom/vk/lists/PaginationHelper$k;->c(Z)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {p3, v0}, Lcom/vk/lists/t$k;->c(Z)Lcom/vk/lists/t$k;
 
     .line 19
     new-instance v2, Lcom/vk/discover/DiscoverFragment$h;
 
     invoke-direct {v2, p0}, Lcom/vk/discover/DiscoverFragment$h;-><init>(Lcom/vk/discover/DiscoverFragment;)V
 
-    invoke-virtual {p3, v2}, Lcom/vk/lists/PaginationHelper$k;->a(Lcom/vk/lists/PreloadCallback;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {p3, v2}, Lcom/vk/lists/t$k;->a(Lcom/vk/lists/y;)Lcom/vk/lists/t$k;
 
     const-string v2, "PaginationHelper\n       \u2026  }\n                    }"
 
-    invoke-static {p3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
-    invoke-static {p3, p2}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
+    invoke-static {p3, p2}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
 
     move-result-object p3
 
-    iput-object p3, p0, Lcom/vk/discover/DiscoverFragment;->G:Lcom/vk/lists/PaginationHelper;
+    iput-object p3, p0, Lcom/vk/discover/DiscoverFragment;->G:Lcom/vk/lists/t;
 
     .line 21
     invoke-virtual {p2}, Lcom/vk/lists/RecyclerPaginatedView;->getRecyclerView()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object p3
 
-    invoke-direct {p0, p3}, Lcom/vk/discover/DiscoverFragment;->a(Landroidx/recyclerview/widget/RecyclerView;)Lkotlin/Unit;
+    invoke-direct {p0, p3}, Lcom/vk/discover/DiscoverFragment;->a(Landroidx/recyclerview/widget/RecyclerView;)Lkotlin/m;
 
     .line 22
-    iget-object p3, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
+    iget-object p3, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/g;
 
     if-eqz p3, :cond_3
 
@@ -2933,7 +2933,7 @@
 
     const-string v3, "it.recyclerView"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
@@ -2952,11 +2952,11 @@
 
     move-result-object v4
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v6, 0x40800000    # 4.0f
 
-    invoke-static {v4, v6}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v4, v6}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
 
     move-result v4
 
@@ -2971,7 +2971,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Landroid/view/ViewGroup;->getPaddingRight()I
 
@@ -2982,11 +2982,11 @@
 
     move-result-object v7
 
-    invoke-static {v7, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v5, 0x41000000    # 8.0f
 
-    invoke-static {v7, v5}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v7, v5}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
 
     move-result v5
 
@@ -2998,7 +2998,7 @@
 
     move-result-object p3
 
-    invoke-static {p3, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3, v0}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
@@ -3010,27 +3010,27 @@
     if-nez p3, :cond_5
 
     .line 32
-    new-instance p3, Lcom/vk/discover/ViewTimeChecker;
+    new-instance p3, Lcom/vk/discover/r;
 
     invoke-virtual {p2}, Lcom/vk/lists/RecyclerPaginatedView;->getRecyclerView()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v0
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p3, v0, p0}, Lcom/vk/discover/ViewTimeChecker;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/v/j/h/OnScreenTimeChecker$a;)V
+    invoke-direct {p3, v0, p0}, Lcom/vk/discover/r;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/v/j/h/b$a;)V
 
-    iput-object p3, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/ViewTimeChecker;
+    iput-object p3, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/r;
 
     .line 33
     :cond_5
-    new-instance p3, Lcom/vk/newsfeed/RecyclerHolderVisibilityTracker;
+    new-instance p3, Lcom/vk/newsfeed/d0;
 
     invoke-virtual {p2}, Lcom/vk/lists/RecyclerPaginatedView;->getRecyclerView()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v5
 
-    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v6, 0x0
 
@@ -3042,9 +3042,9 @@
 
     move-object v4, p3
 
-    invoke-direct/range {v4 .. v9}, Lcom/vk/newsfeed/RecyclerHolderVisibilityTracker;-><init>(Landroidx/recyclerview/widget/RecyclerView;FFILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/newsfeed/d0;-><init>(Landroidx/recyclerview/widget/RecyclerView;FFILkotlin/jvm/internal/i;)V
 
-    iput-object p3, p0, Lcom/vk/discover/DiscoverFragment;->P:Lcom/vk/newsfeed/RecyclerHolderVisibilityTracker;
+    iput-object p3, p0, Lcom/vk/discover/DiscoverFragment;->P:Lcom/vk/newsfeed/d0;
 
     .line 34
     invoke-virtual {p2}, Lcom/vk/lists/RecyclerPaginatedView;->getRecyclerView()Landroidx/recyclerview/widget/RecyclerView;
@@ -3071,7 +3071,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/discover/DiscoverFragment$onCreateView$5;-><init>(Lcom/vk/discover/DiscoverFragment;)V
 
-    invoke-static {p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-static {p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
 
     move-result-object p2
 
@@ -3088,7 +3088,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/discover/DiscoverFragment$onCreateView$6;-><init>(Lcom/vk/discover/DiscoverFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/core/view/search/ModernSearchView;->setStaticMode(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p2, p3}, Lcom/vk/core/view/search/ModernSearchView;->setStaticMode(Lkotlin/jvm/b/a;)V
 
     .line 38
     :cond_6
@@ -3096,7 +3096,7 @@
 
     if-eqz p2, :cond_7
 
-    sget-object v2, Lcom/vk/core/ui/TalkBackDrawable;->a:Lcom/vk/core/ui/TalkBackDrawable$a;
+    sget-object v2, Lcom/vk/core/ui/s;->a:Lcom/vk/core/ui/s$a;
 
     const v3, 0x7f08070f
 
@@ -3108,11 +3108,11 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/core/ui/TalkBackDrawable$a;->a(Lcom/vk/core/ui/TalkBackDrawable$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/TalkBackDrawable;
+    invoke-static/range {v2 .. v7}, Lcom/vk/core/ui/s$a;->a(Lcom/vk/core/ui/s$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/s;
 
     move-result-object p3
 
-    invoke-virtual {p2, p3}, Lcom/vk/core/view/search/ModernSearchView;->setStaticModeRightIcon(Lcom/vk/core/ui/TalkBackDrawable;)V
+    invoke-virtual {p2, p3}, Lcom/vk/core/view/search/ModernSearchView;->setStaticModeRightIcon(Lcom/vk/core/ui/s;)V
 
     .line 39
     :cond_7
@@ -3152,34 +3152,34 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/g;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->h()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->h()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
+    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/g;
 
     .line 3
     iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->f0:Lcom/vk/newsfeed/StoriesBlocksEventController;
 
     .line 4
-    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/discover/DiscoverFragment;->W:Lcom/vk/discover/DiscoverFragment$c;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
 
     .line 5
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/core/fragments/b;->onDestroy()V
 
     return-void
 .end method
@@ -3199,11 +3199,11 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/discover/DiscoverFragment;->U:Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;
+    iget-object v1, p0, Lcom/vk/discover/DiscoverFragment;->U:Lcom/vk/articles/preload/c;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1, v0}, Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {v1, v0}, Lcom/vk/articles/preload/c;->b(Landroidx/recyclerview/widget/RecyclerView;)V
 
     :cond_0
     const/4 v0, 0x0
@@ -3215,13 +3215,13 @@
     iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->M:Lcom/vk/core/view/search/ModernSearchView;
 
     .line 5
-    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->G:Lcom/vk/lists/PaginationHelper;
+    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->G:Lcom/vk/lists/t;
 
     .line 6
-    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->K:Lcom/vk/discover/DiscoverItemDecorator;
+    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->K:Lcom/vk/discover/i;
 
     .line 7
-    iget-object v1, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
+    iget-object v1, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/g;
 
     if-eqz v1, :cond_1
 
@@ -3243,10 +3243,10 @@
     iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->N:Lcom/vk/lists/RecyclerPaginatedView;
 
     .line 10
-    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/ViewTimeChecker;
+    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/r;
 
     .line 11
-    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->P:Lcom/vk/newsfeed/RecyclerHolderVisibilityTracker;
+    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->P:Lcom/vk/newsfeed/d0;
 
     .line 12
     iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->Q:Landroid/widget/TextView;
@@ -3264,11 +3264,11 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/ViewTimeChecker;
+    iget-object p1, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/r;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/h/BaseScreenTimeChecker;->a()V
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/h/a;->a()V
 
     :cond_0
     return-void
@@ -3278,7 +3278,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/b;->onPause()V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->V4()Z
@@ -3297,11 +3297,11 @@
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/ViewTimeChecker;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/r;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/j/h/BaseScreenTimeChecker;->d()V
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/j/h/a;->d()V
 
     .line 6
     :cond_1
@@ -3334,7 +3334,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/discover/DiscoverFragment;->V4()Z
@@ -3368,7 +3368,7 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->Q:Landroid/widget/TextView;
 
-    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->d()I
+    invoke-static {}, Lcom/vtosters/lite/w;->d()I
 
     move-result v1
 
@@ -3386,7 +3386,7 @@
     :goto_0
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
 
     .line 8
     iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->f0:Lcom/vk/newsfeed/StoriesBlocksEventController;
@@ -3397,15 +3397,15 @@
 
     .line 9
     :cond_3
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->T:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->T:Lkotlin/jvm/b/a;
 
     if-eqz v0, :cond_4
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/Unit;
+    check-cast v0, Lkotlin/m;
 
     :cond_4
     return-void
@@ -3447,7 +3447,7 @@
 
     const/4 v3, 0x2
 
-    invoke-static {v0, v2, v1, v3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v0, v2, v1, v3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -3463,7 +3463,7 @@
 
     invoke-direct {v0, p0, v1}, Lcom/vk/discover/DiscoverFragment$onStart$1;-><init>(Lcom/vk/discover/DiscoverFragment;Landroid/widget/ImageView;)V
 
-    invoke-static {v1, v0}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
+    invoke-static {v1, v0}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
 
     :cond_1
     return-void
@@ -3476,11 +3476,11 @@
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onStop()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->V:Lcom/vk/core/util/Dismissable;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->V:Lcom/vk/core/util/w;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/core/util/Dismissable;->dismiss()V
+    invoke-interface {v0}, Lcom/vk/core/util/w;->dismiss()V
 
     :cond_0
     return-void
@@ -3500,11 +3500,11 @@
     iput-object p1, p0, Lcom/vk/discover/DiscoverFragment;->f0:Lcom/vk/newsfeed/StoriesBlocksEventController;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
+    iget-object p1, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/g;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->k()V
+    invoke-virtual {p1}, Lcom/vk/libvideo/autoplay/g;->k()V
 
     .line 4
     :cond_0
@@ -3519,19 +3519,19 @@
     if-eqz p1, :cond_2
 
     .line 5
-    iget-object p2, p0, Lcom/vk/discover/DiscoverFragment;->U:Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;
+    iget-object p2, p0, Lcom/vk/discover/DiscoverFragment;->U:Lcom/vk/articles/preload/c;
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p2, p1}, Lcom/vk/articles/preload/WebCacheRecyclerViewHelper;->a(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p2, p1}, Lcom/vk/articles/preload/c;->a(Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 6
     :cond_1
-    sget-object p2, Lcom/vk/metrics/reporters/PerformanceReporter;->INSTANCE:Lcom/vk/metrics/reporters/PerformanceReporter;
+    sget-object p2, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
 
     sget-object v0, Lcom/vk/metrics/performance/scroll/ScrollScreenType;->DISCOVER:Lcom/vk/metrics/performance/scroll/ScrollScreenType;
 
-    invoke-virtual {p2, v0, p1}, Lcom/vk/metrics/reporters/PerformanceReporter;->a(Lcom/vk/metrics/performance/scroll/ScrollScreenType;Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p2, v0, p1}, Lcom/vk/metrics/reporters/a;->a(Lcom/vk/metrics/performance/scroll/ScrollScreenType;Landroidx/recyclerview/widget/RecyclerView;)V
 
     :cond_2
     return-void
@@ -3548,11 +3548,11 @@
     if-eqz v0, :cond_1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/g;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->g()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->g()V
 
     .line 4
     :cond_0
@@ -3567,13 +3567,13 @@
     if-eqz v0, :cond_1
 
     .line 5
-    new-instance v1, Lcom/vk/discover/ViewTimeChecker;
+    new-instance v1, Lcom/vk/discover/r;
 
-    invoke-direct {v1, v0, p0}, Lcom/vk/discover/ViewTimeChecker;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/v/j/h/OnScreenTimeChecker$a;)V
+    invoke-direct {v1, v0, p0}, Lcom/vk/discover/r;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/v/j/h/b$a;)V
 
-    invoke-virtual {v1}, Lcom/vk/core/ui/v/j/h/BaseScreenTimeChecker;->a()V
+    invoke-virtual {v1}, Lcom/vk/core/ui/v/j/h/a;->a()V
 
-    iput-object v1, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/ViewTimeChecker;
+    iput-object v1, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/r;
 
     :cond_1
     return-void
@@ -3583,25 +3583,25 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->S:Lcom/vk/libvideo/autoplay/g;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->f()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->f()V
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/ViewTimeChecker;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/r;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/j/h/BaseScreenTimeChecker;->d()V
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/j/h/a;->d()V
 
     :cond_1
     const/4 v0, 0x0
 
     .line 4
-    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/ViewTimeChecker;
+    iput-object v0, p0, Lcom/vk/discover/DiscoverFragment;->O:Lcom/vk/discover/r;
 
     return-void
 .end method
@@ -3610,19 +3610,19 @@
     .locals 2
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/data/Analytics;->j()Lcom/vtosters/lite/data/Analytics;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->j()Lcom/vtosters/lite/data/n;
 
     move-result-object v0
 
     const-string v1, "Analytics.instance()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics;->a()Lcom/vtosters/lite/data/Analytics$q;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n;->a()Lcom/vtosters/lite/data/n$q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$q;->a()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$q;->a()V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "MediaHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -49,28 +49,28 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/discover/holders/MediaHolder$onClick$1;->invoke()Lkotlin/Unit;
+    invoke-virtual {p0}, Lcom/vk/discover/holders/MediaHolder$onClick$1;->invoke()Lkotlin/m;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final invoke()Lkotlin/Unit;
+.method public final invoke()Lkotlin/m;
     .locals 1
 
     .line 2
     iget-object v0, p0, Lcom/vk/discover/holders/MediaHolder$onClick$1;->this$0:Lcom/vk/discover/holders/MediaHolder;
 
-    invoke-virtual {v0}, Lcom/vk/discover/holders/BasePostHolder;->h0()Lcom/vk/discover/holders/BasePostHolder$a;
+    invoke-virtual {v0}, Lcom/vk/discover/holders/e;->h0()Lcom/vk/discover/holders/e$a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/discover/holders/BasePostHolder$a;->V3()V
+    invoke-interface {v0}, Lcom/vk/discover/holders/e$a;->V3()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     goto :goto_0
 

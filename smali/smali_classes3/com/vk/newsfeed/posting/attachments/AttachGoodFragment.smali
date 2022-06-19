@@ -1,9 +1,9 @@
 .class public final Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment;
-.super Lcom/vk/core/fragments/BaseFragment1;
+.super Lcom/vk/core/fragments/b;
 .source "AttachGoodFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/ActivityResulter;
+.implements Lcom/vk/navigation/c;
 
 
 # annotations
@@ -24,22 +24,22 @@
 # instance fields
 .field private F:Lcom/vk/market/picker/GoodsPickerView;
 
-.field private final G:Lkotlin/jvm/b/Functions;
+.field private final G:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final H:Lkotlin/jvm/b/Functions2;
+.field private final H:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/Object;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -54,7 +54,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment;->I:Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment$a;
 
@@ -65,21 +65,21 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment$openMarketAppListener$1;
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment$openMarketAppListener$1;-><init>(Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment;)V
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment;->G:Lkotlin/jvm/b/Functions;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment;->G:Lkotlin/jvm/b/a;
 
     .line 3
     new-instance v0, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment$pickListener$1;
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment$pickListener$1;-><init>(Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment;)V
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment;->H:Lkotlin/jvm/b/Functions2;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment;->H:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -113,7 +113,7 @@
     :cond_0
     const-string p1, "pickerView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -131,25 +131,25 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
-    instance-of v0, p1, Lcom/vk/navigation/ResulterProvider;
+    instance-of v0, p1, Lcom/vk/navigation/u;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vk/navigation/ResulterProvider;
+    check-cast p1, Lcom/vk/navigation/u;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1, p0}, Lcom/vk/navigation/ResulterProvider;->b(Lcom/vk/navigation/ActivityResulter;)V
+    invoke-interface {p1, p0}, Lcom/vk/navigation/u;->b(Lcom/vk/navigation/c;)V
 
     :cond_1
     return-void
@@ -182,7 +182,7 @@
 
     const-string v0, "it"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -201,7 +201,7 @@
 
     move-result-object p3
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -226,19 +226,19 @@
 
     const-string v1, "activity!!"
 
-    invoke-static {p3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p2, p3}, Lcom/vk/market/picker/GoodsPickerView;-><init>(Landroid/content/Context;)V
 
     .line 5
-    iget-object p3, p0, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment;->H:Lkotlin/jvm/b/Functions2;
+    iget-object p3, p0, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment;->H:Lkotlin/jvm/b/b;
 
-    invoke-virtual {p2, p3}, Lcom/vk/market/picker/GoodsPickerView;->setPickListener(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p2, p3}, Lcom/vk/market/picker/GoodsPickerView;->setPickListener(Lkotlin/jvm/b/b;)V
 
     .line 6
-    iget-object p3, p0, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment;->G:Lkotlin/jvm/b/Functions;
+    iget-object p3, p0, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment;->G:Lkotlin/jvm/b/a;
 
-    invoke-virtual {p2, p3}, Lcom/vk/market/picker/GoodsPickerView;->setOpenMarketAppListener(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p2, p3}, Lcom/vk/market/picker/GoodsPickerView;->setOpenMarketAppListener(Lkotlin/jvm/b/a;)V
 
     .line 7
     iput-object p2, p0, Lcom/vk/newsfeed/posting/attachments/AttachGoodFragment;->F:Lcom/vk/market/picker/GoodsPickerView;
@@ -269,13 +269,13 @@
     :cond_0
     const-string p1, "pickerView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 11
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v0
 
@@ -308,25 +308,25 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/core/fragments/b;->onDestroy()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/navigation/ResulterProvider;
+    instance-of v1, v0, Lcom/vk/navigation/u;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vk/navigation/ResulterProvider;
+    check-cast v0, Lcom/vk/navigation/u;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p0}, Lcom/vk/navigation/ResulterProvider;->a(Lcom/vk/navigation/ActivityResulter;)V
+    invoke-interface {v0, p0}, Lcom/vk/navigation/u;->a(Lcom/vk/navigation/c;)V
 
     :cond_1
     return-void
@@ -384,7 +384,7 @@
 
     xor-int/lit8 p2, p2, 0x1
 
-    invoke-static {p0, p1, p2}, Lcom/vk/core/extensions/FragmentExt;->a(Landroidx/fragment/app/Fragment;Landroid/view/View;Z)V
+    invoke-static {p0, p1, p2}, Lcom/vk/core/extensions/j;->a(Landroidx/fragment/app/Fragment;Landroid/view/View;Z)V
 
     return-void
 .end method

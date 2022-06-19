@@ -479,7 +479,7 @@
 
     const-string p2, "GLTextureView"
 
-    invoke-static {p2, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lorg/webrtc/videoengine/GLTextureView;->mGLThread:Lorg/webrtc/videoengine/GLTextureView$GLThread;
@@ -497,7 +497,7 @@
     const-string v0, "onSurfaceTextureDestroyed"
 
     .line 1
-    invoke-static {p1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lorg/webrtc/videoengine/GLTextureView;->mGLThread:Lorg/webrtc/videoengine/GLTextureView$GLThread;
@@ -535,7 +535,7 @@
 
     const-string v0, "GLTextureView"
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lorg/webrtc/videoengine/GLTextureView;->mGLThread:Lorg/webrtc/videoengine/GLTextureView$GLThread;

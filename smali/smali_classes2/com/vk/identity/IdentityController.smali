@@ -23,7 +23,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/identity/IdentityController$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/identity/IdentityController$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -58,18 +58,18 @@
     if-eqz v0, :cond_0
 
     .line 24
-    sget-object v1, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
+    sget-object v1, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
 
     const-string v2, "IDENTITY_CARD_REQUEST_DIALOG"
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/identity/IdentityHelper;->a(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v2}, Lcom/vk/identity/a;->a(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     .line 25
-    sget-object v1, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
+    sget-object v1, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
 
     const-string v2, "IDENTITY_CARD_LIST_DIALOG"
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/identity/IdentityHelper;->a(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v2}, Lcom/vk/identity/a;->a(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -103,7 +103,7 @@
 
     const/16 p2, 0x378
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     goto :goto_0
 
@@ -177,7 +177,7 @@
 
     const/16 p3, 0x378
 
-    invoke-virtual {p2, p1, p3}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {p2, p1, p3}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     .line 22
     invoke-direct {p0}, Lcom/vk/identity/IdentityController;->a()V
@@ -211,29 +211,29 @@
     if-eqz v0, :cond_0
 
     .line 4
-    new-instance v7, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance v7, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const-string v1, "it"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v7, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v7, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
     .line 5
-    invoke-static {v7, v2, v1, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static {v7, v2, v1, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/bottomsheet/b;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 6
-    sget-object v1, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
+    sget-object v1, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
 
-    invoke-virtual {v1, v0, p2}, Lcom/vk/identity/IdentityHelper;->c(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v0, p2}, Lcom/vk/identity/a;->c(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v7, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v7, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 7
     new-instance v2, Lcom/vk/identity/adapters/IdentityAdapter;
@@ -246,7 +246,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/identity/IdentityController$showIdentityListByType$1$1;-><init>(Lcom/vk/identity/IdentityController;)V
 
-    invoke-direct {v2, p1, p2, v0, v1}, Lcom/vk/identity/adapters/IdentityAdapter;-><init>(Lcom/vk/identity/IdentityContext;Ljava/lang/String;ILkotlin/jvm/b/Functions4;)V
+    invoke-direct {v2, p1, p2, v0, v1}, Lcom/vk/identity/adapters/IdentityAdapter;-><init>(Lcom/vk/identity/IdentityContext;Ljava/lang/String;ILkotlin/jvm/b/d;)V
 
     const/4 v3, 0x0
 
@@ -258,37 +258,37 @@
 
     move-object v1, v7
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Landroidx/recyclerview/widget/RecyclerView$Adapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Landroidx/recyclerview/widget/RecyclerView$Adapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 8
     new-instance v0, Lcom/vk/identity/IdentityController$e;
 
     invoke-direct {v0, p0, p2, p1}, Lcom/vk/identity/IdentityController$e;-><init>(Lcom/vk/identity/IdentityController;Ljava/lang/String;Lcom/vk/identity/IdentityContext;)V
 
-    invoke-virtual {v7, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v7, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$d;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 9
     new-instance v0, Lcom/vk/identity/IdentityController$showIdentityListByType$$inlined$let$lambda$2;
 
     invoke-direct {v0, p0, p2, p1}, Lcom/vk/identity/IdentityController$showIdentityListByType$$inlined$let$lambda$2;-><init>(Lcom/vk/identity/IdentityController;Ljava/lang/String;Lcom/vk/identity/IdentityContext;)V
 
-    invoke-virtual {v7, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v7, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const p1, 0x7f08089f
 
     const p2, 0x7f04024f
 
     .line 10
-    invoke-static {p1, p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
+    invoke-static {p1, p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
 
     move-result-object p1
 
-    invoke-virtual {v7, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v7, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const-string p1, "IDENTITY_CARD_LIST_DIALOG"
 
     .line 11
-    invoke-virtual {v7, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-virtual {v7, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     :cond_0
     return-void
@@ -309,10 +309,10 @@
 
     invoke-direct {v0, p0}, Lcom/vk/identity/IdentityController$requestIdentity$adapter$1;-><init>(Lcom/vk/identity/IdentityController;)V
 
-    invoke-direct {v1, p1, v0}, Lcom/vk/identity/adapters/IdentityContextAdapter;-><init>(Lcom/vk/identity/IdentityContext;Lkotlin/jvm/b/Functions1;)V
+    invoke-direct {v1, p1, v0}, Lcom/vk/identity/adapters/IdentityContextAdapter;-><init>(Lcom/vk/identity/IdentityContext;Lkotlin/jvm/b/c;)V
 
     .line 10
-    new-instance v6, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance v6, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     iget-object v0, p0, Lcom/vk/identity/IdentityController;->a:Lcom/vk/core/fragments/FragmentImpl;
 
@@ -326,19 +326,19 @@
 
     const-string v3, "fragment.activity!!"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     const v0, 0x7f120595
 
     .line 11
-    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 v0, 0x1
 
     .line 12
-    invoke-static {v6, v2, v0, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static {v6, v2, v0, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/bottomsheet/b;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 v2, 0x0
 
@@ -351,7 +351,7 @@
     move-object v0, v6
 
     .line 13
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Landroidx/recyclerview/widget/RecyclerView$Adapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Landroidx/recyclerview/widget/RecyclerView$Adapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const v0, 0x7f1210c2
 
@@ -360,32 +360,32 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/identity/IdentityController$b;-><init>(Lcom/vk/identity/IdentityController;Lcom/vk/identity/IdentityContext;)V
 
-    invoke-virtual {v6, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(ILcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v6, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(ILcom/vk/core/dialogs/bottomsheet/h$e;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 15
     new-instance v0, Lcom/vk/identity/IdentityController$c;
 
     invoke-direct {v0, p0, p1}, Lcom/vk/identity/IdentityController$c;-><init>(Lcom/vk/identity/IdentityController;Lcom/vk/identity/IdentityContext;)V
 
-    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$d;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 16
     new-instance v0, Lcom/vk/identity/IdentityController$d;
 
     invoke-direct {v0, p1}, Lcom/vk/identity/IdentityController$d;-><init>(Lcom/vk/identity/IdentityContext;)V
 
-    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$f;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$f;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const-string p1, "IDENTITY_CARD_REQUEST_DIALOG"
 
     .line 17
-    invoke-virtual {v6, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-virtual {v6, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-void
 
     .line 18
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 .end method

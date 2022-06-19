@@ -55,7 +55,7 @@
     const v0, 0x7f120369
 
     .line 1
-    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(I)V
+    invoke-static {v0}, Lcom/vk/core/util/k1;->a(I)V
 
     return-void
 .end method

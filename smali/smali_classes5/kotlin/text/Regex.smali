@@ -42,7 +42,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lkotlin/text/Regex$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lkotlin/text/Regex$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lkotlin/text/Regex;->a:Lkotlin/text/Regex$a;
 
@@ -59,7 +59,7 @@
 
     const-string v0, "Pattern.compile(pattern)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lkotlin/text/Regex;-><init>(Ljava/util/regex/Pattern;)V
 
@@ -86,7 +86,7 @@
 
     const-string p2, "Pattern.compile(pattern,\u2026nicodeCase(option.value))"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lkotlin/text/Regex;-><init>(Ljava/util/regex/Pattern;)V
 
@@ -104,7 +104,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lkotlin/text/Regex;Ljava/lang/CharSequence;IILjava/lang/Object;)Lkotlin/text/MatchResult2;
+.method public static synthetic a(Lkotlin/text/Regex;Ljava/lang/CharSequence;IILjava/lang/Object;)Lkotlin/text/j;
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -115,14 +115,14 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lkotlin/text/Regex;->a(Ljava/lang/CharSequence;I)Lkotlin/text/MatchResult2;
+    invoke-virtual {p0, p1, p2}, Lkotlin/text/Regex;->a(Ljava/lang/CharSequence;I)Lkotlin/text/j;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic b(Lkotlin/text/Regex;Ljava/lang/CharSequence;IILjava/lang/Object;)Lkotlin/sequences/Sequence;
+.method public static synthetic b(Lkotlin/text/Regex;Ljava/lang/CharSequence;IILjava/lang/Object;)Lkotlin/sequences/j;
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -133,7 +133,7 @@
 
     .line 1
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lkotlin/text/Regex;->b(Ljava/lang/CharSequence;I)Lkotlin/sequences/Sequence;
+    invoke-virtual {p0, p1, p2}, Lkotlin/text/Regex;->b(Ljava/lang/CharSequence;I)Lkotlin/sequences/j;
 
     move-result-object p0
 
@@ -154,7 +154,7 @@
 
     const-string v2, "nativePattern.pattern()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, p0, Lkotlin/text/Regex;->nativePattern:Ljava/util/regex/Pattern;
 
@@ -185,7 +185,7 @@
 
     const-string p2, "nativePattern.matcher(in\u2026).replaceAll(replacement)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -199,7 +199,7 @@
     return-object v0
 .end method
 
-.method public final a(Ljava/lang/CharSequence;I)Lkotlin/text/MatchResult2;
+.method public final a(Ljava/lang/CharSequence;I)Lkotlin/text/j;
     .locals 2
 
     .line 3
@@ -211,9 +211,9 @@
 
     const-string v1, "nativePattern.matcher(input)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, p2, p1}, Lkotlin/text/Regex2;->a(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Lkotlin/text/MatchResult2;
+    invoke-static {v0, p2, p1}, Lkotlin/text/k;->a(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Lkotlin/text/j;
 
     move-result-object p1
 
@@ -253,20 +253,20 @@
 
     const-string p2, "nativePattern.matcher(in\u2026replaceFirst(replacement)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public final b(Ljava/lang/CharSequence;I)Lkotlin/sequences/Sequence;
+.method public final b(Ljava/lang/CharSequence;I)Lkotlin/sequences/j;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/CharSequence;",
             "I)",
-            "Lkotlin/sequences/Sequence<",
-            "Lkotlin/text/MatchResult2;",
+            "Lkotlin/sequences/j<",
+            "Lkotlin/text/j;",
             ">;"
         }
     .end annotation
@@ -278,14 +278,14 @@
 
     sget-object p1, Lkotlin/text/Regex$findAll$2;->c:Lkotlin/text/Regex$findAll$2;
 
-    invoke-static {v0, p1}, Lkotlin/sequences/m;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {v0, p1}, Lkotlin/sequences/m;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final b(Ljava/lang/CharSequence;)Lkotlin/text/MatchResult2;
+.method public final b(Ljava/lang/CharSequence;)Lkotlin/text/j;
     .locals 2
 
     .line 3
@@ -297,9 +297,9 @@
 
     const-string v1, "nativePattern.matcher(input)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, p1}, Lkotlin/text/Regex2;->a(Ljava/util/regex/Matcher;Ljava/lang/CharSequence;)Lkotlin/text/MatchResult2;
+    invoke-static {v0, p1}, Lkotlin/text/k;->a(Ljava/util/regex/Matcher;Ljava/lang/CharSequence;)Lkotlin/text/j;
 
     move-result-object p1
 
@@ -501,7 +501,7 @@
 
     const-string v1, "nativePattern.toString()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

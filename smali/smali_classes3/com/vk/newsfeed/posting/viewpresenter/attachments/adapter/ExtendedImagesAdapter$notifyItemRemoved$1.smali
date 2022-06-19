@@ -3,7 +3,7 @@
 .source "ExtendedImagesAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/newsfeed/holders/zhukov/BaseHolder;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/newsfeed/holders/zhukov/a;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/newsfeed/holders/zhukov/BaseHolder;)Z
+.method public final a(Lcom/vk/newsfeed/holders/zhukov/a;)Z
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/zhukov/BaseHolder;->a()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/zhukov/a;->a()Lcom/vk/dto/common/Attachment;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter$notifyItemRemoved$1;->$attachment:Lcom/vk/dto/common/Attachment;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -67,9 +67,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/newsfeed/holders/zhukov/BaseHolder;
+    check-cast p1, Lcom/vk/newsfeed/holders/zhukov/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter$notifyItemRemoved$1;->a(Lcom/vk/newsfeed/holders/zhukov/BaseHolder;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter$notifyItemRemoved$1;->a(Lcom/vk/newsfeed/holders/zhukov/a;)Z
 
     move-result p1
 

@@ -3,12 +3,12 @@
 .source "AutoPlayController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/holders/shopping/AutoPlayController;-><init>(Lcom/vk/catalog2/core/holders/shopping/VideoPlayerController1;)V
+    value = Lcom/vk/catalog2/core/holders/shopping/AutoPlayController;-><init>(Lcom/vk/catalog2/core/holders/shopping/s;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/vk/libvideo/VideoTracker$Screen;",
         ">;"
     }

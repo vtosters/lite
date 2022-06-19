@@ -3,7 +3,7 @@
 .source "VkTracker.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/metrics/eventtracking/VkTracker$handleLogin$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -95,12 +95,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/metrics/eventtracking/Tracker;
+    check-cast v1, Lcom/vk/metrics/eventtracking/c;
 
     .line 5
     iget v2, p0, Lcom/vk/metrics/eventtracking/VkTracker$handleLogin$1;->$userId:I
 
-    invoke-interface {v1, v2}, Lcom/vk/metrics/eventtracking/Tracker;->a(I)V
+    invoke-interface {v1, v2}, Lcom/vk/metrics/eventtracking/c;->a(I)V
 
     goto :goto_0
 

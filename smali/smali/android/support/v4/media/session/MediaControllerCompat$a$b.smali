@@ -3,7 +3,7 @@
 .source "MediaControllerCompat.java"
 
 # interfaces
-.implements Landroid/support/v4/media/session/MediaControllerCompatApi21$a;
+.implements Landroid/support/v4/media/session/c$a;
 
 
 # annotations
@@ -167,7 +167,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    iget-object v1, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->b:Landroid/support/v4/media/session/IMediaControllerCallback;
+    iget-object v1, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->b:Landroid/support/v4/media/session/a;
 
     if-eqz v1, :cond_0
 
@@ -235,7 +235,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    iget-object v1, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->b:Landroid/support/v4/media/session/IMediaControllerCallback;
+    iget-object v1, v0, Landroid/support/v4/media/session/MediaControllerCompat$a;->b:Landroid/support/v4/media/session/a;
 
     if-eqz v1, :cond_0
 

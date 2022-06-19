@@ -195,7 +195,7 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/CaptchaActivity;->b:Landroid/widget/EditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
 
     return-void
 .end method

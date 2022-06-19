@@ -3,7 +3,7 @@
 .source "PostingAttachmentsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/newsfeed/holders/zhukov/PostingHolders;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/newsfeed/holders/zhukov/g;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,19 +46,19 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/newsfeed/holders/zhukov/PostingHolders;)Z
+.method public final a(Lcom/vk/newsfeed/holders/zhukov/g;)Z
     .locals 1
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/newsfeed/holders/zhukov/PostingHolders;->V()I
+    invoke-interface {p1}, Lcom/vk/newsfeed/holders/zhukov/g;->V()I
 
     move-result p1
 
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter$removeAttachment$1;->$attachment:Lcom/vk/dto/common/Attachment;
 
-    check-cast v0, Lcom/vtosters/lite/attachments/PendingAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/b;
 
-    invoke-interface {v0}, Lcom/vtosters/lite/attachments/PendingAttachment;->V()I
+    invoke-interface {v0}, Lcom/vtosters/lite/attachments/b;->V()I
 
     move-result v0
 
@@ -79,9 +79,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/newsfeed/holders/zhukov/PostingHolders;
+    check-cast p1, Lcom/vk/newsfeed/holders/zhukov/g;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter$removeAttachment$1;->a(Lcom/vk/newsfeed/holders/zhukov/PostingHolders;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter$removeAttachment$1;->a(Lcom/vk/newsfeed/holders/zhukov/g;)Z
 
     move-result p1
 

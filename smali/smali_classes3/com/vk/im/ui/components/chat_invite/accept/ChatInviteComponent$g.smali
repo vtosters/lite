@@ -3,7 +3,7 @@
 .source "ChatInviteComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/im/engine/models/chats/ChatPreview;",
         ">;"
     }
@@ -52,13 +52,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent$g;->a:Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->a(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    invoke-static {v0}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->a(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)Lcom/vk/im/ui/components/chat_invite/accept/a;
 
     move-result-object v1
 
     const-string v2, "it"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -70,11 +70,11 @@
 
     move-object v3, p1
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->a(Lcom/vk/im/ui/components/chat_invite/accept/Model;Ljava/lang/String;Lcom/vk/im/engine/models/chats/ChatPreview;ZILjava/lang/Object;)Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    invoke-static/range {v1 .. v6}, Lcom/vk/im/ui/components/chat_invite/accept/a;->a(Lcom/vk/im/ui/components/chat_invite/accept/a;Ljava/lang/String;Lcom/vk/im/engine/models/chats/ChatPreview;ZILjava/lang/Object;)Lcom/vk/im/ui/components/chat_invite/accept/a;
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->a(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;Lcom/vk/im/ui/components/chat_invite/accept/Model;)V
+    invoke-static {v0, p1}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->a(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;Lcom/vk/im/ui/components/chat_invite/accept/a;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent$g;->a:Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;

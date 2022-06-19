@@ -42,7 +42,7 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/vk/sharing/q/StorySharingHelper;->INSTANCE:Lcom/vk/sharing/q/StorySharingHelper;
+    sget-object v0, Lcom/vk/sharing/q/a;->a:Lcom/vk/sharing/q/a;
 
     .line 2
     iget-object v1, p0, Lcom/vk/cameraui/CameraUIView$b0;->a:Landroid/app/Activity;
@@ -78,7 +78,7 @@
     if-eqz v3, :cond_0
 
     .line 5
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/sharing/q/StorySharingHelper;->a(Landroid/app/Activity;Landroid/view/View;Lcom/vk/dto/stories/entities/StorySharingInfo;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/sharing/q/a;->a(Landroid/app/Activity;Landroid/view/View;Lcom/vk/dto/stories/entities/StorySharingInfo;)V
 
     :cond_0
     return-void

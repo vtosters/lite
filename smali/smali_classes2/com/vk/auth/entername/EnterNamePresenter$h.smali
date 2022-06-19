@@ -3,7 +3,7 @@
 .source "EnterNamePresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "Ljava/lang/Throwable;",
         "Lcom/vk/auth/api/commands/GuessUserSexCommand$Gender;",
         ">;"

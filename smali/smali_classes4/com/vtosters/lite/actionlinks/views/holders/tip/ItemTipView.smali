@@ -3,7 +3,7 @@
 .source "ItemTipView.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTip1;
+.implements Lcom/vtosters/lite/actionlinks/views/holders/tip/b;
 
 
 # annotations
@@ -21,7 +21,7 @@
 
 .field private final c:Landroid/widget/ImageView;
 
-.field private d:Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTip;
+.field private d:Lcom/vtosters/lite/actionlinks/views/holders/tip/a;
 
 
 # direct methods
@@ -40,7 +40,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -60,7 +60,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -91,7 +91,7 @@
 
     const-string p2, "findViewById(R.id.collection_item_tip_title)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -106,7 +106,7 @@
 
     const-string p2, "findViewById(R.id.collection_item_tip_action)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -121,7 +121,7 @@
 
     const-string p2, "findViewById(R.id.collection_item_tip_photo)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -139,7 +139,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -191,22 +191,22 @@
     return-object v0
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/BaseContract;
+.method public bridge synthetic getPresenter()Lb/h/r/a;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTip;
+    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/holders/tip/a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTip;
+.method public getPresenter()Lcom/vtosters/lite/actionlinks/views/holders/tip/a;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipView;->d:Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTip;
+    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipView;->d:Lcom/vtosters/lite/actionlinks/views/holders/tip/a;
 
     return-object v0
 .end method
@@ -320,22 +320,22 @@
     return-void
 .end method
 
-.method public bridge synthetic setPresenter(Lb/h/r/BaseContract;)V
+.method public bridge synthetic setPresenter(Lb/h/r/a;)V
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTip;
+    check-cast p1, Lcom/vtosters/lite/actionlinks/views/holders/tip/a;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipView;->setPresenter(Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTip;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipView;->setPresenter(Lcom/vtosters/lite/actionlinks/views/holders/tip/a;)V
 
     return-void
 .end method
 
-.method public setPresenter(Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTip;)V
+.method public setPresenter(Lcom/vtosters/lite/actionlinks/views/holders/tip/a;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipView;->d:Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTip;
+    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/holders/tip/ItemTipView;->d:Lcom/vtosters/lite/actionlinks/views/holders/tip/a;
 
     return-void
 .end method

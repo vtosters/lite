@@ -1,5 +1,5 @@
 .class public final Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a;
-.super Lcom/vk/navigation/Navigator;
+.super Lcom/vk/navigation/o;
 .source "MusicPlaylistFragment.kt"
 
 
@@ -32,7 +32,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a;->S0:Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a$a;
 
@@ -45,12 +45,12 @@
     .line 1
     const-class v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 
     .line 2
     sget-object v1, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a;->S0:Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a$a;
 
-    iget-object v2, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v2, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     move v3, p1
 
@@ -65,7 +65,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILjava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(IILjava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x4
@@ -112,7 +112,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a;-><init>(IILjava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a;-><init>(IILjava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     .line 9
     invoke-virtual {p1}, Lcom/vk/dto/music/AlbumLink;->t1()Ljava/lang/String;
@@ -130,17 +130,17 @@
     .line 4
     const-class v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 
     .line 5
-    invoke-static {p1}, Lcom/vk/music/playlist/PlaylistsExt;->d(Lcom/vk/dto/music/Playlist;)Lcom/vk/dto/music/Playlist;
+    invoke-static {p1}, Lcom/vk/music/playlist/e;->d(Lcom/vk/dto/music/Playlist;)Lcom/vk/dto/music/Playlist;
 
     move-result-object p1
 
     .line 6
     sget-object v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a;->S0:Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a$a;
 
-    iget-object v1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     iget v2, p1, Lcom/vk/dto/music/Playlist;->b:I
 
@@ -157,7 +157,7 @@
     invoke-static/range {v0 .. v5}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a$a;->a(Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a$a;Landroid/os/Bundle;IILjava/lang/Integer;Ljava/lang/String;)V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "playlist"
 
@@ -174,7 +174,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "refer"
 
@@ -188,7 +188,7 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "accessKey"
 

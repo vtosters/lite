@@ -1,13 +1,13 @@
 .class public final Lcom/vk/fave/fragments/holders/TagCreateNewHolder;
-.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "TagCreateNewHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
-        "Lkotlin/Unit;",
+        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -16,11 +16,11 @@
 # instance fields
 .field private final c:Landroid/view/View;
 
-.field private final d:Lkotlin/jvm/b/Functions;
+.field private final d:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -28,14 +28,14 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -43,9 +43,9 @@
     const v0, 0x7f0d056b
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
-    iput-object p2, p0, Lcom/vk/fave/fragments/holders/TagCreateNewHolder;->d:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/fave/fragments/holders/TagCreateNewHolder;->d:Lkotlin/jvm/b/a;
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -63,9 +63,9 @@
 
     const-string p2, "plusView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result p2
 
@@ -86,20 +86,20 @@
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/fave/fragments/holders/TagCreateNewHolder$1;
 
     invoke-direct {p2, p0}, Lcom/vk/fave/fragments/holders/TagCreateNewHolder$1;-><init>(Lcom/vk/fave/fragments/holders/TagCreateNewHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lkotlin/Unit;)V
+.method public a(Lkotlin/m;)V
     .locals 0
 
     return-void
@@ -109,26 +109,26 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
-    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/holders/TagCreateNewHolder;->a(Lkotlin/Unit;)V
+    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/holders/TagCreateNewHolder;->a(Lkotlin/m;)V
 
     return-void
 .end method
 
-.method public final g0()Lkotlin/jvm/b/Functions;
+.method public final g0()Lkotlin/jvm/b/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/fave/fragments/holders/TagCreateNewHolder;->d:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/fave/fragments/holders/TagCreateNewHolder;->d:Lkotlin/jvm/b/a;
 
     return-object v0
 .end method

@@ -3,7 +3,7 @@
 .source "AppsFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -57,13 +57,13 @@
     .line 2
     iget-object p1, p0, Lcom/vk/apps/AppsFragment$n;->a:Lcom/vk/apps/AppsFragment;
 
-    invoke-static {p1}, Lcom/vk/apps/AppsFragment;->h(Lcom/vk/apps/AppsFragment;)Lcom/vk/lists/PaginationHelper;
+    invoke-static {p1}, Lcom/vk/apps/AppsFragment;->h(Lcom/vk/apps/AppsFragment;)Lcom/vk/lists/t;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/PaginationHelper;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/t;->a(Z)V
 
     return-void
 .end method

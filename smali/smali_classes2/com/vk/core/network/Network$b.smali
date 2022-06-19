@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/network/Network;->a(ZZLkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/core/network/Network;->a(ZZLkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

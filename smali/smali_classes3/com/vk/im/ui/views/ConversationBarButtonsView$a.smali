@@ -44,7 +44,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/views/ConversationBarButtonsView$a;->b:Lcom/vk/im/ui/views/ConversationBarButtonsView;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/views/ConversationBarButtonsView;->getOnButtonClickListener()Lkotlin/jvm/b/Functions2;
+    invoke-virtual {p1}, Lcom/vk/im/ui/views/ConversationBarButtonsView;->getOnButtonClickListener()Lkotlin/jvm/b/b;
 
     move-result-object p1
 
@@ -52,11 +52,11 @@
 
     iget-object v0, p0, Lcom/vk/im/ui/views/ConversationBarButtonsView$a;->a:Lcom/vk/im/engine/models/dialogs/ConversationBar$Button;
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_0
     return-void

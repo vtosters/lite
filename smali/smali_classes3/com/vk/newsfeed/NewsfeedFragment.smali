@@ -3,14 +3,14 @@
 .source "NewsfeedFragment.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/contracts/NewsfeedContract;
+.implements Lcom/vk/newsfeed/contracts/p;
 .implements Landroid/widget/AdapterView$OnItemSelectedListener;
 .implements Lcom/vk/core/view/NavigationSpinner$a;
-.implements Lcom/vk/navigation/b0/FragmentWithAppBarOffsetListener;
-.implements Lcom/vk/hints/HintDismissable;
-.implements Lcom/vk/core/ui/themes/Themable;
-.implements Lcom/vk/core/ui/v/j/UiTracking;
-.implements Lcom/vk/newsfeed/MilkshakeNewsHeaderDrawable$b;
+.implements Lcom/vk/navigation/b0/b;
+.implements Lcom/vk/hints/a;
+.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/v/j/c;
+.implements Lcom/vk/newsfeed/h$b;
 
 
 # annotations
@@ -25,16 +25,16 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/newsfeed/EntriesListFragment<",
-        "Lcom/vk/newsfeed/presenters/NewsfeedPresenter;",
+        "Lcom/vk/newsfeed/presenters/l;",
         ">;",
-        "Lcom/vk/newsfeed/contracts/NewsfeedContract;",
+        "Lcom/vk/newsfeed/contracts/p;",
         "Landroid/widget/AdapterView$OnItemSelectedListener;",
         "Lcom/vk/core/view/NavigationSpinner$a;",
-        "Lcom/vk/navigation/b0/FragmentWithAppBarOffsetListener;",
-        "Lcom/vk/hints/HintDismissable;",
-        "Lcom/vk/core/ui/themes/Themable;",
-        "Lcom/vk/core/ui/v/j/UiTracking;",
-        "Lcom/vk/newsfeed/MilkshakeNewsHeaderDrawable$b;"
+        "Lcom/vk/navigation/b0/b;",
+        "Lcom/vk/hints/a;",
+        "Lcom/vk/core/ui/themes/f;",
+        "Lcom/vk/core/ui/v/j/c;",
+        "Lcom/vk/newsfeed/h$b;"
     }
 .end annotation
 
@@ -60,31 +60,31 @@
 
 .field private final J0:Lcom/vk/newsfeed/NewsfeedFragment$d;
 
-.field private final K0:Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;
+.field private final K0:Lcom/vk/newsfeed/k0/b/b/b;
 
-.field private L0:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+.field private L0:Lcom/vk/newsfeed/items/posting/floating/a;
 
-.field private final M0:Lcom/vtosters/lite/ui/f0/PostDisplayContext;
+.field private final M0:Lcom/vtosters/lite/ui/f0/a;
 
-.field private final N0:Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
+.field private final N0:Lcom/vk/core/ui/tracking/internal/b;
 
-.field private q0:Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;
+.field private q0:Lcom/vk/newsfeed/adapters/c;
 
-.field private r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+.field private r0:Lcom/vtosters/lite/ui/adapters/f;
 
 .field private s0:Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;
 
-.field private t0:Lcom/vk/newsfeed/items/notifications/UserNotificationsAdapter;
+.field private t0:Lcom/vk/newsfeed/items/notifications/a;
 
-.field private u0:Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;
+.field private u0:Lcom/vk/newsfeed/k0/a/b;
 
-.field private v0:Lcom/vk/common/view/ToolbarSpinnerContainer;
+.field private v0:Lcom/vk/common/view/c;
 
-.field private w0:Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;
+.field private w0:Lcom/vk/newsfeed/j0/a;
 
 .field private x0:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;
 
-.field private y0:Lcom/vk/core/util/Dismissable;
+.field private y0:Lcom/vk/core/util/w;
 
 .field private z0:Landroid/view/View;
 
@@ -97,7 +97,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/NewsfeedFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/NewsfeedFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -123,53 +123,53 @@
     .line 4
     new-instance v0, Lcom/vk/newsfeed/NewsfeedFragment$k;
 
-    invoke-direct {v0, p0, p0}, Lcom/vk/newsfeed/NewsfeedFragment$k;-><init>(Lcom/vk/newsfeed/NewsfeedFragment;Lcom/vk/newsfeed/contracts/EntriesListContract1;)V
+    invoke-direct {v0, p0, p0}, Lcom/vk/newsfeed/NewsfeedFragment$k;-><init>(Lcom/vk/newsfeed/NewsfeedFragment;Lcom/vk/newsfeed/contracts/f;)V
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/newsfeed/contracts/NewsfeedContract2;
+    check-cast v1, Lcom/vk/newsfeed/contracts/n;
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;->a(Lcom/vk/newsfeed/contracts/NewsfeedContract2;)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/k0/b/b/i;->a(Lcom/vk/newsfeed/contracts/n;)V
 
-    iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;
+    iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/b;
 
     .line 6
-    new-instance v0, Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/a$a;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/ui/f0/a$a;-><init>()V
 
     .line 7
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;->e()Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/a$a;->e()Lcom/vtosters/lite/ui/f0/a$a;
 
     .line 8
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;->d()Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/a$a;->d()Lcom/vtosters/lite/ui/f0/a$a;
 
     .line 9
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;->a()Lcom/vtosters/lite/ui/f0/PostDisplayContext;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/a$a;->a()Lcom/vtosters/lite/ui/f0/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->M0:Lcom/vtosters/lite/ui/f0/PostDisplayContext;
+    iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->M0:Lcom/vtosters/lite/ui/f0/a;
 
     .line 10
-    new-instance v0, Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
+    new-instance v0, Lcom/vk/core/ui/tracking/internal/b;
 
-    new-instance v1, Lcom/vk/core/ui/tracking/internal/UiTrackingListener;
+    new-instance v1, Lcom/vk/core/ui/tracking/internal/a;
 
-    sget-object v2, Lcom/vk/core/ui/v/UiTracker;->INSTANCE:Lcom/vk/core/ui/v/UiTracker;
+    sget-object v2, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
 
-    invoke-virtual {v2}, Lcom/vk/core/ui/v/UiTracker;->e()Lcom/vk/core/ui/tracking/internal/UiTrackingListener2;
+    invoke-virtual {v2}, Lcom/vk/core/ui/v/a;->e()Lcom/vk/core/ui/tracking/internal/f;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener;-><init>(Lcom/vk/core/ui/v/UiTrackingListeners1;)V
+    invoke-direct {v1, v2}, Lcom/vk/core/ui/tracking/internal/a;-><init>(Lcom/vk/core/ui/v/b;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;-><init>(Lcom/vk/core/ui/v/UiTrackingListeners1;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/ui/tracking/internal/b;-><init>(Lcom/vk/core/ui/v/b;)V
 
-    iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->N0:Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
+    iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->N0:Lcom/vk/core/ui/tracking/internal/b;
 
     return-void
 .end method
@@ -239,47 +239,47 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/NewsfeedFragment;Lcom/vk/core/util/Dismissable;)V
+.method public static final synthetic a(Lcom/vk/newsfeed/NewsfeedFragment;Lcom/vk/core/util/w;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->y0:Lcom/vk/core/util/Dismissable;
+    iput-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->y0:Lcom/vk/core/util/w;
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/core/util/Dismissable;
+.method public static final synthetic b(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/core/util/w;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->y0:Lcom/vk/core/util/Dismissable;
+    iget-object p0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->y0:Lcom/vk/core/util/w;
 
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;
+.method public static final synthetic c(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/newsfeed/adapters/c;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->q0:Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;
+    iget-object p0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->q0:Lcom/vk/newsfeed/adapters/c;
 
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/newsfeed/items/notifications/UserNotificationsAdapter;
+.method public static final synthetic d(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/newsfeed/items/notifications/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->t0:Lcom/vk/newsfeed/items/notifications/UserNotificationsAdapter;
+    iget-object p0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->t0:Lcom/vk/newsfeed/items/notifications/a;
 
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;
+.method public static final synthetic e(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/newsfeed/k0/a/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->u0:Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;
+    iget-object p0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->u0:Lcom/vk/newsfeed/k0/a/b;
 
     return-object p0
 .end method
@@ -321,16 +321,16 @@
 
     .line 5
     :cond_1
-    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->i()V
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->i()V
 
     goto :goto_3
 
     .line 6
     :cond_2
     :goto_1
-    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
     if-eqz p1, :cond_3
 
@@ -340,17 +340,17 @@
     const/4 v1, 0x0
 
     :goto_2
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/controllers/a;->a(Z)V
 
     .line 7
     :goto_3
     sget-object p1, Lcom/vk/newsfeed/NewsfeedViewPostCache;->b:Lcom/vk/newsfeed/NewsfeedViewPostCache;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/NewsfeedViewPostCache;->a()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/NewsfeedViewPostCache;->a()Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/EntriesListFragment;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/EntriesListFragment;->a(Lio/reactivex/disposables/b;)V
 
     return-void
 .end method
@@ -455,11 +455,11 @@
     .line 3
     check-cast v0, Lcom/vk/navigation/NavigationDelegateActivity;
 
-    invoke-virtual {v0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {v0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/vk/navigation/VKNavigationDelegate;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/vk/navigation/y;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -467,22 +467,22 @@
     if-eqz v0, :cond_1
 
     .line 4
-    new-instance v1, Lcom/vk/cameraui/builder/CameraBuilder;
+    new-instance v1, Lcom/vk/cameraui/builder/a;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
-
-    invoke-virtual {v3}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->v0()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v3
 
-    invoke-direct {v1, v3, v2}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v3, Lcom/vk/newsfeed/presenters/l;
+
+    invoke-virtual {v3}, Lcom/vk/newsfeed/presenters/l;->v0()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v1, v3, v2}, Lcom/vk/cameraui/builder/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {v1, v0}, Lcom/vk/cameraui/builder/CameraBuilder;->c(Landroid/content/Context;)V
+    invoke-virtual {v1, v0}, Lcom/vk/cameraui/builder/a;->c(Landroid/content/Context;)V
 
     :cond_1
     :goto_0
@@ -514,22 +514,22 @@
     sub-int/2addr v1, v0
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/d;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
+    check-cast v2, Lcom/vtosters/lite/ui/f0/b;
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/d;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/lists/SimpleAdapter;->size()I
+    invoke-virtual {v3}, Lcom/vk/lists/i0;->size()I
 
     move-result v3
 
@@ -539,21 +539,21 @@
     if-ge v4, v3, :cond_1
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/d;
 
     move-result-object v5
 
-    invoke-virtual {v5, v4}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
+    invoke-virtual {v5, v4}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
+    check-cast v5, Lcom/vtosters/lite/ui/f0/b;
 
-    iget-object v5, v5, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v5, v5, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    iget-object v6, v2, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v6, v2, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -670,9 +670,9 @@
 
     .line 3
     :cond_1
-    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->k()Z
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->k()Z
 
     move-result p1
 
@@ -727,15 +727,15 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->q0:Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->q0:Lcom/vk/newsfeed/adapters/c;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/d;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->c(Landroidx/recyclerview/widget/RecyclerView$Adapter;)I
+    invoke-virtual {v0, v1}, Ld/a/a/c/b;->c(Landroidx/recyclerview/widget/RecyclerView$Adapter;)I
 
     move-result v0
 
@@ -828,7 +828,7 @@
     const-string v2, "it"
 
     .line 9
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Landroid/view/animation/OvershootInterpolator;
 
@@ -857,11 +857,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->q0:Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->q0:Lcom/vk/newsfeed/adapters/c;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->getItemCount()I
+    invoke-virtual {v0}, Ld/a/a/c/b;->getItemCount()I
 
     move-result v0
 
@@ -878,21 +878,21 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v1, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->C()I
+    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/l;->C()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;->a(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/adapters/f;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -914,11 +914,11 @@
     iput v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->B0:I
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->w0:Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->w0:Lcom/vk/newsfeed/j0/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;->a()V
+    invoke-virtual {v0}, Lcom/vk/newsfeed/j0/a;->a()V
 
     :cond_0
     return-void
@@ -1015,7 +1015,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p0}, Lcom/vk/extensions/FragmentImplExt;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
+    invoke-static {p0}, Lcom/vk/extensions/d;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
 
     move-result v0
 
@@ -1103,11 +1103,11 @@
 
     const-string v0, "resources"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v1, 0x43a00000    # 320.0f
 
-    invoke-static {p1, v1}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
+    invoke-static {p1, v1}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
 
     move-result p1
 
@@ -1118,11 +1118,11 @@
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 p2, 0x43f00000    # 480.0f
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
+    invoke-static {p1, p2}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
 
     move-result p1
 
@@ -1140,11 +1140,11 @@
 
     move-result-object p2
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 p3, 0x41800000    # 16.0f
 
-    invoke-static {p2, p3}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
+    invoke-static {p2, p3}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
 
     move-result p2
 
@@ -1156,20 +1156,20 @@
     return p2
 .end method
 
-.method public a(Lcom/vk/lists/PaginationHelper$k;)Lcom/vk/lists/PaginationHelper;
+.method public a(Lcom/vk/lists/t$k;)Lcom/vk/lists/t;
     .locals 5
 
     .line 4
     iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->J0:Lcom/vk/newsfeed/NewsfeedFragment$d;
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/PaginationHelper$k;->a(Lcom/vk/lists/PaginationHelper$l;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {p1, v0}, Lcom/vk/lists/t$k;->a(Lcom/vk/lists/t$l;)Lcom/vk/lists/t$k;
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v0, Lcom/vk/newsfeed/presenters/l;
 
     invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->q()Ljava/lang/String;
 
@@ -1186,14 +1186,14 @@
 
     .line 6
     :goto_0
-    invoke-virtual {p1, v0}, Lcom/vk/lists/PaginationHelper$k;->a(Ljava/lang/String;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {p1, v0}, Lcom/vk/lists/t$k;->a(Ljava/lang/String;)Lcom/vk/lists/t$k;
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/d;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
+    invoke-virtual {v2}, Lcom/vk/lists/i0;->getItemCount()I
 
     move-result v2
 
@@ -1204,7 +1204,7 @@
     if-nez v2, :cond_1
 
     .line 8
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1228,7 +1228,7 @@
     :goto_1
     if-eqz v2, :cond_3
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1245,11 +1245,11 @@
 
     .line 10
     :goto_2
-    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->u0:Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->u0:Lcom/vk/newsfeed/k0/a/b;
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;->j()Z
+    invoke-virtual {v1}, Lcom/vk/newsfeed/k0/a/b;->j()Z
 
     move-result v1
 
@@ -1271,10 +1271,10 @@
 
     .line 11
     :cond_5
-    invoke-virtual {p1, v3}, Lcom/vk/lists/PaginationHelper$k;->b(Z)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {p1, v3}, Lcom/vk/lists/t$k;->b(Z)Lcom/vk/lists/t$k;
 
     .line 12
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/EntriesListFragment;->a(Lcom/vk/lists/PaginationHelper$k;)Lcom/vk/lists/PaginationHelper;
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/EntriesListFragment;->a(Lcom/vk/lists/t$k;)Lcom/vk/lists/t;
 
     move-result-object p1
 
@@ -1381,7 +1381,7 @@
     iget-object v5, p0, Lcom/vk/newsfeed/NewsfeedFragment;->z0:Landroid/view/View;
 
     .line 46
-    invoke-virtual {v2, v4, v5, p0}, Lcom/vk/newsfeed/HomeFragment;->a(ZLandroid/view/View;Lcom/vk/newsfeed/MilkshakeNewsHeaderDrawable$b;)V
+    invoke-virtual {v2, v4, v5, p0}, Lcom/vk/newsfeed/HomeFragment;->a(ZLandroid/view/View;Lcom/vk/newsfeed/h$b;)V
 
     .line 47
     :cond_4
@@ -1426,13 +1426,13 @@
     iput-boolean v3, p0, Lcom/vk/newsfeed/NewsfeedFragment;->A0:Z
 
     .line 51
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast p1, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->E()Z
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/l;->E()Z
 
     move-result p1
 
@@ -1492,27 +1492,27 @@
     .locals 1
 
     .line 64
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->w0:Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->w0:Lcom/vk/newsfeed/j0/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;->a(IIZ)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/newsfeed/j0/a;->a(IIZ)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
+.method public a(Lcom/vk/core/ui/v/g;)V
     .locals 1
 
     .line 65
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v0, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->C()I
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/l;->C()I
 
     move-result v0
 
@@ -1520,7 +1520,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/g;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     return-void
 .end method
@@ -1533,7 +1533,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/newsfeed/NewsfeedFragment$hideUserNotification$1;-><init>(Lcom/vk/newsfeed/NewsfeedFragment;Lcom/vk/dto/common/data/UserNotification;)V
 
-    invoke-virtual {p0, v0, p2, p3}, Lcom/vk/core/fragments/BaseFragment1;->b(Lkotlin/jvm/b/Functions;J)V
+    invoke-virtual {p0, v0, p2, p3}, Lcom/vk/core/fragments/b;->b(Lkotlin/jvm/b/a;J)V
 
     return-void
 .end method
@@ -1586,16 +1586,16 @@
     if-eqz v1, :cond_4
 
     .line 19
-    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/b;
 
-    invoke-interface {v1, v0}, Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;->a(Lcom/vk/dto/newsfeed/SituationalSuggest;)V
+    invoke-interface {v1, v0}, Lcom/vk/newsfeed/k0/b/b/b;->a(Lcom/vk/dto/newsfeed/SituationalSuggest;)V
 
     .line 20
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/a;
 
     if-eqz v0, :cond_5
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;->a(Lcom/vk/dto/newsfeed/SituationalSuggest;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/items/posting/floating/a;->a(Lcom/vk/dto/newsfeed/SituationalSuggest;)V
 
     goto :goto_2
 
@@ -1610,39 +1610,39 @@
     if-eqz v1, :cond_4
 
     .line 22
-    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/b;
 
-    invoke-interface {v1, p1}, Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;->a(Lcom/vk/dto/newsfeed/SituationalSuggest;)V
+    invoke-interface {v1, p1}, Lcom/vk/newsfeed/k0/b/b/b;->a(Lcom/vk/dto/newsfeed/SituationalSuggest;)V
 
     .line 23
-    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/a;
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1, v0}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;->a(Lcom/vk/dto/newsfeed/SituationalSuggest;)V
+    invoke-interface {p1, v0}, Lcom/vk/newsfeed/items/posting/floating/a;->a(Lcom/vk/dto/newsfeed/SituationalSuggest;)V
 
     goto :goto_2
 
     .line 24
     :cond_4
     :goto_1
-    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;
+    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/b;
 
-    invoke-interface {p1, v0}, Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;->a(Lcom/vk/dto/newsfeed/SituationalSuggest;)V
+    invoke-interface {p1, v0}, Lcom/vk/newsfeed/k0/b/b/b;->a(Lcom/vk/dto/newsfeed/SituationalSuggest;)V
 
     .line 25
-    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/a;
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1, v0}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;->a(Lcom/vk/dto/newsfeed/SituationalSuggest;)V
+    invoke-interface {p1, v0}, Lcom/vk/newsfeed/items/posting/floating/a;->a(Lcom/vk/dto/newsfeed/SituationalSuggest;)V
 
     :cond_5
     :goto_2
     return-void
 .end method
 
-.method public a(Lcom/vk/stories/b1/StoryAppUpdateEvent;)V
+.method public a(Lcom/vk/stories/b1/a;)V
     .locals 16
 
     move-object/from16 v0, p0
@@ -1693,7 +1693,7 @@
     const-string v7, "sc"
 
     .line 30
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -1701,7 +1701,7 @@
 
     const-string v7, "sc.storyEntries"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 31
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
@@ -1725,7 +1725,7 @@
     .line 33
     iget v10, v9, Lcom/vk/dto/stories/model/StoryEntry;->b:I
 
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/stories/b1/StoryAppUpdateEvent;->c()I
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/stories/b1/a;->c()I
 
     move-result v11
 
@@ -1778,7 +1778,7 @@
 
     move-result v14
 
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/stories/b1/StoryAppUpdateEvent;->a()I
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/stories/b1/a;->a()I
 
     move-result v15
 
@@ -1823,7 +1823,7 @@
     if-eqz v10, :cond_5
 
     .line 37
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/stories/b1/StoryAppUpdateEvent;->b()Z
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/stories/b1/a;->b()Z
 
     move-result v8
 
@@ -1916,7 +1916,7 @@
     move-result-object v1
 
     :cond_2
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1925,11 +1925,11 @@
     if-eqz p1, :cond_3
 
     .line 16
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast p1, Lcom/vk/newsfeed/presenters/l;
 
     invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->K()V
 
@@ -1996,11 +1996,11 @@
 
     .line 6
     :goto_2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v0, Lcom/vk/newsfeed/presenters/l;
 
     invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->K()V
 
@@ -2010,7 +2010,7 @@
 
     invoke-direct {v0, p0, p1, v1}, Lcom/vk/newsfeed/NewsfeedFragment$bindStoriesResponse$1;-><init>(Lcom/vk/newsfeed/NewsfeedFragment;Lcom/vk/dto/stories/model/GetStoriesResponse;I)V
 
-    invoke-static {v0}, Lcom/vtosters/lite/ViewUtils;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -2028,11 +2028,11 @@
     .end annotation
 
     .line 8
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;->a()Lcom/vtosters/lite/NewsfeedList;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/adapters/f;->a()Lcom/vtosters/lite/NewsfeedList;
 
     move-result-object v0
 
@@ -2043,7 +2043,7 @@
 
     .line 9
     :goto_0
-    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     if-eqz v1, :cond_1
 
@@ -2051,7 +2051,7 @@
 
     .line 10
     :cond_1
-    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     const/4 v2, 0x0
 
@@ -2064,7 +2064,7 @@
     if-nez v1, :cond_4
 
     .line 11
-    iget-object v3, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object v3, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     if-eqz v3, :cond_2
 
@@ -2072,7 +2072,7 @@
     new-instance v4, Lcom/vtosters/lite/NewsfeedList;
 
     .line 13
-    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v5, 0x7f1208f7
 
@@ -2086,7 +2086,7 @@
     const v5, 0x7f08060a
 
     .line 15
-    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v6, 0x7f120df0
 
@@ -2102,7 +2102,7 @@
     move v7, p2
 
     .line 17
-    invoke-virtual/range {v3 .. v8}, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;->a(Lcom/vtosters/lite/NewsfeedList;ILjava/lang/String;ZLandroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual/range {v3 .. v8}, Lcom/vtosters/lite/ui/adapters/f;->a(Lcom/vtosters/lite/NewsfeedList;ILjava/lang/String;ZLandroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     :cond_2
     const/4 p2, 0x4
@@ -2141,7 +2141,7 @@
     if-eqz v7, :cond_3
 
     .line 24
-    iget-object v7, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object v7, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     if-eqz v7, :cond_3
 
@@ -2149,7 +2149,7 @@
 
     aget v9, p2, v6
 
-    sget-object v10, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v10, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     aget v11, v3, v6
 
@@ -2161,7 +2161,7 @@
 
     aget v9, v4, v6
 
-    invoke-virtual {v7, v8, v9}, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;->a(Lcom/vtosters/lite/NewsfeedList;I)V
+    invoke-virtual {v7, v8, v9}, Lcom/vtosters/lite/ui/adapters/f;->a(Lcom/vtosters/lite/NewsfeedList;I)V
 
     :cond_3
     add-int/lit8 v6, v6, 0x1
@@ -2208,7 +2208,7 @@
 
     .line 29
     :cond_5
-    iget-object v6, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object v6, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     if-eqz v6, :cond_7
 
@@ -2224,7 +2224,7 @@
     const v7, 0x7f080529
 
     :goto_3
-    invoke-virtual {v6, v4, v7}, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;->a(Lcom/vtosters/lite/NewsfeedList;I)V
+    invoke-virtual {v6, v4, v7}, Lcom/vtosters/lite/ui/adapters/f;->a(Lcom/vtosters/lite/NewsfeedList;I)V
 
     :cond_7
     if-eqz v5, :cond_8
@@ -2246,24 +2246,24 @@
 
     move-result-object v6
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
     if-eqz v5, :cond_8
 
     .line 31
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v5
 
-    check-cast v5, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v5, Lcom/vk/newsfeed/presenters/l;
 
     invoke-virtual {v4}, Lcom/vtosters/lite/NewsfeedList;->getId()I
 
     move-result v4
 
-    invoke-virtual {v5, v4}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->e(I)V
+    invoke-virtual {v5, v4}, Lcom/vk/newsfeed/presenters/l;->e(I)V
 
     :cond_8
     add-int/lit8 v2, v2, 0x1
@@ -2306,7 +2306,7 @@
 
     .line 35
     :cond_b
-    iget-object v4, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object v4, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     if-eqz v4, :cond_d
 
@@ -2322,7 +2322,7 @@
     const v5, 0x7f080529
 
     :goto_5
-    invoke-virtual {v4, p2, v5}, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;->a(Lcom/vtosters/lite/NewsfeedList;I)V
+    invoke-virtual {v4, p2, v5}, Lcom/vtosters/lite/ui/adapters/f;->a(Lcom/vtosters/lite/NewsfeedList;I)V
 
     :cond_d
     if-eqz v2, :cond_a
@@ -2344,43 +2344,43 @@
 
     move-result-object v4
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_a
 
     .line 37
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v2, Lcom/vk/newsfeed/presenters/l;
 
     invoke-virtual {p2}, Lcom/vtosters/lite/NewsfeedList;->getId()I
 
     move-result p2
 
-    invoke-virtual {v2, p2}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->e(I)V
+    invoke-virtual {v2, p2}, Lcom/vk/newsfeed/presenters/l;->e(I)V
 
     goto :goto_4
 
     .line 38
     :cond_e
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast p1, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->C()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/l;->C()I
 
     move-result p1
 
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/NewsfeedFragment;->t(I)V
 
     .line 39
-    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     if-eqz p1, :cond_f
 
@@ -2422,12 +2422,12 @@
     .end array-data
 .end method
 
-.method public b5()Lcom/vk/lists/SimpleAdapter;
+.method public b5()Lcom/vk/lists/i0;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/lists/SimpleAdapter<",
+            "Lcom/vk/lists/i0<",
             "*",
             "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
             ">;"
@@ -2435,7 +2435,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->q0:Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->q0:Lcom/vk/newsfeed/adapters/c;
 
     if-eqz v0, :cond_1
 
@@ -2445,7 +2445,7 @@
 
     .line 2
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -2453,18 +2453,18 @@
 
     .line 3
     :cond_1
-    new-instance v0, Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;
+    new-instance v0, Lcom/vk/newsfeed/adapters/c;
 
     invoke-virtual {p0}, Lcom/vk/newsfeed/NewsfeedFragment;->L1()Z
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;-><init>(Z)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/adapters/c;-><init>(Z)V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/b;
 
-    invoke-interface {v1}, Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;->U2()Ljava/util/List;
+    invoke-interface {v1}, Lcom/vk/newsfeed/k0/b/b/b;->U2()Ljava/util/List;
 
     move-result-object v1
 
@@ -2487,25 +2487,25 @@
     check-cast v2, Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     .line 6
-    invoke-virtual {v0, v2}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v2}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     goto :goto_0
 
     .line 7
     :cond_2
-    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/b;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v2, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {v2}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->C()I
+    invoke-virtual {v2}, Lcom/vk/newsfeed/presenters/l;->C()I
 
     move-result v2
 
-    invoke-interface {v1, v2}, Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;->p(I)V
+    invoke-interface {v1, v2}, Lcom/vk/newsfeed/k0/b/b/b;->p(I)V
 
     .line 8
     iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->s0:Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;
@@ -2515,13 +2515,13 @@
     .line 9
     new-instance v1, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v2, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {v2}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->v0()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/newsfeed/presenters/l;->v0()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2532,106 +2532,106 @@
 
     invoke-direct {v2, p0}, Lcom/vk/newsfeed/EntriesListFragment$e;-><init>(Lcom/vk/newsfeed/EntriesListFragment;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->a(Lcom/vk/newsfeed/adapters/RecyclerViewObserver;)V
+    invoke-virtual {v1, v2}, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->a(Lcom/vk/newsfeed/adapters/g;)V
 
     .line 11
     iput-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->s0:Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;
 
     .line 12
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v1, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->G()V
+    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/l;->G()V
 
     .line 13
     :cond_3
     iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->s0:Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;
 
-    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 14
-    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->t0:Lcom/vk/newsfeed/items/notifications/UserNotificationsAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->t0:Lcom/vk/newsfeed/items/notifications/a;
 
     if-nez v1, :cond_4
 
     .line 15
-    new-instance v1, Lcom/vk/newsfeed/items/notifications/UserNotificationsAdapter;
+    new-instance v1, Lcom/vk/newsfeed/items/notifications/a;
 
-    invoke-direct {v1}, Lcom/vk/newsfeed/items/notifications/UserNotificationsAdapter;-><init>()V
+    invoke-direct {v1}, Lcom/vk/newsfeed/items/notifications/a;-><init>()V
 
-    iput-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->t0:Lcom/vk/newsfeed/items/notifications/UserNotificationsAdapter;
+    iput-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->t0:Lcom/vk/newsfeed/items/notifications/a;
 
     .line 16
     :cond_4
-    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->t0:Lcom/vk/newsfeed/items/notifications/UserNotificationsAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->t0:Lcom/vk/newsfeed/items/notifications/a;
 
-    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 17
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/d;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 18
-    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->u0:Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->u0:Lcom/vk/newsfeed/k0/a/b;
 
     if-nez v1, :cond_5
 
     .line 19
-    new-instance v1, Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;
+    new-instance v1, Lcom/vk/newsfeed/k0/a/b;
 
-    invoke-direct {v1}, Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;-><init>()V
+    invoke-direct {v1}, Lcom/vk/newsfeed/k0/a/b;-><init>()V
 
-    iput-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->u0:Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;
+    iput-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->u0:Lcom/vk/newsfeed/k0/a/b;
 
     .line 20
     :cond_5
-    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->u0:Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->u0:Lcom/vk/newsfeed/k0/a/b;
 
-    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 21
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v1, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->C()I
+    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/l;->C()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;->p(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/adapters/c;->p(I)V
 
     .line 22
-    iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->q0:Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;
+    iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->q0:Lcom/vk/newsfeed/adapters/c;
 
     return-object v0
 .end method
 
-.method public bridge synthetic c5()Lcom/vk/newsfeed/contracts/EntriesListContract;
+.method public bridge synthetic c5()Lcom/vk/newsfeed/contracts/e;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/NewsfeedFragment;->c5()Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/NewsfeedFragment;->c5()Lcom/vk/newsfeed/presenters/l;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected c5()Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+.method protected c5()Lcom/vk/newsfeed/presenters/l;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    new-instance v0, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-direct {v0, p0}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;-><init>(Lcom/vk/newsfeed/contracts/NewsfeedContract;)V
+    invoke-direct {v0, p0}, Lcom/vk/newsfeed/presenters/l;-><init>(Lcom/vk/newsfeed/contracts/p;)V
 
     return-object v0
 .end method
@@ -2676,27 +2676,27 @@
     if-ne v0, v1, :cond_1
 
     .line 4
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->t0:Lcom/vk/newsfeed/items/notifications/UserNotificationsAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->t0:Lcom/vk/newsfeed/items/notifications/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
 
     .line 5
     :cond_0
-    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->b(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/controllers/a;->b(Ljava/util/List;)V
 
     goto :goto_1
 
     .line 6
     :cond_1
-    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->t0:Lcom/vk/newsfeed/items/notifications/UserNotificationsAdapter;
+    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->t0:Lcom/vk/newsfeed/items/notifications/a;
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/items/notifications/UserNotificationsAdapter;->getItemCount()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/items/notifications/a;->getItemCount()I
 
     move-result p1
 
@@ -2709,23 +2709,23 @@
     if-lez p1, :cond_3
 
     .line 7
-    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->t0:Lcom/vk/newsfeed/items/notifications/UserNotificationsAdapter;
+    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->t0:Lcom/vk/newsfeed/items/notifications/a;
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->clear()V
+    invoke-virtual {p1}, Lcom/vk/lists/i0;->clear()V
 
     .line 8
     :cond_3
-    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->a()V
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->a()V
 
     :goto_1
     return-void
 .end method
 
-.method protected d5()Lcom/vk/common/view/ToolbarSpinnerContainer;
+.method protected d5()Lcom/vk/common/view/c;
     .locals 5
 
     .line 1
@@ -2738,7 +2738,7 @@
     if-eqz v0, :cond_2
 
     .line 2
-    new-instance v2, Lcom/vk/common/view/ToolbarSpinnerContainer;
+    new-instance v2, Lcom/vk/common/view/c;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -2748,12 +2748,12 @@
 
     const-string v1, "activity!!"
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v2, v3, v0}, Lcom/vk/common/view/ToolbarSpinnerContainer;-><init>(Landroid/app/Activity;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-direct {v2, v3, v0}, Lcom/vk/common/view/c;-><init>(Landroid/app/Activity;Landroidx/appcompat/widget/Toolbar;)V
 
     .line 3
-    invoke-virtual {v2}, Lcom/vk/common/view/ToolbarSpinnerContainer;->a()Landroid/widget/Spinner;
+    invoke-virtual {v2}, Lcom/vk/common/view/c;->a()Landroid/widget/Spinner;
 
     move-result-object v0
 
@@ -2767,11 +2767,11 @@
 
     const-string v3, "resources"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v4, -0x3db80000    # -50.0f
 
-    invoke-static {v1, v4}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v1, v4}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
 
     move-result v1
 
@@ -2779,11 +2779,11 @@
 
     move-result-object v4
 
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v3, 0x41800000    # 16.0f
 
-    invoke-static {v4, v3}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v4, v3}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
 
     move-result v3
 
@@ -2792,7 +2792,7 @@
     invoke-virtual {v0, v1, v4, v3, v4}, Landroid/widget/Spinner;->setPaddingRelative(IIII)V
 
     .line 6
-    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
@@ -2811,7 +2811,7 @@
 
     .line 9
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -2819,11 +2819,11 @@
     return-object v1
 .end method
 
-.method public e()Lcom/vtosters/lite/ui/f0/PostDisplayContext;
+.method public e()Lcom/vtosters/lite/ui/f0/a;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->M0:Lcom/vtosters/lite/ui/f0/PostDisplayContext;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->M0:Lcom/vtosters/lite/ui/f0/a;
 
     return-object v0
 .end method
@@ -2886,7 +2886,7 @@
     const-string v6, "sc"
 
     .line 12
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -2894,7 +2894,7 @@
 
     const-string v6, "sc.storyEntries"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
@@ -2991,11 +2991,11 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->w0:Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->w0:Lcom/vk/newsfeed/j0/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;->a(II)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/newsfeed/j0/a;->a(II)V
 
     :cond_0
     return-void
@@ -3076,7 +3076,7 @@
 
     .line 11
     :cond_2
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v3
 
@@ -3133,7 +3133,7 @@
     const-string v1, "it"
 
     .line 14
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Landroid/view/animation/OvershootInterpolator;
 
@@ -3165,11 +3165,11 @@
     invoke-super {p0, p1}, Lcom/vk/newsfeed/EntriesListFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->y0:Lcom/vk/core/util/Dismissable;
+    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->y0:Lcom/vk/core/util/w;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/core/util/Dismissable;->dismiss()V
+    invoke-interface {p1}, Lcom/vk/core/util/w;->dismiss()V
 
     :cond_0
     return-void
@@ -3179,20 +3179,20 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v0, Lcom/vk/newsfeed/presenters/l;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->a(Landroid/os/Bundle;Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/newsfeed/presenters/l;->a(Landroid/os/Bundle;Landroid/os/Bundle;)V
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
 
     .line 3
     invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->a5()Z
@@ -3225,9 +3225,9 @@
     invoke-direct {p0, p1}, Lcom/vk/newsfeed/NewsfeedFragment;->e(Landroid/os/Bundle;)V
 
     .line 8
-    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->N0:Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
+    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->N0:Lcom/vk/core/ui/tracking/internal/b;
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;->a()V
+    invoke-virtual {p1}, Lcom/vk/core/ui/tracking/internal/b;->a()V
 
     return-void
 .end method
@@ -3249,7 +3249,7 @@
     const/4 v0, 0x2
 
     .line 2
-    invoke-static {p1, p3, p2, v0, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p3, p2, v0, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -3281,7 +3281,7 @@
     if-eqz p3, :cond_1
 
     .line 6
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->INSTANCE:Lcom/vk/metrics/reporters/PerformanceReporter;
+    sget-object v0, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
 
     sget-object v1, Lcom/vk/metrics/performance/scroll/ScrollScreenType;->FEED:Lcom/vk/metrics/performance/scroll/ScrollScreenType;
 
@@ -3291,14 +3291,14 @@
 
     const-string v3, "it.recyclerView"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/metrics/reporters/PerformanceReporter;->a(Lcom/vk/metrics/performance/scroll/ScrollScreenType;Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/metrics/reporters/a;->a(Lcom/vk/metrics/performance/scroll/ScrollScreenType;Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 7
-    sget-object v0, Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;->e:Lcom/vk/newsfeed/j0/FreshNewsButtonHelper$a;
+    sget-object v0, Lcom/vk/newsfeed/j0/a;->e:Lcom/vk/newsfeed/j0/a$a;
 
-    invoke-virtual {v0, p3}, Lcom/vk/newsfeed/j0/FreshNewsButtonHelper$a;->a(Landroid/view/ViewGroup;)Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;
+    invoke-virtual {v0, p3}, Lcom/vk/newsfeed/j0/a$a;->a(Landroid/view/ViewGroup;)Lcom/vk/newsfeed/j0/a;
 
     move-result-object v0
 
@@ -3307,10 +3307,10 @@
 
     invoke-direct {v1, p0}, Lcom/vk/newsfeed/NewsfeedFragment$g;-><init>(Lcom/vk/newsfeed/NewsfeedFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/j0/a;->a(Landroid/view/View$OnClickListener;)V
 
     .line 9
-    iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->w0:Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;
+    iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->w0:Lcom/vk/newsfeed/j0/a;
 
     .line 10
     new-instance v0, Lcom/vk/newsfeed/NewsfeedFragment$c;
@@ -3321,15 +3321,15 @@
 
     .line 11
     :cond_1
-    new-instance p3, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    new-instance p3, Lcom/vtosters/lite/ui/adapters/f;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    invoke-direct {p3, v0}, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;-><init>(Landroid/content/Context;)V
+    invoke-direct {p3, v0}, Lcom/vtosters/lite/ui/adapters/f;-><init>(Landroid/content/Context;)V
 
-    iput-object p3, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iput-object p3, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     .line 12
     invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->a5()Z
@@ -3339,21 +3339,21 @@
     if-nez p3, :cond_2
 
     .line 13
-    invoke-virtual {p0}, Lcom/vk/newsfeed/NewsfeedFragment;->d5()Lcom/vk/common/view/ToolbarSpinnerContainer;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/NewsfeedFragment;->d5()Lcom/vk/common/view/c;
 
     move-result-object p3
 
     .line 14
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v0, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->F()V
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/l;->F()V
 
     .line 15
-    iput-object p3, p0, Lcom/vk/newsfeed/NewsfeedFragment;->v0:Lcom/vk/common/view/ToolbarSpinnerContainer;
+    iput-object p3, p0, Lcom/vk/newsfeed/NewsfeedFragment;->v0:Lcom/vk/common/view/c;
 
     .line 16
     :cond_2
@@ -3367,7 +3367,7 @@
 
     const-string p2, "activity!!"
 
-    invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p3, v0}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;-><init>(Landroid/content/Context;)V
 
@@ -3380,15 +3380,15 @@
     invoke-static {p3, p2}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 19
-    new-instance p2, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestPresenter;
+    new-instance p2, Lcom/vk/newsfeed/items/posting/floating/c;
 
-    invoke-direct {p2, p3, p0}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestPresenter;-><init>(Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract1;Lcom/vk/newsfeed/contracts/EntriesListContract1;)V
+    invoke-direct {p2, p3, p0}, Lcom/vk/newsfeed/items/posting/floating/c;-><init>(Lcom/vk/newsfeed/items/posting/floating/b;Lcom/vk/newsfeed/contracts/f;)V
 
     .line 20
-    iput-object p2, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+    iput-object p2, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/a;
 
     .line 21
-    invoke-virtual {p3, p2}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;->setPresenter(Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;)V
+    invoke-virtual {p3, p2}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;->setPresenter(Lcom/vk/newsfeed/items/posting/floating/a;)V
 
     .line 22
     iput-object p3, p0, Lcom/vk/newsfeed/NewsfeedFragment;->x0:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;
@@ -3461,7 +3461,7 @@
 
     .line 30
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p2
 .end method
@@ -3470,16 +3470,16 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/b;
 
-    invoke-interface {v0}, Lb/h/r/BaseContract;->onDestroy()V
+    invoke-interface {v0}, Lb/h/r/a;->onDestroy()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/a;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lb/h/r/BaseContract;->onDestroy()V
+    invoke-interface {v0}, Lb/h/r/a;->onDestroy()V
 
     .line 3
     :cond_0
@@ -3502,7 +3502,7 @@
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->v0:Lcom/vk/common/view/ToolbarSpinnerContainer;
+    iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->v0:Lcom/vk/common/view/c;
 
     .line 3
     iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->x0:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestView;
@@ -3535,15 +3535,15 @@
     .end annotation
 
     .line 1
-    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1, p3}, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;->b(I)V
+    invoke-virtual {p1, p3}, Lcom/vtosters/lite/ui/adapters/f;->b(I)V
 
     .line 2
     :cond_0
-    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     if-eqz p1, :cond_1
 
@@ -3551,28 +3551,28 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter$d;
+    check-cast p1, Lcom/vtosters/lite/ui/adapters/f$d;
 
     if-eqz p1, :cond_1
 
     const-string p2, "navAdapter?.getItem(position) ?: return"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast p2, Lcom/vk/newsfeed/presenters/l;
 
-    iget-object p1, p1, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter$d;->d:Lcom/vtosters/lite/NewsfeedList;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/adapters/f$d;->d:Lcom/vtosters/lite/NewsfeedList;
 
     const-string p3, "item.listItem"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p2, p1}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->a(Lcom/vtosters/lite/NewsfeedList;)V
+    invoke-virtual {p2, p1}, Lcom/vk/newsfeed/presenters/l;->a(Lcom/vtosters/lite/NewsfeedList;)V
 
     :cond_1
     return-void
@@ -3595,17 +3595,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->y0:Lcom/vk/core/util/Dismissable;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->y0:Lcom/vk/core/util/w;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/core/util/Dismissable;->dismiss()V
+    invoke-interface {v0}, Lcom/vk/core/util/w;->dismiss()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->y0:Lcom/vk/core/util/Dismissable;
+    iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->y0:Lcom/vk/core/util/w;
 
     .line 3
     iput-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->H0:Lcom/vk/newsfeed/HomeFragment;
@@ -3623,72 +3623,72 @@
     invoke-super {p0}, Lcom/vk/newsfeed/EntriesListFragment;->onResume()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/b;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v1, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->C()I
+    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/l;->C()I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;->p(I)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/k0/b/b/b;->p(I)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v1, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->C()I
+    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/l;->C()I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;->p(I)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/items/posting/floating/a;->p(I)V
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->q0:Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->q0:Lcom/vk/newsfeed/adapters/c;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v1, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->C()I
+    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/l;->C()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;->p(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/adapters/c;->p(I)V
 
     .line 5
     :cond_1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->w0:Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->w0:Lcom/vk/newsfeed/j0/a;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v1, Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->C()I
+    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/l;->C()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/j0/a;->a(I)V
 
     .line 6
     :cond_2
@@ -3706,7 +3706,7 @@
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v1, v0}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->a(Ljava/lang/String;)Lcom/vk/core/fragments/j/b/ParentSupportFragment;
+    invoke-virtual {v1, v0}, Lcom/vk/core/fragments/j/b/b;->a(Ljava/lang/String;)Lcom/vk/core/fragments/j/b/a;
 
     move-result-object v0
 
@@ -3749,17 +3749,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->y0:Lcom/vk/core/util/Dismissable;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->y0:Lcom/vk/core/util/w;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/core/util/Dismissable;->dismiss()V
+    invoke-interface {v0}, Lcom/vk/core/util/w;->dismiss()V
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/b;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;->onStop()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/k0/b/b/b;->onStop()V
 
     .line 3
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onStop()V
@@ -3815,13 +3815,13 @@
 
     invoke-direct {v0, p2, p0, p1}, Lcom/vk/newsfeed/NewsfeedFragment$onViewCreated$$inlined$let$lambda$2;-><init>(Landroidx/appcompat/widget/Toolbar;Lcom/vk/newsfeed/NewsfeedFragment;Landroid/view/View;)V
 
-    invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+    invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/a;)V
 
     .line 8
     :cond_0
-    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;
+    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/b;
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;->onStart()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/k0/b/b/b;->onStart()V
 
     return-void
 .end method
@@ -3839,11 +3839,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->v0:Lcom/vk/common/view/ToolbarSpinnerContainer;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->v0:Lcom/vk/common/view/c;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/common/view/ToolbarSpinnerContainer;->a()Landroid/widget/Spinner;
+    invoke-virtual {v0}, Lcom/vk/common/view/c;->a()Landroid/widget/Spinner;
 
     move-result-object v0
 
@@ -3859,7 +3859,7 @@
     .locals 6
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     if-eqz v0, :cond_2
 
@@ -3870,7 +3870,7 @@
 
     move-result v2
 
-    invoke-static {v1, v2}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
+    invoke-static {v1, v2}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
 
     move-result-object v1
 
@@ -3889,9 +3889,9 @@
 
     move-object v2, v1
 
-    check-cast v2, Lkotlin/collections/Iterators1;
+    check-cast v2, Lkotlin/collections/a0;
 
-    invoke-virtual {v2}, Lkotlin/collections/Iterators1;->a()I
+    invoke-virtual {v2}, Lkotlin/collections/a0;->a()I
 
     move-result v2
 
@@ -3900,20 +3900,20 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter$d;
+    check-cast v3, Lcom/vtosters/lite/ui/adapters/f$d;
 
     if-eqz v3, :cond_0
 
     const-string v4, "it.getItem(position) ?: return@forEach"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    iget-object v4, v3, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter$d;->d:Lcom/vtosters/lite/NewsfeedList;
+    iget-object v4, v3, Lcom/vtosters/lite/ui/adapters/f$d;->d:Lcom/vtosters/lite/NewsfeedList;
 
     const-string v5, "item.listItem"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Lcom/vtosters/lite/NewsfeedList;->getId()I
 
@@ -3922,25 +3922,25 @@
     if-ne v4, p1, :cond_0
 
     .line 6
-    iget-object v4, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object v4, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     if-eqz v4, :cond_1
 
-    invoke-virtual {v4, v2}, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;->b(I)V
+    invoke-virtual {v4, v2}, Lcom/vtosters/lite/ui/adapters/f;->b(I)V
 
     .line 7
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
+    check-cast v2, Lcom/vk/newsfeed/presenters/l;
 
-    iget-object v3, v3, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter$d;->d:Lcom/vtosters/lite/NewsfeedList;
+    iget-object v3, v3, Lcom/vtosters/lite/ui/adapters/f$d;->d:Lcom/vtosters/lite/NewsfeedList;
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v3}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->a(Lcom/vtosters/lite/NewsfeedList;)V
+    invoke-virtual {v2, v3}, Lcom/vk/newsfeed/presenters/l;->a(Lcom/vtosters/lite/NewsfeedList;)V
 
     goto :goto_0
 
@@ -3990,7 +3990,7 @@
     const-string v3, "it"
 
     .line 4
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v3, 0x8
 
@@ -4001,7 +4001,7 @@
     const/4 v4, 0x2
 
     .line 5
-    invoke-static {v1, v3, v2, v4, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v1, v3, v2, v4, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -4017,7 +4017,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/newsfeed/NewsfeedFragment$addBottomFreshNewsButton$$inlined$also$lambda$1;-><init>(Lcom/vk/newsfeed/NewsfeedFragment;)V
 
-    invoke-static {v2, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v2, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 8
     new-instance v2, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
@@ -4047,50 +4047,50 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->K0:Lcom/vk/newsfeed/k0/b/b/b;
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/k0/b/b/PostingItemContracts2;->p(I)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/k0/b/b/b;->p(I)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/a;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;->p(I)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/items/posting/floating/a;->p(I)V
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->q0:Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->q0:Lcom/vk/newsfeed/adapters/c;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/adapters/NewsCardMergeAdapter;->p(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/adapters/c;->p(I)V
 
     .line 4
     :cond_1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->w0:Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->w0:Lcom/vk/newsfeed/j0/a;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/j0/a;->a(I)V
 
     .line 5
     :cond_2
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->N0:Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->N0:Lcom/vk/core/ui/tracking/internal/b;
 
     const/4 v1, 0x0
 
-    new-instance v2, Lcom/vk/core/ui/v/UiTrackingScreen;
+    new-instance v2, Lcom/vk/core/ui/v/g;
 
     invoke-direct {p0, p1}, Lcom/vk/newsfeed/NewsfeedFragment;->r0(I)Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object p1
 
-    invoke-direct {v2, p1}, Lcom/vk/core/ui/v/UiTrackingScreen;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
+    invoke-direct {v2, p1}, Lcom/vk/core/ui/v/g;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     const/4 p1, 0x1
 
-    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;->a(Lcom/vk/core/ui/v/UiTrackingScreen;Lcom/vk/core/ui/v/UiTrackingScreen;Z)V
+    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/core/ui/tracking/internal/b;->a(Lcom/vk/core/ui/v/g;Lcom/vk/core/ui/v/g;Z)V
 
     return-void
 .end method
@@ -4099,13 +4099,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->u0:Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->u0:Lcom/vk/newsfeed/k0/a/b;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/k0/a/b;->b(Z)V
 
     :cond_0
     return-void
@@ -4121,7 +4121,7 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     const/4 v1, 0x0
 
@@ -4140,7 +4140,7 @@
     if-ge v1, v0, :cond_3
 
     .line 2
-    iget-object v2, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object v2, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     if-eqz v2, :cond_1
 
@@ -4148,7 +4148,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter$d;
+    check-cast v2, Lcom/vtosters/lite/ui/adapters/f$d;
 
     goto :goto_1
 
@@ -4159,11 +4159,11 @@
     if-eqz v2, :cond_2
 
     .line 3
-    iget-object v3, v2, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter$d;->d:Lcom/vtosters/lite/NewsfeedList;
+    iget-object v3, v2, Lcom/vtosters/lite/ui/adapters/f$d;->d:Lcom/vtosters/lite/NewsfeedList;
 
     const-string v4, "item.listItem"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Lcom/vtosters/lite/NewsfeedList;->getId()I
 
@@ -4175,9 +4175,9 @@
     invoke-virtual {p0, v1}, Lcom/vk/newsfeed/NewsfeedFragment;->q0(I)V
 
     .line 5
-    iget-object p1, v2, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter$d;->d:Lcom/vtosters/lite/NewsfeedList;
+    iget-object p1, v2, Lcom/vtosters/lite/ui/adapters/f$d;->d:Lcom/vtosters/lite/NewsfeedList;
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vtosters/lite/NewsfeedList;->getTitle()Ljava/lang/String;
 
@@ -4186,11 +4186,11 @@
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/NewsfeedFragment;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 6
-    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;
+    iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment;->r0:Lcom/vtosters/lite/ui/adapters/f;
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1, v1}, Lcom/vtosters/lite/ui/adapters/NewsSpinnerAdapter;->b(I)V
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/ui/adapters/f;->b(I)V
 
     goto :goto_2
 
@@ -4227,11 +4227,11 @@
     invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->M4()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->V4()Lcom/vk/newsfeed/html5/Html5ViewPool;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->V4()Lcom/vk/newsfeed/html5/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/html5/Html5ViewPool;->a()V
+    invoke-virtual {v0}, Lcom/vk/newsfeed/html5/d;->a()V
 
     return-void
 .end method
@@ -4258,13 +4258,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->u0:Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->u0:Lcom/vk/newsfeed/k0/a/b;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/k0/a/PlaceholderAdapter;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/k0/a/b;->b(Z)V
 
     :cond_0
     return-void
@@ -4274,13 +4274,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->w0:Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->w0:Lcom/vk/newsfeed/j0/a;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/j0/a;->a(Z)V
 
     :cond_0
     return-void
@@ -4290,13 +4290,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment;->L0:Lcom/vk/newsfeed/items/posting/floating/a;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/items/posting/floating/FloatingSuggestContract;->setIsVisible(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/items/posting/floating/a;->setIsVisible(Z)V
 
     :cond_0
     return-void

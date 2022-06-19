@@ -67,7 +67,7 @@
 
     const-string p2, "vie@cap:focus_control"
 
-    invoke-static {p2, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lorg/webrtc/videoengine/FocusControl$2;->this$0:Lorg/webrtc/videoengine/FocusControl;

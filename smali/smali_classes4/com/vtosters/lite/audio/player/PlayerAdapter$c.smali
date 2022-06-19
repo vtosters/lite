@@ -20,11 +20,11 @@
 # instance fields
 .field private final a:Landroid/os/Handler;
 
-.field private final b:Lkotlin/jvm/b/Functions;
+.field private final b:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -34,14 +34,14 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;Lkotlin/jvm/b/Functions;Ljava/lang/Runnable;)V
+.method public constructor <init>(Landroid/os/Handler;Lkotlin/jvm/b/a;Ljava/lang/Runnable;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/os/Handler;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;",
             "Ljava/lang/Runnable;",
             ")V"
@@ -53,7 +53,7 @@
 
     iput-object p1, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$c;->a:Landroid/os/Handler;
 
-    iput-object p2, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$c;->b:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$c;->b:Lkotlin/jvm/b/a;
 
     iput-object p3, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$c;->c:Ljava/lang/Runnable;
 
@@ -66,21 +66,21 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
+    invoke-interface {v0}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->b()I
+    invoke-virtual {v0}, Lcom/vk/bridges/a;->b()I
 
     move-result v1
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->i()Z
+    invoke-virtual {v0}, Lcom/vk/bridges/a;->i()Z
 
     move-result v0
 
@@ -92,9 +92,9 @@
     if-nez v1, :cond_1
 
     .line 4
-    iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$c;->b:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$c;->b:Lkotlin/jvm/b/a;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     goto :goto_0
 

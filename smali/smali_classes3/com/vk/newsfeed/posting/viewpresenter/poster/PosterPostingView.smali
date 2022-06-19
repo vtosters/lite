@@ -3,14 +3,14 @@
 .source "PosterPostingView.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/posting/PostingContracts8;
+.implements Lcom/vk/newsfeed/posting/i;
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field private a:Lcom/vk/newsfeed/posting/PostingContracts11;
+.field private a:Lcom/vk/newsfeed/posting/h;
 
-.field private final b:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;
+.field private final b:Lcom/vk/newsfeed/posting/viewpresenter/poster/a;
 
 .field private c:Landroid/widget/FrameLayout;
 
@@ -33,20 +33,20 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;
+    new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/poster/a;
 
-    invoke-direct {v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;-><init>()V
+    invoke-direct {v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/a;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/a;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;)Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;
+.method public static final synthetic a(Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;)Lcom/vk/newsfeed/posting/viewpresenter/poster/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;
+    iget-object p0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/a;
 
     return-object p0
 .end method
@@ -92,13 +92,13 @@
     return-void
 .end method
 
-.method private final a(ZLkotlin/jvm/b/Functions;)V
+.method private final a(ZLkotlin/jvm/b/a;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -152,7 +152,7 @@
     .line 35
     new-instance v1, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$d;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$d;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;ZLkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$d;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;ZLkotlin/jvm/b/a;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
@@ -247,7 +247,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->d:Lcom/vk/newsfeed/views/poster/PosterEditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
 
     return-void
 .end method
@@ -256,7 +256,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1, p2}, Lcom/vk/newsfeed/posting/PostingContracts$a10;->a(Lcom/vk/newsfeed/posting/PostingContracts8;FF)V
+    invoke-static {p0, p1, p2}, Lcom/vk/newsfeed/posting/i$a;->a(Lcom/vk/newsfeed/posting/i;FF)V
 
     return-void
 .end method
@@ -268,20 +268,20 @@
     iput-boolean p3, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->h:Z
 
     .line 23
-    iget-object p3, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;
+    iget-object p3, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/a;
 
     new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$setPosterBackgroundId$position$1;
 
     invoke-direct {v0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$setPosterBackgroundId$position$1;-><init>(II)V
 
-    invoke-virtual {p3, v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;->a(Lkotlin/jvm/b/Functions2;)I
+    invoke-virtual {p3, v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/a;->a(Lkotlin/jvm/b/b;)I
 
     move-result p1
 
     .line 24
-    iget-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;
+    iget-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/a;
 
-    invoke-virtual {p2, p1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;->a(I)I
+    invoke-virtual {p2, p1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/a;->a(I)I
 
     move-result p1
 
@@ -330,9 +330,9 @@
     .locals 1
 
     .line 27
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/a;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;->a(ILjava/lang/String;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/poster/a;->a(ILjava/lang/String;)V
 
     return-void
 .end method
@@ -361,7 +361,7 @@
     check-cast v0, Lcom/vk/newsfeed/views/poster/PosterEditText;
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts11;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/h;
 
     move-result-object v1
 
@@ -416,9 +416,9 @@
     const-string v1, "vp"
 
     .line 12
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/a;
 
     invoke-virtual {v0, v1}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
@@ -451,20 +451,20 @@
     iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->f:Landroidx/viewpager/widget/ViewPager;
 
     .line 17
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts11;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/h;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts6;->onStart()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/c;->onStart()V
 
     :cond_1
     return-void
 
     .line 18
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 .end method
@@ -487,29 +487,29 @@
     .locals 1
 
     .line 29
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;->a(Lcom/vk/newsfeed/posting/dto/PosterBackground;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/a;->a(Lcom/vk/newsfeed/posting/dto/PosterBackground;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/newsfeed/posting/PostingContracts11;)V
+.method public a(Lcom/vk/newsfeed/posting/h;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->a:Lcom/vk/newsfeed/posting/PostingContracts11;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->a:Lcom/vk/newsfeed/posting/h;
 
     return-void
 .end method
 
-.method public a(ZZLkotlin/jvm/b/Functions;)V
+.method public a(ZZLkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ZZ",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -517,7 +517,7 @@
     if-eqz p2, :cond_0
 
     .line 19
-    invoke-direct {p0, p1, p3}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->a(ZLkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, p1, p3}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->a(ZLkotlin/jvm/b/a;)V
 
     goto :goto_0
 
@@ -528,11 +528,11 @@
     if-eqz p3, :cond_1
 
     .line 21
-    invoke-interface {p3}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p3}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_1
     :goto_0
@@ -558,7 +558,7 @@
     return v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -590,17 +590,17 @@
 
     const-string v3, "getChildAt(i)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
-    instance-of v3, v2, Lcom/vk/newsfeed/views/poster/PosterBackgroundView;
+    instance-of v3, v2, Lcom/vk/newsfeed/views/poster/a;
 
     if-nez v3, :cond_0
 
     const/4 v2, 0x0
 
     :cond_0
-    check-cast v2, Lcom/vk/newsfeed/views/poster/PosterBackgroundView;
+    check-cast v2, Lcom/vk/newsfeed/views/poster/a;
 
     if-eqz v2, :cond_1
 
@@ -608,7 +608,7 @@
 
     neg-float v4, p2
 
-    invoke-virtual {v2, v3, v4}, Lcom/vk/newsfeed/views/poster/PosterBackgroundView;->a(FF)V
+    invoke-virtual {v2, v3, v4}, Lcom/vk/newsfeed/views/poster/a;->a(FF)V
 
     :cond_1
     add-int/lit8 v1, v1, 0x1
@@ -631,12 +631,12 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;->a(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/a;->a(Ljava/util/List;)V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/a;
 
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->f:Landroidx/viewpager/widget/ViewPager;
 
@@ -654,7 +654,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;->a(I)I
+    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/a;->a(I)I
 
     move-result p1
 
@@ -775,16 +775,16 @@
 
     const-string v1, "editTextView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vk/newsfeed/posting/PostingContracts11;
+.method public getPresenter()Lcom/vk/newsfeed/posting/h;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->a:Lcom/vk/newsfeed/posting/PostingContracts11;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->a:Lcom/vk/newsfeed/posting/h;
 
     return-object v0
 .end method
@@ -821,7 +821,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterBackgroundPagerAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/a;
 
     invoke-virtual {v0}, Landroidx/viewpager/widget/PagerAdapter;->notifyDataSetChanged()V
 
@@ -862,13 +862,13 @@
 
     if-ne p1, v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts11;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/h;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts11;->x2()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/h;->x2()V
 
     :cond_2
     :goto_1
@@ -879,13 +879,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts11;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/h;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts6;->onStop()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/c;->onStop()V
 
     :cond_0
     const/4 v0, 0x0
@@ -903,7 +903,7 @@
     iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->f:Landroidx/viewpager/widget/ViewPager;
 
     .line 6
-    invoke-static {p0}, Lcom/vk/newsfeed/posting/PostingContracts$a10;->a(Lcom/vk/newsfeed/posting/PostingContracts8;)V
+    invoke-static {p0}, Lcom/vk/newsfeed/posting/i$a;->a(Lcom/vk/newsfeed/posting/i;)V
 
     return-void
 .end method
@@ -947,7 +947,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 

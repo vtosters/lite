@@ -63,15 +63,15 @@
 
     .line 4
     :cond_0
-    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
 
     move-result-object p1
 
     const/16 v0, 0x6a
 
-    invoke-virtual {p1, v0}, Lb/h/g/l/NotificationCenter;->a(I)V
+    invoke-virtual {p1, v0}, Lb/h/g/l/d;->a(I)V
 
     .line 5
     iget-object p1, p0, Lcom/vtosters/lite/SuggestionsActivity$b;->a:Lcom/vtosters/lite/SuggestionsActivity;

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -65,7 +65,7 @@
     move-result-object v4
 
     .line 4
-    sget-object v5, Lcom/vk/dto/photo/Photo;->d0:Lcom/vk/dto/common/data/JsonParser;
+    sget-object v5, Lcom/vk/dto/photo/Photo;->d0:Lcom/vk/dto/common/data/c;
 
     const-string v6, "photo"
 
@@ -75,9 +75,9 @@
 
     const-string v7, "json.getJSONObject(ServerKeys.PHOTO)"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v5, v6}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
+    invoke-virtual {v5, v6}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -86,17 +86,17 @@
     check-cast v5, Lcom/vk/dto/photo/Photo;
 
     .line 5
-    sget-object v6, Lcom/vk/dto/common/data/JsonParser;->a:Lcom/vk/dto/common/data/JsonParser$a;
+    sget-object v6, Lcom/vk/dto/common/data/c;->a:Lcom/vk/dto/common/data/c$a;
 
     sget-object v7, Lcom/vk/dto/attachments/Product;->h:Lcom/vk/dto/attachments/Product$c;
 
-    invoke-virtual {v7}, Lcom/vk/dto/attachments/Product$c;->a()Lcom/vk/dto/common/data/JsonParser;
+    invoke-virtual {v7}, Lcom/vk/dto/attachments/Product$c;->a()Lcom/vk/dto/common/data/c;
 
     move-result-object v7
 
     const-string v8, "product"
 
-    invoke-virtual {v6, p1, v8, v7}, Lcom/vk/dto/common/data/JsonParser$a;->c(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/lang/Object;
+    invoke-virtual {v6, p1, v8, v7}, Lcom/vk/dto/common/data/c$a;->c(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -119,13 +119,13 @@
     move-result v9
 
     .line 8
-    sget-object v10, Lcom/vk/dto/common/data/JsonParser;->a:Lcom/vk/dto/common/data/JsonParser$a;
+    sget-object v10, Lcom/vk/dto/common/data/c;->a:Lcom/vk/dto/common/data/c$a;
 
-    sget-object v11, Lcom/vk/dto/tags/Target;->d:Lcom/vk/dto/common/data/JsonParser;
+    sget-object v11, Lcom/vk/dto/tags/Target;->d:Lcom/vk/dto/common/data/c;
 
     const-string v12, "target_object"
 
-    invoke-virtual {v10, p1, v12, v11}, Lcom/vk/dto/common/data/JsonParser$a;->c(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/lang/Object;
+    invoke-virtual {v10, p1, v12, v11}, Lcom/vk/dto/common/data/c$a;->c(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -134,11 +134,11 @@
     .line 9
     new-instance v10, Lcom/vk/dto/tags/TagLink;
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v8, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v1, v10
 

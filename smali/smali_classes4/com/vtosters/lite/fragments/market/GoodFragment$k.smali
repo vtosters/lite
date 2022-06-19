@@ -94,11 +94,11 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$k;->b:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->m(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vk/stickers/f0/KeyboardPopup;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->m(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vk/stickers/f0/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stickers/f0/KeyboardPopup;->f()V
+    invoke-virtual {v0}, Lcom/vk/stickers/f0/a;->f()V
 
     return-void
 .end method

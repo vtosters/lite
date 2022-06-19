@@ -22,7 +22,7 @@
     .end annotation
 .end field
 
-.field static final synthetic h:[Lkotlin/u/KProperty5;
+.field static final synthetic h:[Lkotlin/u/j;
 
 
 # instance fields
@@ -36,7 +36,7 @@
     .end annotation
 .end field
 
-.field private final b:Lkotlin/Lazy2;
+.field private final b:Lkotlin/e;
 
 .field private final c:Lcom/vk/im/engine/models/Member;
 
@@ -64,13 +64,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/engine/models/conversations/BotKeyboard;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -78,21 +78,21 @@
 
     const-string v4, "getSpanCount()I"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/engine/models/conversations/BotKeyboard;->h:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/im/engine/models/conversations/BotKeyboard;->h:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/im/engine/models/conversations/BotKeyboard$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/conversations/BotKeyboard$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/conversations/BotKeyboard$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/conversations/BotKeyboard$a;
@@ -175,16 +175,16 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/engine/models/conversations/BotKeyboard$spanCount$2;-><init>(Lcom/vk/im/engine/models/conversations/BotKeyboard;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/engine/models/conversations/BotKeyboard;->b:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/engine/models/conversations/BotKeyboard;->b:Lkotlin/e;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/im/engine/models/Member;ZZILjava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/im/engine/models/Member;ZZILjava/util/List;ILkotlin/jvm/internal/i;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x4
@@ -622,7 +622,7 @@
 
     check-cast v2, Lcom/vk/im/engine/models/conversations/BotButton;
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -655,15 +655,15 @@
 .method public final A1()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/engine/models/conversations/BotKeyboard;->b:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/engine/models/conversations/BotKeyboard;->b:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/engine/models/conversations/BotKeyboard;->h:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/engine/models/conversations/BotKeyboard;->h:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -799,7 +799,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -822,7 +822,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/conversations/BotKeyboard;->c:Lcom/vk/im/engine/models/Member;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -925,7 +925,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/conversations/BotKeyboard;->c:Lcom/vk/im/engine/models/Member;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -953,7 +953,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/models/conversations/BotKeyboard;->g:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

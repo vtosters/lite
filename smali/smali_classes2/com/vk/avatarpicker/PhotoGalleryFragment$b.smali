@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/vk/photogallery/dto/GalleryState2;)V
+.method public abstract a(Lcom/vk/photogallery/dto/c;)V
 .end method
 
 .method public abstract q()V

@@ -3,7 +3,7 @@
 .source "TranslateFromTopViewAnimator.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/utils/animators/ViewAnimator;
+.implements Lcom/vk/im/ui/utils/animators/b;
 
 
 # annotations
@@ -91,7 +91,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/view/View;Landroid/view/animation/Interpolator;Landroid/view/animation/Interpolator;JJJJILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/view/View;Landroid/view/animation/Interpolator;Landroid/view/animation/Interpolator;JJJJILkotlin/jvm/internal/i;)V
     .locals 11
 
     and-int/lit8 v0, p12, 0x2
@@ -203,19 +203,19 @@
     return-object p0
 .end method
 
-.method private final a(Landroid/view/View;ILkotlin/jvm/b/Functions1;)V
+.method private final a(Landroid/view/View;ILkotlin/jvm/b/c;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
             "I",
-            "Lkotlin/jvm/b/Functions1<",
+            "Lkotlin/jvm/b/c<",
             "-",
             "Ljava/lang/Integer;",
             "-",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -248,7 +248,7 @@
 
     move-result-object v2
 
-    invoke-interface {p3, v2, p1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v2, p1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 7
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
@@ -582,7 +582,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator$restoreParentClipChildren$1;-><init>(Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;)V
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;->a(Landroid/view/View;ILkotlin/jvm/b/Functions1;)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;->a(Landroid/view/View;ILkotlin/jvm/b/c;)V
 
     const/4 v0, 0x0
 
@@ -607,7 +607,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator$saveParentClipChildren$1;-><init>(Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;)V
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;->a(Landroid/view/View;ILkotlin/jvm/b/Functions1;)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;->a(Landroid/view/View;ILkotlin/jvm/b/c;)V
 
     const/4 v0, 0x1
 
@@ -629,7 +629,7 @@
 
     sget-object v2, Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator$setParentClipChildrenTrue$1;->a:Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator$setParentClipChildrenTrue$1;
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;->a(Landroid/view/View;ILkotlin/jvm/b/Functions1;)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;->a(Landroid/view/View;ILkotlin/jvm/b/c;)V
 
     return-void
 .end method
@@ -683,7 +683,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator$showAnimated$1;-><init>(Lcom/vk/im/ui/utils/animators/TranslateFromTopViewAnimator;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
 
     :cond_1
     :goto_0

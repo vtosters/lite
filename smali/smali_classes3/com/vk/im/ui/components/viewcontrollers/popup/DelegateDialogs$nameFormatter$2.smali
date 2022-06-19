@@ -3,12 +3,12 @@
 .source "DelegateDialogs.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;)V
+    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/f;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/im/ui/formatters/DisplayNameFormatter;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/im/ui/formatters/d;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/ui/formatters/DisplayNameFormatter;
+.method public final invoke()Lcom/vk/im/ui/formatters/d;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/formatters/DisplayNameFormatter;
+    new-instance v0, Lcom/vk/im/ui/formatters/d;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/formatters/d;-><init>()V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$nameFormatter$2;->invoke()Lcom/vk/im/ui/formatters/DisplayNameFormatter;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$nameFormatter$2;->invoke()Lcom/vk/im/ui/formatters/d;
 
     move-result-object v0
 

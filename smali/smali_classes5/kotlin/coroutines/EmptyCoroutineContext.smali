@@ -3,7 +3,7 @@
 .source "CoroutineContextImpl.kt"
 
 # interfaces
-.implements Lkotlin/coroutines/CoroutineContext;
+.implements Lkotlin/coroutines/c;
 .implements Ljava/io/Serializable;
 
 
@@ -47,14 +47,14 @@
 
 
 # virtual methods
-.method public a(Lkotlin/coroutines/CoroutineContext$b;)Lkotlin/coroutines/CoroutineContext$a;
+.method public a(Lkotlin/coroutines/c$b;)Lkotlin/coroutines/c$a;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<E::",
-            "Lkotlin/coroutines/CoroutineContext$a;",
+            "Lkotlin/coroutines/c$a;",
             ">(",
-            "Lkotlin/coroutines/CoroutineContext$b<",
+            "Lkotlin/coroutines/c$b<",
             "TE;>;)TE;"
         }
     .end annotation

@@ -30,7 +30,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/music/artists/MusicAppBarOffsetHelper1;",
+            "Lcom/vk/music/artists/c;",
             ">;"
         }
     .end annotation
@@ -51,7 +51,7 @@
             ">;",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/music/artists/MusicAppBarOffsetHelper1;",
+            "Lcom/vk/music/artists/c;",
             ">;)V"
         }
     .end annotation
@@ -71,7 +71,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;ILjava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;ILjava/util/List;Ljava/util/List;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x8
@@ -172,7 +172,7 @@
 
     const-string v1, "ctx.resources"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -216,7 +216,7 @@
 
     new-instance v2, Lcom/vk/music/artists/MusicAppBarOffsetHelper$a;
 
-    invoke-direct {v2, v0}, Lcom/vk/music/artists/MusicAppBarOffsetHelper$a;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v2, v0}, Lcom/vk/music/artists/MusicAppBarOffsetHelper$a;-><init>(Lkotlin/jvm/b/b;)V
 
     invoke-virtual {v1, v2}, Lcom/google/android/material/appbar/AppBarLayout;->a(Lcom/google/android/material/appbar/AppBarLayout$b;)V
 
@@ -231,7 +231,7 @@
 
     new-instance v1, Lcom/vk/music/artists/MusicAppBarOffsetHelper$b;
 
-    invoke-direct {v1, v0}, Lcom/vk/music/artists/MusicAppBarOffsetHelper$b;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v1, v0}, Lcom/vk/music/artists/MusicAppBarOffsetHelper$b;-><init>(Lkotlin/jvm/b/b;)V
 
     invoke-virtual {p1, v1}, Lcom/google/android/material/appbar/NonBouncedAppBarLayout;->a(Lcom/google/android/material/appbar/NonBouncedAppBarLayout$c;)V
 
@@ -424,14 +424,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/music/artists/MusicAppBarOffsetHelper1;
+    check-cast v0, Lcom/vk/music/artists/c;
 
     .line 22
     iget v1, p0, Lcom/vk/music/artists/MusicAppBarOffsetHelper;->a:F
 
     neg-float v1, v1
 
-    invoke-interface {v0, v1}, Lcom/vk/music/artists/MusicAppBarOffsetHelper1;->a(F)V
+    invoke-interface {v0, v1}, Lcom/vk/music/artists/c;->a(F)V
 
     goto :goto_1
 

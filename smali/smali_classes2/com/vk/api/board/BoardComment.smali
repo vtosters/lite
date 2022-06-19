@@ -3,8 +3,8 @@
 .source "BoardComment.java"
 
 # interfaces
-.implements Lcom/vk/dto/common/data/ServerKeys;
-.implements Lcom/vtosters/lite/Comment;
+.implements Lcom/vk/dto/common/data/h;
+.implements Lcom/vtosters/lite/q;
 
 
 # static fields
@@ -614,7 +614,7 @@
     if-gez v2, :cond_3
 
     .line 38
-    sget-object p5, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p5, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v2, 0x7f120201
 
@@ -691,7 +691,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, p2}, Lcom/vtosters/lite/attachments/AttachmentUtils;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
+    invoke-static {v4, p2}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v4
 
@@ -705,7 +705,7 @@
     :cond_6
     iget-object p2, p0, Lcom/vk/api/board/BoardComment;->d:Ljava/util/ArrayList;
 
-    invoke-static {p2}, Lcom/vtosters/lite/attachments/AttachmentUtils;->d(Ljava/util/List;)V
+    invoke-static {p2}, Lcom/vtosters/lite/attachments/a;->d(Ljava/util/List;)V
 
     const-string p2, "likes"
 
@@ -835,7 +835,7 @@
     .end annotation
 
     .line 19
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -869,7 +869,7 @@
 
     .line 24
     :cond_0
-    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v2, 0x7f1204f7
 
@@ -888,21 +888,21 @@
 
     .line 25
     :cond_1
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {v1}, Lb/h/h/d/c;->D0()I
 
     move-result v1
 
     .line 26
-    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->Z()Ljava/lang/String;
+    invoke-virtual {v0}, Lb/h/h/d/c;->Z()Ljava/lang/String;
 
     move-result-object v2
 
     .line 27
-    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->d0()Ljava/lang/String;
+    invoke-virtual {v0}, Lb/h/h/d/c;->d0()Ljava/lang/String;
 
     move-result-object v0
 
@@ -916,7 +916,7 @@
     .line 28
     new-instance v0, Lcom/vk/api/board/BoardComment;
 
-    invoke-static {}, Lcom/vk/core/util/TimeUtils;->b()I
+    invoke-static {}, Lcom/vk/core/util/i1;->b()I
 
     move-result v9
 
@@ -1369,17 +1369,17 @@
     .locals 10
 
     .line 1
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/api/board/BoardComment;->b:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v1}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v1}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -1615,13 +1615,13 @@
 
     sub-int/2addr v0, v4
 
-    const-class v3, Lcom/vtosters/lite/LinkSpan;
+    const-class v3, Lcom/vtosters/lite/v;
 
     invoke-virtual {v1, v2, v0, v3}, Landroid/text/SpannableStringBuilder;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/vtosters/lite/LinkSpan;
+    check-cast v0, [Lcom/vtosters/lite/v;
 
     .line 20
     array-length v1, v0
@@ -1633,7 +1633,7 @@
 
     aget-object v0, v0, v2
 
-    invoke-virtual {v0}, Lcom/vk/core/view/links/ClickableLinkSpan;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/core/view/links/a;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1733,7 +1733,7 @@
     if-eqz v5, :cond_7
 
     .line 30
-    new-instance v5, Lcom/vtosters/lite/LinkSpan;
+    new-instance v5, Lcom/vtosters/lite/v;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1753,7 +1753,7 @@
 
     move-result-object v6
 
-    invoke-direct {v5, v6}, Lcom/vtosters/lite/LinkSpan;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v6}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;)V
 
     .line 31
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->start()I
@@ -1828,11 +1828,11 @@
 
     .line 34
     :cond_7
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v0}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 

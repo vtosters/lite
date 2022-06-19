@@ -55,13 +55,13 @@
     .line 2
     iget-object p1, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder$b;->a:Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;
 
-    invoke-static {p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->a(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-static {p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->a(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
 
     .line 3
     :cond_0
@@ -76,29 +76,29 @@
     .line 4
     iget-object p1, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder$b;->a:Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;
 
-    invoke-static {p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->c(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)Lcom/vk/articles/authorpage/g/ArticleAuthorPageSortItem;
+    invoke-static {p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->c(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)Lcom/vk/articles/authorpage/g/b;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vk/articles/authorpage/g/ArticleAuthorPageSortItem;->a(Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;)V
+    invoke-virtual {p1, p2}, Lcom/vk/articles/authorpage/g/b;->a(Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder$b;->a:Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;
 
-    invoke-static {p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->c(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)Lcom/vk/articles/authorpage/g/ArticleAuthorPageSortItem;
+    invoke-static {p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->c(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)Lcom/vk/articles/authorpage/g/b;
 
     move-result-object p3
 
-    invoke-virtual {p1, p3}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->a(Lcom/vk/articles/authorpage/g/ArticleAuthorPageSortItem;)V
+    invoke-virtual {p1, p3}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->a(Lcom/vk/articles/authorpage/g/b;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder$b;->a:Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;
 
-    invoke-static {p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->d(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)Lkotlin/jvm/b/Functions2;
+    invoke-static {p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->d(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)Lkotlin/jvm/b/b;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     return-void

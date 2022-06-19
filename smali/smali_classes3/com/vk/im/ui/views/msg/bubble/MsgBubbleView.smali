@@ -6,13 +6,13 @@
 # instance fields
 .field private B:I
 
-.field private a:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;
+.field private a:Lcom/vk/im/ui/views/msg/bubble/a;
 
-.field private b:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
+.field private b:Lcom/vk/im/ui/views/msg/bubble/b;
 
 .field private c:Landroid/graphics/Rect;
 
-.field private d:Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+.field private d:Lcom/vk/im/ui/views/msg/bubble/i;
 
 .field private e:Landroid/graphics/Rect;
 
@@ -33,11 +33,11 @@
     const/4 v0, 0x0
 
     .line 2
-    invoke-static {v0, v0}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->b(ZZ)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
+    invoke-static {v0, v0}, Lcom/vk/im/ui/views/msg/bubble/b;->b(ZZ)Lcom/vk/im/ui/views/msg/bubble/b;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->b:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
+    iput-object v1, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->b:Lcom/vk/im/ui/views/msg/bubble/b;
 
     const/4 v1, 0x0
 
@@ -56,11 +56,11 @@
     const/4 v0, 0x0
 
     .line 5
-    invoke-static {v0, v0}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->b(ZZ)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
+    invoke-static {v0, v0}, Lcom/vk/im/ui/views/msg/bubble/b;->b(ZZ)Lcom/vk/im/ui/views/msg/bubble/b;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->b:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
+    iput-object v1, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->b:Lcom/vk/im/ui/views/msg/bubble/b;
 
     .line 6
     invoke-direct {p0, p1, p2, v0, v0}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -77,11 +77,11 @@
     const/4 v0, 0x0
 
     .line 8
-    invoke-static {v0, v0}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->b(ZZ)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
+    invoke-static {v0, v0}, Lcom/vk/im/ui/views/msg/bubble/b;->b(ZZ)Lcom/vk/im/ui/views/msg/bubble/b;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->b:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
+    iput-object v1, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->b:Lcom/vk/im/ui/views/msg/bubble/b;
 
     .line 9
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -101,11 +101,11 @@
     const/4 v0, 0x0
 
     .line 11
-    invoke-static {v0, v0}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->b(ZZ)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
+    invoke-static {v0, v0}, Lcom/vk/im/ui/views/msg/bubble/b;->b(ZZ)Lcom/vk/im/ui/views/msg/bubble/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->b:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
+    iput-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->b:Lcom/vk/im/ui/views/msg/bubble/b;
 
     .line 12
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -117,7 +117,7 @@
     .locals 2
 
     .line 13
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_android_maxWidth:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_android_maxWidth:I
 
     const v0, 0x7fffffff
 
@@ -128,7 +128,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setMaximumWidth(I)V
 
     .line 14
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_android_maxHeight:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_android_maxHeight:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -137,7 +137,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setMaximumHeight(I)V
 
     .line 15
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_vkim_fwdPaddingLeft:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_vkim_fwdPaddingLeft:I
 
     const/4 v0, 0x0
 
@@ -148,7 +148,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setFwdPaddingLeft(I)V
 
     .line 16
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_vkim_fwdPaddingTop:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_vkim_fwdPaddingTop:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -157,7 +157,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setFwdPaddingTop(I)V
 
     .line 17
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_vkim_fwdPaddingRight:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_vkim_fwdPaddingRight:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -166,7 +166,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setFwdPaddingRight(I)V
 
     .line 18
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_vkim_fwdPaddingBottom:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_vkim_fwdPaddingBottom:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -175,7 +175,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setFwdPaddingBottom(I)V
 
     .line 19
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_vkim_fwdNestLevel:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_vkim_fwdNestLevel:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getInteger(II)I
 
@@ -184,7 +184,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setFwdNestLevel(I)V
 
     .line 20
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_vkim_fwdNestLineWidth:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_vkim_fwdNestLineWidth:I
 
     const/4 v1, 0x4
 
@@ -195,7 +195,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setFwdNestLineWidth(I)V
 
     .line 21
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_vkim_fwdNestLineSpace:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_vkim_fwdNestLineSpace:I
 
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -204,7 +204,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setFwdNestLineSpace(I)V
 
     .line 22
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_vkim_fwdNestLineColor:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_vkim_fwdNestLineColor:I
 
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -213,7 +213,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setFwdNestLineColor(I)V
 
     .line 23
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_vkim_contentFitAllWidth:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_vkim_contentFitAllWidth:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -222,7 +222,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setContentFitAllWidth(Z)V
 
     .line 24
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_vkim_contentPaddingLeft:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_vkim_contentPaddingLeft:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -231,7 +231,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setContentPaddingLeft(I)V
 
     .line 25
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_vkim_contentPaddingTop:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_vkim_contentPaddingTop:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -240,7 +240,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setContentPaddingTop(I)V
 
     .line 26
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_vkim_contentPaddingRight:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_vkim_contentPaddingRight:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -249,7 +249,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setContentPaddingRight(I)V
 
     .line 27
-    sget p1, Lcom/vk/im/ui/R2;->MsgBubbleView_vkim_contentPaddingBottom:I
+    sget p1, Lcom/vk/im/ui/o;->MsgBubbleView_vkim_contentPaddingBottom:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -264,14 +264,14 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;
+    new-instance v0, Lcom/vk/im/ui/views/msg/bubble/a;
 
-    invoke-direct {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/a;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;
+    iput-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/a;
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/a;
 
     invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
@@ -283,14 +283,14 @@
     iput-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->c:Landroid/graphics/Rect;
 
     .line 4
-    new-instance v0, Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+    new-instance v0, Lcom/vk/im/ui/views/msg/bubble/i;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/views/msg/bubble/i;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+    iput-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/i;
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/i;
 
     invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
@@ -314,7 +314,7 @@
     iput-object v1, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->g:Landroid/graphics/Rect;
 
     .line 9
-    sget-object v1, Lcom/vk/im/ui/R2;->MsgBubbleView:[I
+    sget-object v1, Lcom/vk/im/ui/o;->MsgBubbleView:[I
 
     invoke-virtual {p1, p2, v1, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -351,7 +351,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;Lcom/vk/im/ui/views/msg/bubble/MsgBubblePart;I)V
+.method public a(Lcom/vk/im/ui/views/msg/bubble/b;Lcom/vk/im/ui/views/msg/bubble/MsgBubblePart;I)V
     .locals 1
     .param p3    # I
         .annotation build Landroidx/annotation/ColorInt;
@@ -359,12 +359,12 @@
     .end param
 
     .line 28
-    iput-object p1, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->b:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
+    iput-object p1, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->b:Lcom/vk/im/ui/views/msg/bubble/b;
 
     .line 29
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/a;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;->a(Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;Lcom/vk/im/ui/views/msg/bubble/MsgBubblePart;I)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/im/ui/views/msg/bubble/a;->a(Lcom/vk/im/ui/views/msg/bubble/b;Lcom/vk/im/ui/views/msg/bubble/MsgBubblePart;I)V
 
     .line 30
     invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
@@ -382,17 +382,17 @@
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchDraw(Landroid/graphics/Canvas;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->b:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->b:Lcom/vk/im/ui/views/msg/bubble/b;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->a()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/msg/bubble/b;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/a;->draw(Landroid/graphics/Canvas;)V
 
     :cond_0
     return-void
@@ -423,23 +423,23 @@
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->b:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->b:Lcom/vk/im/ui/views/msg/bubble/b;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->a()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/msg/bubble/b;->a()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/a;->draw(Landroid/graphics/Canvas;)V
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/i;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/i;->draw(Landroid/graphics/Canvas;)V
 
     return-void
 .end method
@@ -500,7 +500,7 @@
     sub-int p5, p4, p5
 
     .line 9
-    iget-object v2, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;
+    iget-object v2, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/a;
 
     invoke-virtual {v2, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
@@ -517,9 +517,9 @@
     add-int/2addr p1, v1
 
     .line 12
-    iget-object p2, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+    iget-object p2, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/i;
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;->getIntrinsicWidth()I
+    invoke-virtual {p2}, Lcom/vk/im/ui/views/msg/bubble/i;->getIntrinsicWidth()I
 
     move-result p2
 
@@ -533,7 +533,7 @@
     sub-int/2addr p5, p3
 
     .line 14
-    iget-object p3, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+    iget-object p3, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/i;
 
     invoke-virtual {p3, v0, p1, p2, p5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
@@ -569,7 +569,7 @@
     if-eq p2, p3, :cond_1
 
     .line 18
-    iget-object p2, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+    iget-object p2, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/i;
 
     invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
@@ -687,21 +687,21 @@
     move-result v12
 
     .line 11
-    invoke-static {v1, v9, v11, v7}, Lcom/vk/im/ui/views/MeasureUtils;->a(IIII)I
+    invoke-static {v1, v9, v11, v7}, Lcom/vk/im/ui/views/e;->a(IIII)I
 
     move-result v13
 
     .line 12
-    invoke-static {v2, v10, v12, v8}, Lcom/vk/im/ui/views/MeasureUtils;->a(IIII)I
+    invoke-static {v2, v10, v12, v8}, Lcom/vk/im/ui/views/e;->a(IIII)I
 
     move-result v14
 
     .line 13
-    iget-object v15, v0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;
+    iget-object v15, v0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/a;
 
     iget-object v2, v0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->c:Landroid/graphics/Rect;
 
-    invoke-virtual {v15, v2}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;->getPadding(Landroid/graphics/Rect;)Z
+    invoke-virtual {v15, v2}, Lcom/vk/im/ui/views/msg/bubble/a;->getPadding(Landroid/graphics/Rect;)Z
 
     .line 14
     iget-object v2, v0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->c:Landroid/graphics/Rect;
@@ -779,10 +779,10 @@
 
     sub-int/2addr v13, v8
 
-    iget-object v8, v0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+    iget-object v8, v0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/i;
 
     .line 21
-    invoke-virtual {v8}, Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;->getIntrinsicWidth()I
+    invoke-virtual {v8}, Lcom/vk/im/ui/views/msg/bubble/i;->getIntrinsicWidth()I
 
     move-result v8
 
@@ -835,7 +835,7 @@
     if-ltz v13, :cond_2
 
     .line 26
-    invoke-static {v13}, Lcom/vk/im/ui/views/MeasureUtils;->b(I)I
+    invoke-static {v13}, Lcom/vk/im/ui/views/e;->b(I)I
 
     move-result v3
 
@@ -859,7 +859,7 @@
     move-result v3
 
     .line 29
-    invoke-static {v3}, Lcom/vk/im/ui/views/MeasureUtils;->b(I)I
+    invoke-static {v3}, Lcom/vk/im/ui/views/e;->b(I)I
 
     move-result v3
 
@@ -871,7 +871,7 @@
     if-ne v3, v13, :cond_4
 
     .line 30
-    invoke-static {v9}, Lcom/vk/im/ui/views/MeasureUtils;->b(I)I
+    invoke-static {v9}, Lcom/vk/im/ui/views/e;->b(I)I
 
     move-result v3
 
@@ -897,7 +897,7 @@
     if-eqz v4, :cond_5
 
     .line 33
-    invoke-static {v3}, Lcom/vk/im/ui/views/MeasureUtils;->b(I)I
+    invoke-static {v3}, Lcom/vk/im/ui/views/e;->b(I)I
 
     move-result v3
 
@@ -905,7 +905,7 @@
 
     .line 34
     :cond_5
-    invoke-static {v3}, Lcom/vk/im/ui/views/MeasureUtils;->a(I)I
+    invoke-static {v3}, Lcom/vk/im/ui/views/e;->a(I)I
 
     move-result v3
 
@@ -923,7 +923,7 @@
     if-eqz v4, :cond_7
 
     .line 37
-    invoke-static {v3}, Lcom/vk/im/ui/views/MeasureUtils;->b(I)I
+    invoke-static {v3}, Lcom/vk/im/ui/views/e;->b(I)I
 
     move-result v3
 
@@ -931,7 +931,7 @@
 
     .line 38
     :cond_7
-    invoke-static {v3}, Lcom/vk/im/ui/views/MeasureUtils;->a(I)I
+    invoke-static {v3}, Lcom/vk/im/ui/views/e;->a(I)I
 
     move-result v3
 
@@ -944,7 +944,7 @@
     if-ltz v4, :cond_8
 
     .line 40
-    invoke-static {v4}, Lcom/vk/im/ui/views/MeasureUtils;->b(I)I
+    invoke-static {v4}, Lcom/vk/im/ui/views/e;->b(I)I
 
     move-result v1
 
@@ -968,7 +968,7 @@
     move-result v1
 
     .line 43
-    invoke-static {v1}, Lcom/vk/im/ui/views/MeasureUtils;->a(I)I
+    invoke-static {v1}, Lcom/vk/im/ui/views/e;->a(I)I
 
     move-result v1
 
@@ -980,7 +980,7 @@
     if-ne v5, v1, :cond_a
 
     .line 44
-    invoke-static {v8}, Lcom/vk/im/ui/views/MeasureUtils;->b(I)I
+    invoke-static {v8}, Lcom/vk/im/ui/views/e;->b(I)I
 
     move-result v1
 
@@ -1001,7 +1001,7 @@
     move-result v1
 
     .line 46
-    invoke-static {v1}, Lcom/vk/im/ui/views/MeasureUtils;->a(I)I
+    invoke-static {v1}, Lcom/vk/im/ui/views/e;->a(I)I
 
     move-result v1
 
@@ -1014,7 +1014,7 @@
     move-result v1
 
     .line 48
-    invoke-static {v1}, Lcom/vk/im/ui/views/MeasureUtils;->a(I)I
+    invoke-static {v1}, Lcom/vk/im/ui/views/e;->a(I)I
 
     move-result v1
 
@@ -1060,10 +1060,10 @@
 
     add-int/2addr v7, v3
 
-    iget-object v3, v0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+    iget-object v3, v0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/i;
 
     .line 53
-    invoke-virtual {v3}, Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;->getIntrinsicWidth()I
+    invoke-virtual {v3}, Lcom/vk/im/ui/views/msg/bubble/i;->getIntrinsicWidth()I
 
     move-result v3
 
@@ -1099,7 +1099,7 @@
     move/from16 v2, v17
 
     .line 55
-    invoke-static {v1, v2, v11, v7}, Lcom/vk/im/ui/views/MeasureUtils;->b(IIII)I
+    invoke-static {v1, v2, v11, v7}, Lcom/vk/im/ui/views/e;->b(IIII)I
 
     move-result v1
 
@@ -1108,7 +1108,7 @@
     move/from16 v3, v16
 
     .line 56
-    invoke-static {v2, v3, v12, v8}, Lcom/vk/im/ui/views/MeasureUtils;->b(IIII)I
+    invoke-static {v2, v3, v12, v8}, Lcom/vk/im/ui/views/e;->b(IIII)I
 
     move-result v2
 
@@ -1122,9 +1122,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)Ljava/lang/Void;
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/a;->setColorFilter(Landroid/graphics/ColorFilter;)Ljava/lang/Void;
 
     const/4 p1, 0x0
 
@@ -1250,9 +1250,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/i;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;->d(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/i;->d(I)V
 
     .line 2
     invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
@@ -1267,9 +1267,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/i;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/i;->a(I)V
 
     .line 2
     invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
@@ -1281,9 +1281,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/i;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;->b(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/i;->b(I)V
 
     .line 2
     invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
@@ -1298,9 +1298,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/i;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;->c(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/msg/bubble/i;->c(I)V
 
     .line 2
     invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
@@ -1434,11 +1434,11 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleDrawable;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a:Lcom/vk/im/ui/views/msg/bubble/a;
 
     if-eq v0, p1, :cond_1
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/MsgFwdLinesDrawable;
+    iget-object v0, p0, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->d:Lcom/vk/im/ui/views/msg/bubble/i;
 
     if-eq v0, p1, :cond_1
 

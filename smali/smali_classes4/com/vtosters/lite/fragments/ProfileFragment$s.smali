@@ -76,7 +76,7 @@
 
     move-result v2
 
-    sget v3, Lcom/vk/profile/ui/BaseProfileFragment;->V0:I
+    sget v3, Lcom/vk/profile/ui/c;->V0:I
 
     add-int/2addr v2, v3
 
@@ -102,11 +102,11 @@
     :goto_0
     iget-object v2, p0, Lcom/vtosters/lite/fragments/ProfileFragment$s;->a:Lcom/vk/lists/RecyclerPaginatedView;
 
-    sget v3, Lcom/vk/profile/ui/BaseProfileFragment;->W0:I
+    sget v3, Lcom/vk/profile/ui/c;->W0:I
 
     if-nez v3, :cond_1
 
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v3
 

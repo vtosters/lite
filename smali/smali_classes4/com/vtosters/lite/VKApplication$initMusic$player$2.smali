@@ -3,7 +3,7 @@
 .source "VKApplication.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/lang/Boolean;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -60,15 +60,15 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->c()Lcom/vk/auth/VKAccountEditor;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->c()Lcom/vk/auth/l;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0, p1}, Lcom/vk/auth/VKAccountEditor;->a(Z)Lcom/vk/auth/VKAccountEditor;
+    invoke-virtual {v0, p1}, Lcom/vk/auth/l;->a(Z)Lcom/vk/auth/l;
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/auth/VKAccountEditor;->a()Z
+    invoke-virtual {v0}, Lcom/vk/auth/l;->a()Z
 
     return-void
 .end method
@@ -85,7 +85,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vtosters/lite/VKApplication$initMusic$player$2;->a(Z)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

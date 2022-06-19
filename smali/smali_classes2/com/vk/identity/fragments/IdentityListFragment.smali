@@ -1,10 +1,10 @@
 .class public final Lcom/vk/identity/fragments/IdentityListFragment;
-.super Lcom/vk/core/fragments/BaseMvpFragment;
+.super Lcom/vk/core/fragments/c;
 .source "IdentityListFragment.kt"
 
 # interfaces
-.implements Lcom/vk/identity/fragments/IdentityListContract2;
-.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+.implements Lcom/vk/identity/fragments/f;
+.implements Lcom/vk/navigation/b0/k;
 
 
 # annotations
@@ -17,11 +17,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/BaseMvpFragment<",
-        "Lcom/vk/identity/fragments/IdentityListContract1;",
+        "Lcom/vk/core/fragments/c<",
+        "Lcom/vk/identity/fragments/d;",
         ">;",
-        "Lcom/vk/identity/fragments/IdentityListContract2;",
-        "Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;"
+        "Lcom/vk/identity/fragments/f;",
+        "Lcom/vk/navigation/b0/k;"
     }
 .end annotation
 
@@ -46,7 +46,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/identity/fragments/IdentityListFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/identity/fragments/IdentityListFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -55,7 +55,7 @@
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/identity/adapters/IdentityListAdapter;
@@ -68,16 +68,16 @@
 
     invoke-direct {v2, p0}, Lcom/vk/identity/fragments/IdentityListFragment$identityAdapter$2;-><init>(Lcom/vk/identity/fragments/IdentityListFragment;)V
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/identity/adapters/IdentityListAdapter;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/identity/adapters/IdentityListAdapter;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     iput-object v0, p0, Lcom/vk/identity/fragments/IdentityListFragment;->I:Lcom/vk/identity/adapters/IdentityListAdapter;
 
     .line 3
-    new-instance v0, Lcom/vk/identity/fragments/IdentityListContract;
+    new-instance v0, Lcom/vk/identity/fragments/e;
 
-    invoke-direct {v0, p0}, Lcom/vk/identity/fragments/IdentityListContract;-><init>(Lcom/vk/identity/fragments/IdentityListContract2;)V
+    invoke-direct {v0, p0}, Lcom/vk/identity/fragments/e;-><init>(Lcom/vk/identity/fragments/f;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/BaseMvpFragment;->a(Lb/h/r/BaseScreenContract;)V
+    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/c;->a(Lb/h/r/c;)V
 
     return-void
 .end method
@@ -116,13 +116,13 @@
 
     .line 5
     :goto_0
-    invoke-virtual {v1, p0, p1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v1, p0, p1}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     goto :goto_1
 
     .line 6
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -156,7 +156,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -224,7 +224,7 @@
     const/4 v1, 0x1
 
     .line 6
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/core/ui/CardItemDecorator;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/core/ui/d;
 
     :cond_2
     return-void
@@ -241,7 +241,7 @@
     const v1, 0x7f080376
 
     .line 2
-    invoke-static {v0, v1}, Lcom/vtosters/lite/ViewUtils;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     const v1, 0x7f120514
 
@@ -260,7 +260,7 @@
     invoke-virtual {v0, v1}, Landroidx/appcompat/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 5
-    invoke-static {p0, v0}, Lcom/vtosters/lite/m0/ToolbarHelper;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, v0}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     :cond_0
     return-void
@@ -305,7 +305,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1, v0}, Lcom/vk/lists/AbstractPaginatedView;->a(Lcom/vk/lists/EmptyViewConfiguration;)V
+    invoke-virtual {v1, v0}, Lcom/vk/lists/AbstractPaginatedView;->a(Lcom/vk/lists/h;)V
 
     goto :goto_0
 
@@ -313,19 +313,19 @@
     :cond_0
     iget-object v1, p0, Lcom/vk/identity/fragments/IdentityListFragment;->I:Lcom/vk/identity/adapters/IdentityListAdapter;
 
-    sget-object v2, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
+    sget-object v2, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
 
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v3
 
     if-eqz v3, :cond_2
 
-    invoke-virtual {v2, v3, p1}, Lcom/vk/identity/IdentityHelper;->a(Landroid/content/Context;Lcom/vk/dto/identity/IdentityCardData;)Ljava/util/List;
+    invoke-virtual {v2, v3, p1}, Lcom/vk/identity/a;->a(Landroid/content/Context;Lcom/vk/dto/identity/IdentityCardData;)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v1, v0}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/identity/fragments/IdentityListFragment;->G:Lcom/vk/lists/RecyclerPaginatedView;
@@ -343,7 +343,7 @@
 
     .line 5
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v0
 .end method
@@ -393,13 +393,13 @@
 
     .line 6
     :goto_0
-    invoke-virtual {v1, p0, p1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v1, p0, p1}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     goto :goto_1
 
     .line 7
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -518,7 +518,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -528,7 +528,7 @@
     if-eqz p1, :cond_1
 
     .line 3
-    sget-object v0, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
+    sget-object v0, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
 
     const-string v1, "arg_source"
 
@@ -540,9 +540,9 @@
 
     const-string v2, "it.getString(ARG_SOURCE)!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/identity/IdentityHelper;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/identity/a;->a(Ljava/lang/String;)V
 
     const-string v0, "arg_identity_context"
 
@@ -566,7 +566,7 @@
 
     .line 6
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -596,7 +596,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/vk/core/fragments/c;->onDestroyView()V
 
     const/4 v0, 0x0
 
@@ -616,7 +616,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/BaseMvpFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/c;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     const p2, 0x7f0a0d9d
 
@@ -636,7 +636,7 @@
     const/4 v1, 0x2
 
     .line 3
-    invoke-static {p1, v0, p2, v1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p2, v1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -653,7 +653,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/identity/fragments/IdentityListFragment$onViewCreated$1;-><init>(Lcom/vk/identity/fragments/IdentityListFragment;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/lists/AbstractPaginatedView;->setOnReloadRetryClickListener(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p1, p2}, Lcom/vk/lists/AbstractPaginatedView;->setOnReloadRetryClickListener(Lkotlin/jvm/b/a;)V
 
     .line 5
     :cond_0

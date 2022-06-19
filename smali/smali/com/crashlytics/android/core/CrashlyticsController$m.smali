@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/crashlytics/android/core/UserMetaData;
+.field final synthetic a:Lcom/crashlytics/android/core/t0;
 
 
 # direct methods
-.method constructor <init>(Lcom/crashlytics/android/core/CrashlyticsController;Lcom/crashlytics/android/core/UserMetaData;)V
+.method constructor <init>(Lcom/crashlytics/android/core/CrashlyticsController;Lcom/crashlytics/android/core/t0;)V
     .locals 0
 
     .line 1
-    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController$m;->a:Lcom/crashlytics/android/core/UserMetaData;
+    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController$m;->a:Lcom/crashlytics/android/core/t0;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,15 +44,15 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$m;->a:Lcom/crashlytics/android/core/UserMetaData;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$m;->a:Lcom/crashlytics/android/core/t0;
 
-    iget-object v1, v0, Lcom/crashlytics/android/core/UserMetaData;->a:Ljava/lang/String;
+    iget-object v1, v0, Lcom/crashlytics/android/core/t0;->a:Ljava/lang/String;
 
-    iget-object v2, v0, Lcom/crashlytics/android/core/UserMetaData;->b:Ljava/lang/String;
+    iget-object v2, v0, Lcom/crashlytics/android/core/t0;->b:Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/crashlytics/android/core/UserMetaData;->c:Ljava/lang/String;
+    iget-object v0, v0, Lcom/crashlytics/android/core/t0;->c:Ljava/lang/String;
 
-    invoke-static {p1, v1, v2, v0}, Lcom/crashlytics/android/core/SessionProtobufHelper;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1, v2, v0}, Lcom/crashlytics/android/core/n0;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

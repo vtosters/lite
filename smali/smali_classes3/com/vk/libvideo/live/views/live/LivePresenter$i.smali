@@ -3,7 +3,7 @@
 .source "LivePresenter.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/video/VideoOwner;",
         ">;"
     }
@@ -118,7 +118,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/live/LivePresenter;->a(Lcom/vk/libvideo/live/views/live/LivePresenter;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/live/LivePresenter;->a(Lcom/vk/libvideo/live/views/live/LivePresenter;Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
 
     .line 8
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LivePresenter$i;->a:Lcom/vk/libvideo/live/views/live/LivePresenter;
@@ -254,11 +254,11 @@
     .line 24
     iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LivePresenter$i;->a:Lcom/vk/libvideo/live/views/live/LivePresenter;
 
-    invoke-static {v1}, Lcom/vk/libvideo/live/views/live/LivePresenter;->t(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/a0/h/EventsProcessor;
+    invoke-static {v1}, Lcom/vk/libvideo/live/views/live/LivePresenter;->t(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/a0/h/b;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/libvideo/a0/h/EventsProcessor;->a(Lcom/vk/dto/live/LiveEventModel;)V
+    invoke-virtual {v1, v0}, Lcom/vk/libvideo/a0/h/b;->a(Lcom/vk/dto/live/LiveEventModel;)V
 
     goto :goto_0
 

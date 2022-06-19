@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private a:Landroid/support/v4/media/session/IMediaSession;
+.field private a:Landroid/support/v4/media/session/b;
 
 
 # direct methods
@@ -35,11 +35,11 @@
 
     check-cast p1, Landroid/os/IBinder;
 
-    invoke-static {p1}, Landroid/support/v4/media/session/IMediaSession$a;->a(Landroid/os/IBinder;)Landroid/support/v4/media/session/IMediaSession;
+    invoke-static {p1}, Landroid/support/v4/media/session/b$a;->a(Landroid/os/IBinder;)Landroid/support/v4/media/session/b;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->a:Landroid/support/v4/media/session/IMediaSession;
+    iput-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->a:Landroid/support/v4/media/session/b;
 
     return-void
 .end method
@@ -53,9 +53,9 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->a:Landroid/support/v4/media/session/IMediaSession;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->a:Landroid/support/v4/media/session/b;
 
-    invoke-interface {v0, p1}, Landroid/support/v4/media/session/IMediaSession;->a(Landroid/view/KeyEvent;)Z
+    invoke-interface {v0, p1}, Landroid/support/v4/media/session/b;->a(Landroid/view/KeyEvent;)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 

@@ -1,5 +1,5 @@
 .class public Lcom/vk/dto/video/StreamFilter;
-.super Lcom/vk/dto/common/Model;
+.super Lcom/vk/dto/common/e;
 .source "StreamFilter.java"
 
 # interfaces
@@ -50,7 +50,7 @@
     .locals 2
 
     .line 7
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     .line 8
     new-instance v0, Ljava/util/ArrayList;
@@ -94,7 +94,7 @@
     .end annotation
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     .line 3
     new-instance v0, Ljava/util/ArrayList;

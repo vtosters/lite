@@ -4,18 +4,18 @@
 
 
 # direct methods
-.method public static a(Lkotlin/sequences/Sequence;Ljava/lang/Class;)Lkotlin/sequences/Sequence;
+.method public static a(Lkotlin/sequences/j;Ljava/lang/Class;)Lkotlin/sequences/j;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<R:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/Sequence<",
+            "Lkotlin/sequences/j<",
             "*>;",
             "Ljava/lang/Class<",
             "TR;>;)",
-            "Lkotlin/sequences/Sequence<",
+            "Lkotlin/sequences/j<",
             "TR;>;"
         }
     .end annotation
@@ -25,7 +25,7 @@
 
     invoke-direct {v0, p1}, Lkotlin/sequences/SequencesKt___SequencesJvmKt$filterIsInstance$1;-><init>(Ljava/lang/Class;)V
 
-    invoke-static {p0, v0}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p0, v0}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p0
 

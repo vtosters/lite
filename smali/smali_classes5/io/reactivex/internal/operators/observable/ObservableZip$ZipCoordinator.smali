@@ -3,7 +3,7 @@
 .source "ObservableZip.java"
 
 # interfaces
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Lio/reactivex/disposables/Disposable;"
+        "Lio/reactivex/disposables/b;"
     }
 .end annotation
 
@@ -38,10 +38,10 @@
 
 .field final delayError:Z
 
-.field final downstream:Lio/reactivex/Observer;
+.field final downstream:Lc/a/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TR;>;"
         }
     .end annotation
@@ -65,10 +65,10 @@
     .end annotation
 .end field
 
-.field final zipper:Lio/reactivex/functions/Function;
+.field final zipper:Lc/a/z/j;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/functions/Function<",
+            "Lc/a/z/j<",
             "-[",
             "Ljava/lang/Object;",
             "+TR;>;"
@@ -78,14 +78,14 @@
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/Observer;Lio/reactivex/functions/Function;IZ)V
+.method constructor <init>(Lc/a/r;Lc/a/z/j;IZ)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TR;>;",
-            "Lio/reactivex/functions/Function<",
+            "Lc/a/z/j<",
             "-[",
             "Ljava/lang/Object;",
             "+TR;>;IZ)V"
@@ -96,10 +96,10 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->downstream:Lio/reactivex/Observer;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->downstream:Lc/a/r;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->zipper:Lio/reactivex/functions/Function;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->zipper:Lc/a/z/j;
 
     .line 4
     new-array p1, p3, [Lio/reactivex/internal/operators/observable/ObservableZip$a;
@@ -131,12 +131,12 @@
     return-void
 .end method
 
-.method public a([Lio/reactivex/ObservableSource;I)V
+.method public a([Lc/a/p;I)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
-            "Lio/reactivex/ObservableSource<",
+            "Lc/a/p<",
             "+TT;>;I)V"
         }
     .end annotation
@@ -170,9 +170,9 @@
     invoke-virtual {p0, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
 
     .line 5
-    iget-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->downstream:Lio/reactivex/Observer;
+    iget-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->downstream:Lc/a/r;
 
-    invoke-interface {p2, p0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p2, p0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
 
     :goto_1
     if-ge v2, v1, :cond_2
@@ -190,7 +190,7 @@
 
     aget-object v3, v0, v2
 
-    invoke-interface {p2, v3}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
+    invoke-interface {p2, v3}, Lc/a/p;->a(Lc/a/r;)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -200,12 +200,12 @@
     return-void
 .end method
 
-.method a(ZZLio/reactivex/Observer;ZLio/reactivex/internal/operators/observable/ObservableZip$a;)Z
+.method a(ZZLc/a/r;ZLio/reactivex/internal/operators/observable/ObservableZip$a;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ZZ",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TR;>;Z",
             "Lio/reactivex/internal/operators/observable/ObservableZip$a<",
             "**>;)Z"
@@ -243,13 +243,13 @@
     if-eqz p1, :cond_1
 
     .line 15
-    invoke-interface {p3, p1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p3, p1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     .line 16
     :cond_1
-    invoke-interface {p3}, Lio/reactivex/Observer;->b()V
+    invoke-interface {p3}, Lc/a/r;->b()V
 
     :goto_0
     return v1
@@ -267,7 +267,7 @@
     invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->a()V
 
     .line 20
-    invoke-interface {p3, p1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p3, p1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     return v1
 
@@ -281,7 +281,7 @@
     invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->a()V
 
     .line 23
-    invoke-interface {p3}, Lio/reactivex/Observer;->b()V
+    invoke-interface {p3}, Lc/a/r;->b()V
 
     return v1
 
@@ -333,9 +333,9 @@
     aget-object v3, v0, v2
 
     .line 2
-    iget-object v3, v3, Lio/reactivex/internal/operators/observable/ObservableZip$a;->b:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+    iget-object v3, v3, Lio/reactivex/internal/operators/observable/ObservableZip$a;->b:Lio/reactivex/internal/queue/a;
 
-    invoke-virtual {v3}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->clear()V
+    invoke-virtual {v3}, Lio/reactivex/internal/queue/a;->clear()V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -364,7 +364,7 @@
     iget-object v0, v7, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->observers:[Lio/reactivex/internal/operators/observable/ObservableZip$a;
 
     .line 3
-    iget-object v8, v7, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->downstream:Lio/reactivex/Observer;
+    iget-object v8, v7, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->downstream:Lc/a/r;
 
     .line 4
     iget-object v9, v7, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->row:[Ljava/lang/Object;
@@ -403,9 +403,9 @@
     iget-boolean v2, v6, Lio/reactivex/internal/operators/observable/ObservableZip$a;->c:Z
 
     .line 9
-    iget-object v1, v6, Lio/reactivex/internal/operators/observable/ObservableZip$a;->b:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+    iget-object v1, v6, Lio/reactivex/internal/operators/observable/ObservableZip$a;->b:Lio/reactivex/internal/queue/a;
 
-    invoke-virtual {v1}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->poll()Ljava/lang/Object;
+    invoke-virtual {v1}, Lio/reactivex/internal/queue/a;->poll()Ljava/lang/Object;
 
     move-result-object v18
 
@@ -428,7 +428,7 @@
     move v5, v10
 
     .line 10
-    invoke-virtual/range {v1 .. v6}, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->a(ZZLio/reactivex/Observer;ZLio/reactivex/internal/operators/observable/ObservableZip$a;)Z
+    invoke-virtual/range {v1 .. v6}, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->a(ZZLc/a/r;ZLio/reactivex/internal/operators/observable/ObservableZip$a;)Z
 
     move-result v1
 
@@ -469,7 +469,7 @@
     invoke-virtual/range {p0 .. p0}, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->a()V
 
     .line 16
-    invoke-interface {v8, v1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v8, v1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -498,24 +498,24 @@
     .line 18
     :cond_8
     :try_start_0
-    iget-object v1, v7, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->zipper:Lio/reactivex/functions/Function;
+    iget-object v1, v7, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->zipper:Lc/a/z/j;
 
     invoke-virtual {v9}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-interface {v1, v2}, Lio/reactivex/functions/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v2}, Lc/a/z/j;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     const-string v2, "The zipper returned a null value"
 
-    invoke-static {v1, v2}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v1, v2}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 19
-    invoke-interface {v8, v1}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
+    invoke-interface {v8, v1}, Lc/a/r;->b(Ljava/lang/Object;)V
 
     const/4 v1, 0x0
 
@@ -528,13 +528,13 @@
     move-exception v0
 
     .line 21
-    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
 
     .line 22
     invoke-virtual/range {p0 .. p0}, Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;->a()V
 
     .line 23
-    invoke-interface {v8, v0}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v8, v0}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method

@@ -40,7 +40,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$m;->a:Lcom/vk/cameraui/widgets/shutter/ShutterButton;
 
-    invoke-static {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    invoke-static {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/a;
 
     move-result-object v0
 
@@ -64,7 +64,7 @@
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->d(F)V
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/a;->d(F)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$m;->a:Lcom/vk/cameraui/widgets/shutter/ShutterButton;

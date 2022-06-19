@@ -3,7 +3,7 @@
 .source "PosterTextViews.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/views/poster/PosterTextViews;
+.implements Lcom/vk/newsfeed/views/poster/e;
 
 
 # instance fields

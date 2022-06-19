@@ -19,32 +19,32 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;",
+            "Lcom/vk/im/engine/internal/storage/models/c;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
+.field private final b:Lcom/vk/im/engine/internal/storage/models/d;
 
 .field private final c:Z
 
 .field private final d:Z
 
-.field private final e:Lcom/vk/im/engine/models/EntityIntMap;
+.field private final e:Lcom/vk/im/engine/models/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/models/EntityIntMap<",
+            "Lcom/vk/im/engine/models/a<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final f:Lcom/vk/im/engine/models/EntityIntMap;
+.field private final f:Lcom/vk/im/engine/models/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/models/EntityIntMap<",
+            "Lcom/vk/im/engine/models/a<",
             "Lcom/vk/im/engine/models/messages/Msg;",
             ">;"
         }
@@ -55,20 +55,20 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;ZZLcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;I)V
+.method public constructor <init>(Ljava/util/List;Lcom/vk/im/engine/internal/storage/models/d;ZZLcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;",
+            "Lcom/vk/im/engine/internal/storage/models/c;",
             ">;",
-            "Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;",
+            "Lcom/vk/im/engine/internal/storage/models/d;",
             "ZZ",
-            "Lcom/vk/im/engine/models/EntityIntMap<",
+            "Lcom/vk/im/engine/models/a<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;",
-            "Lcom/vk/im/engine/models/EntityIntMap<",
+            "Lcom/vk/im/engine/models/a<",
             "Lcom/vk/im/engine/models/messages/Msg;",
             ">;I)V"
         }
@@ -79,15 +79,15 @@
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->a:Ljava/util/List;
 
-    iput-object p2, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->b:Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
+    iput-object p2, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->b:Lcom/vk/im/engine/internal/storage/models/d;
 
     iput-boolean p3, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->c:Z
 
     iput-boolean p4, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->d:Z
 
-    iput-object p5, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->e:Lcom/vk/im/engine/models/EntityIntMap;
+    iput-object p5, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->e:Lcom/vk/im/engine/models/a;
 
-    iput-object p6, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->f:Lcom/vk/im/engine/models/EntityIntMap;
+    iput-object p6, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->f:Lcom/vk/im/engine/models/a;
 
     iput p7, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->g:I
 
@@ -118,28 +118,28 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;
+    check-cast v2, Lcom/vk/im/engine/internal/storage/models/c;
 
     .line 3
-    iget-object v3, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->e:Lcom/vk/im/engine/models/EntityIntMap;
+    iget-object v3, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->e:Lcom/vk/im/engine/models/a;
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;->a()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/c;->a()I
 
     move-result v4
 
-    invoke-virtual {v3, v4}, Lcom/vk/im/engine/models/EntityIntMap;->h(I)Z
+    invoke-virtual {v3, v4}, Lcom/vk/im/engine/models/a;->h(I)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    iget-object v3, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->f:Lcom/vk/im/engine/models/EntityIntMap;
+    iget-object v3, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->f:Lcom/vk/im/engine/models/a;
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;->b()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/c;->b()I
 
     move-result v2
 
-    invoke-virtual {v3, v2}, Lcom/vk/im/engine/models/EntityIntMap;->h(I)Z
+    invoke-virtual {v3, v2}, Lcom/vk/im/engine/models/a;->h(I)Z
 
     move-result v2
 
@@ -162,19 +162,19 @@
     return v0
 .end method
 
-.method public final b()Lcom/vk/im/engine/models/EntityIntMap;
+.method public final b()Lcom/vk/im/engine/models/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/im/engine/models/EntityIntMap<",
+            "Lcom/vk/im/engine/models/a<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->e:Lcom/vk/im/engine/models/EntityIntMap;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->e:Lcom/vk/im/engine/models/a;
 
     return-object v0
 .end method
@@ -203,7 +203,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;",
+            "Lcom/vk/im/engine/internal/storage/models/c;",
             ">;"
         }
     .end annotation
@@ -214,11 +214,11 @@
     return-object v0
 .end method
 
-.method public final f()Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
+.method public final f()Lcom/vk/im/engine/internal/storage/models/d;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->b:Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->b:Lcom/vk/im/engine/internal/storage/models/d;
 
     return-object v0
 .end method
@@ -227,11 +227,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->b:Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->b:Lcom/vk/im/engine/internal/storage/models/d;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->d()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/d;->d()I
 
     move-result v0
 
@@ -250,19 +250,19 @@
     return v0
 .end method
 
-.method public final h()Lcom/vk/im/engine/models/EntityIntMap;
+.method public final h()Lcom/vk/im/engine/models/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/im/engine/models/EntityIntMap<",
+            "Lcom/vk/im/engine/models/a<",
             "Lcom/vk/im/engine/models/messages/Msg;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->f:Lcom/vk/im/engine/models/EntityIntMap;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->f:Lcom/vk/im/engine/models/a;
 
     return-object v0
 .end method

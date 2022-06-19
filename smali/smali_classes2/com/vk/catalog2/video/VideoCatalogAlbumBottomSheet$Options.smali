@@ -49,11 +49,11 @@
     new-instance v7, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$Options;
 
     .line 1
-    sget v4, Lcom/vk/libvideo/R;->edit:I
+    sget v4, Lcom/vk/libvideo/g;->edit:I
 
-    sget v5, Lcom/vk/libvideo/R7;->ic_write_outline_28:I
+    sget v5, Lcom/vk/libvideo/e;->ic_write_outline_28:I
 
-    sget v6, Lcom/vk/libvideo/R11;->video_album_edit:I
+    sget v6, Lcom/vk/libvideo/j;->video_album_edit:I
 
     const-string v2, "EDIT"
 
@@ -72,11 +72,11 @@
     new-instance v1, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$Options;
 
     .line 2
-    sget v11, Lcom/vk/libvideo/R;->remove:I
+    sget v11, Lcom/vk/libvideo/g;->remove:I
 
-    sget v12, Lcom/vk/libvideo/R7;->ic_delete_outline_28:I
+    sget v12, Lcom/vk/libvideo/e;->ic_delete_outline_28:I
 
-    sget v13, Lcom/vk/libvideo/R11;->video_album_remove:I
+    sget v13, Lcom/vk/libvideo/j;->video_album_remove:I
 
     const-string v9, "REMOVE"
 

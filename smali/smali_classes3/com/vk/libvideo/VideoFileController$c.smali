@@ -1,5 +1,5 @@
 .class public final Lcom/vk/libvideo/VideoFileController$c;
-.super Lcom/vk/libvideo/VideoDisposableObserver;
+.super Lcom/vk/libvideo/o;
 .source "VideoFileController.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/libvideo/VideoDisposableObserver<",
+        "Lcom/vk/libvideo/o<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -45,7 +45,7 @@
 
     iput-object p2, p0, Lcom/vk/libvideo/VideoFileController$c;->d:Landroid/content/Context;
 
-    invoke-direct {p0, p3}, Lcom/vk/libvideo/VideoDisposableObserver;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p3}, Lcom/vk/libvideo/o;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -121,7 +121,7 @@
 
     .line 6
     :cond_1
-    new-instance p1, Lcom/vk/libvideo/y/VideoEvents6;
+    new-instance p1, Lcom/vk/libvideo/y/l;
 
     iget-object v0, p0, Lcom/vk/libvideo/VideoFileController$c;->c:Lcom/vk/libvideo/VideoFileController;
 
@@ -129,12 +129,12 @@
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vk/libvideo/y/VideoEvents6;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {p1, v0}, Lcom/vk/libvideo/y/l;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
-    invoke-static {p1}, Lcom/vk/libvideo/y/VideoEventBus;->a(Lcom/vk/libvideo/y/VideoEvents1;)V
+    invoke-static {p1}, Lcom/vk/libvideo/y/m;->a(Lcom/vk/libvideo/y/a;)V
 
     .line 7
-    new-instance p1, Lcom/vk/libvideo/y/VideoEvents5;
+    new-instance p1, Lcom/vk/libvideo/y/b;
 
     iget-object v0, p0, Lcom/vk/libvideo/VideoFileController$c;->c:Lcom/vk/libvideo/VideoFileController;
 
@@ -142,14 +142,14 @@
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vk/libvideo/y/VideoEvents5;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {p1, v0}, Lcom/vk/libvideo/y/b;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
-    invoke-static {p1}, Lcom/vk/libvideo/y/VideoEventBus;->a(Lcom/vk/libvideo/y/VideoEvents1;)V
+    invoke-static {p1}, Lcom/vk/libvideo/y/m;->a(Lcom/vk/libvideo/y/a;)V
 
     .line 8
     sget-object p1, Lcom/vk/media/player/VideoHelper;->c:Lcom/vk/media/player/VideoHelper;
 
-    invoke-virtual {p1}, Lcom/vk/media/player/VideoHelper;->a()Lcom/vk/media/player/PlayerAnalytics$a;
+    invoke-virtual {p1}, Lcom/vk/media/player/VideoHelper;->a()Lcom/vk/media/player/b$a;
 
     move-result-object p1
 
@@ -183,13 +183,13 @@
 
     invoke-direct {v0, v3, v4}, Landroidx/core/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/media/player/PlayerAnalytics$a;->a(Landroidx/core/util/Pair;Z)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/media/player/b$a;->a(Landroidx/core/util/Pair;Z)V
 
     .line 9
     :cond_2
     iget-object p1, p0, Lcom/vk/libvideo/VideoFileController$c;->d:Landroid/content/Context;
 
-    sget v0, Lcom/vk/libvideo/R11;->video_added:I
+    sget v0, Lcom/vk/libvideo/j;->video_added:I
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -211,7 +211,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v2, v0, v1}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+    invoke-static {p1, v2, v0, v1}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -220,7 +220,7 @@
     .locals 2
 
     .line 10
-    invoke-super {p0, p1}, Lcom/vk/libvideo/VideoDisposableObserver;->a(Ljava/lang/Throwable;)V
+    invoke-super {p0, p1}, Lcom/vk/libvideo/o;->a(Ljava/lang/Throwable;)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/libvideo/VideoFileController$c;->c:Lcom/vk/libvideo/VideoFileController;

@@ -3,7 +3,7 @@
 .source "BaseActionSerializeManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/vk/auidoipc/communication/commands/serializer/BaseActionSerializeManager;",
         ">;"
     }
@@ -65,7 +65,7 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2, v1}, Lcom/vk/auidoipc/communication/commands/serializer/BaseActionSerializeManager;-><init>(Lcom/vk/audioipc/core/SerializeManager;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1, v2, v1}, Lcom/vk/auidoipc/communication/commands/serializer/BaseActionSerializeManager;-><init>(Lcom/vk/audioipc/core/m;ILkotlin/jvm/internal/i;)V
 
     return-object v0
 .end method

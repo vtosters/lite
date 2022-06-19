@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/account/verify/PhoneVerifyManager$b;)V
+.method public final a(Lcom/vk/account/verify/g$b;)V
     .locals 4
 
     .line 1
@@ -54,9 +54,9 @@
 
     new-instance v3, Lcom/vk/account/verify/views/PhoneErrorView$PhoneBusyView$ModalDialogListenerImpl;
 
-    invoke-direct {v3, v0, p1}, Lcom/vk/account/verify/views/PhoneErrorView$PhoneBusyView$ModalDialogListenerImpl;-><init>(Landroid/content/Context;Lcom/vk/account/verify/PhoneVerifyManager$b;)V
+    invoke-direct {v3, v0, p1}, Lcom/vk/account/verify/views/PhoneErrorView$PhoneBusyView$ModalDialogListenerImpl;-><init>(Landroid/content/Context;Lcom/vk/account/verify/g$b;)V
 
-    invoke-direct {v2, v0, p1, v3}, Lcom/vk/account/verify/views/PhoneErrorView$PhoneBusyView;-><init>(Landroid/content/Context;Lcom/vk/account/verify/PhoneVerifyManager$b;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;)V
+    invoke-direct {v2, v0, p1, v3}, Lcom/vk/account/verify/views/PhoneErrorView$PhoneBusyView;-><init>(Landroid/content/Context;Lcom/vk/account/verify/g$b;Lcom/vk/core/dialogs/bottomsheet/h$c;)V
 
     invoke-virtual {v1, v0, v2}, Lcom/vk/account/verify/views/PhoneErrorView$a;->a(Landroid/app/Activity;Lcom/vk/account/verify/views/PhoneErrorView;)V
 

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Lorg/json/JSONArray;Lcom/facebook/GraphResponse;)V
+.method public abstract a(Lorg/json/JSONArray;Lcom/facebook/i;)V
 .end method

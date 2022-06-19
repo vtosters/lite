@@ -3,7 +3,7 @@
 .source "ModelsManager.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Predicate;
+.implements Lc/a/z/l;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Predicate<",
+        "Lc/a/z/l<",
         "Lcom/vk/core/network/RxFileDownloader$c;",
         ">;"
     }

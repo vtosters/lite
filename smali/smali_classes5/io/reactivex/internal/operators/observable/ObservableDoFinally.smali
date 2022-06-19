@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/observable/ObservableDoFinally;
-.super Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;
+.super Lio/reactivex/internal/operators/observable/a;
 .source "ObservableDoFinally.java"
 
 
@@ -15,60 +15,60 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream<",
+        "Lio/reactivex/internal/operators/observable/a<",
         "TT;TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final b:Lio/reactivex/functions/Action;
+.field final b:Lc/a/z/a;
 
 
 # direct methods
-.method public constructor <init>(Lio/reactivex/ObservableSource;Lio/reactivex/functions/Action;)V
+.method public constructor <init>(Lc/a/p;Lc/a/z/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/ObservableSource<",
+            "Lc/a/p<",
             "TT;>;",
-            "Lio/reactivex/functions/Action;",
+            "Lc/a/z/a;",
             ")V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;-><init>(Lio/reactivex/ObservableSource;)V
+    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/a;-><init>(Lc/a/p;)V
 
     .line 2
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally;->b:Lio/reactivex/functions/Action;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally;->b:Lc/a/z/a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected b(Lio/reactivex/Observer;)V
+.method protected b(Lc/a/r;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;->a:Lio/reactivex/ObservableSource;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/a;->a:Lc/a/p;
 
     new-instance v1, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;
 
-    iget-object v2, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally;->b:Lio/reactivex/functions/Action;
+    iget-object v2, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally;->b:Lc/a/z/a;
 
-    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;-><init>(Lio/reactivex/Observer;Lio/reactivex/functions/Action;)V
+    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;-><init>(Lc/a/r;Lc/a/z/a;)V
 
-    invoke-interface {v0, v1}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
+    invoke-interface {v0, v1}, Lc/a/p;->a(Lc/a/r;)V
 
     return-void
 .end method

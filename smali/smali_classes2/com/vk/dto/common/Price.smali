@@ -25,10 +25,10 @@
     .end annotation
 .end field
 
-.field private static final e:Lcom/vk/dto/common/data/JsonParser;
+.field private static final e:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/dto/common/Price;",
             ">;"
         }
@@ -56,7 +56,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/common/Price$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/common/Price$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/common/Price;->f:Lcom/vk/dto/common/Price$c;
 
@@ -65,7 +65,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/common/Price$a;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/common/Price;->e:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/dto/common/Price;->e:Lcom/vk/dto/common/data/c;
 
     .line 2
     new-instance v0, Lcom/vk/dto/common/Price$b;
@@ -95,11 +95,11 @@
     return-void
 .end method
 
-.method public static final synthetic v()Lcom/vk/dto/common/data/JsonParser;
+.method public static final synthetic v()Lcom/vk/dto/common/data/c;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/dto/common/Price;->e:Lcom/vk/dto/common/data/JsonParser;
+    sget-object v0, Lcom/vk/dto/common/Price;->e:Lcom/vk/dto/common/data/c;
 
     return-object v0
 .end method
@@ -174,7 +174,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/common/Price;->c:Lcom/vk/dto/common/Currency;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -184,7 +184,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/common/Price;->d:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vtosters/lite/api/execute/DocsGetTypes;
-.super Lcom/vk/api/base/ApiRequest;
+.super Lcom/vk/api/base/d;
 .source "DocsGetTypes.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/ApiRequest<",
+        "Lcom/vk/api/base/d<",
         "Lcom/vtosters/lite/api/execute/DocsGetTypes$c;",
         ">;"
     }
@@ -30,7 +30,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -41,19 +41,19 @@
     const-string v0, "execute.getDocTypes"
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
 
     const-string v0, "owner_id"
 
     .line 2
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
 
     const-string p1, "func_v"
 
     const/4 v0, 0x2
 
     .line 3
-    invoke-virtual {p0, p1, v0}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
 
     return-void
 .end method
@@ -102,13 +102,13 @@
 
     move-result-object v1
 
-    sget-object v3, Lcom/vk/api/base/Document;->M:Lcom/vk/dto/common/data/JsonParser;
+    sget-object v3, Lcom/vk/api/base/Document;->M:Lcom/vk/dto/common/data/c;
 
     const-string v4, "Document.PARSER"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v1, v3}, Lcom/vk/api/base/VkPaginationList1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/api/base/VkPaginationList;
+    invoke-static {v1, v3}, Lcom/vk/api/base/k;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/api/base/VkPaginationList;
 
     move-result-object v1
 
@@ -160,7 +160,7 @@
 
     const-string v7, "array.getJSONObject(i)"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v5, v6}, Lcom/vtosters/lite/api/execute/DocsGetTypes$b;-><init>(Lorg/json/JSONObject;)V
 

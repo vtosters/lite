@@ -3,7 +3,7 @@
 .source "SingleToFlowable.java"
 
 # interfaces
-.implements Lio/reactivex/SingleObserver;
+.implements Lc/a/v;
 
 
 # annotations
@@ -23,7 +23,7 @@
         ">",
         "Lio/reactivex/internal/subscriptions/DeferredScalarSubscription<",
         "TT;>;",
-        "Lio/reactivex/SingleObserver<",
+        "Lc/a/v<",
         "TT;>;"
     }
 .end annotation
@@ -34,47 +34,47 @@
 
 
 # instance fields
-.field upstream:Lio/reactivex/disposables/Disposable;
+.field upstream:Lio/reactivex/disposables/b;
 
 
 # direct methods
-.method constructor <init>(Le/b/Subscriber;)V
+.method constructor <init>(Le/b/c;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/Subscriber<",
+            "Le/b/c<",
             "-TT;>;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;-><init>(Le/b/Subscriber;)V
+    invoke-direct {p0, p1}, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;-><init>(Le/b/c;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleToFlowable$SingleToFlowableObserver;->upstream:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleToFlowable$SingleToFlowableObserver;->upstream:Lio/reactivex/disposables/b;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/b;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleToFlowable$SingleToFlowableObserver;->upstream:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleToFlowable$SingleToFlowableObserver;->upstream:Lio/reactivex/disposables/b;
 
     .line 3
-    iget-object p1, p0, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;->downstream:Le/b/Subscriber;
+    iget-object p1, p0, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;->downstream:Le/b/c;
 
-    invoke-interface {p1, p0}, Le/b/Subscriber;->a(Le/b/Subscription;)V
+    invoke-interface {p1, p0}, Le/b/c;->a(Le/b/d;)V
 
     :cond_0
     return-void
@@ -98,9 +98,9 @@
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;->downstream:Le/b/Subscriber;
+    iget-object v0, p0, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;->downstream:Le/b/c;
 
-    invoke-interface {v0, p1}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Le/b/c;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -112,9 +112,9 @@
     invoke-super {p0}, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;->cancel()V
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleToFlowable$SingleToFlowableObserver;->upstream:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleToFlowable$SingleToFlowableObserver;->upstream:Lio/reactivex/disposables/b;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     return-void
 .end method

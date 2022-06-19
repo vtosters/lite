@@ -76,7 +76,7 @@
 
     iget-object p1, p1, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1;->a:Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;
 
-    invoke-static {p1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)Lcom/vk/music/stats/MusicStatsTracker;
+    invoke-static {p1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;)Lcom/vk/music/stats/d;
 
     move-result-object p1
 
@@ -84,7 +84,7 @@
 
     iget-object v0, v0, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1;->b:Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Lcom/vk/music/stats/MusicStatsTracker;->b(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/music/stats/d;->b(Ljava/lang/String;)V
 
     :cond_0
     return-void

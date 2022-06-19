@@ -1,9 +1,9 @@
 .class public final Lcom/vk/menu/SearchMenuFragment;
-.super Lcom/vk/core/fragments/BaseMvpFragment;
+.super Lcom/vk/core/fragments/c;
 .source "SearchMenuFragment.kt"
 
 # interfaces
-.implements Lcom/vk/menu/SearchMenuContract1;
+.implements Lcom/vk/menu/f;
 
 
 # annotations
@@ -15,10 +15,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/BaseMvpFragment<",
-        "Lcom/vk/menu/SearchMenuContract;",
+        "Lcom/vk/core/fragments/c<",
+        "Lcom/vk/menu/e;",
         ">;",
-        "Lcom/vk/menu/SearchMenuContract1;"
+        "Lcom/vk/menu/f;"
     }
 .end annotation
 
@@ -49,7 +49,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/menu/SearchMenuFragment$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/menu/SearchMenuFragment$Companion;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/menu/SearchMenuFragment;->M:Lcom/vk/menu/SearchMenuFragment$Companion;
 
@@ -60,14 +60,14 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/menu/SearchMenuPresenter;
 
-    invoke-direct {v0, p0}, Lcom/vk/menu/SearchMenuPresenter;-><init>(Lcom/vk/menu/SearchMenuContract1;)V
+    invoke-direct {v0, p0}, Lcom/vk/menu/SearchMenuPresenter;-><init>(Lcom/vk/menu/f;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/BaseMvpFragment;->a(Lb/h/r/BaseScreenContract;)V
+    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/c;->a(Lb/h/r/c;)V
 
     return-void
 .end method
@@ -107,7 +107,7 @@
     const-string v0, "searchQr"
 
     .line 5
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -115,7 +115,7 @@
     const-string v0, "searchView"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -137,7 +137,7 @@
     :cond_0
     const-string p0, "menuAdapter"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -186,7 +186,7 @@
     const-string v3, "animator"
 
     .line 9
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v6, 0xc8
 
@@ -204,7 +204,7 @@
 
     invoke-direct {v8, v1, p1}, Lcom/vk/menu/SearchMenuFragment$shiftQrWithSearchView$$inlined$also$lambda$2;-><init>(Landroid/widget/LinearLayout$LayoutParams;Landroid/view/View;)V
 
-    invoke-static {v0, v8}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/Functions;)Landroid/animation/ValueAnimator;
+    invoke-static {v0, v8}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/a;)Landroid/animation/ValueAnimator;
 
     new-array v1, v2, [I
 
@@ -256,7 +256,7 @@
     invoke-virtual {v1, v8}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 15
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v6, v7}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
@@ -284,7 +284,7 @@
     invoke-virtual {v6, v7}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 19
-    invoke-static {v6, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v7, 0x50
 
@@ -322,17 +322,17 @@
 
     .line 24
     :cond_0
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v10
 
     :cond_1
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v10
 
     :cond_2
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v10
 
@@ -402,7 +402,7 @@
     :cond_0
     const-string p0, "searchView"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -422,15 +422,15 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/menu/SearchMenuContract;
+    check-cast v0, Lcom/vk/menu/e;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/menu/SearchMenuContract;->n(I)V
+    invoke-interface {v0, p1}, Lcom/vk/menu/e;->n(I)V
 
     :cond_0
     return-void
@@ -471,12 +471,12 @@
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     return-void
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
@@ -484,7 +484,7 @@
     const-string p1, "searchView"
 
     .line 6
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -527,7 +527,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v2, v4, v3, v4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v0, v2, v4, v3, v4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -558,7 +558,7 @@
             "(I",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/common/i/RecyclerItem;",
+            "Lcom/vk/common/i/b;",
             ">;)V"
         }
     .end annotation
@@ -575,7 +575,7 @@
     :cond_0
     const-string p1, "menuAdapter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -589,7 +589,7 @@
             "(I",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/common/i/RecyclerItem;",
+            "Lcom/vk/common/i/b;",
             ">;)V"
         }
     .end annotation
@@ -606,7 +606,7 @@
     :cond_0
     const-string p1, "menuAdapter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -620,7 +620,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/common/i/RecyclerItem;",
+            "Lcom/vk/common/i/b;",
             ">;)V"
         }
     .end annotation
@@ -637,7 +637,7 @@
     :cond_0
     const-string p1, "menuAdapter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -665,7 +665,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/menu/SearchMenuFragment$onCreateView$1;-><init>(Lcom/vk/menu/SearchMenuFragment;)V
 
-    invoke-static {p1, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-static {p1, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
 
     move-result-object p2
 
@@ -680,7 +680,7 @@
     const/4 v1, 0x0
 
     .line 3
-    invoke-static {p1, p2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -695,7 +695,7 @@
 
     const v4, 0x7f0a085b
 
-    invoke-static {v2, v4, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v2, v4, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -724,7 +724,7 @@
 
     const v4, 0x7f0a0853
 
-    invoke-static {v2, v4, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v2, v4, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -765,7 +765,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/menu/SearchMenuFragment$onCreateView$5;-><init>(Lcom/vk/menu/SearchMenuFragment;)V
 
-    invoke-static {p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
+    invoke-static {p1, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
 
     .line 17
     new-instance p2, Lcom/vk/menu/SearchMenuAdapter;
@@ -774,14 +774,14 @@
 
     invoke-direct {p3, p0}, Lcom/vk/menu/SearchMenuFragment$onCreateView$6;-><init>(Lcom/vk/menu/SearchMenuFragment;)V
 
-    invoke-direct {p2, p3}, Lcom/vk/menu/SearchMenuAdapter;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p2, p3}, Lcom/vk/menu/SearchMenuAdapter;-><init>(Lkotlin/jvm/b/b;)V
 
     iput-object p2, p0, Lcom/vk/menu/SearchMenuFragment;->H:Lcom/vk/menu/SearchMenuAdapter;
 
     const p2, 0x7f0a0b46
 
     .line 18
-    invoke-static {p1, p2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -808,15 +808,15 @@
     invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 21
-    new-instance p3, Lcom/vk/core/ui/MilkshakeDecoration;
+    new-instance p3, Lcom/vk/core/ui/m;
 
-    invoke-direct {p3}, Lcom/vk/core/ui/MilkshakeDecoration;-><init>()V
+    invoke-direct {p3}, Lcom/vk/core/ui/m;-><init>()V
 
     iget-object v2, p0, Lcom/vk/menu/SearchMenuFragment;->H:Lcom/vk/menu/SearchMenuAdapter;
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {p3, v2}, Lcom/vk/core/ui/MilkshakeDecoration;->a(Lcom/vk/core/ui/MilkshakeProvider;)Lcom/vk/core/ui/MilkshakeDecoration;
+    invoke-virtual {p3, v2}, Lcom/vk/core/ui/m;->a(Lcom/vk/core/ui/n;)Lcom/vk/core/ui/m;
 
     invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -824,13 +824,13 @@
     iput-object p2, p0, Lcom/vk/menu/SearchMenuFragment;->G:Landroidx/recyclerview/widget/RecyclerView;
 
     .line 23
-    sget-object p2, Lcom/vk/menu/MenuUtils;->INSTANCE:Lcom/vk/menu/MenuUtils;
+    sget-object p2, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
 
     iget-object p3, p0, Lcom/vk/menu/SearchMenuFragment;->H:Lcom/vk/menu/SearchMenuAdapter;
 
     if-eqz p3, :cond_1
 
-    invoke-virtual {p2, p3}, Lcom/vk/menu/MenuUtils;->a(Lcom/vk/menu/MenuUtils$a;)V
+    invoke-virtual {p2, p3}, Lcom/vk/menu/c;->a(Lcom/vk/menu/c$a;)V
 
     .line 24
     iget-object p2, p0, Lcom/vk/menu/SearchMenuFragment;->J:Landroid/view/View;
@@ -841,56 +841,56 @@
 
     invoke-direct {p3, p0}, Lcom/vk/menu/SearchMenuFragment$onCreateView$8;-><init>(Lcom/vk/menu/SearchMenuFragment;)V
 
-    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-object p1
 
     :cond_0
     const-string p1, "searchQr"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 25
     :cond_1
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 26
     :cond_2
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 27
     :cond_3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 28
     :cond_4
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 29
     :cond_5
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 30
     :cond_6
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 31
     :cond_7
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -914,12 +914,12 @@
     iput-object v0, p0, Lcom/vk/menu/SearchMenuFragment;->G:Landroidx/recyclerview/widget/RecyclerView;
 
     .line 2
-    sget-object v1, Lcom/vk/menu/MenuUtils;->INSTANCE:Lcom/vk/menu/MenuUtils;
+    sget-object v1, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
 
-    invoke-virtual {v1, v0}, Lcom/vk/menu/MenuUtils;->a(Lcom/vk/menu/MenuUtils$a;)V
+    invoke-virtual {v1, v0}, Lcom/vk/menu/c;->a(Lcom/vk/menu/c$a;)V
 
     .line 3
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/vk/core/fragments/c;->onDestroyView()V
 
     return-void
 .end method
@@ -928,7 +928,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/c;->onPause()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
@@ -937,13 +937,13 @@
 
     const-string v1, "requireActivity()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/Window;)V
+    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/Window;)V
 
     .line 3
     sget-object v0, Lcom/vk/stats/AppUseTime;->f:Lcom/vk/stats/AppUseTime;
@@ -959,7 +959,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/c;->onResume()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
@@ -968,13 +968,13 @@
 
     const-string v1, "requireActivity()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/Window;)V
+    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/view/Window;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/menu/SearchMenuFragment;->H:Lcom/vk/menu/SearchMenuAdapter;
@@ -999,7 +999,7 @@
     const-string v0, "menuAdapter"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1021,7 +1021,7 @@
     :cond_0
     const-string p1, "menuAdapter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1045,7 +1045,7 @@
     :cond_0
     const-string p1, "menuAdapter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

@@ -3,12 +3,12 @@
 .source "MusicSearchContainer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/search/MusicSearchContainer;->b(Lkotlin/jvm/b/Functions;)Landroid/view/View;
+    value = Lcom/vk/music/search/MusicSearchContainer;->b(Lkotlin/jvm/b/a;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -29,20 +29,20 @@
 # instance fields
 .field final synthetic $this_apply:Lcom/vk/core/view/search/ModernSearchView;
 
-.field final synthetic $voiceButtonAction$inlined:Lkotlin/jvm/b/Functions;
+.field final synthetic $voiceButtonAction$inlined:Lkotlin/jvm/b/a;
 
 .field final synthetic this$0:Lcom/vk/music/search/MusicSearchContainer;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/view/search/ModernSearchView;Lcom/vk/music/search/MusicSearchContainer;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/core/view/search/ModernSearchView;Lcom/vk/music/search/MusicSearchContainer;Lkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/music/search/MusicSearchContainer$initOldTheme$$inlined$apply$lambda$1;->$this_apply:Lcom/vk/core/view/search/ModernSearchView;
 
     iput-object p2, p0, Lcom/vk/music/search/MusicSearchContainer$initOldTheme$$inlined$apply$lambda$1;->this$0:Lcom/vk/music/search/MusicSearchContainer;
 
-    iput-object p3, p0, Lcom/vk/music/search/MusicSearchContainer$initOldTheme$$inlined$apply$lambda$1;->$voiceButtonAction$inlined:Lkotlin/jvm/b/Functions;
+    iput-object p3, p0, Lcom/vk/music/search/MusicSearchContainer$initOldTheme$$inlined$apply$lambda$1;->$voiceButtonAction$inlined:Lkotlin/jvm/b/a;
 
     const/4 p1, 0x0
 

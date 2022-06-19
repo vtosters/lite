@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -50,7 +50,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p1}, Lcom/vk/im/engine/internal/api_parsers/IdApiParser;->e(I)Lcom/vk/im/engine/models/Member;
+    invoke-static {p1}, Lcom/vk/im/engine/internal/g/q;->e(I)Lcom/vk/im/engine/models/Member;
 
     move-result-object p1
 
@@ -81,7 +81,7 @@
 
     const-string v0, "fromPublicId(id)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

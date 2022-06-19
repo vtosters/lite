@@ -3,7 +3,7 @@
 .source "FriendsCatalogFragment.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/analytics/CatalogBindListener;
+.implements Lcom/vk/catalog2/core/analytics/c;
 
 
 # annotations
@@ -41,7 +41,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/friends/catalog/FriendsCatalogFragment$MarkAsReadOnBind$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/friends/catalog/FriendsCatalogFragment$MarkAsReadOnBind$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
@@ -89,23 +89,23 @@
     iput-wide v0, p0, Lcom/vk/friends/catalog/FriendsCatalogFragment$MarkAsReadOnBind;->a:J
 
     .line 8
-    new-instance v0, Lcom/vk/api/friends/FriendsMarkAsRead;
+    new-instance v0, Lcom/vk/api/friends/n;
 
-    invoke-direct {v0}, Lcom/vk/api/friends/FriendsMarkAsRead;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/friends/n;-><init>()V
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
     .line 9
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
     .line 10
     sget-object v1, Lcom/vk/friends/catalog/FriendsCatalogFragment$MarkAsReadOnBind$tryMarkAsRead$1;->a:Lcom/vk/friends/catalog/FriendsCatalogFragment$MarkAsReadOnBind$tryMarkAsRead$1;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Lkotlin/jvm/b/Functions2;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Lkotlin/jvm/b/b;)Lio/reactivex/disposables/b;
 
     :cond_0
     return-void
@@ -134,23 +134,23 @@
     iput-wide v0, p0, Lcom/vk/friends/catalog/FriendsCatalogFragment$MarkAsReadOnBind;->b:J
 
     .line 5
-    new-instance v0, Lcom/vk/api/friends/FriendsMarkNewRecommendationsAsViewed;
+    new-instance v0, Lcom/vk/api/friends/o;
 
-    invoke-direct {v0}, Lcom/vk/api/friends/FriendsMarkNewRecommendationsAsViewed;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/friends/o;-><init>()V
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
     .line 6
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
     .line 7
     sget-object v1, Lcom/vk/friends/catalog/FriendsCatalogFragment$MarkAsReadOnBind$tryMarkAsViewed$1;->a:Lcom/vk/friends/catalog/FriendsCatalogFragment$MarkAsReadOnBind$tryMarkAsViewed$1;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Lkotlin/jvm/b/Functions2;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Lkotlin/jvm/b/b;)Lio/reactivex/disposables/b;
 
     :cond_0
     return-void
@@ -202,7 +202,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/catalog2/core/analytics/CatalogBindListener$a;->a(Lcom/vk/catalog2/core/analytics/CatalogBindListener;Lcom/vk/catalog2/core/blocks/UIBlock;)V
+    invoke-static {p0, p1}, Lcom/vk/catalog2/core/analytics/c$a;->a(Lcom/vk/catalog2/core/analytics/c;Lcom/vk/catalog2/core/blocks/UIBlock;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "RecyclerPaginatedView.java"
 
 # interfaces
-.implements Lcom/vk/lists/PaginationHelper$l;
+.implements Lcom/vk/lists/t$l;
 
 
 # annotations
@@ -41,11 +41,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView$k;->a:Lcom/vk/lists/RecyclerPaginatedView;
 
-    iget-object v0, v0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/PaginatedRecyclerAdapter;
+    iget-object v0, v0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/s;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginatedRecyclerAdapter;->m()I
+    invoke-virtual {v0}, Lcom/vk/lists/s;->m()I
 
     move-result v0
 
@@ -72,9 +72,9 @@
     .line 1
     iget-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView$k;->a:Lcom/vk/lists/RecyclerPaginatedView;
 
-    iget-object v0, v0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/PaginatedRecyclerAdapter;
+    iget-object v0, v0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/s;
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginatedRecyclerAdapter;->clear()V
+    invoke-virtual {v0}, Lcom/vk/lists/s;->clear()V
 
     return-void
 .end method

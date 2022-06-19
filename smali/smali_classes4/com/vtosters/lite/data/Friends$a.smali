@@ -3,7 +3,7 @@
 .source "Friends.java"
 
 # interfaces
-.implements Lcom/vk/api/base/ApiCallback;
+.implements Lcom/vk/api/base/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/ApiCallback<",
-        "Lcom/vk/api/friends/FriendsGet$b;",
+        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/friends/e$b;",
         ">;"
     }
 .end annotation
@@ -38,16 +38,16 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/api/friends/FriendsGet$b;)V
+.method public a(Lcom/vk/api/friends/e$b;)V
     .locals 1
 
     .line 2
     invoke-static {}, Lcom/vtosters/lite/data/Friends;->c()V
 
     .line 3
-    iget-object v0, p1, Lcom/vk/api/friends/FriendsGet$b;->a:Ljava/util/ArrayList;
+    iget-object v0, p1, Lcom/vk/api/friends/e$b;->a:Ljava/util/ArrayList;
 
-    iget-object p1, p1, Lcom/vk/api/friends/FriendsGet$b;->b:Ljava/util/List;
+    iget-object p1, p1, Lcom/vk/api/friends/e$b;->b:Ljava/util/List;
 
     invoke-static {v0, p1}, Lcom/vtosters/lite/data/Friends;->a(Ljava/util/List;Ljava/util/List;)V
 
@@ -68,11 +68,11 @@
     .locals 1
 
     .line 6
-    invoke-static {}, Lcom/vtosters/lite/j0/Cache;->c()Ljava/util/ArrayList;
+    invoke-static {}, Lcom/vtosters/lite/j0/b;->c()Ljava/util/ArrayList;
 
     move-result-object p1
 
-    invoke-static {}, Lcom/vtosters/lite/j0/Cache;->b()Ljava/util/ArrayList;
+    invoke-static {}, Lcom/vtosters/lite/j0/b;->b()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -95,9 +95,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/friends/FriendsGet$b;
+    check-cast p1, Lcom/vk/api/friends/e$b;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/data/Friends$a;->a(Lcom/vk/api/friends/FriendsGet$b;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/data/Friends$a;->a(Lcom/vk/api/friends/e$b;)V
 
     return-void
 .end method

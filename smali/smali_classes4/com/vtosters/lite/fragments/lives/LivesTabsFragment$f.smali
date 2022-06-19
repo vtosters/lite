@@ -42,17 +42,17 @@
 
     iget-object v0, v0, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vtosters/lite/fragments/lives/LivesPostListFragment;
+    check-cast v0, Lcom/vtosters/lite/fragments/lives/c;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vtosters/lite/fragments/lives/LivesPostListFragment;->q0:Lcom/vk/newsfeed/contracts/LivePostListContract1;
+    iget-object v0, v0, Lcom/vtosters/lite/fragments/lives/c;->q0:Lcom/vk/newsfeed/contracts/j;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/contracts/LivePostListContract1;->o(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/contracts/j;->o(Z)V
 
     .line 2
     :cond_0
@@ -62,17 +62,17 @@
 
     move-object v1, v0
 
-    check-cast v1, Lcom/vtosters/lite/fragments/lives/LivesPostListFragment;
+    check-cast v1, Lcom/vtosters/lite/fragments/lives/c;
 
     if-eqz v1, :cond_1
 
-    iget-object v1, v1, Lcom/vtosters/lite/fragments/lives/LivesPostListFragment;->q0:Lcom/vk/newsfeed/contracts/LivePostListContract1;
+    iget-object v1, v1, Lcom/vtosters/lite/fragments/lives/c;->q0:Lcom/vk/newsfeed/contracts/j;
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Lcom/vtosters/lite/fragments/lives/LivesPostListFragment;
+    check-cast v0, Lcom/vtosters/lite/fragments/lives/c;
 
-    invoke-interface {v1, v0}, Lcom/vk/newsfeed/contracts/EntriesListContract;->b(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-interface {v1, v0}, Lcom/vk/newsfeed/contracts/e;->b(Lcom/vk/core/fragments/FragmentImpl;)V
 
     :cond_1
     return-void

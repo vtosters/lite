@@ -1,11 +1,11 @@
 .class Lcom/vk/dto/common/data/VKList$a;
-.super Lcom/vk/dto/common/data/JsonParser;
+.super Lcom/vk/dto/common/data/c;
 .source "VKList.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)V
+    value = Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,24 +15,24 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/dto/common/data/JsonParser<",
+        "Lcom/vk/dto/common/data/c<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic b:Lkotlin/jvm/b/Functions2;
+.field final synthetic b:Lkotlin/jvm/b/b;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions2;)V
+.method constructor <init>(Lkotlin/jvm/b/b;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/dto/common/data/VKList$a;->b:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/dto/common/data/VKList$a;->b:Lkotlin/jvm/b/b;
 
-    invoke-direct {p0}, Lcom/vk/dto/common/data/JsonParser;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/data/c;-><init>()V
 
     return-void
 .end method
@@ -56,9 +56,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/dto/common/data/VKList$a;->b:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/dto/common/data/VKList$a;->b:Lkotlin/jvm/b/b;
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

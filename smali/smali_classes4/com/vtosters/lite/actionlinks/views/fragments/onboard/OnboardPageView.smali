@@ -18,9 +18,9 @@
 
 .field public c:Landroid/widget/TextView;
 
-.field public d:Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;
+.field public d:Lcom/vk/api/video/m$b;
 
-.field private e:Lio/reactivex/disposables/Disposable;
+.field private e:Lio/reactivex/disposables/b;
 
 
 # direct methods
@@ -94,7 +94,7 @@
     :cond_0
     const-string v0, "image"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -116,25 +116,25 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lc/a/m;
 
     move-result-object p1
 
     .line 3
-    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     .line 4
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
@@ -143,11 +143,11 @@
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView$a;-><init>(Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->e:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->e:Lio/reactivex/disposables/b;
 
     goto :goto_0
 
@@ -180,47 +180,47 @@
     return-void
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 8
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
-.method public final a(Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;)V
+.method public final a(Lcom/vk/api/video/m$b;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->d:Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;
+    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->d:Lcom/vk/api/video/m$b;
 
     return-void
 .end method
 
-.method public final d(Lio/reactivex/disposables/Disposable;)V
+.method public final d(Lio/reactivex/disposables/b;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->e:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->e:Lio/reactivex/disposables/b;
 
     return-void
 .end method
 
-.method public final e(Lkotlin/jvm/b/Functions;)V
+.method public final e(Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -263,7 +263,7 @@
 
     const-string v0, "contentView.findViewById(R.id.onboard_page_image)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -282,7 +282,7 @@
 
     const-string v0, "contentView.findViewById(R.id.onboard_page_text)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -301,7 +301,7 @@
 
     const-string v0, "contentView.findViewById(R.id.onboard_page_holder)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/ViewGroup;
 
@@ -316,7 +316,7 @@
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView$onCreateView$1;-><init>(Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;)V
 
-    invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions4;)V
+    invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/d;)V
 
     .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -380,23 +380,23 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p3
 
     :cond_1
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 9
     :cond_2
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p3
 
     :cond_3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p3
 
@@ -410,37 +410,37 @@
     return-object p1
 
     :cond_5
-    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 11
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p3
 
     .line 12
     :cond_7
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 13
     :cond_8
-    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 14
     :cond_9
-    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 15
     :cond_a
-    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p3
 
@@ -462,11 +462,11 @@
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroyView()V
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->e:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->e:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     return-void
@@ -515,9 +515,9 @@
     iget p1, p1, Landroid/util/DisplayMetrics;->heightPixels:I
 
     .line 5
-    sget-object p2, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;->e:Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b$a;
+    sget-object p2, Lcom/vk/api/video/m$b;->e:Lcom/vk/api/video/m$b$a;
 
-    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->d:Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;
+    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->d:Lcom/vk/api/video/m$b;
 
     const-string v1, "promoSlide"
 
@@ -525,15 +525,15 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;->c()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/api/video/m$b;->c()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0, p1}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b$a;->a(Ljava/util/List;I)Lcom/vk/api/video/VideoGetActionButtonsOnboarding$a;
+    invoke-virtual {p2, v0, p1}, Lcom/vk/api/video/m$b$a;->a(Ljava/util/List;I)Lcom/vk/api/video/m$a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$a;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/video/m$a;->b()Ljava/lang/String;
 
     move-result-object p1
 
@@ -545,11 +545,11 @@
 
     if-eqz p1, :cond_2
 
-    iget-object p2, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->d:Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;
+    iget-object p2, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->d:Lcom/vk/api/video/m$b;
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p2}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;->d()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/api/video/m$b;->d()Ljava/lang/String;
 
     move-result-object p2
 
@@ -558,20 +558,20 @@
     return-void
 
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_2
     const-string p1, "text"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 8
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method

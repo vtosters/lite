@@ -26,7 +26,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/account/Experiment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/account/Experiment$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method

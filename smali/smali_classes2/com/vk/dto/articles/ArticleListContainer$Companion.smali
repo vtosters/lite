@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -146,15 +146,15 @@
 
     invoke-direct {v3, v0}, Lcom/vk/dto/articles/ArticleListContainer$Companion$parse$5;-><init>(Landroid/util/SparseArray;)V
 
-    invoke-direct {v2, p1, v3}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v2, p1, v3}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)V
 
-    sget-object v0, Lcom/vk/dto/articles/ArticleAuthor;->g:Lcom/vk/dto/articles/ArticleAuthor$a;
+    sget-object v0, Lcom/vk/dto/articles/a;->g:Lcom/vk/dto/articles/a$a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/dto/articles/ArticleAuthor$a;->a(Lorg/json/JSONObject;)Lcom/vk/dto/articles/ArticleAuthor;
+    invoke-virtual {v0, p1}, Lcom/vk/dto/articles/a$a;->a(Lorg/json/JSONObject;)Lcom/vk/dto/articles/a;
 
     move-result-object p1
 
-    invoke-direct {v1, v2, p1}, Lcom/vk/dto/articles/ArticleListContainer;-><init>(Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/articles/ArticleAuthor;)V
+    invoke-direct {v1, v2, p1}, Lcom/vk/dto/articles/ArticleListContainer;-><init>(Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/articles/a;)V
 
     return-object v1
 .end method

@@ -3,12 +3,12 @@
 .source "MultiPartTracksMergedAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->a(Lcom/vk/music/player/PlayerModel;Ljava/lang/String;I)V
+    value = Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->a(Lcom/vk/music/player/d;Ljava/lang/String;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/ViewGroup;",
-        "Lcom/vk/music/playlist/modern/h/MusicNumberPartViewHolder;",
+        "Lcom/vk/music/playlist/modern/h/b;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/MusicNumberPartViewHolder;
+.method public final a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/b;
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vk/music/playlist/modern/h/MusicNumberPartViewHolder;
+    new-instance v0, Lcom/vk/music/playlist/modern/h/b;
 
-    invoke-direct {v0, p1}, Lcom/vk/music/playlist/modern/h/MusicNumberPartViewHolder;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v0, p1}, Lcom/vk/music/playlist/modern/h/b;-><init>(Landroid/view/ViewGroup;)V
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
     .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter$createBlockAdapter$numberPartAdapter$1;->a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/MusicNumberPartViewHolder;
+    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter$createBlockAdapter$numberPartAdapter$1;->a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/b;
 
     move-result-object p1
 

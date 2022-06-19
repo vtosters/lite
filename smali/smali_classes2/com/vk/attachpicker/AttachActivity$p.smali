@@ -3,7 +3,7 @@
 .source "AttachActivity.java"
 
 # interfaces
-.implements Lcom/vk/attachpicker/adapter/TabsAdapter$a;
+.implements Lcom/vk/attachpicker/adapter/f$a;
 
 
 # annotations

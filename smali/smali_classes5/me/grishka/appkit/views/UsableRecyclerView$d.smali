@@ -3,7 +3,7 @@
 .source "UsableRecyclerView.java"
 
 # interfaces
-.implements Lme/grishka/appkit/preloading/PrefetchInfoProvider;
+.implements Ld/a/a/b/b;
 
 
 # annotations
@@ -23,7 +23,7 @@
         ">",
         "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
         "TVH;>;",
-        "Lme/grishka/appkit/preloading/PrefetchInfoProvider;"
+        "Ld/a/a/b/b;"
     }
 .end annotation
 

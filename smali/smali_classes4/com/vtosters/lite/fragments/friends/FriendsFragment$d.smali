@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/fragments/friends/FriendsFragment$d;
-.super Lcom/vk/core/util/Provider;
+.super Lcom/vk/core/util/v0;
 .source "FriendsFragment.kt"
 
 
@@ -15,18 +15,18 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/util/Provider<",
-        "Lcom/vtosters/lite/fragments/friends/FriendsTab;",
+        "Lcom/vk/core/util/v0<",
+        "Lcom/vtosters/lite/fragments/friends/e;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private d:Lkotlin/jvm/b/Functions;
+.field private d:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -37,13 +37,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vtosters/lite/fragments/friends/FriendsFragment;Lkotlin/jvm/b/Functions;)V
+.method public constructor <init>(Lcom/vtosters/lite/fragments/friends/FriendsFragment;Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lcom/vtosters/lite/fragments/friends/FriendsTab;",
+            "Lkotlin/jvm/b/a<",
+            "Lcom/vtosters/lite/fragments/friends/e;",
             ">;)V"
         }
     .end annotation
@@ -51,41 +51,41 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/fragments/friends/FriendsFragment$d;->e:Lcom/vtosters/lite/fragments/friends/FriendsFragment;
 
-    invoke-direct {p0, p2}, Lcom/vk/core/util/Provider;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, p2}, Lcom/vk/core/util/v0;-><init>(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlin/jvm/b/Functions;)V
+.method public final a(Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "Ljava/lang/Boolean;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/friends/FriendsFragment$d;->d:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/friends/FriendsFragment$d;->d:Lkotlin/jvm/b/a;
 
     return-void
 .end method
 
-.method public get()Lcom/vtosters/lite/fragments/friends/FriendsTab;
+.method public get()Lcom/vtosters/lite/fragments/friends/e;
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/friends/FriendsFragment$d;->d:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/friends/FriendsFragment$d;->d:Lkotlin/jvm/b/a;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -101,13 +101,13 @@
 
     .line 3
     :cond_0
-    invoke-super {p0}, Lcom/vk/core/util/Provider;->get()Ljava/lang/Object;
+    invoke-super {p0}, Lcom/vk/core/util/v0;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    check-cast v0, Lcom/vtosters/lite/fragments/friends/FriendsTab;
+    check-cast v0, Lcom/vtosters/lite/fragments/friends/e;
 
     .line 4
     iget-object v1, p0, Lcom/vtosters/lite/fragments/friends/FriendsFragment$d;->e:Lcom/vtosters/lite/fragments/friends/FriendsFragment;
@@ -122,7 +122,7 @@
 
     .line 5
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
@@ -131,7 +131,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$d;->get()Lcom/vtosters/lite/fragments/friends/FriendsTab;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$d;->get()Lcom/vtosters/lite/fragments/friends/e;
 
     move-result-object v0
 

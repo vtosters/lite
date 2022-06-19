@@ -3,7 +3,7 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
@@ -19,12 +19,12 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "Ljava/util/List<",
         "Lcom/vk/dto/masks/Mask;",
         ">;",
         "Ljava/util/ArrayList<",
-        "Lcom/vk/dto/masks/MasksListItem;",
+        "Lcom/vk/dto/masks/a;",
         ">;>;"
     }
 .end annotation
@@ -51,7 +51,7 @@
             "Lcom/vk/dto/masks/Mask;",
             ">;)",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/masks/MasksListItem;",
+            "Lcom/vk/dto/masks/a;",
             ">;"
         }
     .end annotation
@@ -78,7 +78,7 @@
     if-ge v1, v2, :cond_0
 
     .line 3
-    new-instance v2, Lcom/vk/dto/masks/MasksListItem;
+    new-instance v2, Lcom/vk/dto/masks/a;
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -88,7 +88,7 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v2, v3, v4}, Lcom/vk/dto/masks/MasksListItem;-><init>(Lcom/vk/dto/masks/Mask;Lcom/vk/dto/masks/MaskSection;)V
+    invoke-direct {v2, v3, v4}, Lcom/vk/dto/masks/a;-><init>(Lcom/vk/dto/masks/Mask;Lcom/vk/dto/masks/MaskSection;)V
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 

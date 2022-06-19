@@ -29,7 +29,7 @@
     const-class v0, Lorg/chromium/support_lib_boundary/WebViewRendererBoundaryInterface;
 
     .line 2
-    invoke-static {v0, p0}, Lorg/chromium/support_lib_boundary/a/BoundaryInterfaceReflectionUtil;->a(Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
+    invoke-static {v0, p0}, Lorg/chromium/support_lib_boundary/a/a;->a(Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
 
     move-result-object p0
 

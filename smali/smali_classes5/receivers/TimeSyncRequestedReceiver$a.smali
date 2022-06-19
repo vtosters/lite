@@ -3,7 +3,7 @@
 .source "TimeSyncRequestedReceiver.kt"
 
 # interfaces
-.implements Lcom/vk/utils/g/ServerTimeResolver$a;
+.implements Lcom/vk/utils/g/b$a;
 
 
 # annotations
@@ -33,7 +33,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/utils/g/ServerTimeResolver$a$a;->a(Lcom/vk/utils/g/ServerTimeResolver$a;)V
+    invoke-static {p0}, Lcom/vk/utils/g/b$a$a;->a(Lcom/vk/utils/g/b$a;)V
 
     return-void
 .end method
@@ -42,7 +42,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1, p2}, Lcom/vk/utils/g/ServerTimeResolver$a$a;->a(Lcom/vk/utils/g/ServerTimeResolver$a;J)V
+    invoke-static {p0, p1, p2}, Lcom/vk/utils/g/b$a$a;->a(Lcom/vk/utils/g/b$a;J)V
 
     return-void
 .end method

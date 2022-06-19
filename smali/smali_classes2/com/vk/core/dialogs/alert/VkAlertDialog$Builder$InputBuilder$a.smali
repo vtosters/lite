@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/core/dialogs/alert/InputView;
+.field final synthetic a:Lcom/vk/core/dialogs/alert/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/dialogs/alert/InputView;)V
+.method constructor <init>(Lcom/vk/core/dialogs/alert/a;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$a;->a:Lcom/vk/core/dialogs/alert/InputView;
+    iput-object p1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$a;->a:Lcom/vk/core/dialogs/alert/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,14 +38,14 @@
     .locals 1
 
     .line 1
-    iget-object p1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$a;->a:Lcom/vk/core/dialogs/alert/InputView;
+    iget-object p1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$a;->a:Lcom/vk/core/dialogs/alert/a;
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/alert/InputView;->getEtInput()Landroid/widget/EditText;
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/alert/a;->getEtInput()Landroid/widget/EditText;
 
     move-result-object p1
 
     .line 2
-    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
+    invoke-static {p1}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
 
     .line 3
     invoke-virtual {p1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;

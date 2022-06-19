@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;
-.super Lcom/vk/im/engine/internal/j/ImInstantJob;
+.super Lcom/vk/im/engine/internal/j/a;
 .source "ReplaceMsgsAttachesJob.kt"
 
 
@@ -29,7 +29,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const-string v0, "ReplaceMsgsAttachesJob"
 
@@ -43,7 +43,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/j/ImInstantJob;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/j/a;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->b:Lcom/vk/im/engine/models/attaches/AttachWithId;
 
@@ -69,7 +69,7 @@
             "Lcom/vk/im/engine/models/messages/Msg;",
             ">;)",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/events/Event;",
+            "Lcom/vk/im/engine/events/a;",
             ">;"
         }
     .end annotation
@@ -161,11 +161,11 @@
     check-cast v0, Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 42
-    new-instance v2, Lcom/vk/im/engine/events/OnAttachUpdateEvent;
+    new-instance v2, Lcom/vk/im/engine/events/d;
 
     sget-object v3, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->c:Ljava/lang/String;
 
-    invoke-direct {v2, v0, v3}, Lcom/vk/im/engine/events/OnAttachUpdateEvent;-><init>(Lcom/vk/im/engine/models/attaches/Attach;Ljava/lang/Object;)V
+    invoke-direct {v2, v0, v3}, Lcom/vk/im/engine/events/d;-><init>(Lcom/vk/im/engine/models/attaches/Attach;Ljava/lang/Object;)V
 
     invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -175,14 +175,14 @@
     return-object v1
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/attaches/AttachWithId;)Lkotlin/jvm/b/Functions2;
+.method private final a(Lcom/vk/im/engine/models/attaches/AttachWithId;)Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/im/engine/models/attaches/AttachWithId;",
             ")",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             "Ljava/lang/Boolean;",
             ">;"
@@ -197,7 +197,7 @@
     return-object v0
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/attaches/AttachPoll;)V
+.method private final a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/attaches/AttachPoll;)V
     .locals 5
 
     .line 20
@@ -230,7 +230,7 @@
     if-eqz v0, :cond_8
 
     .line 22
-    invoke-static {v0}, Lcom/vk/core/extensions/SparseArrayExt1;->e(Landroid/util/SparseArray;)Ljava/util/Collection;
+    invoke-static {v0}, Lcom/vk/core/extensions/x;->e(Landroid/util/SparseArray;)Ljava/util/Collection;
 
     move-result-object v1
 
@@ -292,7 +292,7 @@
 
     .line 25
     :cond_5
-    new-instance v1, Lcom/vk/im/engine/i/i/UsersGetByIdCmd;
+    new-instance v1, Lcom/vk/im/engine/i/i/c;
 
     invoke-virtual {p2}, Lcom/vk/im/engine/models/attaches/AttachPoll;->f()Lcom/vk/dto/polls/Poll;
 
@@ -302,29 +302,29 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/IntCollection;
+    invoke-static {p2}, Lcom/vk/im/engine/utils/collection/e;->a(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/d;
 
     move-result-object p2
 
     sget-object v2, Lcom/vk/im/engine/models/Source;->CACHE:Lcom/vk/im/engine/models/Source;
 
-    invoke-direct {v1, p2, v2}, Lcom/vk/im/engine/i/i/UsersGetByIdCmd;-><init>(Lcom/vk/im/engine/utils/collection/IntCollection;Lcom/vk/im/engine/models/Source;)V
+    invoke-direct {v1, p2, v2}, Lcom/vk/im/engine/i/i/c;-><init>(Lcom/vk/im/engine/utils/collection/d;Lcom/vk/im/engine/models/Source;)V
 
     .line 26
-    invoke-interface {p1, p0, v1}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
+    invoke-interface {p1, p0, v1}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/models/EntityIntMap;
+    check-cast p1, Lcom/vk/im/engine/models/a;
 
-    iget-object p1, p1, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
+    iget-object p1, p1, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
 
     const-string p2, "env.submitCommandDirect(this, usersCmd).cached"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 27
-    invoke-static {v0}, Lcom/vk/core/extensions/SparseArrayExt1;->d(Landroid/util/SparseArray;)Ljava/util/Set;
+    invoke-static {v0}, Lcom/vk/core/extensions/x;->d(Landroid/util/SparseArray;)Ljava/util/Set;
 
     move-result-object p2
 
@@ -370,7 +370,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/vk/im/engine/models/ImageList1;->b(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
+    invoke-static {v2}, Lcom/vk/im/engine/models/g;->b(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
 
     move-result-object v2
 
@@ -388,7 +388,7 @@
     :goto_3
     invoke-direct {v3, v1, v4, v2}, Lcom/vk/dto/polls/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, v1, v3}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v3}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
 
     goto :goto_2
 
@@ -397,14 +397,14 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/im/engine/models/attaches/AttachWithId;)Lkotlin/jvm/b/Functions2;
+.method private final b(Lcom/vk/im/engine/models/attaches/AttachWithId;)Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/im/engine/models/attaches/AttachWithId;",
             ")",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;"
@@ -430,24 +430,24 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/instantjobs/InstantJob$b;)V
+.method public a(Lcom/vk/im/engine/d;Lcom/vk/instantjobs/InstantJob$b;)V
     .locals 9
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
+    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object p2
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -464,7 +464,7 @@
 
     iget-object v2, p0, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->b:Lcom/vk/im/engine/models/attaches/AttachWithId;
 
-    invoke-interface {v2}, Lcom/vk/im/engine/models/WithId;->getId()I
+    invoke-interface {v2}, Lcom/vk/im/engine/models/u;->getId()I
 
     move-result v2
 
@@ -487,7 +487,7 @@
 
     iget-object v3, p0, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->b:Lcom/vk/im/engine/models/attaches/AttachWithId;
 
-    invoke-interface {v3}, Lcom/vk/im/engine/models/WithId;->getId()I
+    invoke-interface {v3}, Lcom/vk/im/engine/models/u;->getId()I
 
     move-result v3
 
@@ -502,7 +502,7 @@
     move-result-object v2
 
     .line 6
-    invoke-static {v1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;)Z
+    invoke-static {v1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;)Z
 
     move-result v3
 
@@ -527,20 +527,20 @@
     .line 8
     check-cast v3, Lcom/vk/im/engine/models/attaches/AttachPoll;
 
-    invoke-direct {p0, p1, v3}, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/attaches/AttachPoll;)V
+    invoke-direct {p0, p1, v3}, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/attaches/AttachPoll;)V
 
     .line 9
     :cond_1
     iget-object v3, p0, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->b:Lcom/vk/im/engine/models/attaches/AttachWithId;
 
-    invoke-direct {p0, v3}, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->a(Lcom/vk/im/engine/models/attaches/AttachWithId;)Lkotlin/jvm/b/Functions2;
+    invoke-direct {p0, v3}, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->a(Lcom/vk/im/engine/models/attaches/AttachWithId;)Lkotlin/jvm/b/b;
 
     move-result-object v3
 
     .line 10
     iget-object v4, p0, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->b:Lcom/vk/im/engine/models/attaches/AttachWithId;
 
-    invoke-direct {p0, v4}, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->b(Lcom/vk/im/engine/models/attaches/AttachWithId;)Lkotlin/jvm/b/Functions2;
+    invoke-direct {p0, v4}, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->b(Lcom/vk/im/engine/models/attaches/AttachWithId;)Lkotlin/jvm/b/b;
 
     move-result-object v4
 
@@ -566,7 +566,7 @@
     check-cast v8, Lcom/vk/im/engine/models/messages/PinnedMsg;
 
     .line 13
-    invoke-virtual {v8, v7, v3, v4}, Lcom/vk/im/engine/models/messages/PinnedMsg;->a(ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v8, v7, v3, v4}, Lcom/vk/im/engine/models/messages/PinnedMsg;->a(ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     add-int/lit8 v5, v5, 0x1
 
@@ -599,13 +599,13 @@
     check-cast v6, Lcom/vk/im/engine/models/messages/MsgFromUser;
 
     .line 16
-    invoke-virtual {v6, v7, v3, v4}, Lcom/vk/im/engine/models/messages/MsgFromUser;->a(ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v6, v7, v3, v4}, Lcom/vk/im/engine/models/messages/MsgFromUser;->a(ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     goto :goto_1
 
     .line 17
     :cond_3
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v3
 
@@ -613,27 +613,27 @@
 
     invoke-direct {v4, p2, v1, v0, v2}, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob$onExecute$3;-><init>(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;Landroid/util/SparseArray;Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;Ljava/util/List;)V
 
-    invoke-virtual {v3, v4}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-virtual {v3, v4}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     .line 18
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->n0()Lcom/vk/im/engine/internal/EventHelper;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->n0()Lcom/vk/im/engine/internal/c;
 
     move-result-object p2
 
     sget-object v0, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->c:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Landroid/util/SparseArray;)Lcom/vk/im/engine/utils/collection/IntSet;
+    invoke-static {v1}, Lcom/vk/im/engine/utils/collection/e;->a(Landroid/util/SparseArray;)Lcom/vk/im/engine/utils/collection/h;
 
     move-result-object v1
 
-    invoke-virtual {p2, v0, v1}, Lcom/vk/im/engine/internal/EventHelper;->a(Ljava/lang/Object;Lcom/vk/im/engine/utils/collection/IntCollection;)V
+    invoke-virtual {p2, v0, v1}, Lcom/vk/im/engine/internal/c;->a(Ljava/lang/Object;Lcom/vk/im/engine/utils/collection/d;)V
 
     .line 19
     invoke-direct {p0, v2}, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p2
 
-    invoke-interface {p1, p0, p2}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Ljava/util/Collection;)V
+    invoke-interface {p1, p0, p2}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Ljava/util/Collection;)V
 
     return-void
 .end method
@@ -662,7 +662,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->b:Lcom/vk/im/engine/models/attaches/AttachWithId;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -686,13 +686,13 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/im/engine/internal/QueueNames;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/im/engine/internal/d;->a()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "QueueNames.forAttachesUpdates()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

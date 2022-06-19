@@ -3,7 +3,7 @@
 .source "SavedTracks.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/audio/player/DownloadTaskBase$d;
+.implements Lcom/vtosters/lite/audio/player/m$d;
 
 
 # annotations
@@ -44,17 +44,17 @@
 
 
 # virtual methods
-.method public a(Lcom/vtosters/lite/audio/player/DownloadTaskBase;Z)V
+.method public a(Lcom/vtosters/lite/audio/player/m;Z)V
     .locals 0
 
     .line 2
     iget-object p2, p0, Lcom/vtosters/lite/audio/player/SavedTracks$c;->a:Lcom/vtosters/lite/audio/player/SavedTracks;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/audio/player/DownloadTaskBase;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/audio/player/m;->a()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p2, p1}, Lcom/vtosters/lite/audio/player/SavedTracks;->a(Lcom/vtosters/lite/audio/player/SavedTracks;Ljava/lang/String;)Lcom/vtosters/lite/audio/player/DownloadTaskBase;
+    invoke-static {p2, p1}, Lcom/vtosters/lite/audio/player/SavedTracks;->a(Lcom/vtosters/lite/audio/player/SavedTracks;Ljava/lang/String;)Lcom/vtosters/lite/audio/player/m;
 
     .line 3
     iget-object p1, p0, Lcom/vtosters/lite/audio/player/SavedTracks$c;->a:Lcom/vtosters/lite/audio/player/SavedTracks;
@@ -72,11 +72,11 @@
     .line 4
     iget-object p1, p0, Lcom/vtosters/lite/audio/player/SavedTracks$c;->a:Lcom/vtosters/lite/audio/player/SavedTracks;
 
-    invoke-static {p1}, Lcom/vtosters/lite/audio/player/SavedTracks;->d(Lcom/vtosters/lite/audio/player/SavedTracks;)Lcom/vtosters/lite/audio/utils/WakeLockEx;
+    invoke-static {p1}, Lcom/vtosters/lite/audio/player/SavedTracks;->d(Lcom/vtosters/lite/audio/player/SavedTracks;)Lcom/vtosters/lite/audio/utils/f;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/audio/utils/WakeLockEx;->b()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/audio/utils/f;->b()V
 
     .line 5
     :cond_0

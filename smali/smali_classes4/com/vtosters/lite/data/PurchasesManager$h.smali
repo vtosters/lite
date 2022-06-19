@@ -1,11 +1,11 @@
 .class Lcom/vtosters/lite/data/PurchasesManager$h;
-.super Lcom/vtosters/lite/api/SimpleCallback;
+.super Lcom/vtosters/lite/api/l;
 .source "PurchasesManager.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/data/PurchasesManager;->d(Lcom/vk/dto/common/data/Purchase1;Lcom/vtosters/lite/data/PurchasesManager$o;)V
+    value = Lcom/vtosters/lite/data/PurchasesManager;->d(Lcom/vk/dto/common/data/e;Lcom/vtosters/lite/data/PurchasesManager$o;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,15 +15,15 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/api/SimpleCallback<",
-        "Lcom/vk/dto/common/data/Purchase;",
+        "Lcom/vtosters/lite/api/l<",
+        "Lcom/vk/dto/common/data/g;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic c:Lcom/vk/dto/common/data/Purchase1;
+.field final synthetic c:Lcom/vk/dto/common/data/e;
 
 .field final synthetic d:Lcom/vtosters/lite/data/PurchasesManager$o;
 
@@ -31,17 +31,17 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/data/PurchasesManager;Landroid/content/Context;Lcom/vk/dto/common/data/Purchase1;Lcom/vtosters/lite/data/PurchasesManager$o;)V
+.method constructor <init>(Lcom/vtosters/lite/data/PurchasesManager;Landroid/content/Context;Lcom/vk/dto/common/data/e;Lcom/vtosters/lite/data/PurchasesManager$o;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/data/PurchasesManager$h;->e:Lcom/vtosters/lite/data/PurchasesManager;
 
-    iput-object p3, p0, Lcom/vtosters/lite/data/PurchasesManager$h;->c:Lcom/vk/dto/common/data/Purchase1;
+    iput-object p3, p0, Lcom/vtosters/lite/data/PurchasesManager$h;->c:Lcom/vk/dto/common/data/e;
 
     iput-object p4, p0, Lcom/vtosters/lite/data/PurchasesManager$h;->d:Lcom/vtosters/lite/data/PurchasesManager$o;
 
-    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/SimpleCallback;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/l;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -67,16 +67,16 @@
 
     .line 16
     :cond_0
-    invoke-super {p0, p1}, Lcom/vtosters/lite/api/SimpleCallback;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/api/l;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/dto/common/data/Purchase;)V
+.method public a(Lcom/vk/dto/common/data/g;)V
     .locals 3
 
     .line 2
-    iget-object v0, p1, Lcom/vk/dto/common/data/Purchase;->b:Ljava/lang/String;
+    iget-object v0, p1, Lcom/vk/dto/common/data/g;->b:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -86,7 +86,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p1, Lcom/vk/dto/common/data/Purchase;->c:Ljava/lang/String;
+    iget-object v0, p1, Lcom/vk/dto/common/data/g;->c:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -111,7 +111,7 @@
     .line 4
     invoke-virtual {v0, v2}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setTitle(I)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
-    iget-object v2, p1, Lcom/vk/dto/common/data/Purchase;->b:Ljava/lang/String;
+    iget-object v2, p1, Lcom/vk/dto/common/data/g;->b:Ljava/lang/String;
 
     .line 5
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -120,12 +120,12 @@
 
     if-nez v2, :cond_1
 
-    iget-object v2, p1, Lcom/vk/dto/common/data/Purchase;->b:Ljava/lang/String;
+    iget-object v2, p1, Lcom/vk/dto/common/data/g;->b:Ljava/lang/String;
 
     goto :goto_0
 
     :cond_1
-    iget-object v2, p1, Lcom/vk/dto/common/data/Purchase;->c:Ljava/lang/String;
+    iget-object v2, p1, Lcom/vk/dto/common/data/g;->c:Ljava/lang/String;
 
     :goto_0
     invoke-virtual {v0, v2}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
@@ -140,7 +140,7 @@
 
     .line 8
     :cond_2
-    iget p1, p1, Lcom/vk/dto/common/data/Purchase;->a:I
+    iget p1, p1, Lcom/vk/dto/common/data/g;->a:I
 
     const/4 v0, 0x1
 
@@ -154,14 +154,14 @@
     .line 10
     iget-object p1, p0, Lcom/vtosters/lite/data/PurchasesManager$h;->e:Lcom/vtosters/lite/data/PurchasesManager;
 
-    invoke-static {p1, v1}, Lcom/vtosters/lite/data/PurchasesManager;->a(Lcom/vtosters/lite/data/PurchasesManager;Lcom/vk/dto/common/data/Purchase1;)Lcom/vk/dto/common/data/Purchase1;
+    invoke-static {p1, v1}, Lcom/vtosters/lite/data/PurchasesManager;->a(Lcom/vtosters/lite/data/PurchasesManager;Lcom/vk/dto/common/data/e;)Lcom/vk/dto/common/data/e;
 
     .line 11
     iget-object p1, p0, Lcom/vtosters/lite/data/PurchasesManager$h;->e:Lcom/vtosters/lite/data/PurchasesManager;
 
-    iget-object v0, p0, Lcom/vtosters/lite/data/PurchasesManager$h;->c:Lcom/vk/dto/common/data/Purchase1;
+    iget-object v0, p0, Lcom/vtosters/lite/data/PurchasesManager$h;->c:Lcom/vk/dto/common/data/e;
 
-    invoke-static {p1, v0}, Lcom/vtosters/lite/data/PurchasesManager;->b(Lcom/vtosters/lite/data/PurchasesManager;Lcom/vk/dto/common/data/Purchase1;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/data/PurchasesManager;->b(Lcom/vtosters/lite/data/PurchasesManager;Lcom/vk/dto/common/data/e;)V
 
     .line 12
     iget-object p1, p0, Lcom/vtosters/lite/data/PurchasesManager$h;->d:Lcom/vtosters/lite/data/PurchasesManager$o;
@@ -169,7 +169,7 @@
     if-eqz p1, :cond_3
 
     .line 13
-    iget-object v0, p0, Lcom/vtosters/lite/data/PurchasesManager$h;->c:Lcom/vk/dto/common/data/Purchase1;
+    iget-object v0, p0, Lcom/vtosters/lite/data/PurchasesManager$h;->c:Lcom/vk/dto/common/data/e;
 
     invoke-interface {p1, v0}, Lcom/vtosters/lite/data/PurchasesManager$o;->a(Ljava/lang/Object;)V
 
@@ -181,9 +181,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/common/data/Purchase;
+    check-cast p1, Lcom/vk/dto/common/data/g;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/data/PurchasesManager$h;->a(Lcom/vk/dto/common/data/Purchase;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/data/PurchasesManager$h;->a(Lcom/vk/dto/common/data/g;)V
 
     return-void
 .end method

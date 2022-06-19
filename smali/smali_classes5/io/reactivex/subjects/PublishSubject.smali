@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/subjects/PublishSubject;
-.super Lio/reactivex/subjects/Subject;
+.super Lio/reactivex/subjects/c;
 .source "PublishSubject.java"
 
 
@@ -15,7 +15,7 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/subjects/Subject<",
+        "Lio/reactivex/subjects/c<",
         "TT;>;"
     }
 .end annotation
@@ -65,7 +65,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lio/reactivex/subjects/Subject;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/subjects/c;-><init>()V
 
     .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
@@ -101,7 +101,7 @@
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 2
 
     .line 8
@@ -116,7 +116,7 @@
     if-ne v0, v1, :cond_0
 
     .line 9
-    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     return-void
@@ -128,7 +128,7 @@
     const-string v0, "onError called with null. Null values are generally not allowed in 2.x operators and sources."
 
     .line 10
-    invoke-static {p1, v0}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 11
     iget-object v0, p0, Lio/reactivex/subjects/PublishSubject;->a:Ljava/util/concurrent/atomic/AtomicReference;
@@ -142,7 +142,7 @@
     if-ne v0, v1, :cond_0
 
     .line 12
-    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -283,12 +283,12 @@
     return-void
 .end method
 
-.method protected b(Lio/reactivex/Observer;)V
+.method protected b(Lc/a/r;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;)V"
         }
     .end annotation
@@ -296,10 +296,10 @@
     .line 1
     new-instance v0, Lio/reactivex/subjects/PublishSubject$PublishDisposable;
 
-    invoke-direct {v0, p1, p0}, Lio/reactivex/subjects/PublishSubject$PublishDisposable;-><init>(Lio/reactivex/Observer;Lio/reactivex/subjects/PublishSubject;)V
+    invoke-direct {v0, p1, p0}, Lio/reactivex/subjects/PublishSubject$PublishDisposable;-><init>(Lc/a/r;Lio/reactivex/subjects/PublishSubject;)V
 
     .line 2
-    invoke-interface {p1, v0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p1, v0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
 
     .line 3
     invoke-virtual {p0, v0}, Lio/reactivex/subjects/PublishSubject;->a(Lio/reactivex/subjects/PublishSubject$PublishDisposable;)Z
@@ -327,13 +327,13 @@
     if-eqz v0, :cond_1
 
     .line 7
-    invoke-interface {p1, v0}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     .line 8
     :cond_1
-    invoke-interface {p1}, Lio/reactivex/Observer;->b()V
+    invoke-interface {p1}, Lc/a/r;->b()V
 
     :cond_2
     :goto_0
@@ -460,7 +460,7 @@
     const-string v0, "onNext called with null. Null values are generally not allowed in 2.x operators and sources."
 
     .line 18
-    invoke-static {p1, v0}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 19
     iget-object v0, p0, Lio/reactivex/subjects/PublishSubject;->a:Ljava/util/concurrent/atomic/AtomicReference;

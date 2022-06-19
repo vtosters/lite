@@ -3,7 +3,7 @@
 .source "MenuFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,9 +22,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/util/ArrayList<",
-        "Lcom/vk/menu/MenuViewItem;",
+        "Lcom/vk/menu/d;",
         ">;>;"
     }
 .end annotation
@@ -53,7 +53,7 @@
         value = {
             "(",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/menu/MenuViewItem;",
+            "Lcom/vk/menu/d;",
             ">;)V"
         }
     .end annotation
@@ -71,7 +71,7 @@
 
     const-string v2, "l"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, p1}, Lcom/vk/menu/MenuFragment$a;->a(ILjava/util/Collection;)V
 

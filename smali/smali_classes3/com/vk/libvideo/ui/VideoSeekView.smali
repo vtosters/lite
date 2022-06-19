@@ -18,7 +18,7 @@
 # instance fields
 .field private B:Z
 
-.field private C:Lcom/vk/libvideo/ui/VideoViewCallback;
+.field private C:Lcom/vk/libvideo/ui/h;
 
 .field private final D:Landroidx/appcompat/widget/AppCompatSeekBar;
 
@@ -56,7 +56,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/ui/VideoSeekView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/ui/VideoSeekView$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/16 v0, 0x28
 
@@ -135,7 +135,7 @@
 
     move-result-object p1
 
-    sget p3, Lcom/vk/libvideo/R9;->video_seek_view:I
+    sget p3, Lcom/vk/libvideo/h;->video_seek_view:I
 
     const/4 v0, 0x1
 
@@ -145,13 +145,13 @@
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setClickable(Z)V
 
     .line 10
-    sget p1, Lcom/vk/libvideo/R;->time1:I
+    sget p1, Lcom/vk/libvideo/g;->time1:I
 
     const/4 p3, 0x2
 
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -160,9 +160,9 @@
     iput-object p1, p0, Lcom/vk/libvideo/ui/VideoSeekView;->b:Landroid/widget/TextView;
 
     .line 11
-    sget p1, Lcom/vk/libvideo/R;->time2:I
+    sget p1, Lcom/vk/libvideo/g;->time2:I
 
-    invoke-static {p0, p1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -171,9 +171,9 @@
     iput-object p1, p0, Lcom/vk/libvideo/ui/VideoSeekView;->c:Landroid/widget/TextView;
 
     .line 12
-    sget p1, Lcom/vk/libvideo/R;->space:I
+    sget p1, Lcom/vk/libvideo/g;->space:I
 
-    invoke-static {p0, p1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -182,9 +182,9 @@
     iput-object p1, p0, Lcom/vk/libvideo/ui/VideoSeekView;->g:Landroid/widget/Space;
 
     .line 13
-    sget p1, Lcom/vk/libvideo/R;->seek_bar:I
+    sget p1, Lcom/vk/libvideo/g;->seek_bar:I
 
-    invoke-static {p0, p1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -193,9 +193,9 @@
     iput-object p1, p0, Lcom/vk/libvideo/ui/VideoSeekView;->D:Landroidx/appcompat/widget/AppCompatSeekBar;
 
     .line 14
-    sget p1, Lcom/vk/libvideo/R;->resize:I
+    sget p1, Lcom/vk/libvideo/g;->resize:I
 
-    invoke-static {p0, p1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -204,9 +204,9 @@
     iput-object p1, p0, Lcom/vk/libvideo/ui/VideoSeekView;->d:Landroid/widget/ImageView;
 
     .line 15
-    sget p1, Lcom/vk/libvideo/R;->settings:I
+    sget p1, Lcom/vk/libvideo/g;->settings:I
 
-    invoke-static {p0, p1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -215,9 +215,9 @@
     iput-object p1, p0, Lcom/vk/libvideo/ui/VideoSeekView;->f:Landroid/widget/ImageView;
 
     .line 16
-    sget p1, Lcom/vk/libvideo/R;->fullscreen:I
+    sget p1, Lcom/vk/libvideo/g;->fullscreen:I
 
-    invoke-static {p0, p1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -293,7 +293,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/libvideo/R3;->white:I
+    sget v1, Lcom/vk/libvideo/c;->white:I
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -318,7 +318,7 @@
     .line 15
     iget-object v0, p0, Lcom/vk/libvideo/ui/VideoSeekView;->e:Landroid/widget/ImageView;
 
-    sget v1, Lcom/vk/libvideo/R7;->ic_fullscreen_exit_24:I
+    sget v1, Lcom/vk/libvideo/e;->ic_fullscreen_exit_24:I
 
     invoke-direct {p0, v0, v1}, Lcom/vk/libvideo/ui/VideoSeekView;->a(Landroid/widget/ImageView;I)V
 
@@ -329,7 +329,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/libvideo/R11;->video_accessibility_normal_mode:I
+    sget v2, Lcom/vk/libvideo/j;->video_accessibility_normal_mode:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -356,13 +356,13 @@
     move-result-object v1
 
     .line 3
-    sget-object v2, Lcom/vk/libvideo/VideoUtils;->INSTANCE:Lcom/vk/libvideo/VideoUtils;
+    sget-object v2, Lcom/vk/libvideo/t;->a:Lcom/vk/libvideo/t;
 
     const-string v3, "textPaint"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v1}, Lcom/vk/libvideo/VideoUtils;->a(Landroid/graphics/Paint;)I
+    invoke-virtual {v2, v1}, Lcom/vk/libvideo/t;->a(Landroid/graphics/Paint;)I
 
     move-result v2
 
@@ -383,7 +383,7 @@
     if-ge p1, v9, :cond_0
 
     .line 4
-    sget-object p1, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->INSTANCE:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
+    sget-object p1, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
 
     new-array p1, v7, [Ljava/lang/Object;
 
@@ -423,7 +423,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -435,7 +435,7 @@
     if-ge p1, v9, :cond_1
 
     .line 5
-    sget-object p1, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->INSTANCE:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
+    sget-object p1, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
 
     new-array p1, v10, [Ljava/lang/Object;
 
@@ -481,13 +481,13 @@
 
     move-result-object p1
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 6
     :cond_1
-    sget-object p1, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->INSTANCE:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
+    sget-object p1, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
 
     const/4 p1, 0x6
 
@@ -541,7 +541,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     :goto_0
@@ -602,7 +602,7 @@
     .line 33
     iget-object v0, p0, Lcom/vk/libvideo/ui/VideoSeekView;->b:Landroid/widget/TextView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/VideoUtils;->c(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/libvideo/t;->c(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -615,7 +615,7 @@
 
     if-nez p2, :cond_0
 
-    invoke-static {p2}, Lcom/vk/libvideo/VideoUtils;->c(I)Ljava/lang/String;
+    invoke-static {p2}, Lcom/vk/libvideo/t;->c(I)Ljava/lang/String;
 
     move-result-object p2
 
@@ -630,7 +630,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p2}, Lcom/vk/libvideo/VideoUtils;->c(I)Ljava/lang/String;
+    invoke-static {p2}, Lcom/vk/libvideo/t;->c(I)Ljava/lang/String;
 
     move-result-object p2
 
@@ -830,7 +830,7 @@
     const-string v2, "anim"
 
     .line 41
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v2, 0x12c
 
@@ -891,7 +891,7 @@
 
     const-string v4, "seekBar.thumb.mutate()"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-boolean v4, v9, Lcom/vk/libvideo/ui/VideoSeekView;->B:Z
 
@@ -989,7 +989,7 @@
 
     const-string v2, "seekBar.thumb.mutate()"
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p3, :cond_1
 
@@ -1062,7 +1062,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/ui/VideoSeekView;->e:Landroid/widget/ImageView;
 
-    sget v1, Lcom/vk/libvideo/R7;->ic_fullscreen_24:I
+    sget v1, Lcom/vk/libvideo/e;->ic_fullscreen_24:I
 
     invoke-direct {p0, v0, v1}, Lcom/vk/libvideo/ui/VideoSeekView;->a(Landroid/widget/ImageView;I)V
 
@@ -1073,7 +1073,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/libvideo/R11;->video_accessibility_full_screen_mode:I
+    sget v2, Lcom/vk/libvideo/j;->video_accessibility_full_screen_mode:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1101,7 +1101,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/ui/VideoSeekView;->d:Landroid/widget/ImageView;
 
-    sget v1, Lcom/vk/libvideo/R7;->ic_video_fill_24:I
+    sget v1, Lcom/vk/libvideo/e;->ic_video_fill_24:I
 
     invoke-direct {p0, v0, v1}, Lcom/vk/libvideo/ui/VideoSeekView;->a(Landroid/widget/ImageView;I)V
 
@@ -1112,7 +1112,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/libvideo/R11;->video_accessibility_resize:I
+    sget v2, Lcom/vk/libvideo/j;->video_accessibility_resize:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1158,7 +1158,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/ui/VideoSeekView;->d:Landroid/widget/ImageView;
 
-    sget v1, Lcom/vk/libvideo/R7;->ic_video_fill_none_24:I
+    sget v1, Lcom/vk/libvideo/e;->ic_video_fill_none_24:I
 
     invoke-direct {p0, v0, v1}, Lcom/vk/libvideo/ui/VideoSeekView;->a(Landroid/widget/ImageView;I)V
 
@@ -1169,7 +1169,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/libvideo/R11;->video_accessibility_resize_none:I
+    sget v2, Lcom/vk/libvideo/j;->video_accessibility_resize_none:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1189,11 +1189,11 @@
     return-object v0
 .end method
 
-.method public final getViewCallback()Lcom/vk/libvideo/ui/VideoViewCallback;
+.method public final getViewCallback()Lcom/vk/libvideo/ui/h;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/ui/VideoSeekView;->C:Lcom/vk/libvideo/ui/VideoViewCallback;
+    iget-object v0, p0, Lcom/vk/libvideo/ui/VideoSeekView;->C:Lcom/vk/libvideo/ui/h;
 
     return-object v0
 .end method
@@ -1276,11 +1276,11 @@
     return-void
 .end method
 
-.method public final setViewCallback(Lcom/vk/libvideo/ui/VideoViewCallback;)V
+.method public final setViewCallback(Lcom/vk/libvideo/ui/h;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/libvideo/ui/VideoSeekView;->C:Lcom/vk/libvideo/ui/VideoViewCallback;
+    iput-object p1, p0, Lcom/vk/libvideo/ui/VideoSeekView;->C:Lcom/vk/libvideo/ui/h;
 
     return-void
 .end method

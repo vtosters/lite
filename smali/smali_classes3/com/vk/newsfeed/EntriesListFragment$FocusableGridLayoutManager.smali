@@ -60,7 +60,7 @@
     if-eqz p1, :cond_0
 
     .line 3
-    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/View;)V
+    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/view/View;)V
 
     .line 4
     invoke-virtual {p1}, Landroid/view/View;->clearFocus()V

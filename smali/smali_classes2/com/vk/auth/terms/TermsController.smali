@@ -20,26 +20,26 @@
 
 .field private d:Landroid/text/Spannable;
 
-.field private final e:Lcom/vk/auth/terms/TermsPresenter;
+.field private final e:Lcom/vk/auth/terms/a;
 
 .field private final f:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/auth/terms/TermsPresenter;Landroid/view/View;)V
+.method public constructor <init>(Lcom/vk/auth/terms/a;Landroid/view/View;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/auth/terms/TermsController;->e:Lcom/vk/auth/terms/TermsPresenter;
+    iput-object p1, p0, Lcom/vk/auth/terms/TermsController;->e:Lcom/vk/auth/terms/a;
 
     iput-object p2, p0, Lcom/vk/auth/terms/TermsController;->f:Landroid/view/View;
 
     .line 2
     iget-object p1, p0, Lcom/vk/auth/terms/TermsController;->f:Landroid/view/View;
 
-    sget p2, Lcom/vk/auth/r/R5;->terms_checkbox:I
+    sget p2, Lcom/vk/auth/r/e;->terms_checkbox:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -47,7 +47,7 @@
 
     const-string p2, "termsContainer.findViewById(R.id.terms_checkbox)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/CheckBox;
 
@@ -56,7 +56,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/auth/terms/TermsController;->f:Landroid/view/View;
 
-    sget p2, Lcom/vk/auth/r/R5;->terms_text:I
+    sget p2, Lcom/vk/auth/r/e;->terms_text:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -64,7 +64,7 @@
 
     const-string p2, "termsContainer.findViewById(R.id.terms_text)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -76,9 +76,9 @@
     .line 5
     iget-object p1, p0, Lcom/vk/auth/terms/TermsController;->a:Landroid/widget/CheckBox;
 
-    iget-object p2, p0, Lcom/vk/auth/terms/TermsController;->e:Lcom/vk/auth/terms/TermsPresenter;
+    iget-object p2, p0, Lcom/vk/auth/terms/TermsController;->e:Lcom/vk/auth/terms/a;
 
-    invoke-interface {p2}, Lcom/vk/auth/terms/TermsPresenter;->u2()Z
+    invoke-interface {p2}, Lcom/vk/auth/terms/a;->u2()Z
 
     move-result p2
 
@@ -96,11 +96,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/terms/TermsController;)Lcom/vk/auth/terms/TermsPresenter;
+.method public static final synthetic a(Lcom/vk/auth/terms/TermsController;)Lcom/vk/auth/terms/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/auth/terms/TermsController;->e:Lcom/vk/auth/terms/TermsPresenter;
+    iget-object p0, p0, Lcom/vk/auth/terms/TermsController;->e:Lcom/vk/auth/terms/a;
 
     return-object p0
 .end method
@@ -127,7 +127,7 @@
 
     move-result-object v2
 
-    sget v3, Lcom/vk/auth/r/R;->vk_auth_sign_up_terms:I
+    sget v3, Lcom/vk/auth/r/g;->vk_auth_sign_up_terms:I
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -139,7 +139,7 @@
 
     const-string v2, "Spannable.Factory.getIns\u2026g.vk_auth_sign_up_terms))"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/vk/auth/terms/TermsController;->d:Landroid/text/Spannable;
 
@@ -168,7 +168,7 @@
 
     const-string v4, "spannableText.getSpans(0\u2026gth, URLSpan::class.java)"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     array-length v4, v1
@@ -216,13 +216,13 @@
 
     const-string v12, "context"
 
-    invoke-static {v0, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v12, Lcom/vk/auth/terms/TermsController$setupTermsLinks$$inlined$forEach$lambda$1;
 
     invoke-direct {v12, v7, p0, v0}, Lcom/vk/auth/terms/TermsController$setupTermsLinks$$inlined$forEach$lambda$1;-><init>(Landroid/text/style/URLSpan;Lcom/vk/auth/terms/TermsController;Landroid/content/Context;)V
 
-    invoke-direct {v11, v0, v12}, Lcom/vk/auth/terms/TermsController$b;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v11, v0, v12}, Lcom/vk/auth/terms/TermsController$b;-><init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
 
     invoke-interface {v10, v11, v8, v9, v6}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
@@ -231,25 +231,25 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 11
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 12
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 13
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -282,18 +282,18 @@
     return-void
 
     :cond_5
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 17
     :cond_6
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_7
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -328,7 +328,7 @@
 
     const-string v3, "spannableText.getSpans(0\u2026inkSpannable::class.java)"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     array-length v3, v0
@@ -341,7 +341,7 @@
     check-cast v4, Lcom/vk/auth/terms/TermsController$b;
 
     .line 5
-    invoke-virtual {v4, v2}, Lcom/vk/auth/terms/TermsController$b;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v4, v2}, Lcom/vk/auth/terms/TermsController$b;->a(Lkotlin/jvm/b/a;)V
 
     .line 6
     iget-object v6, p0, Lcom/vk/auth/terms/TermsController;->d:Landroid/text/Spannable;
@@ -355,7 +355,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -364,12 +364,12 @@
 
     .line 7
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -426,7 +426,7 @@
     iput-object p1, p0, Lcom/vk/auth/terms/TermsController;->c:Ljava/lang/Boolean;
 
     .line 5
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     :cond_0
     const/4 p1, 0x0

@@ -26,7 +26,7 @@
     .end annotation
 .end field
 
-.field private static final b:Lkotlin/Lazy2;
+.field private static final b:Lkotlin/e;
 
 .field public static final c:Lcom/vk/hints/HintsManager$d;
 
@@ -39,18 +39,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/hints/HintsManager$d;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/hints/HintsManager$d;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/hints/HintsManager;->c:Lcom/vk/hints/HintsManager$d;
 
     .line 1
     sget-object v0, Lcom/vk/hints/HintsManager$Companion$testHint$2;->a:Lcom/vk/hints/HintsManager$Companion$testHint$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/hints/HintsManager;->b:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/hints/HintsManager;->b:Lkotlin/e;
 
     return-void
 .end method
@@ -97,11 +97,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic b()Lkotlin/Lazy2;
+.method public static final synthetic b()Lkotlin/e;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/hints/HintsManager;->b:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/hints/HintsManager;->b:Lkotlin/e;
 
     return-object v0
 .end method

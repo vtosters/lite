@@ -1,5 +1,5 @@
 .class public final Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment;
-.super Lme/grishka/appkit/fragments/AppKitFragment;
+.super Ld/a/a/a/h;
 .source "MoneyTransferPagerFragment.kt"
 
 
@@ -37,7 +37,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -46,7 +46,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lme/grishka/appkit/fragments/AppKitFragment;-><init>()V
+    invoke-direct {p0}, Ld/a/a/a/h;-><init>()V
 
     return-void
 .end method
@@ -125,7 +125,7 @@
     const/4 p1, 0x1
 
     .line 2
-    invoke-virtual {p0, p1}, Lme/grishka/appkit/fragments/AppKitFragment;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, p1}, Ld/a/a/a/h;->setHasOptionsMenu(Z)V
 
     .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -213,9 +213,9 @@
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lcom/vk/core/ui/v/UiTracker;->INSTANCE:Lcom/vk/core/ui/v/UiTracker;
+    sget-object p1, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/UiTracker;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/a;->b()Ljava/lang/String;
 
     move-result-object p1
 
@@ -268,9 +268,9 @@
     .locals 3
 
     .line 1
-    sget-object p1, Lcom/vk/webapp/fragments/HelpFragment;->B0:Lcom/vk/webapp/fragments/HelpFragment$a;
+    sget-object p1, Lcom/vk/webapp/fragments/e;->B0:Lcom/vk/webapp/fragments/e$a;
 
-    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -280,20 +280,20 @@
 
     const-string v2, "this.context!!"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {}, Lcom/vk/dto/money/MoneyTransfer;->Q()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1, v0, v1, v1, v2}, Lcom/vk/webapp/fragments/HelpFragment$a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1, v1, v2}, Lcom/vk/webapp/fragments/e$a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
     return p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
@@ -309,7 +309,7 @@
     invoke-virtual {v0, v1, p0}, Lcom/vk/stats/AppUseTime;->a(Lcom/vk/stats/AppUseTime$Section;Lcom/vk/core/fragments/FragmentImpl;)V
 
     .line 2
-    invoke-super {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->onPause()V
+    invoke-super {p0}, Ld/a/a/a/h;->onPause()V
 
     return-void
 .end method
@@ -318,7 +318,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->onResume()V
+    invoke-super {p0}, Ld/a/a/a/h;->onResume()V
 
     .line 2
     sget-object v0, Lcom/vk/stats/AppUseTime;->f:Lcom/vk/stats/AppUseTime;
@@ -334,17 +334,17 @@
     .locals 3
 
     .line 1
-    invoke-super {p0, p1, p2}, Lme/grishka/appkit/fragments/AppKitFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Ld/a/a/a/h;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     const p2, 0x7f0803b3
 
     .line 2
-    invoke-virtual {p0, p2}, Lme/grishka/appkit/fragments/AppKitFragment;->q0(I)V
+    invoke-virtual {p0, p2}, Ld/a/a/a/h;->q0(I)V
 
     const p2, 0x7f120710
 
     .line 3
-    invoke-virtual {p0, p2}, Lme/grishka/appkit/fragments/AppKitFragment;->setTitle(I)V
+    invoke-virtual {p0, p2}, Ld/a/a/a/h;->setTitle(I)V
 
     const p2, 0x7f040095
 
@@ -372,7 +372,7 @@
     .line 7
     new-instance v0, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$MoneyTransferPagerAdapter;
 
-    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -380,7 +380,7 @@
 
     const-string v2, "context!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/vk/core/fragments/FragmentImpl;->E4()Lcom/vk/core/fragments/FragmentManagerImpl;
 
@@ -391,7 +391,7 @@
     const-string v1, "pager"
 
     .line 8
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x2
 
@@ -427,7 +427,7 @@
 
     const-string p1, "tabs"
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p2}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
@@ -436,7 +436,7 @@
 
     .line 14
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 

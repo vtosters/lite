@@ -3,12 +3,12 @@
 .source "SensetiveDataManagerService.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService;->a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/RequestSensitiveInfoCmd;)V
+    value = Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveDataProviderService;->a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/e/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/dto/account/AudioAdConfig$Type;",
         "Ljava/lang/String;",
         ">;"

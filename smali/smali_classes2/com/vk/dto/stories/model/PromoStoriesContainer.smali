@@ -35,7 +35,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/PromoStoriesContainer$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/PromoStoriesContainer$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/stories/model/PromoStoriesContainer$a;
@@ -110,7 +110,7 @@
 
     const-string p3, "storyEntries"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p2}, Lkotlin/collections/l;->h(Ljava/util/List;)Ljava/lang/Object;
 
@@ -146,7 +146,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Lcom/vk/dto/stories/d/StoriesContainerExt;->e(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p0}, Lcom/vk/dto/stories/d/a;->e(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v0
 
@@ -223,7 +223,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {p0}, Lcom/vk/dto/stories/d/StoriesContainerExt;->e(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p0}, Lcom/vk/dto/stories/d/a;->e(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v0
 

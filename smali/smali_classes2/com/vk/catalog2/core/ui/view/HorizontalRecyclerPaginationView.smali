@@ -13,9 +13,9 @@
 
 
 # static fields
-.field private static final V:Lcom/vk/lists/FooterLoadingViewProvider;
+.field private static final V:Lcom/vk/lists/l;
 
-.field private static final W:Lcom/vk/lists/FooterErrorViewProvider;
+.field private static final W:Lcom/vk/lists/k;
 
 
 # direct methods
@@ -26,21 +26,21 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView$b;
 
     invoke-direct {v0}, Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView$b;-><init>()V
 
-    sput-object v0, Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView;->V:Lcom/vk/lists/FooterLoadingViewProvider;
+    sput-object v0, Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView;->V:Lcom/vk/lists/l;
 
     .line 2
     new-instance v0, Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView$a;
 
     invoke-direct {v0}, Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView$a;-><init>()V
 
-    sput-object v0, Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView;->W:Lcom/vk/lists/FooterErrorViewProvider;
+    sput-object v0, Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView;->W:Lcom/vk/lists/k;
 
     return-void
 .end method
@@ -52,14 +52,14 @@
     invoke-direct {p0, p1, p2}, Lcom/vk/lists/RecyclerPaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 2
-    sget-object p1, Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView;->W:Lcom/vk/lists/FooterErrorViewProvider;
+    sget-object p1, Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView;->W:Lcom/vk/lists/k;
 
-    iput-object p1, p0, Lcom/vk/lists/AbstractPaginatedView;->g:Lcom/vk/lists/FooterErrorViewProvider;
+    iput-object p1, p0, Lcom/vk/lists/AbstractPaginatedView;->g:Lcom/vk/lists/k;
 
     .line 3
-    sget-object p1, Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView;->V:Lcom/vk/lists/FooterLoadingViewProvider;
+    sget-object p1, Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView;->V:Lcom/vk/lists/l;
 
-    iput-object p1, p0, Lcom/vk/lists/AbstractPaginatedView;->h:Lcom/vk/lists/FooterLoadingViewProvider;
+    iput-object p1, p0, Lcom/vk/lists/AbstractPaginatedView;->h:Lcom/vk/lists/l;
 
     return-void
 .end method
@@ -74,7 +74,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/catalog2/core/R7;->recycler_paginated_horizontal_view:I
+    sget v1, Lcom/vk/catalog2/core/r;->recycler_paginated_horizontal_view:I
 
     const/4 v2, 0x0
 
@@ -83,7 +83,7 @@
     move-result-object v0
 
     .line 2
-    sget v1, Lcom/vk/catalog2/core/R10;->recycler:I
+    sget v1, Lcom/vk/catalog2/core/q;->recycler:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -98,11 +98,11 @@
     new-array v0, v0, [I
 
     .line 3
-    sget v1, Lcom/vk/catalog2/core/R6;->colorAccent:I
+    sget v1, Lcom/vk/catalog2/core/l;->colorAccent:I
 
     aput v1, v0, v2
 
-    sget v1, Lcom/vk/catalog2/core/R6;->enableItemAnimations:I
+    sget v1, Lcom/vk/catalog2/core/l;->enableItemAnimations:I
 
     const/4 v3, 0x1
 
@@ -124,7 +124,7 @@
     .line 5
     iget-object p2, p0, Lcom/vk/lists/RecyclerPaginatedView;->J:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -144,7 +144,7 @@
     .line 8
     iget-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->J:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

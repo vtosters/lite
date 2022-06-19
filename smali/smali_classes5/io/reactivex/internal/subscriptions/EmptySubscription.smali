@@ -3,7 +3,7 @@
 .source "EmptySubscription.java"
 
 # interfaces
-.implements Lc/a/a0/b/QueueSubscription;
+.implements Lc/a/a0/b/h;
 
 
 # annotations
@@ -12,7 +12,7 @@
         "Ljava/lang/Enum<",
         "Lio/reactivex/internal/subscriptions/EmptySubscription;",
         ">;",
-        "Lc/a/a0/b/QueueSubscription<",
+        "Lc/a/a0/b/h<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -68,12 +68,12 @@
     return-void
 .end method
 
-.method public static a(Le/b/Subscriber;)V
+.method public static a(Le/b/c;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/Subscriber<",
+            "Le/b/c<",
             "*>;)V"
         }
     .end annotation
@@ -81,21 +81,21 @@
     .line 4
     sget-object v0, Lio/reactivex/internal/subscriptions/EmptySubscription;->INSTANCE:Lio/reactivex/internal/subscriptions/EmptySubscription;
 
-    invoke-interface {p0, v0}, Le/b/Subscriber;->a(Le/b/Subscription;)V
+    invoke-interface {p0, v0}, Le/b/c;->a(Le/b/d;)V
 
     .line 5
-    invoke-interface {p0}, Le/b/Subscriber;->b()V
+    invoke-interface {p0}, Le/b/c;->b()V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/Throwable;Le/b/Subscriber;)V
+.method public static a(Ljava/lang/Throwable;Le/b/c;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Throwable;",
-            "Le/b/Subscriber<",
+            "Le/b/c<",
             "*>;)V"
         }
     .end annotation
@@ -103,10 +103,10 @@
     .line 2
     sget-object v0, Lio/reactivex/internal/subscriptions/EmptySubscription;->INSTANCE:Lio/reactivex/internal/subscriptions/EmptySubscription;
 
-    invoke-interface {p1, v0}, Le/b/Subscriber;->a(Le/b/Subscription;)V
+    invoke-interface {p1, v0}, Le/b/c;->a(Le/b/d;)V
 
     .line 3
-    invoke-interface {p1, p0}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, p0}, Le/b/c;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method

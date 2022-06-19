@@ -53,7 +53,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/clickable/ClickableQuestion$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/clickable/ClickableQuestion$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/stories/model/clickable/ClickableQuestion;->g:Lcom/vk/dto/stories/model/clickable/ClickableQuestion$b;
 
@@ -124,13 +124,13 @@
 
     .line 10
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 11
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
@@ -162,7 +162,7 @@
     iput-object p1, p0, Lcom/vk/dto/stories/model/clickable/ClickableQuestion;->b:Lcom/vk/dto/stories/model/StickerType;
 
     .line 4
-    sget-object p1, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->INSTANCE:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
+    sget-object p1, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
 
     const/4 p1, 0x1
 
@@ -198,14 +198,14 @@
 
     const-string p2, "java.lang.String.format(format, *args)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/dto/stories/model/clickable/ClickableQuestion;->c:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/dto/stories/model/actions/ActionQuestion;Ljava/util/List;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/dto/stories/model/actions/ActionQuestion;Ljava/util/List;ZILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x4

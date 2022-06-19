@@ -344,11 +344,11 @@
     move-result v2
 
     .line 4
-    sget-object v3, Lcom/vk/core/utils/MeasureUtils;->INSTANCE:Lcom/vk/core/utils/MeasureUtils;
+    sget-object v3, Lcom/vk/core/utils/d;->a:Lcom/vk/core/utils/d;
 
     const v3, 0x7fffffff
 
-    invoke-static {p1, v2, v3, v1}, Lcom/vk/core/utils/MeasureUtils;->a(IIII)I
+    invoke-static {p1, v2, v3, v1}, Lcom/vk/core/utils/d;->a(IIII)I
 
     move-result v1
 

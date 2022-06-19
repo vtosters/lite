@@ -21,7 +21,7 @@
     iput-object p1, p0, Lcom/vk/catalog2/core/holders/shopping/ImageContentHolder;->c:Landroid/view/View;
 
     .line 2
-    sget p1, Lcom/vk/catalog2/core/R10;->discount:I
+    sget p1, Lcom/vk/catalog2/core/q;->discount:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -29,14 +29,14 @@
 
     const-string v0, "componentView.findViewById(R.id.discount)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
     iput-object p1, p0, Lcom/vk/catalog2/core/holders/shopping/ImageContentHolder;->a:Landroid/widget/TextView;
 
     .line 3
-    sget p1, Lcom/vk/catalog2/core/R10;->image:I
+    sget p1, Lcom/vk/catalog2/core/q;->image:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -44,7 +44,7 @@
 
     const-string p2, "componentView.findViewById(R.id.image)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/imageloader/view/VKImageView;
 
@@ -83,7 +83,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/catalog2/core/holders/shopping/ImageContentHolder$bind$1;-><init>(Lcom/vk/catalog2/core/holders/shopping/ImageContentHolder;Lcom/vk/dto/tags/TagLink;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/shopping/ImageContentHolder;->b:Lcom/vk/imageloader/view/VKImageView;
@@ -140,7 +140,7 @@
 
     move-result-object v0
 
-    sget v3, Lcom/vk/catalog2/core/R9;->catalog_product_discount_template:I
+    sget v3, Lcom/vk/catalog2/core/u;->catalog_product_discount_template:I
 
     new-array v1, v1, [Ljava/lang/Object;
 

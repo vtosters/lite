@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;
-.super Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
+.super Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
 .source "MsgPartAudioMsgHolder.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase<",
+        "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c<",
         "Lcom/vk/im/engine/models/attaches/AttachAudioMsg;",
         ">;"
     }
@@ -48,7 +48,7 @@
 
 .field private L:Lcom/vk/im/engine/models/messages/WithUserContent;
 
-.field private M:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;
+.field private M:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;
 
 
 # direct methods
@@ -59,7 +59,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder$a;
 
@@ -94,12 +94,12 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;-><init>()V
 
     .line 2
-    sget-object v0, Lcom/vk/im/engine/models/ImExperimentsProvider;->a:Lcom/vk/im/engine/models/ImExperimentsProvider$a;
+    sget-object v0, Lcom/vk/im/engine/models/f;->a:Lcom/vk/im/engine/models/f$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/ImExperimentsProvider$a;->a()Lcom/vk/im/engine/models/ImExperimentsProvider;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/f$a;->a()Lcom/vk/im/engine/models/f;
 
     return-void
 .end method
@@ -108,18 +108,18 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->B:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->B:Lcom/vk/im/engine/models/attaches/Attach;
 
     check-cast p0, Lcom/vk/im/engine/models/attaches/AttachAudioMsg;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
+.method public static final synthetic b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->f:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->f:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
 
     return-object p0
 .end method
@@ -167,7 +167,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->g:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->g:Lcom/vk/im/engine/models/messages/Msg;
 
     return-object p0
 .end method
@@ -176,7 +176,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->h:Lcom/vk/im/engine/models/messages/NestedMsg;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->h:Lcom/vk/im/engine/models/messages/NestedMsg;
 
     return-object p0
 .end method
@@ -185,15 +185,15 @@
     .locals 11
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->M:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->M:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;
 
     .line 3
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->B:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->B:Lcom/vk/im/engine/models/attaches/Attach;
 
     check-cast v1, Lcom/vk/im/engine/models/attaches/AttachAudioMsg;
 
     .line 4
-    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->h:Lcom/vk/im/engine/models/messages/NestedMsg;
+    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->h:Lcom/vk/im/engine/models/messages/NestedMsg;
 
     const/4 v3, 0x1
 
@@ -210,7 +210,7 @@
 
     .line 5
     :goto_0
-    iget-object v5, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->g:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v5, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->g:Lcom/vk/im/engine/models/messages/Msg;
 
     if-eqz v5, :cond_18
 
@@ -272,7 +272,7 @@
     if-nez v2, :cond_5
 
     .line 8
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;->d()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;->d()Z
 
     move-result v2
 
@@ -282,7 +282,7 @@
 
     move-result v2
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;->a()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;->a()I
 
     move-result v5
 
@@ -314,7 +314,7 @@
 
     move-result v1
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;->a()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;->a()I
 
     move-result v5
 
@@ -325,7 +325,7 @@
 
     if-eqz v1, :cond_d
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;->d()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;->d()Z
 
     move-result v5
 
@@ -339,7 +339,7 @@
     invoke-virtual {v1, v2}, Lcom/vk/im/ui/views/AudioMsgStatusView;->setListened(Z)V
 
     .line 12
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;->c()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;->c()Z
 
     move-result v1
 
@@ -362,13 +362,13 @@
     goto :goto_5
 
     :cond_7
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 15
     :cond_8
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
@@ -378,7 +378,7 @@
 
     if-eqz v1, :cond_b
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;->b()F
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;->b()F
 
     move-result v0
 
@@ -394,25 +394,25 @@
     goto :goto_5
 
     :cond_a
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 18
     :cond_b
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 19
     :cond_c
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 20
     :cond_d
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
@@ -449,25 +449,25 @@
     return-void
 
     :cond_f
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 25
     :cond_10
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 26
     :cond_11
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 27
     :cond_12
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
@@ -504,25 +504,25 @@
     return-void
 
     :cond_14
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 32
     :cond_15
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v10}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 33
     :cond_16
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 34
     :cond_17
-    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v7
 
@@ -539,11 +539,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;)V
+.method public a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->M:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->M:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;
 
     .line 3
     invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->e()V
@@ -560,7 +560,7 @@
     move-result-object v0
 
     .line 3
-    sget v1, Lcom/vk/im/ui/R13;->vkim_msg_part_audiomsg:I
+    sget v1, Lcom/vk/im/ui/j;->vkim_msg_part_audiomsg:I
 
     const/4 v2, 0x0
 
@@ -570,7 +570,7 @@
     move-result-object p1
 
     .line 5
-    sget p2, Lcom/vk/im/ui/R11;->icon:I
+    sget p2, Lcom/vk/im/ui/h;->icon:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -578,14 +578,14 @@
 
     const-string v1, "v.findViewById(R.id.icon)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/im/ui/views/AudioMsgStatusView;
 
     iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->C:Lcom/vk/im/ui/views/AudioMsgStatusView;
 
     .line 6
-    sget p2, Lcom/vk/im/ui/R11;->waveform:I
+    sget p2, Lcom/vk/im/ui/h;->waveform:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -593,14 +593,14 @@
 
     const-string v1, "v.findViewById(R.id.waveform)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/im/ui/views/WaveFormView;
 
     iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->D:Lcom/vk/im/ui/views/WaveFormView;
 
     .line 7
-    sget p2, Lcom/vk/im/ui/R11;->duration:I
+    sget p2, Lcom/vk/im/ui/h;->duration:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -608,14 +608,14 @@
 
     const-string v1, "v.findViewById(R.id.duration)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
     iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->E:Landroid/widget/TextView;
 
     .line 8
-    sget p2, Lcom/vk/im/ui/R11;->time:I
+    sget p2, Lcom/vk/im/ui/h;->time:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -623,14 +623,14 @@
 
     const-string v1, "v.findViewById(R.id.time)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
     iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->F:Landroid/widget/TextView;
 
     .line 9
-    sget p2, Lcom/vk/im/ui/R11;->transcription:I
+    sget p2, Lcom/vk/im/ui/h;->transcription:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -638,14 +638,14 @@
 
     const-string v1, "v.findViewById(R.id.transcription)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
     iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->G:Landroid/widget/TextView;
 
     .line 10
-    sget p2, Lcom/vk/im/ui/R11;->transcript_hide_btn:I
+    sget p2, Lcom/vk/im/ui/h;->transcript_hide_btn:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -653,14 +653,14 @@
 
     const-string v1, "v.findViewById(R.id.transcript_hide_btn)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/ImageView;
 
     iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->H:Landroid/widget/ImageView;
 
     .line 11
-    sget p2, Lcom/vk/im/ui/R11;->transcript_progress:I
+    sget p2, Lcom/vk/im/ui/h;->transcript_progress:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -668,7 +668,7 @@
 
     const-string v1, "v.findViewById(R.id.transcript_progress)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->I:Landroid/view/View;
 
@@ -677,7 +677,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p2, v0}, Lcom/vk/core/util/DurationFormatter;-><init>(Landroid/content/Context;)V
 
@@ -693,13 +693,13 @@
     const-string p2, "v"
 
     .line 14
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder$onCreateView$1;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder$onCreateView$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 15
     new-instance p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder$b;
@@ -732,7 +732,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder$onCreateView$4;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;)V
 
-    invoke-static {p2, v2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p2, v2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 18
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->C:Lcom/vk/im/ui/views/AudioMsgStatusView;
@@ -761,13 +761,13 @@
     :cond_0
     const-string p1, "waveFormView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 20
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -775,13 +775,13 @@
     const-string p1, "transcriptionView"
 
     .line 21
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 22
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -854,7 +854,7 @@
     :cond_0
     const-string p1, "transcriptHideBtn"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -862,7 +862,7 @@
     const-string p1, "transcriptionView"
 
     .line 60
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -870,7 +870,7 @@
     const-string p1, "durationView"
 
     .line 61
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -878,7 +878,7 @@
     const-string p1, "timeView"
 
     .line 62
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -886,7 +886,7 @@
     const-string p1, "waveFormView"
 
     .line 63
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -894,16 +894,16 @@
     const-string p1, "iconView"
 
     .line 64
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
-.method protected b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
+.method protected b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
     .locals 8
 
     .line 23
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->B:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->B:Lcom/vk/im/engine/models/attaches/Attach;
 
     const/4 v1, 0x0
 
@@ -912,14 +912,14 @@
     check-cast v0, Lcom/vk/im/engine/models/attaches/AttachAudioMsg;
 
     .line 24
-    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->h:Lcom/vk/im/engine/models/messages/NestedMsg;
+    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->h:Lcom/vk/im/engine/models/messages/NestedMsg;
 
     if-eqz v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->g:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->g:Lcom/vk/im/engine/models/messages/Msg;
 
     :goto_0
     if-eqz v2, :cond_11
@@ -929,16 +929,16 @@
     iput-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->L:Lcom/vk/im/engine/models/messages/WithUserContent;
 
     .line 25
-    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;
+    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;
 
-    iput-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->M:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;
+    iput-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->M:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;
 
     .line 26
-    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->o:Lcom/vk/im/engine/models/ImExperimentsProvider;
+    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->o:Lcom/vk/im/engine/models/f;
 
     const-string v3, "bindArgs.experimentsProvider"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 27
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->D:Lcom/vk/im/ui/views/WaveFormView;
@@ -952,7 +952,7 @@
     invoke-virtual {v2, v3}, Lcom/vk/im/ui/views/WaveFormView;->setWaveForm([B)V
 
     .line 28
-    iget-boolean v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->x:Z
+    iget-boolean v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->x:Z
 
     const-string v3, "progressView"
 
@@ -964,7 +964,7 @@
 
     if-eqz v2, :cond_6
 
-    iget-boolean v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->v:Z
+    iget-boolean v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->v:Z
 
     if-nez v2, :cond_6
 
@@ -1019,25 +1019,25 @@
     goto :goto_2
 
     :cond_2
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 33
     :cond_3
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 34
     :cond_4
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 35
     :cond_5
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1104,7 +1104,7 @@
 
     if-eqz v0, :cond_7
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;Landroid/widget/TextView;)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;Landroid/widget/TextView;)V
 
     .line 43
     invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartAudioMsgHolder;->e()V
@@ -1115,57 +1115,57 @@
     const-string p1, "timeView"
 
     .line 44
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 45
     :cond_8
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_9
     const-string p1, "durationView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 46
     :cond_a
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_b
     const-string p1, "durationFormatter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 47
     :cond_c
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 48
     :cond_d
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 49
     :cond_e
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 50
     :cond_f
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1173,7 +1173,7 @@
     const-string p1, "waveFormView"
 
     .line 51
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1189,7 +1189,7 @@
 
     .line 53
     :cond_12
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method

@@ -3,12 +3,12 @@
 .source "MusicSubscriptionDetailsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;-><init>(ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;-><init>(ZLkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/ViewGroup;",
         "Lcom/vtosters/lite/fragments/money/music/control/subscription/SubscriptionPurchasingDetails;",
         ">;"
@@ -28,14 +28,14 @@
 
 
 # instance fields
-.field final synthetic $onBuySubscriptionClicked:Lkotlin/jvm/b/Functions2;
+.field final synthetic $onBuySubscriptionClicked:Lkotlin/jvm/b/b;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions2;)V
+.method constructor <init>(Lkotlin/jvm/b/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter$purchasingDetails$1;->$onBuySubscriptionClicked:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter$purchasingDetails$1;->$onBuySubscriptionClicked:Lkotlin/jvm/b/b;
 
     const/4 p1, 0x1
 
@@ -52,9 +52,9 @@
     .line 1
     new-instance v0, Lcom/vtosters/lite/fragments/money/music/control/subscription/SubscriptionPurchasingDetails;
 
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter$purchasingDetails$1;->$onBuySubscriptionClicked:Lkotlin/jvm/b/Functions2;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter$purchasingDetails$1;->$onBuySubscriptionClicked:Lkotlin/jvm/b/b;
 
-    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/fragments/money/music/control/subscription/SubscriptionPurchasingDetails;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/fragments/money/music/control/subscription/SubscriptionPurchasingDetails;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
 
     return-object v0
 .end method

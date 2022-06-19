@@ -3,12 +3,12 @@
 .source "RoundedSearchView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/view/search/RoundedSearchView;->setEditMode(Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/core/view/search/RoundedSearchView;->setEditMode(Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $voiceButtonAction$inlined:Lkotlin/jvm/b/Functions;
+.field final synthetic $voiceButtonAction$inlined:Lkotlin/jvm/b/a;
 
 .field final synthetic this$0:Lcom/vk/core/view/search/RoundedSearchView;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/view/search/RoundedSearchView;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/core/view/search/RoundedSearchView;Lkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/core/view/search/RoundedSearchView$setEditMode$$inlined$apply$lambda$1;->this$0:Lcom/vk/core/view/search/RoundedSearchView;
 
-    iput-object p2, p0, Lcom/vk/core/view/search/RoundedSearchView$setEditMode$$inlined$apply$lambda$1;->$voiceButtonAction$inlined:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/core/view/search/RoundedSearchView$setEditMode$$inlined$apply$lambda$1;->$voiceButtonAction$inlined:Lkotlin/jvm/b/a;
 
     const/4 p1, 0x1
 
@@ -60,22 +60,22 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/extensions/TextViewExt;->b(Landroid/widget/TextView;)Z
+    invoke-static {p1}, Lcom/vk/core/extensions/a0;->b(Landroid/widget/TextView;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
     .line 2
-    iget-object p1, p0, Lcom/vk/core/view/search/RoundedSearchView$setEditMode$$inlined$apply$lambda$1;->$voiceButtonAction$inlined:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/core/view/search/RoundedSearchView$setEditMode$$inlined$apply$lambda$1;->$voiceButtonAction$inlined:Lkotlin/jvm/b/a;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     goto :goto_0
 
@@ -98,7 +98,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/core/view/search/RoundedSearchView$setEditMode$$inlined$apply$lambda$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

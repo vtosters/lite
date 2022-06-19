@@ -3,12 +3,12 @@
 .source "ContactsListComponent.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lio/reactivex/disposables/CompositeDisposable;)V
+    value = Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lio/reactivex/disposables/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lkotlin/Unit;",
+        "Lc/a/z/g<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/Unit;)V
+.method public final a(Lkotlin/m;)V
     .locals 0
 
     .line 1
@@ -65,9 +65,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$f;->a(Lkotlin/Unit;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$f;->a(Lkotlin/m;)V
 
     return-void
 .end method

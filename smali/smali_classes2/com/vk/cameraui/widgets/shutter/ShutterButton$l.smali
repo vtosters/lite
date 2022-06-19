@@ -1,5 +1,5 @@
 .class public final Lcom/vk/cameraui/widgets/shutter/ShutterButton$l;
-.super Lio/reactivex/observers/DisposableObserver/DisposableObserver;
+.super Lc/a/c0/a;
 .source "ShutterButton.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lio/reactivex/observers/DisposableObserver/DisposableObserver<",
+        "Lc/a/c0/a<",
         "Ljava/lang/Float;",
         ">;"
     }
@@ -38,7 +38,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$l;->b:Lcom/vk/cameraui/widgets/shutter/ShutterButton;
 
-    invoke-direct {p0}, Lio/reactivex/observers/DisposableObserver/DisposableObserver;-><init>()V
+    invoke-direct {p0}, Lc/a/c0/a;-><init>()V
 
     return-void
 .end method
@@ -51,11 +51,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$l;->b:Lcom/vk/cameraui/widgets/shutter/ShutterButton;
 
-    invoke-static {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    invoke-static {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->a(F)V
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/a;->a(F)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$l;->b:Lcom/vk/cameraui/widgets/shutter/ShutterButton;
@@ -77,13 +77,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$l;->b:Lcom/vk/cameraui/widgets/shutter/ShutterButton;
 
-    invoke-static {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    invoke-static {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/a;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->b(F)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/widgets/shutter/a;->b(F)V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class final Lcom/vk/core/network/stat/NetworkMetricsReporter$a;
-.super Lokhttp3/EventListener;
+.super Lokhttp3/p;
 .source "NetworkMetricsReporter.kt"
 
 
@@ -30,14 +30,14 @@
     .line 1
     iput-object p1, p0, Lcom/vk/core/network/stat/NetworkMetricsReporter$a;->b:Lcom/vk/core/network/stat/NetworkMetricsReporter;
 
-    invoke-direct {p0}, Lokhttp3/EventListener;-><init>()V
+    invoke-direct {p0}, Lokhttp3/p;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lokhttp3/Call;)V
+.method public a(Lokhttp3/e;)V
     .locals 2
 
     .line 21
@@ -51,7 +51,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/network/stat/MetricsHttp;
+    check-cast v0, Lcom/vk/core/network/stat/d;
 
     .line 22
     iget-object v1, p0, Lcom/vk/core/network/stat/NetworkMetricsReporter$a;->b:Lcom/vk/core/network/stat/NetworkMetricsReporter;
@@ -65,24 +65,24 @@
     if-eqz v0, :cond_0
 
     .line 23
-    invoke-virtual {v0}, Lcom/vk/core/network/stat/MetricsHttp;->t()V
+    invoke-virtual {v0}, Lcom/vk/core/network/stat/d;->t()V
 
     .line 24
     iget-object p1, p0, Lcom/vk/core/network/stat/NetworkMetricsReporter$a;->b:Lcom/vk/core/network/stat/NetworkMetricsReporter;
 
-    invoke-static {p1, v0}, Lcom/vk/core/network/stat/NetworkMetricsReporter;->a(Lcom/vk/core/network/stat/NetworkMetricsReporter;Lcom/vk/core/network/stat/MetricsHttp;)V
+    invoke-static {p1, v0}, Lcom/vk/core/network/stat/NetworkMetricsReporter;->a(Lcom/vk/core/network/stat/NetworkMetricsReporter;Lcom/vk/core/network/stat/d;)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lokhttp3/Call;J)V
+.method public a(Lokhttp3/e;J)V
     .locals 0
 
     return-void
 .end method
 
-.method public a(Lokhttp3/Call;Ljava/io/IOException;)V
+.method public a(Lokhttp3/e;Ljava/io/IOException;)V
     .locals 0
 
     .line 25
@@ -97,7 +97,7 @@
     return-void
 .end method
 
-.method public a(Lokhttp3/Call;Ljava/lang/String;)V
+.method public a(Lokhttp3/e;Ljava/lang/String;)V
     .locals 2
 
     .line 10
@@ -111,29 +111,29 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/core/network/stat/MetricsHttp;
+    check-cast p1, Lcom/vk/core/network/stat/d;
 
     if-eqz p1, :cond_0
 
     .line 11
-    sget-object p2, Lcom/vk/core/network/stat/MetricsHttp;->D:Lcom/vk/core/network/stat/MetricsHttp$a;
+    sget-object p2, Lcom/vk/core/network/stat/d;->D:Lcom/vk/core/network/stat/d$a;
 
-    invoke-virtual {p2}, Lcom/vk/core/network/stat/MetricsHttp$a;->a()J
+    invoke-virtual {p2}, Lcom/vk/core/network/stat/d$a;->a()J
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/MetricsHttp;->d(J)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/d;->d(J)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lokhttp3/Call;Ljava/lang/String;Ljava/util/List;)V
+.method public a(Lokhttp3/e;Ljava/lang/String;Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lokhttp3/Call;",
+            "Lokhttp3/e;",
             "Ljava/lang/String;",
             "Ljava/util/List<",
             "Ljava/net/InetAddress;",
@@ -152,23 +152,23 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/core/network/stat/MetricsHttp;
+    check-cast p1, Lcom/vk/core/network/stat/d;
 
     if-eqz p1, :cond_0
 
-    sget-object p2, Lcom/vk/core/network/stat/MetricsHttp;->D:Lcom/vk/core/network/stat/MetricsHttp$a;
+    sget-object p2, Lcom/vk/core/network/stat/d;->D:Lcom/vk/core/network/stat/d$a;
 
-    invoke-virtual {p2}, Lcom/vk/core/network/stat/MetricsHttp$a;->a()J
+    invoke-virtual {p2}, Lcom/vk/core/network/stat/d$a;->a()J
 
     move-result-wide p2
 
-    invoke-virtual {p1, p2, p3}, Lcom/vk/core/network/stat/MetricsHttp;->c(J)V
+    invoke-virtual {p1, p2, p3}, Lcom/vk/core/network/stat/d;->c(J)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lokhttp3/Call;Ljava/net/InetSocketAddress;Ljava/net/Proxy;)V
+.method public a(Lokhttp3/e;Ljava/net/InetSocketAddress;Ljava/net/Proxy;)V
     .locals 2
 
     .line 13
@@ -182,18 +182,18 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/core/network/stat/MetricsHttp;
+    check-cast p1, Lcom/vk/core/network/stat/d;
 
     if-eqz p1, :cond_2
 
     .line 14
-    sget-object p2, Lcom/vk/core/network/stat/MetricsHttp;->D:Lcom/vk/core/network/stat/MetricsHttp$a;
+    sget-object p2, Lcom/vk/core/network/stat/d;->D:Lcom/vk/core/network/stat/d$a;
 
-    invoke-virtual {p2}, Lcom/vk/core/network/stat/MetricsHttp$a;->a()J
+    invoke-virtual {p2}, Lcom/vk/core/network/stat/d$a;->a()J
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/MetricsHttp;->b(J)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/d;->b(J)V
 
     const/4 p2, 0x0
 
@@ -216,10 +216,10 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {p1, v0}, Lcom/vk/core/network/stat/MetricsHttp;->b(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/network/stat/d;->b(Z)V
 
     .line 16
-    invoke-virtual {p1}, Lcom/vk/core/network/stat/MetricsHttp;->s()Z
+    invoke-virtual {p1}, Lcom/vk/core/network/stat/d;->s()Z
 
     move-result v0
 
@@ -230,17 +230,17 @@
 
     move-result-object p3
 
-    invoke-virtual {p1, p3}, Lcom/vk/core/network/stat/MetricsHttp;->e(Ljava/lang/String;)V
+    invoke-virtual {p1, p3}, Lcom/vk/core/network/stat/d;->e(Ljava/lang/String;)V
 
     .line 18
     :cond_1
-    invoke-virtual {p1, p2}, Lcom/vk/core/network/stat/MetricsHttp;->a(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/core/network/stat/d;->a(Z)V
 
     :cond_2
     return-void
 .end method
 
-.method public a(Lokhttp3/Call;Ljava/net/InetSocketAddress;Ljava/net/Proxy;Lokhttp3/Protocol;)V
+.method public a(Lokhttp3/e;Ljava/net/InetSocketAddress;Ljava/net/Proxy;Lokhttp3/Protocol;)V
     .locals 0
 
     .line 19
@@ -254,30 +254,30 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/core/network/stat/MetricsHttp;
+    check-cast p1, Lcom/vk/core/network/stat/d;
 
     if-eqz p1, :cond_0
 
     .line 20
-    sget-object p2, Lcom/vk/core/network/stat/MetricsHttp;->D:Lcom/vk/core/network/stat/MetricsHttp$a;
+    sget-object p2, Lcom/vk/core/network/stat/d;->D:Lcom/vk/core/network/stat/d$a;
 
-    invoke-virtual {p2}, Lcom/vk/core/network/stat/MetricsHttp$a;->a()J
+    invoke-virtual {p2}, Lcom/vk/core/network/stat/d$a;->a()J
 
     move-result-wide p2
 
-    invoke-virtual {p1, p2, p3}, Lcom/vk/core/network/stat/MetricsHttp;->a(J)V
+    invoke-virtual {p1, p2, p3}, Lcom/vk/core/network/stat/d;->a(J)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lokhttp3/Call;Ljava/net/InetSocketAddress;Ljava/net/Proxy;Lokhttp3/Protocol;Ljava/io/IOException;)V
+.method public a(Lokhttp3/e;Ljava/net/InetSocketAddress;Ljava/net/Proxy;Lokhttp3/Protocol;Ljava/io/IOException;)V
     .locals 0
 
     return-void
 .end method
 
-.method public a(Lokhttp3/Call;Lokhttp3/Response;)V
+.method public a(Lokhttp3/e;Lokhttp3/b0;)V
     .locals 4
 
     .line 1
@@ -291,22 +291,22 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/core/network/stat/MetricsHttp;
+    check-cast p1, Lcom/vk/core/network/stat/d;
 
     if-eqz p1, :cond_2
 
     .line 2
-    invoke-virtual {p2}, Lokhttp3/Response;->f()Lokhttp3/Headers;
+    invoke-virtual {p2}, Lokhttp3/b0;->f()Lokhttp3/s;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {p2}, Lokhttp3/Response;->d()I
+    invoke-virtual {p2}, Lokhttp3/b0;->d()I
 
     move-result v1
 
     .line 4
-    invoke-virtual {p2}, Lokhttp3/Response;->e()Lokhttp3/Handshake;
+    invoke-virtual {p2}, Lokhttp3/b0;->e()Lokhttp3/r;
 
     move-result-object v2
 
@@ -314,7 +314,7 @@
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2}, Lokhttp3/Handshake;->d()Lokhttp3/TlsVersion;
+    invoke-virtual {v2}, Lokhttp3/r;->d()Lokhttp3/TlsVersion;
 
     move-result-object v2
 
@@ -332,12 +332,12 @@
     move-object v2, v3
 
     :goto_0
-    invoke-virtual {p1, v2}, Lcom/vk/core/network/stat/MetricsHttp;->f(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Lcom/vk/core/network/stat/d;->f(Ljava/lang/String;)V
 
     const-string v2, "Content-Type"
 
     .line 5
-    invoke-virtual {v0, v2}, Lokhttp3/Headers;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Lokhttp3/s;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -349,33 +349,33 @@
     move-object v0, v3
 
     :goto_1
-    invoke-virtual {p1, v0}, Lcom/vk/core/network/stat/MetricsHttp;->d(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/network/stat/d;->d(Ljava/lang/String;)V
 
     .line 6
-    invoke-virtual {p1, v1}, Lcom/vk/core/network/stat/MetricsHttp;->a(I)V
+    invoke-virtual {p1, v1}, Lcom/vk/core/network/stat/d;->a(I)V
 
     .line 7
-    invoke-virtual {p2}, Lokhttp3/Response;->m()Lokhttp3/Protocol;
+    invoke-virtual {p2}, Lokhttp3/b0;->m()Lokhttp3/Protocol;
 
     move-result-object p2
 
     const-string v0, "response.protocol()"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/core/network/stat/MetricsHttp;->a(Lokhttp3/Protocol;)V
+    invoke-virtual {p1, p2}, Lcom/vk/core/network/stat/d;->a(Lokhttp3/Protocol;)V
 
     :cond_2
     return-void
 .end method
 
-.method public a(Lokhttp3/Call;Lokhttp3/Connection;)V
+.method public a(Lokhttp3/e;Lokhttp3/i;)V
     .locals 0
 
     return-void
 .end method
 
-.method public a(Lokhttp3/Call;Lokhttp3/Handshake;)V
+.method public a(Lokhttp3/e;Lokhttp3/r;)V
     .locals 2
 
     .line 8
@@ -389,78 +389,78 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/core/network/stat/MetricsHttp;
+    check-cast p1, Lcom/vk/core/network/stat/d;
 
     if-eqz p1, :cond_0
 
     .line 9
-    sget-object p2, Lcom/vk/core/network/stat/MetricsHttp;->D:Lcom/vk/core/network/stat/MetricsHttp$a;
+    sget-object p2, Lcom/vk/core/network/stat/d;->D:Lcom/vk/core/network/stat/d$a;
 
-    invoke-virtual {p2}, Lcom/vk/core/network/stat/MetricsHttp$a;->a()J
+    invoke-virtual {p2}, Lcom/vk/core/network/stat/d$a;->a()J
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/MetricsHttp;->i(J)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/d;->i(J)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lokhttp3/Call;Lokhttp3/Request;)V
+.method public a(Lokhttp3/e;Lokhttp3/z;)V
     .locals 0
 
     return-void
 .end method
 
-.method public b(Lokhttp3/Call;)V
+.method public b(Lokhttp3/e;)V
     .locals 4
 
     .line 4
-    new-instance v0, Lcom/vk/core/network/stat/MetricsHttp;
+    new-instance v0, Lcom/vk/core/network/stat/d;
 
-    invoke-direct {v0}, Lcom/vk/core/network/stat/MetricsHttp;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/network/stat/d;-><init>()V
 
     .line 5
-    invoke-interface {p1}, Lokhttp3/Call;->m0()Lokhttp3/Request;
+    invoke-interface {p1}, Lokhttp3/e;->m0()Lokhttp3/z;
 
     move-result-object v1
 
     .line 6
-    invoke-virtual {v1}, Lokhttp3/Request;->e()Ljava/lang/String;
+    invoke-virtual {v1}, Lokhttp3/z;->e()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "it.method()"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2}, Lcom/vk/core/network/stat/MetricsHttp;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/vk/core/network/stat/d;->b(Ljava/lang/String;)V
 
     .line 7
-    invoke-virtual {v1}, Lokhttp3/Request;->g()Lokhttp3/HttpUrl;
+    invoke-virtual {v1}, Lokhttp3/z;->g()Lokhttp3/t;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lokhttp3/HttpUrl;->g()Ljava/lang/String;
+    invoke-virtual {v2}, Lokhttp3/t;->g()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "it.url().host()"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2}, Lcom/vk/core/network/stat/MetricsHttp;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/vk/core/network/stat/d;->a(Ljava/lang/String;)V
 
     .line 8
-    invoke-virtual {v1}, Lokhttp3/Request;->g()Lokhttp3/HttpUrl;
+    invoke-virtual {v1}, Lokhttp3/z;->g()Lokhttp3/t;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lokhttp3/HttpUrl;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lokhttp3/t;->c()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/network/stat/MetricsHttp;->c(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/network/stat/d;->c(Ljava/lang/String;)V
 
     .line 9
     iget-object v1, p0, Lcom/vk/core/network/stat/NetworkMetricsReporter$a;->b:Lcom/vk/core/network/stat/NetworkMetricsReporter;
@@ -474,7 +474,7 @@
     return-void
 .end method
 
-.method public b(Lokhttp3/Call;J)V
+.method public b(Lokhttp3/e;J)V
     .locals 2
 
     .line 1
@@ -488,41 +488,41 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/core/network/stat/MetricsHttp;
+    check-cast p1, Lcom/vk/core/network/stat/d;
 
     if-eqz p1, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/core/network/stat/MetricsHttp;->D:Lcom/vk/core/network/stat/MetricsHttp$a;
+    sget-object v0, Lcom/vk/core/network/stat/d;->D:Lcom/vk/core/network/stat/d$a;
 
-    invoke-virtual {v0}, Lcom/vk/core/network/stat/MetricsHttp$a;->a()J
+    invoke-virtual {v0}, Lcom/vk/core/network/stat/d$a;->a()J
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/MetricsHttp;->f(J)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/d;->f(J)V
 
     long-to-int p3, p2
 
     .line 3
-    invoke-virtual {p1, p3}, Lcom/vk/core/network/stat/MetricsHttp;->b(I)V
+    invoke-virtual {p1, p3}, Lcom/vk/core/network/stat/d;->b(I)V
 
     :cond_0
     return-void
 .end method
 
-.method public b(Lokhttp3/Call;Lokhttp3/Connection;)V
+.method public b(Lokhttp3/e;Lokhttp3/i;)V
     .locals 0
 
     return-void
 .end method
 
-.method public c(Lokhttp3/Call;)V
+.method public c(Lokhttp3/e;)V
     .locals 0
 
     return-void
 .end method
 
-.method public d(Lokhttp3/Call;)V
+.method public d(Lokhttp3/e;)V
     .locals 2
 
     .line 1
@@ -536,24 +536,24 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/core/network/stat/MetricsHttp;
+    check-cast p1, Lcom/vk/core/network/stat/d;
 
     if-eqz p1, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/core/network/stat/MetricsHttp;->D:Lcom/vk/core/network/stat/MetricsHttp$a;
+    sget-object v0, Lcom/vk/core/network/stat/d;->D:Lcom/vk/core/network/stat/d$a;
 
-    invoke-virtual {v0}, Lcom/vk/core/network/stat/MetricsHttp$a;->a()J
+    invoke-virtual {v0}, Lcom/vk/core/network/stat/d$a;->a()J
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/MetricsHttp;->e(J)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/d;->e(J)V
 
     :cond_0
     return-void
 .end method
 
-.method public e(Lokhttp3/Call;)V
+.method public e(Lokhttp3/e;)V
     .locals 2
 
     .line 1
@@ -567,24 +567,24 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/core/network/stat/MetricsHttp;
+    check-cast p1, Lcom/vk/core/network/stat/d;
 
     if-eqz p1, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/core/network/stat/MetricsHttp;->D:Lcom/vk/core/network/stat/MetricsHttp$a;
+    sget-object v0, Lcom/vk/core/network/stat/d;->D:Lcom/vk/core/network/stat/d$a;
 
-    invoke-virtual {v0}, Lcom/vk/core/network/stat/MetricsHttp$a;->a()J
+    invoke-virtual {v0}, Lcom/vk/core/network/stat/d$a;->a()J
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/MetricsHttp;->g(J)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/d;->g(J)V
 
     :cond_0
     return-void
 .end method
 
-.method public f(Lokhttp3/Call;)V
+.method public f(Lokhttp3/e;)V
     .locals 2
 
     .line 1
@@ -598,24 +598,24 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/core/network/stat/MetricsHttp;
+    check-cast p1, Lcom/vk/core/network/stat/d;
 
     if-eqz p1, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/core/network/stat/MetricsHttp;->D:Lcom/vk/core/network/stat/MetricsHttp$a;
+    sget-object v0, Lcom/vk/core/network/stat/d;->D:Lcom/vk/core/network/stat/d$a;
 
-    invoke-virtual {v0}, Lcom/vk/core/network/stat/MetricsHttp$a;->a()J
+    invoke-virtual {v0}, Lcom/vk/core/network/stat/d$a;->a()J
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/MetricsHttp;->h(J)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/d;->h(J)V
 
     :cond_0
     return-void
 .end method
 
-.method public g(Lokhttp3/Call;)V
+.method public g(Lokhttp3/e;)V
     .locals 2
 
     .line 1
@@ -629,18 +629,18 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/core/network/stat/MetricsHttp;
+    check-cast p1, Lcom/vk/core/network/stat/d;
 
     if-eqz p1, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/core/network/stat/MetricsHttp;->D:Lcom/vk/core/network/stat/MetricsHttp$a;
+    sget-object v0, Lcom/vk/core/network/stat/d;->D:Lcom/vk/core/network/stat/d$a;
 
-    invoke-virtual {v0}, Lcom/vk/core/network/stat/MetricsHttp$a;->a()J
+    invoke-virtual {v0}, Lcom/vk/core/network/stat/d$a;->a()J
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/MetricsHttp;->j(J)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/network/stat/d;->j(J)V
 
     :cond_0
     return-void

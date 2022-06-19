@@ -3,7 +3,7 @@
 .source "PageFullHolder.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/NewsEntryActionsAdapter3;
+.implements Lcom/vk/newsfeed/j;
 
 
 # annotations
@@ -20,18 +20,18 @@
 # instance fields
 .field final synthetic a:Lcom/vk/fave/fragments/holders/PageFullHolder;
 
-.field final synthetic b:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+.field final synthetic b:Lcom/vk/core/dialogs/actionspopup/a;
 
 .field final synthetic c:Lcom/vk/fave/entities/FavePage;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/fave/fragments/holders/PageFullHolder;Lcom/vk/core/dialogs/actionspopup/ActionsPopup;Lcom/vk/fave/entities/FavePage;)V
+.method constructor <init>(Lcom/vk/fave/fragments/holders/PageFullHolder;Lcom/vk/core/dialogs/actionspopup/a;Lcom/vk/fave/entities/FavePage;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/core/dialogs/actionspopup/ActionsPopup;",
+            "Lcom/vk/core/dialogs/actionspopup/a;",
             "Lcom/vk/fave/entities/FavePage;",
             ")V"
         }
@@ -40,7 +40,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/fave/fragments/holders/PageFullHolder$b;->a:Lcom/vk/fave/fragments/holders/PageFullHolder;
 
-    iput-object p2, p0, Lcom/vk/fave/fragments/holders/PageFullHolder$b;->b:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    iput-object p2, p0, Lcom/vk/fave/fragments/holders/PageFullHolder$b;->b:Lcom/vk/core/dialogs/actionspopup/a;
 
     iput-object p3, p0, Lcom/vk/fave/fragments/holders/PageFullHolder$b;->c:Lcom/vk/fave/entities/FavePage;
 
@@ -51,13 +51,13 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup;I)V
+.method public a(Lcom/vk/core/dialogs/actionspopup/a;I)V
     .locals 9
 
     .line 1
-    iget-object p1, p0, Lcom/vk/fave/fragments/holders/PageFullHolder$b;->b:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    iget-object p1, p0, Lcom/vk/fave/fragments/holders/PageFullHolder$b;->b:Lcom/vk/core/dialogs/actionspopup/a;
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
 
     if-eqz p2, :cond_1
 
@@ -97,13 +97,13 @@
     .line 4
     iget-object p2, p0, Lcom/vk/fave/fragments/holders/PageFullHolder$b;->a:Lcom/vk/fave/fragments/holders/PageFullHolder;
 
-    invoke-virtual {p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p2}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p2
 
     const-string v0, "parent"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -113,7 +113,7 @@
     iget-object v0, p0, Lcom/vk/fave/fragments/holders/PageFullHolder$b;->c:Lcom/vk/fave/entities/FavePage;
 
     .line 6
-    new-instance v8, Lcom/vk/fave/entities/FaveMetaInfo;
+    new-instance v8, Lcom/vk/fave/entities/e;
 
     const/4 v2, 0x0
 
@@ -133,10 +133,10 @@
 
     move-object v1, v8
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/fave/entities/FaveMetaInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/fave/entities/e;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/i;)V
 
     .line 7
-    invoke-virtual {p1, p2, v0, v8}, Lcom/vk/fave/views/FaveCustomizeTagsView$Companion;->a(Landroid/content/Context;Lcom/vk/fave/entities/WithTags;Lcom/vk/fave/entities/FaveMetaInfo;)V
+    invoke-virtual {p1, p2, v0, v8}, Lcom/vk/fave/views/FaveCustomizeTagsView$Companion;->a(Landroid/content/Context;Lcom/vk/fave/entities/l;Lcom/vk/fave/entities/e;)V
 
     goto :goto_0
 
@@ -148,7 +148,7 @@
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -156,13 +156,13 @@
 
     const-string p1, "itemView.context"
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     iget-object v1, p0, Lcom/vk/fave/fragments/holders/PageFullHolder$b;->c:Lcom/vk/fave/entities/FavePage;
 
     .line 10
-    new-instance p1, Lcom/vk/fave/entities/FaveMetaInfo;
+    new-instance p1, Lcom/vk/fave/entities/e;
 
     const/4 v3, 0x0
 
@@ -182,7 +182,7 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v2 .. v8}, Lcom/vk/fave/entities/FaveMetaInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/fave/entities/e;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/i;)V
 
     const/4 v4, 0x0
 
@@ -193,7 +193,7 @@
     const/4 v7, 0x0
 
     .line 11
-    invoke-static/range {v0 .. v7}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;ZILjava/lang/Object;)V
+    invoke-static/range {v0 .. v7}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;ZILjava/lang/Object;)V
 
     :goto_0
     return-void

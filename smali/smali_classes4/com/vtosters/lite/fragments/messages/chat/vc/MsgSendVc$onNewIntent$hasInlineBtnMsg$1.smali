@@ -3,7 +3,7 @@
 .source "MsgSendVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions3;
+.implements Lkotlin/jvm/b/e;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions3<",
+        "Lkotlin/jvm/b/e<",
         "Ljava/lang/String;",
         "Ljava/lang/String;",
         "Ljava/util/List<",
@@ -27,7 +27,7 @@
         "Lcom/vk/im/engine/models/attaches/Attach;",
         ">;",
         "Lcom/vk/im/engine/models/conversations/BotButton;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -60,7 +60,7 @@
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$onNewIntent$hasInlineBtnMsg$1;->a(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/models/conversations/BotButton;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
@@ -99,12 +99,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 1
 
     const-class v0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 

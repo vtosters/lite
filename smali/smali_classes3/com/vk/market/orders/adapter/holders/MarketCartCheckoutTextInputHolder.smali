@@ -1,5 +1,5 @@
 .class public final Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;
-.super Lcom/vk/market/orders/adapter/holders/MarketCartBaseInputHolder;
+.super Lcom/vk/market/orders/adapter/holders/a;
 .source "MarketCartCheckoutTextInputHolder.kt"
 
 
@@ -16,13 +16,13 @@
 
 .field private e:Ljava/lang/String;
 
-.field private f:Lkotlin/jvm/b/Functions2;
+.field private f:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -32,13 +32,13 @@
 
 .field private final h:Landroid/text/SpannableString;
 
-.field private i:Lkotlin/jvm/b/Functions2;
+.field private i:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -52,7 +52,7 @@
     .locals 3
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lcom/vk/market/orders/adapter/holders/MarketCartBaseInputHolder;-><init>(Landroid/view/ViewGroup;I)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/market/orders/adapter/holders/a;-><init>(Landroid/view/ViewGroup;I)V
 
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -94,16 +94,16 @@
 
     const-string p2, "input"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->j:Landroid/view/View;
 
     .line 9
-    new-instance p1, Lb/h/g/s/ForegroundDynamicColorSpan;
+    new-instance p1, Lb/h/g/s/a;
 
     const p2, 0x7f040193
 
-    invoke-direct {p1, p2}, Lb/h/g/s/ForegroundDynamicColorSpan;-><init>(I)V
+    invoke-direct {p1, p2}, Lb/h/g/s/a;-><init>(I)V
 
     .line 10
     iget-object p2, p0, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->h:Landroid/text/SpannableString;
@@ -130,7 +130,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/view/ViewGroup;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/view/ViewGroup;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -146,11 +146,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic a(Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->f:Lkotlin/jvm/b/Functions2;
+    iget-object p0, p0, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->f:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
@@ -211,18 +211,18 @@
 
     .line 30
     :goto_1
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public static final synthetic b(Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic b(Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->i:Lkotlin/jvm/b/Functions2;
+    iget-object p0, p0, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->i:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
@@ -238,16 +238,16 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions2;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder$Style;ZLkotlin/jvm/b/Functions2;)V
+.method public final a(Ljava/lang/CharSequence;Lkotlin/jvm/b/b;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder$Style;ZLkotlin/jvm/b/b;)V
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;",
             "Ljava/lang/CharSequence;",
             "Ljava/lang/CharSequence;",
@@ -256,10 +256,10 @@
             "Z",
             "Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder$Style;",
             "Z",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -285,7 +285,7 @@
     move/from16 v5, p9
 
     .line 4
-    invoke-super/range {v0 .. v5}, Lcom/vk/market/orders/adapter/holders/MarketCartBaseInputHolder;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZZ)V
+    invoke-super/range {v0 .. v5}, Lcom/vk/market/orders/adapter/holders/a;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZZ)V
 
     .line 5
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->g:Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder$Style;
@@ -328,21 +328,21 @@
     :cond_0
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setSingleLine(Z)V
 
     .line 9
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setMaxLines(I)V
 
     .line 10
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v4}, Landroid/widget/EditText;->setInputType(I)V
 
@@ -352,21 +352,21 @@
     :cond_1
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setSingleLine(Z)V
 
     .line 12
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setMaxLines(I)V
 
     .line 13
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setInputType(I)V
 
@@ -376,7 +376,7 @@
     :cond_2
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -385,7 +385,7 @@
     .line 15
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x7
 
@@ -394,7 +394,7 @@
     .line 16
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x24001
 
@@ -406,21 +406,21 @@
     :cond_3
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setSingleLine(Z)V
 
     .line 18
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setMaxLines(I)V
 
     .line 19
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v2, 0x4001
 
@@ -433,7 +433,7 @@
 
     const-string v2, "input"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getHint()Ljava/lang/CharSequence;
 
@@ -448,7 +448,7 @@
     .line 21
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p4}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
@@ -456,12 +456,12 @@
     move-object v0, p2
 
     .line 22
-    iput-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->f:Lkotlin/jvm/b/Functions2;
+    iput-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->f:Lkotlin/jvm/b/b;
 
     move-object/from16 v0, p10
 
     .line 23
-    iput-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->i:Lkotlin/jvm/b/Functions2;
+    iput-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->i:Lkotlin/jvm/b/b;
 
     if-eqz v7, :cond_6
 
@@ -483,7 +483,7 @@
     .line 25
     iget-object v0, v6, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 

@@ -3,7 +3,7 @@
 .source "ImEngineProvider.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;",
+        "Lc/a/z/g<",
+        "Lcom/vk/im/engine/events/h;",
         ">;"
     }
 .end annotation
@@ -56,17 +56,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;)V
+.method public final a(Lcom/vk/im/engine/events/h;)V
     .locals 0
 
     .line 1
-    sget-object p1, Lcom/vk/metrics/reporters/PerformanceReporter;->INSTANCE:Lcom/vk/metrics/reporters/PerformanceReporter;
+    sget-object p1, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
 
-    invoke-virtual {p1}, Lcom/vk/metrics/reporters/PerformanceReporter;->c()Lb/h/q/c/c/PerformanceStorage;
+    invoke-virtual {p1}, Lcom/vk/metrics/reporters/a;->c()Lb/h/q/c/c/c;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/q/c/c/PerformanceStorage;->s()V
+    invoke-virtual {p1}, Lb/h/q/c/c/c;->s()V
 
     return-void
 .end method
@@ -75,9 +75,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;
+    check-cast p1, Lcom/vk/im/engine/events/h;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/im/ImEngineProvider$f;->a(Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/im/ImEngineProvider$f;->a(Lcom/vk/im/engine/events/h;)V
 
     return-void
 .end method

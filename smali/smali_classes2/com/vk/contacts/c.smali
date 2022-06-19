@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/vk/contacts/c;->a:Lcom/vk/contacts/ContactsSyncAcitvity;
 
-    invoke-virtual {v0}, Lcom/vk/contacts/ContactsSyncAcitvity;->w1()Lkotlin/Unit;
+    invoke-virtual {v0}, Lcom/vk/contacts/ContactsSyncAcitvity;->w1()Lkotlin/m;
 
     move-result-object v0
 

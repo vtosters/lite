@@ -59,7 +59,7 @@
     return-object v0
 .end method
 
-.method public static final a(Lorg/json/JSONArray;Lkotlin/jvm/b/Functions2;)Ljava/util/ArrayList;
+.method public static final a(Lorg/json/JSONArray;Lkotlin/jvm/b/b;)Ljava/util/ArrayList;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -67,7 +67,7 @@
             "Ljava/lang/Object;",
             ">(",
             "Lorg/json/JSONArray;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lorg/json/JSONObject;",
             "+TT;>;)",
@@ -103,7 +103,7 @@
 
     if-eqz v3, :cond_0
 
-    invoke-interface {p1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -121,7 +121,7 @@
     return-object v0
 .end method
 
-.method public static final a(Lorg/json/JSONArray;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Ljava/util/HashMap;
+.method public static final a(Lorg/json/JSONArray;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Ljava/util/HashMap;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -131,11 +131,11 @@
             "Ljava/lang/Object;",
             ">(",
             "Lorg/json/JSONArray;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lorg/json/JSONObject;",
             "+TT;>;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;+TK;>;)",
             "Ljava/util/HashMap<",
             "TK;TT;>;"
@@ -167,12 +167,12 @@
     if-eqz v3, :cond_0
 
     .line 8
-    invoke-interface {p1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
     .line 9
-    invoke-interface {p2, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -196,7 +196,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
-            "Lcom/vk/core/serialize/JSONSerialize;",
+            "Lcom/vk/core/serialize/a;",
             ">(",
             "Lorg/json/JSONArray;",
             "Ljava/util/List<",
@@ -205,19 +205,19 @@
     .end annotation
 
     .line 11
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object p1
 
     .line 12
     sget-object v0, Lcom/vk/core/extensions/JsonExtKt$putAll$2;->c:Lcom/vk/core/extensions/JsonExtKt$putAll$2;
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p1
 
     .line 13
-    invoke-interface {p1}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
+    invoke-interface {p1}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 

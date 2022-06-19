@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -122,7 +122,7 @@
 
     const/4 v7, 0x2
 
-    invoke-direct {v6, v3, v4, v7, v2}, Lcom/vk/dto/newsfeed/entries/LatestNews$TrackData;-><init>(Ljava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v6, v3, v4, v7, v2}, Lcom/vk/dto/newsfeed/entries/LatestNews$TrackData;-><init>(Ljava/lang/String;ZILkotlin/jvm/internal/i;)V
 
     invoke-direct {p1, v0, v1, v5, v6}, Lcom/vk/dto/newsfeed/entries/LatestNews;-><init>(IILjava/util/ArrayList;Lcom/vk/dto/newsfeed/entries/LatestNews$TrackData;)V
 

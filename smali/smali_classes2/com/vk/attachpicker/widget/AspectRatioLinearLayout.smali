@@ -81,12 +81,12 @@
 
     iget v2, p0, Lcom/vk/attachpicker/widget/AspectRatioLinearLayout;->a:I
 
-    invoke-static {p1, p2, v0, v1, v2}, Lcom/vk/attachpicker/widget/AspectRatioDelegate;->a(IIZFI)Lcom/vk/attachpicker/widget/AspectRatioDelegate$a;
+    invoke-static {p1, p2, v0, v1, v2}, Lcom/vk/attachpicker/widget/a;->a(IIZFI)Lcom/vk/attachpicker/widget/a$a;
 
     move-result-object p1
 
     .line 2
-    iget p2, p1, Lcom/vk/attachpicker/widget/AspectRatioDelegate$a;->a:I
+    iget p2, p1, Lcom/vk/attachpicker/widget/a$a;->a:I
 
     const/high16 v0, 0x40000000    # 2.0f
 
@@ -95,7 +95,7 @@
     move-result p2
 
     .line 3
-    iget p1, p1, Lcom/vk/attachpicker/widget/AspectRatioDelegate$a;->b:I
+    iget p1, p1, Lcom/vk/attachpicker/widget/a$a;->b:I
 
     invoke-static {p1, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 

@@ -16,7 +16,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p1, p2, p3}, Lkotlin/io/Exceptions;->a(Ljava/io/File;Ljava/io/File;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Lkotlin/io/c;->a(Ljava/io/File;Ljava/io/File;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

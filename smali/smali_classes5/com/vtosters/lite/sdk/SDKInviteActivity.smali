@@ -3,7 +3,7 @@
 .source "SDKInviteActivity.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/sdk/SDKInviteDialog$e;
+.implements Lcom/vtosters/lite/sdk/a$e;
 
 
 # instance fields
@@ -99,7 +99,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/FragmentManagerImplSimple;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/f;
 
     move-result-object p1
 
@@ -115,7 +115,7 @@
 
     const v1, 0x1020002
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/core/fragments/FragmentManagerImplSimple;->b(ILcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/core/fragments/f;->b(ILcom/vk/core/fragments/FragmentImpl;)V
 
     .line 7
     iget-boolean p1, p0, Lcom/vtosters/lite/sdk/SDKInviteActivity;->H:Z
@@ -174,7 +174,7 @@
     iget v0, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
     .line 3
-    new-instance v1, Lcom/vk/api/apps/AppsSendRequestWithAttachment;
+    new-instance v1, Lcom/vk/api/apps/b0;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -206,20 +206,20 @@
 
     iget p3, p0, Lcom/vtosters/lite/sdk/SDKInviteActivity;->M:I
 
-    invoke-direct {v1, v0, p1, p2, p3}, Lcom/vk/api/apps/AppsSendRequestWithAttachment;-><init>(ILjava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v1, v0, p1, p2, p3}, Lcom/vk/api/apps/b0;-><init>(ILjava/lang/String;Ljava/lang/String;I)V
 
     new-instance p1, Lcom/vtosters/lite/sdk/SDKInviteActivity$c;
 
     invoke-direct {p1, p0, v0}, Lcom/vtosters/lite/sdk/SDKInviteActivity$c;-><init>(Lcom/vtosters/lite/sdk/SDKInviteActivity;I)V
 
-    invoke-virtual {v1, p1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
+    invoke-virtual {v1, p1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
 
     move-result-object p1
 
     .line 4
-    invoke-virtual {p1, p0}, Lcom/vk/api/base/ApiCallbackDisposable;->a(Landroid/content/Context;)Lcom/vk/api/base/ApiCallbackDisposable;
+    invoke-virtual {p1, p0}, Lcom/vk/api/base/b;->a(Landroid/content/Context;)Lcom/vk/api/base/b;
 
-    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -266,11 +266,11 @@
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 5
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {v1}, Lb/h/h/d/c;->D0()I
 
     move-result v1
 
@@ -313,7 +313,7 @@
 
     iget-object v2, p0, Lcom/vtosters/lite/sdk/SDKInviteActivity;->K:Ljava/lang/CharSequence;
 
-    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/sdk/SDKInviteDialog;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/vtosters/lite/sdk/SDKInviteDialog;
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/sdk/a;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lcom/vtosters/lite/sdk/a;
 
     move-result-object v0
 
@@ -324,7 +324,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/core/fragments/j/b/ParentSupportFragment;->a(Lcom/vk/core/fragments/FragmentManagerImpl;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/core/fragments/j/b/a;->a(Lcom/vk/core/fragments/FragmentManagerImpl;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -544,11 +544,11 @@
 
     .line 10
     :cond_0
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/auth/api/VKAccount;->b1()Z
+    invoke-virtual {p1}, Lb/h/h/d/c;->b1()Z
 
     move-result p1
 

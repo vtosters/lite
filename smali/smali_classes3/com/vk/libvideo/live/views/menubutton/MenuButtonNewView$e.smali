@@ -3,7 +3,7 @@
 .source "MenuButtonNewView.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$f;
+.implements Lcom/vk/core/dialogs/bottomsheet/h$f;
 
 
 # annotations
@@ -40,13 +40,13 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+.method public a(Lcom/vk/core/dialogs/bottomsheet/e;)V
     .locals 1
 
     .line 1
     iget-object p1, p0, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView$e;->a:Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;->b(Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;)Lcom/vk/navigation/ModalDialogCallback;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;->b(Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;)Lcom/vk/navigation/k;
 
     move-result-object p1
 
@@ -58,7 +58,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/navigation/ModalDialogCallback;->u(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/navigation/k;->u(Ljava/lang/String;)V
 
     :cond_0
     return-void

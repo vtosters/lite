@@ -3,12 +3,12 @@
 .source "VkMePromoController.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
+.implements Lcom/vk/core/dialogs/bottomsheet/h$e;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$a;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$a;Ljava/lang/String;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,18 +24,18 @@
 
 .field final synthetic c:Ljava/lang/String;
 
-.field final synthetic d:Lkotlin/jvm/b/Functions;
+.field final synthetic d:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$a;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$a;Ljava/lang/String;Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$a;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/Functions;",
+            "Lkotlin/jvm/b/a;",
             ")V"
         }
     .end annotation
@@ -47,7 +47,7 @@
 
     iput-object p3, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$b;->c:Ljava/lang/String;
 
-    iput-object p4, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$b;->d:Lkotlin/jvm/b/Functions;
+    iput-object p4, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$b;->d:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -62,7 +62,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$b;->a:Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->d(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;)Lcom/vk/im/engine/reporters/VkMePromoReporter;
+    invoke-static {p1}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->d(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;)Lcom/vk/im/engine/reporters/p;
 
     move-result-object p1
 
@@ -86,7 +86,7 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {p1, v0, v1, v2, v3}, Lcom/vk/im/engine/reporters/VkMePromoReporter;->a(Ljava/lang/String;ZZZ)V
+    invoke-virtual {p1, v0, v1, v2, v3}, Lcom/vk/im/engine/reporters/p;->a(Ljava/lang/String;ZZZ)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$b;->a:Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;
@@ -99,7 +99,7 @@
 
     iget-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$b;->a:Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;)Lcom/vk/im/ui/p/ImBridge1;
+    invoke-static {p1}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;)Lcom/vk/im/ui/p/a;
 
     move-result-object p1
 
@@ -115,7 +115,7 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/im/ui/p/ImBridge1;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/im/ui/p/a;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -131,7 +131,7 @@
 
     iget-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$b;->a:Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;)Lcom/vk/im/ui/p/ImBridge1;
+    invoke-static {p1}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;)Lcom/vk/im/ui/p/a;
 
     move-result-object p1
 
@@ -147,7 +147,7 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/im/ui/p/ImBridge1;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/im/ui/p/a;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -173,7 +173,7 @@
 
     iget-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$b;->a:Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;)Lcom/vk/im/ui/p/ImBridge1;
+    invoke-static {p1}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;)Lcom/vk/im/ui/p/a;
 
     move-result-object p1
 
@@ -185,7 +185,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$b;->c:Ljava/lang/String;
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/im/ui/p/ImBridge1;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/im/ui/p/a;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -193,7 +193,7 @@
     :cond_3
     iget-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$b;->a:Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;)Lcom/vk/im/ui/p/ImBridge1;
+    invoke-static {p1}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;)Lcom/vk/im/ui/p/a;
 
     move-result-object p1
 
@@ -205,7 +205,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$b;->a:Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->c(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;)Lcom/vk/im/engine/models/ImExperiments;
+    invoke-static {v1}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->c(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;)Lcom/vk/im/engine/models/e;
 
     move-result-object v1
 
@@ -215,23 +215,23 @@
 
     move-result-object v2
 
-    invoke-interface {v1, v2}, Lcom/vk/im/engine/models/ImExperiments;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v1, v2}, Lcom/vk/im/engine/models/e;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/im/ui/p/ImBridge1;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/im/ui/p/a;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 6
     :goto_1
-    iget-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$b;->d:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$b;->d:Lkotlin/jvm/b/a;
 
     if-eqz p1, :cond_4
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_4
     return-void

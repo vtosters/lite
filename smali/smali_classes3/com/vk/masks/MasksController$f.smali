@@ -3,12 +3,12 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/masks/MasksController;->b(Ljava/io/File;)Lio/reactivex/functions/Function;
+    value = Lcom/vk/masks/MasksController;->b(Ljava/io/File;)Lc/a/z/j;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "Lcom/vk/core/network/RxFileDownloader$c;",
         "Lcom/vk/core/network/RxFileDownloader$c;",
         ">;"
@@ -70,12 +70,12 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/io/File;Z)Ljava/util/List;
+    invoke-static {v0, v1, v2}, Lb/h/g/m/d;->a(Ljava/io/File;Ljava/io/File;Z)Ljava/util/List;
 
     .line 3
     iget-object p1, p1, Lcom/vk/core/network/RxFileDownloader$c;->c:Ljava/io/File;
 
-    invoke-static {p1}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
+    invoke-static {p1}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
 
     .line 4
     iget-object p1, p0, Lcom/vk/masks/MasksController$f;->a:Ljava/io/File;

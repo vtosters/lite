@@ -95,13 +95,13 @@
     .line 8
     iget-object v0, p0, Lorg/chromium/net/impl/CronetUploadDataStream$b;->a:Lorg/chromium/net/impl/CronetUploadDataStream;
 
-    invoke-static {v0}, Lorg/chromium/net/impl/CronetUploadDataStream;->e(Lorg/chromium/net/impl/CronetUploadDataStream;)Lorg/chromium/net/impl/VersionSafeCallbacks4;
+    invoke-static {v0}, Lorg/chromium/net/impl/CronetUploadDataStream;->e(Lorg/chromium/net/impl/CronetUploadDataStream;)Lorg/chromium/net/impl/r;
 
     move-result-object v0
 
     iget-object v1, p0, Lorg/chromium/net/impl/CronetUploadDataStream$b;->a:Lorg/chromium/net/impl/CronetUploadDataStream;
 
-    invoke-virtual {v0, v1}, Lorg/chromium/net/impl/VersionSafeCallbacks4;->a(Lorg/chromium/net/UploadDataSink;)V
+    invoke-virtual {v0, v1}, Lorg/chromium/net/impl/r;->a(Lorg/chromium/net/v;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 

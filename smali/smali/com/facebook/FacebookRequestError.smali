@@ -320,11 +320,11 @@
 
     .line 1
     :try_start_0
-    invoke-static {}, Lcom/facebook/FacebookSdk;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/e;->f()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/facebook/internal/FetchedAppSettingsManager;->c(Ljava/lang/String;)Lcom/facebook/internal/FetchedAppSettings;
+    invoke-static {v1}, Lcom/facebook/internal/FetchedAppSettingsManager;->c(Ljava/lang/String;)Lcom/facebook/internal/h;
 
     move-result-object v1
 
@@ -344,7 +344,7 @@
     .line 3
     :cond_0
     :try_start_1
-    invoke-virtual {v1}, Lcom/facebook/internal/FetchedAppSettings;->c()Lcom/facebook/internal/FacebookRequestErrorClassification;
+    invoke-virtual {v1}, Lcom/facebook/internal/h;->c()Lcom/facebook/internal/FacebookRequestErrorClassification;
 
     move-result-object v1
     :try_end_1
@@ -393,7 +393,7 @@
     move-result v5
 
     .line 3
-    invoke-static {v10, v3, v2}, Lcom/facebook/internal/Utility;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v10, v3, v2}, Lcom/facebook/internal/r;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -428,7 +428,7 @@
 
     .line 7
     :try_start_1
-    invoke-static {v9, v1, v14}, Lcom/facebook/internal/Utility;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v9, v1, v14}, Lcom/facebook/internal/r;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -645,7 +645,7 @@
     if-eqz v0, :cond_4
 
     .line 25
-    invoke-static {v10, v3, v2}, Lcom/facebook/internal/Utility;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v10, v3, v2}, Lcom/facebook/internal/r;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 

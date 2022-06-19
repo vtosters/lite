@@ -3,20 +3,20 @@
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/data/Analytics$p;
+.field private final synthetic a:Lcom/vtosters/lite/data/n$p;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/data/Analytics$p;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/data/n$p;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/data/e;->a:Lcom/vtosters/lite/data/Analytics$p;
+    iput-object p1, p0, Lcom/vtosters/lite/data/e;->a:Lcom/vtosters/lite/data/n$p;
 
     return-void
 .end method
@@ -26,11 +26,11 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/data/e;->a:Lcom/vtosters/lite/data/Analytics$p;
+    iget-object v0, p0, Lcom/vtosters/lite/data/e;->a:Lcom/vtosters/lite/data/n$p;
 
     check-cast p1, Ljava/lang/Boolean;
 
-    invoke-static {v0, p1}, Lcom/vtosters/lite/data/Analytics;->a(Lcom/vtosters/lite/data/Analytics$p;Ljava/lang/Boolean;)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/data/n;->a(Lcom/vtosters/lite/data/n$p;Ljava/lang/Boolean;)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "VkAppExperiments.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/im/VkAppExperiments;-><init>(Landroid/content/Context;Lcom/vk/toggle/FeatureManager;Lcom/vk/core/util/GooglePlayUtils;Lb/h/v/RxBus;)V
+    value = Lcom/vtosters/lite/im/VkAppExperiments;-><init>(Landroid/content/Context;Lcom/vk/toggle/FeatureManager;Lcom/vk/core/util/h0;Lb/h/v/d;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -77,7 +77,7 @@
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/im/VkAppExperiments$forceInstallVkMe$2;->this$0:Lcom/vtosters/lite/im/VkAppExperiments;
 
-    invoke-static {v0}, Lcom/vtosters/lite/im/VkAppExperiments;->d(Lcom/vtosters/lite/im/VkAppExperiments;)Lcom/vk/core/util/GooglePlayUtils;
+    invoke-static {v0}, Lcom/vtosters/lite/im/VkAppExperiments;->d(Lcom/vtosters/lite/im/VkAppExperiments;)Lcom/vk/core/util/h0;
 
     move-result-object v0
 
@@ -87,7 +87,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/util/GooglePlayUtils;->a(Landroid/content/Context;)Z
+    invoke-virtual {v0, v1}, Lcom/vk/core/util/h0;->a(Landroid/content/Context;)Z
 
     move-result v0
 

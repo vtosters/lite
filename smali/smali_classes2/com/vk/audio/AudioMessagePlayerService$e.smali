@@ -134,7 +134,7 @@
     if-eqz v3, :cond_5
 
     .line 9
-    invoke-static {}, Lcom/vk/audio/AudioMessageUtils;->m()Lcom/vk/audio/AudioMessageUtils;
+    invoke-static {}, Lcom/vk/audio/a;->m()Lcom/vk/audio/a;
 
     move-result-object v4
 
@@ -150,7 +150,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v4, v5, v6, v7}, Lcom/vk/audio/AudioMessageUtils;->a(Ljava/nio/ByteBuffer;I[I)V
+    invoke-virtual {v4, v5, v6, v7}, Lcom/vk/audio/a;->a(Ljava/nio/ByteBuffer;I[I)V
 
     .line 10
     invoke-static {}, Lcom/vk/audio/AudioMessagePlayerService;->i()[I

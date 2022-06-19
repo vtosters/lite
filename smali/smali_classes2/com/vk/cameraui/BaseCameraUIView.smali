@@ -4,13 +4,13 @@
 
 # interfaces
 .implements Lcom/vk/cameraui/CameraUI$e;
-.implements Lpub/devrel/easypermissions/EasyPermissions$a;
+.implements Lpub/devrel/easypermissions/b$a;
 .implements Lcom/vk/cameraui/widgets/TabsRecycler$d;
 .implements Lcom/vk/cameraui/widgets/shutter/ShutterButton$a;
 
 
 # static fields
-.field static final synthetic O:[Lkotlin/u/KProperty5;
+.field static final synthetic O:[Lkotlin/u/j;
 
 
 # instance fields
@@ -28,9 +28,9 @@
 
 .field private H:Lcom/vk/attachpicker/drawing/DrawingView;
 
-.field private final I:Lkotlin/Lazy2;
+.field private final I:Lkotlin/e;
 
-.field private final J:Lkotlin/Lazy2;
+.field private final J:Lkotlin/e;
 
 .field private final K:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
@@ -65,7 +65,7 @@
     .end annotation
 .end field
 
-.field private a:Lcom/vk/camera/Camera1View;
+.field private a:Lcom/vk/camera/c;
 
 .field private b:Lcom/vk/cameraui/widgets/TabsRecycler;
 
@@ -88,13 +88,13 @@
 
     const/4 v0, 0x2
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/cameraui/BaseCameraUIView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -102,9 +102,9 @@
 
     const-string v4, "getClickLock()Lcom/vk/core/util/TimeoutLock;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
@@ -114,7 +114,7 @@
 
     const-class v2, Lcom/vk/cameraui/BaseCameraUIView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -122,15 +122,15 @@
 
     const-string v4, "getShutterLock()Lcom/vk/core/util/TimeoutLock;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/cameraui/BaseCameraUIView;->O:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/cameraui/BaseCameraUIView;->O:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -144,20 +144,20 @@
     .line 2
     sget-object p1, Lcom/vk/cameraui/BaseCameraUIView$clickLock$2;->a:Lcom/vk/cameraui/BaseCameraUIView$clickLock$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/cameraui/BaseCameraUIView;->I:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/cameraui/BaseCameraUIView;->I:Lkotlin/e;
 
     .line 3
     sget-object p1, Lcom/vk/cameraui/BaseCameraUIView$shutterLock$2;->a:Lcom/vk/cameraui/BaseCameraUIView$shutterLock$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/cameraui/BaseCameraUIView;->J:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/cameraui/BaseCameraUIView;->J:Lkotlin/e;
 
     .line 4
     new-instance p1, Ljava/util/HashMap;
@@ -183,7 +183,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/cameraui/BaseCameraUIView;Landroid/view/View;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/cameraui/BaseCameraUIView;Landroid/view/View;ZLkotlin/jvm/b/a;ILjava/lang/Object;)V
     .locals 0
 
     if-nez p5, :cond_1
@@ -196,7 +196,7 @@
 
     .line 5
     :cond_0
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/cameraui/BaseCameraUIView;->a(Landroid/view/View;ZLkotlin/jvm/b/Functions;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/cameraui/BaseCameraUIView;->a(Landroid/view/View;ZLkotlin/jvm/b/a;)V
 
     return-void
 
@@ -223,7 +223,7 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -236,7 +236,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -287,7 +287,7 @@
 
     .line 3
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/cameraui/BaseCameraUIView;->getCamera1View()Lcom/vk/camera/Camera1View;
+    invoke-virtual {p0}, Lcom/vk/cameraui/BaseCameraUIView;->getCamera1View()Lcom/vk/camera/c;
 
     move-result-object v0
 
@@ -295,7 +295,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/camera/Camera1View;->setFlashMode(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/camera/c;->setFlashMode(I)V
 
     :cond_2
     return-void
@@ -341,7 +341,7 @@
     const/4 v3, 0x0
 
     .line 1
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -461,19 +461,19 @@
     return-void
 .end method
 
-.method public a(Ljava/util/List;Lcom/vk/dto/stories/model/CommonUploadParams;Lcom/vk/dto/stories/model/StoryUploadParams;Lcom/vk/cameraui/CameraUI$States;II)Lcom/vk/stories/editor/base/BaseCameraEditorView;
+.method public a(Ljava/util/List;Lcom/vk/dto/stories/model/CommonUploadParams;Lcom/vk/dto/stories/model/StoryUploadParams;Lcom/vk/cameraui/CameraUI$States;II)Lcom/vk/stories/editor/base/d0;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/cameraui/entities/StoryRawData3;",
+            "Lcom/vk/cameraui/entities/d;",
             ">;",
             "Lcom/vk/dto/stories/model/CommonUploadParams;",
             "Lcom/vk/dto/stories/model/StoryUploadParams;",
             "Lcom/vk/cameraui/CameraUI$States;",
             "II)",
-            "Lcom/vk/stories/editor/base/BaseCameraEditorView;"
+            "Lcom/vk/stories/editor/base/d0;"
         }
     .end annotation
 
@@ -525,7 +525,7 @@
 
     move-result-object v1
 
-    invoke-interface {p0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {p0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object p1
 
@@ -545,7 +545,7 @@
 
     move v7, p5
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;-><init>(Ljava/util/List;Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;Lcom/vk/cameraui/CameraUI$c;Lcom/vk/dto/stories/model/CommonUploadParams;Lcom/vk/dto/stories/model/StoryUploadParams;I)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;-><init>(Ljava/util/List;Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;Lcom/vk/stories/editor/multi/h;Lcom/vk/cameraui/CameraUI$c;Lcom/vk/dto/stories/model/CommonUploadParams;Lcom/vk/dto/stories/model/StoryUploadParams;I)V
 
     .line 20
     invoke-virtual {p4, v8}, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->setPresenter(Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;)V
@@ -554,7 +554,7 @@
     invoke-virtual {v8, p6}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(I)V
 
     .line 22
-    invoke-interface {p0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {p0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object p1
 
@@ -578,7 +578,7 @@
 
     .line 23
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -631,28 +631,28 @@
     .locals 1
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/cameraui/BaseCameraUIView;->getShutterLock()Lcom/vk/core/util/TimeoutLock;
+    invoke-virtual {p0}, Lcom/vk/cameraui/BaseCameraUIView;->getShutterLock()Lcom/vk/core/util/j1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/util/TimeoutLock;->a()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/j1;->a()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/cameraui/BaseCameraUIView;->getClickLock()Lcom/vk/core/util/TimeoutLock;
+    invoke-virtual {p0}, Lcom/vk/cameraui/BaseCameraUIView;->getClickLock()Lcom/vk/core/util/j1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/util/TimeoutLock;->b()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/j1;->b()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 4
-    invoke-interface {p0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {p0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v0
 
@@ -686,17 +686,17 @@
 
     .line 30
     :cond_0
-    invoke-interface {p0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/CameraUIPositions;
+    invoke-interface {p0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/e;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/CameraUIPositions;->a()Lcom/vk/stories/editor/base/BaseCameraEditorView;
+    invoke-interface {v0}, Lcom/vk/cameraui/e;->a()Lcom/vk/stories/editor/base/d0;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/stories/editor/base/BaseCameraEditorView;->a(ILjava/util/List;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/stories/editor/base/d0;->a(ILjava/util/List;)V
 
     :cond_1
     return-void
@@ -714,17 +714,17 @@
 
     .line 32
     :cond_0
-    invoke-interface {p0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/CameraUIPositions;
+    invoke-interface {p0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/e;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/CameraUIPositions;->a()Lcom/vk/stories/editor/base/BaseCameraEditorView;
+    invoke-interface {v0}, Lcom/vk/cameraui/e;->a()Lcom/vk/stories/editor/base/d0;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/stories/editor/base/BaseCameraEditorView;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/stories/editor/base/d0;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 
     :cond_1
     return-void
@@ -734,26 +734,26 @@
     .locals 3
 
     .line 24
-    invoke-interface {p0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/CameraUIPositions;
+    invoke-interface {p0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/e;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/CameraUIPositions;->a()Lcom/vk/stories/editor/base/BaseCameraEditorView;
+    invoke-interface {v0}, Lcom/vk/cameraui/e;->a()Lcom/vk/stories/editor/base/d0;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
     .line 25
-    invoke-interface {p0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/CameraUIPositions;
+    invoke-interface {p0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/e;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/CameraUIPositions;->a()Lcom/vk/stories/editor/base/BaseCameraEditorView;
+    invoke-interface {v0}, Lcom/vk/cameraui/e;->a()Lcom/vk/stories/editor/base/d0;
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/stories/c1/a/PhotoCameraEditorContract1;
+    instance-of v1, v0, Lcom/vk/stories/c1/a/b;
 
     const/4 v2, 0x0
 
@@ -762,11 +762,11 @@
     move-object v0, v2
 
     :cond_0
-    check-cast v0, Lcom/vk/stories/c1/a/PhotoCameraEditorContract1;
+    check-cast v0, Lcom/vk/stories/c1/a/b;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lb/h/r/BaseContract1;->getPresenter()Lb/h/r/BaseContract;
+    invoke-interface {v0}, Lb/h/r/b;->getPresenter()Lb/h/r/a;
 
     move-result-object v0
 
@@ -778,18 +778,18 @@
     move-object v0, v2
 
     :goto_0
-    instance-of v1, v0, Lcom/vk/stories/c1/a/PhotoCameraEditorContract;
+    instance-of v1, v0, Lcom/vk/stories/c1/a/a;
 
     if-nez v1, :cond_2
 
     move-object v0, v2
 
     :cond_2
-    check-cast v0, Lcom/vk/stories/c1/a/PhotoCameraEditorContract;
+    check-cast v0, Lcom/vk/stories/c1/a/a;
 
     if-eqz v0, :cond_4
 
-    invoke-interface {v0, p1}, Lcom/vk/stories/c1/a/PhotoCameraEditorContract;->a(Landroid/graphics/Bitmap;)V
+    invoke-interface {v0, p1}, Lcom/vk/stories/c1/a/a;->a(Landroid/graphics/Bitmap;)V
 
     goto :goto_1
 
@@ -812,15 +812,15 @@
     return-void
 .end method
 
-.method protected final a(Landroid/view/View;ZLkotlin/jvm/b/Functions;)V
+.method protected final a(Landroid/view/View;ZLkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
             "Z",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -835,13 +835,13 @@
     if-eqz p2, :cond_0
 
     .line 8
-    invoke-interface {p3}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p3}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     .line 9
     :cond_0
     new-instance p2, Lcom/vk/cameraui/BaseCameraUIView$a;
 
-    invoke-direct {p2, p0, p1, p3}, Lcom/vk/cameraui/BaseCameraUIView$a;-><init>(Lcom/vk/cameraui/BaseCameraUIView;Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p2, p0, p1, p3}, Lcom/vk/cameraui/BaseCameraUIView$a;-><init>(Lcom/vk/cameraui/BaseCameraUIView;Landroid/view/View;Lkotlin/jvm/b/a;)V
 
     .line 10
     iget-object p1, p0, Lcom/vk/cameraui/BaseCameraUIView;->N:Ljava/util/Set;
@@ -859,19 +859,19 @@
 
     .line 12
     :cond_1
-    invoke-interface {p3}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p3}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     :goto_0
     return-void
 .end method
 
-.method public a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/Functions4;)V
+.method public a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/d;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/attachpicker/stickers/ISticker;",
-            "Lkotlin/jvm/b/Functions4<",
+            "Lkotlin/jvm/b/d<",
             "-",
             "Ljava/lang/Integer;",
             "-",
@@ -889,7 +889,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/Functions4;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/d;)V
 
     :cond_0
     return-void
@@ -909,7 +909,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/cameraui/widgets/TabsRecycler;->setButtonTouchDelegate(Lcom/vk/cameraui/widgets/TabsRecycler$f;)V
 
     .line 3
-    invoke-interface {p0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {p0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v1
 
@@ -921,7 +921,7 @@
 
     move-result-object v1
 
-    invoke-interface {p0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {p0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v2
 
@@ -952,7 +952,7 @@
 
     .line 5
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -967,7 +967,7 @@
     .locals 1
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {p0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v0
 
@@ -1001,17 +1001,17 @@
 
     .line 4
     :cond_0
-    invoke-interface {p0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/CameraUIPositions;
+    invoke-interface {p0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/e;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/CameraUIPositions;->a()Lcom/vk/stories/editor/base/BaseCameraEditorView;
+    invoke-interface {v0}, Lcom/vk/cameraui/e;->a()Lcom/vk/stories/editor/base/d0;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/stories/editor/base/BaseCameraEditorView;->b(ILjava/util/List;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/stories/editor/base/d0;->b(ILjava/util/List;)V
 
     :cond_1
     return-void
@@ -1038,7 +1038,7 @@
     .locals 1
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {p0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v0
 
@@ -1056,7 +1056,7 @@
     .locals 1
 
     .line 2
-    invoke-interface {p0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {p0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v0
 
@@ -1074,7 +1074,7 @@
     .locals 1
 
     .line 3
-    invoke-interface {p0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {p0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v0
 
@@ -1082,7 +1082,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/i/BasePresenter;->o()Z
+    invoke-interface {v0}, Lcom/vk/cameraui/i/a;->o()Z
 
     move-result v0
 
@@ -1099,7 +1099,7 @@
     .locals 3
 
     .line 2
-    invoke-interface {p0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {p0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v0
 
@@ -1165,7 +1165,7 @@
 
     .line 7
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/cameraui/BaseCameraUIView;->getCamera1View()Lcom/vk/camera/Camera1View;
+    invoke-virtual {p0}, Lcom/vk/cameraui/BaseCameraUIView;->getCamera1View()Lcom/vk/camera/c;
 
     move-result-object v0
 
@@ -1173,7 +1173,7 @@
 
     const/4 v1, 0x2
 
-    invoke-virtual {v0, v1}, Lcom/vk/camera/Camera1View;->setFlashMode(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/camera/c;->setFlashMode(I)V
 
     :cond_2
     return-void
@@ -1196,11 +1196,11 @@
     invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->setItems(Ljava/util/List;)V
 
     .line 4
-    invoke-interface {p0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/CameraUIPositions;
+    invoke-interface {p0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/e;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/cameraui/CameraUIPositions;->getState()Lcom/vk/cameraui/CameraUI$d;
+    invoke-interface {p1}, Lcom/vk/cameraui/e;->getState()Lcom/vk/cameraui/CameraUI$d;
 
     move-result-object p1
 
@@ -1288,14 +1288,14 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/cameraui/BaseCameraUIView;->getCamera1View()Lcom/vk/camera/Camera1View;
+    invoke-virtual {p0}, Lcom/vk/cameraui/BaseCameraUIView;->getCamera1View()Lcom/vk/camera/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/camera/Camera1View;->getFlashMode()I
+    invoke-virtual {v0}, Lcom/vk/camera/c;->getFlashMode()I
 
     move-result v0
 
@@ -1314,7 +1314,7 @@
 
     .line 5
     :goto_0
-    invoke-interface {p0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {p0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v0
 
@@ -1342,11 +1342,11 @@
     return-void
 .end method
 
-.method public getCamera1View()Lcom/vk/camera/Camera1View;
+.method public getCamera1View()Lcom/vk/camera/c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/cameraui/BaseCameraUIView;->a:Lcom/vk/camera/Camera1View;
+    iget-object v0, p0, Lcom/vk/cameraui/BaseCameraUIView;->a:Lcom/vk/camera/c;
 
     return-object v0
 .end method
@@ -1360,22 +1360,22 @@
     return-object v0
 .end method
 
-.method protected final getClickLock()Lcom/vk/core/util/TimeoutLock;
+.method protected final getClickLock()Lcom/vk/core/util/j1;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/cameraui/BaseCameraUIView;->I:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/cameraui/BaseCameraUIView;->I:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/cameraui/BaseCameraUIView;->O:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/cameraui/BaseCameraUIView;->O:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/util/TimeoutLock;
+    check-cast v0, Lcom/vk/core/util/j1;
 
     return-object v0
 .end method
@@ -1389,7 +1389,7 @@
     return-object v0
 .end method
 
-.method public getDrawingStateCopy()Lcom/vk/attachpicker/drawing/DrawingState;
+.method public getDrawingStateCopy()Lcom/vk/attachpicker/drawing/d;
     .locals 1
 
     .line 1
@@ -1397,7 +1397,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/DrawingView;->getDrawingStateCopy()Lcom/vk/attachpicker/drawing/DrawingState;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/drawing/DrawingView;->getDrawingStateCopy()Lcom/vk/attachpicker/drawing/d;
 
     move-result-object v0
 
@@ -1545,22 +1545,22 @@
     return-object v0
 .end method
 
-.method protected final getShutterLock()Lcom/vk/core/util/TimeoutLock;
+.method protected final getShutterLock()Lcom/vk/core/util/j1;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/cameraui/BaseCameraUIView;->J:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/cameraui/BaseCameraUIView;->J:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/cameraui/BaseCameraUIView;->O:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/cameraui/BaseCameraUIView;->O:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/util/TimeoutLock;
+    check-cast v0, Lcom/vk/core/util/j1;
 
     return-object v0
 .end method
@@ -1599,13 +1599,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->getStickersStateCopy()Lcom/vk/attachpicker/stickers/StickersState;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->getStickersStateCopy()Lcom/vk/attachpicker/stickers/m0;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->i()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->i()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -1630,7 +1630,7 @@
     return-object v0
 .end method
 
-.method public getStickersState()Lcom/vk/attachpicker/stickers/StickersState;
+.method public getStickersState()Lcom/vk/attachpicker/stickers/m0;
     .locals 2
 
     .line 1
@@ -1638,7 +1638,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->getStickersState()Lcom/vk/attachpicker/stickers/StickersState;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->getStickersState()Lcom/vk/attachpicker/stickers/m0;
 
     move-result-object v0
 
@@ -1647,11 +1647,11 @@
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lcom/vk/attachpicker/stickers/StickersState;->INSTANCE:Lcom/vk/attachpicker/stickers/StickersState;
+    sget-object v0, Lcom/vk/attachpicker/stickers/m0;->c:Lcom/vk/attachpicker/stickers/m0;
 
     const-string v1, "StickersState.EMPTY"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object v0
@@ -1740,7 +1740,7 @@
     invoke-virtual {v2, p1}, Lcom/vk/hints/HintsManager$e;->a(Landroid/view/View$OnClickListener;)Lcom/vk/hints/HintsManager$e;
 
     .line 6
-    invoke-virtual {v2, v1}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/Dismissable;
+    invoke-virtual {v2, v1}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/w;
 
     :cond_2
     return-void
@@ -1753,17 +1753,17 @@
     invoke-static {p0, p1, p2, p3}, Lcom/vk/cameraui/CameraUI$e$a;->a(Lcom/vk/cameraui/CameraUI$e;IILandroid/content/Intent;)V
 
     .line 2
-    invoke-interface {p0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/CameraUIPositions;
+    invoke-interface {p0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/e;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/CameraUIPositions;->a()Lcom/vk/stories/editor/base/BaseCameraEditorView;
+    invoke-interface {v0}, Lcom/vk/cameraui/e;->a()Lcom/vk/stories/editor/base/d0;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/stories/editor/base/BaseCameraEditorView;->a(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/stories/editor/base/d0;->a(IILandroid/content/Intent;)V
 
     :cond_0
     return-void
@@ -1773,7 +1773,7 @@
     .locals 1
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {p0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v0
 
@@ -1823,11 +1823,11 @@
     return-void
 .end method
 
-.method public setCamera1View(Lcom/vk/camera/Camera1View;)V
+.method public setCamera1View(Lcom/vk/camera/c;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/cameraui/BaseCameraUIView;->a:Lcom/vk/camera/Camera1View;
+    iput-object p1, p0, Lcom/vk/cameraui/BaseCameraUIView;->a:Lcom/vk/camera/c;
 
     return-void
 .end method
@@ -1850,7 +1850,7 @@
     return-void
 .end method
 
-.method public setDrawingState(Lcom/vk/attachpicker/drawing/DrawingState;)V
+.method public setDrawingState(Lcom/vk/attachpicker/drawing/d;)V
     .locals 1
 
     .line 1
@@ -1858,7 +1858,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/drawing/DrawingView;->setDrawingState(Lcom/vk/attachpicker/drawing/DrawingState;)V
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/drawing/DrawingView;->setDrawingState(Lcom/vk/attachpicker/drawing/d;)V
 
     :cond_0
     return-void
@@ -2016,7 +2016,7 @@
     .locals 4
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {p0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v0
 
@@ -2056,7 +2056,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
 
     :cond_1
     return-void

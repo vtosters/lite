@@ -49,13 +49,13 @@
     .line 2
     iget-object p1, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$f;->a:Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;
 
-    invoke-static {p1}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->a(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;
+    invoke-static {p1}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->a(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)Lcom/vk/core/dialogs/bottomsheet/k/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;->close()V
+    invoke-interface {p1}, Lcom/vk/core/dialogs/bottomsheet/k/a;->close()V
 
     :cond_0
     return-void

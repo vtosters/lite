@@ -42,11 +42,11 @@
 
     iget-object v0, v0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$l;->c:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->i(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/core/utils/OrientationListener;
+    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->i(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/core/utils/e;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/utils/OrientationListener;->e()V
+    invoke-virtual {v0}, Lcom/vk/core/utils/e;->e()V
 
     return-void
 .end method

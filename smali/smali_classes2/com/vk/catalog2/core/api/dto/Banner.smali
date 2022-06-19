@@ -22,10 +22,10 @@
     .end annotation
 .end field
 
-.field public static final d:Lcom/vk/dto/common/data/JsonParser;
+.field public static final d:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/catalog2/core/api/dto/Banner;",
             ">;"
         }
@@ -51,7 +51,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/Banner$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/Banner$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/catalog2/core/api/dto/Banner;->e:Lcom/vk/catalog2/core/api/dto/Banner$c;
 
@@ -68,7 +68,7 @@
 
     invoke-direct {v0}, Lcom/vk/catalog2/core/api/dto/Banner$a;-><init>()V
 
-    sput-object v0, Lcom/vk/catalog2/core/api/dto/Banner;->d:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/catalog2/core/api/dto/Banner;->d:Lcom/vk/dto/common/data/c;
 
     return-void
 .end method
@@ -173,7 +173,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/Banner;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -183,7 +183,7 @@
 
     iget-object p1, p1, Lcom/vk/catalog2/core/api/dto/Banner;->c:Lcom/vk/dto/common/NotificationImage;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

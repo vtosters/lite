@@ -3,7 +3,7 @@
 .source "StoriesBlocksEventController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/newsfeed/StoriesBlocksEventController$a;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
     const-string v1, "storyUpload"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1, v0}, Lcom/vk/newsfeed/StoriesBlocksEventController$a;->a(Lcom/vk/stories/StoriesController$j;)V
 
@@ -69,7 +69,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/StoriesBlocksEventController$storyUploadDoneListener$1$1;->a(Lcom/vk/newsfeed/StoriesBlocksEventController$a;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

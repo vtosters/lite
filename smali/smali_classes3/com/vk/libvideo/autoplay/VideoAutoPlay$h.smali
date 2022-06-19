@@ -3,12 +3,12 @@
 .source "VideoAutoPlay.kt"
 
 # interfaces
-.implements Lcom/vk/media/player/StateListener;
+.implements Lcom/vk/media/player/i;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Ljava/lang/String;Lcom/vk/media/player/video/ExoVideoSource;)Lcom/vk/media/player/ExoPlayerBase;
+    value = Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Ljava/lang/String;Lcom/vk/media/player/video/a;)Lcom/vk/media/player/ExoPlayerBase;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,7 +33,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/media/player/StateListener$a;->a(Lcom/vk/media/player/StateListener;Lcom/vk/media/player/ExoPlayerBase;)V
+    invoke-static {p0, p1}, Lcom/vk/media/player/i$a;->a(Lcom/vk/media/player/i;Lcom/vk/media/player/ExoPlayerBase;)V
 
     return-void
 .end method
@@ -42,7 +42,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1, p2}, Lcom/vk/media/player/StateListener$a;->b(Lcom/vk/media/player/StateListener;Lcom/vk/media/player/ExoPlayerBase;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/media/player/i$a;->b(Lcom/vk/media/player/i;Lcom/vk/media/player/ExoPlayerBase;I)V
 
     return-void
 .end method
@@ -51,7 +51,7 @@
     .locals 0
 
     .line 4
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/media/player/StateListener$a;->b(Lcom/vk/media/player/StateListener;Lcom/vk/media/player/ExoPlayerBase;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/media/player/i$a;->b(Lcom/vk/media/player/i;Lcom/vk/media/player/ExoPlayerBase;II)V
 
     return-void
 .end method
@@ -60,7 +60,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/media/player/StateListener$a;->a(Lcom/vk/media/player/StateListener;Lcom/vk/media/player/ExoPlayerBase;IZ)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/media/player/i$a;->a(Lcom/vk/media/player/i;Lcom/vk/media/player/ExoPlayerBase;IZ)V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/media/player/StateListener$a;->b(Lcom/vk/media/player/StateListener;Lcom/vk/media/player/ExoPlayerBase;)V
+    invoke-static {p0, p1}, Lcom/vk/media/player/i$a;->b(Lcom/vk/media/player/i;Lcom/vk/media/player/ExoPlayerBase;)V
 
     return-void
 .end method
@@ -78,7 +78,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/media/player/StateListener$a;->a(Lcom/vk/media/player/StateListener;Lcom/vk/media/player/ExoPlayerBase;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/media/player/i$a;->a(Lcom/vk/media/player/i;Lcom/vk/media/player/ExoPlayerBase;I)V
 
     return-void
 .end method
@@ -87,7 +87,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/media/player/StateListener$a;->c(Lcom/vk/media/player/StateListener;Lcom/vk/media/player/ExoPlayerBase;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/media/player/i$a;->c(Lcom/vk/media/player/i;Lcom/vk/media/player/ExoPlayerBase;II)V
 
     return-void
 .end method
@@ -96,7 +96,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/media/player/StateListener$a;->c(Lcom/vk/media/player/StateListener;Lcom/vk/media/player/ExoPlayerBase;)V
+    invoke-static {p0, p1}, Lcom/vk/media/player/i$a;->c(Lcom/vk/media/player/i;Lcom/vk/media/player/ExoPlayerBase;)V
 
     return-void
 .end method
@@ -105,7 +105,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1, p2}, Lcom/vk/media/player/StateListener$a;->c(Lcom/vk/media/player/StateListener;Lcom/vk/media/player/ExoPlayerBase;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/media/player/i$a;->c(Lcom/vk/media/player/i;Lcom/vk/media/player/ExoPlayerBase;I)V
 
     return-void
 .end method
@@ -114,7 +114,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/media/player/StateListener$a;->a(Lcom/vk/media/player/StateListener;Lcom/vk/media/player/ExoPlayerBase;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/media/player/i$a;->a(Lcom/vk/media/player/i;Lcom/vk/media/player/ExoPlayerBase;II)V
 
     return-void
 .end method
@@ -123,7 +123,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/media/player/StateListener$a;->a(Lcom/vk/media/player/StateListener;)V
+    invoke-static {p0}, Lcom/vk/media/player/i$a;->a(Lcom/vk/media/player/i;)V
 
     return-void
 .end method

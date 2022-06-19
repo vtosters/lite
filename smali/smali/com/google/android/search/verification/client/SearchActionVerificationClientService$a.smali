@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private a:Lb/d/a/e/a/a/ISearchActionVerificationService;
+.field private a:Lb/d/a/e/a/a/a;
 
 .field final synthetic b:Lcom/google/android/search/verification/client/SearchActionVerificationClientService;
 
@@ -50,7 +50,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->a:Lb/d/a/e/a/a/ISearchActionVerificationService;
+    iget-object v0, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->a:Lb/d/a/e/a/a/a;
 
     if-eqz v0, :cond_0
 
@@ -67,11 +67,11 @@
 
 
 # virtual methods
-.method public a()Lb/d/a/e/a/a/ISearchActionVerificationService;
+.method public a()Lb/d/a/e/a/a/a;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->a:Lb/d/a/e/a/a/ISearchActionVerificationService;
+    iget-object v0, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->a:Lb/d/a/e/a/a/a;
 
     return-object v0
 .end method
@@ -85,11 +85,11 @@
     .end annotation
 
     .line 3
-    iget-object v0, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->a:Lb/d/a/e/a/a/ISearchActionVerificationService;
+    iget-object v0, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->a:Lb/d/a/e/a/a/a;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2}, Lb/d/a/e/a/a/ISearchActionVerificationService;->a(Landroid/content/Intent;Landroid/os/Bundle;)Z
+    invoke-interface {v0, p1, p2}, Lb/d/a/e/a/a/a;->a(Landroid/content/Intent;Landroid/os/Bundle;)Z
 
     move-result p1
 
@@ -117,11 +117,11 @@
     move-result p1
 
     .line 2
-    invoke-static {p2}, Lb/d/a/e/a/a/ISearchActionVerificationService$a;->a(Landroid/os/IBinder;)Lb/d/a/e/a/a/ISearchActionVerificationService;
+    invoke-static {p2}, Lb/d/a/e/a/a/a$a;->a(Landroid/os/IBinder;)Lb/d/a/e/a/a/a;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->a:Lb/d/a/e/a/a/ISearchActionVerificationService;
+    iput-object p1, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->a:Lb/d/a/e/a/a/a;
 
     return-void
 .end method
@@ -132,7 +132,7 @@
     const/4 p1, 0x0
 
     .line 1
-    iput-object p1, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->a:Lb/d/a/e/a/a/ISearchActionVerificationService;
+    iput-object p1, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->a:Lb/d/a/e/a/a/a;
 
     .line 2
     iget-object p1, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->b:Lcom/google/android/search/verification/client/SearchActionVerificationClientService;

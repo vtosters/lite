@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic k:[Lkotlin/u/KProperty5;
+.field static final synthetic k:[Lkotlin/u/j;
 
 .field private static final l:Landroid/view/animation/LinearInterpolator;
 
@@ -26,25 +26,25 @@
 
 
 # instance fields
-.field private final a:Lkotlin/Lazy2;
+.field private final a:Lkotlin/e;
 
-.field private final b:Lkotlin/Lazy2;
+.field private final b:Lkotlin/e;
 
-.field private final c:Lkotlin/Lazy2;
+.field private final c:Lkotlin/e;
 
-.field private final d:Lkotlin/Lazy2;
+.field private final d:Lkotlin/e;
 
-.field private final e:Lkotlin/Lazy2;
+.field private final e:Lkotlin/e;
 
-.field private final f:Lkotlin/Lazy2;
+.field private final f:Lkotlin/e;
 
-.field private final g:Lkotlin/Lazy2;
+.field private final g:Lkotlin/e;
 
 .field private final h:Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
 .field private final i:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-.field private final j:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+.field private final j:Lcom/vk/im/ui/components/dialog_header/c/a;
 
 
 # direct methods
@@ -55,11 +55,11 @@
 
     const/4 v1, 0x7
 
-    new-array v1, v1, [Lkotlin/u/KProperty5;
+    new-array v1, v1, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -67,9 +67,9 @@
 
     const-string v5, "getContainer()Landroid/view/ViewGroup;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
@@ -77,7 +77,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -85,9 +85,9 @@
 
     const-string v5, "getVcInfoView()Landroid/view/ViewStub;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x1
 
@@ -95,7 +95,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -103,9 +103,9 @@
 
     const-string v5, "getVcActionsView()Landroid/view/ViewStub;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x2
 
@@ -113,7 +113,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -121,9 +121,9 @@
 
     const-string v5, "getVcEditView()Landroid/view/ViewStub;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x3
 
@@ -131,7 +131,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -139,9 +139,9 @@
 
     const-string v5, "getVcInfoAnimator()Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x4
 
@@ -149,7 +149,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -157,9 +157,9 @@
 
     const-string v5, "getVcActionsAnimator()Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x5
 
@@ -167,7 +167,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -175,21 +175,21 @@
 
     const-string v4, "getVcEditAnimator()Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v0, 0x6
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->m:Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$a;
 
@@ -203,7 +203,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;Landroid/view/View;Landroid/os/Bundle;)V
+.method public constructor <init>(Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;Lcom/vk/im/ui/components/dialog_header/c/a;Landroid/view/View;Landroid/os/Bundle;)V
     .locals 0
 
     .line 1
@@ -213,84 +213,84 @@
 
     iput-object p2, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->i:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    iput-object p3, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    iput-object p3, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/a;
 
     .line 2
     new-instance p1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$container$2;
 
     invoke-direct {p1, p4}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$container$2;-><init>(Landroid/view/View;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->a:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->a:Lkotlin/e;
 
     .line 3
     new-instance p1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$vcInfoView$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$vcInfoView$2;-><init>(Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->b:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->b:Lkotlin/e;
 
     .line 4
     new-instance p1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$vcActionsView$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$vcActionsView$2;-><init>(Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->c:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->c:Lkotlin/e;
 
     .line 5
     new-instance p1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$vcEditView$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$vcEditView$2;-><init>(Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->d:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->d:Lkotlin/e;
 
     .line 6
     new-instance p1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$vcInfoAnimator$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$vcInfoAnimator$2;-><init>(Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->e:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->e:Lkotlin/e;
 
     .line 7
     new-instance p1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$vcActionsAnimator$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$vcActionsAnimator$2;-><init>(Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->f:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->f:Lkotlin/e;
 
     .line 8
     new-instance p1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$vcEditAnimator$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$vcEditAnimator$2;-><init>(Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->g:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->g:Lkotlin/e;
 
     return-void
 .end method
@@ -315,11 +315,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;)Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+.method public static final synthetic c(Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;)Lcom/vk/im/ui/components/dialog_header/c/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    iget-object p0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/a;
 
     return-object p0
 .end method
@@ -353,15 +353,15 @@
 .method private final f()Landroid/view/ViewGroup;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->a:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->a:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -373,15 +373,15 @@
 .method private final g()Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->f:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->f:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/j;
 
     const/4 v2, 0x5
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -393,15 +393,15 @@
 .method private final h()Landroid/view/ViewStub;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->c:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->c:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/j;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -413,15 +413,15 @@
 .method private final i()Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->g:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->g:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/j;
 
     const/4 v2, 0x6
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -433,15 +433,15 @@
 .method private final j()Landroid/view/ViewStub;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->d:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->d:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/j;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -453,15 +453,15 @@
 .method private final k()Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->e:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->e:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/j;
 
     const/4 v2, 0x4
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -473,15 +473,15 @@
 .method private final l()Landroid/view/ViewStub;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->b:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->b:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->k:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -498,17 +498,17 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->h:Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->h()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->h()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->i:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->h()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->h()V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->h()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->h()V
 
     return-void
 .end method
@@ -520,7 +520,7 @@
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->h:Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -543,10 +543,10 @@
 
     const-string v2, "vcActionsView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v2
 
@@ -567,10 +567,10 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v0, v2, v3, v1, v4}, Lcom/vk/im/ui/q/Component;->a(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v0, v2, v3, v1, v4}, Lcom/vk/im/ui/q/c;->a(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)Landroid/view/View;
 
     .line 11
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
 
     .line 12
     :cond_1
@@ -589,10 +589,10 @@
     invoke-static/range {v5 .. v10}, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->a(Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;ZJILjava/lang/Object;)V
 
     .line 13
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/a;
 
     .line 14
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -615,17 +615,17 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->h:Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->i:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
 
     return-void
 .end method
@@ -637,7 +637,7 @@
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->h:Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -655,7 +655,7 @@
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->i:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
     .line 9
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -670,7 +670,7 @@
 
     .line 11
     :cond_1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/a;
 
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j()Landroid/view/ViewStub;
 
@@ -678,10 +678,10 @@
 
     const-string v2, "vcEditView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v2
 
@@ -702,10 +702,10 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v0, v2, v3, v1, v4}, Lcom/vk/im/ui/q/Component;->a(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v0, v2, v3, v1, v4}, Lcom/vk/im/ui/q/c;->a(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)Landroid/view/View;
 
     .line 14
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
 
     .line 15
     :cond_2
@@ -732,17 +732,17 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->h:Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->r()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->r()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->i:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->r()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->r()V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->r()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->r()V
 
     return-void
 .end method
@@ -759,10 +759,10 @@
 
     const-string v2, "vcInfoView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v2
 
@@ -783,10 +783,10 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v0, v2, v3, v1, v4}, Lcom/vk/im/ui/q/Component;->a(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v0, v2, v3, v1, v4}, Lcom/vk/im/ui/q/c;->a(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)Landroid/view/View;
 
     .line 8
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
 
     .line 9
     :cond_0
@@ -808,7 +808,7 @@
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->i:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
     .line 11
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 
@@ -823,10 +823,10 @@
 
     .line 13
     :cond_1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->j:Lcom/vk/im/ui/components/dialog_header/c/a;
 
     .line 14
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->k()Z
 
     move-result v0
 

@@ -88,7 +88,7 @@
     move-result-object v0
 
     .line 3
-    new-instance v1, Lcom/crashlytics/android/core/MetaDataStore;
+    new-instance v1, Lcom/crashlytics/android/core/a0;
 
     iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController$a;->d:Lcom/crashlytics/android/core/CrashlyticsController;
 
@@ -96,9 +96,9 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/crashlytics/android/core/MetaDataStore;-><init>(Ljava/io/File;)V
+    invoke-direct {v1, v2}, Lcom/crashlytics/android/core/a0;-><init>(Ljava/io/File;)V
 
-    new-instance v2, Lcom/crashlytics/android/core/UserMetaData;
+    new-instance v2, Lcom/crashlytics/android/core/t0;
 
     iget-object v3, p0, Lcom/crashlytics/android/core/CrashlyticsController$a;->a:Ljava/lang/String;
 
@@ -106,9 +106,9 @@
 
     iget-object v5, p0, Lcom/crashlytics/android/core/CrashlyticsController$a;->c:Ljava/lang/String;
 
-    invoke-direct {v2, v3, v4, v5}, Lcom/crashlytics/android/core/UserMetaData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lcom/crashlytics/android/core/t0;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0, v2}, Lcom/crashlytics/android/core/MetaDataStore;->a(Ljava/lang/String;Lcom/crashlytics/android/core/UserMetaData;)V
+    invoke-virtual {v1, v0, v2}, Lcom/crashlytics/android/core/a0;->a(Ljava/lang/String;Lcom/crashlytics/android/core/t0;)V
 
     const/4 v0, 0x0
 

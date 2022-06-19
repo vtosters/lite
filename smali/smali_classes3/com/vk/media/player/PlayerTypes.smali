@@ -97,7 +97,7 @@
 
     const-string v0, "context.resources"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -144,7 +144,7 @@
     if-nez v0, :cond_0
 
     .line 15
-    sget p0, Lcom/vk/media/player/R;->video_playback_speed_025:I
+    sget p0, Lcom/vk/media/player/g;->video_playback_speed_025:I
 
     goto :goto_0
 
@@ -156,7 +156,7 @@
     if-nez v0, :cond_1
 
     .line 16
-    sget p0, Lcom/vk/media/player/R;->video_playback_speed_050:I
+    sget p0, Lcom/vk/media/player/g;->video_playback_speed_050:I
 
     goto :goto_0
 
@@ -168,7 +168,7 @@
     if-nez v0, :cond_2
 
     .line 17
-    sget p0, Lcom/vk/media/player/R;->video_playback_speed_075:I
+    sget p0, Lcom/vk/media/player/g;->video_playback_speed_075:I
 
     goto :goto_0
 
@@ -180,7 +180,7 @@
     if-nez v0, :cond_3
 
     .line 18
-    sget p0, Lcom/vk/media/player/R;->video_playback_speed_125:I
+    sget p0, Lcom/vk/media/player/g;->video_playback_speed_125:I
 
     goto :goto_0
 
@@ -192,7 +192,7 @@
     if-nez v0, :cond_4
 
     .line 19
-    sget p0, Lcom/vk/media/player/R;->video_playback_speed_150:I
+    sget p0, Lcom/vk/media/player/g;->video_playback_speed_150:I
 
     goto :goto_0
 
@@ -204,13 +204,13 @@
     if-nez p0, :cond_5
 
     .line 20
-    sget p0, Lcom/vk/media/player/R;->video_playback_speed_200:I
+    sget p0, Lcom/vk/media/player/g;->video_playback_speed_200:I
 
     goto :goto_0
 
     .line 21
     :cond_5
-    sget p0, Lcom/vk/media/player/R;->video_playback_speed_normal:I
+    sget p0, Lcom/vk/media/player/g;->video_playback_speed_normal:I
 
     :goto_0
     return p0
@@ -224,7 +224,7 @@
     .end param
 
     .line 1
-    sget v0, Lcom/vk/media/player/R2;->video_playback_speed_025:I
+    sget v0, Lcom/vk/media/player/f;->video_playback_speed_025:I
 
     if-ne p0, v0, :cond_0
 
@@ -234,7 +234,7 @@
 
     .line 2
     :cond_0
-    sget v0, Lcom/vk/media/player/R2;->video_playback_speed_050:I
+    sget v0, Lcom/vk/media/player/f;->video_playback_speed_050:I
 
     if-ne p0, v0, :cond_1
 
@@ -244,7 +244,7 @@
 
     .line 3
     :cond_1
-    sget v0, Lcom/vk/media/player/R2;->video_playback_speed_075:I
+    sget v0, Lcom/vk/media/player/f;->video_playback_speed_075:I
 
     if-ne p0, v0, :cond_2
 
@@ -254,7 +254,7 @@
 
     .line 4
     :cond_2
-    sget v0, Lcom/vk/media/player/R2;->video_playback_speed_normal:I
+    sget v0, Lcom/vk/media/player/f;->video_playback_speed_normal:I
 
     if-ne p0, v0, :cond_3
 
@@ -264,7 +264,7 @@
 
     .line 5
     :cond_3
-    sget v0, Lcom/vk/media/player/R2;->video_playback_speed_125:I
+    sget v0, Lcom/vk/media/player/f;->video_playback_speed_125:I
 
     if-ne p0, v0, :cond_4
 
@@ -274,7 +274,7 @@
 
     .line 6
     :cond_4
-    sget v0, Lcom/vk/media/player/R2;->video_playback_speed_150:I
+    sget v0, Lcom/vk/media/player/f;->video_playback_speed_150:I
 
     if-ne p0, v0, :cond_5
 
@@ -284,7 +284,7 @@
 
     .line 7
     :cond_5
-    sget v0, Lcom/vk/media/player/R2;->video_playback_speed_200:I
+    sget v0, Lcom/vk/media/player/f;->video_playback_speed_200:I
 
     if-ne p0, v0, :cond_6
 
@@ -433,7 +433,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p1, v0}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p1
 
@@ -446,7 +446,7 @@
 
     .line 13
     :cond_1
-    invoke-static {v3, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v3, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "MsgPartTextView.java"
 
 # interfaces
-.implements Lcom/vk/im/ui/views/msg/WithTime;
+.implements Lcom/vk/im/ui/views/msg/a;
 
 
 # instance fields
@@ -184,7 +184,7 @@
     .locals 6
 
     .line 7
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartTextView_vkim_timeText:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartTextView_vkim_timeText:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -200,7 +200,7 @@
     move-result p1
 
     .line 9
-    sget v0, Lcom/vk/im/ui/R2;->MsgPartTextView_vkim_timeTextAppearance:I
+    sget v0, Lcom/vk/im/ui/o;->MsgPartTextView_vkim_timeTextAppearance:I
 
     const/4 v1, 0x0
 
@@ -219,35 +219,35 @@
 
     move-result-object v4
 
-    sget-object v5, Lcom/vk/im/ui/R2;->MsgPartTextView_TimeAppearance:[I
+    sget-object v5, Lcom/vk/im/ui/o;->MsgPartTextView_TimeAppearance:[I
 
     invoke-virtual {v4, v0, v5}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
     .line 11
-    sget v4, Lcom/vk/im/ui/R2;->MsgPartTextView_TimeAppearance_android_textColor:I
+    sget v4, Lcom/vk/im/ui/o;->MsgPartTextView_TimeAppearance_android_textColor:I
 
     invoke-virtual {v0, v4, v2}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result v2
 
     .line 12
-    sget v4, Lcom/vk/im/ui/R2;->MsgPartTextView_TimeAppearance_android_textSize:I
+    sget v4, Lcom/vk/im/ui/o;->MsgPartTextView_TimeAppearance_android_textSize:I
 
     invoke-virtual {v0, v4, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p1
 
     .line 13
-    sget v4, Lcom/vk/im/ui/R2;->MsgPartTextView_TimeAppearance_android_textStyle:I
+    sget v4, Lcom/vk/im/ui/o;->MsgPartTextView_TimeAppearance_android_textStyle:I
 
     invoke-virtual {v0, v4, v1}, Landroid/content/res/TypedArray;->getInteger(II)I
 
     move-result v4
 
     .line 14
-    sget v5, Lcom/vk/im/ui/R2;->MsgPartTextView_TimeAppearance_android_fontFamily:I
+    sget v5, Lcom/vk/im/ui/o;->MsgPartTextView_TimeAppearance_android_fontFamily:I
 
     invoke-virtual {v0, v5}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -271,28 +271,28 @@
 
     .line 16
     :goto_1
-    sget v0, Lcom/vk/im/ui/R2;->MsgPartTextView_vkim_timeTextColor:I
+    sget v0, Lcom/vk/im/ui/o;->MsgPartTextView_vkim_timeTextColor:I
 
     invoke-virtual {p2, v0, v2}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result v0
 
     .line 17
-    sget v2, Lcom/vk/im/ui/R2;->MsgPartTextView_vkim_timeTextSize:I
+    sget v2, Lcom/vk/im/ui/o;->MsgPartTextView_vkim_timeTextSize:I
 
     invoke-virtual {p2, v2, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p1
 
     .line 18
-    sget v2, Lcom/vk/im/ui/R2;->MsgPartTextView_vkim_timeTextStyle:I
+    sget v2, Lcom/vk/im/ui/o;->MsgPartTextView_vkim_timeTextStyle:I
 
     invoke-virtual {p2, v2, v4}, Landroid/content/res/TypedArray;->getInteger(II)I
 
     move-result v2
 
     .line 19
-    sget v4, Lcom/vk/im/ui/R2;->MsgPartTextView_vkim_timeFontFamily:I
+    sget v4, Lcom/vk/im/ui/o;->MsgPartTextView_vkim_timeFontFamily:I
 
     invoke-virtual {p2, v4}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -320,7 +320,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartTextView;->setTimeTypeface(Landroid/graphics/Typeface;)V
 
     .line 23
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartTextView_vkim_timeSpaceX:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartTextView_vkim_timeSpaceX:I
 
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -329,7 +329,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartTextView;->setTimeTextSpaceX(I)V
 
     .line 24
-    sget p1, Lcom/vk/im/ui/R2;->MsgPartTextView_vkim_timeSpaceY:I
+    sget p1, Lcom/vk/im/ui/o;->MsgPartTextView_vkim_timeSpaceY:I
 
     invoke-virtual {p2, p1, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -359,7 +359,7 @@
     iput v0, p0, Lcom/vk/im/ui/views/msg/MsgPartTextView;->F:I
 
     .line 4
-    sget-object v0, Lcom/vk/im/ui/R2;->MsgPartTextView:[I
+    sget-object v0, Lcom/vk/im/ui/o;->MsgPartTextView:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 

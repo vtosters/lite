@@ -3,7 +3,7 @@
 .source "ChatFragment.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/q/h/e/MentionsController$b;
+.implements Lcom/vk/im/ui/q/h/e/a$b;
 
 
 # annotations
@@ -46,7 +46,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$h;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->k(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/IMsgSendVc;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->k(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/a;
 
     move-result-object v0
 
@@ -54,11 +54,11 @@
 
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$h;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/IMsgSendVc;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/q/h/f/IMsgSendVc;->c()Z
+    invoke-interface {v0}, Lcom/vk/im/ui/q/h/f/a;->c()Z
 
     move-result v0
 

@@ -61,7 +61,7 @@
 
     const-string v2, "Thread.currentThread()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
@@ -70,7 +70,7 @@
     .line 3
     iget-object v2, p0, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor$c;->a:Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;
 
-    invoke-static {v2}, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->b(Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;)Lcom/vk/instantjobs/InstantJobLogger;
+    invoke-static {v2}, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->b(Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;)Lcom/vk/instantjobs/a;
 
     move-result-object v2
 
@@ -92,7 +92,7 @@
 
     move-result-object v1
 
-    invoke-interface {v2, v1, v0}, Lcom/vk/instantjobs/InstantJobLogger;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v2, v1, v0}, Lcom/vk/instantjobs/a;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-void

@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/ui/WriteBar$i;
-.super Lcom/vk/stickers/StickersView$k;
+.super Lcom/vk/stickers/b0$k;
 .source "WriteBar.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar$i;->c:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-direct {p0}, Lcom/vk/stickers/StickersView$k;-><init>()V
+    invoke-direct {p0}, Lcom/vk/stickers/b0$k;-><init>()V
 
     return-void
 .end method
@@ -63,7 +63,7 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar$i;->c:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {v0}, Lcom/vtosters/lite/ui/WriteBar;->x(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/stickers/StickersView$k;
+    invoke-static {v0}, Lcom/vtosters/lite/ui/WriteBar;->x(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/stickers/b0$k;
 
     move-result-object v0
 
@@ -83,11 +83,11 @@
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar$i;->c:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {v0}, Lcom/vtosters/lite/ui/WriteBar;->x(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/stickers/StickersView$k;
+    invoke-static {v0}, Lcom/vtosters/lite/ui/WriteBar;->x(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/stickers/b0$k;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/stickers/StickersView$k;->a(ILcom/vk/dto/stickers/StickerItem;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/stickers/b0$k;->a(ILcom/vk/dto/stickers/StickerItem;Ljava/lang/String;)V
 
     :cond_0
     return-void

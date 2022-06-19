@@ -1,5 +1,5 @@
 .class public final Lcom/vk/api/execute/ExecuteGetAccountSettings;
-.super Lcom/vk/api/base/ApiRequest;
+.super Lcom/vk/api/base/d;
 .source "ExecuteGetAccountSettings.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/ApiRequest<",
+        "Lcom/vk/api/base/d<",
         "Lcom/vk/api/execute/ExecuteGetAccountSettings$Result;",
         ">;"
     }
@@ -26,14 +26,14 @@
     const-string v0, "execute.getAccountSettings"
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
 
     const-string v0, "func_v"
 
     const/4 v1, 0x2
 
     .line 2
-    invoke-virtual {p0, v0, v1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, v0, v1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
 
     return-void
 .end method
@@ -146,7 +146,7 @@
 
     const-string v6, "getJSONObject(\"comment_order\")"
 
-    invoke-static {p1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/api/comments/CommentsOrder$b;->a(Lorg/json/JSONObject;)Lcom/vk/api/comments/CommentsOrder;
 

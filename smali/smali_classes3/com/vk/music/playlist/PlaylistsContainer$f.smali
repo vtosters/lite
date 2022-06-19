@@ -1,16 +1,16 @@
 .class public final Lcom/vk/music/playlist/PlaylistsContainer$f;
-.super Lcom/vk/core/widget/LifecycleListener;
+.super Lcom/vk/core/widget/a;
 .source "PlaylistsContainer.kt"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
-.implements Lcom/vk/music/view/LastReachedScrollListener$a;
-.implements Lcom/vk/core/ui/IdClickListener;
+.implements Lcom/vk/music/view/q$a;
+.implements Lcom/vk/core/ui/k;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/playlist/PlaylistsContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/playlist/PlaylistsModel;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/common/BoomModel;)V
+    value = Lcom/vk/music/playlist/PlaylistsContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/playlist/g;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/d;Lcom/vk/music/common/BoomModel;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,10 +20,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/widget/LifecycleListener;",
+        "Lcom/vk/core/widget/a;",
         "Landroid/view/View$OnClickListener;",
-        "Lcom/vk/music/view/LastReachedScrollListener$a;",
-        "Lcom/vk/core/ui/IdClickListener<",
+        "Lcom/vk/music/view/q$a;",
+        "Lcom/vk/core/ui/k<",
         "Lcom/vk/dto/music/Playlist;",
         ">;"
     }
@@ -46,7 +46,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/music/playlist/PlaylistsContainer$f;->c:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-direct {p0}, Lcom/vk/core/widget/LifecycleListener;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/widget/a;-><init>()V
 
     return-void
 .end method
@@ -59,11 +59,11 @@
     .line 10
     iget-object v0, p0, Lcom/vk/music/playlist/PlaylistsContainer$f;->c:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-virtual {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->getModel$app_armUpload()Lcom/vk/music/playlist/PlaylistsModel;
+    invoke-virtual {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->getModel$app_armUpload()Lcom/vk/music/playlist/g;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/playlist/PlaylistsModel;->m()Z
+    invoke-interface {v0}, Lcom/vk/music/playlist/g;->m()Z
 
     move-result v0
 
@@ -72,11 +72,11 @@
     .line 11
     iget-object v0, p0, Lcom/vk/music/playlist/PlaylistsContainer$f;->c:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-virtual {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->getModel$app_armUpload()Lcom/vk/music/playlist/PlaylistsModel;
+    invoke-virtual {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->getModel$app_armUpload()Lcom/vk/music/playlist/g;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/playlist/PlaylistsModel;->l()V
+    invoke-interface {v0}, Lcom/vk/music/playlist/g;->l()V
 
     :cond_0
     return-void
@@ -98,7 +98,7 @@
     if-eqz p2, :cond_0
 
     .line 3
-    const-class p1, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetModelImpl;
+    const-class p1, Lcom/vk/music/bottomsheets/playlist/b;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -106,14 +106,14 @@
 
     const-string v0, "PlaylistBottomSheetModel\u2026pl::class.java.simpleName"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, p2}, Lcom/vk/music/common/Music$e;->a(Ljava/lang/String;Lcom/vk/dto/music/Playlist;)Lcom/vk/music/playlist/ModernPlaylistModel;
+    invoke-static {p1, p2}, Lcom/vk/music/common/c$e;->a(Ljava/lang/String;Lcom/vk/dto/music/Playlist;)Lcom/vk/music/playlist/b;
 
     move-result-object v4
 
     .line 4
-    new-instance p1, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetModelImpl;
+    new-instance p1, Lcom/vk/music/bottomsheets/playlist/b;
 
     iget-object v0, p0, Lcom/vk/music/playlist/PlaylistsContainer$f;->c:Lcom/vk/music/playlist/PlaylistsContainer;
 
@@ -123,7 +123,7 @@
 
     iget-object v0, p0, Lcom/vk/music/playlist/PlaylistsContainer$f;->c:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->h(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vk/music/player/PlayerModel;
+    invoke-static {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->h(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vk/music/player/d;
 
     move-result-object v5
 
@@ -137,12 +137,12 @@
 
     move-object v3, p2
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetModelImpl;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/dto/music/Playlist;Lcom/vk/music/playlist/ModernPlaylistModel;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/common/BoomModel;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/music/bottomsheets/playlist/b;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/dto/music/Playlist;Lcom/vk/music/playlist/b;Lcom/vk/music/player/d;Lcom/vk/music/common/BoomModel;)V
 
     .line 5
     new-instance v0, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;
 
-    invoke-direct {v0, p2, p1}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;-><init>(Lcom/vk/dto/music/Playlist;Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetModel;)V
+    invoke-direct {v0, p2, p1}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;-><init>(Lcom/vk/dto/music/Playlist;Lcom/vk/music/bottomsheets/playlist/a;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/music/playlist/PlaylistsContainer$f;->c:Lcom/vk/music/playlist/PlaylistsContainer;
@@ -155,7 +155,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, p1, v1, p2, v1}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;->a(Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/MusicAction$a;ILjava/lang/Object;)V
+    invoke-static {v0, p1, v1, p2, v1}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;->a(Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/a$a;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -215,11 +215,11 @@
     .line 12
     iget-object v0, p0, Lcom/vk/music/playlist/PlaylistsContainer$f;->c:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-virtual {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->getModel$app_armUpload()Lcom/vk/music/playlist/PlaylistsModel;
+    invoke-virtual {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->getModel$app_armUpload()Lcom/vk/music/playlist/g;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/playlist/PlaylistsModel;->R()Z
+    invoke-interface {v0}, Lcom/vk/music/playlist/g;->R()Z
 
     move-result v0
 
@@ -228,11 +228,11 @@
     .line 13
     iget-object v0, p0, Lcom/vk/music/playlist/PlaylistsContainer$f;->c:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-virtual {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->getModel$app_armUpload()Lcom/vk/music/playlist/PlaylistsModel;
+    invoke-virtual {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->getModel$app_armUpload()Lcom/vk/music/playlist/g;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/playlist/PlaylistsModel;->c0()Ljava/lang/Long;
+    invoke-interface {v0}, Lcom/vk/music/playlist/g;->c0()Ljava/lang/Long;
 
     move-result-object v0
 
@@ -262,7 +262,7 @@
     const/4 v2, 0x0
 
     .line 14
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     goto :goto_1
 
@@ -304,7 +304,7 @@
     :cond_2
     new-instance v0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a;
 
-    invoke-static {p1}, Lcom/vk/music/playlist/PlaylistsExt;->d(Lcom/vk/dto/music/Playlist;)Lcom/vk/dto/music/Playlist;
+    invoke-static {p1}, Lcom/vk/music/playlist/e;->d(Lcom/vk/dto/music/Playlist;)Lcom/vk/dto/music/Playlist;
 
     move-result-object p1
 
@@ -326,7 +326,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     :goto_1
     return-void
@@ -336,7 +336,7 @@
     .locals 3
 
     .line 22
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/core/widget/LifecycleListener;->a(Ljava/lang/String;IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/core/widget/a;->a(Ljava/lang/String;IILandroid/content/Intent;)V
 
     const/16 p1, 0x17
 
@@ -394,7 +394,7 @@
 
     const/4 p3, 0x2
 
-    invoke-static {p2, v2, p3, v1}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+    invoke-static {p2, v2, p3, v1}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
 
     .line 26
     iget-object p2, p0, Lcom/vk/music/playlist/PlaylistsContainer$f;->c:Lcom/vk/music/playlist/PlaylistsContainer;
@@ -438,7 +438,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/core/ui/IdClickListener$b;->a(Lcom/vk/core/ui/IdClickListener;Landroid/view/View;)V
+    invoke-static {p0, p1}, Lcom/vk/core/ui/k$b;->a(Lcom/vk/core/ui/k;Landroid/view/View;)V
 
     return-void
 .end method
@@ -447,7 +447,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/core/ui/IdClickListener$b;->a(Lcom/vk/core/ui/IdClickListener;Landroid/view/MenuItem;)Z
+    invoke-static {p0, p1}, Lcom/vk/core/ui/k$b;->a(Lcom/vk/core/ui/k;Landroid/view/MenuItem;)Z
 
     move-result p1
 

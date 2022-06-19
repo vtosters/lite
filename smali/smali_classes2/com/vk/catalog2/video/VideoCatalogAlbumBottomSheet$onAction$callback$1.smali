@@ -3,7 +3,7 @@
 .source "VideoCatalogAlbumBottomSheet.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -61,7 +61,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$onAction$callback$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 4
 
     .line 2
-    new-instance v0, Lcom/vk/libvideo/y/VideoEvents8;
+    new-instance v0, Lcom/vk/libvideo/y/e;
 
     sget-object v1, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;->d:Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet;
 
@@ -84,9 +84,9 @@
 
     move-result-object v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/libvideo/y/VideoEvents8;-><init>(JLcom/vk/dto/video/VideoAlbum;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/libvideo/y/e;-><init>(JLcom/vk/dto/video/VideoAlbum;)V
 
-    invoke-static {v0}, Lcom/vk/libvideo/y/VideoEventBus;->a(Lcom/vk/libvideo/y/VideoEvents1;)V
+    invoke-static {v0}, Lcom/vk/libvideo/y/m;->a(Lcom/vk/libvideo/y/a;)V
 
     return-void
 .end method

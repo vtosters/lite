@@ -1,5 +1,5 @@
 .class public Lcom/vtosters/lite/audio/player/SavedTrack$b;
-.super Lcom/vtosters/lite/audio/MusicDatabaseHelper$a;
+.super Lcom/vtosters/lite/audio/e$a;
 .source "SavedTrack.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/audio/MusicDatabaseHelper$a<",
+        "Lcom/vtosters/lite/audio/e$a<",
         "Lcom/vtosters/lite/audio/player/SavedTrack;",
         ">;"
     }
@@ -31,7 +31,7 @@
     const/4 v1, 0x1
 
     .line 2
-    invoke-direct {p0, v0, v1}, Lcom/vtosters/lite/audio/MusicDatabaseHelper$a;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {p0, v0, v1}, Lcom/vtosters/lite/audio/e$a;-><init>(Ljava/lang/String;Z)V
 
     return-void
 .end method
@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method protected bridge synthetic a()Lcom/vtosters/lite/audio/f/DataObject;
+.method protected bridge synthetic a()Lcom/vtosters/lite/audio/f/a;
     .locals 1
 
     .line 1
@@ -100,7 +100,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1, v1, v0}, Lcom/vtosters/lite/audio/f/DataProvider;->a(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-virtual {p0, v1, v1, v0}, Lcom/vtosters/lite/audio/f/b;->a(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v0
 

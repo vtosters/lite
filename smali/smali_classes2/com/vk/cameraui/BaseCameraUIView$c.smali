@@ -46,7 +46,7 @@
 
     iget-object v1, p0, Lcom/vk/cameraui/BaseCameraUIView$c;->b:Lcom/vk/cameraui/BaseCameraUIView;
 
-    invoke-interface {v1}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
+    invoke-interface {v1}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
 
     move-result-object v1
 

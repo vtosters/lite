@@ -3,7 +3,7 @@
 .source "ApiConfig.kt"
 
 # interfaces
-.implements Lb/h/h/ModelConfig$a;
+.implements Lb/h/h/a$a;
 
 
 # annotations
@@ -87,7 +87,7 @@
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "+",
-            "Lcom/vk/dto/common/data/Purchase1;",
+            "Lcom/vk/dto/common/data/e;",
             ">;)V"
         }
     .end annotation

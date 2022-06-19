@@ -1,9 +1,9 @@
 .class public Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos;
-.super Lcom/vk/api/base/ApiRequest;
+.super Lcom/vk/api/base/d;
 .source "NewsfeedGetRecommendedLiveVideos.java"
 
 # interfaces
-.implements Lcom/vk/dto/common/data/ServerKeys;
+.implements Lcom/vk/dto/common/data/h;
 
 
 # annotations
@@ -15,10 +15,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/ApiRequest<",
+        "Lcom/vk/api/base/d<",
         "Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;",
         ">;",
-        "Lcom/vk/dto/common/data/ServerKeys;"
+        "Lcom/vk/dto/common/data/h;"
     }
 .end annotation
 
@@ -38,7 +38,7 @@
     const-string p1, "newsfeed.getRecommendedLiveVideos"
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
 
     .line 2
     iput-object p2, p0, Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos;->F:Ljava/lang/String;
@@ -48,7 +48,7 @@
     const/4 p2, 0x1
 
     .line 3
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
 
     if-eqz p3, :cond_0
 
@@ -57,12 +57,12 @@
     const-string p1, "latitude"
 
     .line 4
-    invoke-virtual {p0, p1, p3}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p1, p3}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     const-string p1, "longitude"
 
     .line 5
-    invoke-virtual {p0, p1, p4}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p1, p4}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     :cond_0
     if-eqz p5, :cond_1
@@ -74,7 +74,7 @@
 
     const-string p2, "live_filters"
 
-    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     :cond_1
     const-string p1, "fields"
@@ -82,7 +82,7 @@
     const-string p2, "id,first_name,first_name_dat,last_name,last_name_dat,sex,screen_name,photo_50,photo_100,online_info,video_files,trending,is_member,friend_status,can_upload_story,verified,trending"
 
     .line 7
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     return-void
 .end method
@@ -104,7 +104,7 @@
 
     .line 5
     :try_start_0
-    invoke-static {p0, p1, p2}, Lcom/vk/dto/newsfeed/entries/NewsEntryFactory;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;Ljava/lang/String;)Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-static {p0, p1, p2}, Lcom/vk/dto/newsfeed/entries/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;Ljava/lang/String;)Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object p0
     :try_end_0

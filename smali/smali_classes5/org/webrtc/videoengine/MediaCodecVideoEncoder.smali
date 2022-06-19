@@ -456,7 +456,7 @@
     const-string v1, "H.264 encoding is disabled by application."
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     sget-object v0, Lorg/webrtc/videoengine/MediaCodecVideoEncoder;->hwEncoderDisabledTypes:Ljava/util/Set;
@@ -476,7 +476,7 @@
     const-string v1, "VP8 encoding is disabled by application."
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     sget-object v0, Lorg/webrtc/videoengine/MediaCodecVideoEncoder;->hwEncoderDisabledTypes:Ljava/util/Set;
@@ -496,7 +496,7 @@
     const-string v1, "VP9 encoding is disabled by application."
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     sget-object v0, Lorg/webrtc/videoengine/MediaCodecVideoEncoder;->hwEncoderDisabledTypes:Ljava/util/Set;
@@ -580,7 +580,7 @@
 
     move-result-object v0
 
-    invoke-static {v5, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v4
 
@@ -629,7 +629,7 @@
 
     move-result-object v0
 
-    invoke-static {v5, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v4
 
@@ -703,7 +703,7 @@
 
     move-result-object v9
 
-    invoke-static {v5, v9}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v9}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 14
     sget-object v9, Lorg/webrtc/videoengine/MediaCodecVideoEncoder$BitrateAdjustmentType;->NO_ADJUSTMENT:Lorg/webrtc/videoengine/MediaCodecVideoEncoder$BitrateAdjustmentType;
@@ -757,7 +757,7 @@
 
     move-result-object v12
 
-    invoke-static {v5, v12}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v12}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_5
 
@@ -788,7 +788,7 @@
 
     move-result-object v9
 
-    invoke-static {v5, v9}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v9}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v9, v10
 
@@ -851,7 +851,7 @@
 
     move-result-object v13
 
-    invoke-static {v5, v13}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v13}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     add-int/lit8 v12, v12, 0x1
 
@@ -921,7 +921,7 @@
     move-result-object v0
 
     .line 28
-    invoke-static {v5, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 29
     new-instance v0, Lorg/webrtc/videoengine/MediaCodecVideoEncoder$EncoderProperties;
@@ -964,7 +964,7 @@
 
     move-result-object v0
 
-    invoke-static {v5, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_e
     :goto_a
@@ -1114,7 +1114,7 @@
     const-string v0, "High profile H.264 encoder supported."
 
     .line 9
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_4
 
@@ -1122,7 +1122,7 @@
     const-string v0, "High profile H.264 encoder requested, but not supported. Use baseline."
 
     .line 10
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_7
     :goto_4
@@ -1175,7 +1175,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1203,7 +1203,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v2
 .end method
@@ -1516,7 +1516,7 @@
     const-string v2, "MediaCodecVideoEncoder stacks trace:"
 
     .line 4
-    invoke-static {v1, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     array-length v2, v0
@@ -1533,7 +1533,7 @@
 
     move-result-object v4
 
-    invoke-static {v1, v4}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     add-int/lit8 v3, v3, 0x1
 
@@ -1672,7 +1672,7 @@
 
     const-string v0, "MediaCodecVideoEncoder"
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1795,7 +1795,7 @@
     move-result-object p1
 
     .line 19
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 20
     iget p1, p0, Lorg/webrtc/videoengine/MediaCodecVideoEncoder;->targetBitrateBps:I
@@ -1825,7 +1825,7 @@
     const-string v1, "Set error callback"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     sput-object p0, Lorg/webrtc/videoengine/MediaCodecVideoEncoder;->errorCallback:Lorg/webrtc/videoengine/MediaCodecVideoEncoder$MediaCodecVideoEncoderErrorCallback;
@@ -1933,7 +1933,7 @@
 
     move-result-object p1
 
-    invoke-static {v4, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1972,7 +1972,7 @@
 
     move-result-object p1
 
-    invoke-static {v4, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 13
     iget p1, p0, Lorg/webrtc/videoengine/MediaCodecVideoEncoder;->bitrateAdjustmentScaleExp:I
@@ -2012,7 +2012,7 @@
 
     move-result-object p1
 
-    invoke-static {v4, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 16
     :cond_3
@@ -2065,7 +2065,7 @@
 
     move-result-object p1
 
-    invoke-static {v4, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -2205,7 +2205,7 @@
     const-string p1, "Sync frame request"
 
     .line 5
-    invoke-static {v1, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -2213,7 +2213,7 @@
     const-string p1, "Sync frame forced"
 
     .line 6
-    invoke-static {v1, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     :goto_1
@@ -2271,7 +2271,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2304,7 +2304,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, -0x2
 
@@ -2382,7 +2382,7 @@
 
     move-result-object v7
 
-    invoke-static {v0, v7}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v7}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     iget v7, v1, Landroid/media/MediaCodec$BufferInfo;->size:I
@@ -2492,7 +2492,7 @@
 
     move-result-object v7
 
-    invoke-static {v0, v7}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v7}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 13
     iget-object v7, p0, Lorg/webrtc/videoengine/MediaCodecVideoEncoder;->mediaCodec:Landroid/media/MediaCodec;
@@ -2557,7 +2557,7 @@
     const-string v4, "Sync frame generated"
 
     .line 20
-    invoke-static {v0, v4}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
     if-eqz v5, :cond_6
@@ -2606,7 +2606,7 @@
 
     move-result-object v4
 
-    invoke-static {v0, v4}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 23
     iget-object v4, p0, Lorg/webrtc/videoengine/MediaCodecVideoEncoder;->configData:Ljava/nio/ByteBuffer;
@@ -2760,7 +2760,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 37
     new-instance v0, Lorg/webrtc/videoengine/MediaCodecVideoEncoder$OutputBufferInfo;
@@ -2840,7 +2840,7 @@
 
     const-string p2, "MediaCodecVideoEncoder"
 
-    invoke-static {p2, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -2885,7 +2885,7 @@
 
     const-string v2, "MediaCodecVideoEncoder"
 
-    invoke-static {v2, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -2964,7 +2964,7 @@
     const-string v8, "MediaCodecVideoEncoder"
 
     .line 2
-    invoke-static {v8, v7}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v7}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iput v2, v1, Lorg/webrtc/videoengine/MediaCodecVideoEncoder;->profile:I
@@ -3068,7 +3068,7 @@
     const-string v2, "High profile H.264 encoder supported."
 
     .line 16
-    invoke-static {v8, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x1
 
@@ -3078,7 +3078,7 @@
     const-string v2, "High profile H.264 encoder requested, but not supported. Use baseline."
 
     .line 17
-    invoke-static {v8, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     const/4 v2, 0x0
@@ -3255,7 +3255,7 @@
 
     move-result-object v6
 
-    invoke-static {v8, v6}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v6}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     mul-int/lit16 v5, v5, 0x3e8
 
@@ -3319,7 +3319,7 @@
 
     move-result-object v5
 
-    invoke-static {v8, v5}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v5}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 40
     :try_start_0
@@ -3392,7 +3392,7 @@
 
     move-result-object v4
 
-    invoke-static {v8, v4}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v4}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 49
     iget-object v2, v2, Lorg/webrtc/videoengine/MediaCodecVideoEncoder$EncoderProperties;->codecName:Ljava/lang/String;
@@ -3414,7 +3414,7 @@
     const-string v0, "Can not create media encoder"
 
     .line 52
-    invoke-static {v8, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 53
     invoke-virtual/range {p0 .. p0}, Lorg/webrtc/videoengine/MediaCodecVideoEncoder;->release()Z
@@ -3466,7 +3466,7 @@
 
     move-result-object v0
 
-    invoke-static {v8, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3517,7 +3517,7 @@
 
     move-result-object v0
 
-    invoke-static {v8, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 60
     invoke-virtual/range {p0 .. p0}, Lorg/webrtc/videoengine/MediaCodecVideoEncoder;->release()Z
@@ -3567,7 +3567,7 @@
     const-string v1, "Java releaseEncoder"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-direct {p0}, Lorg/webrtc/videoengine/MediaCodecVideoEncoder;->checkOnMediaCodecThread()V
@@ -3617,7 +3617,7 @@
     const-string v2, "Media encoder release timeout"
 
     .line 9
-    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x1
 
@@ -3673,7 +3673,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 16
     sget-object v2, Lorg/webrtc/videoengine/MediaCodecVideoEncoder;->errorCallback:Lorg/webrtc/videoengine/MediaCodecVideoEncoder$MediaCodecVideoEncoderErrorCallback;
@@ -3686,7 +3686,7 @@
     const-string v2, "Media encoder release timeout."
 
     .line 17
-    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v5, 0x0
 
@@ -3730,7 +3730,7 @@
     .line 24
     iget-object v1, p0, Lorg/webrtc/videoengine/MediaCodecVideoEncoder;->lastError:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -3741,7 +3741,7 @@
     const-string v1, "Java releaseEncoder done"
 
     .line 25
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v4
 .end method
@@ -3795,7 +3795,7 @@
 
     const-string v1, "MediaCodecVideoEncoder"
 
-    invoke-static {v1, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method

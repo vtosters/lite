@@ -58,7 +58,7 @@
     invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->b(Landroid/app/Activity;[F)V
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/data/ThemeTracker;->a()V
+    invoke-static {}, Lcom/vtosters/lite/data/s;->a()V
 
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$f$a;->a:Lcom/vtosters/lite/fragments/SettingsListFragment$f;
@@ -68,7 +68,7 @@
     invoke-static {v0}, Lcom/vtosters/lite/fragments/SettingsListFragment;->e(Lcom/vtosters/lite/fragments/SettingsListFragment;)V
 
     .line 4
-    invoke-static {}, Lcom/vk/articles/preload/WebCachePreloader;->e()V
+    invoke-static {}, Lcom/vk/articles/preload/a;->e()V
 
     return-void
 .end method

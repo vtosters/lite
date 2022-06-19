@@ -17,11 +17,11 @@
 # instance fields
 .field private final a:Lcom/vk/libvideo/ad/AdPlayerProxy$a;
 
-.field private final b:Lcom/my/target/i3/InstreamAdPlayer$a;
+.field private final b:Lcom/my/target/i3/b$a;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/libvideo/ad/AdPlayerProxy$a;Lcom/my/target/i3/InstreamAdPlayer$a;)V
+.method public constructor <init>(Lcom/vk/libvideo/ad/AdPlayerProxy$a;Lcom/my/target/i3/b$a;)V
     .locals 0
 
     .line 1
@@ -29,7 +29,7 @@
 
     iput-object p1, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->a:Lcom/vk/libvideo/ad/AdPlayerProxy$a;
 
-    iput-object p2, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b:Lcom/my/target/i3/InstreamAdPlayer$a;
+    iput-object p2, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b:Lcom/my/target/i3/b$a;
 
     return-void
 .end method
@@ -45,11 +45,11 @@
     return-object v0
 .end method
 
-.method public final b()Lcom/my/target/i3/InstreamAdPlayer$a;
+.method public final b()Lcom/my/target/i3/b$a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b:Lcom/my/target/i3/InstreamAdPlayer$a;
+    iget-object v0, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b:Lcom/my/target/i3/b$a;
 
     return-object v0
 .end method
@@ -69,17 +69,17 @@
 
     iget-object v1, p1, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->a:Lcom/vk/libvideo/ad/AdPlayerProxy$a;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b:Lcom/my/target/i3/InstreamAdPlayer$a;
+    iget-object v0, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b:Lcom/my/target/i3/b$a;
 
-    iget-object p1, p1, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b:Lcom/my/target/i3/InstreamAdPlayer$a;
+    iget-object p1, p1, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b:Lcom/my/target/i3/b$a;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -120,7 +120,7 @@
     :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b:Lcom/my/target/i3/InstreamAdPlayer$a;
+    iget-object v2, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b:Lcom/my/target/i3/b$a;
 
     if-eqz v2, :cond_1
 
@@ -153,7 +153,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b:Lcom/my/target/i3/InstreamAdPlayer$a;
+    iget-object v1, p0, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b:Lcom/my/target/i3/b$a;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

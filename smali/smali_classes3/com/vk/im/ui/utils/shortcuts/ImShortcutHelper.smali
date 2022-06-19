@@ -134,13 +134,13 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;I)Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;
+.method public final a(Landroid/content/Context;Lcom/vk/im/engine/a;I)Lcom/vk/im/ui/utils/shortcuts/a;
     .locals 8
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
     .line 13
-    new-instance v7, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdArgs;
+    new-instance v7, Lcom/vk/im/engine/commands/dialogs/q;
 
     sget-object v2, Lcom/vk/im/engine/models/Source;->CACHE:Lcom/vk/im/engine/models/Source;
 
@@ -156,33 +156,33 @@
 
     move v1, p3
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdArgs;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/commands/dialogs/q;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
 
     .line 14
-    new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdExtCmd;
+    new-instance v0, Lcom/vk/im/engine/commands/dialogs/t;
 
-    invoke-direct {v0, v7}, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdExtCmd;-><init>(Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdArgs;)V
+    invoke-direct {v0, v7}, Lcom/vk/im/engine/commands/dialogs/t;-><init>(Lcom/vk/im/engine/commands/dialogs/q;)V
 
     .line 15
-    invoke-virtual {p2, p0, v0}, Lcom/vk/im/engine/ImEngine;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
+    invoke-virtual {p2, p0, v0}, Lcom/vk/im/engine/a;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/im/engine/models/dialogs/DialogsExt;
+    check-cast p2, Lcom/vk/im/engine/models/dialogs/g;
 
     .line 16
-    invoke-virtual {p2}, Lcom/vk/im/engine/models/dialogs/DialogsExt;->c()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {p2}, Lcom/vk/im/engine/models/dialogs/g;->c()Lcom/vk/im/engine/models/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Lcom/vk/im/engine/models/EntityIntMap;->d(I)Ljava/lang/Object;
+    invoke-virtual {v0, p3}, Lcom/vk/im/engine/models/a;->d(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/vk/im/engine/models/dialogs/Dialog;
 
     .line 17
-    invoke-virtual {p2}, Lcom/vk/im/engine/models/dialogs/DialogsExt;->d()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {p2}, Lcom/vk/im/engine/models/dialogs/g;->d()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object p2
 
@@ -193,11 +193,11 @@
     if-eqz v0, :cond_0
 
     .line 18
-    new-instance v1, Lcom/vk/im/ui/formatters/DisplayNameFormatter;
+    new-instance v1, Lcom/vk/im/ui/formatters/d;
 
-    invoke-direct {v1}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;-><init>()V
+    invoke-direct {v1}, Lcom/vk/im/ui/formatters/d;-><init>()V
 
-    invoke-virtual {v1, v0, p2}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
+    invoke-virtual {v1, v0, p2}, Lcom/vk/im/ui/formatters/d;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -207,20 +207,20 @@
     move-result p1
 
     .line 20
-    sget-object v2, Lcom/vk/im/ui/views/avatars/AvatarBitmapFactory;->INSTANCE:Lcom/vk/im/ui/views/avatars/AvatarBitmapFactory;
+    sget-object v2, Lcom/vk/im/ui/views/avatars/b;->a:Lcom/vk/im/ui/views/avatars/b;
 
     new-instance v3, Lcom/vk/im/ui/utils/shortcuts/ImShortcutHelper$createDialogWidgetArgs$icon$1;
 
     invoke-direct {v3, v0, p2}, Lcom/vk/im/ui/utils/shortcuts/ImShortcutHelper$createDialogWidgetArgs$icon$1;-><init>(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
-    invoke-virtual {v2, p1, v3}, Lcom/vk/im/ui/views/avatars/AvatarBitmapFactory;->a(ILkotlin/jvm/b/Functions2;)Landroid/graphics/Bitmap;
+    invoke-virtual {v2, p1, v3}, Lcom/vk/im/ui/views/avatars/b;->a(ILkotlin/jvm/b/b;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     .line 21
-    new-instance p2, Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;
+    new-instance p2, Lcom/vk/im/ui/utils/shortcuts/a;
 
-    invoke-direct {p2, p3, v1, p1}, Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;-><init>(ILjava/lang/String;Landroid/graphics/Bitmap;)V
+    invoke-direct {p2, p3, v1, p1}, Lcom/vk/im/ui/utils/shortcuts/a;-><init>(ILjava/lang/String;Landroid/graphics/Bitmap;)V
 
     return-object p2
 
@@ -235,7 +235,7 @@
     throw p1
 .end method
 
-.method public final a(Landroid/content/Context;Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;)V
+.method public final a(Landroid/content/Context;Lcom/vk/im/ui/utils/shortcuts/a;)V
     .locals 4
     .annotation build Landroidx/annotation/UiThread;
     .end annotation
@@ -249,7 +249,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;->a()I
+    invoke-virtual {p2}, Lcom/vk/im/ui/utils/shortcuts/a;->a()I
 
     move-result v1
 
@@ -268,7 +268,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;->a()I
+    invoke-virtual {p2}, Lcom/vk/im/ui/utils/shortcuts/a;->a()I
 
     move-result v2
 
@@ -307,7 +307,7 @@
     invoke-direct {v1, p1, v0}, Landroidx/core/content/pm/ShortcutInfoCompat$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 7
-    invoke-virtual {p2}, Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;->c()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/im/ui/utils/shortcuts/a;->c()Ljava/lang/String;
 
     move-result-object v0
 
@@ -316,7 +316,7 @@
     move-result-object v0
 
     .line 8
-    invoke-virtual {p2}, Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;->c()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/im/ui/utils/shortcuts/a;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -325,7 +325,7 @@
     move-result-object v0
 
     .line 9
-    invoke-virtual {p2}, Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;->b()Landroid/graphics/Bitmap;
+    invoke-virtual {p2}, Lcom/vk/im/ui/utils/shortcuts/a;->b()Landroid/graphics/Bitmap;
 
     move-result-object p2
 
@@ -349,7 +349,7 @@
 
     const-string v0, "ShortcutInfoCompat.Build\u2026\n                .build()"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

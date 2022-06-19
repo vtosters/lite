@@ -29,7 +29,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/view/VideoRestrictionView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/view/VideoRestrictionView$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/core/view/VideoRestrictionView;->c:Lcom/vk/core/view/VideoRestrictionView$a;
 
@@ -51,7 +51,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/VideoRestrictionView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/VideoRestrictionView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/VideoRestrictionView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/VideoRestrictionView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -94,19 +94,19 @@
 
     move-result p3
 
-    invoke-static {p2, p3}, Lcom/vk/core/extensions/TextViewExt;->d(Landroid/widget/TextView;I)V
+    invoke-static {p2, p3}, Lcom/vk/core/extensions/a0;->d(Landroid/widget/TextView;I)V
 
     .line 4
-    sget p3, Lb/h/z/R5;->text_placeholder:I
+    sget p3, Lb/h/z/b;->text_placeholder:I
 
-    invoke-static {p2, p3}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {p2, p3}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     .line 5
     invoke-virtual {p2}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    sget v0, Lb/h/z/R11;->roboto_regular:I
+    sget v0, Lb/h/z/f;->roboto_regular:I
 
     invoke-static {p3, v0}, Landroidx/core/content/res/ResourcesCompat;->getFont(Landroid/content/Context;I)Landroid/graphics/Typeface;
 
@@ -128,15 +128,15 @@
     invoke-direct {p2, p1}, Lcom/vk/imageloader/view/VKImageView;-><init>(Landroid/content/Context;)V
 
     .line 9
-    sget p3, Lb/h/z/R8;->ic_do_not_disturb_48:I
+    sget p3, Lb/h/z/e;->ic_do_not_disturb_48:I
 
-    sget v0, Lb/h/z/R4;->gray_300:I
+    sget v0, Lb/h/z/c;->gray_300:I
 
     invoke-static {p1, p3, v0}, Lcom/vk/core/util/ContextExtKt;->b(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p2, p1}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     .line 10
     iput-object p2, p0, Lcom/vk/core/view/VideoRestrictionView;->b:Lcom/vk/imageloader/view/VKImageView;
@@ -167,7 +167,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -308,7 +308,7 @@
 
     move-result-object p1
 
-    sget v1, Lb/h/z/R2;->error:I
+    sget v1, Lb/h/z/k;->error:I
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

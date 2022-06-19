@@ -3,12 +3,12 @@
 .source "ChatSettingsComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$createCasperChat$1;->a(Lio/reactivex/disposables/Disposable;)V
+    value = Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$createCasperChat$1;->a(Lio/reactivex/disposables/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$createCasperChat$1$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -64,13 +64,13 @@
 
     iget-object v0, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$createCasperChat$1;->a:Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 3
     :cond_0
@@ -80,7 +80,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->d(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/Disposable;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->d(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/b;)V
 
     return-void
 .end method

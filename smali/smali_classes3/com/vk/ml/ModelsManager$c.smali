@@ -3,12 +3,12 @@
 .source "ModelsManager.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/ml/ModelsManager;->a(Lcom/vk/ml/MLModelDto1;Lkotlin/jvm/b/Functions;I)V
+    value = Lcom/vk/ml/ModelsManager;->a(Lcom/vk/ml/b;Lkotlin/jvm/b/a;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -34,18 +34,18 @@
 
 .field final synthetic b:Ljava/io/File;
 
-.field final synthetic c:Lkotlin/jvm/b/Functions;
+.field final synthetic c:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Ljava/io/File;Ljava/io/File;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Ljava/io/File;Ljava/io/File;Lkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/ml/ModelsManager$c;->a:Ljava/io/File;
 
     iput-object p2, p0, Lcom/vk/ml/ModelsManager$c;->b:Ljava/io/File;
 
-    iput-object p3, p0, Lcom/vk/ml/ModelsManager$c;->c:Lkotlin/jvm/b/Functions;
+    iput-object p3, p0, Lcom/vk/ml/ModelsManager$c;->c:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -60,17 +60,17 @@
     .line 1
     iget-object p1, p0, Lcom/vk/ml/ModelsManager$c;->a:Ljava/io/File;
 
-    invoke-static {p1}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
+    invoke-static {p1}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
 
     .line 2
     iget-object p1, p0, Lcom/vk/ml/ModelsManager$c;->b:Ljava/io/File;
 
-    invoke-static {p1}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
+    invoke-static {p1}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
 
     .line 3
-    iget-object p1, p0, Lcom/vk/ml/ModelsManager$c;->c:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/ml/ModelsManager$c;->c:Lkotlin/jvm/b/a;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

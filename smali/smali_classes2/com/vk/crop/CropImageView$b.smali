@@ -47,13 +47,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/crop/CropImageView$b;->a:Lcom/vk/crop/CropImageView;
 
-    invoke-static {p1}, Lcom/vk/crop/CropImageView;->b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/CropController;
+    invoke-static {p1}, Lcom/vk/crop/CropImageView;->b(Lcom/vk/crop/CropImageView;)Lcom/vk/crop/f;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vk/crop/CropController;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/crop/f;->a(Z)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/crop/CropImageView$b;->a:Lcom/vk/crop/CropImageView;

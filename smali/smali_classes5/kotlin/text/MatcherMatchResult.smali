@@ -3,7 +3,7 @@
 .source "Regex.kt"
 
 # interfaces
-.implements Lkotlin/text/MatchResult2;
+.implements Lkotlin/text/j;
 
 
 # instance fields
@@ -95,14 +95,14 @@
     return-object v0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public b()Lkotlin/t/Ranges1;
+.method public b()Lkotlin/t/d;
     .locals 1
 
     .line 1
@@ -110,14 +110,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/text/Regex2;->a(Ljava/util/regex/MatchResult;)Lkotlin/t/Ranges1;
+    invoke-static {v0}, Lkotlin/text/k;->a(Ljava/util/regex/MatchResult;)Lkotlin/t/d;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public next()Lkotlin/text/MatchResult2;
+.method public next()Lkotlin/text/j;
     .locals 3
 
     .line 1
@@ -180,11 +180,11 @@
 
     const-string v2, "matcher.pattern().matcher(input)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, p0, Lkotlin/text/MatcherMatchResult;->c:Ljava/lang/CharSequence;
 
-    invoke-static {v1, v0, v2}, Lkotlin/text/Regex2;->a(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Lkotlin/text/MatchResult2;
+    invoke-static {v1, v0, v2}, Lkotlin/text/k;->a(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Lkotlin/text/j;
 
     move-result-object v0
 

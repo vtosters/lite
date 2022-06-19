@@ -3,12 +3,12 @@
 .source "MusicPlaylistScreenAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;-><init>(ZLkotlin/jvm/b/Functions;Lcom/vk/music/playlist/ModernPlaylistModel;Lcom/vk/music/player/PlayerModel;Lcom/vk/core/ui/IdClickListener;)V
+    value = Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;-><init>(ZLkotlin/jvm/b/a;Lcom/vk/music/playlist/b;Lcom/vk/music/player/d;Lcom/vk/core/ui/k;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/ViewGroup;",
-        "Lcom/vk/music/playlist/modern/h/MusicPlaylistEmptyOwnPlaylistHolder;",
+        "Lcom/vk/music/playlist/modern/h/d;",
         ">;"
     }
 .end annotation
@@ -46,19 +46,19 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/MusicPlaylistEmptyOwnPlaylistHolder;
+.method public final a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/d;
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/music/playlist/modern/h/MusicPlaylistEmptyOwnPlaylistHolder;
+    new-instance v0, Lcom/vk/music/playlist/modern/h/d;
 
     iget-object v1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$emptyOwnPlaylist$1;->this$0:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
 
-    invoke-static {v1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->a(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lcom/vk/core/ui/IdClickListener;
+    invoke-static {v1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->a(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lcom/vk/core/ui/k;
 
     move-result-object v1
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/music/playlist/modern/h/MusicPlaylistEmptyOwnPlaylistHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/core/ui/IdClickListener;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/music/playlist/modern/h/d;-><init>(Landroid/view/ViewGroup;Lcom/vk/core/ui/k;)V
 
     return-object v0
 .end method
@@ -69,7 +69,7 @@
     .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$emptyOwnPlaylist$1;->a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/MusicPlaylistEmptyOwnPlaylistHolder;
+    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$emptyOwnPlaylist$1;->a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/d;
 
     move-result-object p1
 

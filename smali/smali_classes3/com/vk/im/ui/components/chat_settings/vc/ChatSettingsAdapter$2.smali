@@ -3,12 +3,12 @@
 .source "ChatSettingsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;)V
+    value = Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/ViewGroup;",
-        "Lcom/vk/im/ui/components/chat_settings/vc/VhMembersCount;",
+        "Lcom/vk/im/ui/components/chat_settings/vc/g;",
         ">;"
     }
 .end annotation
@@ -46,19 +46,19 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/components/chat_settings/vc/VhMembersCount;
+.method public final a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/components/chat_settings/vc/g;
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/im/ui/components/chat_settings/vc/VhMembersCount;
+    new-instance v0, Lcom/vk/im/ui/components/chat_settings/vc/g;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter$2;->this$0:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter;->m()Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter;->m()Lcom/vk/im/ui/components/chat_settings/vc/a;
 
     move-result-object v1
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/im/ui/components/chat_settings/vc/VhMembersCount;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;Landroid/view/ViewGroup;)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/im/ui/components/chat_settings/vc/g;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/a;Landroid/view/ViewGroup;)V
 
     return-object v0
 .end method
@@ -69,7 +69,7 @@
     .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter$2;->a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/components/chat_settings/vc/VhMembersCount;
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter$2;->a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/components/chat_settings/vc/g;
 
     move-result-object p1
 

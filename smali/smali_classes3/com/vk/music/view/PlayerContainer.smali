@@ -261,7 +261,7 @@
     const/high16 v0, 0x42c00000    # 96.0f
 
     .line 7
-    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
 
     move-result v0
 
@@ -450,7 +450,7 @@
 
     add-int/2addr v1, v0
 
-    invoke-static {p3}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {p3}, Ld/a/a/c/e;->a(F)I
 
     move-result p3
 
@@ -488,7 +488,7 @@
     const/high16 v1, 0x41800000    # 16.0f
 
     .line 13
-    invoke-static {v1}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v1}, Ld/a/a/c/e;->a(F)I
 
     move-result v1
 
@@ -635,7 +635,7 @@
 
     add-int/2addr p2, p4
 
-    invoke-static {p3}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {p3}, Ld/a/a/c/e;->a(F)I
 
     move-result p3
 
@@ -668,7 +668,7 @@
     const/high16 p1, 0x41b80000    # 23.0f
 
     .line 28
-    invoke-static {p1}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {p1}, Ld/a/a/c/e;->a(F)I
 
     move-result p1
 
@@ -816,7 +816,7 @@
     const/high16 v1, 0x42800000    # 64.0f
 
     .line 10
-    invoke-static {v1}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v1}, Ld/a/a/c/e;->a(F)I
 
     move-result v1
 
@@ -842,7 +842,7 @@
     const/high16 v3, 0x43a00000    # 320.0f
 
     .line 13
-    invoke-static {v3}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v3}, Ld/a/a/c/e;->a(F)I
 
     move-result v3
 
@@ -850,7 +850,7 @@
 
     const/high16 v4, 0x42000000    # 32.0f
 
-    invoke-static {v4}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v4}, Ld/a/a/c/e;->a(F)I
 
     move-result v5
 
@@ -881,7 +881,7 @@
     if-lt v3, v2, :cond_1
 
     .line 18
-    invoke-static {v4}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v4}, Ld/a/a/c/e;->a(F)I
 
     move-result v2
 

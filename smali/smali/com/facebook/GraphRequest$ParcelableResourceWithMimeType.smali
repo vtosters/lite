@@ -79,7 +79,7 @@
     iput-object v0, p0, Lcom/facebook/GraphRequest$ParcelableResourceWithMimeType;->a:Ljava/lang/String;
 
     .line 7
-    invoke-static {}, Lcom/facebook/FacebookSdk;->e()Landroid/content/Context;
+    invoke-static {}, Lcom/facebook/e;->e()Landroid/content/Context;
 
     move-result-object v0
 
@@ -96,7 +96,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/facebook/GraphRequest1;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/facebook/f;)V
     .locals 0
 
     .line 1

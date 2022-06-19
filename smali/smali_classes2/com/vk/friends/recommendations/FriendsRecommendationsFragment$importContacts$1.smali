@@ -76,7 +76,7 @@
     sget-object v6, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$importContacts$1$1$2;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$importContacts$1$1$2;
 
     .line 7
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
 
     :cond_0
     return-void

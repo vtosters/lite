@@ -18,15 +18,15 @@
 
 .field private F:F
 
-.field private final G:Lb/h/g/l/NotificationListener;
+.field private final G:Lb/h/g/l/e;
 
-.field private final H:Lb/h/g/l/NotificationListener;
+.field private final H:Lb/h/g/l/e;
 
-.field private final I:Lb/h/g/l/NotificationListener;
+.field private final I:Lb/h/g/l/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/NotificationListener<",
-            "Lcom/vk/attachpicker/widget/PagerVideoPlayer$i;",
+            "Lb/h/g/l/e<",
+            "Lcom/vk/attachpicker/widget/m$i;",
             ">;"
         }
     .end annotation
@@ -98,21 +98,21 @@
 
     invoke-direct {p1, p0}, Lcom/vk/attachpicker/widget/ViewerToolbar$c;-><init>(Lcom/vk/attachpicker/widget/ViewerToolbar;)V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->G:Lb/h/g/l/NotificationListener;
+    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->G:Lb/h/g/l/e;
 
     .line 5
     new-instance p1, Lcom/vk/attachpicker/widget/ViewerToolbar$d;
 
     invoke-direct {p1, p0}, Lcom/vk/attachpicker/widget/ViewerToolbar$d;-><init>(Lcom/vk/attachpicker/widget/ViewerToolbar;)V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->H:Lb/h/g/l/NotificationListener;
+    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->H:Lb/h/g/l/e;
 
     .line 6
     new-instance p1, Lcom/vk/attachpicker/widget/ViewerToolbar$e;
 
     invoke-direct {p1, p0}, Lcom/vk/attachpicker/widget/ViewerToolbar$e;-><init>(Lcom/vk/attachpicker/widget/ViewerToolbar;)V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->I:Lb/h/g/l/NotificationListener;
+    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->I:Lb/h/g/l/e;
 
     .line 7
     invoke-direct {p0}, Lcom/vk/attachpicker/widget/ViewerToolbar;->a()V
@@ -147,21 +147,21 @@
 
     invoke-direct {p1, p0}, Lcom/vk/attachpicker/widget/ViewerToolbar$c;-><init>(Lcom/vk/attachpicker/widget/ViewerToolbar;)V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->G:Lb/h/g/l/NotificationListener;
+    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->G:Lb/h/g/l/e;
 
     .line 12
     new-instance p1, Lcom/vk/attachpicker/widget/ViewerToolbar$d;
 
     invoke-direct {p1, p0}, Lcom/vk/attachpicker/widget/ViewerToolbar$d;-><init>(Lcom/vk/attachpicker/widget/ViewerToolbar;)V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->H:Lb/h/g/l/NotificationListener;
+    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->H:Lb/h/g/l/e;
 
     .line 13
     new-instance p1, Lcom/vk/attachpicker/widget/ViewerToolbar$e;
 
     invoke-direct {p1, p0}, Lcom/vk/attachpicker/widget/ViewerToolbar$e;-><init>(Lcom/vk/attachpicker/widget/ViewerToolbar;)V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->I:Lb/h/g/l/NotificationListener;
+    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->I:Lb/h/g/l/e;
 
     .line 14
     invoke-direct {p0}, Lcom/vk/attachpicker/widget/ViewerToolbar;->a()V
@@ -196,21 +196,21 @@
 
     invoke-direct {p1, p0}, Lcom/vk/attachpicker/widget/ViewerToolbar$c;-><init>(Lcom/vk/attachpicker/widget/ViewerToolbar;)V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->G:Lb/h/g/l/NotificationListener;
+    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->G:Lb/h/g/l/e;
 
     .line 19
     new-instance p1, Lcom/vk/attachpicker/widget/ViewerToolbar$d;
 
     invoke-direct {p1, p0}, Lcom/vk/attachpicker/widget/ViewerToolbar$d;-><init>(Lcom/vk/attachpicker/widget/ViewerToolbar;)V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->H:Lb/h/g/l/NotificationListener;
+    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->H:Lb/h/g/l/e;
 
     .line 20
     new-instance p1, Lcom/vk/attachpicker/widget/ViewerToolbar$e;
 
     invoke-direct {p1, p0}, Lcom/vk/attachpicker/widget/ViewerToolbar$e;-><init>(Lcom/vk/attachpicker/widget/ViewerToolbar;)V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->I:Lb/h/g/l/NotificationListener;
+    iput-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->I:Lb/h/g/l/e;
 
     .line 21
     invoke-direct {p0}, Lcom/vk/attachpicker/widget/ViewerToolbar;->a()V
@@ -345,7 +345,7 @@
 
     const v3, 0x3f4ccccd    # 0.8f
 
-    invoke-static {v2, v3}, Lcom/vk/core/util/ColorUtils;->b(IF)I
+    invoke-static {v2, v3}, Lcom/vk/core/util/p;->b(IF)I
 
     move-result v2
 
@@ -620,37 +620,37 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setAlpha(F)V
 
     .line 4
-    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
+    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->G:Lb/h/g/l/NotificationListener;
+    iget-object v1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->G:Lb/h/g/l/e;
 
     const/4 v2, 0x4
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
 
     .line 5
-    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
+    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->H:Lb/h/g/l/NotificationListener;
+    iget-object v1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->H:Lb/h/g/l/e;
 
     const/4 v2, 0x5
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
 
     .line 6
-    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
+    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->I:Lb/h/g/l/NotificationListener;
+    iget-object v1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->I:Lb/h/g/l/e;
 
     const/4 v2, 0x3
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
 
     return-void
 .end method
@@ -659,31 +659,31 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
+    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->G:Lb/h/g/l/NotificationListener;
+    iget-object v1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->G:Lb/h/g/l/e;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
 
     .line 2
-    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
+    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->H:Lb/h/g/l/NotificationListener;
+    iget-object v1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->H:Lb/h/g/l/e;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
 
     .line 3
-    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
+    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->I:Lb/h/g/l/NotificationListener;
+    iget-object v1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar;->I:Lb/h/g/l/e;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
 
     .line 4
     invoke-super {p0}, Landroid/widget/LinearLayout;->onDetachedFromWindow()V

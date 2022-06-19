@@ -3,7 +3,7 @@
 .source "ActionLinksSnippetPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/lang/Integer;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet1;
+    check-cast v0, Lcom/vk/libvideo/live/views/actionlinkssnippet/b;
 
     .line 3
     iget-object v1, p0, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$showActionLinkSelection$1;->this$0:Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter;
@@ -88,13 +88,13 @@
     if-eqz v1, :cond_0
 
     .line 4
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet1;->d()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/actionlinkssnippet/b;->d()V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippet1;->f()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/actionlinkssnippet/b;->f()V
 
     goto :goto_0
 
@@ -114,7 +114,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$showActionLinkSelection$1;->a(I)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

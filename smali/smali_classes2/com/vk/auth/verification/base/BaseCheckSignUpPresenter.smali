@@ -3,20 +3,20 @@
 .source "BaseCheckSignUpPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/auth/verification/base/CheckPresenter;
+.implements Lcom/vk/auth/verification/base/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<V::",
-        "Lcom/vk/auth/verification/base/CheckView$a;",
+        "Lcom/vk/auth/verification/base/c$a;",
         "D:",
-        "Lcom/vk/auth/verification/base/CheckPresenter$a<",
+        "Lcom/vk/auth/verification/base/b$a<",
         "TV;>;>",
         "Lcom/vk/auth/base/BaseAuthPresenter<",
         "TV;>;",
-        "Lcom/vk/auth/verification/base/CheckPresenter<",
+        "Lcom/vk/auth/verification/base/b<",
         "TV;TD;>;"
     }
 .end annotation
@@ -67,29 +67,29 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;Lcom/vk/auth/main/SignUpRouter;)V
+.method public static final synthetic a(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;Lcom/vk/auth/main/t;)V
     .locals 0
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/main/SignUpRouter;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/main/t;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;Lcom/vk/auth/main/SignUpStrategy;)V
+.method public static final synthetic a(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;Lcom/vk/auth/main/u;)V
     .locals 0
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/main/SignUpStrategy;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/main/u;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;Lcom/vk/auth/verification/base/CheckView$a;)V
+.method public static final synthetic a(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;Lcom/vk/auth/verification/base/c$a;)V
     .locals 0
 
     .line 6
-    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->b(Lcom/vk/auth/base/AuthView;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->b(Lcom/vk/auth/base/b;)V
 
     return-void
 .end method
@@ -114,11 +114,11 @@
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/main/SignUpRouter;
+.method public static final synthetic c(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/main/t;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->p()Lcom/vk/auth/main/SignUpRouter;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->p()Lcom/vk/auth/main/t;
 
     move-result-object p0
 
@@ -134,11 +134,11 @@
     return-void
 .end method
 
-.method public static final synthetic d(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/main/SignUpStrategy;
+.method public static final synthetic d(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/main/u;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->q()Lcom/vk/auth/main/SignUpStrategy;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->q()Lcom/vk/auth/main/u;
 
     move-result-object p0
 
@@ -167,15 +167,15 @@
     return p0
 .end method
 
-.method public static final synthetic g(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/verification/base/CheckView$a;
+.method public static final synthetic g(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/verification/base/c$a;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/auth/verification/base/CheckView$a;
+    check-cast p0, Lcom/vk/auth/verification/base/c$a;
 
     return-object p0
 .end method
@@ -185,15 +185,15 @@
 .method public abstract a()Lcom/vk/auth/main/AuthStatSender$Screen;
 .end method
 
-.method protected final a(Lio/reactivex/Observable;)V
+.method protected final a(Lc/a/m;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lkotlin/Pair<",
             "Lcom/vk/auth/api/models/ConfirmPhoneResponse;",
-            "Lcom/vk/auth/main/SignUpModel$d;",
+            "Lcom/vk/auth/main/s$d;",
             ">;>;)V"
         }
     .end annotation
@@ -203,7 +203,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$a;-><init>(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p1
 
@@ -212,7 +212,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$b;-><init>(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->c(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p1
 
@@ -221,7 +221,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$c;-><init>(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p1
 
@@ -230,7 +230,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$d;-><init>(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/a;)Lc/a/m;
 
     move-result-object p1
 
@@ -245,32 +245,32 @@
     invoke-direct {v1, p0}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$subscribeValidatePhoneObservable$6;-><init>(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)V
 
     .line 17
-    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     const-string v0, "observable\n             \u2026                       })"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 18
-    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/auth/base/AuthView;)V
+.method public bridge synthetic a(Lcom/vk/auth/base/b;)V
     .locals 0
 
     .line 7
-    check-cast p1, Lcom/vk/auth/verification/base/CheckView$a;
+    check-cast p1, Lcom/vk/auth/verification/base/c$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lcom/vk/auth/verification/base/CheckView$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lcom/vk/auth/verification/base/c$a;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/auth/verification/base/CheckView$a;)V
+.method public a(Lcom/vk/auth/verification/base/c$a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -279,21 +279,21 @@
     .end annotation
 
     .line 9
-    invoke-static {p0, p1}, Lcom/vk/auth/verification/base/CheckPresenter$b;->a(Lcom/vk/auth/verification/base/CheckPresenter;Lcom/vk/auth/verification/base/CheckView;)V
+    invoke-static {p0, p1}, Lcom/vk/auth/verification/base/b$b;->a(Lcom/vk/auth/verification/base/b;Lcom/vk/auth/verification/base/c;)V
 
     .line 10
-    invoke-super {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/base/AuthView;)V
+    invoke-super {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/base/b;)V
 
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/auth/verification/base/CheckView;)V
+.method public bridge synthetic a(Lcom/vk/auth/verification/base/c;)V
     .locals 0
 
     .line 8
-    check-cast p1, Lcom/vk/auth/verification/base/CheckView$a;
+    check-cast p1, Lcom/vk/auth/verification/base/c$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lcom/vk/auth/verification/base/CheckView$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lcom/vk/auth/verification/base/c$a;)V
 
     return-void
 .end method
@@ -316,7 +316,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/verification/base/CheckPresenter$b;->a(Lcom/vk/auth/verification/base/CheckPresenter;)V
+    invoke-static {p0}, Lcom/vk/auth/verification/base/b$b;->a(Lcom/vk/auth/verification/base/b;)V
 
     .line 2
     invoke-super {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o2()V
@@ -324,7 +324,7 @@
     return-void
 .end method
 
-.method public abstract p2()Lcom/vk/auth/verification/base/CheckPresenter$a;
+.method public abstract p2()Lcom/vk/auth/verification/base/b$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TD;"
@@ -332,7 +332,7 @@
     .end annotation
 .end method
 
-.method public bridge abstract synthetic p2()Lcom/vk/auth/verification/base/CheckPresenter;
+.method public bridge abstract synthetic p2()Lcom/vk/auth/verification/base/b;
 .end method
 
 .method public abstract x()Ljava/lang/String;

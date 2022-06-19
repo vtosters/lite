@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final a:Lb/h/p/MediaUtils$b;
+.field public final a:Lb/h/p/c$b;
 
 .field public b:Z
 
@@ -23,7 +23,7 @@
 
 .field public d:Landroid/view/Surface;
 
-.field public e:Lcom/vk/media/gles/EglSurface$b;
+.field public e:Lcom/vk/media/gles/a$b;
 
 
 # direct methods
@@ -34,11 +34,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Lb/h/p/MediaUtils$b;
+    new-instance v0, Lb/h/p/c$b;
 
-    invoke-direct {v0}, Lb/h/p/MediaUtils$b;-><init>()V
+    invoke-direct {v0}, Lb/h/p/c$b;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/media/render/RenderBase$e;->a:Lb/h/p/MediaUtils$b;
+    iput-object v0, p0, Lcom/vk/media/render/RenderBase$e;->a:Lb/h/p/c$b;
 
     const/4 v0, 0x0
 
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public a(Landroid/graphics/SurfaceTexture;Lcom/vk/media/gles/EglSurface$b;)V
+.method public a(Landroid/graphics/SurfaceTexture;Lcom/vk/media/gles/a$b;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -62,12 +62,12 @@
     iput-object p1, p0, Lcom/vk/media/render/RenderBase$e;->c:Landroid/graphics/SurfaceTexture;
 
     .line 6
-    iput-object p2, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/EglSurface$b;
+    iput-object p2, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/a$b;
 
     return-void
 .end method
 
-.method public a(Landroid/view/Surface;Lcom/vk/media/gles/EglSurface$b;)V
+.method public a(Landroid/view/Surface;Lcom/vk/media/gles/a$b;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -79,7 +79,7 @@
     iput-object p1, p0, Lcom/vk/media/render/RenderBase$e;->d:Landroid/view/Surface;
 
     .line 3
-    iput-object p2, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/EglSurface$b;
+    iput-object p2, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/a$b;
 
     return-void
 .end method
@@ -104,9 +104,9 @@
     iput-object v0, p0, Lcom/vk/media/render/RenderBase$e;->c:Landroid/graphics/SurfaceTexture;
 
     .line 9
-    iget-object v0, p1, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/EglSurface$b;
+    iget-object v0, p1, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/a$b;
 
-    iput-object v0, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/EglSurface$b;
+    iput-object v0, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/a$b;
 
     .line 10
     iget-boolean p1, p1, Lcom/vk/media/render/RenderBase$e;->b:Z
@@ -125,7 +125,7 @@
     iput-object p1, p0, Lcom/vk/media/render/RenderBase$e;->c:Landroid/graphics/SurfaceTexture;
 
     .line 13
-    iput-object p1, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/EglSurface$b;
+    iput-object p1, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/a$b;
 
     const/4 p1, 0x0
 
@@ -140,12 +140,12 @@
     .locals 1
 
     .line 15
-    iget-object v0, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/EglSurface$b;
+    iget-object v0, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/a$b;
 
     if-eqz v0, :cond_0
 
     .line 16
-    invoke-virtual {v0}, Lcom/vk/media/gles/EglSurface;->a()V
+    invoke-virtual {v0}, Lcom/vk/media/gles/a;->a()V
 
     const/4 v0, 0x1
 
@@ -161,17 +161,17 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/EglSurface$b;
+    iget-object v0, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/a$b;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/media/gles/EglSurface$b;->c()V
+    invoke-virtual {v0}, Lcom/vk/media/gles/a$b;->c()V
 
     .line 3
-    iput-object v1, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/EglSurface$b;
+    iput-object v1, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/a$b;
 
     .line 4
     :cond_0
@@ -192,12 +192,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/EglSurface$b;
+    iget-object v0, p0, Lcom/vk/media/render/RenderBase$e;->e:Lcom/vk/media/gles/a$b;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/media/gles/EglSurface;->b()Z
+    invoke-virtual {v0}, Lcom/vk/media/gles/a;->b()Z
 
     :cond_0
     return-void

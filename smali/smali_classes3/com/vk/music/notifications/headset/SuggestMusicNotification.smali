@@ -1,5 +1,5 @@
 .class public final Lcom/vk/music/notifications/headset/SuggestMusicNotification;
-.super Lcom/vk/music/notifications/inapp/HeadsUpNotification;
+.super Lcom/vk/music/notifications/inapp/a;
 .source "SuggestPlayMusicNotification.kt"
 
 
@@ -10,7 +10,7 @@
 
 .field private D:Z
 
-.field private E:Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;
+.field private E:Lcom/vk/music/notifications/headset/b;
 
 
 # direct methods
@@ -18,7 +18,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/music/notifications/inapp/HeadsUpNotification;-><init>()V
+    invoke-direct {p0}, Lcom/vk/music/notifications/inapp/a;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/music/notifications/headset/SuggestMusicNotification$a;
@@ -148,9 +148,9 @@
     .locals 7
 
     .line 3
-    new-instance v0, Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;
+    new-instance v0, Lcom/vk/music/notifications/headset/b;
 
-    invoke-direct {v0}, Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;-><init>()V
+    invoke-direct {v0}, Lcom/vk/music/notifications/headset/b;-><init>()V
 
     const v1, 0x7f0a08d6
 
@@ -175,7 +175,7 @@
 
     const-string v4, "context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v5, 0x7f040022
 
@@ -185,7 +185,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v2, v3}, Lcom/vk/core/util/z;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     const v2, 0x7f0a0482
 
@@ -196,7 +196,7 @@
 
     new-instance v3, Lcom/vk/music/notifications/headset/SuggestMusicNotification$b;
 
-    invoke-direct {v3, p0, v0}, Lcom/vk/music/notifications/headset/SuggestMusicNotification$b;-><init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;)V
+    invoke-direct {v3, p0, v0}, Lcom/vk/music/notifications/headset/SuggestMusicNotification$b;-><init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Lcom/vk/music/notifications/headset/b;)V
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -214,7 +214,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v4, 0x7f08076f
 
@@ -222,7 +222,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v2, v3}, Lcom/vk/core/util/z;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     const v2, 0x7f0a0891
 
@@ -233,21 +233,21 @@
 
     new-instance v3, Lcom/vk/music/notifications/headset/SuggestMusicNotification$c;
 
-    invoke-direct {v3, p0, v0}, Lcom/vk/music/notifications/headset/SuggestMusicNotification$c;-><init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;)V
+    invoke-direct {v3, p0, v0}, Lcom/vk/music/notifications/headset/SuggestMusicNotification$c;-><init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Lcom/vk/music/notifications/headset/b;)V
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 11
     new-instance v2, Lcom/vk/music/notifications/headset/SuggestMusicNotification$d;
 
-    invoke-direct {v2, p0, v0}, Lcom/vk/music/notifications/headset/SuggestMusicNotification$d;-><init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;)V
+    invoke-direct {v2, p0, v0}, Lcom/vk/music/notifications/headset/SuggestMusicNotification$d;-><init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Lcom/vk/music/notifications/headset/b;)V
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 12
     new-instance v2, Lcom/vk/music/notifications/headset/SuggestMusicNotification$e;
 
-    invoke-direct {v2, p0, v0}, Lcom/vk/music/notifications/headset/SuggestMusicNotification$e;-><init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;)V
+    invoke-direct {v2, p0, v0}, Lcom/vk/music/notifications/headset/SuggestMusicNotification$e;-><init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Lcom/vk/music/notifications/headset/b;)V
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
@@ -261,23 +261,23 @@
     .line 14
     new-instance v3, Lcom/vk/music/notifications/headset/SuggestMusicNotification$onViewCreated$7;
 
-    invoke-direct {v3, p0, v0}, Lcom/vk/music/notifications/headset/SuggestMusicNotification$onViewCreated$7;-><init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;)V
+    invoke-direct {v3, p0, v0}, Lcom/vk/music/notifications/headset/SuggestMusicNotification$onViewCreated$7;-><init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Lcom/vk/music/notifications/headset/b;)V
 
-    invoke-virtual {v2, v3}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;->c(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;
+    invoke-virtual {v2, v3}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;->c(Lkotlin/jvm/b/b;)Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;
 
     .line 15
     new-instance v3, Lcom/vk/music/notifications/headset/SuggestMusicNotification$onViewCreated$8;
 
     invoke-direct {v3, p0, v1}, Lcom/vk/music/notifications/headset/SuggestMusicNotification$onViewCreated$8;-><init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Landroid/view/View;)V
 
-    invoke-virtual {v2, v3}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;->d(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;
+    invoke-virtual {v2, v3}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;->d(Lkotlin/jvm/b/b;)Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;
 
     .line 16
     new-instance v3, Lcom/vk/music/notifications/headset/SuggestMusicNotification$onViewCreated$9;
 
     invoke-direct {v3, p0, v1}, Lcom/vk/music/notifications/headset/SuggestMusicNotification$onViewCreated$9;-><init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Landroid/view/View;)V
 
-    invoke-virtual {v2, v3}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;->b(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;
+    invoke-virtual {v2, v3}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;->b(Lkotlin/jvm/b/b;)Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;
 
     const/high16 v1, 0x3e800000    # 0.25f
 
@@ -293,7 +293,7 @@
     invoke-virtual {v2, p1}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion$Builder;->a(Landroid/view/View;)Lcom/vk/core/ui/FloatingViewGesturesHelper;
 
     .line 20
-    iput-object v0, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification;->E:Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;
+    iput-object v0, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification;->E:Lcom/vk/music/notifications/headset/b;
 
     return-void
 .end method
@@ -376,11 +376,11 @@
     invoke-direct {p0}, Lcom/vk/music/notifications/headset/SuggestMusicNotification;->l()V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification;->E:Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;
+    iget-object v0, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification;->E:Lcom/vk/music/notifications/headset/b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;->b()V
+    invoke-virtual {v0}, Lcom/vk/music/notifications/headset/b;->b()V
 
     :cond_0
     return-void

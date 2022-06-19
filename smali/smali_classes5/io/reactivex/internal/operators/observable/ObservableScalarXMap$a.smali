@@ -1,5 +1,5 @@
 .class final Lio/reactivex/internal/operators/observable/ObservableScalarXMap$a;
-.super Lio/reactivex/Observable;
+.super Lc/a/m;
 .source "ObservableScalarXMap.java"
 
 
@@ -20,7 +20,7 @@
         "R:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/Observable<",
+        "Lc/a/m<",
         "TR;>;"
     }
 .end annotation
@@ -35,12 +35,12 @@
     .end annotation
 .end field
 
-.field final b:Lio/reactivex/functions/Function;
+.field final b:Lc/a/z/j;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/functions/Function<",
+            "Lc/a/z/j<",
             "-TT;+",
-            "Lio/reactivex/ObservableSource<",
+            "Lc/a/p<",
             "+TR;>;>;"
         }
     .end annotation
@@ -48,57 +48,57 @@
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Object;Lio/reactivex/functions/Function;)V
+.method constructor <init>(Ljava/lang/Object;Lc/a/z/j;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
-            "Lio/reactivex/functions/Function<",
+            "Lc/a/z/j<",
             "-TT;+",
-            "Lio/reactivex/ObservableSource<",
+            "Lc/a/p<",
             "+TR;>;>;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lio/reactivex/Observable;-><init>()V
+    invoke-direct {p0}, Lc/a/m;-><init>()V
 
     .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$a;->a:Ljava/lang/Object;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$a;->b:Lio/reactivex/functions/Function;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$a;->b:Lc/a/z/j;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lio/reactivex/Observer;)V
+.method public b(Lc/a/r;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TR;>;)V"
         }
     .end annotation
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$a;->b:Lio/reactivex/functions/Function;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$a;->b:Lc/a/z/j;
 
     iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$a;->a:Ljava/lang/Object;
 
-    invoke-interface {v0, v1}, Lio/reactivex/functions/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lc/a/z/j;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     const-string v1, "The mapper returned a null ObservableSource"
 
-    invoke-static {v0, v1}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    check-cast v0, Lio/reactivex/ObservableSource;
+    check-cast v0, Lc/a/p;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
@@ -120,7 +120,7 @@
     if-nez v0, :cond_0
 
     .line 4
-    invoke-static {p1}, Lio/reactivex/internal/disposables/EmptyDisposable;->a(Lio/reactivex/Observer;)V
+    invoke-static {p1}, Lio/reactivex/internal/disposables/EmptyDisposable;->a(Lc/a/r;)V
 
     return-void
 
@@ -128,10 +128,10 @@
     :cond_0
     new-instance v1, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$ScalarDisposable;
 
-    invoke-direct {v1, p1, v0}, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$ScalarDisposable;-><init>(Lio/reactivex/Observer;Ljava/lang/Object;)V
+    invoke-direct {v1, p1, v0}, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$ScalarDisposable;-><init>(Lc/a/r;Ljava/lang/Object;)V
 
     .line 6
-    invoke-interface {p1, v1}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p1, v1}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
 
     .line 7
     invoke-virtual {v1}, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$ScalarDisposable;->run()V
@@ -142,16 +142,16 @@
     move-exception v0
 
     .line 8
-    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
 
     .line 9
-    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/EmptyDisposable;->a(Ljava/lang/Throwable;Lio/reactivex/Observer;)V
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/EmptyDisposable;->a(Ljava/lang/Throwable;Lc/a/r;)V
 
     return-void
 
     .line 10
     :cond_1
-    invoke-interface {v0, p1}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
+    invoke-interface {v0, p1}, Lc/a/p;->a(Lc/a/r;)V
 
     :goto_0
     return-void
@@ -160,7 +160,7 @@
     move-exception v0
 
     .line 11
-    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/EmptyDisposable;->a(Ljava/lang/Throwable;Lio/reactivex/Observer;)V
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/EmptyDisposable;->a(Ljava/lang/Throwable;Lc/a/r;)V
 
     return-void
 .end method

@@ -51,11 +51,11 @@
     new-instance v7, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$Options;
 
     .line 1
-    sget v4, Lcom/vk/catalog2/core/R10;->record:I
+    sget v4, Lcom/vk/catalog2/core/q;->record:I
 
-    sget v5, Lcom/vk/catalog2/core/R1;->ic_camera_outline_28:I
+    sget v5, Lcom/vk/catalog2/core/p;->ic_camera_outline_28:I
 
-    sget v6, Lcom/vk/catalog2/core/R9;->video_catalog_add_new:I
+    sget v6, Lcom/vk/catalog2/core/u;->video_catalog_add_new:I
 
     const-string v2, "RECORD"
 
@@ -74,11 +74,11 @@
     new-instance v1, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$Options;
 
     .line 2
-    sget v11, Lcom/vk/catalog2/core/R10;->select:I
+    sget v11, Lcom/vk/catalog2/core/q;->select:I
 
-    sget v12, Lcom/vk/catalog2/core/R1;->ic_picture_outline_28:I
+    sget v12, Lcom/vk/catalog2/core/p;->ic_picture_outline_28:I
 
-    sget v13, Lcom/vk/catalog2/core/R9;->video_catalog_add_existing:I
+    sget v13, Lcom/vk/catalog2/core/u;->video_catalog_add_existing:I
 
     const-string v9, "SELECT"
 
@@ -97,11 +97,11 @@
     new-instance v1, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$Options;
 
     .line 3
-    sget v6, Lcom/vk/catalog2/core/R10;->link:I
+    sget v6, Lcom/vk/catalog2/core/q;->link:I
 
-    sget v7, Lcom/vk/catalog2/core/R1;->ic_link_outline_28:I
+    sget v7, Lcom/vk/catalog2/core/p;->ic_link_outline_28:I
 
-    sget v8, Lcom/vk/catalog2/core/R9;->video_catalog_add_link:I
+    sget v8, Lcom/vk/catalog2/core/u;->video_catalog_add_link:I
 
     const-string v4, "LINK"
 

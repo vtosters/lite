@@ -67,7 +67,7 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/vk/attachpicker/drawing/DrawingState;->b(F)I
+    invoke-static {v1}, Lcom/vk/attachpicker/drawing/d;->b(F)I
 
     move-result v1
 
@@ -76,7 +76,7 @@
     invoke-direct {v2, p0}, Lcom/vk/attachpicker/GraffitiActivity$o$a;-><init>(Lcom/vk/attachpicker/GraffitiActivity$o;)V
 
     .line 4
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/attachpicker/widget/WidthSelectorView;->a(Landroid/view/View;IILcom/vk/attachpicker/widget/WidthSelectorView$d;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/attachpicker/widget/r;->a(Landroid/view/View;IILcom/vk/attachpicker/widget/r$d;)V
 
     return-void
 .end method

@@ -4,10 +4,10 @@
 
 
 # static fields
-.field private static final a:Lkotlin/jvm/b/Functions2;
+.field private static final a:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lkotlin/Pair<",
             "Lcom/vk/dto/music/Playlist;",
             "Lcom/vk/dto/music/PlaylistLink;",
@@ -35,7 +35,7 @@
     .line 2
     sget-object v0, Lcom/vk/music/ui/common/MusicUI$Notifications$followRequestNotification$1;->a:Lcom/vk/music/ui/common/MusicUI$Notifications$followRequestNotification$1;
 
-    sput-object v0, Lcom/vk/music/ui/common/MusicUI$Notifications;->a:Lkotlin/jvm/b/Functions2;
+    sput-object v0, Lcom/vk/music/ui/common/MusicUI$Notifications;->a:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -51,12 +51,12 @@
 
 
 # virtual methods
-.method public final a()Lkotlin/jvm/b/Functions2;
+.method public final a()Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lkotlin/Pair<",
             "Lcom/vk/dto/music/Playlist;",
             "Lcom/vk/dto/music/PlaylistLink;",
@@ -67,7 +67,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/music/ui/common/MusicUI$Notifications;->a:Lkotlin/jvm/b/Functions2;
+    sget-object v0, Lcom/vk/music/ui/common/MusicUI$Notifications;->a:Lkotlin/jvm/b/b;
 
     return-object v0
 .end method

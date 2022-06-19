@@ -3,12 +3,12 @@
 .source "MsgSearchVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;-><init>(Lcom/vk/im/ui/components/msg_search/vc/VcCallback;Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;Landroid/content/Context;)V
+    value = Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;-><init>(Lcom/vk/im/ui/components/msg_search/vc/p;Lcom/vk/im/ui/components/msg_search/a;Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/im/ui/components/msg_search/vc/f;",
         ">;"
     }
 .end annotation
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
+.method public final invoke()Lcom/vk/im/ui/components/msg_search/vc/f;
     .locals 2
 
     .line 2
@@ -57,11 +57,11 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$pagerAdapter$2;->this$0:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->d(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;
+    invoke-static {v1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->d(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;->a(Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;)Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;->a(Lcom/vk/im/ui/components/msg_search/a;)Lcom/vk/im/ui/components/msg_search/vc/f;
 
     move-result-object v0
 
@@ -72,7 +72,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$pagerAdapter$2;->invoke()Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$pagerAdapter$2;->invoke()Lcom/vk/im/ui/components/msg_search/vc/f;
 
     move-result-object v0
 

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -49,7 +49,7 @@
 
     const-string v2, "json.getString(\"type\")"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "text"
 
@@ -67,11 +67,11 @@
 
     const-string v4, "json.optString(\"background\")"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v4, -0x10000
 
-    invoke-static {v3, v4}, Lcom/vk/core/extensions/ColorExt;->a(Ljava/lang/String;I)I
+    invoke-static {v3, v4}, Lcom/vk/core/extensions/d;->a(Ljava/lang/String;I)I
 
     move-result v3
 
@@ -84,11 +84,11 @@
 
     const-string v4, "json.optString(\"color\")"
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, -0x1
 
-    invoke-static {p1, v4}, Lcom/vk/core/extensions/ColorExt;->a(Ljava/lang/String;I)I
+    invoke-static {p1, v4}, Lcom/vk/core/extensions/d;->a(Ljava/lang/String;I)I
 
     move-result p1
 

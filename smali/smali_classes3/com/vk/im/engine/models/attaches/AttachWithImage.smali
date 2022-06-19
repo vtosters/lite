@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/vk/im/engine/models/attaches/Attach;
-.implements Lcom/vk/im/engine/models/attaches/WithPreview;
+.implements Lcom/vk/im/engine/models/attaches/g;
 
 
 # direct methods
@@ -45,7 +45,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/attaches/WithPreview$a;->a(Lcom/vk/im/engine/models/attaches/WithPreview;)Lcom/vk/im/engine/models/ImageList;
+    invoke-static {p0}, Lcom/vk/im/engine/models/attaches/g$a;->a(Lcom/vk/im/engine/models/attaches/g;)Lcom/vk/im/engine/models/ImageList;
 
     move-result-object v0
 

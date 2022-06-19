@@ -3,12 +3,12 @@
 .source "GridListVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
+.implements Lcom/vk/catalog2/core/holders/common/i;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/holders/containers/GridListVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;ILcom/vk/catalog2/core/CatalogEntryPointParams;I)V
+    value = Lcom/vk/catalog2/core/holders/containers/GridListVh;-><init>(Lcom/vk/catalog2/core/a;ILcom/vk/catalog2/core/e;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,7 +33,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;Lcom/vk/catalog2/core/blocks/UIBlock;)Z
+    invoke-static {p0, p1}, Lcom/vk/catalog2/core/holders/common/i$a;->a(Lcom/vk/catalog2/core/holders/common/i;Lcom/vk/catalog2/core/blocks/UIBlock;)Z
 
     move-result p1
 

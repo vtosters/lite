@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/parallel/ParallelJoin;
-.super Lio/reactivex/Flowable;
+.super Lc/a/g;
 .source "ParallelJoin.java"
 
 
@@ -18,17 +18,17 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/Flowable<",
+        "Lc/a/g<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final b:Lio/reactivex/parallel/ParallelFlowable;
+.field final b:Lc/a/d0/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/parallel/ParallelFlowable<",
+            "Lc/a/d0/a<",
             "+TT;>;"
         }
     .end annotation
@@ -40,21 +40,21 @@
 
 
 # direct methods
-.method public constructor <init>(Lio/reactivex/parallel/ParallelFlowable;IZ)V
+.method public constructor <init>(Lc/a/d0/a;IZ)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/parallel/ParallelFlowable<",
+            "Lc/a/d0/a<",
             "+TT;>;IZ)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lio/reactivex/Flowable;-><init>()V
+    invoke-direct {p0}, Lc/a/g;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin;->b:Lio/reactivex/parallel/ParallelFlowable;
+    iput-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin;->b:Lc/a/d0/a;
 
     .line 3
     iput p2, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin;->c:I
@@ -67,12 +67,12 @@
 
 
 # virtual methods
-.method protected b(Le/b/Subscriber;)V
+.method protected b(Le/b/c;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/Subscriber<",
+            "Le/b/c<",
             "-TT;>;)V"
         }
     .end annotation
@@ -85,15 +85,15 @@
     .line 2
     new-instance v0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionDelayError;
 
-    iget-object v1, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin;->b:Lio/reactivex/parallel/ParallelFlowable;
+    iget-object v1, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin;->b:Lc/a/d0/a;
 
-    invoke-virtual {v1}, Lio/reactivex/parallel/ParallelFlowable;->a()I
+    invoke-virtual {v1}, Lc/a/d0/a;->a()I
 
     move-result v1
 
     iget v2, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin;->c:I
 
-    invoke-direct {v0, p1, v1, v2}, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionDelayError;-><init>(Le/b/Subscriber;II)V
+    invoke-direct {v0, p1, v1, v2}, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionDelayError;-><init>(Le/b/c;II)V
 
     goto :goto_0
 
@@ -101,26 +101,26 @@
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscription;
 
-    iget-object v1, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin;->b:Lio/reactivex/parallel/ParallelFlowable;
+    iget-object v1, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin;->b:Lc/a/d0/a;
 
-    invoke-virtual {v1}, Lio/reactivex/parallel/ParallelFlowable;->a()I
+    invoke-virtual {v1}, Lc/a/d0/a;->a()I
 
     move-result v1
 
     iget v2, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin;->c:I
 
-    invoke-direct {v0, p1, v1, v2}, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscription;-><init>(Le/b/Subscriber;II)V
+    invoke-direct {v0, p1, v1, v2}, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscription;-><init>(Le/b/c;II)V
 
     .line 4
     :goto_0
-    invoke-interface {p1, v0}, Le/b/Subscriber;->a(Le/b/Subscription;)V
+    invoke-interface {p1, v0}, Le/b/c;->a(Le/b/d;)V
 
     .line 5
-    iget-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin;->b:Lio/reactivex/parallel/ParallelFlowable;
+    iget-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin;->b:Lc/a/d0/a;
 
     iget-object v0, v0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinSubscriptionBase;->subscribers:[Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;
 
-    invoke-virtual {p1, v0}, Lio/reactivex/parallel/ParallelFlowable;->a([Le/b/Subscriber;)V
+    invoke-virtual {p1, v0}, Lc/a/d0/a;->a([Le/b/c;)V
 
     return-void
 .end method

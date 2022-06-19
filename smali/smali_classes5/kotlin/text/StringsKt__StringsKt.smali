@@ -1,5 +1,5 @@
 .class Lkotlin/text/StringsKt__StringsKt;
-.super Lkotlin/text/StringsJVM;
+.super Lkotlin/text/s;
 .source "Strings.kt"
 
 
@@ -84,7 +84,7 @@
 
     move-result p2
 
-    new-instance p5, Lkotlin/t/Ranges1;
+    new-instance p5, Lkotlin/t/d;
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
@@ -94,7 +94,7 @@
 
     move-result p3
 
-    invoke-direct {p5, p2, p3}, Lkotlin/t/Ranges1;-><init>(II)V
+    invoke-direct {p5, p2, p3}, Lkotlin/t/d;-><init>(II)V
 
     goto :goto_0
 
@@ -112,7 +112,7 @@
 
     move-result p3
 
-    invoke-static {p2, p3}, Lkotlin/t/e;->c(II)Lkotlin/t/Progressions;
+    invoke-static {p2, p3}, Lkotlin/t/e;->c(II)Lkotlin/t/b;
 
     move-result-object p5
 
@@ -127,15 +127,15 @@
     if-eqz p2, :cond_3
 
     .line 46
-    invoke-virtual {p5}, Lkotlin/t/Progressions;->a()I
+    invoke-virtual {p5}, Lkotlin/t/b;->a()I
 
     move-result p2
 
-    invoke-virtual {p5}, Lkotlin/t/Progressions;->b()I
+    invoke-virtual {p5}, Lkotlin/t/b;->b()I
 
     move-result p3
 
-    invoke-virtual {p5}, Lkotlin/t/Progressions;->c()I
+    invoke-virtual {p5}, Lkotlin/t/b;->c()I
 
     move-result p5
 
@@ -168,7 +168,7 @@
 
     move v5, p4
 
-    invoke-static/range {v0 .. v5}, Lkotlin/text/StringsJVM;->a(Ljava/lang/String;ILjava/lang/String;IIZ)Z
+    invoke-static/range {v0 .. v5}, Lkotlin/text/s;->a(Ljava/lang/String;ILjava/lang/String;IIZ)Z
 
     move-result v0
 
@@ -185,15 +185,15 @@
 
     .line 48
     :cond_3
-    invoke-virtual {p5}, Lkotlin/t/Progressions;->a()I
+    invoke-virtual {p5}, Lkotlin/t/b;->a()I
 
     move-result p2
 
-    invoke-virtual {p5}, Lkotlin/t/Progressions;->b()I
+    invoke-virtual {p5}, Lkotlin/t/b;->b()I
 
     move-result p3
 
-    invoke-virtual {p5}, Lkotlin/t/Progressions;->c()I
+    invoke-virtual {p5}, Lkotlin/t/b;->c()I
 
     move-result p5
 
@@ -417,7 +417,7 @@
     aget-char v6, p1, v5
 
     .line 41
-    invoke-static {v6, v3, p3}, Lkotlin/text/Char;->a(CCZ)Z
+    invoke-static {v6, v3, p3}, Lkotlin/text/c;->a(CCZ)Z
 
     move-result v6
 
@@ -677,11 +677,11 @@
     throw p0
 .end method
 
-.method public static final a(Ljava/lang/CharSequence;Lkotlin/t/Ranges1;)Ljava/lang/String;
+.method public static final a(Ljava/lang/CharSequence;Lkotlin/t/d;)Ljava/lang/String;
     .locals 1
 
     .line 10
-    invoke-virtual {p1}, Lkotlin/t/Ranges1;->e()Ljava/lang/Integer;
+    invoke-virtual {p1}, Lkotlin/t/d;->e()Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -689,7 +689,7 @@
 
     move-result v0
 
-    invoke-virtual {p1}, Lkotlin/t/Ranges1;->d()Ljava/lang/Integer;
+    invoke-virtual {p1}, Lkotlin/t/d;->d()Ljava/lang/Integer;
 
     move-result-object p1
 
@@ -750,7 +750,7 @@
 
     const-string p0, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p2
@@ -816,7 +816,7 @@
 
     const-string p1, "(this as java.lang.String).substring(startIndex)"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_0
     return-object p0
@@ -866,7 +866,7 @@
 
     const-string p0, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p2
@@ -1111,11 +1111,11 @@
     move v4, p3
 
     .line 84
-    invoke-static/range {v0 .. v6}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;[CIZIILjava/lang/Object;)Lkotlin/sequences/Sequence;
+    invoke-static/range {v0 .. v6}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;[CIZIILjava/lang/Object;)Lkotlin/sequences/j;
 
     move-result-object p1
 
-    invoke-static {p1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;)Ljava/lang/Iterable;
+    invoke-static {p1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;)Ljava/lang/Iterable;
 
     move-result-object p1
 
@@ -1147,10 +1147,10 @@
     move-result-object p3
 
     .line 87
-    check-cast p3, Lkotlin/t/Ranges1;
+    check-cast p3, Lkotlin/t/d;
 
     .line 88
-    invoke-static {p0, p3}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;Lkotlin/t/Ranges1;)Ljava/lang/String;
+    invoke-static {p0, p3}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;Lkotlin/t/d;)Ljava/lang/String;
 
     move-result-object p3
 
@@ -1251,11 +1251,11 @@
     move v4, p3
 
     .line 76
-    invoke-static/range {v0 .. v6}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;[Ljava/lang/String;IZIILjava/lang/Object;)Lkotlin/sequences/Sequence;
+    invoke-static/range {v0 .. v6}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;[Ljava/lang/String;IZIILjava/lang/Object;)Lkotlin/sequences/j;
 
     move-result-object p1
 
-    invoke-static {p1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;)Ljava/lang/Iterable;
+    invoke-static {p1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;)Ljava/lang/Iterable;
 
     move-result-object p1
 
@@ -1287,10 +1287,10 @@
     move-result-object p3
 
     .line 79
-    check-cast p3, Lkotlin/t/Ranges1;
+    check-cast p3, Lkotlin/t/d;
 
     .line 80
-    invoke-static {p0, p3}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;Lkotlin/t/Ranges1;)Ljava/lang/String;
+    invoke-static {p0, p3}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;Lkotlin/t/d;)Ljava/lang/String;
 
     move-result-object p3
 
@@ -1340,15 +1340,15 @@
     return-object p0
 .end method
 
-.method private static final a(Ljava/lang/CharSequence;[CIZI)Lkotlin/sequences/Sequence;
+.method private static final a(Ljava/lang/CharSequence;[CIZI)Lkotlin/sequences/j;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/CharSequence;",
             "[CIZI)",
-            "Lkotlin/sequences/Sequence<",
-            "Lkotlin/t/Ranges1;",
+            "Lkotlin/sequences/j<",
+            "Lkotlin/t/d;",
             ">;"
         }
     .end annotation
@@ -1366,13 +1366,13 @@
     if-eqz v0, :cond_1
 
     .line 65
-    new-instance v0, Lkotlin/text/Strings;
+    new-instance v0, Lkotlin/text/e;
 
     new-instance v1, Lkotlin/text/StringsKt__StringsKt$rangesDelimitedBy$2;
 
     invoke-direct {v1, p1, p3}, Lkotlin/text/StringsKt__StringsKt$rangesDelimitedBy$2;-><init>([CZ)V
 
-    invoke-direct {v0, p0, p2, p4, v1}, Lkotlin/text/Strings;-><init>(Ljava/lang/CharSequence;IILkotlin/jvm/b/Functions1;)V
+    invoke-direct {v0, p0, p2, p4, v1}, Lkotlin/text/e;-><init>(Ljava/lang/CharSequence;IILkotlin/jvm/b/c;)V
 
     return-object v0
 
@@ -1407,7 +1407,7 @@
     throw p1
 .end method
 
-.method static synthetic a(Ljava/lang/CharSequence;[CIZIILjava/lang/Object;)Lkotlin/sequences/Sequence;
+.method static synthetic a(Ljava/lang/CharSequence;[CIZIILjava/lang/Object;)Lkotlin/sequences/j;
     .locals 1
 
     and-int/lit8 p6, p5, 0x2
@@ -1434,14 +1434,14 @@
 
     .line 64
     :cond_2
-    invoke-static {p0, p1, p2, p3, p4}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;[CIZI)Lkotlin/sequences/Sequence;
+    invoke-static {p0, p1, p2, p3, p4}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;[CIZI)Lkotlin/sequences/j;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static final a(Ljava/lang/CharSequence;[Ljava/lang/String;IZI)Lkotlin/sequences/Sequence;
+.method private static final a(Ljava/lang/CharSequence;[Ljava/lang/String;IZI)Lkotlin/sequences/j;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1450,8 +1450,8 @@
             "[",
             "Ljava/lang/String;",
             "IZI)",
-            "Lkotlin/sequences/Sequence<",
-            "Lkotlin/t/Ranges1;",
+            "Lkotlin/sequences/j<",
+            "Lkotlin/t/d;",
             ">;"
         }
     .end annotation
@@ -1474,13 +1474,13 @@
     move-result-object p1
 
     .line 69
-    new-instance v0, Lkotlin/text/Strings;
+    new-instance v0, Lkotlin/text/e;
 
     new-instance v1, Lkotlin/text/StringsKt__StringsKt$rangesDelimitedBy$4;
 
     invoke-direct {v1, p1, p3}, Lkotlin/text/StringsKt__StringsKt$rangesDelimitedBy$4;-><init>(Ljava/util/List;Z)V
 
-    invoke-direct {v0, p0, p2, p4, v1}, Lkotlin/text/Strings;-><init>(Ljava/lang/CharSequence;IILkotlin/jvm/b/Functions1;)V
+    invoke-direct {v0, p0, p2, p4, v1}, Lkotlin/text/e;-><init>(Ljava/lang/CharSequence;IILkotlin/jvm/b/c;)V
 
     return-object v0
 
@@ -1515,7 +1515,7 @@
     throw p1
 .end method
 
-.method static synthetic a(Ljava/lang/CharSequence;[Ljava/lang/String;IZIILjava/lang/Object;)Lkotlin/sequences/Sequence;
+.method static synthetic a(Ljava/lang/CharSequence;[Ljava/lang/String;IZIILjava/lang/Object;)Lkotlin/sequences/j;
     .locals 1
 
     and-int/lit8 p6, p5, 0x2
@@ -1542,7 +1542,7 @@
 
     .line 67
     :cond_2
-    invoke-static {p0, p1, p2, p3, p4}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;[Ljava/lang/String;IZI)Lkotlin/sequences/Sequence;
+    invoke-static {p0, p1, p2, p3, p4}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;[Ljava/lang/String;IZI)Lkotlin/sequences/j;
 
     move-result-object p0
 
@@ -1647,7 +1647,7 @@
 
     move-result v3
 
-    invoke-static {v2, v3, p5}, Lkotlin/text/Char;->a(CCZ)Z
+    invoke-static {v2, v3, p5}, Lkotlin/text/c;->a(CCZ)Z
 
     move-result v2
 
@@ -1701,7 +1701,7 @@
 
     move v3, p2
 
-    invoke-static/range {v1 .. v6}, Lkotlin/text/StringsJVM;->a(Ljava/lang/String;Ljava/lang/String;IZILjava/lang/Object;)Z
+    invoke-static/range {v1 .. v6}, Lkotlin/text/s;->a(Ljava/lang/String;Ljava/lang/String;IZILjava/lang/Object;)Z
 
     move-result p0
 
@@ -2037,7 +2037,7 @@
     aget-char v5, p1, v4
 
     .line 22
-    invoke-static {v5, v1, p3}, Lkotlin/text/Char;->a(CCZ)Z
+    invoke-static {v5, v1, p3}, Lkotlin/text/c;->a(CCZ)Z
 
     move-result v5
 
@@ -2105,7 +2105,7 @@
 
     const-string p0, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p2
@@ -2162,7 +2162,7 @@
 
     const-string p1, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_0
     return-object p0
@@ -2204,7 +2204,7 @@
 
     const-string p0, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p2
@@ -2301,7 +2301,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, p1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p0, p1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -2318,13 +2318,13 @@
 
     move-result p2
 
-    new-instance p4, Lkotlin/t/Ranges1;
+    new-instance p4, Lkotlin/t/d;
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
 
-    invoke-direct {p4, p2, v1}, Lkotlin/t/Ranges1;-><init>(II)V
+    invoke-direct {p4, p2, v1}, Lkotlin/t/d;-><init>(II)V
 
     goto :goto_2
 
@@ -2337,7 +2337,7 @@
 
     move-result p2
 
-    invoke-static {p2, v1}, Lkotlin/t/e;->c(II)Lkotlin/t/Progressions;
+    invoke-static {p2, v1}, Lkotlin/t/e;->c(II)Lkotlin/t/b;
 
     move-result-object p4
 
@@ -2348,15 +2348,15 @@
     if-eqz p2, :cond_8
 
     .line 29
-    invoke-virtual {p4}, Lkotlin/t/Progressions;->a()I
+    invoke-virtual {p4}, Lkotlin/t/b;->a()I
 
     move-result p2
 
-    invoke-virtual {p4}, Lkotlin/t/Progressions;->b()I
+    invoke-virtual {p4}, Lkotlin/t/b;->b()I
 
     move-result v1
 
-    invoke-virtual {p4}, Lkotlin/t/Progressions;->c()I
+    invoke-virtual {p4}, Lkotlin/t/b;->c()I
 
     move-result p4
 
@@ -2405,7 +2405,7 @@
 
     move v7, p3
 
-    invoke-static/range {v2 .. v7}, Lkotlin/text/StringsJVM;->a(Ljava/lang/String;ILjava/lang/String;IIZ)Z
+    invoke-static/range {v2 .. v7}, Lkotlin/text/s;->a(Ljava/lang/String;ILjava/lang/String;IIZ)Z
 
     move-result v2
 
@@ -2426,7 +2426,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, v9}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p0, v9}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p0
 
@@ -2441,15 +2441,15 @@
 
     .line 33
     :cond_8
-    invoke-virtual {p4}, Lkotlin/t/Progressions;->a()I
+    invoke-virtual {p4}, Lkotlin/t/b;->a()I
 
     move-result p2
 
-    invoke-virtual {p4}, Lkotlin/t/Progressions;->b()I
+    invoke-virtual {p4}, Lkotlin/t/b;->b()I
 
     move-result v1
 
-    invoke-virtual {p4}, Lkotlin/t/Progressions;->c()I
+    invoke-virtual {p4}, Lkotlin/t/b;->c()I
 
     move-result p4
 
@@ -2517,7 +2517,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, v9}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p0, v9}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p0
 
@@ -2534,14 +2534,14 @@
     return-object v0
 .end method
 
-.method public static final b(Ljava/lang/CharSequence;[CZI)Lkotlin/sequences/Sequence;
+.method public static final b(Ljava/lang/CharSequence;[CZI)Lkotlin/sequences/j;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/CharSequence;",
             "[CZI)",
-            "Lkotlin/sequences/Sequence<",
+            "Lkotlin/sequences/j<",
             "Ljava/lang/String;",
             ">;"
         }
@@ -2562,7 +2562,7 @@
     move v4, p3
 
     .line 48
-    invoke-static/range {v0 .. v6}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;[CIZIILjava/lang/Object;)Lkotlin/sequences/Sequence;
+    invoke-static/range {v0 .. v6}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;[CIZIILjava/lang/Object;)Lkotlin/sequences/j;
 
     move-result-object p1
 
@@ -2570,14 +2570,14 @@
 
     invoke-direct {p2, p0}, Lkotlin/text/StringsKt__StringsKt$splitToSequence$2;-><init>(Ljava/lang/CharSequence;)V
 
-    invoke-static {p1, p2}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p1, p2}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic b(Ljava/lang/CharSequence;[CZIILjava/lang/Object;)Lkotlin/sequences/Sequence;
+.method public static synthetic b(Ljava/lang/CharSequence;[CZIILjava/lang/Object;)Lkotlin/sequences/j;
     .locals 1
 
     and-int/lit8 p5, p4, 0x2
@@ -2597,14 +2597,14 @@
 
     .line 47
     :cond_1
-    invoke-static {p0, p1, p2, p3}, Lkotlin/text/StringsKt__StringsKt;->b(Ljava/lang/CharSequence;[CZI)Lkotlin/sequences/Sequence;
+    invoke-static {p0, p1, p2, p3}, Lkotlin/text/StringsKt__StringsKt;->b(Ljava/lang/CharSequence;[CZI)Lkotlin/sequences/j;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final b(Ljava/lang/CharSequence;[Ljava/lang/String;ZI)Lkotlin/sequences/Sequence;
+.method public static final b(Ljava/lang/CharSequence;[Ljava/lang/String;ZI)Lkotlin/sequences/j;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2613,7 +2613,7 @@
             "[",
             "Ljava/lang/String;",
             "ZI)",
-            "Lkotlin/sequences/Sequence<",
+            "Lkotlin/sequences/j<",
             "Ljava/lang/String;",
             ">;"
         }
@@ -2634,7 +2634,7 @@
     move v4, p3
 
     .line 46
-    invoke-static/range {v0 .. v6}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;[Ljava/lang/String;IZIILjava/lang/Object;)Lkotlin/sequences/Sequence;
+    invoke-static/range {v0 .. v6}, Lkotlin/text/StringsKt__StringsKt;->a(Ljava/lang/CharSequence;[Ljava/lang/String;IZIILjava/lang/Object;)Lkotlin/sequences/j;
 
     move-result-object p1
 
@@ -2642,14 +2642,14 @@
 
     invoke-direct {p2, p0}, Lkotlin/text/StringsKt__StringsKt$splitToSequence$1;-><init>(Ljava/lang/CharSequence;)V
 
-    invoke-static {p1, p2}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p1, p2}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic b(Ljava/lang/CharSequence;[Ljava/lang/String;ZIILjava/lang/Object;)Lkotlin/sequences/Sequence;
+.method public static synthetic b(Ljava/lang/CharSequence;[Ljava/lang/String;ZIILjava/lang/Object;)Lkotlin/sequences/j;
     .locals 1
 
     and-int/lit8 p5, p4, 0x2
@@ -2669,18 +2669,18 @@
 
     .line 45
     :cond_1
-    invoke-static {p0, p1, p2, p3}, Lkotlin/text/StringsKt__StringsKt;->b(Ljava/lang/CharSequence;[Ljava/lang/String;ZI)Lkotlin/sequences/Sequence;
+    invoke-static {p0, p1, p2, p3}, Lkotlin/text/StringsKt__StringsKt;->b(Ljava/lang/CharSequence;[Ljava/lang/String;ZI)Lkotlin/sequences/j;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final b(Ljava/lang/CharSequence;)Lkotlin/t/Ranges1;
+.method public static final b(Ljava/lang/CharSequence;)Lkotlin/t/d;
     .locals 2
 
     .line 1
-    new-instance v0, Lkotlin/t/Ranges1;
+    new-instance v0, Lkotlin/t/d;
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
@@ -2690,7 +2690,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p0}, Lkotlin/t/Ranges1;-><init>(II)V
+    invoke-direct {v0, v1, p0}, Lkotlin/t/d;-><init>(II)V
 
     return-object v0
 .end method
@@ -2713,7 +2713,7 @@
 
     move-result p0
 
-    invoke-static {p0, p1, p2}, Lkotlin/text/Char;->a(CCZ)Z
+    invoke-static {p0, p1, p2}, Lkotlin/text/c;->a(CCZ)Z
 
     move-result p0
 
@@ -2877,7 +2877,7 @@
 
     const-string p0, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p2
@@ -2917,7 +2917,7 @@
 
     move-result p0
 
-    invoke-static {p0, p1, p2}, Lkotlin/text/Char;->a(CCZ)Z
+    invoke-static {p0, p1, p2}, Lkotlin/text/c;->a(CCZ)Z
 
     move-result p0
 
@@ -3019,14 +3019,14 @@
     return p0
 .end method
 
-.method public static final d(Ljava/lang/CharSequence;)Lkotlin/sequences/Sequence;
+.method public static final d(Ljava/lang/CharSequence;)Lkotlin/sequences/j;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/CharSequence;",
             ")",
-            "Lkotlin/sequences/Sequence<",
+            "Lkotlin/sequences/j<",
             "Ljava/lang/String;",
             ">;"
         }
@@ -3053,7 +3053,7 @@
 
     move-object v3, p0
 
-    invoke-static/range {v3 .. v8}, Lkotlin/text/StringsKt__StringsKt;->b(Ljava/lang/CharSequence;[Ljava/lang/String;ZIILjava/lang/Object;)Lkotlin/sequences/Sequence;
+    invoke-static/range {v3 .. v8}, Lkotlin/text/StringsKt__StringsKt;->b(Ljava/lang/CharSequence;[Ljava/lang/String;ZIILjava/lang/Object;)Lkotlin/sequences/j;
 
     move-result-object p0
 
@@ -3074,11 +3074,11 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lkotlin/text/StringsKt__StringsKt;->d(Ljava/lang/CharSequence;)Lkotlin/sequences/Sequence;
+    invoke-static {p0}, Lkotlin/text/StringsKt__StringsKt;->d(Ljava/lang/CharSequence;)Lkotlin/sequences/j;
 
     move-result-object p0
 
-    invoke-static {p0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
+    invoke-static {p0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
 
     move-result-object p0
 

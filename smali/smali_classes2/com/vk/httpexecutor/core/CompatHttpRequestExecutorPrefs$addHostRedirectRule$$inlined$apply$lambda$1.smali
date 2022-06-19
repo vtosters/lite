@@ -3,7 +3,7 @@
 .source "CompatHttpRequestExecutorPrefs.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs$b;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -64,7 +64,7 @@
 
     iget-object v0, p0, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs$addHostRedirectRule$$inlined$apply$lambda$1;->$originHost$inlined:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

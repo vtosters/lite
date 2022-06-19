@@ -41,11 +41,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager$b;->a:Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->a(Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;)Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->a(Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;)Lcom/vk/libvideo/live/views/liveswipe/b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;->K()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/liveswipe/b;->K()V
 
     return-void
 .end method

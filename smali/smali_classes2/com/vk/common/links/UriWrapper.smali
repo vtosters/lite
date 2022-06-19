@@ -4,13 +4,13 @@
 
 
 # static fields
-.field static final synthetic f:[Lkotlin/u/KProperty5;
+.field static final synthetic f:[Lkotlin/u/j;
 
 
 # instance fields
 .field private final a:Ljava/lang/String;
 
-.field private final b:Lkotlin/Lazy2;
+.field private final b:Lkotlin/e;
 
 .field private final c:Landroid/net/Uri;
 
@@ -25,13 +25,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/common/links/UriWrapper;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -39,15 +39,15 @@
 
     const-string v4, "getFixed()Lcom/vk/common/links/UriWrapper;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/common/links/UriWrapper;->f:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/common/links/UriWrapper;->f:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -109,16 +109,16 @@
 
     invoke-direct {p1, p0}, Lcom/vk/common/links/UriWrapper$fixed$2;-><init>(Lcom/vk/common/links/UriWrapper;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/common/links/UriWrapper;->b:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/common/links/UriWrapper;->b:Lkotlin/e;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/net/Uri;[Ljava/lang/String;Ljava/util/regex/Matcher;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/net/Uri;[Ljava/lang/String;Ljava/util/regex/Matcher;ILkotlin/jvm/internal/i;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x2
@@ -215,15 +215,15 @@
 .method public final a()Lcom/vk/common/links/UriWrapper;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/common/links/UriWrapper;->b:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/common/links/UriWrapper;->b:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/common/links/UriWrapper;->f:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/common/links/UriWrapper;->f:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -246,12 +246,12 @@
 
     const-string v0, "matcher!!.group(index)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -268,7 +268,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -289,7 +289,7 @@
 
     aget-object p2, v0, p2
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -460,7 +460,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/extensions/StringExt;->i(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/vk/core/extensions/z;->i(Ljava/lang/String;)I
 
     move-result p1
 
@@ -577,7 +577,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/extensions/StringExt;->i(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/vk/core/extensions/z;->i(Ljava/lang/String;)I
 
     move-result p1
 
@@ -622,12 +622,12 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v0
 

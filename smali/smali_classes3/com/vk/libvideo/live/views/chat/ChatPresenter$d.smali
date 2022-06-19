@@ -3,12 +3,12 @@
 .source "ChatPresenter.java"
 
 # interfaces
-.implements Lio/reactivex/functions/BiFunction;
+.implements Lc/a/z/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b(II)Lio/reactivex/Observable;
+    value = Lcom/vk/libvideo/live/views/chat/ChatPresenter;->b(II)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/BiFunction<",
+        "Lc/a/z/c<",
         "Ljava/util/List<",
         "Lcom/vk/dto/video/LiveVideoComment;",
         ">;",
@@ -82,11 +82,11 @@
     .line 3
     iget-object v1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter$d;->b:Lcom/vk/libvideo/live/views/chat/ChatPresenter;
 
-    invoke-static {v1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c(Lcom/vk/libvideo/live/views/chat/ChatPresenter;)Lcom/vk/libvideo/a0/h/LiveUsersController;
+    invoke-static {v1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->c(Lcom/vk/libvideo/live/views/chat/ChatPresenter;)Lcom/vk/libvideo/a0/h/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, p2}, Lcom/vk/libvideo/a0/h/LiveUsersController;->a(Lcom/vk/dto/group/Group;)Z
+    invoke-virtual {v1, p2}, Lcom/vk/libvideo/a0/h/e;->a(Lcom/vk/dto/group/Group;)Z
 
     move-result p2
 

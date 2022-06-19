@@ -3,7 +3,7 @@
 .source "SuggestPlayMusicNotification.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $model:Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;
+.field final synthetic $model:Lcom/vk/music/notifications/headset/b;
 
 .field final synthetic this$0:Lcom/vk/music/notifications/headset/SuggestMusicNotification;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;)V
+.method constructor <init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Lcom/vk/music/notifications/headset/b;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification$onViewCreated$7;->this$0:Lcom/vk/music/notifications/headset/SuggestMusicNotification;
 
-    iput-object p2, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification$onViewCreated$7;->$model:Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;
+    iput-object p2, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification$onViewCreated$7;->$model:Lcom/vk/music/notifications/headset/b;
 
     const/4 p1, 0x1
 
@@ -58,9 +58,9 @@
 
     invoke-virtual {p1}, Lcom/vk/music/notifications/headset/SuggestMusicNotification;->a()V
 
-    iget-object p1, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification$onViewCreated$7;->$model:Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;
+    iget-object p1, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification$onViewCreated$7;->$model:Lcom/vk/music/notifications/headset/b;
 
-    invoke-virtual {p1}, Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;->a()V
+    invoke-virtual {p1}, Lcom/vk/music/notifications/headset/b;->a()V
 
     return-void
 .end method
@@ -73,7 +73,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/music/notifications/headset/SuggestMusicNotification$onViewCreated$7;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

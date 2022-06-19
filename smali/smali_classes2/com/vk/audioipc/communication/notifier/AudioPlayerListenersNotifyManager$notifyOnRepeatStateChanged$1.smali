@@ -3,7 +3,7 @@
 .source "AudioPlayerListenersNotifyManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/audioipc/core/AudioPlayerListener;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/audioipc/core/e;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -50,19 +50,19 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/audioipc/core/AudioPlayerListener;)V
+.method public final a(Lcom/vk/audioipc/core/e;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnRepeatStateChanged$1;->this$0:Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;
 
-    invoke-static {v0}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->a(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;)Lcom/vk/audioipc/core/AudioPlayer;
+    invoke-static {v0}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->a(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;)Lcom/vk/audioipc/core/d;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnRepeatStateChanged$1;->$state:Lcom/vk/music/player/LoopMode;
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/audioipc/core/AudioPlayerListener;->a(Lcom/vk/audioipc/core/AudioPlayer;Lcom/vk/music/player/LoopMode;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/audioipc/core/e;->a(Lcom/vk/audioipc/core/d;Lcom/vk/music/player/LoopMode;)V
 
     return-void
 .end method
@@ -71,11 +71,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/audioipc/core/AudioPlayerListener;
+    check-cast p1, Lcom/vk/audioipc/core/e;
 
-    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnRepeatStateChanged$1;->a(Lcom/vk/audioipc/core/AudioPlayerListener;)V
+    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnRepeatStateChanged$1;->a(Lcom/vk/audioipc/core/e;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

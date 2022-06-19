@@ -13,7 +13,7 @@
 
 
 # instance fields
-.field private Q:Lcom/vk/attachpicker/widget/ImageViewerImageView;
+.field private Q:Lcom/vk/attachpicker/widget/i;
 
 .field private R:Landroid/view/ViewGroup;
 
@@ -35,17 +35,17 @@
 
 .field private final a0:Lcom/vk/mediastore/system/MediaStoreEntry;
 
-.field private final b0:Lcom/vk/media/camera/qrcode/QRCodeVisionReader$a;
+.field private final b0:Lcom/vk/media/camera/qrcode/d$a;
 
 .field private final c0:I
 
 .field private final d0:Lcom/vk/attachpicker/screen/QRScreen$b;
 
-.field private final e0:Lcom/vk/attachpicker/screen/ViewerScreen$h;
+.field private final e0:Lcom/vk/attachpicker/screen/h0$h;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/mediastore/system/MediaStoreEntry;Lcom/vk/media/camera/qrcode/QRCodeVisionReader$a;ILcom/vk/attachpicker/screen/QRScreen$b;Lcom/vk/attachpicker/screen/ViewerScreen$h;)V
+.method public constructor <init>(Lcom/vk/mediastore/system/MediaStoreEntry;Lcom/vk/media/camera/qrcode/d$a;ILcom/vk/attachpicker/screen/QRScreen$b;Lcom/vk/attachpicker/screen/h0$h;)V
     .locals 0
 
     .line 1
@@ -53,13 +53,13 @@
 
     iput-object p1, p0, Lcom/vk/attachpicker/screen/QRScreen;->a0:Lcom/vk/mediastore/system/MediaStoreEntry;
 
-    iput-object p2, p0, Lcom/vk/attachpicker/screen/QRScreen;->b0:Lcom/vk/media/camera/qrcode/QRCodeVisionReader$a;
+    iput-object p2, p0, Lcom/vk/attachpicker/screen/QRScreen;->b0:Lcom/vk/media/camera/qrcode/d$a;
 
     iput p3, p0, Lcom/vk/attachpicker/screen/QRScreen;->c0:I
 
     iput-object p4, p0, Lcom/vk/attachpicker/screen/QRScreen;->d0:Lcom/vk/attachpicker/screen/QRScreen$b;
 
-    iput-object p5, p0, Lcom/vk/attachpicker/screen/QRScreen;->e0:Lcom/vk/attachpicker/screen/ViewerScreen$h;
+    iput-object p5, p0, Lcom/vk/attachpicker/screen/QRScreen;->e0:Lcom/vk/attachpicker/screen/h0$h;
 
     .line 2
     new-instance p1, Landroid/graphics/RectF;
@@ -82,7 +82,7 @@
 
     const p2, 0x7f0600ec
 
-    invoke-static {p2}, Lcom/vk/core/util/ResUtils;->b(I)I
+    invoke-static {p2}, Lcom/vk/core/util/y0;->b(I)I
 
     move-result p3
 
@@ -93,7 +93,7 @@
     .line 5
     new-instance p1, Landroid/graphics/drawable/ColorDrawable;
 
-    invoke-static {p2}, Lcom/vk/core/util/ResUtils;->b(I)I
+    invoke-static {p2}, Lcom/vk/core/util/y0;->b(I)I
 
     move-result p2
 
@@ -122,7 +122,7 @@
     return-object p0
 .end method
 
-.method private final b(Landroid/view/MotionEvent;)Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
+.method private final b(Landroid/view/MotionEvent;)Lcom/vk/media/camera/qrcode/a$b;
     .locals 6
 
     .line 2
@@ -171,7 +171,7 @@
     if-gtz v0, :cond_4
 
     .line 3
-    iget-object v0, p0, Lcom/vk/attachpicker/screen/QRScreen;->Q:Lcom/vk/attachpicker/widget/ImageViewerImageView;
+    iget-object v0, p0, Lcom/vk/attachpicker/screen/QRScreen;->Q:Lcom/vk/attachpicker/widget/i;
 
     const-string v1, "imageView"
 
@@ -198,7 +198,7 @@
     div-float/2addr v0, v4
 
     .line 4
-    iget-object v5, p0, Lcom/vk/attachpicker/screen/QRScreen;->Q:Lcom/vk/attachpicker/widget/ImageViewerImageView;
+    iget-object v5, p0, Lcom/vk/attachpicker/screen/QRScreen;->Q:Lcom/vk/attachpicker/widget/i;
 
     if-eqz v5, :cond_2
 
@@ -231,9 +231,9 @@
 
     sub-float/2addr p1, v0
 
-    iget-object v0, p0, Lcom/vk/attachpicker/screen/QRScreen;->b0:Lcom/vk/media/camera/qrcode/QRCodeVisionReader$a;
+    iget-object v0, p0, Lcom/vk/attachpicker/screen/QRScreen;->b0:Lcom/vk/media/camera/qrcode/d$a;
 
-    invoke-virtual {v0}, Lcom/vk/media/camera/qrcode/QRCodeVisionReader$a;->a()Landroid/util/SparseArray;
+    invoke-virtual {v0}, Lcom/vk/media/camera/qrcode/d$a;->a()Landroid/util/SparseArray;
 
     move-result-object v0
 
@@ -272,31 +272,31 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
+    check-cast p1, Lcom/vk/media/camera/qrcode/a$b;
 
     return-object p1
 
     .line 9
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 10
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 11
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 12
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -320,22 +320,22 @@
     return-object v3
 
     :cond_5
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 15
     :cond_6
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 .end method
 
-.method public static final synthetic c(Lcom/vk/attachpicker/screen/QRScreen;)Lcom/vk/attachpicker/widget/ImageViewerImageView;
+.method public static final synthetic c(Lcom/vk/attachpicker/screen/QRScreen;)Lcom/vk/attachpicker/widget/i;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/attachpicker/screen/QRScreen;->Q:Lcom/vk/attachpicker/widget/ImageViewerImageView;
+    iget-object p0, p0, Lcom/vk/attachpicker/screen/QRScreen;->Q:Lcom/vk/attachpicker/widget/i;
 
     if-eqz p0, :cond_0
 
@@ -344,7 +344,7 @@
     :cond_0
     const-string p0, "imageView"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -364,7 +364,7 @@
     :cond_0
     const-string p0, "qrBordersView"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -381,9 +381,9 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/vk/attachpicker/screen/QRScreen;->b0:Lcom/vk/media/camera/qrcode/QRCodeVisionReader$a;
+    iget-object v1, p0, Lcom/vk/attachpicker/screen/QRScreen;->b0:Lcom/vk/media/camera/qrcode/d$a;
 
-    invoke-virtual {v1}, Lcom/vk/media/camera/qrcode/QRCodeVisionReader$a;->c()I
+    invoke-virtual {v1}, Lcom/vk/media/camera/qrcode/d$a;->c()I
 
     move-result v1
 
@@ -398,9 +398,9 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/vk/attachpicker/screen/QRScreen;->b0:Lcom/vk/media/camera/qrcode/QRCodeVisionReader$a;
+    iget-object v2, p0, Lcom/vk/attachpicker/screen/QRScreen;->b0:Lcom/vk/media/camera/qrcode/d$a;
 
-    invoke-virtual {v2}, Lcom/vk/media/camera/qrcode/QRCodeVisionReader$a;->b()I
+    invoke-virtual {v2}, Lcom/vk/media/camera/qrcode/d$a;->b()I
 
     move-result v2
 
@@ -409,9 +409,9 @@
     div-float/2addr v1, v2
 
     .line 3
-    iget-object v2, p0, Lcom/vk/attachpicker/screen/QRScreen;->b0:Lcom/vk/media/camera/qrcode/QRCodeVisionReader$a;
+    iget-object v2, p0, Lcom/vk/attachpicker/screen/QRScreen;->b0:Lcom/vk/media/camera/qrcode/d$a;
 
-    invoke-virtual {v2}, Lcom/vk/media/camera/qrcode/QRCodeVisionReader$a;->a()Landroid/util/SparseArray;
+    invoke-virtual {v2}, Lcom/vk/media/camera/qrcode/d$a;->a()Landroid/util/SparseArray;
 
     move-result-object v2
 
@@ -440,24 +440,24 @@
     return-void
 
     :cond_0
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 6
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
 
 
 # virtual methods
-.method public A()Lcom/vk/attachpicker/widget/ImageViewerImageView;
+.method public A()Lcom/vk/attachpicker/widget/i;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/screen/QRScreen;->Q:Lcom/vk/attachpicker/widget/ImageViewerImageView;
+    iget-object v0, p0, Lcom/vk/attachpicker/screen/QRScreen;->Q:Lcom/vk/attachpicker/widget/i;
 
     if-eqz v0, :cond_0
 
@@ -466,7 +466,7 @@
     :cond_0
     const-string v0, "imageView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -537,7 +537,7 @@
     :cond_0
     const-string v0, "closeButton"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -550,7 +550,7 @@
     .line 2
     new-instance p1, Landroid/widget/FrameLayout;
 
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -559,17 +559,17 @@
     iput-object p1, p0, Lcom/vk/attachpicker/screen/QRScreen;->R:Landroid/view/ViewGroup;
 
     .line 3
-    new-instance p1, Lcom/vk/attachpicker/widget/ImageViewerImageView;
+    new-instance p1, Lcom/vk/attachpicker/widget/i;
 
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/attachpicker/widget/ImageViewerImageView;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/attachpicker/widget/i;-><init>(Landroid/content/Context;I)V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/screen/QRScreen;->Q:Lcom/vk/attachpicker/widget/ImageViewerImageView;
+    iput-object p1, p0, Lcom/vk/attachpicker/screen/QRScreen;->Q:Lcom/vk/attachpicker/widget/i;
 
     .line 4
     iget-object p1, p0, Lcom/vk/attachpicker/screen/QRScreen;->R:Landroid/view/ViewGroup;
@@ -580,7 +580,7 @@
 
     if-eqz p1, :cond_10
 
-    iget-object v2, p0, Lcom/vk/attachpicker/screen/QRScreen;->Q:Lcom/vk/attachpicker/widget/ImageViewerImageView;
+    iget-object v2, p0, Lcom/vk/attachpicker/screen/QRScreen;->Q:Lcom/vk/attachpicker/widget/i;
 
     const-string v3, "imageView"
 
@@ -591,13 +591,13 @@
     .line 5
     new-instance p1, Lcom/vk/attachpicker/screen/QRScreen$a;
 
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
 
     move-result-object v2
 
     const-string v4, "activity"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, v2}, Lcom/vk/attachpicker/screen/QRScreen$a;-><init>(Landroid/content/Context;)V
 
@@ -625,22 +625,22 @@
 
     move-result-object v4
 
-    invoke-static {p1, v4}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;Lcom/vk/imageloader/ImageScreenSize;)Lio/reactivex/Observable;
+    invoke-static {p1, v4}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;Lcom/vk/imageloader/ImageScreenSize;)Lc/a/m;
 
     move-result-object p1
 
     const-string v4, "VKImageLoader.getBitmap(\u2026rredLocalImageSize(true))"
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lcom/vk/core/util/RxUtil;->a(Lio/reactivex/Observable;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/vk/core/util/z0;->a(Lc/a/m;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/graphics/Bitmap;
 
     .line 8
-    iget-object v4, p0, Lcom/vk/attachpicker/screen/QRScreen;->Q:Lcom/vk/attachpicker/widget/ImageViewerImageView;
+    iget-object v4, p0, Lcom/vk/attachpicker/screen/QRScreen;->Q:Lcom/vk/attachpicker/widget/i;
 
     if-eqz v4, :cond_c
 
@@ -649,14 +649,14 @@
     .line 9
     new-instance p1, Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
 
     move-result-object v3
 
     invoke-direct {p1, v3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     .line 10
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -690,7 +690,7 @@
     const v3, 0x7f06030c
 
     .line 14
-    invoke-static {v3}, Lcom/vk/core/util/ResUtils;->b(I)I
+    invoke-static {v3}, Lcom/vk/core/util/y0;->b(I)I
 
     move-result v3
 
@@ -707,7 +707,7 @@
 
     const v4, 0x7f06003c
 
-    invoke-static {v4}, Lcom/vk/core/util/ResUtils;->b(I)I
+    invoke-static {v4}, Lcom/vk/core/util/y0;->b(I)I
 
     move-result v4
 
@@ -768,7 +768,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -777,7 +777,7 @@
     :goto_0
     new-instance p1, Lcom/vk/attachpicker/widget/ClippingView;
 
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -802,7 +802,7 @@
     :cond_2
     new-instance p1, Landroid/widget/FrameLayout;
 
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -828,7 +828,7 @@
     .line 30
     new-instance p1, Landroid/widget/ImageButton;
 
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -849,7 +849,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/attachpicker/screen/QRScreen$createView$$inlined$apply$lambda$1;-><init>(Lcom/vk/attachpicker/screen/QRScreen;)V
 
-    invoke-static {p1, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 34
     iput-object p1, p0, Lcom/vk/attachpicker/screen/QRScreen;->V:Landroid/widget/ImageButton;
@@ -922,7 +922,7 @@
     goto :goto_1
 
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -937,7 +937,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/attachpicker/screen/QRScreen$createView$6;-><init>(Lcom/vk/attachpicker/screen/QRScreen;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 41
     iget-object p1, p0, Lcom/vk/attachpicker/screen/QRScreen;->T:Landroid/view/ViewGroup;
@@ -958,19 +958,19 @@
     return-object p1
 
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 43
     :cond_6
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 44
     :cond_7
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -978,12 +978,12 @@
     const-string p1, "closeButton"
 
     .line 45
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_9
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -991,18 +991,18 @@
     const-string p1, "bottomText"
 
     .line 46
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_b
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 47
     :cond_c
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1010,23 +1010,23 @@
     const-string p1, "qrBordersView"
 
     .line 48
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_e
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 49
     :cond_f
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_10
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1062,7 +1062,7 @@
     iput v0, p0, Lcom/vk/attachpicker/screen/QRScreen;->Y:F
 
     .line 53
-    invoke-direct {p0, p1}, Lcom/vk/attachpicker/screen/QRScreen;->b(Landroid/view/MotionEvent;)Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
+    invoke-direct {p0, p1}, Lcom/vk/attachpicker/screen/QRScreen;->b(Landroid/view/MotionEvent;)Lcom/vk/media/camera/qrcode/a$b;
 
     move-result-object v0
 
@@ -1079,7 +1079,7 @@
     if-ne v0, v1, :cond_4
 
     .line 55
-    invoke-direct {p0, p1}, Lcom/vk/attachpicker/screen/QRScreen;->b(Landroid/view/MotionEvent;)Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
+    invoke-direct {p0, p1}, Lcom/vk/attachpicker/screen/QRScreen;->b(Landroid/view/MotionEvent;)Lcom/vk/media/camera/qrcode/a$b;
 
     move-result-object v0
 
@@ -1090,7 +1090,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v1, v0}, Lcom/vk/attachpicker/screen/QRScreen$b;->a(Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;)V
+    invoke-interface {v1, v0}, Lcom/vk/attachpicker/screen/QRScreen$b;->a(Lcom/vk/media/camera/qrcode/a$b;)V
 
     .line 57
     :cond_1
@@ -1112,13 +1112,13 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 59
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -1173,19 +1173,19 @@
     goto :goto_2
 
     :cond_5
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 65
     :cond_6
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 66
     :cond_7
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -1215,19 +1215,19 @@
     return v1
 
     :cond_9
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 70
     :cond_a
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 71
     :cond_b
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -1235,7 +1235,7 @@
     const-string p1, "rootView"
 
     .line 72
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 .end method
@@ -1260,14 +1260,14 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->Q()Lcom/vk/attachpicker/screen/ViewerScreen$h;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->Q()Lcom/vk/attachpicker/screen/h0$h;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->Q()Lcom/vk/attachpicker/screen/ViewerScreen$h;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->Q()Lcom/vk/attachpicker/screen/h0$h;
 
     move-result-object v0
 
@@ -1286,7 +1286,7 @@
 
     .line 5
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -1385,7 +1385,7 @@
 
     move-result-object v4
 
-    sget-object v5, Lcom/vk/core/util/DrawableUtils;->a:Landroid/util/Property;
+    sget-object v5, Lcom/vk/core/util/z;->a:Landroid/util/Property;
 
     new-array v3, v3, [I
 
@@ -1426,19 +1426,19 @@
 
     .line 9
     :cond_0
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 10
     :cond_1
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 11
     :cond_2
-    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 .end method
@@ -1467,7 +1467,7 @@
     :cond_0
     const-string v0, "rootView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1498,7 +1498,7 @@
     :cond_0
     const-string v0, "bottomText"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1506,7 +1506,7 @@
     const-string v0, "toolbar"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1539,7 +1539,7 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/attachpicker/screen/QRScreen;->e0:Lcom/vk/attachpicker/screen/ViewerScreen$h;
+    iget-object v0, p0, Lcom/vk/attachpicker/screen/QRScreen;->e0:Lcom/vk/attachpicker/screen/h0$h;
 
     const/4 v1, 0x0
 
@@ -1559,7 +1559,7 @@
     :goto_0
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/vk/attachpicker/screen/QRScreen;->e0:Lcom/vk/attachpicker/screen/ViewerScreen$h;
+    iget-object v0, p0, Lcom/vk/attachpicker/screen/QRScreen;->e0:Lcom/vk/attachpicker/screen/h0$h;
 
     iget v2, p0, Lcom/vk/attachpicker/screen/QRScreen;->c0:I
 
@@ -1578,7 +1578,7 @@
     if-ne v0, v2, :cond_4
 
     .line 3
-    iget-object v0, p0, Lcom/vk/attachpicker/screen/QRScreen;->e0:Lcom/vk/attachpicker/screen/ViewerScreen$h;
+    iget-object v0, p0, Lcom/vk/attachpicker/screen/QRScreen;->e0:Lcom/vk/attachpicker/screen/h0$h;
 
     iget v2, p0, Lcom/vk/attachpicker/screen/QRScreen;->c0:I
 
@@ -1587,9 +1587,9 @@
     move-result-object v0
 
     .line 4
-    iget-object v2, p0, Lcom/vk/attachpicker/screen/QRScreen;->e0:Lcom/vk/attachpicker/screen/ViewerScreen$h;
+    iget-object v2, p0, Lcom/vk/attachpicker/screen/QRScreen;->e0:Lcom/vk/attachpicker/screen/h0$h;
 
-    invoke-virtual {p0, v2}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->a(Lcom/vk/attachpicker/screen/ViewerScreen$h;)V
+    invoke-virtual {p0, v2}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->a(Lcom/vk/attachpicker/screen/h0$h;)V
 
     if-eqz v0, :cond_3
 
@@ -1605,7 +1605,7 @@
     :cond_2
     const-string v0, "rootView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1617,7 +1617,7 @@
 
     .line 7
     :cond_4
-    invoke-virtual {p0, v1}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->a(Lcom/vk/attachpicker/screen/ViewerScreen$h;)V
+    invoke-virtual {p0, v1}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->a(Lcom/vk/attachpicker/screen/h0$h;)V
 
     .line 8
     invoke-virtual {p0}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->q0()V

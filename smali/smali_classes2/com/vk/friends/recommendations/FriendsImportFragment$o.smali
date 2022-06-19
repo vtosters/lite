@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->W4()Lio/reactivex/Observable;
+    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->W4()Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -55,7 +55,7 @@
 
 
 # virtual methods
-.method public final call()Lcom/vk/utils/ContactImportUtils$a;
+.method public final call()Lcom/vk/utils/b$a;
     .locals 9
 
     .line 2
@@ -64,7 +64,7 @@
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     .line 3
-    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->d()Lru/ok/android/sdk/Odnoklassniki;
+    invoke-static {}, Lru/ok/android/sdk/a;->d()Lru/ok/android/sdk/a;
 
     move-result-object v0
 
@@ -78,7 +78,7 @@
     const-string v4, "users.getCurrentUser"
 
     .line 5
-    invoke-virtual {v0, v4, v1, v2}, Lru/ok/android/sdk/Odnoklassniki;->a(Ljava/lang/String;Ljava/util/Map;Ljava/util/EnumSet;)Ljava/lang/String;
+    invoke-virtual {v0, v4, v1, v2}, Lru/ok/android/sdk/a;->a(Ljava/lang/String;Ljava/util/Map;Ljava/util/EnumSet;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
     move-result-object v4
 
     .line 7
-    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->d()Lru/ok/android/sdk/Odnoklassniki;
+    invoke-static {}, Lru/ok/android/sdk/a;->d()Lru/ok/android/sdk/a;
 
     move-result-object v0
 
@@ -106,7 +106,7 @@
     const-string v5, "friends.get"
 
     .line 9
-    invoke-virtual {v0, v5, v1, v2}, Lru/ok/android/sdk/Odnoklassniki;->a(Ljava/lang/String;Ljava/util/Map;Ljava/util/EnumSet;)Ljava/lang/String;
+    invoke-virtual {v0, v5, v1, v2}, Lru/ok/android/sdk/a;->a(Ljava/lang/String;Ljava/util/Map;Ljava/util/EnumSet;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -133,7 +133,7 @@
 
     if-eqz v6, :cond_0
 
-    new-instance v7, Lcom/vk/dto/common/Contact;
+    new-instance v7, Lcom/vk/dto/common/b;
 
     const/4 v8, 0x1
 
@@ -145,7 +145,7 @@
 
     move-result-object v8
 
-    invoke-direct {v7, v6, v8}, Lcom/vk/dto/common/Contact;-><init>(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v7, v6, v8}, Lcom/vk/dto/common/b;-><init>(Ljava/lang/String;Ljava/util/List;)V
 
     invoke-virtual {v3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -156,11 +156,11 @@
 
     .line 12
     :cond_1
-    new-instance v7, Lcom/vk/utils/ContactImportUtils$a;
+    new-instance v7, Lcom/vk/utils/b$a;
 
     const-string v0, "currentUser"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x0
 
@@ -180,7 +180,7 @@
 
     move-object v6, v8
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/utils/ContactImportUtils$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/utils/b$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ZILkotlin/jvm/internal/i;)V
 
     return-object v7
 .end method
@@ -189,7 +189,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/friends/recommendations/FriendsImportFragment$o;->call()Lcom/vk/utils/ContactImportUtils$a;
+    invoke-virtual {p0}, Lcom/vk/friends/recommendations/FriendsImportFragment$o;->call()Lcom/vk/utils/b$a;
 
     move-result-object v0
 

@@ -176,7 +176,7 @@
 
     check-cast p1, Ljava/lang/String;
 
-    invoke-static {p2, p1}, Lcom/facebook/internal/NativeAppCallAttachmentStore;->a(Ljava/util/UUID;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p2, p1}, Lcom/facebook/internal/m;->a(Ljava/util/UUID;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p1
 

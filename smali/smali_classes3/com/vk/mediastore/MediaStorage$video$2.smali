@@ -3,7 +3,7 @@
 .source "MediaStorage.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/mediastore/a/e/ExoVideoCache;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/mediastore/a/e/i;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/mediastore/a/e/ExoVideoCache;
+.method public final invoke()Lcom/vk/mediastore/a/e/i;
     .locals 3
 
     .line 2
@@ -65,7 +65,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/mediastore/MediaStorage;->a(Lcom/vk/mediastore/MediaStorage;Ljava/io/File;ILjava/lang/Object;)Lcom/vk/mediastore/a/e/ExoVideoCache;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/mediastore/MediaStorage;->a(Lcom/vk/mediastore/MediaStorage;Ljava/io/File;ILjava/lang/Object;)Lcom/vk/mediastore/a/e/i;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/mediastore/MediaStorage$video$2;->invoke()Lcom/vk/mediastore/a/e/ExoVideoCache;
+    invoke-virtual {p0}, Lcom/vk/mediastore/MediaStorage$video$2;->invoke()Lcom/vk/mediastore/a/e/i;
 
     move-result-object v0
 

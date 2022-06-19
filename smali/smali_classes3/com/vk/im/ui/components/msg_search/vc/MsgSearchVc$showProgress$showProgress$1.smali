@@ -3,7 +3,7 @@
 .source "MsgSearchVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$showProgress$showProgress$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -67,11 +67,11 @@
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$showProgress$showProgress$1;->this$0:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->e(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->e(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/f;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;->e()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/f;->e()V
 
     return-void
 .end method

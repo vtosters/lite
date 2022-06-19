@@ -3,7 +3,7 @@
 .source "SubtitleFormatter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/im/ui/formatters/PhoneFormatter;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/im/ui/formatters/s;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/ui/formatters/PhoneFormatter;
+.method public final invoke()Lcom/vk/im/ui/formatters/s;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/formatters/PhoneFormatter;
+    new-instance v0, Lcom/vk/im/ui/formatters/s;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/formatters/PhoneFormatter;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/formatters/s;-><init>()V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/SubtitleFormatter$phoneFormatter$2;->invoke()Lcom/vk/im/ui/formatters/PhoneFormatter;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/SubtitleFormatter$phoneFormatter$2;->invoke()Lcom/vk/im/ui/formatters/s;
 
     move-result-object v0
 

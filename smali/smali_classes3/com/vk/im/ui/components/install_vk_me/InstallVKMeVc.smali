@@ -41,7 +41,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeVc;->d:Landroid/view/LayoutInflater;
 
-    sget v1, Lcom/vk/im/ui/R13;->vkim_install_vk_me:I
+    sget v1, Lcom/vk/im/ui/j;->vkim_install_vk_me:I
 
     const/4 v2, 0x1
 
@@ -50,7 +50,7 @@
     move-result-object p1
 
     .line 4
-    sget v0, Lcom/vk/im/ui/R11;->description_view:I
+    sget v0, Lcom/vk/im/ui/h;->description_view:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -58,14 +58,14 @@
 
     const-string v1, "view.findViewById(R.id.description_view)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
     iput-object v0, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeVc;->b:Landroid/widget/TextView;
 
     .line 5
-    sget v0, Lcom/vk/im/ui/R11;->install_view:I
+    sget v0, Lcom/vk/im/ui/h;->install_view:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -73,7 +73,7 @@
 
     const-string v1, "view.findViewById(R.id.install_view)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -88,12 +88,12 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeVc$createView$1;-><init>(Lcom/vk/im/ui/components/install_vk_me/InstallVKMeVc;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     const-string v0, "view"
 
     .line 7
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -101,7 +101,7 @@
     const-string p1, "buttonView"
 
     .line 8
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -132,25 +132,25 @@
     if-eqz p1, :cond_0
 
     .line 9
-    sget v0, Lcom/vk/im/ui/R4;->vkim_install_vk_me_login_message:I
+    sget v0, Lcom/vk/im/ui/m;->vkim_install_vk_me_login_message:I
 
     goto :goto_0
 
     .line 10
     :cond_0
-    sget v0, Lcom/vk/im/ui/R4;->vkim_install_vk_me_message:I
+    sget v0, Lcom/vk/im/ui/m;->vkim_install_vk_me_message:I
 
     :goto_0
     if-eqz p1, :cond_1
 
     .line 11
-    sget p1, Lcom/vk/im/ui/R4;->vkim_install_vk_me_login_button_text:I
+    sget p1, Lcom/vk/im/ui/m;->vkim_install_vk_me_login_button_text:I
 
     goto :goto_1
 
     .line 12
     :cond_1
-    sget p1, Lcom/vk/im/ui/R4;->vkim_install_vk_me_button_text:I
+    sget p1, Lcom/vk/im/ui/m;->vkim_install_vk_me_button_text:I
 
     .line 13
     :goto_1
@@ -174,7 +174,7 @@
     :cond_2
     const-string p1, "buttonView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -182,7 +182,7 @@
     const-string p1, "descriptionView"
 
     .line 15
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method

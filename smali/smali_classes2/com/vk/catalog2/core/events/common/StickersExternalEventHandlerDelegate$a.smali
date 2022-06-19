@@ -3,12 +3,12 @@
 .source "StickersExternalEventHandlerDelegate.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->c()Lio/reactivex/disposables/Disposable;
+    value = Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->c()Lio/reactivex/disposables/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/stickers/d0/StickerEvent6;",
+        "Lc/a/z/g<",
+        "Lcom/vk/stickers/d0/f;",
         ">;"
     }
 .end annotation
@@ -46,75 +46,75 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/stickers/d0/StickerEvent6;)V
+.method public final a(Lcom/vk/stickers/d0/f;)V
     .locals 8
 
     .line 1
-    instance-of v0, p1, Lcom/vk/stickers/d0/StickerEvent4;
+    instance-of v0, p1, Lcom/vk/stickers/d0/e;
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/vk/catalog2/core/w/e/CatalogCommand8;
+    new-instance v0, Lcom/vk/catalog2/core/w/e/e;
 
     iget-object v1, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$a;->a:Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;
 
-    invoke-static {v1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;)Lkotlin/jvm/b/Functions2;
+    invoke-static {v1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;)Lkotlin/jvm/b/b;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$a;->a:Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;
 
-    check-cast p1, Lcom/vk/stickers/d0/StickerEvent4;
+    check-cast p1, Lcom/vk/stickers/d0/e;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/d0/StickerEvent4;->a()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v2, p1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->c(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Ljava/lang/String;)Lkotlin/jvm/b/Functions1;
+    invoke-virtual {p1}, Lcom/vk/stickers/d0/e;->a()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand8;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions1;)V
+    invoke-static {v2, p1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->c(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Ljava/lang/String;)Lkotlin/jvm/b/c;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, p1}, Lcom/vk/catalog2/core/w/e/e;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/c;)V
 
     goto/16 :goto_0
 
     .line 2
     :cond_0
-    instance-of v0, p1, Lcom/vk/stickers/d0/StickerEvent2;
+    instance-of v0, p1, Lcom/vk/stickers/d0/c;
 
     if-eqz v0, :cond_1
 
-    new-instance v0, Lcom/vk/catalog2/core/w/e/CatalogCommand8;
+    new-instance v0, Lcom/vk/catalog2/core/w/e/e;
 
     iget-object v1, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$a;->a:Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;
 
-    invoke-static {v1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;)Lkotlin/jvm/b/Functions2;
+    invoke-static {v1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;)Lkotlin/jvm/b/b;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$a;->a:Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;
 
-    check-cast p1, Lcom/vk/stickers/d0/StickerEvent2;
+    check-cast p1, Lcom/vk/stickers/d0/c;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/d0/StickerEvent2;->a()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v2, p1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->b(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Ljava/lang/String;)Lkotlin/jvm/b/Functions1;
+    invoke-virtual {p1}, Lcom/vk/stickers/d0/c;->a()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand8;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions1;)V
+    invoke-static {v2, p1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->b(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Ljava/lang/String;)Lkotlin/jvm/b/c;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, p1}, Lcom/vk/catalog2/core/w/e/e;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/c;)V
 
     goto :goto_0
 
     .line 3
     :cond_1
-    instance-of v0, p1, Lcom/vk/stickers/d0/StickerEvent1;
+    instance-of v0, p1, Lcom/vk/stickers/d0/a;
 
     if-eqz v0, :cond_2
 
-    new-instance p1, Lcom/vk/catalog2/core/w/e/CatalogCommand2;
+    new-instance p1, Lcom/vk/catalog2/core/w/e/o;
 
     const/4 v3, 0x0
 
@@ -130,7 +130,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/catalog2/core/w/e/CatalogCommand2;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/catalog2/core/w/e/o;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/i;)V
 
     move-object v0, p1
 
@@ -138,15 +138,15 @@
 
     .line 4
     :cond_2
-    instance-of v0, p1, Lcom/vk/stickers/d0/StickerEvent;
+    instance-of v0, p1, Lcom/vk/stickers/d0/g;
 
     if-eqz v0, :cond_3
 
-    new-instance v0, Lcom/vk/catalog2/core/w/e/CatalogCommand7;
+    new-instance v0, Lcom/vk/catalog2/core/w/e/l;
 
-    check-cast p1, Lcom/vk/stickers/d0/StickerEvent;
+    check-cast p1, Lcom/vk/stickers/d0/g;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/d0/StickerEvent;->a()Lcom/vk/dto/common/data/UserNotification;
+    invoke-virtual {p1}, Lcom/vk/stickers/d0/g;->a()Lcom/vk/dto/common/data/UserNotification;
 
     move-result-object p1
 
@@ -156,47 +156,47 @@
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand7;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/vk/catalog2/core/w/e/l;-><init>(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 5
     :cond_3
-    instance-of v0, p1, Lcom/vk/stickers/d0/StickerEvent5;
+    instance-of v0, p1, Lcom/vk/stickers/d0/d;
 
     if-eqz v0, :cond_4
 
-    new-instance v0, Lcom/vk/catalog2/core/w/e/CatalogCommand8;
+    new-instance v0, Lcom/vk/catalog2/core/w/e/e;
 
     iget-object v1, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$a;->a:Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;
 
-    invoke-static {v1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;)Lkotlin/jvm/b/Functions2;
+    invoke-static {v1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;)Lkotlin/jvm/b/b;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$a;->a:Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;
 
-    check-cast p1, Lcom/vk/stickers/d0/StickerEvent5;
+    check-cast p1, Lcom/vk/stickers/d0/d;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/d0/StickerEvent5;->a()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v2, p1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Ljava/lang/String;)Lkotlin/jvm/b/Functions1;
+    invoke-virtual {p1}, Lcom/vk/stickers/d0/d;->a()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand8;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions1;)V
+    invoke-static {v2, p1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Ljava/lang/String;)Lkotlin/jvm/b/c;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, p1}, Lcom/vk/catalog2/core/w/e/e;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/c;)V
 
     goto :goto_0
 
     .line 6
     :cond_4
-    instance-of p1, p1, Lcom/vk/stickers/d0/StickerEvent3;
+    instance-of p1, p1, Lcom/vk/stickers/d0/b;
 
     if-eqz p1, :cond_5
 
-    new-instance p1, Lcom/vk/catalog2/core/w/e/CatalogCommand2;
+    new-instance p1, Lcom/vk/catalog2/core/w/e/o;
 
     const/4 v2, 0x0
 
@@ -212,13 +212,13 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/w/e/CatalogCommand2;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/w/e/o;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/i;)V
 
     .line 7
     :goto_0
     iget-object p1, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$a;->a:Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/events/common/CatalogExternalEventsAdapter;->a()Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/events/common/a;->a()Lcom/vk/catalog2/core/w/a;
 
     move-result-object p1
 
@@ -228,7 +228,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {p1, v0, v1, v2, v3}, Lcom/vk/catalog2/core/w/CatalogCommandsBus;->a(Lcom/vk/catalog2/core/w/CatalogCommandsBus;Lcom/vk/catalog2/core/w/e/CatalogCommand6;ZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2, v3}, Lcom/vk/catalog2/core/w/a;->a(Lcom/vk/catalog2/core/w/a;Lcom/vk/catalog2/core/w/e/b;ZILjava/lang/Object;)V
 
     return-void
 
@@ -245,9 +245,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/stickers/d0/StickerEvent6;
+    check-cast p1, Lcom/vk/stickers/d0/f;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$a;->a(Lcom/vk/stickers/d0/StickerEvent6;)V
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$a;->a(Lcom/vk/stickers/d0/f;)V
 
     return-void
 .end method

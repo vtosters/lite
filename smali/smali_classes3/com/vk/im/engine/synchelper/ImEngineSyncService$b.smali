@@ -3,7 +3,7 @@
 .source "ImEngineSyncService.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Predicate;
+.implements Lc/a/z/l;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Predicate<",
-        "Lcom/vk/im/engine/events/Event;",
+        "Lc/a/z/l<",
+        "Lcom/vk/im/engine/events/a;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/events/Event;)Z
+.method public final a(Lcom/vk/im/engine/events/a;)Z
     .locals 0
 
     .line 2
-    instance-of p1, p1, Lcom/vk/im/engine/events/OnImEngineInvalidateEvent;
+    instance-of p1, p1, Lcom/vk/im/engine/events/y;
 
     return p1
 .end method
@@ -69,9 +69,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/Event;
+    check-cast p1, Lcom/vk/im/engine/events/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/synchelper/ImEngineSyncService$b;->a(Lcom/vk/im/engine/events/Event;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/synchelper/ImEngineSyncService$b;->a(Lcom/vk/im/engine/events/a;)Z
 
     move-result p1
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/dto/market/cart/MarketDeliveryOption$a;
-.super Lcom/vk/dto/common/data/JsonParser;
+.super Lcom/vk/dto/common/data/c;
 .source "JsonParser.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/dto/common/data/JsonParser<",
+        "Lcom/vk/dto/common/data/c<",
         "Lcom/vk/dto/market/cart/MarketDeliveryOption;",
         ">;"
     }
@@ -33,7 +33,7 @@
     iput-object p1, p0, Lcom/vk/dto/market/cart/MarketDeliveryOption$a;->b:Lcom/vk/dto/market/cart/MarketDeliveryOption$Companion;
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/data/JsonParser;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/data/c;-><init>()V
 
     return-void
 .end method

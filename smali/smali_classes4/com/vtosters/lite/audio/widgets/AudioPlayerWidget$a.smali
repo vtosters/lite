@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -60,7 +60,7 @@
 
     const-string p2, "PendingIntent.getService\u2026tent.FLAG_UPDATE_CURRENT)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -104,7 +104,7 @@
 
     const-string p2, "PendingIntent.getActivity(ctx, 0, intent, 0)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -122,9 +122,9 @@
     move-result-object p1
 
     .line 27
-    new-instance p2, Lcom/vk/core/drawable/RecoloredDrawable;
+    new-instance p2, Lcom/vk/core/drawable/i;
 
-    invoke-direct {p2, p1, p3}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {p2, p1, p3}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     if-eqz p1, :cond_0
 
@@ -154,20 +154,20 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p2, v1, v1, v0, p1}, Lcom/vk/core/drawable/RecoloredDrawable;->setBounds(IIII)V
+    invoke-virtual {p2, v1, v1, v0, p1}, Lcom/vk/core/drawable/i;->setBounds(IIII)V
 
     .line 30
     new-instance p1, Landroid/graphics/Canvas;
 
     invoke-direct {p1, p3}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {p2, p1}, Lcom/vk/core/drawable/RecoloredDrawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {p2, p1}, Lcom/vk/core/drawable/i;->draw(Landroid/graphics/Canvas;)V
 
     return-object p3
 
     .line 31
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -272,13 +272,13 @@
 
     const/high16 v1, 0x41000000    # 8.0f
 
-    invoke-static {v1}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v1}, Ld/a/a/c/e;->a(F)I
 
     move-result v2
 
     int-to-float v2, v2
 
-    invoke-static {v1}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {v1}, Ld/a/a/c/e;->a(F)I
 
     move-result v1
 
@@ -289,19 +289,19 @@
     const-string p1, "cv"
 
     .line 25
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p2
 .end method
 
-.method protected final a(Lcom/vk/dto/music/MusicTrack;F)Lio/reactivex/Observable;
+.method protected final a(Lcom/vk/dto/music/MusicTrack;F)Lc/a/m;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/music/MusicTrack;",
             "F)",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -324,13 +324,13 @@
     if-eqz p2, :cond_0
 
     .line 3
-    invoke-static {p2}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {p2}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
     const-string p2, "Observable.just(bitmap)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -349,13 +349,13 @@
 
     invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1}, Lio/reactivex/Observable;->b(Ljava/lang/Throwable;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lc/a/m;->b(Ljava/lang/Throwable;)Lc/a/m;
 
     move-result-object p1
 
     const-string p2, "Observable.error(Runtime\u2026(\"Can\'t resolve image!\"))"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -365,36 +365,36 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lc/a/m;
 
     move-result-object p1
 
     const-string p2, "VKImageLoader.getBitmap(Uri.parse(url))"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method protected final a(Lcom/vk/music/player/PlayerModel;)Z
+.method protected final a(Lcom/vk/music/player/d;)Z
     .locals 5
 
     .line 13
-    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->U()J
+    invoke-interface {p1}, Lcom/vk/music/player/d;->U()J
 
     move-result-wide v0
 
     .line 14
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
+    invoke-interface {p1}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
 
     move-result-object p1
 
     .line 15
-    invoke-virtual {p1}, Lcom/vk/bridges/AuthBridge1;->i()Z
+    invoke-virtual {p1}, Lcom/vk/bridges/a;->i()Z
 
     move-result v2
 
@@ -402,7 +402,7 @@
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {p1}, Lcom/vk/bridges/AuthBridge1;->b()I
+    invoke-virtual {p1}, Lcom/vk/bridges/a;->b()I
 
     move-result p1
 
@@ -466,7 +466,7 @@
 
     const-string p2, "PendingIntent.getActivity(ctx, 0, intent, 0)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -510,7 +510,7 @@
 
     const-string p2, "PendingIntent.getActivity(ctx, 0, intent, 0)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->a(Landroid/view/View;FFZLkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;->a(Landroid/view/View;FFZLkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,18 +23,18 @@
 
 .field final synthetic d:Z
 
-.field final synthetic e:Lkotlin/jvm/b/Functions;
+.field final synthetic e:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;Landroid/view/View;FZLkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;Landroid/view/View;FZLkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
             "FZ",
-            "Lkotlin/jvm/b/Functions;",
+            "Lkotlin/jvm/b/a;",
             ")V"
         }
     .end annotation
@@ -48,7 +48,7 @@
 
     iput-boolean p4, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder$a;->d:Z
 
-    iput-object p5, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder$a;->e:Lkotlin/jvm/b/Functions;
+    iput-object p5, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder$a;->e:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -79,15 +79,15 @@
 
     iget-object v0, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder$a;->a:Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;
 
-    invoke-virtual {v0}, Lcom/vk/music/ui/common/MusicViewHolder;->d0()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/music/ui/common/o;->d0()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/playlist/modern/PlaylistScreenData;
+    check-cast v1, Lcom/vk/music/playlist/modern/g;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->a()Ljava/lang/Integer;
+    invoke-virtual {v1}, Lcom/vk/music/playlist/modern/g;->a()Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -118,15 +118,15 @@
     invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder$a;->e:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder$a;->e:Lkotlin/jvm/b/a;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_2
     return-void

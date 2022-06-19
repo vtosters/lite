@@ -77,7 +77,7 @@
 
     const-string p2, "GLTextureView"
 
-    invoke-static {p2, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-object v0

@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/fragments/ProfileFragment$k;
-.super Lcom/vtosters/lite/api/ResultlessCallback;
+.super Lcom/vtosters/lite/api/k;
 .source "ProfileFragment.java"
 
 
@@ -29,7 +29,7 @@
 
     iput-object p3, p0, Lcom/vtosters/lite/fragments/ProfileFragment$k;->c:Landroid/app/Activity;
 
-    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/ResultlessCallback;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/k;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method
@@ -151,19 +151,19 @@
 
     aput-object v3, v1, v2
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ToastUtils;->a(I[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/vk/core/util/k1;->a(I[Ljava/lang/Object;)V
 
     .line 9
     :cond_3
     iget-object v0, p0, Lcom/vtosters/lite/fragments/ProfileFragment$k;->d:Lcom/vtosters/lite/fragments/ProfileFragment;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/ProfileFragment;->g0(Lcom/vtosters/lite/fragments/ProfileFragment;)Lcom/vk/newsfeed/contracts/EntriesListContract;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/ProfileFragment;->g0(Lcom/vtosters/lite/fragments/ProfileFragment;)Lcom/vk/newsfeed/contracts/e;
 
     move-result-object v0
 
     check-cast v0, Lcom/vk/profile/presenter/UserPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->H0()V
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->H0()V
 
     return-void
 .end method

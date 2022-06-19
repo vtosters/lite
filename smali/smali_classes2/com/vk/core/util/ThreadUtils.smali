@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/KProperty5;
+.field static final synthetic a:[Lkotlin/u/j;
 
-.field private static final b:Lkotlin/Lazy2;
+.field private static final b:Lkotlin/e;
 
 .field public static final c:Lcom/vk/core/util/ThreadUtils;
 
@@ -17,13 +17,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/core/util/ThreadUtils;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -31,15 +31,15 @@
 
     const-string v4, "getHandler()Landroid/os/Handler;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/core/util/ThreadUtils;->a:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/core/util/ThreadUtils;->a:[Lkotlin/u/j;
 
     .line 1
     new-instance v0, Lcom/vk/core/util/ThreadUtils;
@@ -51,11 +51,11 @@
     .line 2
     sget-object v0, Lcom/vk/core/util/ThreadUtils$handler$2;->a:Lcom/vk/core/util/ThreadUtils$handler$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/util/ThreadUtils;->b:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/core/util/ThreadUtils;->b:Lkotlin/e;
 
     return-void
 .end method
@@ -69,14 +69,14 @@
     return-void
 .end method
 
-.method public static final a(JLkotlin/jvm/b/Functions;)Ljava/lang/Object;
+.method public static final a(JLkotlin/jvm/b/a;)Ljava/lang/Object;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(J",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "+TT;>;)TT;"
         }
     .end annotation
@@ -86,7 +86,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, p0, p1, p2}, Lcom/vk/core/util/ThreadUtils;->a(Ljava/lang/Object;JLkotlin/jvm/b/Functions;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, p0, p1, p2}, Lcom/vk/core/util/ThreadUtils;->a(Ljava/lang/Object;JLkotlin/jvm/b/a;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -120,7 +120,7 @@
 
     const-string v3, "Thread.currentThread()"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
@@ -138,7 +138,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/core/util/DebugUtils;->a(Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/core/util/q;->a(Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -225,7 +225,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/core/util/DebugUtils;->a(Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/core/util/q;->a(Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -269,7 +269,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -303,15 +303,15 @@
 .method private final c()Landroid/os/Handler;
     .locals 3
 
-    sget-object v0, Lcom/vk/core/util/ThreadUtils;->b:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/core/util/ThreadUtils;->b:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/core/util/ThreadUtils;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/core/util/ThreadUtils;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -379,7 +379,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -399,14 +399,14 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;JLkotlin/jvm/b/Functions;)Ljava/lang/Object;
+.method public final a(Ljava/lang/Object;JLkotlin/jvm/b/a;)Ljava/lang/Object;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(TT;J",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "+TT;>;)TT;"
         }
     .end annotation
@@ -434,7 +434,7 @@
 
     new-instance v3, Lcom/vk/core/util/ThreadUtils$a;
 
-    invoke-direct {v3, v0, p4, p1}, Lcom/vk/core/util/ThreadUtils$a;-><init>(Lkotlin/jvm/internal/Ref$ObjectRef;Lkotlin/jvm/b/Functions;Ljava/util/concurrent/CountDownLatch;)V
+    invoke-direct {v3, v0, p4, p1}, Lcom/vk/core/util/ThreadUtils$a;-><init>(Lkotlin/jvm/internal/Ref$ObjectRef;Lkotlin/jvm/b/a;Ljava/util/concurrent/CountDownLatch;)V
 
     invoke-interface {v2, v3}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
@@ -473,7 +473,7 @@
 
     const-string v1, "Thread\n                .getAllStackTraces()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 16
     new-instance v1, Ljava/util/LinkedHashMap;
@@ -510,7 +510,7 @@
 
     const-string v4, "it.key"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Ljava/lang/Thread;
 
@@ -518,7 +518,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 

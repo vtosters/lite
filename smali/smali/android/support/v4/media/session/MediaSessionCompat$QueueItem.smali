@@ -146,7 +146,7 @@
 
     .line 2
     :cond_0
-    invoke-static {p0}, Landroid/support/v4/media/session/MediaSessionCompatApi21$c;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroid/support/v4/media/session/d$c;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -156,7 +156,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {p0}, Landroid/support/v4/media/session/MediaSessionCompatApi21$c;->b(Ljava/lang/Object;)J
+    invoke-static {p0}, Landroid/support/v4/media/session/d$c;->b(Ljava/lang/Object;)J
 
     move-result-wide v1
 

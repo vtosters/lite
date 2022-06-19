@@ -40,7 +40,7 @@
     sget-object v1, Lcom/vk/core/exif/ExifHelper$extractLocationFromExif$1;->a:Lcom/vk/core/exif/ExifHelper$extractLocationFromExif$1;
 
     .line 3
-    invoke-direct {v0, p0, p1, v1}, Lcom/vk/core/exif/ExifHelper;->a(Landroid/content/Context;Landroid/net/Uri;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {v0, p0, p1, v1}, Lcom/vk/core/exif/ExifHelper;->a(Landroid/content/Context;Landroid/net/Uri;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -49,7 +49,7 @@
     return-object p0
 .end method
 
-.method private final a(Landroid/content/Context;Landroid/net/Uri;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+.method private final a(Landroid/content/Context;Landroid/net/Uri;Lkotlin/jvm/b/b;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -58,7 +58,7 @@
             ">(",
             "Landroid/content/Context;",
             "Landroid/net/Uri;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Landroid/media/ExifInterface;",
             "+TT;>;)TT;"
@@ -76,7 +76,7 @@
     invoke-direct {v0, p1}, Landroid/media/ExifInterface;-><init>(Ljava/lang/String;)V
 
     .line 5
-    invoke-interface {p3, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
     :try_end_0
@@ -102,7 +102,7 @@
     sget-object v1, Lcom/vk/core/exif/ExifHelper$extractTimestampFromExif$1;->a:Lcom/vk/core/exif/ExifHelper$extractTimestampFromExif$1;
 
     .line 3
-    invoke-direct {v0, p0, p1, v1}, Lcom/vk/core/exif/ExifHelper;->a(Landroid/content/Context;Landroid/net/Uri;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-direct {v0, p0, p1, v1}, Lcom/vk/core/exif/ExifHelper;->a(Landroid/content/Context;Landroid/net/Uri;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -120,7 +120,7 @@
     .locals 7
 
     .line 1
-    invoke-static {p2}, Lb/h/g/m/FileUtils;->h(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p2}, Lb/h/g/m/d;->h(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -172,7 +172,7 @@
 
     .line 8
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 

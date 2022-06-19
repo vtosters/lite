@@ -3,7 +3,7 @@
 .source "ObservablePublish.java"
 
 # interfaces
-.implements Lio/reactivex/ObservableSource;
+.implements Lc/a/p;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "TT;>;"
     }
 .end annotation
@@ -63,12 +63,12 @@
 
 
 # virtual methods
-.method public a(Lio/reactivex/Observer;)V
+.method public a(Lc/a/r;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;)V"
         }
     .end annotation
@@ -76,10 +76,10 @@
     .line 1
     new-instance v0, Lio/reactivex/internal/operators/observable/ObservablePublish$InnerDisposable;
 
-    invoke-direct {v0, p1}, Lio/reactivex/internal/operators/observable/ObservablePublish$InnerDisposable;-><init>(Lio/reactivex/Observer;)V
+    invoke-direct {v0, p1}, Lio/reactivex/internal/operators/observable/ObservablePublish$InnerDisposable;-><init>(Lc/a/r;)V
 
     .line 2
-    invoke-interface {p1, v0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p1, v0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
 
     .line 3
     :cond_0

@@ -3,7 +3,7 @@
 .source "PostingPostponeDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/fourmob/datetimepicker/time/RadialTimePickerDialog$g;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/fourmob/datetimepicker/time/e$g;",
         ">;"
     }
 .end annotation
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/fourmob/datetimepicker/time/RadialTimePickerDialog$g;
+.method public final invoke()Lcom/fourmob/datetimepicker/time/e$g;
     .locals 1
 
     .line 2
@@ -60,7 +60,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/PostingPostponeDelegate$timeSetListener$2;->invoke()Lcom/fourmob/datetimepicker/time/RadialTimePickerDialog$g;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/PostingPostponeDelegate$timeSetListener$2;->invoke()Lcom/fourmob/datetimepicker/time/e$g;
 
     move-result-object v0
 

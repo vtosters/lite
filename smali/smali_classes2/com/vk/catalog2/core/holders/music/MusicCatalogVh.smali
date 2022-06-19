@@ -3,12 +3,12 @@
 .source "MusicCatalogVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/CatalogVh;
-.implements Lcom/vk/catalog2/core/holders/common/CatalogScrollableViewHolder;
-.implements Lcom/vk/catalog2/core/holders/common/OnConfigurationChangeListener;
+.implements Lcom/vk/catalog2/core/holders/common/m;
+.implements Lcom/vk/catalog2/core/holders/common/j;
+.implements Lcom/vk/catalog2/core/holders/common/s;
 .implements Landroid/view/View$OnTouchListener;
-.implements Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVh$a;
-.implements Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+.implements Lcom/vk/catalog2/core/holders/containers/k$a;
+.implements Lcom/vk/catalog2/core/holders/common/k;
 
 
 # annotations
@@ -20,13 +20,13 @@
 
 
 # instance fields
-.field private final B:Lcom/vk/catalog2/core/holders/common/ProgressVh;
+.field private final B:Lcom/vk/catalog2/core/holders/common/v;
 
-.field private final C:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+.field private final C:Lcom/vk/catalog2/core/holders/common/k;
 
 .field private final D:Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;
 
-.field private final E:Lcom/vk/music/k/MusicSuggestionModel;
+.field private final E:Lcom/vk/music/k/a;
 
 .field private final F:Ljava/lang/String;
 
@@ -36,15 +36,15 @@
 
 .field private final c:Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;
 
-.field private final d:Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+.field private final d:Lcom/vk/catalog2/core/y/d/b;
 
-.field private final e:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+.field private final e:Lcom/vk/catalog2/core/holders/headers/a;
 
 .field private final f:Lcom/vk/catalog2/core/holders/common/ErrorStateVh;
 
-.field private final g:Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
+.field private final g:Lcom/vk/catalog2/core/presenters/b;
 
-.field private final h:Lcom/vk/catalog2/core/holders/music/MusicTabLayoutVh;
+.field private final h:Lcom/vk/catalog2/core/holders/music/f;
 
 
 # direct methods
@@ -55,18 +55,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;Lcom/vk/music/k/MusicSuggestionModel;Ljava/lang/String;)V
+.method public constructor <init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;Lcom/vk/music/k/a;Ljava/lang/String;)V
     .locals 9
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p5, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->E:Lcom/vk/music/k/MusicSuggestionModel;
+    iput-object p5, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->E:Lcom/vk/music/k/a;
 
     iput-object p6, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->F:Ljava/lang/String;
 
@@ -90,23 +90,23 @@
 
     move-object v2, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;IILkotlin/jvm/internal/i;)V
 
     iput-object p5, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->c:Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;
 
     .line 4
-    invoke-direct {p0, p2, p4, p3}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/api/SearchRequestFactory;Lcom/vk/catalog2/core/CatalogEntryPointParams;)Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+    invoke-direct {p0, p2, p4, p3}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/api/g;Lcom/vk/catalog2/core/e;)Lcom/vk/catalog2/core/y/d/b;
 
     move-result-object p4
 
-    iput-object p4, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->d:Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+    iput-object p4, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->d:Lcom/vk/catalog2/core/y/d/b;
 
     .line 5
-    new-instance p4, Lcom/vk/catalog2/core/holders/headers/MilkshakeSearchQueryVh;
+    new-instance p4, Lcom/vk/catalog2/core/holders/headers/b;
 
     new-instance p5, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;
 
-    sget v1, Lcom/vk/catalog2/core/R9;->music_hint_search:I
+    sget v1, Lcom/vk/catalog2/core/u;->music_hint_search:I
 
     .line 6
     new-instance v6, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh$searchQueryVh$1;
@@ -131,11 +131,11 @@
     move-object v0, p5
 
     .line 10
-    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;-><init>(ILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;-><init>(ILkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
 
-    invoke-direct {p4, p5}, Lcom/vk/catalog2/core/holders/headers/MilkshakeSearchQueryVh;-><init>(Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;)V
+    invoke-direct {p4, p5}, Lcom/vk/catalog2/core/holders/headers/b;-><init>(Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;)V
 
-    iput-object p4, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->e:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iput-object p4, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->e:Lcom/vk/catalog2/core/holders/headers/a;
 
     .line 11
     new-instance p1, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;
@@ -144,14 +144,14 @@
 
     invoke-direct {p4, p0}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh$catalogErrorVh$1;-><init>(Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;)V
 
-    invoke-direct {p1, p0, p4}, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;-><init>(Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p1, p0, p4}, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;-><init>(Lcom/vk/catalog2/core/holders/common/k;Lkotlin/jvm/b/a;)V
 
     iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->f:Lcom/vk/catalog2/core/holders/common/ErrorStateVh;
 
     .line 12
-    new-instance p1, Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
+    new-instance p1, Lcom/vk/catalog2/core/presenters/b;
 
-    invoke-virtual {p3}, Lcom/vk/catalog2/core/CatalogEntryPointParams;->e()Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+    invoke-virtual {p3}, Lcom/vk/catalog2/core/e;->e()Lcom/vk/catalog2/core/w/a;
 
     move-result-object v2
 
@@ -167,21 +167,21 @@
 
     move-object v1, p2
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/w/CatalogCommandsBus;Lcom/vk/catalog2/core/api/dto/CatalogResponse;Lcom/vk/catalog2/core/cache/CatalogCache;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/presenters/b;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/w/a;Lcom/vk/catalog2/core/api/dto/d;Lcom/vk/catalog2/core/cache/a;ILkotlin/jvm/internal/i;)V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->g:Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->g:Lcom/vk/catalog2/core/presenters/b;
 
     .line 13
-    new-instance p1, Lcom/vk/catalog2/core/holders/music/MusicTabLayoutVh;
+    new-instance p1, Lcom/vk/catalog2/core/holders/music/f;
 
     iget-object p2, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->c:Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;
 
-    invoke-direct {p1, p2}, Lcom/vk/catalog2/core/holders/music/MusicTabLayoutVh;-><init>(Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;)V
+    invoke-direct {p1, p2}, Lcom/vk/catalog2/core/holders/music/f;-><init>(Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;)V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->h:Lcom/vk/catalog2/core/holders/music/MusicTabLayoutVh;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->h:Lcom/vk/catalog2/core/holders/music/f;
 
     .line 14
-    new-instance p1, Lcom/vk/catalog2/core/holders/common/ProgressVh;
+    new-instance p1, Lcom/vk/catalog2/core/holders/common/v;
 
     const/4 p2, 0x1
 
@@ -189,24 +189,24 @@
 
     const/4 p4, 0x0
 
-    invoke-direct {p1, p3, p2, p4}, Lcom/vk/catalog2/core/holders/common/ProgressVh;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {p1, p3, p2, p4}, Lcom/vk/catalog2/core/holders/common/v;-><init>(IILkotlin/jvm/internal/i;)V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/ProgressVh;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/v;
 
     .line 15
-    new-instance p1, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVh;
+    new-instance p1, Lcom/vk/catalog2/core/holders/containers/k;
 
     .line 16
     iget-object v1, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->c:Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;
 
     .line 17
-    iget-object v2, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->d:Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+    iget-object v2, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->d:Lcom/vk/catalog2/core/y/d/b;
 
     .line 18
     iget-object v3, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->f:Lcom/vk/catalog2/core/holders/common/ErrorStateVh;
 
     .line 19
-    iget-object v4, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/ProgressVh;
+    iget-object v4, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/v;
 
     const/4 v6, 0x0
 
@@ -219,22 +219,22 @@
     move-object v5, p0
 
     .line 20
-    invoke-direct/range {v0 .. v8}, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVh;-><init>(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/holders/common/ErrorStateVh;Lcom/vk/catalog2/core/holders/common/ProgressVh;Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVh$a;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/catalog2/core/holders/containers/k;-><init>(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/holders/common/ErrorStateVh;Lcom/vk/catalog2/core/holders/common/v;Lcom/vk/catalog2/core/holders/containers/k$a;IILkotlin/jvm/internal/i;)V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/k;
 
     .line 21
     new-instance p1, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;
 
     const/4 p4, 0x2
 
-    new-array p4, p4, [Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
+    new-array p4, p4, [Lcom/vk/catalog2/core/holders/common/n;
 
-    iget-object p5, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->e:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iget-object p5, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->e:Lcom/vk/catalog2/core/holders/headers/a;
 
     aput-object p5, p4, p3
 
-    iget-object p3, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->h:Lcom/vk/catalog2/core/holders/music/MusicTabLayoutVh;
+    iget-object p3, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->h:Lcom/vk/catalog2/core/holders/music/f;
 
     aput-object p3, p4, p2
 
@@ -242,40 +242,40 @@
 
     move-result-object p2
 
-    iget-object p3, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object p3, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/k;
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;-><init>(Ljava/util/List;Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;-><init>(Ljava/util/List;Lcom/vk/catalog2/core/holders/common/n;)V
 
     iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->D:Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;)Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
+.method public static final synthetic a(Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;)Lcom/vk/catalog2/core/presenters/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->g:Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->g:Lcom/vk/catalog2/core/presenters/b;
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/api/SearchRequestFactory;Lcom/vk/catalog2/core/CatalogEntryPointParams;)Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+.method private final a(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/api/g;Lcom/vk/catalog2/core/e;)Lcom/vk/catalog2/core/y/d/b;
     .locals 15
 
     .line 29
-    new-instance v4, Lcom/vk/catalog2/core/presenters/CatalogReorderingPresenter;
+    new-instance v4, Lcom/vk/catalog2/core/presenters/e;
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/catalog2/core/CatalogEntryPointParams;->e()Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/catalog2/core/e;->e()Lcom/vk/catalog2/core/w/a;
 
     move-result-object v0
 
-    invoke-direct {v4, v0}, Lcom/vk/catalog2/core/presenters/CatalogReorderingPresenter;-><init>(Lcom/vk/catalog2/core/w/CatalogCommandsBus;)V
+    invoke-direct {v4, v0}, Lcom/vk/catalog2/core/presenters/e;-><init>(Lcom/vk/catalog2/core/w/a;)V
 
     .line 30
     new-instance v14, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-interface/range {p1 .. p1}, Lcom/vk/catalog2/core/CatalogConfiguration;->d()Lcom/vk/catalog2/core/CatalogResponseTransformer;
+    invoke-interface/range {p1 .. p1}, Lcom/vk/catalog2/core/a;->d()Lcom/vk/catalog2/core/i;
 
     move-result-object v2
 
@@ -289,10 +289,10 @@
 
     move-object/from16 v3, p3
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;-><init>(Lcom/vk/catalog2/core/api/CatalogRequestFactory;Lcom/vk/catalog2/core/CatalogResponseTransformer;Lcom/vk/catalog2/core/CatalogEntryPointParams;Lcom/vk/catalog2/core/presenters/CatalogReorderingPresenter;ZLcom/vk/catalog2/core/blocks/UIBlockList;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;-><init>(Lcom/vk/catalog2/core/api/f;Lcom/vk/catalog2/core/i;Lcom/vk/catalog2/core/e;Lcom/vk/catalog2/core/presenters/e;ZLcom/vk/catalog2/core/blocks/UIBlockList;)V
 
     .line 31
-    invoke-static {v14}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$p;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-static {v14}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$p;)Lcom/vk/lists/t$k;
 
     move-result-object v7
 
@@ -301,9 +301,9 @@
 
     const-string v1, "paginationHelperBuilder"
 
-    invoke-static {v7, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v11, Lcom/vk/catalog2/core/R7;->catalog_list_vertical_with_appbar_behaviour:I
+    sget v11, Lcom/vk/catalog2/core/r;->catalog_list_vertical_with_appbar_behaviour:I
 
     const/4 v10, 0x0
 
@@ -319,10 +319,10 @@
 
     move-object/from16 v9, p3
 
-    invoke-direct/range {v5 .. v13}, Lcom/vk/catalog2/core/holders/containers/VerticalListVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/lists/PaginationHelper$k;Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;Lcom/vk/catalog2/core/CatalogEntryPointParams;ZIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v5 .. v13}, Lcom/vk/catalog2/core/holders/containers/VerticalListVh;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/lists/t$k;Lcom/vk/catalog2/core/presenters/c;Lcom/vk/catalog2/core/e;ZIILkotlin/jvm/internal/i;)V
 
     .line 33
-    new-instance v1, Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+    new-instance v1, Lcom/vk/catalog2/core/y/d/b;
 
     const/4 v9, 0x0
 
@@ -344,7 +344,7 @@
 
     move-object v14, v2
 
-    invoke-direct/range {v5 .. v14}, Lcom/vk/catalog2/core/y/d/SearchResultsVh;-><init>(Lcom/vk/catalog2/core/api/SearchRequestFactory;Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;Lcom/vk/catalog2/core/holders/containers/VerticalListVh;ZZLcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v5 .. v14}, Lcom/vk/catalog2/core/y/d/b;-><init>(Lcom/vk/catalog2/core/api/g;Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;Lcom/vk/catalog2/core/holders/containers/VerticalListVh;ZZLcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;ZILkotlin/jvm/internal/i;)V
 
     return-object v1
 .end method
@@ -385,20 +385,20 @@
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;)Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+.method public static final synthetic d(Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;)Lcom/vk/catalog2/core/y/d/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->d:Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->d:Lcom/vk/catalog2/core/y/d/b;
 
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;)Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+.method public static final synthetic e(Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;)Lcom/vk/catalog2/core/holders/common/k;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/k;
 
     return-object p0
 .end method
@@ -409,26 +409,26 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/k;
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;->getState()Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/k;->getState()Lcom/vk/catalog2/core/holders/containers/l;
 
     move-result-object v0
 
     .line 2
-    instance-of v1, v0, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState2;
+    instance-of v1, v0, Lcom/vk/catalog2/core/holders/containers/i;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->d:Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->d:Lcom/vk/catalog2/core/y/d/b;
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/y/d/SearchResultsVh;->F()V
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/y/d/b;->F()V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    instance-of v0, v0, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState;
+    instance-of v0, v0, Lcom/vk/catalog2/core/holders/containers/b;
 
     if-eqz v0, :cond_1
 
@@ -466,15 +466,15 @@
     if-eqz p2, :cond_0
 
     .line 8
-    iget-object p2, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->e:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iget-object p2, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->e:Lcom/vk/catalog2/core/holders/headers/a;
 
-    invoke-interface {p2}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->g()V
+    invoke-interface {p2}, Lcom/vk/catalog2/core/holders/headers/a;->g()V
 
     .line 9
     :cond_0
-    iget-object p2, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->d:Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+    iget-object p2, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->d:Lcom/vk/catalog2/core/y/d/b;
 
-    invoke-virtual {p2, p0}, Lcom/vk/catalog2/core/y/d/SearchResultsVh;->a(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual {p2, p0}, Lcom/vk/catalog2/core/y/d/b;->a(Landroid/view/View$OnTouchListener;)V
 
     .line 10
     iget-object p2, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->F:Ljava/lang/String;
@@ -487,15 +487,15 @@
     invoke-virtual {p0, p2, p3}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 12
-    sget-object p2, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState2;->INSTANCE:Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState2;
+    sget-object p2, Lcom/vk/catalog2/core/holders/containers/i;->a:Lcom/vk/catalog2/core/holders/containers/i;
 
-    invoke-virtual {p0, p2}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
+    invoke-virtual {p0, p2}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
 
     .line 13
     :cond_1
-    sget-object p2, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState4;->INSTANCE:Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState4;
+    sget-object p2, Lcom/vk/catalog2/core/holders/containers/f;->a:Lcom/vk/catalog2/core/holders/containers/f;
 
-    invoke-virtual {p0, p2}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
+    invoke-virtual {p0, p2}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
 
     return-object p1
 .end method
@@ -515,21 +515,21 @@
     .locals 0
 
     .line 19
-    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/VoiceUtils;->a(IILandroid/content/Intent;)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/i;->a(IILandroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 20
-    iget-object p2, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object p2, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/k;
 
-    invoke-interface {p2}, Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;->getState()Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;
+    invoke-interface {p2}, Lcom/vk/catalog2/core/holders/common/k;->getState()Lcom/vk/catalog2/core/holders/containers/l;
 
     move-result-object p2
 
     .line 21
-    sget-object p3, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState2;->INSTANCE:Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState2;
+    sget-object p3, Lcom/vk/catalog2/core/holders/containers/i;->a:Lcom/vk/catalog2/core/holders/containers/i;
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -551,9 +551,9 @@
 
     .line 23
     :cond_1
-    sget-object p1, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState;->INSTANCE:Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState;
+    sget-object p1, Lcom/vk/catalog2/core/holders/containers/b;->a:Lcom/vk/catalog2/core/holders/containers/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
 
     :goto_0
     return-void
@@ -574,7 +574,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogVh$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogVh;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/m$a;->a(Lcom/vk/catalog2/core/holders/common/m;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
 
     return-void
 .end method
@@ -583,22 +583,22 @@
     .locals 0
 
     .line 4
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogVh$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogVh;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/m$a;->a(Lcom/vk/catalog2/core/holders/common/m;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
+.method public a(Lcom/vk/catalog2/core/holders/containers/l;)V
     .locals 1
 
     .line 17
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/k;
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;->getState()Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/k;->getState()Lcom/vk/catalog2/core/holders/containers/l;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -608,9 +608,9 @@
 
     .line 18
     :cond_0
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/k;
 
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/k;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
 
     return-void
 .end method
@@ -625,14 +625,14 @@
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->b:Ljava/lang/String;
 
     .line 26
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->e:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->e:Lcom/vk/catalog2/core/holders/headers/a;
 
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->a(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/headers/a;->a(Ljava/lang/String;)V
 
     .line 27
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->d:Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->d:Lcom/vk/catalog2/core/y/d/b;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/catalog2/core/y/d/SearchResultsVh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/catalog2/core/y/d/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 28
     iget-object p1, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->D:Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;
@@ -648,34 +648,34 @@
     .locals 1
 
     .line 16
-    new-instance v0, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState3;
+    new-instance v0, Lcom/vk/catalog2/core/holders/containers/d;
 
-    invoke-direct {v0, p1}, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState3;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v0, p1}, Lcom/vk/catalog2/core/holders/containers/d;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
+    invoke-virtual {p0, v0}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
 
     return-void
 .end method
 
-.method public b(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
+.method public b(Lcom/vk/catalog2/core/holders/containers/l;)V
     .locals 3
 
     .line 4
-    instance-of v0, p1, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState2;
+    instance-of v0, p1, Lcom/vk/catalog2/core/holders/containers/i;
 
     if-nez v0, :cond_1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->e:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->e:Lcom/vk/catalog2/core/holders/headers/a;
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->h()Lcom/vk/core/view/search/ModernSearchView;
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/headers/a;->h()Lcom/vk/core/view/search/ModernSearchView;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 6
-    instance-of v1, p1, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState4;
+    instance-of v1, p1, Lcom/vk/catalog2/core/holders/containers/f;
 
     if-nez v1, :cond_0
 
@@ -689,29 +689,29 @@
 
     .line 8
     :cond_1
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->e:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->e:Lcom/vk/catalog2/core/holders/headers/a;
 
     .line 9
-    instance-of v1, p1, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState3;
+    instance-of v1, p1, Lcom/vk/catalog2/core/holders/containers/d;
 
     if-eqz v1, :cond_2
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->f()V
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/headers/a;->f()V
 
     goto :goto_0
 
     :cond_2
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->show()V
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/headers/a;->show()V
 
     .line 10
     :goto_0
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->h()Lcom/vk/core/view/search/ModernSearchView;
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/headers/a;->h()Lcom/vk/core/view/search/ModernSearchView;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    instance-of v1, p1, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState4;
+    instance-of v1, p1, Lcom/vk/catalog2/core/holders/containers/f;
 
     xor-int/lit8 v1, v1, 0x1
 
@@ -719,18 +719,18 @@
 
     .line 11
     :cond_3
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->h:Lcom/vk/catalog2/core/holders/music/MusicTabLayoutVh;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->h:Lcom/vk/catalog2/core/holders/music/f;
 
-    instance-of p1, p1, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState;
+    instance-of p1, p1, Lcom/vk/catalog2/core/holders/containers/b;
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;->show()Lkotlin/Unit;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/holders/containers/m;->show()Lkotlin/m;
 
     goto :goto_1
 
     :cond_4
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;->f()Lkotlin/Unit;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/holders/containers/m;->f()Lkotlin/m;
 
     :goto_1
     return-void
@@ -740,9 +740,9 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/k;
 
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogSwitchToSectionListener;->b(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/l;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -751,27 +751,27 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/k;
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;->getState()Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/k;->getState()Lcom/vk/catalog2/core/holders/containers/l;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState2;
+    instance-of v0, v0, Lcom/vk/catalog2/core/holders/containers/i;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState;->INSTANCE:Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState;
+    sget-object v0, Lcom/vk/catalog2/core/holders/containers/b;->a:Lcom/vk/catalog2/core/holders/containers/b;
 
-    invoke-virtual {p0, v0}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
+    invoke-virtual {p0, v0}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->e:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->e:Lcom/vk/catalog2/core/holders/headers/a;
 
-    invoke-interface {v0, v1, v1}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->a(ZZ)V
+    invoke-interface {v0, v1, v1}, Lcom/vk/catalog2/core/holders/headers/a;->a(ZZ)V
 
     const/4 v0, 0x1
 
@@ -781,13 +781,13 @@
     return v1
 .end method
 
-.method public getState()Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;
+.method public getState()Lcom/vk/catalog2/core/holders/containers/l;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/k;
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;->getState()Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/k;->getState()Lcom/vk/catalog2/core/holders/containers/l;
 
     move-result-object v0
 
@@ -798,11 +798,11 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->E:Lcom/vk/music/k/MusicSuggestionModel;
+    iget-object p1, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->E:Lcom/vk/music/k/a;
 
     iget-object p2, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a:Ljava/lang/String;
 
-    invoke-interface {p1, p2}, Lcom/vk/music/k/MusicSuggestionModel;->a(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, Lcom/vk/music/k/a;->a(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

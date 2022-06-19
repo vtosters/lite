@@ -3,12 +3,12 @@
 .source "GoodsDataProviders.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/picker/FaveGoodsDataProvider;->a(Lcom/vk/fave/entities/FaveResponseEntries1;)Ljava/util/List;
+    value = Lcom/vk/market/picker/FaveGoodsDataProvider;->a(Lcom/vk/fave/entities/c;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lb/h/h/f/Favable;",
+        "Lkotlin/jvm/b/b<",
+        "Lb/h/h/f/a;",
         "Lcom/vk/dto/common/Good;",
         ">;"
     }
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lb/h/h/f/Favable;)Lcom/vk/dto/common/Good;
+.method public final a(Lb/h/h/f/a;)Lcom/vk/dto/common/Good;
     .locals 1
 
     .line 1
@@ -76,9 +76,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/h/f/Favable;
+    check-cast p1, Lb/h/h/f/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/market/picker/FaveGoodsDataProvider$convertToViewModel$2;->a(Lb/h/h/f/Favable;)Lcom/vk/dto/common/Good;
+    invoke-virtual {p0, p1}, Lcom/vk/market/picker/FaveGoodsDataProvider$convertToViewModel$2;->a(Lb/h/h/f/a;)Lcom/vk/dto/common/Good;
 
     move-result-object p1
 

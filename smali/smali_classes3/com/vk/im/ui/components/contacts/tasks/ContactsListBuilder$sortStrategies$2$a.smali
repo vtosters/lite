@@ -48,17 +48,17 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/Profile;
+    check-cast p1, Lcom/vk/im/engine/models/j;
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->a0()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->a0()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p2, Lcom/vk/im/engine/models/Profile;
+    check-cast p2, Lcom/vk/im/engine/models/j;
 
     .line 3
-    invoke-interface {p2}, Lcom/vk/im/engine/models/Profile;->a0()Ljava/lang/String;
+    invoke-interface {p2}, Lcom/vk/im/engine/models/j;->a0()Ljava/lang/String;
 
     move-result-object p2
 

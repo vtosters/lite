@@ -35,11 +35,11 @@
 
 
 # virtual methods
-.method public a(Lcom/facebook/GraphResponse;)V
+.method public a(Lcom/facebook/i;)V
     .locals 8
 
     .line 1
-    invoke-virtual {p1}, Lcom/facebook/GraphResponse;->b()Lorg/json/JSONObject;
+    invoke-virtual {p1}, Lcom/facebook/i;->b()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -158,7 +158,7 @@
 
     .line 12
     :cond_5
-    invoke-static {v3}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -185,7 +185,7 @@
     :cond_6
     sget-object v3, Lcom/facebook/GraphRequest;->n:Ljava/lang/String;
 
-    invoke-static {v6, v3, v4}, Lcom/facebook/internal/Logger;->a(Lcom/facebook/LoggingBehavior;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v3, v4}, Lcom/facebook/internal/l;->a(Lcom/facebook/LoggingBehavior;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_7
     add-int/lit8 v2, v2, 0x1
@@ -199,7 +199,7 @@
     if-eqz v0, :cond_9
 
     .line 16
-    invoke-interface {v0, p1}, Lcom/facebook/GraphRequest$f;->a(Lcom/facebook/GraphResponse;)V
+    invoke-interface {v0, p1}, Lcom/facebook/GraphRequest$f;->a(Lcom/facebook/i;)V
 
     :cond_9
     return-void

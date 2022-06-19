@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # instance fields
@@ -28,9 +28,9 @@
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/m;->a:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    check-cast p1, Lb/h/o/a/MarketEvents;
+    check-cast p1, Lb/h/o/a/a;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->a(Lb/h/o/a/MarketEvents;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->a(Lb/h/o/a/a;)V
 
     return-void
 .end method

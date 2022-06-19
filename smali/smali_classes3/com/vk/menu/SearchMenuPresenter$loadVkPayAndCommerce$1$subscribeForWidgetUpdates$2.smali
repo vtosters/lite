@@ -3,7 +3,7 @@
 .source "SearchMenuPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lb/h/u/b/VkPayBalanceQueueEvent$a;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lb/h/u/b/e$a;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lb/h/u/b/VkPayBalanceQueueEvent$a;)V
+.method public final a(Lb/h/u/b/e$a;)V
     .locals 1
 
     .line 1
     new-instance v0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2$a;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2$a;-><init>(Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2;Lb/h/u/b/VkPayBalanceQueueEvent$a;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2$a;-><init>(Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2;Lb/h/u/b/e$a;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ThreadUtils;->e(Ljava/lang/Runnable;)V
 
@@ -63,11 +63,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/u/b/VkPayBalanceQueueEvent$a;
+    check-cast p1, Lb/h/u/b/e$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2;->a(Lb/h/u/b/VkPayBalanceQueueEvent$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2;->a(Lb/h/u/b/e$a;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

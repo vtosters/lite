@@ -3,7 +3,7 @@
 .source "CreateChatAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/ui/components/common/AvatarAction;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -99,9 +99,9 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v1, Lcom/vk/im/ui/R12;->ic_camera_outline_placeholder:I
+    sget v1, Lcom/vk/im/ui/f;->ic_camera_outline_placeholder:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -117,11 +117,11 @@
 
     iget-object p1, p1, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH$1;->this$0:Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->b(Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;)Lcom/vk/im/ui/components/new_chat/VcCallback;
+    invoke-static {p1}, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->b(Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;)Lcom/vk/im/ui/components/new_chat/f;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/new_chat/VcCallback;->b()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/new_chat/f;->b()V
 
     goto :goto_0
 
@@ -131,11 +131,11 @@
 
     iget-object p1, p1, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH$1;->this$0:Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->b(Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;)Lcom/vk/im/ui/components/new_chat/VcCallback;
+    invoke-static {p1}, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;->b(Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH;)Lcom/vk/im/ui/components/new_chat/f;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/new_chat/VcCallback;->c()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/new_chat/f;->c()V
 
     :goto_0
     return-void
@@ -149,7 +149,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH$1$1;->a(Lcom/vk/im/ui/components/common/AvatarAction;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

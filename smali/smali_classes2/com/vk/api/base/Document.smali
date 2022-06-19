@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Landroid/os/Parcelable;
-.implements Lcom/vk/dto/common/BaseDocument;
-.implements Lcom/vk/core/serialize/JSONSerialize;
+.implements Lcom/vk/dto/common/a;
+.implements Lcom/vk/core/serialize/a;
 
 
 # static fields
@@ -19,10 +19,10 @@
     .end annotation
 .end field
 
-.field public static final M:Lcom/vk/dto/common/data/JsonParser;
+.field public static final M:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/api/base/Document;",
             ">;"
         }
@@ -92,7 +92,7 @@
 
     invoke-direct {v0}, Lcom/vk/api/base/Document$b;-><init>()V
 
-    sput-object v0, Lcom/vk/api/base/Document;->M:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/api/base/Document;->M:Lcom/vk/dto/common/data/c;
 
     return-void
 .end method

@@ -18,11 +18,11 @@
 
 .field private c:I
 
-.field private d:Lkotlin/jvm/b/Functions;
+.field private d:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -37,7 +37,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/ContentErrorView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/ContentErrorView$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -57,7 +57,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/ContentErrorView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/ContentErrorView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -77,7 +77,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/ContentErrorView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/ContentErrorView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -193,14 +193,14 @@
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 22
-    sget-object v1, Lcom/vk/im/ui/R2;->ContentErrorView:[I
+    sget-object v1, Lcom/vk/im/ui/o;->ContentErrorView:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 23
-    sget p2, Lcom/vk/im/ui/R2;->ContentErrorView_android_maxWidth:I
+    sget p2, Lcom/vk/im/ui/o;->ContentErrorView_android_maxWidth:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -209,7 +209,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/ContentErrorView;->setMaxWidth(I)V
 
     .line 24
-    sget p2, Lcom/vk/im/ui/R2;->ContentErrorView_vkim_titleText:I
+    sget p2, Lcom/vk/im/ui/o;->ContentErrorView_vkim_titleText:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -230,7 +230,7 @@
     .line 25
     iget-object p2, p0, Lcom/vk/im/ui/views/ContentErrorView;->a:Landroid/widget/TextView;
 
-    sget v1, Lcom/vk/im/ui/R2;->ContentErrorView_vkim_titleTextAppearance:I
+    sget v1, Lcom/vk/im/ui/o;->ContentErrorView_vkim_titleTextAppearance:I
 
     invoke-virtual {p1, v1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -239,7 +239,7 @@
     invoke-static {p2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/widget/TextView;I)V
 
     .line 26
-    sget p2, Lcom/vk/im/ui/R2;->ContentErrorView_vkim_buttonText:I
+    sget p2, Lcom/vk/im/ui/o;->ContentErrorView_vkim_buttonText:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -256,7 +256,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/ContentErrorView;->setButtonText(Ljava/lang/CharSequence;)V
 
     .line 27
-    sget p2, Lcom/vk/im/ui/R2;->ContentErrorView_vkim_buttonBackground:I
+    sget p2, Lcom/vk/im/ui/o;->ContentErrorView_vkim_buttonBackground:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -267,7 +267,7 @@
     .line 28
     iget-object p2, p0, Lcom/vk/im/ui/views/ContentErrorView;->b:Landroid/widget/TextView;
 
-    sget p3, Lcom/vk/im/ui/R2;->ContentErrorView_vkim_buttonTextAppearance:I
+    sget p3, Lcom/vk/im/ui/o;->ContentErrorView_vkim_buttonTextAppearance:I
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -285,12 +285,12 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/views/ContentErrorView$1;-><init>(Lcom/vk/im/ui/views/ContentErrorView;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -462,7 +462,7 @@
 
     const-string v1, "buttonView.text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -476,19 +476,19 @@
     return v0
 .end method
 
-.method public final getOnButtonClickListener()Lkotlin/jvm/b/Functions;
+.method public final getOnButtonClickListener()Lkotlin/jvm/b/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/ContentErrorView;->d:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/im/ui/views/ContentErrorView;->d:Lkotlin/jvm/b/a;
 
     return-object v0
 .end method
@@ -505,7 +505,7 @@
 
     const-string v1, "titleView.text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -551,19 +551,19 @@
     return-void
 .end method
 
-.method public final setOnButtonClickListener(Lkotlin/jvm/b/Functions;)V
+.method public final setOnButtonClickListener(Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/views/ContentErrorView;->d:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/im/ui/views/ContentErrorView;->d:Lkotlin/jvm/b/a;
 
     return-void
 .end method

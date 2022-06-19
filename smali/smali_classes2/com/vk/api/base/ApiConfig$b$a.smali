@@ -3,12 +3,12 @@
 .source "ApiConfig.kt"
 
 # interfaces
-.implements Lokhttp3/Interceptor;
+.implements Lokhttp3/u;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/api/base/ApiConfig$b;->a(Lcom/vk/api/sdk/VKOkHttpProvider$a;)V
+    value = Lcom/vk/api/base/ApiConfig$b;->a(Lcom/vk/api/sdk/m$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -44,16 +44,16 @@
 
 
 # virtual methods
-.method public final a(Lokhttp3/Interceptor$a;)Lokhttp3/Response;
+.method public final a(Lokhttp3/u$a;)Lokhttp3/b0;
     .locals 3
 
     .line 1
-    invoke-interface {p1}, Lokhttp3/Interceptor$a;->m0()Lokhttp3/Request;
+    invoke-interface {p1}, Lokhttp3/u$a;->m0()Lokhttp3/z;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0}, Lokhttp3/Request;->f()Lokhttp3/Request$a;
+    invoke-virtual {v0}, Lokhttp3/z;->f()Lokhttp3/z$a;
 
     move-result-object v0
 
@@ -62,15 +62,15 @@
     const-string v2, "new"
 
     .line 3
-    invoke-virtual {v0, v1, v2}, Lokhttp3/Request$a;->b(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$a;
+    invoke-virtual {v0, v1, v2}, Lokhttp3/z$a;->b(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/z$a;
 
     .line 4
-    invoke-virtual {v0}, Lokhttp3/Request$a;->a()Lokhttp3/Request;
+    invoke-virtual {v0}, Lokhttp3/z$a;->a()Lokhttp3/z;
 
     move-result-object v0
 
     .line 5
-    invoke-interface {p1, v0}, Lokhttp3/Interceptor$a;->a(Lokhttp3/Request;)Lokhttp3/Response;
+    invoke-interface {p1, v0}, Lokhttp3/u$a;->a(Lokhttp3/z;)Lokhttp3/b0;
 
     move-result-object p1
 

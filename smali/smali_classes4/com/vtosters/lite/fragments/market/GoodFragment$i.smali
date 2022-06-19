@@ -3,7 +3,7 @@
 .source "GoodFragment.java"
 
 # interfaces
-.implements Lb/h/g/l/NotificationListener;
+.implements Lb/h/g/l/e;
 
 
 # annotations
@@ -55,7 +55,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/Favable;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/a;
 
     move-result-object p1
 
@@ -84,7 +84,7 @@
     .line 6
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$i;->a:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-virtual {p1}, Lme/grishka/appkit/fragments/AppKitFragment;->q1()V
+    invoke-virtual {p1}, Ld/a/a/a/h;->q1()V
 
     :cond_0
     return-void

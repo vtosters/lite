@@ -3,7 +3,7 @@
 .source "VKList.java"
 
 # interfaces
-.implements Lcom/vk/core/serialize/JSONSerialize;
+.implements Lcom/vk/core/serialize/a;
 
 
 # annotations
@@ -14,7 +14,7 @@
         ">",
         "Lcom/vk/dto/common/data/PaginatedList<",
         "TT;>;",
-        "Lcom/vk/core/serialize/JSONSerialize;"
+        "Lcom/vk/core/serialize/a;"
     }
 .end annotation
 
@@ -110,13 +110,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)V
+.method public constructor <init>(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lorg/json/JSONObject;",
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "TT;>;)V"
         }
     .end annotation
@@ -195,7 +195,7 @@
     move-result-object v1
 
     .line 24
-    invoke-virtual {p2, v1}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
+    invoke-virtual {p2, v1}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -213,13 +213,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)V
+.method public constructor <init>(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lorg/json/JSONObject;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lorg/json/JSONObject;",
             "TT;>;)V"
         }
@@ -234,9 +234,9 @@
     .line 14
     new-instance v0, Lcom/vk/dto/common/data/VKList$a;
 
-    invoke-direct {v0, p2}, Lcom/vk/dto/common/data/VKList$a;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p2}, Lcom/vk/dto/common/data/VKList$a;-><init>(Lkotlin/jvm/b/b;)V
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)V
 
     return-void
 .end method

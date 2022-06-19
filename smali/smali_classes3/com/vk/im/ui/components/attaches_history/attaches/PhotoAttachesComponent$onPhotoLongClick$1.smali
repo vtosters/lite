@@ -3,7 +3,7 @@
 .source "PhotoAttachesComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -50,11 +50,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;)V
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;)V
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;->b()I
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;->b()I
 
     move-result p1
 
@@ -94,11 +94,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;
+    check-cast p1, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent$onPhotoLongClick$1;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/PhotoAttachesComponent$onPhotoLongClick$1;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

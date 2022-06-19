@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # static fields
@@ -38,7 +38,7 @@
 
     check-cast p1, Lcom/vk/attachpicker/stickers/ISticker;
 
-    invoke-static {p1}, Lcom/vk/attachpicker/stickers/StickersState;->j(Lcom/vk/attachpicker/stickers/ISticker;)Ljava/lang/Boolean;
+    invoke-static {p1}, Lcom/vk/attachpicker/stickers/m0;->j(Lcom/vk/attachpicker/stickers/ISticker;)Ljava/lang/Boolean;
 
     move-result-object p1
 

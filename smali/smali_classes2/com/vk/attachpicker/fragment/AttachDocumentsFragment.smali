@@ -3,9 +3,9 @@
 .source "AttachDocumentsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/util/ItemClickListener;
-.implements Lcom/vk/attachpicker/base/AttachPickerInterfaces2;
-.implements Lcom/vtosters/lite/ui/SearchViewWrapper$j;
+.implements Lcom/vk/core/util/k0;
+.implements Lcom/vk/attachpicker/base/d;
+.implements Lcom/vtosters/lite/ui/x$j;
 .implements Landroid/view/View$OnClickListener;
 
 
@@ -24,13 +24,13 @@
         "Lcom/vk/api/base/Document;",
         "Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;",
         ">;",
-        "Lcom/vk/core/util/ItemClickListener<",
+        "Lcom/vk/core/util/k0<",
         "Lcom/vk/api/base/Document;",
         ">;",
-        "Lcom/vk/attachpicker/base/AttachPickerInterfaces2<",
+        "Lcom/vk/attachpicker/base/d<",
         "Lcom/vk/api/base/Document;",
         ">;",
-        "Lcom/vtosters/lite/ui/SearchViewWrapper$j;",
+        "Lcom/vtosters/lite/ui/x$j;",
         "Landroid/view/View$OnClickListener;"
     }
 .end annotation
@@ -52,7 +52,7 @@
 
 .field private n0:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-.field private o0:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment1;
+.field private o0:Lcom/vk/attachpicker/fragment/p;
 
 .field private p0:Landroidx/viewpager/widget/ViewPager;
 
@@ -68,7 +68,7 @@
 
 .field private v0:Z
 
-.field private final w0:Lcom/vk/core/ui/v/j/i/UiTrackingTabLayoutListener;
+.field private final w0:Lcom/vk/core/ui/v/j/i/a;
 
 .field private final x0:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$uploadReceiver$1;
 
@@ -81,7 +81,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->y0:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$b;
 
@@ -110,11 +110,11 @@
     iput-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->m0:Ljava/lang/String;
 
     .line 5
-    new-instance v0, Lcom/vk/core/ui/v/j/i/UiTrackingTabLayoutListener;
+    new-instance v0, Lcom/vk/core/ui/v/j/i/a;
 
-    invoke-direct {v0}, Lcom/vk/core/ui/v/j/i/UiTrackingTabLayoutListener;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/ui/v/j/i/a;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->w0:Lcom/vk/core/ui/v/j/i/UiTrackingTabLayoutListener;
+    iput-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->w0:Lcom/vk/core/ui/v/j/i/a;
 
     .line 6
     new-instance v0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$uploadReceiver$1;
@@ -126,11 +126,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)Lcom/vk/attachpicker/base/AttachPickerAdapter;
+.method public static final synthetic a(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)Lcom/vk/attachpicker/base/a;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->P4()Lcom/vk/attachpicker/base/AttachPickerAdapter;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->P4()Lcom/vk/attachpicker/base/a;
 
     move-result-object p0
 
@@ -286,22 +286,22 @@
     return p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)Lcom/vk/attachpicker/base/StreamParcelableSelection;
+.method public static final synthetic d(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)Lcom/vk/attachpicker/base/f;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->W4()Lcom/vk/attachpicker/base/StreamParcelableSelection;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->W4()Lcom/vk/attachpicker/base/f;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)Lcom/vk/attachpicker/fragment/AttachDocumentsFragment1;
+.method public static final synthetic e(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)Lcom/vk/attachpicker/fragment/p;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->o0:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment1;
+    iget-object p0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->o0:Lcom/vk/attachpicker/fragment/p;
 
     return-object p0
 .end method
@@ -334,11 +334,11 @@
     .line 2
     new-instance v0, Lcom/vtosters/lite/api/execute/DocsGetTypes;
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {v1}, Lb/h/h/d/c;->D0()I
 
     move-result v1
 
@@ -349,7 +349,7 @@
     const/4 v2, 0x1
 
     .line 3
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -364,16 +364,16 @@
     invoke-direct {v2, p0}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$f;-><init>(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)V
 
     .line 6
-    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     const-string v1, "DocsGetTypes(VKAccountMa\u2026 setState(STATE_ERROR) })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/BaseFragment1;->d(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/b;->d(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -469,10 +469,10 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->w0:Lcom/vk/core/ui/v/j/i/UiTrackingTabLayoutListener;
+    iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->w0:Lcom/vk/core/ui/v/j/i/a;
 
     .line 2
-    invoke-virtual {v0, p1}, Lcom/vk/core/ui/v/j/i/UiTrackingTabLayoutListener;->a(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/ui/v/j/i/a;->a(Ljava/util/List;)V
 
     .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getUserVisibleHint()Z
@@ -486,7 +486,7 @@
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->w0:Lcom/vk/core/ui/v/j/i/UiTrackingTabLayoutListener;
+    iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->w0:Lcom/vk/core/ui/v/j/i/a;
 
     invoke-virtual {p1, v0}, Lcom/google/android/material/tabs/TabLayout;->a(Lcom/google/android/material/tabs/TabLayout$c;)V
 
@@ -543,7 +543,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lcom/vk/extensions/t/ToolbarExt;->b(Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p1}, Lcom/vk/extensions/t/a;->b(Landroidx/appcompat/widget/Toolbar;)V
 
     goto :goto_0
 
@@ -554,14 +554,14 @@
     return-object p1
 .end method
 
-.method public a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/StreamParcelableSelection;)Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;
+.method public a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I",
-            "Lcom/vk/attachpicker/base/StreamParcelableSelection<",
+            "Lcom/vk/attachpicker/base/f<",
             "Lcom/vk/api/base/Document;",
             ">;)",
             "Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;"
@@ -573,7 +573,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-direct {p2, p1, p3, p0, p0}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;-><init>(Landroid/view/ViewGroup;Lcom/vk/attachpicker/base/StreamParcelableSelection;Lcom/vk/core/util/ItemClickListener;Lcom/vk/attachpicker/base/AttachPickerInterfaces2;)V
+    invoke-direct {p2, p1, p3, p0, p0}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;-><init>(Landroid/view/ViewGroup;Lcom/vk/attachpicker/base/f;Lcom/vk/core/util/k0;Lcom/vk/attachpicker/base/d;)V
 
     return-object p2
 
@@ -587,11 +587,11 @@
     throw p1
 .end method
 
-.method public bridge synthetic a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/StreamParcelableSelection;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+.method public bridge synthetic a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vtosters/lite/ui/b0/i;
     .locals 0
 
     .line 6
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/StreamParcelableSelection;)Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;
 
     move-result-object p1
 
@@ -620,14 +620,14 @@
     return-void
 .end method
 
-.method protected b(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
+.method protected b(ILcom/vk/lists/t;)Lc/a/m;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/PaginationHelper;",
+            "Lcom/vk/lists/t;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/api/base/VkPaginationList<",
             "Lcom/vk/api/base/Document;",
             ">;>;"
@@ -635,7 +635,7 @@
     .end annotation
 
     .line 2
-    new-instance v6, Lcom/vk/api/docs/DocsSearch;
+    new-instance v6, Lb/h/c/i/i;
 
     invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->S4()Ljava/lang/String;
 
@@ -647,7 +647,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/lists/PaginationHelper;->c()I
+    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
 
     move-result v0
 
@@ -667,29 +667,29 @@
 
     move v4, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/api/docs/DocsSearch;-><init>(Ljava/lang/String;IZII)V
+    invoke-direct/range {v0 .. v5}, Lb/h/c/i/i;-><init>(Ljava/lang/String;IZII)V
 
     const/4 p1, 0x1
 
     const/4 v0, 0x0
 
     .line 3
-    invoke-static {v6, v0, p1, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v6, v0, p1, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
     .line 4
     new-instance v0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$d;
 
-    invoke-direct {v0, p0, p2}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$d;-><init>(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;Lcom/vk/lists/PaginationHelper;)V
+    invoke-direct {v0, p0, p2}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$d;-><init>(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;Lcom/vk/lists/t;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
     move-result-object p1
 
     const-string p2, "DocsSearch(currentSearch\u2026re)\n                    }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -719,11 +719,11 @@
     if-eqz p2, :cond_2
 
     .line 7
-    iget-object p2, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->o0:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment1;
+    iget-object p2, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->o0:Lcom/vk/attachpicker/fragment/p;
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p2, p1}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment1;->a(Lcom/vk/api/base/Document;)V
+    invoke-virtual {p2, p1}, Lcom/vk/attachpicker/fragment/p;->a(Lcom/vk/api/base/Document;)V
 
     .line 8
     :cond_1
@@ -738,24 +738,24 @@
     invoke-super {p0, p1, p2}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;I)V
 
     .line 10
-    iget-object p2, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->o0:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment1;
+    iget-object p2, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->o0:Lcom/vk/attachpicker/fragment/p;
 
     if-eqz p2, :cond_4
 
-    invoke-virtual {p2, p1}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment1;->a(Lcom/vk/api/base/Document;)V
+    invoke-virtual {p2, p1}, Lcom/vk/attachpicker/fragment/p;->a(Lcom/vk/api/base/Document;)V
 
     :cond_4
     return-void
 .end method
 
-.method protected c(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
+.method protected c(ILcom/vk/lists/t;)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/PaginationHelper;",
+            "Lcom/vk/lists/t;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/api/base/VkPaginationList<",
             "Lcom/vk/api/base/Document;",
             ">;>;"
@@ -773,13 +773,13 @@
 
     invoke-direct {p2, p1, v0, v0}, Lcom/vk/api/base/VkPaginationList;-><init>(Ljava/util/ArrayList;IZ)V
 
-    invoke-static {p2}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {p2}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
     const-string p2, "Observable.just(VkPagina\u2026f<Document>(), 0, false))"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -800,14 +800,14 @@
 
     const-string v3, "activity!!"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/documents/list/DocumentsUtils;->a(Lcom/vk/api/base/Document;Landroid/app/Activity;Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/documents/list/DocumentsUtils;->a(Lcom/vk/api/base/Document;Landroid/app/Activity;Lkotlin/jvm/b/b;)V
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 .end method
@@ -859,14 +859,14 @@
 
     const-string p2, "Intent().putParcelableAr\u2026OCUMENTS_PENDING, result)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->R4()Lcom/vk/attachpicker/AttachResulter;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->R4()Lcom/vk/attachpicker/j;
 
     move-result-object p2
 
-    invoke-interface {p2, p1}, Lcom/vk/attachpicker/AttachResulter;->a(Landroid/content/Intent;)V
+    invoke-interface {p2, p1}, Lcom/vk/attachpicker/j;->a(Landroid/content/Intent;)V
 
     :cond_0
     return-void
@@ -971,7 +971,7 @@
     invoke-super {p0, p1}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     .line 3
     iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->x0:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$uploadReceiver$1;
@@ -991,11 +991,11 @@
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     .line 6
-    new-instance p1, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment1;
+    new-instance p1, Lcom/vk/attachpicker/fragment/p;
 
-    invoke-direct {p1}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment1;-><init>()V
+    invoke-direct {p1}, Lcom/vk/attachpicker/fragment/p;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->o0:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment1;
+    iput-object p1, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->o0:Lcom/vk/attachpicker/fragment/p;
 
     return-void
 .end method
@@ -1022,7 +1022,7 @@
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -1043,14 +1043,14 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->x0:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$uploadReceiver$1;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 2
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/core/fragments/b;->onDestroy()V
 
     return-void
 .end method
@@ -1130,7 +1130,7 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v2, Lcom/vk/core/ui/CardDrawable;
+    new-instance v2, Lcom/vk/core/ui/c;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -1138,7 +1138,7 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v2, v3, p2, v4, v1}, Lcom/vk/core/ui/CardDrawable;-><init>(Landroid/content/res/Resources;IFZ)V
+    invoke-direct {v2, v3, p2, v4, v1}, Lcom/vk/core/ui/c;-><init>(Landroid/content/res/Resources;IFZ)V
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -1186,7 +1186,7 @@
 
     if-eqz p2, :cond_2
 
-    iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->o0:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment1;
+    iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->o0:Lcom/vk/attachpicker/fragment/p;
 
     invoke-virtual {p2, v0}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
@@ -1269,7 +1269,7 @@
 
     .line 17
     :cond_4
-    invoke-virtual {p0, p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->a(Lcom/vtosters/lite/ui/SearchViewWrapper$j;)V
+    invoke-virtual {p0, p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->a(Lcom/vtosters/lite/ui/x$j;)V
 
     .line 18
     invoke-direct {p0}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->j5()V
@@ -1305,13 +1305,13 @@
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->a5()Lcom/vk/lists/PaginationHelper;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->a5()Lcom/vk/lists/t;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->h()V
+    invoke-virtual {v0}, Lcom/vk/lists/t;->h()V
 
     .line 3
     :cond_0
@@ -1419,7 +1419,7 @@
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->w0:Lcom/vk/core/ui/v/j/i/UiTrackingTabLayoutListener;
+    iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->w0:Lcom/vk/core/ui/v/j/i/a;
 
     invoke-virtual {p1, v0}, Lcom/google/android/material/tabs/TabLayout;->a(Lcom/google/android/material/tabs/TabLayout$c;)V
 

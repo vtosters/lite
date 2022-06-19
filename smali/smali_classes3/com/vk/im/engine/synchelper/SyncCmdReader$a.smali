@@ -44,7 +44,7 @@
 
     const-string v1, "msg.data"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vk/im/engine/synchelper/SyncCmdReader;->a(Lcom/vk/im/engine/synchelper/SyncCmdReader;Landroid/os/Bundle;)V
 

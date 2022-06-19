@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -110,7 +110,7 @@
 
     const-string v0, "currencyCode"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v2, p1
 
@@ -119,19 +119,19 @@
     return-object p1
 .end method
 
-.method public final a()Lcom/vk/dto/common/data/JsonParser;
+.method public final a()Lcom/vk/dto/common/data/c;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/dto/attachments/Product;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/vk/dto/attachments/Product;->z1()Lcom/vk/dto/common/data/JsonParser;
+    invoke-static {}, Lcom/vk/dto/attachments/Product;->z1()Lcom/vk/dto/common/data/c;
 
     move-result-object v0
 

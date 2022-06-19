@@ -3,7 +3,7 @@
 .source "MsgListVc.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/j/WebUrlCacheController$a;
+.implements Lcom/vk/im/engine/j/j$a;
 
 
 # annotations
@@ -50,11 +50,11 @@
     .line 1
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$a;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+    invoke-static {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->c()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->c()I
 
     move-result v1
 
@@ -66,16 +66,16 @@
     :cond_0
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$a;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
+    invoke-static {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->c(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    invoke-virtual {v1, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->c(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
     move-result-object p1
 
     .line 3
-    iget v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
+    iget v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
 
     const/16 v2, 0x49
 
@@ -93,9 +93,9 @@
 
     .line 4
     :cond_1
-    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->f:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->f:Lcom/vk/im/engine/models/attaches/Attach;
 
-    instance-of v1, p1, Lcom/vk/im/engine/models/attaches/WithCacheUrl;
+    instance-of v1, p1, Lcom/vk/im/engine/models/attaches/c;
 
     if-nez v1, :cond_2
 
@@ -105,9 +105,9 @@
     if-eqz p1, :cond_3
 
     .line 5
-    check-cast p1, Lcom/vk/im/engine/models/attaches/WithCacheUrl;
+    check-cast p1, Lcom/vk/im/engine/models/attaches/c;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/attaches/WithCacheUrl;->i()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/attaches/c;->i()Ljava/lang/String;
 
     move-result-object v0
 

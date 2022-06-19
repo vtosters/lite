@@ -3,7 +3,7 @@
 .source "DeliveryInfo.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/market/orders/checkout/l;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/market/orders/checkout/DeliveryInfo8;)Z
+.method public final a(Lcom/vk/market/orders/checkout/l;)Z
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo8;->j()Lcom/vk/market/orders/checkout/InputType;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/l;->j()Lcom/vk/market/orders/checkout/InputType;
 
     move-result-object p1
 
@@ -83,9 +83,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/market/orders/checkout/DeliveryInfo8;
+    check-cast p1, Lcom/vk/market/orders/checkout/l;
 
-    invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/DeliveryInfo$Companion$fromMarketSettingsDto$selectedCountryId$1;->a(Lcom/vk/market/orders/checkout/DeliveryInfo8;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/DeliveryInfo$Companion$fromMarketSettingsDto$selectedCountryId$1;->a(Lcom/vk/market/orders/checkout/l;)Z
 
     move-result p1
 

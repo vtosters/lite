@@ -3,12 +3,12 @@
 .source "RxFileDownloader.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Cancellable;
+.implements Lc/a/z/f;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/network/RxFileDownloader;->a(Lokhttp3/Response;)Lio/reactivex/functions/Cancellable;
+    value = Lcom/vk/core/network/RxFileDownloader;->a(Lokhttp3/b0;)Lc/a/z/f;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field final synthetic a:Lokhttp3/Response;
+.field final synthetic a:Lokhttp3/b0;
 
 
 # direct methods
-.method constructor <init>(Lokhttp3/Response;)V
+.method constructor <init>(Lokhttp3/b0;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/core/network/RxFileDownloader$b;->a:Lokhttp3/Response;
+    iput-object p1, p0, Lcom/vk/core/network/RxFileDownloader$b;->a:Lokhttp3/b0;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

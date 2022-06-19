@@ -3,7 +3,7 @@
 .source "Lazy.kt"
 
 # interfaces
-.implements Lkotlin/Lazy2;
+.implements Lkotlin/e;
 .implements Ljava/io/Serializable;
 
 
@@ -14,7 +14,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lkotlin/Lazy2<",
+        "Lkotlin/e<",
         "TT;>;",
         "Ljava/io/Serializable;"
     }

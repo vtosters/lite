@@ -3,12 +3,12 @@
 .source "CommunitiesExternalEventHandlerDelegate.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate;->c()Lio/reactivex/disposables/Disposable;
+    value = Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate;->c()Lio/reactivex/disposables/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lb/h/g/l/ProfleEvents5;",
+        "Lc/a/z/g<",
+        "Lb/h/g/l/f;",
         ">;"
     }
 .end annotation
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lb/h/g/l/ProfleEvents5;)V
+.method public final a(Lb/h/g/l/f;)V
     .locals 5
 
     .line 1
-    invoke-virtual {p1}, Lb/h/g/l/ProfleEvents5;->a()I
+    invoke-virtual {p1}, Lb/h/g/l/f;->a()I
 
     move-result v0
 
@@ -68,7 +68,7 @@
 
     .line 2
     :cond_0
-    new-instance p1, Lcom/vk/catalog2/core/w/e/CatalogCommand8;
+    new-instance p1, Lcom/vk/catalog2/core/w/e/e;
 
     sget-object v0, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$3;->a:Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$3;
 
@@ -78,7 +78,7 @@
     invoke-direct {v3, p0}, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$4;-><init>(Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1;)V
 
     .line 4
-    invoke-direct {p1, v0, v3}, Lcom/vk/catalog2/core/w/e/CatalogCommand8;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions1;)V
+    invoke-direct {p1, v0, v3}, Lcom/vk/catalog2/core/w/e/e;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/c;)V
 
     goto :goto_0
 
@@ -86,20 +86,20 @@
     if-eqz p1, :cond_3
 
     .line 5
-    check-cast p1, Lb/h/g/l/ProfleEvents;
+    check-cast p1, Lb/h/g/l/g;
 
     .line 6
-    new-instance v0, Lcom/vk/catalog2/core/w/e/CatalogCommand8;
+    new-instance v0, Lcom/vk/catalog2/core/w/e/e;
 
     sget-object v3, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$1;->a:Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$1;
 
     .line 7
     new-instance v4, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;
 
-    invoke-direct {v4, p0, p1}, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;-><init>(Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1;Lb/h/g/l/ProfleEvents;)V
+    invoke-direct {v4, p0, p1}, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;-><init>(Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1;Lb/h/g/l/g;)V
 
     .line 8
-    invoke-direct {v0, v3, v4}, Lcom/vk/catalog2/core/w/e/CatalogCommand8;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions1;)V
+    invoke-direct {v0, v3, v4}, Lcom/vk/catalog2/core/w/e/e;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/c;)V
 
     move-object p1, v0
 
@@ -109,13 +109,13 @@
     .line 9
     iget-object v0, p0, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1;->a:Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate;
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/events/common/CatalogExternalEventsAdapter;->a()Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/events/common/a;->a()Lcom/vk/catalog2/core/w/a;
 
     move-result-object v0
 
     const/4 v3, 0x0
 
-    invoke-static {v0, p1, v3, v2, v1}, Lcom/vk/catalog2/core/w/CatalogCommandsBus;->a(Lcom/vk/catalog2/core/w/CatalogCommandsBus;Lcom/vk/catalog2/core/w/e/CatalogCommand6;ZILjava/lang/Object;)V
+    invoke-static {v0, p1, v3, v2, v1}, Lcom/vk/catalog2/core/w/a;->a(Lcom/vk/catalog2/core/w/a;Lcom/vk/catalog2/core/w/e/b;ZILjava/lang/Object;)V
 
     :cond_2
     return-void
@@ -135,9 +135,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/g/l/ProfleEvents5;
+    check-cast p1, Lb/h/g/l/f;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1;->a(Lb/h/g/l/ProfleEvents5;)V
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1;->a(Lb/h/g/l/f;)V
 
     return-void
 .end method

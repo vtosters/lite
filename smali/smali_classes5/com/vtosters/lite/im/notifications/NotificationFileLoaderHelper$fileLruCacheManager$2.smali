@@ -3,7 +3,7 @@
 .source "NotificationFileLoaderHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lb/h/j/b/FileLruCacheManager;",
+        "Lkotlin/jvm/b/a<",
+        "Lb/h/j/b/a;",
         ">;"
     }
 .end annotation
@@ -55,11 +55,11 @@
 
 
 # virtual methods
-.method public final invoke()Lb/h/j/b/FileLruCacheManager;
+.method public final invoke()Lb/h/j/b/a;
     .locals 4
 
     .line 2
-    new-instance v0, Lb/h/j/b/FileLruCacheManager;
+    new-instance v0, Lb/h/j/b/a;
 
     sget-object v1, Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;->e:Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;
 
@@ -69,7 +69,7 @@
 
     const-wide/32 v2, 0x1400000
 
-    invoke-direct {v0, v1, v2, v3}, Lb/h/j/b/FileLruCacheManager;-><init>(Ljava/io/File;J)V
+    invoke-direct {v0, v1, v2, v3}, Lb/h/j/b/a;-><init>(Ljava/io/File;J)V
 
     return-object v0
 .end method
@@ -78,7 +78,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper$fileLruCacheManager$2;->invoke()Lb/h/j/b/FileLruCacheManager;
+    invoke-virtual {p0}, Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper$fileLruCacheManager$2;->invoke()Lb/h/j/b/a;
 
     move-result-object v0
 

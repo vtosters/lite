@@ -1,9 +1,9 @@
 .class public abstract Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;
-.super Lcom/vk/attachpicker/stickers/ViewGroupSticker;
+.super Lcom/vk/attachpicker/stickers/t0;
 .source "BaseStoryPostSticker.kt"
 
 # interfaces
-.implements Lcom/vk/attachpicker/stickers/text/MakerOfClickableStickers;
+.implements Lcom/vk/attachpicker/stickers/text/c;
 
 
 # annotations
@@ -27,7 +27,7 @@
 
 .field private C:I
 
-.field private final D:Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;
+.field private final D:Lcom/vk/stories/clickable/models/j/a;
 
 .field private final d:Landroid/view/View;
 
@@ -48,7 +48,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/16 v0, 0x10
 
@@ -78,7 +78,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;I)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/stories/clickable/models/j/a;I)V
     .locals 0
     .param p3    # I
         .annotation build Landroidx/annotation/LayoutRes;
@@ -86,9 +86,9 @@
     .end param
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/vk/attachpicker/stickers/t0;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->D:Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;
+    iput-object p2, p0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->D:Lcom/vk/stories/clickable/models/j/a;
 
     .line 2
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -103,7 +103,7 @@
 
     const-string p2, "LayoutInflater.from(cont\u2026.inflate(layoutRes, null)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->d:Landroid/view/View;
 
@@ -118,7 +118,7 @@
 
     const-string p2, "root.findViewById(R.id.photo)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/imageloader/view/VKImageView;
 
@@ -135,7 +135,7 @@
 
     const-string p2, "root.findViewById(R.id.name)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -152,7 +152,7 @@
 
     const-string p2, "root.findViewById(R.id.date)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -169,7 +169,7 @@
 
     const-string p2, "root.findViewById(R.id.text)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/common/view/TextViewEllipsizeEnd;
 
@@ -227,7 +227,7 @@
     return-void
 .end method
 
-.method protected a(Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;)V
+.method protected a(Lcom/vk/stories/clickable/models/j/a;)V
     .locals 4
     .annotation build Landroidx/annotation/CallSuper;
     .end annotation
@@ -235,7 +235,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->e:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;->h()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/a;->h()Ljava/lang/String;
 
     move-result-object v1
 
@@ -244,7 +244,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->f:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/a;->d()Ljava/lang/String;
 
     move-result-object v1
 
@@ -253,23 +253,23 @@
     .line 3
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->f:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;->e()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/a;->e()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->g:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/a;->a()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;->j()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/a;->j()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -308,11 +308,11 @@
     .line 8
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->h:Lcom/vk/common/view/TextViewEllipsizeEnd;
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;->j()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/a;->j()Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;->k()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/a;->k()Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -339,15 +339,15 @@
     .locals 4
 
     .line 1
-    new-instance p1, Lcom/vk/attachpicker/stickers/ViewRenderSticker;
+    new-instance p1, Lcom/vk/attachpicker/stickers/u0;
 
-    invoke-static {p0}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/view/View;)Landroid/graphics/Bitmap;
+    invoke-static {p0}, Lcom/vk/core/util/m;->a(Landroid/view/View;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     const-string v1, "BitmapUtils.loadBitmapFromView(this)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getMeasuredWidth()I
 
@@ -359,17 +359,17 @@
 
     const-string v3, ""
 
-    invoke-direct {p1, v0, v1, v2, v3}, Lcom/vk/attachpicker/stickers/ViewRenderSticker;-><init>(Landroid/graphics/Bitmap;ILcom/vk/dto/stories/model/StickerType;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1, v2, v3}, Lcom/vk/attachpicker/stickers/u0;-><init>(Landroid/graphics/Bitmap;ILcom/vk/dto/stories/model/StickerType;Ljava/lang/String;)V
 
     .line 2
     new-instance v0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker$getStickerCopyForRendering$$inlined$also$lambda$1;
 
     invoke-direct {v0, p0}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker$getStickerCopyForRendering$$inlined$also$lambda$1;-><init>(Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/stickers/ViewRenderSticker;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/stickers/u0;->a(Lkotlin/jvm/b/b;)V
 
     .line 3
-    invoke-super {p0, p1}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->b(Lcom/vk/attachpicker/stickers/ISticker;)Lcom/vk/attachpicker/stickers/ISticker;
+    invoke-super {p0, p1}, Lcom/vk/attachpicker/stickers/t0;->b(Lcom/vk/attachpicker/stickers/ISticker;)Lcom/vk/attachpicker/stickers/ISticker;
 
     return-object p1
 .end method
@@ -408,7 +408,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->getFillPoints()[Landroid/graphics/PointF;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/t0;->getFillPoints()[Landroid/graphics/PointF;
 
     move-result-object v0
 
@@ -456,15 +456,15 @@
     :cond_0
     new-instance v0, Lcom/vk/dto/stories/model/clickable/ClickablePost;
 
-    iget-object v2, p0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->D:Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;
+    iget-object v2, p0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->D:Lcom/vk/stories/clickable/models/j/a;
 
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;->i()I
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/models/j/a;->i()I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->D:Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;
+    iget-object v3, p0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->D:Lcom/vk/stories/clickable/models/j/a;
 
-    invoke-virtual {v3}, Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;->f()I
+    invoke-virtual {v3}, Lcom/vk/stories/clickable/models/j/a;->f()I
 
     move-result v3
 
@@ -503,11 +503,11 @@
     return v0
 .end method
 
-.method protected final getStickerInfo()Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;
+.method protected final getStickerInfo()Lcom/vk/stories/clickable/models/j/a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->D:Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->D:Lcom/vk/stories/clickable/models/j/a;
 
     return-object v0
 .end method

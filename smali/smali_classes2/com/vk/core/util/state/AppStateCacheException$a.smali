@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -83,14 +83,14 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/String;Lcom/vk/core/util/state/cache/CompositeCache;Ljava/util/concurrent/LinkedBlockingDeque;)Lcom/vk/core/util/state/AppStateCacheException;
+.method public final a(Ljava/lang/String;Ljava/lang/String;Lcom/vk/core/util/state/cache/a;Ljava/util/concurrent/LinkedBlockingDeque;)Lcom/vk/core/util/state/AppStateCacheException;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
-            "Lcom/vk/core/util/state/cache/CompositeCache;",
+            "Lcom/vk/core/util/state/cache/a;",
             "Ljava/util/concurrent/LinkedBlockingDeque<",
             "Ljava/lang/String;",
             ">;)",
@@ -118,11 +118,11 @@
     .line 4
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3}, Lcom/vk/core/util/state/cache/CompositeCache;->b()Lcom/vk/core/util/state/cache/StateCache;
+    invoke-virtual {p3}, Lcom/vk/core/util/state/cache/a;->b()Lcom/vk/core/util/state/cache/c;
 
     move-result-object v5
 
-    invoke-interface {v5}, Lcom/vk/core/util/state/cache/StateCache;->size()I
+    invoke-interface {v5}, Lcom/vk/core/util/state/cache/c;->size()I
 
     move-result v5
 
@@ -137,11 +137,11 @@
     .line 5
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3}, Lcom/vk/core/util/state/cache/CompositeCache;->c()Lcom/vk/core/util/state/cache/StateCache;
+    invoke-virtual {p3}, Lcom/vk/core/util/state/cache/a;->c()Lcom/vk/core/util/state/cache/c;
 
     move-result-object p3
 
-    invoke-interface {p3}, Lcom/vk/core/util/state/cache/StateCache;->size()I
+    invoke-interface {p3}, Lcom/vk/core/util/state/cache/c;->size()I
 
     move-result p3
 
@@ -269,9 +269,9 @@
 
     const-string p4, "sb.toString()"
 
-    invoke-static {p3, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p2, p3, p1}, Lcom/vk/core/util/state/AppStateCacheException;-><init>(Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {p2, p3, p1}, Lcom/vk/core/util/state/AppStateCacheException;-><init>(Ljava/lang/String;Lkotlin/jvm/internal/i;)V
 
     return-object p2
 .end method

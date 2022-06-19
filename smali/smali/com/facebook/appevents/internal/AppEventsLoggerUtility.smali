@@ -38,7 +38,7 @@
     return-void
 .end method
 
-.method public static a(Lcom/facebook/appevents/internal/AppEventsLoggerUtility$GraphAPIActivityType;Lcom/facebook/internal/AttributionIdentifiers;Ljava/lang/String;ZLandroid/content/Context;)Lorg/json/JSONObject;
+.method public static a(Lcom/facebook/appevents/internal/AppEventsLoggerUtility$GraphAPIActivityType;Lcom/facebook/internal/a;Ljava/lang/String;ZLandroid/content/Context;)Lorg/json/JSONObject;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -76,11 +76,11 @@
 
     .line 5
     :cond_0
-    invoke-static {v0, p1, p2, p3}, Lcom/facebook/internal/Utility;->a(Lorg/json/JSONObject;Lcom/facebook/internal/AttributionIdentifiers;Ljava/lang/String;Z)V
+    invoke-static {v0, p1, p2, p3}, Lcom/facebook/internal/r;->a(Lorg/json/JSONObject;Lcom/facebook/internal/a;Ljava/lang/String;Z)V
 
     .line 6
     :try_start_0
-    invoke-static {v0, p4}, Lcom/facebook/internal/Utility;->a(Lorg/json/JSONObject;Landroid/content/Context;)V
+    invoke-static {v0, p4}, Lcom/facebook/internal/r;->a(Lorg/json/JSONObject;Landroid/content/Context;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -110,7 +110,7 @@
     const-string p3, "Fetching extended device info parameters failed: \'%s\'"
 
     .line 9
-    invoke-static {p1, p0, p3, p2}, Lcom/facebook/internal/Logger;->a(Lcom/facebook/LoggingBehavior;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p1, p0, p3, p2}, Lcom/facebook/internal/l;->a(Lcom/facebook/LoggingBehavior;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 10
     :goto_0

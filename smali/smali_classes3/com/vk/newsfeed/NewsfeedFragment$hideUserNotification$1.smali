@@ -3,7 +3,7 @@
 .source "NewsfeedFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/newsfeed/NewsfeedFragment$hideUserNotification$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -66,7 +66,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment$hideUserNotification$1;->this$0:Lcom/vk/newsfeed/NewsfeedFragment;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/NewsfeedFragment;->d(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/newsfeed/items/notifications/UserNotificationsAdapter;
+    invoke-static {v0}, Lcom/vk/newsfeed/NewsfeedFragment;->d(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/newsfeed/items/notifications/a;
 
     move-result-object v0
 
@@ -77,20 +77,20 @@
 
     invoke-direct {v1, p0}, Lcom/vk/newsfeed/NewsfeedFragment$hideUserNotification$1$$special$$inlined$let$lambda$1;-><init>(Lcom/vk/newsfeed/NewsfeedFragment$hideUserNotification$1;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->b(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->b(Lkotlin/jvm/b/b;)V
 
     .line 4
-    sget-object v1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object v1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v0
 
     const-string v2, "adapter.list"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->b(Ljava/util/List;)V
+    invoke-virtual {v1, v0}, Lcom/vk/newsfeed/controllers/a;->b(Ljava/util/List;)V
 
     :cond_0
     return-void

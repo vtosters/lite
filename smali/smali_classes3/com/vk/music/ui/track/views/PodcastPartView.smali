@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private B:Lcom/vk/common/view/UpdatableTouchDelegate;
+.field private B:Lcom/vk/common/view/e;
 
 .field private final a:Landroid/widget/TextView;
 
@@ -39,7 +39,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/ui/track/views/PodcastPartView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/ui/track/views/PodcastPartView$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -59,7 +59,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/ui/track/views/PodcastPartView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/ui/track/views/PodcastPartView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/ui/track/views/PodcastPartView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/ui/track/views/PodcastPartView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -277,7 +277,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -563,7 +563,7 @@
 
     const v1, 0x7f040022
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     :cond_0
     const v0, 0x7f120ae4
@@ -642,7 +642,7 @@
 
     const v1, 0x7f04059b
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     .line 5
     :cond_0
@@ -700,7 +700,7 @@
 
     const v1, 0x7f04059b
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     .line 5
     :cond_0
@@ -762,7 +762,7 @@
 
     const v1, 0x7f04059b
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     .line 5
     :cond_0
@@ -820,7 +820,7 @@
 
     const v1, 0x7f04059b
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     .line 5
     :cond_0
@@ -880,7 +880,7 @@
 
     const v1, 0x7f04059a
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     .line 5
     :cond_0
@@ -1172,23 +1172,23 @@
     invoke-virtual {p2, p1, p1}, Landroid/graphics/Rect;->inset(II)V
 
     .line 38
-    iget-object p1, p0, Lcom/vk/music/ui/track/views/PodcastPartView;->B:Lcom/vk/common/view/UpdatableTouchDelegate;
+    iget-object p1, p0, Lcom/vk/music/ui/track/views/PodcastPartView;->B:Lcom/vk/common/view/e;
 
     if-nez p1, :cond_4
 
     .line 39
-    new-instance p1, Lcom/vk/common/view/UpdatableTouchDelegate;
+    new-instance p1, Lcom/vk/common/view/e;
 
     iget-object p2, p0, Lcom/vk/music/ui/track/views/PodcastPartView;->h:Landroid/graphics/Rect;
 
     iget-object p3, p0, Lcom/vk/music/ui/track/views/PodcastPartView;->c:Landroid/widget/TextView;
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/common/view/UpdatableTouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/common/view/e;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
 
-    iput-object p1, p0, Lcom/vk/music/ui/track/views/PodcastPartView;->B:Lcom/vk/common/view/UpdatableTouchDelegate;
+    iput-object p1, p0, Lcom/vk/music/ui/track/views/PodcastPartView;->B:Lcom/vk/common/view/e;
 
     .line 40
-    iget-object p1, p0, Lcom/vk/music/ui/track/views/PodcastPartView;->B:Lcom/vk/common/view/UpdatableTouchDelegate;
+    iget-object p1, p0, Lcom/vk/music/ui/track/views/PodcastPartView;->B:Lcom/vk/common/view/e;
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setTouchDelegate(Landroid/view/TouchDelegate;)V
 
@@ -1200,7 +1200,7 @@
     .line 41
     iget-object p2, p0, Lcom/vk/music/ui/track/views/PodcastPartView;->h:Landroid/graphics/Rect;
 
-    invoke-virtual {p1, p2}, Lcom/vk/common/view/UpdatableTouchDelegate;->a(Landroid/graphics/Rect;)V
+    invoke-virtual {p1, p2}, Lcom/vk/common/view/e;->a(Landroid/graphics/Rect;)V
 
     goto :goto_2
 
@@ -1747,13 +1747,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/ui/track/views/PodcastPartView;->a:Landroid/widget/TextView;
 
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object v1
 
     iget-object v2, p1, Lcom/vk/dto/music/MusicTrack;->f:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v2}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -1762,13 +1762,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/music/ui/track/views/PodcastPartView;->d:Landroid/widget/TextView;
 
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object v1
 
     iget-object v2, p1, Lcom/vk/dto/music/MusicTrack;->C:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v2}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -1801,7 +1801,7 @@
     if-lez v3, :cond_2
 
     .line 5
-    sget-object v5, Lcom/vk/music/n/PodcastFormatter;->INSTANCE:Lcom/vk/music/n/PodcastFormatter;
+    sget-object v5, Lcom/vk/music/n/f;->a:Lcom/vk/music/n/f;
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -1809,7 +1809,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v6, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v1, p1, Lcom/vk/dto/music/MusicTrack;->h:I
 
@@ -1819,7 +1819,7 @@
 
     mul-long v7, v7, v1
 
-    invoke-virtual/range {v5 .. v10}, Lcom/vk/music/n/PodcastFormatter;->a(Landroid/content/Context;JJ)Ljava/lang/CharSequence;
+    invoke-virtual/range {v5 .. v10}, Lcom/vk/music/n/f;->a(Landroid/content/Context;JJ)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -1835,7 +1835,7 @@
 
     const-string v2, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -1854,7 +1854,7 @@
 
     int-to-long v1, v1
 
-    invoke-static {v1, v2}, Lcom/vk/music/ui/common/formatting/DurationFormatter;->a(J)Ljava/lang/CharSequence;
+    invoke-static {v1, v2}, Lcom/vk/music/ui/common/formatting/a;->a(J)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -1871,13 +1871,13 @@
 
     int-to-long v1, v1
 
-    invoke-static {v0, v1, v2}, Lcom/vk/music/ui/common/formatting/DurationFormatter;->b(Landroid/content/Context;J)Ljava/lang/CharSequence;
+    invoke-static {v0, v1, v2}, Lcom/vk/music/ui/common/formatting/a;->b(Landroid/content/Context;J)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     const-string v1, "DurationFormatter.format\u2026 track.duration.toLong())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     iget-object v1, p0, Lcom/vk/music/ui/track/views/PodcastPartView;->f:Landroid/widget/TextView;
@@ -1921,11 +1921,11 @@
 
     const v5, 0x7f040254
 
-    invoke-static {v3, v5}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
+    invoke-static {v3, v5}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v3}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_2
 
@@ -1933,7 +1933,7 @@
     :cond_4
     iget-object v0, p0, Lcom/vk/music/ui/track/views/PodcastPartView;->f:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     .line 15
     :goto_2

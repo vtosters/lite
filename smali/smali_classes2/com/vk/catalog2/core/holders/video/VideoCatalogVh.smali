@@ -3,39 +3,39 @@
 .source "VideoCatalogVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
-.implements Lcom/vk/catalog2/core/holders/common/CatalogVh;
-.implements Lcom/vk/catalog2/core/holders/common/OnConfigurationChangeListener;
-.implements Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVh$a;
-.implements Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+.implements Lcom/vk/catalog2/core/holders/common/n;
+.implements Lcom/vk/catalog2/core/holders/common/m;
+.implements Lcom/vk/catalog2/core/holders/common/s;
+.implements Lcom/vk/catalog2/core/holders/containers/k$a;
+.implements Lcom/vk/catalog2/core/holders/common/k;
 
 
 # instance fields
-.field private final B:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+.field private final B:Lcom/vk/catalog2/core/holders/common/k;
 
 .field private final C:Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;
 
-.field private final D:Lcom/vk/catalog2/core/y/d/SearchParamsViewHolder;
+.field private final D:Lcom/vk/catalog2/core/y/d/a;
 
-.field private final a:Lcom/vk/catalog2/video/VideoCatalogSearchRequestFactory;
+.field private final a:Lcom/vk/catalog2/video/b;
 
-.field private final b:Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
+.field private final b:Lcom/vk/catalog2/core/presenters/b;
 
 .field private final c:Lcom/vk/catalog2/core/holders/common/ErrorStateVh;
 
-.field private final d:Lcom/vk/catalog2/core/holders/common/ProgressVh;
+.field private final d:Lcom/vk/catalog2/core/holders/common/v;
 
 .field private final e:Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;
 
-.field private final f:Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;
+.field private final f:Lcom/vk/catalog2/core/holders/containers/m;
 
-.field private final g:Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+.field private final g:Lcom/vk/catalog2/core/y/d/b;
 
-.field private final h:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+.field private final h:Lcom/vk/catalog2/core/holders/headers/a;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;)V
+.method public constructor <init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;)V
     .locals 22
 
     move-object/from16 v7, p0
@@ -46,20 +46,20 @@
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v1, Lcom/vk/catalog2/video/VideoCatalogSearchRequestFactory;
+    new-instance v1, Lcom/vk/catalog2/video/b;
 
-    invoke-interface/range {p2 .. p2}, Lcom/vk/catalog2/core/CatalogConfiguration;->j()Lcom/vk/catalog2/core/CatalogParser;
+    invoke-interface/range {p2 .. p2}, Lcom/vk/catalog2/core/a;->j()Lcom/vk/catalog2/core/h;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/vk/catalog2/video/VideoCatalogSearchRequestFactory;-><init>(Lcom/vk/catalog2/core/CatalogParser;)V
+    invoke-direct {v1, v2}, Lcom/vk/catalog2/video/b;-><init>(Lcom/vk/catalog2/core/h;)V
 
-    iput-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->a:Lcom/vk/catalog2/video/VideoCatalogSearchRequestFactory;
+    iput-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->a:Lcom/vk/catalog2/video/b;
 
     .line 3
-    new-instance v1, Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
+    new-instance v1, Lcom/vk/catalog2/core/presenters/b;
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/catalog2/core/CatalogEntryPointParams;->e()Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/catalog2/core/e;->e()Lcom/vk/catalog2/core/w/a;
 
     move-result-object v10
 
@@ -75,9 +75,9 @@
 
     move-object/from16 v9, p2
 
-    invoke-direct/range {v8 .. v14}, Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/w/CatalogCommandsBus;Lcom/vk/catalog2/core/api/dto/CatalogResponse;Lcom/vk/catalog2/core/cache/CatalogCache;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v8 .. v14}, Lcom/vk/catalog2/core/presenters/b;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/w/a;Lcom/vk/catalog2/core/api/dto/d;Lcom/vk/catalog2/core/cache/a;ILkotlin/jvm/internal/i;)V
 
-    iput-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->b:Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
+    iput-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->b:Lcom/vk/catalog2/core/presenters/b;
 
     .line 4
     new-instance v1, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;
@@ -86,12 +86,12 @@
 
     invoke-direct {v2, v7}, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh$catalogErrorVh$1;-><init>(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)V
 
-    invoke-direct {v1, v7, v2}, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;-><init>(Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, v7, v2}, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;-><init>(Lcom/vk/catalog2/core/holders/common/k;Lkotlin/jvm/b/a;)V
 
     iput-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->c:Lcom/vk/catalog2/core/holders/common/ErrorStateVh;
 
     .line 5
-    new-instance v1, Lcom/vk/catalog2/core/holders/common/ProgressVh;
+    new-instance v1, Lcom/vk/catalog2/core/holders/common/v;
 
     const/4 v8, 0x1
 
@@ -99,9 +99,9 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v9, v8, v2}, Lcom/vk/catalog2/core/holders/common/ProgressVh;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v1, v9, v8, v2}, Lcom/vk/catalog2/core/holders/common/v;-><init>(IILkotlin/jvm/internal/i;)V
 
-    iput-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->d:Lcom/vk/catalog2/core/holders/common/ProgressVh;
+    iput-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->d:Lcom/vk/catalog2/core/holders/common/v;
 
     .line 6
     new-instance v1, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;
@@ -118,12 +118,12 @@
 
     move-object/from16 v12, p3
 
-    invoke-direct/range {v10 .. v15}, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v10 .. v15}, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;IILkotlin/jvm/internal/i;)V
 
     iput-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->e:Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;
 
     .line 7
-    new-instance v1, Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;
+    new-instance v1, Lcom/vk/catalog2/core/holders/containers/m;
 
     iget-object v2, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->e:Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;
 
@@ -139,29 +139,29 @@
 
     move-object/from16 v17, v2
 
-    invoke-direct/range {v16 .. v21}, Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;-><init>(Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;IZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v16 .. v21}, Lcom/vk/catalog2/core/holders/containers/m;-><init>(Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;IZILkotlin/jvm/internal/i;)V
 
-    iput-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->f:Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;
+    iput-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->f:Lcom/vk/catalog2/core/holders/containers/m;
 
     .line 8
-    iget-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->a:Lcom/vk/catalog2/video/VideoCatalogSearchRequestFactory;
+    iget-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->a:Lcom/vk/catalog2/video/b;
 
     move-object/from16 v2, p2
 
     move-object/from16 v3, p3
 
-    invoke-direct {v7, v2, v1, v3}, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->a(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/api/SearchRequestFactory;Lcom/vk/catalog2/core/CatalogEntryPointParams;)Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+    invoke-direct {v7, v2, v1, v3}, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->a(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/api/g;Lcom/vk/catalog2/core/e;)Lcom/vk/catalog2/core/y/d/b;
 
     move-result-object v1
 
-    iput-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->g:Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+    iput-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->g:Lcom/vk/catalog2/core/y/d/b;
 
     .line 9
-    new-instance v1, Lcom/vk/catalog2/core/holders/headers/MilkshakeSearchQueryVh;
+    new-instance v1, Lcom/vk/catalog2/core/holders/headers/b;
 
     new-instance v2, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;
 
-    sget v11, Lcom/vk/catalog2/core/R9;->video_search_hint:I
+    sget v11, Lcom/vk/catalog2/core/u;->video_search_hint:I
 
     .line 10
     new-instance v3, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh$searchQueryVh$1;
@@ -193,51 +193,51 @@
     move-object/from16 v16, v3
 
     .line 15
-    invoke-direct/range {v10 .. v16}, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;-><init>(ILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct/range {v10 .. v16}, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;-><init>(ILkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
 
-    invoke-direct {v1, v2}, Lcom/vk/catalog2/core/holders/headers/MilkshakeSearchQueryVh;-><init>(Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;)V
+    invoke-direct {v1, v2}, Lcom/vk/catalog2/core/holders/headers/b;-><init>(Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;)V
 
-    iput-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iput-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/a;
 
     .line 16
-    new-instance v10, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVh;
+    new-instance v10, Lcom/vk/catalog2/core/holders/containers/k;
 
     .line 17
     iget-object v1, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->e:Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;
 
     .line 18
-    iget-object v2, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->g:Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+    iget-object v2, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->g:Lcom/vk/catalog2/core/y/d/b;
 
     .line 19
     iget-object v3, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->c:Lcom/vk/catalog2/core/holders/common/ErrorStateVh;
 
     .line 20
-    iget-object v4, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->d:Lcom/vk/catalog2/core/holders/common/ProgressVh;
+    iget-object v4, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->d:Lcom/vk/catalog2/core/holders/common/v;
 
     .line 21
-    sget v6, Lcom/vk/catalog2/core/R7;->catalog_root_vh_layout_no_behaviour:I
+    sget v6, Lcom/vk/catalog2/core/r;->catalog_root_vh_layout_no_behaviour:I
 
     move-object v0, v10
 
     move-object/from16 v5, p0
 
     .line 22
-    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVh;-><init>(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/holders/common/ErrorStateVh;Lcom/vk/catalog2/core/holders/common/ProgressVh;Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVh$a;I)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/holders/containers/k;-><init>(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/holders/common/ErrorStateVh;Lcom/vk/catalog2/core/holders/common/v;Lcom/vk/catalog2/core/holders/containers/k$a;I)V
 
-    iput-object v10, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iput-object v10, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/k;
 
     .line 23
     new-instance v0, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
+    new-array v1, v1, [Lcom/vk/catalog2/core/holders/common/n;
 
-    iget-object v2, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iget-object v2, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/a;
 
     aput-object v2, v1, v9
 
-    iget-object v2, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->f:Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;
+    iget-object v2, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->f:Lcom/vk/catalog2/core/holders/containers/m;
 
     aput-object v2, v1, v8
 
@@ -245,9 +245,9 @@
 
     move-result-object v1
 
-    iget-object v2, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object v2, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/k;
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;-><init>(Ljava/util/List;Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;-><init>(Ljava/util/List;Lcom/vk/catalog2/core/holders/common/n;)V
 
     iput-object v0, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->C:Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;
 
@@ -268,54 +268,54 @@
     invoke-direct {v3, v7}, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh$searchParamsVh$2;-><init>(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)V
 
     .line 28
-    iget-object v4, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->a:Lcom/vk/catalog2/video/VideoCatalogSearchRequestFactory;
+    iget-object v4, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->a:Lcom/vk/catalog2/video/b;
 
-    invoke-virtual {v4}, Lcom/vk/catalog2/video/VideoCatalogSearchRequestFactory;->d()Lcom/vk/catalog2/video/VideoSearchFilter;
+    invoke-virtual {v4}, Lcom/vk/catalog2/video/b;->d()Lcom/vk/catalog2/video/VideoSearchFilter;
 
     move-result-object v4
 
     .line 29
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/catalog2/core/holders/video/VideoSearchParamsVh;-><init>(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lcom/vk/catalog2/video/VideoSearchFilter;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/catalog2/core/holders/video/VideoSearchParamsVh;-><init>(Lcom/vk/catalog2/core/holders/common/n;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lcom/vk/catalog2/video/VideoSearchFilter;)V
 
-    iput-object v0, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->D:Lcom/vk/catalog2/core/y/d/SearchParamsViewHolder;
+    iput-object v0, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->D:Lcom/vk/catalog2/core/y/d/a;
 
     .line 30
-    iget-object v0, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->D:Lcom/vk/catalog2/core/y/d/SearchParamsViewHolder;
+    iget-object v0, v7, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->D:Lcom/vk/catalog2/core/y/d/a;
 
     new-instance v1, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh$1;
 
     invoke-direct {v1, v7}, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh$1;-><init>(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)V
 
-    invoke-interface {v0, v1}, Lcom/vk/catalog2/core/y/d/SearchParamsViewHolder;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-interface {v0, v1}, Lcom/vk/catalog2/core/y/d/a;->a(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
+.method public static final synthetic a(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)Lcom/vk/catalog2/core/presenters/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->b:Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->b:Lcom/vk/catalog2/core/presenters/b;
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/api/SearchRequestFactory;Lcom/vk/catalog2/core/CatalogEntryPointParams;)Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+.method private final a(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/api/g;Lcom/vk/catalog2/core/e;)Lcom/vk/catalog2/core/y/d/b;
     .locals 15
 
     .line 17
-    new-instance v4, Lcom/vk/catalog2/core/presenters/CatalogReorderingPresenter;
+    new-instance v4, Lcom/vk/catalog2/core/presenters/e;
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/catalog2/core/CatalogEntryPointParams;->e()Lcom/vk/catalog2/core/w/CatalogCommandsBus;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/catalog2/core/e;->e()Lcom/vk/catalog2/core/w/a;
 
     move-result-object v0
 
-    invoke-direct {v4, v0}, Lcom/vk/catalog2/core/presenters/CatalogReorderingPresenter;-><init>(Lcom/vk/catalog2/core/w/CatalogCommandsBus;)V
+    invoke-direct {v4, v0}, Lcom/vk/catalog2/core/presenters/e;-><init>(Lcom/vk/catalog2/core/w/a;)V
 
     .line 18
     new-instance v14, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-interface/range {p1 .. p1}, Lcom/vk/catalog2/core/CatalogConfiguration;->d()Lcom/vk/catalog2/core/CatalogResponseTransformer;
+    invoke-interface/range {p1 .. p1}, Lcom/vk/catalog2/core/a;->d()Lcom/vk/catalog2/core/i;
 
     move-result-object v2
 
@@ -329,10 +329,10 @@
 
     move-object/from16 v3, p3
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;-><init>(Lcom/vk/catalog2/core/api/CatalogRequestFactory;Lcom/vk/catalog2/core/CatalogResponseTransformer;Lcom/vk/catalog2/core/CatalogEntryPointParams;Lcom/vk/catalog2/core/presenters/CatalogReorderingPresenter;ZLcom/vk/catalog2/core/blocks/UIBlockList;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;-><init>(Lcom/vk/catalog2/core/api/f;Lcom/vk/catalog2/core/i;Lcom/vk/catalog2/core/e;Lcom/vk/catalog2/core/presenters/e;ZLcom/vk/catalog2/core/blocks/UIBlockList;)V
 
     .line 19
-    invoke-static {v14}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$p;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-static {v14}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$p;)Lcom/vk/lists/t$k;
 
     move-result-object v7
 
@@ -341,9 +341,9 @@
 
     const-string v1, "paginationHelperBuilder"
 
-    invoke-static {v7, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v11, Lcom/vk/catalog2/core/R7;->catalog_list_vertical_with_appbar_behaviour:I
+    sget v11, Lcom/vk/catalog2/core/r;->catalog_list_vertical_with_appbar_behaviour:I
 
     const/4 v10, 0x0
 
@@ -359,10 +359,10 @@
 
     move-object/from16 v9, p3
 
-    invoke-direct/range {v5 .. v13}, Lcom/vk/catalog2/core/holders/containers/VerticalListVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/lists/PaginationHelper$k;Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;Lcom/vk/catalog2/core/CatalogEntryPointParams;ZIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v5 .. v13}, Lcom/vk/catalog2/core/holders/containers/VerticalListVh;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/lists/t$k;Lcom/vk/catalog2/core/presenters/c;Lcom/vk/catalog2/core/e;ZIILkotlin/jvm/internal/i;)V
 
     .line 21
-    new-instance v1, Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+    new-instance v1, Lcom/vk/catalog2/core/y/d/b;
 
     const/4 v9, 0x0
 
@@ -384,7 +384,7 @@
 
     move-object v14, v2
 
-    invoke-direct/range {v5 .. v14}, Lcom/vk/catalog2/core/y/d/SearchResultsVh;-><init>(Lcom/vk/catalog2/core/api/SearchRequestFactory;Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;Lcom/vk/catalog2/core/holders/containers/VerticalListVh;ZZLcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v5 .. v14}, Lcom/vk/catalog2/core/y/d/b;-><init>(Lcom/vk/catalog2/core/api/g;Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;Lcom/vk/catalog2/core/holders/containers/VerticalListVh;ZZLcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;ZILkotlin/jvm/internal/i;)V
 
     return-object v1
 .end method
@@ -398,11 +398,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)Lcom/vk/catalog2/core/y/d/SearchParamsViewHolder;
+.method public static final synthetic b(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)Lcom/vk/catalog2/core/y/d/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->D:Lcom/vk/catalog2/core/y/d/SearchParamsViewHolder;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->D:Lcom/vk/catalog2/core/y/d/a;
 
     return-object p0
 .end method
@@ -423,7 +423,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 14
-    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     invoke-static {p1}, Landroidx/localbroadcastmanager/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroidx/localbroadcastmanager/content/LocalBroadcastManager;
 
@@ -434,29 +434,29 @@
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+.method public static final synthetic c(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)Lcom/vk/catalog2/core/holders/headers/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/a;
 
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+.method public static final synthetic d(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)Lcom/vk/catalog2/core/y/d/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->g:Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->g:Lcom/vk/catalog2/core/y/d/b;
 
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+.method public static final synthetic e(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)Lcom/vk/catalog2/core/holders/common/k;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/k;
 
     return-object p0
 .end method
@@ -467,9 +467,9 @@
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->D:Lcom/vk/catalog2/core/y/d/SearchParamsViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->D:Lcom/vk/catalog2/core/y/d/a;
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-interface {v0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/n;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object p1
 
@@ -488,15 +488,15 @@
     if-eqz p2, :cond_0
 
     .line 8
-    iget-object p2, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iget-object p2, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/a;
 
-    invoke-interface {p2}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->g()V
+    invoke-interface {p2}, Lcom/vk/catalog2/core/holders/headers/a;->g()V
 
     .line 9
     :cond_0
-    sget-object p2, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState4;->INSTANCE:Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState4;
+    sget-object p2, Lcom/vk/catalog2/core/holders/containers/f;->a:Lcom/vk/catalog2/core/holders/containers/f;
 
-    invoke-virtual {p0, p2}, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
+    invoke-virtual {p0, p2}, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
 
     return-object p1
 .end method
@@ -516,20 +516,20 @@
     .locals 0
 
     .line 15
-    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/VoiceUtils;->a(IILandroid/content/Intent;)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/i;->a(IILandroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 16
-    iget-object p2, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iget-object p2, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/a;
 
     const-string p3, "it"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, p1}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->a(Ljava/lang/String;)V
+    invoke-interface {p2, p1}, Lcom/vk/catalog2/core/holders/headers/a;->a(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -550,7 +550,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
 
     return-void
 .end method
@@ -559,22 +559,22 @@
     .locals 0
 
     .line 4
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
+.method public a(Lcom/vk/catalog2/core/holders/containers/l;)V
     .locals 1
 
     .line 13
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/k;
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;->getState()Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/k;->getState()Lcom/vk/catalog2/core/holders/containers/l;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -584,9 +584,9 @@
 
     .line 14
     :cond_0
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/k;
 
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/k;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
 
     return-void
 .end method
@@ -595,27 +595,27 @@
     .locals 1
 
     .line 12
-    new-instance v0, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState3;
+    new-instance v0, Lcom/vk/catalog2/core/holders/containers/d;
 
-    invoke-direct {v0, p1}, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState3;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v0, p1}, Lcom/vk/catalog2/core/holders/containers/d;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
+    invoke-virtual {p0, v0}, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
 
     return-void
 .end method
 
-.method public b(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
+.method public b(Lcom/vk/catalog2/core/holders/containers/l;)V
     .locals 4
 
     .line 2
-    instance-of v0, p1, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState2;
+    instance-of v0, p1, Lcom/vk/catalog2/core/holders/containers/i;
 
     if-nez v0, :cond_0
 
     .line 3
-    iget-object v1, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iget-object v1, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/a;
 
-    invoke-interface {v1}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->h()Lcom/vk/core/view/search/ModernSearchView;
+    invoke-interface {v1}, Lcom/vk/catalog2/core/holders/headers/a;->h()Lcom/vk/core/view/search/ModernSearchView;
 
     move-result-object v1
 
@@ -631,29 +631,29 @@
 
     .line 6
     :cond_0
-    iget-object v1, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iget-object v1, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/a;
 
     .line 7
-    instance-of v2, p1, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState3;
+    instance-of v2, p1, Lcom/vk/catalog2/core/holders/containers/d;
 
     if-eqz v2, :cond_1
 
-    invoke-interface {v1}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->f()V
+    invoke-interface {v1}, Lcom/vk/catalog2/core/holders/headers/a;->f()V
 
     goto :goto_0
 
     :cond_1
-    invoke-interface {v1}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->show()V
+    invoke-interface {v1}, Lcom/vk/catalog2/core/holders/headers/a;->show()V
 
     .line 8
     :goto_0
-    invoke-interface {v1}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->h()Lcom/vk/core/view/search/ModernSearchView;
+    invoke-interface {v1}, Lcom/vk/catalog2/core/holders/headers/a;->h()Lcom/vk/core/view/search/ModernSearchView;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    instance-of v2, p1, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState4;
+    instance-of v2, p1, Lcom/vk/catalog2/core/holders/containers/f;
 
     xor-int/lit8 v2, v2, 0x1
 
@@ -661,24 +661,24 @@
 
     .line 9
     :cond_2
-    iget-object v1, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->f:Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;
+    iget-object v1, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->f:Lcom/vk/catalog2/core/holders/containers/m;
 
-    instance-of p1, p1, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState;
+    instance-of p1, p1, Lcom/vk/catalog2/core/holders/containers/b;
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {v1}, Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;->show()Lkotlin/Unit;
+    invoke-virtual {v1}, Lcom/vk/catalog2/core/holders/containers/m;->show()Lkotlin/m;
 
     goto :goto_1
 
     :cond_3
-    invoke-virtual {v1}, Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;->f()Lkotlin/Unit;
+    invoke-virtual {v1}, Lcom/vk/catalog2/core/holders/containers/m;->f()Lkotlin/m;
 
     .line 10
     :goto_1
-    iget-object p1, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->D:Lcom/vk/catalog2/core/y/d/SearchParamsViewHolder;
+    iget-object p1, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->D:Lcom/vk/catalog2/core/y/d/a;
 
-    invoke-interface {p1, v0}, Lcom/vk/catalog2/core/y/d/SearchParamsViewHolder;->a(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/catalog2/core/y/d/a;->a(Z)V
 
     return-void
 .end method
@@ -687,20 +687,20 @@
     .locals 1
 
     .line 11
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/k;
 
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogSwitchToSectionListener;->b(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/l;->b(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public getState()Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;
+.method public getState()Lcom/vk/catalog2/core/holders/containers/l;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/k;
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;->getState()Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/k;->getState()Lcom/vk/catalog2/core/holders/containers/l;
 
     move-result-object v0
 
@@ -711,27 +711,27 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->B:Lcom/vk/catalog2/core/holders/common/k;
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;->getState()Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/k;->getState()Lcom/vk/catalog2/core/holders/containers/l;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState2;
+    instance-of v0, v0, Lcom/vk/catalog2/core/holders/containers/i;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState;->INSTANCE:Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState;
+    sget-object v0, Lcom/vk/catalog2/core/holders/containers/b;->a:Lcom/vk/catalog2/core/holders/containers/b;
 
-    invoke-virtual {p0, v0}, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
+    invoke-virtual {p0, v0}, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->h:Lcom/vk/catalog2/core/holders/headers/a;
 
-    invoke-interface {v0, v1, v1}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->a(ZZ)V
+    invoke-interface {v0, v1, v1}, Lcom/vk/catalog2/core/holders/headers/a;->a(ZZ)V
 
     const/4 v0, 0x1
 

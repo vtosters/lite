@@ -3,7 +3,7 @@
 .source "InstantJobManagerImpl.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/instantjobs/impl/InstantJobController;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/instantjobs/impl/a;",
         ">;"
     }
 .end annotation
@@ -49,7 +49,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/instantjobs/impl/InstantJobController;
+.method public final invoke()Lcom/vk/instantjobs/impl/a;
     .locals 2
 
     .line 2
@@ -64,7 +64,7 @@
 
     iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$restoreControllerIfStarted$1;->$cause:Ljava/lang/Throwable;
 
-    invoke-static {v0, v1}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Ljava/lang/Throwable;)Lcom/vk/instantjobs/impl/InstantJobController;
+    invoke-static {v0, v1}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Ljava/lang/Throwable;)Lcom/vk/instantjobs/impl/a;
 
     move-result-object v0
 
@@ -75,7 +75,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$restoreControllerIfStarted$1;->invoke()Lcom/vk/instantjobs/impl/InstantJobController;
+    invoke-virtual {p0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$restoreControllerIfStarted$1;->invoke()Lcom/vk/instantjobs/impl/a;
 
     move-result-object v0
 

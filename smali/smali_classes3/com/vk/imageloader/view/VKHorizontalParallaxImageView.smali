@@ -3,7 +3,7 @@
 .source "VKHorizontalParallaxImageView.java"
 
 # interfaces
-.implements Lcom/facebook/drawee/drawable/ScalingUtils$b;
+.implements Lcom/facebook/drawee/drawable/r$b;
 
 
 # instance fields
@@ -98,11 +98,11 @@
     return-object p1
 .end method
 
-.method protected a(Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;)V
+.method protected a(Lcom/facebook/drawee/generic/b;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p1, p0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
+    invoke-virtual {p1, p0}, Lcom/facebook/drawee/generic/b;->a(Lcom/facebook/drawee/drawable/r$b;)Lcom/facebook/drawee/generic/b;
 
     return-void
 .end method
@@ -184,13 +184,13 @@
     rem-int/2addr v2, v1
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
 
     move-result-object v3
 
-    check-cast v3, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    check-cast v3, Lcom/facebook/drawee/generic/a;
 
-    invoke-virtual {v3}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v3}, Lcom/facebook/drawee/generic/a;->a()Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 

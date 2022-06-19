@@ -3,7 +3,7 @@
 .source "OkHttpRequestExecutor.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lokhttp3/OkHttpClient;",
+        "Lkotlin/jvm/b/a<",
+        "Lokhttp3/x;",
         ">;"
     }
 .end annotation
@@ -49,20 +49,20 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor$okHttpClient$2;->invoke()Lokhttp3/OkHttpClient;
+    invoke-virtual {p0}, Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor$okHttpClient$2;->invoke()Lokhttp3/x;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final invoke()Lokhttp3/OkHttpClient;
+.method public final invoke()Lokhttp3/x;
     .locals 1
 
     .line 2
     iget-object v0, p0, Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor$okHttpClient$2;->this$0:Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;
 
-    invoke-static {v0}, Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;->b(Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;)Lokhttp3/OkHttpClient;
+    invoke-static {v0}, Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;->b(Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;)Lokhttp3/x;
 
     move-result-object v0
 

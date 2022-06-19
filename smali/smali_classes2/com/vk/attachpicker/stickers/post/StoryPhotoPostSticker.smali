@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static final synthetic K:[Lkotlin/u/KProperty5;
+.field static final synthetic K:[Lkotlin/u/j;
 
 .field private static final L:F
 
@@ -22,7 +22,7 @@
 # instance fields
 .field private final H:Lcom/vk/imageloader/view/VKImageView;
 
-.field private final I:Lkotlin/Lazy2;
+.field private final I:Lkotlin/e;
 
 .field private final J:F
 
@@ -33,13 +33,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -47,21 +47,21 @@
 
     const-string v4, "getPredictedHeight()F"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;->K:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;->K:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     invoke-static {}, Lcom/vk/core/util/Screen;->e()I
@@ -98,13 +98,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/stories/clickable/models/j/a;)V
     .locals 3
 
     const v0, 0x7f0d0519
 
     .line 1
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;-><init>(Landroid/content/Context;Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;-><init>(Landroid/content/Context;Lcom/vk/stories/clickable/models/j/a;I)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->getRoot()Landroid/view/View;
@@ -119,7 +119,7 @@
 
     const-string v1, "root.findViewById(R.id.image)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/imageloader/view/VKImageView;
 
@@ -130,11 +130,11 @@
 
     invoke-direct {v0, p0}, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker$predictedHeight$2;-><init>(Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;->I:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;->I:Lkotlin/e;
 
     .line 4
     sget v0, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;->M:F
@@ -178,7 +178,7 @@
 
     invoke-direct {v1, p1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;->H:Lcom/vk/imageloader/view/VKImageView;
@@ -187,10 +187,10 @@
 
     float-to-int v0, v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->setMaxHeight(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/a;->setMaxHeight(I)V
 
     .line 7
-    invoke-virtual {p0, p2}, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;->a(Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;)V
+    invoke-virtual {p0, p2}, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;->a(Lcom/vk/stories/clickable/models/j/a;)V
 
     return-void
 .end method
@@ -210,11 +210,11 @@
     .locals 5
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->getStickerInfo()Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->getStickerInfo()Lcom/vk/stories/clickable/models/j/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;->g()Lcom/vk/dto/common/Image;
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/j/a;->g()Lcom/vk/dto/common/Image;
 
     move-result-object v0
 
@@ -245,7 +245,7 @@
 
     const-string v3, "size.url"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
 
@@ -313,15 +313,15 @@
 .method private final getPredictedHeight()F
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;->I:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;->I:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;->K:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;->K:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -402,11 +402,11 @@
     add-float/2addr v0, v1
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->getStickerInfo()Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->getStickerInfo()Lcom/vk/stories/clickable/models/j/a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;->j()Ljava/lang/CharSequence;
+    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/j/a;->j()Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -460,41 +460,41 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->getStickerInfo()Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->getStickerInfo()Lcom/vk/stories/clickable/models/j/a;
 
     move-result-object v1
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;-><init>(Landroid/content/Context;Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;-><init>(Landroid/content/Context;Lcom/vk/stories/clickable/models/j/a;)V
 
-    invoke-super {p0, p1}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->a(Lcom/vk/attachpicker/stickers/ISticker;)Lcom/vk/attachpicker/stickers/ISticker;
+    invoke-super {p0, p1}, Lcom/vk/attachpicker/stickers/t0;->a(Lcom/vk/attachpicker/stickers/ISticker;)Lcom/vk/attachpicker/stickers/ISticker;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected a(Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;)V
+.method protected a(Lcom/vk/stories/clickable/models/j/a;)V
     .locals 6
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->a(Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;)V
+    invoke-super {p0, p1}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->a(Lcom/vk/stories/clickable/models/j/a;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;->H:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {v0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
+    invoke-virtual {v0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    check-cast v0, Lcom/facebook/drawee/generic/a;
 
     const-string v1, "image.hierarchy"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;->j()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/a;->j()Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -552,17 +552,17 @@
 
     .line 5
     :goto_2
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;->g()Lcom/vk/dto/common/Image;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/a;->g()Lcom/vk/dto/common/Image;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/StoryPostStickerInfo;->g()Lcom/vk/dto/common/Image;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/j/a;->g()Lcom/vk/dto/common/Image;
 
     move-result-object p1
 
@@ -583,7 +583,7 @@
 
     const-string v1, "size.url"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
@@ -603,7 +603,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setAspectRatio(F)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/a;->setAspectRatio(F)V
 
     .line 10
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/post/StoryPhotoPostSticker;->H:Lcom/vk/imageloader/view/VKImageView;
@@ -667,7 +667,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lcom/vk/attachpicker/stickers/t0;->onMeasure(II)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/post/BaseStoryPostSticker;->getRoot()Landroid/view/View;

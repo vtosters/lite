@@ -1,11 +1,11 @@
 .class Lcom/vk/music/attach/AttachMusicActivity$b;
-.super Lcom/vk/core/ui/IdClickListener$c;
+.super Lcom/vk/core/ui/k$c;
 .source "AttachMusicActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/attach/AttachMusicActivity;->b(Ljava/util/List;)Lcom/vk/core/ui/IdClickListener;
+    value = Lcom/vk/music/attach/AttachMusicActivity;->b(Ljava/util/List;)Lcom/vk/core/ui/k;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/ui/IdClickListener$c<",
+        "Lcom/vk/core/ui/k$c<",
         "Lcom/vk/dto/music/MusicTrack;",
         ">;"
     }
@@ -37,7 +37,7 @@
 
     iput-object p2, p0, Lcom/vk/music/attach/AttachMusicActivity$b;->a:Ljava/util/List;
 
-    invoke-direct {p0}, Lcom/vk/core/ui/IdClickListener$c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/ui/k$c;-><init>()V
 
     return-void
 .end method
@@ -52,13 +52,13 @@
     .line 2
     iget-object p1, p0, Lcom/vk/music/attach/AttachMusicActivity$b;->b:Lcom/vk/music/attach/AttachMusicActivity;
 
-    iget-object p1, p1, Lcom/vk/music/attach/AttachMusicActivity;->X:Lcom/vk/music/player/PlayerModel;
+    iget-object p1, p1, Lcom/vk/music/attach/AttachMusicActivity;->X:Lcom/vk/music/player/d;
 
     iget-object v0, p0, Lcom/vk/music/attach/AttachMusicActivity$b;->a:Ljava/util/List;
 
     sget-object v1, Lcom/vk/music/common/MusicPlaybackLaunchContext;->C:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
-    invoke-interface {p1, p2, v0, v1}, Lcom/vk/music/player/PlayerModel;->b(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
+    invoke-interface {p1, p2, v0, v1}, Lcom/vk/music/player/d;->b(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     :cond_0
     return-void

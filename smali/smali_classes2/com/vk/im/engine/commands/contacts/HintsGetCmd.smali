@@ -1,15 +1,15 @@
 .class public final Lcom/vk/im/engine/commands/contacts/HintsGetCmd;
-.super Lcom/vk/im/engine/i/BaseImEngineCmd;
+.super Lcom/vk/im/engine/i/a;
 .source "HintsGetCmd.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
+        "Lcom/vk/im/engine/i/a<",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/im/engine/models/Profile;",
+        "Lcom/vk/im/engine/models/j;",
         ">;>;"
     }
 .end annotation
@@ -28,7 +28,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->b:I
 
@@ -39,7 +39,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILcom/vk/im/engine/models/Source;Ljava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(ILcom/vk/im/engine/models/Source;Ljava/lang/Object;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x4
@@ -55,12 +55,12 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/Map;I)Ljava/util/List;
+.method private final a(Lcom/vk/im/engine/d;Ljava/util/Map;I)Ljava/util/List;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             "Ljava/util/Map<",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
@@ -72,13 +72,13 @@
     .end annotation
 
     .line 6
-    new-instance v0, Lcom/vk/im/engine/i/i/UsersGetByIdCmd;
+    new-instance v0, Lcom/vk/im/engine/i/i/c;
 
     invoke-interface {p2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/IntCollection;
+    invoke-static {v1}, Lcom/vk/im/engine/utils/collection/e;->a(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/d;
 
     move-result-object v1
 
@@ -88,35 +88,35 @@
 
     const/4 v4, 0x1
 
-    invoke-direct {v0, v1, v2, v4, v3}, Lcom/vk/im/engine/i/i/UsersGetByIdCmd;-><init>(Lcom/vk/im/engine/utils/collection/IntCollection;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
+    invoke-direct {v0, v1, v2, v4, v3}, Lcom/vk/im/engine/i/i/c;-><init>(Lcom/vk/im/engine/utils/collection/d;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
 
     .line 7
-    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
+    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/models/EntityIntMap;
+    check-cast p1, Lcom/vk/im/engine/models/a;
 
-    iget-object p1, p1, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
+    iget-object p1, p1, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
 
     const-string v0, "env.submitCommandDirect(\u2026)\n                .cached"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
-    invoke-static {p1}, Lcom/vk/core/extensions/SparseArrayExt1;->e(Landroid/util/SparseArray;)Ljava/util/Collection;
+    invoke-static {p1}, Lcom/vk/core/extensions/x;->e(Landroid/util/SparseArray;)Ljava/util/Collection;
 
     move-result-object p1
 
     .line 9
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object p1
 
     .line 10
     sget-object v0, Lcom/vk/im/engine/commands/contacts/HintsGetCmd$loadUsers$1;->a:Lcom/vk/im/engine/commands/contacts/HintsGetCmd$loadUsers$1;
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p1
 
@@ -125,38 +125,38 @@
 
     invoke-direct {v0, p2}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd$a;-><init>(Ljava/util/Map;)V
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Ljava/util/Comparator;)Lkotlin/sequences/Sequence;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Ljava/util/Comparator;)Lkotlin/sequences/j;
 
     move-result-object p1
 
     .line 12
-    invoke-static {p1, p3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;I)Lkotlin/sequences/Sequence;
+    invoke-static {p1, p3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;I)Lkotlin/sequences/j;
 
     move-result-object p1
 
     .line 13
-    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
+    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final b(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
+.method private final b(Lcom/vk/im/engine/d;)Ljava/util/List;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/Profile;",
+            "Lcom/vk/im/engine/models/j;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -169,13 +169,13 @@
     move-result-wide v0
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->r0()J
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->r0()J
 
     move-result-wide v2
 
     sub-long/2addr v2, v0
 
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->c0()Lcom/vk/im/engine/ImConfig;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->c0()Lcom/vk/im/engine/ImConfig;
 
     move-result-object v0
 
@@ -198,7 +198,7 @@
     if-eqz v0, :cond_1
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->d(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->d(Lcom/vk/im/engine/d;)Ljava/util/List;
 
     move-result-object p1
 
@@ -206,7 +206,7 @@
 
     .line 4
     :cond_1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->c(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->c(Lcom/vk/im/engine/d;)Ljava/util/List;
 
     move-result-object p1
 
@@ -214,21 +214,21 @@
     return-object p1
 .end method
 
-.method private final c(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
+.method private final c(Lcom/vk/im/engine/d;)Ljava/util/List;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/Profile;",
+            "Lcom/vk/im/engine/models/j;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -264,41 +264,41 @@
     :cond_0
     iget v1, p0, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->b:I
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/Map;I)Ljava/util/List;
+    invoke-direct {p0, p1, v0, v1}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->a(Lcom/vk/im/engine/d;Ljava/util/Map;I)Ljava/util/List;
 
     move-result-object v0
 
     .line 5
-    new-instance v1, Lcom/vk/im/engine/events/OnHintsUpdateEvent;
+    new-instance v1, Lcom/vk/im/engine/events/w;
 
     iget-object v2, p0, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->d:Ljava/lang/Object;
 
-    invoke-direct {v1, v0, v2}, Lcom/vk/im/engine/events/OnHintsUpdateEvent;-><init>(Ljava/util/List;Ljava/lang/Object;)V
+    invoke-direct {v1, v0, v2}, Lcom/vk/im/engine/events/w;-><init>(Ljava/util/List;Ljava/lang/Object;)V
 
-    invoke-interface {p1, p0, v1}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/Event;)V
+    invoke-interface {p1, p0, v1}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/a;)V
 
     return-object v0
 .end method
 
-.method private final d(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
+.method private final d(Lcom/vk/im/engine/d;)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/Profile;",
+            "Lcom/vk/im/engine/models/j;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vk/im/engine/commands/messages/MsgSearchLoadHintsCmd;
+    new-instance v0, Lcom/vk/im/engine/commands/messages/x;
 
-    invoke-direct {v0}, Lcom/vk/im/engine/commands/messages/MsgSearchLoadHintsCmd;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/engine/commands/messages/x;-><init>()V
 
-    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
+    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -307,7 +307,7 @@
     const-string v0, "hints"
 
     .line 2
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v0, p0, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->b:I
 
@@ -320,26 +320,26 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->a(Lcom/vk/im/engine/d;)Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
+.method public a(Lcom/vk/im/engine/d;)Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/Profile;",
+            "Lcom/vk/im/engine/models/j;",
             ">;"
         }
     .end annotation
@@ -368,7 +368,7 @@
     if-ne v0, v1, :cond_0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->d(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->d(Lcom/vk/im/engine/d;)Ljava/util/List;
 
     move-result-object p1
 
@@ -383,7 +383,7 @@
 
     .line 4
     :cond_1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->b(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->b(Lcom/vk/im/engine/d;)Ljava/util/List;
 
     move-result-object p1
 
@@ -391,7 +391,7 @@
 
     .line 5
     :cond_2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->c(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->c(Lcom/vk/im/engine/d;)Ljava/util/List;
 
     move-result-object p1
 
@@ -420,7 +420,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->c:Lcom/vk/im/engine/models/Source;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -430,7 +430,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->d:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

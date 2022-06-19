@@ -3,12 +3,12 @@
 .source "SearchDocumentsListFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
+    value = Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a;->a(Lc/a/m;ZLcom/vk/lists/t;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/api/docs/DocsSearch$a;",
+        "Lc/a/z/g<",
+        "Lb/h/c/i/i$a;",
         ">;"
     }
 .end annotation
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a;
 
-.field final synthetic b:Lcom/vk/lists/PaginationHelper;
+.field final synthetic b:Lcom/vk/lists/t;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a;Lcom/vk/lists/PaginationHelper;)V
+.method constructor <init>(Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a;Lcom/vk/lists/t;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a$a;->a:Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a;
 
-    iput-object p2, p0, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
+    iput-object p2, p0, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a$a;->b:Lcom/vk/lists/t;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/docs/DocsSearch$a;)V
+.method public final a(Lb/h/c/i/i$a;)V
     .locals 4
 
     .line 1
@@ -64,9 +64,9 @@
 
     move-result-object v0
 
-    iget-object v1, p1, Lcom/vk/api/docs/DocsSearch$a;->d:Ljava/lang/String;
+    iget-object v1, p1, Lb/h/c/i/i$a;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -86,11 +86,11 @@
 
     iget-object v0, v0, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2;->this$0:Lcom/vk/documents/SearchDocumentsListFragment;
 
-    iget-object v2, p1, Lcom/vk/api/docs/DocsSearch$a;->a:Ljava/util/List;
+    iget-object v2, p1, Lb/h/c/i/i$a;->a:Ljava/util/List;
 
     const-string v3, "it.documents"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, v2}, Lcom/vk/documents/SearchDocumentsListFragment;->a(Lcom/vk/documents/SearchDocumentsListFragment;Ljava/util/List;)V
 
@@ -104,11 +104,11 @@
     invoke-static {v0, v1}, Lcom/vk/documents/SearchDocumentsListFragment;->a(Lcom/vk/documents/SearchDocumentsListFragment;Z)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
+    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a$a;->b:Lcom/vk/lists/t;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->a()I
+    invoke-virtual {v0}, Lcom/vk/lists/t;->a()I
 
     move-result v0
 
@@ -121,19 +121,19 @@
 
     iget-object v0, v0, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2;->this$0:Lcom/vk/documents/SearchDocumentsListFragment;
 
-    iget v1, p1, Lcom/vk/api/docs/DocsSearch$a;->b:I
+    iget v1, p1, Lb/h/c/i/i$a;->b:I
 
     invoke-static {v0, v1}, Lcom/vk/documents/SearchDocumentsListFragment;->a(Lcom/vk/documents/SearchDocumentsListFragment;I)V
 
     .line 6
     :cond_1
-    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
+    iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a$a;->b:Lcom/vk/lists/t;
 
     if-eqz v0, :cond_2
 
-    iget p1, p1, Lcom/vk/api/docs/DocsSearch$a;->e:I
+    iget p1, p1, Lb/h/c/i/i$a;->e:I
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/PaginationHelper;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/t;->a(I)V
 
     :cond_2
     return-void
@@ -143,9 +143,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/docs/DocsSearch$a;
+    check-cast p1, Lb/h/c/i/i$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a$a;->a(Lcom/vk/api/docs/DocsSearch$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a$a;->a(Lb/h/c/i/i$a;)V
 
     return-void
 .end method

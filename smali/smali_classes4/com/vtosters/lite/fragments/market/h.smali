@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # instance fields
@@ -30,9 +30,9 @@
 
     check-cast p1, Ljava/lang/Boolean;
 
-    check-cast p2, Lb/h/h/f/Favable;
+    check-cast p2, Lb/h/h/f/a;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/fragments/market/GoodFragment;->a(Ljava/lang/Boolean;Lb/h/h/f/Favable;)Lkotlin/Unit;
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/fragments/market/GoodFragment;->a(Ljava/lang/Boolean;Lb/h/h/f/a;)Lkotlin/m;
 
     move-result-object p1
 

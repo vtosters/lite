@@ -44,7 +44,7 @@
     new-instance v1, Lcom/vk/im/ui/components/attaches_history/attaches/model/video/VideoAttachMenu;
 
     .line 1
-    sget v2, Lcom/vk/im/ui/R4;->vkim_history_attaches_video_menu_copy_link:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_history_attaches_video_menu_copy_link:I
 
     const/4 v3, 0x0
 
@@ -59,7 +59,7 @@
     new-instance v1, Lcom/vk/im/ui/components/attaches_history/attaches/model/video/VideoAttachMenu;
 
     .line 2
-    sget v2, Lcom/vk/im/ui/R4;->vkim_history_attach_open_msg:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_history_attach_open_msg:I
 
     const/4 v3, 0x1
 
@@ -74,7 +74,7 @@
     new-instance v1, Lcom/vk/im/ui/components/attaches_history/attaches/model/video/VideoAttachMenu;
 
     .line 3
-    sget v2, Lcom/vk/im/ui/R4;->vkim_history_attaches_video_menu_share:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_history_attaches_video_menu_share:I
 
     const/4 v3, 0x2
 
@@ -89,7 +89,7 @@
     new-instance v1, Lcom/vk/im/ui/components/attaches_history/attaches/model/video/VideoAttachMenu;
 
     .line 4
-    sget v2, Lcom/vk/im/ui/R4;->vkim_history_attaches_video_menu_add:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_history_attaches_video_menu_add:I
 
     const/4 v3, 0x3
 
@@ -104,7 +104,7 @@
     new-instance v1, Lcom/vk/im/ui/components/attaches_history/attaches/model/video/VideoAttachMenu;
 
     .line 5
-    sget v2, Lcom/vk/im/ui/R4;->vkim_history_attaches_video_menu_add_to_album:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_history_attaches_video_menu_add_to_album:I
 
     const/4 v3, 0x4
 
@@ -119,7 +119,7 @@
     new-instance v1, Lcom/vk/im/ui/components/attaches_history/attaches/model/video/VideoAttachMenu;
 
     .line 6
-    sget v2, Lcom/vk/im/ui/R4;->vkim_history_attaches_video_menu_delete:I
+    sget v2, Lcom/vk/im/ui/m;->vkim_history_attaches_video_menu_delete:I
 
     const/4 v3, 0x5
 

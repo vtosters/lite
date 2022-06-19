@@ -40,7 +40,7 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment$e;->a:Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;
 
-    invoke-virtual {v0}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->K()V
+    invoke-virtual {v0}, Ld/a/a/a/i;->K()V
 
     return-void
 .end method

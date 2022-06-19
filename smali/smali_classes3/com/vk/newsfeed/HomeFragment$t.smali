@@ -47,7 +47,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/newsfeed/HomeFragment;->a(Lcom/vk/newsfeed/HomeFragment;Lcom/google/android/material/tabs/TabLayout;)Lkotlin/Unit;
+    invoke-static {v0, v1}, Lcom/vk/newsfeed/HomeFragment;->a(Lcom/vk/newsfeed/HomeFragment;Lcom/google/android/material/tabs/TabLayout;)Lkotlin/m;
 
     return-void
 .end method

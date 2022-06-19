@@ -56,11 +56,11 @@
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$n;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/Player;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->B()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->B()V
 
     return-void
 .end method

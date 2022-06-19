@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/api/sdk/internal/ApiCommand;Lcom/vk/api/internal/ApiManager;)Lio/reactivex/Observable;
+    value = Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/api/sdk/internal/a;Lcom/vk/api/internal/ApiManager;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -29,16 +29,16 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/api/sdk/internal/ApiCommand;
+.field final synthetic a:Lcom/vk/api/sdk/internal/a;
 
 .field final synthetic b:Lcom/vk/api/internal/ApiManager;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/api/sdk/internal/ApiCommand;Lcom/vk/api/internal/ApiManager;)V
+.method constructor <init>(Lcom/vk/api/sdk/internal/a;Lcom/vk/api/internal/ApiManager;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/auth/VkAuthModel$f;->a:Lcom/vk/api/sdk/internal/ApiCommand;
+    iput-object p1, p0, Lcom/vk/auth/VkAuthModel$f;->a:Lcom/vk/api/sdk/internal/a;
 
     iput-object p2, p0, Lcom/vk/auth/VkAuthModel$f;->b:Lcom/vk/api/internal/ApiManager;
 
@@ -60,9 +60,9 @@
     .line 1
     iget-object v0, p0, Lcom/vk/auth/VkAuthModel$f;->b:Lcom/vk/api/internal/ApiManager;
 
-    iget-object v1, p0, Lcom/vk/auth/VkAuthModel$f;->a:Lcom/vk/api/sdk/internal/ApiCommand;
+    iget-object v1, p0, Lcom/vk/auth/VkAuthModel$f;->a:Lcom/vk/api/sdk/internal/a;
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/ApiCommand;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/a;)Ljava/lang/Object;
 
     move-result-object v0
 

@@ -1,5 +1,5 @@
 .class Landroidx/browser/customtabs/CustomTabsService$1;
-.super Landroid/support/customtabs/ICustomTabsService$a;
+.super La/a/a/b$a;
 .source "CustomTabsService.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Landroidx/browser/customtabs/CustomTabsService$1;->this$0:Landroidx/browser/customtabs/CustomTabsService;
 
-    invoke-direct {p0}, Landroid/support/customtabs/ICustomTabsService$a;-><init>()V
+    invoke-direct {p0}, La/a/a/b$a;-><init>()V
 
     return-void
 .end method
@@ -45,12 +45,12 @@
     return-object p1
 .end method
 
-.method public mayLaunchUrl(Landroid/support/customtabs/ICustomTabsCallback;Landroid/net/Uri;Landroid/os/Bundle;Ljava/util/List;)Z
+.method public mayLaunchUrl(La/a/a/a;Landroid/net/Uri;Landroid/os/Bundle;Ljava/util/List;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroid/support/customtabs/ICustomTabsCallback;",
+            "La/a/a/a;",
             "Landroid/net/Uri;",
             "Landroid/os/Bundle;",
             "Ljava/util/List<",
@@ -64,7 +64,7 @@
 
     new-instance v1, Landroidx/browser/customtabs/CustomTabsSessionToken;
 
-    invoke-direct {v1, p1}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(Landroid/support/customtabs/ICustomTabsCallback;)V
+    invoke-direct {v1, p1}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(La/a/a/a;)V
 
     invoke-virtual {v0, v1, p2, p3, p4}, Landroidx/browser/customtabs/CustomTabsService;->mayLaunchUrl(Landroidx/browser/customtabs/CustomTabsSessionToken;Landroid/net/Uri;Landroid/os/Bundle;Ljava/util/List;)Z
 
@@ -73,13 +73,13 @@
     return p1
 .end method
 
-.method public newSession(Landroid/support/customtabs/ICustomTabsCallback;)Z
+.method public newSession(La/a/a/a;)Z
     .locals 5
 
     .line 1
     new-instance v0, Landroidx/browser/customtabs/CustomTabsSessionToken;
 
-    invoke-direct {v0, p1}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(Landroid/support/customtabs/ICustomTabsCallback;)V
+    invoke-direct {v0, p1}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(La/a/a/a;)V
 
     const/4 v1, 0x0
 
@@ -152,7 +152,7 @@
     return v1
 .end method
 
-.method public postMessage(Landroid/support/customtabs/ICustomTabsCallback;Ljava/lang/String;Landroid/os/Bundle;)I
+.method public postMessage(La/a/a/a;Ljava/lang/String;Landroid/os/Bundle;)I
     .locals 2
 
     .line 1
@@ -160,7 +160,7 @@
 
     new-instance v1, Landroidx/browser/customtabs/CustomTabsSessionToken;
 
-    invoke-direct {v1, p1}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(Landroid/support/customtabs/ICustomTabsCallback;)V
+    invoke-direct {v1, p1}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(La/a/a/a;)V
 
     invoke-virtual {v0, v1, p2, p3}, Landroidx/browser/customtabs/CustomTabsService;->postMessage(Landroidx/browser/customtabs/CustomTabsSessionToken;Ljava/lang/String;Landroid/os/Bundle;)I
 
@@ -169,7 +169,7 @@
     return p1
 .end method
 
-.method public requestPostMessageChannel(Landroid/support/customtabs/ICustomTabsCallback;Landroid/net/Uri;)Z
+.method public requestPostMessageChannel(La/a/a/a;Landroid/net/Uri;)Z
     .locals 2
 
     .line 1
@@ -177,7 +177,7 @@
 
     new-instance v1, Landroidx/browser/customtabs/CustomTabsSessionToken;
 
-    invoke-direct {v1, p1}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(Landroid/support/customtabs/ICustomTabsCallback;)V
+    invoke-direct {v1, p1}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(La/a/a/a;)V
 
     invoke-virtual {v0, v1, p2}, Landroidx/browser/customtabs/CustomTabsService;->requestPostMessageChannel(Landroidx/browser/customtabs/CustomTabsSessionToken;Landroid/net/Uri;)Z
 
@@ -186,7 +186,7 @@
     return p1
 .end method
 
-.method public updateVisuals(Landroid/support/customtabs/ICustomTabsCallback;Landroid/os/Bundle;)Z
+.method public updateVisuals(La/a/a/a;Landroid/os/Bundle;)Z
     .locals 2
 
     .line 1
@@ -194,7 +194,7 @@
 
     new-instance v1, Landroidx/browser/customtabs/CustomTabsSessionToken;
 
-    invoke-direct {v1, p1}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(Landroid/support/customtabs/ICustomTabsCallback;)V
+    invoke-direct {v1, p1}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(La/a/a/a;)V
 
     invoke-virtual {v0, v1, p2}, Landroidx/browser/customtabs/CustomTabsService;->updateVisuals(Landroidx/browser/customtabs/CustomTabsSessionToken;Landroid/os/Bundle;)Z
 
@@ -203,7 +203,7 @@
     return p1
 .end method
 
-.method public validateRelationship(Landroid/support/customtabs/ICustomTabsCallback;ILandroid/net/Uri;Landroid/os/Bundle;)Z
+.method public validateRelationship(La/a/a/a;ILandroid/net/Uri;Landroid/os/Bundle;)Z
     .locals 2
 
     .line 1
@@ -211,7 +211,7 @@
 
     new-instance v1, Landroidx/browser/customtabs/CustomTabsSessionToken;
 
-    invoke-direct {v1, p1}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(Landroid/support/customtabs/ICustomTabsCallback;)V
+    invoke-direct {v1, p1}, Landroidx/browser/customtabs/CustomTabsSessionToken;-><init>(La/a/a/a;)V
 
     invoke-virtual {v0, v1, p2, p3, p4}, Landroidx/browser/customtabs/CustomTabsService;->validateRelationship(Landroidx/browser/customtabs/CustomTabsSessionToken;ILandroid/net/Uri;Landroid/os/Bundle;)Z
 

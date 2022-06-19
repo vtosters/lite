@@ -46,19 +46,19 @@
 
 .field private g:Landroid/view/View;
 
-.field private h:Lcom/vk/core/ui/IdClickListener;
+.field private h:Lcom/vk/core/ui/k;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/ui/IdClickListener<",
+            "Lcom/vk/core/ui/k<",
             "TT;>;"
         }
     .end annotation
 .end field
 
-.field private final i:Lkotlin/jvm/b/Functions2;
+.field private final i:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "TT;",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;"
@@ -66,22 +66,22 @@
     .end annotation
 .end field
 
-.field private j:Lcom/vk/music/ui/common/MusicViewHolder;
+.field private j:Lcom/vk/music/ui/common/o;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private k:Lcom/vk/music/player/PlayerModel;
+.field private k:Lcom/vk/music/player/d;
 
-.field private l:Lkotlin/jvm/b/Functions1;
+.field private l:Lkotlin/jvm/b/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions1<",
+            "Lkotlin/jvm/b/c<",
             "-",
             "Ljava/lang/Integer;",
             "-",
@@ -101,29 +101,29 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->o:Lcom/vk/music/ui/track/MusicTrackHolderBuilder$a;
 
     .line 1
-    sget v0, Lcom/vk/music/m/R3;->music_playing_drawable_rect_blue:I
+    sget v0, Lcom/vk/music/m/b;->music_playing_drawable_rect_blue:I
 
     sput v0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->m:I
 
     .line 2
-    sget v0, Lcom/vk/music/m/R3;->music_playing_drawable_rect_white:I
+    sget v0, Lcom/vk/music/m/b;->music_playing_drawable_rect_white:I
 
     sput v0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->n:I
 
     return-void
 .end method
 
-.method public constructor <init>(Lkotlin/jvm/b/Functions2;)V
+.method public constructor <init>(Lkotlin/jvm/b/b;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;)V"
@@ -151,26 +151,26 @@
 
     invoke-direct {v0, p0}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder$isPlayingTrack$1;-><init>(Lcom/vk/music/ui/track/MusicTrackHolderBuilder;)V
 
-    iput-object v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->l:Lkotlin/jvm/b/Functions1;
+    iput-object v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->l:Lkotlin/jvm/b/c;
 
     if-nez p1, :cond_0
 
     .line 6
     sget-object p1, Lcom/vk/music/ui/track/MusicTrackHolderBuilder$1;->a:Lcom/vk/music/ui/track/MusicTrackHolderBuilder$1;
 
-    iput-object p1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->i:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->i:Lkotlin/jvm/b/b;
 
     goto :goto_0
 
     .line 7
     :cond_0
-    iput-object p1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->i:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->i:Lkotlin/jvm/b/b;
 
     :goto_0
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/b/Functions2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/b/b;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -181,21 +181,21 @@
 
     .line 8
     :cond_0
-    invoke-direct {p0, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p0, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;-><init>(Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/ui/track/MusicTrackHolderBuilder;)Lcom/vk/music/player/PlayerModel;
+.method public static final synthetic a(Lcom/vk/music/ui/track/MusicTrackHolderBuilder;)Lcom/vk/music/player/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->k:Lcom/vk/music/player/PlayerModel;
+    iget-object p0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->k:Lcom/vk/music/player/d;
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/music/ui/common/MusicViewHolder;I)Lcom/vk/music/ui/common/MusicViewHolder;
+.method private final a(Lcom/vk/music/ui/common/o;I)Lcom/vk/music/ui/common/o;
     .locals 3
     .param p2    # I
         .annotation build Landroidx/annotation/ColorRes;
@@ -204,39 +204,39 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;I)",
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;"
         }
     .end annotation
 
     .line 26
-    iget-object v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->k:Lcom/vk/music/player/PlayerModel;
+    iget-object v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->k:Lcom/vk/music/player/d;
 
     if-eqz v0, :cond_0
 
     .line 27
-    new-instance v1, Lcom/vk/music/ui/track/b/MusicPlayingTrackHolder;
+    new-instance v1, Lcom/vk/music/ui/track/b/d;
 
-    iget-object v2, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->l:Lkotlin/jvm/b/Functions1;
+    iget-object v2, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->l:Lkotlin/jvm/b/c;
 
-    invoke-direct {v1, p1, v0, p2, v2}, Lcom/vk/music/ui/track/b/MusicPlayingTrackHolder;-><init>(Lcom/vk/music/ui/common/MusicViewHolder;Lcom/vk/music/player/PlayerModel;ILkotlin/jvm/b/Functions1;)V
+    invoke-direct {v1, p1, v0, p2, v2}, Lcom/vk/music/ui/track/b/d;-><init>(Lcom/vk/music/ui/common/o;Lcom/vk/music/player/d;ILkotlin/jvm/b/c;)V
 
     return-object v1
 
     .line 28
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public static synthetic a(Lcom/vk/music/ui/track/MusicTrackHolderBuilder;ILkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
+.method public static synthetic a(Lcom/vk/music/ui/track/MusicTrackHolderBuilder;ILkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -247,59 +247,59 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(ILkotlin/jvm/b/Functions1;)Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(ILkotlin/jvm/b/c;)Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/music/ui/common/MusicViewHolder;Z)Lcom/vk/music/ui/track/b/MusicOrderedTrackHolder;
+.method private final a(Lcom/vk/music/ui/common/o;Z)Lcom/vk/music/ui/track/b/c;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;Z)",
-            "Lcom/vk/music/ui/track/b/MusicOrderedTrackHolder;"
+            "Lcom/vk/music/ui/track/b/c;"
         }
     .end annotation
 
     .line 25
-    new-instance v0, Lcom/vk/music/ui/track/b/MusicOrderedTrackHolder;
+    new-instance v0, Lcom/vk/music/ui/track/b/c;
 
-    iget-object v1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->k:Lcom/vk/music/player/PlayerModel;
+    iget-object v1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->k:Lcom/vk/music/player/d;
 
     if-eqz v1, :cond_0
 
-    iget-object v2, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->l:Lkotlin/jvm/b/Functions1;
+    iget-object v2, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->l:Lkotlin/jvm/b/c;
 
-    invoke-direct {v0, p1, v1, v2, p2}, Lcom/vk/music/ui/track/b/MusicOrderedTrackHolder;-><init>(Lcom/vk/music/ui/common/MusicViewHolder;Lcom/vk/music/player/PlayerModel;Lkotlin/jvm/b/Functions1;Z)V
+    invoke-direct {v0, p1, v1, v2, p2}, Lcom/vk/music/ui/track/b/c;-><init>(Lcom/vk/music/ui/common/o;Lcom/vk/music/player/d;Lkotlin/jvm/b/c;Z)V
 
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method private final b(Landroid/view/ViewGroup;)Lcom/vk/music/ui/common/MusicViewHolder;
+.method private final b(Landroid/view/ViewGroup;)Lcom/vk/music/ui/common/o;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;"
         }
     .end annotation
 
     .line 5
-    iget-object v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->j:Lcom/vk/music/ui/common/MusicViewHolder;
+    iget-object v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->j:Lcom/vk/music/ui/common/o;
 
     if-eqz v0, :cond_0
 
@@ -307,36 +307,36 @@
 
     .line 6
     :cond_0
-    new-instance v0, Lcom/vk/music/ui/track/b/MusicCommonTrackHolder;
+    new-instance v0, Lcom/vk/music/ui/track/b/a;
 
     invoke-direct {p0, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->c(Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lcom/vk/music/ui/track/b/MusicCommonTrackHolder;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p1}, Lcom/vk/music/ui/track/b/a;-><init>(Landroid/view/View;)V
 
     :goto_0
     return-object v0
 .end method
 
-.method private final b(Lcom/vk/music/ui/common/MusicViewHolder;)Lcom/vk/music/ui/common/MusicViewHolder;
+.method private final b(Lcom/vk/music/ui/common/o;)Lcom/vk/music/ui/common/o;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;)",
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;"
         }
     .end annotation
 
     .line 7
-    new-instance v0, Lcom/vk/music/ui/track/b/MusicTrackAlbumItemHolder;
+    new-instance v0, Lcom/vk/music/ui/track/b/e;
 
-    invoke-direct {v0, p1}, Lcom/vk/music/ui/track/b/MusicTrackAlbumItemHolder;-><init>(Lcom/vk/music/ui/common/MusicViewHolder;)V
+    invoke-direct {v0, p1}, Lcom/vk/music/ui/track/b/e;-><init>(Lcom/vk/music/ui/common/o;)V
 
     return-object v0
 .end method
@@ -392,28 +392,28 @@
 
     const-string p1, "LayoutInflater.from(pare\u2026te(layout, parent, false)"
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_1
     return-object v0
 .end method
 
-.method private final c(Lcom/vk/music/ui/common/MusicViewHolder;)Lcom/vk/music/ui/track/b/MusicExplicitTrackHolder;
+.method private final c(Lcom/vk/music/ui/common/o;)Lcom/vk/music/ui/track/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;)",
-            "Lcom/vk/music/ui/track/b/MusicExplicitTrackHolder;"
+            "Lcom/vk/music/ui/track/b/b;"
         }
     .end annotation
 
     .line 5
-    new-instance v0, Lcom/vk/music/ui/track/b/MusicExplicitTrackHolder;
+    new-instance v0, Lcom/vk/music/ui/track/b/b;
 
-    invoke-direct {v0, p1}, Lcom/vk/music/ui/track/b/MusicExplicitTrackHolder;-><init>(Lcom/vk/music/ui/common/MusicViewHolder;)V
+    invoke-direct {v0, p1}, Lcom/vk/music/ui/track/b/b;-><init>(Lcom/vk/music/ui/common/o;)V
 
     return-object v0
 .end method
@@ -463,7 +463,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->j:Lcom/vk/music/ui/common/MusicViewHolder;
+    iget-object v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->j:Lcom/vk/music/ui/common/o;
 
     if-nez v0, :cond_1
 
@@ -500,7 +500,7 @@
     if-eqz v0, :cond_3
 
     :cond_2
-    iget-object v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->k:Lcom/vk/music/player/PlayerModel;
+    iget-object v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->k:Lcom/vk/music/player/d;
 
     if-eqz v0, :cond_4
 
@@ -519,14 +519,14 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Lcom/vk/music/ui/common/MusicViewHolder;
+.method public final a(Landroid/view/ViewGroup;)Lcom/vk/music/ui/common/o;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "TT;>;"
         }
     .end annotation
@@ -535,7 +535,7 @@
     invoke-direct {p0}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->i()V
 
     .line 14
-    invoke-direct {p0, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->b(Landroid/view/ViewGroup;)Lcom/vk/music/ui/common/MusicViewHolder;
+    invoke-direct {p0, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->b(Landroid/view/ViewGroup;)Lcom/vk/music/ui/common/o;
 
     move-result-object p1
 
@@ -558,7 +558,7 @@
     :cond_0
     iget-boolean v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->b:Z
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(Lcom/vk/music/ui/common/MusicViewHolder;Z)Lcom/vk/music/ui/track/b/MusicOrderedTrackHolder;
+    invoke-direct {p0, p1, v0}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(Lcom/vk/music/ui/common/o;Z)Lcom/vk/music/ui/track/b/c;
 
     move-result-object p1
 
@@ -566,13 +566,13 @@
 
     .line 17
     :cond_1
-    invoke-direct {p0, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->b(Lcom/vk/music/ui/common/MusicViewHolder;)Lcom/vk/music/ui/common/MusicViewHolder;
+    invoke-direct {p0, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->b(Lcom/vk/music/ui/common/o;)Lcom/vk/music/ui/common/o;
 
     move-result-object p1
 
     iget-boolean v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->b:Z
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(Lcom/vk/music/ui/common/MusicViewHolder;Z)Lcom/vk/music/ui/track/b/MusicOrderedTrackHolder;
+    invoke-direct {p0, p1, v0}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(Lcom/vk/music/ui/common/o;Z)Lcom/vk/music/ui/track/b/c;
 
     move-result-object p1
 
@@ -582,7 +582,7 @@
     :cond_2
     iget-boolean v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->b:Z
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(Lcom/vk/music/ui/common/MusicViewHolder;Z)Lcom/vk/music/ui/track/b/MusicOrderedTrackHolder;
+    invoke-direct {p0, p1, v0}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(Lcom/vk/music/ui/common/o;Z)Lcom/vk/music/ui/track/b/c;
 
     move-result-object p1
 
@@ -592,7 +592,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-direct {p0, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->c(Lcom/vk/music/ui/common/MusicViewHolder;)Lcom/vk/music/ui/track/b/MusicExplicitTrackHolder;
+    invoke-direct {p0, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->c(Lcom/vk/music/ui/common/o;)Lcom/vk/music/ui/track/b/b;
 
     move-result-object p1
 
@@ -604,25 +604,25 @@
 
     iget v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->d:I
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(Lcom/vk/music/ui/common/MusicViewHolder;I)Lcom/vk/music/ui/common/MusicViewHolder;
+    invoke-direct {p0, p1, v0}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->a(Lcom/vk/music/ui/common/o;I)Lcom/vk/music/ui/common/o;
 
     move-result-object p1
 
     .line 21
     :cond_4
-    new-instance v0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder1;
+    new-instance v0, Lcom/vk/music/ui/track/a;
 
-    iget-object v1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->i:Lkotlin/jvm/b/Functions2;
+    iget-object v1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->i:Lkotlin/jvm/b/b;
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder1;-><init>(Lcom/vk/music/ui/common/MusicViewHolder;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/music/ui/track/a;-><init>(Lcom/vk/music/ui/common/o;Lkotlin/jvm/b/b;)V
 
     .line 22
-    iget-object p1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->h:Lcom/vk/core/ui/IdClickListener;
+    iget-object p1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->h:Lcom/vk/core/ui/k;
 
     if-eqz p1, :cond_6
 
     .line 23
-    invoke-virtual {v0}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder1;->h0()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vk/music/ui/track/a;->h0()Landroid/view/View;
 
     move-result-object v1
 
@@ -630,9 +630,9 @@
 
     new-instance v2, Lcom/vk/music/ui/track/MusicTrackHolderBuilder$create$1$1;
 
-    invoke-direct {v2, v0, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder$create$1$1;-><init>(Lcom/vk/music/ui/track/MusicTrackHolderBuilder1;Lcom/vk/core/ui/IdClickListener;)V
+    invoke-direct {v2, v0, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder$create$1$1;-><init>(Lcom/vk/music/ui/track/a;Lcom/vk/core/ui/k;)V
 
-    invoke-static {v1, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v1, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 24
     :cond_5
@@ -640,13 +640,13 @@
 
     const-string v2, "itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vk/music/ui/track/MusicTrackHolderBuilder$create$1$2;
 
-    invoke-direct {v2, v0, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder$create$1$2;-><init>(Lcom/vk/music/ui/track/MusicTrackHolderBuilder1;Lcom/vk/core/ui/IdClickListener;)V
+    invoke-direct {v2, v0, p1}, Lcom/vk/music/ui/track/MusicTrackHolderBuilder$create$1$2;-><init>(Lcom/vk/music/ui/track/a;Lcom/vk/core/ui/k;)V
 
-    invoke-static {v1, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {v1, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     :cond_6
     return-object v0
@@ -690,7 +690,7 @@
     return-object p0
 .end method
 
-.method public final a(ILkotlin/jvm/b/Functions1;)Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
+.method public final a(ILkotlin/jvm/b/c;)Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
     .locals 1
     .param p1    # I
         .annotation build Landroidx/annotation/ColorRes;
@@ -699,7 +699,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lkotlin/jvm/b/Functions1<",
+            "Lkotlin/jvm/b/c<",
             "-",
             "Ljava/lang/Integer;",
             "-",
@@ -719,7 +719,7 @@
     if-eqz p2, :cond_0
 
     .line 5
-    iput-object p2, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->l:Lkotlin/jvm/b/Functions1;
+    iput-object p2, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->l:Lkotlin/jvm/b/c;
 
     .line 6
     :cond_0
@@ -746,12 +746,12 @@
     return-object p0
 .end method
 
-.method public final a(Lcom/vk/core/ui/IdClickListener;)Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
+.method public final a(Lcom/vk/core/ui/k;)Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/core/ui/IdClickListener<",
+            "Lcom/vk/core/ui/k<",
             "TT;>;)",
             "Lcom/vk/music/ui/track/MusicTrackHolderBuilder<",
             "TT;>;"
@@ -759,17 +759,17 @@
     .end annotation
 
     .line 10
-    iput-object p1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->h:Lcom/vk/core/ui/IdClickListener;
+    iput-object p1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->h:Lcom/vk/core/ui/k;
 
     return-object p0
 .end method
 
-.method public final a(Lcom/vk/music/player/PlayerModel;)Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
+.method public final a(Lcom/vk/music/player/d;)Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/player/PlayerModel;",
+            "Lcom/vk/music/player/d;",
             ")",
             "Lcom/vk/music/ui/track/MusicTrackHolderBuilder<",
             "TT;>;"
@@ -777,17 +777,17 @@
     .end annotation
 
     .line 9
-    iput-object p1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->k:Lcom/vk/music/player/PlayerModel;
+    iput-object p1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->k:Lcom/vk/music/player/d;
 
     return-object p0
 .end method
 
-.method public final a(Lcom/vk/music/ui/common/MusicViewHolder;)Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
+.method public final a(Lcom/vk/music/ui/common/o;)Lcom/vk/music/ui/track/MusicTrackHolderBuilder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/ui/common/MusicViewHolder<",
+            "Lcom/vk/music/ui/common/o<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;)",
             "Lcom/vk/music/ui/track/MusicTrackHolderBuilder<",
@@ -801,7 +801,7 @@
     iput v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->e:I
 
     .line 8
-    iput-object p1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->j:Lcom/vk/music/ui/common/MusicViewHolder;
+    iput-object p1, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->j:Lcom/vk/music/ui/common/o;
 
     return-object p0
 .end method
@@ -829,7 +829,7 @@
     if-eqz v0, :cond_0
 
     .line 4
-    sget v0, Lcom/vk/music/m/R;->music_audio_item_album_single_artist:I
+    sget v0, Lcom/vk/music/m/g;->music_audio_item_album_single_artist:I
 
     iput v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->f:I
 
@@ -860,7 +860,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    sget v0, Lcom/vk/music/m/R;->music_audio_item_album_multiple_artists_vertical:I
+    sget v0, Lcom/vk/music/m/g;->music_audio_item_album_multiple_artists_vertical:I
 
     iput v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->f:I
 
@@ -896,7 +896,7 @@
     if-eqz v0, :cond_0
 
     .line 4
-    sget v0, Lcom/vk/music/m/R;->music_audio_item_ordered_playlist:I
+    sget v0, Lcom/vk/music/m/g;->music_audio_item_ordered_playlist:I
 
     iput v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->f:I
 
@@ -927,7 +927,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    sget v0, Lcom/vk/music/m/R;->music_audio_item_playlist:I
+    sget v0, Lcom/vk/music/m/g;->music_audio_item_playlist:I
 
     iput v0, p0, Lcom/vk/music/ui/track/MusicTrackHolderBuilder;->f:I
 

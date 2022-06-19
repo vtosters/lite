@@ -70,7 +70,7 @@
 
     const-string v1, "[event_listener]"
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getPreviousSpan()F

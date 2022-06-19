@@ -3,7 +3,7 @@
 .source "CurrentUserFriendsPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/api/friends/FriendsGet$b;",
+        "Lc/a/z/g<",
+        "Lcom/vk/api/friends/e$b;",
         ">;"
     }
 .end annotation
@@ -46,50 +46,50 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/friends/FriendsGet$b;)V
+.method public final a(Lcom/vk/api/friends/e$b;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$a;->a:Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter;->e()Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/friends/presenter/a;->e()Lcom/vtosters/lite/fragments/friends/presenter/b;
 
     move-result-object v0
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;->a(Lcom/vk/api/friends/FriendsGet$b;Z)V
+    invoke-virtual {v0, p1, v1}, Lcom/vtosters/lite/fragments/friends/presenter/b;->a(Lcom/vk/api/friends/e$b;Z)V
 
     .line 2
-    iget-object v0, p1, Lcom/vk/api/friends/FriendsGet$b;->a:Ljava/util/ArrayList;
+    iget-object v0, p1, Lcom/vk/api/friends/e$b;->a:Ljava/util/ArrayList;
 
-    iget-object p1, p1, Lcom/vk/api/friends/FriendsGet$b;->b:Ljava/util/List;
+    iget-object p1, p1, Lcom/vk/api/friends/e$b;->b:Ljava/util/List;
 
     invoke-static {v0, p1}, Lcom/vtosters/lite/data/Friends;->c(Ljava/util/List;Ljava/util/List;)V
 
     .line 3
     iget-object p1, p0, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$a;->a:Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;->a(Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;)Lcom/vk/im/engine/ImEngine;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;->a(Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;)Lcom/vk/im/engine/a;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$a;->a:Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;
 
-    new-instance v1, Lcom/vk/im/engine/i/i/ExpireAllUsersCmd;
+    new-instance v1, Lcom/vk/im/engine/i/i/a;
 
-    invoke-direct {v1}, Lcom/vk/im/engine/i/i/ExpireAllUsersCmd;-><init>()V
+    invoke-direct {v1}, Lcom/vk/im/engine/i/i/a;-><init>()V
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/ImEngine;->b(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Completable;
+    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/a;->b(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/a;
 
     move-result-object p1
 
     .line 4
-    invoke-virtual {p1}, Lio/reactivex/Completable;->a()Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1}, Lc/a/a;->a()Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -98,9 +98,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/friends/FriendsGet$b;
+    check-cast p1, Lcom/vk/api/friends/e$b;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$a;->a(Lcom/vk/api/friends/FriendsGet$b;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$a;->a(Lcom/vk/api/friends/e$b;)V
 
     return-void
 .end method

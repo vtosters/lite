@@ -3,18 +3,18 @@
 .source "ContinuationImpl.kt"
 
 # interfaces
-.implements Lkotlin/jvm/internal/FunctionBase;
-.implements Lkotlin/coroutines/jvm/internal/ContinuationImpl1;
+.implements Lkotlin/jvm/internal/l;
+.implements Lkotlin/coroutines/jvm/internal/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/coroutines/jvm/internal/RestrictedContinuationImpl;",
-        "Lkotlin/jvm/internal/FunctionBase<",
+        "Lkotlin/jvm/internal/l<",
         "Ljava/lang/Object;",
         ">;",
-        "Lkotlin/coroutines/jvm/internal/ContinuationImpl1;"
+        "Lkotlin/coroutines/jvm/internal/g;"
     }
 .end annotation
 
@@ -24,19 +24,19 @@
 
 
 # direct methods
-.method public constructor <init>(ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ILkotlin/coroutines/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lkotlin/coroutines/Continuation<",
+            "Lkotlin/coroutines/a<",
             "Ljava/lang/Object;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p2}, Lkotlin/coroutines/jvm/internal/RestrictedContinuationImpl;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lkotlin/coroutines/jvm/internal/RestrictedContinuationImpl;-><init>(Lkotlin/coroutines/a;)V
 
     iput p1, p0, Lkotlin/coroutines/jvm/internal/RestrictedSuspendLambda;->arity:I
 
@@ -58,20 +58,20 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->a()Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0}, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->a()Lkotlin/coroutines/a;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
     .line 2
-    invoke-static {p0}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/FunctionBase;)Ljava/lang/String;
+    invoke-static {p0}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/l;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "Reflection.renderLambdaToString(this)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 

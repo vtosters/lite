@@ -36,7 +36,7 @@
 .method public static b(Lcom/vk/im/engine/models/attaches/AttachWithId;)Z
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/im/engine/models/WithId$a;->a(Lcom/vk/im/engine/models/WithId;)Z
+    invoke-static {p0}, Lcom/vk/im/engine/models/u$a;->a(Lcom/vk/im/engine/models/u;)Z
 
     move-result p0
 

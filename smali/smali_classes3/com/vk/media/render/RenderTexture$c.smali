@@ -71,7 +71,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/media/render/RenderTexture$c;->b:Lcom/vk/media/render/RenderTexture;
 
-    invoke-virtual {v0}, Lcom/vk/media/render/RenderTexture;->a()Lb/h/p/f/Logger;
+    invoke-virtual {v0}, Lcom/vk/media/render/RenderTexture;->a()Lb/h/p/f/e;
 
     move-result-object v0
 
@@ -99,7 +99,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lb/h/p/f/Logger;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lb/h/p/f/e;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/media/render/RenderTexture$c;->a:Ljava/lang/ref/WeakReference;

@@ -3,7 +3,7 @@
 .source "MasksWrap.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Landroid/location/Location;",
         ">;"
     }
@@ -82,7 +82,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$j;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getMasksController()Lcom/vk/masks/MasksController;
+    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/masks/a;->getMasksController()Lcom/vk/masks/MasksController;
 
     move-result-object v0
 
@@ -140,7 +140,7 @@
 
     const-string v1, "context.getString(R.string.ok)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_2
 
@@ -150,7 +150,7 @@
 
     const-string v1, "(this as java.lang.String).toUpperCase()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 

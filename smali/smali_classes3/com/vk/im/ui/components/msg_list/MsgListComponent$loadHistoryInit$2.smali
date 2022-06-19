@@ -3,7 +3,7 @@
 .source "MsgListComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/im/ui/components/msg_list/k/LoadInitModel;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/im/ui/components/msg_list/k/b;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/msg_list/k/LoadInitModel;)V
+.method public final a(Lcom/vk/im/ui/components/msg_list/k/b;)V
     .locals 1
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
@@ -48,7 +48,7 @@
     check-cast v0, Lcom/vk/im/ui/components/msg_list/MsgListComponent;
 
     .line 1
-    invoke-static {v0, p1}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->a(Lcom/vk/im/ui/components/msg_list/MsgListComponent;Lcom/vk/im/ui/components/msg_list/k/LoadInitModel;)V
+    invoke-static {v0, p1}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->a(Lcom/vk/im/ui/components/msg_list/MsgListComponent;Lcom/vk/im/ui/components/msg_list/k/b;)V
 
     return-void
 .end method
@@ -61,12 +61,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 1
 
     const-class v0, Lcom/vk/im/ui/components/msg_list/MsgListComponent;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -85,11 +85,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/msg_list/k/LoadInitModel;
+    check-cast p1, Lcom/vk/im/ui/components/msg_list/k/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_list/MsgListComponent$loadHistoryInit$2;->a(Lcom/vk/im/ui/components/msg_list/k/LoadInitModel;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_list/MsgListComponent$loadHistoryInit$2;->a(Lcom/vk/im/ui/components/msg_list/k/b;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

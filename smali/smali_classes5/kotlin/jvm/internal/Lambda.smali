@@ -3,7 +3,7 @@
 .source "Lambda.kt"
 
 # interfaces
-.implements Lkotlin/jvm/internal/FunctionBase;
+.implements Lkotlin/jvm/internal/l;
 .implements Ljava/io/Serializable;
 
 
@@ -14,7 +14,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/internal/FunctionBase<",
+        "Lkotlin/jvm/internal/l<",
         "TR;>;",
         "Ljava/io/Serializable;"
     }
@@ -52,13 +52,13 @@
     .locals 2
 
     .line 1
-    invoke-static {p0}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/Lambda;)Ljava/lang/String;
+    invoke-static {p0}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/Lambda;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "Reflection.renderLambdaToString(this)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

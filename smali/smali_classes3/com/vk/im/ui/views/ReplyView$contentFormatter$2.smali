@@ -3,7 +3,7 @@
 .source "ReplyView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/im/ui/formatters/MsgShortContentFormatter;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/im/ui/formatters/q;",
         ">;"
     }
 .end annotation
@@ -45,11 +45,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/ui/formatters/MsgShortContentFormatter;
+.method public final invoke()Lcom/vk/im/ui/formatters/q;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/formatters/MsgShortContentFormatter;
+    new-instance v0, Lcom/vk/im/ui/formatters/q;
 
     iget-object v1, p0, Lcom/vk/im/ui/views/ReplyView$contentFormatter$2;->this$0:Lcom/vk/im/ui/views/ReplyView;
 
@@ -59,9 +59,9 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/MsgShortContentFormatter;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/q;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/views/ReplyView$contentFormatter$2;->invoke()Lcom/vk/im/ui/formatters/MsgShortContentFormatter;
+    invoke-virtual {p0}, Lcom/vk/im/ui/views/ReplyView$contentFormatter$2;->invoke()Lcom/vk/im/ui/formatters/q;
 
     move-result-object v0
 

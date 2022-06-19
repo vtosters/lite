@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
-.super Lcom/vk/im/ui/q/Component;
+.super Lcom/vk/im/ui/q/c;
 .source "DialogHeaderActionsComponent.kt"
 
 
@@ -15,51 +15,51 @@
 
 
 # instance fields
-.field private B:Lio/reactivex/disposables/Disposable;
+.field private B:Lio/reactivex/disposables/b;
 
-.field private C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+.field private C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
 .field private D:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;
 
-.field private E:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;
+.field private E:Lcom/vk/im/ui/components/dialog_header/actions/c;
 
 .field private final F:Landroid/content/Context;
 
-.field private final G:Lcom/vk/im/engine/ImEngine;
+.field private final G:Lcom/vk/im/engine/a;
 
 .field private final H:Lcom/vk/im/ui/themes/DialogThemeBinder;
 
-.field private final g:Lio/reactivex/disposables/CompositeDisposable;
+.field private final g:Lio/reactivex/disposables/a;
 
-.field private h:Lio/reactivex/disposables/Disposable;
+.field private h:Lio/reactivex/disposables/b;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/themes/DialogThemeBinder;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/ui/themes/DialogThemeBinder;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/q/Component;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/q/c;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->F:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/ImEngine;
+    iput-object p2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/a;
 
     iput-object p3, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->H:Lcom/vk/im/ui/themes/DialogThemeBinder;
 
     .line 2
-    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
+    new-instance p1, Lio/reactivex/disposables/a;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->g:Lio/reactivex/disposables/a;
 
     .line 3
-    new-instance p1, Lcom/vk/im/ui/components/dialog_header/actions/State;
+    new-instance p1, Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-direct {p1}, Lcom/vk/im/ui/components/dialog_header/actions/State;-><init>()V
+    invoke-direct {p1}, Lcom/vk/im/ui/components/dialog_header/actions/e;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
     return-void
 .end method
@@ -76,23 +76,23 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/im/ui/components/common/MsgActionHelper;->INSTANCE:Lcom/vk/im/ui/components/common/MsgActionHelper;
+    sget-object v0, Lcom/vk/im/ui/components/common/d;->a:Lcom/vk/im/ui/components/common/d;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/ImEngine;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/a;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/State;->d()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/e;->d()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v3}, Lcom/vk/im/ui/components/dialog_header/actions/State;->h()Ljava/util/List;
+    invoke-virtual {v3}, Lcom/vk/im/ui/components/dialog_header/actions/e;->h()Ljava/util/List;
 
     move-result-object v3
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/im/ui/components/common/MsgActionHelper;->a(Lcom/vk/im/engine/ImEngine;Lcom/vk/im/engine/models/dialogs/Dialog;Ljava/util/Collection;)Ljava/util/List;
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/im/ui/components/common/d;->a(Lcom/vk/im/engine/a;Lcom/vk/im/engine/models/dialogs/Dialog;Ljava/util/Collection;)Ljava/util/List;
 
     move-result-object v0
 
@@ -104,9 +104,9 @@
     .line 3
     sget-object v1, Lcom/vk/im/ui/components/common/MsgAction;->REPLY:Lcom/vk/im/ui/components/common/MsgAction;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/State;->i()Z
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/e;->i()Z
 
     move-result v2
 
@@ -114,9 +114,9 @@
 
     if-eqz v2, :cond_1
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/State;->h()Ljava/util/List;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/e;->h()Ljava/util/List;
 
     move-result-object v2
 
@@ -138,33 +138,33 @@
     const/4 v2, 0x1
 
     :goto_1
-    invoke-static {v0, v1, v2}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
 
     .line 4
     sget-object v1, Lcom/vk/im/ui/components/common/MsgAction;->FORWARD:Lcom/vk/im/ui/components/common/MsgAction;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/State;->g()Z
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/e;->g()Z
 
     move-result v2
 
     xor-int/2addr v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
 
     .line 5
     sget-object v1, Lcom/vk/im/ui/components/common/MsgAction;->DELETE:Lcom/vk/im/ui/components/common/MsgAction;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/State;->b()Z
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/e;->b()Z
 
     move-result v2
 
     xor-int/2addr v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
 
     .line 6
     sget-object v1, Lcom/vk/im/ui/components/common/MsgAction;->PIN:Lcom/vk/im/ui/components/common/MsgAction;
@@ -183,23 +183,23 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/vk/im/engine/utils/MsgPermissionHelper;->INSTANCE:Lcom/vk/im/engine/utils/MsgPermissionHelper;
+    sget-object v0, Lcom/vk/im/engine/utils/h;->b:Lcom/vk/im/engine/utils/h;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/ImEngine;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/a;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/State;->d()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/e;->d()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v3}, Lcom/vk/im/ui/components/dialog_header/actions/State;->h()Ljava/util/List;
+    invoke-virtual {v3}, Lcom/vk/im/ui/components/dialog_header/actions/e;->h()Ljava/util/List;
 
     move-result-object v3
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/im/engine/utils/MsgPermissionHelper;->a(Lcom/vk/im/engine/ImEngine;Lcom/vk/im/engine/models/dialogs/Dialog;Ljava/util/Collection;)Z
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/im/engine/utils/h;->a(Lcom/vk/im/engine/a;Lcom/vk/im/engine/models/dialogs/Dialog;Ljava/util/Collection;)Z
 
     move-result v0
 
@@ -210,9 +210,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/State;->l()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/e;->l()Z
 
     move-result v0
 
@@ -223,9 +223,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/State;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/e;->j()Z
 
     move-result v0
 
@@ -235,45 +235,45 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->d(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->d(Z)V
 
     .line 3
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->H()V
 
     .line 4
-    new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/f/LoadInitCmd;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/f/c;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->e()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->e()I
 
     move-result v1
 
-    sget-object v2, Lcom/vk/im/ui/components/dialog_header/actions/Constants;->INSTANCE:Lcom/vk/im/ui/components/dialog_header/actions/Constants;
+    sget-object v2, Lcom/vk/im/ui/components/dialog_header/actions/a;->b:Lcom/vk/im/ui/components/dialog_header/actions/a;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/Constants;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/a;->a()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_header/actions/f/LoadInitCmd;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_header/actions/f/c;-><init>(ILjava/lang/Object;)V
 
     .line 5
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/ImEngine;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
 
     move-result-object v0
 
     .line 6
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
 
     move-result-object v0
 
@@ -282,30 +282,30 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$loadInit$1;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;
+    new-instance v2, Lcom/vk/im/ui/components/dialog_header/actions/b;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_header/actions/b;-><init>(Lkotlin/jvm/b/b;)V
 
     new-instance v1, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$loadInit$2;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$loadInit$2;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;
+    new-instance v3, Lcom/vk/im/ui/components/dialog_header/actions/b;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_header/actions/b;-><init>(Lkotlin/jvm/b/b;)V
 
-    invoke-virtual {v0, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     const-string v1, "imEngine.submitWithCance\u2026ccess, ::onLoadInitError)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->g:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)V
 
     return-void
 .end method
@@ -314,16 +314,16 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->g:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->a()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/a;->a()V
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/State;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/components/dialog_header/actions/State;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/components/dialog_header/actions/e;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
     .line 3
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->H()V
@@ -335,17 +335,17 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/State;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/e;->j()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/State;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/e;->k()Z
 
     move-result v0
 
@@ -355,42 +355,42 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->e(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->e(Z)V
 
     .line 3
-    new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/f/LoadAllByActualCmd;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/f/a;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->e()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->e()I
 
     move-result v1
 
-    sget-object v2, Lcom/vk/im/ui/components/dialog_header/actions/Constants;->INSTANCE:Lcom/vk/im/ui/components/dialog_header/actions/Constants;
+    sget-object v2, Lcom/vk/im/ui/components/dialog_header/actions/a;->b:Lcom/vk/im/ui/components/dialog_header/actions/a;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/Constants;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_header/actions/a;->a()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_header/actions/f/LoadAllByActualCmd;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_header/actions/f/a;-><init>(ILjava/lang/Object;)V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/ImEngine;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
 
     move-result-object v0
 
@@ -399,30 +399,30 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$updateAllByActual$1;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;
+    new-instance v2, Lcom/vk/im/ui/components/dialog_header/actions/b;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_header/actions/b;-><init>(Lkotlin/jvm/b/b;)V
 
     new-instance v1, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$updateAllByActual$2;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$updateAllByActual$2;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;
+    new-instance v3, Lcom/vk/im/ui/components/dialog_header/actions/b;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_header/actions/b;-><init>(Lkotlin/jvm/b/b;)V
 
-    invoke-virtual {v0, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     const-string v1, "imEngine.submitWithCance\u2026onUpdateAllByActualError)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->g:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)V
 
     :cond_1
     :goto_0
@@ -484,9 +484,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->h()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->h()Ljava/util/List;
 
     move-result-object v1
 
@@ -501,9 +501,9 @@
     move-result v3
 
     .line 5
-    iget-object v4, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v4, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v4}, Lcom/vk/im/ui/components/dialog_header/actions/State;->c()Z
+    invoke-virtual {v4}, Lcom/vk/im/ui/components/dialog_header/actions/e;->c()Z
 
     move-result v4
 
@@ -514,11 +514,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)Lcom/vk/im/ui/components/dialog_header/actions/State;
+.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)Lcom/vk/im/ui/components/dialog_header/actions/e;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object p0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
     return-object p0
 .end method
@@ -527,66 +527,66 @@
     .locals 2
 
     .line 40
-    new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/State;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/components/dialog_header/actions/State;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/components/dialog_header/actions/e;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
     .line 41
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->f(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->f(Z)V
 
     .line 42
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->a(I)V
 
     .line 43
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->a()Lcom/vk/im/engine/models/Member;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->a()Lcom/vk/im/engine/models/Member;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/dialog_header/actions/State;->a(Lcom/vk/im/engine/models/Member;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/dialog_header/actions/e;->a(Lcom/vk/im/engine/models/Member;)V
 
     .line 44
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/ImEngine;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/a;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/ImEngine;->j()Lio/reactivex/Observable;
+    invoke-virtual {p1}, Lcom/vk/im/engine/a;->j()Lc/a/m;
 
     move-result-object p1
 
     .line 45
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     .line 46
-    new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/EventConsumerImpl;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/d;
 
-    invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialog_header/actions/EventConsumerImpl;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
+    invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialog_header/actions/d;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     const-string v0, "imEngine.observeEvents()\u2026(EventConsumerImpl(this))"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 47
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->g:Lio/reactivex/disposables/a;
 
-    invoke-static {p1, v0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {p1, v0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)V
 
     .line 48
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->H()V
@@ -597,29 +597,29 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;Lcom/vk/im/ui/components/dialog_header/actions/f/LoadAllByActualCmd$a;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;Lcom/vk/im/ui/components/dialog_header/actions/f/a$a;)V
     .locals 0
 
     .line 6
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/f/LoadAllByActualCmd$a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/f/a$a;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;Lcom/vk/im/ui/components/dialog_header/actions/f/LoadAllByCacheCmd$a;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;Lcom/vk/im/ui/components/dialog_header/actions/f/b$a;)V
     .locals 0
 
     .line 7
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/f/LoadAllByCacheCmd$a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/f/b$a;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;Lcom/vk/im/ui/components/dialog_header/actions/f/LoadInitCmd$a;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;Lcom/vk/im/ui/components/dialog_header/actions/f/c$a;)V
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/f/LoadInitCmd$a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/f/c$a;)V
 
     return-void
 .end method
@@ -651,33 +651,33 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/ui/components/dialog_header/actions/f/LoadAllByActualCmd$a;)V
+.method private final a(Lcom/vk/im/ui/components/dialog_header/actions/f/a$a;)V
     .locals 2
 
     .line 59
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->e(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->e(Z)V
 
     .line 60
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/f/LoadAllByActualCmd$a;->b()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/f/a$a;->b()Lcom/vk/im/engine/models/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->a(Lcom/vk/im/engine/models/EntityIntMap;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->a(Lcom/vk/im/engine/models/a;)V
 
     .line 61
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/f/LoadAllByActualCmd$a;->a()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/f/a$a;->a()Z
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->b(Z)V
 
     .line 62
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->z()V
@@ -688,26 +688,26 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/ui/components/dialog_header/actions/f/LoadAllByCacheCmd$a;)V
+.method private final a(Lcom/vk/im/ui/components/dialog_header/actions/f/b$a;)V
     .locals 2
 
     .line 55
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/f/LoadAllByCacheCmd$a;->b()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/f/b$a;->b()Lcom/vk/im/engine/models/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->a(Lcom/vk/im/engine/models/EntityIntMap;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->a(Lcom/vk/im/engine/models/a;)V
 
     .line 56
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/f/LoadAllByCacheCmd$a;->a()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/f/b$a;->a()Z
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->b(Z)V
 
     .line 57
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->z()V
@@ -718,33 +718,33 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/ui/components/dialog_header/actions/f/LoadInitCmd$a;)V
+.method private final a(Lcom/vk/im/ui/components/dialog_header/actions/f/c$a;)V
     .locals 2
 
     .line 50
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->d(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->d(Z)V
 
     .line 51
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/f/LoadInitCmd$a;->b()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/f/c$a;->b()Lcom/vk/im/engine/models/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->a(Lcom/vk/im/engine/models/EntityIntMap;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->a(Lcom/vk/im/engine/models/a;)V
 
     .line 52
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/f/LoadInitCmd$a;->a()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/f/c$a;->a()Z
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->b(Z)V
 
     .line 53
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->z()V
@@ -826,7 +826,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->b(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/IntArrayList;
+    invoke-static {v0}, Lcom/vk/im/engine/utils/collection/e;->b(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/IntArrayList;
 
     move-result-object p1
 
@@ -857,7 +857,7 @@
     .line 12
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->F:Landroid/content/Context;
 
-    invoke-static {v0, p1}, Lcom/vk/im/ui/utils/ClipboardUtils;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    invoke-static {v0, p1}, Lcom/vk/im/ui/utils/b;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
     .line 13
     iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->D:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;
@@ -876,11 +876,11 @@
     .locals 2
 
     .line 14
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->d(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->d(Z)V
 
     .line 15
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->H()V
@@ -891,13 +891,13 @@
     return-void
 .end method
 
-.method private final b(Lio/reactivex/disposables/Disposable;)Z
+.method private final b(Lio/reactivex/disposables/b;)Z
     .locals 0
 
     if-eqz p1, :cond_0
 
     .line 17
-    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->e()Z
+    invoke-interface {p1}, Lio/reactivex/disposables/b;->e()Z
 
     move-result p1
 
@@ -989,11 +989,11 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->e(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->e(Z)V
 
     .line 3
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->H()V
@@ -1071,13 +1071,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/State;->f()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/e;->f()Lcom/vk/im/engine/models/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityIntMap;->g()Z
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/a;->g()Z
 
     move-result v0
 
@@ -1092,21 +1092,21 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/EntityIntMap;)V
+.method public final a(Lcom/vk/im/engine/models/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/EntityIntMap<",
+            "Lcom/vk/im/engine/models/a<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;)V"
         }
     .end annotation
 
     .line 64
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/State;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/e;->j()Z
 
     move-result v0
 
@@ -1116,19 +1116,19 @@
 
     .line 65
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/State;->f()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/e;->f()Lcom/vk/im/engine/models/a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->e()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->e()I
 
     move-result v1
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/im/engine/models/EntityIntMap;->a(Lcom/vk/im/engine/models/EntityIntMap;I)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/im/engine/models/a;->a(Lcom/vk/im/engine/models/a;I)V
 
     .line 66
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->z()V
@@ -1139,11 +1139,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;)V
+.method public final a(Lcom/vk/im/ui/components/dialog_header/actions/c;)V
     .locals 0
 
     .line 8
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->E:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->E:Lcom/vk/im/ui/components/dialog_header/actions/c;
 
     return-void
 .end method
@@ -1215,9 +1215,9 @@
     new-instance v0, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd;
 
     .line 30
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->e()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->e()I
 
     move-result v2
 
@@ -1233,9 +1233,9 @@
     const/4 v6, 0x0
 
     .line 32
-    sget-object p1, Lcom/vk/im/ui/components/dialog_header/actions/Constants;->INSTANCE:Lcom/vk/im/ui/components/dialog_header/actions/Constants;
+    sget-object p1, Lcom/vk/im/ui/components/dialog_header/actions/a;->b:Lcom/vk/im/ui/components/dialog_header/actions/a;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/Constants;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/a;->a()Ljava/lang/String;
 
     move-result-object v7
 
@@ -1246,13 +1246,13 @@
     move-object v1, v0
 
     .line 33
-    invoke-direct/range {v1 .. v9}, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd;-><init>(ILcom/vk/im/engine/utils/collection/IntCollection;ZZZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v9}, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd;-><init>(ILcom/vk/im/engine/utils/collection/d;ZZZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
 
     .line 34
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/ImEngine;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/a;
 
     .line 35
-    invoke-virtual {p1, p0, v0}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
+    invoke-virtual {p1, p0, v0}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
 
     move-result-object p1
 
@@ -1261,23 +1261,23 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$startMsgMarkAsSpam$1;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
 
-    new-instance v1, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;
+    new-instance v1, Lcom/vk/im/ui/components/dialog_header/actions/b;
 
-    invoke-direct {v1, v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v1, v0}, Lcom/vk/im/ui/components/dialog_header/actions/b;-><init>(Lkotlin/jvm/b/b;)V
 
     new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$startMsgMarkAsSpam$2;
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$startMsgMarkAsSpam$2;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;
+    new-instance v2, Lcom/vk/im/ui/components/dialog_header/actions/b;
 
-    invoke-direct {v2, v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v2, v0}, Lcom/vk/im/ui/components/dialog_header/actions/b;-><init>(Lkotlin/jvm/b/b;)V
 
-    invoke-virtual {p1, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->B:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->B:Lio/reactivex/disposables/b;
 
     :cond_2
     :goto_0
@@ -1324,9 +1324,9 @@
     new-instance v0, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd;
 
     .line 20
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->e()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->e()I
 
     move-result v2
 
@@ -1340,9 +1340,9 @@
     const/4 v6, 0x0
 
     .line 22
-    sget-object p1, Lcom/vk/im/ui/components/dialog_header/actions/Constants;->INSTANCE:Lcom/vk/im/ui/components/dialog_header/actions/Constants;
+    sget-object p1, Lcom/vk/im/ui/components/dialog_header/actions/a;->b:Lcom/vk/im/ui/components/dialog_header/actions/a;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/Constants;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_header/actions/a;->a()Ljava/lang/String;
 
     move-result-object v7
 
@@ -1355,13 +1355,13 @@
     move v4, p2
 
     .line 23
-    invoke-direct/range {v1 .. v9}, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd;-><init>(ILcom/vk/im/engine/utils/collection/IntCollection;ZZZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v9}, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd;-><init>(ILcom/vk/im/engine/utils/collection/d;ZZZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
 
     .line 24
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/ImEngine;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/a;
 
     .line 25
-    invoke-virtual {p1, p0, v0}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
+    invoke-virtual {p1, p0, v0}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
 
     move-result-object p1
 
@@ -1370,23 +1370,23 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$startMsgDelete$1;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
 
-    new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/b;
 
-    invoke-direct {v0, p2}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p2}, Lcom/vk/im/ui/components/dialog_header/actions/b;-><init>(Lkotlin/jvm/b/b;)V
 
     new-instance p2, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$startMsgDelete$2;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$startMsgDelete$2;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
 
-    new-instance v1, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;
+    new-instance v1, Lcom/vk/im/ui/components/dialog_header/actions/b;
 
-    invoke-direct {v1, p2}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v1, p2}, Lcom/vk/im/ui/components/dialog_header/actions/b;-><init>(Lkotlin/jvm/b/b;)V
 
-    invoke-virtual {p1, v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v0, v1}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->h:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->h:Lio/reactivex/disposables/b;
 
     :cond_2
     :goto_0
@@ -1416,17 +1416,17 @@
 
     .line 13
     :cond_0
-    sget-object v0, Lcom/vk/im/ui/u/MsgToTextLoader;->INSTANCE:Lcom/vk/im/ui/u/MsgToTextLoader;
+    sget-object v0, Lcom/vk/im/ui/u/a;->a:Lcom/vk/im/ui/u/a;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->F:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/ImEngine;
+    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/a;
 
     invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->b(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/IntArrayList;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/im/ui/u/MsgToTextLoader;->b(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/engine/utils/collection/IntArrayList;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/im/ui/u/a;->b(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/engine/utils/collection/IntArrayList;)Lc/a/t;
 
     move-result-object p1
 
@@ -1435,30 +1435,30 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$copyToClipboard$1;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
 
-    new-instance v1, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;
+    new-instance v1, Lcom/vk/im/ui/components/dialog_header/actions/b;
 
-    invoke-direct {v1, v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v1, v0}, Lcom/vk/im/ui/components/dialog_header/actions/b;-><init>(Lkotlin/jvm/b/b;)V
 
     new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$copyToClipboard$2;
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$copyToClipboard$2;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;
+    new-instance v2, Lcom/vk/im/ui/components/dialog_header/actions/b;
 
-    invoke-direct {v2, v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v2, v0}, Lcom/vk/im/ui/components/dialog_header/actions/b;-><init>(Lkotlin/jvm/b/b;)V
 
-    invoke-virtual {p1, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     const-string v0, "MsgToTextLoader.loadSing\u2026::onCopyToClipboardError)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->g:Lio/reactivex/disposables/a;
 
-    invoke-static {p1, v0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {p1, v0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)V
 
     return-void
 .end method
@@ -1467,25 +1467,25 @@
     .locals 2
 
     .line 37
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->b(Z)V
 
     .line 38
-    new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogsDeleteForAllFlagSetCmd;
+    new-instance v0, Lcom/vk/im/engine/commands/dialogs/n;
 
-    sget-object v1, Lcom/vk/im/ui/components/dialog_header/actions/Constants;->INSTANCE:Lcom/vk/im/ui/components/dialog_header/actions/Constants;
+    sget-object v1, Lcom/vk/im/ui/components/dialog_header/actions/a;->b:Lcom/vk/im/ui/components/dialog_header/actions/a;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/Constants;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/a;->a()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/im/engine/commands/dialogs/DialogsDeleteForAllFlagSetCmd;-><init>(ZLjava/lang/Object;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/im/engine/commands/dialogs/n;-><init>(ZLjava/lang/Object;)V
 
     .line 39
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/ImEngine;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/a;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
 
     return-void
 .end method
@@ -1513,7 +1513,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$a;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
 
-    invoke-virtual {p1, p3}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;)V
+    invoke-virtual {p1, p3}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;)V
 
     .line 5
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->H()V
@@ -1530,13 +1530,13 @@
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p2
 
     .line 7
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p2
 .end method
@@ -1554,9 +1554,9 @@
     .end annotation
 
     .line 10
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->a(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->a(Ljava/util/List;)V
 
     .line 11
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->H()V
@@ -1568,9 +1568,9 @@
     .locals 1
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->a(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->a(Z)V
 
     .line 9
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->H()V
@@ -1582,9 +1582,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->c(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->c(Z)V
 
     .line 3
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->H()V
@@ -1596,9 +1596,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->g(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->g(Z)V
 
     .line 3
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->H()V
@@ -1610,9 +1610,9 @@
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/State;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/e;->j()Z
 
     move-result v0
 
@@ -1622,9 +1622,9 @@
 
     .line 6
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->b(Z)V
 
     return-void
 .end method
@@ -1662,7 +1662,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;)V
 
     .line 2
     :cond_0
@@ -1683,17 +1683,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->h:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->h:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->h:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->h:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -1702,26 +1702,26 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->B:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->B:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->B:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->B:Lio/reactivex/disposables/b;
 
     return-void
 .end method
 
-.method public final u()Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;
+.method public final u()Lcom/vk/im/ui/components/dialog_header/actions/c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->E:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->E:Lcom/vk/im/ui/components/dialog_header/actions/c;
 
     return-object v0
 .end method
@@ -1730,9 +1730,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->h:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->h:Lio/reactivex/disposables/b;
 
-    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->b(Lio/reactivex/disposables/b;)Z
 
     move-result v0
 
@@ -1743,9 +1743,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->B:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->B:Lio/reactivex/disposables/b;
 
-    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->b(Lio/reactivex/disposables/b;)Z
 
     move-result v0
 
@@ -1763,9 +1763,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/State;->e()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/e;->e()I
 
     move-result v0
 
@@ -1783,9 +1783,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/State;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/e;->j()Z
 
     move-result v0
 
@@ -1795,29 +1795,29 @@
 
     .line 2
     :cond_0
-    new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/f/LoadAllByCacheCmd;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_header/actions/f/b;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->C:Lcom/vk/im/ui/components/dialog_header/actions/e;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->e()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->e()I
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/f/LoadAllByCacheCmd;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/f/b;-><init>(I)V
 
     .line 3
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/ImEngine;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->G:Lcom/vk/im/engine/a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
 
     move-result-object v0
 
@@ -1826,30 +1826,30 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$updateAllByCache$1;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;
+    new-instance v2, Lcom/vk/im/ui/components/dialog_header/actions/b;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_header/actions/b;-><init>(Lkotlin/jvm/b/b;)V
 
     new-instance v1, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$updateAllByCache$2;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$updateAllByCache$2;-><init>(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;
+    new-instance v3, Lcom/vk/im/ui/components/dialog_header/actions/b;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_header/actions/b;-><init>(Lkotlin/jvm/b/b;)V
 
-    invoke-virtual {v0, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     const-string v1, "imEngine.submitWithCance\u2026:onUpdateAllByCacheError)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->g:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)V
 
     return-void
 .end method

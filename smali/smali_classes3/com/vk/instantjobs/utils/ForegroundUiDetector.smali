@@ -37,12 +37,12 @@
     .end annotation
 .end field
 
-.field private final d:Lkotlin/jvm/b/Functions2;
+.field private final d:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/Boolean;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -57,7 +57,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/instantjobs/utils/ForegroundUiDetector$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/instantjobs/utils/ForegroundUiDetector$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Landroid/os/Handler;
@@ -73,16 +73,16 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
+.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -90,7 +90,7 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/instantjobs/utils/ForegroundUiDetector;->d:Lkotlin/jvm/b/Functions2;
+    iput-object p2, p0, Lcom/vk/instantjobs/utils/ForegroundUiDetector;->d:Lkotlin/jvm/b/b;
 
     .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -187,7 +187,7 @@
     if-eq v0, p1, :cond_1
 
     .line 7
-    iget-object p1, p0, Lcom/vk/instantjobs/utils/ForegroundUiDetector;->d:Lkotlin/jvm/b/Functions2;
+    iget-object p1, p0, Lcom/vk/instantjobs/utils/ForegroundUiDetector;->d:Lkotlin/jvm/b/b;
 
     invoke-virtual {p0}, Lcom/vk/instantjobs/utils/ForegroundUiDetector;->a()Z
 
@@ -197,7 +197,7 @@
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     return-void
@@ -306,9 +306,9 @@
     .line 6
     sget-object v0, Lcom/vk/instantjobs/utils/ForegroundUiDetector;->e:Landroid/os/Handler;
 
-    new-instance v4, Lcom/vk/instantjobs/utils/ForegroundUiDetector1;
+    new-instance v4, Lcom/vk/instantjobs/utils/d;
 
-    invoke-direct {v4, v1}, Lcom/vk/instantjobs/utils/ForegroundUiDetector1;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v4, v1}, Lcom/vk/instantjobs/utils/d;-><init>(Lkotlin/jvm/b/a;)V
 
     invoke-virtual {v0, v4, p1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
 
@@ -318,9 +318,9 @@
     :cond_0
     sget-object v0, Lcom/vk/instantjobs/utils/ForegroundUiDetector;->e:Landroid/os/Handler;
 
-    new-instance v4, Lcom/vk/instantjobs/utils/ForegroundUiDetector1;
+    new-instance v4, Lcom/vk/instantjobs/utils/d;
 
-    invoke-direct {v4, v1}, Lcom/vk/instantjobs/utils/ForegroundUiDetector1;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v4, v1}, Lcom/vk/instantjobs/utils/d;-><init>(Lkotlin/jvm/b/a;)V
 
     invoke-static {v0, v4}, Landroid/os/Message;->obtain(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;
 

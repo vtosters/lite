@@ -3,7 +3,7 @@
 .source "VkSpinner.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/Themable;
+.implements Lcom/vk/core/ui/themes/f;
 
 
 # direct methods
@@ -22,7 +22,7 @@
     .locals 1
 
     .line 2
-    sget v0, Lb/h/z/R5;->spinnerStyle:I
+    sget v0, Lb/h/z/b;->spinnerStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/vk/core/view/VkSpinner;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -78,7 +78,7 @@
     .locals 4
 
     .line 1
-    sget v0, Lb/h/z/R5;->modal_card_background:I
+    sget v0, Lb/h/z/b;->modal_card_background:I
 
     invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 

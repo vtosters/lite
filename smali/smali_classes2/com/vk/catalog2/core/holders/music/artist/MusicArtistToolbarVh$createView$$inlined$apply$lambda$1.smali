@@ -3,7 +3,7 @@
 .source "MusicArtistToolbarVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/MenuItem;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -79,7 +79,7 @@
 
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh$createView$$inlined$apply$lambda$1;->this$0:Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;
 
-    invoke-static {v0}, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;->a(Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;)Lcom/vk/bridges/SharingBridge1;
+    invoke-static {v0}, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;->a(Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;)Lcom/vk/bridges/z;
 
     move-result-object v0
 
@@ -93,9 +93,9 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/SharingBridge1;->a(Landroid/content/Context;Lcom/vk/dto/music/Artist;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Lcom/vk/dto/music/Artist;)V
 
     :cond_1
     const/4 p1, 0x1

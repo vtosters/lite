@@ -3,12 +3,12 @@
 .source "RxExt.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZ)Lio/reactivex/Observable;
+    value = Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZ)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -30,14 +30,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/core/extensions/RxExt;
+.field final synthetic a:Lcom/vk/core/extensions/t;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/extensions/RxExt;)V
+.method constructor <init>(Lcom/vk/core/extensions/t;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/core/extensions/RxExtKt$i;->a:Lcom/vk/core/extensions/RxExt;
+    iput-object p1, p0, Lcom/vk/core/extensions/RxExtKt$i;->a:Lcom/vk/core/extensions/t;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,9 +50,9 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/core/extensions/RxExtKt$i;->a:Lcom/vk/core/extensions/RxExt;
+    iget-object p1, p0, Lcom/vk/core/extensions/RxExtKt$i;->a:Lcom/vk/core/extensions/t;
 
-    invoke-virtual {p1}, Lcom/vk/core/extensions/RxExt;->a()V
+    invoke-virtual {p1}, Lcom/vk/core/extensions/t;->a()V
 
     return-void
 .end method

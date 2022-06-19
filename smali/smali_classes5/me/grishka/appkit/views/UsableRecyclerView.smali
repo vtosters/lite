@@ -58,9 +58,9 @@
 
 .field private Q:Lme/grishka/appkit/views/UsableRecyclerView$p;
 
-.field private R:Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;
+.field private R:Ld/a/a/b/c;
 
-.field private S:Lme/grishka/appkit/preloading/ListPreloader;
+.field private S:Ld/a/a/b/a;
 
 .field private T:Landroid/view/View;
 
@@ -70,15 +70,15 @@
 
 .field private W:I
 
-.field private final a:Lme/grishka/appkit/views/RecyclerViewDelegate;
+.field private final a:Lme/grishka/appkit/views/c;
 
-.field private a0:Lcom/vk/common/g/F1;
+.field private a0:Lcom/vk/common/g/b;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/common/g/F1<",
+            "Lcom/vk/common/g/b<",
             "Ljava/lang/Boolean;",
             "Landroidx/recyclerview/widget/RecyclerView$Adapter;",
             ">;"
@@ -112,11 +112,11 @@
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;)V
 
     .line 2
-    new-instance p1, Lme/grishka/appkit/views/RecyclerViewDelegate;
+    new-instance p1, Lme/grishka/appkit/views/c;
 
-    invoke-direct {p1, p0}, Lme/grishka/appkit/views/RecyclerViewDelegate;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-direct {p1, p0}, Lme/grishka/appkit/views/c;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    iput-object p1, p0, Lme/grishka/appkit/views/UsableRecyclerView;->a:Lme/grishka/appkit/views/RecyclerViewDelegate;
+    iput-object p1, p0, Lme/grishka/appkit/views/UsableRecyclerView;->a:Lme/grishka/appkit/views/c;
 
     const/4 p1, 0x0
 
@@ -138,7 +138,7 @@
     .line 6
     new-instance p1, Landroid/view/GestureDetector;
 
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     new-instance v1, Lme/grishka/appkit/views/UsableRecyclerView$k;
 
@@ -182,11 +182,11 @@
     invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 14
-    new-instance p1, Lme/grishka/appkit/views/RecyclerViewDelegate;
+    new-instance p1, Lme/grishka/appkit/views/c;
 
-    invoke-direct {p1, p0}, Lme/grishka/appkit/views/RecyclerViewDelegate;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-direct {p1, p0}, Lme/grishka/appkit/views/c;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    iput-object p1, p0, Lme/grishka/appkit/views/UsableRecyclerView;->a:Lme/grishka/appkit/views/RecyclerViewDelegate;
+    iput-object p1, p0, Lme/grishka/appkit/views/UsableRecyclerView;->a:Lme/grishka/appkit/views/c;
 
     const/4 p1, 0x0
 
@@ -208,7 +208,7 @@
     .line 18
     new-instance p1, Landroid/view/GestureDetector;
 
-    sget-object p2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     new-instance v0, Lme/grishka/appkit/views/UsableRecyclerView$k;
 
@@ -252,11 +252,11 @@
     invoke-direct {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 26
-    new-instance p1, Lme/grishka/appkit/views/RecyclerViewDelegate;
+    new-instance p1, Lme/grishka/appkit/views/c;
 
-    invoke-direct {p1, p0}, Lme/grishka/appkit/views/RecyclerViewDelegate;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-direct {p1, p0}, Lme/grishka/appkit/views/c;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    iput-object p1, p0, Lme/grishka/appkit/views/UsableRecyclerView;->a:Lme/grishka/appkit/views/RecyclerViewDelegate;
+    iput-object p1, p0, Lme/grishka/appkit/views/UsableRecyclerView;->a:Lme/grishka/appkit/views/c;
 
     const/4 p1, 0x0
 
@@ -278,7 +278,7 @@
     .line 30
     new-instance p1, Landroid/view/GestureDetector;
 
-    sget-object p2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     new-instance p3, Lme/grishka/appkit/views/UsableRecyclerView$k;
 
@@ -333,11 +333,11 @@
     return-object p1
 .end method
 
-.method static synthetic a(Lme/grishka/appkit/views/UsableRecyclerView;)Lme/grishka/appkit/views/RecyclerViewDelegate;
+.method static synthetic a(Lme/grishka/appkit/views/UsableRecyclerView;)Lme/grishka/appkit/views/c;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->a:Lme/grishka/appkit/views/RecyclerViewDelegate;
+    iget-object p0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->a:Lme/grishka/appkit/views/c;
 
     return-object p0
 .end method
@@ -424,11 +424,11 @@
     return-void
 .end method
 
-.method static synthetic b(Lme/grishka/appkit/views/UsableRecyclerView;)Lme/grishka/appkit/preloading/ListPreloader;
+.method static synthetic b(Lme/grishka/appkit/views/UsableRecyclerView;)Ld/a/a/b/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->S:Lme/grishka/appkit/preloading/ListPreloader;
+    iget-object p0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->S:Ld/a/a/b/a;
 
     return-object p0
 .end method
@@ -577,41 +577,41 @@
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 8
-    new-instance v0, Lme/grishka/appkit/utils/AutoAssignMaxRecycledViewPool;
+    new-instance v0, Ld/a/a/c/a;
 
     const/16 v1, 0x19
 
-    invoke-direct {v0, v1}, Lme/grishka/appkit/utils/AutoAssignMaxRecycledViewPool;-><init>(I)V
+    invoke-direct {v0, v1}, Ld/a/a/c/a;-><init>(I)V
 
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView;->setRecycledViewPool(Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;)V
 
     .line 9
-    iget-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->a:Lme/grishka/appkit/views/RecyclerViewDelegate;
+    iget-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->a:Lme/grishka/appkit/views/c;
 
     new-instance v2, Lme/grishka/appkit/views/UsableRecyclerView$b;
 
     invoke-direct {v2, p0}, Lme/grishka/appkit/views/UsableRecyclerView$b;-><init>(Lme/grishka/appkit/views/UsableRecyclerView;)V
 
-    invoke-virtual {v0, v2}, Lme/grishka/appkit/views/RecyclerViewDelegate;->a(Landroid/widget/AbsListView$OnScrollListener;)V
+    invoke-virtual {v0, v2}, Lme/grishka/appkit/views/c;->a(Landroid/widget/AbsListView$OnScrollListener;)V
 
     .line 10
-    new-instance v0, Lme/grishka/appkit/preloading/ListPreloader;
+    new-instance v0, Ld/a/a/b/a;
 
-    invoke-direct {v0, v1}, Lme/grishka/appkit/preloading/ListPreloader;-><init>(I)V
+    invoke-direct {v0, v1}, Ld/a/a/b/a;-><init>(I)V
 
-    iput-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->S:Lme/grishka/appkit/preloading/ListPreloader;
+    iput-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->S:Ld/a/a/b/a;
 
     .line 11
-    new-instance v0, Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;
+    new-instance v0, Ld/a/a/b/c;
 
-    iget-object v1, p0, Lme/grishka/appkit/views/UsableRecyclerView;->S:Lme/grishka/appkit/preloading/ListPreloader;
+    iget-object v1, p0, Lme/grishka/appkit/views/UsableRecyclerView;->S:Ld/a/a/b/a;
 
-    invoke-direct {v0, v1}, Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;-><init>(Landroid/widget/AbsListView$OnScrollListener;)V
+    invoke-direct {v0, v1}, Ld/a/a/b/c;-><init>(Landroid/widget/AbsListView$OnScrollListener;)V
 
-    iput-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->R:Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;
+    iput-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->R:Ld/a/a/b/c;
 
     .line 12
-    iget-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->R:Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;
+    iget-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->R:Ld/a/a/b/c;
 
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
@@ -669,7 +669,7 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->a0:Lcom/vk/common/g/F1;
+    iget-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->a0:Lcom/vk/common/g/b;
 
     if-eqz v0, :cond_1
 
@@ -677,7 +677,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/common/g/F1;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lcom/vk/common/g/b;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -778,9 +778,9 @@
     return-void
 .end method
 
-.method public a(Landroid/view/View;Lcom/vk/common/g/F1;)V
+.method public a(Landroid/view/View;Lcom/vk/common/g/b;)V
     .locals 0
-    .param p2    # Lcom/vk/common/g/F1;
+    .param p2    # Lcom/vk/common/g/b;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -788,7 +788,7 @@
         value = {
             "(",
             "Landroid/view/View;",
-            "Lcom/vk/common/g/F1<",
+            "Lcom/vk/common/g/b<",
             "Ljava/lang/Boolean;",
             "Landroidx/recyclerview/widget/RecyclerView$Adapter;",
             ">;)V"
@@ -799,7 +799,7 @@
     iput-object p1, p0, Lme/grishka/appkit/views/UsableRecyclerView;->T:Landroid/view/View;
 
     .line 13
-    iput-object p2, p0, Lme/grishka/appkit/views/UsableRecyclerView;->a0:Lcom/vk/common/g/F1;
+    iput-object p2, p0, Lme/grishka/appkit/views/UsableRecyclerView;->a0:Lcom/vk/common/g/b;
 
     .line 14
     invoke-direct {p0}, Lme/grishka/appkit/views/UsableRecyclerView;->i()V
@@ -811,9 +811,9 @@
     .locals 1
 
     .line 23
-    iget-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->R:Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;
+    iget-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->R:Ld/a/a/b/c;
 
-    invoke-virtual {v0, p1}, Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;->a(Landroid/widget/AbsListView$OnScrollListener;)V
+    invoke-virtual {v0, p1}, Ld/a/a/b/c;->a(Landroid/widget/AbsListView$OnScrollListener;)V
 
     return-void
 .end method
@@ -997,20 +997,20 @@
     .line 3
     check-cast v0, Lme/grishka/appkit/views/UsableRecyclerView$i;
 
-    iget-object v0, v0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, v0, Lme/grishka/appkit/views/b;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     return-object v0
 
     .line 4
     :cond_0
-    instance-of v1, v0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;
+    instance-of v1, v0, Lme/grishka/appkit/views/b;
 
     if-eqz v1, :cond_1
 
     .line 5
-    check-cast v0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;
+    check-cast v0, Lme/grishka/appkit/views/b;
 
-    iget-object v0, v0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, v0, Lme/grishka/appkit/views/b;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     :cond_1
     return-object v0
@@ -1728,18 +1728,18 @@
     .line 5
     :cond_1
     :goto_0
-    instance-of v0, p1, Lme/grishka/appkit/preloading/PrefetchInfoProvider;
+    instance-of v0, p1, Ld/a/a/b/b;
 
     if-eqz v0, :cond_2
 
     .line 6
-    iget-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->S:Lme/grishka/appkit/preloading/ListPreloader;
+    iget-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->S:Ld/a/a/b/a;
 
     move-object v1, p1
 
-    check-cast v1, Lme/grishka/appkit/preloading/PrefetchInfoProvider;
+    check-cast v1, Ld/a/a/b/b;
 
-    invoke-virtual {v0, v1}, Lme/grishka/appkit/preloading/ListPreloader;->a(Lme/grishka/appkit/preloading/PrefetchInfoProvider;)V
+    invoke-virtual {v0, v1}, Ld/a/a/b/a;->a(Ld/a/a/b/b;)V
 
     :cond_2
     if-nez p1, :cond_3
@@ -1750,9 +1750,9 @@
 
     .line 7
     :cond_3
-    new-instance v0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;
+    new-instance v0, Lme/grishka/appkit/views/b;
 
-    invoke-direct {v0, p1}, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {v0, p1}, Lme/grishka/appkit/views/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     move-object p1, v0
 
@@ -1765,7 +1765,7 @@
     .line 9
     iget-object v0, p0, Lme/grishka/appkit/views/UsableRecyclerView;->M:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
 
-    invoke-virtual {p1, v0}, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->registerAdapterDataObserver(Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;)V
+    invoke-virtual {p1, v0}, Lme/grishka/appkit/views/b;->registerAdapterDataObserver(Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;)V
 
     .line 10
     :cond_4
@@ -1789,7 +1789,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, v0}, Lme/grishka/appkit/views/UsableRecyclerView;->a(Landroid/view/View;Lcom/vk/common/g/F1;)V
+    invoke-virtual {p0, p1, v0}, Lme/grishka/appkit/views/UsableRecyclerView;->a(Landroid/view/View;Lcom/vk/common/g/b;)V
 
     return-void
 .end method

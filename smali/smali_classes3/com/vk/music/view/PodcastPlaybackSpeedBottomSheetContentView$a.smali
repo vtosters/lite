@@ -1,5 +1,5 @@
 .class final Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView$a;
-.super Lcom/vk/lists/SimpleAdapter;
+.super Lcom/vk/lists/i0;
 .source "PodcastPlaybackSpeedBottomSheetContentView.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/SimpleAdapter<",
+        "Lcom/vk/lists/i0<",
         "Ljava/lang/Integer;",
         "Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView$c;",
         ">;"
@@ -39,7 +39,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView$a;->c:Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;
 
-    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
 
     const/4 p1, 0x1
 

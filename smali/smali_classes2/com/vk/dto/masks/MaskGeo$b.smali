@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -39,7 +39,7 @@
     .locals 6
 
     .line 1
-    new-instance v0, Lkotlin/t/Ranges1;
+    new-instance v0, Lkotlin/t/d;
 
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
@@ -51,7 +51,7 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v3, v1}, Lkotlin/t/Ranges1;-><init>(II)V
+    invoke-direct {v0, v3, v1}, Lkotlin/t/d;-><init>(II)V
 
     .line 2
     new-instance v1, Ljava/util/ArrayList;
@@ -78,9 +78,9 @@
 
     move-object v5, v0
 
-    check-cast v5, Lkotlin/collections/Iterators1;
+    check-cast v5, Lkotlin/collections/a0;
 
-    invoke-virtual {v5}, Lkotlin/collections/Iterators1;->a()I
+    invoke-virtual {v5}, Lkotlin/collections/a0;->a()I
 
     move-result v5
 
@@ -171,7 +171,7 @@
 
     const-string v4, "it"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v1}, Lcom/vk/dto/masks/MaskGeo$MaskLocation$b;->a(Lorg/json/JSONObject;)Lcom/vk/dto/masks/MaskGeo$MaskLocation;
 

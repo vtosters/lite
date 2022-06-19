@@ -1,5 +1,5 @@
 .class final Lcom/vk/im/engine/ImEnvironmentRunner$a;
-.super Lcom/vk/im/engine/internal/i/ProxyFuture;
+.super Lcom/vk/im/engine/internal/i/b;
 .source "ImEnvironmentRunner.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/internal/i/ProxyFuture<",
+        "Lcom/vk/im/engine/internal/i/b<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -31,7 +31,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/i/ProxyFuture;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/i/b;-><init>()V
 
     .line 2
     new-instance v0, Ljava/lang/Object;
@@ -64,7 +64,7 @@
 
     .line 2
     :try_start_0
-    invoke-super {p0, p1}, Lcom/vk/im/engine/internal/i/ProxyFuture;->cancel(Z)Z
+    invoke-super {p0, p1}, Lcom/vk/im/engine/internal/i/b;->cancel(Z)Z
 
     move-result p1
     :try_end_0

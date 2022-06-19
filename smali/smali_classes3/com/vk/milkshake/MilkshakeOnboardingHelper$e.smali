@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/milkshake/MilkshakeOnboardingHelper;->e(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/Functions;)Z
+    value = Lcom/vk/milkshake/MilkshakeOnboardingHelper;->e(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/a;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/Functions;
+.field final synthetic a:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lkotlin/jvm/b/a;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/milkshake/MilkshakeOnboardingHelper$e;->a:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/milkshake/MilkshakeOnboardingHelper$e;->a:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
     invoke-static {p1, v0}, Lcom/vk/milkshake/MilkshakeOnboardingHelper;->a(Lcom/vk/milkshake/MilkshakeOnboardingHelper;Z)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/milkshake/MilkshakeOnboardingHelper$e;->a:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/milkshake/MilkshakeOnboardingHelper$e;->a:Lkotlin/jvm/b/a;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

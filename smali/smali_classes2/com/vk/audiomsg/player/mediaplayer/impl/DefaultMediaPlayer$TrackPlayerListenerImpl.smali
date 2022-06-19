@@ -3,7 +3,7 @@
 .source "DefaultMediaPlayer.kt"
 
 # interfaces
-.implements Lcom/vk/audiomsg/player/k/TrackPlayerListener;
+.implements Lcom/vk/audiomsg/player/k/b;
 
 
 # annotations
@@ -57,7 +57,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;F)V
+.method public a(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;F)V
     .locals 1
 
     .line 8
@@ -65,16 +65,16 @@
 
     new-instance v0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onVolumeChanged$1;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onVolumeChanged$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;F)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onVolumeChanged$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;F)V
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/SpeakerType;)V
+.method public a(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/SpeakerType;)V
     .locals 1
 
     .line 6
@@ -82,16 +82,16 @@
 
     new-instance v0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onSpeakerChanged$1;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onSpeakerChanged$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/SpeakerType;)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onSpeakerChanged$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/SpeakerType;)V
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/Speed;)V
+.method public a(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/Speed;)V
     .locals 1
 
     .line 7
@@ -99,16 +99,16 @@
 
     new-instance v0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onSpeedChanged$1;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onSpeedChanged$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/Speed;)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onSpeedChanged$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/Speed;)V
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+.method public a(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
     .locals 1
 
     .line 4
@@ -116,16 +116,16 @@
 
     new-instance v0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onPlay$1;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onPlay$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onPlay$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;F)V
+.method public a(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;F)V
     .locals 1
 
     .line 5
@@ -133,16 +133,16 @@
 
     new-instance v0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onPlayProgressChanged$1;
 
-    invoke-direct {v0, p0, p2, p3, p4}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onPlayProgressChanged$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;F)V
+    invoke-direct {v0, p0, p2, p3, p4}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onPlayProgressChanged$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;F)V
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;)V
+.method public a(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;)V
     .locals 1
 
     .line 3
@@ -150,16 +150,16 @@
 
     new-instance v0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onResourceForPlayFound$1;
 
-    invoke-direct {v0, p0, p2, p3, p4}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onResourceForPlayFound$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;)V
+    invoke-direct {v0, p0, p2, p3, p4}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onResourceForPlayFound$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;)V
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;Ljava/lang/Throwable;)V
+.method public a(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;Ljava/lang/Throwable;)V
     .locals 7
 
     .line 2
@@ -179,16 +179,16 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onResourceLoadError$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;Ljava/lang/Throwable;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onResourceLoadError$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;Ljava/lang/Throwable;)V
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2, v6}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2, v6}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Ljava/lang/Throwable;)V
+.method public a(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Ljava/lang/Throwable;)V
     .locals 1
 
     .line 9
@@ -196,11 +196,11 @@
 
     new-instance v0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onError$1;
 
-    invoke-direct {v0, p0, p2, p3, p4}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onError$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Ljava/lang/Throwable;)V
+    invoke-direct {v0, p0, p2, p3, p4}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onError$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Ljava/lang/Throwable;)V
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
 
     .line 10
     iget-object p1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;->b:Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;
@@ -210,7 +210,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+.method public b(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
     .locals 1
 
     .line 2
@@ -218,16 +218,16 @@
 
     new-instance v0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onPause$1;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onPause$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onPause$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public b(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;)V
+.method public b(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;)V
     .locals 1
 
     .line 1
@@ -235,16 +235,16 @@
 
     new-instance v0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onResourceLoadBegin$1;
 
-    invoke-direct {v0, p0, p2, p3, p4}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onResourceLoadBegin$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;)V
+    invoke-direct {v0, p0, p2, p3, p4}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onResourceLoadBegin$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;)V
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public c(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+.method public c(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
     .locals 2
 
     .line 2
@@ -252,21 +252,21 @@
 
     new-instance v0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onComplete$1;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onComplete$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onComplete$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
 
     const/4 v1, 0x1
 
-    invoke-static {p1, v1, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, v1, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;->b:Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;
 
-    invoke-static {p1, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+    invoke-static {p1, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
 
     return-void
 .end method
 
-.method public c(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;)V
+.method public c(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;)V
     .locals 1
 
     .line 1
@@ -274,16 +274,16 @@
 
     new-instance v0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onResourceLoadComplete$1;
 
-    invoke-direct {v0, p0, p2, p3, p4}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onResourceLoadComplete$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;)V
+    invoke-direct {v0, p0, p2, p3, p4}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onResourceLoadComplete$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;)V
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public d(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+.method public d(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
     .locals 1
 
     .line 1
@@ -291,16 +291,16 @@
 
     new-instance v0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onStop$1;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onStop$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onStop$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public e(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+.method public e(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
     .locals 2
 
     if-eqz p3, :cond_0
@@ -312,9 +312,9 @@
 
     new-instance v1, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onTrackChanged$1;
 
-    invoke-direct {v1, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onTrackChanged$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
+    invoke-direct {v1, p0, p2, p3}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl$onTrackChanged$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
 
-    invoke-static {p1, v0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, v0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
 
     :cond_0
     return-void

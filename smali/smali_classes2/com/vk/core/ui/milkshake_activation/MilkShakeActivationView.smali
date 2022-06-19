@@ -3,11 +3,11 @@
 .source "MilkShakeActivationView.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract;
+.implements Lcom/vk/core/ui/milkshake_activation/e;
 
 
 # instance fields
-.field private final B:Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;
+.field private final B:Lcom/vk/core/ui/milkshake_activation/c;
 
 .field private final C:Landroid/view/View;
 
@@ -23,14 +23,14 @@
 
 .field private I:Landroid/animation/ValueAnimator;
 
-.field private J:Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;
+.field private J:Lcom/vk/core/ui/milkshake_activation/d;
 
-.field private final K:Lkotlin/jvm/b/Functions2;
+.field private final K:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -38,17 +38,17 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions2;Landroid/util/AttributeSet;I)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/b;Landroid/util/AttributeSet;I)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;",
             "Landroid/util/AttributeSet;",
             "I)V"
@@ -58,10 +58,10 @@
     .line 2
     invoke-direct {p0, p1, p4, p5}, Lcom/vk/core/view/FitSystemWindowsFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    iput-object p3, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->K:Lkotlin/jvm/b/Functions2;
+    iput-object p3, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->K:Lkotlin/jvm/b/b;
 
     .line 3
-    new-instance p3, Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;
+    new-instance p3, Lcom/vk/core/ui/milkshake_activation/c;
 
     const/4 v2, 0x0
 
@@ -75,16 +75,16 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/ui/milkshake_activation/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
-    iput-object p3, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;
+    iput-object p3, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/c;
 
     .line 4
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p3
 
-    sget p4, Lb/h/z/R10;->activity_milkshake_activation:I
+    sget p4, Lb/h/z/h;->activity_milkshake_activation:I
 
     const/4 p5, 0x0
 
@@ -97,7 +97,7 @@
     .line 5
     iget-object p3, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->C:Landroid/view/View;
 
-    sget p4, Lb/h/z/R;->milkshake_activation_text:I
+    sget p4, Lb/h/z/g;->milkshake_activation_text:I
 
     invoke-virtual {p3, p4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -110,7 +110,7 @@
     .line 6
     iget-object p3, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->C:Landroid/view/View;
 
-    sget p4, Lb/h/z/R;->milkshake_activation_image:I
+    sget p4, Lb/h/z/g;->milkshake_activation_image:I
 
     invoke-virtual {p3, p4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -125,7 +125,7 @@
 
     move-result-object p3
 
-    sget p4, Lb/h/z/R10;->activity_milkshake_loading:I
+    sget p4, Lb/h/z/h;->activity_milkshake_loading:I
 
     invoke-virtual {p3, p4, p0, p5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -136,7 +136,7 @@
     .line 8
     iget-object p3, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->F:Landroid/view/View;
 
-    sget p4, Lb/h/z/R;->milkshake_loading_logo:I
+    sget p4, Lb/h/z/g;->milkshake_loading_logo:I
 
     invoke-virtual {p3, p4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -147,7 +147,7 @@
     .line 9
     iget-object p3, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->F:Landroid/view/View;
 
-    sget p4, Lb/h/z/R;->milkshake_loading_progress:I
+    sget p4, Lb/h/z/g;->milkshake_loading_progress:I
 
     invoke-virtual {p3, p4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -170,7 +170,7 @@
 
     .line 11
     :cond_0
-    sget p4, Lb/h/z/R4;->gray_200:I
+    sget p4, Lb/h/z/c;->gray_200:I
 
     invoke-static {p1, p4}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;I)I
 
@@ -222,7 +222,7 @@
 
     invoke-direct {p1, p2}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->J:Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;
+    iput-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->J:Lcom/vk/core/ui/milkshake_activation/d;
 
     const/4 p1, 0x1
 
@@ -230,7 +230,7 @@
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setFitsSystemWindows(Z)V
 
     .line 20
-    iget-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;
+    iget-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/c;
 
     const/4 p2, -0x1
 
@@ -249,16 +249,16 @@
     .line 23
     iget-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->C:Landroid/view/View;
 
-    iget-object p2, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;
+    iget-object p2, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/c;
 
-    invoke-virtual {p2}, Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;->getColor()I
+    invoke-virtual {p2}, Lcom/vk/core/ui/milkshake_activation/c;->getColor()I
 
     move-result p2
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundColor(I)V
 
     .line 24
-    iget-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;
+    iget-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/c;
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
@@ -267,7 +267,7 @@
 
     const-string p2, "activationView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
@@ -276,14 +276,14 @@
 
     const-string p2, "loadingView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions2;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/b;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 6
 
     and-int/lit8 p7, p6, 0x2
@@ -340,7 +340,7 @@
     move-object v1, p1
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;-><init>(Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions2;Landroid/util/AttributeSet;I)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;-><init>(Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/b;Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
@@ -372,20 +372,20 @@
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic d(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->K:Lkotlin/jvm/b/Functions2;
+    iget-object p0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->K:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;)Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;
+.method public static final synthetic e(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;)Lcom/vk/core/ui/milkshake_activation/c;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;
+    iget-object p0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/c;
 
     return-object p0
 .end method
@@ -400,7 +400,7 @@
 
     const-string v1, "activationTextView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -409,7 +409,7 @@
     const-string v2, "text"
 
     .line 2
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
@@ -434,7 +434,7 @@
     .line 3
     iget-object v2, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->D:Landroid/widget/TextView;
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
@@ -474,7 +474,7 @@
 
     const-string v3, "loadingProgressView"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/widget/ProgressBar;->getProgress()I
 
@@ -523,19 +523,19 @@
     return-void
 .end method
 
-.method public a(JLkotlin/jvm/b/Functions;)V
+.method public a(JLkotlin/jvm/b/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;
+    iget-object v0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/c;
 
     invoke-static {v0}, Lcom/vk/extensions/ViewExtKt;->r(Landroid/view/View;)V
 
@@ -544,7 +544,7 @@
 
     const-string v1, "activationView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
@@ -553,18 +553,18 @@
 
     const-string v1, "loadingView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;
+    iget-object v0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/c;
 
     new-instance v1, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView$startScreenOffAnimation$1;
 
-    invoke-direct {v1, p0, p3}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView$startScreenOffAnimation$1;-><init>(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, p0, p3}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView$startScreenOffAnimation$1;-><init>(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;Lkotlin/jvm/b/a;)V
 
-    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;->a(JLkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/core/ui/milkshake_activation/c;->a(JLkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -600,7 +600,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -609,9 +609,9 @@
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object v1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;
+    iget-object v1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->B:Lcom/vk/core/ui/milkshake_activation/c;
 
-    invoke-virtual {v1}, Lcom/vk/core/ui/milkshake_activation/MilkShakeScreenOffView;->getColor()I
+    invoke-virtual {v1}, Lcom/vk/core/ui/milkshake_activation/c;->getColor()I
 
     move-result v1
 
@@ -621,7 +621,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/vk/core/extensions/ActivityExt;->a(Landroid/app/Activity;IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/vk/core/extensions/a;->a(Landroid/app/Activity;IZILjava/lang/Object;)V
 
     .line 4
     :cond_0
@@ -642,34 +642,34 @@
 
     .line 6
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->getPresenter()Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;
+    invoke-virtual {p0}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->getPresenter()Lcom/vk/core/ui/milkshake_activation/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0}, Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;->L3()V
+    invoke-interface {v0}, Lcom/vk/core/ui/milkshake_activation/d;->L3()V
 
     :cond_2
     return-void
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/BaseContract;
+.method public bridge synthetic getPresenter()Lb/h/r/a;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->getPresenter()Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;
+    invoke-virtual {p0}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->getPresenter()Lcom/vk/core/ui/milkshake_activation/d;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;
+.method public getPresenter()Lcom/vk/core/ui/milkshake_activation/d;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->J:Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;
+    iget-object v0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->J:Lcom/vk/core/ui/milkshake_activation/d;
 
     return-object v0
 .end method
@@ -750,7 +750,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->f(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -758,7 +758,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1, v1}, Lcom/vk/core/ui/themes/MilkshakeHelper;->a(Landroid/app/Activity;ZZ)V
+    invoke-static {v0, v1, v1}, Lcom/vk/core/ui/themes/d;->a(Landroid/app/Activity;ZZ)V
 
     .line 2
     new-instance v0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView$b;
@@ -810,13 +810,13 @@
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->requestApplyInsets()V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->getPresenter()Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;
+    invoke-virtual {p0}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->getPresenter()Lcom/vk/core/ui/milkshake_activation/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0}, Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;->a(Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract;)V
+    invoke-interface {v0, p0}, Lcom/vk/core/ui/milkshake_activation/d;->a(Lcom/vk/core/ui/milkshake_activation/e;)V
 
     :cond_0
     return-void
@@ -829,13 +829,13 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->getPresenter()Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;
+    invoke-virtual {p0}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->getPresenter()Lcom/vk/core/ui/milkshake_activation/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;->o2()V
+    invoke-interface {v0}, Lcom/vk/core/ui/milkshake_activation/d;->o2()V
 
     :cond_0
     return-void
@@ -854,22 +854,22 @@
     return p1
 .end method
 
-.method public bridge synthetic setPresenter(Lb/h/r/BaseContract;)V
+.method public bridge synthetic setPresenter(Lb/h/r/a;)V
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;
+    check-cast p1, Lcom/vk/core/ui/milkshake_activation/d;
 
-    invoke-virtual {p0, p1}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->setPresenter(Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;)V
+    invoke-virtual {p0, p1}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->setPresenter(Lcom/vk/core/ui/milkshake_activation/d;)V
 
     return-void
 .end method
 
-.method public setPresenter(Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;)V
+.method public setPresenter(Lcom/vk/core/ui/milkshake_activation/d;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->J:Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;
+    iput-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->J:Lcom/vk/core/ui/milkshake_activation/d;
 
     return-void
 .end method

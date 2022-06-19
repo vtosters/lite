@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # static fields
@@ -38,7 +38,7 @@
 
     check-cast p1, Ljava/lang/Boolean;
 
-    invoke-static {p1}, Lcom/vk/music/view/x/ControlsHolder;->a(Ljava/lang/Boolean;)V
+    invoke-static {p1}, Lcom/vk/music/view/x/p;->a(Ljava/lang/Boolean;)V
 
     return-void
 .end method

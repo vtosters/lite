@@ -20,7 +20,7 @@
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/vigo/metrics/Question;",
+            "Lcom/vigo/metrics/e;",
             ">;>;"
         }
     .end annotation
@@ -36,7 +36,7 @@
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/vigo/metrics/Question;",
+            "Lcom/vigo/metrics/e;",
             ">;>;)V"
         }
     .end annotation
@@ -71,7 +71,7 @@
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/vigo/metrics/Question;",
+            "Lcom/vigo/metrics/e;",
             ">;>;)V"
         }
     .end annotation
@@ -143,7 +143,7 @@
     const-string v2, "getConfig: not null"
 
     .line 3
-    invoke-static {v1, v2}, Lcom/vigo/metrics/Log;->a(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/vigo/metrics/d;->a(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
 .end method
@@ -154,9 +154,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vigo/metrics/config;->f:Lcom/vigo/metrics/Storage;
+    sget-object v0, Lcom/vigo/metrics/z;->f:Lcom/vigo/metrics/f;
 
-    invoke-virtual {v0}, Lcom/vigo/metrics/Storage;->a()Landroid/content/SharedPreferences;
+    invoke-virtual {v0}, Lcom/vigo/metrics/f;->a()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -234,9 +234,9 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/vigo/metrics/config;->f:Lcom/vigo/metrics/Storage;
+    sget-object v0, Lcom/vigo/metrics/z;->f:Lcom/vigo/metrics/f;
 
-    invoke-virtual {v0}, Lcom/vigo/metrics/Storage;->a()Landroid/content/SharedPreferences;
+    invoke-virtual {v0}, Lcom/vigo/metrics/f;->a()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -295,7 +295,7 @@
 
     check-cast v1, Ljava/util/List;
 
-    invoke-static {v1}, Lcom/vigo/metrics/Question;->a(Ljava/util/List;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vigo/metrics/e;->a(Ljava/util/List;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -313,7 +313,7 @@
 
     check-cast v1, Ljava/util/List;
 
-    invoke-static {v1}, Lcom/vigo/metrics/Question;->a(Ljava/util/List;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vigo/metrics/e;->a(Ljava/util/List;)Ljava/lang/String;
 
     move-result-object v1
 

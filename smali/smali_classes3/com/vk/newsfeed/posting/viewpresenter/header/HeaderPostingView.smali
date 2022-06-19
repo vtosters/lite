@@ -3,7 +3,7 @@
 .source "HeaderPostingView.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/posting/PostingContracts;
+.implements Lcom/vk/newsfeed/posting/g;
 .implements Landroid/view/View$OnClickListener;
 
 
@@ -16,7 +16,7 @@
 
 
 # static fields
-.field static final synthetic P:[Lkotlin/u/KProperty5;
+.field static final synthetic P:[Lkotlin/u/j;
 
 .field private static final Q:I
 
@@ -42,15 +42,15 @@
 
 .field private K:Z
 
-.field private final L:Lkotlin/Lazy2;
+.field private final L:Lkotlin/e;
 
-.field private final M:Lkotlin/Lazy2;
+.field private final M:Lkotlin/e;
 
-.field private final N:Lkotlin/Lazy2;
+.field private final N:Lkotlin/e;
 
-.field private final O:Lkotlin/Lazy2;
+.field private final O:Lkotlin/e;
 
-.field private a:Lcom/vk/newsfeed/posting/PostingContracts13;
+.field private a:Lcom/vk/newsfeed/posting/f;
 
 .field private b:F
 
@@ -62,7 +62,7 @@
 
 .field private f:Landroid/view/ViewPropertyAnimator;
 
-.field private g:Lcom/vk/newsfeed/posting/viewpresenter/header/PostingAuthorsAdapter;
+.field private g:Lcom/vk/newsfeed/posting/viewpresenter/header/b;
 
 .field private h:Landroid/view/View;
 
@@ -73,13 +73,13 @@
 
     const/4 v0, 0x4
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -87,9 +87,9 @@
 
     const-string v4, "getShowAuthorsLayoutAnimatorListener()Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$showAuthorsLayoutAnimatorListener$2$1;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
@@ -99,7 +99,7 @@
 
     const-class v2, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -107,9 +107,9 @@
 
     const-string v4, "getHideAuthorsLayoutAnimatorListener()Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$hideAuthorsLayoutAnimatorListener$2$1;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x1
 
@@ -119,7 +119,7 @@
 
     const-class v2, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -127,9 +127,9 @@
 
     const-string v4, "getShowInterpolator()Landroid/view/animation/DecelerateInterpolator;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x2
 
@@ -139,7 +139,7 @@
 
     const-class v2, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -147,28 +147,28 @@
 
     const-string v4, "getHideInterpolator()Landroid/view/animation/DecelerateInterpolator;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->P:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->P:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -210,40 +210,40 @@
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$showAuthorsLayoutAnimatorListener$2;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->L:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->L:Lkotlin/e;
 
     .line 5
     new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$hideAuthorsLayoutAnimatorListener$2;
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$hideAuthorsLayoutAnimatorListener$2;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->M:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->M:Lkotlin/e;
 
     .line 6
     sget-object v0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$showInterpolator$2;->a:Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$showInterpolator$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->N:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->N:Lkotlin/e;
 
     .line 7
     sget-object v0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$hideInterpolator$2;->a:Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$hideInterpolator$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->O:Lkotlin/Lazy2;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->O:Lkotlin/e;
 
     return-void
 .end method
@@ -260,15 +260,15 @@
 .method private final a()Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$hideAuthorsLayoutAnimatorListener$2$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->M:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->M:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->P:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->P:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -280,15 +280,15 @@
 .method private final b()Landroid/view/animation/DecelerateInterpolator;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->O:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->O:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->P:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->P:[Lkotlin/u/j;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -309,15 +309,15 @@
 .method private final c()Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView$showAuthorsLayoutAnimatorListener$2$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->L:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->L:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->P:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->P:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -329,15 +329,15 @@
 .method private final d()Landroid/view/animation/DecelerateInterpolator;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->N:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->N:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->P:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->P:[Lkotlin/u/j;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -615,11 +615,11 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->g:Lcom/vk/newsfeed/posting/viewpresenter/header/PostingAuthorsAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->g:Lcom/vk/newsfeed/posting/viewpresenter/header/b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -716,17 +716,17 @@
     iput v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->d:I
 
     .line 7
-    new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/header/PostingAuthorsAdapter;
+    new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/header/b;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts13;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/f;
 
     move-result-object v1
 
     if-eqz v1, :cond_7
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/viewpresenter/header/PostingAuthorsAdapter;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/header/OnAuthorSelectListener;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/viewpresenter/header/b;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/header/a;)V
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->g:Lcom/vk/newsfeed/posting/viewpresenter/header/PostingAuthorsAdapter;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->g:Lcom/vk/newsfeed/posting/viewpresenter/header/b;
 
     const v0, 0x7f0a0a82
 
@@ -836,7 +836,7 @@
 
     const-string v1, "view.findViewById<View>(R.id.posting_close_button)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
@@ -880,7 +880,7 @@
     invoke-virtual {v0}, Lcom/vk/lists/AbstractPaginatedView$c;->a()V
 
     .line 25
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->g:Lcom/vk/newsfeed/posting/viewpresenter/header/PostingAuthorsAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->g:Lcom/vk/newsfeed/posting/viewpresenter/header/b;
 
     invoke-virtual {p1, v0}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -892,7 +892,7 @@
 
     move-result-object p1
 
-    new-instance v0, Lcom/vk/lists/l0/BoundariesSpacesItemDecoration;
+    new-instance v0, Lcom/vk/lists/l0/a;
 
     const/high16 v2, 0x40800000    # 4.0f
 
@@ -902,19 +902,19 @@
 
     const/4 v3, 0x1
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/lists/l0/BoundariesSpacesItemDecoration;-><init>(IIZ)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/lists/l0/a;-><init>(IIZ)V
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     .line 28
     :cond_5
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts13;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/f;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts6;->onStart()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/c;->onStart()V
 
     :cond_6
     return-void
@@ -930,11 +930,11 @@
     throw p1
 .end method
 
-.method public a(Lcom/vk/newsfeed/posting/PostingContracts13;)V
+.method public a(Lcom/vk/newsfeed/posting/f;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->a:Lcom/vk/newsfeed/posting/PostingContracts13;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->a:Lcom/vk/newsfeed/posting/f;
 
     return-void
 .end method
@@ -943,11 +943,11 @@
     .locals 2
 
     .line 30
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->g:Lcom/vk/newsfeed/posting/viewpresenter/header/PostingAuthorsAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->g:Lcom/vk/newsfeed/posting/viewpresenter/header/b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/PostingAuthorsAdapter;->a(Lcom/vk/sharing/target/Target;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/b;->a(Lcom/vk/sharing/target/Target;)V
 
     .line 31
     :cond_0
@@ -1058,7 +1058,7 @@
 
     sget v1, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->Q:I
 
-    invoke-static {p2, p1, v0, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;IZI)V
+    invoke-static {p2, p1, v0, v1}, Ld/a/a/c/e;->a(Landroid/view/View;IZI)V
 
     goto :goto_1
 
@@ -1079,11 +1079,11 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->g:Lcom/vk/newsfeed/posting/viewpresenter/header/PostingAuthorsAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->g:Lcom/vk/newsfeed/posting/viewpresenter/header/b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->b(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -1111,7 +1111,7 @@
 
     sget v1, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->Q:I
 
-    invoke-static {p2, p1, v0, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;IZI)V
+    invoke-static {p2, p1, v0, v1}, Ld/a/a/c/e;->a(Landroid/view/View;IZI)V
 
     goto :goto_1
 
@@ -1197,17 +1197,17 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p2, p1, v1, v0, v1}, Lcom/vk/extensions/ImageViewExt;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
+    invoke-static {p2, p1, v1, v0, v1}, Lcom/vk/extensions/e;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
 
     :cond_4
     return-void
 .end method
 
-.method public getPresenter()Lcom/vk/newsfeed/posting/PostingContracts13;
+.method public getPresenter()Lcom/vk/newsfeed/posting/f;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->a:Lcom/vk/newsfeed/posting/PostingContracts13;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->a:Lcom/vk/newsfeed/posting/f;
 
     return-object v0
 .end method
@@ -1246,13 +1246,13 @@
 
     if-ne v1, v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts13;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/f;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/OnAuthorSelectListener;->a()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/a;->a()V
 
     goto :goto_3
 
@@ -1272,13 +1272,13 @@
 
     if-ne v1, v0, :cond_4
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts13;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/f;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts13;->w()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/f;->w()V
 
     goto :goto_3
 
@@ -1298,13 +1298,13 @@
 
     if-ne p1, v0, :cond_6
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts13;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/f;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts13;->E()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/f;->E()V
 
     :cond_6
     :goto_3
@@ -1315,13 +1315,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts13;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->getPresenter()Lcom/vk/newsfeed/posting/f;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts6;->onStop()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/c;->onStop()V
 
     :cond_0
     const/4 v0, 0x0

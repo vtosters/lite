@@ -1,5 +1,5 @@
 .class public final Lcom/vk/apps/AppsFragment;
-.super Lcom/vk/core/fragments/BaseFragment1;
+.super Lcom/vk/core/fragments/b;
 .source "AppsFragment.kt"
 
 
@@ -50,15 +50,15 @@
 # instance fields
 .field private F:Lcom/vk/lists/RecyclerPaginatedView;
 
-.field private G:Lcom/vk/lists/PaginationHelper;
+.field private G:Lcom/vk/lists/t;
 
 .field private H:Lcom/vk/apps/AppsFragment$b;
 
 .field private I:Lcom/vk/apps/AppsFragment$b;
 
-.field private J:Lcom/vk/lists/PaginationHelper;
+.field private J:Lcom/vk/lists/t;
 
-.field private K:Lcom/vk/core/ui/MilkshakeDecoration;
+.field private K:Lcom/vk/core/ui/m;
 
 .field private L:Ljava/lang/String;
 
@@ -70,7 +70,7 @@
 
 .field private final P:Lcom/vk/apps/AppsFragment$s;
 
-.field private final Q:Lio/reactivex/disposables/CompositeDisposable;
+.field private final Q:Lio/reactivex/disposables/a;
 
 .field private R:Z
 
@@ -87,7 +87,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/apps/AppsFragment$i;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/apps/AppsFragment$i;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/apps/AppsFragment;->a0:Lcom/vk/apps/AppsFragment$i;
 
@@ -150,7 +150,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
 
     const-string v0, ""
 
@@ -172,11 +172,11 @@
     iput-object v0, p0, Lcom/vk/apps/AppsFragment;->P:Lcom/vk/apps/AppsFragment$s;
 
     .line 5
-    new-instance v0, Lio/reactivex/disposables/CompositeDisposable;
+    new-instance v0, Lio/reactivex/disposables/a;
 
-    invoke-direct {v0}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
+    invoke-direct {v0}, Lio/reactivex/disposables/a;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/apps/AppsFragment;->Q:Lio/reactivex/disposables/CompositeDisposable;
+    iput-object v0, p0, Lcom/vk/apps/AppsFragment;->Q:Lio/reactivex/disposables/a;
 
     return-void
 .end method
@@ -270,14 +270,14 @@
     invoke-virtual {v0, v3}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/apps/AppsFragment;->J:Lcom/vk/lists/PaginationHelper;
+    iget-object v0, p0, Lcom/vk/apps/AppsFragment;->J:Lcom/vk/lists/t;
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->j()V
+    invoke-virtual {v0}, Lcom/vk/lists/t;->j()V
 
     .line 5
-    iget-object v3, p0, Lcom/vk/apps/AppsFragment;->G:Lcom/vk/lists/PaginationHelper;
+    iget-object v3, p0, Lcom/vk/apps/AppsFragment;->G:Lcom/vk/lists/t;
 
     const-string v0, "mainAppsHelper"
 
@@ -293,7 +293,7 @@
 
     const-wide/16 v7, 0x0
 
-    invoke-virtual/range {v3 .. v8}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$q;ZZJ)V
+    invoke-virtual/range {v3 .. v8}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$q;ZZJ)V
 
     .line 6
     iget-object v3, p0, Lcom/vk/apps/AppsFragment;->F:Lcom/vk/lists/RecyclerPaginatedView;
@@ -304,23 +304,23 @@
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/vk/apps/AppsFragment;->K:Lcom/vk/core/ui/MilkshakeDecoration;
+    iget-object v3, p0, Lcom/vk/apps/AppsFragment;->K:Lcom/vk/core/ui/m;
 
     if-eqz v3, :cond_1
 
     invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     .line 7
-    iget-object v1, p0, Lcom/vk/apps/AppsFragment;->G:Lcom/vk/lists/PaginationHelper;
+    iget-object v1, p0, Lcom/vk/apps/AppsFragment;->G:Lcom/vk/lists/t;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/lists/PaginationHelper;->h()V
+    invoke-virtual {v1}, Lcom/vk/lists/t;->h()V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -328,23 +328,23 @@
     const-string v0, "decoration"
 
     .line 8
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 9
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_4
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -352,7 +352,7 @@
     const-string v0, "searchAppsHelper"
 
     .line 10
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -360,12 +360,12 @@
     const-string v0, "mainAppsAdapter"
 
     .line 11
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -378,19 +378,19 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/apps/AppsFragment;->Q:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/apps/AppsFragment;->Q:Lio/reactivex/disposables/a;
 
     .line 2
-    new-instance v1, Lcom/vk/api/apps/AppsClearRecents;
+    new-instance v1, Lb/h/c/n/c;
 
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, v3, v2, v3}, Lcom/vk/api/apps/AppsClearRecents;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v1, v3, v2, v3}, Lb/h/c/n/c;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     .line 3
-    invoke-static {v1, v3, v2, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v1, v3, v2, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v1
 
@@ -399,12 +399,12 @@
 
     invoke-direct {v2, p0}, Lcom/vk/apps/AppsFragment$n;-><init>(Lcom/vk/apps/AppsFragment;)V
 
-    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v1, v2}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v1
 
     .line 5
-    invoke-virtual {v0, v1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v0, v1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
@@ -474,11 +474,11 @@
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     move-object v1, v0
@@ -493,7 +493,7 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     const v0, 0x7f120cd5
 
@@ -505,7 +505,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/apps/AppsFragment$configureSearchView$$inlined$apply$lambda$1;-><init>(Lcom/vk/apps/AppsFragment;)V
 
-    invoke-virtual {v6, v0}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v6, v0}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/a;)V
 
     .line 7
     invoke-virtual {v6}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -540,14 +540,14 @@
     move-object v0, v6
 
     .line 10
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
     .line 11
     sget-object v1, Lcom/vk/apps/AppsFragment$q;->a:Lcom/vk/apps/AppsFragment$q;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
     move-result-object v0
 
@@ -556,16 +556,16 @@
 
     invoke-direct {v1, p0}, Lcom/vk/apps/AppsFragment$o;-><init>(Lcom/vk/apps/AppsFragment;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
     move-result-object v0
 
     .line 13
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object v0
 
@@ -574,7 +574,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/apps/AppsFragment$p;-><init>(Lcom/vk/apps/AppsFragment;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     .line 15
     iput-object v6, p0, Lcom/vk/apps/AppsFragment;->N:Lcom/vk/core/view/search/MilkshakeSearchView;
@@ -586,7 +586,7 @@
     const/4 v2, 0x0
 
     .line 16
-    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -690,13 +690,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/apps/AppsFragment;->P:Lcom/vk/apps/AppsFragment$s;
 
-    invoke-static {v0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$p;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-static {v0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$p;)Lcom/vk/lists/t$k;
 
     move-result-object v0
 
     const-string v1, "PaginationHelper\n       \u2026rom(mainAppsDataProvider)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     iget-object v1, p0, Lcom/vk/apps/AppsFragment;->F:Lcom/vk/lists/RecyclerPaginatedView;
@@ -707,11 +707,11 @@
 
     if-eqz v1, :cond_3
 
-    invoke-static {v0, v1}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
+    invoke-static {v0, v1}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/apps/AppsFragment;->G:Lcom/vk/lists/PaginationHelper;
+    iput-object v0, p0, Lcom/vk/apps/AppsFragment;->G:Lcom/vk/lists/t;
 
     .line 3
     sget-object v0, Lcom/vk/apps/AppsFragment;->a0:Lcom/vk/apps/AppsFragment$i;
@@ -725,63 +725,63 @@
     .line 4
     iget-object v0, p0, Lcom/vk/apps/AppsFragment;->O:Lcom/vk/apps/AppsFragment$searchDataProvider$1;
 
-    invoke-static {v0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$o;)Lcom/vk/lists/PaginationHelper$k;
+    invoke-static {v0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$o;)Lcom/vk/lists/t$k;
 
     move-result-object v0
 
     const/16 v1, 0xa
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/lists/PaginationHelper$k;->b(I)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {v0, v1}, Lcom/vk/lists/t$k;->b(I)Lcom/vk/lists/t$k;
 
     const/16 v1, 0x14
 
     .line 6
-    invoke-virtual {v0, v1}, Lcom/vk/lists/PaginationHelper$k;->c(I)Lcom/vk/lists/PaginationHelper$k;
+    invoke-virtual {v0, v1}, Lcom/vk/lists/t$k;->c(I)Lcom/vk/lists/t$k;
 
     const-string v1, "PaginationHelper\n       \u2026ageSize(SEARCH_PAGE_SIZE)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     iget-object v1, p0, Lcom/vk/apps/AppsFragment;->F:Lcom/vk/lists/RecyclerPaginatedView;
 
     if-eqz v1, :cond_0
 
-    invoke-static {v0, v1}, Lcom/vk/lists/PaginationHelperExt;->a(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
+    invoke-static {v0, v1}, Lcom/vk/lists/u;->a(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/apps/AppsFragment;->J:Lcom/vk/lists/PaginationHelper;
+    iput-object v0, p0, Lcom/vk/apps/AppsFragment;->J:Lcom/vk/lists/t;
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 8
     :cond_1
     :goto_0
-    iget-object v0, p0, Lcom/vk/apps/AppsFragment;->G:Lcom/vk/lists/PaginationHelper;
+    iget-object v0, p0, Lcom/vk/apps/AppsFragment;->G:Lcom/vk/lists/t;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0, v3}, Lcom/vk/lists/PaginationHelper;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v3}, Lcom/vk/lists/t;->a(Ljava/lang/String;)V
 
     return-void
 
     :cond_2
     const-string v0, "mainAppsHelper"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 9
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 .end method
@@ -799,9 +799,9 @@
     .locals 4
 
     .line 1
-    new-instance v0, Lcom/vk/core/ui/MilkshakeDecoration;
+    new-instance v0, Lcom/vk/core/ui/m;
 
-    invoke-direct {v0}, Lcom/vk/core/ui/MilkshakeDecoration;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/ui/m;-><init>()V
 
     .line 2
     iget-object v1, p0, Lcom/vk/apps/AppsFragment;->I:Lcom/vk/apps/AppsFragment$b;
@@ -812,10 +812,10 @@
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/ui/MilkshakeDecoration;->a(Lcom/vk/core/ui/MilkshakeProvider;)Lcom/vk/core/ui/MilkshakeDecoration;
+    invoke-virtual {v0, v1}, Lcom/vk/core/ui/m;->a(Lcom/vk/core/ui/n;)Lcom/vk/core/ui/m;
 
     .line 3
-    iput-object v0, p0, Lcom/vk/apps/AppsFragment;->K:Lcom/vk/core/ui/MilkshakeDecoration;
+    iput-object v0, p0, Lcom/vk/apps/AppsFragment;->K:Lcom/vk/core/ui/m;
 
     .line 4
     iget-object v0, p0, Lcom/vk/apps/AppsFragment;->F:Lcom/vk/lists/RecyclerPaginatedView;
@@ -843,7 +843,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vk/apps/AppsFragment;->K:Lcom/vk/core/ui/MilkshakeDecoration;
+    iget-object v2, p0, Lcom/vk/apps/AppsFragment;->K:Lcom/vk/core/ui/m;
 
     if-eqz v2, :cond_0
 
@@ -866,13 +866,13 @@
     const-string v0, "decoration"
 
     .line 9
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 10
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -880,22 +880,22 @@
     const-string v0, "recyclerPaginatedView"
 
     .line 11
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 12
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 .end method
 
-.method public static final synthetic d(Lcom/vk/apps/AppsFragment;)Lio/reactivex/disposables/CompositeDisposable;
+.method public static final synthetic d(Lcom/vk/apps/AppsFragment;)Lio/reactivex/disposables/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/apps/AppsFragment;->Q:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object p0, p0, Lcom/vk/apps/AppsFragment;->Q:Lio/reactivex/disposables/a;
 
     return-object p0
 .end method
@@ -918,14 +918,14 @@
     iput-boolean v0, p0, Lcom/vk/apps/AppsFragment;->M:Z
 
     .line 3
-    iget-object v0, p0, Lcom/vk/apps/AppsFragment;->G:Lcom/vk/lists/PaginationHelper;
+    iget-object v0, p0, Lcom/vk/apps/AppsFragment;->G:Lcom/vk/lists/t;
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->j()V
+    invoke-virtual {v0}, Lcom/vk/lists/t;->j()V
 
     .line 4
-    iget-object v3, p0, Lcom/vk/apps/AppsFragment;->J:Lcom/vk/lists/PaginationHelper;
+    iget-object v3, p0, Lcom/vk/apps/AppsFragment;->J:Lcom/vk/lists/t;
 
     if-eqz v3, :cond_5
 
@@ -941,7 +941,7 @@
 
     const-wide/16 v7, 0x0
 
-    invoke-virtual/range {v3 .. v8}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$q;ZZJ)V
+    invoke-virtual/range {v3 .. v8}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$q;ZZJ)V
 
     .line 5
     iget-object v3, p0, Lcom/vk/apps/AppsFragment;->F:Lcom/vk/lists/RecyclerPaginatedView;
@@ -952,7 +952,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/vk/apps/AppsFragment;->K:Lcom/vk/core/ui/MilkshakeDecoration;
+    iget-object v4, p0, Lcom/vk/apps/AppsFragment;->K:Lcom/vk/core/ui/m;
 
     if-eqz v4, :cond_2
 
@@ -974,12 +974,12 @@
     :cond_0
     const-string v0, "searchAppsAdapter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_1
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -987,23 +987,23 @@
     const-string v0, "decoration"
 
     .line 7
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 8
     :cond_4
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1011,23 +1011,23 @@
     const-string v0, "mainAppsHelper"
 
     .line 9
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 10
     :cond_7
     :goto_0
-    iget-object v0, p0, Lcom/vk/apps/AppsFragment;->J:Lcom/vk/lists/PaginationHelper;
+    iget-object v0, p0, Lcom/vk/apps/AppsFragment;->J:Lcom/vk/lists/t;
 
     if-eqz v0, :cond_8
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->h()V
+    invoke-virtual {v0}, Lcom/vk/lists/t;->h()V
 
     return-void
 
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -1066,7 +1066,7 @@
     :cond_0
     const-string v0, "searchAppsAdapter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1095,18 +1095,18 @@
     :cond_0
     const-string p0, "mainAppsAdapter"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic h(Lcom/vk/apps/AppsFragment;)Lcom/vk/lists/PaginationHelper;
+.method public static final synthetic h(Lcom/vk/apps/AppsFragment;)Lcom/vk/lists/t;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/apps/AppsFragment;->G:Lcom/vk/lists/PaginationHelper;
+    iget-object p0, p0, Lcom/vk/apps/AppsFragment;->G:Lcom/vk/lists/t;
 
     if-eqz p0, :cond_0
 
@@ -1115,7 +1115,7 @@
     :cond_0
     const-string p0, "mainAppsHelper"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -1135,18 +1135,18 @@
     :cond_0
     const-string p0, "searchAppsAdapter"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic j(Lcom/vk/apps/AppsFragment;)Lcom/vk/lists/PaginationHelper;
+.method public static final synthetic j(Lcom/vk/apps/AppsFragment;)Lcom/vk/lists/t;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/apps/AppsFragment;->J:Lcom/vk/lists/PaginationHelper;
+    iget-object p0, p0, Lcom/vk/apps/AppsFragment;->J:Lcom/vk/lists/t;
 
     if-eqz p0, :cond_0
 
@@ -1155,7 +1155,7 @@
     :cond_0
     const-string p0, "searchAppsHelper"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -1226,7 +1226,7 @@
     if-ne p2, p1, :cond_1
 
     .line 2
-    iget-object p1, p0, Lcom/vk/apps/AppsFragment;->G:Lcom/vk/lists/PaginationHelper;
+    iget-object p1, p0, Lcom/vk/apps/AppsFragment;->G:Lcom/vk/lists/t;
 
     if-eqz p1, :cond_1
 
@@ -1235,14 +1235,14 @@
     const/4 p2, 0x1
 
     .line 3
-    invoke-virtual {p1, p2}, Lcom/vk/lists/PaginationHelper;->a(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/lists/t;->a(Z)V
 
     goto :goto_0
 
     :cond_0
     const-string p1, "mainAppsHelper"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1257,7 +1257,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/apps/AppsFragment;->a5()V
@@ -1297,18 +1297,18 @@
     if-eqz p2, :cond_0
 
     .line 3
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f0a00a5
 
-    invoke-static {p1, p2, v4, v3, v4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, v4, v3, v4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
     check-cast p2, Landroid/view/ViewGroup;
 
     .line 4
-    invoke-static {p1, v0, v4, v3, v4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, v4, v3, v4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1321,9 +1321,9 @@
 
     .line 6
     :cond_0
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, v0, v4, v3, v4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, v4, v3, v4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -1332,10 +1332,10 @@
     const v0, 0x7f080376
 
     .line 7
-    invoke-static {p2, v0}, Lcom/vtosters/lite/ViewUtils;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, v0}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     .line 8
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result v0
 
@@ -1399,7 +1399,7 @@
 
     .line 11
     :goto_4
-    iget-object p2, p0, Lcom/vk/apps/AppsFragment;->Q:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object p2, p0, Lcom/vk/apps/AppsFragment;->Q:Lio/reactivex/disposables/a;
 
     sget-object v0, Lcom/vk/location/LocationUtils;->b:Lcom/vk/location/LocationUtils;
 
@@ -1412,14 +1412,14 @@
     goto :goto_5
 
     :cond_5
-    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const-string v5, "AppContextHolder.context"
 
-    invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_5
-    invoke-virtual {v0, v1}, Lcom/vk/location/LocationUtils;->d(Landroid/content/Context;)Lio/reactivex/Observable;
+    invoke-virtual {v0, v1}, Lcom/vk/location/LocationUtils;->d(Landroid/content/Context;)Lc/a/m;
 
     move-result-object v0
 
@@ -1434,17 +1434,17 @@
     invoke-direct {v5, p0}, Lcom/vk/apps/AppsFragment$v;-><init>(Lcom/vk/apps/AppsFragment;)V
 
     .line 14
-    invoke-virtual {v0, v1, v5}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, v5}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     .line 15
-    invoke-virtual {p2, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {p2, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     const p2, 0x7f0a0b7a
 
     .line 16
-    invoke-static {p1, p2, v4, v3, v4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, v4, v3, v4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -1485,12 +1485,12 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/core/fragments/b;->onDestroy()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/apps/AppsFragment;->Q:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/apps/AppsFragment;->Q:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
 
     return-void
 .end method
@@ -1506,7 +1506,7 @@
     invoke-virtual {v0, v1, p0}, Lcom/vk/stats/AppUseTime;->a(Lcom/vk/stats/AppUseTime$Section;Lcom/vk/core/fragments/FragmentImpl;)V
 
     .line 2
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/b;->onPause()V
 
     return-void
 .end method
@@ -1515,7 +1515,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
 
     .line 2
     sget-object v0, Lcom/vk/stats/AppUseTime;->f:Lcom/vk/stats/AppUseTime;

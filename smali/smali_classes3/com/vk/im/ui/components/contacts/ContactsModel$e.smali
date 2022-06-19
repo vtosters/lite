@@ -46,11 +46,11 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/contacts/ContactsModel$e;->a:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->c()Lcom/vk/im/ui/components/contacts/ContactsModel1;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->c()Lcom/vk/im/ui/components/contacts/e;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/contacts/ContactsModel1;->f()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/contacts/e;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -64,13 +64,13 @@
     .line 3
     iget-object v1, p0, Lcom/vk/im/ui/components/contacts/ContactsModel$e;->a:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->a(Lcom/vk/im/ui/components/contacts/ContactsModel;)Lio/reactivex/subjects/BehaviorSubject;
+    invoke-static {v1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->a(Lcom/vk/im/ui/components/contacts/ContactsModel;)Lio/reactivex/subjects/a;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/vk/im/ui/components/contacts/ContactsModel$e;->a:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/contacts/ContactsModel;->c()Lcom/vk/im/ui/components/contacts/ContactsModel1;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/contacts/ContactsModel;->c()Lcom/vk/im/ui/components/contacts/e;
 
     move-result-object v3
 
@@ -78,15 +78,15 @@
 
     iget-object v4, p0, Lcom/vk/im/ui/components/contacts/ContactsModel$e;->a:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    invoke-virtual {v4}, Lcom/vk/im/ui/components/contacts/ContactsModel;->c()Lcom/vk/im/ui/components/contacts/ContactsModel1;
+    invoke-virtual {v4}, Lcom/vk/im/ui/components/contacts/ContactsModel;->c()Lcom/vk/im/ui/components/contacts/e;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/im/ui/components/contacts/ContactsModel1;->d()Lcom/vk/im/ui/components/contacts/ContactsListState;
+    invoke-virtual {v4}, Lcom/vk/im/ui/components/contacts/e;->d()Lcom/vk/im/ui/components/contacts/c;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/im/ui/components/contacts/ContactsListState;->h()Lcom/vk/im/ui/components/contacts/SortOrder;
+    invoke-virtual {v4}, Lcom/vk/im/ui/components/contacts/c;->h()Lcom/vk/im/ui/components/contacts/SortOrder;
 
     move-result-object v4
 
@@ -108,11 +108,11 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/im/ui/components/contacts/ContactsModel1;->a(Lcom/vk/im/ui/components/contacts/ContactsModel1;Ljava/util/List;Ljava/util/Set;Lcom/vk/im/ui/components/contacts/ContactsListState;Ljava/lang/String;Ljava/lang/Throwable;ZILjava/lang/Object;)Lcom/vk/im/ui/components/contacts/ContactsModel1;
+    invoke-static/range {v3 .. v11}, Lcom/vk/im/ui/components/contacts/e;->a(Lcom/vk/im/ui/components/contacts/e;Ljava/util/List;Ljava/util/Set;Lcom/vk/im/ui/components/contacts/c;Ljava/lang/String;Ljava/lang/Throwable;ZILjava/lang/Object;)Lcom/vk/im/ui/components/contacts/e;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lio/reactivex/subjects/BehaviorSubject;->b(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Lio/reactivex/subjects/a;->b(Ljava/lang/Object;)V
 
     return-void
 .end method

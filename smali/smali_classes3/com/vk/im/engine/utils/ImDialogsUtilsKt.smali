@@ -41,7 +41,7 @@
 
     move-object v1, v10
 
-    invoke-static/range {v0 .. v9}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/Appendable;
+    invoke-static/range {v0 .. v9}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/Appendable;
 
     check-cast v10, Ljava/lang/StringBuilder;
 
@@ -51,7 +51,7 @@
 
     const-string v0, "joinTo(buffer = StringBu\u2026.toString() }).toString()"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
@@ -60,7 +60,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/utils/ImDialogsUtils;->d(I)Lcom/vk/im/engine/models/PeerType;
+    invoke-static {p0}, Lcom/vk/im/engine/utils/e;->d(I)Lcom/vk/im/engine/models/PeerType;
 
     move-result-object p0
 
@@ -83,7 +83,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/utils/ImDialogsUtils;->b(I)Lcom/vk/im/engine/models/MemberType;
+    invoke-static {p0}, Lcom/vk/im/engine/utils/e;->b(I)Lcom/vk/im/engine/models/MemberType;
 
     move-result-object p0
 
@@ -106,7 +106,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/utils/ImDialogsUtils;->b(I)Lcom/vk/im/engine/models/MemberType;
+    invoke-static {p0}, Lcom/vk/im/engine/utils/e;->b(I)Lcom/vk/im/engine/models/MemberType;
 
     move-result-object p0
 
@@ -129,7 +129,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/utils/ImDialogsUtils;->b(I)Lcom/vk/im/engine/models/MemberType;
+    invoke-static {p0}, Lcom/vk/im/engine/utils/e;->b(I)Lcom/vk/im/engine/models/MemberType;
 
     move-result-object p0
 
@@ -152,7 +152,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/utils/ImDialogsUtils;->b(I)Lcom/vk/im/engine/models/MemberType;
+    invoke-static {p0}, Lcom/vk/im/engine/utils/e;->b(I)Lcom/vk/im/engine/models/MemberType;
 
     move-result-object p0
 
@@ -202,7 +202,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/utils/ImDialogsUtils;->a(I)I
+    invoke-static {p0}, Lcom/vk/im/engine/utils/e;->a(I)I
 
     move-result p0
 
@@ -213,7 +213,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/utils/ImDialogsUtils;->b(I)Lcom/vk/im/engine/models/MemberType;
+    invoke-static {p0}, Lcom/vk/im/engine/utils/e;->b(I)Lcom/vk/im/engine/models/MemberType;
 
     move-result-object p0
 
@@ -224,7 +224,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/utils/ImDialogsUtils;->c(I)I
+    invoke-static {p0}, Lcom/vk/im/engine/utils/e;->c(I)I
 
     move-result p0
 

@@ -27,7 +27,7 @@
 
 .field private final M:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;
 
-.field private final N:Lcom/vk/media/player/exo/ExoAdaptiveVideoSelection$b;
+.field private final N:Lcom/vk/media/player/exo/b$b;
 
 .field private final O:Landroid/os/Handler;
 
@@ -40,12 +40,12 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/media/player/exo/VKExoPlayer$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/media/player/exo/VKExoPlayer$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/media/player/ExoPlayerBase;Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;Lcom/google/android/exoplayer2/z;Lcom/vk/media/player/exo/ExoAdaptiveVideoSelection$b;Lcom/google/android/exoplayer2/m0;Landroid/os/Handler;)V
+.method public constructor <init>(Lcom/vk/media/player/ExoPlayerBase;Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;Lcom/google/android/exoplayer2/z;Lcom/vk/media/player/exo/b$b;Lcom/google/android/exoplayer2/m0;Landroid/os/Handler;)V
     .locals 8
 
     .line 1
@@ -88,7 +88,7 @@
 
     iput-object p2, p0, Lcom/vk/media/player/exo/VKExoPlayer;->M:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;
 
-    iput-object p4, p0, Lcom/vk/media/player/exo/VKExoPlayer;->N:Lcom/vk/media/player/exo/ExoAdaptiveVideoSelection$b;
+    iput-object p4, p0, Lcom/vk/media/player/exo/VKExoPlayer;->N:Lcom/vk/media/player/exo/b$b;
 
     iput-object p6, p0, Lcom/vk/media/player/exo/VKExoPlayer;->O:Landroid/os/Handler;
 
@@ -109,9 +109,9 @@
 
     invoke-direct {p1, p0}, Lcom/vk/media/player/exo/VKExoPlayer$updateTimingAction$1;-><init>(Lcom/vk/media/player/exo/VKExoPlayer;)V
 
-    new-instance p2, Lcom/vk/media/player/exo/VKExoPlayer1;
+    new-instance p2, Lcom/vk/media/player/exo/g;
 
-    invoke-direct {p2, p1}, Lcom/vk/media/player/exo/VKExoPlayer1;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p2, p1}, Lcom/vk/media/player/exo/g;-><init>(Lkotlin/jvm/b/a;)V
 
     iput-object p2, p0, Lcom/vk/media/player/exo/VKExoPlayer;->J:Ljava/lang/Runnable;
 
@@ -158,7 +158,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/media/player/exo/VKExoPlayer;->L:Lcom/vk/media/player/ExoPlayerBase;
 
-    invoke-virtual {v0}, Lcom/vk/media/player/ExoPlayerBase;->s()Lcom/vk/media/player/StateListener;
+    invoke-virtual {v0}, Lcom/vk/media/player/ExoPlayerBase;->s()Lcom/vk/media/player/i;
 
     move-result-object v0
 
@@ -178,13 +178,13 @@
 
     long-to-int v2, v4
 
-    invoke-interface {v0, v1, v3, v2}, Lcom/vk/media/player/StateListener;->a(Lcom/vk/media/player/ExoPlayerBase;II)V
+    invoke-interface {v0, v1, v3, v2}, Lcom/vk/media/player/i;->a(Lcom/vk/media/player/ExoPlayerBase;II)V
 
     .line 3
     :cond_0
     iget-object v0, p0, Lcom/vk/media/player/exo/VKExoPlayer;->L:Lcom/vk/media/player/ExoPlayerBase;
 
-    invoke-virtual {v0}, Lcom/vk/media/player/ExoPlayerBase;->s()Lcom/vk/media/player/StateListener;
+    invoke-virtual {v0}, Lcom/vk/media/player/ExoPlayerBase;->s()Lcom/vk/media/player/i;
 
     move-result-object v0
 
@@ -196,7 +196,7 @@
 
     move-result v2
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/media/player/StateListener;->c(Lcom/vk/media/player/ExoPlayerBase;I)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/media/player/i;->c(Lcom/vk/media/player/ExoPlayerBase;I)V
 
     .line 4
     :cond_1
@@ -247,11 +247,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/media/player/exo/VKExoPlayer;)Lcom/vk/media/player/exo/ExoAdaptiveVideoSelection$b;
+.method public static final synthetic c(Lcom/vk/media/player/exo/VKExoPlayer;)Lcom/vk/media/player/exo/b$b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/media/player/exo/VKExoPlayer;->N:Lcom/vk/media/player/exo/ExoAdaptiveVideoSelection$b;
+    iget-object p0, p0, Lcom/vk/media/player/exo/VKExoPlayer;->N:Lcom/vk/media/player/exo/b$b;
 
     return-object p0
 .end method
@@ -310,7 +310,7 @@
     :cond_1
     iget-object v1, p0, Lcom/vk/media/player/exo/VKExoPlayer;->L:Lcom/vk/media/player/ExoPlayerBase;
 
-    invoke-virtual {v1}, Lcom/vk/media/player/ExoPlayerBase;->s()Lcom/vk/media/player/StateListener;
+    invoke-virtual {v1}, Lcom/vk/media/player/ExoPlayerBase;->s()Lcom/vk/media/player/i;
 
     move-result-object v1
 
@@ -322,7 +322,7 @@
 
     iget v0, v0, Lcom/google/android/exoplayer2/Format;->G:I
 
-    invoke-interface {v1, v2, v3, v0}, Lcom/vk/media/player/StateListener;->c(Lcom/vk/media/player/ExoPlayerBase;II)V
+    invoke-interface {v1, v2, v3, v0}, Lcom/vk/media/player/i;->c(Lcom/vk/media/player/ExoPlayerBase;II)V
 
     goto :goto_1
 
@@ -331,7 +331,7 @@
     :goto_0
     iget-object v1, p0, Lcom/vk/media/player/exo/VKExoPlayer;->L:Lcom/vk/media/player/ExoPlayerBase;
 
-    invoke-virtual {v1}, Lcom/vk/media/player/ExoPlayerBase;->s()Lcom/vk/media/player/StateListener;
+    invoke-virtual {v1}, Lcom/vk/media/player/ExoPlayerBase;->s()Lcom/vk/media/player/i;
 
     move-result-object v1
 
@@ -343,7 +343,7 @@
 
     iget v0, v0, Lcom/google/android/exoplayer2/Format;->H:I
 
-    invoke-interface {v1, v2, v3, v0}, Lcom/vk/media/player/StateListener;->c(Lcom/vk/media/player/ExoPlayerBase;II)V
+    invoke-interface {v1, v2, v3, v0}, Lcom/vk/media/player/i;->c(Lcom/vk/media/player/ExoPlayerBase;II)V
 
     goto :goto_1
 
@@ -351,7 +351,7 @@
     :cond_3
     iget-object v0, p0, Lcom/vk/media/player/exo/VKExoPlayer;->L:Lcom/vk/media/player/ExoPlayerBase;
 
-    invoke-virtual {v0}, Lcom/vk/media/player/ExoPlayerBase;->s()Lcom/vk/media/player/StateListener;
+    invoke-virtual {v0}, Lcom/vk/media/player/ExoPlayerBase;->s()Lcom/vk/media/player/i;
 
     move-result-object v0
 
@@ -359,7 +359,7 @@
 
     iget-object v2, p0, Lcom/vk/media/player/exo/VKExoPlayer;->L:Lcom/vk/media/player/ExoPlayerBase;
 
-    invoke-interface {v0, v2, v1, v1}, Lcom/vk/media/player/StateListener;->c(Lcom/vk/media/player/ExoPlayerBase;II)V
+    invoke-interface {v0, v2, v1, v1}, Lcom/vk/media/player/i;->c(Lcom/vk/media/player/ExoPlayerBase;II)V
 
     :cond_4
     :goto_1
@@ -397,7 +397,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/media/player/exo/VKExoPlayer;->L:Lcom/vk/media/player/ExoPlayerBase;
 
-    invoke-virtual {v0}, Lcom/vk/media/player/ExoPlayerBase;->n()Lb/h/p/f/Logger;
+    invoke-virtual {v0}, Lcom/vk/media/player/ExoPlayerBase;->n()Lb/h/p/f/e;
 
     move-result-object v0
 
@@ -443,7 +443,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lb/h/p/f/Logger;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lb/h/p/f/e;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/media/player/exo/VKExoPlayer;->I:Landroid/view/Surface;
@@ -769,7 +769,7 @@
     const-string v5, "renderer"
 
     .line 2
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v4}, Lcom/google/android/exoplayer2/j0;->e()I
 

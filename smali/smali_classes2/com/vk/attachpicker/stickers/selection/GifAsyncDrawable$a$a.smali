@@ -3,12 +3,12 @@
 .source "GifAsyncDrawable.kt"
 
 # interfaces
-.implements Lcom/facebook/x/f/DrawableFactory;
+.implements Lcom/facebook/x/f/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable$a;->a()Lcom/facebook/x/f/DrawableFactory;
+    value = Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable$a;->a()Lcom/facebook/x/f/a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -29,16 +29,16 @@
 
 
 # virtual methods
-.method public a(Lcom/facebook/x/g/CloseableImage;)Z
+.method public a(Lcom/facebook/x/g/c;)Z
     .locals 0
 
     .line 1
-    instance-of p1, p1, Lcom/facebook/x/g/CloseableAnimatedImage;
+    instance-of p1, p1, Lcom/facebook/x/g/a;
 
     return p1
 .end method
 
-.method public b(Lcom/facebook/x/g/CloseableImage;)Landroid/graphics/drawable/Drawable;
+.method public b(Lcom/facebook/x/g/c;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
     .line 1
@@ -46,9 +46,9 @@
 
     if-eqz p1, :cond_0
 
-    check-cast p1, Lcom/facebook/x/g/CloseableAnimatedImage;
+    check-cast p1, Lcom/facebook/x/g/a;
 
-    invoke-direct {v0, p1}, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;-><init>(Lcom/facebook/x/g/CloseableAnimatedImage;)V
+    invoke-direct {v0, p1}, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;-><init>(Lcom/facebook/x/g/a;)V
 
     return-object v0
 

@@ -3,7 +3,7 @@
 .source "ProfileContract.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/contracts/EntriesListContract;
+.implements Lcom/vk/newsfeed/contracts/e;
 
 
 # annotations
@@ -19,7 +19,7 @@
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/newsfeed/contracts/EntriesListContract;"
+        "Lcom/vk/newsfeed/contracts/e;"
     }
 .end annotation
 
@@ -28,11 +28,11 @@
 .method public abstract e1()V
 .end method
 
-.method public abstract j1()Lio/reactivex/Observable;
+.method public abstract j1()Lc/a/m;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "TT;>;"
         }
     .end annotation

@@ -71,7 +71,7 @@
     invoke-direct {p1, v0}, Landroid/graphics/Paint;-><init>(I)V
 
     .line 5
-    sget v0, Lb/h/z/R5;->separator_alpha:I
+    sget v0, Lb/h/z/b;->separator_alpha:I
 
     invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 

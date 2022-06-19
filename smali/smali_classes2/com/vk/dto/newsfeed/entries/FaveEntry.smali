@@ -3,9 +3,9 @@
 .source "FaveEntry.kt"
 
 # interfaces
-.implements Lcom/vk/dto/newsfeed/WithAttachments;
-.implements Lcom/vk/dto/newsfeed/Ownable;
-.implements Lcom/vk/fave/entities/WithTags;
+.implements Lcom/vk/dto/newsfeed/h;
+.implements Lcom/vk/dto/newsfeed/d;
+.implements Lcom/vk/fave/entities/l;
 
 
 # annotations
@@ -31,10 +31,10 @@
 # instance fields
 .field private final c:Lcom/vk/dto/newsfeed/entries/FaveEntry$c;
 
-.field private final d:Lb/h/g/t/DelegateMutableList;
+.field private final d:Lb/h/g/t/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/t/DelegateMutableList<",
+            "Lb/h/g/t/a<",
             "Lcom/vk/dto/common/Attachment;",
             ">;"
         }
@@ -54,7 +54,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/FaveEntry$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/FaveEntry$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/newsfeed/entries/FaveEntry$a;
@@ -97,7 +97,7 @@
 
     .line 10
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -122,18 +122,18 @@
     iput-object p1, p0, Lcom/vk/dto/newsfeed/entries/FaveEntry;->c:Lcom/vk/dto/newsfeed/entries/FaveEntry$c;
 
     .line 3
-    new-instance p1, Lb/h/g/t/DelegateMutableList;
+    new-instance p1, Lb/h/g/t/a;
 
     .line 4
-    sget-object p2, Lcom/vk/fave/FaveConverter;->INSTANCE:Lcom/vk/fave/FaveConverter;
+    sget-object p2, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
 
     iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/FaveEntry;->e:Lcom/vk/fave/entities/FaveItem;
 
-    invoke-virtual {v0}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/Favable;
+    invoke-virtual {v0}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/a;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lcom/vk/fave/FaveConverter;->a(Lb/h/h/f/Favable;)Ljava/util/List;
+    invoke-virtual {p2, v0}, Lcom/vk/fave/d;->a(Lb/h/h/f/a;)Ljava/util/List;
 
     move-result-object p2
 
@@ -141,9 +141,9 @@
     iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/FaveEntry;->c:Lcom/vk/dto/newsfeed/entries/FaveEntry$c;
 
     .line 6
-    invoke-direct {p1, p2, v0}, Lb/h/g/t/DelegateMutableList;-><init>(Ljava/util/List;Lb/h/g/t/DelegateMutableList$a;)V
+    invoke-direct {p1, p2, v0}, Lb/h/g/t/a;-><init>(Ljava/util/List;Lb/h/g/t/a$a;)V
 
-    iput-object p1, p0, Lcom/vk/dto/newsfeed/entries/FaveEntry;->d:Lb/h/g/t/DelegateMutableList;
+    iput-object p1, p0, Lcom/vk/dto/newsfeed/entries/FaveEntry;->d:Lb/h/g/t/a;
 
     return-void
 .end method
@@ -154,15 +154,15 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/fave/FaveConverter;->INSTANCE:Lcom/vk/fave/FaveConverter;
+    sget-object v0, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
 
     iget-object v1, p0, Lcom/vk/dto/newsfeed/entries/FaveEntry;->e:Lcom/vk/fave/entities/FaveItem;
 
-    invoke-virtual {v1}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/Favable;
+    invoke-virtual {v1}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/fave/FaveConverter;->b(Lb/h/h/f/Favable;)Lcom/vk/dto/newsfeed/Owner;
+    invoke-virtual {v0, v1}, Lcom/vk/fave/d;->b(Lb/h/h/f/a;)Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v0
 
@@ -190,13 +190,13 @@
     return-object v0
 .end method
 
-.method public final a(Lb/h/h/f/Favable;)Lcom/vk/dto/newsfeed/entries/FaveEntry;
+.method public final a(Lb/h/h/f/a;)Lcom/vk/dto/newsfeed/entries/FaveEntry;
     .locals 1
 
     .line 4
     iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/FaveEntry;->e:Lcom/vk/fave/entities/FaveItem;
 
-    invoke-virtual {v0, p1}, Lcom/vk/fave/entities/FaveItem;->a(Lb/h/h/f/Favable;)Lcom/vk/fave/entities/FaveItem;
+    invoke-virtual {v0, p1}, Lcom/vk/fave/entities/FaveItem;->a(Lb/h/h/f/a;)Lcom/vk/fave/entities/FaveItem;
 
     move-result-object p1
 
@@ -246,7 +246,7 @@
     return-object p1
 .end method
 
-.method public bridge synthetic a(Ljava/util/List;)Lcom/vk/fave/entities/WithTags;
+.method public bridge synthetic a(Ljava/util/List;)Lcom/vk/fave/entities/l;
     .locals 0
 
     .line 1
@@ -298,7 +298,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -321,7 +321,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/newsfeed/entries/FaveEntry;->e:Lcom/vk/fave/entities/FaveItem;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -370,7 +370,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/FaveEntry;->d:Lb/h/g/t/DelegateMutableList;
+    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/FaveEntry;->d:Lb/h/g/t/a;
 
     return-object v0
 .end method

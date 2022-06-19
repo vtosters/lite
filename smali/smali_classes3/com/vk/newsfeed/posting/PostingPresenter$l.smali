@@ -3,7 +3,7 @@
 .source "PostingPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/BiFunction;
+.implements Lc/a/z/c;
 
 
 # annotations
@@ -26,12 +26,12 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/BiFunction<",
-        "Lcom/vk/newsfeed/posting/dto/PostingDraft;",
+        "Lc/a/z/c<",
+        "Lcom/vk/newsfeed/posting/dto/c;",
         "Ljava/lang/Boolean;",
         "Lkotlin/Pair<",
         "+",
-        "Lcom/vk/newsfeed/posting/dto/PostingDraft;",
+        "Lcom/vk/newsfeed/posting/dto/c;",
         "+",
         "Ljava/lang/Boolean;",
         ">;>;"
@@ -70,27 +70,27 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/newsfeed/posting/dto/PostingDraft;
+    check-cast p1, Lcom/vk/newsfeed/posting/dto/c;
 
     check-cast p2, Ljava/lang/Boolean;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/PostingPresenter$l;->a(Lcom/vk/newsfeed/posting/dto/PostingDraft;Ljava/lang/Boolean;)Lkotlin/Pair;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/PostingPresenter$l;->a(Lcom/vk/newsfeed/posting/dto/c;Ljava/lang/Boolean;)Lkotlin/Pair;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final a(Lcom/vk/newsfeed/posting/dto/PostingDraft;Ljava/lang/Boolean;)Lkotlin/Pair;
+.method public final a(Lcom/vk/newsfeed/posting/dto/c;Ljava/lang/Boolean;)Lkotlin/Pair;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/newsfeed/posting/dto/PostingDraft;",
+            "Lcom/vk/newsfeed/posting/dto/c;",
             "Ljava/lang/Boolean;",
             ")",
             "Lkotlin/Pair<",
-            "Lcom/vk/newsfeed/posting/dto/PostingDraft;",
+            "Lcom/vk/newsfeed/posting/dto/c;",
             "Ljava/lang/Boolean;",
             ">;"
         }

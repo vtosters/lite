@@ -54,7 +54,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/api/execute/DocsGetTypes$c;-><init>(Lcom/vk/api/base/VkPaginationList;Ljava/util/List;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/api/execute/DocsGetTypes$c;-><init>(Lcom/vk/api/base/VkPaginationList;Ljava/util/List;ZILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -85,7 +85,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/api/base/VkPaginationList;Ljava/util/List;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/api/base/VkPaginationList;Ljava/util/List;ZILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x1
@@ -181,7 +181,7 @@
 
     iget-object v1, p1, Lcom/vtosters/lite/api/execute/DocsGetTypes$c;->a:Lcom/vk/api/base/VkPaginationList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -191,7 +191,7 @@
 
     iget-object v1, p1, Lcom/vtosters/lite/api/execute/DocsGetTypes$c;->b:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

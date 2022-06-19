@@ -24,7 +24,7 @@
 
 .field private final e:I
 
-.field f:Lcom/facebook/x/g/EncodedImage;
+.field f:Lcom/facebook/x/g/e;
 
 .field g:I
 
@@ -68,7 +68,7 @@
     const/4 p1, 0x0
 
     .line 7
-    iput-object p1, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/EncodedImage;
+    iput-object p1, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/e;
 
     const/4 p1, 0x0
 
@@ -141,11 +141,11 @@
     return-void
 .end method
 
-.method private static b(Lcom/facebook/x/g/EncodedImage;I)Z
+.method private static b(Lcom/facebook/x/g/e;I)Z
     .locals 1
 
     .line 2
-    invoke-static {p1}, Lcom/facebook/imagepipeline/producers/BaseConsumer;->a(I)Z
+    invoke-static {p1}, Lcom/facebook/imagepipeline/producers/b;->a(I)Z
 
     move-result v0
 
@@ -154,14 +154,14 @@
     const/4 v0, 0x4
 
     .line 3
-    invoke-static {p1, v0}, Lcom/facebook/imagepipeline/producers/BaseConsumer;->b(II)Z
+    invoke-static {p1, v0}, Lcom/facebook/imagepipeline/producers/b;->b(II)Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
     .line 4
-    invoke-static {p0}, Lcom/facebook/x/g/EncodedImage;->e(Lcom/facebook/x/g/EncodedImage;)Z
+    invoke-static {p0}, Lcom/facebook/x/g/e;->e(Lcom/facebook/x/g/e;)Z
 
     move-result p0
 
@@ -195,7 +195,7 @@
 
     .line 3
     :try_start_0
-    iget-object v2, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/EncodedImage;
+    iget-object v2, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/e;
 
     .line 4
     iget v3, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->g:I
@@ -203,7 +203,7 @@
     const/4 v4, 0x0
 
     .line 5
-    iput-object v4, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/EncodedImage;
+    iput-object v4, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/e;
 
     const/4 v4, 0x0
 
@@ -225,7 +225,7 @@
 
     .line 10
     :try_start_1
-    invoke-static {v2, v3}, Lcom/facebook/imagepipeline/producers/JobScheduler;->b(Lcom/facebook/x/g/EncodedImage;I)Z
+    invoke-static {v2, v3}, Lcom/facebook/imagepipeline/producers/JobScheduler;->b(Lcom/facebook/x/g/e;I)Z
 
     move-result v0
 
@@ -234,13 +234,13 @@
     .line 11
     iget-object v0, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->b:Lcom/facebook/imagepipeline/producers/JobScheduler$d;
 
-    invoke-interface {v0, v2, v3}, Lcom/facebook/imagepipeline/producers/JobScheduler$d;->a(Lcom/facebook/x/g/EncodedImage;I)V
+    invoke-interface {v0, v2, v3}, Lcom/facebook/imagepipeline/producers/JobScheduler$d;->a(Lcom/facebook/x/g/e;I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 12
     :cond_0
-    invoke-static {v2}, Lcom/facebook/x/g/EncodedImage;->c(Lcom/facebook/x/g/EncodedImage;)V
+    invoke-static {v2}, Lcom/facebook/x/g/e;->c(Lcom/facebook/x/g/e;)V
 
     .line 13
     invoke-direct {p0}, Lcom/facebook/imagepipeline/producers/JobScheduler;->e()V
@@ -251,7 +251,7 @@
     move-exception v0
 
     .line 14
-    invoke-static {v2}, Lcom/facebook/x/g/EncodedImage;->c(Lcom/facebook/x/g/EncodedImage;)V
+    invoke-static {v2}, Lcom/facebook/x/g/e;->c(Lcom/facebook/x/g/e;)V
 
     .line 15
     invoke-direct {p0}, Lcom/facebook/imagepipeline/producers/JobScheduler;->e()V
@@ -375,12 +375,12 @@
 
     .line 3
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/EncodedImage;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/e;
 
     const/4 v1, 0x0
 
     .line 4
-    iput-object v1, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/EncodedImage;
+    iput-object v1, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/e;
 
     const/4 v1, 0x0
 
@@ -393,7 +393,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 7
-    invoke-static {v0}, Lcom/facebook/x/g/EncodedImage;->c(Lcom/facebook/x/g/EncodedImage;)V
+    invoke-static {v0}, Lcom/facebook/x/g/e;->c(Lcom/facebook/x/g/e;)V
 
     return-void
 
@@ -409,11 +409,11 @@
     throw v0
 .end method
 
-.method public a(Lcom/facebook/x/g/EncodedImage;I)Z
+.method public a(Lcom/facebook/x/g/e;I)Z
     .locals 1
 
     .line 9
-    invoke-static {p1, p2}, Lcom/facebook/imagepipeline/producers/JobScheduler;->b(Lcom/facebook/x/g/EncodedImage;I)Z
+    invoke-static {p1, p2}, Lcom/facebook/imagepipeline/producers/JobScheduler;->b(Lcom/facebook/x/g/e;I)Z
 
     move-result v0
 
@@ -429,14 +429,14 @@
 
     .line 11
     :try_start_0
-    iget-object v0, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/EncodedImage;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/e;
 
     .line 12
-    invoke-static {p1}, Lcom/facebook/x/g/EncodedImage;->b(Lcom/facebook/x/g/EncodedImage;)Lcom/facebook/x/g/EncodedImage;
+    invoke-static {p1}, Lcom/facebook/x/g/e;->b(Lcom/facebook/x/g/e;)Lcom/facebook/x/g/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/EncodedImage;
+    iput-object p1, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/e;
 
     .line 13
     iput p2, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->g:I
@@ -447,7 +447,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 15
-    invoke-static {v0}, Lcom/facebook/x/g/EncodedImage;->c(Lcom/facebook/x/g/EncodedImage;)V
+    invoke-static {v0}, Lcom/facebook/x/g/e;->c(Lcom/facebook/x/g/e;)V
 
     const/4 p1, 0x1
 
@@ -505,11 +505,11 @@
 
     .line 3
     :try_start_0
-    iget-object v2, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/EncodedImage;
+    iget-object v2, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->f:Lcom/facebook/x/g/e;
 
     iget v3, p0, Lcom/facebook/imagepipeline/producers/JobScheduler;->g:I
 
-    invoke-static {v2, v3}, Lcom/facebook/imagepipeline/producers/JobScheduler;->b(Lcom/facebook/x/g/EncodedImage;I)Z
+    invoke-static {v2, v3}, Lcom/facebook/imagepipeline/producers/JobScheduler;->b(Lcom/facebook/x/g/e;I)Z
 
     move-result v2
 

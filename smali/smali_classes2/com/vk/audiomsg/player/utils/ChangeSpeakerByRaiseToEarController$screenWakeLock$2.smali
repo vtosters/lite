@@ -3,12 +3,12 @@
 .source "ChangeSpeakerByRaiseToEarController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audiomsg/player/utils/ChangeSpeakerByRaiseToEarController;-><init>(Landroid/content/Context;Lcom/vk/audiomsg/player/AudioMsgPlayer;)V
+    value = Lcom/vk/audiomsg/player/utils/ChangeSpeakerByRaiseToEarController;-><init>(Landroid/content/Context;Lcom/vk/audiomsg/player/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Landroid/os/PowerManager$WakeLock;",
         ">;"
     }
@@ -57,7 +57,7 @@
 
     const-string v1, "ChangeSpeakerByRaiseToEa\u2026er::class.java.simpleName"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     iget-object v1, p0, Lcom/vk/audiomsg/player/utils/ChangeSpeakerByRaiseToEarController$screenWakeLock$2;->this$0:Lcom/vk/audiomsg/player/utils/ChangeSpeakerByRaiseToEarController;

@@ -3,8 +3,8 @@
 .source "PendingVideoAttachment.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/attachments/PendingAttachment;
-.implements Lcom/vk/newsfeed/i0/PostingDraftJsonItem;
+.implements Lcom/vtosters/lite/attachments/b;
+.implements Lcom/vk/newsfeed/i0/b;
 
 
 # static fields
@@ -103,11 +103,11 @@
 
     .line 4
     :cond_0
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {p1}, Lb/h/h/d/c;->D0()I
 
     move-result p3
 
@@ -131,7 +131,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/vk/dto/common/VideoFileFactory;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/VideoFile;
+    invoke-static {p0}, Lcom/vk/dto/common/i;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/VideoFile;
 
     move-result-object p0
 
@@ -140,11 +140,11 @@
 
     sget-object v1, Lcom/vk/api/video/VideoSave$Target;->POST:Lcom/vk/api/video/VideoSave$Target;
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {v2}, Lb/h/h/d/c;->D0()I
 
     move-result v2
 
@@ -161,9 +161,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/newsfeed/i0/PostingDraftJsonItem;->w:Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;
+    sget-object v0, Lcom/vk/newsfeed/i0/b;->w:Lcom/vk/newsfeed/i0/b$a;
 
-    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;->a(Lcom/vk/newsfeed/i0/PostingDraftJsonItem;)Lorg/json/JSONObject;
+    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/b$a;->a(Lcom/vk/newsfeed/i0/b;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -204,22 +204,22 @@
     return v0
 .end method
 
-.method public bridge synthetic V0()Lcom/vtosters/lite/upload/UploadTask;
+.method public bridge synthetic V0()Lcom/vtosters/lite/upload/j;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/attachments/PendingVideoAttachment;->V0()Lcom/vtosters/lite/upload/l/VideoUploadTask;
+    invoke-virtual {p0}, Lcom/vtosters/lite/attachments/PendingVideoAttachment;->V0()Lcom/vtosters/lite/upload/l/r;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public V0()Lcom/vtosters/lite/upload/l/VideoUploadTask;
+.method public V0()Lcom/vtosters/lite/upload/l/r;
     .locals 8
 
     .line 2
-    new-instance v7, Lcom/vtosters/lite/upload/l/VideoUploadTask;
+    new-instance v7, Lcom/vtosters/lite/upload/l/r;
 
     invoke-virtual {p0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
@@ -243,12 +243,12 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/upload/l/VideoUploadTask;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/api/video/VideoSave$Target;IZ)V
+    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/upload/l/r;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/api/video/VideoSave$Target;IZ)V
 
     .line 3
     iget v0, p0, Lcom/vtosters/lite/attachments/PendingVideoAttachment;->G:I
 
-    invoke-virtual {v7, v0}, Lcom/vtosters/lite/upload/UploadTask;->a(I)V
+    invoke-virtual {v7, v0}, Lcom/vtosters/lite/upload/j;->a(I)V
 
     return-object v7
 .end method

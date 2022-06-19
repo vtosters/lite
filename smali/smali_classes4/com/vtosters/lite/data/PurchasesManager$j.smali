@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/data/PurchasesManager;->e(Lcom/vk/dto/common/data/Purchase1;Lcom/vtosters/lite/data/PurchasesManager$o;)V
+    value = Lcom/vtosters/lite/data/PurchasesManager;->e(Lcom/vk/dto/common/data/e;Lcom/vtosters/lite/data/PurchasesManager$o;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/dto/common/data/Purchase1;
+.field final synthetic a:Lcom/vk/dto/common/data/e;
 
 .field final synthetic b:Lcom/vtosters/lite/data/PurchasesManager$o;
 
@@ -23,13 +23,13 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/data/PurchasesManager;Lcom/vk/dto/common/data/Purchase1;Lcom/vtosters/lite/data/PurchasesManager$o;)V
+.method constructor <init>(Lcom/vtosters/lite/data/PurchasesManager;Lcom/vk/dto/common/data/e;Lcom/vtosters/lite/data/PurchasesManager$o;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/data/PurchasesManager$j;->c:Lcom/vtosters/lite/data/PurchasesManager;
 
-    iput-object p2, p0, Lcom/vtosters/lite/data/PurchasesManager$j;->a:Lcom/vk/dto/common/data/Purchase1;
+    iput-object p2, p0, Lcom/vtosters/lite/data/PurchasesManager$j;->a:Lcom/vk/dto/common/data/e;
 
     iput-object p3, p0, Lcom/vtosters/lite/data/PurchasesManager$j;->b:Lcom/vtosters/lite/data/PurchasesManager$o;
 
@@ -46,11 +46,11 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/data/PurchasesManager$j;->c:Lcom/vtosters/lite/data/PurchasesManager;
 
-    iget-object v1, p0, Lcom/vtosters/lite/data/PurchasesManager$j;->a:Lcom/vk/dto/common/data/Purchase1;
+    iget-object v1, p0, Lcom/vtosters/lite/data/PurchasesManager$j;->a:Lcom/vk/dto/common/data/e;
 
     iget-object v2, p0, Lcom/vtosters/lite/data/PurchasesManager$j;->b:Lcom/vtosters/lite/data/PurchasesManager$o;
 
-    invoke-static {v0, v1, v2, p1}, Lcom/vtosters/lite/data/PurchasesManager;->a(Lcom/vtosters/lite/data/PurchasesManager;Lcom/vk/dto/common/data/Purchase1;Lcom/vtosters/lite/data/PurchasesManager$o;Lcom/android/vending/billing/IInAppBillingService;)V
+    invoke-static {v0, v1, v2, p1}, Lcom/vtosters/lite/data/PurchasesManager;->a(Lcom/vtosters/lite/data/PurchasesManager;Lcom/vk/dto/common/data/e;Lcom/vtosters/lite/data/PurchasesManager$o;Lcom/android/vending/billing/IInAppBillingService;)V
 
     return-void
 .end method
@@ -70,7 +70,7 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/data/PurchasesManager$j;->b:Lcom/vtosters/lite/data/PurchasesManager$o;
 
-    iget-object v1, p0, Lcom/vtosters/lite/data/PurchasesManager$j;->a:Lcom/vk/dto/common/data/Purchase1;
+    iget-object v1, p0, Lcom/vtosters/lite/data/PurchasesManager$j;->a:Lcom/vk/dto/common/data/e;
 
     invoke-interface {v0, v1}, Lcom/vtosters/lite/data/PurchasesManager$o;->b(Ljava/lang/Object;)V
 

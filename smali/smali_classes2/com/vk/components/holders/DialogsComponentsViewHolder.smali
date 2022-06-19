@@ -1,13 +1,13 @@
 .class public final Lcom/vk/components/holders/DialogsComponentsViewHolder;
-.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "DialogsComponentsViewHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
-        "Lkotlin/Unit;",
+        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -20,7 +20,7 @@
 
 .field private e:Landroid/widget/Button;
 
-.field private f:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+.field private f:Lcom/vk/core/dialogs/bottomsheet/e;
 
 
 # direct methods
@@ -30,7 +30,7 @@
     const v0, 0x7f0d0185
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -43,7 +43,7 @@
 
     const-string v0, "itemView.findViewById(R.id.modalBottomSheetBtn)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/Button;
 
@@ -60,7 +60,7 @@
 
     const-string v0, "itemView.findViewById(R.\u2026ntentModalBottomSheetBtn)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/Button;
 
@@ -77,7 +77,7 @@
 
     const-string v0, "itemView.findViewById(R.id.paramsBtn)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/Button;
 
@@ -113,20 +113,20 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/components/holders/DialogsComponentsViewHolder;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+.method public static final synthetic a(Lcom/vk/components/holders/DialogsComponentsViewHolder;)Lcom/vk/core/dialogs/bottomsheet/e;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/components/holders/DialogsComponentsViewHolder;->f:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    iget-object p0, p0, Lcom/vk/components/holders/DialogsComponentsViewHolder;->f:Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/components/holders/DialogsComponentsViewHolder;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+.method public static final synthetic a(Lcom/vk/components/holders/DialogsComponentsViewHolder;Lcom/vk/core/dialogs/bottomsheet/e;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/components/holders/DialogsComponentsViewHolder;->f:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    iput-object p1, p0, Lcom/vk/components/holders/DialogsComponentsViewHolder;->f:Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-void
 .end method
@@ -166,7 +166,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -177,7 +177,7 @@
     check-cast v0, Landroid/app/Activity;
 
     .line 2
-    new-instance v7, Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;
+    new-instance v7, Lcom/vk/profile/ui/photos/modal/b;
 
     const/4 v3, 0x0
 
@@ -191,12 +191,12 @@
 
     move-object v2, v0
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/profile/ui/photos/modal/b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     const/4 v1, 0x0
 
     .line 3
-    invoke-virtual {v7, v1}, Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;->setNeedShowStub(Z)V
+    invoke-virtual {v7, v1}, Lcom/vk/profile/ui/photos/modal/b;->setNeedShowStub(Z)V
 
     .line 4
     new-instance v2, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
@@ -207,44 +207,44 @@
     sget-object v4, Lcom/vk/components/holders/DialogsComponentsViewHolder$showDynamicModalModalBottomSheet$adapter$2;->a:Lcom/vk/components/holders/DialogsComponentsViewHolder$showDynamicModalModalBottomSheet$adapter$2;
 
     .line 6
-    invoke-direct {v2, v3, v4}, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v2, v3, v4}, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     .line 7
-    invoke-virtual {v7, v2}, Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;->setAdapter(Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;)V
+    invoke-virtual {v7, v2}, Lcom/vk/profile/ui/photos/modal/b;->setAdapter(Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;)V
 
     .line 8
     new-instance v3, Lcom/vk/components/holders/DialogsComponentsViewHolder$showDynamicModalModalBottomSheet$1;
 
     invoke-direct {v3, v2}, Lcom/vk/components/holders/DialogsComponentsViewHolder$showDynamicModalModalBottomSheet$1;-><init>(Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;)V
 
-    invoke-virtual {v7, v3}, Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;->setOnAddAlbumClick(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v7, v3}, Lcom/vk/profile/ui/photos/modal/b;->setOnAddAlbumClick(Lkotlin/jvm/b/a;)V
 
     .line 9
-    new-instance v2, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance v2, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
-    invoke-direct {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     .line 10
-    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;
+    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/c;
 
     const/4 v3, 0x1
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v3, v4}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1, v3, v4}, Lcom/vk/core/dialogs/bottomsheet/c;-><init>(ZILkotlin/jvm/internal/i;)V
 
-    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 11
-    invoke-virtual {v2, v7}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v7}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const v0, 0x7f120a7d
 
     .line 12
-    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 13
-    invoke-static {v2, v4, v3, v4}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-static {v2, v4, v3, v4}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-void
 
@@ -267,7 +267,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -292,22 +292,22 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 4
-    new-instance v2, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    new-instance v2, Lcom/vk/core/dialogs/bottomsheet/e$a;
 
-    invoke-direct {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
 
     const-string v3, "Title"
 
     .line 5
-    invoke-virtual {v2, v3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v3}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const-string v3, "Subtitle"
 
     .line 6
-    invoke-virtual {v2, v3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v3}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 7
-    invoke-virtual {v2, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 8
     new-instance v6, Lcom/vk/components/holders/DialogsComponentsViewHolder$d;
@@ -324,37 +324,37 @@
 
     move-object v4, v2
 
-    invoke-static/range {v4 .. v9}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;Landroid/graphics/drawable/Drawable;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static/range {v4 .. v9}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/h$e;Landroid/graphics/drawable/Drawable;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const v1, 0x7f08089f
 
     const v3, 0x7f060077
 
     .line 9
-    invoke-static {v0, v1, v3}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v1, v3}, Lcom/vk/core/util/z;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 10
     sget-object v0, Lcom/vk/components/holders/DialogsComponentsViewHolder$showModalBottomSheet$2;->a:Lcom/vk/components/holders/DialogsComponentsViewHolder$showModalBottomSheet$2;
 
-    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
     .line 11
-    invoke-static {v2, v1, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
+    invoke-static {v2, v1, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/bottomsheet/b;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
 
     .line 12
-    invoke-static {v2, v1, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-static {v2, v1, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/components/holders/DialogsComponentsViewHolder;->f:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    iput-object v0, p0, Lcom/vk/components/holders/DialogsComponentsViewHolder;->f:Lcom/vk/core/dialogs/bottomsheet/e;
 
     return-void
 
@@ -377,7 +377,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -388,10 +388,10 @@
     check-cast v0, Landroid/app/Activity;
 
     .line 2
-    new-instance v2, Lcom/vk/dto/polls/PollVotersCriteria1;
+    new-instance v2, Lcom/vk/dto/polls/c;
 
     .line 3
-    new-instance v3, Lcom/vk/dto/polls/PollVotersCriteria;
+    new-instance v3, Lcom/vk/dto/polls/a;
 
     const/4 v4, 0x1
 
@@ -419,14 +419,14 @@
     const-string v6, "Russia"
 
     .line 5
-    invoke-direct {v3, v4, v6, v5}, Lcom/vk/dto/polls/PollVotersCriteria;-><init>(ILjava/lang/String;Ljava/util/ArrayList;)V
+    invoke-direct {v3, v4, v6, v5}, Lcom/vk/dto/polls/a;-><init>(ILjava/lang/String;Ljava/util/ArrayList;)V
 
     .line 6
     invoke-static {v3}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/vk/dto/polls/PollVotersCriteria1;-><init>(Ljava/util/List;)V
+    invoke-direct {v2, v3}, Lcom/vk/dto/polls/c;-><init>(Ljava/util/List;)V
 
     .line 7
     new-instance v3, Lcom/vk/dto/polls/PollFilterParams;
@@ -436,7 +436,7 @@
     .line 8
     iget-object v4, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -444,7 +444,7 @@
 
     const-string v4, "itemView.context"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -463,13 +463,13 @@
 
     new-instance v5, Lcom/vk/poll/views/PollFilterParamsView;
 
-    invoke-direct {v5, v2, v3, v0}, Lcom/vk/poll/views/PollFilterParamsView;-><init>(Lcom/vk/dto/polls/PollVotersCriteria1;Lcom/vk/dto/polls/PollFilterParams;Landroid/app/Activity;)V
+    invoke-direct {v5, v2, v3, v0}, Lcom/vk/poll/views/PollFilterParamsView;-><init>(Lcom/vk/dto/polls/c;Lcom/vk/dto/polls/PollFilterParams;Landroid/app/Activity;)V
 
     invoke-direct {v4, v0, v5}, Lcom/vk/search/SearchParamsDialogSheet;-><init>(Landroid/app/Activity;Landroid/view/View;)V
 
     const-string v0, "fragmentManager"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4, v1}, Lcom/vk/search/SearchParamsDialogSheet;->a(Landroidx/fragment/app/FragmentManager;)V
 
@@ -498,7 +498,7 @@
 
 
 # virtual methods
-.method public a(Lkotlin/Unit;)V
+.method public a(Lkotlin/m;)V
     .locals 0
 
     return-void
@@ -508,9 +508,9 @@
     .locals 0
 
     .line 2
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
-    invoke-virtual {p0, p1}, Lcom/vk/components/holders/DialogsComponentsViewHolder;->a(Lkotlin/Unit;)V
+    invoke-virtual {p0, p1}, Lcom/vk/components/holders/DialogsComponentsViewHolder;->a(Lkotlin/m;)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "ContactsModel.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/ContactsModel;-><init>(Lcom/vk/im/engine/models/ImExperiments;Ljava/util/Set;ZLjava/lang/String;Ljava/util/Set;)V
+    value = Lcom/vk/im/ui/components/contacts/ContactsModel;-><init>(Lcom/vk/im/engine/models/e;Ljava/util/Set;ZLjava/lang/String;Ljava/util/Set;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,12 +22,12 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lkotlin/Pair<",
         "+",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
+        "Lcom/vk/im/ui/views/adapter_delegate/c;",
         ">;+",
         "Landroidx/recyclerview/widget/DiffUtil$DiffResult;",
         ">;>;"
@@ -61,7 +61,7 @@
             "+",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
+            "Lcom/vk/im/ui/views/adapter_delegate/c;",
             ">;+",
             "Landroidx/recyclerview/widget/DiffUtil$DiffResult;",
             ">;)V"
@@ -71,11 +71,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsModel$d;->a:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsModel;->b(Lcom/vk/im/ui/components/contacts/ContactsModel;)Lio/reactivex/subjects/BehaviorSubject;
+    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsModel;->b(Lcom/vk/im/ui/components/contacts/ContactsModel;)Lio/reactivex/subjects/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lio/reactivex/subjects/BehaviorSubject;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lio/reactivex/subjects/a;->b(Ljava/lang/Object;)V
 
     return-void
 .end method

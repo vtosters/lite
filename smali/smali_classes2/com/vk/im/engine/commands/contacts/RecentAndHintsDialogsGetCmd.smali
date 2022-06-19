@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd;
-.super Lcom/vk/im/engine/i/BaseImEngineCmd;
+.super Lcom/vk/im/engine/i/a;
 .source "RecentAndHintsDialogsGetCmd.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
+        "Lcom/vk/im/engine/i/a<",
         "Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd$a;",
         ">;"
     }
@@ -34,7 +34,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd;->b:I
 
@@ -47,7 +47,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x8
@@ -65,11 +65,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd$a;
+.method public a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd$a;
     .locals 6
 
     .line 2
-    new-instance v0, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd;
+    new-instance v0, Lcom/vk/im/engine/commands/contacts/m;
 
     iget v1, p0, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd;->b:I
 
@@ -79,16 +79,16 @@
 
     iget-object v4, p0, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd;->e:Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/im/engine/commands/contacts/m;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
 
-    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
+    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;
+    check-cast v0, Lcom/vk/im/engine/commands/contacts/m$a;
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/contacts/m$a;->a()Ljava/util/List;
 
     move-result-object v1
 
@@ -103,11 +103,11 @@
     .line 4
     new-instance p1, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/contacts/m$a;->a()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;->b()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/contacts/m$a;->b()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v0
 
@@ -117,7 +117,7 @@
 
     .line 5
     :cond_0
-    new-instance v1, Lcom/vk/im/engine/commands/contacts/HintDialogsGetCmd;
+    new-instance v1, Lcom/vk/im/engine/commands/contacts/j;
 
     iget-object v3, p0, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd;->c:Lcom/vk/im/engine/models/Source;
 
@@ -125,16 +125,16 @@
 
     iget-object v5, p0, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd;->e:Ljava/lang/Object;
 
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vk/im/engine/commands/contacts/HintDialogsGetCmd;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
+    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vk/im/engine/commands/contacts/j;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
 
-    invoke-interface {p1, p0, v1}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
+    invoke-interface {p1, p0, v1}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/commands/contacts/HintDialogsGetCmd$a;
+    check-cast p1, Lcom/vk/im/engine/commands/contacts/j$a;
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/contacts/HintDialogsGetCmd$a;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/contacts/j$a;->a()Ljava/util/List;
 
     move-result-object v1
 
@@ -144,18 +144,18 @@
 
     new-instance v2, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd$onExecute$hintsResult$1$1;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/contacts/m$a;->a()Ljava/util/List;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd$onExecute$hintsResult$1$1;-><init>(Ljava/util/List;)V
 
-    invoke-static {v1, v2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
+    invoke-static {v1, v2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
 
     .line 7
     new-instance v2, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/contacts/m$a;->a()Ljava/util/List;
 
     move-result-object v3
 
@@ -169,11 +169,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;->b()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/contacts/m$a;->b()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/contacts/HintDialogsGetCmd$a;->b()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/contacts/j$a;->b()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object p1
 
@@ -186,11 +186,11 @@
     return-object v2
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd$a;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd;->a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd$a;
 
     move-result-object p1
 
@@ -218,7 +218,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd;->c:Lcom/vk/im/engine/models/Source;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -234,7 +234,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd;->e:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

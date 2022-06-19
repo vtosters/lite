@@ -37,7 +37,7 @@
 
 .field private final b:Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$ContactsMemCache;
 
-.field private final c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+.field private final c:Lcom/vk/im/engine/internal/storage/b;
 
 
 # direct methods
@@ -48,7 +48,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const-string v0, "contacts_sync_state"
 
@@ -83,13 +83,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
+.method public constructor <init>(Lcom/vk/im/engine/internal/storage/b;)V
     .locals 2
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
     .line 2
     new-instance p1, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$ContactsMemCache;
@@ -100,7 +100,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$byIdCache$2;-><init>(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;)V
 
-    invoke-direct {p1, p0, v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$ContactsMemCache;-><init>(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p1, p0, v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$ContactsMemCache;-><init>(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->a:Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$ContactsMemCache;
 
@@ -113,29 +113,29 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$byUserIdCache$2;-><init>(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;)V
 
-    invoke-direct {p1, p0, v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$ContactsMemCache;-><init>(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p1, p0, v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$ContactsMemCache;-><init>(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->b:Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$ContactsMemCache;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;)Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;)Lcom/vk/im/engine/internal/storage/b;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
     return-object p0
 .end method
@@ -251,7 +251,7 @@
     move-object v4, v2
 
     .line 23
-    invoke-direct/range {v4 .. v18}, Lcom/vk/im/engine/models/contacts/Contact;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;ZLjava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v4 .. v18}, Lcom/vk/im/engine/models/contacts/Contact;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;ZLjava/lang/Integer;ILkotlin/jvm/internal/i;)V
 
     :goto_0
     return-object v2
@@ -266,11 +266,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method public static final synthetic b(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->d(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->d(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object p0
 
@@ -289,9 +289,9 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -299,17 +299,17 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$putToDb$1;-><init>(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;Ljava/util/Collection;)V
 
-    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method private final c(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method private final c(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
+            "Lcom/vk/im/engine/utils/collection/d;",
             ")",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/models/contacts/Contact;",
@@ -318,7 +318,7 @@
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
 
     move-result v0
 
@@ -335,14 +335,14 @@
     const-string v0, ","
 
     .line 3
-    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/d;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -428,12 +428,12 @@
     throw v0
 .end method
 
-.method private final d(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method private final d(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
+            "Lcom/vk/im/engine/utils/collection/d;",
             ")",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/models/contacts/Contact;",
@@ -442,7 +442,7 @@
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
 
     move-result v0
 
@@ -459,14 +459,14 @@
     const-string v0, ","
 
     .line 3
-    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/d;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -572,12 +572,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method public final a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
+            "Lcom/vk/im/engine/utils/collection/d;",
             ")",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/models/contacts/Contact;",
@@ -588,7 +588,7 @@
     .line 7
     iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->a:Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$ContactsMemCache;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object p1
 
@@ -599,15 +599,15 @@
     .locals 2
 
     .line 6
-    invoke-static {p1}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(I)Lcom/vk/im/engine/utils/collection/IntArrayList;
+    invoke-static {p1}, Lcom/vk/im/engine/utils/collection/e;->a(I)Lcom/vk/im/engine/utils/collection/IntArrayList;
 
     move-result-object v0
 
     const-string v1, "intListOf(id)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {p0, v0}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object v0
 
@@ -634,9 +634,9 @@
     invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a()V
 
     .line 33
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -644,7 +644,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$clearAll$1;-><init>(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;)V
 
-    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -666,7 +666,7 @@
     invoke-direct {v2, p0, p2, p1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$changeUserId$2;-><init>(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;II)V
 
     .line 30
-    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(ILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(ILkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -685,9 +685,9 @@
     invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a()V
 
     .line 10
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -714,9 +714,9 @@
     .locals 2
 
     .line 24
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -733,9 +733,9 @@
     invoke-virtual {v0, v1, p1}, Lcom/vk/im/engine/internal/storage/delegates/key_value/KeyValueStorageManager;->b(Ljava/lang/String;I)V
 
     .line 25
-    iget-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -778,9 +778,9 @@
     .locals 2
 
     .line 26
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -795,12 +795,12 @@
     return-void
 .end method
 
-.method public final b(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+.method public final b(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/IntCollection;",
+            "Lcom/vk/im/engine/utils/collection/d;",
             ")",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/models/contacts/Contact;",
@@ -811,7 +811,7 @@
     .line 14
     iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->b:Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager$ContactsMemCache;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
 
     move-result-object p1
 
@@ -834,9 +834,9 @@
     .end annotation
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -928,9 +928,9 @@
     .locals 2
 
     .line 15
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -949,9 +949,9 @@
     .locals 2
 
     .line 16
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -970,9 +970,9 @@
     .locals 2
 
     .line 13
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -991,9 +991,9 @@
     .locals 3
 
     .line 12
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -1016,9 +1016,9 @@
     .locals 3
 
     .line 12
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -1041,9 +1041,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -1066,9 +1066,9 @@
     .locals 7
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 

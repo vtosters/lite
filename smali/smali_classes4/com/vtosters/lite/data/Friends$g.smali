@@ -305,7 +305,7 @@
     .line 13
     iget-object v1, v0, Lcom/vk/dto/user/UserProfile;->d:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/vtosters/lite/utils/Utils;->a(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/vtosters/lite/utils/l;->a(Ljava/lang/String;)Z
 
     move-result v1
 

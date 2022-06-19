@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;
-.super Lcom/vk/im/ui/q/Component;
+.super Lcom/vk/im/ui/q/c;
 .source "DialogPinnedMsgComponent.kt"
 
 
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static final F:Lcom/vk/im/log/ImLogger;
+.field private static final F:Lcom/vk/im/log/a;
 
 .field private static final G:Ljava/lang/String;
 
@@ -23,15 +23,15 @@
 # instance fields
 .field private B:Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/DialogPinnedMsgVc;
 
-.field private C:Lio/reactivex/disposables/Disposable;
+.field private C:Lio/reactivex/disposables/b;
 
-.field private D:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;
+.field private D:Lcom/vk/im/ui/components/dialog_pinned_msg/b;
 
-.field private final E:Lcom/vk/im/engine/ImEngine;
+.field private final E:Lcom/vk/im/engine/a;
 
-.field private final g:Lio/reactivex/disposables/CompositeDisposable;
+.field private final g:Lio/reactivex/disposables/a;
 
-.field private h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+.field private h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
 
 # direct methods
@@ -44,16 +44,16 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v1, v2}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
-    invoke-static {v0}, Lcom/vk/im/log/ImLoggerFactory;->a(Ljava/lang/Class;)Lcom/vk/im/log/ImLogger;
+    invoke-static {v0}, Lcom/vk/im/log/b;->a(Ljava/lang/Class;)Lcom/vk/im/log/a;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    sput-object v1, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->F:Lcom/vk/im/log/ImLogger;
+    sput-object v1, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->F:Lcom/vk/im/log/a;
 
     .line 2
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -64,41 +64,41 @@
 
     const-string v1, "DialogPinnedMsgComponent::class.java.simpleName!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->G:Ljava/lang/String;
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
     .line 3
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/a;)V
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/q/Component;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/q/c;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/ImEngine;
+    iput-object p2, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/a;
 
     .line 2
-    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
+    new-instance p1, Lio/reactivex/disposables/a;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->g:Lio/reactivex/disposables/a;
 
     .line 3
-    new-instance p1, Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    new-instance p1, Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     new-instance p2, Lcom/vk/im/engine/models/dialogs/DialogExt;
 
@@ -108,11 +108,11 @@
 
     const/4 v2, 0x2
 
-    invoke-direct {p2, v1, v0, v2, v0}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {p2, v1, v0, v2, v0}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/i;)V
 
-    invoke-direct {p1, p2}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     return-void
 .end method
@@ -121,9 +121,9 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->b()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->b()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v0
 
@@ -132,9 +132,9 @@
     move-result v0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->i()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->i()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v1
 
@@ -152,9 +152,9 @@
 
     .line 4
     :cond_1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v0
 
@@ -182,9 +182,9 @@
     if-eqz v1, :cond_3
 
     .line 6
-    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v3}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->i()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v3}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->i()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v3
 
@@ -199,7 +199,7 @@
 
     .line 8
     :cond_3
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/ImEngine;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/a;
 
     new-instance v3, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;
 
@@ -209,9 +209,9 @@
 
     const/4 v4, 0x2
 
-    invoke-direct {v3, v0, v2, v4, v2}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;-><init>(Ljava/util/Collection;Ljava/util/Collection;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v3, v0, v2, v4, v2}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;-><init>(Ljava/util/Collection;Ljava/util/Collection;ILkotlin/jvm/internal/i;)V
 
-    invoke-virtual {v1, v3}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
+    invoke-virtual {v1, v3}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
 
     :cond_4
     return-void
@@ -221,9 +221,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->l()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->l()Z
 
     move-result v0
 
@@ -234,9 +234,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->j()Z
 
     move-result v0
 
@@ -246,18 +246,18 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a(Z)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a(Ljava/lang/Throwable;)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->O()V
@@ -266,31 +266,31 @@
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->I()V
 
     .line 6
-    new-instance v0, Lcom/vk/im/ui/components/dialog_pinned_msg/f/LoadInitCmd;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_pinned_msg/f/c;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->c()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->c()I
 
     move-result v1
 
     sget-object v2, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->G:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_pinned_msg/f/LoadInitCmd;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_pinned_msg/f/c;-><init>(ILjava/lang/Object;)V
 
     .line 7
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/ImEngine;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
 
     move-result-object v0
 
     .line 8
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
 
     move-result-object v0
 
@@ -299,30 +299,30 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$loadInit$1;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;
+    new-instance v2, Lcom/vk/im/ui/components/dialog_pinned_msg/a;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/a;-><init>(Lkotlin/jvm/b/b;)V
 
     new-instance v1, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$loadInit$2;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$loadInit$2;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;
+    new-instance v3, Lcom/vk/im/ui/components/dialog_pinned_msg/a;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/a;-><init>(Lkotlin/jvm/b/b;)V
 
-    invoke-virtual {v0, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     const-string v1, "imEngine.submitWithCance\u2026ccess, ::onLoadInitError)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->g:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -331,11 +331,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->D:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->D:Lcom/vk/im/ui/components/dialog_pinned_msg/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;->a()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/b;->a()V
 
     :cond_0
     return-void
@@ -371,12 +371,12 @@
     invoke-direct {p0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->d(Z)V
 
     .line 4
-    new-instance v1, Lcom/vk/im/engine/commands/dialogs/DialogsPinnedMsgDetachCmd;
+    new-instance v1, Lcom/vk/im/engine/commands/dialogs/f0;
 
     .line 5
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->c()I
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->c()I
 
     move-result v2
 
@@ -384,22 +384,22 @@
     sget-object v3, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->G:Ljava/lang/String;
 
     .line 7
-    invoke-direct {v1, v2, v0, v3}, Lcom/vk/im/engine/commands/dialogs/DialogsPinnedMsgDetachCmd;-><init>(IZLjava/lang/Object;)V
+    invoke-direct {v1, v2, v0, v3}, Lcom/vk/im/engine/commands/dialogs/f0;-><init>(IZLjava/lang/Object;)V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/ImEngine;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/a;
 
     .line 9
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
 
     move-result-object v0
 
     .line 10
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
 
     move-result-object v0
 
@@ -408,23 +408,23 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$startPinnedMsgDetachProgress$1;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;
+    new-instance v2, Lcom/vk/im/ui/components/dialog_pinned_msg/a;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/a;-><init>(Lkotlin/jvm/b/b;)V
 
     new-instance v1, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$startPinnedMsgDetachProgress$2;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$startPinnedMsgDetachProgress$2;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;
+    new-instance v3, Lcom/vk/im/ui/components/dialog_pinned_msg/a;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/a;-><init>(Lkotlin/jvm/b/b;)V
 
-    invoke-virtual {v0, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->C:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->C:Lio/reactivex/disposables/b;
 
     :cond_1
     :goto_0
@@ -485,12 +485,12 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->g:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->a()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/a;->a()V
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     new-instance v1, Lcom/vk/im/engine/models/dialogs/DialogExt;
 
@@ -500,11 +500,11 @@
 
     const/4 v4, 0x2
 
-    invoke-direct {v1, v3, v2, v4, v2}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v1, v3, v2, v4, v2}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/i;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     .line 3
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->O()V
@@ -516,17 +516,17 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->j()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->k()Z
 
     move-result v0
 
@@ -536,38 +536,38 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->b(Z)V
 
     .line 3
-    new-instance v0, Lcom/vk/im/ui/components/dialog_pinned_msg/f/LoadAllByActualCmd;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_pinned_msg/f/a;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->c()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->c()I
 
     move-result v1
 
     sget-object v2, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->G:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_pinned_msg/f/LoadAllByActualCmd;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_pinned_msg/f/a;-><init>(ILjava/lang/Object;)V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/ImEngine;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
 
     move-result-object v0
 
@@ -576,30 +576,30 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$updateAllByActual$1;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;
+    new-instance v2, Lcom/vk/im/ui/components/dialog_pinned_msg/a;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/a;-><init>(Lkotlin/jvm/b/b;)V
 
     new-instance v1, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$updateAllByActual$2;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$updateAllByActual$2;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;
+    new-instance v3, Lcom/vk/im/ui/components/dialog_pinned_msg/a;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/a;-><init>(Lkotlin/jvm/b/b;)V
 
-    invoke-virtual {v0, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     const-string v1, "imEngine.submitWithCance\u2026onUpdateAllByActualError)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->g:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
 
     :cond_1
     :goto_0
@@ -610,17 +610,17 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->j()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->b()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->b()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v0
 
@@ -642,9 +642,9 @@
 
     .line 3
     :cond_1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->d()Ljava/lang/Throwable;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->d()Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -662,23 +662,23 @@
 
     .line 5
     :cond_3
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v0
 
     .line 6
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->e()Lcom/vk/im/engine/models/messages/PinnedMsg;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->e()Lcom/vk/im/engine/models/messages/PinnedMsg;
 
     move-result-object v1
 
     .line 7
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->h()Z
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->h()Z
 
     move-result v2
 
@@ -739,9 +739,9 @@
 
     if-eqz v0, :cond_9
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->i()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->i()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v2
 
@@ -824,40 +824,40 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/EntityIntMap;Z)V
+.method private final a(Lcom/vk/im/engine/models/a;Z)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/EntityIntMap<",
+            "Lcom/vk/im/engine/models/a<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;Z)V"
         }
     .end annotation
 
     .line 35
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->c()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->c()I
 
     move-result v0
 
     .line 36
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->e()Lcom/vk/im/engine/models/messages/PinnedMsg;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->e()Lcom/vk/im/engine/models/messages/PinnedMsg;
 
     move-result-object v4
 
     .line 37
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->h()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->h()Z
 
     move-result v5
 
     .line 38
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;->d(I)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/a;->d(I)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -880,7 +880,7 @@
 
     .line 39
     :goto_0
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;->d(I)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/a;->d(I)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -930,7 +930,7 @@
     move-result-object v2
 
     :cond_3
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -955,28 +955,28 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/dialogs/DialogsExt;)V
+.method private final a(Lcom/vk/im/engine/models/dialogs/g;)V
     .locals 2
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a(Z)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->c()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->c()I
 
     move-result v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/im/engine/models/dialogs/DialogsExt;->a(I)Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {p1, v1}, Lcom/vk/im/engine/models/dialogs/g;->a(I)Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
     .line 10
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->F()V
@@ -985,15 +985,15 @@
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->O()V
 
     .line 12
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->e()Lcom/vk/im/engine/models/messages/PinnedMsg;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->e()Lcom/vk/im/engine/models/messages/PinnedMsg;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->h()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->h()Z
 
     move-result v0
 
@@ -1006,17 +1006,17 @@
     .locals 2
 
     .line 48
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->D:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->D:Lcom/vk/im/ui/components/dialog_pinned_msg/b;
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->i()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->i()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v1
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;->a(Lcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/ProfilesInfo;)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/b;->a(Lcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/ProfilesInfo;)V
 
     :cond_0
     return-void
@@ -1026,21 +1026,21 @@
     .locals 1
 
     .line 46
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->D:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->D:Lcom/vk/im/ui/components/dialog_pinned_msg/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;->a(Lcom/vk/im/engine/models/messages/PinnedMsg;Z)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/im/ui/components/dialog_pinned_msg/b;->a(Lcom/vk/im/engine/models/messages/PinnedMsg;Z)V
 
     :cond_0
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;Lcom/vk/im/engine/models/dialogs/DialogsExt;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;Lcom/vk/im/engine/models/dialogs/g;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->a(Lcom/vk/im/engine/models/dialogs/DialogsExt;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->a(Lcom/vk/im/engine/models/dialogs/g;)V
 
     return-void
 .end method
@@ -1067,21 +1067,21 @@
     .locals 2
 
     .line 13
-    sget-object v0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->F:Lcom/vk/im/log/ImLogger;
+    sget-object v0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->F:Lcom/vk/im/log/a;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
 
     .line 14
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a(Z)V
 
     .line 15
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a(Ljava/lang/Throwable;)V
 
     .line 16
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->O()V
@@ -1089,13 +1089,13 @@
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/Functions;)V
+.method private final a(Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -1106,7 +1106,7 @@
     move-result v0
 
     .line 43
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     .line 44
     invoke-virtual {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->x()Z
@@ -1126,7 +1126,7 @@
     .locals 6
 
     .line 47
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->D:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->D:Lcom/vk/im/ui/components/dialog_pinned_msg/b;
 
     if-eqz v0, :cond_0
 
@@ -1140,7 +1140,7 @@
 
     move v5, p5
 
-    invoke-interface/range {v0 .. v5}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;->a(ZLcom/vk/im/engine/models/messages/PinnedMsg;ZLcom/vk/im/engine/models/messages/PinnedMsg;Z)V
+    invoke-interface/range {v0 .. v5}, Lcom/vk/im/ui/components/dialog_pinned_msg/b;->a(ZLcom/vk/im/engine/models/messages/PinnedMsg;ZLcom/vk/im/engine/models/messages/PinnedMsg;Z)V
 
     :cond_0
     return-void
@@ -1150,52 +1150,52 @@
     .locals 1
 
     .line 9
-    new-instance v0, Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-direct {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-direct {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     .line 10
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->c(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->c(Z)V
 
     .line 11
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/ImEngine;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/a;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/ImEngine;->j()Lio/reactivex/Observable;
+    invoke-virtual {p1}, Lcom/vk/im/engine/a;->j()Lc/a/m;
 
     move-result-object p1
 
     .line 12
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     .line 13
-    new-instance v0, Lcom/vk/im/ui/components/dialog_pinned_msg/EventConsumerImpl;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_pinned_msg/c;
 
-    invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/EventConsumerImpl;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;)V
+    invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/c;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     const-string v0, "imEngine.observeEvents()\u2026(EventConsumerImpl(this))"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->g:Lio/reactivex/disposables/a;
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
 
     .line 15
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->O()V
@@ -1206,44 +1206,44 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/im/engine/models/dialogs/DialogsExt;)V
+.method private final b(Lcom/vk/im/engine/models/dialogs/g;)V
     .locals 2
 
     .line 17
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/DialogsExt;->c()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/g;->c()Lcom/vk/im/engine/models/a;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->a(Lcom/vk/im/engine/models/EntityIntMap;Z)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->a(Lcom/vk/im/engine/models/a;Z)V
 
     .line 18
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->b(Z)V
 
     .line 19
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->c()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->c()I
 
     move-result v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/im/engine/models/dialogs/DialogsExt;->a(I)Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {p1, v1}, Lcom/vk/im/engine/models/dialogs/g;->a(I)Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
     .line 20
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a(Ljava/lang/Throwable;)V
 
     .line 21
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->F()V
@@ -1254,11 +1254,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;Lcom/vk/im/engine/models/dialogs/DialogsExt;)V
+.method public static final synthetic b(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;Lcom/vk/im/engine/models/dialogs/g;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->b(Lcom/vk/im/engine/models/dialogs/DialogsExt;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->b(Lcom/vk/im/engine/models/dialogs/g;)V
 
     return-void
 .end method
@@ -1285,9 +1285,9 @@
     .locals 1
 
     .line 23
-    sget-object v0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->F:Lcom/vk/im/log/ImLogger;
+    sget-object v0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->F:Lcom/vk/im/log/a;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
 
     const/4 v0, 0x0
 
@@ -1309,47 +1309,47 @@
     .locals 1
 
     .line 26
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->D:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->D:Lcom/vk/im/ui/components/dialog_pinned_msg/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;->a(Z)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/b;->a(Z)V
 
     :cond_0
     return-void
 .end method
 
-.method private final c(Lcom/vk/im/engine/models/dialogs/DialogsExt;)V
+.method private final c(Lcom/vk/im/engine/models/dialogs/g;)V
     .locals 2
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/DialogsExt;->c()Lcom/vk/im/engine/models/EntityIntMap;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/g;->c()Lcom/vk/im/engine/models/a;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->a(Lcom/vk/im/engine/models/EntityIntMap;Z)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->a(Lcom/vk/im/engine/models/a;Z)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->c()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->c()I
 
     move-result v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/im/engine/models/dialogs/DialogsExt;->a(I)Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {p1, v1}, Lcom/vk/im/engine/models/dialogs/g;->a(I)Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
     .line 6
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a(Ljava/lang/Throwable;)V
 
     .line 7
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->F()V
@@ -1360,11 +1360,11 @@
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;Lcom/vk/im/engine/models/dialogs/DialogsExt;)V
+.method public static final synthetic c(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;Lcom/vk/im/engine/models/dialogs/g;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->c(Lcom/vk/im/engine/models/dialogs/DialogsExt;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->c(Lcom/vk/im/engine/models/dialogs/g;)V
 
     return-void
 .end method
@@ -1391,23 +1391,23 @@
     .locals 5
 
     .line 9
-    sget-object v0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->F:Lcom/vk/im/log/ImLogger;
+    sget-object v0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->F:Lcom/vk/im/log/a;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
 
     .line 10
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->b(Z)V
 
     .line 11
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
     new-instance v1, Lcom/vk/im/engine/models/dialogs/DialogExt;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->c()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->c()I
 
     move-result v2
 
@@ -1415,14 +1415,14 @@
 
     const/4 v4, 0x2
 
-    invoke-direct {v1, v2, v3, v4, v3}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v1, v2, v3, v4, v3}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/i;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
     .line 12
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a(Ljava/lang/Throwable;)V
 
     .line 13
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->O()V
@@ -1454,14 +1454,14 @@
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->F:Lcom/vk/im/log/ImLogger;
+    sget-object v0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->F:Lcom/vk/im/log/a;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a(Ljava/lang/Throwable;)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->O()V
@@ -1477,7 +1477,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$setPinnedMsgDetachProgressActive$1;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;Z)V
 
-    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -1486,18 +1486,18 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->f()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->f()Z
 
     move-result v0
 
     if-eq v0, p1, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->d(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->d(Z)V
 
     if-eqz p1, :cond_0
 
@@ -1531,7 +1531,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$setPinnedMsgDetachSubmitActive$1;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;Z)V
 
-    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -1540,18 +1540,18 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->g()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->g()Z
 
     move-result v0
 
     if-eq v0, p1, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->e(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->e(Z)V
 
     if-eqz p1, :cond_0
 
@@ -1583,9 +1583,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->g()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->g()Z
 
     move-result v0
 
@@ -1596,9 +1596,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->e()Lcom/vk/im/engine/models/messages/PinnedMsg;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->e()Lcom/vk/im/engine/models/messages/PinnedMsg;
 
     move-result-object v0
 
@@ -1622,9 +1622,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->b()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->b()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v0
 
@@ -1651,9 +1651,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->j()Z
 
     move-result v0
 
@@ -1663,31 +1663,31 @@
 
     .line 2
     :cond_0
-    new-instance v0, Lcom/vk/im/ui/components/dialog_pinned_msg/f/LoadAllByCacheCmd;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_pinned_msg/f/b;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->c()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->c()I
 
     move-result v1
 
     sget-object v2, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->G:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_pinned_msg/f/LoadAllByCacheCmd;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_pinned_msg/f/b;-><init>(ILjava/lang/Object;)V
 
     .line 3
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/ImEngine;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
 
     move-result-object v0
 
@@ -1696,30 +1696,30 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$updateAllByCache$1;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;
+    new-instance v2, Lcom/vk/im/ui/components/dialog_pinned_msg/a;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/a;-><init>(Lkotlin/jvm/b/b;)V
 
     new-instance v1, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$updateAllByCache$2;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent$updateAllByCache$2;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;
+    new-instance v3, Lcom/vk/im/ui/components/dialog_pinned_msg/a;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/a;-><init>(Lkotlin/jvm/b/b;)V
 
-    invoke-virtual {v0, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     const-string v1, "imEngine.submitWithCance\u2026:onUpdateAllByCacheError)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->g:Lio/reactivex/disposables/a;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -1728,9 +1728,9 @@
     .locals 1
 
     .line 30
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->j()Z
 
     move-result v0
 
@@ -1740,18 +1740,18 @@
 
     .line 31
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->i()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->i()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/ProfilesInfo;->b(Lcom/vk/im/engine/models/ProfilesInfo;)Lcom/vk/im/engine/models/ProfilesIds1;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/ProfilesInfo;->b(Lcom/vk/im/engine/models/ProfilesInfo;)Lcom/vk/im/engine/models/l;
 
     move-result-object p1
 
     .line 32
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/ProfilesIds1;->f()Z
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/l;->f()Z
 
     move-result p1
 
@@ -1767,12 +1767,12 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/EntityIntMap;Ljava/lang/Object;)V
+.method public final a(Lcom/vk/im/engine/models/a;Ljava/lang/Object;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/EntityIntMap<",
+            "Lcom/vk/im/engine/models/a<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;",
             "Ljava/lang/Object;",
@@ -1781,21 +1781,21 @@
     .end annotation
 
     .line 19
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->j()Z
 
     move-result v0
 
     if-nez v0, :cond_6
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->c()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->c()I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;->c(I)Z
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/a;->c(I)Z
 
     move-result v0
 
@@ -1807,29 +1807,29 @@
     :cond_0
     sget-object v0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->G:Ljava/lang/String;
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
     .line 21
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->a(Lcom/vk/im/engine/models/EntityIntMap;Z)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->a(Lcom/vk/im/engine/models/a;Z)V
 
     .line 22
-    iget-object p2, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object p2, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->c()I
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->c()I
 
     move-result p2
 
     .line 23
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->a()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->a()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v0
 
     .line 24
-    invoke-virtual {p1, p2}, Lcom/vk/im/engine/models/EntityIntMap;->d(I)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lcom/vk/im/engine/models/a;->d(I)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1862,7 +1862,7 @@
     move-object v4, v2
 
     :goto_1
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -1894,7 +1894,7 @@
     move-result-object v2
 
     :cond_4
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1904,21 +1904,21 @@
 
     .line 27
     :cond_5
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->b()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->b()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v0
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/engine/models/EntityIntMap;->e(I)Lcom/vk/im/engine/models/EntityValue;
+    invoke-virtual {p1, p2}, Lcom/vk/im/engine/models/a;->e(I)Lcom/vk/im/engine/models/b;
 
     move-result-object p1
 
     const-string p2, "dialogs.getValue(dialogId)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->a(Lcom/vk/im/engine/models/EntityValue;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->a(Lcom/vk/im/engine/models/b;)V
 
     .line 28
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->F()V
@@ -1954,11 +1954,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;)V
+.method public final a(Lcom/vk/im/ui/components/dialog_pinned_msg/b;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->D:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->D:Lcom/vk/im/ui/components/dialog_pinned_msg/b;
 
     return-void
 .end method
@@ -1998,11 +1998,11 @@
 
     if-eqz p1, :cond_1
 
-    new-instance p3, Lcom/vk/im/ui/components/dialog_pinned_msg/VcCallbackImpl;
+    new-instance p3, Lcom/vk/im/ui/components/dialog_pinned_msg/e;
 
-    invoke-direct {p3, p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/VcCallbackImpl;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;)V
+    invoke-direct {p3, p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/e;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;)V
 
-    invoke-virtual {p1, p3}, Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/DialogPinnedMsgVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/DialogPinnedMsgVcCallback;)V
+    invoke-virtual {p1, p3}, Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/DialogPinnedMsgVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/a;)V
 
     .line 6
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->O()V
@@ -2019,13 +2019,13 @@
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p2
 
     .line 8
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p2
 .end method
@@ -2034,7 +2034,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/q/Component;->m()V
+    invoke-super {p0}, Lcom/vk/im/ui/q/c;->m()V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->G()Z
@@ -2054,7 +2054,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/q/Component;->n()V
+    invoke-super {p0}, Lcom/vk/im/ui/q/c;->n()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->B:Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/DialogPinnedMsgVc;
@@ -2063,7 +2063,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/DialogPinnedMsgVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/DialogPinnedMsgVcCallback;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/DialogPinnedMsgVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/a;)V
 
     .line 3
     :cond_0
@@ -2084,17 +2084,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->C:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->C:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->C:Lio/reactivex/disposables/Disposable;
+    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->C:Lio/reactivex/disposables/b;
 
     const/4 v0, 0x0
 
@@ -2142,9 +2142,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->e()Lcom/vk/im/engine/models/messages/PinnedMsg;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->e()Lcom/vk/im/engine/models/messages/PinnedMsg;
 
     move-result-object v0
 
@@ -2155,9 +2155,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->h()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->h()Z
 
     move-result v0
 
@@ -2168,12 +2168,12 @@
     .locals 4
 
     .line 1
-    new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogsPinnedMsgChangeVisibilityCmd;
+    new-instance v0, Lcom/vk/im/engine/commands/dialogs/e0;
 
     .line 2
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->c()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->c()I
 
     move-result v1
 
@@ -2183,12 +2183,12 @@
     const/4 v3, 0x0
 
     .line 4
-    invoke-direct {v0, v1, v3, v2}, Lcom/vk/im/engine/commands/dialogs/DialogsPinnedMsgChangeVisibilityCmd;-><init>(IZLjava/lang/Object;)V
+    invoke-direct {v0, v1, v3, v2}, Lcom/vk/im/engine/commands/dialogs/e0;-><init>(IZLjava/lang/Object;)V
 
     .line 5
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/ImEngine;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->E:Lcom/vk/im/engine/a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
 
     return-void
 .end method
@@ -2228,17 +2228,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->j()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->b()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->b()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v0
 
@@ -2263,9 +2263,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/State;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->h:Lcom/vk/im/ui/components/dialog_pinned_msg/d;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/State;->f()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_pinned_msg/d;->f()Z
 
     move-result v0
 

@@ -51,7 +51,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/view/StaticMapView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/view/StaticMapView$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/core/view/StaticMapView;->E:Lcom/vk/core/view/StaticMapView$a;
 
@@ -198,7 +198,7 @@
     .locals 2
 
     .line 2
-    sget-object v0, Lb/h/z/R3;->StaticMapView:[I
+    sget-object v0, Lb/h/z/m;->StaticMapView:[I
 
     const/4 v1, 0x0
 
@@ -207,7 +207,7 @@
     move-result-object p1
 
     .line 3
-    sget p2, Lb/h/z/R3;->StaticMapView_android_maxWidth:I
+    sget p2, Lb/h/z/m;->StaticMapView_android_maxWidth:I
 
     const v0, 0x7fffffff
 
@@ -218,7 +218,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/core/view/StaticMapView;->setMaxWidth(I)V
 
     .line 4
-    sget p2, Lb/h/z/R3;->StaticMapView_android_maxHeight:I
+    sget p2, Lb/h/z/m;->StaticMapView_android_maxHeight:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -227,7 +227,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/core/view/StaticMapView;->setMaxHeight(I)V
 
     .line 5
-    sget p2, Lb/h/z/R3;->StaticMapView_smv_aspectRadio:I
+    sget p2, Lb/h/z/m;->StaticMapView_smv_aspectRadio:I
 
     const/high16 v0, -0x40800000    # -1.0f
 
@@ -238,7 +238,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/core/view/StaticMapView;->setAspectRatio(F)V
 
     .line 6
-    sget p2, Lb/h/z/R3;->StaticMapView_smv_cornerRadius:I
+    sget p2, Lb/h/z/m;->StaticMapView_smv_cornerRadius:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -247,7 +247,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/core/view/StaticMapView;->setCornerRadius(I)V
 
     .line 7
-    sget p2, Lb/h/z/R3;->StaticMapView_smv_overlayColor:I
+    sget p2, Lb/h/z/m;->StaticMapView_smv_overlayColor:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -256,7 +256,7 @@
     if-eqz p2, :cond_0
 
     .line 8
-    sget p2, Lb/h/z/R3;->StaticMapView_smv_overlayColor:I
+    sget p2, Lb/h/z/m;->StaticMapView_smv_overlayColor:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -367,7 +367,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -705,7 +705,7 @@
 
     iget v3, p0, Lcom/vk/core/view/StaticMapView;->f:I
 
-    invoke-static {p1, v2, v3, v0}, Lcom/vk/core/utils/MeasureUtils;->a(IIII)I
+    invoke-static {p1, v2, v3, v0}, Lcom/vk/core/utils/d;->a(IIII)I
 
     move-result v2
 
@@ -716,7 +716,7 @@
 
     iget v4, p0, Lcom/vk/core/view/StaticMapView;->g:I
 
-    invoke-static {p2, v3, v4, v1}, Lcom/vk/core/utils/MeasureUtils;->a(IIII)I
+    invoke-static {p2, v3, v4, v1}, Lcom/vk/core/utils/d;->a(IIII)I
 
     move-result v3
 
@@ -765,7 +765,7 @@
 
     iget v6, p0, Lcom/vk/core/view/StaticMapView;->f:I
 
-    invoke-static {p1, v4, v6, v0, v2}, Lcom/vk/core/utils/MeasureUtils;->a(IIIII)I
+    invoke-static {p1, v4, v6, v0, v2}, Lcom/vk/core/utils/d;->a(IIIII)I
 
     move-result p1
 
@@ -776,7 +776,7 @@
 
     iget v4, p0, Lcom/vk/core/view/StaticMapView;->g:I
 
-    invoke-static {p2, v2, v4, v1, v3}, Lcom/vk/core/utils/MeasureUtils;->a(IIIII)I
+    invoke-static {p2, v2, v4, v1, v3}, Lcom/vk/core/utils/d;->a(IIIII)I
 
     move-result p2
 
@@ -799,15 +799,15 @@
 
     move-result-object v2
 
-    sget-object v3, Lcom/vk/core/utils/MeasureUtils;->INSTANCE:Lcom/vk/core/utils/MeasureUtils;
+    sget-object v3, Lcom/vk/core/utils/d;->a:Lcom/vk/core/utils/d;
 
-    invoke-virtual {v3, v0}, Lcom/vk/core/utils/MeasureUtils;->a(I)I
+    invoke-virtual {v3, v0}, Lcom/vk/core/utils/d;->a(I)I
 
     move-result v0
 
-    sget-object v3, Lcom/vk/core/utils/MeasureUtils;->INSTANCE:Lcom/vk/core/utils/MeasureUtils;
+    sget-object v3, Lcom/vk/core/utils/d;->a:Lcom/vk/core/utils/d;
 
-    invoke-virtual {v3, v1}, Lcom/vk/core/utils/MeasureUtils;->a(I)I
+    invoke-virtual {v3, v1}, Lcom/vk/core/utils/d;->a(I)I
 
     move-result v1
 

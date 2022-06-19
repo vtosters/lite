@@ -35,7 +35,7 @@
     invoke-direct {p0, p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 9
-    sget-object v0, Lcom/vtosters/lite/R;->RingtonePreference:[I
+    sget-object v0, Lcom/vtosters/lite/a0;->RingtonePreference:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -92,7 +92,7 @@
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 2
-    sget-object v0, Lcom/vtosters/lite/R;->RingtonePreference:[I
+    sget-object v0, Lcom/vtosters/lite/a0;->RingtonePreference:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 

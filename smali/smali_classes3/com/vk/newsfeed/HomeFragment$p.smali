@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/HomeFragment;->a(ZLandroid/view/View;Lcom/vk/newsfeed/MilkshakeNewsHeaderDrawable$b;)V
+    value = Lcom/vk/newsfeed/HomeFragment;->a(ZLandroid/view/View;Lcom/vk/newsfeed/h$b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

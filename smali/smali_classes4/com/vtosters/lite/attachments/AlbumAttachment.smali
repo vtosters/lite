@@ -147,7 +147,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v1, 0x7f12010c
 
@@ -162,7 +162,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->c:I
+    sget v0, Lcom/vk/dto/attachments/a;->c:I
 
     return v0
 .end method

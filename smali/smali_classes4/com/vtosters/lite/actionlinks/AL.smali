@@ -3,7 +3,7 @@
 .source "AL.kt"
 
 # interfaces
-.implements Lcom/vk/bridges/ActionLinksBridge1;
+.implements Lcom/vk/bridges/b;
 
 
 # annotations

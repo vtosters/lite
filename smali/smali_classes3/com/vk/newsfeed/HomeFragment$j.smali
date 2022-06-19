@@ -3,7 +3,7 @@
 .source "HomeFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -50,7 +50,7 @@
     .locals 2
 
     .line 1
-    instance-of v0, p1, Lcom/vk/newsfeed/NewsfeedListsUpdatedEvent;
+    instance-of v0, p1, Lcom/vk/newsfeed/s;
 
     if-eqz v0, :cond_0
 
@@ -63,9 +63,9 @@
 
     iget-object v1, p0, Lcom/vk/newsfeed/HomeFragment$j;->a:Lcom/vk/newsfeed/HomeFragment;
 
-    check-cast p1, Lcom/vk/newsfeed/NewsfeedListsUpdatedEvent;
+    check-cast p1, Lcom/vk/newsfeed/s;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/NewsfeedListsUpdatedEvent;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/s;->a()Ljava/util/List;
 
     move-result-object p1
 

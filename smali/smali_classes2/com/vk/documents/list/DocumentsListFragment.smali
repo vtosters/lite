@@ -1,10 +1,10 @@
 .class public abstract Lcom/vk/documents/list/DocumentsListFragment;
-.super Lcom/vk/core/fragments/BaseFragment1;
+.super Lcom/vk/core/fragments/b;
 .source "DocumentsListFragment.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/fragments/p2/DocumentClickListener;
-.implements Lcom/vtosters/lite/fragments/p2/DocumentStatListener;
+.implements Lcom/vtosters/lite/fragments/p2/c;
+.implements Lcom/vtosters/lite/fragments/p2/d;
 
 
 # annotations
@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field private F:Lcom/vk/documents/list/DocumentsListAdapter;
+.field private F:Lcom/vk/documents/list/a;
 
 .field private G:Lcom/vk/lists/RecyclerPaginatedView;
 
@@ -31,7 +31,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/documents/list/DocumentsListFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/documents/list/DocumentsListFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -40,7 +40,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/documents/list/DocumentsListFragment$f;
@@ -52,11 +52,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/documents/list/DocumentsListFragment;)Lcom/vk/documents/list/DocumentsListAdapter;
+.method public static final synthetic a(Lcom/vk/documents/list/DocumentsListFragment;)Lcom/vk/documents/list/a;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/DocumentsListAdapter;
+    iget-object p0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/a;
 
     return-object p0
 .end method
@@ -176,20 +176,20 @@
     .locals 12
 
     .line 1
-    new-instance v0, Lcom/vk/api/docs/DocsDelete;
+    new-instance v0, Lb/h/c/i/c;
 
     iget v1, p1, Lcom/vk/api/base/Document;->b:I
 
     iget v2, p1, Lcom/vk/api/base/Document;->a:I
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/api/docs/DocsDelete;-><init>(II)V
+    invoke-direct {v0, v1, v2}, Lb/h/c/i/c;-><init>(II)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 2
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v3
 
@@ -210,7 +210,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -225,16 +225,16 @@
     invoke-direct {p1, p0}, Lcom/vk/documents/list/DocumentsListFragment$e;-><init>(Lcom/vk/documents/list/DocumentsListFragment;)V
 
     .line 6
-    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     const-string v0, "disposable"
 
     .line 7
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->b(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/b;->b(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -245,11 +245,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/DocumentsListAdapter;
+    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->getItemCount()I
 
     move-result v0
 
@@ -266,11 +266,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/DocumentsListAdapter;
+    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/documents/list/DocumentsListAdapter;->l()I
+    invoke-virtual {v0}, Lcom/vk/documents/list/a;->l()I
 
     move-result v0
 
@@ -309,20 +309,20 @@
 
     const-string v2, "activity!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vk/documents/list/DocumentsListFragment$onDocumentClicked$1;
 
     invoke-direct {v2, p0, p1}, Lcom/vk/documents/list/DocumentsListFragment$onDocumentClicked$1;-><init>(Lcom/vk/documents/list/DocumentsListFragment;Lcom/vk/api/base/Document;)V
 
     .line 5
-    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/documents/list/DocumentsUtils;->a(Lcom/vk/api/base/Document;Landroid/app/Activity;Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/documents/list/DocumentsUtils;->a(Lcom/vk/api/base/Document;Landroid/app/Activity;Lkotlin/jvm/b/b;)V
 
     return-void
 
     .line 6
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -349,11 +349,11 @@
 
     .line 3
     :goto_0
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v2
 
-    invoke-interface {v2, v1}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
+    invoke-interface {v2, v1}, Lcom/vk/bridges/f;->b(I)Z
 
     move-result v2
 
@@ -431,11 +431,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/DocumentsListAdapter;
+    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->clear()V
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->clear()V
 
     :cond_0
     const/4 v0, 0x0
@@ -462,11 +462,11 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/DocumentsListAdapter;
+    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->g(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->g(Ljava/util/List;)V
 
     :cond_0
     return-void
@@ -476,14 +476,14 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    new-instance p1, Lcom/vk/documents/list/DocumentsListAdapter;
+    new-instance p1, Lcom/vk/documents/list/a;
 
-    invoke-direct {p1, p0, p0}, Lcom/vk/documents/list/DocumentsListAdapter;-><init>(Lcom/vtosters/lite/fragments/p2/DocumentClickListener;Lcom/vtosters/lite/fragments/p2/DocumentStatListener;)V
+    invoke-direct {p1, p0, p0}, Lcom/vk/documents/list/a;-><init>(Lcom/vtosters/lite/fragments/p2/c;Lcom/vtosters/lite/fragments/p2/d;)V
 
-    iput-object p1, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/DocumentsListAdapter;
+    iput-object p1, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/a;
 
     return-void
 .end method
@@ -511,7 +511,7 @@
     invoke-virtual {p2}, Lcom/vk/lists/AbstractPaginatedView$c;->a()V
 
     .line 4
-    iget-object p2, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/DocumentsListAdapter;
+    iget-object p2, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/a;
 
     invoke-virtual {p1, p2}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -567,11 +567,11 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/DocumentsListAdapter;
+    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/a;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -633,11 +633,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/DocumentsListAdapter;
+    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->j(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->j(I)V
 
     :cond_0
     return-void
@@ -647,11 +647,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/DocumentsListAdapter;
+    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/documents/list/DocumentsListAdapter;->J(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/documents/list/a;->J(I)V
 
     :cond_0
     return-void
@@ -670,11 +670,11 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/DocumentsListAdapter;
+    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
 
     :cond_0
     return-void
@@ -684,11 +684,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/DocumentsListAdapter;
+    iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/documents/list/DocumentsListAdapter;->c(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/documents/list/a;->c(Z)V
 
     :cond_0
     return-void

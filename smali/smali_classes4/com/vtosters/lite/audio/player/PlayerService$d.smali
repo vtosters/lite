@@ -39,27 +39,27 @@
     .locals 13
 
     .line 1
-    invoke-static {p0}, Lcom/vtosters/lite/ViewUtils;->b(Ljava/lang/Runnable;)V
+    invoke-static {p0}, Lcom/vtosters/lite/f0;->b(Ljava/lang/Runnable;)V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerService$d;->a:Lcom/vtosters/lite/audio/player/PlayerService;
 
-    invoke-static {v0}, Lcom/vtosters/lite/audio/player/PlayerService;->a(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vk/bridges/AuthBridge3;
+    invoke-static {v0}, Lcom/vtosters/lite/audio/player/PlayerService;->a(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vk/bridges/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
+    invoke-interface {v0}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->b()I
+    invoke-virtual {v0}, Lcom/vk/bridges/a;->b()I
 
     move-result v0
 
     .line 3
     iget-object v1, p0, Lcom/vtosters/lite/audio/player/PlayerService$d;->a:Lcom/vtosters/lite/audio/player/PlayerService;
 
-    invoke-static {v1}, Lcom/vtosters/lite/audio/player/PlayerService;->l(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vtosters/lite/audio/player/Player;
+    invoke-static {v1}, Lcom/vtosters/lite/audio/player/PlayerService;->l(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v1
 
@@ -74,11 +74,11 @@
     :cond_0
     iget-object v1, p0, Lcom/vtosters/lite/audio/player/PlayerService$d;->a:Lcom/vtosters/lite/audio/player/PlayerService;
 
-    invoke-static {v1}, Lcom/vtosters/lite/audio/player/PlayerService;->l(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vtosters/lite/audio/player/Player;
+    invoke-static {v1}, Lcom/vtosters/lite/audio/player/PlayerService;->l(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/audio/player/Player;->m()J
+    invoke-virtual {v1}, Lcom/vtosters/lite/audio/player/u;->m()J
 
     move-result-wide v4
 
@@ -86,7 +86,7 @@
     :goto_0
     iget-object v1, p0, Lcom/vtosters/lite/audio/player/PlayerService$d;->a:Lcom/vtosters/lite/audio/player/PlayerService;
 
-    invoke-static {v1}, Lcom/vtosters/lite/audio/player/PlayerService;->l(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vtosters/lite/audio/player/Player;
+    invoke-static {v1}, Lcom/vtosters/lite/audio/player/PlayerService;->l(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v1
 
@@ -101,11 +101,11 @@
     :cond_1
     iget-object v1, p0, Lcom/vtosters/lite/audio/player/PlayerService$d;->a:Lcom/vtosters/lite/audio/player/PlayerService;
 
-    invoke-static {v1}, Lcom/vtosters/lite/audio/player/PlayerService;->l(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vtosters/lite/audio/player/Player;
+    invoke-static {v1}, Lcom/vtosters/lite/audio/player/PlayerService;->l(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vtosters/lite/audio/player/u;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/audio/player/Player;->n()Lcom/vk/music/player/TrackInfo;
+    invoke-virtual {v1}, Lcom/vtosters/lite/audio/player/u;->n()Lcom/vk/music/player/e;
 
     move-result-object v1
 
@@ -116,7 +116,7 @@
 
     .line 5
     :cond_2
-    invoke-virtual {v1}, Lcom/vk/music/player/TrackInfo;->e()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {v1}, Lcom/vk/music/player/e;->e()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v6
 
@@ -156,13 +156,13 @@
     move-result-object v8
 
     .line 8
-    invoke-static {}, Lcom/vk/bridges/AudioBridge;->a()Lcom/vk/bridges/AudioBridge1;
+    invoke-static {}, Lcom/vk/bridges/e;->a()Lcom/vk/bridges/d;
 
     move-result-object v9
 
-    sget-object v10, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v10, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    invoke-interface {v9, v10, v8}, Lcom/vk/bridges/AudioBridge1;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v9, v10, v8}, Lcom/vk/bridges/d;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     const-wide/16 v8, 0x3c
 
@@ -196,7 +196,7 @@
     const-wide/16 v2, 0x7d0
 
     .line 11
-    invoke-static {p0, v2, v3}, Lcom/vtosters/lite/ViewUtils;->a(Ljava/lang/Runnable;J)V
+    invoke-static {p0, v2, v3}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     :goto_4
     const/4 v2, 0x6

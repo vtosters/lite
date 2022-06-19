@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IIILcom/vk/common/links/OpenCallback;)Z
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IIILcom/vk/common/links/f;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/api/board/BoardGetTopics$b;",
+        "Lc/a/z/g<",
+        "Lcom/vk/api/board/g$b;",
         ">;"
     }
 .end annotation
@@ -38,11 +38,11 @@
 
 .field final synthetic d:Landroid/content/Context;
 
-.field final synthetic e:Lcom/vk/common/links/OpenCallback;
+.field final synthetic e:Lcom/vk/common/links/f;
 
 
 # direct methods
-.method constructor <init>(IIILandroid/content/Context;Lcom/vk/common/links/OpenCallback;)V
+.method constructor <init>(IIILandroid/content/Context;Lcom/vk/common/links/f;)V
     .locals 0
 
     iput p1, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->a:I
@@ -53,7 +53,7 @@
 
     iput-object p4, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->d:Landroid/content/Context;
 
-    iput-object p5, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->e:Lcom/vk/common/links/OpenCallback;
+    iput-object p5, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->e:Lcom/vk/common/links/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -62,11 +62,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/board/BoardGetTopics$b;)V
+.method public final a(Lcom/vk/api/board/g$b;)V
     .locals 4
 
     .line 1
-    iget-object p1, p1, Lcom/vk/api/board/BoardGetTopics$b;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object p1, p1, Lcom/vk/api/board/g$b;->a:Lcom/vk/dto/common/data/VKList;
 
     if-eqz p1, :cond_1
 
@@ -74,35 +74,35 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vtosters/lite/api/BoardTopic;
+    check-cast p1, Lcom/vtosters/lite/api/c;
 
     if-eqz p1, :cond_1
 
     .line 2
-    new-instance v0, Lcom/vtosters/lite/fragments/o2/BoardTopicViewFragment$q;
+    new-instance v0, Lcom/vtosters/lite/fragments/o2/c$q;
 
     iget v1, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->a:I
 
     iget v2, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->b:I
 
-    iget-object v3, p1, Lcom/vtosters/lite/api/BoardTopic;->b:Ljava/lang/String;
+    iget-object v3, p1, Lcom/vtosters/lite/api/c;->b:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/fragments/o2/BoardTopicViewFragment$q;-><init>(IILjava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/fragments/o2/c$q;-><init>(IILjava/lang/String;)V
 
     .line 3
     iget v1, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->c:I
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/o2/BoardTopicViewFragment$q;->c(I)Lcom/vtosters/lite/fragments/o2/BoardTopicViewFragment$q;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/o2/c$q;->c(I)Lcom/vtosters/lite/fragments/o2/c$q;
 
     .line 4
-    iget v1, p1, Lcom/vtosters/lite/api/BoardTopic;->c:I
+    iget v1, p1, Lcom/vtosters/lite/api/c;->c:I
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/fragments/o2/BoardTopicViewFragment$q;->a(ZI)Lcom/vtosters/lite/fragments/o2/BoardTopicViewFragment$q;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/fragments/o2/c$q;->a(ZI)Lcom/vtosters/lite/fragments/o2/c$q;
 
     .line 5
-    iget p1, p1, Lcom/vtosters/lite/api/BoardTopic;->f:I
+    iget p1, p1, Lcom/vtosters/lite/api/c;->f:I
 
     and-int/2addr p1, v2
 
@@ -114,7 +114,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-virtual {v0, v2}, Lcom/vtosters/lite/fragments/o2/BoardTopicViewFragment$q;->d(Z)Lcom/vtosters/lite/fragments/o2/BoardTopicViewFragment$q;
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/fragments/o2/c$q;->d(Z)Lcom/vtosters/lite/fragments/o2/c$q;
 
     .line 6
     iget p1, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->b:I
@@ -127,20 +127,20 @@
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/o2/BoardTopicViewFragment$q;->c(Z)Lcom/vtosters/lite/fragments/o2/BoardTopicViewFragment$q;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/o2/c$q;->c(Z)Lcom/vtosters/lite/fragments/o2/c$q;
 
     .line 7
     iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->d:Landroid/content/Context;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     .line 8
     :cond_1
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->e:Lcom/vk/common/links/OpenCallback;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->e:Lcom/vk/common/links/f;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->a()V
+    invoke-interface {p1}, Lcom/vk/common/links/f;->a()V
 
     :cond_2
     return-void
@@ -149,9 +149,9 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Lcom/vk/api/board/BoardGetTopics$b;
+    check-cast p1, Lcom/vk/api/board/g$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/common/links/OpenFunctionsKt$q0;->a(Lcom/vk/api/board/BoardGetTopics$b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/common/links/OpenFunctionsKt$q0;->a(Lcom/vk/api/board/g$b;)V
 
     return-void
 .end method

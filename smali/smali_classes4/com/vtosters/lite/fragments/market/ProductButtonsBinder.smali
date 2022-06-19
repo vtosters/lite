@@ -93,26 +93,26 @@
 
     const-string v0, "addToCartButton"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder$1;
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder$1;-><init>(Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 9
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->c:Landroid/view/View;
 
     const-string v0, "goToCartButtonBg"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder$2;
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder$2;-><init>(Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 10
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->e:Landroid/view/View;
@@ -146,18 +146,18 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/ui/c0/ProductActionButtonsItem;)V
+.method public final a(Lcom/vtosters/lite/ui/c0/b;)V
     .locals 8
 
     .line 2
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/c0/ProductActionButtonsItem;->b()Lcom/vtosters/lite/fragments/market/ProductButtonsBinder$b;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/c0/b;->b()Lcom/vtosters/lite/fragments/market/ProductButtonsBinder$b;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->f:Lcom/vtosters/lite/fragments/market/ProductButtonsBinder$b;
 
     .line 3
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/c0/ProductActionButtonsItem;->c()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/c0/b;->c()Z
 
     move-result v0
 
@@ -175,7 +175,7 @@
     if-eqz v0, :cond_4
 
     .line 5
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/c0/ProductActionButtonsItem;->d()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/c0/b;->d()I
 
     move-result v0
 
@@ -188,7 +188,7 @@
     .line 6
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->b:Landroid/view/View;
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
@@ -197,13 +197,13 @@
     const v6, 0x7f1000a1
 
     .line 7
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/c0/ProductActionButtonsItem;->d()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/c0/b;->d()I
 
     move-result v7
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/c0/ProductActionButtonsItem;->d()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/c0/b;->d()I
 
     move-result p1
 
@@ -220,35 +220,35 @@
 
     const-string v0, "goToCartButton.resources\u2026.quantity, item.quantity)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->d:Landroid/widget/TextView;
 
     const-string v4, "goToCartButtonTopText"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 10
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->a:Landroid/widget/TextView;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
     .line 11
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->b:Landroid/view/View;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->r(Landroid/view/View;)V
 
     .line 12
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->e:Landroid/view/View;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->r(Landroid/view/View;)V
 
@@ -256,7 +256,7 @@
 
     .line 13
     :cond_0
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/c0/ProductActionButtonsItem;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/c0/b;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -287,7 +287,7 @@
     :cond_3
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->a:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/c0/ProductActionButtonsItem;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/c0/b;->a()Ljava/lang/String;
 
     move-result-object p1
 
@@ -297,21 +297,21 @@
     :goto_0
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->a:Landroid/widget/TextView;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->r(Landroid/view/View;)V
 
     .line 17
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->b:Landroid/view/View;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
     .line 18
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->e:Landroid/view/View;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
@@ -328,21 +328,21 @@
     .line 20
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->a:Landroid/widget/TextView;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->r(Landroid/view/View;)V
 
     .line 21
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->b:Landroid/view/View;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
     .line 22
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->e:Landroid/view/View;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 

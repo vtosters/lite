@@ -1,5 +1,5 @@
 .class public final Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;
-.super Lcom/vk/common/e/BaseItemHolder;
+.super Lcom/vk/common/e/b;
 .source "ArticleAuthorPageItemHolder.kt"
 
 
@@ -12,8 +12,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/e/BaseItemHolder<",
-        "Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;",
+        "Lcom/vk/common/e/b<",
+        "Lcom/vk/articles/authorpage/g/a;",
         ">;"
     }
 .end annotation
@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/4 v0, 0x2
 
@@ -68,13 +68,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+.method public constructor <init>(Landroid/view/View;Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "+",
             "Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;",
             ">;)V"
@@ -82,12 +82,12 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/common/e/BaseItemHolder;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/common/e/b;-><init>(Landroid/view/View;)V
 
     const p1, 0x7f0a0d80
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -98,7 +98,7 @@
     const p1, 0x7f0a0cf2
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -109,7 +109,7 @@
     const p1, 0x7f0a0590
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -120,7 +120,7 @@
     const p1, 0x7f0a057f
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -131,7 +131,7 @@
     const p1, 0x7f0a03df
 
     .line 6
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -144,13 +144,13 @@
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$1;
 
-    invoke-direct {v0, p0, p2}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$1;-><init>(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, p0, p2}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$1;-><init>(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;Lkotlin/jvm/b/a;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;->g:Landroid/widget/ImageView;
@@ -159,7 +159,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$2;-><init>(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 9
     invoke-static {}, Lcom/vk/fave/FaveController;->c()Z
@@ -190,7 +190,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
@@ -215,15 +215,15 @@
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;)Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;
+.method public static final synthetic e(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;)Lcom/vk/articles/authorpage/g/a;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->d0()Lcom/vk/common/i/RecyclerItem;
+    invoke-virtual {p0}, Lcom/vk/common/e/b;->d0()Lcom/vk/common/i/b;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;
+    check-cast p0, Lcom/vk/articles/authorpage/g/a;
 
     return-object p0
 .end method
@@ -243,13 +243,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;->g:Landroid/widget/ImageView;
 
-    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->d0()Lcom/vk/common/i/RecyclerItem;
+    invoke-virtual {p0}, Lcom/vk/common/e/b;->d0()Lcom/vk/common/i/b;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;
+    check-cast v1, Lcom/vk/articles/authorpage/g/a;
 
-    invoke-virtual {v1}, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;->c()Lcom/vk/dto/articles/Article;
+    invoke-virtual {v1}, Lcom/vk/articles/authorpage/g/a;->c()Lcom/vk/dto/articles/Article;
 
     move-result-object v1
 
@@ -262,17 +262,17 @@
     .line 2
     iget-object v0, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;->g:Landroid/widget/ImageView;
 
-    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->d0()Lcom/vk/common/i/RecyclerItem;
+    invoke-virtual {p0}, Lcom/vk/common/e/b;->d0()Lcom/vk/common/i/b;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;
+    check-cast v2, Lcom/vk/articles/authorpage/g/a;
 
-    invoke-virtual {v2}, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;->c()Lcom/vk/dto/articles/Article;
+    invoke-virtual {v2}, Lcom/vk/articles/authorpage/g/a;->c()Lcom/vk/dto/articles/Article;
 
     move-result-object v2
 
@@ -325,11 +325,11 @@
 
 
 # virtual methods
-.method protected a(Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;)V
+.method protected a(Lcom/vk/articles/authorpage/g/a;)V
     .locals 7
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;->c()Lcom/vk/dto/articles/Article;
+    invoke-virtual {p1}, Lcom/vk/articles/authorpage/g/a;->c()Lcom/vk/dto/articles/Article;
 
     move-result-object v0
 
@@ -340,7 +340,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
 
     .line 4
     iget-object v1, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;->d:Landroid/widget/TextView;
@@ -349,16 +349,16 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
 
     .line 5
     iget-object v1, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;->e:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/articles/authorpage/g/a;->d()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
 
     .line 6
     invoke-direct {p0}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;->g0()V
@@ -438,7 +438,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     .line 13
-    invoke-virtual {p1}, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;->e()Z
+    invoke-virtual {p1}, Lcom/vk/articles/authorpage/g/a;->e()Z
 
     move-result p1
 
@@ -481,10 +481,10 @@
 
     const/4 v3, 0x2
 
-    invoke-static {v0, v1, v2, v3, v2}, Lcom/vk/extensions/ImageViewExt;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3, v2}, Lcom/vk/extensions/e;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
 
     .line 18
-    invoke-virtual {p1}, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;->e()Z
+    invoke-virtual {p1}, Lcom/vk/articles/authorpage/g/a;->e()Z
 
     move-result p1
 
@@ -515,13 +515,13 @@
     return-void
 .end method
 
-.method public bridge synthetic b(Lcom/vk/common/i/RecyclerItem;)V
+.method public bridge synthetic b(Lcom/vk/common/i/b;)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;
+    check-cast p1, Lcom/vk/articles/authorpage/g/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;->a(Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;)V
+    invoke-virtual {p0, p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;->a(Lcom/vk/articles/authorpage/g/a;)V
 
     return-void
 .end method

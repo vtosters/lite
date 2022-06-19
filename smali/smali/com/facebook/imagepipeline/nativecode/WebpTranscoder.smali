@@ -4,7 +4,7 @@
 
 
 # virtual methods
-.method public abstract isWebpNativelySupported(Lcom/facebook/w/ImageFormat;)Z
+.method public abstract isWebpNativelySupported(Lcom/facebook/w/c;)Z
 .end method
 
 .method public abstract transcodeWebpToJpeg(Ljava/io/InputStream;Ljava/io/OutputStream;I)V

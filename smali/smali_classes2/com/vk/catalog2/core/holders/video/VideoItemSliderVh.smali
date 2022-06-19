@@ -16,7 +16,7 @@
 
 .field private final G:I
 
-.field private final H:Lcom/vk/catalog2/core/util/CatalogImageUtils;
+.field private final H:Lcom/vk/catalog2/core/util/f;
 
 .field protected c:Landroid/widget/TextView;
 
@@ -32,7 +32,7 @@
 
 
 # direct methods
-.method public constructor <init>(IIILcom/vk/catalog2/core/util/CatalogImageUtils;)V
+.method public constructor <init>(IIILcom/vk/catalog2/core/util/f;)V
     .locals 0
     .param p1    # I
         .annotation build Landroidx/annotation/LayoutRes;
@@ -56,7 +56,7 @@
 
     iput p3, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->G:I
 
-    iput-object p4, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->H:Lcom/vk/catalog2/core/util/CatalogImageUtils;
+    iput-object p4, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->H:Lcom/vk/catalog2/core/util/f;
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     if-eqz v0, :cond_0
 
-    sget v1, Lcom/vk/catalog2/core/R6;->icon_secondary:I
+    sget v1, Lcom/vk/catalog2/core/l;->icon_secondary:I
 
     invoke-static {v0, p1, v1}, Lcom/vk/core/utils/VideoFormatter;->a(Landroid/widget/TextView;Lcom/vk/dto/common/VideoFile;I)V
 
@@ -78,7 +78,7 @@
     :cond_0
     const-string p1, "title"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -113,25 +113,25 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p2, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p2, v0}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_1
 
     :cond_0
     const-string p1, "restrictedDrawable"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 44
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -185,9 +185,9 @@
 
     const-string v1, "duration.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, p1}, Lcom/vk/libvideo/VideoUtils;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lcom/vk/libvideo/t;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -196,18 +196,18 @@
     return-void
 
     :cond_5
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_6
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 47
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -216,11 +216,11 @@
     .locals 7
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
+    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/VideoBridge1;->a(Lcom/vk/dto/common/VideoFile;)Z
+    invoke-interface {v0, p1}, Lcom/vk/bridges/k0;->a(Lcom/vk/dto/common/VideoFile;)Z
 
     move-result v0
 
@@ -292,30 +292,30 @@
 
     invoke-direct {v3, p1}, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh$bindImageHolder$1;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
-    invoke-virtual {p2, v0, v1, v3}, Lcom/vk/libvideo/ui/VideoRestrictionView;->a(Lcom/vk/dto/common/Restriction;Lcom/vk/dto/common/Image;Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p2, v0, v1, v3}, Lcom/vk/libvideo/ui/VideoRestrictionView;->a(Lcom/vk/dto/common/Restriction;Lcom/vk/dto/common/Image;Lkotlin/jvm/b/a;)V
 
     goto/16 :goto_3
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 6
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 7
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 8
     :cond_5
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
@@ -362,43 +362,43 @@
 
     if-eqz v0, :cond_7
 
-    invoke-virtual {p2, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p2, v0}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     goto/16 :goto_3
 
     :cond_7
     const-string p1, "restrictedDrawable"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     :cond_8
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 15
     :cond_9
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 16
     :cond_a
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 17
     :cond_b
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 18
     :cond_c
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
@@ -439,13 +439,13 @@
 
     move-result-object v1
 
-    sget v6, Lcom/vk/catalog2/core/R1;->default_placeholder_6:I
+    sget v6, Lcom/vk/catalog2/core/p;->default_placeholder_6:I
 
     invoke-static {v1, v6}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     .line 23
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->g:Lcom/vk/imageloader/view/VKImageView;
@@ -525,14 +525,14 @@
 
     if-eqz p2, :cond_10
 
-    sget v0, Lcom/vk/catalog2/core/R1;->bg_video_duration_label:I
+    sget v0, Lcom/vk/catalog2/core/p;->bg_video_duration_label:I
 
     invoke-virtual {p2, v0}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
     goto :goto_5
 
     :cond_10
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
@@ -543,7 +543,7 @@
 
     if-eqz p2, :cond_14
 
-    sget v0, Lcom/vk/catalog2/core/R1;->bg_video_live:I
+    sget v0, Lcom/vk/catalog2/core/p;->bg_video_live:I
 
     invoke-virtual {p2, v0}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
@@ -561,9 +561,9 @@
 
     const-string v1, "duration.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, p1}, Lcom/vk/libvideo/VideoUtils;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lcom/vk/libvideo/t;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -572,64 +572,64 @@
     return-void
 
     :cond_12
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     :cond_13
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 29
     :cond_14
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 30
     :cond_15
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 31
     :cond_16
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     :cond_17
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 32
     :cond_18
-    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     :cond_19
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 33
     :cond_1a
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 34
     :cond_1b
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 35
     :cond_1c
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 .end method
@@ -647,7 +647,7 @@
     if-lez v0, :cond_4
 
     .line 2
-    invoke-static {v0}, Lcom/vk/core/util/StringUtils;->b(I)Z
+    invoke-static {v0}, Lcom/vk/core/util/b1;->b(I)Z
 
     move-result v0
 
@@ -660,7 +660,7 @@
     .line 3
     iget v0, p1, Lcom/vk/dto/common/VideoFile;->N:I
 
-    invoke-static {v0}, Lcom/vk/core/util/StringUtils;->a(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/core/util/b1;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -669,7 +669,7 @@
 
     if-eqz v5, :cond_0
 
-    sget v6, Lcom/vk/catalog2/core/R9;->video_views_count_formatted:I
+    sget v6, Lcom/vk/catalog2/core/u;->video_views_count_formatted:I
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -684,7 +684,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -694,7 +694,7 @@
 
     if-eqz v0, :cond_3
 
-    sget v5, Lcom/vk/catalog2/core/R2;->video_views:I
+    sget v5, Lcom/vk/catalog2/core/t;->video_views:I
 
     iget v6, p1, Lcom/vk/dto/common/VideoFile;->N:I
 
@@ -723,13 +723,13 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 7
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -761,12 +761,12 @@
 
     if-eqz p2, :cond_a
 
-    sget v1, Lcom/vk/catalog2/core/R1;->user_placeholder:I
+    sget v1, Lcom/vk/catalog2/core/p;->user_placeholder:I
 
-    invoke-virtual {p2, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(I)V
+    invoke-virtual {p2, v1}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(I)V
 
     .line 11
-    iget-object v3, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->H:Lcom/vk/catalog2/core/util/CatalogImageUtils;
+    iget-object v3, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->H:Lcom/vk/catalog2/core/util/f;
 
     iget-object v4, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->e:Lcom/vk/imageloader/view/VKImageView;
 
@@ -792,7 +792,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v3 .. v8}, Lcom/vk/catalog2/core/util/CatalogImageUtils;->a(Lcom/vk/catalog2/core/util/CatalogImageUtils;Lcom/vk/imageloader/view/VKImageView;Lcom/vk/catalog2/core/api/dto/ContentType;FILjava/lang/Object;)V
+    invoke-static/range {v3 .. v8}, Lcom/vk/catalog2/core/util/f;->a(Lcom/vk/catalog2/core/util/f;Lcom/vk/imageloader/view/VKImageView;Lcom/vk/catalog2/core/api/dto/ContentType;FILjava/lang/Object;)V
 
     .line 12
     iget-object p2, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->e:Lcom/vk/imageloader/view/VKImageView;
@@ -817,31 +817,31 @@
     :cond_7
     const-string p1, "title"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 14
     :cond_8
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 15
     :cond_9
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 16
     :cond_a
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 17
     :cond_b
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -863,12 +863,12 @@
     const-string p3, "itemView"
 
     .line 2
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->D:Landroid/view/View;
 
     .line 3
-    sget p3, Lcom/vk/catalog2/core/R10;->title:I
+    sget p3, Lcom/vk/catalog2/core/q;->title:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -876,14 +876,14 @@
 
     const-string v0, "itemView.findViewById(R.id.title)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Landroid/widget/TextView;
 
     iput-object p3, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->c:Landroid/widget/TextView;
 
     .line 4
-    sget p3, Lcom/vk/catalog2/core/R10;->subtitle_views:I
+    sget p3, Lcom/vk/catalog2/core/q;->subtitle_views:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -891,14 +891,14 @@
 
     const-string v0, "itemView.findViewById(R.id.subtitle_views)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Landroid/widget/TextView;
 
     iput-object p3, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->d:Landroid/widget/TextView;
 
     .line 5
-    sget p3, Lcom/vk/catalog2/core/R10;->subtitle_author:I
+    sget p3, Lcom/vk/catalog2/core/q;->subtitle_author:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -909,7 +909,7 @@
     iput-object p3, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->h:Landroid/widget/TextView;
 
     .line 6
-    sget p3, Lcom/vk/catalog2/core/R10;->avatar:I
+    sget p3, Lcom/vk/catalog2/core/q;->avatar:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -917,14 +917,14 @@
 
     const-string v0, "itemView.findViewById(R.id.avatar)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Lcom/vk/imageloader/view/VKImageView;
 
     iput-object p3, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->e:Lcom/vk/imageloader/view/VKImageView;
 
     .line 7
-    sget p3, Lcom/vk/catalog2/core/R10;->duration:I
+    sget p3, Lcom/vk/catalog2/core/q;->duration:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -932,14 +932,14 @@
 
     const-string v0, "itemView.findViewById(R.id.duration)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Lcom/vk/libvideo/ui/DurationView;
 
     iput-object p3, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->f:Lcom/vk/libvideo/ui/DurationView;
 
     .line 8
-    sget p3, Lcom/vk/catalog2/core/R10;->preview:I
+    sget p3, Lcom/vk/catalog2/core/q;->preview:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -947,14 +947,14 @@
 
     const-string v0, "itemView.findViewById(R.id.preview)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Lcom/vk/imageloader/view/VKImageView;
 
     iput-object p3, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->g:Lcom/vk/imageloader/view/VKImageView;
 
     .line 9
-    sget p3, Lcom/vk/catalog2/core/R10;->video_slider_item_restriction:I
+    sget p3, Lcom/vk/catalog2/core/q;->video_slider_item_restriction:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -962,14 +962,14 @@
 
     const-string v0, "itemView.findViewById(R.\u2026_slider_item_restriction)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Lcom/vk/libvideo/ui/VideoRestrictionView;
 
     iput-object p3, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->C:Lcom/vk/libvideo/ui/VideoRestrictionView;
 
     .line 10
-    sget p3, Lcom/vk/catalog2/core/R10;->avatar_hover:I
+    sget p3, Lcom/vk/catalog2/core/q;->avatar_hover:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -985,7 +985,7 @@
     const-string v0, "itemView.findViewById<Vi\u2026mSliderVh))\n            }"
 
     .line 12
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
     sget-object p3, Lcom/vk/core/view/VideoRestrictionView;->c:Lcom/vk/core/view/VideoRestrictionView$a;
@@ -996,7 +996,7 @@
 
     const-string v1, "itemView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v1, 0x8
 
@@ -1017,9 +1017,9 @@
 
     const-string p3, "inflater.context"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget p3, Lcom/vk/catalog2/core/R3;->small_video_corner_radius:I
+    sget p3, Lcom/vk/catalog2/core/o;->small_video_corner_radius:I
 
     invoke-static {p1, p3}, Lcom/vk/core/util/ContextExtKt;->b(Landroid/content/Context;I)I
 
@@ -1030,7 +1030,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/video/VideoItemVh;->a(F)V
 
     .line 15
-    sget p1, Lcom/vk/catalog2/core/R10;->avatar_hover:I
+    sget p1, Lcom/vk/catalog2/core/q;->avatar_hover:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1052,7 +1052,7 @@
     const-string p1, "inflater.inflate(layoutI\u2026alogLock(this))\n        }"
 
     .line 17
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p2
 .end method
@@ -1073,7 +1073,7 @@
 
     if-eqz v0, :cond_6
 
-    sget v2, Lcom/vk/catalog2/core/R6;->text_secondary:I
+    sget v2, Lcom/vk/catalog2/core/l;->text_secondary:I
 
     invoke-static {p1, p2, v2}, Lcom/vk/core/utils/VideoFormatter;->a(Landroid/content/Context;Lcom/vk/dto/common/MusicVideoFile;I)Ljava/lang/CharSequence;
 
@@ -1094,7 +1094,7 @@
 
     .line 33
     :cond_0
-    sget-object v3, Lcom/vk/core/utils/CustomImageUtils;->INSTANCE:Lcom/vk/core/utils/CustomImageUtils;
+    sget-object v3, Lcom/vk/core/utils/b;->a:Lcom/vk/core/utils/b;
 
     iget-object v4, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->e:Lcom/vk/imageloader/view/VKImageView;
 
@@ -1110,7 +1110,7 @@
 
     const-string v5, "artist"
 
-    invoke-static/range {v3 .. v8}, Lcom/vk/core/utils/CustomImageUtils;->a(Lcom/vk/core/utils/CustomImageUtils;Lcom/vk/imageloader/view/VKImageView;Ljava/lang/String;FILjava/lang/Object;)V
+    invoke-static/range {v3 .. v8}, Lcom/vk/core/utils/b;->a(Lcom/vk/core/utils/b;Lcom/vk/imageloader/view/VKImageView;Ljava/lang/String;FILjava/lang/Object;)V
 
     .line 34
     iget-object v2, p0, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->e:Lcom/vk/imageloader/view/VKImageView;
@@ -1136,7 +1136,7 @@
 
     if-eqz v0, :cond_2
 
-    sget v3, Lcom/vk/catalog2/core/R6;->text_secondary:I
+    sget v3, Lcom/vk/catalog2/core/l;->text_secondary:I
 
     invoke-static {p1, p2, v3}, Lcom/vk/core/utils/VideoFormatter;->b(Landroid/content/Context;Lcom/vk/dto/common/MusicVideoFile;I)Ljava/lang/CharSequence;
 
@@ -1149,37 +1149,37 @@
 
     if-eqz p1, :cond_1
 
-    sget v0, Lcom/vk/catalog2/core/R6;->icon_tertiary:I
+    sget v0, Lcom/vk/catalog2/core/l;->icon_tertiary:I
 
     invoke-static {p1, p2, v0}, Lcom/vk/core/utils/VideoFormatter;->a(Landroid/widget/TextView;Lcom/vk/dto/common/VideoFile;I)V
 
     return-void
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 37
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 38
     :cond_3
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_4
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 39
     :cond_5
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1187,7 +1187,7 @@
     const-string p1, "subtitleViews"
 
     .line 40
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1240,7 +1240,7 @@
     const-string v2, "resources"
 
     .line 23
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1, v0}, Lcom/vk/catalog2/core/holders/video/VideoItemSliderVh;->a(Lcom/vk/dto/common/VideoFile;Landroid/content/res/Resources;)V
 
@@ -1254,7 +1254,7 @@
 
     const-string v0, "context"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v0, p1
 
@@ -1276,13 +1276,13 @@
 
     .line 28
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 29
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1303,7 +1303,7 @@
     :cond_0
     const-string v0, "avatar"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1332,7 +1332,7 @@
     :cond_0
     const-string v0, "subtitleViews"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1352,7 +1352,7 @@
     :cond_0
     const-string v0, "title"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

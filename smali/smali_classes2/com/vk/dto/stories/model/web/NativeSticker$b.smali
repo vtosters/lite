@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -46,9 +46,9 @@
     move-result-object v0
 
     .line 2
-    sget-object v1, Lcom/vk/dto/stories/model/actions/StickerAction1;->INSTANCE:Lcom/vk/dto/stories/model/actions/StickerAction1;
+    sget-object v1, Lcom/vk/dto/stories/model/actions/b;->a:Lcom/vk/dto/stories/model/actions/b;
 
-    invoke-virtual {v1, p1}, Lcom/vk/dto/stories/model/actions/StickerAction1;->a(Lorg/json/JSONObject;)Lcom/vk/dto/stories/model/actions/StickerAction;
+    invoke-virtual {v1, p1}, Lcom/vk/dto/stories/model/actions/b;->a(Lorg/json/JSONObject;)Lcom/vk/dto/stories/model/actions/StickerAction;
 
     move-result-object v1
 
@@ -90,7 +90,7 @@
 
     move-object v3, v2
 
-    invoke-direct/range {v3 .. v10}, Lcom/vk/dto/stories/model/web/Transform;-><init>(IFFLjava/lang/Float;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v10}, Lcom/vk/dto/stories/model/web/Transform;-><init>(IFFLjava/lang/Float;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     :goto_0
     const/4 v3, 0x1
@@ -108,7 +108,7 @@
     const-string v4, "actionType"
 
     .line 6
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     invoke-direct {v3, v0, v1, v2, p1}, Lcom/vk/dto/stories/model/web/NativeSticker;-><init>(Ljava/lang/String;Lcom/vk/dto/stories/model/actions/StickerAction;Lcom/vk/dto/stories/model/web/Transform;Z)V

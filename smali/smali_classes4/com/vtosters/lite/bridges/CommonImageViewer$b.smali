@@ -20,11 +20,11 @@
 # instance fields
 .field private final a:Landroid/content/Context;
 
-.field private final b:Lcom/vk/bridges/ImageViewer$a;
+.field private final b:Lcom/vk/bridges/p$a;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/bridges/ImageViewer$a;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/bridges/p$a;)V
     .locals 0
 
     .line 1
@@ -32,7 +32,7 @@
 
     iput-object p1, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->a:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/ImageViewer$a;
+    iput-object p2, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/p$a;
 
     return-void
 .end method
@@ -73,7 +73,7 @@
 
     const-string p2, "context.getString(R.stri\u2026ayer_num, pos + 1, count)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -91,21 +91,21 @@
     return-object p1
 .end method
 
-.method public a(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions;)Landroid/view/View;
+.method public a(Landroid/view/ViewGroup;Lkotlin/jvm/b/a;)Landroid/view/View;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)",
             "Landroid/view/View;"
         }
     .end annotation
 
     .line 4
-    invoke-static {p0, p1, p2}, Lcom/vk/photoviewer/PhotoViewer$e$a;->a(Lcom/vk/photoviewer/PhotoViewer$e;Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions;)Landroid/view/View;
+    invoke-static {p0, p1, p2}, Lcom/vk/photoviewer/PhotoViewer$e$a;->a(Lcom/vk/photoviewer/PhotoViewer$e;Landroid/view/ViewGroup;Lkotlin/jvm/b/a;)Landroid/view/View;
 
     move-result-object p1
 
@@ -127,9 +127,9 @@
     .locals 1
 
     .line 13
-    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/ImageViewer$a;
+    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/p$a;
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/bridges/ImageViewer$a;->a(II)Ljava/lang/String;
+    invoke-interface {v0, p1, p2}, Lcom/vk/bridges/p$a;->a(II)Ljava/lang/String;
 
     move-result-object v0
 
@@ -161,9 +161,9 @@
     .locals 1
 
     .line 12
-    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/ImageViewer$a;
+    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/p$a;
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/ImageViewer$a;->a(I)V
+    invoke-interface {v0, p1}, Lcom/vk/bridges/p$a;->a(I)V
 
     return-void
 .end method
@@ -199,9 +199,9 @@
     .locals 0
 
     .line 11
-    iget-object p1, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/ImageViewer$a;
+    iget-object p1, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/p$a;
 
-    invoke-interface {p1}, Lcom/vk/bridges/ImageViewer$a;->f()V
+    invoke-interface {p1}, Lcom/vk/bridges/p$a;->f()V
 
     return-void
 .end method
@@ -241,9 +241,9 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/ImageViewer$a;
+    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/p$a;
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/ImageViewer$a;->b(I)Landroid/view/View;
+    invoke-interface {v0, p1}, Lcom/vk/bridges/p$a;->b(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -265,9 +265,9 @@
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/ImageViewer$a;
+    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/p$a;
 
-    invoke-interface {v0}, Lcom/vk/bridges/ImageViewer$a;->b()Ljava/lang/Integer;
+    invoke-interface {v0}, Lcom/vk/bridges/p$a;->b()Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -278,9 +278,9 @@
     .locals 1
 
     .line 6
-    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/ImageViewer$a;
+    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/p$a;
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/bridges/ImageViewer$a;->a(II)Ljava/lang/String;
+    invoke-interface {v0, p1, p2}, Lcom/vk/bridges/p$a;->a(II)Ljava/lang/String;
 
     move-result-object v0
 
@@ -313,9 +313,9 @@
     .locals 0
 
     .line 4
-    iget-object p1, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/ImageViewer$a;
+    iget-object p1, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/p$a;
 
-    invoke-interface {p1}, Lcom/vk/bridges/ImageViewer$a;->d()V
+    invoke-interface {p1}, Lcom/vk/bridges/p$a;->d()V
 
     return-void
 .end method
@@ -335,9 +335,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/ImageViewer$a;
+    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/p$a;
 
-    invoke-interface {v0}, Lcom/vk/bridges/ImageViewer$a;->c()Landroid/graphics/Rect;
+    invoke-interface {v0}, Lcom/vk/bridges/p$a;->c()Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -378,9 +378,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/ImageViewer$a;
+    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/p$a;
 
-    invoke-interface {v0}, Lcom/vk/bridges/ImageViewer$a;->e()V
+    invoke-interface {v0}, Lcom/vk/bridges/p$a;->e()V
 
     return-void
 .end method
@@ -416,13 +416,13 @@
 
     check-cast v3, Lcom/vk/im/ui/views/FrescoImageView;
 
-    invoke-virtual {v3}, Lcom/vk/im/ui/views/FrescoImageView;->getHierarchy()Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    invoke-virtual {v3}, Lcom/vk/im/ui/views/FrescoImageView;->getHierarchy()Lcom/facebook/drawee/generic/a;
 
     move-result-object v3
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->c()Lcom/facebook/drawee/generic/RoundingParams;
+    invoke-virtual {v3}, Lcom/facebook/drawee/generic/a;->c()Lcom/facebook/drawee/generic/RoundingParams;
 
     move-result-object v3
 
@@ -438,15 +438,15 @@
 
     check-cast v3, Lcom/facebook/drawee/view/GenericDraweeView;
 
-    invoke-virtual {v3}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
+    invoke-virtual {v3}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
 
     move-result-object v3
 
-    check-cast v3, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
+    check-cast v3, Lcom/facebook/drawee/generic/a;
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->c()Lcom/facebook/drawee/generic/RoundingParams;
+    invoke-virtual {v3}, Lcom/facebook/drawee/generic/a;->c()Lcom/facebook/drawee/generic/RoundingParams;
 
     move-result-object v3
 
@@ -456,7 +456,7 @@
     const-string v4, "when (view) {\n          \u2026         } ?: return null"
 
     .line 4
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-virtual {v3}, Lcom/facebook/drawee/generic/RoundingParams;->f()Z
@@ -515,7 +515,7 @@
     return-object v2
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
@@ -535,9 +535,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/ImageViewer$a;
+    iget-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$b;->b:Lcom/vk/bridges/p$a;
 
-    invoke-interface {v0}, Lcom/vk/bridges/ImageViewer$a;->onDismiss()V
+    invoke-interface {v0}, Lcom/vk/bridges/p$a;->onDismiss()V
 
     return-void
 .end method

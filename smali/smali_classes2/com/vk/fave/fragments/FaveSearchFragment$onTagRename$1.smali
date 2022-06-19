@@ -3,7 +3,7 @@
 .source "FaveSearchFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/fave/entities/FaveEntries3;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/fave/entities/j;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -50,11 +50,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/fave/entities/FaveEntries3;)Z
+.method public final a(Lcom/vk/fave/entities/j;)Z
     .locals 2
 
     .line 1
-    instance-of v0, p1, Lcom/vk/fave/entities/FaveEntries3;
+    instance-of v0, p1, Lcom/vk/fave/entities/j;
 
     if-eqz v0, :cond_0
 
@@ -62,7 +62,7 @@
 
     iget-object v1, p0, Lcom/vk/fave/fragments/FaveSearchFragment$onTagRename$1;->$tag:Lcom/vk/fave/entities/FaveTag;
 
-    invoke-static {v0, p1, v1}, Lcom/vk/fave/fragments/FaveSearchFragment;->a(Lcom/vk/fave/fragments/FaveSearchFragment;Lcom/vk/fave/entities/FaveEntries3;Lcom/vk/fave/entities/FaveTag;)Z
+    invoke-static {v0, p1, v1}, Lcom/vk/fave/fragments/FaveSearchFragment;->a(Lcom/vk/fave/fragments/FaveSearchFragment;Lcom/vk/fave/entities/j;Lcom/vk/fave/entities/FaveTag;)Z
 
     move-result p1
 
@@ -83,9 +83,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/fave/entities/FaveEntries3;
+    check-cast p1, Lcom/vk/fave/entities/j;
 
-    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/FaveSearchFragment$onTagRename$1;->a(Lcom/vk/fave/entities/FaveEntries3;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/FaveSearchFragment$onTagRename$1;->a(Lcom/vk/fave/entities/j;)Z
 
     move-result p1
 

@@ -36,7 +36,7 @@
 .method public final execute(Ljava/lang/Runnable;)V
     .locals 0
 
-    invoke-static {p1}, Lorg/chromium/base/task/AsyncTask;->a(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lorg/chromium/base/task/g;->a(Ljava/lang/Runnable;)V
 
     return-void
 .end method

@@ -86,7 +86,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/squareup/picasso/Action$a;
+    check-cast v0, Lcom/squareup/picasso/a$a;
 
     .line 4
     iget-object v1, p0, Lcom/squareup/picasso/Picasso$c;->b:Landroid/os/Handler;
@@ -103,7 +103,7 @@
     iput v2, v1, Landroid/os/Message;->what:I
 
     .line 6
-    iget-object v0, v0, Lcom/squareup/picasso/Action$a;->a:Lcom/squareup/picasso/Action;
+    iget-object v0, v0, Lcom/squareup/picasso/a$a;->a:Lcom/squareup/picasso/a;
 
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 

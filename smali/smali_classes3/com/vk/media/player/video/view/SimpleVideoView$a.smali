@@ -3,7 +3,7 @@
 .source "SimpleVideoView.java"
 
 # interfaces
-.implements Lcom/vk/media/player/video/VideoPlayerAudioFocusListener$a;
+.implements Lcom/vk/media/player/video/h$a;
 
 
 # annotations

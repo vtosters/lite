@@ -3,12 +3,12 @@
 .source "NewsfeedData.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/BiFunction;
+.implements Lc/a/z/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/dto/newsfeed/NewsfeedData$Companion;->b(IZ)Lio/reactivex/Observable;
+    value = Lcom/vk/dto/newsfeed/NewsfeedData$Companion;->b(IZ)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/BiFunction<",
+        "Lc/a/z/c<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/dto/newsfeed/NewsfeedData$Info;",

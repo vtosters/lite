@@ -3,8 +3,8 @@
 .source "FunctionReference.java"
 
 # interfaces
-.implements Lkotlin/jvm/internal/FunctionBase;
-.implements Lkotlin/u/KFunction;
+.implements Lkotlin/jvm/internal/l;
+.implements Lkotlin/u/f;
 
 
 # instance fields
@@ -38,11 +38,11 @@
 
 
 # virtual methods
-.method protected c()Lkotlin/u/KCallable;
+.method protected c()Lkotlin/u/b;
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/FunctionReference;)Lkotlin/u/KFunction;
+    invoke-static {p0}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/FunctionReference;)Lkotlin/u/f;
 
     return-object p0
 .end method
@@ -68,13 +68,13 @@
     check-cast p1, Lkotlin/jvm/internal/FunctionReference;
 
     .line 3
-    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/KDeclarationContainer;
+    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/e;
 
     move-result-object v1
 
     if-nez v1, :cond_1
 
-    invoke-virtual {p1}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/KDeclarationContainer;
+    invoke-virtual {p1}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/e;
 
     move-result-object v1
 
@@ -83,11 +83,11 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/KDeclarationContainer;
+    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/e;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/KDeclarationContainer;
+    invoke-virtual {p1}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/e;
 
     move-result-object v3
 
@@ -134,7 +134,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -150,12 +150,12 @@
 
     .line 4
     :cond_3
-    instance-of v0, p1, Lkotlin/u/KFunction;
+    instance-of v0, p1, Lkotlin/u/f;
 
     if-eqz v0, :cond_4
 
     .line 5
-    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->b()Lkotlin/u/KCallable;
+    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->b()Lkotlin/u/b;
 
     move-result-object v0
 
@@ -182,7 +182,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/KDeclarationContainer;
+    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/e;
 
     move-result-object v0
 
@@ -193,7 +193,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/KDeclarationContainer;
+    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->f()Lkotlin/u/e;
 
     move-result-object v0
 
@@ -233,7 +233,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->b()Lkotlin/u/KCallable;
+    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->b()Lkotlin/u/b;
 
     move-result-object v0
 

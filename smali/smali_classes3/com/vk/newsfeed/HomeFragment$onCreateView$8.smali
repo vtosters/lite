@@ -3,7 +3,7 @@
 .source "HomeFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions4;
+.implements Lkotlin/jvm/b/d;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions4<",
+        "Lkotlin/jvm/b/d<",
         "Landroid/view/View;",
         "Ljava/lang/Integer;",
         "Ljava/lang/Integer;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -68,7 +68,7 @@
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/vk/newsfeed/HomeFragment$onCreateView$8;->a(Landroid/view/View;II)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
@@ -79,13 +79,13 @@
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/HomeFragment$onCreateView$8;->this$0:Lcom/vk/newsfeed/HomeFragment;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/HomeFragment;->c(Lcom/vk/newsfeed/HomeFragment;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-static {p1}, Lcom/vk/newsfeed/HomeFragment;->c(Lcom/vk/newsfeed/HomeFragment;)Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
 
     :cond_0
     return-void

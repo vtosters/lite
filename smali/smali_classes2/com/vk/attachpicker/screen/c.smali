@@ -3,11 +3,11 @@
 .source "lambda"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # instance fields
-.field private final synthetic a:Lcom/vk/attachpicker/screen/EditorScreen$w;
+.field private final synthetic a:Lcom/vk/attachpicker/screen/d0$w;
 
 .field private final synthetic b:Ljava/lang/Runnable;
 
@@ -19,12 +19,12 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vk/attachpicker/screen/EditorScreen$w;Ljava/lang/Runnable;Ljava/util/concurrent/atomic/AtomicReference;ZLjava/lang/String;)V
+.method public synthetic constructor <init>(Lcom/vk/attachpicker/screen/d0$w;Ljava/lang/Runnable;Ljava/util/concurrent/atomic/AtomicReference;ZLjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/screen/c;->a:Lcom/vk/attachpicker/screen/EditorScreen$w;
+    iput-object p1, p0, Lcom/vk/attachpicker/screen/c;->a:Lcom/vk/attachpicker/screen/d0$w;
 
     iput-object p2, p0, Lcom/vk/attachpicker/screen/c;->b:Ljava/lang/Runnable;
 
@@ -42,7 +42,7 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 6
 
-    iget-object v0, p0, Lcom/vk/attachpicker/screen/c;->a:Lcom/vk/attachpicker/screen/EditorScreen$w;
+    iget-object v0, p0, Lcom/vk/attachpicker/screen/c;->a:Lcom/vk/attachpicker/screen/d0$w;
 
     iget-object v1, p0, Lcom/vk/attachpicker/screen/c;->b:Ljava/lang/Runnable;
 
@@ -56,7 +56,7 @@
 
     check-cast v5, Landroid/graphics/Bitmap;
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/attachpicker/screen/EditorScreen$w;->a(Ljava/lang/Runnable;Ljava/util/concurrent/atomic/AtomicReference;ZLjava/lang/String;Landroid/graphics/Bitmap;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/attachpicker/screen/d0$w;->a(Ljava/lang/Runnable;Ljava/util/concurrent/atomic/AtomicReference;ZLjava/lang/String;Landroid/graphics/Bitmap;)V
 
     return-void
 .end method

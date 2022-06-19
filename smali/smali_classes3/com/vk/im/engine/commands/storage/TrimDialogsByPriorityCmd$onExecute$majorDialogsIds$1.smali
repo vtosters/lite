@@ -3,12 +3,12 @@
 .source "TrimDialogsByPriorityCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
+    value = Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->a(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/im/engine/internal/storage/models/c;",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;)I
+.method public final a(Lcom/vk/im/engine/internal/storage/models/c;)I
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;->a()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/c;->a()I
 
     move-result p1
 
@@ -71,9 +71,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/c;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd$onExecute$majorDialogsIds$1;->a(Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;)I
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd$onExecute$majorDialogsIds$1;->a(Lcom/vk/im/engine/internal/storage/models/c;)I
 
     move-result p1
 

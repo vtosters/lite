@@ -61,18 +61,18 @@
     move-result v0
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/data/Analytics;->j()Lcom/vtosters/lite/data/Analytics;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->j()Lcom/vtosters/lite/data/n;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/data/Analytics;->c()V
+    invoke-virtual {v1}, Lcom/vtosters/lite/data/n;->c()V
 
     .line 3
-    invoke-static {}, Lcom/vtosters/lite/data/Analytics;->j()Lcom/vtosters/lite/data/Analytics;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->j()Lcom/vtosters/lite/data/n;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vtosters/lite/data/Analytics;->a(Z)V
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/data/n;->a(Z)V
 
     return-void
 .end method

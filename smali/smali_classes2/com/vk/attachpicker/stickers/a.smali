@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lcom/vk/common/g/VoidF1;
+.implements Lcom/vk/common/g/g;
 
 
 # static fields
@@ -36,9 +36,9 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Lcom/vk/attachpicker/stickers/VideoViewSticker;
+    check-cast p1, Lcom/vk/attachpicker/stickers/s0;
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/VideoViewSticker;->p()V
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/s0;->p()V
 
     return-void
 .end method

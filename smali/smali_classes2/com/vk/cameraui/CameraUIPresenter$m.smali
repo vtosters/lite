@@ -1,5 +1,5 @@
 .class public final Lcom/vk/cameraui/CameraUIPresenter$m;
-.super Lio/reactivex/observers/DisposableObserver/DisposableObserver;
+.super Lc/a/c0/a;
 .source "CameraUIPresenter.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lio/reactivex/observers/DisposableObserver/DisposableObserver<",
+        "Lc/a/c0/a<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -38,7 +38,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/cameraui/CameraUIPresenter$m;->b:Lcom/vk/cameraui/CameraUIPresenter;
 
-    invoke-direct {p0}, Lio/reactivex/observers/DisposableObserver/DisposableObserver;-><init>()V
+    invoke-direct {p0}, Lc/a/c0/a;-><init>()V
 
     return-void
 .end method
@@ -67,11 +67,11 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/CameraUIPositions;
+    invoke-interface {v0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/e;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/CameraUIPositions;->b()V
+    invoke-interface {v0}, Lcom/vk/cameraui/e;->b()V
 
     return-void
 .end method

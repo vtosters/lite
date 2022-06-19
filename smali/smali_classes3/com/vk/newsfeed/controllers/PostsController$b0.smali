@@ -3,7 +3,7 @@
 .source "PostsController.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -62,7 +62,7 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/controllers/PostsController$b0;->a:Lcom/vk/dto/newsfeed/entries/Post;
@@ -74,7 +74,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/newsfeed/controllers/PostsController$b0;->a:Lcom/vk/dto/newsfeed/entries/Post;
 
-    sget-object v0, Lcom/vk/common/links/ParsedText;->d:Lcom/vk/common/links/ParsedText$a;
+    sget-object v0, Lcom/vk/common/links/i;->d:Lcom/vk/common/links/i$a;
 
     iget-object v1, p0, Lcom/vk/newsfeed/controllers/PostsController$b0;->b:Ljava/lang/String;
 
@@ -92,11 +92,11 @@
 
     move-result v3
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/common/links/ParsedText$a;->a(Ljava/lang/String;Landroid/os/Bundle;F)Lcom/vk/common/links/ParsedText;
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/common/links/i$a;->a(Ljava/lang/String;Landroid/os/Bundle;F)Lcom/vk/common/links/i;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/dto/newsfeed/entries/Post;->a(Lcom/vk/common/links/ParsedText;)V
+    invoke-virtual {p1, v0}, Lcom/vk/dto/newsfeed/entries/Post;->a(Lcom/vk/common/links/i;)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/newsfeed/controllers/PostsController$b0;->a:Lcom/vk/dto/newsfeed/entries/Post;
@@ -118,9 +118,9 @@
     if-ne p1, v0, :cond_0
 
     .line 5
-    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
+    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
 
     move-result-object p1
 
@@ -128,7 +128,7 @@
 
     iget-object v1, p0, Lcom/vk/newsfeed/controllers/PostsController$b0;->a:Lcom/vk/dto/newsfeed/entries/Post;
 
-    invoke-virtual {p1, v0, v1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v0, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
 
     :cond_0
     return-void

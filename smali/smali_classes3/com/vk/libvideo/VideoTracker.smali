@@ -306,11 +306,11 @@
     invoke-virtual {p2, v2, v0, v1}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     .line 76
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/bridges/b0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -370,13 +370,13 @@
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-static {}, Lcom/vk/bridges/StatisticsBridge1;->a()Lcom/vk/bridges/StatisticsBridge;
+    invoke-static {}, Lcom/vk/bridges/c0;->a()Lcom/vk/bridges/b0;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/libvideo/VideoTracker;->b:Lcom/vk/statistic/Statistic;
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/StatisticsBridge;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/b0;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_0
     return-void

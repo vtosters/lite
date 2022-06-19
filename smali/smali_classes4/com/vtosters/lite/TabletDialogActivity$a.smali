@@ -104,9 +104,9 @@
 
     iget-object v2, p0, Lcom/vtosters/lite/TabletDialogActivity$a;->f:Lcom/vtosters/lite/TabletDialogActivity;
 
-    iget-object v2, v2, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
+    iget-object v2, v2, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/a;
 
-    invoke-virtual {v2}, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;->getInsetTop()I
+    invoke-virtual {v2}, Lcom/vk/core/view/a;->getInsetTop()I
 
     move-result v2
 

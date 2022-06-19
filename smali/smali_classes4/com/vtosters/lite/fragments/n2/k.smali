@@ -36,7 +36,7 @@
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    invoke-static {p1, p2}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Landroid/content/DialogInterface;I)V
+    invoke-static {p1, p2}, Lcom/vtosters/lite/fragments/n2/q0;->a(Landroid/content/DialogInterface;I)V
 
     return-void
 .end method

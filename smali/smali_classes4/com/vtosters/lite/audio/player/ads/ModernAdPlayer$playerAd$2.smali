@@ -3,12 +3,12 @@
 .source "ModernAdPlayer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/audio/player/ads/ModernAdPlayer;-><init>(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;Landroid/content/Context;Lkotlin/jvm/b/Functions;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener;Z)V
+    value = Lcom/vtosters/lite/audio/player/ads/ModernAdPlayer;-><init>(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;Landroid/content/Context;Lkotlin/jvm/b/a;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vtosters/lite/audio/player/ads/InstreamAudioAdPlayerAdapter;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vtosters/lite/audio/player/ads/d;",
         ">;"
     }
 .end annotation
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vtosters/lite/audio/player/ads/InstreamAudioAdPlayerAdapter;
+.method public final invoke()Lcom/vtosters/lite/audio/player/ads/d;
     .locals 9
 
     const/4 v0, 0x1
@@ -62,7 +62,7 @@
     invoke-static {v0}, Lcom/vk/music/logger/MusicLogger;->d([Ljava/lang/Object;)V
 
     .line 3
-    new-instance v0, Lcom/vtosters/lite/audio/player/ads/InstreamAudioAdPlayerAdapter;
+    new-instance v0, Lcom/vtosters/lite/audio/player/ads/d;
 
     iget-object v1, p0, Lcom/vtosters/lite/audio/player/ads/ModernAdPlayer$playerAd$2;->this$0:Lcom/vtosters/lite/audio/player/ads/ModernAdPlayer;
 
@@ -86,7 +86,7 @@
 
     move-object v3, v0
 
-    invoke-direct/range {v3 .. v8}, Lcom/vtosters/lite/audio/player/ads/InstreamAudioAdPlayerAdapter;-><init>(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;Landroid/content/Context;ILcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener;Z)V
+    invoke-direct/range {v3 .. v8}, Lcom/vtosters/lite/audio/player/ads/d;-><init>(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;Landroid/content/Context;ILcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener;Z)V
 
     return-object v0
 .end method
@@ -95,7 +95,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/audio/player/ads/ModernAdPlayer$playerAd$2;->invoke()Lcom/vtosters/lite/audio/player/ads/InstreamAudioAdPlayerAdapter;
+    invoke-virtual {p0}, Lcom/vtosters/lite/audio/player/ads/ModernAdPlayer$playerAd$2;->invoke()Lcom/vtosters/lite/audio/player/ads/d;
 
     move-result-object v0
 

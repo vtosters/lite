@@ -3,7 +3,7 @@
 .source "ValidationActivity.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/dto/common/data/Purchase1;",
+        "Lc/a/z/g<",
+        "Lcom/vk/dto/common/data/e;",
         ">;"
     }
 .end annotation
@@ -44,7 +44,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/dto/common/data/Purchase1;)V
+.method public a(Lcom/vk/dto/common/data/e;)V
     .locals 2
 
     .line 1
@@ -73,7 +73,7 @@
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/ValidationActivity$a$a$a;-><init>(Lcom/vtosters/lite/ValidationActivity$a$a;)V
 
-    invoke-virtual {v0, p1, v1}, Lcom/vtosters/lite/data/PurchasesManager;->a(Lcom/vk/dto/common/data/Purchase1;Lcom/vtosters/lite/data/PurchasesManager$o;)V
+    invoke-virtual {v0, p1, v1}, Lcom/vtosters/lite/data/PurchasesManager;->a(Lcom/vk/dto/common/data/e;Lcom/vtosters/lite/data/PurchasesManager$o;)V
 
     return-void
 .end method
@@ -87,9 +87,9 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lcom/vk/dto/common/data/Purchase1;
+    check-cast p1, Lcom/vk/dto/common/data/e;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ValidationActivity$a$a;->a(Lcom/vk/dto/common/data/Purchase1;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ValidationActivity$a$a;->a(Lcom/vk/dto/common/data/e;)V
 
     return-void
 .end method

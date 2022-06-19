@@ -13,7 +13,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -68,7 +68,7 @@
     const-string v3, "child"
 
     .line 6
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v2}, Lcom/google/android/material/appbar/NonBouncedAppBarFixedSwipeRefreshLayout;->b(Landroid/view/View;)Lcom/google/android/material/appbar/NonBouncedAppBarLayout;
 

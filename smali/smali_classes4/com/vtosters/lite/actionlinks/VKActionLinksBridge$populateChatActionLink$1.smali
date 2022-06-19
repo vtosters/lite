@@ -3,12 +3,12 @@
 .source "VKActionLinksBridge.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/actionlinks/VKActionLinksBridge;->a(Landroid/content/Context;Landroid/view/ViewGroup;ZLcom/vk/dto/actionlinks/ActionLink;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ZZZLjava/lang/Integer;)Lkotlin/jvm/b/Functions2;
+    value = Lcom/vtosters/lite/actionlinks/VKActionLinksBridge;->a(Landroid/content/Context;Landroid/view/ViewGroup;ZLcom/vk/dto/actionlinks/ActionLink;IILkotlin/jvm/b/a;Lkotlin/jvm/b/a;ZZZLjava/lang/Integer;)Lkotlin/jvm/b/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/lang/Integer;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $alPresenter:Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkPresenter;
+.field final synthetic $alPresenter:Lcom/vtosters/lite/actionlinks/c/b/c/d;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkPresenter;)V
+.method constructor <init>(Lcom/vtosters/lite/actionlinks/c/b/c/d;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/VKActionLinksBridge$populateChatActionLink$1;->$alPresenter:Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkPresenter;
+    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/VKActionLinksBridge$populateChatActionLink$1;->$alPresenter:Lcom/vtosters/lite/actionlinks/c/b/c/d;
 
     const/4 p1, 0x1
 
@@ -50,9 +50,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/VKActionLinksBridge$populateChatActionLink$1;->$alPresenter:Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkPresenter;
+    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/VKActionLinksBridge$populateChatActionLink$1;->$alPresenter:Lcom/vtosters/lite/actionlinks/c/b/c/d;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkPresenter;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/actionlinks/c/b/c/d;->a(I)V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vtosters/lite/actionlinks/VKActionLinksBridge$populateChatActionLink$1;->a(I)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

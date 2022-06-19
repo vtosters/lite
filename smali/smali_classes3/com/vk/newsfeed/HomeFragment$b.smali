@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -45,7 +45,7 @@
 
     const-string v1, "view.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -61,11 +61,11 @@
     .line 3
     check-cast v0, Lcom/vk/navigation/NavigationDelegateActivity;
 
-    invoke-virtual {v0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
+    invoke-virtual {v0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
 
     move-result-object p1
 
-    invoke-virtual {p1, v2}, Lcom/vk/navigation/VKNavigationDelegate;->a(Ljava/lang/String;)V
+    invoke-virtual {p1, v2}, Lcom/vk/navigation/y;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -78,14 +78,14 @@
     if-eqz p1, :cond_1
 
     .line 5
-    new-instance v0, Lcom/vk/cameraui/builder/CameraBuilder;
+    new-instance v0, Lcom/vk/cameraui/builder/a;
 
     const-string v1, "home"
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/cameraui/builder/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/builder/CameraBuilder;->c(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/builder/a;->c(Landroid/content/Context;)V
 
     :cond_1
     :goto_0

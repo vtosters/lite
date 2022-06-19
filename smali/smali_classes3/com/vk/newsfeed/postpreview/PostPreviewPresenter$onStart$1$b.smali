@@ -3,7 +3,7 @@
 .source "PostPreviewPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -86,7 +86,7 @@
 
     iget-object p1, p1, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter$onStart$1;->this$0:Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
+    invoke-static {p1}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/b;
 
     move-result-object p1
 
@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->a(Ljava/lang/Integer;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/newsfeed/postpreview/b;->a(Ljava/lang/Integer;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -133,7 +133,7 @@
 
     iget-object p1, p1, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter$onStart$1;->this$0:Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
+    invoke-static {p1}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/b;
 
     move-result-object p1
 
@@ -147,7 +147,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/newsfeed/postpreview/PostPreviewContract$a;->a(Lcom/vk/newsfeed/postpreview/PostPreviewContract1;Ljava/lang/Integer;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/newsfeed/postpreview/b$a;->a(Lcom/vk/newsfeed/postpreview/b;Ljava/lang/Integer;Ljava/lang/String;ILjava/lang/Object;)V
 
     :goto_0
     return-void

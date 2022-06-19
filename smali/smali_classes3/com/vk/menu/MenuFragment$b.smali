@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/menu/MenuFragment;Lcom/vk/dto/common/data/VkAppsList;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/menu/MenuFragment;Lcom/vk/dto/common/data/VkAppsList;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x1
@@ -70,7 +70,7 @@
 
     const/4 p4, 0x0
 
-    invoke-direct {p2, p4, p4, p3, p4}, Lcom/vk/dto/common/data/VkAppsList;-><init>(Ljava/util/List;Lcom/vk/dto/common/data/VkAppsFeatured;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {p2, p4, p4, p3, p4}, Lcom/vk/dto/common/data/VkAppsList;-><init>(Ljava/util/List;Lcom/vk/dto/common/data/VkAppsFeatured;ILkotlin/jvm/internal/i;)V
 
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/vk/menu/MenuFragment$b;-><init>(Lcom/vk/menu/MenuFragment;Lcom/vk/dto/common/data/VkAppsList;)V
@@ -162,7 +162,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -197,7 +197,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     :goto_1
     return-void

@@ -3,12 +3,12 @@
 .source "VideoItemAutoPlayVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/holders/video/VideoItemAutoPlayVh;-><init>(Lcom/vk/catalog2/core/holders/video/VideoItemListLargeVh;)V
+    value = Lcom/vk/catalog2/core/holders/video/VideoItemAutoPlayVh;-><init>(Lcom/vk/catalog2/core/holders/video/g;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/vk/libvideo/VideoTracker$Screen;",
         ">;"
     }

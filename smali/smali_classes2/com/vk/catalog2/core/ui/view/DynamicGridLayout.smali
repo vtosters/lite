@@ -41,7 +41,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     const/16 v0, 0x8
 
@@ -136,18 +136,18 @@
     aput-object v2, v0, v3
 
     .line 9
-    invoke-static {v0}, Lkotlin/sequences/m;->a([Ljava/lang/Object;)Lkotlin/sequences/Sequence;
+    invoke-static {v0}, Lkotlin/sequences/m;->a([Ljava/lang/Object;)Lkotlin/sequences/j;
 
     move-result-object v0
 
     .line 10
     sget-object v2, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout$Companion$DEBUG_FILL_COLORS$1;->a:Lcom/vk/catalog2/core/ui/view/DynamicGridLayout$Companion$DEBUG_FILL_COLORS$1;
 
-    invoke-static {v0, v2}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {v0, v2}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
+    invoke-static {v0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
 
     .line 11
     new-instance v0, Landroid/graphics/Paint;
@@ -190,7 +190,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -210,7 +210,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -233,7 +233,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/vk/catalog2/core/R3;->dynamic_grid_item_interval:I
+    sget p2, Lcom/vk/catalog2/core/o;->dynamic_grid_item_interval:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -244,7 +244,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -318,7 +318,7 @@
     check-cast p3, Lcom/vk/catalog2/core/api/dto/layout/GridColumn;
 
     .line 25
-    invoke-virtual {v0, p2}, Lcom/vk/catalog2/core/ui/view/Grid;->a(I)Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;
+    invoke-virtual {v0, p2}, Lcom/vk/catalog2/core/ui/view/Grid;->a(I)Lcom/vk/catalog2/core/ui/view/c;
 
     move-result-object p2
 
@@ -360,7 +360,7 @@
 
     div-float/2addr v3, v2
 
-    invoke-virtual {p2, v3}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;->a(F)V
+    invoke-virtual {p2, v3}, Lcom/vk/catalog2/core/ui/view/c;->a(F)V
 
     goto :goto_1
 
@@ -607,19 +607,19 @@
     move-result-object p1
 
     .line 5
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object p1
 
     .line 6
     sget-object p4, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout$onLayout$1;->a:Lcom/vk/catalog2/core/ui/view/DynamicGridLayout$onLayout$1;
 
-    invoke-static {p1, p4}, Lkotlin/sequences/m;->d(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p1, p4}, Lkotlin/sequences/m;->d(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p1
 
     .line 7
-    invoke-interface {p1}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
+    invoke-interface {p1}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
@@ -638,7 +638,7 @@
 
     if-ltz p3, :cond_2
 
-    check-cast p4, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout2;
+    check-cast p4, Lcom/vk/catalog2/core/ui/view/b;
 
     if-ge p3, p2, :cond_1
 
@@ -648,7 +648,7 @@
     move-result-object p3
 
     .line 9
-    invoke-virtual {p4}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout2;->c()I
+    invoke-virtual {p4}, Lcom/vk/catalog2/core/ui/view/b;->c()I
 
     move-result v0
 
@@ -659,7 +659,7 @@
     add-int/2addr v0, v1
 
     .line 10
-    invoke-virtual {p4}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout2;->d()I
+    invoke-virtual {p4}, Lcom/vk/catalog2/core/ui/view/b;->d()I
 
     move-result v1
 
@@ -670,11 +670,11 @@
     add-int/2addr v1, v2
 
     .line 11
-    invoke-virtual {p4}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout2;->c()I
+    invoke-virtual {p4}, Lcom/vk/catalog2/core/ui/view/b;->c()I
 
     move-result v2
 
-    invoke-virtual {p4}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout2;->b()I
+    invoke-virtual {p4}, Lcom/vk/catalog2/core/ui/view/b;->b()I
 
     move-result v3
 
@@ -687,11 +687,11 @@
     add-int/2addr v2, v3
 
     .line 12
-    invoke-virtual {p4}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout2;->d()I
+    invoke-virtual {p4}, Lcom/vk/catalog2/core/ui/view/b;->d()I
 
     move-result v3
 
-    invoke-virtual {p4}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout2;->a()I
+    invoke-virtual {p4}, Lcom/vk/catalog2/core/ui/view/b;->a()I
 
     move-result p4
 
@@ -829,19 +829,19 @@
     move-result-object v0
 
     .line 13
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object v0
 
     .line 14
     sget-object v2, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout$onMeasure$1;->a:Lcom/vk/catalog2/core/ui/view/DynamicGridLayout$onMeasure$1;
 
-    invoke-static {v0, v2}, Lkotlin/sequences/m;->d(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {v0, v2}, Lkotlin/sequences/m;->d(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object v0
 
     .line 15
-    invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -860,7 +860,7 @@
 
     if-ltz v3, :cond_3
 
-    check-cast v2, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout2;
+    check-cast v2, Lcom/vk/catalog2/core/ui/view/b;
 
     if-ge v3, v1, :cond_2
 
@@ -872,13 +872,13 @@
     const-string v5, "view"
 
     .line 17
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout2;->b()I
+    invoke-virtual {v2}, Lcom/vk/catalog2/core/ui/view/b;->b()I
 
     move-result v5
 
-    invoke-virtual {v2}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout2;->a()I
+    invoke-virtual {v2}, Lcom/vk/catalog2/core/ui/view/b;->a()I
 
     move-result v2
 

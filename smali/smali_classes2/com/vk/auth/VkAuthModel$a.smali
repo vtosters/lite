@@ -3,12 +3,12 @@
 .source "VkAuthModel.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/auth/api/models/AuthResult;Lcom/vk/auth/api/commands/GetExchangeLoginDataCommand;)Lio/reactivex/Observable;
+    value = Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/auth/api/models/AuthResult;Lcom/vk/auth/api/commands/g;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vtosters/lite/api/execute/GetWallInfo$a;",
+        "Lc/a/z/g<",
+        "Lcom/vtosters/lite/api/execute/i$a;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/execute/GetWallInfo$a;)V
+.method public final a(Lcom/vtosters/lite/api/execute/i$a;)V
     .locals 3
 
     .line 1
@@ -60,20 +60,20 @@
 
     const-string v2, "it"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, v1, p1}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/auth/VkAuthModel;Lcom/vk/auth/api/models/AuthResult;Lcom/vtosters/lite/api/execute/GetWallInfo$a;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/auth/VkAuthModel;Lcom/vk/auth/api/models/AuthResult;Lcom/vtosters/lite/api/execute/i$a;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/auth/VkAuthModel$a;->a:Lcom/vk/auth/VkAuthModel;
 
-    invoke-virtual {v0}, Lcom/vk/auth/DefaultAuthModel;->o()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/vk/auth/d;->o()Landroid/content/Context;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-static {v0, p1, v1}, Lcom/vtosters/lite/NetworkStateReceiver;->a(Landroid/content/Context;Lcom/vtosters/lite/api/execute/GetWallInfo$a;Z)V
+    invoke-static {v0, p1, v1}, Lcom/vtosters/lite/NetworkStateReceiver;->a(Landroid/content/Context;Lcom/vtosters/lite/api/execute/i$a;Z)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/auth/VkAuthModel$a;->a:Lcom/vk/auth/VkAuthModel;
@@ -89,9 +89,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/execute/GetWallInfo$a;
+    check-cast p1, Lcom/vtosters/lite/api/execute/i$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/VkAuthModel$a;->a(Lcom/vtosters/lite/api/execute/GetWallInfo$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/VkAuthModel$a;->a(Lcom/vtosters/lite/api/execute/i$a;)V
 
     return-void
 .end method

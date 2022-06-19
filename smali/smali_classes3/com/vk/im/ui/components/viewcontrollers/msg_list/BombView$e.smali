@@ -122,7 +122,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$e;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;
 
@@ -149,7 +149,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$e;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;
 
@@ -176,7 +176,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$e;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;
 
@@ -242,9 +242,9 @@
 
     const-string v1, "time"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/im/ui/components/msg_send/b/MsgTtlFormatter;->INSTANCE:Lcom/vk/im/ui/components/msg_send/b/MsgTtlFormatter;
+    sget-object v1, Lcom/vk/im/ui/components/msg_send/b/a;->b:Lcom/vk/im/ui/components/msg_send/b/a;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$e;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;
 
@@ -252,7 +252,7 @@
 
     move-result-wide v2
 
-    invoke-virtual {v1, v2, v3}, Lcom/vk/im/ui/components/msg_send/b/MsgTtlFormatter;->a(J)Ljava/lang/String;
+    invoke-virtual {v1, v2, v3}, Lcom/vk/im/ui/components/msg_send/b/a;->a(J)Ljava/lang/String;
 
     move-result-object v1
 

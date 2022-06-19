@@ -3,12 +3,12 @@
 .source "VKImageLoader.java"
 
 # interfaces
-.implements Lcom/facebook/common/internal/Supplier;
+.implements Lcom/facebook/common/internal/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/imageloader/VKImageLoader;->a(Lcom/facebook/x/d/ImagePipelineConfig$b;Landroid/content/Context;)V
+    value = Lcom/vk/imageloader/VKImageLoader;->a(Lcom/facebook/x/d/h$b;Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/facebook/common/internal/Supplier<",
+        "Lcom/facebook/common/internal/j<",
         "Ljava/io/File;",
         ">;"
     }

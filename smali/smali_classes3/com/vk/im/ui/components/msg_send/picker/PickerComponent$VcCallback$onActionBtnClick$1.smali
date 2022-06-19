@@ -3,7 +3,7 @@
 .source "PickerComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback$onActionBtnClick$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -90,11 +90,11 @@
 
     iget-object v3, v3, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v3}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/PickerState;
+    invoke-static {v3}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/d;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->b()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/vk/im/ui/components/msg_send/picker/d;->b()Ljava/lang/String;
 
     move-result-object v3
 
@@ -102,15 +102,15 @@
 
     iget-object v4, v4, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$VcCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;
 
-    invoke-static {v4}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/PickerState;
+    invoke-static {v4}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->c(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;)Lcom/vk/im/ui/components/msg_send/picker/d;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->d()Lcom/vk/im/engine/models/messages/MsgSendSource;
+    invoke-virtual {v4}, Lcom/vk/im/ui/components/msg_send/picker/d;->d()Lcom/vk/im/engine/models/messages/e;
 
     move-result-object v4
 
-    invoke-interface {v0, v1, v2, v3, v4}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;->a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;)V
+    invoke-interface {v0, v1, v2, v3, v4}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;->a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;)V
 
     return-void
 .end method

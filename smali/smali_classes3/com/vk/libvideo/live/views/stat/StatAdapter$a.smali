@@ -58,7 +58,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/libvideo/live/views/stat/StatAdapter$Type;Lcom/vk/dto/user/UserProfile;Ljava/lang/String;ILjava/lang/String;ILcom/vk/dto/actionlinks/ActionLink;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/libvideo/live/views/stat/StatAdapter$Type;Lcom/vk/dto/user/UserProfile;Ljava/lang/String;ILjava/lang/String;ILcom/vk/dto/actionlinks/ActionLink;ZILkotlin/jvm/internal/i;)V
     .locals 9
 
     move/from16 v0, p9

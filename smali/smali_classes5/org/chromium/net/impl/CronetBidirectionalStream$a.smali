@@ -129,13 +129,13 @@
     :try_start_1
     iget-object v0, p0, Lorg/chromium/net/impl/CronetBidirectionalStream$a;->b:Lorg/chromium/net/impl/CronetBidirectionalStream;
 
-    invoke-static {v0}, Lorg/chromium/net/impl/CronetBidirectionalStream;->f(Lorg/chromium/net/impl/CronetBidirectionalStream;)Lorg/chromium/net/impl/VersionSafeCallbacks3;
+    invoke-static {v0}, Lorg/chromium/net/impl/CronetBidirectionalStream;->f(Lorg/chromium/net/impl/CronetBidirectionalStream;)Lorg/chromium/net/impl/m;
 
     move-result-object v0
 
     iget-object v1, p0, Lorg/chromium/net/impl/CronetBidirectionalStream$a;->b:Lorg/chromium/net/impl/CronetBidirectionalStream;
 
-    invoke-virtual {v0, v1}, Lorg/chromium/net/impl/VersionSafeCallbacks3;->a(Lorg/chromium/net/BidirectionalStream;)V
+    invoke-virtual {v0, v1}, Lorg/chromium/net/impl/m;->a(Lorg/chromium/net/e;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 

@@ -71,11 +71,11 @@
     return-void
 .end method
 
-.method public a(ILcom/vk/photogallery/dto/GalleryState4;)V
+.method public a(ILcom/vk/photogallery/dto/d;)V
     .locals 0
 
     .line 4
-    invoke-static {p0, p1, p2}, Lcom/vk/photogallery/PhotoGalleryView$Callback$DefaultImpls;->a(Lcom/vk/photogallery/PhotoGalleryView$Callback;ILcom/vk/photogallery/dto/GalleryState4;)V
+    invoke-static {p0, p1, p2}, Lcom/vk/photogallery/PhotoGalleryView$Callback$DefaultImpls;->a(Lcom/vk/photogallery/PhotoGalleryView$Callback;ILcom/vk/photogallery/dto/d;)V
 
     return-void
 .end method
@@ -130,7 +130,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/avatarpicker/PhotoGalleryFragment$galleryCallback$1$getSelectionStrategy$1;-><init>(Lcom/vk/avatarpicker/PhotoGalleryFragment$galleryCallback$1;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/photogallery/PhotoGalleryView$c$b;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, v1}, Lcom/vk/photogallery/PhotoGalleryView$c$b;-><init>(Lkotlin/jvm/b/b;)V
 
     return-object v0
 .end method

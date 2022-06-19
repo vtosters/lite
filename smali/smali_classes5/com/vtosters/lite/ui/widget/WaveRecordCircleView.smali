@@ -322,7 +322,7 @@
 
     .line 2
     :cond_0
-    sget-wide v0, Lcom/vk/audio/AudioMessageUtils;->w:D
+    sget-wide v0, Lcom/vk/audio/a;->w:D
 
     invoke-static {v0, v1}, Ljava/lang/Math;->abs(D)D
 

@@ -214,7 +214,7 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/contacts/ContactsSyncReporter;->INSTANCE:Lcom/vk/contacts/ContactsSyncReporter;
+    sget-object v0, Lcom/vk/contacts/g;->a:Lcom/vk/contacts/g;
 
     invoke-static {}, Lcom/vk/contacts/ContactsSyncUtils;->b()I
 
@@ -222,7 +222,7 @@
 
     iget-object v2, p0, Lcom/vk/contacts/ContactsSyncAcitvity;->G:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/contacts/ContactsSyncReporter;->a(ILjava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/contacts/g;->a(ILjava/lang/String;)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
@@ -534,21 +534,21 @@
     return-void
 .end method
 
-.method public synthetic c(Ljava/util/List;)Lkotlin/Unit;
+.method public synthetic c(Ljava/util/List;)Lkotlin/m;
     .locals 1
 
     .line 1
-    sget-object p1, Lcom/vk/contacts/ContactsSyncReporter;->INSTANCE:Lcom/vk/contacts/ContactsSyncReporter;
+    sget-object p1, Lcom/vk/contacts/g;->a:Lcom/vk/contacts/g;
 
     iget-object v0, p0, Lcom/vk/contacts/ContactsSyncAcitvity;->G:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/contacts/ContactsSyncReporter;->a(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/vk/contacts/g;->a(Ljava/lang/String;)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     .line 3
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
@@ -699,7 +699,7 @@
     move-object v1, p0
 
     .line 12
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
 
     return-void
 .end method
@@ -777,14 +777,14 @@
     return-void
 .end method
 
-.method public synthetic w1()Lkotlin/Unit;
+.method public synthetic w1()Lkotlin/m;
     .locals 1
 
     .line 1
     invoke-direct {p0}, Lcom/vk/contacts/ContactsSyncAcitvity;->x1()V
 
     .line 2
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method

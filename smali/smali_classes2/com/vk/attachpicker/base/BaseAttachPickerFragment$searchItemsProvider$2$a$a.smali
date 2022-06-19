@@ -3,12 +3,12 @@
 .source "BaseAttachPickerFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/base/BaseAttachPickerFragment$searchItemsProvider$2$a;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
+    value = Lcom/vk/attachpicker/base/BaseAttachPickerFragment$searchItemsProvider$2$a;->a(Lc/a/m;ZLcom/vk/lists/t;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/api/base/VkPaginationList<",
         "TT;>;>;"
     }
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/attachpicker/base/BaseAttachPickerFragment$searchItemsProvider$2$a;
 
-.field final synthetic b:Lcom/vk/lists/PaginationHelper;
+.field final synthetic b:Lcom/vk/lists/t;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/attachpicker/base/BaseAttachPickerFragment$searchItemsProvider$2$a;Lcom/vk/lists/PaginationHelper;)V
+.method constructor <init>(Lcom/vk/attachpicker/base/BaseAttachPickerFragment$searchItemsProvider$2$a;Lcom/vk/lists/t;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$searchItemsProvider$2$a$a;->a:Lcom/vk/attachpicker/base/BaseAttachPickerFragment$searchItemsProvider$2$a;
 
-    iput-object p2, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$searchItemsProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
+    iput-object p2, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$searchItemsProvider$2$a$a;->b:Lcom/vk/lists/t;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -67,7 +67,7 @@
 
     iget-object v0, v0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$searchItemsProvider$2;->this$0:Lcom/vk/attachpicker/base/BaseAttachPickerFragment;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->P4()Lcom/vk/attachpicker/base/AttachPickerAdapter;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->P4()Lcom/vk/attachpicker/base/a;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->g(Ljava/util/List;)V
 
     .line 2
     :cond_0
@@ -87,7 +87,7 @@
 
     iget-object v0, v0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$searchItemsProvider$2;->this$0:Lcom/vk/attachpicker/base/BaseAttachPickerFragment;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->P4()Lcom/vk/attachpicker/base/AttachPickerAdapter;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->P4()Lcom/vk/attachpicker/base/a;
 
     move-result-object v0
 
@@ -103,11 +103,11 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/base/AttachPickerAdapter;->c(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/base/a;->c(Z)V
 
     .line 3
     :cond_1
-    iget-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$searchItemsProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
+    iget-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$searchItemsProvider$2$a$a;->b:Lcom/vk/lists/t;
 
     if-eqz v0, :cond_2
 
@@ -115,7 +115,7 @@
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/PaginationHelper;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/t;->a(I)V
 
     :cond_2
     return-void

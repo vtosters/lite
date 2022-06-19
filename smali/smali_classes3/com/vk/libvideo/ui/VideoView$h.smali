@@ -3,7 +3,7 @@
 .source "VideoView.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -65,11 +65,11 @@
 
     sget-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->F:Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a()Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
+    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a()Lcom/facebook/x/i/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;->a(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/x/i/a;->a(Landroid/graphics/Bitmap;)V
 
     :cond_0
     return-object p1

@@ -29,7 +29,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder$a;
 
@@ -38,7 +38,7 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgContentBuilder;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1, v2, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgContentBuilder;ILkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder;
 
@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgContentBuilder;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgContentBuilder;ILkotlin/jvm/internal/i;)V
     .locals 6
 
     and-int/lit8 p2, p2, 0x1
@@ -78,7 +78,7 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgContentBuilder;-><init>(Lcom/vk/im/engine/models/ImExperiments;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgContentBuilder;-><init>(Lcom/vk/im/engine/models/e;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/d;ILkotlin/jvm/internal/i;)V
 
     :cond_0
     invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgContentBuilder;)V
@@ -114,15 +114,15 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
             ">;)V"
         }
     .end annotation
 
     .line 47
-    sget-object v0, Lb/h/g/g/BuildInfo;->INSTANCE:Lb/h/g/g/BuildInfo;
+    sget-object v0, Lb/h/g/g/b;->i:Lb/h/g/g/b;
 
-    invoke-virtual {v0}, Lb/h/g/g/BuildInfo;->g()Z
+    invoke-virtual {v0}, Lb/h/g/g/b;->g()Z
 
     move-result v0
 
@@ -134,7 +134,7 @@
     :cond_0
     sget-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder$insertInstallVkMeIfNeeded$1;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder$insertInstallVkMeIfNeeded$1;
 
-    invoke-static {p1, v0}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
+    invoke-static {p1, v0}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
 
     .line 49
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -160,13 +160,13 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
     .line 52
-    iget-object v3, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->f:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object v3, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->f:Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 53
-    iget-object v4, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v4, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     const/4 v5, 0x0
 
@@ -187,7 +187,7 @@
 
     .line 54
     :goto_0
-    iget v1, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
+    iget v1, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
 
     const/16 v6, 0x53
 
@@ -234,44 +234,44 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
     add-int/2addr v0, v2
 
     .line 58
-    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    invoke-direct {v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;-><init>()V
+    invoke-direct {v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;-><init>()V
 
     const/16 v3, 0x67
 
     .line 59
-    iput v3, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
+    iput v3, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
 
     .line 60
-    iget-object v3, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->f:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object v3, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->f:Lcom/vk/im/engine/models/attaches/Attach;
 
-    iput-object v3, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->f:Lcom/vk/im/engine/models/attaches/Attach;
+    iput-object v3, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->f:Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 61
-    iget-object v3, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v3, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
 
-    iput-object v3, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iput-object v3, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     .line 62
-    iget-object v1, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v1, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     if-eqz v1, :cond_6
 
     const-string v3, "storyEntry.valueMsg!!"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder;->a(Lcom/vk/im/engine/models/messages/Msg;)J
 
     move-result-wide v3
 
-    iput-wide v3, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->b:J
+    iput-wide v3, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->b:J
 
     .line 63
     invoke-interface {p1, v0, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
@@ -280,7 +280,7 @@
 
     .line 64
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -293,21 +293,21 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
             ">;IJ)V"
         }
     .end annotation
 
     .line 38
-    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;-><init>()V
 
     .line 39
-    iput p2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
+    iput p2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
 
     .line 40
-    iput-wide p3, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->b:J
+    iput-wide p3, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->b:J
 
     .line 41
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -321,7 +321,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
             ">;IJ",
             "Lcom/vk/im/engine/models/Direction;",
             ")V"
@@ -329,18 +329,18 @@
     .end annotation
 
     .line 42
-    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;-><init>()V
 
     .line 43
-    iput p2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
+    iput p2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
 
     .line 44
-    iput-wide p3, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->b:J
+    iput-wide p3, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->b:J
 
     .line 45
-    iput-object p5, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->h:Lcom/vk/im/engine/models/Direction;
+    iput-object p5, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->h:Lcom/vk/im/engine/models/Direction;
 
     .line 46
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -393,17 +393,17 @@
             "Lcom/vk/im/engine/models/messages/MsgHistory;",
             "I)",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
             ">;"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p1, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
+    iget-object v0, p1, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
 
-    iget-boolean v1, p1, Lcom/vk/im/engine/models/History;->hasHistoryBefore:Z
+    iget-boolean v1, p1, Lcom/vk/im/engine/models/d;->hasHistoryBefore:Z
 
-    iget-boolean p1, p1, Lcom/vk/im/engine/models/History;->hasHistoryAfter:Z
+    iget-boolean p1, p1, Lcom/vk/im/engine/models/d;->hasHistoryAfter:Z
 
     invoke-virtual {p0, v0, v1, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder;->a(Ljava/util/List;ZZI)Ljava/util/List;
 
@@ -422,7 +422,7 @@
             "Lcom/vk/im/engine/models/messages/Msg;",
             ">;ZZI)",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
             ">;"
         }
     .end annotation
@@ -574,7 +574,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
             ">;",
             "Ljava/util/List<",
             "+",
@@ -626,9 +626,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->e()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->e()Z
 
     move-result v1
 
@@ -639,9 +639,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->i()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->i()Z
 
     move-result v1
 
@@ -652,9 +652,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->b()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->b()Z
 
     move-result v1
 
@@ -665,9 +665,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->g()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->g()Z
 
     move-result v1
 
@@ -677,13 +677,13 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    iget-object v1, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v1, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
 
     move-result-object v1
 
@@ -693,11 +693,11 @@
 
     check-cast v3, Lcom/vk/im/engine/models/messages/Msg;
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v3}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lcom/vk/im/engine/models/Weight;->a(Lcom/vk/im/engine/models/Weight;)I
+    invoke-virtual {v1, v3}, Lcom/vk/im/engine/models/q;->a(Lcom/vk/im/engine/models/q;)I
 
     move-result v1
 
@@ -706,7 +706,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -734,11 +734,11 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
     if-eqz v1, :cond_5
 
-    iget-wide v3, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->b:J
+    iget-wide v3, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->b:J
 
     goto :goto_2
 
@@ -781,10 +781,10 @@
 
     move-result-object v8
 
-    check-cast v8, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v8, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
     .line 28
-    invoke-virtual {v8}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->i()Z
+    invoke-virtual {v8}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->i()Z
 
     move-result v8
 
@@ -893,7 +893,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
             ">;",
             "Ljava/util/List<",
             "+",
@@ -946,9 +946,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->e()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->e()Z
 
     move-result v0
 
@@ -961,9 +961,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->i()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->i()Z
 
     move-result v0
 
@@ -974,9 +974,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->b()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->b()Z
 
     move-result v0
 
@@ -987,9 +987,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->g()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->g()Z
 
     move-result v0
 
@@ -999,13 +999,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    iget-object v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
 
     move-result-object v0
 
@@ -1015,11 +1015,11 @@
 
     check-cast v1, Lcom/vk/im/engine/models/messages/Msg;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/Weight;->a(Lcom/vk/im/engine/models/Weight;)I
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/q;->a(Lcom/vk/im/engine/models/q;)I
 
     move-result v0
 
@@ -1028,7 +1028,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v11
 
@@ -1162,9 +1162,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->g()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->g()Z
 
     move-result v0
 
@@ -1187,15 +1187,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
+    check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
 
-    iget-object v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     if-eqz v0, :cond_a
 
     const-string v4, "entryList.first().valueMsg!!"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 23
     invoke-direct {v6, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder;->a(Lcom/vk/im/engine/models/messages/Msg;)J
@@ -1226,7 +1226,7 @@
 
     .line 27
     :cond_a
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 

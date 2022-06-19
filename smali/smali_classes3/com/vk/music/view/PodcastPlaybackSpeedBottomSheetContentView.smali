@@ -35,9 +35,9 @@
 
 .field private H:Z
 
-.field private final I:Lio/reactivex/disposables/CompositeDisposable;
+.field private final I:Lio/reactivex/disposables/a;
 
-.field private final J:Lcom/vk/music/player/PlayerModel;
+.field private final J:Lcom/vk/music/player/d;
 
 .field private final K:Landroidx/recyclerview/widget/LinearLayoutManager;
 
@@ -68,7 +68,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->M:Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView$b;
 
@@ -90,7 +90,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -175,24 +175,24 @@
     iput-boolean p2, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->G:Z
 
     .line 12
-    new-instance p2, Lio/reactivex/disposables/CompositeDisposable;
+    new-instance p2, Lio/reactivex/disposables/a;
 
-    invoke-direct {p2}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
+    invoke-direct {p2}, Lio/reactivex/disposables/a;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->I:Lio/reactivex/disposables/CompositeDisposable;
+    iput-object p2, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->I:Lio/reactivex/disposables/a;
 
     .line 13
-    sget-object p2, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
+    sget-object p2, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
 
-    invoke-virtual {p2}, Lcom/vk/music/common/Music$a;->i()Lcom/vk/music/common/Music$c;
-
-    move-result-object p2
-
-    invoke-interface {p2}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
+    invoke-virtual {p2}, Lcom/vk/music/common/c$a;->i()Lcom/vk/music/common/c$c;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->J:Lcom/vk/music/player/PlayerModel;
+    invoke-interface {p2}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->J:Lcom/vk/music/player/d;
 
     .line 14
     new-instance p2, Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -234,7 +234,7 @@
 
     const-string v0, "findViewById(R.id.value)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -249,7 +249,7 @@
 
     const-string v0, "findViewById(R.id.controls)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -276,7 +276,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView$1;-><init>(Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;)V
 
-    invoke-static {p0, p2}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+    invoke-static {p0, p2}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/a;)V
 
     .line 24
     iget-object p2, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->b:Landroidx/recyclerview/widget/RecyclerView;
@@ -323,7 +323,7 @@
     const p2, 0x7f040022
 
     .line 28
-    invoke-static {p1, p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
+    invoke-static {p1, p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
 
     move-result-object p1
 
@@ -332,7 +332,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -441,45 +441,45 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView$d;-><init>(Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;I)V
 
-    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
+    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
 
     move-result-object p1
 
     .line 9
-    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->c()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/f0/b;->c()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     .line 10
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
     .line 11
-    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
+    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
+    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
 
     move-result-object v1
 
-    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     .line 12
-    iget-object v0, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->I:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->I:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     :cond_1
     return-void
@@ -573,9 +573,9 @@
     .locals 4
 
     .line 3
-    iget-object v0, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->J:Lcom/vk/music/player/PlayerModel;
+    iget-object v0, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->J:Lcom/vk/music/player/d;
 
-    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->O0()F
+    invoke-interface {v0}, Lcom/vk/music/player/d;->O0()F
 
     move-result v0
 
@@ -634,11 +634,11 @@
     return-wide p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;)Lcom/vk/music/player/PlayerModel;
+.method public static final synthetic c(Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;)Lcom/vk/music/player/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->J:Lcom/vk/music/player/PlayerModel;
+    iget-object p0, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->J:Lcom/vk/music/player/d;
 
     return-object p0
 .end method
@@ -697,7 +697,7 @@
 
     const-string v2, "controls.layoutManager ?\u2026 RecyclerView.NO_POSITION"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     iget-object v2, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->c:Landroidx/recyclerview/widget/LinearSnapHelper;
@@ -710,7 +710,7 @@
 
     const-string v1, "snapHelper.findSnapView(\u2026 RecyclerView.NO_POSITION"
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
@@ -849,9 +849,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->I:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->I:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
 
     .line 2
     invoke-super {p0}, Landroid/widget/LinearLayout;->onDetachedFromWindow()V
@@ -925,7 +925,7 @@
 
     invoke-direct {v2, p0, v0}, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView$onSizeChanged$1;-><init>(Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;I)V
 
-    invoke-static {v1, v2}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+    invoke-static {v1, v2}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/a;)V
 
     .line 4
     :cond_0

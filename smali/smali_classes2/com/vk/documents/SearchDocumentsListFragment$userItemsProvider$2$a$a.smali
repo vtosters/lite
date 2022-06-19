@@ -3,12 +3,12 @@
 .source "SearchDocumentsListFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
+    value = Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a;->a(Lc/a/m;ZLcom/vk/lists/t;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/api/base/VkPaginationList<",
         "Lcom/vk/api/base/Document;",
         ">;>;"
@@ -33,18 +33,18 @@
 # instance fields
 .field final synthetic a:Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a;
 
-.field final synthetic b:Lcom/vk/lists/PaginationHelper;
+.field final synthetic b:Lcom/vk/lists/t;
 
 .field final synthetic c:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a;Lcom/vk/lists/PaginationHelper;Z)V
+.method constructor <init>(Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a;Lcom/vk/lists/t;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;->a:Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a;
 
-    iput-object p2, p0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
+    iput-object p2, p0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/t;
 
     iput-boolean p3, p0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;->c:Z
 
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -95,13 +95,13 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
+    iget-object v1, p0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/t;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Lcom/vk/lists/PaginationHelper;->a()I
+    invoke-virtual {v1}, Lcom/vk/lists/t;->a()I
 
     move-result v1
 
@@ -130,7 +130,7 @@
 
     .line 3
     :goto_1
-    iget-object v1, p0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
+    iget-object v1, p0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/t;
 
     if-eqz v1, :cond_3
 
@@ -138,7 +138,7 @@
 
     move-result v4
 
-    invoke-virtual {v1, v4}, Lcom/vk/lists/PaginationHelper;->a(I)V
+    invoke-virtual {v1, v4}, Lcom/vk/lists/t;->a(I)V
 
     .line 4
     :cond_3
@@ -219,7 +219,7 @@
     if-eqz v0, :cond_6
 
     .line 8
-    iget-object p1, p0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
+    iget-object p1, p0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/t;
 
     if-eqz p1, :cond_7
 
@@ -233,17 +233,17 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/PaginationHelper;->b(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/t;->b(I)V
 
     goto :goto_3
 
     .line 9
     :cond_6
-    iget-object p1, p0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
+    iget-object p1, p0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;->b:Lcom/vk/lists/t;
 
     if-eqz p1, :cond_7
 
-    invoke-virtual {p1, v2}, Lcom/vk/lists/PaginationHelper;->b(Z)V
+    invoke-virtual {p1, v2}, Lcom/vk/lists/t;->b(Z)V
 
     :cond_7
     :goto_3

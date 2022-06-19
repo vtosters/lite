@@ -3,12 +3,12 @@
 .source "MentionsStorage.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/MentionsStorage;->a(I)Lio/reactivex/Observable;
+    value = Lcom/vk/newsfeed/MentionsStorage;->a(I)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,7 +49,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)Lio/reactivex/Observable;
+.method public final a(Ljava/util/List;)Lc/a/m;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -57,8 +57,8 @@
             "Ljava/util/List<",
             "Lcom/vk/newsfeed/MentionsStorage$SerializableMentionProfile;",
             ">;)",
-            "Lio/reactivex/Observable<",
-            "Lcom/vk/mentions/MentionModels2;",
+            "Lc/a/m<",
+            "Lcom/vk/mentions/h;",
             ">;"
         }
     .end annotation
@@ -117,27 +117,27 @@
     if-nez v0, :cond_3
 
     .line 3
-    new-instance p1, Lcom/vk/api/users/UsersGetOne;
+    new-instance p1, Lcom/vk/api/users/f;
 
     iget v0, p0, Lcom/vk/newsfeed/MentionsStorage$a;->a:I
 
-    invoke-direct {p1, v0}, Lcom/vk/api/users/UsersGetOne;-><init>(I)V
+    invoke-direct {p1, v0}, Lcom/vk/api/users/f;-><init>(I)V
 
-    invoke-static {p1, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {p1, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
     .line 4
     sget-object v0, Lcom/vk/newsfeed/MentionsStorage$a$a;->a:Lcom/vk/newsfeed/MentionsStorage$a$a;
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
     move-result-object p1
 
     .line 5
     sget-object v0, Lcom/vk/newsfeed/MentionsStorage$a$b;->a:Lcom/vk/newsfeed/MentionsStorage$a$b;
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p1
 
@@ -145,7 +145,7 @@
 
     .line 6
     :cond_3
-    new-instance p1, Lcom/vk/mentions/MentionModels2;
+    new-instance p1, Lcom/vk/mentions/h;
 
     .line 7
     invoke-virtual {v0}, Lcom/vk/newsfeed/MentionsStorage$SerializableMentionProfile;->getId()I
@@ -172,9 +172,9 @@
     move-object v0, p1
 
     .line 11
-    invoke-direct/range {v0 .. v5}, Lcom/vk/mentions/MentionModels2;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/mentions/h;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
@@ -188,7 +188,7 @@
     .line 1
     check-cast p1, Ljava/util/List;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/MentionsStorage$a;->a(Ljava/util/List;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/MentionsStorage$a;->a(Ljava/util/List;)Lc/a/m;
 
     move-result-object p1
 

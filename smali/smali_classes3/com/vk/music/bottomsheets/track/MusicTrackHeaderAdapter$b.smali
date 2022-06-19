@@ -3,12 +3,12 @@
 .source "MusicTrackHeaderAdapter.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/IdClickListener;
+.implements Lcom/vk/core/ui/k;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/MusicViewHolder;
+    value = Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/o;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/core/ui/IdClickListener<",
+        "Lcom/vk/core/ui/k<",
         "TT;>;"
     }
 .end annotation
@@ -67,11 +67,11 @@
 
     iget-object p2, p0, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter$b;->a:Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;
 
-    invoke-static {p2}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->b(Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;)Lcom/vk/music/bottomsheets/a/MusicAction$a;
+    invoke-static {p2}, Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;->b(Lcom/vk/music/bottomsheets/track/MusicTrackHeaderAdapter;)Lcom/vk/music/bottomsheets/a/a$a;
 
     move-result-object p2
 
-    invoke-interface {p2, p1}, Lcom/vk/music/bottomsheets/a/MusicAction$a;->a(Ljava/lang/Object;)V
+    invoke-interface {p2, p1}, Lcom/vk/music/bottomsheets/a/a$a;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -81,7 +81,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/core/ui/IdClickListener$b;->a(Lcom/vk/core/ui/IdClickListener;Landroid/view/View;)V
+    invoke-static {p0, p1}, Lcom/vk/core/ui/k$b;->a(Lcom/vk/core/ui/k;Landroid/view/View;)V
 
     return-void
 .end method
@@ -90,7 +90,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/core/ui/IdClickListener$b;->a(Lcom/vk/core/ui/IdClickListener;Landroid/view/MenuItem;)Z
+    invoke-static {p0, p1}, Lcom/vk/core/ui/k$b;->a(Lcom/vk/core/ui/k;Landroid/view/MenuItem;)Z
 
     move-result p1
 

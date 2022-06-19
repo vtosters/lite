@@ -3,12 +3,12 @@
 .source "LivePresenter.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/live/views/live/LivePresenter$l;->a(Lio/reactivex/Observable;)Lio/reactivex/ObservableSource;
+    value = Lcom/vk/libvideo/live/views/live/LivePresenter$l;->a(Lc/a/m;)Lc/a/p;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "Ljava/lang/Throwable;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "*>;>;"
     }
 .end annotation
@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Throwable;)Lio/reactivex/ObservableSource;
+.method public a(Ljava/lang/Throwable;)Lc/a/p;
     .locals 2
     .param p1    # Ljava/lang/Throwable;
         .annotation build Landroidx/annotation/NonNull;
@@ -50,7 +50,7 @@
             "(",
             "Ljava/lang/Throwable;",
             ")",
-            "Lio/reactivex/ObservableSource<",
+            "Lc/a/p<",
             "*>;"
         }
     .end annotation
@@ -95,13 +95,13 @@
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
 
     const-wide/16 v0, 0xbb8
 
     sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {v0, v1, p1}, Lio/reactivex/Observable;->j(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
+    invoke-static {v0, v1, p1}, Lc/a/m;->j(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
 
     move-result-object p1
 
@@ -109,7 +109,7 @@
 
     .line 5
     :cond_1
-    invoke-static {p1}, Lio/reactivex/Observable;->b(Ljava/lang/Throwable;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lc/a/m;->b(Ljava/lang/Throwable;)Lc/a/m;
 
     move-result-object p1
 
@@ -131,7 +131,7 @@
     .line 1
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/live/LivePresenter$l$a;->a(Ljava/lang/Throwable;)Lio/reactivex/ObservableSource;
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/live/LivePresenter$l$a;->a(Ljava/lang/Throwable;)Lc/a/p;
 
     move-result-object p1
 

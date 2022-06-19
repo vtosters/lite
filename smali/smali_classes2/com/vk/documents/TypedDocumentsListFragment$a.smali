@@ -1,5 +1,5 @@
 .class public final Lcom/vk/documents/TypedDocumentsListFragment$a;
-.super Lcom/vk/navigation/Navigator;
+.super Lcom/vk/navigation/o;
 .source "TypedDocumentsListFragment.kt"
 
 
@@ -21,7 +21,7 @@
     .line 1
     const-class v0, Lcom/vk/documents/TypedDocumentsListFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     invoke-static {}, Lcom/vk/documents/TypedDocumentsListFragment;->U4()Lcom/vk/documents/TypedDocumentsListFragment$b;
 
@@ -56,9 +56,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->O:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->O:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -69,9 +69,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->E:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->E:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -82,7 +82,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     invoke-static {}, Lcom/vk/documents/TypedDocumentsListFragment;->U4()Lcom/vk/documents/TypedDocumentsListFragment$b;
 

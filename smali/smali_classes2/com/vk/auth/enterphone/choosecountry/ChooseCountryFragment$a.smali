@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -45,7 +45,7 @@
 
     const-string p2, "data.putExtra(KEY_COUNTRY, country)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -104,7 +104,7 @@
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -122,27 +122,27 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment$a;Ljava/lang/String;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic a(Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment$a;Ljava/lang/String;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment$a;->a(Ljava/lang/String;)Lkotlin/jvm/b/Functions2;
+    invoke-direct {p0, p1}, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment$a;->a(Ljava/lang/String;)Lkotlin/jvm/b/b;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Ljava/lang/String;)Lkotlin/jvm/b/Functions2;
+.method private final a(Ljava/lang/String;)Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Landroid/view/ViewGroup;",
-            "Lcom/vk/auth/main/AuthUiManager$a;",
+            "Lcom/vk/auth/main/i$a;",
             ">;"
         }
     .end annotation
@@ -156,7 +156,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/jvm/b/Functions2;
+    check-cast p1, Lkotlin/jvm/b/b;
 
     if-eqz p1, :cond_0
 
@@ -164,7 +164,7 @@
 
     .line 15
     :cond_0
-    invoke-static {}, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment;->C4()Lkotlin/jvm/b/Functions2;
+    invoke-static {}, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment;->C4()Lkotlin/jvm/b/b;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "CatalogReorderBlockItems.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/catalog2/core/util/k;",
         "Lorg/json/JSONArray;",
         ">;"
     }
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;)Lorg/json/JSONArray;
+.method public final a(Lcom/vk/catalog2/core/util/k;)Lorg/json/JSONArray;
     .locals 3
 
     .line 1
@@ -65,22 +65,22 @@
     invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/util/k;->b()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/util/k;->b()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/util/k;->c()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -89,14 +89,14 @@
     if-eqz v1, :cond_0
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/util/k;->c()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;->a()I
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/util/k;->a()I
 
     move-result p1
 
@@ -110,9 +110,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;
+    check-cast p1, Lcom/vk/catalog2/core/util/k;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/api/CatalogReorderBlockItems$Companion$createReplacementIdsJson$1;->a(Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;)Lorg/json/JSONArray;
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/api/CatalogReorderBlockItems$Companion$createReplacementIdsJson$1;->a(Lcom/vk/catalog2/core/util/k;)Lorg/json/JSONArray;
 
     move-result-object p1
 

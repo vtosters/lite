@@ -3,12 +3,12 @@
 .source "MsgHistoryGetCmdRefreshHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;)V
+    value = Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,29 +19,29 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
+        "Lcom/vk/im/engine/internal/storage/models/a;",
         ">;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
+.field final synthetic $env:Lcom/vk/im/engine/d;
 
 .field final synthetic $info:Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;Lcom/vk/im/engine/ImEnvironment;)V
+.method constructor <init>(Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;Lcom/vk/im/engine/d;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$merge$1;->$info:Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;
 
-    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$merge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$merge$1;->$env:Lcom/vk/im/engine/d;
 
     const/4 p1, 0x1
 
@@ -60,7 +60,7 @@
             "Lcom/vk/im/engine/internal/storage/StorageManager;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
+            "Lcom/vk/im/engine/internal/storage/models/a;",
             ">;"
         }
     .end annotation
@@ -73,11 +73,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$merge$1;->$info:Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->b()Lcom/vk/im/engine/models/dialogs/DialogApiModel;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->b()Lcom/vk/im/engine/models/dialogs/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->j()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/c;->j()I
 
     move-result v0
 
@@ -126,24 +126,24 @@
     move-result-object p1
 
     .line 7
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$merge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$merge$1;->$env:Lcom/vk/im/engine/d;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
 
     .line 8
     new-instance p1, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;
 
     iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$merge$1;->$info:Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->b()Lcom/vk/im/engine/models/dialogs/DialogApiModel;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->b()Lcom/vk/im/engine/models/dialogs/c;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;-><init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;)V
+    invoke-direct {p1, v0}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;-><init>(Lcom/vk/im/engine/models/dialogs/c;)V
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$merge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$merge$1;->$env:Lcom/vk/im/engine/d;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
 
     move-result-object p1
 

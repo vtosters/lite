@@ -50,7 +50,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService$g;->a:Lcom/vk/audio/AudioMessagePlayerService;
 
-    invoke-static {v0}, Lcom/vk/audio/AudioMessageUtils;->a(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-static {v0}, Lcom/vk/audio/a;->a(Landroid/content/Context;)Landroid/media/AudioManager;
 
     move-result-object v0
 
@@ -63,9 +63,9 @@
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
 
     .line 2
-    sget-object v0, Lcom/vk/bridges/AudioBridge;->a:Lcom/vk/bridges/AudioBridge1;
+    sget-object v0, Lcom/vk/bridges/e;->a:Lcom/vk/bridges/d;
 
-    invoke-interface {v0}, Lcom/vk/bridges/AudioBridge1;->a()V
+    invoke-interface {v0}, Lcom/vk/bridges/d;->a()V
 
     return-void
 .end method

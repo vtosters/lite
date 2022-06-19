@@ -50,7 +50,7 @@
 
     .line 1
     :cond_0
-    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v0, 0x7f12090a
 
@@ -60,7 +60,7 @@
 
     const-string v0, "AppContextHolder.context\u2026ng.newsfeed_discover_tab)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -84,7 +84,7 @@
 
     .line 3
     :cond_2
-    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v0, 0x7f1208f7
 
@@ -94,7 +94,7 @@
 
     const-string v0, "AppContextHolder.context\u2026String(R.string.newsfeed)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p1

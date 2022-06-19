@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/crashlytics/android/core/CrashlyticsController;->b(Lio/fabric/sdk/android/services/settings/SessionSettingsData;)Z
+    value = Lcom/crashlytics/android/core/CrashlyticsController;->b(Lio/fabric/sdk/android/services/settings/q;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,19 +27,19 @@
 
 
 # instance fields
-.field final synthetic a:Lio/fabric/sdk/android/services/settings/SessionSettingsData;
+.field final synthetic a:Lio/fabric/sdk/android/services/settings/q;
 
 .field final synthetic b:Lcom/crashlytics/android/core/CrashlyticsController;
 
 
 # direct methods
-.method constructor <init>(Lcom/crashlytics/android/core/CrashlyticsController;Lio/fabric/sdk/android/services/settings/SessionSettingsData;)V
+.method constructor <init>(Lcom/crashlytics/android/core/CrashlyticsController;Lio/fabric/sdk/android/services/settings/q;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController$d;->b:Lcom/crashlytics/android/core/CrashlyticsController;
 
-    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController$d;->a:Lio/fabric/sdk/android/services/settings/SessionSettingsData;
+    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController$d;->a:Lio/fabric/sdk/android/services/settings/q;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -68,13 +68,13 @@
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v0
 
     const-string v2, "Skipping session finalization because a crash has already occurred."
 
-    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -83,31 +83,31 @@
 
     .line 5
     :cond_0
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v0
 
     const-string v2, "Finalizing previously open sessions."
 
-    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$d;->b:Lcom/crashlytics/android/core/CrashlyticsController;
 
-    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController$d;->a:Lio/fabric/sdk/android/services/settings/SessionSettingsData;
+    iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController$d;->a:Lio/fabric/sdk/android/services/settings/q;
 
     const/4 v3, 0x1
 
-    invoke-static {v0, v2, v3}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Lcom/crashlytics/android/core/CrashlyticsController;Lio/fabric/sdk/android/services/settings/SessionSettingsData;Z)V
+    invoke-static {v0, v2, v3}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Lcom/crashlytics/android/core/CrashlyticsController;Lio/fabric/sdk/android/services/settings/q;Z)V
 
     .line 7
-    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
+    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
 
     move-result-object v0
 
     const-string v2, "Closed all previously open sessions"
 
-    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;

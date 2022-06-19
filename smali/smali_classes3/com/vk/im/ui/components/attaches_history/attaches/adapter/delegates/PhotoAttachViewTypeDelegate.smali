@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate;
-.super Lcom/vk/im/ui/views/adapter_delegate/ViewTypeDelegate;
+.super Lcom/vk/im/ui/views/adapter_delegate/f;
 .source "PhotoAttachViewTypeDelegate.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/views/adapter_delegate/ViewTypeDelegate<",
+        "Lcom/vk/im/ui/views/adapter_delegate/f<",
         "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachListItem;",
         ">;"
     }
@@ -20,26 +20,26 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/OnPhotoClickListener;
+.field private final a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/f;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/OnPhotoClickListener;)V
+.method public constructor <init>(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/f;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/views/adapter_delegate/ViewTypeDelegate;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/views/adapter_delegate/f;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/OnPhotoClickListener;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/f;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate;)Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/OnPhotoClickListener;
+.method public static final synthetic a(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate;)Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/f;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/OnPhotoClickListener;
+    iget-object p0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/f;
 
     return-object p0
 .end method
@@ -52,7 +52,7 @@
     .line 4
     new-instance v0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate$PhotoAttachViewHolder;
 
-    sget v1, Lcom/vk/im/ui/R13;->vkim_history_attach_photo:I
+    sget v1, Lcom/vk/im/ui/j;->vkim_history_attach_photo:I
 
     const/4 v2, 0x0
 
@@ -69,7 +69,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;
+.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/views/adapter_delegate/d;
     .locals 0
 
     .line 2
@@ -80,7 +80,7 @@
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)Z
+.method public a(Lcom/vk/im/ui/views/adapter_delegate/c;)Z
     .locals 1
 
     .line 3

@@ -4,10 +4,10 @@
 
 
 # static fields
-.field private static final a:Lkotlin/jvm/b/Functions2;
+.field private static final a:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;"
@@ -15,10 +15,10 @@
     .end annotation
 .end field
 
-.field private static final b:Lkotlin/jvm/b/Functions2;
+.field private static final b:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;"
@@ -43,12 +43,12 @@
     .line 2
     sget-object v0, Lcom/vk/metrics/formatter/EventNameFormatters$FABRIC_FORMATTER$1;->a:Lcom/vk/metrics/formatter/EventNameFormatters$FABRIC_FORMATTER$1;
 
-    sput-object v0, Lcom/vk/metrics/formatter/EventNameFormatters;->a:Lkotlin/jvm/b/Functions2;
+    sput-object v0, Lcom/vk/metrics/formatter/EventNameFormatters;->a:Lkotlin/jvm/b/b;
 
     .line 3
     sget-object v0, Lcom/vk/metrics/formatter/EventNameFormatters$STATLOG_FORMATTER$1;->a:Lcom/vk/metrics/formatter/EventNameFormatters$STATLOG_FORMATTER$1;
 
-    sput-object v0, Lcom/vk/metrics/formatter/EventNameFormatters;->b:Lkotlin/jvm/b/Functions2;
+    sput-object v0, Lcom/vk/metrics/formatter/EventNameFormatters;->b:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -64,12 +64,12 @@
 
 
 # virtual methods
-.method public final a()Lkotlin/jvm/b/Functions2;
+.method public final a()Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;"
@@ -77,17 +77,17 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/metrics/formatter/EventNameFormatters;->a:Lkotlin/jvm/b/Functions2;
+    sget-object v0, Lcom/vk/metrics/formatter/EventNameFormatters;->a:Lkotlin/jvm/b/b;
 
     return-object v0
 .end method
 
-.method public final b()Lkotlin/jvm/b/Functions2;
+.method public final b()Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;"
@@ -95,7 +95,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/metrics/formatter/EventNameFormatters;->b:Lkotlin/jvm/b/Functions2;
+    sget-object v0, Lcom/vk/metrics/formatter/EventNameFormatters;->b:Lkotlin/jvm/b/b;
 
     return-object v0
 .end method

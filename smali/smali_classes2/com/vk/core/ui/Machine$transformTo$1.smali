@@ -3,12 +3,12 @@
 .source "FloatingViewGesturesHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/ui/Machine;->a(Lcom/vk/core/ui/Machine;Lcom/vk/core/ui/FloatingViewGesturesHelper4;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Z
+    value = Lcom/vk/core/ui/Machine;->a(Lcom/vk/core/ui/Machine;Lcom/vk/core/ui/r;Lkotlin/jvm/b/a;ILjava/lang/Object;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -61,7 +61,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/core/ui/Machine$transformTo$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method

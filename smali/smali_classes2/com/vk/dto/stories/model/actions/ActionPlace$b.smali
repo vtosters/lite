@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -138,7 +138,7 @@
     new-instance v4, Lcom/vk/dto/stories/model/actions/ActionPlace;
 
     .line 9
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     invoke-direct {v4, v0, v2, v3, p1}, Lcom/vk/dto/stories/model/actions/ActionPlace;-><init>(ILjava/lang/String;Ljava/lang/Integer;Ljava/lang/String;)V

@@ -3,12 +3,12 @@
 .source "MsgSendJob.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/instantjobs/InstantJob$b;)V
+    value = Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;->a(Lcom/vk/im/engine/d;Lcom/vk/instantjobs/InstantJob$b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,16 +19,16 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
+.field final synthetic $env:Lcom/vk/im/engine/d;
 
 .field final synthetic $isEditMode:Z
 
@@ -42,7 +42,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;Lkotlin/jvm/internal/Ref$ObjectRef;ILcom/vk/im/engine/ImEnvironment;ZLkotlin/jvm/internal/Ref$BooleanRef;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;Lkotlin/jvm/internal/Ref$ObjectRef;ILcom/vk/im/engine/d;ZLkotlin/jvm/internal/Ref$BooleanRef;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->this$0:Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;
@@ -51,7 +51,7 @@
 
     iput p3, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->$vkId:I
 
-    iput-object p4, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iput-object p4, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->$env:Lcom/vk/im/engine/d;
 
     iput-boolean p5, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->$isEditMode:Z
 
@@ -176,9 +176,9 @@
     move-result-object p1
 
     .line 13
-    iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->$env:Lcom/vk/im/engine/d;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
 
     .line 14
     :cond_1
@@ -189,7 +189,7 @@
     .line 15
     sget-object p1, Lcom/vk/im/engine/internal/merge/dialogs/DialogMergeUtils;->a:Lcom/vk/im/engine/internal/merge/dialogs/DialogMergeUtils;
 
-    iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->$env:Lcom/vk/im/engine/d;
 
     iget-object v2, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->this$0:Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;
 
@@ -203,7 +203,7 @@
 
     check-cast v3, Lcom/vk/im/engine/models/messages/MsgFromUser;
 
-    invoke-virtual {p1, v0, v2, v3}, Lcom/vk/im/engine/internal/merge/dialogs/DialogMergeUtils;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/messages/Msg;)Z
+    invoke-virtual {p1, v0, v2, v3}, Lcom/vk/im/engine/internal/merge/dialogs/DialogMergeUtils;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/messages/Msg;)Z
 
     move-result p1
 
@@ -212,7 +212,7 @@
     .line 16
     sget-object p1, Lcom/vk/im/engine/internal/merge/dialogs/DialogMergeUtils;->a:Lcom/vk/im/engine/internal/merge/dialogs/DialogMergeUtils;
 
-    iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->$env:Lcom/vk/im/engine/d;
 
     iget-object v2, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->this$0:Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;
 
@@ -226,7 +226,7 @@
 
     check-cast v3, Lcom/vk/im/engine/models/messages/MsgFromUser;
 
-    invoke-virtual {p1, v0, v2, v3}, Lcom/vk/im/engine/internal/merge/dialogs/DialogMergeUtils;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/messages/MsgFromUser;)V
+    invoke-virtual {p1, v0, v2, v3}, Lcom/vk/im/engine/internal/merge/dialogs/DialogMergeUtils;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/messages/MsgFromUser;)V
 
     .line 17
     iget-object p1, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->$isPinnedMsgUpdated:Lkotlin/jvm/internal/Ref$BooleanRef;
@@ -245,7 +245,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$onExecute$1;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

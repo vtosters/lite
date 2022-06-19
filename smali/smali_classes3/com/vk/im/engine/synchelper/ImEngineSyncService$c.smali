@@ -3,7 +3,7 @@
 .source "ImEngineSyncService.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/im/engine/events/Event;",
+        "Lc/a/z/g<",
+        "Lcom/vk/im/engine/events/a;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/events/Event;)V
+.method public final a(Lcom/vk/im/engine/events/a;)V
     .locals 0
 
     .line 1
@@ -61,9 +61,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/Event;
+    check-cast p1, Lcom/vk/im/engine/events/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/synchelper/ImEngineSyncService$c;->a(Lcom/vk/im/engine/events/Event;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/synchelper/ImEngineSyncService$c;->a(Lcom/vk/im/engine/events/a;)V
 
     return-void
 .end method

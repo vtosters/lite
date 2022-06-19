@@ -1,11 +1,11 @@
 .class public final Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment;
-.super Lcom/vk/im/ui/fragments/ImFragment;
+.super Lcom/vk/im/ui/fragments/c;
 .source "ImSelectContactsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/ScrolledToTop;
-.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
-.implements Lcom/vk/navigation/BackListener;
+.implements Lcom/vk/navigation/v;
+.implements Lcom/vk/navigation/b0/k;
+.implements Lcom/vk/navigation/d;
 
 
 # annotations
@@ -82,7 +82,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/fragments/ImFragment;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/fragments/c;-><init>()V
 
     const/4 v0, 0x1
 
@@ -122,7 +122,7 @@
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
     .line 3
-    sget-object v3, Lcom/vk/navigation/NavigatorKeys;->C:Ljava/lang/String;
+    sget-object v3, Lcom/vk/navigation/q;->C:Ljava/lang/String;
 
     .line 4
     new-instance v4, Ljava/util/ArrayList;
@@ -152,10 +152,10 @@
     move-result-object v5
 
     .line 6
-    check-cast v5, Lcom/vk/im/engine/models/Profile;
+    check-cast v5, Lcom/vk/im/engine/models/j;
 
     .line 7
-    invoke-interface {v5}, Lcom/vk/im/engine/models/Profile;->f0()I
+    invoke-interface {v5}, Lcom/vk/im/engine/models/j;->f0()I
 
     move-result v5
 
@@ -183,7 +183,7 @@
     const-string v0, "listComponent"
 
     .line 9
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -221,7 +221,7 @@
     :cond_0
     const-string p0, "confirmBtn"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -241,7 +241,7 @@
     :cond_0
     const-string p0, "descriptionContainer"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -261,7 +261,7 @@
     :cond_0
     const-string p0, "listComponent"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -274,7 +274,7 @@
     if-eqz p1, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->J:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/q;->J:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -298,7 +298,7 @@
 
     const-string v0, "requireContext().getStri\u2026.string.vkim_create_chat)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p1
@@ -312,7 +312,7 @@
     if-eqz p1, :cond_0
 
     .line 2
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->m0:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->m0:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
 
@@ -424,7 +424,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->C:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/q;->C:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getIntArray(Ljava/lang/String;)[I
 
@@ -456,7 +456,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->K:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/q;->K:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -480,7 +480,7 @@
 
     const-string v0, "requireContext().getStri\u2026kim_empty_selection_hint)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p1
@@ -492,7 +492,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->d:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/q;->d:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -516,7 +516,7 @@
 
     const-string v0, "requireContext().getStri\u2026cessibility_contacts_tab)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p1
@@ -530,7 +530,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->U:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->U:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
 
@@ -578,7 +578,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->D:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/q;->D:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getIntArray(Ljava/lang/String;)[I
 
@@ -623,14 +623,14 @@
     :cond_0
     const-string v0, "listComponent"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
+.method public a(Lcom/vk/core/ui/v/g;)V
     .locals 1
 
     .line 2
@@ -638,14 +638,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/g;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     return-void
 
     :cond_0
     const-string p1, "visitSource"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -702,7 +702,7 @@
     return v2
 
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -713,7 +713,7 @@
 
     .line 4
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -721,7 +721,7 @@
     const-string v0, "toolbarSearch"
 
     .line 5
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -840,7 +840,7 @@
 
     if-eqz p1, :cond_0
 
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->n0:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->n0:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
@@ -861,7 +861,7 @@
 
     if-eqz p1, :cond_1
 
-    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->f:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/q;->f:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
@@ -873,28 +873,28 @@
     .line 13
     new-instance p1, Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
+    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
 
     move-result-object v2
 
-    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
+    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
 
     move-result-object v3
 
-    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
+    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->e()Lcom/vk/im/engine/models/ImExperiments;
+    invoke-virtual {v0}, Lcom/vk/im/engine/a;->e()Lcom/vk/im/engine/models/e;
 
     move-result-object v4
 
     const-string v0, "imEngine.experiments"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
-    invoke-static {p0}, Lcom/vk/navigation/ActivityLauncher1;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/ActivityLauncher;
+    invoke-static {p0}, Lcom/vk/navigation/b;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/a;
 
     move-result-object v5
 
@@ -932,7 +932,7 @@
     move-object v1, p1
 
     .line 22
-    invoke-direct/range {v1 .. v12}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;-><init>(Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/engine/models/ImExperiments;Lcom/vk/navigation/ActivityLauncher;Lcom/vk/im/ui/components/contacts/ContactsListComponent$a;Lcom/vk/im/ui/components/contacts/ContactsListFactory;Lcom/vk/im/ui/components/contacts/SortOrder;ZLjava/lang/String;Ljava/util/Set;Ljava/util/Set;)V
+    invoke-direct/range {v1 .. v12}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;-><init>(Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/im/engine/models/e;Lcom/vk/navigation/a;Lcom/vk/im/ui/components/contacts/ContactsListComponent$a;Lcom/vk/im/ui/components/contacts/ContactsListFactory;Lcom/vk/im/ui/components/contacts/SortOrder;ZLjava/lang/String;Ljava/util/Set;Ljava/util/Set;)V
 
     iput-object p1, p0, Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment;->M:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
@@ -941,14 +941,14 @@
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p0, p1, p0}, Lcom/vk/im/ui/fragments/ImFragment;->a(Lcom/vk/im/ui/q/Component;Lcom/vk/im/ui/fragments/ImFragment;)V
+    invoke-virtual {p0, p1, p0}, Lcom/vk/im/ui/fragments/c;->a(Lcom/vk/im/ui/q/c;Lcom/vk/im/ui/fragments/c;)V
 
     return-void
 
     :cond_2
     const-string p1, "listComponent"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -956,7 +956,7 @@
     const-string p1, "selectedProfiles"
 
     .line 24
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -964,7 +964,7 @@
     const-string p1, "excludedProfiles"
 
     .line 25
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -972,7 +972,7 @@
     const-string p1, "hint"
 
     .line 26
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -980,7 +980,7 @@
     const-string p1, "factory"
 
     .line 27
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -1010,7 +1010,7 @@
 
     const-string v1, "view.findViewById(R.id.vkim_confirm_btn)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/core/view/BottomConfirmButton;
 
@@ -1045,7 +1045,7 @@
 
     const-string v3, "view.findViewById(R.id.toolbar)"
 
-    invoke-static {p2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroidx/appcompat/widget/Toolbar;
 
@@ -1060,7 +1060,7 @@
 
     const-string v3, "view.findViewById(R.id.im_appbar)"
 
-    invoke-static {p2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
 
@@ -1073,7 +1073,7 @@
 
     const-string v3, "view.findViewById(R.id.vkim_list_container)"
 
-    invoke-static {p2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/view/ViewGroup;
 
@@ -1090,7 +1090,7 @@
 
     if-eqz v4, :cond_3
 
-    invoke-virtual {v4, p1, p3}, Lcom/vk/im/ui/q/Component;->a(Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v4, p1, p3}, Lcom/vk/im/ui/q/c;->a(Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object p3
 
@@ -1116,7 +1116,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1133,7 +1133,7 @@
 
     const-string p3, "view.findViewById(R.id.vkim_description_container)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment;->H:Landroid/view/View;
 
@@ -1146,7 +1146,7 @@
 
     const-string p3, "view.findViewById(R.id.vkim_description_text)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -1161,7 +1161,7 @@
 
     const-string p3, "view.findViewById(R.id.vkim_description_icon)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/ImageView;
 
@@ -1176,7 +1176,7 @@
 
     const-string p3, "view.findViewById(R.id.vkim_description_close)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/ImageView;
 
@@ -1186,7 +1186,7 @@
 
     .line 14
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1194,24 +1194,24 @@
     const-string p1, "listComponent"
 
     .line 15
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_4
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 16
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 17
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1264,7 +1264,7 @@
 
     const-string v3, "requireContext()"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0402b9
 
@@ -1303,7 +1303,7 @@
 
     const/4 v0, 0x2
 
-    invoke-direct {p2, p1, v1, v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {p2, p1, v1, v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;-><init>(Landroid/view/View;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
 
     iput-object p2, p0, Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment;->F:Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;
 
@@ -1312,7 +1312,7 @@
 
     if-eqz p1, :cond_e
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;->a()Lio/reactivex/Observable;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;->a()Lc/a/m;
 
     move-result-object p1
 
@@ -1321,16 +1321,16 @@
 
     invoke-direct {p2, p0}, Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment$d;-><init>(Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment;)V
 
-    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, p2}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     const-string p2, "toolbarSearch.observeQue\u2026onent.filter(it.text()) }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 11
-    invoke-virtual {p0, p1, p0}, Lcom/vk/im/ui/fragments/ImFragment;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/fragments/ImFragment;)V
+    invoke-virtual {p0, p1, p0}, Lcom/vk/im/ui/fragments/c;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/fragments/c;)V
 
     .line 12
     iget-object p1, p0, Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment;->G:Lcom/vk/core/view/BottomConfirmButton;
@@ -1354,7 +1354,7 @@
 
     invoke-direct {p2, p0}, Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment$onViewCreated$3;-><init>(Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment;)V
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 14
     iget-object p1, p0, Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment;->H:Landroid/view/View;
@@ -1446,62 +1446,62 @@
 
     invoke-direct {p2, p0}, Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment$onViewCreated$5;-><init>(Lcom/vtosters/lite/im/fragments/ImSelectContactsFragment;)V
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-void
 
     :cond_3
     const-string p1, "descriptionCloseBtn"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 20
     :cond_4
-    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 21
     :cond_5
-    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 22
     :cond_6
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_7
     const-string p1, "descriptionView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 23
     :cond_8
-    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 24
     :cond_9
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_a
-    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 25
     :cond_b
-    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1509,12 +1509,12 @@
     const-string p1, "confirmText"
 
     .line 26
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_d
-    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1522,13 +1522,13 @@
     const-string p1, "toolbarSearch"
 
     .line 27
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 28
     :cond_f
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1536,18 +1536,18 @@
     const-string p1, "title"
 
     .line 29
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_11
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 30
     :cond_12
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method

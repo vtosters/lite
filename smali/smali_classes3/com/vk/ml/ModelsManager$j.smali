@@ -3,7 +3,7 @@
 .source "ModelsManager.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "Lcom/vk/core/network/RxFileDownloader$c;",
         "Ljava/io/File;",
         ">;"
@@ -63,7 +63,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/io/File;Z)Ljava/util/List;
+    invoke-static {v0, v1, v2}, Lb/h/g/m/d;->a(Ljava/io/File;Ljava/io/File;Z)Ljava/util/List;
 
     move-result-object v0
 
@@ -87,7 +87,7 @@
     .line 3
     iget-object p1, p1, Lcom/vk/core/network/RxFileDownloader$c;->c:Ljava/io/File;
 
-    invoke-static {p1}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
+    invoke-static {p1}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
 
     return-object v1
 .end method

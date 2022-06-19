@@ -3,7 +3,7 @@
 .source "ImEngineProvider.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/libvideo/y/VideoEvents3;",
+        "Lc/a/z/g<",
+        "Lcom/vk/libvideo/y/n;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/libvideo/y/VideoEvents3;)V
+.method public final a(Lcom/vk/libvideo/y/n;)V
     .locals 14
 
     .line 1
@@ -64,7 +64,7 @@
 
     new-instance v13, Lcom/vk/im/engine/models/attaches/AttachVideo;
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/y/VideoEvents3;->a()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vk/libvideo/y/n;->a()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v2
 
@@ -88,7 +88,7 @@
 
     move-object v1, v13
 
-    invoke-direct/range {v1 .. v12}, Lcom/vk/im/engine/models/attaches/AttachVideo;-><init>(Lcom/vk/dto/common/VideoFile;Lcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/ImageList;Ljava/lang/String;JILcom/vk/im/engine/models/attaches/AttachSyncState;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v12}, Lcom/vk/im/engine/models/attaches/AttachVideo;-><init>(Lcom/vk/dto/common/VideoFile;Lcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/ImageList;Ljava/lang/String;JILcom/vk/im/engine/models/attaches/AttachSyncState;ILkotlin/jvm/internal/i;)V
 
     invoke-static {v0, v13}, Lcom/vtosters/lite/im/ImEngineProvider;->b(Lcom/vtosters/lite/im/ImEngineProvider;Lcom/vk/im/engine/models/attaches/AttachWithId;)V
 
@@ -99,9 +99,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/y/VideoEvents3;
+    check-cast p1, Lcom/vk/libvideo/y/n;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/im/ImEngineProvider$k;->a(Lcom/vk/libvideo/y/VideoEvents3;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/im/ImEngineProvider$k;->a(Lcom/vk/libvideo/y/n;)V
 
     return-void
 .end method

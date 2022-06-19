@@ -3,7 +3,7 @@
 .source "SingleZipArray.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -60,7 +60,7 @@
     .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleZipArray$a;->a:Lio/reactivex/internal/operators/single/SingleZipArray;
 
-    iget-object v0, v0, Lio/reactivex/internal/operators/single/SingleZipArray;->b:Lio/reactivex/functions/Function;
+    iget-object v0, v0, Lio/reactivex/internal/operators/single/SingleZipArray;->b:Lc/a/z/j;
 
     const/4 v1, 0x1
 
@@ -70,13 +70,13 @@
 
     aput-object p1, v1, v2
 
-    invoke-interface {v0, v1}, Lio/reactivex/functions/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lc/a/z/j;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     const-string v0, "The zipper returned a null value"
 
-    invoke-static {p1, v0}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     return-object p1
 .end method

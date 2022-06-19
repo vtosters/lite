@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field private final mService:Landroid/support/customtabs/ICustomTabsService;
+.field private final mService:La/a/a/b;
 
 .field private final mServiceComponentName:Landroid/content/ComponentName;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/customtabs/ICustomTabsService;Landroid/content/ComponentName;)V
+.method constructor <init>(La/a/a/b;Landroid/content/ComponentName;)V
     .locals 0
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -22,7 +22,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Landroidx/browser/customtabs/CustomTabsClient;->mService:Landroid/support/customtabs/ICustomTabsService;
+    iput-object p1, p0, Landroidx/browser/customtabs/CustomTabsClient;->mService:La/a/a/b;
 
     .line 3
     iput-object p2, p0, Landroidx/browser/customtabs/CustomTabsClient;->mServiceComponentName:Landroid/content/ComponentName;
@@ -258,9 +258,9 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient;->mService:Landroid/support/customtabs/ICustomTabsService;
+    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient;->mService:La/a/a/b;
 
-    invoke-interface {v0, p1, p2}, Landroid/support/customtabs/ICustomTabsService;->extraCommand(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    invoke-interface {v0, p1, p2}, La/a/a/b;->extraCommand(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object p1
     :try_end_0
@@ -286,9 +286,9 @@
 
     .line 2
     :try_start_0
-    iget-object v1, p0, Landroidx/browser/customtabs/CustomTabsClient;->mService:Landroid/support/customtabs/ICustomTabsService;
+    iget-object v1, p0, Landroidx/browser/customtabs/CustomTabsClient;->mService:La/a/a/b;
 
-    invoke-interface {v1, v0}, Landroid/support/customtabs/ICustomTabsService;->newSession(Landroid/support/customtabs/ICustomTabsCallback;)Z
+    invoke-interface {v1, v0}, La/a/a/b;->newSession(La/a/a/a;)Z
 
     move-result v1
     :try_end_0
@@ -302,11 +302,11 @@
     :cond_0
     new-instance p1, Landroidx/browser/customtabs/CustomTabsSession;
 
-    iget-object v1, p0, Landroidx/browser/customtabs/CustomTabsClient;->mService:Landroid/support/customtabs/ICustomTabsService;
+    iget-object v1, p0, Landroidx/browser/customtabs/CustomTabsClient;->mService:La/a/a/b;
 
     iget-object v2, p0, Landroidx/browser/customtabs/CustomTabsClient;->mServiceComponentName:Landroid/content/ComponentName;
 
-    invoke-direct {p1, v1, v0, v2}, Landroidx/browser/customtabs/CustomTabsSession;-><init>(Landroid/support/customtabs/ICustomTabsService;Landroid/support/customtabs/ICustomTabsCallback;Landroid/content/ComponentName;)V
+    invoke-direct {p1, v1, v0, v2}, Landroidx/browser/customtabs/CustomTabsSession;-><init>(La/a/a/b;La/a/a/a;Landroid/content/ComponentName;)V
 
     :catch_0
     return-object p1
@@ -317,9 +317,9 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient;->mService:Landroid/support/customtabs/ICustomTabsService;
+    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient;->mService:La/a/a/b;
 
-    invoke-interface {v0, p1, p2}, Landroid/support/customtabs/ICustomTabsService;->warmup(J)Z
+    invoke-interface {v0, p1, p2}, La/a/a/b;->warmup(J)Z
 
     move-result p1
     :try_end_0

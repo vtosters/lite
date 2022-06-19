@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -113,7 +113,7 @@
 
     move-result-object v3
 
-    invoke-static {p2, v3}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Ljava/lang/Integer;)Ljava/lang/Object;
+    invoke-static {p2, v3}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Ljava/lang/Integer;)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -145,7 +145,7 @@
     new-instance p1, Lcom/vk/dto/stories/model/StoryQuestionEntry;
 
     .line 10
-    invoke-static {v7, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v4, p1
 

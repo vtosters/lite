@@ -1,11 +1,11 @@
 .class public final Lcom/vk/cameraui/CameraUIPresenter$f;
-.super Lio/reactivex/observers/DisposableObserver/DisposableObserver;
+.super Lc/a/c0/a;
 .source "CameraUIPresenter.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/cameraui/CameraUIPresenter;->a(Lcom/vk/media/recorder/RecorderBase$RecordingType;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/cameraui/CameraUIPresenter;->a(Lcom/vk/media/recorder/RecorderBase$RecordingType;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lio/reactivex/observers/DisposableObserver/DisposableObserver<",
+        "Lc/a/c0/a<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -25,16 +25,16 @@
 # instance fields
 .field final synthetic b:Lcom/vk/cameraui/CameraUIPresenter;
 
-.field final synthetic c:Lkotlin/jvm/b/Functions;
+.field final synthetic c:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/cameraui/CameraUIPresenter;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/cameraui/CameraUIPresenter;Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions;",
+            "Lkotlin/jvm/b/a;",
             ")V"
         }
     .end annotation
@@ -42,9 +42,9 @@
     .line 1
     iput-object p1, p0, Lcom/vk/cameraui/CameraUIPresenter$f;->b:Lcom/vk/cameraui/CameraUIPresenter;
 
-    iput-object p2, p0, Lcom/vk/cameraui/CameraUIPresenter$f;->c:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/cameraui/CameraUIPresenter$f;->c:Lkotlin/jvm/b/a;
 
-    invoke-direct {p0}, Lio/reactivex/observers/DisposableObserver/DisposableObserver;-><init>()V
+    invoke-direct {p0}, Lc/a/c0/a;-><init>()V
 
     return-void
 .end method
@@ -59,7 +59,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/cameraui/CameraUIPresenter;->e(Lcom/vk/cameraui/CameraUIPresenter;Lio/reactivex/disposables/Disposable;)V
+    invoke-static {p1, v0}, Lcom/vk/cameraui/CameraUIPresenter;->e(Lcom/vk/cameraui/CameraUIPresenter;Lio/reactivex/disposables/b;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/cameraui/CameraUIPresenter$f;->b:Lcom/vk/cameraui/CameraUIPresenter;
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/cameraui/CameraUIPresenter$f;->c:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/cameraui/CameraUIPresenter$f;->c:Lkotlin/jvm/b/a;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method
@@ -88,7 +88,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/cameraui/CameraUIPresenter;->e(Lcom/vk/cameraui/CameraUIPresenter;Lio/reactivex/disposables/Disposable;)V
+    invoke-static {v0, v1}, Lcom/vk/cameraui/CameraUIPresenter;->e(Lcom/vk/cameraui/CameraUIPresenter;Lio/reactivex/disposables/b;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIPresenter$f;->b:Lcom/vk/cameraui/CameraUIPresenter;

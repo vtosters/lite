@@ -106,7 +106,7 @@
 
     iget-object p4, p0, Landroid/support/v4/media/MediaBrowserCompat$f;->c:Landroid/os/Bundle;
 
-    invoke-static {p1, p2, p3, p4}, Landroid/support/v4/media/MediaBrowserCompatApi21;->a(Landroid/content/Context;Landroid/content/ComponentName;Ljava/lang/Object;Landroid/os/Bundle;)Ljava/lang/Object;
+    invoke-static {p1, p2, p3, p4}, Landroid/support/v4/media/a;->a(Landroid/content/Context;Landroid/content/ComponentName;Ljava/lang/Object;Landroid/os/Bundle;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -123,7 +123,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$f;->b:Ljava/lang/Object;
 
-    invoke-static {v0}, Landroid/support/v4/media/MediaBrowserCompatApi21;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Landroid/support/v4/media/a;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -229,7 +229,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$f;->b:Ljava/lang/Object;
 
-    invoke-static {v0}, Landroid/support/v4/media/MediaBrowserCompatApi21;->c(Ljava/lang/Object;)Landroid/os/Bundle;
+    invoke-static {v0}, Landroid/support/v4/media/a;->c(Ljava/lang/Object;)Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -306,7 +306,7 @@
     move-result-object v0
 
     .line 9
-    invoke-static {v0}, Landroid/support/v4/media/session/IMediaSession$a;->a(Landroid/os/IBinder;)Landroid/support/v4/media/session/IMediaSession;
+    invoke-static {v0}, Landroid/support/v4/media/session/b$a;->a(Landroid/os/IBinder;)Landroid/support/v4/media/session/b;
 
     move-result-object v0
 
@@ -316,12 +316,12 @@
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$f;->b:Ljava/lang/Object;
 
     .line 11
-    invoke-static {v1}, Landroid/support/v4/media/MediaBrowserCompatApi21;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1}, Landroid/support/v4/media/a;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     .line 12
-    invoke-static {v1, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->a(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
+    invoke-static {v1, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->a(Ljava/lang/Object;Landroid/support/v4/media/session/b;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     move-result-object v0
 
@@ -345,7 +345,7 @@
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$f;->b:Ljava/lang/Object;
 
     .line 3
-    invoke-static {v0}, Landroid/support/v4/media/MediaBrowserCompatApi21;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/support/v4/media/a;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -392,7 +392,7 @@
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$f;->b:Ljava/lang/Object;
 
-    invoke-static {v0}, Landroid/support/v4/media/MediaBrowserCompatApi21;->b(Ljava/lang/Object;)V
+    invoke-static {v0}, Landroid/support/v4/media/a;->b(Ljava/lang/Object;)V
 
     return-void
 .end method

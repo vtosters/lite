@@ -38,7 +38,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/RemoteCallbackList<",
-            "Landroid/support/v4/media/session/IMediaControllerCallback;",
+            "Landroid/support/v4/media/session/a;",
             ">;"
         }
     .end annotation
@@ -87,7 +87,7 @@
     iput-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$g;->d:Landroid/os/RemoteCallbackList;
 
     .line 4
-    invoke-static {p1, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, p2}, Landroid/support/v4/media/session/d;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -98,7 +98,7 @@
 
     iget-object p2, p0, Landroid/support/v4/media/session/MediaSessionCompat$g;->a:Ljava/lang/Object;
 
-    invoke-static {p2}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->a(Ljava/lang/Object;)Landroid/os/Parcelable;
+    invoke-static {p2}, Landroid/support/v4/media/session/d;->a(Ljava/lang/Object;)Landroid/os/Parcelable;
 
     move-result-object p2
 
@@ -106,7 +106,7 @@
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaSessionCompat$g$a;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$g;)V
 
-    invoke-direct {p1, p2, v0, p3}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Landroid/os/Bundle;)V
+    invoke-direct {p1, p2, v0, p3}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/b;Landroid/os/Bundle;)V
 
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$g;->b:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
@@ -126,7 +126,7 @@
     .line 6
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$g;->a:Ljava/lang/Object;
 
-    invoke-static {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->c(Ljava/lang/Object;)V
+    invoke-static {v0}, Landroid/support/v4/media/session/d;->c(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -137,7 +137,7 @@
     .line 3
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$g;->a:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->a(Ljava/lang/Object;I)V
+    invoke-static {v0, p1}, Landroid/support/v4/media/session/d;->a(Ljava/lang/Object;I)V
 
     return-void
 .end method
@@ -148,7 +148,7 @@
     .line 19
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$g;->a:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->a(Ljava/lang/Object;Landroid/app/PendingIntent;)V
+    invoke-static {v0, p1}, Landroid/support/v4/media/session/d;->a(Ljava/lang/Object;Landroid/app/PendingIntent;)V
 
     return-void
 .end method
@@ -176,7 +176,7 @@
 
     .line 18
     :goto_0
-    invoke-static {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Landroid/support/v4/media/session/d;->a(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -197,7 +197,7 @@
     iget-object v1, p1, Landroid/support/v4/media/session/MediaSessionCompat$c;->a:Ljava/lang/Object;
 
     :goto_0
-    invoke-static {v0, v1, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->a(Ljava/lang/Object;Ljava/lang/Object;Landroid/os/Handler;)V
+    invoke-static {v0, v1, p2}, Landroid/support/v4/media/session/d;->a(Ljava/lang/Object;Ljava/lang/Object;Landroid/os/Handler;)V
 
     if-eqz p1, :cond_1
 
@@ -233,11 +233,11 @@
 
     move-result-object v1
 
-    check-cast v1, Landroid/support/v4/media/session/IMediaControllerCallback;
+    check-cast v1, Landroid/support/v4/media/session/a;
 
     .line 10
     :try_start_0
-    invoke-interface {v1, p1}, Landroid/support/v4/media/session/IMediaControllerCallback;->a(Landroid/support/v4/media/session/PlaybackStateCompat;)V
+    invoke-interface {v1, p1}, Landroid/support/v4/media/session/a;->a(Landroid/support/v4/media/session/PlaybackStateCompat;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -269,7 +269,7 @@
 
     .line 14
     :goto_1
-    invoke-static {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->b(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Landroid/support/v4/media/session/d;->b(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -286,7 +286,7 @@
     .line 4
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$g;->a:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->a(Ljava/lang/Object;Z)V
+    invoke-static {v0, p1}, Landroid/support/v4/media/session/d;->a(Ljava/lang/Object;Z)V
 
     return-void
 .end method
@@ -309,7 +309,7 @@
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$g;->a:Ljava/lang/Object;
 
-    invoke-static {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi24;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0}, Landroid/support/v4/media/session/f;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -331,7 +331,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$g;->a:Ljava/lang/Object;
 
-    invoke-static {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->b(Ljava/lang/Object;)Z
+    invoke-static {v0}, Landroid/support/v4/media/session/d;->b(Ljava/lang/Object;)Z
 
     move-result v0
 

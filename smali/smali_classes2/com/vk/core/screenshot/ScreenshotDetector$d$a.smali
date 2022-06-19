@@ -3,12 +3,12 @@
 .source "ScreenshotDetector.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Cancellable;
+.implements Lc/a/z/f;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/screenshot/ScreenshotDetector$d;->a(Lio/reactivex/ObservableEmitter;)V
+    value = Lcom/vk/core/screenshot/ScreenshotDetector$d;->a(Lc/a/n;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

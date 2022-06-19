@@ -3,7 +3,7 @@
 .source "CopyrightPostingController.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -120,7 +120,7 @@
 
     .line 4
     :goto_1
-    invoke-static {v0, v4, v2, v5}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+    invoke-static {v0, v4, v2, v5}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
 
     goto :goto_2
 
@@ -130,7 +130,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v4, v2, v5}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+    invoke-static {v0, v4, v2, v5}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
 
     :goto_2
     if-eq v1, v3, :cond_5
@@ -169,7 +169,7 @@
 
     .line 8
     :goto_3
-    invoke-static {p1, v4, v2, v5}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+    invoke-static {p1, v4, v2, v5}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
 
     :cond_6
     return-void

@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/ReportContentActivity$c;
-.super Lcom/vtosters/lite/api/ResultlessCallback;
+.super Lcom/vtosters/lite/api/k;
 .source "ReportContentActivity.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/ReportContentActivity$c;->c:Lcom/vtosters/lite/ReportContentActivity;
 
-    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/ResultlessCallback;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/k;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
     const v0, 0x7f120c8c
 
     .line 1
-    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(I)V
+    invoke-static {v0}, Lcom/vk/core/util/k1;->a(I)V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/ReportContentActivity$c;->c:Lcom/vtosters/lite/ReportContentActivity;
@@ -63,7 +63,7 @@
     .locals 0
 
     .line 4
-    invoke-super {p0, p1}, Lcom/vtosters/lite/api/SimpleCallback;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/api/l;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     .line 5
     iget-object p1, p0, Lcom/vtosters/lite/ReportContentActivity$c;->c:Lcom/vtosters/lite/ReportContentActivity;

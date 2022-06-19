@@ -147,15 +147,15 @@
     check-cast v12, Lcom/vk/dto/common/Attachment;
 
     .line 6
-    instance-of v13, v12, Lcom/vtosters/lite/attachments/PendingAttachment;
+    instance-of v13, v12, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v13, :cond_4
 
     move-object v13, v12
 
-    check-cast v13, Lcom/vtosters/lite/attachments/PendingAttachment;
+    check-cast v13, Lcom/vtosters/lite/attachments/b;
 
-    invoke-interface {v13}, Lcom/vtosters/lite/attachments/PendingAttachment;->V()I
+    invoke-interface {v13}, Lcom/vtosters/lite/attachments/b;->V()I
 
     move-result v13
 
@@ -318,15 +318,15 @@
     check-cast v13, Lcom/vk/dto/common/Attachment;
 
     .line 19
-    instance-of v14, v13, Lcom/vtosters/lite/attachments/PendingAttachment;
+    instance-of v14, v13, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v14, :cond_e
 
     move-object v14, v13
 
-    check-cast v14, Lcom/vtosters/lite/attachments/PendingAttachment;
+    check-cast v14, Lcom/vtosters/lite/attachments/b;
 
-    invoke-interface {v14}, Lcom/vtosters/lite/attachments/PendingAttachment;->V()I
+    invoke-interface {v14}, Lcom/vtosters/lite/attachments/b;->V()I
 
     move-result v14
 
@@ -382,14 +382,14 @@
     move-result-object v11
 
     .line 24
-    instance-of v15, v11, Lcom/vk/core/drawable/CircularProgressDrawable;
+    instance-of v15, v11, Lcom/vk/core/drawable/c;
 
     if-eqz v15, :cond_9
 
     .line 25
-    check-cast v11, Lcom/vk/core/drawable/CircularProgressDrawable;
+    check-cast v11, Lcom/vk/core/drawable/c;
 
-    invoke-virtual {v11}, Lcom/vk/core/drawable/CircularProgressDrawable;->a()V
+    invoke-virtual {v11}, Lcom/vk/core/drawable/c;->a()V
 
     .line 26
     iget-object v11, v0, Lcom/vtosters/lite/ui/AttachmentsEditorView$g;->a:Lcom/vtosters/lite/ui/AttachmentsEditorView;
@@ -410,7 +410,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v10}, Lcom/vtosters/lite/ViewUtils;->b(Landroid/view/View;I)V
+    invoke-static {v6, v10}, Lcom/vtosters/lite/f0;->b(Landroid/view/View;I)V
 
     :goto_4
     const-string v6, "result"
@@ -648,15 +648,15 @@
     check-cast v3, Lcom/vk/dto/common/Attachment;
 
     .line 49
-    instance-of v4, v3, Lcom/vtosters/lite/attachments/PendingAttachment;
+    instance-of v4, v3, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v4, :cond_15
 
     move-object v4, v3
 
-    check-cast v4, Lcom/vtosters/lite/attachments/PendingAttachment;
+    check-cast v4, Lcom/vtosters/lite/attachments/b;
 
-    invoke-interface {v4}, Lcom/vtosters/lite/attachments/PendingAttachment;->V()I
+    invoke-interface {v4}, Lcom/vtosters/lite/attachments/b;->V()I
 
     move-result v4
 
@@ -724,7 +724,7 @@
 
     const/16 v4, 0x8
 
-    invoke-static {v1, v4}, Lcom/vtosters/lite/ViewUtils;->b(Landroid/view/View;I)V
+    invoke-static {v1, v4}, Lcom/vtosters/lite/f0;->b(Landroid/view/View;I)V
 
     const v1, 0x7f0a00d7
 
@@ -735,7 +735,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v1, v3}, Lcom/vtosters/lite/ViewUtils;->b(Landroid/view/View;I)V
+    invoke-static {v1, v3}, Lcom/vtosters/lite/f0;->b(Landroid/view/View;I)V
 
     goto :goto_9
 

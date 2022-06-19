@@ -3,12 +3,12 @@
 .source "AnimatedFactoryV2Impl.java"
 
 # interfaces
-.implements Lcom/facebook/common/internal/Supplier;
+.implements Lcom/facebook/common/internal/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->b()Lcom/facebook/fresco/animation/factory/ExperimentalBitmapAnimationDrawableFactory;
+    value = Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->b()Lcom/facebook/fresco/animation/factory/a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/facebook/common/internal/Supplier<",
+        "Lcom/facebook/common/internal/j<",
         "Ljava/lang/Integer;",
         ">;"
     }

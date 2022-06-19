@@ -3,7 +3,7 @@
 .source "ChatFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/im/engine/models/dialogs/DialogsExt;",
+        "Lc/a/z/g<",
+        "Lcom/vk/im/engine/models/dialogs/g;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/dialogs/DialogsExt;)V
+.method public final a(Lcom/vk/im/engine/models/dialogs/g;)V
     .locals 2
 
     .line 1
@@ -56,7 +56,7 @@
 
     move-result v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/im/engine/models/dialogs/DialogsExt;->a(I)Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {p1, v1}, Lcom/vk/im/engine/models/dialogs/g;->a(I)Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object p1
 
@@ -69,9 +69,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/dialogs/DialogsExt;
+    check-cast p1, Lcom/vk/im/engine/models/dialogs/g;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/fragments/ChatFragment$p;->a(Lcom/vk/im/engine/models/dialogs/DialogsExt;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/fragments/ChatFragment$p;->a(Lcom/vk/im/engine/models/dialogs/g;)V
 
     return-void
 .end method

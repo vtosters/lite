@@ -95,7 +95,7 @@
     invoke-direct {v5, v6}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
     .line 9
-    invoke-static {v5}, Lcom/vtosters/lite/attachments/AttachmentUtils;->a(Ljava/io/DataInputStream;)Lcom/vk/dto/common/Attachment;
+    invoke-static {v5}, Lcom/vtosters/lite/attachments/a;->a(Ljava/io/DataInputStream;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v5
 

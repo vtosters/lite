@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/common/ui/MarketCartGoodView;-><init>(Landroid/content/Context;Lcom/vk/im/ui/utils/k/SimpleObjectsPool;Lcom/vk/market/orders/MarketCartContract$Presenter;)V
+    value = Lcom/vk/market/common/ui/MarketCartGoodView;-><init>(Landroid/content/Context;Lcom/vk/im/ui/utils/k/b;Lcom/vk/market/orders/MarketCartContract$Presenter;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

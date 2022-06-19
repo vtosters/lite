@@ -1,5 +1,5 @@
 .class public final Lcom/vk/components/holders/TooltipComponentsViewHolder;
-.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "TooltipComponentsViewHolder.kt"
 
 # interfaces
@@ -9,8 +9,8 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
-        "Lkotlin/Unit;",
+        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lkotlin/m;",
         ">;",
         "Landroid/view/View$OnAttachStateChangeListener;"
     }
@@ -38,7 +38,7 @@
     const v0, 0x7f0d0581
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -51,7 +51,7 @@
 
     const-string v0, "itemView.findViewById(R.id.tooltip_start_btn)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/components/holders/TooltipComponentsViewHolder;->d:Landroid/view/View;
 
@@ -66,7 +66,7 @@
 
     const-string v0, "itemView.findViewById(R.id.tooltip_center_btn)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/components/holders/TooltipComponentsViewHolder;->e:Landroid/view/View;
 
@@ -81,7 +81,7 @@
 
     const-string v0, "itemView.findViewById(R.id.tooltip_end_btn)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/components/holders/TooltipComponentsViewHolder;->f:Landroid/view/View;
 
@@ -96,7 +96,7 @@
 
     const-string v0, "itemView.findViewById(R.\u2026tooltip_overlay_rect_btn)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/components/holders/TooltipComponentsViewHolder;->g:Landroid/view/View;
 
@@ -111,7 +111,7 @@
 
     const-string v0, "itemView.findViewById(R.\u2026oltip_overlay_square_btn)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/components/holders/TooltipComponentsViewHolder;->h:Landroid/view/View;
 
@@ -315,7 +315,7 @@
     const/16 v24, 0x0
 
     .line 6
-    invoke-direct/range {v3 .. v24}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v24}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/i;)V
 
     .line 7
     iget-object v3, v0, Lcom/vk/components/holders/TooltipComponentsViewHolder;->e:Landroid/view/View;
@@ -326,7 +326,7 @@
 
     const-string v4, "centerBtn.context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v4, Landroid/graphics/RectF;
 
@@ -392,7 +392,7 @@
 
     const-string v8, "itemView"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -457,7 +457,7 @@
     const/16 v24, 0x0
 
     .line 9
-    invoke-direct/range {v3 .. v24}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v24}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/i;)V
 
     .line 10
     iget-object v3, v0, Lcom/vk/components/holders/TooltipComponentsViewHolder;->f:Landroid/view/View;
@@ -468,7 +468,7 @@
 
     const-string v4, "endBtn.context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v4, Landroid/graphics/RectF;
 
@@ -524,7 +524,7 @@
     move-object v5, v3
 
     .line 6
-    new-instance v4, Lcom/vk/core/tips/WindowBackground$d;
+    new-instance v4, Lcom/vk/core/tips/b$d;
 
     move-object/from16 v20, v4
 
@@ -540,7 +540,7 @@
 
     const/4 v8, 0x0
 
-    invoke-direct {v4, v6, v7, v2, v8}, Lcom/vk/core/tips/WindowBackground$d;-><init>(FIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v4, v6, v7, v2, v8}, Lcom/vk/core/tips/b$d;-><init>(FIILkotlin/jvm/internal/i;)V
 
     const-string v6, "Title"
 
@@ -583,7 +583,7 @@
     const/16 v26, 0x0
 
     .line 7
-    invoke-direct/range {v5 .. v26}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v5 .. v26}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/i;)V
 
     .line 8
     iget-object v2, v0, Lcom/vk/components/holders/TooltipComponentsViewHolder;->g:Landroid/view/View;
@@ -594,7 +594,7 @@
 
     const-string v4, "overlayRectBtn.context"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v4, Landroid/graphics/RectF;
 
@@ -652,13 +652,13 @@
     if-eqz v2, :cond_0
 
     .line 6
-    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->getContext()Landroid/content/Context;
+    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
     const-string v3, "getContext<Context>()"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f06030f
 
@@ -707,11 +707,11 @@
     invoke-direct {v4, v0}, Lcom/vk/components/holders/TooltipComponentsViewHolder$showOverlaySquareWindowTip$1;-><init>(Lcom/vk/components/holders/TooltipComponentsViewHolder;)V
 
     .line 9
-    new-instance v4, Lcom/vk/core/tips/WindowBackground$b;
+    new-instance v4, Lcom/vk/core/tips/b$b;
 
     move-object/from16 v18, v4
 
-    invoke-direct {v4, v2}, Lcom/vk/core/tips/WindowBackground$b;-><init>(I)V
+    invoke-direct {v4, v2}, Lcom/vk/core/tips/b$b;-><init>(I)V
 
     .line 10
     sget-object v19, Lcom/vk/components/holders/TooltipComponentsViewHolder$h;->a:Lcom/vk/components/holders/TooltipComponentsViewHolder$h;
@@ -737,7 +737,7 @@
     move-object v5, v2
 
     .line 13
-    invoke-direct/range {v3 .. v24}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v24}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/i;)V
 
     .line 14
     iget-object v2, v0, Lcom/vk/components/holders/TooltipComponentsViewHolder;->g:Landroid/view/View;
@@ -748,7 +748,7 @@
 
     const-string v3, "overlayRectBtn.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v3, Landroid/graphics/RectF;
 
@@ -832,7 +832,7 @@
     const/16 v24, 0x0
 
     .line 6
-    invoke-direct/range {v3 .. v24}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v24}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/i;)V
 
     .line 7
     iget-object v3, v0, Lcom/vk/components/holders/TooltipComponentsViewHolder;->d:Landroid/view/View;
@@ -843,7 +843,7 @@
 
     const-string v4, "startBtn.context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v4, Landroid/graphics/RectF;
 
@@ -860,7 +860,7 @@
 
 
 # virtual methods
-.method public a(Lkotlin/Unit;)V
+.method public a(Lkotlin/m;)V
     .locals 0
 
     return-void
@@ -870,9 +870,9 @@
     .locals 0
 
     .line 2
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
-    invoke-virtual {p0, p1}, Lcom/vk/components/holders/TooltipComponentsViewHolder;->a(Lkotlin/Unit;)V
+    invoke-virtual {p0, p1}, Lcom/vk/components/holders/TooltipComponentsViewHolder;->a(Lkotlin/m;)V
 
     return-void
 .end method

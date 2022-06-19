@@ -3,7 +3,7 @@
 .source "Regex.kt"
 
 # interfaces
-.implements Lkotlin/text/MatchResult;
+.implements Lkotlin/text/i;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/collections/AbstractCollection<",
-        "Lkotlin/text/Regex1;",
+        "Lkotlin/text/g;",
         ">;",
-        "Lkotlin/text/MatchResult;"
+        "Lkotlin/text/i;"
     }
 .end annotation
 
@@ -68,7 +68,7 @@
     return v0
 .end method
 
-.method public bridge a(Lkotlin/text/Regex1;)Z
+.method public bridge a(Lkotlin/text/g;)Z
     .locals 0
 
     .line 1
@@ -85,7 +85,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    instance-of v0, p1, Lkotlin/text/Regex1;
+    instance-of v0, p1, Lkotlin/text/g;
 
     goto :goto_0
 
@@ -95,9 +95,9 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    check-cast p1, Lkotlin/text/Regex1;
+    check-cast p1, Lkotlin/text/g;
 
-    invoke-virtual {p0, p1}, Lkotlin/text/MatcherMatchResult$groups$1;->a(Lkotlin/text/Regex1;)Z
+    invoke-virtual {p0, p1}, Lkotlin/text/MatcherMatchResult$groups$1;->a(Lkotlin/text/g;)Z
 
     move-result p1
 
@@ -109,7 +109,7 @@
     return p1
 .end method
 
-.method public get(I)Lkotlin/text/Regex1;
+.method public get(I)Lkotlin/text/g;
     .locals 3
 
     .line 1
@@ -119,12 +119,12 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/text/Regex2;->a(Ljava/util/regex/MatchResult;I)Lkotlin/t/Ranges1;
+    invoke-static {v0, p1}, Lkotlin/text/k;->a(Ljava/util/regex/MatchResult;I)Lkotlin/t/d;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0}, Lkotlin/t/Ranges1;->e()Ljava/lang/Integer;
+    invoke-virtual {v0}, Lkotlin/t/d;->e()Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -135,7 +135,7 @@
     if-ltz v1, :cond_0
 
     .line 3
-    new-instance v1, Lkotlin/text/Regex1;
+    new-instance v1, Lkotlin/text/g;
 
     iget-object v2, p0, Lkotlin/text/MatcherMatchResult$groups$1;->a:Lkotlin/text/MatcherMatchResult;
 
@@ -149,9 +149,9 @@
 
     const-string v2, "matchResult.group(index)"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, p1, v0}, Lkotlin/text/Regex1;-><init>(Ljava/lang/String;Lkotlin/t/Ranges1;)V
+    invoke-direct {v1, p1, v0}, Lkotlin/text/g;-><init>(Ljava/lang/String;Lkotlin/t/d;)V
 
     goto :goto_0
 
@@ -176,17 +176,17 @@
         value = {
             "()",
             "Ljava/util/Iterator<",
-            "Lkotlin/text/Regex1;",
+            "Lkotlin/text/g;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lkotlin/collections/l;->a(Ljava/util/Collection;)Lkotlin/t/Ranges1;
+    invoke-static {p0}, Lkotlin/collections/l;->a(Ljava/util/Collection;)Lkotlin/t/d;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object v0
 
@@ -194,11 +194,11 @@
 
     invoke-direct {v1, p0}, Lkotlin/text/MatcherMatchResult$groups$1$iterator$1;-><init>(Lkotlin/text/MatcherMatchResult$groups$1;)V
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$c;
-.super Lcom/vk/core/util/TextWatcherAdapter;
+.super Lcom/vk/core/util/c1;
 .source "SelectionStickerSearchDelegate.kt"
 
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/util/TextWatcherAdapter;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/util/c1;-><init>()V
 
     return-void
 .end method
@@ -30,11 +30,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
+    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     return-void
 .end method

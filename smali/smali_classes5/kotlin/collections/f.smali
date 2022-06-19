@@ -46,7 +46,7 @@
         value = {
             "([Z)",
             "Ljava/lang/Iterable<",
-            "Lkotlin/collections/IndexedValue<",
+            "Lkotlin/collections/x<",
             "Ljava/lang/Boolean;",
             ">;>;"
         }
@@ -76,30 +76,30 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic a([BLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+.method public static bridge synthetic a([BLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
     .locals 0
 
-    invoke-static/range {p0 .. p8}, Lkotlin/collections/ArraysKt___ArraysKt;->a([BLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {p0 .. p8}, Lkotlin/collections/ArraysKt___ArraysKt;->a([BLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static bridge synthetic a([ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+.method public static bridge synthetic a([ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
     .locals 0
 
-    invoke-static/range {p0 .. p8}, Lkotlin/collections/ArraysKt___ArraysKt;->a([ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {p0 .. p8}, Lkotlin/collections/ArraysKt___ArraysKt;->a([ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static bridge synthetic a([Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+.method public static bridge synthetic a([Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
     .locals 0
 
-    invoke-static/range {p0 .. p8}, Lkotlin/collections/ArraysKt___ArraysKt;->a([Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {p0 .. p8}, Lkotlin/collections/ArraysKt___ArraysKt;->a([Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -117,7 +117,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/_ArraysJvm;->a([I)Ljava/util/List;
+    invoke-static {p0}, Lkotlin/collections/i;->a([I)Ljava/util/List;
 
     move-result-object p0
 
@@ -136,25 +136,25 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/_ArraysJvm;->a([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {p0}, Lkotlin/collections/i;->a([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static bridge synthetic a([F)Lkotlin/sequences/Sequence;
+.method public static bridge synthetic a([F)Lkotlin/sequences/j;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([F)",
-            "Lkotlin/sequences/Sequence<",
+            "Lkotlin/sequences/j<",
             "Ljava/lang/Float;",
             ">;"
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/ArraysKt___ArraysKt;->a([F)Lkotlin/sequences/Sequence;
+    invoke-static {p0}, Lkotlin/collections/ArraysKt___ArraysKt;->a([F)Lkotlin/sequences/j;
 
     move-result-object p0
 
@@ -164,7 +164,7 @@
 .method public static bridge synthetic a([FFIIILjava/lang/Object;)V
     .locals 0
 
-    invoke-static/range {p0 .. p5}, Lkotlin/collections/_ArraysJvm;->a([FFIIILjava/lang/Object;)V
+    invoke-static/range {p0 .. p5}, Lkotlin/collections/i;->a([FFIIILjava/lang/Object;)V
 
     return-void
 .end method
@@ -172,7 +172,7 @@
 .method public static bridge synthetic a([IIIIILjava/lang/Object;)V
     .locals 0
 
-    invoke-static/range {p0 .. p5}, Lkotlin/collections/_ArraysJvm;->a([IIIIILjava/lang/Object;)V
+    invoke-static/range {p0 .. p5}, Lkotlin/collections/i;->a([IIIIILjava/lang/Object;)V
 
     return-void
 .end method
@@ -207,7 +207,7 @@
         }
     .end annotation
 
-    invoke-static {p0, p1}, Lkotlin/collections/_ArraysJvm;->a([Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {p0, p1}, Lkotlin/collections/i;->a([Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
 
@@ -319,19 +319,19 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic c([Ljava/lang/Object;)Lkotlin/sequences/Sequence;
+.method public static bridge synthetic c([Ljava/lang/Object;)Lkotlin/sequences/j;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">([TT;)",
-            "Lkotlin/sequences/Sequence<",
+            "Lkotlin/sequences/j<",
             "TT;>;"
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/ArraysKt___ArraysKt;->c([Ljava/lang/Object;)Lkotlin/sequences/Sequence;
+    invoke-static {p0}, Lkotlin/collections/ArraysKt___ArraysKt;->c([Ljava/lang/Object;)Lkotlin/sequences/j;
 
     move-result-object p0
 
@@ -473,18 +473,18 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic g([Ljava/lang/Object;)Lkotlin/t/Ranges1;
+.method public static bridge synthetic g([Ljava/lang/Object;)Lkotlin/t/d;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">([TT;)",
-            "Lkotlin/t/Ranges1;"
+            "Lkotlin/t/d;"
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/ArraysKt___ArraysKt;->g([Ljava/lang/Object;)Lkotlin/t/Ranges1;
+    invoke-static {p0}, Lkotlin/collections/ArraysKt___ArraysKt;->g([Ljava/lang/Object;)Lkotlin/t/d;
 
     move-result-object p0
 

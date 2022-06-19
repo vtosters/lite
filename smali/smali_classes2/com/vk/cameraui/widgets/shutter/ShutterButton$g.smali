@@ -38,22 +38,22 @@
     .line 1
     iget-object p1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$g;->a:Lcom/vk/cameraui/widgets/shutter/ShutterButton;
 
-    invoke-static {p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    invoke-static {p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/a;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->d(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/cameraui/widgets/shutter/a;->d(Z)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$g;->a:Lcom/vk/cameraui/widgets/shutter/ShutterButton;
 
-    invoke-static {p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    invoke-static {p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/a;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->c(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/cameraui/widgets/shutter/a;->c(Z)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$g;->a:Lcom/vk/cameraui/widgets/shutter/ShutterButton;
@@ -69,13 +69,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$g;->a:Lcom/vk/cameraui/widgets/shutter/ShutterButton;
 
-    invoke-static {p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;
+    invoke-static {p1}, Lcom/vk/cameraui/widgets/shutter/ShutterButton;->b(Lcom/vk/cameraui/widgets/shutter/ShutterButton;)Lcom/vk/cameraui/widgets/shutter/a;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->d(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/cameraui/widgets/shutter/a;->d(Z)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$g;->a:Lcom/vk/cameraui/widgets/shutter/ShutterButton;

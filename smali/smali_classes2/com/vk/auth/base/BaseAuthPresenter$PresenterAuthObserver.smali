@@ -51,21 +51,21 @@
     invoke-direct {v4, p1}, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$4;-><init>(Lcom/vk/auth/base/BaseAuthPresenter;)V
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->k()Lio/reactivex/disposables/CompositeDisposable;
+    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->k()Lio/reactivex/disposables/a;
 
     move-result-object v5
 
     move-object v0, p0
 
     .line 7
-    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/base/BaseAuthObserver;-><init>(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lio/reactivex/disposables/CompositeDisposable;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/base/BaseAuthObserver;-><init>(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lio/reactivex/disposables/a;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a(Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)Lio/reactivex/functions/Consumer;
+.method protected a(Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Z)Lc/a/z/g;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -73,11 +73,11 @@
             "Lcom/vk/auth/main/VkAuthState;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/jvm/b/a<",
             "+",
             "Lcom/vk/auth/verification/base/CodeState;",
             ">;Z)",
-            "Lio/reactivex/functions/Consumer<",
+            "Lc/a/z/g<",
             "Ljava/lang/Throwable;",
             ">;"
         }
@@ -100,7 +100,7 @@
 
     move v6, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$a;-><init>(Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$a;-><init>(Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Z)V
 
     return-object v7
 .end method
@@ -119,27 +119,27 @@
     return-void
 .end method
 
-.method protected a(Lcom/vk/auth/api/models/AuthAnswer;)V
+.method protected a(Lcom/vk/auth/api/models/a;)V
     .locals 1
 
     .line 7
     iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;->g:Lcom/vk/auth/base/BaseAuthPresenter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/api/models/AuthAnswer;)V
+    invoke-virtual {v0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/api/models/a;)V
 
     return-void
 .end method
 
-.method protected a(Lcom/vk/auth/main/VkAuthState;Lcom/vk/auth/api/models/AuthAnswer;)V
+.method protected a(Lcom/vk/auth/main/VkAuthState;Lcom/vk/auth/api/models/a;)V
     .locals 1
 
     .line 5
-    invoke-super {p0, p1, p2}, Lcom/vk/auth/base/BaseAuthObserver;->a(Lcom/vk/auth/main/VkAuthState;Lcom/vk/auth/api/models/AuthAnswer;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/auth/base/BaseAuthObserver;->a(Lcom/vk/auth/main/VkAuthState;Lcom/vk/auth/api/models/a;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;->g:Lcom/vk/auth/base/BaseAuthPresenter;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/main/VkAuthState;Lcom/vk/auth/api/models/AuthAnswer;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/main/VkAuthState;Lcom/vk/auth/api/models/a;)V
 
     return-void
 .end method
@@ -159,7 +159,7 @@
     .locals 1
 
     .line 3
-    invoke-super {p0, p1}, Lcom/vk/auth/base/SimpleAuthObserver;->a(Ljava/lang/Throwable;)V
+    invoke-super {p0, p1}, Lcom/vk/auth/base/g;->a(Ljava/lang/Throwable;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;->g:Lcom/vk/auth/base/BaseAuthPresenter;
@@ -169,21 +169,21 @@
     return-void
 .end method
 
-.method protected b(Ljava/lang/String;)Lio/reactivex/Observable;
+.method protected b(Ljava/lang/String;)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vk/auth/api/models/ValidatePhoneResult;",
             ">;"
         }
     .end annotation
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/auth/base/BaseAuthObserver;->b(Ljava/lang/String;)Lio/reactivex/Observable;
+    invoke-super {p0, p1}, Lcom/vk/auth/base/BaseAuthObserver;->b(Ljava/lang/String;)Lc/a/m;
 
     move-result-object p1
 
@@ -192,7 +192,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$b;-><init>(Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p1
 
@@ -201,13 +201,13 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$c;-><init>(Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/a;)Lc/a/m;
 
     move-result-object p1
 
     const-string v0, "super.validatePhone(sid)\u2026t--\n                    }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

@@ -3,7 +3,7 @@
 .source "PhotoListFragment.java"
 
 # interfaces
-.implements Lcom/vk/common/g/F1;
+.implements Lcom/vk/common/g/b;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/F1<",
+        "Lcom/vk/common/g/b<",
         "Ljava/lang/Void;",
         "Lcom/vk/dto/photo/PhotoAlbum;",
         ">;"

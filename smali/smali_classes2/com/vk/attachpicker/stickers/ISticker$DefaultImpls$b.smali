@@ -59,17 +59,17 @@
     .line 2
     iget-object p1, p0, Lcom/vk/attachpicker/stickers/ISticker$DefaultImpls$b;->a:Lcom/vk/attachpicker/stickers/ISticker;
 
-    invoke-interface {p1}, Lcom/vk/attachpicker/stickers/ISticker;->getInvalidator()Lkotlin/jvm/b/Functions;
+    invoke-interface {p1}, Lcom/vk/attachpicker/stickers/ISticker;->getInvalidator()Lkotlin/jvm/b/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_0
     return-void

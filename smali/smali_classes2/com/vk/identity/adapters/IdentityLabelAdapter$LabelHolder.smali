@@ -39,7 +39,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/identity/adapters/IdentityLabelAdapter$LabelHolder$1;-><init>(Lcom/vk/identity/adapters/IdentityLabelAdapter$LabelHolder;)V
 
-    invoke-static {p2, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p2, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
@@ -54,7 +54,7 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/identity/c/CheckedTextView;
+    check-cast v0, Lcom/vk/identity/c/a;
 
     .line 2
     invoke-virtual {p1}, Lcom/vk/dto/identity/IdentityLabel;->t1()Ljava/lang/String;
@@ -67,7 +67,7 @@
 
     move-result-object v2
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -75,12 +75,12 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/identity/c/CheckedTextView;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/identity/c/a;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     const p1, 0x7f04059a
 
     .line 3
-    invoke-static {v0, p1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, p1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     const p1, 0x7f080228
 
@@ -108,7 +108,7 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/identity/c/CheckedTextView;
+    check-cast v0, Lcom/vk/identity/c/a;
 
     const v1, 0x7f12058e
 
@@ -131,7 +131,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     return-void
 

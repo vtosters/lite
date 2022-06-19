@@ -3,12 +3,12 @@
 .source "GoodsPickerTabs.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/picker/LinksTabController$Companion;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)Lcom/vk/market/picker/LinksTabController;
+    value = Lcom/vk/market/picker/LinksTabController$Companion;->a(Landroid/view/View;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)Lcom/vk/market/picker/LinksTabController;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/market/common/GoodViewModel;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/market/common/c;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $pickListener:Lkotlin/jvm/b/Functions2;
+.field final synthetic $pickListener:Lkotlin/jvm/b/b;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions2;)V
+.method constructor <init>(Lkotlin/jvm/b/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/market/picker/LinksTabController$Companion$instance$wrappedListener$1;->$pickListener:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/market/picker/LinksTabController$Companion$instance$wrappedListener$1;->$pickListener:Lkotlin/jvm/b/b;
 
     const/4 p1, 0x1
 
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/market/common/GoodViewModel;)V
+.method public final a(Lcom/vk/market/common/c;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/market/picker/LinksTabController$Companion$instance$wrappedListener$1;->$pickListener:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/market/picker/LinksTabController$Companion$instance$wrappedListener$1;->$pickListener:Lkotlin/jvm/b/b;
 
-    invoke-virtual {p1}, Lcom/vk/market/common/GoodViewModel;->c()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/market/common/c;->c()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -65,11 +65,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/market/common/GoodViewModel;
+    check-cast p1, Lcom/vk/market/common/c;
 
-    invoke-virtual {p0, p1}, Lcom/vk/market/picker/LinksTabController$Companion$instance$wrappedListener$1;->a(Lcom/vk/market/common/GoodViewModel;)V
+    invoke-virtual {p0, p1}, Lcom/vk/market/picker/LinksTabController$Companion$instance$wrappedListener$1;->a(Lcom/vk/market/common/c;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

@@ -3,7 +3,7 @@
 .source "PostingPostponeDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/fourmob/datetimepicker/date/CalendarDatePickerDialog$c;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/fourmob/datetimepicker/date/a$c;",
         ">;"
     }
 .end annotation
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/fourmob/datetimepicker/date/CalendarDatePickerDialog$c;
+.method public final invoke()Lcom/fourmob/datetimepicker/date/a$c;
     .locals 1
 
     .line 2
@@ -60,7 +60,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/PostingPostponeDelegate$dateSetListener$2;->invoke()Lcom/fourmob/datetimepicker/date/CalendarDatePickerDialog$c;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/PostingPostponeDelegate$dateSetListener$2;->invoke()Lcom/fourmob/datetimepicker/date/a$c;
 
     move-result-object v0
 

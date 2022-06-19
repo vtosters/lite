@@ -3,7 +3,7 @@
 .source "CameraUIView.kt"
 
 # interfaces
-.implements Lcom/vk/camera/Camera1View$m$b;
+.implements Lcom/vk/camera/c$m$b;
 
 
 # annotations

@@ -51,7 +51,7 @@
 
     .line 2
     :try_start_0
-    sget-object v0, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;->h:Lcom/vk/im/log/ImLogger;
+    sget-object v0, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;->h:Lcom/vk/im/log/a;
 
     const-string v1, "succeed %s (%d ms)"
 
@@ -63,7 +63,7 @@
 
     iget-object v4, p0, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor$a;->b:Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;
 
-    invoke-static {v4}, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;->a(Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;)Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;
+    invoke-static {v4}, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;->a(Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;)Lcom/vk/im/ui/utils/ui_queue_task/c;
 
     move-result-object v4
 
@@ -83,27 +83,27 @@
 
     aput-object v4, v2, v3
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/im/log/a;->b(Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor$a;->b:Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;
 
-    invoke-static {v0}, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;->a(Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;)Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;
+    invoke-static {v0}, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;->a(Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;)Lcom/vk/im/ui/utils/ui_queue_task/c;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor$a;->a:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/utils/ui_queue_task/c;->b(Ljava/lang/Object;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor$a;->b:Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;
 
-    invoke-static {v0}, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;->a(Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;)Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;
+    invoke-static {v0}, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;->a(Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskExecutor;)Lcom/vk/im/ui/utils/ui_queue_task/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;->c()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/utils/ui_queue_task/c;->c()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

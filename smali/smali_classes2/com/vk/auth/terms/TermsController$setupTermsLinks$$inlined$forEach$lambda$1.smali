@@ -3,7 +3,7 @@
 .source "TermsController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -59,7 +59,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/auth/terms/TermsController$setupTermsLinks$$inlined$forEach$lambda$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -72,7 +72,7 @@
 
     const-string v1, "urlSpan"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/text/style/URLSpan;->getURL()Ljava/lang/String;
 
@@ -110,11 +110,11 @@
 
     iget-object v0, p0, Lcom/vk/auth/terms/TermsController$setupTermsLinks$$inlined$forEach$lambda$1;->this$0:Lcom/vk/auth/terms/TermsController;
 
-    invoke-static {v0}, Lcom/vk/auth/terms/TermsController;->a(Lcom/vk/auth/terms/TermsController;)Lcom/vk/auth/terms/TermsPresenter;
+    invoke-static {v0}, Lcom/vk/auth/terms/TermsController;->a(Lcom/vk/auth/terms/TermsController;)Lcom/vk/auth/terms/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/auth/terms/TermsPresenter;->q2()V
+    invoke-interface {v0}, Lcom/vk/auth/terms/a;->q2()V
 
     goto :goto_0
 
@@ -130,11 +130,11 @@
 
     iget-object v0, p0, Lcom/vk/auth/terms/TermsController$setupTermsLinks$$inlined$forEach$lambda$1;->this$0:Lcom/vk/auth/terms/TermsController;
 
-    invoke-static {v0}, Lcom/vk/auth/terms/TermsController;->a(Lcom/vk/auth/terms/TermsController;)Lcom/vk/auth/terms/TermsPresenter;
+    invoke-static {v0}, Lcom/vk/auth/terms/TermsController;->a(Lcom/vk/auth/terms/TermsController;)Lcom/vk/auth/terms/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/auth/terms/TermsPresenter;->t2()V
+    invoke-interface {v0}, Lcom/vk/auth/terms/a;->t2()V
 
     :cond_3
     :goto_0

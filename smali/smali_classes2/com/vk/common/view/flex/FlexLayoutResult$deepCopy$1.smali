@@ -3,7 +3,7 @@
 .source "SizeEntities.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/common/view/flex/SizeEntities2;",
-        "Lcom/vk/common/view/flex/SizeEntities2;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/common/view/flex/f;",
+        "Lcom/vk/common/view/flex/f;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/common/view/flex/SizeEntities2;)Lcom/vk/common/view/flex/SizeEntities2;
+.method public final a(Lcom/vk/common/view/flex/f;)Lcom/vk/common/view/flex/f;
     .locals 8
 
     const/4 v1, 0x0
@@ -76,7 +76,7 @@
     move-object v0, p1
 
     .line 1
-    invoke-static/range {v0 .. v7}, Lcom/vk/common/view/flex/SizeEntities2;->a(Lcom/vk/common/view/flex/SizeEntities2;IIIIIILjava/lang/Object;)Lcom/vk/common/view/flex/SizeEntities2;
+    invoke-static/range {v0 .. v7}, Lcom/vk/common/view/flex/f;->a(Lcom/vk/common/view/flex/f;IIIIIILjava/lang/Object;)Lcom/vk/common/view/flex/f;
 
     move-result-object p1
 
@@ -87,9 +87,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/common/view/flex/SizeEntities2;
+    check-cast p1, Lcom/vk/common/view/flex/f;
 
-    invoke-virtual {p0, p1}, Lcom/vk/common/view/flex/FlexLayoutResult$deepCopy$1;->a(Lcom/vk/common/view/flex/SizeEntities2;)Lcom/vk/common/view/flex/SizeEntities2;
+    invoke-virtual {p0, p1}, Lcom/vk/common/view/flex/FlexLayoutResult$deepCopy$1;->a(Lcom/vk/common/view/flex/f;)Lcom/vk/common/view/flex/f;
 
     move-result-object p1
 

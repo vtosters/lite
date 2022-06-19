@@ -1,5 +1,5 @@
 .class public final Lcom/vk/common/AppStateTracker$g;
-.super Lb/h/n/ActivityLifecycleListenerAdapter;
+.super Lb/h/n/b;
 .source "AppStateTracker.kt"
 
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lb/h/n/ActivityLifecycleListenerAdapter;-><init>()V
+    invoke-direct {p0}, Lb/h/n/b;-><init>()V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "FriendsImportFragment.kt"
 
 # interfaces
-.implements Lcom/vk/common/g/VoidF1;
+.implements Lcom/vk/common/g/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/VoidF1<",
+        "Lcom/vk/common/g/g<",
         "Lcom/vk/dto/user/UserProfile;",
         ">;"
     }
@@ -55,7 +55,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    new-instance v0, Lcom/vk/profile/ui/BaseProfileFragment$z;
+    new-instance v0, Lcom/vk/profile/ui/c$z;
 
     iget v1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -65,17 +65,17 @@
 
     iget-object v2, v2, Lcom/vk/dto/user/RequestUserProfile;->t0:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/profile/ui/c$z;-><init>(ILjava/lang/String;)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    new-instance v0, Lcom/vk/profile/ui/BaseProfileFragment$z;
+    new-instance v0, Lcom/vk/profile/ui/c$z;
 
     iget v1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/ui/c$z;-><init>(I)V
 
     .line 5
     :goto_0
@@ -85,11 +85,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/ui/BaseProfileFragment$z;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vk/profile/ui/BaseProfileFragment$z;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/ui/c$z;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vk/profile/ui/c$z;
 
     iget-object p1, p1, Lcom/vk/dto/user/UserProfile;->X:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/BaseProfileFragment$z;->b(Ljava/lang/String;)Lcom/vk/profile/ui/BaseProfileFragment$z;
+    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/c$z;->b(Ljava/lang/String;)Lcom/vk/profile/ui/c$z;
 
     iget-object p1, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$p;->a:Lcom/vk/friends/recommendations/FriendsImportFragment;
 
@@ -97,7 +97,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     return-void
 .end method

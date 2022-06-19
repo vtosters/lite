@@ -3,7 +3,7 @@
 .source "MenuCache.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/core/util/Optional<",
+        "Lc/a/z/g<",
+        "Lcom/vk/core/util/q0<",
         "Lcom/vk/dto/menu/MenuResponse;",
         ">;>;"
     }
@@ -47,12 +47,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/core/util/Optional;)V
+.method public final a(Lcom/vk/core/util/q0;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/core/util/Optional<",
+            "Lcom/vk/core/util/q0<",
             "Lcom/vk/dto/menu/MenuResponse;",
             ">;)V"
         }
@@ -85,7 +85,7 @@
     invoke-direct {v1, v2}, Lcom/vk/menu/MenuCache$loadMainMenu$1$2;-><init>(Lcom/vk/menu/MenuCache;)V
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/core/util/Optional;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/core/util/q0;->a()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -94,7 +94,7 @@
     check-cast p1, Lcom/vk/dto/menu/MenuResponse;
 
     .line 4
-    invoke-interface {v1, p1}, Lkotlin/u/KProperty;->set(Ljava/lang/Object;)V
+    invoke-interface {v1, p1}, Lkotlin/u/g;->set(Ljava/lang/Object;)V
 
     :cond_1
     if-nez v0, :cond_2
@@ -122,9 +122,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/core/util/Optional;
+    check-cast p1, Lcom/vk/core/util/q0;
 
-    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuCache$g;->a(Lcom/vk/core/util/Optional;)V
+    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuCache$g;->a(Lcom/vk/core/util/q0;)V
 
     return-void
 .end method

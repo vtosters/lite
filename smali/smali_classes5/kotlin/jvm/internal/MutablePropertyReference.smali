@@ -3,7 +3,7 @@
 .source "MutablePropertyReference.java"
 
 # interfaces
-.implements Lkotlin/u/KProperty3;
+.implements Lkotlin/u/i;
 
 
 # direct methods

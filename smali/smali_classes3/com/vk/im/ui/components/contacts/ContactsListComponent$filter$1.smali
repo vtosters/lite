@@ -3,7 +3,7 @@
 .source "ContactsListComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$filter$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -66,12 +66,12 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$filter$1;->this$0:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->d(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/engine/ImEngine;
+    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->d(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/engine/a;
 
     move-result-object v0
 
     .line 3
-    new-instance v9, Lcom/vk/im/engine/i/i/FriendsSearchCmd;
+    new-instance v9, Lcom/vk/im/engine/i/i/b;
 
     .line 4
     iget-object v1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$filter$1;->$text:Ljava/lang/CharSequence;
@@ -80,7 +80,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/core/extensions/StringExt;->j(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/extensions/z;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -99,18 +99,18 @@
     move-object v1, v9
 
     .line 5
-    invoke-direct/range {v1 .. v8}, Lcom/vk/im/engine/i/i/FriendsSearchCmd;-><init>(Ljava/lang/String;IIZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/im/engine/i/i/b;-><init>(Ljava/lang/String;IIZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
 
     const-string v1, "ContactsListComponent"
 
     .line 6
-    invoke-virtual {v0, v1, v9}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1, v9}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
 
     move-result-object v0
 
     const-string v1, "engine.submitSingle(CHAN\u2026hangerTag = CHANGER_TAG))"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     new-instance v1, Lcom/vk/im/ui/components/contacts/ContactsListComponent$filter$1$1;
@@ -121,7 +121,7 @@
 
     const/4 v3, 0x1
 
-    invoke-static {v0, v2, v1, v3, v2}, Lio/reactivex/rxkotlin/SubscribersKt;->a(Lio/reactivex/Single;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0, v2, v1, v3, v2}, Lio/reactivex/rxkotlin/SubscribersKt;->a(Lc/a/t;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;ILjava/lang/Object;)Lio/reactivex/disposables/b;
 
     return-void
 .end method

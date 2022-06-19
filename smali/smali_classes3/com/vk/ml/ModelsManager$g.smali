@@ -3,12 +3,12 @@
 .source "ModelsManager.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/ml/ModelsManager;->a(Lcom/vk/ml/MLModelDto1;Lkotlin/jvm/b/Functions;I)V
+    value = Lcom/vk/ml/ModelsManager;->a(Lcom/vk/ml/b;Lkotlin/jvm/b/a;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -35,18 +35,18 @@
 
 .field final synthetic b:I
 
-.field final synthetic c:Lcom/vk/ml/MLModelDto1;
+.field final synthetic c:Lcom/vk/ml/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/ml/ModelsManager;ILcom/vk/ml/MLModelDto1;)V
+.method constructor <init>(Lcom/vk/ml/ModelsManager;ILcom/vk/ml/b;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/ml/ModelsManager$g;->a:Lcom/vk/ml/ModelsManager;
 
     iput p2, p0, Lcom/vk/ml/ModelsManager$g;->b:I
 
-    iput-object p3, p0, Lcom/vk/ml/ModelsManager$g;->c:Lcom/vk/ml/MLModelDto1;
+    iput-object p3, p0, Lcom/vk/ml/ModelsManager$g;->c:Lcom/vk/ml/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -59,14 +59,14 @@
     .locals 3
 
     .line 1
-    invoke-static {p1}, Lb/h/g/m/FileUtils;->j(Ljava/io/File;)Ljava/lang/String;
+    invoke-static {p1}, Lb/h/g/m/d;->j(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 2
     iget-object v0, p0, Lcom/vk/ml/ModelsManager$g;->a:Lcom/vk/ml/ModelsManager;
 
-    invoke-static {v0}, Lcom/vk/ml/ModelsManager;->b(Lcom/vk/ml/ModelsManager;)Lcom/vk/ml/ModelsStorage;
+    invoke-static {v0}, Lcom/vk/ml/ModelsManager;->b(Lcom/vk/ml/ModelsManager;)Lcom/vk/ml/e;
 
     move-result-object v0
 
@@ -76,15 +76,15 @@
 
     const-string v2, "metaString"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/vk/ml/ModelsManager$g;->c:Lcom/vk/ml/MLModelDto1;
+    iget-object v2, p0, Lcom/vk/ml/ModelsManager$g;->c:Lcom/vk/ml/b;
 
-    invoke-virtual {v2}, Lcom/vk/ml/MLModelDto1;->c()I
+    invoke-virtual {v2}, Lcom/vk/ml/b;->c()I
 
     move-result v2
 
-    invoke-virtual {v0, v1, p1, v2}, Lcom/vk/ml/ModelsStorage;->a(ILjava/lang/String;I)I
+    invoke-virtual {v0, v1, p1, v2}, Lcom/vk/ml/e;->a(ILjava/lang/String;I)I
 
     move-result p1
 

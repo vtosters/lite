@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/discover/DiscoverLayoutParams$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/discover/DiscoverLayoutParams$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/discover/DiscoverLayoutParams;->e:Lcom/vk/discover/DiscoverLayoutParams$b;
 
@@ -75,7 +75,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/discover/DiscoverLayoutParams;-><init>(IFIZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/discover/DiscoverLayoutParams;-><init>(IFIZILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -97,7 +97,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IFIZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(IFIZILkotlin/jvm/internal/i;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x1

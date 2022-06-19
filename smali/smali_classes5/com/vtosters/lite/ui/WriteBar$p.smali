@@ -3,12 +3,12 @@
 .source "WriteBar.java"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/io/File;",
         ">;"
     }
@@ -27,15 +27,15 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/Functions;
+.field final synthetic a:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/ui/WriteBar;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vtosters/lite/ui/WriteBar;Lkotlin/jvm/b/a;)V
     .locals 0
 
     .line 1
-    iput-object p2, p0, Lcom/vtosters/lite/ui/WriteBar$p;->a:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vtosters/lite/ui/WriteBar$p;->a:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,9 +53,9 @@
     .end annotation
 
     .line 1
-    iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar$p;->a:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar$p;->a:Lkotlin/jvm/b/a;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

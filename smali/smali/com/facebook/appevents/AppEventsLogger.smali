@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private a:Lcom/facebook/appevents/AppEventsLoggerImpl;
+.field private a:Lcom/facebook/appevents/e;
 
 
 # direct methods
@@ -23,11 +23,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/facebook/appevents/AppEventsLoggerImpl;
+    new-instance v0, Lcom/facebook/appevents/e;
 
-    invoke-direct {v0, p1, p2, p3}, Lcom/facebook/appevents/AppEventsLoggerImpl;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/AccessToken;)V
+    invoke-direct {v0, p1, p2, p3}, Lcom/facebook/appevents/e;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/AccessToken;)V
 
-    iput-object v0, p0, Lcom/facebook/appevents/AppEventsLogger;->a:Lcom/facebook/appevents/AppEventsLoggerImpl;
+    iput-object v0, p0, Lcom/facebook/appevents/AppEventsLogger;->a:Lcom/facebook/appevents/e;
 
     return-void
 .end method
@@ -36,7 +36,7 @@
     .locals 0
 
     .line 5
-    invoke-static {p0}, Lcom/facebook/appevents/AppEventsLoggerImpl;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/facebook/appevents/e;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -47,7 +47,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/facebook/appevents/AppEventsLoggerImpl;->a(Landroid/app/Application;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/facebook/appevents/e;->a(Landroid/app/Application;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -56,7 +56,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/facebook/appevents/AppEventsLoggerImpl;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/facebook/appevents/e;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -70,7 +70,7 @@
     .end annotation
 
     .line 6
-    invoke-static {p0}, Lcom/facebook/appevents/AppEventsLoggerImpl;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/facebook/appevents/e;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
     .locals 1
 
     .line 2
-    invoke-static {}, Lcom/facebook/appevents/AppEventsLoggerImpl;->d()Lcom/facebook/appevents/AppEventsLogger$FlushBehavior;
+    invoke-static {}, Lcom/facebook/appevents/e;->d()Lcom/facebook/appevents/AppEventsLogger$FlushBehavior;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/facebook/appevents/AnalyticsUserIDStore;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/appevents/a;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -114,7 +114,7 @@
     .locals 0
 
     .line 1
-    invoke-static {}, Lcom/facebook/appevents/AppEventsLoggerImpl;->h()V
+    invoke-static {}, Lcom/facebook/appevents/e;->h()V
 
     return-void
 .end method
@@ -125,9 +125,9 @@
     .locals 1
 
     .line 4
-    iget-object v0, p0, Lcom/facebook/appevents/AppEventsLogger;->a:Lcom/facebook/appevents/AppEventsLoggerImpl;
+    iget-object v0, p0, Lcom/facebook/appevents/AppEventsLogger;->a:Lcom/facebook/appevents/e;
 
-    invoke-virtual {v0}, Lcom/facebook/appevents/AppEventsLoggerImpl;->a()V
+    invoke-virtual {v0}, Lcom/facebook/appevents/e;->a()V
 
     return-void
 .end method
@@ -136,9 +136,9 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/facebook/appevents/AppEventsLogger;->a:Lcom/facebook/appevents/AppEventsLoggerImpl;
+    iget-object v0, p0, Lcom/facebook/appevents/AppEventsLogger;->a:Lcom/facebook/appevents/e;
 
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/appevents/AppEventsLoggerImpl;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1, p2}, Lcom/facebook/appevents/e;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method

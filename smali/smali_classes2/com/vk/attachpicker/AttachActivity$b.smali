@@ -3,7 +3,7 @@
 .source "AttachActivity.java"
 
 # interfaces
-.implements Lcom/vk/common/g/F0;
+.implements Lcom/vk/common/g/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/F0<",
+        "Lcom/vk/common/g/a<",
         "Lcom/vk/core/fragments/FragmentImpl;",
         ">;"
     }
@@ -48,9 +48,9 @@
     .locals 4
 
     .line 2
-    new-instance v0, Lcom/vk/attachpicker/fragment/GalleryFragment;
+    new-instance v0, Lcom/vk/attachpicker/fragment/s;
 
-    invoke-direct {v0}, Lcom/vk/attachpicker/fragment/GalleryFragment;-><init>()V
+    invoke-direct {v0}, Lcom/vk/attachpicker/fragment/s;-><init>()V
 
     .line 3
     new-instance v1, Landroid/os/Bundle;

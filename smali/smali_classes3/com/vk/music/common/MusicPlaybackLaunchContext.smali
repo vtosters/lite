@@ -3,7 +3,7 @@
 .source "MusicPlaybackLaunchContext.java"
 
 # interfaces
-.implements Lcom/vk/music/stats/MusicStatsRefer;
+.implements Lcom/vk/music/stats/c;
 
 
 # static fields
@@ -1422,7 +1422,7 @@
     return-object p0
 .end method
 
-.method public static a(Lcom/vk/music/stats/MusicStatsRefer;)Ljava/lang/String;
+.method public static a(Lcom/vk/music/stats/c;)Ljava/lang/String;
     .locals 1
 
     if-nez p0, :cond_0
@@ -1433,7 +1433,7 @@
 
     .line 19
     :cond_0
-    invoke-interface {p0}, Lcom/vk/music/stats/MusicStatsRefer;->v0()Ljava/lang/String;
+    invoke-interface {p0}, Lcom/vk/music/stats/c;->v0()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1445,7 +1445,7 @@
 
     .line 20
     :cond_1
-    invoke-interface {p0}, Lcom/vk/music/stats/MusicStatsRefer;->v0()Ljava/lang/String;
+    invoke-interface {p0}, Lcom/vk/music/stats/c;->v0()Ljava/lang/String;
 
     move-result-object p0
 

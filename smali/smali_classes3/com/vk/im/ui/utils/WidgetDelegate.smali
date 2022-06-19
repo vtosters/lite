@@ -8,7 +8,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Lio/reactivex/disposables/Disposable;",
+            "Lio/reactivex/disposables/b;",
             ">;"
         }
     .end annotation
@@ -16,11 +16,11 @@
 
 .field private final b:Landroid/content/Context;
 
-.field private final c:Lcom/vk/im/engine/ImEngine;
+.field private final c:Lcom/vk/im/engine/a;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/a;)V
     .locals 0
 
     .line 1
@@ -28,7 +28,7 @@
 
     iput-object p1, p0, Lcom/vk/im/ui/utils/WidgetDelegate;->b:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/im/ui/utils/WidgetDelegate;->c:Lcom/vk/im/engine/ImEngine;
+    iput-object p2, p0, Lcom/vk/im/ui/utils/WidgetDelegate;->c:Lcom/vk/im/engine/a;
 
     .line 2
     new-instance p1, Landroid/util/SparseArray;
@@ -49,27 +49,27 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/utils/WidgetDelegate;I)Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;
+.method public static final synthetic a(Lcom/vk/im/ui/utils/WidgetDelegate;I)Lcom/vk/im/ui/utils/shortcuts/a;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/utils/WidgetDelegate;->b(I)Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/utils/WidgetDelegate;->b(I)Lcom/vk/im/ui/utils/shortcuts/a;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/utils/WidgetDelegate;Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;)V
+.method public static final synthetic a(Lcom/vk/im/ui/utils/WidgetDelegate;Lcom/vk/im/ui/utils/shortcuts/a;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/utils/WidgetDelegate;->a(Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/utils/WidgetDelegate;->a(Lcom/vk/im/ui/utils/shortcuts/a;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;)V
+.method private final a(Lcom/vk/im/ui/utils/shortcuts/a;)V
     .locals 2
 
     .line 19
@@ -77,12 +77,12 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/utils/WidgetDelegate;->b:Landroid/content/Context;
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/utils/shortcuts/ImShortcutHelper;->a(Landroid/content/Context;Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/utils/shortcuts/ImShortcutHelper;->a(Landroid/content/Context;Lcom/vk/im/ui/utils/shortcuts/a;)V
 
     return-void
 .end method
 
-.method private final b(I)Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;
+.method private final b(I)Lcom/vk/im/ui/utils/shortcuts/a;
     .locals 3
 
     .line 1
@@ -90,9 +90,9 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/utils/WidgetDelegate;->b:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/vk/im/ui/utils/WidgetDelegate;->c:Lcom/vk/im/engine/ImEngine;
+    iget-object v2, p0, Lcom/vk/im/ui/utils/WidgetDelegate;->c:Lcom/vk/im/engine/a;
 
-    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/im/ui/utils/shortcuts/ImShortcutHelper;->a(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;I)Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;
+    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/im/ui/utils/shortcuts/ImShortcutHelper;->a(Landroid/content/Context;Lcom/vk/im/engine/a;I)Lcom/vk/im/ui/utils/shortcuts/a;
 
     move-result-object p1
 
@@ -124,10 +124,10 @@
 
     move-result-object v3
 
-    check-cast v3, Lio/reactivex/disposables/Disposable;
+    check-cast v3, Lio/reactivex/disposables/b;
 
     .line 18
-    invoke-interface {v3}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v3}, Lio/reactivex/disposables/b;->o()V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -149,17 +149,17 @@
 
     move-result-object p1
 
-    check-cast p1, Lio/reactivex/disposables/Disposable;
+    check-cast p1, Lio/reactivex/disposables/b;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     return-void
 .end method
 
-.method public final a(ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
+.method public final a(ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
     .locals 2
     .annotation build Landroidx/annotation/UiThread;
     .end annotation
@@ -167,13 +167,13 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/Throwable;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -182,34 +182,34 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/utils/WidgetDelegate;->a(I)V
 
     .line 5
-    sget-object v0, Lcom/vk/core/util/RxUtil;->INSTANCE:Lcom/vk/core/util/RxUtil;
+    sget-object v0, Lcom/vk/core/util/z0;->a:Lcom/vk/core/util/z0;
 
     .line 6
     new-instance v1, Lcom/vk/im/ui/utils/WidgetDelegate$startCreateDialogWidget$d$1;
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/utils/WidgetDelegate$startCreateDialogWidget$d$1;-><init>(Lcom/vk/im/ui/utils/WidgetDelegate;I)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/util/RxUtil;->a(Lkotlin/jvm/b/Functions;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lcom/vk/core/util/z0;->a(Lkotlin/jvm/b/a;)Lc/a/t;
 
     move-result-object v0
 
     .line 7
     sget-object v1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->m()Lio/reactivex/Scheduler;
+    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->m()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->b(Lc/a/s;)Lc/a/t;
 
     move-result-object v0
 
     .line 8
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
 
     move-result-object v0
 
@@ -218,28 +218,28 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/utils/WidgetDelegate$a;-><init>(Lcom/vk/im/ui/utils/WidgetDelegate;I)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
 
     move-result-object v0
 
     .line 10
     new-instance v1, Lcom/vk/im/ui/utils/WidgetDelegate$b;
 
-    invoke-direct {v1, p0, p2}, Lcom/vk/im/ui/utils/WidgetDelegate$b;-><init>(Lcom/vk/im/ui/utils/WidgetDelegate;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, p0, p2}, Lcom/vk/im/ui/utils/WidgetDelegate$b;-><init>(Lcom/vk/im/ui/utils/WidgetDelegate;Lkotlin/jvm/b/a;)V
 
     .line 11
-    new-instance p2, Lcom/vk/im/ui/utils/WidgetDelegate1;
+    new-instance p2, Lcom/vk/im/ui/utils/h;
 
-    invoke-direct {p2, p3}, Lcom/vk/im/ui/utils/WidgetDelegate1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p2, p3}, Lcom/vk/im/ui/utils/h;-><init>(Lkotlin/jvm/b/b;)V
 
     .line 12
-    invoke-virtual {v0, v1, p2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, p2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p2
 
     const-string p3, "RxUtil\n                .\u2026              onErrorFun)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
     iget-object p3, p0, Lcom/vk/im/ui/utils/WidgetDelegate;->a:Landroid/util/SparseArray;

@@ -50,22 +50,22 @@
     .line 1
     sget-object v0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->b:Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;
 
-    invoke-virtual {v0}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->a()Lcom/vk/httpexecutor/api/HttpRequestExecutor;
+    invoke-virtual {v0}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->a()Lcom/vk/httpexecutor/api/g;
 
     move-result-object v0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/httpexecutor/api/HttpRequestExecutor;->O()Z
+    invoke-interface {v0}, Lcom/vk/httpexecutor/api/g;->O()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 3
-    invoke-interface {v0}, Lcom/vk/httpexecutor/api/HttpRequestExecutor;->Q()Ljava/io/File;
+    invoke-interface {v0}, Lcom/vk/httpexecutor/api/g;->Q()Ljava/io/File;
 
     .line 4
-    invoke-interface {v0}, Lcom/vk/httpexecutor/api/HttpRequestExecutor;->P()Ljava/io/File;
+    invoke-interface {v0}, Lcom/vk/httpexecutor/api/g;->P()Ljava/io/File;
 
     :cond_0
     return-void

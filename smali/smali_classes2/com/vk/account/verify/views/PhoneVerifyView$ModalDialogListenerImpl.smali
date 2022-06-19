@@ -1,5 +1,5 @@
 .class final Lcom/vk/account/verify/views/PhoneVerifyView$ModalDialogListenerImpl;
-.super Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;
+.super Lcom/vk/core/dialogs/bottomsheet/h$c;
 .source "PhoneVerifyView.kt"
 
 
@@ -31,7 +31,7 @@
     iput-object p1, p0, Lcom/vk/account/verify/views/PhoneVerifyView$ModalDialogListenerImpl;->c:Lcom/vk/account/verify/views/PhoneVerifyView;
 
     .line 2
-    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$b;
+    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/h$b;
 
     new-instance v1, Lcom/vk/account/verify/views/PhoneVerifyView$ModalDialogListenerImpl$1;
 
@@ -39,10 +39,10 @@
 
     const v2, 0x7f120a44
 
-    invoke-direct {v0, v2, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$b;-><init>(ILkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, v2, v1}, Lcom/vk/core/dialogs/bottomsheet/h$b;-><init>(ILkotlin/jvm/b/a;)V
 
     .line 3
-    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$b;
+    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/h$b;
 
     new-instance v2, Lcom/vk/account/verify/views/PhoneVerifyView$ModalDialogListenerImpl$2;
 
@@ -50,10 +50,10 @@
 
     const p1, 0x7f120a56
 
-    invoke-direct {v1, p1, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$b;-><init>(ILkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, p1, v2}, Lcom/vk/core/dialogs/bottomsheet/h$b;-><init>(ILkotlin/jvm/b/a;)V
 
     .line 4
-    invoke-direct {p0, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;-><init>(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$b;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$b;)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/h$c;-><init>(Lcom/vk/core/dialogs/bottomsheet/h$b;Lcom/vk/core/dialogs/bottomsheet/h$b;)V
 
     return-void
 .end method
@@ -73,21 +73,21 @@
     if-eqz p1, :cond_0
 
     .line 2
-    sget-object p1, Lcom/vk/account/verify/PhoneVerifyManager;->INSTANCE:Lcom/vk/account/verify/PhoneVerifyManager;
+    sget-object p1, Lcom/vk/account/verify/g;->e:Lcom/vk/account/verify/g;
 
-    invoke-virtual {p1}, Lcom/vk/account/verify/PhoneVerifyManager;->b()Lcom/vk/account/verify/h/PhoneValidationPresenter;
+    invoke-virtual {p1}, Lcom/vk/account/verify/g;->b()Lcom/vk/account/verify/h/e;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/account/verify/views/PhoneVerifyView$ModalDialogListenerImpl;->c:Lcom/vk/account/verify/views/PhoneVerifyView;
 
-    invoke-virtual {v0}, Lcom/vk/account/verify/views/PhoneVerifyView;->getInfo()Lcom/vk/account/verify/PhoneVerifyManager$b;
+    invoke-virtual {v0}, Lcom/vk/account/verify/views/PhoneVerifyView;->getInfo()Lcom/vk/account/verify/g$b;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand$Reason;->OUTSIDE_TAP:Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand$Reason;
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/account/verify/h/PhoneValidationPresenter;->a(Lcom/vk/account/verify/PhoneVerifyManager$b;Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand$Reason;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/account/verify/h/e;->a(Lcom/vk/account/verify/g$b;Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand$Reason;)V
 
     :cond_0
     return-void
@@ -108,26 +108,26 @@
     invoke-static {p2, p1}, Lcom/vk/account/verify/views/PhoneVerifyView;->a(Lcom/vk/account/verify/views/PhoneVerifyView;Z)V
 
     .line 2
-    sget-object p1, Lcom/vk/account/verify/PhoneVerifyManager;->INSTANCE:Lcom/vk/account/verify/PhoneVerifyManager;
+    sget-object p1, Lcom/vk/account/verify/g;->e:Lcom/vk/account/verify/g;
 
-    invoke-virtual {p1}, Lcom/vk/account/verify/PhoneVerifyManager;->b()Lcom/vk/account/verify/h/PhoneValidationPresenter;
+    invoke-virtual {p1}, Lcom/vk/account/verify/g;->b()Lcom/vk/account/verify/h/e;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/vk/account/verify/views/PhoneVerifyView$ModalDialogListenerImpl;->c:Lcom/vk/account/verify/views/PhoneVerifyView;
 
-    invoke-virtual {p2}, Lcom/vk/account/verify/views/PhoneVerifyView;->getInfo()Lcom/vk/account/verify/PhoneVerifyManager$b;
+    invoke-virtual {p2}, Lcom/vk/account/verify/views/PhoneVerifyView;->getInfo()Lcom/vk/account/verify/g$b;
 
     move-result-object p2
 
     sget-object p3, Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand$Reason;->BACK_BUTTON:Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand$Reason;
 
-    invoke-virtual {p1, p2, p3}, Lcom/vk/account/verify/h/PhoneValidationPresenter;->a(Lcom/vk/account/verify/PhoneVerifyManager$b;Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand$Reason;)V
+    invoke-virtual {p1, p2, p3}, Lcom/vk/account/verify/h/e;->a(Lcom/vk/account/verify/g$b;Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand$Reason;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/account/verify/views/PhoneVerifyView$ModalDialogListenerImpl;->c:Lcom/vk/account/verify/views/PhoneVerifyView;
 
-    invoke-virtual {p1}, Lcom/vk/account/verify/views/PhoneVerifyView;->a()Lkotlin/Unit;
+    invoke-virtual {p1}, Lcom/vk/account/verify/views/PhoneVerifyView;->a()Lkotlin/m;
 
     const/4 p1, 0x1
 

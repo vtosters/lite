@@ -3,12 +3,12 @@
 .source "StorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/StorageManager;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/im/engine/internal/storage/structure/DbSchema;Lcom/vk/im/engine/internal/storage/structure/DbMigration;Lcom/vk/im/engine/models/Member;Ljava/util/List;Lcom/vk/im/engine/internal/storage/StorageChangesListener;Lcom/vk/im/engine/internal/storage/StorageTriggerFactory;)V
+    value = Lcom/vk/im/engine/internal/storage/StorageManager;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/im/engine/internal/storage/structure/c;Lcom/vk/im/engine/internal/storage/structure/a;Lcom/vk/im/engine/models/Member;Ljava/util/List;Lcom/vk/im/engine/internal/storage/a;Lcom/vk/im/engine/internal/storage/e;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/im/engine/internal/storage/StorageEnvironmentImpl;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/im/engine/internal/storage/c;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $triggerFactory:Lcom/vk/im/engine/internal/storage/StorageTriggerFactory;
+.field final synthetic $triggerFactory:Lcom/vk/im/engine/internal/storage/e;
 
 .field final synthetic this$0:Lcom/vk/im/engine/internal/storage/StorageManager;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/storage/StorageManager;Lcom/vk/im/engine/internal/storage/StorageTriggerFactory;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/storage/StorageManager;Lcom/vk/im/engine/internal/storage/e;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/storage/StorageManager$cacheEnvironment$2;->this$0:Lcom/vk/im/engine/internal/storage/StorageManager;
 
-    iput-object p2, p0, Lcom/vk/im/engine/internal/storage/StorageManager$cacheEnvironment$2;->$triggerFactory:Lcom/vk/im/engine/internal/storage/StorageTriggerFactory;
+    iput-object p2, p0, Lcom/vk/im/engine/internal/storage/StorageManager$cacheEnvironment$2;->$triggerFactory:Lcom/vk/im/engine/internal/storage/e;
 
     const/4 p1, 0x0
 
@@ -49,11 +49,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/engine/internal/storage/StorageEnvironmentImpl;
+.method public final invoke()Lcom/vk/im/engine/internal/storage/c;
     .locals 4
 
     .line 2
-    new-instance v0, Lcom/vk/im/engine/internal/storage/StorageEnvironmentImpl;
+    new-instance v0, Lcom/vk/im/engine/internal/storage/c;
 
     iget-object v1, p0, Lcom/vk/im/engine/internal/storage/StorageManager$cacheEnvironment$2;->this$0:Lcom/vk/im/engine/internal/storage/StorageManager;
 
@@ -63,11 +63,11 @@
 
     const-string v3, "sqliteDb"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/vk/im/engine/internal/storage/StorageManager$cacheEnvironment$2;->$triggerFactory:Lcom/vk/im/engine/internal/storage/StorageTriggerFactory;
+    iget-object v3, p0, Lcom/vk/im/engine/internal/storage/StorageManager$cacheEnvironment$2;->$triggerFactory:Lcom/vk/im/engine/internal/storage/e;
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/internal/storage/StorageEnvironmentImpl;-><init>(Lcom/vk/im/engine/internal/storage/StorageManager;Lio/requery/android/database/sqlite/SQLiteDatabase;Lcom/vk/im/engine/internal/storage/StorageTriggerFactory;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/internal/storage/c;-><init>(Lcom/vk/im/engine/internal/storage/StorageManager;Lio/requery/android/database/sqlite/SQLiteDatabase;Lcom/vk/im/engine/internal/storage/e;)V
 
     return-object v0
 .end method
@@ -76,7 +76,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/storage/StorageManager$cacheEnvironment$2;->invoke()Lcom/vk/im/engine/internal/storage/StorageEnvironmentImpl;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/storage/StorageManager$cacheEnvironment$2;->invoke()Lcom/vk/im/engine/internal/storage/c;
 
     move-result-object v0
 

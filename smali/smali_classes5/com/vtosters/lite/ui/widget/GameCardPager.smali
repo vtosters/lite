@@ -42,7 +42,7 @@
     iput v0, p0, Lcom/vtosters/lite/ui/widget/GameCardPager;->b:I
 
     .line 7
-    sget-object v1, Lcom/vtosters/lite/R;->GameCardPager:[I
+    sget-object v1, Lcom/vtosters/lite/a0;->GameCardPager:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

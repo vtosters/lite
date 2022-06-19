@@ -22,18 +22,18 @@
 
 .field final synthetic b:Landroid/content/Context;
 
-.field final synthetic c:Lkotlin/jvm/b/Functions;
+.field final synthetic c:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/dto/video/VideoAlbum;Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$Options;Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/dto/video/VideoAlbum;Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$Options;Landroid/content/Context;Lkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$c;->a:Lcom/vk/dto/video/VideoAlbum;
 
     iput-object p3, p0, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$c;->b:Landroid/content/Context;
 
-    iput-object p4, p0, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$c;->c:Lkotlin/jvm/b/Functions;
+    iput-object p4, p0, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$c;->c:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,7 +46,7 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
+    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
 
     move-result-object p1
 
@@ -64,9 +64,9 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$c;->c:Lkotlin/jvm/b/Functions;
+    iget-object v2, p0, Lcom/vk/catalog2/video/VideoCatalogAlbumBottomSheet$c;->c:Lkotlin/jvm/b/a;
 
-    invoke-interface {p1, p2, v0, v1, v2}, Lcom/vk/bridges/VideoBridge1;->a(Landroid/content/Context;IILkotlin/jvm/b/Functions;)V
+    invoke-interface {p1, p2, v0, v1, v2}, Lcom/vk/bridges/k0;->a(Landroid/content/Context;IILkotlin/jvm/b/a;)V
 
     return-void
 .end method

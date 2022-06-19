@@ -3,7 +3,7 @@
 .source "VkVideoBridge.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,12 +19,12 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/util/List<",
         "+",
         "Ljava/lang/String;",
         ">;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -70,15 +70,15 @@
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/fragments/j/b/b;->b()V
 
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/bridges/VkVideoBridge$recordVideo$2;->$fragment:Lcom/vk/core/fragments/FragmentImpl;
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->b(Lcom/vk/core/fragments/j/b/ParentSupportFragment;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/fragments/j/b/b;->b(Lcom/vk/core/fragments/j/b/a;)V
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->c()V
+    invoke-virtual {p1}, Lcom/vk/core/fragments/j/b/b;->c()V
 
     :cond_0
     return-void
@@ -92,7 +92,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vtosters/lite/bridges/VkVideoBridge$recordVideo$2;->a(Ljava/util/List;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

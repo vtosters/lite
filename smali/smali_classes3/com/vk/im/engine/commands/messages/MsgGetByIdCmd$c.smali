@@ -3,12 +3,12 @@
 .source "MsgGetByIdCmd.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/utils/collection/IntCollection$a;
+.implements Lcom/vk/im/engine/utils/collection/d$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
+    value = Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;)Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$a;
 
-.field final synthetic b:Lcom/vk/im/engine/models/EntityIntMap;
+.field final synthetic b:Lcom/vk/im/engine/models/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$a;Lcom/vk/im/engine/models/EntityIntMap;)V
+.method constructor <init>(Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$a;Lcom/vk/im/engine/models/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$c;->a:Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$a;
 
-    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$c;->b:Lcom/vk/im/engine/models/EntityIntMap;
+    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$c;->b:Lcom/vk/im/engine/models/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,20 +57,20 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$c;->b:Lcom/vk/im/engine/models/EntityIntMap;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$c;->b:Lcom/vk/im/engine/models/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/EntityIntMap;->b(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/a;->b(I)V
 
     goto :goto_1
 
     .line 3
     :cond_0
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$c;->b:Lcom/vk/im/engine/models/EntityIntMap;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$c;->b:Lcom/vk/im/engine/models/a;
 
-    invoke-virtual {v1, p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;->a(ILjava/lang/Object;)V
+    invoke-virtual {v1, p1, v0}, Lcom/vk/im/engine/models/a;->a(ILjava/lang/Object;)V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$c;->b:Lcom/vk/im/engine/models/EntityIntMap;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd$c;->b:Lcom/vk/im/engine/models/a;
 
     invoke-virtual {v0}, Lcom/vk/im/engine/models/messages/Msg;->z1()I
 
@@ -92,7 +92,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {v1, p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;->a(IZ)V
+    invoke-virtual {v1, p1, v0}, Lcom/vk/im/engine/models/a;->a(IZ)V
 
     :goto_1
     return-void

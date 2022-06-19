@@ -44,7 +44,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh$f;->b:Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;
 
-    invoke-static {p1}, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;->a(Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;)Lkotlin/jvm/b/Functions;
+    invoke-static {p1}, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;->a(Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;)Lkotlin/jvm/b/a;
 
     move-result-object p1
 
@@ -58,7 +58,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh$f;->b:Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;
 
-    invoke-static {p1}, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;->c(Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;)Lkotlin/jvm/b/Functions2;
+    invoke-static {p1}, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;->c(Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;)Lkotlin/jvm/b/b;
 
     move-result-object p1
 
@@ -68,7 +68,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

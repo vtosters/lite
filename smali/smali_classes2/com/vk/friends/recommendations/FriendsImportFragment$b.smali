@@ -1,5 +1,5 @@
 .class public final Lcom/vk/friends/recommendations/FriendsImportFragment$b;
-.super Lcom/vk/navigation/Navigator;
+.super Lcom/vk/navigation/o;
 .source "FriendsImportFragment.kt"
 
 
@@ -32,7 +32,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/friends/recommendations/FriendsImportFragment$b$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/friends/recommendations/FriendsImportFragment$b$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/friends/recommendations/FriendsImportFragment$b;->S0:Lcom/vk/friends/recommendations/FriendsImportFragment$b$a;
 
@@ -45,19 +45,19 @@
     .line 1
     const-class v0, Lcom/vk/friends/recommendations/FriendsImportFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->d:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->d:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object p1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
-    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->e:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/q;->e:Ljava/lang/String;
 
     invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
@@ -74,7 +74,7 @@
     .locals 2
 
     .line 3
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "session"
 
@@ -83,11 +83,11 @@
     return-object p0
 .end method
 
-.method public final a(Lcom/twitter/sdk/android/core/TwitterSession;)Lcom/vk/friends/recommendations/FriendsImportFragment$b;
+.method public final a(Lcom/twitter/sdk/android/core/t;)Lcom/vk/friends/recommendations/FriendsImportFragment$b;
     .locals 2
 
     .line 5
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     new-instance v1, Lcom/google/gson/e;
 
@@ -112,7 +112,7 @@
     .locals 2
 
     .line 4
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "token"
 
@@ -125,14 +125,14 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v1, "token"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
+    iget-object p1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
     const-string v0, "account_name"
 

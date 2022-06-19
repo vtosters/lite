@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public a:Lcom/vk/dto/common/data/UploadServer;
+.field public a:Lcom/vk/dto/common/data/i;
 
 .field public b:Ljava/lang/String;
 

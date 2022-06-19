@@ -22,10 +22,10 @@
     .end annotation
 .end field
 
-.field public static final d:Lcom/vk/dto/common/data/JsonParser;
+.field public static final d:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/catalog2/core/api/dto/Meta;",
             ">;"
         }
@@ -49,7 +49,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/Meta$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/Meta$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/catalog2/core/api/dto/Meta$b;
@@ -64,7 +64,7 @@
 
     invoke-direct {v0}, Lcom/vk/catalog2/core/api/dto/Meta$a;-><init>()V
 
-    sput-object v0, Lcom/vk/catalog2/core/api/dto/Meta;->d:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/catalog2/core/api/dto/Meta;->d:Lcom/vk/dto/common/data/c;
 
     return-void
 .end method
@@ -110,7 +110,7 @@
 
     .line 10
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -172,7 +172,7 @@
 
     const-string v2, "o.optString(ServerKeys.TRACK_CODE)"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-direct {p0, v0, v1, p1}, Lcom/vk/catalog2/core/api/dto/Meta;-><init>(Lcom/vk/dto/common/VerifyInfo;Lcom/vk/catalog2/core/api/dto/ContentType;Ljava/lang/String;)V

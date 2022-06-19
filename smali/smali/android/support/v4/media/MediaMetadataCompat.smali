@@ -391,7 +391,7 @@
     const/4 v1, 0x0
 
     .line 3
-    invoke-static {p0, v0, v1}, Landroid/support/v4/media/MediaMetadataCompatApi21;->a(Ljava/lang/Object;Landroid/os/Parcel;I)V
+    invoke-static {p0, v0, v1}, Landroid/support/v4/media/e;->a(Ljava/lang/Object;Landroid/os/Parcel;I)V
 
     .line 4
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->setDataPosition(I)V
@@ -462,7 +462,7 @@
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->setDataPosition(I)V
 
     .line 5
-    invoke-static {v0}, Landroid/support/v4/media/MediaMetadataCompatApi21;->a(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/support/v4/media/e;->a(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object v1
 

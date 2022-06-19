@@ -3,7 +3,7 @@
 .source "VkTracker.kt"
 
 # interfaces
-.implements Lcom/vk/metrics/eventtracking/Tracker;
+.implements Lcom/vk/metrics/eventtracking/c;
 
 
 # annotations
@@ -21,13 +21,13 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/KProperty5;
+.field static final synthetic a:[Lkotlin/u/j;
 
 .field private static final b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/metrics/eventtracking/Tracker;",
+            "Lcom/vk/metrics/eventtracking/c;",
             ">;"
         }
     .end annotation
@@ -47,14 +47,14 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private static final e:Lkotlin/Lazy2;
+.field private static final e:Lkotlin/e;
 
 .field private static f:Landroid/content/Context;
 
@@ -62,7 +62,7 @@
 
 .field private static volatile h:Z
 
-.field private static final i:Lcom/vk/metrics/eventtracking/TrackerExtraParamsProducer;
+.field private static final i:Lcom/vk/metrics/eventtracking/d;
 
 .field private static j:Lcom/vk/metrics/eventtracking/EventsStorage;
 
@@ -77,11 +77,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/KProperty5;
+    new-array v1, v1, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -89,9 +89,9 @@
 
     const-string v5, "getHandler()Landroid/os/Handler;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
@@ -99,7 +99,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -107,15 +107,15 @@
 
     const-string v4, "getExecutor()Ljava/util/concurrent/ExecutorService;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/metrics/eventtracking/VkTracker;->a:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/metrics/eventtracking/VkTracker;->a:[Lkotlin/u/j;
 
     .line 1
     new-instance v1, Lcom/vk/metrics/eventtracking/VkTracker;
@@ -125,7 +125,7 @@
     sput-object v1, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
 
     .line 2
-    invoke-static {}, Lcom/vk/metrics/eventtracking/VkTracker1;->a()Ljava/util/List;
+    invoke-static {}, Lcom/vk/metrics/eventtracking/g;->a()Ljava/util/List;
 
     move-result-object v1
 
@@ -139,7 +139,7 @@
     sput-object v1, Lcom/vk/metrics/eventtracking/VkTracker;->c:Ljava/util/HashSet;
 
     .line 4
-    invoke-static {}, Lcom/vk/metrics/eventtracking/VkTracker1;->a()Ljava/util/List;
+    invoke-static {}, Lcom/vk/metrics/eventtracking/g;->a()Ljava/util/List;
 
     move-result-object v1
 
@@ -148,16 +148,16 @@
     .line 5
     sget-object v1, Lcom/vk/metrics/eventtracking/VkTracker$handler$2;->a:Lcom/vk/metrics/eventtracking/VkTracker$handler$2;
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     .line 6
     sget-object v1, Lcom/vk/metrics/eventtracking/VkTracker$executor$2;->a:Lcom/vk/metrics/eventtracking/VkTracker$executor$2;
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v1
 
-    sput-object v1, Lcom/vk/metrics/eventtracking/VkTracker;->e:Lkotlin/Lazy2;
+    sput-object v1, Lcom/vk/metrics/eventtracking/VkTracker;->e:Lkotlin/e;
 
     .line 7
     sget-object v1, Lcom/vk/metrics/eventtracking/VkTracker$State;->IDLE:Lcom/vk/metrics/eventtracking/VkTracker$State;
@@ -168,9 +168,9 @@
     sput-boolean v0, Lcom/vk/metrics/eventtracking/VkTracker;->h:Z
 
     .line 9
-    sget-object v0, Lcom/vk/metrics/eventtracking/TrackerExtraParamsProducer;->INSTANCE:Lcom/vk/metrics/eventtracking/TrackerExtraParamsProducer;
+    sget-object v0, Lcom/vk/metrics/eventtracking/d;->b:Lcom/vk/metrics/eventtracking/d;
 
-    sput-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->i:Lcom/vk/metrics/eventtracking/TrackerExtraParamsProducer;
+    sput-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->i:Lcom/vk/metrics/eventtracking/d;
 
     return-void
 .end method
@@ -197,18 +197,18 @@
     :cond_0
     const-string p0, "eventsStorage"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/metrics/eventtracking/VkTracker;Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Tracker;
+.method public static final synthetic a(Lcom/vk/metrics/eventtracking/VkTracker;Ljava/lang/String;)Lcom/vk/metrics/eventtracking/c;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/metrics/eventtracking/VkTracker;->b(Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Tracker;
+    invoke-direct {p0, p1}, Lcom/vk/metrics/eventtracking/VkTracker;->b(Ljava/lang/String;)Lcom/vk/metrics/eventtracking/c;
 
     move-result-object p0
 
@@ -233,13 +233,13 @@
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/Functions;)V
+.method private final a(Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -251,7 +251,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     goto :goto_0
 
@@ -265,7 +265,7 @@
     return-void
 .end method
 
-.method private final b(Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Tracker;
+.method private final b(Ljava/lang/String;)Lcom/vk/metrics/eventtracking/c;
     .locals 3
 
     .line 15
@@ -288,13 +288,13 @@
 
     move-object v2, v1
 
-    check-cast v2, Lcom/vk/metrics/eventtracking/Tracker;
+    check-cast v2, Lcom/vk/metrics/eventtracking/c;
 
-    invoke-interface {v2}, Lcom/vk/metrics/eventtracking/Tracker;->getId()Ljava/lang/String;
+    invoke-interface {v2}, Lcom/vk/metrics/eventtracking/c;->getId()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -306,7 +306,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    check-cast v1, Lcom/vk/metrics/eventtracking/Tracker;
+    check-cast v1, Lcom/vk/metrics/eventtracking/c;
 
     return-object v1
 .end method
@@ -320,16 +320,16 @@
     return-object p0
 .end method
 
-.method private final b(Lkotlin/jvm/b/Functions;)Lkotlin/jvm/b/Functions;
+.method private final b(Lkotlin/jvm/b/a;)Lkotlin/jvm/b/a;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -348,7 +348,7 @@
     .line 4
     new-instance v1, Lcom/vk/metrics/eventtracking/VkTracker$waitForAll$onCompleteAll$1;
 
-    invoke-direct {v1, v0, p1}, Lcom/vk/metrics/eventtracking/VkTracker$waitForAll$onCompleteAll$1;-><init>(Ljava/util/concurrent/atomic/AtomicInteger;Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v1, v0, p1}, Lcom/vk/metrics/eventtracking/VkTracker$waitForAll$onCompleteAll$1;-><init>(Ljava/util/concurrent/atomic/AtomicInteger;Lkotlin/jvm/b/a;)V
 
     return-object v1
 .end method
@@ -357,9 +357,9 @@
     .locals 4
 
     .line 6
-    sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->i:Lcom/vk/metrics/eventtracking/TrackerExtraParamsProducer;
+    sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->i:Lcom/vk/metrics/eventtracking/d;
 
-    invoke-virtual {v0}, Lcom/vk/metrics/eventtracking/TrackerExtraParamsProducer;->a()Ljava/util/Map;
+    invoke-virtual {v0}, Lcom/vk/metrics/eventtracking/d;->a()Ljava/util/Map;
 
     move-result-object v0
 
@@ -398,7 +398,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/metrics/eventtracking/Tracker;
+    check-cast v1, Lcom/vk/metrics/eventtracking/c;
 
     .line 10
     invoke-virtual {p1}, Lcom/vk/metrics/eventtracking/Event;->d()Ljava/util/Set;
@@ -415,7 +415,7 @@
 
     move-result-object v2
 
-    invoke-interface {v1}, Lcom/vk/metrics/eventtracking/Tracker;->getId()Ljava/lang/String;
+    invoke-interface {v1}, Lcom/vk/metrics/eventtracking/c;->getId()Ljava/lang/String;
 
     move-result-object v3
 
@@ -427,7 +427,7 @@
 
     .line 11
     :cond_1
-    invoke-interface {v1, p1}, Lcom/vk/metrics/eventtracking/Tracker;->a(Lcom/vk/metrics/eventtracking/Event;)V
+    invoke-interface {v1, p1}, Lcom/vk/metrics/eventtracking/c;->a(Lcom/vk/metrics/eventtracking/Event;)V
 
     goto :goto_0
 
@@ -488,7 +488,7 @@
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/metrics/eventtracking/VkTracker;->b(Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Tracker;
+    invoke-direct {p0, p1}, Lcom/vk/metrics/eventtracking/VkTracker;->b(Ljava/lang/String;)Lcom/vk/metrics/eventtracking/c;
 
     move-result-object p1
 
@@ -508,15 +508,15 @@
 .method private final d()Ljava/util/concurrent/ExecutorService;
     .locals 3
 
-    sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->e:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->e:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/metrics/eventtracking/VkTracker;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/metrics/eventtracking/VkTracker;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -553,10 +553,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lkotlin/jvm/b/Functions;
+    check-cast v1, Lkotlin/jvm/b/a;
 
     .line 3
-    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     goto :goto_0
 
@@ -587,7 +587,7 @@
     .line 35
     sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker$handleLogout$1;->a:Lcom/vk/metrics/eventtracking/VkTracker$handleLogout$1;
 
-    invoke-direct {p0, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -600,7 +600,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/metrics/eventtracking/VkTracker$handleLogin$1;-><init>(I)V
 
-    invoke-direct {p0, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -611,12 +611,12 @@
     .line 6
     sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker$initialize$1;->a:Lcom/vk/metrics/eventtracking/VkTracker$initialize$1;
 
-    invoke-virtual {p0, p1, p2, p3, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Landroid/app/Application;ZLandroid/os/Bundle;Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p0, p1, p2, p3, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Landroid/app/Application;ZLandroid/os/Bundle;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method public declared-synchronized a(Landroid/app/Application;ZLandroid/os/Bundle;Lkotlin/jvm/b/Functions;)V
+.method public declared-synchronized a(Landroid/app/Application;ZLandroid/os/Bundle;Lkotlin/jvm/b/a;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -624,8 +624,8 @@
             "Landroid/app/Application;",
             "Z",
             "Landroid/os/Bundle;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -710,19 +710,19 @@
 
     const-string v4, "executor"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, p1, v2, v0, v3}, Lcom/vk/metrics/eventtracking/EventsStorage;-><init>(Landroid/content/Context;ILjava/lang/String;Ljava/util/concurrent/Executor;)V
 
     sput-object v1, Lcom/vk/metrics/eventtracking/VkTracker;->j:Lcom/vk/metrics/eventtracking/EventsStorage;
 
     .line 14
-    sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->i:Lcom/vk/metrics/eventtracking/TrackerExtraParamsProducer;
+    sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->i:Lcom/vk/metrics/eventtracking/d;
 
-    invoke-virtual {v0, p1}, Lcom/vk/metrics/eventtracking/TrackerExtraParamsProducer;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/metrics/eventtracking/d;->a(Landroid/content/Context;)V
 
     .line 15
-    invoke-direct {p0, p4}, Lcom/vk/metrics/eventtracking/VkTracker;->b(Lkotlin/jvm/b/Functions;)Lkotlin/jvm/b/Functions;
+    invoke-direct {p0, p4}, Lcom/vk/metrics/eventtracking/VkTracker;->b(Lkotlin/jvm/b/a;)Lkotlin/jvm/b/a;
 
     move-result-object p4
 
@@ -745,10 +745,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/metrics/eventtracking/Tracker;
+    check-cast v1, Lcom/vk/metrics/eventtracking/c;
 
     .line 18
-    invoke-interface {v1, p1, p2, p3, p4}, Lcom/vk/metrics/eventtracking/Tracker;->a(Landroid/app/Application;ZLandroid/os/Bundle;Lkotlin/jvm/b/Functions;)V
+    invoke-interface {v1, p1, p2, p3, p4}, Lcom/vk/metrics/eventtracking/c;->a(Landroid/app/Application;ZLandroid/os/Bundle;Lkotlin/jvm/b/a;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -765,7 +765,7 @@
     const-string p1, "context"
 
     .line 20
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -775,7 +775,7 @@
     :try_start_3
     const-string p1, "context"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -797,7 +797,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/metrics/eventtracking/VkTracker$updateParams$1;-><init>(Landroid/os/Bundle;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -810,16 +810,16 @@
 
     invoke-direct {v0, p1}, Lcom/vk/metrics/eventtracking/VkTracker$logEvent$1;-><init>(Lcom/vk/metrics/eventtracking/Event;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/metrics/eventtracking/Tracker;)V
+.method public final a(Lcom/vk/metrics/eventtracking/c;)V
     .locals 3
 
     .line 39
-    invoke-interface {p1}, Lcom/vk/metrics/eventtracking/Tracker;->getId()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/metrics/eventtracking/c;->getId()Ljava/lang/String;
 
     move-result-object v0
 
@@ -844,7 +844,7 @@
     .line 42
     sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->c:Ljava/util/HashSet;
 
-    invoke-interface {p1}, Lcom/vk/metrics/eventtracking/Tracker;->getId()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/metrics/eventtracking/c;->getId()Ljava/lang/String;
 
     move-result-object p1
 
@@ -874,7 +874,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1}, Lcom/vk/metrics/eventtracking/Tracker;->getId()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/metrics/eventtracking/c;->getId()Ljava/lang/String;
 
     move-result-object p1
 
@@ -952,7 +952,7 @@
 
     invoke-direct {v0, p1, p2}, Lcom/vk/metrics/eventtracking/VkTracker$logException$3;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -965,7 +965,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/metrics/eventtracking/VkTracker$logException$1;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -988,7 +988,7 @@
 
     invoke-direct {v0, p1, p2}, Lcom/vk/metrics/eventtracking/VkTracker$logException$2;-><init>(Ljava/util/Collection;Ljava/lang/Throwable;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -1071,10 +1071,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/metrics/eventtracking/Tracker;
+    check-cast v1, Lcom/vk/metrics/eventtracking/c;
 
     .line 3
-    invoke-interface {v1, p1}, Lcom/vk/metrics/eventtracking/Tracker;->onStartActivity(Landroid/app/Activity;)V
+    invoke-interface {v1, p1}, Lcom/vk/metrics/eventtracking/c;->onStartActivity(Landroid/app/Activity;)V
 
     goto :goto_0
 
@@ -1104,10 +1104,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/metrics/eventtracking/Tracker;
+    check-cast v1, Lcom/vk/metrics/eventtracking/c;
 
     .line 3
-    invoke-interface {v1, p1}, Lcom/vk/metrics/eventtracking/Tracker;->onStopActivity(Landroid/app/Activity;)V
+    invoke-interface {v1, p1}, Lcom/vk/metrics/eventtracking/c;->onStopActivity(Landroid/app/Activity;)V
 
     goto :goto_0
 

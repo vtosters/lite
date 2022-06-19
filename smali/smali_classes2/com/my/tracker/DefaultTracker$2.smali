@@ -3,7 +3,7 @@
 .source "DefaultTracker.java"
 
 # interfaces
-.implements Lcom/my/tracker/async/commands/AsyncCommand$a;
+.implements Lcom/my/tracker/async/commands/c$a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/my/tracker/async/commands/AsyncCommand$a<",
+        "Lcom/my/tracker/async/commands/c$a<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -60,7 +60,7 @@
     const-string p1, "API referrer is already sent"
 
     .line 3
-    invoke-static {p1}, Lcom/my/tracker/Tracer;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/b;->a(Ljava/lang/String;)V
 
     return-void
 

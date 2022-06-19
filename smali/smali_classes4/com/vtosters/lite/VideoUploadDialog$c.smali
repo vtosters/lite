@@ -1,5 +1,5 @@
 .class public final Lcom/vtosters/lite/VideoUploadDialog$c;
-.super Lcom/vk/core/util/TextWatcherAdapter;
+.super Lcom/vk/core/util/c1;
 .source "VideoUploadDialog.kt"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/VideoUploadDialog$c;->a:Landroidx/appcompat/app/AlertDialog;
 
-    invoke-direct {p0}, Lcom/vk/core/util/TextWatcherAdapter;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/util/c1;-><init>()V
 
     return-void
 .end method
@@ -46,13 +46,13 @@
 
     const-string v1, "dialog.getButton(AlertDialog.BUTTON_POSITIVE)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/utils/Utils;->a(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/vtosters/lite/utils/l;->a(Ljava/lang/String;)Z
 
     move-result p1
 

@@ -1,5 +1,5 @@
 .class Lcom/squareup/picasso/NetworkRequestHandler;
-.super Lcom/squareup/picasso/RequestHandler;
+.super Lcom/squareup/picasso/s;
 .source "NetworkRequestHandler.java"
 
 
@@ -14,21 +14,21 @@
 # instance fields
 .field private final a:Lcom/squareup/picasso/Downloader;
 
-.field private final b:Lcom/squareup/picasso/Stats;
+.field private final b:Lcom/squareup/picasso/u;
 
 
 # direct methods
-.method public constructor <init>(Lcom/squareup/picasso/Downloader;Lcom/squareup/picasso/Stats;)V
+.method public constructor <init>(Lcom/squareup/picasso/Downloader;Lcom/squareup/picasso/u;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/squareup/picasso/RequestHandler;-><init>()V
+    invoke-direct {p0}, Lcom/squareup/picasso/s;-><init>()V
 
     .line 2
     iput-object p1, p0, Lcom/squareup/picasso/NetworkRequestHandler;->a:Lcom/squareup/picasso/Downloader;
 
     .line 3
-    iput-object p2, p0, Lcom/squareup/picasso/NetworkRequestHandler;->b:Lcom/squareup/picasso/Stats;
+    iput-object p2, p0, Lcom/squareup/picasso/NetworkRequestHandler;->b:Lcom/squareup/picasso/u;
 
     return-void
 .end method
@@ -43,7 +43,7 @@
     return v0
 .end method
 
-.method public a(Lcom/squareup/picasso/Request;I)Lcom/squareup/picasso/RequestHandler$a;
+.method public a(Lcom/squareup/picasso/q;I)Lcom/squareup/picasso/s$a;
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -54,9 +54,9 @@
     .line 3
     iget-object p2, p0, Lcom/squareup/picasso/NetworkRequestHandler;->a:Lcom/squareup/picasso/Downloader;
 
-    iget-object v0, p1, Lcom/squareup/picasso/Request;->d:Landroid/net/Uri;
+    iget-object v0, p1, Lcom/squareup/picasso/q;->d:Landroid/net/Uri;
 
-    iget p1, p1, Lcom/squareup/picasso/Request;->c:I
+    iget p1, p1, Lcom/squareup/picasso/q;->c:I
 
     invoke-interface {p2, v0, p1}, Lcom/squareup/picasso/Downloader;->a(Landroid/net/Uri;I)Lcom/squareup/picasso/Downloader$a;
 
@@ -90,9 +90,9 @@
     if-eqz v1, :cond_2
 
     .line 6
-    new-instance p1, Lcom/squareup/picasso/RequestHandler$a;
+    new-instance p1, Lcom/squareup/picasso/s$a;
 
-    invoke-direct {p1, v1, v0}, Lcom/squareup/picasso/RequestHandler$a;-><init>(Landroid/graphics/Bitmap;Lcom/squareup/picasso/Picasso$LoadedFrom;)V
+    invoke-direct {p1, v1, v0}, Lcom/squareup/picasso/s$a;-><init>(Landroid/graphics/Bitmap;Lcom/squareup/picasso/Picasso$LoadedFrom;)V
 
     return-object p1
 
@@ -126,7 +126,7 @@
 
     .line 9
     :cond_4
-    invoke-static {v1}, Lcom/squareup/picasso/Utils;->a(Ljava/io/InputStream;)V
+    invoke-static {v1}, Lcom/squareup/picasso/a0;->a(Ljava/io/InputStream;)V
 
     .line 10
     new-instance p1, Lcom/squareup/picasso/NetworkRequestHandler$ContentLengthException;
@@ -153,28 +153,28 @@
     if-lez p2, :cond_6
 
     .line 12
-    iget-object p2, p0, Lcom/squareup/picasso/NetworkRequestHandler;->b:Lcom/squareup/picasso/Stats;
+    iget-object p2, p0, Lcom/squareup/picasso/NetworkRequestHandler;->b:Lcom/squareup/picasso/u;
 
     invoke-virtual {p1}, Lcom/squareup/picasso/Downloader$a;->b()J
 
     move-result-wide v2
 
-    invoke-virtual {p2, v2, v3}, Lcom/squareup/picasso/Stats;->a(J)V
+    invoke-virtual {p2, v2, v3}, Lcom/squareup/picasso/u;->a(J)V
 
     .line 13
     :cond_6
-    new-instance p1, Lcom/squareup/picasso/RequestHandler$a;
+    new-instance p1, Lcom/squareup/picasso/s$a;
 
-    invoke-direct {p1, v1, v0}, Lcom/squareup/picasso/RequestHandler$a;-><init>(Ljava/io/InputStream;Lcom/squareup/picasso/Picasso$LoadedFrom;)V
+    invoke-direct {p1, v1, v0}, Lcom/squareup/picasso/s$a;-><init>(Ljava/io/InputStream;Lcom/squareup/picasso/Picasso$LoadedFrom;)V
 
     return-object p1
 .end method
 
-.method public a(Lcom/squareup/picasso/Request;)Z
+.method public a(Lcom/squareup/picasso/q;)Z
     .locals 1
 
     .line 1
-    iget-object p1, p1, Lcom/squareup/picasso/Request;->d:Landroid/net/Uri;
+    iget-object p1, p1, Lcom/squareup/picasso/q;->d:Landroid/net/Uri;
 
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 

@@ -3,12 +3,12 @@
 .source "InstantJobExt.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/utils/extensions/InstantJobExtKt;->b(Lcom/vk/instantjobs/InstantJobManager;Ljava/lang/String;I)V
+    value = Lcom/vk/im/engine/utils/extensions/InstantJobExtKt;->b(Lcom/vk/instantjobs/b;Ljava/lang/String;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/instantjobs/InstantJob;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -79,13 +79,13 @@
 
     .line 2
     :goto_0
-    instance-of v3, p1, Lcom/vk/im/engine/internal/jobs/msg/MsgSendScreenshotNotifyJob;
+    instance-of v3, p1, Lcom/vk/im/engine/internal/jobs/msg/f;
 
     if-eqz v3, :cond_1
 
-    check-cast p1, Lcom/vk/im/engine/internal/jobs/msg/MsgSendScreenshotNotifyJob;
+    check-cast p1, Lcom/vk/im/engine/internal/jobs/msg/f;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/jobs/msg/MsgSendScreenshotNotifyJob;->m()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/jobs/msg/f;->m()I
 
     move-result p1
 

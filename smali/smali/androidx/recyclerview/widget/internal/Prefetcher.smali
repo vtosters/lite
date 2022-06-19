@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroidx/recyclerview/widget/internal/TaskScheduler;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroidx/recyclerview/widget/internal/TaskScheduler;Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 4

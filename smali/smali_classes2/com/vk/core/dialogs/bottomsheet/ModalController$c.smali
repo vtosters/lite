@@ -60,7 +60,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/View;)V
+    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/view/View;)V
 
     :cond_0
     return-void

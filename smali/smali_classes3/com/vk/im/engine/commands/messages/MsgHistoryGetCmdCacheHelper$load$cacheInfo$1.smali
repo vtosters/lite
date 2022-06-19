@@ -3,12 +3,12 @@
 .source "MsgHistoryGetCmdCacheHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;)Lcom/vk/im/engine/models/messages/MsgHistory;
+    value = Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/commands/messages/j;)Lcom/vk/im/engine/models/messages/MsgHistory;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
         "Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;",
         ">;"
@@ -28,18 +28,18 @@
 
 
 # instance fields
-.field final synthetic $args:Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;
+.field final synthetic $args:Lcom/vk/im/engine/commands/messages/j;
 
-.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
+.field final synthetic $env:Lcom/vk/im/engine/d;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;)V
+.method constructor <init>(Lcom/vk/im/engine/d;Lcom/vk/im/engine/commands/messages/j;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$load$cacheInfo$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$load$cacheInfo$1;->$env:Lcom/vk/im/engine/d;
 
-    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$load$cacheInfo$1;->$args:Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;
+    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$load$cacheInfo$1;->$args:Lcom/vk/im/engine/commands/messages/j;
 
     const/4 p1, 0x1
 
@@ -56,11 +56,11 @@
     .line 1
     sget-object p1, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->b:Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$load$cacheInfo$1;->$env:Lcom/vk/im/engine/ImEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$load$cacheInfo$1;->$env:Lcom/vk/im/engine/d;
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$load$cacheInfo$1;->$args:Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$load$cacheInfo$1;->$args:Lcom/vk/im/engine/commands/messages/j;
 
-    invoke-static {p1, v0, v1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs;)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;
+    invoke-static {p1, v0, v1}, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;->a(Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper;Lcom/vk/im/engine/d;Lcom/vk/im/engine/commands/messages/j;)Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$a;
 
     move-result-object p1
 

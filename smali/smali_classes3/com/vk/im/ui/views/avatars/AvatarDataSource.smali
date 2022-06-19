@@ -13,8 +13,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/facebook/datasource/AbstractDataSource<",
-        "Lcom/facebook/common/references/CloseableReference<",
-        "Lcom/facebook/x/g/CloseableImage;",
+        "Lcom/facebook/common/references/a<",
+        "Lcom/facebook/x/g/c;",
         ">;>;"
     }
 .end annotation
@@ -23,11 +23,11 @@
 # static fields
 .field private static final j:Ljava/util/concurrent/ExecutorService;
 
-.field private static final k:Lcom/vk/core/util/ThreadLocalDelegate;
+.field private static final k:Lcom/vk/core/util/d1;
 
-.field private static final l:Lcom/vk/core/util/ThreadLocalDelegate;
+.field private static final l:Lcom/vk/core/util/d1;
 
-.field private static final m:Lcom/vk/core/util/ThreadLocalDelegate;
+.field private static final m:Lcom/vk/core/util/d1;
 
 .field private static final n:Landroid/graphics/Paint;
 
@@ -39,10 +39,10 @@
 
 
 # instance fields
-.field private final g:Lcom/facebook/datasource/DataSource;
+.field private final g:Lcom/facebook/datasource/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/datasource/b<",
             "*>;"
         }
     .end annotation
@@ -61,7 +61,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/avatars/AvatarDataSource$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/avatars/AvatarDataSource$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->q:Lcom/vk/im/ui/views/avatars/AvatarDataSource$c;
 
@@ -77,29 +77,29 @@
     .line 2
     sget-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource$Companion$srcRect$2;->a:Lcom/vk/im/ui/views/avatars/AvatarDataSource$Companion$srcRect$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
+    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->k:Lcom/vk/core/util/ThreadLocalDelegate;
+    sput-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->k:Lcom/vk/core/util/d1;
 
     .line 3
     sget-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource$Companion$dstRect$2;->a:Lcom/vk/im/ui/views/avatars/AvatarDataSource$Companion$dstRect$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
+    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->l:Lcom/vk/core/util/ThreadLocalDelegate;
+    sput-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->l:Lcom/vk/core/util/d1;
 
     .line 4
     sget-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource$Companion$stringBuilder$2;->a:Lcom/vk/im/ui/views/avatars/AvatarDataSource$Companion$stringBuilder$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
+    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->m:Lcom/vk/core/util/ThreadLocalDelegate;
+    sput-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->m:Lcom/vk/core/util/d1;
 
     .line 5
     new-instance v0, Landroid/graphics/Paint;
@@ -179,51 +179,51 @@
     .line 3
     sget-object p3, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {p3}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
+    invoke-virtual {p3}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
 
     move-result-object p3
 
     const-string p4, "FrescoWrapper.getImagePipeline()"
 
-    invoke-static {p3, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p3}, Lcom/facebook/x/d/ImagePipeline;->e()Lcom/facebook/x/c/MemoryCache;
+    invoke-virtual {p3}, Lcom/facebook/x/d/g;->e()Lcom/facebook/x/c/p;
 
     move-result-object p3
 
     .line 4
-    new-instance p4, Lcom/facebook/cache/common/SimpleCacheKey;
+    new-instance p4, Lcom/facebook/cache/common/g;
 
-    invoke-direct {p4, p2}, Lcom/facebook/cache/common/SimpleCacheKey;-><init>(Ljava/lang/String;)V
+    invoke-direct {p4, p2}, Lcom/facebook/cache/common/g;-><init>(Ljava/lang/String;)V
 
     .line 5
-    invoke-interface {p3, p4}, Lcom/facebook/x/c/MemoryCache;->get(Ljava/lang/Object;)Lcom/facebook/common/references/CloseableReference;
+    invoke-interface {p3, p4}, Lcom/facebook/x/c/p;->get(Ljava/lang/Object;)Lcom/facebook/common/references/a;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
     .line 6
-    invoke-virtual {p2}, Lcom/facebook/common/references/CloseableReference;->d()Z
+    invoke-virtual {p2}, Lcom/facebook/common/references/a;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 7
-    invoke-static {}, Lcom/facebook/datasource/SimpleDataSource;->j()Lcom/facebook/datasource/SimpleDataSource;
+    invoke-static {}, Lcom/facebook/datasource/g;->j()Lcom/facebook/datasource/g;
 
     move-result-object p1
 
     const-string p3, "SimpleDataSource.create()"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
-    iput-object p1, p0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->g:Lcom/facebook/datasource/DataSource;
+    iput-object p1, p0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->g:Lcom/facebook/datasource/b;
 
     .line 9
-    invoke-virtual {p1, p2}, Lcom/facebook/datasource/SimpleDataSource;->b(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p2}, Lcom/facebook/datasource/g;->b(Ljava/lang/Object;)Z
 
     const/4 p1, 0x1
 
@@ -236,7 +236,7 @@
     :cond_0
     sget-object p2, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->q:Lcom/vk/im/ui/views/avatars/AvatarDataSource$c;
 
-    invoke-static {p2, p1}, Lcom/vk/im/ui/views/avatars/AvatarDataSource$c;->a(Lcom/vk/im/ui/views/avatars/AvatarDataSource$c;Ljava/util/List;)[Lcom/facebook/datasource/DataSource;
+    invoke-static {p2, p1}, Lcom/vk/im/ui/views/avatars/AvatarDataSource$c;->a(Lcom/vk/im/ui/views/avatars/AvatarDataSource$c;Ljava/util/List;)[Lcom/facebook/datasource/b;
 
     move-result-object p1
 
@@ -246,38 +246,38 @@
 
     move-result-object p1
 
-    check-cast p1, [Lcom/facebook/datasource/DataSource;
+    check-cast p1, [Lcom/facebook/datasource/b;
 
-    invoke-static {p1}, Lcom/facebook/x/e/ListDataSource;->a([Lcom/facebook/datasource/DataSource;)Lcom/facebook/x/e/ListDataSource;
+    invoke-static {p1}, Lcom/facebook/x/e/d;->a([Lcom/facebook/datasource/b;)Lcom/facebook/x/e/d;
 
     move-result-object p1
 
     const-string p2, "ListDataSource.create(*makeDataSources(sources))"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->g:Lcom/facebook/datasource/DataSource;
+    iput-object p1, p0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->g:Lcom/facebook/datasource/b;
 
     .line 12
-    iget-object p1, p0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->g:Lcom/facebook/datasource/DataSource;
+    iget-object p1, p0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->g:Lcom/facebook/datasource/b;
 
-    check-cast p1, Lcom/facebook/x/e/ListDataSource;
+    check-cast p1, Lcom/facebook/x/e/d;
 
     new-instance p2, Lcom/vk/im/ui/views/avatars/AvatarDataSource$a;
 
-    invoke-direct {p2, p0, p3, p4}, Lcom/vk/im/ui/views/avatars/AvatarDataSource$a;-><init>(Lcom/vk/im/ui/views/avatars/AvatarDataSource;Lcom/facebook/x/c/MemoryCache;Lcom/facebook/cache/common/SimpleCacheKey;)V
+    invoke-direct {p2, p0, p3, p4}, Lcom/vk/im/ui/views/avatars/AvatarDataSource$a;-><init>(Lcom/vk/im/ui/views/avatars/AvatarDataSource;Lcom/facebook/x/c/p;Lcom/facebook/cache/common/g;)V
 
     .line 13
     sget-object p3, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->j:Ljava/util/concurrent/ExecutorService;
 
     .line 14
-    invoke-virtual {p1, p2, p3}, Lcom/facebook/datasource/AbstractDataSource;->a(Lcom/facebook/datasource/DataSubscriber;Ljava/util/concurrent/Executor;)V
+    invoke-virtual {p1, p2, p3}, Lcom/facebook/datasource/AbstractDataSource;->a(Lcom/facebook/datasource/d;Ljava/util/concurrent/Executor;)V
 
     :goto_0
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/List;Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Ljava/util/List;Ljava/lang/String;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 1
@@ -293,8 +293,8 @@
             "(",
             "Landroid/graphics/Canvas;",
             "Ljava/util/List<",
-            "Lcom/facebook/common/references/CloseableReference<",
-            "Lcom/facebook/x/g/CloseableImage;",
+            "Lcom/facebook/common/references/a<",
+            "Lcom/facebook/x/g/c;",
             ">;>;)I"
         }
     .end annotation
@@ -322,27 +322,27 @@
 
     move-object v9, v2
 
-    check-cast v9, Lcom/facebook/common/references/CloseableReference;
+    check-cast v9, Lcom/facebook/common/references/a;
 
     .line 21
     :try_start_0
-    invoke-virtual {v9}, Lcom/facebook/common/references/CloseableReference;->b()Ljava/lang/Object;
+    invoke-virtual {v9}, Lcom/facebook/common/references/a;->b()Ljava/lang/Object;
 
     move-result-object v2
 
-    instance-of v3, v2, Lcom/facebook/x/g/CloseableBitmap;
+    instance-of v3, v2, Lcom/facebook/x/g/b;
 
     if-nez v3, :cond_0
 
     const/4 v2, 0x0
 
     :cond_0
-    check-cast v2, Lcom/facebook/x/g/CloseableBitmap;
+    check-cast v2, Lcom/facebook/x/g/b;
 
     if-eqz v2, :cond_1
 
     .line 22
-    invoke-virtual {v2}, Lcom/facebook/x/g/CloseableBitmap;->d()Landroid/graphics/Bitmap;
+    invoke-virtual {v2}, Lcom/facebook/x/g/b;->d()Landroid/graphics/Bitmap;
 
     move-result-object v10
 
@@ -361,7 +361,7 @@
 
     const-string v2, "img"
 
-    invoke-static {v10, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -400,7 +400,7 @@
 
     .line 25
     :cond_1
-    invoke-static {v9}, Lcom/facebook/common/references/CloseableReference;->b(Lcom/facebook/common/references/CloseableReference;)V
+    invoke-static {v9}, Lcom/facebook/common/references/a;->b(Lcom/facebook/common/references/a;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -409,7 +409,7 @@
     :catchall_0
     move-exception p1
 
-    invoke-static {v9}, Lcom/facebook/common/references/CloseableReference;->b(Lcom/facebook/common/references/CloseableReference;)V
+    invoke-static {v9}, Lcom/facebook/common/references/a;->b(Lcom/facebook/common/references/a;)V
 
     throw p1
 
@@ -417,28 +417,28 @@
     return v0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/views/avatars/AvatarDataSource;Ljava/util/List;)Lcom/facebook/common/references/CloseableReference;
+.method public static final synthetic a(Lcom/vk/im/ui/views/avatars/AvatarDataSource;Ljava/util/List;)Lcom/facebook/common/references/a;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->a(Ljava/util/List;)Lcom/facebook/common/references/CloseableReference;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->a(Ljava/util/List;)Lcom/facebook/common/references/a;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Ljava/util/List;)Lcom/facebook/common/references/CloseableReference;
+.method private final a(Ljava/util/List;)Lcom/facebook/common/references/a;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/facebook/common/references/CloseableReference<",
-            "Lcom/facebook/x/g/CloseableImage;",
+            "Lcom/facebook/common/references/a<",
+            "Lcom/facebook/x/g/c;",
             ">;>;)",
-            "Lcom/facebook/common/references/CloseableReference<",
-            "Lcom/facebook/x/g/CloseableImage;",
+            "Lcom/facebook/common/references/a<",
+            "Lcom/facebook/x/g/c;",
             ">;"
         }
     .end annotation
@@ -473,7 +473,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/common/references/CloseableReference;
+    check-cast p1, Lcom/facebook/common/references/a;
 
     return-object p1
 
@@ -481,15 +481,15 @@
     :cond_1
     sget-object v1, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v1}, Lcom/vk/imageloader/FrescoWrapper;->c()Lcom/facebook/x/d/ImagePipelineFactory;
+    invoke-virtual {v1}, Lcom/vk/imageloader/FrescoWrapper;->c()Lcom/facebook/x/d/j;
 
     move-result-object v1
 
     const-string v2, "FrescoWrapper.getImagePipelineFactory()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/facebook/x/d/ImagePipelineFactory;->h()Lcom/facebook/x/b/PlatformBitmapFactory;
+    invoke-virtual {v1}, Lcom/facebook/x/d/j;->h()Lcom/facebook/x/b/f;
 
     move-result-object v1
 
@@ -499,7 +499,7 @@
 
     iget v4, p0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->h:I
 
-    invoke-virtual {v1, v2, v4}, Lcom/facebook/x/b/PlatformBitmapFactory;->a(II)Lcom/facebook/common/references/CloseableReference;
+    invoke-virtual {v1, v2, v4}, Lcom/facebook/x/b/f;->a(II)Lcom/facebook/common/references/a;
 
     move-result-object v0
     :try_end_0
@@ -507,7 +507,7 @@
 
     .line 8
     :try_start_1
-    invoke-virtual {v0}, Lcom/facebook/common/references/CloseableReference;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/facebook/common/references/a;->b()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -539,30 +539,30 @@
     invoke-direct {p0, v2, p1}, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->a(Landroid/graphics/Canvas;Ljava/util/List;)I
 
     .line 14
-    new-instance p1, Lcom/facebook/x/g/CloseableStaticBitmap;
+    new-instance p1, Lcom/facebook/x/g/d;
 
     .line 15
-    sget-object v1, Lcom/facebook/x/g/ImmutableQualityInfo;->d:Lcom/facebook/x/g/QualityInfo;
+    sget-object v1, Lcom/facebook/x/g/g;->d:Lcom/facebook/x/g/h;
 
     .line 16
-    invoke-direct {p1, v0, v1, v3}, Lcom/facebook/x/g/CloseableStaticBitmap;-><init>(Lcom/facebook/common/references/CloseableReference;Lcom/facebook/x/g/QualityInfo;I)V
+    invoke-direct {p1, v0, v1, v3}, Lcom/facebook/x/g/d;-><init>(Lcom/facebook/common/references/a;Lcom/facebook/x/g/h;I)V
 
     .line 17
-    invoke-static {p1}, Lcom/facebook/common/references/CloseableReference;->a(Ljava/io/Closeable;)Lcom/facebook/common/references/CloseableReference;
+    invoke-static {p1}, Lcom/facebook/common/references/a;->a(Ljava/io/Closeable;)Lcom/facebook/common/references/a;
 
     move-result-object p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 18
-    invoke-static {v0}, Lcom/facebook/common/references/CloseableReference;->b(Lcom/facebook/common/references/CloseableReference;)V
+    invoke-static {v0}, Lcom/facebook/common/references/a;->b(Lcom/facebook/common/references/a;)V
 
     return-object p1
 
     :catchall_0
     move-exception p1
 
-    invoke-static {v0}, Lcom/facebook/common/references/CloseableReference;->b(Lcom/facebook/common/references/CloseableReference;)V
+    invoke-static {v0}, Lcom/facebook/common/references/a;->b(Lcom/facebook/common/references/a;)V
 
     throw p1
 
@@ -572,7 +572,7 @@
     return-object v0
 .end method
 
-.method public static final a(Ljava/util/List;II)Lcom/facebook/datasource/DataSource;
+.method public static final a(Ljava/util/List;II)Lcom/facebook/datasource/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -580,16 +580,16 @@
             "Ljava/util/List<",
             "Lcom/vk/im/engine/models/Image;",
             ">;II)",
-            "Lcom/facebook/datasource/DataSource<",
-            "Lcom/facebook/common/references/CloseableReference<",
-            "Lcom/facebook/x/g/CloseableImage;",
+            "Lcom/facebook/datasource/b<",
+            "Lcom/facebook/common/references/a<",
+            "Lcom/facebook/x/g/c;",
             ">;>;"
         }
     .end annotation
 
     sget-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->q:Lcom/vk/im/ui/views/avatars/AvatarDataSource$c;
 
-    invoke-virtual {v0, p0, p1, p2}, Lcom/vk/im/ui/views/avatars/AvatarDataSource$c;->a(Ljava/util/List;II)Lcom/facebook/datasource/DataSource;
+    invoke-virtual {v0, p0, p1, p2}, Lcom/vk/im/ui/views/avatars/AvatarDataSource$c;->a(Ljava/util/List;II)Lcom/facebook/datasource/b;
 
     move-result-object p0
 
@@ -883,7 +883,7 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/views/avatars/AvatarDataSource;Lcom/facebook/common/references/CloseableReference;Z)Z
+.method public static final synthetic a(Lcom/vk/im/ui/views/avatars/AvatarDataSource;Lcom/facebook/common/references/a;Z)Z
     .locals 0
 
     .line 2
@@ -894,29 +894,29 @@
     return p0
 .end method
 
-.method public static final synthetic j()Lcom/vk/core/util/ThreadLocalDelegate;
+.method public static final synthetic j()Lcom/vk/core/util/d1;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->l:Lcom/vk/core/util/ThreadLocalDelegate;
+    sget-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->l:Lcom/vk/core/util/d1;
 
     return-object v0
 .end method
 
-.method public static final synthetic k()Lcom/vk/core/util/ThreadLocalDelegate;
+.method public static final synthetic k()Lcom/vk/core/util/d1;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->k:Lcom/vk/core/util/ThreadLocalDelegate;
+    sget-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->k:Lcom/vk/core/util/d1;
 
     return-object v0
 .end method
 
-.method public static final synthetic l()Lcom/vk/core/util/ThreadLocalDelegate;
+.method public static final synthetic l()Lcom/vk/core/util/d1;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->m:Lcom/vk/core/util/ThreadLocalDelegate;
+    sget-object v0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->m:Lcom/vk/core/util/d1;
 
     return-object v0
 .end method
@@ -933,9 +933,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->g:Lcom/facebook/datasource/DataSource;
+    iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->g:Lcom/facebook/datasource/b;
 
-    invoke-interface {v0}, Lcom/facebook/datasource/DataSource;->close()Z
+    invoke-interface {v0}, Lcom/facebook/datasource/b;->close()Z
 
     move-result v0
 

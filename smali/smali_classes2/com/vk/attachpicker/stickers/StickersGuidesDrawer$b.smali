@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;->a(ZLandroid/graphics/Paint;ILkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;->a(ZLandroid/graphics/Paint;ILkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;Landroid/graphics/Paint;ILkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;Landroid/graphics/Paint;ILkotlin/jvm/b/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/StickersGuidesDrawer$b;->a:Lcom/vk/attachpicker/stickers/StickersGuidesDrawer;
@@ -46,7 +46,7 @@
 
     const-string v1, "anim"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 

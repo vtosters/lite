@@ -176,7 +176,7 @@
 
     iget-object v1, v1, Lcom/vk/dto/photo/PhotoAlbum;->g:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v1}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 

@@ -3,7 +3,7 @@
 .source "FlowableConcatMap.java"
 
 # interfaces
-.implements Le/b/Subscription;
+.implements Le/b/d;
 
 
 # annotations
@@ -22,16 +22,16 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Le/b/Subscription;"
+        "Le/b/d;"
     }
 .end annotation
 
 
 # instance fields
-.field final a:Le/b/Subscriber;
+.field final a:Le/b/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Le/b/Subscriber<",
+            "Le/b/c<",
             "-TT;>;"
         }
     .end annotation
@@ -49,12 +49,12 @@
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Object;Le/b/Subscriber;)V
+.method constructor <init>(Ljava/lang/Object;Le/b/c;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
-            "Le/b/Subscriber<",
+            "Le/b/c<",
             "-TT;>;)V"
         }
     .end annotation
@@ -66,7 +66,7 @@
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$c;->b:Ljava/lang/Object;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$c;->a:Le/b/Subscriber;
+    iput-object p2, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$c;->a:Le/b/c;
 
     return-void
 .end method
@@ -93,15 +93,15 @@
     iput-boolean p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$c;->c:Z
 
     .line 3
-    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$c;->a:Le/b/Subscriber;
+    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$c;->a:Le/b/c;
 
     .line 4
     iget-object p2, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$c;->b:Ljava/lang/Object;
 
-    invoke-interface {p1, p2}, Le/b/Subscriber;->b(Ljava/lang/Object;)V
+    invoke-interface {p1, p2}, Le/b/c;->b(Ljava/lang/Object;)V
 
     .line 5
-    invoke-interface {p1}, Le/b/Subscriber;->b()V
+    invoke-interface {p1}, Le/b/c;->b()V
 
     :cond_0
     return-void

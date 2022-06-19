@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/lang/Comparable;
-.implements Lcom/vk/core/serialize/JSONSerialize;
+.implements Lcom/vk/core/serialize/a;
 
 
 # annotations
@@ -14,7 +14,7 @@
         "Ljava/lang/Comparable<",
         "Lcom/vk/dto/common/ImageSize;",
         ">;",
-        "Lcom/vk/core/serialize/JSONSerialize;"
+        "Lcom/vk/core/serialize/a;"
     }
 .end annotation
 

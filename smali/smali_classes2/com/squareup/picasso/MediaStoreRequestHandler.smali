@@ -1,5 +1,5 @@
 .class Lcom/squareup/picasso/MediaStoreRequestHandler;
-.super Lcom/squareup/picasso/ContentStreamRequestHandler;
+.super Lcom/squareup/picasso/g;
 .source "MediaStoreRequestHandler.java"
 
 
@@ -35,7 +35,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/squareup/picasso/ContentStreamRequestHandler;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/squareup/picasso/g;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -162,7 +162,7 @@
 
 
 # virtual methods
-.method public a(Lcom/squareup/picasso/Request;I)Lcom/squareup/picasso/RequestHandler$a;
+.method public a(Lcom/squareup/picasso/q;I)Lcom/squareup/picasso/s$a;
     .locals 16
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -175,21 +175,21 @@
     move-object/from16 v7, p0
 
     .line 4
-    iget-object v0, v7, Lcom/squareup/picasso/ContentStreamRequestHandler;->a:Landroid/content/Context;
+    iget-object v0, v7, Lcom/squareup/picasso/g;->a:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
     .line 5
-    iget-object v0, v6, Lcom/squareup/picasso/Request;->d:Landroid/net/Uri;
+    iget-object v0, v6, Lcom/squareup/picasso/q;->d:Landroid/net/Uri;
 
     invoke-static {v8, v0}, Lcom/squareup/picasso/MediaStoreRequestHandler;->a(Landroid/content/ContentResolver;Landroid/net/Uri;)I
 
     move-result v9
 
     .line 6
-    iget-object v0, v6, Lcom/squareup/picasso/Request;->d:Landroid/net/Uri;
+    iget-object v0, v6, Lcom/squareup/picasso/q;->d:Landroid/net/Uri;
 
     invoke-virtual {v8, v0}, Landroid/content/ContentResolver;->getType(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -219,7 +219,7 @@
 
     .line 8
     :goto_0
-    invoke-virtual/range {p1 .. p1}, Lcom/squareup/picasso/Request;->c()Z
+    invoke-virtual/range {p1 .. p1}, Lcom/squareup/picasso/q;->c()Z
 
     move-result v0
 
@@ -228,9 +228,9 @@
     if-eqz v0, :cond_4
 
     .line 9
-    iget v0, v6, Lcom/squareup/picasso/Request;->h:I
+    iget v0, v6, Lcom/squareup/picasso/q;->h:I
 
-    iget v1, v6, Lcom/squareup/picasso/Request;->i:I
+    iget v1, v6, Lcom/squareup/picasso/q;->i:I
 
     invoke-static {v0, v1}, Lcom/squareup/picasso/MediaStoreRequestHandler;->a(II)Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;
 
@@ -244,28 +244,28 @@
     if-ne v13, v0, :cond_1
 
     .line 11
-    new-instance v0, Lcom/squareup/picasso/RequestHandler$a;
+    new-instance v0, Lcom/squareup/picasso/s$a;
 
-    invoke-virtual/range {p0 .. p1}, Lcom/squareup/picasso/ContentStreamRequestHandler;->c(Lcom/squareup/picasso/Request;)Ljava/io/InputStream;
+    invoke-virtual/range {p0 .. p1}, Lcom/squareup/picasso/g;->c(Lcom/squareup/picasso/q;)Ljava/io/InputStream;
 
     move-result-object v1
 
     sget-object v2, Lcom/squareup/picasso/Picasso$LoadedFrom;->DISK:Lcom/squareup/picasso/Picasso$LoadedFrom;
 
-    invoke-direct {v0, v12, v1, v2, v9}, Lcom/squareup/picasso/RequestHandler$a;-><init>(Landroid/graphics/Bitmap;Ljava/io/InputStream;Lcom/squareup/picasso/Picasso$LoadedFrom;I)V
+    invoke-direct {v0, v12, v1, v2, v9}, Lcom/squareup/picasso/s$a;-><init>(Landroid/graphics/Bitmap;Ljava/io/InputStream;Lcom/squareup/picasso/Picasso$LoadedFrom;I)V
 
     return-object v0
 
     .line 12
     :cond_1
-    iget-object v0, v6, Lcom/squareup/picasso/Request;->d:Landroid/net/Uri;
+    iget-object v0, v6, Lcom/squareup/picasso/q;->d:Landroid/net/Uri;
 
     invoke-static {v0}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v14
 
     .line 13
-    invoke-static/range {p1 .. p1}, Lcom/squareup/picasso/RequestHandler;->b(Lcom/squareup/picasso/Request;)Landroid/graphics/BitmapFactory$Options;
+    invoke-static/range {p1 .. p1}, Lcom/squareup/picasso/s;->b(Lcom/squareup/picasso/q;)Landroid/graphics/BitmapFactory$Options;
 
     move-result-object v5
 
@@ -273,9 +273,9 @@
     iput-boolean v10, v5, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
     .line 15
-    iget v0, v6, Lcom/squareup/picasso/Request;->h:I
+    iget v0, v6, Lcom/squareup/picasso/q;->h:I
 
-    iget v1, v6, Lcom/squareup/picasso/Request;->i:I
+    iget v1, v6, Lcom/squareup/picasso/q;->i:I
 
     iget v2, v13, Lcom/squareup/picasso/MediaStoreRequestHandler$PicassoKind;->width:I
 
@@ -287,7 +287,7 @@
 
     move-object/from16 v5, p1
 
-    invoke-static/range {v0 .. v5}, Lcom/squareup/picasso/RequestHandler;->a(IIIILandroid/graphics/BitmapFactory$Options;Lcom/squareup/picasso/Request;)V
+    invoke-static/range {v0 .. v5}, Lcom/squareup/picasso/s;->a(IIIILandroid/graphics/BitmapFactory$Options;Lcom/squareup/picasso/q;)V
 
     if-eqz v11, :cond_3
 
@@ -324,34 +324,34 @@
     if-eqz v0, :cond_4
 
     .line 20
-    new-instance v1, Lcom/squareup/picasso/RequestHandler$a;
+    new-instance v1, Lcom/squareup/picasso/s$a;
 
     sget-object v2, Lcom/squareup/picasso/Picasso$LoadedFrom;->DISK:Lcom/squareup/picasso/Picasso$LoadedFrom;
 
-    invoke-direct {v1, v0, v12, v2, v9}, Lcom/squareup/picasso/RequestHandler$a;-><init>(Landroid/graphics/Bitmap;Ljava/io/InputStream;Lcom/squareup/picasso/Picasso$LoadedFrom;I)V
+    invoke-direct {v1, v0, v12, v2, v9}, Lcom/squareup/picasso/s$a;-><init>(Landroid/graphics/Bitmap;Ljava/io/InputStream;Lcom/squareup/picasso/Picasso$LoadedFrom;I)V
 
     return-object v1
 
     .line 21
     :cond_4
-    new-instance v0, Lcom/squareup/picasso/RequestHandler$a;
+    new-instance v0, Lcom/squareup/picasso/s$a;
 
-    invoke-virtual/range {p0 .. p1}, Lcom/squareup/picasso/ContentStreamRequestHandler;->c(Lcom/squareup/picasso/Request;)Ljava/io/InputStream;
+    invoke-virtual/range {p0 .. p1}, Lcom/squareup/picasso/g;->c(Lcom/squareup/picasso/q;)Ljava/io/InputStream;
 
     move-result-object v1
 
     sget-object v2, Lcom/squareup/picasso/Picasso$LoadedFrom;->DISK:Lcom/squareup/picasso/Picasso$LoadedFrom;
 
-    invoke-direct {v0, v12, v1, v2, v9}, Lcom/squareup/picasso/RequestHandler$a;-><init>(Landroid/graphics/Bitmap;Ljava/io/InputStream;Lcom/squareup/picasso/Picasso$LoadedFrom;I)V
+    invoke-direct {v0, v12, v1, v2, v9}, Lcom/squareup/picasso/s$a;-><init>(Landroid/graphics/Bitmap;Ljava/io/InputStream;Lcom/squareup/picasso/Picasso$LoadedFrom;I)V
 
     return-object v0
 .end method
 
-.method public a(Lcom/squareup/picasso/Request;)Z
+.method public a(Lcom/squareup/picasso/q;)Z
     .locals 2
 
     .line 1
-    iget-object p1, p1, Lcom/squareup/picasso/Request;->d:Landroid/net/Uri;
+    iget-object p1, p1, Lcom/squareup/picasso/q;->d:Landroid/net/Uri;
 
     .line 2
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;

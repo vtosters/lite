@@ -3,7 +3,7 @@
 .source "ChatFragment.kt"
 
 # interfaces
-.implements Lcom/vk/bridges/ImageViewer$a;
+.implements Lcom/vk/bridges/p$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/bridges/ImageViewer$c;
+.field private final a:Lcom/vk/bridges/p$c;
 
 .field private final b:Lcom/vk/im/engine/models/messages/Msg;
 
@@ -59,11 +59,11 @@
     iput-object p3, p0, Lcom/vk/im/ui/fragments/ChatFragment$f;->c:Ljava/util/List;
 
     .line 2
-    new-instance p1, Lcom/vk/bridges/ImageViewer$c;
+    new-instance p1, Lcom/vk/bridges/p$c;
 
-    invoke-direct {p1, p4, p4}, Lcom/vk/bridges/ImageViewer$c;-><init>(ZZ)V
+    invoke-direct {p1, p4, p4}, Lcom/vk/bridges/p$c;-><init>(ZZ)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/fragments/ChatFragment$f;->a:Lcom/vk/bridges/ImageViewer$c;
+    iput-object p1, p0, Lcom/vk/im/ui/fragments/ChatFragment$f;->a:Lcom/vk/bridges/p$c;
 
     return-void
 .end method
@@ -74,7 +74,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/bridges/ImageViewer$a$a;->a(Lcom/vk/bridges/ImageViewer$a;II)Ljava/lang/String;
+    invoke-static {p0, p1, p2}, Lcom/vk/bridges/p$a$a;->a(Lcom/vk/bridges/p$a;II)Ljava/lang/String;
 
     move-result-object p1
 
@@ -85,7 +85,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/bridges/ImageViewer$a$a;->b(Lcom/vk/bridges/ImageViewer$a;I)V
+    invoke-static {p0, p1}, Lcom/vk/bridges/p$a$a;->b(Lcom/vk/bridges/p$a;I)V
 
     return-void
 .end method
@@ -94,7 +94,7 @@
     .locals 1
 
     .line 3
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->g(Lcom/vk/bridges/ImageViewer$a;)Z
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->g(Lcom/vk/bridges/p$a;)Z
 
     move-result v0
 
@@ -134,7 +134,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->c(Lcom/vk/bridges/ImageViewer$a;)Ljava/lang/Integer;
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->c(Lcom/vk/bridges/p$a;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -151,7 +151,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->i()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->i()Landroid/view/View;
 
     move-result-object v0
 
@@ -198,16 +198,16 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->r()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->r()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$f;->d:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/IMsgSendVc;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/q/h/f/IMsgSendVc;->onPause()V
+    invoke-interface {v0}, Lcom/vk/im/ui/q/h/f/a;->onPause()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$f;->d:Lcom/vk/im/ui/fragments/ChatFragment;
@@ -223,7 +223,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->h(Lcom/vk/bridges/ImageViewer$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->h(Lcom/vk/bridges/p$a;)V
 
     return-void
 .end method
@@ -234,20 +234,20 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$f;->d:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/IMsgSendVc;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/q/h/f/IMsgSendVc;->g()V
+    invoke-interface {v0}, Lcom/vk/im/ui/q/h/f/a;->g()V
 
     return-void
 .end method
 
-.method public g()Lcom/vk/bridges/ImageViewer$c;
+.method public g()Lcom/vk/bridges/p$c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$f;->a:Lcom/vk/bridges/ImageViewer$c;
+    iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$f;->a:Lcom/vk/bridges/p$c;
 
     return-object v0
 .end method
@@ -265,7 +265,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$f;->d:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/fragments/ChatFragment;->a(Lcom/vk/im/ui/fragments/ChatFragment;Lcom/vk/bridges/ImageViewer$d;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/fragments/ChatFragment;->a(Lcom/vk/im/ui/fragments/ChatFragment;Lcom/vk/bridges/p$d;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$f;->d:Lcom/vk/im/ui/fragments/ChatFragment;
@@ -302,16 +302,16 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
 
     .line 5
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$f;->d:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/IMsgSendVc;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/q/h/f/IMsgSendVc;->onResume()V
+    invoke-interface {v0}, Lcom/vk/im/ui/q/h/f/a;->onResume()V
 
     :cond_1
     :goto_0

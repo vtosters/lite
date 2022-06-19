@@ -67,7 +67,7 @@
     .line 2
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$j;->a:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->i(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vk/stickers/PauseAnimationScrollListener;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->i(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vk/stickers/e;
 
     move-result-object p1
 
@@ -76,11 +76,11 @@
     .line 3
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$j;->a:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->i(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vk/stickers/PauseAnimationScrollListener;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->i(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vk/stickers/e;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stickers/PauseAnimationScrollListener;->a()V
+    invoke-virtual {p1}, Lcom/vk/stickers/e;->a()V
 
     :cond_1
     return-void

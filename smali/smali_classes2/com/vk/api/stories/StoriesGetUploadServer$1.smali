@@ -3,7 +3,7 @@
 .source "StoriesGetUploadServer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "Ljava/lang/String;",
         "Ljava/lang/Object;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/api/stories/StoriesGetUploadServer$1;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
@@ -76,7 +76,7 @@
 
     move-result p2
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
 
     goto :goto_1
 
@@ -94,7 +94,7 @@
 
     move-result-wide v1
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/api/base/ApiRequest;->a(Ljava/lang/String;J)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/api/base/d;->a(Ljava/lang/String;J)Lcom/vk/api/base/d;
 
     goto :goto_1
 
@@ -112,7 +112,7 @@
 
     move-result p2
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/api/base/ApiRequest;->a(Ljava/lang/String;Z)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/api/base/d;->a(Ljava/lang/String;Z)Lcom/vk/api/base/d;
 
     goto :goto_1
 
@@ -132,7 +132,7 @@
     const/4 p2, 0x0
 
     :goto_0
-    invoke-virtual {v0, p1, p2}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     :goto_1
     return-void

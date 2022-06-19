@@ -3,7 +3,7 @@
 .source "ArticleFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/articles/ArticleFragment$showPopupMenu$5;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -60,14 +60,14 @@
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/webapp/fragments/ReportFragment$a;
+    new-instance v0, Lcom/vk/webapp/fragments/j$a;
 
-    invoke-direct {v0}, Lcom/vk/webapp/fragments/ReportFragment$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/webapp/fragments/j$a;-><init>()V
 
     const-string v1, "article"
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
 
     .line 4
     iget-object v1, p0, Lcom/vk/articles/ArticleFragment$showPopupMenu$5;->this$0:Lcom/vk/articles/ArticleFragment;
@@ -84,7 +84,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->d(I)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->d(I)Lcom/vk/webapp/fragments/j$a;
 
     .line 5
     iget-object v1, p0, Lcom/vk/articles/ArticleFragment$showPopupMenu$5;->this$0:Lcom/vk/articles/ArticleFragment;
@@ -99,24 +99,24 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->e(I)Lcom/vk/webapp/fragments/ReportFragment$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->e(I)Lcom/vk/webapp/fragments/j$a;
 
     .line 6
     iget-object v1, p0, Lcom/vk/articles/ArticleFragment$showPopupMenu$5;->this$0:Lcom/vk/articles/ArticleFragment;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 
     .line 7
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 
     .line 8
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 .end method

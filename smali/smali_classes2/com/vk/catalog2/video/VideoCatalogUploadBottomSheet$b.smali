@@ -42,13 +42,13 @@
     .line 4
     sget-object v0, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;->c:Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;
 
-    invoke-static {v0}, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;->a(Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-static {v0}, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;->a(Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismiss()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e;->dismiss()V
 
     .line 5
     :cond_0
@@ -56,7 +56,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;->a(Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+    invoke-static {v0, v1}, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;->a(Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;Lcom/vk/core/dialogs/bottomsheet/e;)V
 
     return-void
 .end method
@@ -76,7 +76,7 @@
 
     const-string p3, "view.context"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 

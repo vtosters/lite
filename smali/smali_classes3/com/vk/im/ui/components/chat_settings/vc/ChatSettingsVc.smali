@@ -16,7 +16,7 @@
 
 
 # static fields
-.field static final synthetic k:[Lkotlin/u/KProperty5;
+.field static final synthetic k:[Lkotlin/u/j;
 
 
 # instance fields
@@ -34,11 +34,11 @@
 
 .field private final g:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter;
 
-.field private final h:Lkotlin/Lazy2;
+.field private final h:Lkotlin/e;
 
 .field private i:Ljava/lang/String;
 
-.field private j:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+.field private j:Lcom/vk/im/ui/components/chat_settings/vc/d;
 
 
 # direct methods
@@ -47,13 +47,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -61,21 +61,21 @@
 
     const-string v4, "getPopupVc()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -98,7 +98,7 @@
     iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->a:Landroid/content/Context;
 
     .line 3
-    sget v0, Lcom/vk/im/ui/R13;->vkim_chat_settings:I
+    sget v0, Lcom/vk/im/ui/j;->vkim_chat_settings:I
 
     const/4 v2, 0x0
 
@@ -117,7 +117,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->b:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->progress:I
+    sget p2, Lcom/vk/im/ui/h;->progress:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -128,7 +128,7 @@
     .line 5
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->b:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->list:I
+    sget p2, Lcom/vk/im/ui/h;->list:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -141,7 +141,7 @@
     .line 6
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->b:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->error_container:I
+    sget p2, Lcom/vk/im/ui/h;->error_container:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -152,7 +152,7 @@
     .line 7
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->b:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->error_text:I
+    sget p2, Lcom/vk/im/ui/h;->error_text:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -165,7 +165,7 @@
     .line 8
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->b:Landroid/view/ViewGroup;
 
-    sget p2, Lcom/vk/im/ui/R11;->error_retry:I
+    sget p2, Lcom/vk/im/ui/h;->error_retry:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -180,7 +180,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$AdapterCallbackImpl;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;)V
 
-    invoke-direct {p1, p2}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/a;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->g:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter;
 
@@ -189,18 +189,18 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$popupVc$2;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->h:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->h:Lkotlin/e;
 
     .line 11
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->d:Landroidx/recyclerview/widget/RecyclerView;
 
     const-string p2, "recyclerView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Landroidx/recyclerview/widget/LinearLayoutManager;
 
@@ -215,23 +215,23 @@
     .line 12
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v0, Lcom/vk/im/ui/utils/recyclerview/GrowingRecycledViewPool;
+    new-instance v0, Lcom/vk/im/ui/utils/recyclerview/b;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/utils/recyclerview/GrowingRecycledViewPool;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/utils/recyclerview/b;-><init>()V
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setRecycledViewPool(Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;)V
 
     .line 13
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
 
     .line 14
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->g:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter;
 
@@ -253,13 +253,13 @@
     throw p1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 17
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
@@ -284,7 +284,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -295,7 +295,7 @@
 
     .line 33
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -316,11 +316,11 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->i:Ljava/lang/String;
 
     .line 36
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->j:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->j:Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->a(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/d;->a(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -343,13 +343,13 @@
     if-ne p1, v0, :cond_0
 
     .line 5
-    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->j:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->j:Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     if-eqz p1, :cond_1
 
     const-wide/16 v1, -0x1
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->a(ZJ)V
+    invoke-interface {p1, v0, v1, v2}, Lcom/vk/im/ui/components/chat_settings/vc/d;->a(ZJ)V
 
     goto :goto_0
 
@@ -376,15 +376,15 @@
 .method private final x()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->h:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->h:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -397,11 +397,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->j:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->j:Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->e()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/vc/d;->e()V
 
     :cond_0
     return-void
@@ -425,7 +425,7 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$showAvatarRemoveSubmit$1;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;)V
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -577,7 +577,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/dialogs/DialogMembersList;Lcom/vk/im/engine/models/ProfilesInfo;Lcom/vk/im/engine/models/Member;ZZ)V
+.method public final a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/dialogs/d;Lcom/vk/im/engine/models/ProfilesInfo;Lcom/vk/im/engine/models/Member;ZZ)V
     .locals 9
 
     .line 16
@@ -585,7 +585,7 @@
 
     const-string v1, "progressView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v1, 0x8
 
@@ -596,7 +596,7 @@
 
     const-string v2, "errorContainerView"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
@@ -605,7 +605,7 @@
 
     const-string v1, "recyclerView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -626,7 +626,7 @@
 
     move v8, p6
 
-    invoke-virtual/range {v2 .. v8}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/dialogs/DialogMembersList;Lcom/vk/im/engine/models/ProfilesInfo;Lcom/vk/im/engine/models/Member;ZZ)V
+    invoke-virtual/range {v2 .. v8}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/dialogs/d;Lcom/vk/im/engine/models/ProfilesInfo;Lcom/vk/im/engine/models/Member;ZZ)V
 
     .line 20
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->g:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsAdapter;
@@ -654,16 +654,16 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$showKickSubmit$1;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;Lcom/vk/im/engine/models/dialogs/DialogMember;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;)V
+.method public final a(Lcom/vk/im/ui/components/chat_settings/vc/d;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->j:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->j:Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     return-void
 .end method
@@ -714,7 +714,7 @@
 
     .line 30
     :goto_0
-    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/common/AvatarAction;Lkotlin/jvm/b/Functions;Z)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/common/AvatarAction;Lkotlin/jvm/b/a;Z)V
 
     :cond_1
     return-void
@@ -724,7 +724,7 @@
     .locals 0
 
     .line 22
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->a(Lcom/vk/im/ui/components/common/NotifyId;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->a(Lcom/vk/im/ui/components/common/NotifyId;)V
 
     return-void
 .end method
@@ -737,7 +737,7 @@
 
     const-string v1, "progressView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v1, 0x8
 
@@ -748,7 +748,7 @@
 
     const-string v2, "recyclerView"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
@@ -757,7 +757,7 @@
 
     const-string v1, "errorContainerView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -768,9 +768,9 @@
 
     const-string v1, "errorTextView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->b(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -806,18 +806,18 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$showAvatarActions$1;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;)V
 
     .line 25
-    invoke-virtual {v0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Ljava/util/List;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/Functions;)V
+.method public final a(Lkotlin/jvm/b/a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -833,7 +833,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lkotlin/jvm/b/Functions;Z)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lkotlin/jvm/b/a;Z)V
 
     return-void
 .end method
@@ -885,7 +885,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -1022,11 +1022,11 @@
     return-void
 .end method
 
-.method public final k()Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+.method public final k()Lcom/vk/im/ui/components/chat_settings/vc/d;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->j:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->j:Lcom/vk/im/ui/components/chat_settings/vc/d;
 
     return-object v0
 .end method
@@ -1073,7 +1073,7 @@
     const/4 v4, 0x0
 
     .line 3
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Lkotlin/jvm/b/Functions;ZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Lkotlin/jvm/b/a;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1098,7 +1098,7 @@
 
     const/4 v3, 0x1
 
-    invoke-static {v0, v2, v1, v3, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static {v0, v2, v1, v3, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1123,7 +1123,7 @@
 
     const/4 v3, 0x1
 
-    invoke-static {v0, v2, v1, v3, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
+    invoke-static {v0, v2, v1, v3, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1151,7 +1151,7 @@
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$showDndPeriodSelection$2;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;)V
 
     .line 4
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -1176,7 +1176,7 @@
     const/4 v2, 0x1
 
     .line 3
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lkotlin/jvm/b/Functions;Z)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lkotlin/jvm/b/a;Z)V
 
     return-void
 .end method
@@ -1201,7 +1201,7 @@
     const/4 v2, 0x1
 
     .line 3
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->c(Lkotlin/jvm/b/Functions;Z)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->c(Lkotlin/jvm/b/a;Z)V
 
     return-void
 .end method
@@ -1244,7 +1244,7 @@
     const/4 v4, 0x1
 
     .line 5
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lkotlin/jvm/b/Functions;Z)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lkotlin/jvm/b/a;Z)V
 
     return-void
 .end method
@@ -1287,7 +1287,7 @@
     const/4 v4, 0x0
 
     .line 5
-    invoke-virtual {v0, v1, v2, v4, v3}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;ZLkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, v1, v2, v4, v3}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;ZLkotlin/jvm/b/a;)V
 
     return-void
 .end method
@@ -1300,7 +1300,7 @@
 
     const-string v1, "errorContainerView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v1, 0x8
 
@@ -1311,7 +1311,7 @@
 
     const-string v2, "recyclerView"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
@@ -1320,7 +1320,7 @@
 
     const-string v1, "progressView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -1367,7 +1367,7 @@
     const/4 v4, 0x1
 
     .line 5
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lkotlin/jvm/b/Functions;Z)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lkotlin/jvm/b/a;Z)V
 
     return-void
 .end method

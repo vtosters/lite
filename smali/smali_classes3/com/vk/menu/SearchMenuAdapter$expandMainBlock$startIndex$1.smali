@@ -3,7 +3,7 @@
 .source "SearchMenuAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/common/i/RecyclerItem;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/common/i/b;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,17 +56,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/common/i/RecyclerItem;)Z
+.method public final a(Lcom/vk/common/i/b;)Z
     .locals 1
 
     .line 1
-    instance-of v0, p1, Lcom/vk/menu/g/SearchMenuItem;
+    instance-of v0, p1, Lcom/vk/menu/g/c;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vk/menu/g/SearchMenuItem;
+    check-cast p1, Lcom/vk/menu/g/c;
 
-    invoke-virtual {p1}, Lcom/vk/menu/g/SearchMenuItem;->c()Landroid/view/MenuItem;
+    invoke-virtual {p1}, Lcom/vk/menu/g/c;->c()Landroid/view/MenuItem;
 
     move-result-object p1
 
@@ -93,9 +93,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/common/i/RecyclerItem;
+    check-cast p1, Lcom/vk/common/i/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/menu/SearchMenuAdapter$expandMainBlock$startIndex$1;->a(Lcom/vk/common/i/RecyclerItem;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/menu/SearchMenuAdapter$expandMainBlock$startIndex$1;->a(Lcom/vk/common/i/b;)Z
 
     move-result p1
 

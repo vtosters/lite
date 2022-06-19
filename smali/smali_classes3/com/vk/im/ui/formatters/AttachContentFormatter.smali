@@ -12,15 +12,15 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/KProperty5;
+.field static final synthetic a:[Lkotlin/u/j;
 
-.field private static final b:Lcom/vk/im/ui/formatters/MsgAttachFormatter;
+.field private static final b:Lcom/vk/im/ui/formatters/j;
 
-.field private static final c:Lcom/vk/im/ui/formatters/MsgNestedFormatter;
+.field private static final c:Lcom/vk/im/ui/formatters/n;
 
-.field private static final d:Lcom/vk/im/ui/formatters/EmojiFormatter;
+.field private static final d:Lcom/vk/im/ui/formatters/e;
 
-.field private static final e:Lcom/vk/core/util/ThreadLocalDelegate;
+.field private static final e:Lcom/vk/core/util/d1;
 
 .field public static final f:Lcom/vk/im/ui/formatters/AttachContentFormatter;
 
@@ -31,13 +31,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/formatters/AttachContentFormatter;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -45,15 +45,15 @@
 
     const-string v4, "getTmpList()Ljava/util/List;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->a:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->a:[Lkotlin/u/j;
 
     .line 1
     new-instance v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;
@@ -63,44 +63,44 @@
     sput-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->f:Lcom/vk/im/ui/formatters/AttachContentFormatter;
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/formatters/MsgAttachFormatter;
+    new-instance v0, Lcom/vk/im/ui/formatters/j;
 
-    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const-string v2, "AppContextHolder.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/MsgAttachFormatter;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/j;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->b:Lcom/vk/im/ui/formatters/MsgAttachFormatter;
+    sput-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->b:Lcom/vk/im/ui/formatters/j;
 
     .line 3
-    new-instance v0, Lcom/vk/im/ui/formatters/MsgNestedFormatter;
+    new-instance v0, Lcom/vk/im/ui/formatters/n;
 
-    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/MsgNestedFormatter;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/n;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->c:Lcom/vk/im/ui/formatters/MsgNestedFormatter;
+    sput-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->c:Lcom/vk/im/ui/formatters/n;
 
     .line 4
-    new-instance v0, Lcom/vk/im/ui/formatters/EmojiFormatter;
+    new-instance v0, Lcom/vk/im/ui/formatters/e;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/formatters/EmojiFormatter;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/formatters/e;-><init>()V
 
-    sput-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->d:Lcom/vk/im/ui/formatters/EmojiFormatter;
+    sput-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->d:Lcom/vk/im/ui/formatters/e;
 
     .line 5
     sget-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter$tmpList$2;->a:Lcom/vk/im/ui/formatters/AttachContentFormatter$tmpList$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
+    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->e:Lcom/vk/core/util/ThreadLocalDelegate;
+    sput-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->e:Lcom/vk/core/util/d1;
 
     return-void
 .end method
@@ -125,15 +125,15 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->e:Lcom/vk/core/util/ThreadLocalDelegate;
+    sget-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->e:Lcom/vk/core/util/d1;
 
-    sget-object v1, Lcom/vk/im/ui/formatters/AttachContentFormatter;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/formatters/AttachContentFormatter;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -212,7 +212,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v2 .. v10}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v2 .. v10}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -246,7 +246,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v2 .. v10}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v2 .. v10}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -294,9 +294,9 @@
     move-result-object p1
 
     .line 10
-    sget-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->d:Lcom/vk/im/ui/formatters/EmojiFormatter;
+    sget-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->d:Lcom/vk/im/ui/formatters/e;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/formatters/EmojiFormatter;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/formatters/e;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -339,7 +339,7 @@
 
     const-string v1, "(this as java.lang.String).toUpperCase()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
     invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/AttachDoc;->x()Ljava/lang/String;
@@ -387,7 +387,7 @@
 
     move-result-object p1
 
-    sget-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->c:Lcom/vk/im/ui/formatters/MsgNestedFormatter;
+    sget-object v0, Lcom/vk/im/ui/formatters/AttachContentFormatter;->c:Lcom/vk/im/ui/formatters/n;
 
     invoke-static {p1}, Lkotlin/collections/l;->g(Ljava/util/List;)Ljava/lang/Object;
 
@@ -403,7 +403,7 @@
 
     move-result p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/formatters/MsgNestedFormatter;->a(Lcom/vk/im/engine/models/messages/NestedMsg$Type;I)Ljava/lang/String;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/formatters/n;->a(Lcom/vk/im/engine/models/messages/NestedMsg$Type;I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -465,7 +465,7 @@
 
     const-string p1, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto/16 :goto_6
 
@@ -509,13 +509,13 @@
     goto/16 :goto_6
 
     :cond_13
-    sget-object p1, Lcom/vk/im/ui/formatters/AttachContentFormatter;->b:Lcom/vk/im/ui/formatters/MsgAttachFormatter;
+    sget-object p1, Lcom/vk/im/ui/formatters/AttachContentFormatter;->b:Lcom/vk/im/ui/formatters/j;
 
     invoke-direct {p0}, Lcom/vk/im/ui/formatters/AttachContentFormatter;->a()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/formatters/MsgAttachFormatter;->a(Ljava/util/List;)Ljava/lang/CharSequence;
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/formatters/j;->a(Ljava/util/List;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -671,13 +671,13 @@
 
     .line 34
     :cond_20
-    sget-object p1, Lcom/vk/im/ui/formatters/AttachContentFormatter;->b:Lcom/vk/im/ui/formatters/MsgAttachFormatter;
+    sget-object p1, Lcom/vk/im/ui/formatters/AttachContentFormatter;->b:Lcom/vk/im/ui/formatters/j;
 
     invoke-direct {p0}, Lcom/vk/im/ui/formatters/AttachContentFormatter;->a()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/formatters/MsgAttachFormatter;->a(Ljava/util/List;)Ljava/lang/CharSequence;
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/formatters/j;->a(Ljava/util/List;)Ljava/lang/CharSequence;
 
     move-result-object v1
 

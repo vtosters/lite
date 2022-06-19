@@ -44,13 +44,13 @@
 
     .line 1
     :try_start_0
-    invoke-static {}, Lcom/vk/audio/AudioMessageUtils;->m()Lcom/vk/audio/AudioMessageUtils;
+    invoke-static {}, Lcom/vk/audio/a;->m()Lcom/vk/audio/a;
 
     move-result-object v0
 
     iget v1, p0, Lcom/vk/audio/AudioMessagePlayerService$f;->a:F
 
-    invoke-virtual {v0, v1}, Lcom/vk/audio/AudioMessageUtils;->a(F)V
+    invoke-virtual {v0, v1}, Lcom/vk/audio/a;->a(F)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService$f;->b:Lcom/vk/audio/AudioMessagePlayerService;

@@ -3,7 +3,7 @@
 .source "DialogPinnedMsgVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lcom/vk/im/ui/formatters/EmojiFormatter;",
+        "Lkotlin/jvm/b/a<",
+        "Lcom/vk/im/ui/formatters/e;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/ui/formatters/EmojiFormatter;
+.method public final invoke()Lcom/vk/im/ui/formatters/e;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/formatters/EmojiFormatter;
+    new-instance v0, Lcom/vk/im/ui/formatters/e;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/formatters/EmojiFormatter;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/formatters/e;-><init>()V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/DialogPinnedMsgVc$emojiFormatter$2;->invoke()Lcom/vk/im/ui/formatters/EmojiFormatter;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/DialogPinnedMsgVc$emojiFormatter$2;->invoke()Lcom/vk/im/ui/formatters/e;
 
     move-result-object v0
 

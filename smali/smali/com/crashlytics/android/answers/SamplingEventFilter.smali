@@ -3,7 +3,7 @@
 .source "SamplingEventFilter.java"
 
 # interfaces
-.implements Lcom/crashlytics/android/answers/EventFilter;
+.implements Lcom/crashlytics/android/answers/p;
 
 
 # static fields
@@ -68,9 +68,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p1, Lcom/crashlytics/android/answers/SessionEvent;->a:Lcom/crashlytics/android/answers/SessionEventMetadata;
+    iget-object v0, p1, Lcom/crashlytics/android/answers/SessionEvent;->a:Lcom/crashlytics/android/answers/c0;
 
-    iget-object v0, v0, Lcom/crashlytics/android/answers/SessionEventMetadata;->e:Ljava/lang/String;
+    iget-object v0, v0, Lcom/crashlytics/android/answers/c0;->e:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -83,9 +83,9 @@
 
     .line 2
     :goto_0
-    iget-object p1, p1, Lcom/crashlytics/android/answers/SessionEvent;->a:Lcom/crashlytics/android/answers/SessionEventMetadata;
+    iget-object p1, p1, Lcom/crashlytics/android/answers/SessionEvent;->a:Lcom/crashlytics/android/answers/c0;
 
-    iget-object p1, p1, Lcom/crashlytics/android/answers/SessionEventMetadata;->c:Ljava/lang/String;
+    iget-object p1, p1, Lcom/crashlytics/android/answers/c0;->c:Ljava/lang/String;
 
     .line 3
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I

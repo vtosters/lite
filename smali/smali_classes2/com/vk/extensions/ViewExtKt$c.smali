@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ZLkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ZLkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/Functions;
+.field final synthetic a:Lkotlin/jvm/b/a;
 
 .field final synthetic b:Z
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions;Z)V
+.method constructor <init>(Lkotlin/jvm/b/a;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/extensions/ViewExtKt$c;->a:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/extensions/ViewExtKt$c;->a:Lkotlin/jvm/b/a;
 
     iput-boolean p2, p0, Lcom/vk/extensions/ViewExtKt$c;->b:Z
 
@@ -53,7 +53,7 @@
     const-string p1, "event"
 
     .line 1
-    invoke-static {p3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -64,9 +64,9 @@
     if-ne p1, p2, :cond_1
 
     .line 2
-    iget-object p1, p0, Lcom/vk/extensions/ViewExtKt$c;->a:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/extensions/ViewExtKt$c;->a:Lkotlin/jvm/b/a;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 

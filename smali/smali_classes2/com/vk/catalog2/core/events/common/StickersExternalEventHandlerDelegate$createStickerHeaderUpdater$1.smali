@@ -3,12 +3,12 @@
 .source "StickersExternalEventHandlerDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Ljava/lang/String;)Lkotlin/jvm/b/Functions1;
+    value = Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Ljava/lang/String;)Lkotlin/jvm/b/c;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "Lcom/vk/catalog2/core/blocks/UIBlock;",
-        "Lcom/vk/lists/PaginationHelper;",
+        "Lcom/vk/lists/t;",
         "Lcom/vk/catalog2/core/blocks/UIBlockList;",
         ">;"
     }
@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/lists/PaginationHelper;)Lcom/vk/catalog2/core/blocks/UIBlockList;
+.method public final a(Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/lists/t;)Lcom/vk/catalog2/core/blocks/UIBlockList;
     .locals 6
 
     .line 2
@@ -65,7 +65,7 @@
     move-result-object p2
 
     .line 4
-    invoke-static {p2}, Lkotlin/collections/l;->a(Ljava/util/Collection;)Lkotlin/t/Ranges1;
+    invoke-static {p2}, Lkotlin/collections/l;->a(Ljava/util/Collection;)Lkotlin/t/d;
 
     move-result-object v0
 
@@ -123,7 +123,7 @@
 
     iget-object v3, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$createStickerHeaderUpdater$1;->$uniqueId:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -222,9 +222,9 @@
     .line 1
     check-cast p1, Lcom/vk/catalog2/core/blocks/UIBlock;
 
-    check-cast p2, Lcom/vk/lists/PaginationHelper;
+    check-cast p2, Lcom/vk/lists/t;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$createStickerHeaderUpdater$1;->a(Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/lists/PaginationHelper;)Lcom/vk/catalog2/core/blocks/UIBlockList;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$createStickerHeaderUpdater$1;->a(Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/lists/t;)Lcom/vk/catalog2/core/blocks/UIBlockList;
 
     move-result-object p1
 

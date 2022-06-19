@@ -3,7 +3,7 @@
 .source "SelectionStickerSearchDelegate.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/ActivityResulter;
+.implements Lcom/vk/navigation/c;
 
 
 # annotations
@@ -44,14 +44,14 @@
     .locals 0
 
     .line 1
-    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/VoiceUtils;->a(IILandroid/content/Intent;)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/i;->a(IILandroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-static {p1}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
 
     move-result p2
 
@@ -68,7 +68,7 @@
 
     const-string p3, "it"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2, p1}, Lcom/vk/core/view/search/AnimStartSearchView;->setQuery(Ljava/lang/String;)V
 
@@ -86,7 +86,7 @@
 
     const-string p2, "baseView.context"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -103,7 +103,7 @@
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1, p0}, Lcom/vtosters/lite/VKActivity;->a(Lcom/vk/navigation/ActivityResulter;)V
+    invoke-virtual {p1, p0}, Lcom/vtosters/lite/VKActivity;->a(Lcom/vk/navigation/c;)V
 
     :cond_2
     return-void

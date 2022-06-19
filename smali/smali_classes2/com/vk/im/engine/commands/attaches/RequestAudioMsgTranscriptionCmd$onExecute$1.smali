@@ -3,12 +3,12 @@
 .source "RequestAudioMsgTranscriptionCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd;->a(Lcom/vk/im/engine/ImEnvironment;)V
+    value = Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd;->a(Lcom/vk/im/engine/d;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Lcom/vk/instantjobs/InstantJob;",
         "Ljava/lang/Boolean;",
         ">;"

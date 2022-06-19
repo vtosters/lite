@@ -3,7 +3,7 @@
 .source "VKApplication.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -67,10 +67,10 @@
     move-result-object p1
 
     .line 2
-    invoke-static {p1}, Lcom/vk/emoji/Emoji;->a(Landroid/app/Activity;)V
+    invoke-static {p1}, Lcom/vk/emoji/b;->a(Landroid/app/Activity;)V
 
     .line 3
-    invoke-static {p1}, Lcom/vk/stickers/f0/KeyboardPopup;->b(Landroid/app/Activity;)V
+    invoke-static {p1}, Lcom/vk/stickers/f0/a;->b(Landroid/app/Activity;)V
 
     return-void
 .end method

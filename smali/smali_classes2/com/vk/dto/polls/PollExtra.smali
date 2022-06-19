@@ -20,7 +20,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/dto/polls/PollExtra1;",
+            "Lcom/vk/dto/polls/b;",
             ">;"
         }
     .end annotation
@@ -47,7 +47,7 @@
             "Ljava/lang/Integer;",
             ">;",
             "Ljava/util/List<",
-            "Lcom/vk/dto/polls/PollExtra1;",
+            "Lcom/vk/dto/polls/b;",
             ">;",
             "Landroid/util/SparseArray<",
             "Lcom/vk/dto/newsfeed/Owner;",
@@ -88,7 +88,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {v1}, Lcom/vk/core/extensions/JsonObjectExt;->b(Lorg/json/JSONArray;)[I
+    invoke-static {v1}, Lcom/vk/core/extensions/m;->b(Lorg/json/JSONArray;)[I
 
     move-result-object v1
 
@@ -143,9 +143,9 @@
     if-eqz v6, :cond_1
 
     .line 7
-    new-instance v7, Lcom/vk/dto/polls/PollExtra1;
+    new-instance v7, Lcom/vk/dto/polls/b;
 
-    invoke-direct {v7, v6}, Lcom/vk/dto/polls/PollExtra1;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v7, v6}, Lcom/vk/dto/polls/b;-><init>(Lorg/json/JSONObject;)V
 
     invoke-virtual {v3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -174,7 +174,7 @@
 
     invoke-direct {v2, p1}, Lcom/vk/dto/polls/PollExtra$2;-><init>(Lorg/json/JSONObject;)V
 
-    invoke-interface {v2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -211,7 +211,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/dto/polls/PollExtra1;",
+            "Lcom/vk/dto/polls/b;",
             ">;"
         }
     .end annotation

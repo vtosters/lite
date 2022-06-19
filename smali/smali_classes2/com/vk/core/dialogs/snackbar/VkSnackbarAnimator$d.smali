@@ -3,7 +3,7 @@
 .source "VkSnackbarAnimator.kt"
 
 # interfaces
-.implements Lcom/vk/core/util/ViewMeasurer$a;
+.implements Lcom/vk/core/util/m1$a;
 
 
 # annotations

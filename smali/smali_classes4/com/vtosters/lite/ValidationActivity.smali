@@ -23,7 +23,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vtosters/lite/data/PurchasesManager<",
-            "Lcom/vk/dto/common/data/Purchase1;",
+            "Lcom/vk/dto/common/data/e;",
             ">;"
         }
     .end annotation
@@ -31,11 +31,11 @@
 
 .field private M:Landroid/webkit/WebView;
 
-.field private N:Lb/h/g/k/VKProgressDialog;
+.field private N:Lb/h/g/k/a;
 
 .field private O:Lcom/vtosters/lite/ValidationActivity$c;
 
-.field private final P:Lcom/vk/bridges/AuthBridge3;
+.field private final P:Lcom/vk/bridges/f;
 
 
 # direct methods
@@ -58,20 +58,20 @@
     iput-object v0, p0, Lcom/vtosters/lite/ValidationActivity;->O:Lcom/vtosters/lite/ValidationActivity$c;
 
     .line 4
-    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
+    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vtosters/lite/ValidationActivity;->P:Lcom/vk/bridges/AuthBridge3;
+    iput-object v0, p0, Lcom/vtosters/lite/ValidationActivity;->P:Lcom/vk/bridges/f;
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/vtosters/lite/ValidationActivity;Lb/h/g/k/VKProgressDialog;)Lb/h/g/k/VKProgressDialog;
+.method static synthetic a(Lcom/vtosters/lite/ValidationActivity;Lb/h/g/k/a;)Lb/h/g/k/a;
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vtosters/lite/ValidationActivity;->N:Lb/h/g/k/VKProgressDialog;
+    iput-object p1, p0, Lcom/vtosters/lite/ValidationActivity;->N:Lb/h/g/k/a;
 
     return-object p1
 .end method
@@ -94,11 +94,11 @@
     return-object p1
 .end method
 
-.method static synthetic b(Lcom/vtosters/lite/ValidationActivity;)Lcom/vk/bridges/AuthBridge3;
+.method static synthetic b(Lcom/vtosters/lite/ValidationActivity;)Lcom/vk/bridges/f;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vtosters/lite/ValidationActivity;->P:Lcom/vk/bridges/AuthBridge3;
+    iget-object p0, p0, Lcom/vtosters/lite/ValidationActivity;->P:Lcom/vk/bridges/f;
 
     return-object p0
 .end method
@@ -127,7 +127,7 @@
     .locals 1
 
     .line 2
-    invoke-static {p0}, Lcom/vk/common/links/LinkProcessor;->b(Landroid/net/Uri;)Z
+    invoke-static {p0}, Lcom/vk/common/links/c;->b(Landroid/net/Uri;)Z
 
     move-result v0
 
@@ -156,11 +156,11 @@
     return p0
 .end method
 
-.method static synthetic d(Lcom/vtosters/lite/ValidationActivity;)Lb/h/g/k/VKProgressDialog;
+.method static synthetic d(Lcom/vtosters/lite/ValidationActivity;)Lb/h/g/k/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ValidationActivity;->N:Lb/h/g/k/VKProgressDialog;
+    iget-object p0, p0, Lcom/vtosters/lite/ValidationActivity;->N:Lb/h/g/k/a;
 
     return-object p0
 .end method
@@ -357,14 +357,14 @@
     invoke-virtual {p0, p1}, Lcom/vtosters/lite/activities/TabletsDialogActivity;->setContentView(Landroid/view/View;)V
 
     .line 20
-    new-instance p1, Lb/h/g/k/VKProgressDialog;
+    new-instance p1, Lb/h/g/k/a;
 
-    invoke-direct {p1, p0}, Lb/h/g/k/VKProgressDialog;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p0}, Lb/h/g/k/a;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lcom/vtosters/lite/ValidationActivity;->N:Lb/h/g/k/VKProgressDialog;
+    iput-object p1, p0, Lcom/vtosters/lite/ValidationActivity;->N:Lb/h/g/k/a;
 
     .line 21
-    iget-object p1, p0, Lcom/vtosters/lite/ValidationActivity;->N:Lb/h/g/k/VKProgressDialog;
+    iget-object p1, p0, Lcom/vtosters/lite/ValidationActivity;->N:Lb/h/g/k/a;
 
     const v0, 0x7f1206b4
 

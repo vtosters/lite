@@ -152,7 +152,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/vk/emoji/R5;->emoji_keyboard_item_width:I
+    sget p2, Lcom/vk/emoji/s;->emoji_keyboard_item_width:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 

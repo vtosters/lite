@@ -4,22 +4,22 @@
 
 
 # instance fields
-.field private a:Lkotlin/jvm/b/Functions2;
+.field private a:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/Object;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private b:Lkotlin/jvm/b/Functions;
+.field private b:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -31,7 +31,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/market/common/RecyclerController<",
+            "Lcom/vk/market/common/h<",
             "***>;>;"
         }
     .end annotation
@@ -53,7 +53,7 @@
     iput-object p1, p0, Lcom/vk/market/picker/GoodsPickerView;->d:Ljava/util/ArrayList;
 
     .line 3
-    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
 
     move-result p1
 
@@ -94,7 +94,7 @@
     const/4 v1, 0x0
 
     .line 8
-    invoke-static {p0, p1, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -103,7 +103,7 @@
     const v2, 0x7f0a0ee0
 
     .line 9
-    invoke-static {p0, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -124,7 +124,7 @@
     .line 12
     iget-object v2, p0, Lcom/vk/market/picker/GoodsPickerView;->c:Landroidx/viewpager/widget/ViewPager;
 
-    new-instance v3, Lcom/vk/market/picker/GoodsPickerView1;
+    new-instance v3, Lcom/vk/market/picker/h;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
@@ -132,11 +132,11 @@
 
     const-string v5, "context"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v5, p0, Lcom/vk/market/picker/GoodsPickerView;->d:Ljava/util/ArrayList;
 
-    invoke-direct {v3, v4, v0, v1, v5}, Lcom/vk/market/picker/GoodsPickerView1;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Ljava/util/Collection;)V
+    invoke-direct {v3, v4, v0, v1, v5}, Lcom/vk/market/picker/h;-><init>(Landroid/content/Context;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Ljava/util/Collection;)V
 
     invoke-virtual {v2, v3}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
@@ -172,10 +172,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/market/common/RecyclerController;
+    check-cast v1, Lcom/vk/market/common/h;
 
     .line 3
-    invoke-virtual {v1}, Lcom/vk/market/common/RecyclerController;->b()V
+    invoke-virtual {v1}, Lcom/vk/market/common/h;->b()V
 
     goto :goto_0
 
@@ -196,72 +196,72 @@
     return-void
 .end method
 
-.method public final getOpenMarketAppListener()Lkotlin/jvm/b/Functions;
+.method public final getOpenMarketAppListener()Lkotlin/jvm/b/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/market/picker/GoodsPickerView;->b:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/market/picker/GoodsPickerView;->b:Lkotlin/jvm/b/a;
 
     return-object v0
 .end method
 
-.method public final getPickListener()Lkotlin/jvm/b/Functions2;
+.method public final getPickListener()Lkotlin/jvm/b/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/Object;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/market/picker/GoodsPickerView;->a:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/market/picker/GoodsPickerView;->a:Lkotlin/jvm/b/b;
 
     return-object v0
 .end method
 
-.method public final setOpenMarketAppListener(Lkotlin/jvm/b/Functions;)V
+.method public final setOpenMarketAppListener(Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/market/picker/GoodsPickerView;->b:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/market/picker/GoodsPickerView;->b:Lkotlin/jvm/b/a;
 
     return-void
 .end method
 
-.method public final setPickListener(Lkotlin/jvm/b/Functions2;)V
+.method public final setPickListener(Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/Object;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/market/picker/GoodsPickerView;->a:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/market/picker/GoodsPickerView;->a:Lkotlin/jvm/b/b;
 
     return-void
 .end method

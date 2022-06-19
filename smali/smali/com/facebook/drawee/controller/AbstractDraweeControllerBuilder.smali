@@ -3,7 +3,7 @@
 .source "AbstractDraweeControllerBuilder.java"
 
 # interfaces
-.implements Lcom/facebook/u/e/SimpleDraweeControllerBuilder;
+.implements Lcom/facebook/u/e/d;
 
 
 # annotations
@@ -27,16 +27,16 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/facebook/u/e/SimpleDraweeControllerBuilder;"
+        "Lcom/facebook/u/e/d;"
     }
 .end annotation
 
 
 # static fields
-.field private static final p:Lcom/facebook/drawee/controller/ControllerListener;
+.field private static final p:Lcom/facebook/drawee/controller/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/facebook/drawee/controller/ControllerListener<",
+            "Lcom/facebook/drawee/controller/c<",
             "Ljava/lang/Object;",
             ">;"
         }
@@ -55,7 +55,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lcom/facebook/drawee/controller/ControllerListener;",
+            "Lcom/facebook/drawee/controller/c;",
             ">;"
         }
     .end annotation
@@ -89,26 +89,26 @@
 
 .field private g:Z
 
-.field private h:Lcom/facebook/common/internal/Supplier;
+.field private h:Lcom/facebook/common/internal/j;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/facebook/common/internal/Supplier<",
-            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/common/internal/j<",
+            "Lcom/facebook/datasource/b<",
             "TIMAGE;>;>;"
         }
     .end annotation
 .end field
 
-.field private i:Lcom/facebook/drawee/controller/ControllerListener;
+.field private i:Lcom/facebook/drawee/controller/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/facebook/drawee/controller/ControllerListener<",
+            "Lcom/facebook/drawee/controller/c<",
             "-TINFO;>;"
         }
     .end annotation
 .end field
 
-.field private j:Lcom/facebook/drawee/controller/ControllerViewportVisibilityListener;
+.field private j:Lcom/facebook/drawee/controller/d;
 
 .field private k:Z
 
@@ -118,7 +118,7 @@
 
 .field private n:Ljava/lang/String;
 
-.field private o:Lcom/facebook/u/e/DraweeController;
+.field private o:Lcom/facebook/u/e/a;
 
 
 # direct methods
@@ -130,7 +130,7 @@
 
     invoke-direct {v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$a;-><init>()V
 
-    sput-object v0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->p:Lcom/facebook/drawee/controller/ControllerListener;
+    sput-object v0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->p:Lcom/facebook/drawee/controller/c;
 
     .line 2
     new-instance v0, Ljava/lang/NullPointerException;
@@ -158,7 +158,7 @@
             "(",
             "Landroid/content/Context;",
             "Ljava/util/Set<",
-            "Lcom/facebook/drawee/controller/ControllerListener;",
+            "Lcom/facebook/drawee/controller/c;",
             ">;)V"
         }
     .end annotation
@@ -218,10 +218,10 @@
     iput-boolean v1, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->g:Z
 
     .line 6
-    iput-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->i:Lcom/facebook/drawee/controller/ControllerListener;
+    iput-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->i:Lcom/facebook/drawee/controller/c;
 
     .line 7
-    iput-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->j:Lcom/facebook/drawee/controller/ControllerViewportVisibilityListener;
+    iput-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->j:Lcom/facebook/drawee/controller/d;
 
     const/4 v1, 0x0
 
@@ -232,7 +232,7 @@
     iput-boolean v1, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->l:Z
 
     .line 10
-    iput-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->o:Lcom/facebook/u/e/DraweeController;
+    iput-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->o:Lcom/facebook/u/e/a;
 
     .line 11
     iput-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->n:Ljava/lang/String;
@@ -242,22 +242,22 @@
 
 
 # virtual methods
-.method protected a(Lcom/facebook/u/e/DraweeController;Ljava/lang/String;)Lcom/facebook/common/internal/Supplier;
+.method protected a(Lcom/facebook/u/e/a;Ljava/lang/String;)Lcom/facebook/common/internal/j;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/u/e/DraweeController;",
+            "Lcom/facebook/u/e/a;",
             "Ljava/lang/String;",
             ")",
-            "Lcom/facebook/common/internal/Supplier<",
-            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/common/internal/j<",
+            "Lcom/facebook/datasource/b<",
             "TIMAGE;>;>;"
         }
     .end annotation
 
     .line 27
-    iget-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->h:Lcom/facebook/common/internal/Supplier;
+    iget-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->h:Lcom/facebook/common/internal/j;
 
     if-eqz v0, :cond_0
 
@@ -272,7 +272,7 @@
     if-eqz v1, :cond_1
 
     .line 29
-    invoke-virtual {p0, p1, p2, v1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;Ljava/lang/String;Ljava/lang/Object;)Lcom/facebook/common/internal/Supplier;
+    invoke-virtual {p0, p1, p2, v1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;Ljava/lang/String;Ljava/lang/Object;)Lcom/facebook/common/internal/j;
 
     move-result-object v0
 
@@ -288,7 +288,7 @@
     iget-boolean v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->g:Z
 
     .line 32
-    invoke-virtual {p0, p1, p2, v1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;Ljava/lang/String;[Ljava/lang/Object;Z)Lcom/facebook/common/internal/Supplier;
+    invoke-virtual {p0, p1, p2, v1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;Ljava/lang/String;[Ljava/lang/Object;Z)Lcom/facebook/common/internal/j;
 
     move-result-object v0
 
@@ -314,7 +314,7 @@
     .line 36
     iget-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->e:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;Ljava/lang/String;Ljava/lang/Object;)Lcom/facebook/common/internal/Supplier;
+    invoke-virtual {p0, p1, p2, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;Ljava/lang/String;Ljava/lang/Object;)Lcom/facebook/common/internal/j;
 
     move-result-object p1
 
@@ -323,7 +323,7 @@
     const/4 p1, 0x0
 
     .line 37
-    invoke-static {v1, p1}, Lcom/facebook/datasource/IncreasingQualityDataSourceSupplier;->a(Ljava/util/List;Z)Lcom/facebook/datasource/IncreasingQualityDataSourceSupplier;
+    invoke-static {v1, p1}, Lcom/facebook/datasource/f;->a(Ljava/util/List;Z)Lcom/facebook/datasource/f;
 
     move-result-object v0
 
@@ -333,7 +333,7 @@
     .line 38
     sget-object p1, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->q:Ljava/lang/NullPointerException;
 
-    invoke-static {p1}, Lcom/facebook/datasource/DataSources;->a(Ljava/lang/Throwable;)Lcom/facebook/common/internal/Supplier;
+    invoke-static {p1}, Lcom/facebook/datasource/c;->a(Ljava/lang/Throwable;)Lcom/facebook/common/internal/j;
 
     move-result-object v0
 
@@ -341,16 +341,16 @@
     return-object v0
 .end method
 
-.method protected a(Lcom/facebook/u/e/DraweeController;Ljava/lang/String;Ljava/lang/Object;)Lcom/facebook/common/internal/Supplier;
+.method protected a(Lcom/facebook/u/e/a;Ljava/lang/String;Ljava/lang/Object;)Lcom/facebook/common/internal/j;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/u/e/DraweeController;",
+            "Lcom/facebook/u/e/a;",
             "Ljava/lang/String;",
             "TREQUEST;)",
-            "Lcom/facebook/common/internal/Supplier<",
-            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/common/internal/j<",
+            "Lcom/facebook/datasource/b<",
             "TIMAGE;>;>;"
         }
     .end annotation
@@ -358,25 +358,25 @@
     .line 47
     sget-object v0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;->FULL_FETCH:Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;
 
-    invoke-virtual {p0, p1, p2, p3, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;)Lcom/facebook/common/internal/Supplier;
+    invoke-virtual {p0, p1, p2, p3, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;)Lcom/facebook/common/internal/j;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected a(Lcom/facebook/u/e/DraweeController;Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;)Lcom/facebook/common/internal/Supplier;
+.method protected a(Lcom/facebook/u/e/a;Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;)Lcom/facebook/common/internal/j;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/u/e/DraweeController;",
+            "Lcom/facebook/u/e/a;",
             "Ljava/lang/String;",
             "TREQUEST;",
             "Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;",
             ")",
-            "Lcom/facebook/common/internal/Supplier<",
-            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/common/internal/j<",
+            "Lcom/facebook/datasource/b<",
             "TIMAGE;>;>;"
         }
     .end annotation
@@ -401,21 +401,21 @@
 
     move-object v6, p4
 
-    invoke-direct/range {v0 .. v6}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$b;-><init>(Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;Lcom/facebook/u/e/DraweeController;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;)V
+    invoke-direct/range {v0 .. v6}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$b;-><init>(Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;Lcom/facebook/u/e/a;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;)V
 
     return-object v7
 .end method
 
-.method protected a(Lcom/facebook/u/e/DraweeController;Ljava/lang/String;[Ljava/lang/Object;Z)Lcom/facebook/common/internal/Supplier;
+.method protected a(Lcom/facebook/u/e/a;Ljava/lang/String;[Ljava/lang/Object;Z)Lcom/facebook/common/internal/j;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/u/e/DraweeController;",
+            "Lcom/facebook/u/e/a;",
             "Ljava/lang/String;",
             "[TREQUEST;Z)",
-            "Lcom/facebook/common/internal/Supplier<",
-            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/common/internal/j<",
+            "Lcom/facebook/datasource/b<",
             "TIMAGE;>;>;"
         }
     .end annotation
@@ -447,7 +447,7 @@
     sget-object v3, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;->BITMAP_MEMORY_CACHE:Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;
 
     .line 42
-    invoke-virtual {p0, p1, p2, v2, v3}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;)Lcom/facebook/common/internal/Supplier;
+    invoke-virtual {p0, p1, p2, v2, v3}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;)Lcom/facebook/common/internal/j;
 
     move-result-object v2
 
@@ -468,7 +468,7 @@
     .line 45
     aget-object p4, p3, v1
 
-    invoke-virtual {p0, p1, p2, p4}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;Ljava/lang/String;Ljava/lang/Object;)Lcom/facebook/common/internal/Supplier;
+    invoke-virtual {p0, p1, p2, p4}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;Ljava/lang/String;Ljava/lang/Object;)Lcom/facebook/common/internal/j;
 
     move-result-object p4
 
@@ -480,43 +480,43 @@
 
     .line 46
     :cond_1
-    invoke-static {v0}, Lcom/facebook/datasource/FirstAvailableDataSourceSupplier;->a(Ljava/util/List;)Lcom/facebook/datasource/FirstAvailableDataSourceSupplier;
+    invoke-static {v0}, Lcom/facebook/datasource/e;->a(Ljava/util/List;)Lcom/facebook/datasource/e;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected abstract a(Lcom/facebook/u/e/DraweeController;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;)Lcom/facebook/datasource/DataSource;
+.method protected abstract a(Lcom/facebook/u/e/a;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;)Lcom/facebook/datasource/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/u/e/DraweeController;",
+            "Lcom/facebook/u/e/a;",
             "Ljava/lang/String;",
             "TREQUEST;",
             "Ljava/lang/Object;",
             "Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$CacheLevel;",
             ")",
-            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/datasource/b<",
             "TIMAGE;>;"
         }
     .end annotation
 .end method
 
-.method public a(Lcom/facebook/common/internal/Supplier;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+.method public a(Lcom/facebook/common/internal/j;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/common/internal/Supplier<",
-            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/common/internal/j<",
+            "Lcom/facebook/datasource/b<",
             "TIMAGE;>;>;)TBUI",
             "LDER;"
         }
     .end annotation
 
     .line 9
-    iput-object p1, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->h:Lcom/facebook/common/internal/Supplier;
+    iput-object p1, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->h:Lcom/facebook/common/internal/j;
 
     .line 10
     invoke-virtual {p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->h()Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
@@ -524,19 +524,19 @@
     return-object p0
 .end method
 
-.method public a(Lcom/facebook/drawee/controller/ControllerListener;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+.method public a(Lcom/facebook/drawee/controller/c;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/drawee/controller/ControllerListener<",
+            "Lcom/facebook/drawee/controller/c<",
             "-TINFO;>;)TBUI",
             "LDER;"
         }
     .end annotation
 
     .line 13
-    iput-object p1, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->i:Lcom/facebook/drawee/controller/ControllerListener;
+    iput-object p1, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->i:Lcom/facebook/drawee/controller/c;
 
     .line 14
     invoke-virtual {p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->h()Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
@@ -544,19 +544,19 @@
     return-object p0
 .end method
 
-.method public a(Lcom/facebook/u/e/DraweeController;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+.method public a(Lcom/facebook/u/e/a;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/u/e/DraweeController;",
+            "Lcom/facebook/u/e/a;",
             ")TBUI",
             "LDER;"
         }
     .end annotation
 
     .line 15
-    iput-object p1, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->o:Lcom/facebook/u/e/DraweeController;
+    iput-object p1, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->o:Lcom/facebook/u/e/a;
 
     .line 16
     invoke-virtual {p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->h()Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
@@ -649,7 +649,7 @@
     :goto_1
     const-string v1, "No requests specified!"
 
-    invoke-static {v0, v1}, Lcom/facebook/common/internal/Preconditions;->a(ZLjava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/facebook/common/internal/g;->a(ZLjava/lang/Object;)V
 
     .line 6
     iput-object p1, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->f:[Ljava/lang/Object;
@@ -663,11 +663,11 @@
     return-object p0
 .end method
 
-.method protected a()Lcom/facebook/drawee/controller/AbstractDraweeController;
+.method protected a()Lcom/facebook/drawee/controller/a;
     .locals 2
 
     .line 17
-    invoke-static {}, Lcom/facebook/x/j/FrescoSystrace;->c()Z
+    invoke-static {}, Lcom/facebook/x/j/b;->c()Z
 
     move-result v0
 
@@ -676,11 +676,11 @@
     const-string v0, "AbstractDraweeControllerBuilder#buildController"
 
     .line 18
-    invoke-static {v0}, Lcom/facebook/x/j/FrescoSystrace;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/facebook/x/j/b;->a(Ljava/lang/String;)V
 
     .line 19
     :cond_0
-    invoke-virtual {p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->i()Lcom/facebook/drawee/controller/AbstractDraweeController;
+    invoke-virtual {p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->i()Lcom/facebook/drawee/controller/a;
 
     move-result-object v0
 
@@ -689,52 +689,52 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/controller/AbstractDraweeController;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/controller/a;->a(Z)V
 
     .line 21
     invoke-virtual {p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->c()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/controller/AbstractDraweeController;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/controller/a;->a(Ljava/lang/String;)V
 
     .line 22
-    invoke-virtual {p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->d()Lcom/facebook/drawee/controller/ControllerViewportVisibilityListener;
+    invoke-virtual {p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->d()Lcom/facebook/drawee/controller/d;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/controller/AbstractDraweeController;->a(Lcom/facebook/drawee/controller/ControllerViewportVisibilityListener;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/controller/a;->a(Lcom/facebook/drawee/controller/d;)V
 
     .line 23
-    invoke-virtual {p0, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->c(Lcom/facebook/drawee/controller/AbstractDraweeController;)V
+    invoke-virtual {p0, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->c(Lcom/facebook/drawee/controller/a;)V
 
     .line 24
-    invoke-virtual {p0, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/drawee/controller/AbstractDraweeController;)V
+    invoke-virtual {p0, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/drawee/controller/a;)V
 
     .line 25
-    invoke-static {}, Lcom/facebook/x/j/FrescoSystrace;->c()Z
+    invoke-static {}, Lcom/facebook/x/j/b;->c()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 26
-    invoke-static {}, Lcom/facebook/x/j/FrescoSystrace;->a()V
+    invoke-static {}, Lcom/facebook/x/j/b;->a()V
 
     :cond_1
     return-object v0
 .end method
 
-.method public bridge synthetic a(Lcom/facebook/u/e/DraweeController;)Lcom/facebook/u/e/SimpleDraweeControllerBuilder;
+.method public bridge synthetic a(Lcom/facebook/u/e/a;)Lcom/facebook/u/e/d;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {p0, p1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     return-object p0
 .end method
 
-.method protected a(Lcom/facebook/drawee/controller/AbstractDraweeController;)V
+.method protected a(Lcom/facebook/drawee/controller/a;)V
     .locals 2
 
     .line 50
@@ -758,21 +758,21 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/facebook/drawee/controller/ControllerListener;
+    check-cast v1, Lcom/facebook/drawee/controller/c;
 
     .line 52
-    invoke-virtual {p1, v1}, Lcom/facebook/drawee/controller/AbstractDraweeController;->a(Lcom/facebook/drawee/controller/ControllerListener;)V
+    invoke-virtual {p1, v1}, Lcom/facebook/drawee/controller/a;->a(Lcom/facebook/drawee/controller/c;)V
 
     goto :goto_0
 
     .line 53
     :cond_0
-    iget-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->i:Lcom/facebook/drawee/controller/ControllerListener;
+    iget-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->i:Lcom/facebook/drawee/controller/c;
 
     if-eqz v0, :cond_1
 
     .line 54
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeController;->a(Lcom/facebook/drawee/controller/ControllerListener;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/a;->a(Lcom/facebook/drawee/controller/c;)V
 
     .line 55
     :cond_1
@@ -781,9 +781,9 @@
     if-eqz v0, :cond_2
 
     .line 56
-    sget-object v0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->p:Lcom/facebook/drawee/controller/ControllerListener;
+    sget-object v0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->p:Lcom/facebook/drawee/controller/c;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeController;->a(Lcom/facebook/drawee/controller/ControllerListener;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/a;->a(Lcom/facebook/drawee/controller/c;)V
 
     :cond_2
     return-void
@@ -834,11 +834,11 @@
     return-object v0
 .end method
 
-.method protected b(Lcom/facebook/drawee/controller/AbstractDraweeController;)V
+.method protected b(Lcom/facebook/drawee/controller/a;)V
     .locals 1
 
     .line 6
-    invoke-virtual {p1}, Lcom/facebook/drawee/controller/AbstractDraweeController;->k()Lcom/facebook/u/d/GestureDetector;
+    invoke-virtual {p1}, Lcom/facebook/drawee/controller/a;->k()Lcom/facebook/u/d/a;
 
     move-result-object v0
 
@@ -847,12 +847,12 @@
     .line 7
     iget-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/facebook/u/d/GestureDetector;->a(Landroid/content/Context;)Lcom/facebook/u/d/GestureDetector;
+    invoke-static {v0}, Lcom/facebook/u/d/a;->a(Landroid/content/Context;)Lcom/facebook/u/d/a;
 
     move-result-object v0
 
     .line 8
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeController;->a(Lcom/facebook/u/d/GestureDetector;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/a;->a(Lcom/facebook/u/d/a;)V
 
     :cond_0
     return-void
@@ -903,7 +903,7 @@
     return-object v0
 .end method
 
-.method protected c(Lcom/facebook/drawee/controller/AbstractDraweeController;)V
+.method protected c(Lcom/facebook/drawee/controller/a;)V
     .locals 2
 
     .line 6
@@ -915,25 +915,25 @@
 
     .line 7
     :cond_0
-    invoke-virtual {p1}, Lcom/facebook/drawee/controller/AbstractDraweeController;->m()Lcom/facebook/drawee/components/RetryManager;
+    invoke-virtual {p1}, Lcom/facebook/drawee/controller/a;->m()Lcom/facebook/drawee/components/b;
 
     move-result-object v0
 
     iget-boolean v1, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k:Z
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/components/RetryManager;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/components/b;->a(Z)V
 
     .line 8
-    invoke-virtual {p0, p1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->b(Lcom/facebook/drawee/controller/AbstractDraweeController;)V
+    invoke-virtual {p0, p1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->b(Lcom/facebook/drawee/controller/a;)V
 
     return-void
 .end method
 
-.method public d()Lcom/facebook/drawee/controller/ControllerViewportVisibilityListener;
+.method public d()Lcom/facebook/drawee/controller/d;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->j:Lcom/facebook/drawee/controller/ControllerViewportVisibilityListener;
+    iget-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->j:Lcom/facebook/drawee/controller/d;
 
     return-object v0
 .end method
@@ -952,11 +952,11 @@
     return-object v0
 .end method
 
-.method public f()Lcom/facebook/u/e/DraweeController;
+.method public f()Lcom/facebook/u/e/a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->o:Lcom/facebook/u/e/DraweeController;
+    iget-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->o:Lcom/facebook/u/e/a;
 
     return-object v0
 .end method
@@ -982,7 +982,7 @@
     return-object p0
 .end method
 
-.method protected abstract i()Lcom/facebook/drawee/controller/AbstractDraweeController;
+.method protected abstract i()Lcom/facebook/drawee/controller/a;
 .end method
 
 .method public j()Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
@@ -1033,10 +1033,10 @@
     :goto_1
     const-string v3, "Cannot specify both ImageRequest and FirstAvailableImageRequests!"
 
-    invoke-static {v0, v3}, Lcom/facebook/common/internal/Preconditions;->b(ZLjava/lang/Object;)V
+    invoke-static {v0, v3}, Lcom/facebook/common/internal/g;->b(ZLjava/lang/Object;)V
 
     .line 2
-    iget-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->h:Lcom/facebook/common/internal/Supplier;
+    iget-object v0, p0, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->h:Lcom/facebook/common/internal/j;
 
     if-eqz v0, :cond_2
 
@@ -1058,12 +1058,12 @@
     :cond_3
     const-string v0, "Cannot specify DataSourceSupplier with other ImageRequests! Use one or the other."
 
-    invoke-static {v1, v0}, Lcom/facebook/common/internal/Preconditions;->b(ZLjava/lang/Object;)V
+    invoke-static {v1, v0}, Lcom/facebook/common/internal/g;->b(ZLjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public k0()Lcom/facebook/drawee/controller/AbstractDraweeController;
+.method public k0()Lcom/facebook/drawee/controller/a;
     .locals 1
 
     .line 2
@@ -1092,18 +1092,18 @@
 
     .line 6
     :cond_0
-    invoke-virtual {p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a()Lcom/facebook/drawee/controller/AbstractDraweeController;
+    invoke-virtual {p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a()Lcom/facebook/drawee/controller/a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public bridge synthetic k0()Lcom/facebook/u/e/DraweeController;
+.method public bridge synthetic k0()Lcom/facebook/u/e/a;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/AbstractDraweeController;
+    invoke-virtual {p0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/a;
 
     move-result-object v0
 

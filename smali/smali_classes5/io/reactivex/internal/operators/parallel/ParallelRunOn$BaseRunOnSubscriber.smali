@@ -3,8 +3,8 @@
 .source "ParallelRunOn.java"
 
 # interfaces
-.implements Lio/reactivex/FlowableSubscriber;
-.implements Le/b/Subscription;
+.implements Lc/a/h;
+.implements Le/b/d;
 .implements Ljava/lang/Runnable;
 
 
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Lio/reactivex/FlowableSubscriber<",
+        "Lc/a/h<",
         "TT;>;",
-        "Le/b/Subscription;",
+        "Le/b/d;",
         "Ljava/lang/Runnable;"
     }
 .end annotation
@@ -60,20 +60,20 @@
 
 .field final requested:Ljava/util/concurrent/atomic/AtomicLong;
 
-.field upstream:Le/b/Subscription;
+.field upstream:Le/b/d;
 
-.field final worker:Lio/reactivex/Scheduler$c;
+.field final worker:Lc/a/s$c;
 
 
 # direct methods
-.method constructor <init>(ILio/reactivex/internal/queue/SpscArrayQueue;Lio/reactivex/Scheduler$c;)V
+.method constructor <init>(ILio/reactivex/internal/queue/SpscArrayQueue;Lc/a/s$c;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
             "Lio/reactivex/internal/queue/SpscArrayQueue<",
             "TT;>;",
-            "Lio/reactivex/Scheduler$c;",
+            "Lc/a/s$c;",
             ")V"
         }
     .end annotation
@@ -102,7 +102,7 @@
     iput p1, p0, Lio/reactivex/internal/operators/parallel/ParallelRunOn$BaseRunOnSubscriber;->limit:I
 
     .line 6
-    iput-object p3, p0, Lio/reactivex/internal/operators/parallel/ParallelRunOn$BaseRunOnSubscriber;->worker:Lio/reactivex/Scheduler$c;
+    iput-object p3, p0, Lio/reactivex/internal/operators/parallel/ParallelRunOn$BaseRunOnSubscriber;->worker:Lc/a/s$c;
 
     return-void
 .end method
@@ -122,7 +122,7 @@
     .line 7
     iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelRunOn$BaseRunOnSubscriber;->requested:Ljava/util/concurrent/atomic/AtomicLong;
 
-    invoke-static {v0, p1, p2}, Lio/reactivex/internal/util/BackpressureHelper;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+    invoke-static {v0, p1, p2}, Lio/reactivex/internal/util/b;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
     .line 8
     invoke-virtual {p0}, Lio/reactivex/internal/operators/parallel/ParallelRunOn$BaseRunOnSubscriber;->d()V
@@ -140,7 +140,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -207,9 +207,9 @@
     if-nez p1, :cond_1
 
     .line 3
-    iget-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelRunOn$BaseRunOnSubscriber;->upstream:Le/b/Subscription;
+    iget-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelRunOn$BaseRunOnSubscriber;->upstream:Le/b/d;
 
-    invoke-interface {p1}, Le/b/Subscription;->cancel()V
+    invoke-interface {p1}, Le/b/d;->cancel()V
 
     .line 4
     new-instance p1, Lio/reactivex/exceptions/MissingBackpressureException;
@@ -243,14 +243,14 @@
     iput-boolean v0, p0, Lio/reactivex/internal/operators/parallel/ParallelRunOn$BaseRunOnSubscriber;->cancelled:Z
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelRunOn$BaseRunOnSubscriber;->upstream:Le/b/Subscription;
+    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelRunOn$BaseRunOnSubscriber;->upstream:Le/b/d;
 
-    invoke-interface {v0}, Le/b/Subscription;->cancel()V
+    invoke-interface {v0}, Le/b/d;->cancel()V
 
     .line 4
-    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelRunOn$BaseRunOnSubscriber;->worker:Lio/reactivex/Scheduler$c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelRunOn$BaseRunOnSubscriber;->worker:Lc/a/s$c;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 5
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
@@ -279,9 +279,9 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelRunOn$BaseRunOnSubscriber;->worker:Lio/reactivex/Scheduler$c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelRunOn$BaseRunOnSubscriber;->worker:Lc/a/s$c;
 
-    invoke-virtual {v0, p0}, Lio/reactivex/Scheduler$c;->a(Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, p0}, Lc/a/s$c;->a(Ljava/lang/Runnable;)Lio/reactivex/disposables/b;
 
     :cond_0
     return-void

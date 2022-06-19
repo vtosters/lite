@@ -39,18 +39,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/account/verify/views/PhoneErrorView$PhoneBusyView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/account/verify/views/PhoneErrorView$PhoneBusyView$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/account/verify/views/PhoneErrorView$PhoneBusyView;->d:Lcom/vk/account/verify/views/PhoneErrorView$PhoneBusyView$a;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/account/verify/PhoneVerifyManager$b;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/account/verify/g$b;Lcom/vk/core/dialogs/bottomsheet/h$c;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p3}, Lcom/vk/account/verify/views/PhoneErrorView;-><init>(Landroid/content/Context;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;)V
+    invoke-direct {p0, p1, p3}, Lcom/vk/account/verify/views/PhoneErrorView;-><init>(Landroid/content/Context;Lcom/vk/core/dialogs/bottomsheet/h$c;)V
 
     .line 2
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -76,7 +76,7 @@
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 5
-    invoke-virtual {p2}, Lcom/vk/account/verify/PhoneVerifyManager$b;->d()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/account/verify/g$b;->d()Ljava/lang/String;
 
     move-result-object p1
 
@@ -89,7 +89,7 @@
 
     const-string p3, "findViewById<TextView>(R.id.description)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -126,7 +126,7 @@
 
     const-string v1, "context.getString(formattedString, data)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
@@ -139,7 +139,7 @@
 
     const-string p1, "context.getString(formattedString)"
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v3, "%s"
 
@@ -164,7 +164,7 @@
     if-ltz p1, :cond_0
 
     .line 5
-    new-instance v0, Lcom/vtosters/lite/utils/TypefaceSpanAssets;
+    new-instance v0, Lcom/vtosters/lite/utils/k;
 
     sget-object v2, Lcom/vk/core/ui/Font;->Companion:Lcom/vk/core/ui/Font$a;
 
@@ -172,7 +172,7 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v2}, Lcom/vtosters/lite/utils/TypefaceSpanAssets;-><init>(Landroid/graphics/Typeface;)V
+    invoke-direct {v0, v2}, Lcom/vtosters/lite/utils/k;-><init>(Landroid/graphics/Typeface;)V
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
@@ -197,7 +197,7 @@
 
     add-int/2addr p2, p1
 
-    invoke-static {v1, v0, p1, p2}, Lcom/vk/extensions/SpannableExt;->b(Landroid/text/SpannableStringBuilder;III)Landroid/text/SpannableStringBuilder;
+    invoke-static {v1, v0, p1, p2}, Lcom/vk/extensions/k;->b(Landroid/text/SpannableStringBuilder;III)Landroid/text/SpannableStringBuilder;
 
     :cond_0
     return-object v1

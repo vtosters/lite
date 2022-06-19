@@ -1,5 +1,5 @@
 .class public Lcom/vk/dto/video/VideoOwner;
-.super Lcom/vk/dto/common/Model;
+.super Lcom/vk/dto/common/e;
 .source "VideoOwner.java"
 
 # interfaces
@@ -85,7 +85,7 @@
     .locals 2
 
     .line 14
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     .line 15
     new-instance v0, Ljava/util/ArrayList;
@@ -165,7 +165,7 @@
 
     const-class v1, Lcom/vk/dto/live/LiveEventModel;
 
-    invoke-static {p1, v0, v1}, Lb/h/h/ModelUtils;->a(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/Class;)V
+    invoke-static {p1, v0, v1}, Lb/h/h/b;->a(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/Class;)V
 
     return-void
 .end method
@@ -236,7 +236,7 @@
     .end annotation
 
     .line 5
-    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
 
     .line 6
     new-instance v0, Ljava/util/ArrayList;
@@ -444,7 +444,7 @@
     .line 7
     iget-object p2, p0, Lcom/vk/dto/video/VideoOwner;->h:Ljava/util/List;
 
-    invoke-static {p1, p2}, Lb/h/h/ModelUtils;->a(Landroid/os/Parcel;Ljava/util/List;)V
+    invoke-static {p1, p2}, Lb/h/h/b;->a(Landroid/os/Parcel;Ljava/util/List;)V
 
     return-void
 .end method

@@ -33,7 +33,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    sget-object p1, Lcom/vk/attachpicker/drawing/DrawingColors;->a:[I
+    sget-object p1, Lcom/vk/attachpicker/drawing/b;->a:[I
 
     const/4 v0, 0x0
 
@@ -52,7 +52,7 @@
 .method public synthetic a(I)V
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/vk/attachpicker/widget/ColorSelectorView1;->a(Lcom/vk/attachpicker/widget/ColorSelectorView$c;I)V
+    invoke-static {p0, p1}, Lcom/vk/attachpicker/widget/c;->a(Lcom/vk/attachpicker/widget/ColorSelectorView$c;I)V
 
     return-void
 .end method

@@ -1,31 +1,31 @@
 .class public final Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;
-.super Lcom/vk/lists/SimpleAdapter;
+.super Lcom/vk/lists/i0;
 .source "StoriesHeaderAdapter.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/Provider;
-.implements Lme/grishka/appkit/preloading/PrefetchInfoProvider;
-.implements Lcom/vk/newsfeed/NewsfeedItem;
+.implements Lcom/vk/core/ui/o;
+.implements Ld/a/a/b/b;
+.implements Lcom/vk/newsfeed/q;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/SimpleAdapter<",
+        "Lcom/vk/lists/i0<",
         "Ljava/util/ArrayList<",
         "Lcom/vk/dto/stories/model/StoriesContainer;",
         ">;",
         "Lcom/vk/stories/holders/StoriesBlockHolder;",
         ">;",
-        "Lcom/vk/core/ui/Provider;",
-        "Lme/grishka/appkit/preloading/PrefetchInfoProvider;",
-        "Lcom/vk/newsfeed/NewsfeedItem;"
+        "Lcom/vk/core/ui/o;",
+        "Ld/a/a/b/b;",
+        "Lcom/vk/newsfeed/q;"
     }
 .end annotation
 
 
 # static fields
-.field static final synthetic C:[Lkotlin/u/KProperty5;
+.field static final synthetic C:[Lkotlin/u/j;
 
 
 # instance fields
@@ -47,9 +47,9 @@
 
 .field private f:I
 
-.field private g:Lcom/vk/newsfeed/adapters/RecyclerViewObserver;
+.field private g:Lcom/vk/newsfeed/adapters/g;
 
-.field private final h:Lkotlin/Lazy2;
+.field private final h:Lkotlin/e;
 
 
 # direct methods
@@ -58,13 +58,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -72,15 +72,15 @@
 
     const-string v4, "getShowAlways()Z"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->C:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->C:[Lkotlin/u/j;
 
     return-void
 .end method
@@ -89,18 +89,18 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
 
     iput-object p1, p0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->B:Ljava/lang/String;
 
     .line 2
     sget-object p1, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter$showAlways$2;->a:Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter$showAlways$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->h:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->h:Lkotlin/e;
 
     return-void
 .end method
@@ -108,15 +108,15 @@
 .method private final m()Z
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->h:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->h:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->C:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->C:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -173,11 +173,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/newsfeed/adapters/RecyclerViewObserver;)V
+.method public final a(Lcom/vk/newsfeed/adapters/g;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->g:Lcom/vk/newsfeed/adapters/RecyclerViewObserver;
+    iput-object p1, p0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->g:Lcom/vk/newsfeed/adapters/g;
 
     return-void
 .end method
@@ -189,11 +189,11 @@
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->g:Lcom/vk/newsfeed/adapters/RecyclerViewObserver;
+    iget-object v0, p0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->g:Lcom/vk/newsfeed/adapters/g;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/adapters/RecyclerViewObserver;->onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/adapters/g;->onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     :cond_0
     return-void
@@ -217,7 +217,7 @@
     move-object p2, v0
 
     :goto_0
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 3
     iget-boolean p2, p0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->d:Z
@@ -260,13 +260,13 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/Functions;)V
+.method public final a(Lkotlin/jvm/b/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -284,7 +284,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/holders/StoriesBlockHolder;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, p1}, Lcom/vk/stories/holders/StoriesBlockHolder;->a(Lkotlin/jvm/b/a;)V
 
     :cond_0
     return-void
@@ -329,7 +329,7 @@
 
     if-eqz v3, :cond_1
 
-    invoke-static {v3, p1}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Ljava/util/Collection;)V
+    invoke-static {v3, p1}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Ljava/util/Collection;)V
 
     .line 3
     :cond_1
@@ -433,11 +433,11 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->r0()Z
+    invoke-virtual {v0}, Lb/h/h/d/c;->r0()Z
 
     move-result v0
 
@@ -649,11 +649,11 @@
     invoke-virtual {p1, p2}, Lcom/vk/stories/holders/StoriesBlockHolder;->g(Z)V
 
     .line 5
-    iget-object p2, p0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->g:Lcom/vk/newsfeed/adapters/RecyclerViewObserver;
+    iget-object p2, p0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->g:Lcom/vk/newsfeed/adapters/g;
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2, p1}, Lcom/vk/newsfeed/adapters/RecyclerViewObserver;->a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+    invoke-interface {p2, p1}, Lcom/vk/newsfeed/adapters/g;->a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     :cond_0
     return-object p1

@@ -3,12 +3,12 @@
 .source "CreateChatComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/new_chat/CreateChatComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/navigation/ActivityLauncher;[IZ)V
+    value = Lcom/vk/im/ui/components/new_chat/CreateChatComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/navigation/a;[IZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/vk/im/ui/components/new_chat/CreateChatVC;",
         ">;"
     }
@@ -63,7 +63,7 @@
 
     invoke-direct {v2, v3}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl;-><init>(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)V
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/new_chat/CreateChatVC;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/new_chat/VcCallback;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/new_chat/CreateChatVC;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/new_chat/f;)V
 
     return-object v0
 .end method

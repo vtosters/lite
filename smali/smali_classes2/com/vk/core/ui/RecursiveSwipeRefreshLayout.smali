@@ -3,7 +3,7 @@
 .source "RecursiveSwipeRefreshLayout.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/ISwipeRefreshLayout;
+.implements Lcom/vk/core/ui/j;
 
 
 # direct methods

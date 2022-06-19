@@ -3,7 +3,7 @@
 .source "EntriesListFragment.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/adapters/RecyclerViewObserver;
+.implements Lcom/vk/newsfeed/adapters/g;
 
 
 # annotations
@@ -44,7 +44,7 @@
     .locals 2
 
     .line 1
-    instance-of v0, p1, Lcom/vk/newsfeed/holders/InlineWriteBarHolder;
+    instance-of v0, p1, Lcom/vk/newsfeed/holders/c0;
 
     if-eqz v0, :cond_0
 
@@ -64,7 +64,7 @@
 
     .line 2
     :cond_0
-    instance-of v0, p1, Lcom/vk/newsfeed/holders/poster/PosterHolder;
+    instance-of v0, p1, Lcom/vk/newsfeed/holders/poster/a;
 
     if-eqz v0, :cond_1
 
@@ -84,13 +84,13 @@
 
     .line 3
     :cond_1
-    instance-of v0, p1, Lcom/vk/newsfeed/holders/Html5Holder;
+    instance-of v0, p1, Lcom/vk/newsfeed/holders/y;
 
     if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcom/vk/newsfeed/EntriesListFragment$e;->a:Lcom/vk/newsfeed/EntriesListFragment;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/EntriesListFragment;->b(Lcom/vk/newsfeed/EntriesListFragment;)Lcom/vk/newsfeed/html5/Html5StateController;
+    invoke-static {v0}, Lcom/vk/newsfeed/EntriesListFragment;->b(Lcom/vk/newsfeed/EntriesListFragment;)Lcom/vk/newsfeed/html5/b;
 
     move-result-object v0
 
@@ -100,7 +100,7 @@
 
     invoke-direct {v1, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/html5/Html5StateController;->a(Ljava/lang/ref/WeakReference;)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/html5/b;->a(Ljava/lang/ref/WeakReference;)V
 
     goto :goto_0
 
@@ -129,16 +129,16 @@
     return-void
 .end method
 
-.method public a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
+.method public a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vtosters/lite/ui/f0/b;)V
     .locals 2
 
     .line 5
-    instance-of v0, p1, Lcom/vk/newsfeed/holders/Html5Holder;
+    instance-of v0, p1, Lcom/vk/newsfeed/holders/y;
 
     if-eqz v0, :cond_0
 
     .line 6
-    iget-object v0, p2, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v0, p2, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v0, v0, Lcom/vk/dto/newsfeed/entries/Html5Entry;
 
@@ -147,23 +147,23 @@
     .line 7
     iget-object v0, p0, Lcom/vk/newsfeed/EntriesListFragment$e;->a:Lcom/vk/newsfeed/EntriesListFragment;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/EntriesListFragment;->b(Lcom/vk/newsfeed/EntriesListFragment;)Lcom/vk/newsfeed/html5/Html5StateController;
+    invoke-static {v0}, Lcom/vk/newsfeed/EntriesListFragment;->b(Lcom/vk/newsfeed/EntriesListFragment;)Lcom/vk/newsfeed/html5/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vk/newsfeed/holders/Html5Holder;
+    check-cast p1, Lcom/vk/newsfeed/holders/y;
 
-    iget-object p2, p2, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object p2, p2, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     const-string v1, "item.entry"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/dto/newsfeed/entries/Html5Entry;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/newsfeed/html5/Html5StateController;->a(Lcom/vk/newsfeed/holders/Html5Holder;Lcom/vk/dto/newsfeed/entries/Html5Entry;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/newsfeed/html5/b;->a(Lcom/vk/newsfeed/holders/y;Lcom/vk/dto/newsfeed/entries/Html5Entry;)V
 
     :cond_0
     return-void
@@ -173,7 +173,7 @@
     .locals 3
 
     .line 1
-    instance-of v0, p1, Lcom/vk/common/view/i/CommonScrollListener;
+    instance-of v0, p1, Lcom/vk/common/view/i/a;
 
     const/4 v1, 0x0
 
@@ -213,7 +213,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/newsfeed/holders/poster/PosterHolder;
+    check-cast v2, Lcom/vk/newsfeed/holders/poster/a;
 
     goto :goto_1
 
@@ -239,7 +239,7 @@
 
     .line 4
     :cond_2
-    instance-of v0, p1, Lcom/vk/newsfeed/holders/InlineWriteBarHolder;
+    instance-of v0, p1, Lcom/vk/newsfeed/holders/c0;
 
     if-eqz v0, :cond_5
 
@@ -277,7 +277,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/newsfeed/holders/InlineWriteBarHolder;
+    check-cast v2, Lcom/vk/newsfeed/holders/c0;
 
     goto :goto_3
 

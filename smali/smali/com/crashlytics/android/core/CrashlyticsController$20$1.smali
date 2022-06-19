@@ -50,11 +50,11 @@
 
     iget-object p1, p1, Lcom/crashlytics/android/core/CrashlyticsController$20;->f:Lcom/crashlytics/android/core/CrashlyticsController;
 
-    invoke-static {p1}, Lcom/crashlytics/android/core/CrashlyticsController;->d(Lcom/crashlytics/android/core/CrashlyticsController;)Lcom/crashlytics/android/core/AppData;
+    invoke-static {p1}, Lcom/crashlytics/android/core/CrashlyticsController;->d(Lcom/crashlytics/android/core/CrashlyticsController;)Lcom/crashlytics/android/core/a;
 
     move-result-object p1
 
-    iget-object p1, p1, Lcom/crashlytics/android/core/AppData;->a:Ljava/lang/String;
+    iget-object p1, p1, Lcom/crashlytics/android/core/a;->a:Ljava/lang/String;
 
     const-string v0, "api_key"
 

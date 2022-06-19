@@ -1,22 +1,22 @@
 .class public final Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;
-.super Lcom/vk/newsfeed/adapters/ImagesAdapter;
+.super Lcom/vk/newsfeed/adapters/b;
 .source "ExtendedImagesAdapter.kt"
 
 
 # instance fields
-.field private j:Lcom/vk/common/view/flex/ImagesAdapterView;
+.field private j:Lcom/vk/common/view/flex/d;
 
 .field private final k:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/newsfeed/holders/zhukov/BaseHolder;",
+            "Lcom/vk/newsfeed/holders/zhukov/a;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final l:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;
+.field private final l:Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;
 
 .field private final m:Z
 
@@ -32,12 +32,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;ZLjava/util/List;)V
+.method public constructor <init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;ZLjava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;",
+            "Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;",
             "Z",
             "Ljava/util/List<",
             "+",
@@ -47,9 +47,9 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/newsfeed/adapters/ImagesAdapter;-><init>()V
+    invoke-direct {p0}, Lcom/vk/newsfeed/adapters/b;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->l:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->l:Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;
 
     iput-boolean p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->m:Z
 
@@ -65,12 +65,12 @@
     const/4 p1, 0x0
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/adapters/ImagesAdapter;->a(Z)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/adapters/b;->a(Z)V
 
     return-void
 .end method
 
-.method private final a(IILcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;)V
+.method private final a(IILcom/vk/im/ui/views/image_zhukov/j;)V
     .locals 2
 
     .line 43
@@ -95,16 +95,16 @@
 
     move-result p1
 
-    iput p1, p3, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;->a:I
+    iput p1, p3, Lcom/vk/im/ui/views/image_zhukov/j;->a:I
 
     .line 45
-    iget p1, p3, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;->a:I
+    iget p1, p3, Lcom/vk/im/ui/views/image_zhukov/j;->a:I
 
     div-int/lit8 p1, p1, 0x10
 
     mul-int/lit8 p1, p1, 0x9
 
-    iput p1, p3, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;->b:I
+    iput p1, p3, Lcom/vk/im/ui/views/image_zhukov/j;->b:I
 
     goto :goto_3
 
@@ -115,14 +115,14 @@
 
     .line 46
     :cond_2
-    sget-object p1, Lcom/vk/newsfeed/adapters/ImagesAdapter;->i:Lcom/vk/newsfeed/adapters/ImagesAdapter$a;
+    sget-object p1, Lcom/vk/newsfeed/adapters/b;->i:Lcom/vk/newsfeed/adapters/b$a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/adapters/ImagesAdapter$a;->c()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/adapters/b$a;->c()I
 
     move-result p1
 
     :goto_1
-    iput p1, p3, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;->a:I
+    iput p1, p3, Lcom/vk/im/ui/views/image_zhukov/j;->a:I
 
     if-lez p2, :cond_3
 
@@ -130,14 +130,14 @@
 
     .line 47
     :cond_3
-    sget-object p1, Lcom/vk/newsfeed/adapters/ImagesAdapter;->i:Lcom/vk/newsfeed/adapters/ImagesAdapter$a;
+    sget-object p1, Lcom/vk/newsfeed/adapters/b;->i:Lcom/vk/newsfeed/adapters/b$a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/adapters/ImagesAdapter$a;->b()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/adapters/b$a;->b()I
 
     move-result p2
 
     :goto_2
-    iput p2, p3, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;->b:I
+    iput p2, p3, Lcom/vk/im/ui/views/image_zhukov/j;->b:I
 
     :goto_3
     return-void
@@ -189,7 +189,7 @@
     check-cast v1, Lcom/vk/dto/common/Attachment;
 
     .line 5
-    invoke-static {v1}, Lcom/vtosters/lite/attachments/AttachmentUtils;->a(Lcom/vk/dto/common/Attachment;)Z
+    invoke-static {v1}, Lcom/vtosters/lite/attachments/a;->a(Lcom/vk/dto/common/Attachment;)Z
 
     move-result v1
 
@@ -258,7 +258,7 @@
 
     .line 10
     :cond_2
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/adapters/ImagesAdapter;->a(I)I
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/adapters/b;->a(I)I
 
     move-result p1
 
@@ -266,18 +266,18 @@
     return p1
 .end method
 
-.method public bridge synthetic a(Landroid/view/ViewGroup;I)Lcom/vk/im/ui/views/image_zhukov/ZhukovViewHolder;
+.method public bridge synthetic a(Landroid/view/ViewGroup;I)Lcom/vk/im/ui/views/image_zhukov/l;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->a(Landroid/view/ViewGroup;I)Lcom/vk/newsfeed/holders/zhukov/BaseHolder;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->a(Landroid/view/ViewGroup;I)Lcom/vk/newsfeed/holders/zhukov/a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Landroid/view/ViewGroup;I)Lcom/vk/newsfeed/holders/zhukov/BaseHolder;
+.method public a(Landroid/view/ViewGroup;I)Lcom/vk/newsfeed/holders/zhukov/a;
     .locals 1
 
     const/4 v0, 0x6
@@ -293,7 +293,7 @@
     if-eq p2, v0, :cond_0
 
     .line 25
-    invoke-super {p0, p1, p2}, Lcom/vk/newsfeed/adapters/ImagesAdapter;->a(Landroid/view/ViewGroup;I)Lcom/vk/newsfeed/holders/zhukov/BaseHolder;
+    invoke-super {p0, p1, p2}, Lcom/vk/newsfeed/adapters/b;->a(Landroid/view/ViewGroup;I)Lcom/vk/newsfeed/holders/zhukov/a;
 
     move-result-object p1
 
@@ -301,9 +301,9 @@
 
     .line 26
     :cond_0
-    sget-object p2, Lcom/vk/newsfeed/holders/zhukov/PostingHolders3;->C:Lcom/vk/newsfeed/holders/zhukov/PostingHolders$c2;
+    sget-object p2, Lcom/vk/newsfeed/holders/zhukov/e;->C:Lcom/vk/newsfeed/holders/zhukov/e$c;
 
-    invoke-virtual {p2, p1}, Lcom/vk/newsfeed/holders/zhukov/PostingHolders$c2;->a(Landroid/view/ViewGroup;)Lcom/vk/newsfeed/holders/zhukov/PostingHolders3;
+    invoke-virtual {p2, p1}, Lcom/vk/newsfeed/holders/zhukov/e$c;->a(Landroid/view/ViewGroup;)Lcom/vk/newsfeed/holders/zhukov/e;
 
     move-result-object p1
 
@@ -311,9 +311,9 @@
 
     .line 27
     :cond_1
-    sget-object p2, Lcom/vk/newsfeed/holders/zhukov/PostingHolders2;->C:Lcom/vk/newsfeed/holders/zhukov/PostingHolders$c1;
+    sget-object p2, Lcom/vk/newsfeed/holders/zhukov/i;->C:Lcom/vk/newsfeed/holders/zhukov/i$c;
 
-    invoke-virtual {p2, p1}, Lcom/vk/newsfeed/holders/zhukov/PostingHolders$c1;->a(Landroid/view/ViewGroup;)Lcom/vk/newsfeed/holders/zhukov/PostingHolders2;
+    invoke-virtual {p2, p1}, Lcom/vk/newsfeed/holders/zhukov/i$c;->a(Landroid/view/ViewGroup;)Lcom/vk/newsfeed/holders/zhukov/i;
 
     move-result-object p1
 
@@ -321,35 +321,35 @@
 
     .line 28
     :cond_2
-    sget-object p2, Lcom/vk/newsfeed/holders/zhukov/PostingHolders6;->D:Lcom/vk/newsfeed/holders/zhukov/PostingHolders$c;
+    sget-object p2, Lcom/vk/newsfeed/holders/zhukov/f;->D:Lcom/vk/newsfeed/holders/zhukov/f$c;
 
-    invoke-virtual {p2, p1}, Lcom/vk/newsfeed/holders/zhukov/PostingHolders$c;->a(Landroid/view/ViewGroup;)Lcom/vk/newsfeed/holders/zhukov/PostingHolders6;
+    invoke-virtual {p2, p1}, Lcom/vk/newsfeed/holders/zhukov/f$c;->a(Landroid/view/ViewGroup;)Lcom/vk/newsfeed/holders/zhukov/f;
 
     move-result-object p1
 
     .line 29
     :goto_0
-    iget-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->l:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;
+    iget-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->l:Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;
 
     if-eqz p2, :cond_3
 
-    instance-of p2, p1, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces3;
+    instance-of p2, p1, Lcom/vk/newsfeed/posting/viewpresenter/attachments/f;
 
     if-eqz p2, :cond_3
 
     .line 30
     move-object p2, p1
 
-    check-cast p2, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces3;
+    check-cast p2, Lcom/vk/newsfeed/posting/viewpresenter/attachments/f;
 
     const/4 v0, 0x1
 
-    invoke-interface {p2, v0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces3;->d(Z)V
+    invoke-interface {p2, v0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/f;->d(Z)V
 
     .line 31
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->l:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->l:Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;
 
-    invoke-interface {p2, v0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces3;->a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;)V
+    invoke-interface {p2, v0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/f;->a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;)V
 
     .line 32
     :cond_3
@@ -368,7 +368,7 @@
     return-object p1
 .end method
 
-.method public a(ILcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;)V
+.method public a(ILcom/vk/im/ui/views/image_zhukov/j;)V
     .locals 2
 
     .line 11
@@ -397,14 +397,14 @@
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lcom/vk/newsfeed/adapters/ImagesAdapter;->i:Lcom/vk/newsfeed/adapters/ImagesAdapter$a;
+    sget-object p1, Lcom/vk/newsfeed/adapters/b;->i:Lcom/vk/newsfeed/adapters/b$a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/adapters/ImagesAdapter$a;->d()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/adapters/b$a;->d()I
 
     move-result p1
 
     :goto_0
-    iput p1, p2, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;->a:I
+    iput p1, p2, Lcom/vk/im/ui/views/image_zhukov/j;->a:I
 
     .line 14
     iget p1, v0, Lcom/vtosters/lite/attachments/DocumentAttachment;->G:I
@@ -414,14 +414,14 @@
     goto :goto_1
 
     :cond_1
-    sget-object p1, Lcom/vk/newsfeed/adapters/ImagesAdapter;->i:Lcom/vk/newsfeed/adapters/ImagesAdapter$a;
+    sget-object p1, Lcom/vk/newsfeed/adapters/b;->i:Lcom/vk/newsfeed/adapters/b$a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/adapters/ImagesAdapter$a;->a()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/adapters/b$a;->a()I
 
     move-result p1
 
     :goto_1
-    iput p1, p2, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;->b:I
+    iput p1, p2, Lcom/vk/im/ui/views/image_zhukov/j;->b:I
 
     goto/16 :goto_6
 
@@ -447,14 +447,14 @@
     goto :goto_2
 
     :cond_3
-    sget-object p1, Lcom/vk/newsfeed/adapters/ImagesAdapter;->i:Lcom/vk/newsfeed/adapters/ImagesAdapter$a;
+    sget-object p1, Lcom/vk/newsfeed/adapters/b;->i:Lcom/vk/newsfeed/adapters/b$a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/adapters/ImagesAdapter$a;->d()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/adapters/b$a;->d()I
 
     move-result p1
 
     :goto_2
-    iput p1, p2, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;->a:I
+    iput p1, p2, Lcom/vk/im/ui/views/image_zhukov/j;->a:I
 
     .line 17
     invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->getHeight()I
@@ -470,14 +470,14 @@
     goto :goto_3
 
     :cond_4
-    sget-object p1, Lcom/vk/newsfeed/adapters/ImagesAdapter;->i:Lcom/vk/newsfeed/adapters/ImagesAdapter$a;
+    sget-object p1, Lcom/vk/newsfeed/adapters/b;->i:Lcom/vk/newsfeed/adapters/b$a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/adapters/ImagesAdapter$a;->a()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/adapters/b$a;->a()I
 
     move-result p1
 
     :goto_3
-    iput p1, p2, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;->b:I
+    iput p1, p2, Lcom/vk/im/ui/views/image_zhukov/j;->b:I
 
     goto :goto_6
 
@@ -498,7 +498,7 @@
 
     move-result v0
 
-    invoke-direct {p0, p1, v0, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->a(IILcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;)V
+    invoke-direct {p0, p1, v0, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->a(IILcom/vk/im/ui/views/image_zhukov/j;)V
 
     goto :goto_6
 
@@ -540,7 +540,7 @@
     if-eqz v1, :cond_9
 
     .line 22
-    invoke-super {p0, p1, p2}, Lcom/vk/newsfeed/adapters/ImagesAdapter;->a(ILcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/newsfeed/adapters/b;->a(ILcom/vk/im/ui/views/image_zhukov/j;)V
 
     goto :goto_6
 
@@ -554,23 +554,23 @@
 
     move-result v0
 
-    invoke-direct {p0, p1, v0, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->a(IILcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;)V
+    invoke-direct {p0, p1, v0, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->a(IILcom/vk/im/ui/views/image_zhukov/j;)V
 
     goto :goto_6
 
     .line 24
     :cond_a
-    invoke-super {p0, p1, p2}, Lcom/vk/newsfeed/adapters/ImagesAdapter;->a(ILcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/newsfeed/adapters/b;->a(ILcom/vk/im/ui/views/image_zhukov/j;)V
 
     :goto_6
     return-void
 .end method
 
-.method public final a(Lcom/vk/common/view/flex/ImagesAdapterView;)V
+.method public final a(Lcom/vk/common/view/flex/d;)V
     .locals 0
 
     .line 37
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->j:Lcom/vk/common/view/flex/ImagesAdapterView;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->j:Lcom/vk/common/view/flex/d;
 
     return-void
 .end method
@@ -599,14 +599,14 @@
 
     invoke-direct {v2, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter$notifyItemRemoved$1;-><init>(Lcom/vk/dto/common/Attachment;)V
 
-    invoke-static {v1, v2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
+    invoke-static {v1, v2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
 
     .line 36
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->j:Lcom/vk/common/view/flex/ImagesAdapterView;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->j:Lcom/vk/common/view/flex/d;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1, v0}, Lcom/vk/common/view/flex/ImagesAdapterView;->a(I)V
+    invoke-interface {p1, v0}, Lcom/vk/common/view/flex/d;->a(I)V
 
     :cond_1
     return-void
@@ -636,14 +636,14 @@
 
     move-object v2, v1
 
-    check-cast v2, Lcom/vk/newsfeed/holders/zhukov/BaseHolder;
+    check-cast v2, Lcom/vk/newsfeed/holders/zhukov/a;
 
     .line 40
-    invoke-virtual {v2}, Lcom/vk/newsfeed/holders/zhukov/BaseHolder;->a()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {v2}, Lcom/vk/newsfeed/holders/zhukov/a;->a()Lcom/vk/dto/common/Attachment;
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -656,22 +656,22 @@
 
     .line 41
     :goto_0
-    check-cast v1, Lcom/vk/newsfeed/holders/zhukov/BaseHolder;
+    check-cast v1, Lcom/vk/newsfeed/holders/zhukov/a;
 
     if-eqz v1, :cond_2
 
     .line 42
-    invoke-virtual {p0}, Lcom/vk/newsfeed/adapters/ImagesAdapter;->d()Lcom/vk/newsfeed/holders/zhukov/BaseHolder$a;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/adapters/b;->d()Lcom/vk/newsfeed/holders/zhukov/a$a;
 
     move-result-object p1
 
-    invoke-virtual {v1, p2, p1}, Lcom/vk/newsfeed/holders/zhukov/BaseHolder;->a(Lcom/vk/dto/common/Attachment;Lcom/vk/newsfeed/holders/zhukov/BaseHolder$a;)V
+    invoke-virtual {v1, p2, p1}, Lcom/vk/newsfeed/holders/zhukov/a;->a(Lcom/vk/dto/common/Attachment;Lcom/vk/newsfeed/holders/zhukov/a$a;)V
 
     :cond_2
     return-void
 .end method
 
-.method public final b(I)Lcom/vk/newsfeed/holders/zhukov/PostingHolders;
+.method public final b(I)Lcom/vk/newsfeed/holders/zhukov/g;
     .locals 5
 
     .line 3
@@ -697,21 +697,21 @@
 
     move-object v3, v1
 
-    check-cast v3, Lcom/vk/newsfeed/holders/zhukov/BaseHolder;
+    check-cast v3, Lcom/vk/newsfeed/holders/zhukov/a;
 
     .line 5
-    instance-of v4, v3, Lcom/vk/newsfeed/holders/zhukov/PostingHolders;
+    instance-of v4, v3, Lcom/vk/newsfeed/holders/zhukov/g;
 
     if-nez v4, :cond_1
 
     move-object v3, v2
 
     :cond_1
-    check-cast v3, Lcom/vk/newsfeed/holders/zhukov/PostingHolders;
+    check-cast v3, Lcom/vk/newsfeed/holders/zhukov/g;
 
     if-eqz v3, :cond_2
 
-    invoke-interface {v3}, Lcom/vk/newsfeed/holders/zhukov/PostingHolders;->V()I
+    invoke-interface {v3}, Lcom/vk/newsfeed/holders/zhukov/g;->V()I
 
     move-result v3
 
@@ -734,14 +734,14 @@
 
     .line 6
     :goto_1
-    instance-of p1, v1, Lcom/vk/newsfeed/holders/zhukov/PostingHolders;
+    instance-of p1, v1, Lcom/vk/newsfeed/holders/zhukov/g;
 
     if-nez p1, :cond_4
 
     move-object v1, v2
 
     :cond_4
-    check-cast v1, Lcom/vk/newsfeed/holders/zhukov/PostingHolders;
+    check-cast v1, Lcom/vk/newsfeed/holders/zhukov/g;
 
     return-object v1
 .end method
@@ -750,16 +750,16 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->j:Lcom/vk/common/view/flex/ImagesAdapterView;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->j:Lcom/vk/common/view/flex/d;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/common/view/flex/ImagesAdapterView;->a()V
+    invoke-interface {v0}, Lcom/vk/common/view/flex/d;->a()V
 
     goto :goto_0
 
     :cond_0
-    invoke-super {p0}, Lcom/vk/im/ui/views/image_zhukov/ZhukovAdapter;->b()V
+    invoke-super {p0}, Lcom/vk/im/ui/views/image_zhukov/i;->b()V
 
     :goto_0
     return-void
@@ -777,11 +777,11 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->j:Lcom/vk/common/view/flex/ImagesAdapterView;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->j:Lcom/vk/common/view/flex/d;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/common/view/flex/ImagesAdapterView;->a(Ljava/util/List;)V
+    invoke-interface {v0, p1}, Lcom/vk/common/view/flex/d;->a(Ljava/util/List;)V
 
     :cond_0
     return-void

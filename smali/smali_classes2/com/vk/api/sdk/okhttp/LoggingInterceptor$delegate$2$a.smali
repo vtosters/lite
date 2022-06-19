@@ -110,11 +110,11 @@
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/api/sdk/utils/log/Logger;->a()Lkotlin/Lazy2;
+    invoke-interface {p1}, Lcom/vk/api/sdk/utils/log/Logger;->a()Lkotlin/e;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 

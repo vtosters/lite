@@ -54,7 +54,7 @@
 
     const/high16 p1, 0x40000000    # 2.0f
 
-    invoke-static {p1}, Lme/grishka/appkit/utils/V;->a(F)I
+    invoke-static {p1}, Ld/a/a/c/e;->a(F)I
 
     move-result p1
 

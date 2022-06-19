@@ -47,7 +47,7 @@
 
     iget v1, p0, Lorg/chromium/net/impl/CronetUrlRequest$f;->b:I
 
-    invoke-static {v1}, Lorg/chromium/net/impl/UrlRequestBase;->a(I)I
+    invoke-static {v1}, Lorg/chromium/net/impl/i;->a(I)I
 
     move-result v1
 

@@ -1,5 +1,5 @@
 .class Lkotlin/text/StringsKt___StringsKt;
-.super Lkotlin/text/_StringsJvm;
+.super Lkotlin/text/t;
 .source "_Strings.kt"
 
 
@@ -20,14 +20,14 @@
     .line 1
     sget-object v0, Lkotlin/text/StringsKt___StringsKt$windowed$1;->a:Lkotlin/text/StringsKt___StringsKt$windowed$1;
 
-    invoke-static {p0, p1, p2, p3, v0}, Lkotlin/text/StringsKt___StringsKt;->a(Ljava/lang/CharSequence;IIZLkotlin/jvm/b/Functions2;)Ljava/util/List;
+    invoke-static {p0, p1, p2, p3, v0}, Lkotlin/text/StringsKt___StringsKt;->a(Ljava/lang/CharSequence;IIZLkotlin/jvm/b/b;)Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final a(Ljava/lang/CharSequence;IIZLkotlin/jvm/b/Functions2;)Ljava/util/List;
+.method public static final a(Ljava/lang/CharSequence;IIZLkotlin/jvm/b/b;)Ljava/util/List;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -36,7 +36,7 @@
             ">(",
             "Ljava/lang/CharSequence;",
             "IIZ",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/CharSequence;",
             "+TR;>;)",
@@ -102,7 +102,7 @@
 
     move-result-object v1
 
-    invoke-interface {p4, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p4, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -199,7 +199,7 @@
 
     const-string p1, "(this as java.lang.String).substring(startIndex)"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 
@@ -266,7 +266,7 @@
 
     const-string p1, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 
@@ -334,7 +334,7 @@
 
     const-string p1, "(this as java.lang.String).substring(startIndex)"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 

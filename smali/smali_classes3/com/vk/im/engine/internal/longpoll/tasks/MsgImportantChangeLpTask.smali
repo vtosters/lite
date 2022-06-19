@@ -1,12 +1,12 @@
 .class public final Lcom/vk/im/engine/internal/longpoll/tasks/MsgImportantChangeLpTask;
-.super Lcom/vk/im/engine/internal/longpoll/LongPollTask;
+.super Lcom/vk/im/engine/internal/longpoll/g;
 .source "MsgImportantChangeLpTask.kt"
 
 
 # instance fields
 .field private b:I
 
-.field private final c:Lcom/vk/im/engine/ImEnvironment;
+.field private final c:Lcom/vk/im/engine/d;
 
 .field private final d:I
 
@@ -16,13 +16,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/ImEnvironment;IIZ)V
+.method public constructor <init>(Lcom/vk/im/engine/d;IIZ)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/longpoll/LongPollTask;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/longpoll/g;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgImportantChangeLpTask;->c:Lcom/vk/im/engine/ImEnvironment;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgImportantChangeLpTask;->c:Lcom/vk/im/engine/d;
 
     iput p2, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgImportantChangeLpTask;->d:I
 
@@ -53,7 +53,7 @@
 
 
 # virtual methods
-.method protected b(Lcom/vk/im/engine/internal/longpoll/LongPollChanges;)V
+.method protected b(Lcom/vk/im/engine/internal/longpoll/c;)V
     .locals 2
 
     .line 3
@@ -64,19 +64,19 @@
     .line 4
     iget v1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgImportantChangeLpTask;->d:I
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/im/engine/internal/longpoll/LongPollChanges;->e(II)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/im/engine/internal/longpoll/c;->e(II)V
 
     :cond_0
     return-void
 .end method
 
-.method protected b(Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;)V
+.method protected b(Lcom/vk/im/engine/internal/longpoll/d;)V
     .locals 1
 
     .line 2
-    iget-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgImportantChangeLpTask;->c:Lcom/vk/im/engine/ImEnvironment;
+    iget-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgImportantChangeLpTask;->c:Lcom/vk/im/engine/d;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -84,7 +84,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgImportantChangeLpTask$onSyncStorage$1;-><init>(Lcom/vk/im/engine/internal/longpoll/tasks/MsgImportantChangeLpTask;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     return-void
 .end method

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/menu/SearchMenuPresenter;-><init>(Lcom/vk/menu/SearchMenuContract1;)V
+    value = Lcom/vk/menu/SearchMenuPresenter;-><init>(Lcom/vk/menu/f;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

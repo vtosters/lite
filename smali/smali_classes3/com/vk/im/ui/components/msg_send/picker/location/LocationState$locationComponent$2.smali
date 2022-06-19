@@ -3,12 +3,12 @@
 .source "LocationState.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;-><init>(Landroid/app/Activity;Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;)V
+    value = Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;-><init>(Landroid/app/Activity;Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;",
         ">;"
     }
@@ -73,7 +73,7 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;-><init>(Landroid/app/Activity;Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$a;Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;-><init>(Landroid/app/Activity;Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$a;Lcom/vk/im/ui/components/msg_send/picker/location/d;ZILkotlin/jvm/internal/i;)V
 
     return-object v7
 .end method

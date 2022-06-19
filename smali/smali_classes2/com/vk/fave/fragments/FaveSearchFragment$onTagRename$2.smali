@@ -3,7 +3,7 @@
 .source "FaveSearchFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/fave/entities/FaveEntries3;",
-        "Lcom/vk/fave/entities/FaveEntries3;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/fave/entities/j;",
+        "Lcom/vk/fave/entities/j;",
         ">;"
     }
 .end annotation
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/fave/entities/FaveEntries3;)Lcom/vk/fave/entities/FaveEntries3;
+.method public final a(Lcom/vk/fave/entities/j;)Lcom/vk/fave/entities/j;
     .locals 7
 
     if-eqz p1, :cond_3
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveEntries3;->c()Lcom/vk/fave/entities/FavePage;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/j;->c()Lcom/vk/fave/entities/FavePage;
 
     move-result-object v0
 
@@ -112,11 +112,11 @@
 
     .line 6
     :cond_1
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveEntries3;->c()Lcom/vk/fave/entities/FavePage;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/j;->c()Lcom/vk/fave/entities/FavePage;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/vk/fave/entities/FavePage;->a(Ljava/util/List;)Lcom/vk/fave/entities/WithTags;
+    invoke-virtual {v0, v1}, Lcom/vk/fave/entities/FavePage;->a(Ljava/util/List;)Lcom/vk/fave/entities/l;
 
     move-result-object v0
 
@@ -136,7 +136,7 @@
 
     move-object v1, p1
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/fave/entities/FaveEntries3;->a(Lcom/vk/fave/entities/FaveEntries3;Lcom/vk/fave/entities/FavePage;Lkotlin/Pair;Lkotlin/Pair;ILjava/lang/Object;)Lcom/vk/fave/entities/FaveEntries3;
+    invoke-static/range {v1 .. v6}, Lcom/vk/fave/entities/j;->a(Lcom/vk/fave/entities/j;Lcom/vk/fave/entities/FavePage;Lkotlin/Pair;Lkotlin/Pair;ILjava/lang/Object;)Lcom/vk/fave/entities/j;
 
     move-result-object p1
 
@@ -166,9 +166,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/fave/entities/FaveEntries3;
+    check-cast p1, Lcom/vk/fave/entities/j;
 
-    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/FaveSearchFragment$onTagRename$2;->a(Lcom/vk/fave/entities/FaveEntries3;)Lcom/vk/fave/entities/FaveEntries3;
+    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/FaveSearchFragment$onTagRename$2;->a(Lcom/vk/fave/entities/j;)Lcom/vk/fave/entities/j;
 
     move-result-object p1
 

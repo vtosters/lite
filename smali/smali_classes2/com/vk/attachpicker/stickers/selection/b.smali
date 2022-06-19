@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;
+.field private final synthetic a:Lcom/vk/attachpicker/stickers/selection/d;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;)V
+.method public synthetic constructor <init>(Lcom/vk/attachpicker/stickers/selection/d;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/b;->a:Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/b;->a:Lcom/vk/attachpicker/stickers/selection/d;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/b;->a:Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/b;->a:Lcom/vk/attachpicker/stickers/selection/d;
 
-    invoke-static {v0, p1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->a(Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;Landroid/view/View;)V
+    invoke-static {v0, p1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->a(Lcom/vk/attachpicker/stickers/selection/d;Landroid/view/View;)V
 
     return-void
 .end method

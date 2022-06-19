@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lb/h/g/l/NotificationListener;
+.implements Lb/h/g/l/e;
 
 
 # instance fields

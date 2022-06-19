@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -50,7 +50,7 @@
     .line 2
     new-instance v0, Lcom/vk/newsfeed/posting/PostingInteractor;
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/PostingInteractor;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/PostingInteractor;-><init>(Lkotlin/jvm/internal/i;)V
 
     invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingInteractor;->b(Lcom/vk/newsfeed/posting/PostingInteractor;)V
 
@@ -65,7 +65,7 @@
     return-object v0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method

@@ -48,7 +48,7 @@
     return p0
 .end method
 
-.method static synthetic a(Landroid/content/Context;Ljava/util/List;)Lkotlin/Unit;
+.method static synthetic a(Landroid/content/Context;Ljava/util/List;)Lkotlin/m;
     .locals 5
 
     .line 33
@@ -77,13 +77,13 @@
     move-result-object p1
 
     .line 34
-    new-instance v0, Lcom/vk/navigation/Navigator;
+    new-instance v0, Lcom/vk/navigation/o;
 
-    const-class v1, Lcom/vtosters/lite/fragments/gifts/BirthdaysFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/gifts/d;
 
-    invoke-direct {v0, v1}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+    invoke-direct {v0, v1}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 
-    invoke-virtual {v0, p0}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v0, p0}, Lcom/vk/navigation/o;->b(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -219,7 +219,7 @@
     invoke-virtual {p0, v0, p1}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
     .line 50
-    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p0
 .end method
@@ -228,7 +228,7 @@
     .locals 13
 
     .line 12
-    invoke-static {p1, p2}, Lcom/vtosters/lite/j0/Cache;->a(J)Ljava/util/ArrayList;
+    invoke-static {p1, p2}, Lcom/vtosters/lite/j0/b;->a(J)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -628,7 +628,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/pushes/NotificationChannelsController;->INSTANCE:Lcom/vk/pushes/NotificationChannelsController;
+    sget-object v0, Lcom/vk/pushes/a;->c:Lcom/vk/pushes/a;
 
     new-instance v1, Lcom/vtosters/lite/a;
 
@@ -636,7 +636,7 @@
 
     const-string p0, "default"
 
-    invoke-virtual {v0, p0, v1}, Lcom/vk/pushes/NotificationChannelsController;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, p0, v1}, Lcom/vk/pushes/a;->a(Ljava/lang/String;Lkotlin/jvm/b/a;)Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -681,7 +681,7 @@
     .line 3
     iget-object v2, v1, Lcom/vk/dto/user/UserProfile;->d:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/vtosters/lite/utils/Utils;->a(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/vtosters/lite/utils/l;->a(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -703,7 +703,7 @@
     if-nez p1, :cond_2
 
     .line 6
-    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     invoke-static {p1, v0}, Lcom/vtosters/lite/BirthdayBroadcastReceiver;->b(Landroid/content/Context;Ljava/util/List;)V
 
@@ -810,12 +810,12 @@
 
     .line 10
     :goto_0
-    sget-object p1, Lcom/vtosters/lite/ui/widget/MenuListView;->U:Lcom/vtosters/lite/ui/widget/MenuListView;
+    sget-object p1, Lcom/vtosters/lite/ui/widget/d;->U:Lcom/vtosters/lite/ui/widget/d;
 
     if-eqz p1, :cond_3
 
     .line 11
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/widget/MenuListView;->g()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/widget/d;->g()V
 
     :cond_3
     return-void

@@ -56,7 +56,7 @@
 
     iget-object p1, p1, Lio/reactivex/internal/util/NotificationLite$ErrorNotification;->e:Ljava/lang/Throwable;
 
-    invoke-static {v0, p1}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

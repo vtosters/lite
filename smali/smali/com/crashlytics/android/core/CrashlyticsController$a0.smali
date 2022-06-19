@@ -33,7 +33,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/crashlytics/android/core/ClsFileOutputStream;->d:Ljava/io/FilenameFilter;
+    sget-object v0, Lcom/crashlytics/android/core/f;->d:Ljava/io/FilenameFilter;
 
     invoke-interface {v0, p1, p2}, Ljava/io/FilenameFilter;->accept(Ljava/io/File;Ljava/lang/String;)Z
 

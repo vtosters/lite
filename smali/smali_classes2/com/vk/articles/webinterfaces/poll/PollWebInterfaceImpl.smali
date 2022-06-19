@@ -1,20 +1,20 @@
 .class public final Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;
-.super Lcom/vk/articles/webinterfaces/BaseWebInterface;
+.super Lcom/vk/articles/webinterfaces/c;
 .source "PollWebInterfaceImpl.kt"
 
 # interfaces
-.implements Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceI;
+.implements Lcom/vk/articles/webinterfaces/poll/a;
 
 
 # instance fields
 .field private final b:Landroid/content/Context;
 
-.field private final c:Lkotlin/jvm/b/Functions2;
+.field private final c:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Lcom/vk/dto/polls/PollInfo;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -22,26 +22,26 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
+.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/dto/polls/PollInfo;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/articles/webinterfaces/BaseWebInterface;-><init>()V
+    invoke-direct {p0}, Lcom/vk/articles/webinterfaces/c;-><init>()V
 
     iput-object p1, p0, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;->b:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;->c:Lkotlin/jvm/b/Functions2;
+    iput-object p2, p0, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;->c:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -55,11 +55,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic b(Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;->c:Lkotlin/jvm/b/Functions2;
+    iget-object p0, p0, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;->c:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
@@ -89,7 +89,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl$pollChanged$1;-><init>(Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/articles/webinterfaces/BaseWebInterface;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p0, v0}, Lcom/vk/articles/webinterfaces/c;->a(Lkotlin/jvm/b/a;)V
 
     :cond_0
     return-void
@@ -105,7 +105,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl$pollStatistic$1;-><init>(Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/articles/webinterfaces/BaseWebInterface;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p0, v0}, Lcom/vk/articles/webinterfaces/c;->a(Lkotlin/jvm/b/a;)V
 
     :cond_0
     return-void

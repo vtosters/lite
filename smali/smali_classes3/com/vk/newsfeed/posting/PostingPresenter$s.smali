@@ -3,7 +3,7 @@
 .source "PostingPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lcom/vk/mentions/MentionModels2;",
+        "Lc/a/z/g<",
+        "Lcom/vk/mentions/h;",
         ">;"
     }
 .end annotation
@@ -46,21 +46,21 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/mentions/MentionModels2;)V
+.method public final a(Lcom/vk/mentions/h;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$s;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->g(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/mentions/MentionSelectInterfaces1;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->g(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/mentions/j;
 
     move-result-object v0
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lcom/vk/mentions/MentionSelectInterfaces1;->a(Lcom/vk/mentions/MentionModels2;)V
+    invoke-interface {v0, p1}, Lcom/vk/mentions/j;->a(Lcom/vk/mentions/h;)V
 
     return-void
 .end method
@@ -69,9 +69,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/mentions/MentionModels2;
+    check-cast p1, Lcom/vk/mentions/h;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingPresenter$s;->a(Lcom/vk/mentions/MentionModels2;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingPresenter$s;->a(Lcom/vk/mentions/h;)V
 
     return-void
 .end method

@@ -29,32 +29,32 @@
 
     const-string p2, "intent?.action ?: return"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
-    sget-object p2, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;->INSTANCE:Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;
+    sget-object p2, Lcom/vk/audiomsg/player/service/a;->j:Lcom/vk/audiomsg/player/service/a;
 
-    invoke-virtual {p2}, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;->e()Lkotlin/jvm/b/Functions;
-
-    move-result-object p2
-
-    invoke-interface {p2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-virtual {p2}, Lcom/vk/audiomsg/player/service/a;->e()Lkotlin/jvm/b/a;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/audiomsg/player/AudioMsgPlayer;
+    invoke-interface {p2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/vk/audiomsg/player/a;
 
     .line 3
-    sget-object v0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;->INSTANCE:Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;
+    sget-object v0, Lcom/vk/audiomsg/player/service/a;->j:Lcom/vk/audiomsg/player/service/a;
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;->d()Lcom/vk/audiomsg/player/Source;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/service/a;->d()Lcom/vk/audiomsg/player/f;
 
     move-result-object v0
 
     .line 4
-    sget-object v1, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;->INSTANCE:Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;
+    sget-object v1, Lcom/vk/audiomsg/player/service/a;->j:Lcom/vk/audiomsg/player/service/a;
 
-    invoke-virtual {v1}, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;->c()Lkotlin/jvm/b/Functions;
+    invoke-virtual {v1}, Lcom/vk/audiomsg/player/service/a;->c()Lkotlin/jvm/b/a;
 
     move-result-object v1
 
@@ -87,7 +87,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     goto :goto_0
 
@@ -101,7 +101,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p2, v0}, Lcom/vk/audiomsg/player/AudioMsgPlayer;->e(Lcom/vk/audiomsg/player/Source;)V
+    invoke-interface {p2, v0}, Lcom/vk/audiomsg/player/a;->e(Lcom/vk/audiomsg/player/f;)V
 
     goto :goto_0
 
@@ -115,7 +115,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p2, v0}, Lcom/vk/audiomsg/player/AudioMsgPlayer;->f(Lcom/vk/audiomsg/player/Source;)V
+    invoke-interface {p2, v0}, Lcom/vk/audiomsg/player/a;->f(Lcom/vk/audiomsg/player/f;)V
 
     :cond_3
     :goto_0

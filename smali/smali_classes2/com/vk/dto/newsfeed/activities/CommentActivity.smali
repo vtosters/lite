@@ -55,7 +55,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/activities/CommentActivity$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/activities/CommentActivity$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/dto/newsfeed/activities/CommentActivity;->f:Lcom/vk/dto/newsfeed/activities/CommentActivity$b;
 
@@ -99,7 +99,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/ArrayList;Landroid/util/SparseArray;Ljava/util/ArrayList;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Ljava/util/ArrayList;Landroid/util/SparseArray;Ljava/util/ArrayList;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x1

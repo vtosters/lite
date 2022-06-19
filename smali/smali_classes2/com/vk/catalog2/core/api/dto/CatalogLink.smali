@@ -22,10 +22,10 @@
     .end annotation
 .end field
 
-.field public static final g:Lcom/vk/dto/common/data/JsonParser;
+.field public static final g:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/catalog2/core/api/dto/CatalogLink;",
             ">;"
         }
@@ -55,7 +55,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/CatalogLink$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/CatalogLink$c;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/catalog2/core/api/dto/CatalogLink$b;
@@ -70,7 +70,7 @@
 
     invoke-direct {v0}, Lcom/vk/catalog2/core/api/dto/CatalogLink$a;-><init>()V
 
-    sput-object v0, Lcom/vk/catalog2/core/api/dto/CatalogLink;->g:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/catalog2/core/api/dto/CatalogLink;->g:Lcom/vk/dto/common/data/c;
 
     return-void
 .end method
@@ -181,7 +181,7 @@
 
     .line 16
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -221,7 +221,7 @@
 
     const-string v0, "json.optString(ServerKeys.ID)"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "title"
 
@@ -232,7 +232,7 @@
 
     const-string v0, "json.optString(ServerKeys.TITLE)"
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "subtitle"
 
@@ -243,7 +243,7 @@
 
     const-string v0, "json.optString(ServerKeys.SUBTITLE)"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "url"
 
@@ -254,7 +254,7 @@
 
     const-string v0, "json.optString(ServerKeys.URL)"
 
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     new-instance v6, Lcom/vk/dto/common/Image;
@@ -268,13 +268,13 @@
     invoke-direct {v6, v0}, Lcom/vk/dto/common/Image;-><init>(Lorg/json/JSONArray;)V
 
     .line 7
-    sget-object v0, Lcom/vk/dto/common/data/JsonParser;->a:Lcom/vk/dto/common/data/JsonParser$a;
+    sget-object v0, Lcom/vk/dto/common/data/c;->a:Lcom/vk/dto/common/data/c$a;
 
-    sget-object v1, Lcom/vk/catalog2/core/api/dto/Meta;->d:Lcom/vk/dto/common/data/JsonParser;
+    sget-object v1, Lcom/vk/catalog2/core/api/dto/Meta;->d:Lcom/vk/dto/common/data/c;
 
     const-string v7, "meta"
 
-    invoke-virtual {v0, p1, v7, v1}, Lcom/vk/dto/common/data/JsonParser$a;->c(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v7, v1}, Lcom/vk/dto/common/data/c$a;->c(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -443,7 +443,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogLink;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -453,7 +453,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogLink;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -463,7 +463,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogLink;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -473,7 +473,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogLink;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -483,7 +483,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogLink;->e:Lcom/vk/dto/common/Image;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -493,7 +493,7 @@
 
     iget-object p1, p1, Lcom/vk/catalog2/core/api/dto/CatalogLink;->f:Lcom/vk/catalog2/core/api/dto/Meta;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

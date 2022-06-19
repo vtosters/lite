@@ -71,7 +71,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/playlist/MusicPlaylistsModelDataContainer$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/playlist/MusicPlaylistsModelDataContainer$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/music/playlist/MusicPlaylistsModelDataContainer$a;
@@ -115,7 +115,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v14}, Lcom/vk/music/playlist/MusicPlaylistsModelDataContainer;-><init>(ZZZZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/music/PlaylistOwner;Ljava/util/ArrayList;IJLjava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v14}, Lcom/vk/music/playlist/MusicPlaylistsModelDataContainer;-><init>(ZZZZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/music/PlaylistOwner;Ljava/util/ArrayList;IJLjava/util/List;ILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -253,7 +253,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ZZZZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/music/PlaylistOwner;Ljava/util/ArrayList;IJLjava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(ZZZZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/music/PlaylistOwner;Ljava/util/ArrayList;IJLjava/util/List;ILkotlin/jvm/internal/i;)V
     .locals 13
 
     move/from16 v0, p13
@@ -373,11 +373,11 @@
     if-eqz v11, :cond_9
 
     .line 1
-    sget-object v11, Lcom/vk/music/playlist/PlaylistsModel;->a:Ljava/lang/Long;
+    sget-object v11, Lcom/vk/music/playlist/g;->a:Ljava/lang/Long;
 
     const-string v12, "PlaylistsModel.UNKNOWN_FROM_PLAYLIST_PID"
 
-    invoke-static {v11, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v11, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v11}, Ljava/lang/Long;->longValue()J
 

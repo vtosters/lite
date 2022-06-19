@@ -3,7 +3,7 @@
 .source "MarketCartFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
-        "Lb/h/o/a/MarketEvents;",
+        "Lc/a/z/g<",
+        "Lb/h/o/a/a;",
         ">;"
     }
 .end annotation
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lb/h/o/a/MarketEvents;)V
+.method public final a(Lb/h/o/a/a;)V
     .locals 2
 
     .line 1
-    invoke-virtual {p1}, Lb/h/o/a/MarketEvents;->a()I
+    invoke-virtual {p1}, Lb/h/o/a/a;->a()I
 
     move-result v0
 
@@ -66,37 +66,37 @@
 
     .line 2
     :cond_0
-    instance-of v0, p1, Lb/h/o/a/MarketEvents2;
+    instance-of v0, p1, Lb/h/o/a/b;
 
     if-eqz v0, :cond_1
 
     iget-object p1, p0, Lcom/vk/market/orders/MarketCartFragment$g;->a:Lcom/vk/market/orders/MarketCartFragment;
 
-    invoke-static {p1}, Lcom/vk/market/orders/MarketCartFragment;->d(Lcom/vk/market/orders/MarketCartFragment;)Lcom/vk/lists/PaginationHelper;
+    invoke-static {p1}, Lcom/vk/market/orders/MarketCartFragment;->d(Lcom/vk/market/orders/MarketCartFragment;)Lcom/vk/lists/t;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->h()V
+    invoke-virtual {p1}, Lcom/vk/lists/t;->h()V
 
     goto :goto_0
 
     .line 3
     :cond_1
-    instance-of v0, p1, Lb/h/o/a/MarketEvents1;
+    instance-of v0, p1, Lb/h/o/a/c;
 
     if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcom/vk/market/orders/MarketCartFragment$g;->a:Lcom/vk/market/orders/MarketCartFragment;
 
-    check-cast p1, Lb/h/o/a/MarketEvents1;
+    check-cast p1, Lb/h/o/a/c;
 
-    invoke-virtual {p1}, Lb/h/o/a/MarketEvents1;->c()Lcom/vk/dto/common/Good;
+    invoke-virtual {p1}, Lb/h/o/a/c;->c()Lcom/vk/dto/common/Good;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lb/h/o/a/MarketEvents1;->b()Lcom/vk/dto/common/Good;
+    invoke-virtual {p1}, Lb/h/o/a/c;->b()Lcom/vk/dto/common/Good;
 
     move-result-object p1
 
@@ -106,15 +106,15 @@
 
     .line 4
     :cond_2
-    instance-of v0, p1, Lb/h/o/a/MarketEvents4;
+    instance-of v0, p1, Lb/h/o/a/d;
 
     if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcom/vk/market/orders/MarketCartFragment$g;->a:Lcom/vk/market/orders/MarketCartFragment;
 
-    check-cast p1, Lb/h/o/a/MarketEvents4;
+    check-cast p1, Lb/h/o/a/d;
 
-    invoke-virtual {p1}, Lb/h/o/a/MarketEvents4;->b()Lcom/vk/dto/common/Good;
+    invoke-virtual {p1}, Lb/h/o/a/d;->b()Lcom/vk/dto/common/Good;
 
     move-result-object p1
 
@@ -124,19 +124,19 @@
 
     .line 5
     :cond_3
-    instance-of v0, p1, Lb/h/o/a/MarketEvents3;
+    instance-of v0, p1, Lb/h/o/a/e;
 
     if-eqz v0, :cond_4
 
     iget-object v0, p0, Lcom/vk/market/orders/MarketCartFragment$g;->a:Lcom/vk/market/orders/MarketCartFragment;
 
-    check-cast p1, Lb/h/o/a/MarketEvents3;
+    check-cast p1, Lb/h/o/a/e;
 
-    invoke-virtual {p1}, Lb/h/o/a/MarketEvents3;->c()Lcom/vk/dto/common/Good;
+    invoke-virtual {p1}, Lb/h/o/a/e;->c()Lcom/vk/dto/common/Good;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lb/h/o/a/MarketEvents3;->b()Lcom/vk/dto/common/Good;
+    invoke-virtual {p1}, Lb/h/o/a/e;->b()Lcom/vk/dto/common/Good;
 
     move-result-object p1
 
@@ -146,7 +146,7 @@
 
     .line 6
     :cond_4
-    instance-of p1, p1, Lb/h/o/a/MarketEvents5;
+    instance-of p1, p1, Lb/h/o/a/f;
 
     if-eqz p1, :cond_5
 
@@ -163,9 +163,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/o/a/MarketEvents;
+    check-cast p1, Lb/h/o/a/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/market/orders/MarketCartFragment$g;->a(Lb/h/o/a/MarketEvents;)V
+    invoke-virtual {p0, p1}, Lcom/vk/market/orders/MarketCartFragment$g;->a(Lb/h/o/a/a;)V
 
     return-void
 .end method

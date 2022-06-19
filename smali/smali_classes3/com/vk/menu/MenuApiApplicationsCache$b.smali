@@ -3,12 +3,12 @@
 .source "MenuApiApplicationsCache.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/BiFunction;
+.implements Lc/a/z/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/menu/MenuApiApplicationsCache;->i()Lio/reactivex/Observable;
+    value = Lcom/vk/menu/MenuApiApplicationsCache;->i()Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,12 +26,12 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/BiFunction<",
+        "Lc/a/z/c<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/dto/common/data/ApiApplication;",
         ">;",
-        "Lcom/vk/core/util/Optional<",
+        "Lcom/vk/core/util/q0<",
         "Lcom/vk/dto/common/data/VkAppsFeatured;",
         ">;",
         "Lcom/vk/dto/common/data/VkAppsList;",
@@ -67,7 +67,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/List;Lcom/vk/core/util/Optional;)Lcom/vk/dto/common/data/VkAppsList;
+.method public final a(Ljava/util/List;Lcom/vk/core/util/q0;)Lcom/vk/dto/common/data/VkAppsList;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -76,7 +76,7 @@
             "+",
             "Lcom/vk/dto/common/data/ApiApplication;",
             ">;",
-            "Lcom/vk/core/util/Optional<",
+            "Lcom/vk/core/util/q0<",
             "Lcom/vk/dto/common/data/VkAppsFeatured;",
             ">;)",
             "Lcom/vk/dto/common/data/VkAppsList;"
@@ -86,7 +86,7 @@
     .line 2
     sget-object v0, Lcom/vk/menu/MenuApiApplicationsCache;->g:Lcom/vk/menu/MenuApiApplicationsCache;
 
-    invoke-static {v0, p1, p2}, Lcom/vk/menu/MenuApiApplicationsCache;->a(Lcom/vk/menu/MenuApiApplicationsCache;Ljava/util/List;Lcom/vk/core/util/Optional;)Lcom/vk/dto/common/data/VkAppsList;
+    invoke-static {v0, p1, p2}, Lcom/vk/menu/MenuApiApplicationsCache;->a(Lcom/vk/menu/MenuApiApplicationsCache;Ljava/util/List;Lcom/vk/core/util/q0;)Lcom/vk/dto/common/data/VkAppsList;
 
     move-result-object p1
 
@@ -99,9 +99,9 @@
     .line 1
     check-cast p1, Ljava/util/List;
 
-    check-cast p2, Lcom/vk/core/util/Optional;
+    check-cast p2, Lcom/vk/core/util/q0;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/menu/MenuApiApplicationsCache$b;->a(Ljava/util/List;Lcom/vk/core/util/Optional;)Lcom/vk/dto/common/data/VkAppsList;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/menu/MenuApiApplicationsCache$b;->a(Ljava/util/List;Lcom/vk/core/util/q0;)Lcom/vk/dto/common/data/VkAppsList;
 
     move-result-object p1
 

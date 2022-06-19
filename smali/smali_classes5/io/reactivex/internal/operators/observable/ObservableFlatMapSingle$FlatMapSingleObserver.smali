@@ -3,8 +3,8 @@
 .source "ObservableFlatMapSingle.java"
 
 # interfaces
-.implements Lio/reactivex/Observer;
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lc/a/r;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations
@@ -31,9 +31,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Lio/reactivex/Observer<",
+        "Lc/a/r<",
         "TT;>;",
-        "Lio/reactivex/disposables/Disposable;"
+        "Lio/reactivex/disposables/b;"
     }
 .end annotation
 
@@ -49,10 +49,10 @@
 
 .field final delayErrors:Z
 
-.field final downstream:Lio/reactivex/Observer;
+.field final downstream:Lc/a/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TR;>;"
         }
     .end annotation
@@ -60,12 +60,12 @@
 
 .field final errors:Lio/reactivex/internal/util/AtomicThrowable;
 
-.field final mapper:Lio/reactivex/functions/Function;
+.field final mapper:Lc/a/z/j;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/functions/Function<",
+            "Lc/a/z/j<",
             "-TT;+",
-            "Lio/reactivex/SingleSource<",
+            "Lc/a/x<",
             "+TR;>;>;"
         }
     .end annotation
@@ -75,28 +75,28 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lio/reactivex/internal/queue/SpscLinkedArrayQueue<",
+            "Lio/reactivex/internal/queue/a<",
             "TR;>;>;"
         }
     .end annotation
 .end field
 
-.field final set:Lio/reactivex/disposables/CompositeDisposable;
+.field final set:Lio/reactivex/disposables/a;
 
-.field upstream:Lio/reactivex/disposables/Disposable;
+.field upstream:Lio/reactivex/disposables/b;
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/Observer;Lio/reactivex/functions/Function;Z)V
+.method constructor <init>(Lc/a/r;Lc/a/z/j;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TR;>;",
-            "Lio/reactivex/functions/Function<",
+            "Lc/a/z/j<",
             "-TT;+",
-            "Lio/reactivex/SingleSource<",
+            "Lc/a/x<",
             "+TR;>;>;Z)V"
         }
     .end annotation
@@ -105,20 +105,20 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->downstream:Lio/reactivex/Observer;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->downstream:Lc/a/r;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->mapper:Lio/reactivex/functions/Function;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->mapper:Lc/a/z/j;
 
     .line 4
     iput-boolean p3, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->delayErrors:Z
 
     .line 5
-    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
+    new-instance p1, Lio/reactivex/disposables/a;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
 
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->set:Lio/reactivex/disposables/CompositeDisposable;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->set:Lio/reactivex/disposables/a;
 
     .line 6
     new-instance p1, Lio/reactivex/internal/util/AtomicThrowable;
@@ -158,36 +158,36 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+    check-cast v0, Lio/reactivex/internal/queue/a;
 
     if-eqz v0, :cond_0
 
     .line 37
-    invoke-virtual {v0}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->clear()V
+    invoke-virtual {v0}, Lio/reactivex/internal/queue/a;->clear()V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lio/reactivex/disposables/Disposable;)V
+.method public a(Lio/reactivex/disposables/b;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->upstream:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->upstream:Lio/reactivex/disposables/b;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/Disposable;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/b;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->upstream:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->upstream:Lio/reactivex/disposables/b;
 
     .line 3
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->downstream:Lio/reactivex/Observer;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->downstream:Lc/a/r;
 
-    invoke-interface {p1, p0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p1, p0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
 
     :cond_0
     return-void
@@ -204,9 +204,9 @@
     .end annotation
 
     .line 10
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->set:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->set:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->c(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->c(Lio/reactivex/disposables/b;)Z
 
     .line 11
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -226,9 +226,9 @@
     if-eqz v1, :cond_4
 
     .line 12
-    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->downstream:Lio/reactivex/Observer;
+    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->downstream:Lc/a/r;
 
-    invoke-interface {v1, p2}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
+    invoke-interface {v1, p2}, Lc/a/r;->b(Ljava/lang/Object;)V
 
     .line 13
     iget-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->active:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -252,14 +252,14 @@
 
     move-result-object p2
 
-    check-cast p2, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+    check-cast p2, Lio/reactivex/internal/queue/a;
 
     if-eqz p1, :cond_3
 
     if-eqz p2, :cond_1
 
     .line 15
-    invoke-virtual {p2}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->isEmpty()Z
+    invoke-virtual {p2}, Lio/reactivex/internal/queue/a;->isEmpty()Z
 
     move-result p1
 
@@ -276,17 +276,17 @@
     if-eqz p1, :cond_2
 
     .line 17
-    iget-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->downstream:Lio/reactivex/Observer;
+    iget-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->downstream:Lc/a/r;
 
-    invoke-interface {p2, p1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p2, p1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
     .line 18
     :cond_2
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->downstream:Lio/reactivex/Observer;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->downstream:Lc/a/r;
 
-    invoke-interface {p1}, Lio/reactivex/Observer;->b()V
+    invoke-interface {p1}, Lc/a/r;->b()V
 
     :goto_1
     return-void
@@ -303,7 +303,7 @@
 
     .line 20
     :cond_4
-    invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->f()Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+    invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->f()Lio/reactivex/internal/queue/a;
 
     move-result-object p1
 
@@ -312,7 +312,7 @@
 
     .line 22
     :try_start_0
-    invoke-virtual {p1, p2}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->offer(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p2}, Lio/reactivex/internal/queue/a;->offer(Ljava/lang/Object;)Z
 
     .line 23
     monitor-exit p1
@@ -364,9 +364,9 @@
     .end annotation
 
     .line 28
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->set:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->set:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->c(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->c(Lio/reactivex/disposables/b;)Z
 
     .line 29
     iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->errors:Lio/reactivex/internal/util/AtomicThrowable;
@@ -383,14 +383,14 @@
     if-nez p1, :cond_0
 
     .line 31
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->upstream:Lio/reactivex/disposables/Disposable;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->upstream:Lio/reactivex/disposables/b;
 
-    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
 
     .line 32
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->set:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->set:Lio/reactivex/disposables/a;
 
-    invoke-virtual {p1}, Lio/reactivex/disposables/CompositeDisposable;->o()V
+    invoke-virtual {p1}, Lio/reactivex/disposables/a;->o()V
 
     .line 33
     :cond_0
@@ -405,7 +405,7 @@
 
     .line 35
     :cond_1
-    invoke-static {p2}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p2}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -434,9 +434,9 @@
     if-nez p1, :cond_0
 
     .line 7
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->set:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->set:Lio/reactivex/disposables/a;
 
-    invoke-virtual {p1}, Lio/reactivex/disposables/CompositeDisposable;->o()V
+    invoke-virtual {p1}, Lio/reactivex/disposables/a;->o()V
 
     .line 8
     :cond_0
@@ -446,7 +446,7 @@
 
     .line 9
     :cond_1
-    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -476,17 +476,17 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->mapper:Lio/reactivex/functions/Function;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->mapper:Lc/a/z/j;
 
-    invoke-interface {v0, p1}, Lio/reactivex/functions/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lc/a/z/j;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     const-string v0, "The mapper returned a null SingleSource"
 
-    invoke-static {p1, v0}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    check-cast p1, Lio/reactivex/SingleSource;
+    check-cast p1, Lc/a/x;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -505,16 +505,16 @@
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->set:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->set:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 5
-    invoke-interface {p1, v0}, Lio/reactivex/SingleSource;->a(Lio/reactivex/SingleObserver;)V
+    invoke-interface {p1, v0}, Lc/a/x;->a(Lc/a/v;)V
 
     :cond_0
     return-void
@@ -523,12 +523,12 @@
     move-exception p1
 
     .line 6
-    invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
 
     .line 7
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->upstream:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->upstream:Lio/reactivex/disposables/b;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 8
     invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->a(Ljava/lang/Throwable;)V
@@ -557,7 +557,7 @@
     .locals 8
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->downstream:Lio/reactivex/Observer;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->downstream:Lc/a/r;
 
     .line 2
     iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->active:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -609,7 +609,7 @@
     invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->a()V
 
     .line 10
-    invoke-interface {v0, v1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -636,12 +636,12 @@
 
     move-result-object v7
 
-    check-cast v7, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+    check-cast v7, Lio/reactivex/internal/queue/a;
 
     if-eqz v7, :cond_4
 
     .line 13
-    invoke-virtual {v7}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->poll()Ljava/lang/Object;
+    invoke-virtual {v7}, Lio/reactivex/internal/queue/a;->poll()Ljava/lang/Object;
 
     move-result-object v7
 
@@ -670,13 +670,13 @@
     if-eqz v1, :cond_6
 
     .line 15
-    invoke-interface {v0, v1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
 
     goto :goto_3
 
     .line 16
     :cond_6
-    invoke-interface {v0}, Lio/reactivex/Observer;->b()V
+    invoke-interface {v0}, Lc/a/r;->b()V
 
     :goto_3
     return-void
@@ -697,7 +697,7 @@
 
     .line 18
     :cond_8
-    invoke-interface {v0, v7}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, v7}, Lc/a/r;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -711,12 +711,12 @@
     return v0
 .end method
 
-.method f()Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+.method f()Lio/reactivex/internal/queue/a;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lio/reactivex/internal/queue/SpscLinkedArrayQueue<",
+            "Lio/reactivex/internal/queue/a<",
             "TR;>;"
         }
     .end annotation
@@ -729,7 +729,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+    check-cast v0, Lio/reactivex/internal/queue/a;
 
     if-eqz v0, :cond_1
 
@@ -737,13 +737,13 @@
 
     .line 2
     :cond_1
-    new-instance v0, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
+    new-instance v0, Lio/reactivex/internal/queue/a;
 
-    invoke-static {}, Lio/reactivex/Observable;->k()I
+    invoke-static {}, Lc/a/m;->k()I
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;-><init>(I)V
+    invoke-direct {v0, v1}, Lio/reactivex/internal/queue/a;-><init>(I)V
 
     .line 3
     iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->queue:Ljava/util/concurrent/atomic/AtomicReference;
@@ -768,14 +768,14 @@
     iput-boolean v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->cancelled:Z
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->upstream:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->upstream:Lio/reactivex/disposables/b;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->set:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMapSingle$FlatMapSingleObserver;->set:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
 
     return-void
 .end method

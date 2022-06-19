@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -35,19 +35,19 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/dto/common/data/JsonParser;
+.method public final a()Lcom/vk/dto/common/data/c;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/dto/market/Variant;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/vk/dto/market/Variant;->y()Lcom/vk/dto/common/data/JsonParser;
+    invoke-static {}, Lcom/vk/dto/market/Variant;->y()Lcom/vk/dto/common/data/c;
 
     move-result-object v0
 

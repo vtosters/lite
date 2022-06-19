@@ -1,33 +1,33 @@
 .class public final Lcom/vk/menu/SearchMenuAdapter;
-.super Lcom/vk/common/e/BaseItemAdapter;
+.super Lcom/vk/common/e/a;
 .source "SearchMenuAdapter.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/MilkshakeProvider;
-.implements Lcom/vk/menu/MenuUtils$a;
+.implements Lcom/vk/core/ui/n;
+.implements Lcom/vk/menu/c$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/e/BaseItemAdapter<",
-        "Lcom/vk/common/i/RecyclerItem;",
+        "Lcom/vk/common/e/a<",
+        "Lcom/vk/common/i/b;",
         ">;",
-        "Lcom/vk/core/ui/MilkshakeProvider;",
-        "Lcom/vk/menu/MenuUtils$a;"
+        "Lcom/vk/core/ui/n;",
+        "Lcom/vk/menu/c$a;"
     }
 .end annotation
 
 
 # instance fields
-.field private final c:Lcom/vk/menu/MenuBlocksAndIndexes;
+.field private final c:Lcom/vk/menu/a;
 
-.field private final d:Lkotlin/jvm/b/Functions2;
+.field private final d:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "Ljava/lang/Integer;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -35,15 +35,15 @@
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/jvm/b/Functions2;)V
+.method public constructor <init>(Lkotlin/jvm/b/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -51,16 +51,16 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/common/e/BaseItemAdapter;-><init>(Z)V
+    invoke-direct {p0, v0}, Lcom/vk/common/e/a;-><init>(Z)V
 
-    iput-object p1, p0, Lcom/vk/menu/SearchMenuAdapter;->d:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/menu/SearchMenuAdapter;->d:Lkotlin/jvm/b/b;
 
     .line 2
-    new-instance p1, Lcom/vk/menu/MenuBlocksAndIndexes;
+    new-instance p1, Lcom/vk/menu/a;
 
-    invoke-direct {p1}, Lcom/vk/menu/MenuBlocksAndIndexes;-><init>()V
+    invoke-direct {p1}, Lcom/vk/menu/a;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iput-object p1, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
     return-void
 .end method
@@ -71,7 +71,7 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
+    invoke-virtual {p0}, Lcom/vk/lists/i0;->getItemCount()I
 
     move-result v0
 
@@ -81,20 +81,20 @@
     if-ge v1, v0, :cond_1
 
     .line 2
-    invoke-virtual {p0, v1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/common/i/RecyclerItem;
+    check-cast v2, Lcom/vk/common/i/b;
 
     .line 3
-    instance-of v3, v2, Lcom/vk/menu/g/SearchMenuItem;
+    instance-of v3, v2, Lcom/vk/menu/g/c;
 
     if-eqz v3, :cond_0
 
-    check-cast v2, Lcom/vk/menu/g/SearchMenuItem;
+    check-cast v2, Lcom/vk/menu/g/c;
 
-    invoke-virtual {v2}, Lcom/vk/menu/g/SearchMenuItem;->c()Landroid/view/MenuItem;
+    invoke-virtual {v2}, Lcom/vk/menu/g/c;->c()Landroid/view/MenuItem;
 
     move-result-object v2
 
@@ -119,16 +119,16 @@
     return p1
 .end method
 
-.method protected a(Landroid/view/View;I)Lcom/vk/common/e/BaseItemHolder;
+.method protected a(Landroid/view/View;I)Lcom/vk/common/e/b;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
             "I)",
-            "Lcom/vk/common/e/BaseItemHolder<",
+            "Lcom/vk/common/e/b<",
             "+",
-            "Lcom/vk/common/i/RecyclerItem;",
+            "Lcom/vk/common/i/b;",
             ">;"
         }
     .end annotation
@@ -158,27 +158,27 @@
 
     .line 2
     :sswitch_0
-    new-instance p2, Lcom/vk/menu/holders/SearchMenuHeaderHolder;
+    new-instance p2, Lcom/vk/menu/holders/b;
 
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->d:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->d:Lkotlin/jvm/b/b;
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/menu/holders/SearchMenuHeaderHolder;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/menu/holders/b;-><init>(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     goto :goto_0
 
     .line 3
     :sswitch_1
-    new-instance p2, Lcom/vk/menu/holders/SearchMenuGameHolder;
+    new-instance p2, Lcom/vk/menu/holders/a;
 
-    invoke-direct {p2, p1}, Lcom/vk/menu/holders/SearchMenuGameHolder;-><init>(Landroid/view/View;)V
+    invoke-direct {p2, p1}, Lcom/vk/menu/holders/a;-><init>(Landroid/view/View;)V
 
     goto :goto_0
 
     .line 4
     :sswitch_2
-    new-instance p2, Lcom/vk/menu/holders/SearchMenuVkPayHolder;
+    new-instance p2, Lcom/vk/menu/holders/d;
 
-    invoke-direct {p2, p1}, Lcom/vk/menu/holders/SearchMenuVkPayHolder;-><init>(Landroid/view/View;)V
+    invoke-direct {p2, p1}, Lcom/vk/menu/holders/d;-><init>(Landroid/view/View;)V
 
     goto :goto_0
 
@@ -186,17 +186,17 @@
     :sswitch_3
     new-instance p2, Lcom/vk/menu/holders/SearchMenuItemHolder;
 
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->d:Lkotlin/jvm/b/Functions2;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->d:Lkotlin/jvm/b/b;
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/menu/holders/SearchMenuItemHolder;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/menu/holders/SearchMenuItemHolder;-><init>(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     goto :goto_0
 
     .line 6
     :sswitch_4
-    new-instance p2, Lcom/vk/menu/holders/SearchMenuServicesHolder;
+    new-instance p2, Lcom/vk/menu/holders/c;
 
-    invoke-direct {p2, p1}, Lcom/vk/menu/holders/SearchMenuServicesHolder;-><init>(Landroid/view/View;)V
+    invoke-direct {p2, p1}, Lcom/vk/menu/holders/c;-><init>(Landroid/view/View;)V
 
     :goto_0
     return-object p2
@@ -230,9 +230,9 @@
     if-eqz v0, :cond_1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
-    invoke-virtual {v0, v2}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
+    invoke-virtual {v0, v2}, Lcom/vk/menu/a;->a(I)I
 
     move-result v0
 
@@ -242,9 +242,9 @@
 
     .line 6
     :cond_0
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
-    invoke-virtual {v0, v1}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
+    invoke-virtual {v0, v1}, Lcom/vk/menu/a;->a(I)I
 
     move-result v0
 
@@ -254,9 +254,9 @@
 
     .line 7
     :cond_1
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
-    invoke-virtual {v0, v3}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
+    invoke-virtual {v0, v3}, Lcom/vk/menu/a;->a(I)I
 
     move-result v0
 
@@ -268,9 +268,9 @@
 
     .line 8
     :cond_2
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
-    invoke-virtual {v0, v1}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
+    invoke-virtual {v0, v1}, Lcom/vk/menu/a;->a(I)I
 
     move-result v0
 
@@ -283,11 +283,11 @@
 
     .line 9
     :cond_3
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
     const/4 v1, 0x4
 
-    invoke-virtual {v0, v1}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
+    invoke-virtual {v0, v1}, Lcom/vk/menu/a;->a(I)I
 
     move-result v0
 
@@ -297,9 +297,9 @@
 
     .line 10
     :cond_4
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
-    invoke-virtual {v0, v4}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
+    invoke-virtual {v0, v4}, Lcom/vk/menu/a;->a(I)I
 
     move-result v0
 
@@ -312,9 +312,9 @@
 
     .line 11
     :cond_6
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
-    invoke-virtual {v0, v4}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
+    invoke-virtual {v0, v4}, Lcom/vk/menu/a;->a(I)I
 
     move-result v0
 
@@ -331,7 +331,7 @@
             "(I",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/common/i/RecyclerItem;",
+            "Lcom/vk/common/i/b;",
             ">;)V"
         }
     .end annotation
@@ -344,11 +344,11 @@
 
     .line 1
     :cond_0
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
     add-int/lit8 p1, p1, -0x1
 
-    invoke-virtual {v0, p1}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
+    invoke-virtual {v0, p1}, Lcom/vk/menu/a;->a(I)I
 
     move-result p1
 
@@ -366,7 +366,7 @@
 
     .line 3
     :cond_1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/lists/SimpleAdapter;->a(ILjava/util/List;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/lists/i0;->a(ILjava/util/List;)V
 
     return-void
 .end method
@@ -391,7 +391,7 @@
             "(I",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/common/i/RecyclerItem;",
+            "Lcom/vk/common/i/b;",
             ">;)V"
         }
     .end annotation
@@ -404,11 +404,11 @@
 
     .line 1
     :cond_0
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
     add-int/lit8 v1, p1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
+    invoke-virtual {v0, v1}, Lcom/vk/menu/a;->a(I)I
 
     move-result v0
 
@@ -422,16 +422,16 @@
 
     .line 3
     :cond_1
-    invoke-virtual {p0, v0, p2}, Lcom/vk/lists/SimpleAdapter;->b(ILjava/util/List;)V
+    invoke-virtual {p0, v0, p2}, Lcom/vk/lists/i0;->b(ILjava/util/List;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result p2
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(II)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/menu/a;->a(II)V
 
     return-void
 .end method
@@ -443,7 +443,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/common/i/RecyclerItem;",
+            "Lcom/vk/common/i/b;",
             ">;)V"
         }
     .end annotation
@@ -451,7 +451,7 @@
     .line 1
     sget-object v0, Lcom/vk/menu/SearchMenuAdapter$expandMainBlock$startIndex$1;->a:Lcom/vk/menu/SearchMenuAdapter$expandMainBlock$startIndex$1;
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->d(Lkotlin/jvm/b/Functions2;)I
+    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->d(Lkotlin/jvm/b/b;)I
 
     move-result v0
 
@@ -461,13 +461,13 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->j(I)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->j(I)V
 
     .line 3
-    invoke-virtual {p0, v0, p1}, Lcom/vk/lists/SimpleAdapter;->b(ILjava/util/List;)V
+    invoke-virtual {p0, v0, p1}, Lcom/vk/lists/i0;->b(ILjava/util/List;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
     const/4 v1, 0x0
 
@@ -477,7 +477,7 @@
 
     add-int/lit8 p1, p1, -0x1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(II)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/menu/a;->a(II)V
 
     return-void
 .end method
@@ -493,19 +493,19 @@
 
     .line 1
     :cond_0
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
     add-int/lit8 v1, p1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
+    invoke-virtual {v0, v1}, Lcom/vk/menu/a;->a(I)I
 
     move-result v0
 
     .line 2
     :goto_0
-    iget-object v1, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v1, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
-    invoke-virtual {v1, p1}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
+    invoke-virtual {v1, p1}, Lcom/vk/menu/a;->a(I)I
 
     move-result v1
 
@@ -517,7 +517,7 @@
 
     .line 3
     :goto_1
-    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->j(I)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->j(I)V
 
     if-eq v2, v1, :cond_1
 
@@ -527,9 +527,9 @@
 
     .line 4
     :cond_1
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/menu/MenuBlocksAndIndexes;->b(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/menu/a;->b(I)V
 
     return-void
 .end method
@@ -547,19 +547,19 @@
 
     .line 1
     :cond_0
-    iget-object v1, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v1, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
     add-int/lit8 v2, p1, -0x1
 
-    invoke-virtual {v1, v2}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
+    invoke-virtual {v1, v2}, Lcom/vk/menu/a;->a(I)I
 
     move-result v1
 
     .line 2
     :goto_0
-    iget-object v2, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/MenuBlocksAndIndexes;
+    iget-object v2, p0, Lcom/vk/menu/SearchMenuAdapter;->c:Lcom/vk/menu/a;
 
-    invoke-virtual {v2, p1}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
+    invoke-virtual {v2, p1}, Lcom/vk/menu/a;->a(I)I
 
     move-result p1
 

@@ -3,7 +3,7 @@
 .source "SearchDocumentsListFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/PaginationHelper$o;
+.implements Lcom/vk/lists/t$o;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/lists/PaginationHelper$o<",
-        "Lcom/vk/api/docs/DocsSearch$a;",
+        "Lcom/vk/lists/t$o<",
+        "Lb/h/c/i/i$a;",
         ">;"
     }
 .end annotation
@@ -49,21 +49,21 @@
 
 
 # virtual methods
-.method public a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
+.method public a(ILcom/vk/lists/t;)Lc/a/m;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/PaginationHelper;",
+            "Lcom/vk/lists/t;",
             ")",
-            "Lio/reactivex/Observable<",
-            "Lcom/vk/api/docs/DocsSearch$a;",
+            "Lc/a/m<",
+            "Lb/h/c/i/i$a;",
             ">;"
         }
     .end annotation
 
     .line 2
-    new-instance p2, Lcom/vk/api/docs/DocsSearch;
+    new-instance p2, Lb/h/c/i/i;
 
     iget-object v0, p0, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a;->a:Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2;
 
@@ -85,13 +85,13 @@
 
     iget-object v0, v0, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2;->this$0:Lcom/vk/documents/SearchDocumentsListFragment;
 
-    invoke-static {v0}, Lcom/vk/documents/SearchDocumentsListFragment;->g(Lcom/vk/documents/SearchDocumentsListFragment;)Lcom/vk/lists/PaginationHelper;
+    invoke-static {v0}, Lcom/vk/documents/SearchDocumentsListFragment;->g(Lcom/vk/documents/SearchDocumentsListFragment;)Lcom/vk/lists/t;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->c()I
+    invoke-virtual {v0}, Lcom/vk/lists/t;->c()I
 
     move-result v0
 
@@ -115,29 +115,29 @@
     move v4, p1
 
     .line 4
-    invoke-direct/range {v0 .. v5}, Lcom/vk/api/docs/DocsSearch;-><init>(Ljava/lang/String;IZII)V
+    invoke-direct/range {v0 .. v5}, Lb/h/c/i/i;-><init>(Ljava/lang/String;IZII)V
 
     const/4 p1, 0x1
 
     const/4 v0, 0x0
 
     .line 5
-    invoke-static {p2, v0, p1, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {p2, v0, p1, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
+.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/PaginationHelper;",
+            "Lcom/vk/lists/t;",
             "Z)",
-            "Lio/reactivex/Observable<",
-            "Lcom/vk/api/docs/DocsSearch$a;",
+            "Lc/a/m<",
+            "Lb/h/c/i/i$a;",
             ">;"
         }
     .end annotation
@@ -145,22 +145,22 @@
     const/4 p2, 0x0
 
     .line 1
-    invoke-virtual {p0, p2, p1}, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a;->a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a;->a(ILcom/vk/lists/t;)Lc/a/m;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
+.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observable<",
-            "Lcom/vk/api/docs/DocsSearch$a;",
+            "Lc/a/m<",
+            "Lb/h/c/i/i$a;",
             ">;Z",
-            "Lcom/vk/lists/PaginationHelper;",
+            "Lcom/vk/lists/t;",
             ")V"
         }
     .end annotation
@@ -170,7 +170,7 @@
     .line 6
     new-instance p2, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a$a;
 
-    invoke-direct {p2, p0, p3}, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a$a;-><init>(Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a;Lcom/vk/lists/PaginationHelper;)V
+    invoke-direct {p2, p0, p3}, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a$a;-><init>(Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a;Lcom/vk/lists/t;)V
 
     .line 7
     iget-object p3, p0, Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2$a;->a:Lcom/vk/documents/SearchDocumentsListFragment$searchItemsProvider$2;
@@ -183,17 +183,17 @@
 
     if-eqz p3, :cond_0
 
-    new-instance v0, Lcom/vk/documents/SearchDocumentsListFragment1;
+    new-instance v0, Lcom/vk/documents/a;
 
-    invoke-direct {v0, p3}, Lcom/vk/documents/SearchDocumentsListFragment1;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {v0, p3}, Lcom/vk/documents/a;-><init>(Lkotlin/jvm/b/b;)V
 
     move-object p3, v0
 
     :cond_0
-    check-cast p3, Lio/reactivex/functions/Consumer;
+    check-cast p3, Lc/a/z/g;
 
     .line 8
-    invoke-virtual {p1, p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, p2, p3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
@@ -210,7 +210,7 @@
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p2, p1}, Lcom/vk/core/fragments/BaseFragment1;->d(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p2, p1}, Lcom/vk/core/fragments/b;->d(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
 
     :cond_2
     return-void

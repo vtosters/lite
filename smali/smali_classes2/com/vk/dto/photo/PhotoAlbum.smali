@@ -197,14 +197,14 @@
 
     const-class v1, Lcom/vk/dto/common/data/PrivacySetting$PrivacyRule;
 
-    invoke-static {p1, v0, v1}, Lb/h/h/ModelUtils;->a(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/Class;)V
+    invoke-static {p1, v0, v1}, Lb/h/h/b;->a(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/Class;)V
 
     .line 45
     iget-object v0, p0, Lcom/vk/dto/photo/PhotoAlbum;->B:Ljava/util/List;
 
     const-class v1, Lcom/vk/dto/common/data/PrivacySetting$PrivacyRule;
 
-    invoke-static {p1, v0, v1}, Lb/h/h/ModelUtils;->a(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/Class;)V
+    invoke-static {p1, v0, v1}, Lb/h/h/b;->a(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/Class;)V
 
     .line 46
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -371,9 +371,9 @@
     if-nez v3, :cond_0
 
     .line 15
-    sget-object v3, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
+    sget-object v3, Lb/h/h/a;->b:Lb/h/h/a$a;
 
-    invoke-interface {v3}, Lb/h/h/ModelConfig$a;->getContext()Landroid/content/Context;
+    invoke-interface {v3}, Lb/h/h/a$a;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -381,7 +381,7 @@
 
     move-result-object v3
 
-    sget v4, Lb/h/h/R;->album_unnamed:I
+    sget v4, Lb/h/h/c;->album_unnamed:I
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -648,12 +648,12 @@
     .line 8
     iget-object p2, p0, Lcom/vk/dto/photo/PhotoAlbum;->h:Ljava/util/List;
 
-    invoke-static {p1, p2}, Lb/h/h/ModelUtils;->a(Landroid/os/Parcel;Ljava/util/List;)V
+    invoke-static {p1, p2}, Lb/h/h/b;->a(Landroid/os/Parcel;Ljava/util/List;)V
 
     .line 9
     iget-object p2, p0, Lcom/vk/dto/photo/PhotoAlbum;->B:Ljava/util/List;
 
-    invoke-static {p1, p2}, Lb/h/h/ModelUtils;->a(Landroid/os/Parcel;Ljava/util/List;)V
+    invoke-static {p1, p2}, Lb/h/h/b;->a(Landroid/os/Parcel;Ljava/util/List;)V
 
     .line 10
     iget-object p2, p0, Lcom/vk/dto/photo/PhotoAlbum;->C:Ljava/lang/String;

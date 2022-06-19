@@ -3,12 +3,12 @@
 .source "PrefetchByNotListenedMsgPlugin.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;->c()Lio/reactivex/Single;
+    value = Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;->c()Lc/a/t;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;TR;>;"
     }
 .end annotation
@@ -66,7 +66,7 @@
             "Lcom/vk/im/engine/models/messages/MsgFromUser;",
             ">;)",
             "Ljava/util/List<",
-            "Lcom/vk/audiomsg/player/AudioMsgTrack;",
+            "Lcom/vk/audiomsg/player/d;",
             ">;"
         }
     .end annotation
@@ -102,7 +102,7 @@
     check-cast v1, Lcom/vk/im/engine/models/messages/MsgFromUser;
 
     .line 4
-    sget-object v2, Lcom/vk/im/ui/utils/AudioMsgUtils;->INSTANCE:Lcom/vk/im/ui/utils/AudioMsgUtils;
+    sget-object v2, Lcom/vk/im/ui/utils/a;->b:Lcom/vk/im/ui/utils/a;
 
     invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/MsgFromUser;->V1()Lcom/vk/im/engine/models/attaches/AttachAudioMsg;
 
@@ -112,7 +112,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v2, v1, v4, v3, v4}, Lcom/vk/im/ui/utils/AudioMsgUtils;->a(Lcom/vk/im/ui/utils/AudioMsgUtils;Lcom/vk/im/engine/models/attaches/AttachAudioMsg;Lcom/vk/im/engine/models/ProfilesInfo;ILjava/lang/Object;)Lcom/vk/audiomsg/player/AudioMsgTrack;
+    invoke-static {v2, v1, v4, v3, v4}, Lcom/vk/im/ui/utils/a;->a(Lcom/vk/im/ui/utils/a;Lcom/vk/im/engine/models/attaches/AttachAudioMsg;Lcom/vk/im/engine/models/ProfilesInfo;ILjava/lang/Object;)Lcom/vk/audiomsg/player/d;
 
     move-result-object v1
 

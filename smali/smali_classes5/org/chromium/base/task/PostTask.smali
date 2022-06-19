@@ -10,7 +10,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lorg/chromium/base/task/TaskRunner;",
+            "Lorg/chromium/base/task/p;",
             ">;"
         }
     .end annotation
@@ -20,7 +20,7 @@
 
 .field private static d:Ljava/util/concurrent/Executor;
 
-.field private static final e:[Lorg/chromium/base/task/TaskExecutor;
+.field private static final e:[Lorg/chromium/base/task/o;
 
 
 # direct methods
@@ -47,18 +47,18 @@
     sput-object v0, Lorg/chromium/base/task/PostTask;->b:Ljava/util/Set;
 
     .line 4
-    new-instance v0, Lorg/chromium/base/task/ChromeThreadPoolExecutor;
+    new-instance v0, Lorg/chromium/base/task/j;
 
-    invoke-direct {v0}, Lorg/chromium/base/task/ChromeThreadPoolExecutor;-><init>()V
+    invoke-direct {v0}, Lorg/chromium/base/task/j;-><init>()V
 
     sput-object v0, Lorg/chromium/base/task/PostTask;->c:Ljava/util/concurrent/Executor;
 
     .line 5
-    invoke-static {}, Lorg/chromium/base/task/PostTask;->a()[Lorg/chromium/base/task/TaskExecutor;
+    invoke-static {}, Lorg/chromium/base/task/PostTask;->a()[Lorg/chromium/base/task/o;
 
     move-result-object v0
 
-    sput-object v0, Lorg/chromium/base/task/PostTask;->e:[Lorg/chromium/base/task/TaskExecutor;
+    sput-object v0, Lorg/chromium/base/task/PostTask;->e:[Lorg/chromium/base/task/o;
 
     return-void
 .end method
@@ -72,31 +72,31 @@
     return-void
 .end method
 
-.method private static a(Lorg/chromium/base/task/TaskTraits;)Lorg/chromium/base/task/TaskExecutor;
+.method private static a(Lorg/chromium/base/task/q;)Lorg/chromium/base/task/o;
     .locals 1
 
     .line 10
-    sget-object v0, Lorg/chromium/base/task/PostTask;->e:[Lorg/chromium/base/task/TaskExecutor;
+    sget-object v0, Lorg/chromium/base/task/PostTask;->e:[Lorg/chromium/base/task/o;
 
-    iget-byte p0, p0, Lorg/chromium/base/task/TaskTraits;->e:B
+    iget-byte p0, p0, Lorg/chromium/base/task/q;->e:B
 
     aget-object p0, v0, p0
 
     return-object p0
 .end method
 
-.method public static a(Lorg/chromium/base/task/TaskTraits;Ljava/lang/Runnable;)V
+.method public static a(Lorg/chromium/base/task/q;Ljava/lang/Runnable;)V
     .locals 2
 
     const-wide/16 v0, 0x0
 
     .line 2
-    invoke-static {p0, p1, v0, v1}, Lorg/chromium/base/task/PostTask;->a(Lorg/chromium/base/task/TaskTraits;Ljava/lang/Runnable;J)V
+    invoke-static {p0, p1, v0, v1}, Lorg/chromium/base/task/PostTask;->a(Lorg/chromium/base/task/q;Ljava/lang/Runnable;J)V
 
     return-void
 .end method
 
-.method public static a(Lorg/chromium/base/task/TaskTraits;Ljava/lang/Runnable;J)V
+.method public static a(Lorg/chromium/base/task/q;Ljava/lang/Runnable;J)V
     .locals 10
 
     .line 3
@@ -111,27 +111,27 @@
     if-eqz v1, :cond_0
 
     .line 5
-    invoke-static {p0}, Lorg/chromium/base/task/PostTask;->a(Lorg/chromium/base/task/TaskTraits;)Lorg/chromium/base/task/TaskExecutor;
+    invoke-static {p0}, Lorg/chromium/base/task/PostTask;->a(Lorg/chromium/base/task/q;)Lorg/chromium/base/task/o;
 
     move-result-object v1
 
-    invoke-interface {v1, p0, p1, p2, p3}, Lorg/chromium/base/task/TaskExecutor;->a(Lorg/chromium/base/task/TaskTraits;Ljava/lang/Runnable;J)V
+    invoke-interface {v1, p0, p1, p2, p3}, Lorg/chromium/base/task/o;->a(Lorg/chromium/base/task/q;Ljava/lang/Runnable;J)V
 
     goto :goto_0
 
     .line 6
     :cond_0
-    iget-boolean v1, p0, Lorg/chromium/base/task/TaskTraits;->a:Z
+    iget-boolean v1, p0, Lorg/chromium/base/task/q;->a:Z
 
-    iget v2, p0, Lorg/chromium/base/task/TaskTraits;->b:I
+    iget v2, p0, Lorg/chromium/base/task/q;->b:I
 
-    iget-boolean v3, p0, Lorg/chromium/base/task/TaskTraits;->c:Z
+    iget-boolean v3, p0, Lorg/chromium/base/task/q;->c:Z
 
-    iget-boolean v4, p0, Lorg/chromium/base/task/TaskTraits;->d:Z
+    iget-boolean v4, p0, Lorg/chromium/base/task/q;->d:Z
 
-    iget-byte v5, p0, Lorg/chromium/base/task/TaskTraits;->e:B
+    iget-byte v5, p0, Lorg/chromium/base/task/q;->e:B
 
-    iget-object v6, p0, Lorg/chromium/base/task/TaskTraits;->f:[B
+    iget-object v6, p0, Lorg/chromium/base/task/q;->f:[B
 
     move-object v7, p1
 
@@ -155,7 +155,7 @@
     throw p0
 .end method
 
-.method static a(Lorg/chromium/base/task/TaskRunner;)Z
+.method static a(Lorg/chromium/base/task/p;)Z
     .locals 1
 
     .line 8
@@ -176,17 +176,17 @@
     return p0
 .end method
 
-.method private static a()[Lorg/chromium/base/task/TaskExecutor;
+.method private static a()[Lorg/chromium/base/task/o;
     .locals 3
 
     const/4 v0, 0x5
 
-    new-array v0, v0, [Lorg/chromium/base/task/TaskExecutor;
+    new-array v0, v0, [Lorg/chromium/base/task/o;
 
     .line 1
-    new-instance v1, Lorg/chromium/base/task/DefaultTaskExecutor;
+    new-instance v1, Lorg/chromium/base/task/k;
 
-    invoke-direct {v1}, Lorg/chromium/base/task/DefaultTaskExecutor;-><init>()V
+    invoke-direct {v1}, Lorg/chromium/base/task/k;-><init>()V
 
     const/4 v2, 0x0
 
@@ -267,10 +267,10 @@
 
     move-result-object v2
 
-    check-cast v2, Lorg/chromium/base/task/TaskRunner;
+    check-cast v2, Lorg/chromium/base/task/p;
 
     .line 3
-    invoke-interface {v2}, Lorg/chromium/base/task/TaskRunner;->a()V
+    invoke-interface {v2}, Lorg/chromium/base/task/p;->a()V
 
     goto :goto_0
 

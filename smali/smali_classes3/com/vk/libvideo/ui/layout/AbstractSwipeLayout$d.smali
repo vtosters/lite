@@ -1,5 +1,5 @@
 .class Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$d;
-.super Lcom/vk/core/widget/ViewDragHelper$c;
+.super Lcom/vk/core/widget/i$c;
 .source "AbstractSwipeLayout.java"
 
 
@@ -29,7 +29,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$d;->c:Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
-    invoke-direct {p0}, Lcom/vk/core/widget/ViewDragHelper$c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/widget/i$c;-><init>()V
 
     return-void
 .end method
@@ -122,11 +122,11 @@
     iput-boolean v0, p1, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->G:Z
 
     .line 61
-    iget-object v0, p1, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/ViewDragHelper;
+    iget-object v0, p1, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/i;
 
     iget-object p1, p1, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->c:Landroid/view/View;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/core/widget/ViewDragHelper;->a(Landroid/view/View;I)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/core/widget/i;->a(Landroid/view/View;I)V
 
     return-void
 .end method
@@ -286,7 +286,7 @@
 
     .line 39
     :cond_5
-    iget-object p3, p2, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/ViewDragHelper;
+    iget-object p3, p2, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/i;
 
     invoke-virtual {p2}, Landroid/widget/FrameLayout;->getLeft()I
 
@@ -296,7 +296,7 @@
 
     move-result p1
 
-    invoke-virtual {p3, p2, p1}, Lcom/vk/core/widget/ViewDragHelper;->c(II)Z
+    invoke-virtual {p3, p2, p1}, Lcom/vk/core/widget/i;->c(II)Z
 
     goto/16 :goto_1
 
@@ -304,7 +304,7 @@
     :cond_6
     iget-object p2, p0, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$d;->c:Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
-    iget-object p3, p2, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/ViewDragHelper;
+    iget-object p3, p2, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/i;
 
     invoke-virtual {p2}, Landroid/widget/FrameLayout;->getLeft()I
 
@@ -314,7 +314,7 @@
 
     move-result p1
 
-    invoke-virtual {p3, p2, p1}, Lcom/vk/core/widget/ViewDragHelper;->c(II)Z
+    invoke-virtual {p3, p2, p1}, Lcom/vk/core/widget/i;->c(II)Z
 
     goto/16 :goto_1
 
@@ -326,17 +326,17 @@
 
     iget-object v2, p0, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$d;->c:Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
-    iget-object v2, v2, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/ViewDragHelper;
+    iget-object v2, v2, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/i;
 
-    invoke-virtual {v2}, Lcom/vk/core/widget/ViewDragHelper;->c()F
+    invoke-virtual {v2}, Lcom/vk/core/widget/i;->c()F
 
     move-result v2
 
     iget-object v5, p0, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$d;->c:Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
-    iget-object v5, v5, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/ViewDragHelper;
+    iget-object v5, v5, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/i;
 
-    invoke-virtual {v5}, Lcom/vk/core/widget/ViewDragHelper;->d()F
+    invoke-virtual {v5}, Lcom/vk/core/widget/i;->d()F
 
     move-result v5
 
@@ -399,7 +399,7 @@
 
     .line 45
     :cond_a
-    iget-object p2, p2, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/ViewDragHelper;
+    iget-object p2, p2, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/i;
 
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -411,7 +411,7 @@
 
     move-result p3
 
-    invoke-virtual {p2, p1, p3}, Lcom/vk/core/widget/ViewDragHelper;->c(II)Z
+    invoke-virtual {p2, p1, p3}, Lcom/vk/core/widget/i;->c(II)Z
 
     goto :goto_1
 
@@ -463,7 +463,7 @@
 
     .line 49
     :cond_e
-    iget-object p2, p2, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/ViewDragHelper;
+    iget-object p2, p2, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/i;
 
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -475,7 +475,7 @@
 
     neg-int p1, p1
 
-    invoke-virtual {p2, p3, p1}, Lcom/vk/core/widget/ViewDragHelper;->c(II)Z
+    invoke-virtual {p2, p3, p1}, Lcom/vk/core/widget/i;->c(II)Z
 
     goto :goto_1
 
@@ -483,7 +483,7 @@
     :cond_f
     iget-object p2, p0, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$d;->c:Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
-    iget-object p2, p2, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/ViewDragHelper;
+    iget-object p2, p2, Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;->I:Lcom/vk/core/widget/i;
 
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -503,7 +503,7 @@
 
     shr-int/lit8 p1, v0, 0x1
 
-    invoke-virtual {p2, p3, p1}, Lcom/vk/core/widget/ViewDragHelper;->c(II)Z
+    invoke-virtual {p2, p3, p1}, Lcom/vk/core/widget/i;->c(II)Z
 
     .line 51
     :goto_1

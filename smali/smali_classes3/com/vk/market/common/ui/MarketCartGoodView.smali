@@ -18,10 +18,10 @@
 
 .field private D:I
 
-.field private final E:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
+.field private final E:Lcom/vk/im/ui/utils/k/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/ui/utils/k/SimpleObjectsPool<",
+            "Lcom/vk/im/ui/utils/k/b<",
             "Landroid/view/View;",
             ">;"
         }
@@ -44,17 +44,17 @@
 
 .field private final g:Landroid/view/ViewGroup;
 
-.field private final h:Lcom/vk/core/util/PriceFormatter;
+.field private final h:Lcom/vk/core/util/s0;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/utils/k/SimpleObjectsPool;Lcom/vk/market/orders/MarketCartContract$Presenter;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/utils/k/b;Lcom/vk/market/orders/MarketCartContract$Presenter;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lcom/vk/im/ui/utils/k/SimpleObjectsPool<",
+            "Lcom/vk/im/ui/utils/k/b<",
             "Landroid/view/View;",
             ">;",
             "Lcom/vk/market/orders/MarketCartContract$Presenter;",
@@ -65,7 +65,7 @@
     .line 1
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->E:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
+    iput-object p2, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->E:Lcom/vk/im/ui/utils/k/b;
 
     iput-object p3, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->F:Lcom/vk/market/orders/MarketCartContract$Presenter;
 
@@ -159,11 +159,11 @@
     iput-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->g:Landroid/view/ViewGroup;
 
     .line 9
-    new-instance p1, Lcom/vk/core/util/PriceFormatter;
+    new-instance p1, Lcom/vk/core/util/s0;
 
-    invoke-direct {p1}, Lcom/vk/core/util/PriceFormatter;-><init>()V
+    invoke-direct {p1}, Lcom/vk/core/util/s0;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->h:Lcom/vk/core/util/PriceFormatter;
+    iput-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->h:Lcom/vk/core/util/s0;
 
     .line 10
     iget-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->a:Landroid/view/View;
@@ -172,7 +172,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/market/common/ui/MarketCartGoodView$1;-><init>(Lcom/vk/market/common/ui/MarketCartGoodView;)V
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->e:Landroid/widget/TextView;
@@ -188,7 +188,7 @@
 
     const-string p2, "dataLayout"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -233,7 +233,7 @@
     return-void
 .end method
 
-.method private final a(Ljava/lang/String;Ljava/lang/String;ZLkotlin/jvm/b/Functions;)V
+.method private final a(Ljava/lang/String;Ljava/lang/String;ZLkotlin/jvm/b/a;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -241,8 +241,8 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Z",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -259,7 +259,7 @@
 
     const-string v2, "dataLayout"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -278,7 +278,7 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/market/common/ui/MarketCartRowView;
+    check-cast v0, Lcom/vk/market/common/ui/a;
 
     goto :goto_0
 
@@ -291,15 +291,15 @@
 
     .line 36
     :cond_1
-    iget-object v0, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->E:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
+    iget-object v0, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->E:Lcom/vk/im/ui/utils/k/b;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/utils/k/SimpleObjectsPool;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/im/ui/utils/k/b;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    check-cast v0, Lcom/vk/market/common/ui/MarketCartRowView;
+    check-cast v0, Lcom/vk/market/common/ui/a;
 
     .line 37
     iget-object v1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->g:Landroid/view/ViewGroup;
@@ -328,9 +328,9 @@
 
     const-string v1, "resources.getString(R.st\u2026er_property_title, title)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vk/market/common/ui/MarketCartRowView;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vk/market/common/ui/a;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLkotlin/jvm/b/a;)V
 
     .line 39
     iget p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->D:I
@@ -391,7 +391,7 @@
 
     const-string v2, "title"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p1, Lcom/vk/dto/common/Good;->c:Ljava/lang/String;
 
@@ -409,19 +409,19 @@
 
     const-string v4, "price"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v5, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->h:Lcom/vk/core/util/PriceFormatter;
+    iget-object v5, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->h:Lcom/vk/core/util/s0;
 
     iget-object v6, p1, Lcom/vk/dto/common/Good;->B:Ljava/lang/String;
 
     const-string v7, "good.price_currency_name"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v7, 0x1
 
-    invoke-virtual {v5, v1, v6, v7}, Lcom/vk/core/util/PriceFormatter;->a(ILjava/lang/String;Z)Ljava/lang/CharSequence;
+    invoke-virtual {v5, v1, v6, v7}, Lcom/vk/core/util/s0;->a(ILjava/lang/String;Z)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -596,7 +596,7 @@
 
     invoke-direct {v13, p0, p1, v9}, Lcom/vk/market/common/ui/MarketCartGoodView$bind$1;-><init>(Lcom/vk/market/common/ui/MarketCartGoodView;Lcom/vk/dto/common/Good;Lcom/vk/dto/market/VariantGroup;)V
 
-    invoke-direct {p0, v11, v12, v10, v13}, Lcom/vk/market/common/ui/MarketCartGoodView;->a(Ljava/lang/String;Ljava/lang/String;ZLkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v11, v12, v10, v13}, Lcom/vk/market/common/ui/MarketCartGoodView;->a(Ljava/lang/String;Ljava/lang/String;ZLkotlin/jvm/b/a;)V
 
     add-int/lit8 v8, v8, 0x1
 
@@ -616,7 +616,7 @@
 
     const-string v9, "resources.getString(R.string.market_cart_quantity)"
 
-    invoke-static {v1, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
@@ -640,18 +640,18 @@
 
     const-string v10, "resources.getString(R.st\u2026ieces, good.cartQuantity)"
 
-    invoke-static {v9, v10}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v10}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v10, Lcom/vk/market/common/ui/MarketCartGoodView$bind$2;
 
     invoke-direct {v10, p0, p1}, Lcom/vk/market/common/ui/MarketCartGoodView$bind$2;-><init>(Lcom/vk/market/common/ui/MarketCartGoodView;Lcom/vk/dto/common/Good;)V
 
-    invoke-direct {p0, v1, v9, v7, v10}, Lcom/vk/market/common/ui/MarketCartGoodView;->a(Ljava/lang/String;Ljava/lang/String;ZLkotlin/jvm/b/Functions;)V
+    invoke-direct {p0, v1, v9, v7, v10}, Lcom/vk/market/common/ui/MarketCartGoodView;->a(Ljava/lang/String;Ljava/lang/String;ZLkotlin/jvm/b/a;)V
 
     .line 18
     iget-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->b:Landroid/widget/TextView;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -660,28 +660,28 @@
     .line 19
     iget-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->c:Landroid/widget/TextView;
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setAlpha(F)V
 
     .line 20
     iget-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->f:Lcom/vk/market/common/ui/SquareImageView;
 
-    invoke-static {p1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setAlpha(F)V
 
     .line 21
     iget-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->e:Landroid/widget/TextView;
 
-    invoke-static {p1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
     .line 22
     iget-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->d:Landroid/widget/TextView;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
@@ -691,7 +691,7 @@
     :cond_9
     iget-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->b:Landroid/widget/TextView;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x3ecccccd    # 0.4f
 
@@ -700,28 +700,28 @@
     .line 24
     iget-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->c:Landroid/widget/TextView;
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setAlpha(F)V
 
     .line 25
     iget-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->f:Lcom/vk/market/common/ui/SquareImageView;
 
-    invoke-static {p1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setAlpha(F)V
 
     .line 26
     iget-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->e:Landroid/widget/TextView;
 
-    invoke-static {p1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->r(Landroid/view/View;)V
 
     .line 27
     iget-object p1, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->d:Landroid/widget/TextView;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->r(Landroid/view/View;)V
 
@@ -740,7 +740,7 @@
 
     const-string v2, "dataLayout"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -759,9 +759,9 @@
     move-result-object v2
 
     .line 31
-    iget-object v3, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->E:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
+    iget-object v3, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->E:Lcom/vk/im/ui/utils/k/b;
 
-    invoke-virtual {v3, v2}, Lcom/vk/im/ui/utils/k/SimpleObjectsPool;->a(Ljava/lang/Object;)V
+    invoke-virtual {v3, v2}, Lcom/vk/im/ui/utils/k/b;->a(Ljava/lang/Object;)V
 
     .line 32
     iget-object v3, p0, Lcom/vk/market/common/ui/MarketCartGoodView;->g:Landroid/view/ViewGroup;

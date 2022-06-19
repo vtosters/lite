@@ -3,7 +3,7 @@
 .source "FriendsSuggestNearbyFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$onResume$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -60,11 +60,11 @@
     .locals 2
 
     .line 2
-    sget-object v0, Lcom/vk/friends/recommendations/NearbyController;->INSTANCE:Lcom/vk/friends/recommendations/NearbyController;
+    sget-object v0, Lcom/vk/friends/recommendations/f;->f:Lcom/vk/friends/recommendations/f;
 
     iget-object v1, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$onResume$1;->this$0:Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;
 
-    invoke-virtual {v0, v1}, Lcom/vk/friends/recommendations/NearbyController;->a(Lcom/vk/friends/recommendations/NearbyController$a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/friends/recommendations/f;->a(Lcom/vk/friends/recommendations/f$a;)V
 
     return-void
 .end method

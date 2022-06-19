@@ -16,7 +16,7 @@
     .end annotation
 .end field
 
-.field private c:Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;
+.field private c:Lcom/vk/attachpicker/stickers/text/delegates/c;
 
 .field private d:Lcom/vk/stories/clickable/views/StoryHashtagsTopView;
 
@@ -32,11 +32,11 @@
 
 .field private final f:Landroid/widget/EditText;
 
-.field private final g:Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper1;
+.field private final g:Lcom/vk/attachpicker/stickers/text/delegates/a;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/EditText;Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper1;)V
+.method public constructor <init>(Landroid/widget/EditText;Lcom/vk/attachpicker/stickers/text/delegates/a;)V
     .locals 2
 
     .line 1
@@ -44,7 +44,7 @@
 
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->f:Landroid/widget/EditText;
 
-    iput-object p2, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->g:Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper1;
+    iput-object p2, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->g:Lcom/vk/attachpicker/stickers/text/delegates/a;
 
     const-string p1, "([a-zA-Z\u0430-\u044f\u0410-\u042f\u0451\u04010-9_])+"
 
@@ -201,7 +201,7 @@
 
     const-string p2, "PublishSubject.create<CharSequence>()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->e:Lio/reactivex/subjects/PublishSubject;
 
@@ -260,7 +260,7 @@
     return p1
 .end method
 
-.method private final a(Landroid/text/Editable;II)Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;
+.method private final a(Landroid/text/Editable;II)Lcom/vk/attachpicker/stickers/text/delegates/c;
     .locals 1
 
     add-int/lit8 p3, p3, 0x1
@@ -280,20 +280,20 @@
     move-result-object p1
 
     .line 50
-    new-instance v0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;
+    new-instance v0, Lcom/vk/attachpicker/stickers/text/delegates/c;
 
-    invoke-direct {v0, p2, p3, p1}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;-><init>(IILjava/lang/CharSequence;)V
+    invoke-direct {v0, p2, p3, p1}, Lcom/vk/attachpicker/stickers/text/delegates/c;-><init>(IILjava/lang/CharSequence;)V
 
     return-object v0
 .end method
 
-.method private final a(Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;)V
+.method private final a(Lcom/vk/attachpicker/stickers/text/delegates/c;)V
     .locals 3
 
     .line 51
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->c:Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->c:Lcom/vk/attachpicker/stickers/text/delegates/c;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -302,17 +302,17 @@
     if-eqz v0, :cond_1
 
     .line 52
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->c:Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->c:Lcom/vk/attachpicker/stickers/text/delegates/c;
 
     .line 53
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->c:Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->c:Lcom/vk/attachpicker/stickers/text/delegates/c;
 
     .line 54
     iget-object v1, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->e:Lio/reactivex/subjects/PublishSubject;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;->c()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/delegates/c;->c()Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -327,9 +327,9 @@
     invoke-virtual {v1, v2}, Lio/reactivex/subjects/PublishSubject;->b(Ljava/lang/Object;)V
 
     .line 55
-    iget-object v1, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->g:Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper1;
+    iget-object v1, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->g:Lcom/vk/attachpicker/stickers/text/delegates/a;
 
-    invoke-interface {v1, v0, p1}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper1;->a(Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;)V
+    invoke-interface {v1, v0, p1}, Lcom/vk/attachpicker/stickers/text/delegates/a;->a(Lcom/vk/attachpicker/stickers/text/delegates/c;Lcom/vk/attachpicker/stickers/text/delegates/c;)V
 
     :cond_1
     return-void
@@ -474,7 +474,7 @@
 
     const-string v2, "parent.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;-><init>(Landroid/content/Context;)V
 
@@ -503,11 +503,11 @@
     .line 33
     new-instance p1, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper$onCreateView$1$1;
 
-    iget-object v1, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->g:Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper1;
+    iget-object v1, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->g:Lcom/vk/attachpicker/stickers/text/delegates/a;
 
-    invoke-direct {p1, v1}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper$onCreateView$1$1;-><init>(Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper1;)V
+    invoke-direct {p1, v1}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper$onCreateView$1$1;-><init>(Lcom/vk/attachpicker/stickers/text/delegates/a;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->setOnClick(Lkotlin/jvm/b/Functions1;)V
+    invoke-virtual {v0, p1}, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->setOnClick(Lkotlin/jvm/b/c;)V
 
     .line 34
     :cond_0
@@ -530,7 +530,7 @@
     const-string v1, "text"
 
     .line 2
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1, v0}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->b(ILandroid/text/Editable;)I
 
@@ -551,12 +551,12 @@
     if-lt p1, v1, :cond_2
 
     .line 4
-    invoke-direct {p0, v0, v1, p1}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->a(Landroid/text/Editable;II)Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;
+    invoke-direct {p0, v0, v1, p1}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->a(Landroid/text/Editable;II)Lcom/vk/attachpicker/stickers/text/delegates/c;
 
     move-result-object p1
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;->c()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/delegates/c;->c()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -567,20 +567,20 @@
     if-eqz v0, :cond_1
 
     .line 6
-    invoke-direct {p0, p1}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->a(Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;)V
+    invoke-direct {p0, p1}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->a(Lcom/vk/attachpicker/stickers/text/delegates/c;)V
 
     goto :goto_1
 
     .line 7
     :cond_1
-    invoke-direct {p0, v2}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->a(Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;)V
+    invoke-direct {p0, v2}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->a(Lcom/vk/attachpicker/stickers/text/delegates/c;)V
 
     goto :goto_1
 
     .line 8
     :cond_2
     :goto_0
-    invoke-direct {p0, v2}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->a(Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;)V
+    invoke-direct {p0, v2}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->a(Lcom/vk/attachpicker/stickers/text/delegates/c;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -708,7 +708,7 @@
 
     const-string v9, "hashtag"
 
-    invoke-static {v6, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v8, v6}, Lcom/vk/stories/clickable/StoryHashtagSpan;-><init>(Ljava/lang/String;)V
 
@@ -768,7 +768,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v1, v2}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->b(ILandroid/text/Editable;)I
 
@@ -785,7 +785,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v1, v2}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->a(ILandroid/text/Editable;)I
 
@@ -820,7 +820,7 @@
     const/4 p1, 0x0
 
     .line 20
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->c:Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;->c:Lcom/vk/attachpicker/stickers/text/delegates/c;
 
     .line 21
     const-class p1, Lcom/vk/stories/clickable/StoryHashtagSpan;
@@ -831,7 +831,7 @@
 
     const-string v3, "text.getSpans(hashtagSta\u2026yHashtagSpan::class.java)"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 22
     array-length v3, p1

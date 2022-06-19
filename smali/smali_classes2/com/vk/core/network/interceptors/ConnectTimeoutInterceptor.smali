@@ -3,18 +3,18 @@
 .source "ConnectTimeoutInterceptor.kt"
 
 # interfaces
-.implements Lokhttp3/Interceptor;
-.implements Lcom/vk/core/network/utils/NetworkEventListener$a;
+.implements Lokhttp3/u;
+.implements Lcom/vk/core/network/utils/a$a;
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/KProperty5;
+.field static final synthetic a:[Lkotlin/u/j;
 
 .field private static final b:Landroid/os/HandlerThread;
 
-.field private static final c:Lcom/vk/core/util/TimeProvider;
+.field private static final c:Lcom/vk/core/util/h1;
 
-.field private static final d:Lkotlin/Lazy2;
+.field private static final d:Lkotlin/e;
 
 .field public static final e:Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;
 
@@ -25,13 +25,13 @@
 
     const/4 v0, 0x1
 
-    new-array v1, v0, [Lkotlin/u/KProperty5;
+    new-array v1, v0, [Lkotlin/u/j;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v3, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;
 
-    invoke-static {v3}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v3}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v3
 
@@ -39,15 +39,15 @@
 
     const-string v5, "getHandler()Landroid/os/Handler;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    sput-object v1, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->a:[Lkotlin/u/KProperty5;
+    sput-object v1, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->a:[Lkotlin/u/j;
 
     .line 1
     new-instance v1, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;
@@ -66,20 +66,20 @@
     sput-object v1, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->b:Landroid/os/HandlerThread;
 
     .line 3
-    new-instance v0, Lcom/vk/core/util/TimeProvider;
+    new-instance v0, Lcom/vk/core/util/h1;
 
-    invoke-direct {v0}, Lcom/vk/core/util/TimeProvider;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/util/h1;-><init>()V
 
-    sput-object v0, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->c:Lcom/vk/core/util/TimeProvider;
+    sput-object v0, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->c:Lcom/vk/core/util/h1;
 
     .line 4
     sget-object v0, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor$handler$2;->a:Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor$handler$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->d:Lkotlin/Lazy2;
+    sput-object v0, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->d:Lkotlin/e;
 
     return-void
 .end method
@@ -96,15 +96,15 @@
 .method private final a()Landroid/os/Handler;
     .locals 3
 
-    sget-object v0, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->d:Lkotlin/Lazy2;
+    sget-object v0, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->d:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -122,11 +122,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;Lokhttp3/Interceptor$a;Lokhttp3/Call;)V
+.method public static final synthetic a(Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;Lokhttp3/u$a;Lokhttp3/e;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->a(Lokhttp3/Interceptor$a;Lokhttp3/Call;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->a(Lokhttp3/u$a;Lokhttp3/e;)V
 
     return-void
 .end method
@@ -137,13 +137,13 @@
     return-void
 .end method
 
-.method private final a(Lokhttp3/Interceptor$a;Lokhttp3/Call;)V
+.method private final a(Lokhttp3/u$a;Lokhttp3/e;)V
     .locals 3
 
     .line 12
     sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
 
-    invoke-interface {p1}, Lokhttp3/Interceptor$a;->d()I
+    invoke-interface {p1}, Lokhttp3/u$a;->d()I
 
     move-result p1
 
@@ -176,11 +176,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p2}, Lokhttp3/Call;->m0()Lokhttp3/Request;
+    invoke-interface {p2}, Lokhttp3/e;->m0()Lokhttp3/z;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lokhttp3/Request;->g()Lokhttp3/HttpUrl;
+    invoke-virtual {p2}, Lokhttp3/z;->g()Lokhttp3/t;
 
     move-result-object p2
 
@@ -201,18 +201,18 @@
 
 
 # virtual methods
-.method public a(Lokhttp3/Interceptor$a;)Lokhttp3/Response;
+.method public a(Lokhttp3/u$a;)Lokhttp3/b0;
     .locals 8
 
     .line 3
-    invoke-interface {p1}, Lokhttp3/Interceptor$a;->d()I
+    invoke-interface {p1}, Lokhttp3/u$a;->d()I
 
     move-result v0
 
     add-int/lit16 v0, v0, 0x1f4
 
     .line 4
-    invoke-interface {p1}, Lokhttp3/Interceptor$a;->call()Lokhttp3/Call;
+    invoke-interface {p1}, Lokhttp3/u$a;->call()Lokhttp3/e;
 
     move-result-object v1
 
@@ -223,12 +223,12 @@
 
     new-instance v3, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor$a;
 
-    invoke-direct {v3, p1, v1}, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor$a;-><init>(Lokhttp3/Interceptor$a;Lokhttp3/Call;)V
+    invoke-direct {v3, p1, v1}, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor$a;-><init>(Lokhttp3/u$a;Lokhttp3/e;)V
 
     .line 6
-    sget-object v4, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->c:Lcom/vk/core/util/TimeProvider;
+    sget-object v4, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->c:Lcom/vk/core/util/h1;
 
-    invoke-virtual {v4}, Lcom/vk/core/util/TimeProvider;->b()J
+    invoke-virtual {v4}, Lcom/vk/core/util/h1;->b()J
 
     move-result-wide v4
 
@@ -248,11 +248,11 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v1}, Lokhttp3/Call;->m0()Lokhttp3/Request;
+    invoke-interface {v1}, Lokhttp3/e;->m0()Lokhttp3/z;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lokhttp3/Request;->g()Lokhttp3/HttpUrl;
+    invoke-virtual {v1}, Lokhttp3/z;->g()Lokhttp3/t;
 
     move-result-object v1
 
@@ -265,22 +265,22 @@
     invoke-direct {p0, v0}, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->a(Ljava/lang/String;)V
 
     .line 9
-    invoke-interface {p1}, Lokhttp3/Interceptor$a;->m0()Lokhttp3/Request;
+    invoke-interface {p1}, Lokhttp3/u$a;->m0()Lokhttp3/z;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lokhttp3/Interceptor$a;->a(Lokhttp3/Request;)Lokhttp3/Response;
+    invoke-interface {p1, v0}, Lokhttp3/u$a;->a(Lokhttp3/z;)Lokhttp3/b0;
 
     move-result-object p1
 
     const-string v0, "chain.proceed(chain.request())"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public a(Lokhttp3/Call;)V
+.method public a(Lokhttp3/e;)V
     .locals 2
 
     .line 10
@@ -292,11 +292,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1}, Lokhttp3/Call;->m0()Lokhttp3/Request;
+    invoke-interface {p1}, Lokhttp3/e;->m0()Lokhttp3/z;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lokhttp3/Request;->g()Lokhttp3/HttpUrl;
+    invoke-virtual {v1}, Lokhttp3/z;->g()Lokhttp3/t;
 
     move-result-object v1
 

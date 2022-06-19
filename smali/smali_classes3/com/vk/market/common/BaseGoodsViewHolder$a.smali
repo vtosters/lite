@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/common/BaseGoodsViewHolder;->a(Lcom/vk/market/common/GoodViewModel;)V
+    value = Lcom/vk/market/common/BaseGoodsViewHolder;->a(Lcom/vk/market/common/c;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/market/common/BaseGoodsViewHolder;
 
-.field final synthetic b:Lcom/vk/market/common/GoodViewModel;
+.field final synthetic b:Lcom/vk/market/common/c;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/market/common/BaseGoodsViewHolder;Lcom/vk/market/common/GoodViewModel;)V
+.method constructor <init>(Lcom/vk/market/common/BaseGoodsViewHolder;Lcom/vk/market/common/c;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/market/common/BaseGoodsViewHolder$a;->a:Lcom/vk/market/common/BaseGoodsViewHolder;
 
-    iput-object p2, p0, Lcom/vk/market/common/BaseGoodsViewHolder$a;->b:Lcom/vk/market/common/GoodViewModel;
+    iput-object p2, p0, Lcom/vk/market/common/BaseGoodsViewHolder$a;->b:Lcom/vk/market/common/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,9 +48,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/market/common/BaseGoodsViewHolder$a;->b:Lcom/vk/market/common/GoodViewModel;
+    iget-object v1, p0, Lcom/vk/market/common/BaseGoodsViewHolder$a;->b:Lcom/vk/market/common/c;
 
-    invoke-virtual {v1}, Lcom/vk/market/common/GoodViewModel;->b()Lcom/vk/dto/photo/Photo;
+    invoke-virtual {v1}, Lcom/vk/market/common/c;->b()Lcom/vk/dto/photo/Photo;
 
     move-result-object v1
 

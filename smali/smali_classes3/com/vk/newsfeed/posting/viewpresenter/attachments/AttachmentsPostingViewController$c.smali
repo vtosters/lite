@@ -3,7 +3,7 @@
 .source "AttachmentsPostingViewController.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;
+.implements Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;
 
 
 # annotations
@@ -46,13 +46,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$c;->a:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts1;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->getPresenter()Lcom/vk/newsfeed/posting/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts1;->a(Lcom/vk/dto/common/Attachment;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/a;->a(Lcom/vk/dto/common/Attachment;)V
 
     :cond_0
     return-void

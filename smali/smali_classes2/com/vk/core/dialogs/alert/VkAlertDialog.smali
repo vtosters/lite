@@ -35,12 +35,12 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/core/dialogs/alert/VkAlertDialog;->e:Lcom/vk/core/dialogs/alert/VkAlertDialog$a;
 
     .line 1
-    sget v0, Lb/h/z/R6;->VkAlertDialogTheme:I
+    sget v0, Lb/h/z/l;->VkAlertDialogTheme:I
 
     sput v0, Lcom/vk/core/dialogs/alert/VkAlertDialog;->a:I
 

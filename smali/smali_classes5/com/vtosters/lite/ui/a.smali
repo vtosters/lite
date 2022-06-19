@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # instance fields
@@ -42,7 +42,7 @@
 
     check-cast p1, Lcom/vk/dto/common/VideoFile;
 
-    invoke-static {v0, v1, v2, p1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vk/dto/common/VideoFile;Lcom/vk/imageloader/view/VKImageView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/dto/common/VideoFile;)Lkotlin/Unit;
+    invoke-static {v0, v1, v2, p1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vk/dto/common/VideoFile;Lcom/vk/imageloader/view/VKImageView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/dto/common/VideoFile;)Lkotlin/m;
 
     move-result-object p1
 

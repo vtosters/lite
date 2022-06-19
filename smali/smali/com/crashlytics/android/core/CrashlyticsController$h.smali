@@ -58,7 +58,7 @@
 
     iget-wide v2, p0, Lcom/crashlytics/android/core/CrashlyticsController$h;->c:J
 
-    invoke-static {p1, v0, v1, v2, v3}, Lcom/crashlytics/android/core/SessionProtobufHelper;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;Ljava/lang/String;J)V
+    invoke-static {p1, v0, v1, v2, v3}, Lcom/crashlytics/android/core/n0;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;Ljava/lang/String;J)V
 
     return-void
 .end method

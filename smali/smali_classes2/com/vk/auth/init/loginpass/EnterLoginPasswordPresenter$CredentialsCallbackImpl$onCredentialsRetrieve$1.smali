@@ -3,7 +3,7 @@
 .source "EnterLoginPasswordPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter$CredentialsCallbackImpl$onCredentialsRetrieve$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -68,7 +68,7 @@
 
     iget-object v0, v0, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter$CredentialsCallbackImpl;->a:Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;
 
-    invoke-static {v0}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->a(Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;)Lcom/vk/auth/init/loginpass/LoginPassView;
+    invoke-static {v0}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->a(Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;)Lcom/vk/auth/init/loginpass/a;
 
     move-result-object v0
 
@@ -86,7 +86,7 @@
 
     move-result-object v2
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/auth/base/LoginView;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/auth/base/f;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     :cond_0

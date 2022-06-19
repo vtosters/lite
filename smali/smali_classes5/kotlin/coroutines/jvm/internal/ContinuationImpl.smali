@@ -4,12 +4,12 @@
 
 
 # instance fields
-.field private final _context:Lkotlin/coroutines/CoroutineContext;
+.field private final _context:Lkotlin/coroutines/c;
 
-.field private transient a:Lkotlin/coroutines/Continuation;
+.field private transient a:Lkotlin/coroutines/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/coroutines/Continuation<",
+            "Lkotlin/coroutines/a<",
             "Ljava/lang/Object;",
             ">;"
         }
@@ -18,23 +18,23 @@
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lkotlin/coroutines/CoroutineContext;)V
+.method public constructor <init>(Lkotlin/coroutines/a;Lkotlin/coroutines/c;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/coroutines/Continuation<",
+            "Lkotlin/coroutines/a<",
             "Ljava/lang/Object;",
             ">;",
-            "Lkotlin/coroutines/CoroutineContext;",
+            "Lkotlin/coroutines/c;",
             ")V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1}, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;-><init>(Lkotlin/coroutines/a;)V
 
-    iput-object p2, p0, Lkotlin/coroutines/jvm/internal/ContinuationImpl;->_context:Lkotlin/coroutines/CoroutineContext;
+    iput-object p2, p0, Lkotlin/coroutines/jvm/internal/ContinuationImpl;->_context:Lkotlin/coroutines/c;
 
     return-void
 .end method
@@ -45,33 +45,33 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lkotlin/coroutines/jvm/internal/ContinuationImpl;->a:Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lkotlin/coroutines/jvm/internal/ContinuationImpl;->a:Lkotlin/coroutines/a;
 
     if-eqz v0, :cond_1
 
     if-eq v0, p0, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Lkotlin/coroutines/jvm/internal/ContinuationImpl;->getContext()Lkotlin/coroutines/CoroutineContext;
+    invoke-virtual {p0}, Lkotlin/coroutines/jvm/internal/ContinuationImpl;->getContext()Lkotlin/coroutines/c;
 
     move-result-object v1
 
-    sget-object v2, Lkotlin/coroutines/ContinuationInterceptor;->A:Lkotlin/coroutines/ContinuationInterceptor$a;
+    sget-object v2, Lkotlin/coroutines/b;->A:Lkotlin/coroutines/b$a;
 
-    invoke-interface {v1, v2}, Lkotlin/coroutines/CoroutineContext;->a(Lkotlin/coroutines/CoroutineContext$b;)Lkotlin/coroutines/CoroutineContext$a;
+    invoke-interface {v1, v2}, Lkotlin/coroutines/c;->a(Lkotlin/coroutines/c$b;)Lkotlin/coroutines/c$a;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    check-cast v1, Lkotlin/coroutines/ContinuationInterceptor;
+    check-cast v1, Lkotlin/coroutines/b;
 
-    invoke-interface {v1, v0}, Lkotlin/coroutines/ContinuationInterceptor;->a(Lkotlin/coroutines/Continuation;)V
+    invoke-interface {v1, v0}, Lkotlin/coroutines/b;->a(Lkotlin/coroutines/a;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 
@@ -80,25 +80,25 @@
     .line 3
     :cond_1
     :goto_0
-    sget-object v0, Lkotlin/coroutines/jvm/internal/ContinuationImpl2;->INSTANCE:Lkotlin/coroutines/jvm/internal/ContinuationImpl2;
+    sget-object v0, Lkotlin/coroutines/jvm/internal/a;->a:Lkotlin/coroutines/jvm/internal/a;
 
-    iput-object v0, p0, Lkotlin/coroutines/jvm/internal/ContinuationImpl;->a:Lkotlin/coroutines/Continuation;
+    iput-object v0, p0, Lkotlin/coroutines/jvm/internal/ContinuationImpl;->a:Lkotlin/coroutines/a;
 
     return-void
 .end method
 
-.method public getContext()Lkotlin/coroutines/CoroutineContext;
+.method public getContext()Lkotlin/coroutines/c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lkotlin/coroutines/jvm/internal/ContinuationImpl;->_context:Lkotlin/coroutines/CoroutineContext;
+    iget-object v0, p0, Lkotlin/coroutines/jvm/internal/ContinuationImpl;->_context:Lkotlin/coroutines/c;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 

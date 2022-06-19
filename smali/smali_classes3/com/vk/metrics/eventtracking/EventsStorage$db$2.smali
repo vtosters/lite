@@ -3,7 +3,7 @@
 .source "EventsStorage.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Landroid/database/sqlite/SQLiteDatabase;",
         ">;"
     }
@@ -51,7 +51,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage$db$2;->this$0:Lcom/vk/metrics/eventtracking/EventsStorage;
 
-    invoke-static {v0}, Lcom/vk/metrics/eventtracking/EventsStorage;->i(Lcom/vk/metrics/eventtracking/EventsStorage;)Lcom/vk/metrics/eventtracking/EventsStorage1;
+    invoke-static {v0}, Lcom/vk/metrics/eventtracking/EventsStorage;->i(Lcom/vk/metrics/eventtracking/EventsStorage;)Lcom/vk/metrics/eventtracking/a;
 
     move-result-object v0
 

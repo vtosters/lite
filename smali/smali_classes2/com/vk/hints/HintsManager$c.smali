@@ -32,7 +32,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/app/Activity;)Lcom/vk/core/util/Dismissable;
+.method public final a(Landroid/app/Activity;)Lcom/vk/core/util/w;
     .locals 2
 
     .line 1
@@ -46,7 +46,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/hints/HintsManager$c;->b(Landroid/app/Activity;Lcom/vk/dto/hints/Hint;)Lcom/vk/core/util/Dismissable;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/hints/HintsManager$c;->b(Landroid/app/Activity;Lcom/vk/dto/hints/Hint;)Lcom/vk/core/util/w;
 
     move-result-object p1
 
@@ -59,16 +59,16 @@
     return-object p1
 .end method
 
-.method public final a(Landroid/app/Activity;Lcom/vk/dto/hints/Hint;)Lcom/vk/core/util/Dismissable;
+.method public final a(Landroid/app/Activity;Lcom/vk/dto/hints/Hint;)Lcom/vk/core/util/w;
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1, p2}, Lcom/vk/hints/HintsManager$c;->b(Landroid/app/Activity;Lcom/vk/dto/hints/Hint;)Lcom/vk/core/util/Dismissable;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/hints/HintsManager$c;->b(Landroid/app/Activity;Lcom/vk/dto/hints/Hint;)Lcom/vk/core/util/w;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected abstract b(Landroid/app/Activity;Lcom/vk/dto/hints/Hint;)Lcom/vk/core/util/Dismissable;
+.method protected abstract b(Landroid/app/Activity;Lcom/vk/dto/hints/Hint;)Lcom/vk/core/util/w;
 .end method

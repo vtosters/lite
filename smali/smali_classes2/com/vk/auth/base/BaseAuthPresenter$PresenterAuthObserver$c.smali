@@ -3,12 +3,12 @@
 .source "BaseAuthPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Action;
+.implements Lc/a/z/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;->b(Ljava/lang/String;)Lio/reactivex/Observable;
+    value = Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;->b(Ljava/lang/String;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

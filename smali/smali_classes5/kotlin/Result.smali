@@ -41,7 +41,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lkotlin/Result$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lkotlin/Result$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lkotlin/Result;->a:Lkotlin/Result$a;
 
@@ -67,7 +67,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 

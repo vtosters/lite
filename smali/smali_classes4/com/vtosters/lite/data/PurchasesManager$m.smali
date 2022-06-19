@@ -3,7 +3,7 @@
 .source "PurchasesManager.java"
 
 # interfaces
-.implements Lcom/vk/dto/common/data/Purchase1;
+.implements Lcom/vk/dto/common/data/e;
 
 
 # annotations

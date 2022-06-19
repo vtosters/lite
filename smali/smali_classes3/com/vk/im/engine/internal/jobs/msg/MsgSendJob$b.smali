@@ -3,7 +3,7 @@
 .source "MsgSendJob.kt"
 
 # interfaces
-.implements Lcom/vk/instantjobs/InstantJobSerializer;
+.implements Lcom/vk/instantjobs/c;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/instantjobs/InstantJobSerializer<",
+        "Lcom/vk/instantjobs/c<",
         "Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;",
         ">;"
     }
@@ -103,7 +103,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/instantjobs/PersistedArgs;)Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;
+.method public a(Lcom/vk/instantjobs/d;)Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;
     .locals 12
 
     .line 12
@@ -112,45 +112,45 @@
     .line 13
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/PersistedArgs;->c(Ljava/lang/String;)I
+    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/d;->c(Ljava/lang/String;)I
 
     move-result v1
 
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->b:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/PersistedArgs;->c(Ljava/lang/String;)I
+    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/d;->c(Ljava/lang/String;)I
 
     move-result v2
 
     .line 14
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->c:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/PersistedArgs;->a(Ljava/lang/String;)Z
+    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/d;->a(Ljava/lang/String;)Z
 
     move-result v3
 
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->d:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/PersistedArgs;->a(Ljava/lang/String;)Z
+    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/d;->a(Ljava/lang/String;)Z
 
     move-result v4
 
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->e:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/PersistedArgs;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/d;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     .line 15
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->f:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/PersistedArgs;->a(Ljava/lang/String;)Z
+    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/d;->a(Ljava/lang/String;)Z
 
     move-result v6
 
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->g:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/PersistedArgs;->d(Ljava/lang/String;)J
+    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/d;->d(Ljava/lang/String;)J
 
     move-result-wide v7
 
@@ -158,7 +158,7 @@
 
     const/4 v9, 0x0
 
-    invoke-virtual {p1, v0, v9}, Lcom/vk/instantjobs/PersistedArgs;->a(Ljava/lang/String;Z)Z
+    invoke-virtual {p1, v0, v9}, Lcom/vk/instantjobs/d;->a(Ljava/lang/String;Z)Z
 
     move-result v9
 
@@ -167,7 +167,7 @@
 
     const-string v10, ""
 
-    invoke-virtual {p1, v0, v10}, Lcom/vk/instantjobs/PersistedArgs;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v0, v10}, Lcom/vk/instantjobs/d;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
@@ -179,18 +179,18 @@
     return-object v11
 .end method
 
-.method public bridge synthetic a(Lcom/vk/instantjobs/PersistedArgs;)Lcom/vk/instantjobs/InstantJob;
+.method public bridge synthetic a(Lcom/vk/instantjobs/d;)Lcom/vk/instantjobs/InstantJob;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->a(Lcom/vk/instantjobs/PersistedArgs;)Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->a(Lcom/vk/instantjobs/d;)Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;Lcom/vk/instantjobs/PersistedArgs;)V
+.method public a(Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;Lcom/vk/instantjobs/d;)V
     .locals 3
 
     .line 3
@@ -200,7 +200,7 @@
 
     move-result v1
 
-    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/PersistedArgs;->a(Ljava/lang/String;I)V
+    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/d;->a(Ljava/lang/String;I)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->b:Ljava/lang/String;
@@ -209,7 +209,7 @@
 
     move-result v1
 
-    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/PersistedArgs;->a(Ljava/lang/String;I)V
+    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/d;->a(Ljava/lang/String;I)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->c:Ljava/lang/String;
@@ -218,7 +218,7 @@
 
     move-result v1
 
-    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/PersistedArgs;->b(Ljava/lang/String;Z)V
+    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/d;->b(Ljava/lang/String;Z)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->d:Ljava/lang/String;
@@ -227,7 +227,7 @@
 
     move-result v1
 
-    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/PersistedArgs;->b(Ljava/lang/String;Z)V
+    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/d;->b(Ljava/lang/String;Z)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->e:Ljava/lang/String;
@@ -236,7 +236,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/PersistedArgs;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/d;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->f:Ljava/lang/String;
@@ -245,7 +245,7 @@
 
     move-result v1
 
-    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/PersistedArgs;->b(Ljava/lang/String;Z)V
+    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/d;->b(Ljava/lang/String;Z)V
 
     .line 9
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->g:Ljava/lang/String;
@@ -254,7 +254,7 @@
 
     move-result-wide v1
 
-    invoke-virtual {p2, v0, v1, v2}, Lcom/vk/instantjobs/PersistedArgs;->a(Ljava/lang/String;J)V
+    invoke-virtual {p2, v0, v1, v2}, Lcom/vk/instantjobs/d;->a(Ljava/lang/String;J)V
 
     .line 10
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->h:Ljava/lang/String;
@@ -263,7 +263,7 @@
 
     move-result v1
 
-    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/PersistedArgs;->b(Ljava/lang/String;Z)V
+    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/d;->b(Ljava/lang/String;Z)V
 
     .line 11
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->i:Ljava/lang/String;
@@ -272,18 +272,18 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, v0, p1}, Lcom/vk/instantjobs/PersistedArgs;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p2, v0, p1}, Lcom/vk/instantjobs/d;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/instantjobs/InstantJob;Lcom/vk/instantjobs/PersistedArgs;)V
+.method public bridge synthetic a(Lcom/vk/instantjobs/InstantJob;Lcom/vk/instantjobs/d;)V
     .locals 0
 
     .line 2
     check-cast p1, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->a(Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;Lcom/vk/instantjobs/PersistedArgs;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob$b;->a(Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;Lcom/vk/instantjobs/d;)V
 
     return-void
 .end method

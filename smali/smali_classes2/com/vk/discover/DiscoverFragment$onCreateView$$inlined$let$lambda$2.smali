@@ -41,25 +41,25 @@
     .line 2
     iget-object p2, p0, Lcom/vk/discover/DiscoverFragment$onCreateView$$inlined$let$lambda$2;->a:Lcom/vk/discover/DiscoverFragment;
 
-    invoke-static {p2}, Lcom/vk/discover/DiscoverFragment;->n(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/discover/ViewTimeChecker;
+    invoke-static {p2}, Lcom/vk/discover/DiscoverFragment;->n(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/discover/r;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/core/ui/v/j/h/BaseScreenTimeChecker;->a()V
+    invoke-virtual {p2}, Lcom/vk/core/ui/v/j/h/a;->a()V
 
     .line 3
     :cond_0
     iget-object p2, p0, Lcom/vk/discover/DiscoverFragment$onCreateView$$inlined$let$lambda$2;->a:Lcom/vk/discover/DiscoverFragment;
 
-    invoke-static {p2}, Lcom/vk/discover/DiscoverFragment;->o(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/newsfeed/RecyclerHolderVisibilityTracker;
+    invoke-static {p2}, Lcom/vk/discover/DiscoverFragment;->o(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/newsfeed/d0;
 
     move-result-object p2
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p2}, Lcom/vk/newsfeed/RecyclerHolderVisibilityTracker;->a()V
+    invoke-virtual {p2}, Lcom/vk/newsfeed/d0;->a()V
 
     .line 4
     :cond_1

@@ -106,11 +106,11 @@
 
     const-string p2, "textField"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f04059a
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$b;->b:Landroid/widget/EditText;
@@ -128,7 +128,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/identity/b/IdentityAdapterItem8;)V
+.method public final a(Lcom/vk/identity/b/f;)V
     .locals 5
 
     .line 1
@@ -136,9 +136,9 @@
 
     const-string v1, "titleView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem8;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/identity/b/f;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -151,7 +151,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem8;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/identity/b/f;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -173,9 +173,9 @@
     .line 4
     iget-object v0, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$b;->b:Landroid/widget/EditText;
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem8;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/identity/b/f;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -192,7 +192,7 @@
     :cond_0
     iget-object v1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$b;->b:Landroid/widget/EditText;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
@@ -203,7 +203,7 @@
 
     .line 8
     :goto_0
-    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem8;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/identity/b/f;->b()Ljava/lang/String;
 
     move-result-object p1
 
@@ -232,7 +232,7 @@
     .line 10
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$b;->b:Landroid/widget/EditText;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-array v0, v1, [Landroid/text/InputFilter;
 
@@ -261,7 +261,7 @@
     .line 12
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$b;->b:Landroid/widget/EditText;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-array v0, v1, [Landroid/text/InputFilter;
 
@@ -290,7 +290,7 @@
     .line 14
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$b;->b:Landroid/widget/EditText;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-array v0, v1, [Landroid/text/InputFilter;
 
@@ -307,7 +307,7 @@
     .line 15
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$b;->b:Landroid/widget/EditText;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v0, 0x21
 
@@ -328,7 +328,7 @@
     .line 17
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$b;->b:Landroid/widget/EditText;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-array v0, v1, [Landroid/text/InputFilter;
 
@@ -345,7 +345,7 @@
     .line 18
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$b;->b:Landroid/widget/EditText;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x3
 
@@ -366,7 +366,7 @@
     .line 20
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$b;->b:Landroid/widget/EditText;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-array v0, v1, [Landroid/text/InputFilter;
 
@@ -387,7 +387,7 @@
     :goto_1
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$b;->b:Landroid/widget/EditText;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-array v0, v2, [Landroid/text/InputFilter;
 
@@ -396,7 +396,7 @@
     .line 22
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$b;->b:Landroid/widget/EditText;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Landroid/widget/EditText;->setInputType(I)V
 
@@ -452,7 +452,7 @@
 
     iget-object p3, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$b;->c:Lcom/vk/identity/adapters/IdentityEditAdapter;
 
-    invoke-virtual {p3}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {p3}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object p3
 
@@ -466,9 +466,9 @@
 
     if-eqz p3, :cond_1
 
-    check-cast p3, Lcom/vk/identity/b/IdentityAdapterItem8;
+    check-cast p3, Lcom/vk/identity/b/f;
 
-    invoke-virtual {p3}, Lcom/vk/identity/b/IdentityAdapterItem8;->b()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/vk/identity/b/f;->b()Ljava/lang/String;
 
     move-result-object p3
 

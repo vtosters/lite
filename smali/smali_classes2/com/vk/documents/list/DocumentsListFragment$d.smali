@@ -3,7 +3,7 @@
 .source "DocumentsListFragment.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,7 +56,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/documents/list/DocumentsListFragment$d;->a:Lcom/vk/documents/list/DocumentsListFragment;
 
-    invoke-static {p1}, Lcom/vk/documents/list/DocumentsListFragment;->a(Lcom/vk/documents/list/DocumentsListFragment;)Lcom/vk/documents/list/DocumentsListAdapter;
+    invoke-static {p1}, Lcom/vk/documents/list/DocumentsListFragment;->a(Lcom/vk/documents/list/DocumentsListFragment;)Lcom/vk/documents/list/a;
 
     move-result-object p1
 
@@ -64,7 +64,7 @@
 
     iget-object v0, p0, Lcom/vk/documents/list/DocumentsListFragment$d;->b:Lcom/vk/api/base/Document;
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/SimpleAdapter;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/i0;->a(Ljava/lang/Object;)V
 
     .line 2
     :cond_0

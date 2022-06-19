@@ -3,12 +3,12 @@
 .source "AudioMsgUploader.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/upload/AudioMsgUploader;-><init>(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/attaches/AttachAudioMsg;)V
+    value = Lcom/vk/im/engine/internal/upload/AudioMsgUploader;-><init>(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/attaches/AttachAudioMsg;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/lang/String;",
-        "Lcom/vk/api/internal/HttpPostCall;",
+        "Lcom/vk/api/internal/c;",
         ">;"
     }
 .end annotation
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall;
+.method public final a(Ljava/lang/String;)Lcom/vk/api/internal/c;
     .locals 1
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
@@ -48,7 +48,7 @@
     check-cast v0, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;
 
     .line 1
-    invoke-static {v0, p1}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->a(Lcom/vk/im/engine/internal/upload/AudioMsgUploader;Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall;
+    invoke-static {v0, p1}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->a(Lcom/vk/im/engine/internal/upload/AudioMsgUploader;Ljava/lang/String;)Lcom/vk/api/internal/c;
 
     move-result-object p1
 
@@ -63,12 +63,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/KDeclarationContainer;
+.method public final f()Lkotlin/u/e;
     .locals 1
 
     const-class v0, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v0
 
@@ -89,7 +89,7 @@
     .line 1
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader$uploadHelper$1;->a(Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader$uploadHelper$1;->a(Ljava/lang/String;)Lcom/vk/api/internal/c;
 
     move-result-object p1
 

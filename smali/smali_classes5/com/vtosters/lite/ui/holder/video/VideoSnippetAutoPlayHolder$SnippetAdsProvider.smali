@@ -59,7 +59,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/ui/holder/video/VideoSnippetAutoPlayHolder$SnippetAdsProvider$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/ui/holder/video/VideoSnippetAutoPlayHolder$SnippetAdsProvider$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vtosters/lite/ui/holder/video/VideoSnippetAutoPlayHolder$SnippetAdsProvider$a;
@@ -193,14 +193,14 @@
 
     const-string p2, "post_ads"
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
     .line 7
-    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const p2, 0x7f120dee
 
@@ -355,7 +355,7 @@
 
     const-string v0, "StringBuilder(att.domain\u2026\n            }.toString()"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 22
     new-instance v0, Lcom/vk/dto/newsfeed/Owner;
@@ -378,7 +378,7 @@
 
     move-object v2, v0
 
-    invoke-direct/range {v2 .. v10}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v2 .. v10}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     iput-object v0, p0, Lcom/vtosters/lite/ui/holder/video/VideoSnippetAutoPlayHolder$SnippetAdsProvider;->c:Lcom/vk/dto/newsfeed/Owner;
 
@@ -435,7 +435,7 @@
 
     const-string v0, "Collections.emptyList()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p1
@@ -516,7 +516,7 @@
     move-result-object v2
 
     :cond_2
-    invoke-static {p1, v1, v3, v2}, Lcom/vtosters/lite/utils/AdsUtil;->a(Landroid/content/Context;Lcom/vk/dto/newsfeed/ButtonAction;Lcom/vtosters/lite/data/PostInteract;Ljava/lang/String;)V
+    invoke-static {p1, v1, v3, v2}, Lcom/vtosters/lite/utils/b;->a(Landroid/content/Context;Lcom/vk/dto/newsfeed/ButtonAction;Lcom/vtosters/lite/data/PostInteract;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -552,7 +552,7 @@
     move-result-object v2
 
     :cond_4
-    invoke-static {p1, v1, v3, v2}, Lcom/vk/common/links/LinkUtils;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-static {p1, v1, v3, v2}, Lcom/vk/common/links/e;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
 
     :cond_5
     :goto_1
@@ -677,7 +677,7 @@
     :goto_0
     const-string v3, "site"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -690,21 +690,21 @@
 
     .line 5
     :cond_1
-    new-instance v2, Lcom/vk/profile/ui/BaseProfileFragment$z;
+    new-instance v2, Lcom/vk/profile/ui/c$z;
 
     invoke-virtual {v0}, Lcom/vk/dto/newsfeed/Owner;->getUid()I
 
     move-result v3
 
-    invoke-direct {v2, v3}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(I)V
+    invoke-direct {v2, v3}, Lcom/vk/profile/ui/c$z;-><init>(I)V
 
     invoke-virtual {v1}, Lcom/vtosters/lite/attachments/VideoAttachment;->A1()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v2, v1}, Lcom/vk/profile/ui/BaseProfileFragment$z;->a(Ljava/lang/String;)Lcom/vk/profile/ui/BaseProfileFragment$z;
+    invoke-virtual {v2, v1}, Lcom/vk/profile/ui/c$z;->a(Ljava/lang/String;)Lcom/vk/profile/ui/c$z;
 
-    invoke-virtual {v2, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+    invoke-virtual {v2, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     .line 6
     invoke-virtual {v0}, Lcom/vk/dto/newsfeed/Owner;->getUid()I
@@ -758,7 +758,7 @@
     const-string p1, "click_post_owner"
 
     .line 10
-    invoke-static {p0, p1}, Lcom/vtosters/lite/data/Analytics;->a(Lcom/vk/statistic/Statistic;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/vtosters/lite/data/n;->a(Lcom/vk/statistic/Statistic;Ljava/lang/String;)V
 
     :cond_4
     return-void
@@ -846,7 +846,7 @@
     move-result-object v2
 
     :cond_3
-    invoke-static {p1, v1, v3, v2}, Lcom/vk/common/links/LinkUtils;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-static {p1, v1, v3, v2}, Lcom/vk/common/links/e;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
 
     :cond_4
     return-void

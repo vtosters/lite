@@ -1,5 +1,5 @@
 .class public final Lcom/vk/libvideo/VideoFileController$j;
-.super Lcom/vk/libvideo/VideoDisposableObserver;
+.super Lcom/vk/libvideo/o;
 .source "VideoFileController.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/libvideo/VideoDisposableObserver<",
+        "Lcom/vk/libvideo/o<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -41,7 +41,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/libvideo/VideoFileController$j;->c:Lcom/vk/libvideo/VideoFileController;
 
-    invoke-direct {p0, p3}, Lcom/vk/libvideo/VideoDisposableObserver;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p3}, Lcom/vk/libvideo/o;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method

@@ -363,7 +363,7 @@
 
     const-string v1, "CameraWrapper.doCaptureStillImage"
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;->this$0:Lorg/webrtc/videoengine/VideoCapture;
@@ -494,7 +494,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -611,7 +611,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     :goto_1
@@ -638,7 +638,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -663,7 +663,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;->_camera:Landroid/hardware/Camera;
@@ -763,7 +763,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -799,7 +799,7 @@
 
     const-string v1, "CameraWrapper.doStart _videoCaptureDevice==null!"
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -874,7 +874,7 @@
     move-result-object v3
 
     .line 8
-    invoke-static {v0, v3}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;->_camera:Landroid/hardware/Camera;
@@ -1048,7 +1048,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 24
     invoke-direct {p0, v3, v1}, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;->handleError(IZ)V
@@ -1059,7 +1059,7 @@
 
     const-string v1, "CameraWrapper.doStart <<<"
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -1094,7 +1094,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 28
     invoke-direct {p0, v3, v1}, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;->handleError(IZ)V
@@ -1110,7 +1110,7 @@
 
     const-string v1, "CameraWrapper.doStop >>>"
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;->_focusControl:Lorg/webrtc/videoengine/FocusControl;
@@ -1179,7 +1179,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
     :goto_0
@@ -1277,7 +1277,7 @@
 
     const-string v0, "CameraWrapper.doStop <<<"
 
-    invoke-static {p1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1304,7 +1304,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;->_camera:Landroid/hardware/Camera;
@@ -1408,7 +1408,7 @@
 
     const-string v1, "VideoCapture.nativeOnError!"
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;->this$0:Lorg/webrtc/videoengine/VideoCapture;
@@ -1545,7 +1545,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;->_camera:Landroid/hardware/Camera;
@@ -1611,7 +1611,7 @@
 
     const-string p2, "_camera.addCallbackBuffer -- failed!"
 
-    invoke-static {p1, p2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
@@ -1675,7 +1675,7 @@
 
     move-result-object p1
 
-    invoke-static {p2, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 .end method
@@ -1739,7 +1739,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v3, "huawei"
 
@@ -1821,7 +1821,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     return-void
@@ -1869,7 +1869,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;->_camera:Landroid/hardware/Camera;
@@ -2078,7 +2078,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_2
     return-void
@@ -2110,7 +2110,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;->_camera:Landroid/hardware/Camera;
@@ -2138,7 +2138,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -2266,7 +2266,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v0, 0x9
 
@@ -2278,7 +2278,7 @@
 
     const-string v1, "CameraWrapper.onCameraSurfaceChanged <<<"
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -2355,7 +2355,7 @@
 
     move-result-object v5
 
-    invoke-static {v0, v5}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v5}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     :goto_0
@@ -2524,7 +2524,7 @@
 
     const-string v7, "photo with flash failed!"
 
-    invoke-static {v2, v7}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -2617,7 +2617,7 @@
 
     const-string v4, "actual frame size not equal to expected one!"
 
-    invoke-static {v0, v4}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, -0x1
 
@@ -2683,7 +2683,7 @@
 
     const-string v2, "onPreviewFrame _started || data.length <<<"
 
-    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -2694,7 +2694,7 @@
 
     const-string v2, "onPreviewFrame is in wrong state: data == null || camera == null"
 
-    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -2746,7 +2746,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;->this$0:Lorg/webrtc/videoengine/VideoCapture;
@@ -2996,7 +2996,7 @@
 
     move-result-object v7
 
-    invoke-static {v8, v7}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v7}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
     iget v7, v6, Landroid/hardware/Camera$Size;->width:I
@@ -3177,7 +3177,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 19
     invoke-virtual {p1, v0}, Landroid/hardware/Camera;->setParameters(Landroid/hardware/Camera$Parameters;)V
@@ -3210,7 +3210,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_3
     return-void
@@ -3278,7 +3278,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v0, p0, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;->_threadStarted:Z
@@ -3328,7 +3328,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -3355,7 +3355,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;->_handlerThread:Landroid/os/HandlerThread;
@@ -3452,7 +3452,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
@@ -3480,7 +3480,7 @@
 
     const-string v0, "CameraWrapper.stopCapture <<<"
 
-    invoke-static {p1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -3507,7 +3507,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     :try_start_0
@@ -3564,7 +3564,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     const/4 v0, 0x0

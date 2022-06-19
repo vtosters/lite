@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vtosters/lite/actionlinks/AL$Companion;Landroid/content/Context;ILjava/lang/String;ZZZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Landroid/content/DialogInterface$OnDismissListener;ILjava/lang/Object;)Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection;
+.method public static synthetic a(Lcom/vtosters/lite/actionlinks/AL$Companion;Landroid/content/Context;ILjava/lang/String;ZZZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;Landroid/content/DialogInterface$OnDismissListener;ILjava/lang/Object;)Lcom/vtosters/lite/actionlinks/views/fragments/show/a;
     .locals 13
 
     move/from16 v0, p10
@@ -141,7 +141,7 @@
     move v5, p2
 
     .line 1
-    invoke-virtual/range {v3 .. v12}, Lcom/vtosters/lite/actionlinks/AL$Companion;->a(Landroid/content/Context;ILjava/lang/String;ZZZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Landroid/content/DialogInterface$OnDismissListener;)Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection;
+    invoke-virtual/range {v3 .. v12}, Lcom/vtosters/lite/actionlinks/AL$Companion;->a(Landroid/content/Context;ILjava/lang/String;ZZZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;Landroid/content/DialogInterface$OnDismissListener;)Lcom/vtosters/lite/actionlinks/views/fragments/show/a;
 
     move-result-object v0
 
@@ -150,7 +150,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vk/navigation/ModalDialogCallback;)Lcom/vtosters/lite/actionlinks/c/a/e/AddPoll;
+.method public final a(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vk/navigation/k;)Lcom/vtosters/lite/actionlinks/c/a/e/a;
     .locals 1
 
     .line 58
@@ -163,38 +163,38 @@
     check-cast p1, Landroidx/appcompat/app/AppCompatActivity;
 
     .line 59
-    new-instance v0, Lcom/vtosters/lite/actionlinks/c/a/e/AddPollView;
+    new-instance v0, Lcom/vtosters/lite/actionlinks/c/a/e/d;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/actionlinks/c/a/e/AddPollView;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/actionlinks/c/a/e/d;-><init>()V
 
     .line 60
-    invoke-virtual {v0, p4}, Lcom/vtosters/lite/actionlinks/c/a/WrappedView;->a(Lcom/vk/navigation/ModalDialogCallback;)V
+    invoke-virtual {v0, p4}, Lcom/vtosters/lite/actionlinks/c/a/d;->a(Lcom/vk/navigation/k;)V
 
     .line 61
-    new-instance p4, Lcom/vtosters/lite/actionlinks/c/a/e/AddPollPresenter;
+    new-instance p4, Lcom/vtosters/lite/actionlinks/c/a/e/c;
 
-    invoke-direct {p4}, Lcom/vtosters/lite/actionlinks/c/a/e/AddPollPresenter;-><init>()V
+    invoke-direct {p4}, Lcom/vtosters/lite/actionlinks/c/a/e/c;-><init>()V
 
     .line 62
-    invoke-virtual {p4, p2}, Lcom/vtosters/lite/actionlinks/c/a/e/AddPollPresenter;->a(Lcom/vtosters/lite/actionlinks/AL$d;)V
+    invoke-virtual {p4, p2}, Lcom/vtosters/lite/actionlinks/c/a/e/c;->a(Lcom/vtosters/lite/actionlinks/AL$d;)V
 
     .line 63
-    invoke-virtual {p4, p3}, Lcom/vtosters/lite/actionlinks/c/a/e/AddPollPresenter;->a(I)V
+    invoke-virtual {p4, p3}, Lcom/vtosters/lite/actionlinks/c/a/e/c;->a(I)V
 
     .line 64
-    invoke-virtual {p4, v0}, Lcom/vtosters/lite/actionlinks/c/a/e/AddPollPresenter;->a(Lcom/vtosters/lite/actionlinks/c/a/e/AddPoll1;)V
+    invoke-virtual {p4, v0}, Lcom/vtosters/lite/actionlinks/c/a/e/c;->a(Lcom/vtosters/lite/actionlinks/c/a/e/b;)V
 
     .line 65
-    invoke-virtual {v0, p4}, Lcom/vtosters/lite/actionlinks/c/a/e/AddPollView;->a(Lcom/vtosters/lite/actionlinks/c/a/e/AddPoll;)V
+    invoke-virtual {v0, p4}, Lcom/vtosters/lite/actionlinks/c/a/e/d;->a(Lcom/vtosters/lite/actionlinks/c/a/e/a;)V
 
     .line 66
-    new-instance p2, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;
+    new-instance p2, Lcom/vtosters/lite/actionlinks/c/a/c;
 
-    invoke-direct {p2}, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;-><init>()V
+    invoke-direct {p2}, Lcom/vtosters/lite/actionlinks/c/a/c;-><init>()V
 
     const p3, 0x7f1201d7
 
-    invoke-virtual {p2, v0, p3}, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;->a(Lcom/vtosters/lite/actionlinks/c/a/WrappedView;I)V
+    invoke-virtual {p2, v0, p3}, Lcom/vtosters/lite/actionlinks/c/a/c;->a(Lcom/vtosters/lite/actionlinks/c/a/d;I)V
 
     .line 67
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -205,9 +205,9 @@
 
     move-result-object p1
 
-    sget-object p3, Lcom/vtosters/lite/actionlinks/c/a/e/AddPollView;->H:Lcom/vtosters/lite/actionlinks/c/a/e/AddPollView$a;
+    sget-object p3, Lcom/vtosters/lite/actionlinks/c/a/e/d;->H:Lcom/vtosters/lite/actionlinks/c/a/e/d$a;
 
-    invoke-virtual {p3}, Lcom/vtosters/lite/actionlinks/c/a/e/AddPollView$a;->a()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/vtosters/lite/actionlinks/c/a/e/d$a;->a()Ljava/lang/String;
 
     move-result-object p3
 
@@ -230,7 +230,7 @@
     throw p1
 .end method
 
-.method public final a(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/ModalDialogCallback;)Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink;
+.method public final a(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/k;)Lcom/vtosters/lite/actionlinks/views/fragments/add/a;
     .locals 1
 
     .line 36
@@ -243,12 +243,12 @@
     check-cast p1, Landroidx/appcompat/app/AppCompatActivity;
 
     .line 37
-    new-instance v0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkView;
+    new-instance v0, Lcom/vtosters/lite/actionlinks/views/fragments/add/d;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkView;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/add/d;-><init>()V
 
     .line 38
-    invoke-virtual {v0, p5}, Lcom/vtosters/lite/actionlinks/c/a/WrappedView;->a(Lcom/vk/navigation/ModalDialogCallback;)V
+    invoke-virtual {v0, p5}, Lcom/vtosters/lite/actionlinks/c/a/d;->a(Lcom/vk/navigation/k;)V
 
     .line 39
     new-instance p5, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
@@ -265,19 +265,19 @@
     invoke-virtual {p5, p4}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->a(Lcom/vtosters/lite/actionlinks/AL$SourceType;)V
 
     .line 43
-    invoke-virtual {p5, v0}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->a(Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink1;)V
+    invoke-virtual {p5, v0}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->a(Lcom/vtosters/lite/actionlinks/views/fragments/add/b;)V
 
     .line 44
-    invoke-virtual {v0, p5}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkView;->a(Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLink;)V
+    invoke-virtual {v0, p5}, Lcom/vtosters/lite/actionlinks/views/fragments/add/d;->a(Lcom/vtosters/lite/actionlinks/views/fragments/add/a;)V
 
     .line 45
-    new-instance p2, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;
+    new-instance p2, Lcom/vtosters/lite/actionlinks/c/a/c;
 
-    invoke-direct {p2}, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;-><init>()V
+    invoke-direct {p2}, Lcom/vtosters/lite/actionlinks/c/a/c;-><init>()V
 
     const p3, 0x7f1201d1
 
-    invoke-virtual {p2, v0, p3}, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;->a(Lcom/vtosters/lite/actionlinks/c/a/WrappedView;I)V
+    invoke-virtual {p2, v0, p3}, Lcom/vtosters/lite/actionlinks/c/a/c;->a(Lcom/vtosters/lite/actionlinks/c/a/d;I)V
 
     .line 46
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -288,9 +288,9 @@
 
     move-result-object p1
 
-    sget-object p3, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkView;->N:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkView$a;
+    sget-object p3, Lcom/vtosters/lite/actionlinks/views/fragments/add/d;->N:Lcom/vtosters/lite/actionlinks/views/fragments/add/d$a;
 
-    invoke-virtual {p3}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkView$a;->a()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/vtosters/lite/actionlinks/views/fragments/add/d$a;->a()Ljava/lang/String;
 
     move-result-object p3
 
@@ -313,7 +313,7 @@
     throw p1
 .end method
 
-.method public final a(Landroid/content/Context;Landroid/content/DialogInterface$OnDismissListener;ILcom/vk/cameraui/utils/CameraTracker;)Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard;
+.method public final a(Landroid/content/Context;Landroid/content/DialogInterface$OnDismissListener;ILcom/vk/cameraui/utils/CameraTracker;)Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;
     .locals 1
 
     .line 48
@@ -334,21 +334,21 @@
     invoke-virtual {v0, p4}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->a(Lcom/vk/cameraui/utils/CameraTracker;)V
 
     .line 51
-    new-instance p4, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPresenter;
+    new-instance p4, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/c;
 
-    invoke-direct {p4}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPresenter;-><init>()V
+    invoke-direct {p4}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/c;-><init>()V
 
     .line 52
-    invoke-virtual {p4, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPresenter;->a(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {p4, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/c;->a(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 53
-    invoke-virtual {p4, p3}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPresenter;->a(I)V
+    invoke-virtual {p4, p3}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/c;->a(I)V
 
     .line 54
-    invoke-virtual {p4, v0}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPresenter;->a(Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard1;)V
+    invoke-virtual {p4, v0}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/c;->a(Lcom/vtosters/lite/actionlinks/views/fragments/onboard/b;)V
 
     .line 55
-    invoke-virtual {v0, p4}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->a(Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard;)V
+    invoke-virtual {v0, p4}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->a(Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;)V
 
     .line 56
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -384,7 +384,7 @@
     throw p1
 .end method
 
-.method public final a(Landroid/content/Context;ILjava/lang/String;ZZZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Landroid/content/DialogInterface$OnDismissListener;)Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection;
+.method public final a(Landroid/content/Context;ILjava/lang/String;ZZZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;Landroid/content/DialogInterface$OnDismissListener;)Lcom/vtosters/lite/actionlinks/views/fragments/show/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -393,19 +393,19 @@
             "I",
             "Ljava/lang/String;",
             "ZZZ",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/dto/actionlinks/ActionLink;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;",
             "Landroid/content/DialogInterface$OnDismissListener;",
             ")",
-            "Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection;"
+            "Lcom/vtosters/lite/actionlinks/views/fragments/show/a;"
         }
     .end annotation
 
@@ -423,10 +423,10 @@
     invoke-virtual {v0, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->a(Z)V
 
     .line 5
-    invoke-virtual {v0, p7}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->b(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, p7}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->b(Lkotlin/jvm/b/b;)V
 
     .line 6
-    invoke-virtual {v0, p8}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, p8}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->a(Lkotlin/jvm/b/b;)V
 
     .line 7
     invoke-virtual {v0, p3}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->a(Ljava/lang/String;)V
@@ -458,23 +458,23 @@
     invoke-direct {p2, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionView;-><init>(Landroid/content/Context;)V
 
     .line 14
-    invoke-virtual {p2, v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionView;->a(Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection;)V
+    invoke-virtual {p2, v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionView;->a(Lcom/vtosters/lite/actionlinks/views/fragments/show/a;)V
 
     const p1, 0x7f1201e1
 
     .line 15
-    invoke-interface {p2, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection1;->setTitle(I)V
+    invoke-interface {p2, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/b;->setTitle(I)V
 
     .line 16
-    invoke-interface {v0, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection;->a(Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection1;)V
+    invoke-interface {v0, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/show/a;->a(Lcom/vtosters/lite/actionlinks/views/fragments/show/b;)V
 
     .line 17
-    invoke-interface {p2}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection1;->show()V
+    invoke-interface {p2}, Lcom/vtosters/lite/actionlinks/views/fragments/show/b;->show()V
 
     return-object v0
 .end method
 
-.method public final a(Landroid/content/Context;Lcom/vk/dto/actionlinks/ActionLink;ILjava/lang/String;ZZZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Landroid/content/DialogInterface$OnDismissListener;)Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection;
+.method public final a(Landroid/content/Context;Lcom/vk/dto/actionlinks/ActionLink;ILjava/lang/String;ZZZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;Landroid/content/DialogInterface$OnDismissListener;)Lcom/vtosters/lite/actionlinks/views/fragments/show/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -484,19 +484,19 @@
             "I",
             "Ljava/lang/String;",
             "ZZZ",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Lcom/vk/dto/actionlinks/ActionLink;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;",
             "Landroid/content/DialogInterface$OnDismissListener;",
             ")",
-            "Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection;"
+            "Lcom/vtosters/lite/actionlinks/views/fragments/show/a;"
         }
     .end annotation
 
@@ -509,10 +509,10 @@
     invoke-virtual {v0, p3}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->a(I)V
 
     .line 20
-    invoke-virtual {v0, p8}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->b(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, p8}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->b(Lkotlin/jvm/b/b;)V
 
     .line 21
-    invoke-virtual {v0, p9}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->a(Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v0, p9}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->a(Lkotlin/jvm/b/b;)V
 
     .line 22
     invoke-virtual {v0, p4}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->a(Ljava/lang/String;)V
@@ -552,27 +552,27 @@
     invoke-direct {p2, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionView;-><init>(Landroid/content/Context;)V
 
     .line 31
-    invoke-virtual {p2, v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionView;->a(Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection;)V
+    invoke-virtual {p2, v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionView;->a(Lcom/vtosters/lite/actionlinks/views/fragments/show/a;)V
 
     const p1, 0x7f1201db
 
     .line 32
-    invoke-interface {p2, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection1;->setTitle(I)V
+    invoke-interface {p2, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/b;->setTitle(I)V
 
     const p1, 0x7f1201d9
 
     .line 33
-    invoke-interface {p2, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection1;->c(I)V
+    invoke-interface {p2, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/b;->c(I)V
 
     .line 34
-    invoke-interface {v0, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection;->a(Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection1;)V
+    invoke-interface {v0, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/show/a;->a(Lcom/vtosters/lite/actionlinks/views/fragments/show/b;)V
 
     .line 35
-    invoke-interface {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection1;
+    invoke-interface {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/a;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/show/b;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection1;->show()V
+    invoke-interface {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/b;->show()V
 
     return-object v0
 .end method
@@ -608,19 +608,19 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/vk/poll/fragments/PollViewerFragment$a;-><init>(IIZLjava/lang/String;ZZ)V
 
-    invoke-virtual {v7}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v7}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object p2
 
     .line 71
-    new-instance p3, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;
+    new-instance p3, Lcom/vtosters/lite/actionlinks/c/a/c;
 
-    invoke-direct {p3}, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;-><init>()V
+    invoke-direct {p3}, Lcom/vtosters/lite/actionlinks/c/a/c;-><init>()V
 
     const v0, 0x7f120b28
 
     .line 72
-    invoke-virtual {p3, p2, v0}, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {p3, p2, v0}, Lcom/vtosters/lite/actionlinks/c/a/c;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     .line 73
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -656,7 +656,7 @@
     throw p1
 .end method
 
-.method public final b(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/ModalDialogCallback;)Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall1;
+.method public final b(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/k;)Lcom/vtosters/lite/actionlinks/views/fragments/wall/b;
     .locals 9
 
     .line 1
@@ -669,12 +669,12 @@
     check-cast v0, Landroidx/appcompat/app/AppCompatActivity;
 
     .line 2
-    new-instance v7, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddGridView;
+    new-instance v7, Lcom/vtosters/lite/actionlinks/views/fragments/wall/a;
 
-    invoke-direct {v7}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddGridView;-><init>()V
+    invoke-direct {v7}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/a;-><init>()V
 
     .line 3
-    invoke-virtual {v7, p5}, Lcom/vtosters/lite/actionlinks/c/a/WrappedView;->a(Lcom/vk/navigation/ModalDialogCallback;)V
+    invoke-virtual {v7, p5}, Lcom/vtosters/lite/actionlinks/c/a/d;->a(Lcom/vk/navigation/k;)V
 
     .line 4
     new-instance p5, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;
@@ -773,24 +773,24 @@
 
     move-object v6, v7
 
-    invoke-direct/range {v1 .. v6}, Lcom/vtosters/lite/actionlinks/AL$Companion$showAddProduct$$inlined$apply$lambda$1;-><init>(Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Landroid/content/Context;Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddGridView;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vtosters/lite/actionlinks/AL$Companion$showAddProduct$$inlined$apply$lambda$1;-><init>(Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Landroid/content/Context;Lcom/vtosters/lite/actionlinks/views/fragments/wall/a;)V
 
-    invoke-virtual {p5, v8}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {p5, v8}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->a(Lkotlin/jvm/b/a;)V
 
     .line 16
-    invoke-virtual {p5, v7}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->a(Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall;)V
+    invoke-virtual {p5, v7}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->a(Lcom/vtosters/lite/actionlinks/views/fragments/wall/c;)V
 
     .line 17
-    invoke-virtual {v7, p5}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddGridView;->a(Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall1;)V
+    invoke-virtual {v7, p5}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/a;->a(Lcom/vtosters/lite/actionlinks/views/fragments/wall/b;)V
 
     .line 18
-    new-instance p1, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;
+    new-instance p1, Lcom/vtosters/lite/actionlinks/c/a/c;
 
-    invoke-direct {p1}, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;-><init>()V
+    invoke-direct {p1}, Lcom/vtosters/lite/actionlinks/c/a/c;-><init>()V
 
     const p2, 0x7f1201cf
 
-    invoke-virtual {p1, v7, p2}, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;->a(Lcom/vtosters/lite/actionlinks/c/a/WrappedView;I)V
+    invoke-virtual {p1, v7, p2}, Lcom/vtosters/lite/actionlinks/c/a/c;->a(Lcom/vtosters/lite/actionlinks/c/a/d;I)V
 
     .line 19
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -801,9 +801,9 @@
 
     move-result-object p2
 
-    sget-object p3, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddGridView;->I:Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddGridView$a;
+    sget-object p3, Lcom/vtosters/lite/actionlinks/views/fragments/wall/a;->I:Lcom/vtosters/lite/actionlinks/views/fragments/wall/a$a;
 
-    invoke-virtual {p3}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddGridView$a;->a()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/a$a;->a()Ljava/lang/String;
 
     move-result-object p3
 
@@ -826,7 +826,7 @@
     throw p1
 .end method
 
-.method public final c(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/ModalDialogCallback;)Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall1;
+.method public final c(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/k;)Lcom/vtosters/lite/actionlinks/views/fragments/wall/b;
     .locals 1
 
     .line 1
@@ -839,12 +839,12 @@
     check-cast p1, Landroidx/appcompat/app/AppCompatActivity;
 
     .line 2
-    new-instance v0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallView;
+    new-instance v0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/d;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallView;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/d;-><init>()V
 
     .line 3
-    invoke-virtual {v0, p5}, Lcom/vtosters/lite/actionlinks/c/a/WrappedView;->a(Lcom/vk/navigation/ModalDialogCallback;)V
+    invoke-virtual {v0, p5}, Lcom/vtosters/lite/actionlinks/c/a/d;->a(Lcom/vk/navigation/k;)V
 
     .line 4
     new-instance p5, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;
@@ -908,19 +908,19 @@
     invoke-virtual {p5, p2}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->d(Ljava/lang/Integer;)V
 
     .line 12
-    invoke-virtual {p5, v0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->a(Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall;)V
+    invoke-virtual {p5, v0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->a(Lcom/vtosters/lite/actionlinks/views/fragments/wall/c;)V
 
     .line 13
-    invoke-virtual {v0, p5}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallView;->a(Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall1;)V
+    invoke-virtual {v0, p5}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/d;->a(Lcom/vtosters/lite/actionlinks/views/fragments/wall/b;)V
 
     .line 14
-    new-instance p2, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;
+    new-instance p2, Lcom/vtosters/lite/actionlinks/c/a/c;
 
-    invoke-direct {p2}, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;-><init>()V
+    invoke-direct {p2}, Lcom/vtosters/lite/actionlinks/c/a/c;-><init>()V
 
     const p3, 0x7f1201d8
 
-    invoke-virtual {p2, v0, p3}, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;->a(Lcom/vtosters/lite/actionlinks/c/a/WrappedView;I)V
+    invoke-virtual {p2, v0, p3}, Lcom/vtosters/lite/actionlinks/c/a/c;->a(Lcom/vtosters/lite/actionlinks/c/a/d;I)V
 
     .line 15
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -931,9 +931,9 @@
 
     move-result-object p1
 
-    sget-object p3, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallView;->I:Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallView$a;
+    sget-object p3, Lcom/vtosters/lite/actionlinks/views/fragments/wall/d;->I:Lcom/vtosters/lite/actionlinks/views/fragments/wall/d$a;
 
-    invoke-virtual {p3}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallView$a;->a()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/d$a;->a()Ljava/lang/String;
 
     move-result-object p3
 

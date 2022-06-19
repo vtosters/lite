@@ -3,7 +3,7 @@
 .source "MenuCache.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/dto/menu/MenuResponse;",
         ">;"
     }
@@ -60,18 +60,18 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
+    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
 
     const-string v1, "key_menu_cache_serialization"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
     .line 2
     sget-object v0, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/menu/MenuCache;->a(Lcom/vk/menu/MenuCache;Lio/reactivex/disposables/Disposable;)V
+    invoke-static {v0, v1}, Lcom/vk/menu/MenuCache;->a(Lcom/vk/menu/MenuCache;Lio/reactivex/disposables/b;)V
 
     .line 3
     sget-object v0, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;

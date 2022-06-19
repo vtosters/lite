@@ -24,7 +24,7 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/content/Context;Lcom/vk/catalog2/core/CatalogConfiguration;Ljava/lang/String;Ljava/lang/String;)V
+.method public abstract a(Landroid/content/Context;Lcom/vk/catalog2/core/a;Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
 .method public abstract a(Landroid/content/Context;Lcom/vk/dto/common/actions/ActionOpenUrl;Ljava/lang/String;)V
@@ -33,7 +33,7 @@
 .method public abstract a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
-.method public abstract a(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
+.method public abstract a(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/b;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -41,10 +41,10 @@
             "Ljava/util/List<",
             "Lcom/vk/catalog2/core/api/dto/CatalogFilterData;",
             ">;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation

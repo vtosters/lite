@@ -3,9 +3,9 @@
 .source "SettingsPostingView.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/posting/PostingContracts4;
+.implements Lcom/vk/newsfeed/posting/o;
 .implements Landroid/view/View$OnClickListener;
-.implements Lcom/vk/core/util/ItemClickListener;
+.implements Lcom/vk/core/util/k0;
 
 
 # annotations
@@ -18,17 +18,17 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/newsfeed/posting/PostingContracts4;",
+        "Lcom/vk/newsfeed/posting/o;",
         "Landroid/view/View$OnClickListener;",
-        "Lcom/vk/core/util/ItemClickListener<",
-        "Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;",
+        "Lcom/vk/core/util/k0<",
+        "Lcom/vk/newsfeed/posting/r/b;",
         ">;"
     }
 .end annotation
 
 
 # static fields
-.field static final synthetic M:[Lkotlin/u/KProperty5;
+.field static final synthetic M:[Lkotlin/u/j;
 
 
 # instance fields
@@ -38,29 +38,29 @@
 
 .field private D:Lcom/vk/core/view/TintTextView;
 
-.field private E:Lcom/vk/newsfeed/posting/PostingContracts5;
+.field private E:Lcom/vk/newsfeed/posting/n;
 
-.field private final F:Lkotlin/Lazy2;
+.field private final F:Lkotlin/e;
 
 .field private final G:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;",
+            "Lcom/vk/newsfeed/posting/r/b;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final H:Lkotlin/Lazy2;
+.field private final H:Lkotlin/e;
 
-.field private final I:Lkotlin/Lazy2;
+.field private final I:Lkotlin/e;
 
 .field private final J:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;",
+            "Lcom/vk/newsfeed/posting/r/b;",
             ">;"
         }
     .end annotation
@@ -70,7 +70,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;",
+            "Lcom/vk/newsfeed/posting/r/b;",
             ">;"
         }
     .end annotation
@@ -78,11 +78,11 @@
 
 .field private final L:Landroid/app/FragmentManager;
 
-.field private a:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+.field private a:Lcom/vk/newsfeed/posting/r/a;
 
-.field private b:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+.field private b:Lcom/vk/newsfeed/posting/r/a;
 
-.field private c:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+.field private c:Lcom/vk/newsfeed/posting/r/a;
 
 .field private d:Lcom/vk/newsfeed/posting/viewpresenter/settings/PostingPostponeDelegate;
 
@@ -101,13 +101,13 @@
 
     const/4 v0, 0x3
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -115,9 +115,9 @@
 
     const-string v4, "getPostponeMenu()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
@@ -127,7 +127,7 @@
 
     const-class v2, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -135,9 +135,9 @@
 
     const-string v4, "getCopyrightMenu()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x1
 
@@ -147,7 +147,7 @@
 
     const-class v2, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -155,21 +155,21 @@
 
     const-string v4, "getTopicMenu()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->M:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->M:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -191,20 +191,20 @@
 
     invoke-direct {v1, v0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView$postponeMenu$2;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;)V
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->F:Lkotlin/Lazy2;
+    iput-object v1, v0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->F:Lkotlin/e;
 
     const/4 v1, 0x2
 
-    new-array v2, v1, [Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-array v2, v1, [Lcom/vk/newsfeed/posting/r/b;
 
     .line 3
-    new-instance v9, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-instance v9, Lcom/vk/newsfeed/posting/r/b;
 
-    sget-object v3, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v3, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v4, 0x7f120b4f
 
@@ -214,7 +214,7 @@
 
     const-string v3, "AppContextHolder.context\u2026.posting_postpone_change)"
 
-    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -226,16 +226,16 @@
 
     move-object v3, v9
 
-    invoke-direct/range {v3 .. v8}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v3 .. v8}, Lcom/vk/newsfeed/posting/r/b;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
 
     const/4 v3, 0x0
 
     aput-object v9, v2, v3
 
     .line 4
-    new-instance v4, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-instance v4, Lcom/vk/newsfeed/posting/r/b;
 
-    sget-object v5, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v5, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v6, 0x7f120b50
 
@@ -245,7 +245,7 @@
 
     const-string v5, "AppContextHolder.context\u2026.posting_postpone_remove)"
 
-    invoke-static {v12, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v12, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v11, 0x1
 
@@ -257,7 +257,7 @@
 
     move-object v10, v4
 
-    invoke-direct/range {v10 .. v15}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v10 .. v15}, Lcom/vk/newsfeed/posting/r/b;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
 
     const/4 v5, 0x1
 
@@ -275,29 +275,29 @@
 
     invoke-direct {v2, v0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView$copyrightMenu$2;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;)V
 
-    invoke-static {v2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->H:Lkotlin/Lazy2;
+    iput-object v2, v0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->H:Lkotlin/e;
 
     .line 7
     new-instance v2, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView$topicMenu$2;
 
     invoke-direct {v2, v0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView$topicMenu$2;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;)V
 
-    invoke-static {v2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {v2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->I:Lkotlin/Lazy2;
+    iput-object v2, v0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->I:Lkotlin/e;
 
-    new-array v2, v1, [Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-array v2, v1, [Lcom/vk/newsfeed/posting/r/b;
 
     .line 8
-    new-instance v4, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-instance v4, Lcom/vk/newsfeed/posting/r/b;
 
-    sget-object v6, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v6, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v7, 0x7f120b51
 
@@ -307,7 +307,7 @@
 
     const-string v6, "AppContextHolder.context\u2026ettings_change_copyright)"
 
-    invoke-static {v8, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v7, 0x2
 
@@ -319,14 +319,14 @@
 
     move-object v6, v4
 
-    invoke-direct/range {v6 .. v11}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v6 .. v11}, Lcom/vk/newsfeed/posting/r/b;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
 
     aput-object v4, v2, v3
 
     .line 9
-    new-instance v4, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-instance v4, Lcom/vk/newsfeed/posting/r/b;
 
-    sget-object v6, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v6, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v7, 0x7f120b54
 
@@ -336,7 +336,7 @@
 
     const-string v6, "AppContextHolder.context\u2026ettings_delete_copyright)"
 
-    invoke-static {v14, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v14, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v13, 0x3
 
@@ -348,7 +348,7 @@
 
     move-object v12, v4
 
-    invoke-direct/range {v12 .. v17}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v12 .. v17}, Lcom/vk/newsfeed/posting/r/b;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
 
     aput-object v4, v2, v5
 
@@ -359,12 +359,12 @@
 
     iput-object v2, v0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->J:Ljava/util/List;
 
-    new-array v1, v1, [Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-array v1, v1, [Lcom/vk/newsfeed/posting/r/b;
 
     .line 11
-    new-instance v2, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-instance v2, Lcom/vk/newsfeed/posting/r/b;
 
-    sget-object v4, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v4, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v6, 0x7f120b52
 
@@ -374,20 +374,20 @@
 
     const-string v4, "AppContextHolder.context\u2026ng_settings_change_topic)"
 
-    invoke-static {v8, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v7, 0x4
 
     move-object v6, v2
 
-    invoke-direct/range {v6 .. v11}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v6 .. v11}, Lcom/vk/newsfeed/posting/r/b;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
 
     aput-object v2, v1, v3
 
     .line 12
-    new-instance v2, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    new-instance v2, Lcom/vk/newsfeed/posting/r/b;
 
-    sget-object v3, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v3, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const v4, 0x7f120b55
 
@@ -397,13 +397,13 @@
 
     const-string v3, "AppContextHolder.context\u2026ng_settings_delete_topic)"
 
-    invoke-static {v14, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v14, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v13, 0x5
 
     move-object v12, v2
 
-    invoke-direct/range {v12 .. v17}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v12 .. v17}, Lcom/vk/newsfeed/posting/r/b;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
 
     aput-object v2, v1, v5
 
@@ -417,31 +417,31 @@
     return-void
 .end method
 
-.method private final a()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+.method private final a()Lcom/vk/core/dialogs/actionspopup/a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->H:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->H:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->M:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->M:[Lkotlin/u/j;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    check-cast v0, Lcom/vk/core/dialogs/actionspopup/a;
 
     return-object v0
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;)Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+.method public static final synthetic a(Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;)Lcom/vk/newsfeed/posting/r/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->b:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object p0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->b:Lcom/vk/newsfeed/posting/r/a;
 
     if-eqz p0, :cond_0
 
@@ -450,7 +450,7 @@
     :cond_0
     const-string p0, "copyrightMenuAdapter"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -471,28 +471,28 @@
     invoke-virtual {p1, v0}, Lcom/vk/core/view/TintTextView;->setDynamicDrawableTint(I)V
 
     .line 53
-    invoke-static {p1, v0}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     :cond_0
     return-void
 .end method
 
-.method private final b()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+.method private final b()Lcom/vk/core/dialogs/actionspopup/a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->F:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->F:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->M:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->M:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    check-cast v0, Lcom/vk/core/dialogs/actionspopup/a;
 
     return-object v0
 .end method
@@ -535,37 +535,37 @@
     const v0, 0x7f04059b
 
     .line 5
-    invoke-static {p1, v0}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
 
     :cond_0
     return-void
 .end method
 
-.method private final c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+.method private final c()Lcom/vk/core/dialogs/actionspopup/a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->I:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->I:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->M:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->M:[Lkotlin/u/j;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    check-cast v0, Lcom/vk/core/dialogs/actionspopup/a;
 
     return-object v0
 .end method
 
-.method public static final synthetic c(Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;)Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+.method public static final synthetic c(Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;)Lcom/vk/newsfeed/posting/r/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->a:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object p0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->a:Lcom/vk/newsfeed/posting/r/a;
 
     if-eqz p0, :cond_0
 
@@ -574,7 +574,7 @@
     :cond_0
     const-string p0, "dateMenuAdapter"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -599,11 +599,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic f(Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;)Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+.method public static final synthetic f(Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;)Lcom/vk/newsfeed/posting/r/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->c:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object p0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->c:Lcom/vk/newsfeed/posting/r/a;
 
     if-eqz p0, :cond_0
 
@@ -612,7 +612,7 @@
     :cond_0
     const-string p0, "topicsMenuAdapter"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -844,14 +844,14 @@
     .locals 4
 
     .line 4
-    new-instance v0, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    new-instance v0, Lcom/vk/newsfeed/posting/r/a;
 
-    invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;-><init>(Lcom/vk/core/util/ItemClickListener;)V
+    invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/r/a;-><init>(Lcom/vk/core/util/k0;)V
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->a:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->a:Lcom/vk/newsfeed/posting/r/a;
 
     .line 5
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->a:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->a:Lcom/vk/newsfeed/posting/r/a;
 
     const/4 v1, 0x0
 
@@ -859,39 +859,39 @@
 
     iget-object v2, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->G:Ljava/util/List;
 
-    invoke-virtual {v0, v2}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v2}, Lcom/vk/newsfeed/posting/r/a;->setItems(Ljava/util/List;)V
 
     .line 6
-    new-instance v0, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    new-instance v0, Lcom/vk/newsfeed/posting/r/a;
 
-    invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;-><init>(Lcom/vk/core/util/ItemClickListener;)V
+    invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/r/a;-><init>(Lcom/vk/core/util/k0;)V
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->b:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->b:Lcom/vk/newsfeed/posting/r/a;
 
     .line 7
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->b:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->b:Lcom/vk/newsfeed/posting/r/a;
 
     if-eqz v0, :cond_4
 
     iget-object v2, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->J:Ljava/util/List;
 
-    invoke-virtual {v0, v2}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v2}, Lcom/vk/newsfeed/posting/r/a;->setItems(Ljava/util/List;)V
 
     .line 8
-    new-instance v0, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    new-instance v0, Lcom/vk/newsfeed/posting/r/a;
 
-    invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;-><init>(Lcom/vk/core/util/ItemClickListener;)V
+    invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/r/a;-><init>(Lcom/vk/core/util/k0;)V
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->c:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->c:Lcom/vk/newsfeed/posting/r/a;
 
     .line 9
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->c:Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->c:Lcom/vk/newsfeed/posting/r/a;
 
     if-eqz v0, :cond_3
 
     iget-object v2, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->K:Ljava/util/List;
 
-    invoke-virtual {v0, v2}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v2}, Lcom/vk/newsfeed/posting/r/a;->setItems(Ljava/util/List;)V
 
     const v0, 0x7f0a0a80
 
@@ -911,7 +911,7 @@
 
     const-string v3, "view.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->L:Landroid/app/FragmentManager;
 
@@ -920,7 +920,7 @@
     iput-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->d:Lcom/vk/newsfeed/posting/viewpresenter/settings/PostingPostponeDelegate;
 
     .line 12
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object v0
 
@@ -930,14 +930,14 @@
 
     if-eqz v2, :cond_0
 
-    invoke-interface {v0, v2}, Lcom/vk/newsfeed/posting/PostingContracts5;->a(Lcom/vk/newsfeed/posting/viewpresenter/settings/PostingPostponeDelegate;)V
+    invoke-interface {v0, v2}, Lcom/vk/newsfeed/posting/n;->a(Lcom/vk/newsfeed/posting/viewpresenter/settings/PostingPostponeDelegate;)V
 
     goto :goto_0
 
     :cond_0
     const-string p1, "postponeDelegate"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1074,13 +1074,13 @@
     invoke-direct {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->b(Lcom/vk/core/view/TintTextView;)V
 
     .line 29
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts6;->onStart()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/c;->onStart()V
 
     :cond_2
     return-void
@@ -1089,7 +1089,7 @@
     const-string p1, "topicsMenuAdapter"
 
     .line 30
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1097,7 +1097,7 @@
     const-string p1, "copyrightMenuAdapter"
 
     .line 31
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1105,7 +1105,7 @@
     const-string p1, "dateMenuAdapter"
 
     .line 32
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1133,20 +1133,20 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/newsfeed/posting/PostingContracts5;)V
+.method public a(Lcom/vk/newsfeed/posting/n;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->E:Lcom/vk/newsfeed/posting/PostingContracts5;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->E:Lcom/vk/newsfeed/posting/n;
 
     return-void
 .end method
 
-.method public a(Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;I)V
+.method public a(Lcom/vk/newsfeed/posting/r/b;I)V
     .locals 0
 
     .line 33
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;->a()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/r/b;->a()I
 
     move-result p1
 
@@ -1176,96 +1176,96 @@
 
     .line 34
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts5;->p3()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/n;->p3()V
 
     goto :goto_0
 
     .line 35
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts5;->F3()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/n;->F3()V
 
     goto :goto_0
 
     .line 36
     :cond_2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts5;->M()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/n;->M()V
 
     goto :goto_0
 
     .line 37
     :cond_3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts5;->N()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/n;->N()V
 
     goto :goto_0
 
     .line 38
     :cond_4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts5;->u3()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/n;->u3()V
 
     goto :goto_0
 
     .line 39
     :cond_5
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts5;->t3()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/n;->t3()V
 
     .line 40
     :cond_6
     :goto_0
-    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->b()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->b()Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
 
     .line 41
-    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->a()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->a()Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
 
     .line 42
-    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->c()Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
 
     return-void
 .end method
@@ -1274,9 +1274,9 @@
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    check-cast p1, Lcom/vk/newsfeed/posting/r/b;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->a(Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->a(Lcom/vk/newsfeed/posting/r/b;I)V
 
     return-void
 .end method
@@ -1316,7 +1316,7 @@
     :goto_0
     const-string v1, "postponeSettingsText?.co\u2026g(R.string.date_at) ?: \"\""
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 44
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1335,7 +1335,7 @@
 
     long-to-int v3, v2
 
-    invoke-static {v3}, Lcom/vk/core/util/TimeUtils;->c(I)Ljava/lang/String;
+    invoke-static {v3}, Lcom/vk/core/util/i1;->c(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1388,7 +1388,7 @@
 
     const-string v5, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v2, :cond_2
 
@@ -1398,7 +1398,7 @@
 
     const-string v5, "(this as java.lang.String).toUpperCase()"
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1410,7 +1410,7 @@
 
     const-string v2, "(this as java.lang.String).substring(startIndex)"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1482,17 +1482,17 @@
 
     invoke-direct {v2, p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView$showTopicsSelectionDialog$1;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;)V
 
-    invoke-virtual {v1, v0, p1, p2, v2}, Lcom/vk/newsfeed/controllers/PostsController;->a(Landroid/content/Context;Ljava/util/List;ILkotlin/jvm/b/Functions2;)V
+    invoke-virtual {v1, v0, p1, p2, v2}, Lcom/vk/newsfeed/controllers/PostsController;->a(Landroid/content/Context;Ljava/util/List;ILkotlin/jvm/b/b;)V
 
     :cond_0
     return-void
 .end method
 
-.method public getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+.method public getPresenter()Lcom/vk/newsfeed/posting/n;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->E:Lcom/vk/newsfeed/posting/PostingContracts5;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->E:Lcom/vk/newsfeed/posting/n;
 
     return-object v0
 .end method
@@ -1552,13 +1552,13 @@
 
     if-ne v1, v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object p1
 
     if-eqz p1, :cond_c
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts5;->r3()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/n;->r3()V
 
     goto/16 :goto_6
 
@@ -1578,13 +1578,13 @@
 
     if-ne v1, v0, :cond_4
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object p1
 
     if-eqz p1, :cond_c
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts5;->B3()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/n;->B3()V
 
     goto :goto_6
 
@@ -1604,13 +1604,13 @@
 
     if-ne v1, v0, :cond_6
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object p1
 
     if-eqz p1, :cond_c
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts5;->y3()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/n;->y3()V
 
     goto :goto_6
 
@@ -1630,13 +1630,13 @@
 
     if-ne v1, v0, :cond_8
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object p1
 
     if-eqz p1, :cond_c
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts5;->w3()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/n;->w3()V
 
     goto :goto_6
 
@@ -1656,13 +1656,13 @@
 
     if-ne v1, v0, :cond_a
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object p1
 
     if-eqz p1, :cond_c
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts5;->G3()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/n;->G3()V
 
     goto :goto_6
 
@@ -1682,13 +1682,13 @@
 
     if-ne p1, v0, :cond_c
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object p1
 
     if-eqz p1, :cond_c
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts5;->q3()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/n;->q3()V
 
     :cond_c
     :goto_6
@@ -1699,13 +1699,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts5;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->getPresenter()Lcom/vk/newsfeed/posting/n;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts6;->onStop()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/c;->onStop()V
 
     :cond_0
     const/4 v0, 0x0
@@ -1732,11 +1732,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->b()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->b()Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->d()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/a;->d()Lcom/vk/core/dialogs/actionspopup/a;
 
     return-void
 .end method
@@ -1819,11 +1819,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->c()Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->d()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/a;->d()Lcom/vk/core/dialogs/actionspopup/a;
 
     return-void
 .end method
@@ -1846,11 +1846,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->a()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->a()Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->d()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/a;->d()Lcom/vk/core/dialogs/actionspopup/a;
 
     return-void
 .end method

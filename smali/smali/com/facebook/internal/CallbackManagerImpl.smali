@@ -3,7 +3,7 @@
 .source "CallbackManagerImpl.java"
 
 # interfaces
-.implements Lcom/facebook/CallbackManager;
+.implements Lcom/facebook/c;
 
 
 # annotations
@@ -140,7 +140,7 @@
     const-string v1, "callback"
 
     .line 1
-    invoke-static {p1, v1}, Lcom/facebook/internal/Validate;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lcom/facebook/internal/s;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     sget-object v1, Lcom/facebook/internal/CallbackManagerImpl;->b:Ljava/util/Map;
@@ -196,7 +196,7 @@
     const-string v0, "callback"
 
     .line 4
-    invoke-static {p2, v0}, Lcom/facebook/internal/Validate;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lcom/facebook/internal/s;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     iget-object v0, p0, Lcom/facebook/internal/CallbackManagerImpl;->a:Ljava/util/Map;

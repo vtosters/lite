@@ -3,7 +3,7 @@
 .source "MsgPartStoryHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Landroid/graphics/drawable/Drawable;",
         ">;"
     }
@@ -49,7 +49,7 @@
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/drawables/RoundCornerColorDrawable;
+    new-instance v0, Lcom/vk/im/ui/drawables/g;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartStoryHolder$oneTimePlaceholder$2;->this$0:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartStoryHolder;
 
@@ -57,7 +57,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/im/ui/R5;->im_msg_part_story_corner_radius:I
+    sget v2, Lcom/vk/im/ui/c;->im_msg_part_story_corner_radius:I
 
     invoke-static {v1, v2}, Lcom/vk/core/util/ContextExtKt;->i(Landroid/content/Context;I)I
 
@@ -65,7 +65,7 @@
 
     const/high16 v2, -0x1000000
 
-    invoke-direct {v0, v2, v1}, Lcom/vk/im/ui/drawables/RoundCornerColorDrawable;-><init>(II)V
+    invoke-direct {v0, v2, v1}, Lcom/vk/im/ui/drawables/g;-><init>(II)V
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 

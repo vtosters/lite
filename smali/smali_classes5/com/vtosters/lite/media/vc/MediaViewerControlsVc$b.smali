@@ -18,11 +18,11 @@
 .method public abstract K1()V
 .end method
 
-.method public abstract Z(I)Lio/reactivex/Single;
+.method public abstract Z(I)Lc/a/t;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lio/reactivex/Single<",
+            "Lc/a/t<",
             "Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;",
             ">;"
         }

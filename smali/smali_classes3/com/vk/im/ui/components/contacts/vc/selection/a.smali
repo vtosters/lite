@@ -1,0 +1,193 @@
+.class final Lcom/vk/im/ui/components/contacts/vc/selection/a;
+.super Landroidx/recyclerview/widget/RecyclerView$Adapter;
+.source "SelectionPreviewViewTypeDelegate.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
+        "Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field private a:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "+",
+            "Lcom/vk/im/engine/models/j;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final b:Landroid/view/LayoutInflater;
+
+.field private final c:I
+
+.field private final d:Lcom/vk/im/ui/components/contacts/vc/selection/b;
+
+
+# direct methods
+.method public constructor <init>(Landroid/view/LayoutInflater;ILcom/vk/im/ui/components/contacts/vc/selection/b;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
+
+    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/vc/selection/a;->b:Landroid/view/LayoutInflater;
+
+    iput p2, p0, Lcom/vk/im/ui/components/contacts/vc/selection/a;->c:I
+
+    iput-object p3, p0, Lcom/vk/im/ui/components/contacts/vc/selection/a;->d:Lcom/vk/im/ui/components/contacts/vc/selection/b;
+
+    .line 2
+    invoke-static {}, Lkotlin/collections/l;->a()Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/vc/selection/a;->a:Ljava/util/List;
+
+    const/4 p1, 0x1
+
+    .line 3
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->setHasStableIds(Z)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;I)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/vc/selection/a;->a:Ljava/util/List;
+
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/vk/im/engine/models/j;
+
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;->a(Lcom/vk/im/engine/models/j;)V
+
+    return-void
+.end method
+
+.method public getItemCount()I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/vc/selection/a;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getItemId(I)J
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/vc/selection/a;->a:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/vk/im/engine/models/j;
+
+    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->f0()I
+
+    move-result p1
+
+    int-to-long v0, p1
+
+    return-wide v0
+.end method
+
+.method public getItemViewType(I)I
+    .locals 0
+
+    .line 1
+    iget p1, p0, Lcom/vk/im/ui/components/contacts/vc/selection/a;->c:I
+
+    return p1
+.end method
+
+.method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
+    .locals 0
+
+    .line 1
+    check-cast p1, Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;
+
+    invoke-virtual {p0, p1, p2}, Lcom/vk/im/ui/components/contacts/vc/selection/a;->a(Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;I)V
+
+    return-void
+.end method
+
+.method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1, p2}, Lcom/vk/im/ui/components/contacts/vc/selection/a;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;
+    .locals 3
+
+    .line 2
+    new-instance p2, Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;
+
+    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/vc/selection/a;->b:Landroid/view/LayoutInflater;
+
+    sget v1, Lcom/vk/im/ui/j;->vkim_contacts_user_selection_vh:I
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    const-string v0, "inflater.inflate(R.layou\u2026ection_vh, parent, false)"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/vc/selection/a;->d:Lcom/vk/im/ui/components/contacts/vc/selection/b;
+
+    invoke-direct {p2, p1, v0}, Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/contacts/vc/selection/b;)V
+
+    return-object p2
+.end method
+
+.method public final setItems(Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "+",
+            "Lcom/vk/im/engine/models/j;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/vc/selection/a;->a:Ljava/util/List;
+
+    .line 2
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
+
+    return-void
+.end method

@@ -3,12 +3,12 @@
 .source "GoodsPickerHelper.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$f;
+.implements Lcom/vk/core/dialogs/bottomsheet/h$f;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/picker/GoodsPickerHelper;->a(Landroid/content/Context;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ZILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    value = Lcom/vk/market/picker/GoodsPickerHelper;->a(Landroid/content/Context;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;ZILkotlin/jvm/b/a;Lkotlin/jvm/b/a;)Lcom/vk/core/dialogs/bottomsheet/e;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/Functions;
+.field final synthetic a:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lkotlin/jvm/b/a;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/market/picker/GoodsPickerHelper$b;->a:Lkotlin/jvm/b/Functions;
+    iput-object p1, p0, Lcom/vk/market/picker/GoodsPickerHelper$b;->a:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,19 +35,19 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+.method public a(Lcom/vk/core/dialogs/bottomsheet/e;)V
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/market/picker/GoodsPickerHelper$b;->a:Lkotlin/jvm/b/Functions;
+    iget-object p1, p0, Lcom/vk/market/picker/GoodsPickerHelper$b;->a:Lkotlin/jvm/b/a;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/Unit;
+    check-cast p1, Lkotlin/m;
 
     :cond_0
     return-void

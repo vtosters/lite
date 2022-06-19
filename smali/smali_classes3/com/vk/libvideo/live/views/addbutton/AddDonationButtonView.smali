@@ -3,11 +3,11 @@
 .source "AddDonationButtonView.java"
 
 # interfaces
-.implements Lcom/vk/libvideo/live/views/addbutton/AddButtonContract1;
+.implements Lcom/vk/libvideo/live/views/addbutton/b;
 
 
 # instance fields
-.field private a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
+.field private a:Lcom/vk/libvideo/live/views/addbutton/a;
 
 
 # direct methods
@@ -42,11 +42,11 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;)Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
+.method static synthetic a(Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;)Lcom/vk/libvideo/live/views/addbutton/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
+    iget-object p0, p0, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
 
     return-object p0
 .end method
@@ -70,7 +70,7 @@
 
     move-result-object p1
 
-    sget v0, Lcom/vk/libvideo/R7;->ic_friend_added_overlay:I
+    sget v0, Lcom/vk/libvideo/e;->ic_friend_added_overlay:I
 
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -91,7 +91,7 @@
 
     move-result-object p1
 
-    sget v0, Lcom/vk/libvideo/R7;->ic_friend_add_overlay:I
+    sget v0, Lcom/vk/libvideo/e;->ic_friend_add_overlay:I
 
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -116,12 +116,12 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->a()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->a()V
 
     .line 4
     :cond_0
@@ -147,22 +147,22 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->e()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->e()V
 
     :cond_0
     return-void
 .end method
 
-.method public getPresenter()Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
+.method public getPresenter()Lcom/vk/libvideo/live/views/addbutton/a;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
 
     return-object v0
 .end method
@@ -171,7 +171,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->getPresenter()Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->getPresenter()Lcom/vk/libvideo/live/views/addbutton/a;
 
     move-result-object v0
 
@@ -184,11 +184,11 @@
     return-void
 .end method
 
-.method public setPresenter(Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;)V
+.method public setPresenter(Lcom/vk/libvideo/live/views/addbutton/a;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
 
     return-void
 .end method
@@ -197,9 +197,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
+    check-cast p1, Lcom/vk/libvideo/live/views/addbutton/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->setPresenter(Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->setPresenter(Lcom/vk/libvideo/live/views/addbutton/a;)V
 
     return-void
 .end method
@@ -214,12 +214,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->t()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->t()V
 
     :cond_0
     return-void

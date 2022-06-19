@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
+.field private a:Lcom/vk/im/engine/models/dialogs/c;
 
 .field private b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -36,12 +36,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;Ljava/util/List;ZZLcom/vk/im/engine/models/ProfilesSimpleInfo;)V
+.method public constructor <init>(Lcom/vk/im/engine/models/dialogs/c;Ljava/util/List;ZZLcom/vk/im/engine/models/ProfilesSimpleInfo;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/dialogs/DialogApiModel;",
+            "Lcom/vk/im/engine/models/dialogs/c;",
             "Ljava/util/List<",
             "+",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -54,7 +54,7 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a:Lcom/vk/im/engine/models/dialogs/c;
 
     iput-object p2, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->b:Ljava/util/List;
 
@@ -69,11 +69,11 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/im/engine/models/dialogs/DialogApiModel;
+.method public final a()Lcom/vk/im/engine/models/dialogs/c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a:Lcom/vk/im/engine/models/dialogs/c;
 
     return-object v0
 .end method
@@ -133,11 +133,11 @@
 
     check-cast p1, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;
 
-    iget-object v0, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a:Lcom/vk/im/engine/models/dialogs/c;
 
-    iget-object v1, p1, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
+    iget-object v1, p1, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a:Lcom/vk/im/engine/models/dialogs/c;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -147,7 +147,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->b:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -169,7 +169,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->e:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -192,13 +192,13 @@
 .method public hashCode()I
     .locals 4
 
-    iget-object v0, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a:Lcom/vk/im/engine/models/dialogs/c;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->hashCode()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/c;->hashCode()I
 
     move-result v0
 
@@ -277,7 +277,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a:Lcom/vk/im/engine/models/dialogs/c;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

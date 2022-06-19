@@ -13,7 +13,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/auth/base/BaseAuthPresenter<",
-        "Lcom/vk/auth/enterbirthday/EnterBirthdayView;",
+        "Lcom/vk/auth/enterbirthday/a;",
         ">;"
     }
 .end annotation
@@ -31,7 +31,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -78,7 +78,7 @@
     return-object p0
 .end method
 
-.method private final a(Lio/reactivex/functions/Consumer;)V
+.method private final a(Lc/a/z/g;)V
     .locals 2
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -89,7 +89,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/functions/Consumer<",
+            "Lc/a/z/g<",
             "Lkotlin/Pair<",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
@@ -98,7 +98,7 @@
     .end annotation
 
     .line 20
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/SignUpModel;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/s;
 
     move-result-object v0
 
@@ -110,14 +110,14 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/auth/main/SignUpModel;->a(Lcom/vk/auth/enterphone/choosecountry/Country;)Lio/reactivex/Single;
+    invoke-interface {v0, v1}, Lcom/vk/auth/main/s;->a(Lcom/vk/auth/enterphone/choosecountry/Country;)Lc/a/t;
 
     move-result-object v0
 
     .line 21
     sget-object v1, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter$b;->a:Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter$b;
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/j;)Lc/a/t;
 
     move-result-object v0
 
@@ -126,7 +126,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter$c;-><init>(Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
 
     move-result-object v0
 
@@ -135,12 +135,12 @@
 
     invoke-direct {v1, p0}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter$d;-><init>(Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->d(Lc/a/z/g;)Lc/a/t;
 
     move-result-object v0
 
     .line 24
-    invoke-virtual {v0, p1}, Lio/reactivex/Single;->e(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, p1}, Lc/a/t;->e(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -267,15 +267,15 @@
 
     .line 26
     :goto_0
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/auth/enterbirthday/EnterBirthdayView;
+    check-cast p2, Lcom/vk/auth/enterbirthday/a;
 
     if-eqz p2, :cond_1
 
-    invoke-interface {p2, p1}, Lcom/vk/auth/enterbirthday/EnterBirthdayView;->z(Z)V
+    invoke-interface {p2, p1}, Lcom/vk/auth/enterbirthday/a;->z(Z)V
 
     :cond_1
     return-void
@@ -313,42 +313,42 @@
 
     invoke-direct {p1, p0, v0}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter$e;-><init>(Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;Lcom/vk/auth/enterbirthday/SimpleDate;)V
 
-    invoke-direct {p0, p1}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;->a(Lio/reactivex/functions/Consumer;)V
+    invoke-direct {p0, p1}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;->a(Lc/a/z/g;)V
 
     goto :goto_0
 
     .line 17
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/auth/enterbirthday/EnterBirthdayView;
+    check-cast p1, Lcom/vk/auth/enterbirthday/a;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1, v1}, Lcom/vk/auth/enterbirthday/EnterBirthdayView;->z(Z)V
+    invoke-interface {p1, v1}, Lcom/vk/auth/enterbirthday/a;->z(Z)V
 
     .line 18
     :cond_2
     :goto_0
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/auth/enterbirthday/EnterBirthdayView;
+    check-cast p1, Lcom/vk/auth/enterbirthday/a;
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1, v0}, Lcom/vk/auth/enterbirthday/EnterBirthdayView;->a(Lcom/vk/auth/enterbirthday/SimpleDate;)V
+    invoke-interface {p1, v0}, Lcom/vk/auth/enterbirthday/a;->a(Lcom/vk/auth/enterbirthday/SimpleDate;)V
 
     .line 19
     :cond_3
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/auth/enterbirthday/EnterBirthdayView;
+    check-cast p1, Lcom/vk/auth/enterbirthday/a;
 
     if-eqz p1, :cond_5
 
@@ -357,7 +357,7 @@
     const/4 v1, 0x1
 
     :cond_4
-    invoke-interface {p1, v1}, Lcom/vk/auth/enterbirthday/EnterBirthdayView;->v(Z)V
+    invoke-interface {p1, v1}, Lcom/vk/auth/enterbirthday/a;->v(Z)V
 
     :cond_5
     return-void
@@ -381,15 +381,15 @@
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;)Lcom/vk/auth/enterbirthday/EnterBirthdayView;
+.method public static final synthetic c(Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;)Lcom/vk/auth/enterbirthday/a;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/auth/enterbirthday/EnterBirthdayView;
+    check-cast p0, Lcom/vk/auth/enterbirthday/a;
 
     return-object p0
 .end method
@@ -414,7 +414,7 @@
 
     const-string v1, "date"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, v0}, Lcom/vk/auth/enterbirthday/SimpleDate;-><init>(Ljava/util/Calendar;)V
 
@@ -432,22 +432,22 @@
     return-object v0
 .end method
 
-.method public bridge synthetic a(Lcom/vk/auth/base/AuthView;)V
+.method public bridge synthetic a(Lcom/vk/auth/base/b;)V
     .locals 0
 
     .line 6
-    check-cast p1, Lcom/vk/auth/enterbirthday/EnterBirthdayView;
+    check-cast p1, Lcom/vk/auth/enterbirthday/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;->a(Lcom/vk/auth/enterbirthday/EnterBirthdayView;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;->a(Lcom/vk/auth/enterbirthday/a;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/auth/enterbirthday/EnterBirthdayView;)V
+.method public a(Lcom/vk/auth/enterbirthday/a;)V
     .locals 1
 
     .line 9
-    invoke-super {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/base/AuthView;)V
+    invoke-super {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/base/b;)V
 
     const/4 p1, 0x0
 
@@ -468,11 +468,11 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->q()Lcom/vk/auth/main/SignUpStrategy;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->q()Lcom/vk/auth/main/u;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0, p0}, Lcom/vk/auth/main/SignUpStrategy;->b(Lcom/vk/auth/enterbirthday/SimpleDate;Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;)V
+    invoke-virtual {v1, v0, p0}, Lcom/vk/auth/main/u;->b(Lcom/vk/auth/enterbirthday/SimpleDate;Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;)V
 
     .line 3
     invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->r()Lcom/vk/auth/main/AuthStatSender;
@@ -489,17 +489,17 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/auth/enterbirthday/EnterBirthdayView;
+    check-cast v0, Lcom/vk/auth/enterbirthday/a;
 
     if-eqz v0, :cond_1
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/vk/auth/enterbirthday/EnterBirthdayView;->v(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/auth/enterbirthday/a;->v(Z)V
 
     :cond_1
     :goto_0
@@ -514,7 +514,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter$onChooseBirthdayClick$1;-><init>(Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;->a(Lio/reactivex/functions/Consumer;)V
+    invoke-direct {p0, v0}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;->a(Lc/a/z/g;)V
 
     return-void
 .end method

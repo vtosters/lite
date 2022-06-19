@@ -1,10 +1,10 @@
 .class public final Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;
-.super Lcom/vk/newsfeed/holders/digest/grid/DigestMediaItemHolder;
+.super Lcom/vk/newsfeed/holders/digest/grid/b;
 .source "DigestAutoPlayMediaItem.kt"
 
 
 # instance fields
-.field private final h:Lcom/vtosters/lite/ui/holder/video/VideoAutoPlayHolder;
+.field private final h:Lcom/vtosters/lite/ui/holder/video/i;
 
 .field private final i:Landroid/view/View;
 
@@ -20,21 +20,21 @@
     .locals 3
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/holders/digest/grid/DigestMediaItemHolder;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/holders/digest/grid/b;-><init>(Landroid/view/ViewGroup;)V
 
     .line 2
-    new-instance p1, Lcom/vtosters/lite/ui/holder/video/VideoAutoPlayHolder;
+    new-instance p1, Lcom/vtosters/lite/ui/holder/video/i;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/digest/grid/DigestMediaItemHolder;->b()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/digest/grid/b;->b()Landroid/view/ViewGroup;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/holder/video/VideoAutoPlayHolder;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/holder/video/i;-><init>(Landroid/view/ViewGroup;)V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vtosters/lite/ui/holder/video/VideoAutoPlayHolder;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vtosters/lite/ui/holder/video/i;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/digest/grid/DigestMediaItemHolder;->b()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/digest/grid/b;->b()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -45,7 +45,7 @@
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/digest/grid/DigestMediaItemHolder;->b()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/digest/grid/b;->b()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -54,16 +54,16 @@
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setClipToOutline(Z)V
 
     .line 5
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vtosters/lite/ui/holder/video/VideoAutoPlayHolder;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vtosters/lite/ui/holder/video/i;
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v0, "autoPlayHolder.itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/digest/grid/DigestMediaItemHolder;->b()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/digest/grid/b;->b()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -82,7 +82,7 @@
     const v2, 0x7f0a00fb
 
     .line 7
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -91,7 +91,7 @@
     const v2, 0x7f0a00f7
 
     .line 8
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -100,7 +100,7 @@
     const v2, 0x7f0a0ec7
 
     .line 9
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -111,7 +111,7 @@
     const v2, 0x7f0a0c54
 
     .line 10
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -144,7 +144,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem$2;-><init>(Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;)V
 
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;JLkotlin/jvm/b/Functions;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;JLkotlin/jvm/b/a;)V
 
     :cond_1
     return-void
@@ -180,20 +180,20 @@
     check-cast v0, Lcom/vk/dto/common/Attachment;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vtosters/lite/ui/holder/video/VideoAutoPlayHolder;
+    iget-object v1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vtosters/lite/ui/holder/video/i;
 
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v2, "autoPlayHolder.itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     instance-of v0, v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     invoke-static {v1, v0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 5
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/digest/grid/DigestMediaItemHolder;->a(Lcom/vk/dto/newsfeed/entries/Digest$DigestItem;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/digest/grid/b;->a(Lcom/vk/dto/newsfeed/entries/Digest$DigestItem;)V
 
     return-void
 .end method
@@ -202,12 +202,12 @@
     .locals 1
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/digest/grid/DigestMediaItemHolder;->a()V
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/digest/grid/b;->a()V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vtosters/lite/ui/holder/video/VideoAutoPlayHolder;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vtosters/lite/ui/holder/video/i;
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->a(Lcom/vk/dto/common/Attachment;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/holders/attachments/k;->a(Lcom/vk/dto/common/Attachment;)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->i:Landroid/view/View;

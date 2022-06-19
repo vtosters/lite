@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;
+.field private final synthetic a:Lcom/vtosters/lite/fragments/n2/q0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/n2/q0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/n2/f;->a:Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/n2/f;->a:Lcom/vtosters/lite/fragments/n2/q0;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final onPreferenceClick(Landroidx/preference/Preference;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/n2/f;->a:Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/n2/f;->a:Lcom/vtosters/lite/fragments/n2/q0;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->j(Landroidx/preference/Preference;)Z
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/n2/q0;->j(Landroidx/preference/Preference;)Z
 
     move-result p1
 

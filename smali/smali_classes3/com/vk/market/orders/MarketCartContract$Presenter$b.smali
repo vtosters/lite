@@ -3,7 +3,7 @@
 .source "MarketCartContract.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -73,16 +73,16 @@
     .line 2
     iget-object p1, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$b;->a:Lcom/vk/market/orders/MarketCartContract$Presenter;
 
-    invoke-static {p1}, Lcom/vk/market/orders/MarketCartContract$Presenter;->b(Lcom/vk/market/orders/MarketCartContract$Presenter;)Lcom/vk/market/orders/MarketCartContract;
+    invoke-static {p1}, Lcom/vk/market/orders/MarketCartContract$Presenter;->b(Lcom/vk/market/orders/MarketCartContract$Presenter;)Lcom/vk/market/orders/c;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$b;->d:Lcom/vk/dto/common/Good;
 
-    invoke-interface {p1, v0}, Lcom/vk/market/orders/MarketCartContract;->a(Lcom/vk/dto/common/Good;)V
+    invoke-interface {p1, v0}, Lcom/vk/market/orders/c;->a(Lcom/vk/dto/common/Good;)V
 
     .line 3
-    new-instance p1, Lb/h/o/a/MarketEvents4;
+    new-instance p1, Lb/h/o/a/d;
 
     iget-object v0, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$b;->d:Lcom/vk/dto/common/Good;
 
@@ -92,9 +92,9 @@
 
     move-result v1
 
-    invoke-direct {p1, v0, v1}, Lb/h/o/a/MarketEvents4;-><init>(Lcom/vk/dto/common/Good;I)V
+    invoke-direct {p1, v0, v1}, Lb/h/o/a/d;-><init>(Lcom/vk/dto/common/Good;I)V
 
-    invoke-static {p1}, Lb/h/o/a/MarketEventBus;->a(Lb/h/o/a/MarketEvents;)V
+    invoke-static {p1}, Lb/h/o/a/g;->a(Lb/h/o/a/a;)V
 
     goto :goto_0
 
@@ -102,7 +102,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$b;->a:Lcom/vk/market/orders/MarketCartContract$Presenter;
 
-    invoke-static {p1}, Lcom/vk/market/orders/MarketCartContract$Presenter;->b(Lcom/vk/market/orders/MarketCartContract$Presenter;)Lcom/vk/market/orders/MarketCartContract;
+    invoke-static {p1}, Lcom/vk/market/orders/MarketCartContract$Presenter;->b(Lcom/vk/market/orders/MarketCartContract$Presenter;)Lcom/vk/market/orders/c;
 
     move-result-object p1
 
@@ -110,10 +110,10 @@
 
     iget-object v1, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$b;->b:Lcom/vk/dto/common/Good;
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/market/orders/MarketCartContract;->a(Lcom/vk/dto/common/Good;Lcom/vk/dto/common/Good;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/market/orders/c;->a(Lcom/vk/dto/common/Good;Lcom/vk/dto/common/Good;)V
 
     .line 5
-    new-instance p1, Lb/h/o/a/MarketEvents1;
+    new-instance p1, Lb/h/o/a/c;
 
     iget-object v0, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$b;->d:Lcom/vk/dto/common/Good;
 
@@ -125,9 +125,9 @@
 
     move-result v2
 
-    invoke-direct {p1, v0, v1, v2}, Lb/h/o/a/MarketEvents1;-><init>(Lcom/vk/dto/common/Good;Lcom/vk/dto/common/Good;I)V
+    invoke-direct {p1, v0, v1, v2}, Lb/h/o/a/c;-><init>(Lcom/vk/dto/common/Good;Lcom/vk/dto/common/Good;I)V
 
-    invoke-static {p1}, Lb/h/o/a/MarketEventBus;->a(Lb/h/o/a/MarketEvents;)V
+    invoke-static {p1}, Lb/h/o/a/g;->a(Lb/h/o/a/a;)V
 
     :goto_0
     return-void

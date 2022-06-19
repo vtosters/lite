@@ -1,5 +1,5 @@
 .class public final Lcom/vk/dto/common/VideoAd$a;
-.super Lcom/vk/dto/common/data/JsonParser;
+.super Lcom/vk/dto/common/data/c;
 .source "JsonParser.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/dto/common/data/JsonParser<",
+        "Lcom/vk/dto/common/data/c<",
         "Lcom/vk/dto/common/VideoAd;",
         ">;"
     }
@@ -27,7 +27,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/data/JsonParser;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/data/c;-><init>()V
 
     return-void
 .end method
@@ -88,7 +88,7 @@
 
     const-string v3, "it.getJSONArray(ServerKeys.MIDROLL_PERCENTS)"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     new-instance v3, Ljava/util/ArrayList;
@@ -119,7 +119,7 @@
 
     move-result-object v9
 
-    invoke-static {v9, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     invoke-static {v9}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -146,9 +146,9 @@
 
     const-string v4, "it.getJSONObject(ServerKeys.PARAMS)"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;)Ljava/util/Map;
+    invoke-static {v0}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;)Ljava/util/Map;
 
     move-result-object v0
 
@@ -221,7 +221,7 @@
 
     const-string v0, "it.getJSONArray(ServerKeys.SECTIONS)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 17
     new-instance v0, Ljava/util/ArrayList;
@@ -245,7 +245,7 @@
 
     move-result-object v9
 
-    invoke-static {v9, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v9, :cond_3
 
@@ -256,7 +256,7 @@
 
     const-string v10, "(this as java.lang.String).toUpperCase()"
 
-    invoke-static {v9, v10}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v10}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v9}, Lcom/vk/dto/common/AdSection;->valueOf(Ljava/lang/String;)Lcom/vk/dto/common/AdSection;
 

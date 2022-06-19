@@ -3,12 +3,12 @@
 .source "HttpRequestExecutorProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->c(Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;)Lcom/vk/httpexecutor/api/k/LoggingInterceptor;
+    value = Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->c(Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;)Lcom/vk/httpexecutor/api/k/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/httpexecutor/api/HttpRequest;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/httpexecutor/api/e;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/httpexecutor/api/HttpRequest;)Z
+.method public final a(Lcom/vk/httpexecutor/api/e;)Z
     .locals 0
 
     .line 1
     iget-object p1, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$createLoggingInterceptor$1;->$config:Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;
 
-    invoke-virtual {p1}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->e()Lkotlin/jvm/b/Functions;
+    invoke-virtual {p1}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->e()Lkotlin/jvm/b/a;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/httpexecutor/api/HttpRequest;
+    check-cast p1, Lcom/vk/httpexecutor/api/e;
 
-    invoke-virtual {p0, p1}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$createLoggingInterceptor$1;->a(Lcom/vk/httpexecutor/api/HttpRequest;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$createLoggingInterceptor$1;->a(Lcom/vk/httpexecutor/api/e;)Z
 
     move-result p1
 

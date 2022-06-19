@@ -6,17 +6,17 @@
 # instance fields
 .field private final a:Ljava/lang/String;
 
-.field private final b:Lcom/vk/music/common/HeadsetConnectionStateChangedListener;
+.field private final b:Lcom/vk/music/common/b;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/music/common/HeadsetConnectionStateChangedListener;)V
+.method public constructor <init>(Lcom/vk/music/common/b;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/vk/music/notifications/headset/listeners/HeadsetBaseReceiver;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/music/notifications/headset/listeners/HeadsetBluetoothConnectionChangedReceiver;->b:Lcom/vk/music/common/HeadsetConnectionStateChangedListener;
+    iput-object p1, p0, Lcom/vk/music/notifications/headset/listeners/HeadsetBluetoothConnectionChangedReceiver;->b:Lcom/vk/music/common/b;
 
     const-string p1, "android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED"
 
@@ -83,14 +83,14 @@
     invoke-static {p2}, Lcom/vk/music/logger/MusicLogger;->d([Ljava/lang/Object;)V
 
     .line 4
-    iget-object p2, p0, Lcom/vk/music/notifications/headset/listeners/HeadsetBluetoothConnectionChangedReceiver;->b:Lcom/vk/music/common/HeadsetConnectionStateChangedListener;
+    iget-object p2, p0, Lcom/vk/music/notifications/headset/listeners/HeadsetBluetoothConnectionChangedReceiver;->b:Lcom/vk/music/common/b;
 
     if-ne p1, v2, :cond_0
 
     const/4 v0, 0x1
 
     :cond_0
-    invoke-interface {p2, v0}, Lcom/vk/music/common/HeadsetConnectionStateChangedListener;->a(Z)V
+    invoke-interface {p2, v0}, Lcom/vk/music/common/b;->a(Z)V
 
     return-void
 .end method

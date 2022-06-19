@@ -3,10 +3,10 @@
 .source "Good.java"
 
 # interfaces
-.implements Lcom/vk/dto/common/data/ServerKeys;
-.implements Lcom/vk/dto/newsfeed/Ownable;
-.implements Lb/h/h/f/Favable;
-.implements Lcom/vk/core/serialize/JSONSerialize;
+.implements Lcom/vk/dto/common/data/h;
+.implements Lcom/vk/dto/newsfeed/d;
+.implements Lb/h/h/f/a;
+.implements Lcom/vk/core/serialize/a;
 
 
 # static fields
@@ -20,10 +20,10 @@
     .end annotation
 .end field
 
-.field public static final c0:Lcom/vk/dto/common/data/JsonParser;
+.field public static final c0:Lcom/vk/dto/common/data/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "Lcom/vk/dto/common/Good;",
             ">;"
         }
@@ -176,7 +176,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/common/Good$d;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/common/Good;->c0:Lcom/vk/dto/common/data/JsonParser;
+    sput-object v0, Lcom/vk/dto/common/Good;->c0:Lcom/vk/dto/common/data/c;
 
     return-void
 .end method
@@ -539,13 +539,13 @@
     .line 5
     sget-object v1, Lcom/vk/dto/common/Price;->f:Lcom/vk/dto/common/Price$c;
 
-    invoke-virtual {v1}, Lcom/vk/dto/common/Price$c;->a()Lcom/vk/dto/common/data/JsonParser;
+    invoke-virtual {v1}, Lcom/vk/dto/common/Price$c;->a()Lcom/vk/dto/common/data/c;
 
     move-result-object v1
 
     const-string v2, "price"
 
-    invoke-static {p1, v2, v1}, Lcom/vk/dto/common/Good;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/lang/Object;
+    invoke-static {p1, v2, v1}, Lcom/vk/dto/common/Good;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -719,13 +719,13 @@
     :cond_3
     sget-object p2, Lcom/vk/dto/common/DeliveryInfo;->c:Lcom/vk/dto/common/DeliveryInfo$c;
 
-    invoke-virtual {p2}, Lcom/vk/dto/common/DeliveryInfo$c;->a()Lcom/vk/dto/common/data/JsonParser;
+    invoke-virtual {p2}, Lcom/vk/dto/common/DeliveryInfo$c;->a()Lcom/vk/dto/common/data/c;
 
     move-result-object p2
 
     const-string v3, "delivery_info"
 
-    invoke-static {p1, v3, p2}, Lcom/vk/dto/common/Good;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/lang/Object;
+    invoke-static {p1, v3, p2}, Lcom/vk/dto/common/Good;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -884,7 +884,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/dto/common/Good$a;-><init>(Lcom/vk/dto/common/Good;)V
 
-    invoke-static {p2, v1}, Lcom/vk/core/extensions/JsonExtKt;->a(Lorg/json/JSONArray;Lkotlin/jvm/b/Functions2;)Ljava/util/ArrayList;
+    invoke-static {p2, v1}, Lcom/vk/core/extensions/JsonExtKt;->a(Lorg/json/JSONArray;Lkotlin/jvm/b/b;)Ljava/util/ArrayList;
 
     move-result-object p2
 
@@ -901,7 +901,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/dto/common/Good$b;-><init>(Lcom/vk/dto/common/Good;)V
 
-    invoke-static {p2, v1}, Lcom/vk/core/extensions/JsonExtKt;->a(Lorg/json/JSONArray;Lkotlin/jvm/b/Functions2;)Ljava/util/ArrayList;
+    invoke-static {p2, v1}, Lcom/vk/core/extensions/JsonExtKt;->a(Lorg/json/JSONArray;Lkotlin/jvm/b/b;)Ljava/util/ArrayList;
 
     move-result-object p2
 
@@ -957,9 +957,9 @@
     :try_start_0
     iget-object v4, p0, Lcom/vk/dto/common/Good;->R:[Lcom/vk/dto/photo/Photo;
 
-    sget-object v5, Lcom/vk/dto/photo/Photo;->d0:Lcom/vk/dto/common/data/JsonParser;
+    sget-object v5, Lcom/vk/dto/photo/Photo;->d0:Lcom/vk/dto/common/data/c;
 
-    invoke-virtual {v5, v3}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
+    invoke-virtual {v5, v3}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1099,7 +1099,7 @@
     return-void
 .end method
 
-.method private static a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/lang/Object;
+.method private static a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/lang/Object;
     .locals 0
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -1111,7 +1111,7 @@
             ">(",
             "Lorg/json/JSONObject;",
             "Ljava/lang/String;",
-            "Lcom/vk/dto/common/data/JsonParser<",
+            "Lcom/vk/dto/common/data/c<",
             "TT;>;)TT;"
         }
     .end annotation
@@ -1127,7 +1127,7 @@
 
     .line 35
     :try_start_0
-    invoke-virtual {p2, p0}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
+    invoke-virtual {p2, p0}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
 
     move-result-object p1
     :try_end_0

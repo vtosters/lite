@@ -164,7 +164,7 @@
     move-result-object v4
 
     .line 7
-    invoke-static {v4}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -223,7 +223,7 @@
 
     .line 14
     :cond_2
-    sget-object p2, Lcom/facebook/internal/ServerProtocol;->a:Ljava/util/Collection;
+    sget-object p2, Lcom/facebook/internal/q;->a:Ljava/util/Collection;
 
     invoke-interface {p2, v0}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
@@ -235,7 +235,7 @@
 
     .line 15
     :cond_3
-    sget-object p2, Lcom/facebook/internal/ServerProtocol;->b:Ljava/util/Collection;
+    sget-object p2, Lcom/facebook/internal/q;->b:Ljava/util/Collection;
 
     invoke-interface {p2, v0}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 

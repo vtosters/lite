@@ -57,11 +57,11 @@
     .line 3
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar$a;->a:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {p1}, Lcom/vtosters/lite/ui/WriteBar;->M(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/audio/AudioMessageUtils;
+    invoke-static {p1}, Lcom/vtosters/lite/ui/WriteBar;->M(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/audio/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/audio/AudioMessageUtils;->b()V
+    invoke-virtual {p1}, Lcom/vk/audio/a;->b()V
 
     .line 4
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar$a;->a:Lcom/vtosters/lite/ui/WriteBar;
@@ -91,7 +91,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/audio/AudioMessageUtils;->a(Lcom/vk/audio/AudioMessageSource;)V
+    invoke-static {p1}, Lcom/vk/audio/a;->a(Lcom/vk/audio/AudioMessageSource;)V
 
     .line 6
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar$a;->a:Lcom/vtosters/lite/ui/WriteBar;

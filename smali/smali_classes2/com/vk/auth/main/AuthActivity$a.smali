@@ -3,7 +3,7 @@
 .source "AuthActivity.kt"
 
 # interfaces
-.implements Lcom/vk/auth/main/AuthCallback;
+.implements Lcom/vk/auth/main/b;
 
 
 # annotations
@@ -63,11 +63,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/auth/main/AuthActivity$a;->a:Lcom/vk/auth/main/AuthActivity;
 
-    invoke-static {p1}, Lcom/vk/auth/main/AuthActivity;->a(Lcom/vk/auth/main/AuthActivity;)Lcom/vk/auth/main/AuthenticatorManager;
+    invoke-static {p1}, Lcom/vk/auth/main/AuthActivity;->a(Lcom/vk/auth/main/AuthActivity;)Lcom/vk/auth/main/j;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/auth/main/AuthenticatorManager;->b()V
+    invoke-virtual {p1}, Lcom/vk/auth/main/j;->b()V
 
     .line 2
     sget-object p1, Lcom/vk/auth/utils/AuthUtils;->d:Lcom/vk/auth/utils/AuthUtils;

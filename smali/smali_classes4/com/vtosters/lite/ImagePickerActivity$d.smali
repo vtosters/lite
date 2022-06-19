@@ -3,7 +3,7 @@
 .source "ImagePickerActivity.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Ljava/util/List<",
         "Ljava/lang/String;",
         ">;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method public a(Ljava/util/List;)Lkotlin/Unit;
+.method public a(Ljava/util/List;)Lkotlin/m;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -55,7 +55,7 @@
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;)",
-            "Lkotlin/Unit;"
+            "Lkotlin/m;"
         }
     .end annotation
 
@@ -65,7 +65,7 @@
     invoke-virtual {p1}, Lcom/vtosters/lite/ImagePickerActivity;->finish()V
 
     .line 2
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
@@ -76,7 +76,7 @@
     .line 1
     check-cast p1, Ljava/util/List;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ImagePickerActivity$d;->a(Ljava/util/List;)Lkotlin/Unit;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ImagePickerActivity$d;->a(Ljava/util/List;)Lkotlin/m;
 
     move-result-object p1
 

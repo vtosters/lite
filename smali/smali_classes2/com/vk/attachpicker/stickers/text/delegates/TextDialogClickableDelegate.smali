@@ -3,11 +3,11 @@
 .source "TextDialogClickableDelegate.kt"
 
 # interfaces
-.implements Lcom/vk/mentions/MentionSelectInterfaces;
-.implements Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper1;
-.implements Lcom/vk/mentions/MentionSuggestViewer;
+.implements Lcom/vk/mentions/i;
+.implements Lcom/vk/attachpicker/stickers/text/delegates/a;
+.implements Lcom/vk/mentions/m;
 .implements Lcom/vk/common/view/SelectionChangeEditText$a;
-.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/disposables/b;
 
 
 # annotations
@@ -44,17 +44,17 @@
     .end annotation
 .end field
 
-.field private F:Lio/reactivex/disposables/Disposable;
+.field private F:Lio/reactivex/disposables/b;
 
 .field private G:I
 
 .field private H:I
 
-.field private final I:Lcom/vk/attachpicker/stickers/text/TextStickerDialog;
+.field private final I:Lcom/vk/attachpicker/stickers/text/i;
 
 .field private final a:Lcom/vk/stories/views/CreateStoryEditText;
 
-.field private final b:Lcom/vk/attachpicker/stickers/StickersCounter;
+.field private final b:Lcom/vk/attachpicker/stickers/l0;
 
 .field private final c:Lcom/vk/attachpicker/widget/ColorSelectorView;
 
@@ -62,7 +62,7 @@
 
 .field private final e:Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$c;
 
-.field private final f:Lcom/vk/mentions/MentionsEditTextHelper;
+.field private final f:Lcom/vk/mentions/n;
 
 .field private final g:Lcom/vk/mentions/MentionSelectViewControllerImpl;
 
@@ -70,45 +70,45 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/attachpicker/stickers/text/TextStickerDialog;)V
+.method public constructor <init>(Lcom/vk/attachpicker/stickers/text/i;)V
     .locals 4
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->I:Lcom/vk/attachpicker/stickers/text/TextStickerDialog;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->I:Lcom/vk/attachpicker/stickers/text/i;
 
     .line 2
-    iget-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->I:Lcom/vk/attachpicker/stickers/text/TextStickerDialog;
+    iget-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->I:Lcom/vk/attachpicker/stickers/text/i;
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/TextStickerDialog;->d()Lcom/vk/stories/views/CreateStoryEditText;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/i;->d()Lcom/vk/stories/views/CreateStoryEditText;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->a:Lcom/vk/stories/views/CreateStoryEditText;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->I:Lcom/vk/attachpicker/stickers/text/TextStickerDialog;
+    iget-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->I:Lcom/vk/attachpicker/stickers/text/i;
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/TextStickerDialog;->c()Lcom/vk/attachpicker/stickers/StickersCounter;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/i;->c()Lcom/vk/attachpicker/stickers/l0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->b:Lcom/vk/attachpicker/stickers/StickersCounter;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->b:Lcom/vk/attachpicker/stickers/l0;
 
     .line 4
-    iget-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->I:Lcom/vk/attachpicker/stickers/text/TextStickerDialog;
+    iget-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->I:Lcom/vk/attachpicker/stickers/text/i;
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/TextStickerDialog;->b()Lcom/vk/attachpicker/widget/ColorSelectorView;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/i;->b()Lcom/vk/attachpicker/widget/ColorSelectorView;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->c:Lcom/vk/attachpicker/widget/ColorSelectorView;
 
     .line 5
-    iget-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->I:Lcom/vk/attachpicker/stickers/text/TextStickerDialog;
+    iget-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->I:Lcom/vk/attachpicker/stickers/text/i;
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/TextStickerDialog;->e()Lcom/rd/PageIndicatorView;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/i;->e()Lcom/rd/PageIndicatorView;
 
     move-result-object p1
 
@@ -122,24 +122,24 @@
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->e:Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$c;
 
     .line 7
-    new-instance p1, Lcom/vk/mentions/MentionsEditTextHelper;
+    new-instance p1, Lcom/vk/mentions/n;
 
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->a:Lcom/vk/stories/views/CreateStoryEditText;
 
     const-string v1, "editText"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->e:Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$c;
 
-    invoke-direct {p1, v0, p0, v2}, Lcom/vk/mentions/MentionsEditTextHelper;-><init>(Landroid/widget/EditText;Lcom/vk/mentions/MentionSuggestViewer;Lcom/vk/mentions/MentionUtils1;)V
+    invoke-direct {p1, v0, p0, v2}, Lcom/vk/mentions/n;-><init>(Landroid/widget/EditText;Lcom/vk/mentions/m;Lcom/vk/mentions/l;)V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->f:Lcom/vk/mentions/MentionsEditTextHelper;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->f:Lcom/vk/mentions/n;
 
     .line 8
     new-instance p1, Lcom/vk/mentions/MentionSelectViewControllerImpl;
 
-    invoke-direct {p1, p0}, Lcom/vk/mentions/MentionSelectViewControllerImpl;-><init>(Lcom/vk/mentions/MentionSelectInterfaces;)V
+    invoke-direct {p1, p0}, Lcom/vk/mentions/MentionSelectViewControllerImpl;-><init>(Lcom/vk/mentions/i;)V
 
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->g:Lcom/vk/mentions/MentionSelectViewControllerImpl;
 
@@ -148,9 +148,9 @@
 
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->a:Lcom/vk/stories/views/CreateStoryEditText;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p1, v0, p0}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;-><init>(Landroid/widget/EditText;Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper1;)V
+    invoke-direct {p1, v0, p0}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;-><init>(Landroid/widget/EditText;Lcom/vk/attachpicker/stickers/text/delegates/a;)V
 
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->h:Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;
 
@@ -171,7 +171,7 @@
     .line 12
     iget-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->a:Lcom/vk/stories/views/CreateStoryEditText;
 
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->f:Lcom/vk/mentions/MentionsEditTextHelper;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->f:Lcom/vk/mentions/n;
 
     invoke-virtual {p1, v0}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
@@ -180,7 +180,7 @@
 
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->a:Lcom/vk/stories/views/CreateStoryEditText;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -188,7 +188,7 @@
 
     const-string v1, "editText.text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Lcom/vk/mentions/MentionUtils;->b(Ljava/lang/CharSequence;)Ljava/util/List;
 
@@ -213,10 +213,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/mentions/MentionModels;
+    check-cast v1, Lcom/vk/mentions/a;
 
     .line 15
-    instance-of v2, v1, Lcom/vk/mentions/MentionModels3;
+    instance-of v2, v1, Lcom/vk/mentions/u;
 
     if-eqz v2, :cond_0
 
@@ -225,9 +225,9 @@
 
     move-object v3, v1
 
-    check-cast v3, Lcom/vk/mentions/MentionModels3;
+    check-cast v3, Lcom/vk/mentions/u;
 
-    invoke-virtual {v3}, Lcom/vk/mentions/MentionModels3;->d()I
+    invoke-virtual {v3}, Lcom/vk/mentions/u;->d()I
 
     move-result v3
 
@@ -235,7 +235,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v1}, Lcom/vk/mentions/MentionModels;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/mentions/a;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -245,13 +245,13 @@
 
     .line 17
     :cond_1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->b:Lcom/vk/attachpicker/stickers/StickersCounter;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->b:Lcom/vk/attachpicker/stickers/l0;
 
     const-string v1, "counter"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersCounter;->d()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/l0;->d()I
 
     move-result v0
 
@@ -270,11 +270,11 @@
     move-result v0
 
     .line 18
-    iget-object v3, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->b:Lcom/vk/attachpicker/stickers/StickersCounter;
+    iget-object v3, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->b:Lcom/vk/attachpicker/stickers/l0;
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Lcom/vk/attachpicker/stickers/StickersCounter;->c()I
+    invoke-virtual {v3}, Lcom/vk/attachpicker/stickers/l0;->c()I
 
     move-result v1
 
@@ -293,7 +293,7 @@
     .line 19
     sget-object v2, Lcom/vk/dto/stories/model/StickerType;->MENTION:Lcom/vk/dto/stories/model/StickerType;
 
-    invoke-static {v2}, Lcom/vk/stories/clickable/StoryClickableController;->a(Lcom/vk/dto/stories/model/StickerType;)I
+    invoke-static {v2}, Lcom/vk/stories/clickable/e;->a(Lcom/vk/dto/stories/model/StickerType;)I
 
     move-result v2
 
@@ -304,7 +304,7 @@
     .line 20
     sget-object v0, Lcom/vk/dto/stories/model/StickerType;->HASHTAG:Lcom/vk/dto/stories/model/StickerType;
 
-    invoke-static {v0}, Lcom/vk/stories/clickable/StoryClickableController;->a(Lcom/vk/dto/stories/model/StickerType;)I
+    invoke-static {v0}, Lcom/vk/stories/clickable/e;->a(Lcom/vk/dto/stories/model/StickerType;)I
 
     move-result v0
 
@@ -340,7 +340,7 @@
     .line 26
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {p1, v0, v1, v2}, Lio/reactivex/Observable;->g(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0, v1, v2}, Lc/a/m;->g(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
 
     move-result-object p1
 
@@ -349,16 +349,16 @@
 
     invoke-direct {v0, p0}, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$a;-><init>(Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->j(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->j(Lc/a/z/j;)Lc/a/m;
 
     move-result-object p1
 
     .line 28
-    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
+    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
 
     move-result-object p1
 
@@ -367,11 +367,11 @@
 
     invoke-direct {v0, p0}, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$b;-><init>(Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {p1, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->F:Lio/reactivex/disposables/Disposable;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->F:Lio/reactivex/disposables/b;
 
     return-void
 .end method
@@ -383,7 +383,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/mentions/MentionModels;",
+            "Lcom/vk/mentions/a;",
             ">;)I"
         }
     .end annotation
@@ -398,7 +398,7 @@
     if-eqz p1, :cond_1
 
     .line 7
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
 
     move-result-object p1
 
@@ -407,7 +407,7 @@
     .line 8
     sget-object v1, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$getMentionCount$1;->a:Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$getMentionCount$1;
 
-    invoke-static {p1, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p1, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p1
 
@@ -416,14 +416,14 @@
     .line 9
     sget-object v1, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$getMentionCount$2;->a:Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$getMentionCount$2;
 
-    invoke-static {p1, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
+    invoke-static {p1, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
     .line 10
-    invoke-static {p1}, Lkotlin/sequences/m;->n(Lkotlin/sequences/Sequence;)Ljava/util/Set;
+    invoke-static {p1}, Lkotlin/sequences/m;->n(Lkotlin/sequences/j;)Ljava/util/Set;
 
     move-result-object p1
 
@@ -529,7 +529,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;Lcom/vk/mentions/MentionModels2;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)V
+.method static synthetic a(Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;Lcom/vk/mentions/h;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x2
@@ -549,7 +549,7 @@
 
     .line 21
     :cond_1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->a(Lcom/vk/mentions/MentionModels2;Ljava/lang/Integer;Ljava/lang/Integer;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->a(Lcom/vk/mentions/h;Ljava/lang/Integer;Ljava/lang/Integer;)V
 
     return-void
 .end method
@@ -595,7 +595,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/mentions/MentionModels2;Ljava/lang/Integer;Ljava/lang/Integer;)V
+.method private final a(Lcom/vk/mentions/h;Ljava/lang/Integer;Ljava/lang/Integer;)V
     .locals 9
 
     .line 22
@@ -609,7 +609,7 @@
 
     sget-object v1, Lcom/vk/mentions/MentionUtils;->b:Lcom/vk/mentions/MentionUtils;
 
-    invoke-virtual {v1, p1}, Lcom/vk/mentions/MentionUtils;->a(Lcom/vk/mentions/MentionModels2;)Ljava/lang/String;
+    invoke-virtual {v1, p1}, Lcom/vk/mentions/MentionUtils;->a(Lcom/vk/mentions/h;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -634,10 +634,10 @@
     invoke-virtual {v1, v8}, Lcom/vk/stories/views/CreateStoryEditText;->setSelectionChangeListener(Lcom/vk/common/view/SelectionChangeEditText$a;)V
 
     .line 25
-    iget-object v2, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->f:Lcom/vk/mentions/MentionsEditTextHelper;
+    iget-object v2, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->f:Lcom/vk/mentions/n;
 
     .line 26
-    invoke-virtual {p1}, Lcom/vk/mentions/MentionModels2;->d()I
+    invoke-virtual {p1}, Lcom/vk/mentions/h;->d()I
 
     move-result v3
 
@@ -650,7 +650,7 @@
     move-object v7, p3
 
     .line 27
-    invoke-virtual/range {v2 .. v7}, Lcom/vk/mentions/MentionsEditTextHelper;->a(ILjava/lang/String;ZLjava/lang/Integer;Ljava/lang/Integer;)V
+    invoke-virtual/range {v2 .. v7}, Lcom/vk/mentions/n;->a(ILjava/lang/String;ZLjava/lang/Integer;Ljava/lang/Integer;)V
 
     .line 28
     iget-object p2, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->a:Lcom/vk/stories/views/CreateStoryEditText;
@@ -665,7 +665,7 @@
     .line 30
     iget-object p2, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->B:Ljava/util/HashMap;
 
-    invoke-virtual {p1}, Lcom/vk/mentions/MentionModels2;->d()I
+    invoke-virtual {p1}, Lcom/vk/mentions/h;->d()I
 
     move-result p1
 
@@ -684,15 +684,15 @@
     return-void
 .end method
 
-.method private final a(Ljava/lang/CharSequence;Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;)V
+.method private final a(Ljava/lang/CharSequence;Lcom/vk/attachpicker/stickers/text/delegates/c;)V
     .locals 2
 
     .line 42
-    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;->b()I
+    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/text/delegates/c;->b()I
 
     move-result v0
 
-    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;->a()I
+    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/text/delegates/c;->a()I
 
     move-result v1
 
@@ -715,7 +715,7 @@
     move-result-object p1
 
     .line 45
-    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;->b()I
+    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/text/delegates/c;->b()I
 
     move-result v0
 
@@ -724,7 +724,7 @@
     move-result-object v0
 
     .line 46
-    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;->a()I
+    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/text/delegates/c;->a()I
 
     move-result p2
 
@@ -800,7 +800,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/mentions/MentionModels;",
+            "Lcom/vk/mentions/a;",
             ">;)V"
         }
     .end annotation
@@ -817,7 +817,7 @@
 
     const-string v1, "editText"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -825,7 +825,7 @@
 
     const-string v1, "editText.text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Lcom/vk/mentions/MentionUtils;->b(Ljava/lang/CharSequence;)Ljava/util/List;
 
@@ -860,11 +860,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;)Lcom/vk/attachpicker/stickers/text/TextStickerDialog;
+.method public static final synthetic e(Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;)Lcom/vk/attachpicker/stickers/text/i;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->I:Lcom/vk/attachpicker/stickers/text/TextStickerDialog;
+    iget-object p0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->I:Lcom/vk/attachpicker/stickers/text/i;
 
     return-object p0
 .end method
@@ -965,7 +965,7 @@
     .locals 0
 
     .line 5
-    invoke-static {p0}, Lcom/vk/mentions/MentionSelectInterfaces$a;->a(Lcom/vk/mentions/MentionSelectInterfaces;)V
+    invoke-static {p0}, Lcom/vk/mentions/i$a;->a(Lcom/vk/mentions/i;)V
 
     return-void
 .end method
@@ -979,9 +979,9 @@
 
     .line 51
     :cond_0
-    iget-object p2, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->f:Lcom/vk/mentions/MentionsEditTextHelper;
+    iget-object p2, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->f:Lcom/vk/mentions/n;
 
-    invoke-virtual {p2, p1}, Lcom/vk/mentions/MentionsEditTextHelper;->b(I)V
+    invoke-virtual {p2, p1}, Lcom/vk/mentions/n;->b(I)V
 
     .line 52
     iget-object p2, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->h:Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper;
@@ -1003,7 +1003,7 @@
 
     const-string v1, "editText.editableText"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->B:Ljava/util/HashMap;
 
@@ -1029,7 +1029,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;)V
+.method public a(Lcom/vk/attachpicker/stickers/text/delegates/c;Lcom/vk/attachpicker/stickers/text/delegates/c;)V
     .locals 2
 
     .line 48
@@ -1037,7 +1037,7 @@
 
     const-string v1, "editText"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -1046,20 +1046,20 @@
     if-eqz p1, :cond_1
 
     .line 49
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;->b()I
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/delegates/c;->b()I
 
     move-result v1
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;->b()I
+    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/text/delegates/c;->b()I
 
     move-result p2
 
     if-eq v1, p2, :cond_1
 
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;->a()I
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/text/delegates/c;->a()I
 
     move-result p2
 
@@ -1072,9 +1072,9 @@
     const-string p2, "text"
 
     .line 50
-    invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0, p1}, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->a(Ljava/lang/CharSequence;Lcom/vk/attachpicker/stickers/text/delegates/HashtagEditTextHelper2;)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->a(Ljava/lang/CharSequence;Lcom/vk/attachpicker/stickers/text/delegates/c;)V
 
     :cond_1
     return-void
@@ -1084,12 +1084,12 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1}, Lcom/vk/mentions/MentionSelectInterfaces$a;->a(Lcom/vk/mentions/MentionSelectInterfaces;Lcom/vk/dto/common/Attachment;)V
+    invoke-static {p0, p1}, Lcom/vk/mentions/i$a;->a(Lcom/vk/mentions/i;Lcom/vk/dto/common/Attachment;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/mentions/MentionModels2;)V
+.method public a(Lcom/vk/mentions/h;)V
     .locals 6
 
     const/4 v2, 0x0
@@ -1105,16 +1105,16 @@
     move-object v1, p1
 
     .line 17
-    invoke-static/range {v0 .. v5}, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->a(Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;Lcom/vk/mentions/MentionModels2;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->a(Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;Lcom/vk/mentions/h;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;I)V
+.method public a(Lcom/vk/stories/clickable/models/e;I)V
     .locals 6
 
     .line 18
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/e;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1135,7 +1135,7 @@
 
     const-string p2, "editText"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -1157,7 +1157,7 @@
     .locals 0
 
     .line 4
-    invoke-static {p0, p1, p2}, Lcom/vk/mentions/MentionSuggestViewer$a;->a(Lcom/vk/mentions/MentionSuggestViewer;Ljava/lang/Integer;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/mentions/m$a;->a(Lcom/vk/mentions/m;Ljava/lang/Integer;I)V
 
     return-void
 .end method
@@ -1179,7 +1179,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/mentions/MentionSelectInterfaces$a;->a(Lcom/vk/mentions/MentionSelectInterfaces;Ljava/lang/Throwable;)V
+    invoke-static {p0, p1}, Lcom/vk/mentions/i$a;->a(Lcom/vk/mentions/i;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -1188,13 +1188,13 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->F:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->F:Lio/reactivex/disposables/b;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->e()Z
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->e()Z
 
     move-result v0
 
@@ -1213,7 +1213,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/mentions/MentionSelectInterfaces$a;->a(Lcom/vk/mentions/MentionSelectInterfaces;Z)V
+    invoke-static {p0, p1}, Lcom/vk/mentions/i$a;->a(Lcom/vk/mentions/i;Z)V
 
     return-void
 .end method
@@ -1279,11 +1279,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->F:Lio/reactivex/disposables/Disposable;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->F:Lio/reactivex/disposables/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
 
     :cond_0
     return-void
@@ -1293,7 +1293,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/mentions/MentionSelectInterfaces$a;->b(Lcom/vk/mentions/MentionSelectInterfaces;)V
+    invoke-static {p0}, Lcom/vk/mentions/i$a;->b(Lcom/vk/mentions/i;)V
 
     return-void
 .end method
@@ -1302,7 +1302,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/mentions/MentionSelectInterfaces$a;->c(Lcom/vk/mentions/MentionSelectInterfaces;)V
+    invoke-static {p0}, Lcom/vk/mentions/i$a;->c(Lcom/vk/mentions/i;)V
 
     return-void
 .end method

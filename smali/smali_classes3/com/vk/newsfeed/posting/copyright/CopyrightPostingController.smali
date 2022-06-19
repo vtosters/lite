@@ -17,7 +17,7 @@
 
 
 # instance fields
-.field private final a:Lio/reactivex/disposables/CompositeDisposable;
+.field private final a:Lio/reactivex/disposables/a;
 
 .field private b:Landroidx/appcompat/app/AlertDialog;
 
@@ -38,7 +38,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController;->g:Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController$a;
 
@@ -54,11 +54,11 @@
     iput-object p1, p0, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController;->f:Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController$b;
 
     .line 2
-    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
+    new-instance p1, Lio/reactivex/disposables/a;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController;->a:Lio/reactivex/disposables/CompositeDisposable;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController;->a:Lio/reactivex/disposables/a;
 
     .line 3
     new-instance p1, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController$f;
@@ -124,16 +124,16 @@
     .locals 12
 
     .line 17
-    new-instance v0, Lb/h/c/w/CheckCopyrightRequest;
+    new-instance v0, Lb/h/c/w/a;
 
-    invoke-direct {v0, p1}, Lb/h/c/w/CheckCopyrightRequest;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lb/h/c/w/a;-><init>(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 18
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
 
     move-result-object v3
 
@@ -160,7 +160,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
 
     move-result-object v0
 
@@ -175,14 +175,14 @@
     invoke-direct {p1, p0}, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController$e;-><init>(Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController;)V
 
     .line 22
-    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 
     .line 23
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController;->a:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController;->a:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     :cond_0
     return-void
@@ -318,7 +318,7 @@
 
     invoke-direct {v0, p0, p2}, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController$showDialog$1;-><init>(Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;->a(Lkotlin/jvm/b/Functions1;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;->a(Lkotlin/jvm/b/c;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;
 
     if-eqz p2, :cond_6
 
@@ -334,7 +334,7 @@
     .line 13
     iget-object p2, p0, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController;->e:Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController$c;
 
-    invoke-virtual {p1, v2, p2, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;->a(ILkotlin/jvm/b/Functions1;Z)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;
+    invoke-virtual {p1, v2, p2, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;->a(ILkotlin/jvm/b/c;Z)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;
 
     .line 14
     invoke-virtual {p1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;->f()Landroidx/appcompat/app/AlertDialog;
@@ -364,9 +364,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController;->a:Lio/reactivex/disposables/CompositeDisposable;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/copyright/CopyrightPostingController;->a:Lio/reactivex/disposables/a;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
 
     return-void
 .end method

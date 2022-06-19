@@ -19,7 +19,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/instantjobs/receivers/InstantJobCancelReceiver$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/instantjobs/receivers/InstantJobCancelReceiver$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -45,7 +45,7 @@
 
     const-string v1, "com.vk.instantjobs.receivers.ACTION_CANCEL"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -121,9 +121,9 @@
 
     .line 7
     :cond_4
-    sget-object v1, Lcom/vk/instantjobs/InstantJobManager;->h:Lcom/vk/instantjobs/InstantJobManager$a;
+    sget-object v1, Lcom/vk/instantjobs/b;->h:Lcom/vk/instantjobs/b$a;
 
-    invoke-virtual {v1, p2}, Lcom/vk/instantjobs/InstantJobManager$a;->a(Ljava/lang/String;)Lcom/vk/instantjobs/InstantJobManager;
+    invoke-virtual {v1, p2}, Lcom/vk/instantjobs/b$a;->a(Ljava/lang/String;)Lcom/vk/instantjobs/b;
 
     move-result-object p2
 
@@ -135,7 +135,7 @@
 
     const-string v0, "Canceled from push"
 
-    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/InstantJobManager;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p2, v0, v1}, Lcom/vk/instantjobs/b;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)V
 
     .line 8
     :cond_5

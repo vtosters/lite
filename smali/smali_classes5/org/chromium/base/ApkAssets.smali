@@ -34,7 +34,7 @@
 
     .line 1
     :try_start_0
-    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
 
     move-result-object v7
 

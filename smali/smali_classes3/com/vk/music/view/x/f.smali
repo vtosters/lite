@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # static fields
@@ -38,7 +38,7 @@
 
     check-cast p1, Landroid/view/View;
 
-    invoke-static {p1}, Lcom/vk/music/view/x/ControlsHolder;->a(Landroid/view/View;)Landroid/animation/ObjectAnimator;
+    invoke-static {p1}, Lcom/vk/music/view/x/p;->a(Landroid/view/View;)Landroid/animation/ObjectAnimator;
 
     move-result-object p1
 

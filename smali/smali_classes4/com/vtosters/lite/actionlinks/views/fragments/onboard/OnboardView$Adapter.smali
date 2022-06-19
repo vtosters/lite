@@ -19,7 +19,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;",
+            "Lcom/vk/api/video/m$b;",
             ">;"
         }
     .end annotation
@@ -36,7 +36,7 @@
             "(",
             "Landroidx/fragment/app/FragmentManager;",
             "Ljava/util/List<",
-            "Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;",
+            "Lcom/vk/api/video/m$b;",
             ">;)V"
         }
     .end annotation
@@ -81,9 +81,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;
+    check-cast p1, Lcom/vk/api/video/m$b;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->a(Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->a(Lcom/vk/api/video/m$b;)V
 
     .line 3
     new-instance p1, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView$Adapter$getItem$1;
@@ -92,7 +92,7 @@
 
     invoke-direct {p1, v1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView$Adapter$getItem$1;-><init>(Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;)V
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->e(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->e(Lkotlin/jvm/b/a;)V
 
     return-object v0
 .end method

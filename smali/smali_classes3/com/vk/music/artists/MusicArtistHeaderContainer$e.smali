@@ -65,7 +65,7 @@
 
     const-string v2, "activity.window"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
@@ -79,7 +79,7 @@
 
     xor-int/lit8 v2, v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/vk/extensions/ActivityExt;->a(Landroid/app/Activity;Landroid/view/View;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vk/extensions/b;->a(Landroid/app/Activity;Landroid/view/View;Z)V
 
     :cond_1
     return-void

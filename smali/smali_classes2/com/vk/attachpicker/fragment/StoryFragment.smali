@@ -45,14 +45,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/attachpicker/fragment/StoryFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/attachpicker/fragment/StoryFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -67,9 +67,9 @@
     sput v0, Lcom/vk/attachpicker/fragment/StoryFragment;->L:I
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -149,7 +149,7 @@
     const v5, 0x7f120a1b
 
     .line 7
-    invoke-virtual/range {v1 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
+    invoke-virtual/range {v1 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
 
     return-void
 .end method
@@ -187,7 +187,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/view/View;ZLjava/lang/Runnable;)V
+    invoke-static {p1, v1, v0}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;ZLjava/lang/Runnable;)V
 
     return-void
 .end method
@@ -371,7 +371,7 @@
     const/4 v0, 0x0
 
     .line 11
-    invoke-static {p2, v0, v5}, Lcom/vk/core/util/MathUtils;->a(FFF)F
+    invoke-static {p2, v0, v5}, Lcom/vk/core/util/o0;->a(FFF)F
 
     move-result p2
 
@@ -388,7 +388,7 @@
 
     const-string v2, "background.paint"
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v2, Lcom/vk/attachpicker/fragment/StoryFragment;->M:I
 
@@ -400,7 +400,7 @@
 
     double-to-float v5, v5
 
-    invoke-static {v2, v7, v5}, Lcom/vk/core/util/ColorUtils;->a(IIF)I
+    invoke-static {v2, v7, v5}, Lcom/vk/core/util/p;->a(IIF)I
 
     move-result v2
 
@@ -479,9 +479,9 @@
 
     invoke-direct {p2, p0}, Lcom/vk/attachpicker/fragment/StoryFragment$onOffsetChanged$1;-><init>(Lcom/vk/attachpicker/fragment/StoryFragment;)V
 
-    new-instance v0, Lcom/vk/attachpicker/fragment/StoryFragment1;
+    new-instance v0, Lcom/vk/attachpicker/fragment/u;
 
-    invoke-direct {v0, p2}, Lcom/vk/attachpicker/fragment/StoryFragment1;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v0, p2}, Lcom/vk/attachpicker/fragment/u;-><init>(Lkotlin/jvm/b/a;)V
 
     const-wide/16 v1, 0xc8
 
@@ -504,43 +504,43 @@
     const-string p1, "background"
 
     .line 22
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 23
     :cond_8
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 24
     :cond_9
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 25
     :cond_a
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 26
     :cond_b
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 27
     :cond_c
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 28
     :cond_d
-    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 .end method
@@ -605,14 +605,14 @@
 
     const-string v0, "view!!"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/attachpicker/fragment/StoryFragment;->a(Landroid/view/View;)V
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -645,7 +645,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -699,7 +699,7 @@
 
     const-string v1, "background.paint"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v1, Lcom/vk/attachpicker/fragment/StoryFragment;->L:I
 
@@ -714,7 +714,7 @@
 
     const-string v1, "view.findViewById(R.id.growing_circle)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/ImageView;
 
@@ -729,7 +729,7 @@
 
     const-string v1, "view.findViewById(R.id.steady_circle)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/ImageView;
 
@@ -751,7 +751,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/attachpicker/fragment/StoryFragment$onCreateView$2;-><init>(Lcom/vk/attachpicker/fragment/StoryFragment;)V
 
-    invoke-static {p3, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p3, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 9
     invoke-direct {p0, p3}, Lcom/vk/attachpicker/fragment/StoryFragment;->a(Landroid/view/View;)V
@@ -760,26 +760,26 @@
 
     .line 10
     :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p1
 
     :cond_1
     const-string p2, "steadyCircle"
 
-    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p1
 
     .line 11
     :cond_2
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw p1
 
     .line 12
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw p1
 .end method

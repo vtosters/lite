@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;ILjava/lang/String;ZLjava/lang/Integer;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;)Z
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;ILjava/lang/String;ZLjava/lang/Integer;Ljava/lang/String;Lcom/vk/common/links/f;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lcom/vk/im/engine/models/ProfilesInfo;",
         ">;"
     }
@@ -40,11 +40,11 @@
 
 .field final synthetic e:Ljava/lang/String;
 
-.field final synthetic f:Lcom/vk/common/links/OpenCallback;
+.field final synthetic f:Lcom/vk/common/links/f;
 
 
 # direct methods
-.method constructor <init>(ILjava/lang/String;ZLjava/lang/Integer;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;)V
+.method constructor <init>(ILjava/lang/String;ZLjava/lang/Integer;Ljava/lang/String;Lcom/vk/common/links/f;)V
     .locals 0
 
     iput p1, p0, Lcom/vk/common/links/OpenFunctionsKt$u0;->a:I
@@ -57,7 +57,7 @@
 
     iput-object p5, p0, Lcom/vk/common/links/OpenFunctionsKt$u0;->e:Ljava/lang/String;
 
-    iput-object p6, p0, Lcom/vk/common/links/OpenFunctionsKt$u0;->f:Lcom/vk/common/links/OpenCallback;
+    iput-object p6, p0, Lcom/vk/common/links/OpenFunctionsKt$u0;->f:Lcom/vk/common/links/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -72,7 +72,7 @@
     .line 1
     iget v0, p0, Lcom/vk/common/links/OpenFunctionsKt$u0;->a:I
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/ProfilesInfo;->get(I)Lcom/vk/im/engine/models/Profile;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/ProfilesInfo;->get(I)Lcom/vk/im/engine/models/j;
 
     move-result-object p1
 
@@ -81,7 +81,7 @@
     .line 2
     sget-object v0, Lcom/vtosters/lite/im/ImCompat;->d:Lcom/vtosters/lite/im/ImCompat;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/im/ImCompat;->b(Lcom/vk/im/engine/models/Profile;)Lcom/vk/dto/user/UserProfile;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/im/ImCompat;->b(Lcom/vk/im/engine/models/j;)Lcom/vk/dto/user/UserProfile;
 
     move-result-object v2
 
@@ -99,21 +99,21 @@
     invoke-virtual/range {v1 .. v6}, Lcom/vk/voip/VoipViewModel;->a(Lcom/vk/dto/user/UserProfile;Ljava/lang/String;ZLjava/lang/Integer;Ljava/lang/String;)V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$u0;->f:Lcom/vk/common/links/OpenCallback;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$u0;->f:Lcom/vk/common/links/f;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->a()V
+    invoke-interface {p1}, Lcom/vk/common/links/f;->a()V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$u0;->f:Lcom/vk/common/links/OpenCallback;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$u0;->f:Lcom/vk/common/links/f;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->b()V
+    invoke-interface {p1}, Lcom/vk/common/links/f;->b()V
 
     :cond_1
     :goto_0

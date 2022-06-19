@@ -3,7 +3,7 @@
 .source "WriteBar.java"
 
 # interfaces
-.implements Lcom/vk/audio/AudioRecordObserver;
+.implements Lcom/vk/audio/c;
 
 
 # annotations
@@ -63,7 +63,7 @@
     .line 24
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar$l;->a:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {p1}, Lcom/vtosters/lite/ui/WriteBar;->b(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
+    invoke-static {p1}, Lcom/vtosters/lite/ui/WriteBar;->b(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vtosters/lite/ui/widget/f;
 
     move-result-object p1
 
@@ -71,7 +71,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->a(Ljava/lang/Double;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/widget/f;->a(Ljava/lang/Double;)V
 
     .line 25
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar$l;->a:Lcom/vtosters/lite/ui/WriteBar;
@@ -208,11 +208,11 @@
 
     long-to-int v7, v7
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/auth/api/VKAccount;->D0()I
+    invoke-virtual {v4}, Lb/h/h/d/c;->D0()I
 
     move-result v8
 
@@ -244,7 +244,7 @@
     .line 10
     iget-object v3, v0, Lcom/vtosters/lite/ui/WriteBar$l;->a:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {v3}, Lcom/vtosters/lite/ui/WriteBar;->M(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/audio/AudioMessageUtils;
+    invoke-static {v3}, Lcom/vtosters/lite/ui/WriteBar;->M(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/audio/a;
 
     move-result-object v3
 
@@ -256,16 +256,16 @@
 
     move-result-object v5
 
-    invoke-virtual {v3, v4, v5}, Lcom/vk/audio/AudioMessageUtils;->a(ILcom/vk/audio/AudioMsgTrackByRecord;)V
+    invoke-virtual {v3, v4, v5}, Lcom/vk/audio/a;->a(ILcom/vk/audio/AudioMsgTrackByRecord;)V
 
     .line 11
     iget-object v3, v0, Lcom/vtosters/lite/ui/WriteBar$l;->a:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {v3}, Lcom/vtosters/lite/ui/WriteBar;->M(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/audio/AudioMessageUtils;
+    invoke-static {v3}, Lcom/vtosters/lite/ui/WriteBar;->M(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/audio/a;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/audio/AudioMessageUtils;->b()V
+    invoke-virtual {v3}, Lcom/vk/audio/a;->b()V
 
     .line 12
     iget-object v3, v0, Lcom/vtosters/lite/ui/WriteBar$l;->a:Lcom/vtosters/lite/ui/WriteBar;
@@ -296,13 +296,13 @@
     :cond_0
     iget-object v3, v0, Lcom/vtosters/lite/ui/WriteBar$l;->a:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {v3}, Lcom/vtosters/lite/ui/WriteBar;->b(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
+    invoke-static {v3}, Lcom/vtosters/lite/ui/WriteBar;->b(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vtosters/lite/ui/widget/f;
 
     move-result-object v3
 
     const/4 v4, 0x0
 
-    invoke-virtual {v3, v4}, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->a(Ljava/lang/Double;)V
+    invoke-virtual {v3, v4}, Lcom/vtosters/lite/ui/widget/f;->a(Ljava/lang/Double;)V
 
     if-eqz p4, :cond_1
 

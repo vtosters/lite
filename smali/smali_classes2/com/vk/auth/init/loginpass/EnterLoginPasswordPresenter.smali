@@ -13,7 +13,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/auth/base/FacebookAuthPresenter<",
-        "Lcom/vk/auth/init/loginpass/LoginPassView;",
+        "Lcom/vk/auth/init/loginpass/a;",
         ">;"
     }
 .end annotation
@@ -54,15 +54,15 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;)Lcom/vk/auth/init/loginpass/LoginPassView;
+.method public static final synthetic a(Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;)Lcom/vk/auth/init/loginpass/a;
     .locals 0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/auth/init/loginpass/LoginPassView;
+    check-cast p0, Lcom/vk/auth/init/loginpass/a;
 
     return-object p0
 .end method
@@ -114,11 +114,11 @@
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/auth/init/loginpass/LoginPassView;
+    check-cast p1, Lcom/vk/auth/init/loginpass/a;
 
     if-eqz p1, :cond_0
 
@@ -126,15 +126,15 @@
 
     iget-object v1, p0, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->z:Ljava/lang/String;
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/auth/base/LoginView;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/auth/base/f;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/auth/init/loginpass/LoginPassView;
+    check-cast p1, Lcom/vk/auth/init/loginpass/a;
 
     if-eqz p1, :cond_5
 
@@ -185,7 +185,7 @@
 
     :cond_4
     :goto_2
-    invoke-interface {p1, v1}, Lcom/vk/auth/base/LoginView;->x(Z)V
+    invoke-interface {p1, v1}, Lcom/vk/auth/base/f;->x(Z)V
 
     :cond_5
     return-void
@@ -200,13 +200,13 @@
     if-nez v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->i()Lcom/vk/auth/t/CredentialsManager;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->i()Lcom/vk/auth/t/b;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->A:Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter$CredentialsCallbackImpl;
 
-    invoke-interface {v0, v1}, Lcom/vk/auth/t/CredentialsManager;->b(Lcom/vk/auth/t/CredentialsCallback;)V
+    invoke-interface {v0, v1}, Lcom/vk/auth/t/b;->b(Lcom/vk/auth/t/a;)V
 
     const/4 v0, 0x1
 
@@ -252,22 +252,22 @@
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/auth/base/AuthView;)V
+.method public bridge synthetic a(Lcom/vk/auth/base/b;)V
     .locals 0
 
     .line 3
-    check-cast p1, Lcom/vk/auth/init/loginpass/LoginPassView;
+    check-cast p1, Lcom/vk/auth/init/loginpass/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->a(Lcom/vk/auth/init/loginpass/LoginPassView;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->a(Lcom/vk/auth/init/loginpass/a;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/auth/init/loginpass/LoginPassView;)V
+.method public a(Lcom/vk/auth/init/loginpass/a;)V
     .locals 1
 
     .line 4
-    invoke-super {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/base/AuthView;)V
+    invoke-super {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/base/b;)V
 
     const/4 p1, 0x1
 
@@ -275,13 +275,13 @@
     invoke-direct {p0, p1}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->b(Z)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->i()Lcom/vk/auth/t/CredentialsManager;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->i()Lcom/vk/auth/t/b;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->A:Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter$CredentialsCallbackImpl;
 
-    invoke-interface {p1, v0}, Lcom/vk/auth/t/CredentialsManager;->a(Lcom/vk/auth/t/CredentialsCallback;)V
+    invoke-interface {p1, v0}, Lcom/vk/auth/t/b;->a(Lcom/vk/auth/t/a;)V
 
     .line 7
     invoke-direct {p0}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->z()V
@@ -321,13 +321,13 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->i()Lcom/vk/auth/t/CredentialsManager;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->i()Lcom/vk/auth/t/b;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->A:Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter$CredentialsCallbackImpl;
 
-    invoke-interface {v0, v1}, Lcom/vk/auth/t/CredentialsManager;->c(Lcom/vk/auth/t/CredentialsCallback;)V
+    invoke-interface {v0, v1}, Lcom/vk/auth/t/b;->c(Lcom/vk/auth/t/a;)V
 
     .line 2
     invoke-super {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o2()V
@@ -339,19 +339,19 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->g()Lcom/vk/auth/main/AuthRouter;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->g()Lcom/vk/auth/main/g;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->y:Ljava/lang/String;
 
-    new-instance v2, Lcom/vk/auth/main/RestoreReason3;
+    new-instance v2, Lcom/vk/auth/main/l;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, v3}, Lcom/vk/auth/main/RestoreReason3;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Lcom/vk/auth/main/l;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/auth/main/AuthRouter;->a(Ljava/lang/String;Lcom/vk/auth/main/RestoreReason2;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/auth/main/g;->a(Ljava/lang/String;Lcom/vk/auth/main/p;)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->r()Lcom/vk/auth/main/AuthStatSender;

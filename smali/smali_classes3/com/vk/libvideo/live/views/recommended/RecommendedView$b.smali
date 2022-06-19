@@ -97,18 +97,18 @@
 
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    check-cast v1, Lcom/vk/libvideo/live/views/recommended/f/RecommendedElement;
+    check-cast v1, Lcom/vk/libvideo/live/views/recommended/f/a;
 
-    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->a(Lcom/vk/libvideo/live/views/recommended/RecommendedView;Lcom/vk/libvideo/live/views/recommended/f/RecommendedElement;)Lcom/vk/libvideo/live/views/recommended/f/RecommendedElement;
+    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->a(Lcom/vk/libvideo/live/views/recommended/RecommendedView;Lcom/vk/libvideo/live/views/recommended/f/a;)Lcom/vk/libvideo/live/views/recommended/f/a;
 
     .line 4
     iget-object v0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView$b;->b:Lcom/vk/libvideo/live/views/recommended/RecommendedView;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->b(Lcom/vk/libvideo/live/views/recommended/RecommendedView;)Lcom/vk/libvideo/live/views/recommended/f/RecommendedElement;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->b(Lcom/vk/libvideo/live/views/recommended/RecommendedView;)Lcom/vk/libvideo/live/views/recommended/f/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/recommended/f/RecommendedElement;->a()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/recommended/f/a;->a()V
 
     :cond_0
     return-void

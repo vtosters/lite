@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/friends/recommendations/FriendsImportFragment$f;->call()Lcom/vk/utils/ContactImportUtils$a;
+    value = Lcom/vk/friends/recommendations/FriendsImportFragment$f;->call()Lcom/vk/utils/b$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,15 +34,15 @@
 
 
 # virtual methods
-.method public final a(Lorg/json/JSONArray;Lcom/facebook/GraphResponse;)V
+.method public final a(Lorg/json/JSONArray;Lcom/facebook/i;)V
     .locals 8
 
     const-string v0, "response"
 
     .line 1
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p2}, Lcom/facebook/GraphResponse;->a()Lcom/facebook/FacebookRequestError;
+    invoke-virtual {p2}, Lcom/facebook/i;->a()Lcom/facebook/FacebookRequestError;
 
     move-result-object p2
 
@@ -51,7 +51,7 @@
     .line 2
     sget-object p1, Lcom/vk/friends/recommendations/FriendsImportFragment$f$a$a;->a:Lcom/vk/friends/recommendations/FriendsImportFragment$f$a$a;
 
-    invoke-static {p1}, Lcom/vtosters/lite/ViewUtils;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     goto :goto_1
 
@@ -78,7 +78,7 @@
 
     aget-object v3, v3, v0
 
-    new-instance v4, Lcom/vk/dto/common/Contact;
+    new-instance v4, Lcom/vk/dto/common/b;
 
     const-string v5, "name"
 
@@ -98,7 +98,7 @@
 
     const-string v7, "it.getString(\"id\")"
 
-    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v2, v6, v0
 
@@ -106,7 +106,7 @@
 
     move-result-object v2
 
-    invoke-direct {v4, v5, v2}, Lcom/vk/dto/common/Contact;-><init>(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v4, v5, v2}, Lcom/vk/dto/common/b;-><init>(Ljava/lang/String;Ljava/util/List;)V
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0

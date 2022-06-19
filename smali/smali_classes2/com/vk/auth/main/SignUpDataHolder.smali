@@ -56,7 +56,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/main/SignUpDataHolder$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/main/SignUpDataHolder$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/auth/main/SignUpDataHolder$a;
@@ -202,7 +202,7 @@
     return-void
 .end method
 
-.method public final a(ILjava/lang/String;)Lcom/vk/auth/api/commands/SignUpCommand;
+.method public final a(ILjava/lang/String;)Lcom/vk/auth/api/commands/i;
     .locals 15
 
     move-object v0, p0
@@ -291,7 +291,7 @@
 
     .line 7
     :goto_1
-    new-instance v1, Lcom/vk/auth/api/commands/SignUpCommand;
+    new-instance v1, Lcom/vk/auth/api/commands/i;
 
     .line 8
     iget-object v5, v0, Lcom/vk/auth/main/SignUpDataHolder;->d:Ljava/lang/String;
@@ -322,19 +322,19 @@
     move-object/from16 v14, p2
 
     .line 14
-    invoke-direct/range {v4 .. v14}, Lcom/vk/auth/api/commands/SignUpCommand;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct/range {v4 .. v14}, Lcom/vk/auth/api/commands/i;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
     return-object v1
 
     .line 15
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 
     .line 16
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 .end method

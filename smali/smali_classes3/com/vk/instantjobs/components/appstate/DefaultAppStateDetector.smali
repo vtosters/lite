@@ -3,7 +3,7 @@
 .source "DefaultAppStateDetector.kt"
 
 # interfaces
-.implements Lcom/vk/instantjobs/components/appstate/AppStateDetector;
+.implements Lcom/vk/instantjobs/components/appstate/a;
 
 
 # annotations
@@ -35,13 +35,13 @@
 # instance fields
 .field private final a:Lcom/vk/instantjobs/utils/ForegroundUiDetector;
 
-.field private final b:Lcom/vk/instantjobs/utils/ForegroundServiceDetector;
+.field private final b:Lcom/vk/instantjobs/utils/c;
 
 .field private final c:Lcom/vk/instantjobs/utils/BatteryLevelDetector;
 
 .field private final d:Lcom/vk/instantjobs/utils/BgDataRestrictionDetector;
 
-.field private final e:Lcom/vk/instantjobs/utils/BgServiceDetector;
+.field private final e:Lcom/vk/instantjobs/utils/a;
 
 .field private f:Lcom/vk/instantjobs/components/appstate/AppState;
     .annotation build Landroidx/annotation/GuardedBy;
@@ -53,7 +53,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/CopyOnWriteArrayList<",
-            "Lcom/vk/instantjobs/InstantJobLogger;",
+            "Lcom/vk/instantjobs/a;",
             ">;"
         }
     .end annotation
@@ -63,7 +63,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/CopyOnWriteArrayList<",
-            "Lcom/vk/instantjobs/components/appstate/AppStateDetector$a;",
+            "Lcom/vk/instantjobs/components/appstate/a$a;",
             ">;"
         }
     .end annotation
@@ -80,7 +80,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Landroid/os/Handler;
@@ -149,20 +149,20 @@
 
     invoke-direct {v1, p0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$foregroundUiDetector$1;-><init>(Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;)V
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/instantjobs/utils/ForegroundUiDetector;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/instantjobs/utils/ForegroundUiDetector;-><init>(Landroid/content/Context;Lkotlin/jvm/b/b;)V
 
     iput-object p1, p0, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a:Lcom/vk/instantjobs/utils/ForegroundUiDetector;
 
     .line 3
-    new-instance p1, Lcom/vk/instantjobs/utils/ForegroundServiceDetector;
+    new-instance p1, Lcom/vk/instantjobs/utils/c;
 
     new-instance v0, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$foregroundServiceDetector$1;
 
     invoke-direct {v0, p0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$foregroundServiceDetector$1;-><init>(Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;)V
 
-    invoke-direct {p1, v0}, Lcom/vk/instantjobs/utils/ForegroundServiceDetector;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p1, v0}, Lcom/vk/instantjobs/utils/c;-><init>(Lkotlin/jvm/b/b;)V
 
-    iput-object p1, p0, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->b:Lcom/vk/instantjobs/utils/ForegroundServiceDetector;
+    iput-object p1, p0, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->b:Lcom/vk/instantjobs/utils/c;
 
     .line 4
     new-instance p1, Lcom/vk/instantjobs/utils/BatteryLevelDetector;
@@ -173,7 +173,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$batteryLevelDetector$1;-><init>(Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;)V
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/instantjobs/utils/BatteryLevelDetector;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/instantjobs/utils/BatteryLevelDetector;-><init>(Landroid/content/Context;Lkotlin/jvm/b/b;)V
 
     iput-object p1, p0, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->c:Lcom/vk/instantjobs/utils/BatteryLevelDetector;
 
@@ -186,20 +186,20 @@
 
     invoke-direct {v1, p0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$bgDataRestrictionDetector$1;-><init>(Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;)V
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/instantjobs/utils/BgDataRestrictionDetector;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/instantjobs/utils/BgDataRestrictionDetector;-><init>(Landroid/content/Context;Lkotlin/jvm/b/b;)V
 
     iput-object p1, p0, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->d:Lcom/vk/instantjobs/utils/BgDataRestrictionDetector;
 
     .line 6
-    new-instance p1, Lcom/vk/instantjobs/utils/BgServiceDetector;
+    new-instance p1, Lcom/vk/instantjobs/utils/a;
 
     new-instance v0, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$bgServiceDetector$1;
 
     invoke-direct {v0, p0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$bgServiceDetector$1;-><init>(Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;)V
 
-    invoke-direct {p1, v0}, Lcom/vk/instantjobs/utils/BgServiceDetector;-><init>(Lkotlin/jvm/b/Functions2;)V
+    invoke-direct {p1, v0}, Lcom/vk/instantjobs/utils/a;-><init>(Lkotlin/jvm/b/b;)V
 
-    iput-object p1, p0, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->e:Lcom/vk/instantjobs/utils/BgServiceDetector;
+    iput-object p1, p0, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->e:Lcom/vk/instantjobs/utils/a;
 
     .line 7
     sget-object p1, Lcom/vk/instantjobs/components/appstate/AppState;->IDLE:Lcom/vk/instantjobs/components/appstate/AppState;
@@ -227,7 +227,7 @@
     .locals 3
 
     .line 31
-    sget-object v0, Lcom/vk/instantjobs/utils/ThrowableUtils;->INSTANCE:Lcom/vk/instantjobs/utils/ThrowableUtils;
+    sget-object v0, Lcom/vk/instantjobs/utils/h;->a:Lcom/vk/instantjobs/utils/h;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -253,7 +253,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/instantjobs/utils/ThrowableUtils;->a(Ljava/lang/String;Ljava/lang/Throwable;I)Ljava/lang/Throwable;
+    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/instantjobs/utils/h;->a(Ljava/lang/String;Ljava/lang/Throwable;I)Ljava/lang/Throwable;
 
     move-result-object p1
 
@@ -285,16 +285,16 @@
     move-result v0
 
     .line 17
-    iget-object v1, p0, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->b:Lcom/vk/instantjobs/utils/ForegroundServiceDetector;
+    iget-object v1, p0, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->b:Lcom/vk/instantjobs/utils/c;
 
-    invoke-virtual {v1}, Lcom/vk/instantjobs/utils/ForegroundServiceDetector;->a()Z
+    invoke-virtual {v1}, Lcom/vk/instantjobs/utils/c;->a()Z
 
     move-result v1
 
     .line 18
-    iget-object v2, p0, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->e:Lcom/vk/instantjobs/utils/BgServiceDetector;
+    iget-object v2, p0, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->e:Lcom/vk/instantjobs/utils/a;
 
-    invoke-virtual {v2}, Lcom/vk/instantjobs/utils/BgServiceDetector;->a()Z
+    invoke-virtual {v2}, Lcom/vk/instantjobs/utils/a;->a()Z
 
     move-result v2
 
@@ -437,7 +437,7 @@
     .line 29
     new-instance v1, Lcom/vk/instantjobs/exceptions/JobException;
 
-    invoke-static {v0, p2}, Lcom/vk/instantjobs/utils/Extensions;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-static {v0, p2}, Lcom/vk/instantjobs/utils/b;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     invoke-direct {v1, p1, v0}, Lcom/vk/instantjobs/exceptions/JobException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -448,18 +448,18 @@
     return-void
 .end method
 
-.method private final declared-synchronized a(Lcom/vk/instantjobs/components/appstate/AppState;Lkotlin/jvm/b/Functions1;)V
+.method private final declared-synchronized a(Lcom/vk/instantjobs/components/appstate/AppState;Lkotlin/jvm/b/c;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/instantjobs/components/appstate/AppState;",
-            "Lkotlin/jvm/b/Functions1<",
+            "Lkotlin/jvm/b/c<",
             "-",
             "Lcom/vk/instantjobs/components/appstate/AppState;",
             "-",
             "Lcom/vk/instantjobs/components/appstate/AppState;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -479,7 +479,7 @@
     iput-object p1, p0, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->f:Lcom/vk/instantjobs/components/appstate/AppState;
 
     .line 8
-    invoke-interface {p2, v0, p1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0, p1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 9
     invoke-direct {p0, p1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/components/appstate/AppState;)V
@@ -549,10 +549,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/instantjobs/InstantJobLogger;
+    check-cast v1, Lcom/vk/instantjobs/a;
 
     .line 35
-    invoke-interface {v1, p1}, Lcom/vk/instantjobs/InstantJobLogger;->a(Ljava/lang/String;)V
+    invoke-interface {v1, p1}, Lcom/vk/instantjobs/a;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -582,10 +582,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/instantjobs/InstantJobLogger;
+    check-cast v1, Lcom/vk/instantjobs/a;
 
     .line 38
-    invoke-interface {v1, p1, p2}, Lcom/vk/instantjobs/InstantJobLogger;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, p1, p2}, Lcom/vk/instantjobs/a;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -634,11 +634,11 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/instantjobs/components/appstate/AppStateDetector$a;
+    check-cast v1, Lcom/vk/instantjobs/components/appstate/a$a;
 
     .line 13
     :try_start_0
-    invoke-interface {v1, p1}, Lcom/vk/instantjobs/components/appstate/AppStateDetector$a;->a(Lcom/vk/instantjobs/components/appstate/AppState;)V
+    invoke-interface {v1, p1}, Lcom/vk/instantjobs/components/appstate/a$a;->a(Lcom/vk/instantjobs/components/appstate/AppState;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -714,7 +714,7 @@
     .line 7
     new-instance v1, Lcom/vk/instantjobs/exceptions/JobException;
 
-    invoke-static {v0, p2}, Lcom/vk/instantjobs/utils/Extensions;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-static {v0, p2}, Lcom/vk/instantjobs/utils/b;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     invoke-direct {v1, p1, v0}, Lcom/vk/instantjobs/exceptions/JobException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -756,14 +756,14 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/instantjobs/InstantJobLogger;
+    check-cast v1, Lcom/vk/instantjobs/a;
 
     .line 17
     invoke-virtual {p1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-interface {v1, v2}, Lcom/vk/instantjobs/InstantJobLogger;->d(Ljava/lang/String;)V
+    invoke-interface {v1, v2}, Lcom/vk/instantjobs/a;->d(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -781,9 +781,9 @@
 
     invoke-direct {v1, p0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$scheduleIdle$1;-><init>(Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;)V
 
-    new-instance v2, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector1;
+    new-instance v2, Lcom/vk/instantjobs/components/appstate/b;
 
-    invoke-direct {v2, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector1;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v2, v1}, Lcom/vk/instantjobs/components/appstate/b;-><init>(Lkotlin/jvm/b/a;)V
 
     sget-object v1, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->n:Ljava/lang/Object;
 
@@ -835,10 +835,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/instantjobs/InstantJobLogger;
+    check-cast v1, Lcom/vk/instantjobs/a;
 
     .line 5
-    invoke-interface {v1, p1}, Lcom/vk/instantjobs/InstantJobLogger;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v1, p1}, Lcom/vk/instantjobs/a;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -856,9 +856,9 @@
 
     invoke-direct {v1, p0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$scheduleSuspending$1;-><init>(Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;)V
 
-    new-instance v2, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector1;
+    new-instance v2, Lcom/vk/instantjobs/components/appstate/b;
 
-    invoke-direct {v2, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector1;-><init>(Lkotlin/jvm/b/Functions;)V
+    invoke-direct {v2, v1}, Lcom/vk/instantjobs/components/appstate/b;-><init>(Lkotlin/jvm/b/a;)V
 
     sget-object v1, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->l:Ljava/lang/Object;
 
@@ -901,7 +901,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$switchToBackground$1;-><init>(Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;)V
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/components/appstate/AppState;Lkotlin/jvm/b/Functions1;)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/components/appstate/AppState;Lkotlin/jvm/b/c;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -940,7 +940,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$switchToForegroundService$1;-><init>(Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;)V
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/components/appstate/AppState;Lkotlin/jvm/b/Functions1;)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/components/appstate/AppState;Lkotlin/jvm/b/c;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -979,7 +979,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$switchToForegroundUi$1;-><init>(Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;)V
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/components/appstate/AppState;Lkotlin/jvm/b/Functions1;)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/components/appstate/AppState;Lkotlin/jvm/b/c;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1018,7 +1018,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$switchToIdle$1;-><init>(Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;)V
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/components/appstate/AppState;Lkotlin/jvm/b/Functions1;)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/components/appstate/AppState;Lkotlin/jvm/b/c;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1057,7 +1057,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector$switchToSuspending$1;-><init>(Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;)V
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/components/appstate/AppState;Lkotlin/jvm/b/Functions1;)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/components/appstate/AppState;Lkotlin/jvm/b/c;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1102,7 +1102,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/instantjobs/InstantJobLogger;)V
+.method public final a(Lcom/vk/instantjobs/a;)V
     .locals 1
 
     .line 11
@@ -1113,7 +1113,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/instantjobs/components/appstate/AppStateDetector$a;)V
+.method public a(Lcom/vk/instantjobs/components/appstate/a$a;)V
     .locals 1
 
     .line 12
@@ -1165,7 +1165,7 @@
     throw p1
 .end method
 
-.method public final b(Lcom/vk/instantjobs/InstantJobLogger;)V
+.method public final b(Lcom/vk/instantjobs/a;)V
     .locals 1
 
     .line 3
@@ -1176,7 +1176,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/instantjobs/components/appstate/AppStateDetector$a;)V
+.method public b(Lcom/vk/instantjobs/components/appstate/a$a;)V
     .locals 1
 
     .line 4

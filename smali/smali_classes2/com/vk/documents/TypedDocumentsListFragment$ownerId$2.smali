@@ -3,7 +3,7 @@
 .source "TypedDocumentsListFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/jvm/b/a<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -57,7 +57,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->E:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/q;->E:Ljava/lang/String;
 
     const/4 v2, 0x0
 
@@ -68,7 +68,7 @@
     return v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 v0, 0x0
 

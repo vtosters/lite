@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/observable/ObservableDebounceTimed;
-.super Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;
+.super Lio/reactivex/internal/operators/observable/a;
 .source "ObservableDebounceTimed.java"
 
 
@@ -16,7 +16,7 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream<",
+        "Lio/reactivex/internal/operators/observable/a<",
         "TT;TT;>;"
     }
 .end annotation
@@ -27,25 +27,25 @@
 
 .field final c:Ljava/util/concurrent/TimeUnit;
 
-.field final d:Lio/reactivex/Scheduler;
+.field final d:Lc/a/s;
 
 
 # direct methods
-.method public constructor <init>(Lio/reactivex/ObservableSource;JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)V
+.method public constructor <init>(Lc/a/p;JLjava/util/concurrent/TimeUnit;Lc/a/s;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/ObservableSource<",
+            "Lc/a/p<",
             "TT;>;J",
             "Ljava/util/concurrent/TimeUnit;",
-            "Lio/reactivex/Scheduler;",
+            "Lc/a/s;",
             ")V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;-><init>(Lio/reactivex/ObservableSource;)V
+    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/a;-><init>(Lc/a/p;)V
 
     .line 2
     iput-wide p2, p0, Lio/reactivex/internal/operators/observable/ObservableDebounceTimed;->b:J
@@ -54,49 +54,49 @@
     iput-object p4, p0, Lio/reactivex/internal/operators/observable/ObservableDebounceTimed;->c:Ljava/util/concurrent/TimeUnit;
 
     .line 4
-    iput-object p5, p0, Lio/reactivex/internal/operators/observable/ObservableDebounceTimed;->d:Lio/reactivex/Scheduler;
+    iput-object p5, p0, Lio/reactivex/internal/operators/observable/ObservableDebounceTimed;->d:Lc/a/s;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lio/reactivex/Observer;)V
+.method public b(Lc/a/r;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/Observer<",
+            "Lc/a/r<",
             "-TT;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;->a:Lio/reactivex/ObservableSource;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/a;->a:Lc/a/p;
 
     new-instance v7, Lio/reactivex/internal/operators/observable/ObservableDebounceTimed$a;
 
-    new-instance v2, Lio/reactivex/observers/DisposableObserver/SerializedObserver;
+    new-instance v2, Lc/a/c0/c;
 
-    invoke-direct {v2, p1}, Lio/reactivex/observers/DisposableObserver/SerializedObserver;-><init>(Lio/reactivex/Observer;)V
+    invoke-direct {v2, p1}, Lc/a/c0/c;-><init>(Lc/a/r;)V
 
     iget-wide v3, p0, Lio/reactivex/internal/operators/observable/ObservableDebounceTimed;->b:J
 
     iget-object v5, p0, Lio/reactivex/internal/operators/observable/ObservableDebounceTimed;->c:Ljava/util/concurrent/TimeUnit;
 
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableDebounceTimed;->d:Lio/reactivex/Scheduler;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableDebounceTimed;->d:Lc/a/s;
 
     .line 2
-    invoke-virtual {p1}, Lio/reactivex/Scheduler;->a()Lio/reactivex/Scheduler$c;
+    invoke-virtual {p1}, Lc/a/s;->a()Lc/a/s$c;
 
     move-result-object v6
 
     move-object v1, v7
 
-    invoke-direct/range {v1 .. v6}, Lio/reactivex/internal/operators/observable/ObservableDebounceTimed$a;-><init>(Lio/reactivex/Observer;JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler$c;)V
+    invoke-direct/range {v1 .. v6}, Lio/reactivex/internal/operators/observable/ObservableDebounceTimed$a;-><init>(Lc/a/r;JLjava/util/concurrent/TimeUnit;Lc/a/s$c;)V
 
     .line 3
-    invoke-interface {v0, v7}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
+    invoke-interface {v0, v7}, Lc/a/p;->a(Lc/a/r;)V
 
     return-void
 .end method

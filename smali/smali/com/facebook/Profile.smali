@@ -177,7 +177,7 @@
     const-string v0, "id"
 
     .line 3
-    invoke-static {p1, v0}, Lcom/facebook/internal/Validate;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/facebook/internal/s;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     iput-object p1, p0, Lcom/facebook/Profile;->a:Ljava/lang/String;
@@ -317,7 +317,7 @@
 
     invoke-direct {v1}, Lcom/facebook/Profile$a;-><init>()V
 
-    invoke-static {v0, v1}, Lcom/facebook/internal/Utility;->a(Ljava/lang/String;Lcom/facebook/internal/Utility$c;)V
+    invoke-static {v0, v1}, Lcom/facebook/internal/r;->a(Ljava/lang/String;Lcom/facebook/internal/r$c;)V
 
     return-void
 .end method
@@ -326,11 +326,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/facebook/ProfileManager;->c()Lcom/facebook/ProfileManager;
+    invoke-static {}, Lcom/facebook/l;->c()Lcom/facebook/l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/facebook/ProfileManager;->a()Lcom/facebook/Profile;
+    invoke-virtual {v0}, Lcom/facebook/l;->a()Lcom/facebook/Profile;
 
     move-result-object v0
 
@@ -345,11 +345,11 @@
     .end param
 
     .line 1
-    invoke-static {}, Lcom/facebook/ProfileManager;->c()Lcom/facebook/ProfileManager;
+    invoke-static {}, Lcom/facebook/l;->c()Lcom/facebook/l;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/facebook/ProfileManager;->a(Lcom/facebook/Profile;)V
+    invoke-virtual {v0, p0}, Lcom/facebook/l;->a(Lcom/facebook/Profile;)V
 
     return-void
 .end method

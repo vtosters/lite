@@ -22,7 +22,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/core/simplescreen/BaseScreen;",
+            "Lcom/vk/core/simplescreen/a;",
             ">;"
         }
     .end annotation
@@ -91,7 +91,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1}, Lcom/vtosters/lite/utils/Utils;->a(Landroid/content/Context;)Landroid/app/Activity;
+    invoke-static {p1}, Lcom/vtosters/lite/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object p1
 
@@ -100,13 +100,13 @@
     return-void
 .end method
 
-.method private b(Lcom/vk/core/simplescreen/BaseScreen;)V
+.method private b(Lcom/vk/core/simplescreen/a;)V
     .locals 1
 
     if-eqz p1, :cond_1
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/core/simplescreen/BaseScreen;->g()Z
+    invoke-virtual {p1}, Lcom/vk/core/simplescreen/a;->g()Z
 
     move-result v0
 
@@ -118,21 +118,21 @@
     if-eqz v0, :cond_0
 
     .line 8
-    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
 
     .line 9
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/core/simplescreen/BaseScreen;->j()V
+    invoke-virtual {p1}, Lcom/vk/core/simplescreen/a;->j()V
 
     .line 10
-    invoke-virtual {p1}, Lcom/vk/core/simplescreen/BaseScreen;->d()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/vk/core/simplescreen/a;->d()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 11
-    invoke-virtual {p1}, Lcom/vk/core/simplescreen/BaseScreen;->d()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/vk/core/simplescreen/a;->d()Landroid/view/View;
 
     move-result-object p1
 
@@ -144,20 +144,20 @@
     return-void
 .end method
 
-.method private c(Lcom/vk/core/simplescreen/BaseScreen;)V
+.method private c(Lcom/vk/core/simplescreen/a;)V
     .locals 2
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vk/core/simplescreen/ScreenContainer;->b(Lcom/vk/core/simplescreen/BaseScreen;)V
+    invoke-direct {p0, p1}, Lcom/vk/core/simplescreen/ScreenContainer;->b(Lcom/vk/core/simplescreen/a;)V
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/core/simplescreen/BaseScreen;->d()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/vk/core/simplescreen/a;->d()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/core/simplescreen/BaseScreen;->d()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/vk/core/simplescreen/a;->d()Landroid/view/View;
 
     move-result-object v0
 
@@ -168,7 +168,7 @@
     if-eqz v0, :cond_0
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/core/simplescreen/BaseScreen;->d()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/vk/core/simplescreen/a;->d()Landroid/view/View;
 
     move-result-object v0
 
@@ -178,7 +178,7 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    invoke-virtual {p1}, Lcom/vk/core/simplescreen/BaseScreen;->d()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/vk/core/simplescreen/a;->d()Landroid/view/View;
 
     move-result-object v1
 
@@ -186,12 +186,12 @@
 
     .line 7
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/core/simplescreen/BaseScreen;->i()V
+    invoke-virtual {p1}, Lcom/vk/core/simplescreen/a;->i()V
 
     const/4 v0, 0x0
 
     .line 8
-    invoke-virtual {p1, v0}, Lcom/vk/core/simplescreen/BaseScreen;->a(Lcom/vk/core/simplescreen/ScreenContainer;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/simplescreen/a;->a(Lcom/vk/core/simplescreen/ScreenContainer;)V
 
     .line 9
     iget-object v0, p0, Lcom/vk/core/simplescreen/ScreenContainer;->d:Ljava/util/ArrayList;
@@ -258,9 +258,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/simplescreen/BaseScreen;
+    check-cast v0, Lcom/vk/core/simplescreen/a;
 
-    invoke-direct {p0, v0}, Lcom/vk/core/simplescreen/ScreenContainer;->c(Lcom/vk/core/simplescreen/BaseScreen;)V
+    invoke-direct {p0, v0}, Lcom/vk/core/simplescreen/ScreenContainer;->c(Lcom/vk/core/simplescreen/a;)V
 
     .line 13
     iget-object v0, p0, Lcom/vk/core/simplescreen/ScreenContainer;->d:Ljava/util/ArrayList;
@@ -284,13 +284,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/simplescreen/BaseScreen;
+    check-cast v0, Lcom/vk/core/simplescreen/a;
 
     .line 15
     invoke-direct {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->f()V
 
     .line 16
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->d()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->d()Landroid/view/View;
 
     move-result-object v1
 
@@ -298,7 +298,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->d()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->d()Landroid/view/View;
 
     move-result-object v1
 
@@ -309,7 +309,7 @@
     if-ne v1, p0, :cond_0
 
     .line 17
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->d()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->d()Landroid/view/View;
 
     move-result-object v1
 
@@ -319,13 +319,13 @@
 
     .line 18
     :cond_0
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->d()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->d()Landroid/view/View;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->d()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->d()Landroid/view/View;
 
     move-result-object v1
 
@@ -336,7 +336,7 @@
     if-eqz v1, :cond_1
 
     .line 19
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->d()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->d()Landroid/view/View;
 
     move-result-object v1
 
@@ -346,7 +346,7 @@
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->d()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->d()Landroid/view/View;
 
     move-result-object v3
 
@@ -360,14 +360,14 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/simplescreen/BaseScreen;->b(Landroid/view/LayoutInflater;)Landroid/view/View;
+    invoke-virtual {v0, v1}, Lcom/vk/core/simplescreen/a;->b(Landroid/view/LayoutInflater;)Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     .line 21
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->d()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->d()Landroid/view/View;
 
     move-result-object v1
 
@@ -375,7 +375,7 @@
 
     .line 22
     :goto_0
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->k()V
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->k()V
 
     .line 23
     :cond_2
@@ -406,35 +406,35 @@
     iput p1, p0, Lcom/vk/core/simplescreen/ScreenContainer;->a:I
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/BaseScreen;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/BaseScreen;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/simplescreen/BaseScreen;->b(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/simplescreen/a;->b(I)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lcom/vk/core/simplescreen/BaseScreen;)V
+.method public a(Lcom/vk/core/simplescreen/a;)V
     .locals 1
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/BaseScreen;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/a;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/vk/core/simplescreen/ScreenContainer;->b(Lcom/vk/core/simplescreen/BaseScreen;)V
+    invoke-direct {p0, v0}, Lcom/vk/core/simplescreen/ScreenContainer;->b(Lcom/vk/core/simplescreen/a;)V
 
     .line 6
-    invoke-virtual {p1, p0}, Lcom/vk/core/simplescreen/BaseScreen;->a(Lcom/vk/core/simplescreen/ScreenContainer;)V
+    invoke-virtual {p1, p0}, Lcom/vk/core/simplescreen/a;->a(Lcom/vk/core/simplescreen/ScreenContainer;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/core/simplescreen/ScreenContainer;->b:Landroid/app/Activity;
@@ -443,19 +443,19 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/simplescreen/BaseScreen;->b(Landroid/view/LayoutInflater;)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/vk/core/simplescreen/a;->b(Landroid/view/LayoutInflater;)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/core/simplescreen/BaseScreen;->k()V
+    invoke-virtual {p1}, Lcom/vk/core/simplescreen/a;->k()V
 
     .line 9
     iget v0, p0, Lcom/vk/core/simplescreen/ScreenContainer;->a:I
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/simplescreen/BaseScreen;->b(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/simplescreen/a;->b(I)V
 
     .line 10
     iget-object v0, p0, Lcom/vk/core/simplescreen/ScreenContainer;->d:Ljava/util/ArrayList;
@@ -469,7 +469,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/BaseScreen;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/a;
 
     move-result-object v0
 
@@ -477,11 +477,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/BaseScreen;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->h()Z
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->h()Z
 
     move-result v0
 
@@ -494,7 +494,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/BaseScreen;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/a;
 
     move-result-object v0
 
@@ -543,9 +543,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/simplescreen/BaseScreen;
+    check-cast v0, Lcom/vk/core/simplescreen/a;
 
-    invoke-direct {p0, v0}, Lcom/vk/core/simplescreen/ScreenContainer;->c(Lcom/vk/core/simplescreen/BaseScreen;)V
+    invoke-direct {p0, v0}, Lcom/vk/core/simplescreen/ScreenContainer;->c(Lcom/vk/core/simplescreen/a;)V
 
     goto :goto_0
 
@@ -562,14 +562,14 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/BaseScreen;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->j()V
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->j()V
 
     :cond_0
     return-void
@@ -579,27 +579,27 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/BaseScreen;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/ScreenContainer;->getCurrentScreen()Lcom/vk/core/simplescreen/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->g()Z
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->g()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->k()V
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->k()V
 
     :cond_0
     return-void
 .end method
 
-.method public getCurrentScreen()Lcom/vk/core/simplescreen/BaseScreen;
+.method public getCurrentScreen()Lcom/vk/core/simplescreen/a;
     .locals 2
 
     .line 1
@@ -624,7 +624,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/simplescreen/BaseScreen;
+    check-cast v0, Lcom/vk/core/simplescreen/a;
 
     return-object v0
 

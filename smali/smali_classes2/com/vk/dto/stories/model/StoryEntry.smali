@@ -135,7 +135,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/dto/stories/model/StoryAdsStatAction;",
+            "Lcom/vk/dto/stories/model/d;",
             ">;"
         }
     .end annotation
@@ -939,9 +939,9 @@
 
     .line 23
     :try_start_0
-    sget-object v4, Lcom/vk/dto/photo/Photo;->d0:Lcom/vk/dto/common/data/JsonParser;
+    sget-object v4, Lcom/vk/dto/photo/Photo;->d0:Lcom/vk/dto/common/data/c;
 
-    invoke-virtual {v4, v2}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
+    invoke-virtual {v4, v2}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -974,7 +974,7 @@
     if-eqz v2, :cond_3
 
     .line 27
-    invoke-static {v2}, Lcom/vk/dto/common/VideoFileFactory;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/VideoFile;
+    invoke-static {v2}, Lcom/vk/dto/common/i;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/VideoFile;
 
     move-result-object v2
 
@@ -1476,7 +1476,7 @@
 
     .line 73
     :cond_13
-    invoke-static {v3}, Lcom/vk/dto/stories/model/StoryAdsStatAction;->a(Lorg/json/JSONObject;)Lcom/vk/dto/stories/model/StoryAdsStatAction;
+    invoke-static {v3}, Lcom/vk/dto/stories/model/d;->a(Lorg/json/JSONObject;)Lcom/vk/dto/stories/model/d;
 
     move-result-object v3
 
@@ -1821,7 +1821,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1}, Lcom/vk/core/util/MathUtils;->a(FFF)F
+    invoke-static {v0, v2, v1}, Lcom/vk/core/util/o0;->a(FFF)F
 
     move-result v0
 
@@ -2231,9 +2231,9 @@
     .line 1
     iget v0, p0, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
-    sget-object v1, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
+    sget-object v1, Lb/h/h/a;->b:Lb/h/h/a$a;
 
-    invoke-interface {v1}, Lb/h/h/ModelConfig$a;->c()I
+    invoke-interface {v1}, Lb/h/h/a$a;->c()I
 
     move-result v1
 

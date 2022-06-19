@@ -3,7 +3,7 @@
 .source "AttachActivity.java"
 
 # interfaces
-.implements Lcom/vk/common/g/F0;
+.implements Lcom/vk/common/g/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/F0<",
+        "Lcom/vk/common/g/a<",
         "Lcom/vk/core/fragments/FragmentImpl;",
         ">;"
     }
@@ -42,9 +42,9 @@
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vtosters/lite/fragments/l2/PickVKPhotoFragment;
+    new-instance v0, Lcom/vtosters/lite/fragments/l2/a;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/fragments/l2/PickVKPhotoFragment;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/l2/a;-><init>()V
 
     return-object v0
 .end method

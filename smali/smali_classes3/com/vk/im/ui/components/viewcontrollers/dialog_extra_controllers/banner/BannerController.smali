@@ -25,11 +25,11 @@
 
 .field private final c:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
 
-.field private final d:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+.field private final d:Lcom/vk/im/ui/components/audio_msg_player/a;
 
 .field private e:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;
 
-.field private f:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;
+.field private f:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;
 
 .field private final g:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
@@ -45,9 +45,9 @@
 
 .field private final i:Landroid/content/Context;
 
-.field private final j:Lcom/vk/im/engine/ImEngine;
+.field private final j:Lcom/vk/im/engine/a;
 
-.field private final k:Lcom/vk/im/ui/p/ImBridge8;
+.field private final k:Lcom/vk/im/ui/p/b;
 
 .field private final l:Lcom/vk/im/ui/ImUiModule;
 
@@ -55,7 +55,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/ui/ImUiModule;Lcom/vk/im/ui/themes/DialogThemeBinder;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/im/ui/ImUiModule;Lcom/vk/im/ui/themes/DialogThemeBinder;)V
     .locals 7
 
     .line 1
@@ -63,9 +63,9 @@
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->i:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->j:Lcom/vk/im/engine/ImEngine;
+    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->j:Lcom/vk/im/engine/a;
 
-    iput-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->k:Lcom/vk/im/ui/p/ImBridge8;
+    iput-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->k:Lcom/vk/im/ui/p/b;
 
     iput-object p4, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->l:Lcom/vk/im/ui/ImUiModule;
 
@@ -76,9 +76,9 @@
 
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->i:Landroid/content/Context;
 
-    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->j:Lcom/vk/im/engine/ImEngine;
+    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->j:Lcom/vk/im/engine/a;
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/a;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->a:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;
 
@@ -87,13 +87,13 @@
 
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->i:Landroid/content/Context;
 
-    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->j:Lcom/vk/im/engine/ImEngine;
+    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->j:Lcom/vk/im/engine/a;
 
-    iget-object p4, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->k:Lcom/vk/im/ui/p/ImBridge8;
+    iget-object p4, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->k:Lcom/vk/im/ui/p/b;
 
     iget-object p5, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->l:Lcom/vk/im/ui/ImUiModule;
 
-    invoke-direct {p1, p2, p3, p4, p5}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/ui/ImUiModule;)V
+    invoke-direct {p1, p2, p3, p4, p5}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/im/ui/ImUiModule;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->b:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;
 
@@ -102,25 +102,25 @@
 
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->i:Landroid/content/Context;
 
-    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->j:Lcom/vk/im/engine/ImEngine;
+    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->j:Lcom/vk/im/engine/a;
 
-    iget-object p4, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->k:Lcom/vk/im/ui/p/ImBridge8;
+    iget-object p4, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->k:Lcom/vk/im/ui/p/b;
 
-    invoke-direct {p1, p2, p3, p4}, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;)V
+    invoke-direct {p1, p2, p3, p4}, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->c:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
 
     .line 5
-    new-instance p1, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    new-instance p1, Lcom/vk/im/ui/components/audio_msg_player/a;
 
     .line 6
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->i:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->j:Lcom/vk/im/engine/ImEngine;
+    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->j:Lcom/vk/im/engine/a;
 
-    iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->k:Lcom/vk/im/ui/p/ImBridge8;
+    iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->k:Lcom/vk/im/ui/p/b;
 
-    sget-object v4, Lcom/vk/im/ui/providers/audiomsg/PlayerActionSources;->e:Lcom/vk/im/ui/providers/audiomsg/PlayerActionSource;
+    sget-object v4, Lcom/vk/im/ui/providers/audiomsg/d;->e:Lcom/vk/im/ui/providers/audiomsg/c;
 
     new-instance v5, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController$d;
 
@@ -131,9 +131,9 @@
     move-object v0, p1
 
     .line 7
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/audiomsg/player/Source;Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent$a;Lcom/vk/im/ui/themes/DialogThemeBinder;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/components/audio_msg_player/a;-><init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/audiomsg/player/f;Lcom/vk/im/ui/components/audio_msg_player/a$a;Lcom/vk/im/ui/themes/DialogThemeBinder;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/a;
 
     .line 8
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->a:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;
@@ -142,7 +142,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController$c;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->a(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;->a(Lcom/vk/im/ui/components/dialog_pinned_msg/b;)V
 
     .line 9
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->b:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;
@@ -151,7 +151,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController$a;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->a(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponentCallback;)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->a(Lcom/vk/im/ui/components/dialog_bar/b;)V
 
     .line 10
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->c:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
@@ -160,16 +160,16 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController$b;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;->a(Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponentCallback;)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;->a(Lcom/vk/im/ui/components/dialog_business_notify/b;)V
 
     .line 11
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/a;
 
     new-instance p2, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController$d;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController$d;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;->a(Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent$a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/audio_msg_player/a;->a(Lcom/vk/im/ui/components/audio_msg_player/a$a;)V
 
     .line 12
     new-instance p1, Ljava/util/LinkedHashSet;
@@ -218,11 +218,11 @@
     .locals 1
 
     .line 35
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->f:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->f:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;->a(Lcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/ProfilesInfo;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;->a(Lcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/ProfilesInfo;)V
 
     :cond_0
     return-void
@@ -501,11 +501,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;)Lcom/vk/im/ui/p/ImBridge8;
+.method public static final synthetic b(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;)Lcom/vk/im/ui/p/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->k:Lcom/vk/im/ui/p/ImBridge8;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->k:Lcom/vk/im/ui/p/b;
 
     return-object p0
 .end method
@@ -652,11 +652,11 @@
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;)Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+.method public static final synthetic c(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;)Lcom/vk/im/ui/components/audio_msg_player/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/a;
 
     return-object p0
 .end method
@@ -943,22 +943,22 @@
     .line 20
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->a:Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->g()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->g()V
 
     .line 21
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->b:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->g()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->g()V
 
     .line 22
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->c:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->g()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->g()V
 
     .line 23
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->g()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->g()V
 
     return-void
 .end method
@@ -975,7 +975,7 @@
 
     iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->c:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
 
-    iget-object v4, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iget-object v4, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/a;
 
     move-object v0, v9
 
@@ -987,7 +987,7 @@
 
     move-object v8, p4
 
-    invoke-direct/range {v0 .. v8}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;Lcom/vk/im/ui/components/audio_msg_player/a;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)V
 
     iput-object v9, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->e:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;
 
@@ -996,9 +996,9 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->f:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;
+    iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->f:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;)V
 
     .line 10
     :cond_0
@@ -1075,9 +1075,9 @@
 
     .line 18
     :cond_3
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/a;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;->t()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/audio_msg_player/a;->t()Z
 
     move-result p1
 
@@ -1111,24 +1111,24 @@
     invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;->a(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
     .line 27
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/a;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;->u()V
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/audio_msg_player/a;->u()V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;)V
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;)V
     .locals 1
 
     .line 7
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->f:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->f:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;
 
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->e:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;)V
 
     :cond_0
     return-void
@@ -1138,9 +1138,9 @@
     .locals 1
 
     .line 38
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->d:Lcom/vk/im/ui/components/audio_msg_player/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;->t()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/audio_msg_player/a;->t()Z
 
     move-result v0
 
@@ -1182,11 +1182,11 @@
     return-void
 .end method
 
-.method public final c()Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;
+.method public final c()Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->f:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->f:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;
 
     return-object v0
 .end method

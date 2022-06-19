@@ -1,5 +1,5 @@
 .class public final Lcom/vk/market/picker/FaveGoodsPickerAdapter;
-.super Lcom/vk/market/common/GoodsAdapter1;
+.super Lcom/vk/market/common/g;
 .source "GoodsPickerAdapter.kt"
 
 
@@ -12,8 +12,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/market/common/GoodsAdapter1<",
-        "Lcom/vk/market/picker/FaveGoodViewModel;",
+        "Lcom/vk/market/common/g<",
+        "Lcom/vk/market/picker/b;",
         "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
         ">;"
     }
@@ -25,30 +25,30 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/market/picker/FaveGoodViewModel;",
+            "Lcom/vk/market/picker/b;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/market/picker/GoodsPickerAdapter;
+.field private final b:Lcom/vk/market/picker/c;
 
-.field private final c:Lkotlin/jvm/b/Functions2;
+.field private final c:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
-            "Lcom/vk/market/common/GoodViewModel;",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/b<",
+            "Lcom/vk/market/common/c;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final d:Lkotlin/jvm/b/Functions;
+.field private final d:Lkotlin/jvm/b/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -65,33 +65,33 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/market/picker/FaveGoodsPickerAdapter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/market/picker/FaveGoodsPickerAdapter$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Z)V
+.method public constructor <init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
-            "Lcom/vk/market/common/GoodViewModel;",
-            "Lkotlin/Unit;",
+            "Lcom/vk/market/common/c;",
+            "Lkotlin/m;",
             ">;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;Z)V"
         }
     .end annotation
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/market/common/GoodsAdapter1;-><init>()V
+    invoke-direct {p0}, Lcom/vk/market/common/g;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->c:Lkotlin/jvm/b/Functions2;
+    iput-object p1, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->c:Lkotlin/jvm/b/b;
 
-    iput-object p2, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->d:Lkotlin/jvm/b/Functions;
+    iput-object p2, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->d:Lkotlin/jvm/b/a;
 
     iput-boolean p3, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->e:Z
 
@@ -103,16 +103,16 @@
     iput-object p1, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->a:Ljava/util/List;
 
     .line 4
-    new-instance p1, Lcom/vk/market/picker/GoodsPickerAdapter;
+    new-instance p1, Lcom/vk/market/picker/c;
 
-    invoke-direct {p1}, Lcom/vk/market/picker/GoodsPickerAdapter;-><init>()V
+    invoke-direct {p1}, Lcom/vk/market/picker/c;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->b:Lcom/vk/market/picker/GoodsPickerAdapter;
+    iput-object p1, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->b:Lcom/vk/market/picker/c;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;ZILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -130,7 +130,7 @@
 
     .line 1
     :cond_1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/market/picker/FaveGoodsPickerAdapter;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Z)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/market/picker/FaveGoodsPickerAdapter;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Z)V
 
     return-void
 .end method
@@ -160,11 +160,11 @@
     return p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/market/picker/FaveGoodsPickerAdapter;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic a(Lcom/vk/market/picker/FaveGoodsPickerAdapter;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->c:Lkotlin/jvm/b/Functions2;
+    iget-object p0, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->c:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
@@ -178,11 +178,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/market/picker/FaveGoodsPickerAdapter;)Lkotlin/jvm/b/Functions;
+.method public static final synthetic c(Lcom/vk/market/picker/FaveGoodsPickerAdapter;)Lkotlin/jvm/b/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->d:Lkotlin/jvm/b/Functions;
+    iget-object p0, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->d:Lkotlin/jvm/b/a;
 
     return-object p0
 .end method
@@ -338,7 +338,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/market/picker/FaveGoodViewModel;",
+            "Lcom/vk/market/picker/b;",
             ">;)V"
         }
     .end annotation
@@ -371,7 +371,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/market/picker/FaveGoodViewModel;",
+            "Lcom/vk/market/picker/b;",
             ">;)V"
         }
     .end annotation
@@ -379,7 +379,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->a:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Ljava/util/Collection;)V
+    invoke-static {v0, p1}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Ljava/util/Collection;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
@@ -410,14 +410,14 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/market/picker/FaveGoodViewModel;
+    check-cast p2, Lcom/vk/market/picker/b;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->b:Lcom/vk/market/picker/GoodsPickerAdapter;
+    iget-object v0, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->b:Lcom/vk/market/picker/c;
 
-    check-cast p1, Lcom/vk/market/picker/GoodsPickerAdapter2;
+    check-cast p1, Lcom/vk/market/picker/d;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/market/picker/GoodsPickerAdapter;->a(Lcom/vk/market/picker/GoodsPickerAdapter2;Lcom/vk/market/picker/FaveGoodViewModel;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/market/picker/c;->a(Lcom/vk/market/picker/d;Lcom/vk/market/picker/b;)V
 
     :cond_0
     return-void
@@ -435,13 +435,13 @@
     if-ne p2, v0, :cond_0
 
     .line 1
-    iget-object p2, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->b:Lcom/vk/market/picker/GoodsPickerAdapter;
+    iget-object p2, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->b:Lcom/vk/market/picker/c;
 
     new-instance v0, Lcom/vk/market/picker/FaveGoodsPickerAdapter$onCreateViewHolder$2;
 
     invoke-direct {v0, p0}, Lcom/vk/market/picker/FaveGoodsPickerAdapter$onCreateViewHolder$2;-><init>(Lcom/vk/market/picker/FaveGoodsPickerAdapter;)V
 
-    invoke-virtual {p2, p1, v0}, Lcom/vk/market/picker/GoodsPickerAdapter;->a(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)Lcom/vk/market/picker/GoodsPickerAdapter2;
+    invoke-virtual {p2, p1, v0}, Lcom/vk/market/picker/c;->a(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)Lcom/vk/market/picker/d;
 
     move-result-object p1
 
@@ -504,12 +504,12 @@
 
     invoke-direct {p2, p0}, Lcom/vk/market/picker/FaveGoodsPickerAdapter$onCreateViewHolder$1;-><init>(Lcom/vk/market/picker/FaveGoodsPickerAdapter;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->d(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->d(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     .line 5
-    new-instance p2, Lcom/vk/market/picker/GoodsPickerAdapter1;
+    new-instance p2, Lcom/vk/market/picker/i;
 
-    invoke-direct {p2, p1}, Lcom/vk/market/picker/GoodsPickerAdapter1;-><init>(Landroid/view/View;)V
+    invoke-direct {p2, p1}, Lcom/vk/market/picker/i;-><init>(Landroid/view/View;)V
 
     move-object p1, p2
 

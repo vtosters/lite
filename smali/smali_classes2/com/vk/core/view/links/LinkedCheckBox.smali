@@ -3,11 +3,11 @@
 .source "LinkedCheckBox.java"
 
 # interfaces
-.implements Lcom/vk/core/view/links/ClickableLinksDelegate$b;
+.implements Lcom/vk/core/view/links/b$b;
 
 
 # instance fields
-.field private a:Lcom/vk/core/view/links/ClickableLinksDelegate;
+.field private a:Lcom/vk/core/view/links/b;
 
 
 # direct methods
@@ -18,11 +18,11 @@
     invoke-direct {p0, p1}, Landroidx/appcompat/widget/AppCompatCheckBox;-><init>(Landroid/content/Context;)V
 
     .line 2
-    new-instance p1, Lcom/vk/core/view/links/ClickableLinksDelegate;
+    new-instance p1, Lcom/vk/core/view/links/b;
 
-    invoke-direct {p1, p0}, Lcom/vk/core/view/links/ClickableLinksDelegate;-><init>(Lcom/vk/core/view/links/ClickableLinksDelegate$b;)V
+    invoke-direct {p1, p0}, Lcom/vk/core/view/links/b;-><init>(Lcom/vk/core/view/links/b$b;)V
 
-    iput-object p1, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
+    iput-object p1, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/b;
 
     const/4 p1, 0x0
 
@@ -39,11 +39,11 @@
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatCheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 5
-    new-instance p1, Lcom/vk/core/view/links/ClickableLinksDelegate;
+    new-instance p1, Lcom/vk/core/view/links/b;
 
-    invoke-direct {p1, p0}, Lcom/vk/core/view/links/ClickableLinksDelegate;-><init>(Lcom/vk/core/view/links/ClickableLinksDelegate$b;)V
+    invoke-direct {p1, p0}, Lcom/vk/core/view/links/b;-><init>(Lcom/vk/core/view/links/b$b;)V
 
-    iput-object p1, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
+    iput-object p1, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/b;
 
     const/4 p1, 0x0
 
@@ -60,11 +60,11 @@
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatCheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 8
-    new-instance p1, Lcom/vk/core/view/links/ClickableLinksDelegate;
+    new-instance p1, Lcom/vk/core/view/links/b;
 
-    invoke-direct {p1, p0}, Lcom/vk/core/view/links/ClickableLinksDelegate;-><init>(Lcom/vk/core/view/links/ClickableLinksDelegate$b;)V
+    invoke-direct {p1, p0}, Lcom/vk/core/view/links/b;-><init>(Lcom/vk/core/view/links/b$b;)V
 
-    iput-object p1, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
+    iput-object p1, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/b;
 
     const/4 p1, 0x0
 
@@ -89,9 +89,9 @@
     invoke-super {p0, p1}, Landroid/widget/CheckBox;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
+    iget-object v0, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/b;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/ClickableLinksDelegate;->a(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/b;->a(Landroid/graphics/Canvas;)V
 
     return-void
 .end method
@@ -103,7 +103,7 @@
     invoke-super/range {p0 .. p5}, Landroid/widget/CheckBox;->onLayout(ZIIII)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
+    iget-object p1, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/b;
 
     invoke-virtual {p0}, Landroid/widget/CheckBox;->getLeftPaddingOffset()I
 
@@ -113,7 +113,7 @@
 
     move-result p3
 
-    invoke-virtual {p1, p2, p3}, Lcom/vk/core/view/links/ClickableLinksDelegate;->a(II)V
+    invoke-virtual {p1, p2, p3}, Lcom/vk/core/view/links/b;->a(II)V
 
     return-void
 .end method
@@ -122,9 +122,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
+    iget-object v0, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/b;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/ClickableLinksDelegate;->a(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/b;->a(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -155,9 +155,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
+    iget-object v0, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/b;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/ClickableLinksDelegate;->a(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/b;->a(Z)V
 
     return-void
 .end method
@@ -166,9 +166,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
+    iget-object v0, p0, Lcom/vk/core/view/links/LinkedCheckBox;->a:Lcom/vk/core/view/links/b;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/ClickableLinksDelegate;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/b;->a(Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method

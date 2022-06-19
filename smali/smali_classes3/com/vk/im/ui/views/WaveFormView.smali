@@ -164,7 +164,7 @@
     .locals 1
 
     .line 28
-    sget p1, Lcom/vk/im/ui/R2;->WaveFormView_android_maxWidth:I
+    sget p1, Lcom/vk/im/ui/o;->WaveFormView_android_maxWidth:I
 
     const v0, 0x7fffffff
 
@@ -175,7 +175,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/WaveFormView;->setMaximumWidth(I)V
 
     .line 29
-    sget p1, Lcom/vk/im/ui/R2;->WaveFormView_android_maxHeight:I
+    sget p1, Lcom/vk/im/ui/o;->WaveFormView_android_maxHeight:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -184,7 +184,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/WaveFormView;->setMaximumHeight(I)V
 
     .line 30
-    sget p1, Lcom/vk/im/ui/R2;->WaveFormView_vkim_barWidth:I
+    sget p1, Lcom/vk/im/ui/o;->WaveFormView_vkim_barWidth:I
 
     const/4 v0, 0x2
 
@@ -195,7 +195,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/WaveFormView;->setBarWidth(I)V
 
     .line 31
-    sget p1, Lcom/vk/im/ui/R2;->WaveFormView_vkim_spaceWidth:I
+    sget p1, Lcom/vk/im/ui/o;->WaveFormView_vkim_spaceWidth:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -204,7 +204,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/WaveFormView;->setSpaceWidth(I)V
 
     .line 32
-    sget p1, Lcom/vk/im/ui/R2;->WaveFormView_vkim_amplifyThreshold:I
+    sget p1, Lcom/vk/im/ui/o;->WaveFormView_vkim_amplifyThreshold:I
 
     const/high16 v0, 0x3f000000    # 0.5f
 
@@ -215,7 +215,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/WaveFormView;->setAmplifyThreshold(F)V
 
     .line 33
-    sget p1, Lcom/vk/im/ui/R2;->WaveFormView_vkim_primaryColor:I
+    sget p1, Lcom/vk/im/ui/o;->WaveFormView_vkim_primaryColor:I
 
     const-string v0, "#88000000"
 
@@ -232,7 +232,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/WaveFormView;->setPrimaryColor(I)V
 
     .line 36
-    sget p1, Lcom/vk/im/ui/R2;->WaveFormView_vkim_indeterminate:I
+    sget p1, Lcom/vk/im/ui/o;->WaveFormView_vkim_indeterminate:I
 
     const/4 v0, 0x1
 
@@ -399,7 +399,7 @@
     iput v0, p0, Lcom/vk/im/ui/views/WaveFormView;->D:F
 
     .line 25
-    sget-object v0, Lcom/vk/im/ui/R2;->WaveFormView:[I
+    sget-object v0, Lcom/vk/im/ui/o;->WaveFormView:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -1377,12 +1377,12 @@
     move-result v7
 
     .line 9
-    invoke-static {p1, v2, v4, v0}, Lcom/vk/im/ui/views/MeasureUtils;->a(IIII)I
+    invoke-static {p1, v2, v4, v0}, Lcom/vk/im/ui/views/e;->a(IIII)I
 
     move-result p1
 
     .line 10
-    invoke-static {p2, v3, v5, v1}, Lcom/vk/im/ui/views/MeasureUtils;->a(IIII)I
+    invoke-static {p2, v3, v5, v1}, Lcom/vk/im/ui/views/e;->a(IIII)I
 
     move-result p2
 
@@ -1887,7 +1887,7 @@
     const v0, 0x3ecccccd    # 0.4f
 
     .line 3
-    invoke-static {p1, v0}, Lcom/vk/core/util/ColorUtils;->b(IF)I
+    invoke-static {p1, v0}, Lcom/vk/core/util/p;->b(IF)I
 
     move-result p1
 

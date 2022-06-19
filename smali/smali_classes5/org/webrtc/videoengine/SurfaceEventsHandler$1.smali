@@ -63,7 +63,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lorg/webrtc/videoengine/SurfaceEventsHandler$1;->this$0:Lorg/webrtc/videoengine/SurfaceEventsHandler;
@@ -115,7 +115,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lorg/webrtc/videoengine/SurfaceEventsHandler$1;->this$0:Lorg/webrtc/videoengine/SurfaceEventsHandler;
@@ -158,7 +158,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lorg/webrtc/videoengine/SurfaceEventsHandler$1;->this$0:Lorg/webrtc/videoengine/SurfaceEventsHandler;

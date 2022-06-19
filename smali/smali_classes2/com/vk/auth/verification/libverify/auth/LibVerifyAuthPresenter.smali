@@ -1,9 +1,9 @@
 .class public Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter;
-.super Lcom/vk/auth/verification/base/BaseCheckAuthPresenter;
+.super Lcom/vk/auth/verification/base/a;
 .source "LibVerifyAuthPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/auth/y/a/LibVerifyPresenter;
+.implements Lcom/vk/auth/y/a/c;
 
 
 # annotations
@@ -15,12 +15,12 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/auth/verification/base/BaseCheckAuthPresenter<",
-        "Lcom/vk/auth/y/a/LibVerifyView;",
+        "Lcom/vk/auth/verification/base/a<",
+        "Lcom/vk/auth/y/a/d;",
         "Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter$AuthDelegate;",
         ">;",
-        "Lcom/vk/auth/y/a/LibVerifyPresenter<",
-        "Lcom/vk/auth/y/a/LibVerifyView;",
+        "Lcom/vk/auth/y/a/c<",
+        "Lcom/vk/auth/y/a/d;",
         "Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter$AuthDelegate;",
         ">;"
     }
@@ -36,7 +36,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/auth/verification/base/BaseCheckAuthPresenter;-><init>()V
+    invoke-direct {p0}, Lcom/vk/auth/verification/base/a;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter$AuthDelegate;
@@ -48,22 +48,22 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter;)Lcom/vk/auth/main/AuthModel;
+.method public static final synthetic a(Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter;)Lcom/vk/auth/main/f;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->f()Lcom/vk/auth/main/AuthModel;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->f()Lcom/vk/auth/main/f;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter;Lcom/vk/auth/main/AuthModel;)V
+.method public static final synthetic a(Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter;Lcom/vk/auth/main/f;)V
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/main/AuthModel;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/main/f;)V
 
     return-void
 .end method
@@ -74,18 +74,18 @@
     .locals 1
 
     .line 4
-    invoke-static {p0}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->b(Lcom/vk/auth/y/a/LibVerifyPresenter;)Lcom/vk/auth/main/AuthStatSender$Screen;
+    invoke-static {p0}, Lcom/vk/auth/y/a/c$b;->b(Lcom/vk/auth/y/a/c;)Lcom/vk/auth/main/AuthStatSender$Screen;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public bridge synthetic a(Lcom/vk/auth/y/a/LibVerifyView;)V
+.method public bridge synthetic a(Lcom/vk/auth/y/a/d;)V
     .locals 0
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/auth/verification/base/BaseCheckAuthPresenter;->a(Lcom/vk/auth/verification/base/CheckView;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/verification/base/a;->a(Lcom/vk/auth/verification/base/c;)V
 
     return-void
 .end method
@@ -94,7 +94,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->g(Lcom/vk/auth/y/a/LibVerifyPresenter;)V
+    invoke-static {p0}, Lcom/vk/auth/y/a/c$b;->g(Lcom/vk/auth/y/a/c;)V
 
     return-void
 .end method
@@ -103,7 +103,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->e(Lcom/vk/auth/y/a/LibVerifyPresenter;)V
+    invoke-static {p0}, Lcom/vk/auth/y/a/c$b;->e(Lcom/vk/auth/y/a/c;)V
 
     return-void
 .end method
@@ -112,7 +112,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->b(Lcom/vk/auth/y/a/LibVerifyPresenter;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/vk/auth/y/a/c$b;->b(Lcom/vk/auth/y/a/c;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -123,7 +123,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->a(Lcom/vk/auth/y/a/LibVerifyPresenter;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/vk/auth/y/a/c$b;->a(Lcom/vk/auth/y/a/c;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -132,7 +132,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->f(Lcom/vk/auth/y/a/LibVerifyPresenter;)V
+    invoke-static {p0}, Lcom/vk/auth/y/a/c$b;->f(Lcom/vk/auth/y/a/c;)V
 
     .line 2
     invoke-super {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->onPause()V
@@ -144,7 +144,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->h(Lcom/vk/auth/y/a/LibVerifyPresenter;)V
+    invoke-static {p0}, Lcom/vk/auth/y/a/c$b;->h(Lcom/vk/auth/y/a/c;)V
 
     .line 2
     invoke-super {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->onResume()V
@@ -152,7 +152,7 @@
     return-void
 .end method
 
-.method public bridge synthetic p2()Lcom/vk/auth/verification/base/CheckPresenter$a;
+.method public bridge synthetic p2()Lcom/vk/auth/verification/base/b$a;
     .locals 1
 
     .line 1
@@ -163,7 +163,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic p2()Lcom/vk/auth/verification/base/CheckPresenter;
+.method public bridge synthetic p2()Lcom/vk/auth/verification/base/b;
     .locals 1
 
     .line 2
@@ -183,7 +183,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic p2()Lcom/vk/auth/y/a/LibVerifyPresenter$a;
+.method public bridge synthetic p2()Lcom/vk/auth/y/a/c$a;
     .locals 1
 
     .line 3
@@ -198,7 +198,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/auth/y/a/LibVerifyPresenter$b;->c(Lcom/vk/auth/y/a/LibVerifyPresenter;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/vk/auth/y/a/c$b;->c(Lcom/vk/auth/y/a/c;)Ljava/lang/String;
 
     move-result-object v0
 

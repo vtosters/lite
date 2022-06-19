@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -145,9 +145,9 @@
     if-eqz v3, :cond_6
 
     .line 14
-    new-instance v5, Lcom/vk/dto/notifications/NotificationsResponseData;
+    new-instance v5, Lcom/vk/dto/notifications/c;
 
-    invoke-direct {v5, v3}, Lcom/vk/dto/notifications/NotificationsResponseData;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v5, v3}, Lcom/vk/dto/notifications/c;-><init>(Lorg/json/JSONObject;)V
 
     const-string v6, "ttl"
 
@@ -228,7 +228,7 @@
     .line 22
     sget-object v13, Lcom/vk/dto/notifications/NotificationItem;->N:Lcom/vk/dto/notifications/NotificationItem$Companion;
 
-    invoke-virtual {v13, v11, v5}, Lcom/vk/dto/notifications/NotificationItem$Companion;->a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/NotificationsResponseData;)Lcom/vk/dto/notifications/NotificationItem;
+    invoke-virtual {v13, v11, v5}, Lcom/vk/dto/notifications/NotificationItem$Companion;->a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/c;)Lcom/vk/dto/notifications/NotificationItem;
 
     move-result-object v11
 
@@ -253,7 +253,7 @@
 
     .line 26
     :cond_5
-    invoke-virtual {v5}, Lcom/vk/dto/notifications/NotificationsResponseData;->a()V
+    invoke-virtual {v5}, Lcom/vk/dto/notifications/c;->a()V
 
     move-object v11, v6
 

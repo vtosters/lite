@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -33,7 +33,7 @@
     return-void
 .end method
 
-.method private final a(Landroid/accounts/Account;Lcom/vk/core/fragments/BaseFragment1;Landroid/app/Activity;)Ljava/lang/String;
+.method private final a(Landroid/accounts/Account;Lcom/vk/core/fragments/b;Landroid/app/Activity;)Ljava/lang/String;
     .locals 7
 
     const-string v0, "vk"
@@ -60,7 +60,7 @@
 
     const-string v4, "GoogleAuthUtil.getToken(\u2026.com/m8/feeds\", Bundle())"
 
-    invoke-static {p3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catch Lcom/google/android/gms/auth/GooglePlayServicesAvailabilityException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Lcom/google/android/gms/auth/UserRecoverableAuthException; {:try_start_0 .. :try_end_0} :catch_2
@@ -184,11 +184,11 @@
     throw p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$b;Landroid/accounts/Account;Lcom/vk/core/fragments/BaseFragment1;Landroid/app/Activity;)Ljava/lang/String;
+.method public static final synthetic a(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$b;Landroid/accounts/Account;Lcom/vk/core/fragments/b;Landroid/app/Activity;)Ljava/lang/String;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$b;->a(Landroid/accounts/Account;Lcom/vk/core/fragments/BaseFragment1;Landroid/app/Activity;)Ljava/lang/String;
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$b;->a(Landroid/accounts/Account;Lcom/vk/core/fragments/b;Landroid/app/Activity;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -202,9 +202,9 @@
 
     .line 12
     :try_start_0
-    sget-object v0, Lb/h/i/FacebookSdkWrapper;->INSTANCE:Lb/h/i/FacebookSdkWrapper;
+    sget-object v0, Lb/h/i/a;->a:Lb/h/i/a;
 
-    invoke-virtual {v0}, Lb/h/i/FacebookSdkWrapper;->a()V
+    invoke-virtual {v0}, Lb/h/i/a;->a()V
 
     .line 13
     invoke-static {}, Lcom/facebook/login/LoginManager;->b()Lcom/facebook/login/LoginManager;
@@ -224,20 +224,20 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     const-string v1, "1258261760"
 
     const-string v2, "CBAOIQPLEBABABABA"
 
-    invoke-static {v0, v1, v2}, Lru/ok/android/sdk/Odnoklassniki;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/sdk/Odnoklassniki;
+    invoke-static {v0, v1, v2}, Lru/ok/android/sdk/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/sdk/a;
 
     .line 2
-    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->d()Lru/ok/android/sdk/Odnoklassniki;
+    invoke-static {}, Lru/ok/android/sdk/a;->d()Lru/ok/android/sdk/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lru/ok/android/sdk/Odnoklassniki;->a()V
+    invoke-virtual {v0}, Lru/ok/android/sdk/a;->a()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -250,72 +250,72 @@
 
     .line 1
     :try_start_0
-    new-instance v0, Lcom/twitter/sdk/android/core/TwitterConfig$b;
+    new-instance v0, Lcom/twitter/sdk/android/core/p$b;
 
-    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lcom/twitter/sdk/android/core/TwitterConfig$b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/twitter/sdk/android/core/p$b;-><init>(Landroid/content/Context;)V
 
-    new-instance v1, Lcom/twitter/sdk/android/core/DefaultLogger;
+    new-instance v1, Lcom/twitter/sdk/android/core/c;
 
     const/4 v2, 0x3
 
-    invoke-direct {v1, v2}, Lcom/twitter/sdk/android/core/DefaultLogger;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/twitter/sdk/android/core/c;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lcom/twitter/sdk/android/core/TwitterConfig$b;->a(Lcom/twitter/sdk/android/core/Logger;)Lcom/twitter/sdk/android/core/TwitterConfig$b;
+    invoke-virtual {v0, v1}, Lcom/twitter/sdk/android/core/p$b;->a(Lcom/twitter/sdk/android/core/g;)Lcom/twitter/sdk/android/core/p$b;
 
     .line 2
     new-instance v1, Lcom/twitter/sdk/android/core/TwitterAuthConfig;
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->B0()Ljava/lang/String;
+    invoke-virtual {v2}, Lb/h/h/d/c;->B0()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/auth/api/VKAccount;->C0()Ljava/lang/String;
+    invoke-virtual {v3}, Lb/h/h/d/c;->C0()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-direct {v1, v2, v3}, Lcom/twitter/sdk/android/core/TwitterAuthConfig;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/twitter/sdk/android/core/TwitterConfig$b;->a(Lcom/twitter/sdk/android/core/TwitterAuthConfig;)Lcom/twitter/sdk/android/core/TwitterConfig$b;
+    invoke-virtual {v0, v1}, Lcom/twitter/sdk/android/core/p$b;->a(Lcom/twitter/sdk/android/core/TwitterAuthConfig;)Lcom/twitter/sdk/android/core/p$b;
 
     .line 3
-    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/TwitterConfig$b;->a()Lcom/twitter/sdk/android/core/TwitterConfig;
+    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/p$b;->a()Lcom/twitter/sdk/android/core/p;
 
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, Lcom/twitter/sdk/android/core/Twitter;->b(Lcom/twitter/sdk/android/core/TwitterConfig;)V
+    invoke-static {v0}, Lcom/twitter/sdk/android/core/n;->b(Lcom/twitter/sdk/android/core/p;)V
 
     .line 5
-    invoke-static {}, Lcom/twitter/sdk/android/core/TwitterCore;->h()Lcom/twitter/sdk/android/core/TwitterCore;
+    invoke-static {}, Lcom/twitter/sdk/android/core/r;->h()Lcom/twitter/sdk/android/core/r;
 
     move-result-object v0
 
     const-string v1, "TwitterCore.getInstance()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/TwitterCore;->e()Lcom/twitter/sdk/android/core/SessionManager;
+    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/r;->e()Lcom/twitter/sdk/android/core/m;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/twitter/sdk/android/core/SessionManager;->a()V
+    invoke-interface {v0}, Lcom/twitter/sdk/android/core/m;->a()V
 
     .line 6
-    new-instance v0, Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
+    new-instance v0, Lcom/twitter/sdk/android/core/identity/h;
 
-    invoke-direct {v0}, Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;-><init>()V
+    invoke-direct {v0}, Lcom/twitter/sdk/android/core/identity/h;-><init>()V
 
-    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;->a()V
+    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/identity/h;->a()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

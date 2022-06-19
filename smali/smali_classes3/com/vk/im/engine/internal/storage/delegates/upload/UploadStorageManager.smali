@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+.field private final a:Lcom/vk/im/engine/internal/storage/b;
 
 
 # direct methods
@@ -23,18 +23,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
+.method public constructor <init>(Lcom/vk/im/engine/internal/storage/b;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/b;
 
     return-void
 .end method
@@ -140,11 +140,11 @@
     return-object v0
 .end method
 
-.method private final b(Landroid/database/Cursor;)Lcom/vk/im/engine/models/attaches/h/CacheUploadInfo1;
+.method private final b(Landroid/database/Cursor;)Lcom/vk/im/engine/models/attaches/h/b;
     .locals 7
 
     .line 13
-    new-instance v6, Lcom/vk/im/engine/models/attaches/h/CacheUploadInfo1;
+    new-instance v6, Lcom/vk/im/engine/models/attaches/h/b;
 
     const-string v0, "file_hash"
 
@@ -184,14 +184,14 @@
     move-object v0, v6
 
     .line 19
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/models/attaches/h/CacheUploadInfo1;-><init>(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/models/attaches/h/b;-><init>(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)V
 
     return-object v6
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/im/engine/models/attaches/h/CacheUploadInfo1;
+.method public final a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/im/engine/models/attaches/h/b;
     .locals 2
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
@@ -209,9 +209,9 @@
     aput-object p2, v0, p1
 
     .line 18
-    iget-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {p1}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
 
@@ -223,7 +223,7 @@
 
     const-string p2, "env.database.rawQuery(sql, args)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 19
     :try_start_0
@@ -234,7 +234,7 @@
     if-eqz p2, :cond_0
 
     .line 20
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->b(Landroid/database/Cursor;)Lcom/vk/im/engine/models/attaches/h/CacheUploadInfo1;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->b(Landroid/database/Cursor;)Lcom/vk/im/engine/models/attaches/h/b;
 
     move-result-object p2
     :try_end_0
@@ -265,9 +265,9 @@
     .end annotation
 
     .line 23
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -292,9 +292,9 @@
     if-le v0, v1, :cond_0
 
     .line 24
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -310,9 +310,9 @@
     .locals 3
 
     .line 16
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -336,15 +336,15 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/attaches/h/CacheUploadInfo1;)V
+.method public final a(Lcom/vk/im/engine/models/attaches/h/b;)V
     .locals 4
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
     .line 22
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -352,7 +352,7 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/CacheUploadInfo1;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/b;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -360,7 +360,7 @@
 
     aput-object v2, v1, v3
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/CacheUploadInfo1;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/b;->e()Ljava/lang/String;
 
     move-result-object p1
 
@@ -379,9 +379,9 @@
     .locals 2
 
     .line 12
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -389,7 +389,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager$putResumableUploadAttachInfo$1;-><init>(Lcom/vk/im/engine/models/upload/ResumableAttachUploadInfo;)V
 
-    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -425,14 +425,14 @@
     move-object v0, p1
 
     .line 14
-    invoke-static/range {v0 .. v8}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v0 .. v8}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 15
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -478,9 +478,9 @@
     move-result-object p1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -522,15 +522,15 @@
     throw v0
 .end method
 
-.method public final b(Lcom/vk/im/engine/models/attaches/h/CacheUploadInfo1;)V
+.method public final b(Lcom/vk/im/engine/models/attaches/h/b;)V
     .locals 4
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/upload/UploadStorageManager;->a:Lcom/vk/im/engine/internal/storage/b;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -539,7 +539,7 @@
     new-array v1, v1, [Ljava/lang/Object;
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/CacheUploadInfo1;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/b;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -548,7 +548,7 @@
     aput-object v2, v1, v3
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/CacheUploadInfo1;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/b;->e()Ljava/lang/String;
 
     move-result-object v2
 
@@ -557,7 +557,7 @@
     aput-object v2, v1, v3
 
     .line 9
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/CacheUploadInfo1;->c()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/b;->c()I
 
     move-result v2
 
@@ -572,7 +572,7 @@
     aput-object v2, v1, v3
 
     .line 10
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/CacheUploadInfo1;->d()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/b;->d()I
 
     move-result v2
 
@@ -587,7 +587,7 @@
     aput-object v2, v1, v3
 
     .line 11
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/CacheUploadInfo1;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/b;->a()Ljava/lang/String;
 
     move-result-object p1
 

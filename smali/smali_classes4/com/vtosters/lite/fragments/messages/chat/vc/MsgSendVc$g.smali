@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->b(Lcom/vk/im/engine/models/messages/MsgSendSource$b;)V
+    value = Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->b(Lcom/vk/im/engine/models/messages/e$b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/im/engine/models/conversations/BotButton;Lcom/vk/im/engine/models/messages/MsgSendSource$b;)V
+.method constructor <init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/im/engine/models/conversations/BotButton;Lcom/vk/im/engine/models/messages/e$b;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$g;->b:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method public a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;)V
+.method public a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;)V
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -55,7 +55,7 @@
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;",
             "Ljava/lang/String;",
-            "Lcom/vk/im/engine/models/messages/MsgSendSource;",
+            "Lcom/vk/im/engine/models/messages/e;",
             ")V"
         }
     .end annotation
@@ -63,7 +63,7 @@
     .line 3
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$g;->b:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/b;
 
     move-result-object v0
 
@@ -95,12 +95,12 @@
 
     move-object v6, p4
 
-    invoke-static/range {v0 .. v10}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback$a;->a(Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/MsgSendSource;Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/commands/messages/MsgSendConfig;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v10}, Lcom/vk/im/ui/q/h/f/b$a;->a(Lcom/vk/im/ui/q/h/f/b;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/e;Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/commands/messages/z;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+.method public a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;Landroid/view/View;Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -111,16 +111,16 @@
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;",
             "Ljava/lang/String;",
-            "Lcom/vk/im/engine/models/messages/MsgSendSource;",
+            "Lcom/vk/im/engine/models/messages/e;",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-static/range {p0 .. p6}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a$b;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+    invoke-static/range {p0 .. p6}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a$b;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;Landroid/view/View;Lkotlin/jvm/b/a;)V
 
     return-void
 .end method

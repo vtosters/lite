@@ -130,30 +130,30 @@
     if-eqz p1, :cond_3
 
     .line 4
-    invoke-static {p1}, Lokhttp3/HttpUrl;->e(Ljava/lang/String;)Lokhttp3/HttpUrl;
+    invoke-static {p1}, Lokhttp3/t;->e(Ljava/lang/String;)Lokhttp3/t;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-virtual {v0}, Lokhttp3/HttpUrl;->i()Lokhttp3/HttpUrl$a;
+    invoke-virtual {v0}, Lokhttp3/t;->i()Lokhttp3/t$a;
 
     move-result-object p1
 
     const-string v0, ""
 
-    invoke-virtual {p1, v0}, Lokhttp3/HttpUrl$a;->h(Ljava/lang/String;)Lokhttp3/HttpUrl$a;
+    invoke-virtual {p1, v0}, Lokhttp3/t$a;->h(Ljava/lang/String;)Lokhttp3/t$a;
 
-    invoke-virtual {p1, v0}, Lokhttp3/HttpUrl$a;->e(Ljava/lang/String;)Lokhttp3/HttpUrl$a;
+    invoke-virtual {p1, v0}, Lokhttp3/t$a;->e(Ljava/lang/String;)Lokhttp3/t$a;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lokhttp3/HttpUrl$a;->f(Ljava/lang/String;)Lokhttp3/HttpUrl$a;
+    invoke-virtual {p1, v0}, Lokhttp3/t$a;->f(Ljava/lang/String;)Lokhttp3/t$a;
 
-    invoke-virtual {p1, v0}, Lokhttp3/HttpUrl$a;->c(Ljava/lang/String;)Lokhttp3/HttpUrl$a;
+    invoke-virtual {p1, v0}, Lokhttp3/t$a;->c(Ljava/lang/String;)Lokhttp3/t$a;
 
-    invoke-virtual {p1}, Lokhttp3/HttpUrl$a;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Lokhttp3/t$a;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -185,14 +185,14 @@
     if-eq v1, v4, :cond_2
 
     .line 9
-    invoke-static {p1}, Lokhttp3/HttpUrl;->e(Ljava/lang/String;)Lokhttp3/HttpUrl;
+    invoke-static {p1}, Lokhttp3/t;->e(Ljava/lang/String;)Lokhttp3/t;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
     .line 10
-    invoke-virtual {v1}, Lokhttp3/HttpUrl;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lokhttp3/t;->c()Ljava/lang/String;
 
     move-result-object v1
 

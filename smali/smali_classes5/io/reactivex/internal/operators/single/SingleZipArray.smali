@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/single/SingleZipArray;
-.super Lio/reactivex/Single;
+.super Lc/a/t;
 .source "SingleZipArray.java"
 
 
@@ -19,27 +19,27 @@
         "R:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/Single<",
+        "Lc/a/t<",
         "TR;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final a:[Lio/reactivex/SingleSource;
+.field final a:[Lc/a/x;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
-            "Lio/reactivex/SingleSource<",
+            "Lc/a/x<",
             "+TT;>;"
         }
     .end annotation
 .end field
 
-.field final b:Lio/reactivex/functions/Function;
+.field final b:Lc/a/z/j;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/functions/Function<",
+            "Lc/a/z/j<",
             "-[",
             "Ljava/lang/Object;",
             "+TR;>;"
@@ -49,14 +49,14 @@
 
 
 # direct methods
-.method public constructor <init>([Lio/reactivex/SingleSource;Lio/reactivex/functions/Function;)V
+.method public constructor <init>([Lc/a/x;Lc/a/z/j;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
-            "Lio/reactivex/SingleSource<",
+            "Lc/a/x<",
             "+TT;>;",
-            "Lio/reactivex/functions/Function<",
+            "Lc/a/z/j<",
             "-[",
             "Ljava/lang/Object;",
             "+TR;>;)V"
@@ -64,31 +64,31 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lio/reactivex/Single;-><init>()V
+    invoke-direct {p0}, Lc/a/t;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleZipArray;->a:[Lio/reactivex/SingleSource;
+    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleZipArray;->a:[Lc/a/x;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/single/SingleZipArray;->b:Lio/reactivex/functions/Function;
+    iput-object p2, p0, Lio/reactivex/internal/operators/single/SingleZipArray;->b:Lc/a/z/j;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected b(Lio/reactivex/SingleObserver;)V
+.method protected b(Lc/a/v;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/SingleObserver<",
+            "Lc/a/v<",
             "-TR;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleZipArray;->a:[Lio/reactivex/SingleSource;
+    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleZipArray;->a:[Lc/a/x;
 
     .line 2
     array-length v1, v0
@@ -102,15 +102,15 @@
     .line 3
     aget-object v0, v0, v2
 
-    new-instance v1, Lio/reactivex/internal/operators/single/SingleMap$a;
+    new-instance v1, Lio/reactivex/internal/operators/single/h$a;
 
     new-instance v2, Lio/reactivex/internal/operators/single/SingleZipArray$a;
 
     invoke-direct {v2, p0}, Lio/reactivex/internal/operators/single/SingleZipArray$a;-><init>(Lio/reactivex/internal/operators/single/SingleZipArray;)V
 
-    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/single/SingleMap$a;-><init>(Lio/reactivex/SingleObserver;Lio/reactivex/functions/Function;)V
+    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/single/h$a;-><init>(Lc/a/v;Lc/a/z/j;)V
 
-    invoke-interface {v0, v1}, Lio/reactivex/SingleSource;->a(Lio/reactivex/SingleObserver;)V
+    invoke-interface {v0, v1}, Lc/a/x;->a(Lc/a/v;)V
 
     return-void
 
@@ -118,12 +118,12 @@
     :cond_0
     new-instance v3, Lio/reactivex/internal/operators/single/SingleZipArray$ZipCoordinator;
 
-    iget-object v4, p0, Lio/reactivex/internal/operators/single/SingleZipArray;->b:Lio/reactivex/functions/Function;
+    iget-object v4, p0, Lio/reactivex/internal/operators/single/SingleZipArray;->b:Lc/a/z/j;
 
-    invoke-direct {v3, p1, v1, v4}, Lio/reactivex/internal/operators/single/SingleZipArray$ZipCoordinator;-><init>(Lio/reactivex/SingleObserver;ILio/reactivex/functions/Function;)V
+    invoke-direct {v3, p1, v1, v4}, Lio/reactivex/internal/operators/single/SingleZipArray$ZipCoordinator;-><init>(Lc/a/v;ILc/a/z/j;)V
 
     .line 5
-    invoke-interface {p1, v3}, Lio/reactivex/SingleObserver;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-interface {p1, v3}, Lc/a/v;->a(Lio/reactivex/disposables/b;)V
 
     :goto_0
     if-ge v2, v1, :cond_3
@@ -160,7 +160,7 @@
 
     aget-object v4, v4, v2
 
-    invoke-interface {p1, v4}, Lio/reactivex/SingleSource;->a(Lio/reactivex/SingleObserver;)V
+    invoke-interface {p1, v4}, Lc/a/x;->a(Lc/a/v;)V
 
     add-int/lit8 v2, v2, 0x1
 

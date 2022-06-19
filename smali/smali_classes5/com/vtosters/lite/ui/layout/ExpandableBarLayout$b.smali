@@ -77,7 +77,7 @@
     .line 3
     iget-object p1, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout$b;->a:Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;
 
-    invoke-static {p1}, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->c(Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;)Lcom/vk/common/g/VoidFBool;
+    invoke-static {p1}, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->c(Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;)Lcom/vk/common/g/l;
 
     move-result-object p1
 
@@ -86,7 +86,7 @@
     .line 4
     iget-object p1, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout$b;->a:Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;
 
-    invoke-static {p1}, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->c(Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;)Lcom/vk/common/g/VoidFBool;
+    invoke-static {p1}, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->c(Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;)Lcom/vk/common/g/l;
 
     move-result-object p1
 
@@ -96,7 +96,7 @@
 
     move-result v0
 
-    invoke-interface {p1, v0}, Lcom/vk/common/g/VoidFBool;->a(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/common/g/l;->a(Z)V
 
     :cond_0
     return-void

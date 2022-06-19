@@ -32,7 +32,7 @@
             "Ljava/util/Map<",
             "Lcom/vk/im/engine/models/MemberType;",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/models/Profile;",
+            "Lcom/vk/im/engine/models/j;",
             ">;>;"
         }
     .end annotation
@@ -87,7 +87,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/ProfilesSimpleInfo$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/ProfilesSimpleInfo$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->f:Lcom/vk/im/engine/models/ProfilesSimpleInfo$b;
 
@@ -145,7 +145,7 @@
     .end annotation
 
     .line 20
-    invoke-static {}, Lcom/vk/core/extensions/SparseArrayExt1;->a()Landroid/util/SparseArray;
+    invoke-static {}, Lcom/vk/core/extensions/x;->a()Landroid/util/SparseArray;
 
     move-result-object v0
 
@@ -154,7 +154,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x1
@@ -236,7 +236,7 @@
 
     if-eqz p3, :cond_3
 
-    invoke-static {p2, p3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p2, p3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p2
 
@@ -253,7 +253,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p3, v0}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p3, v0}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p3
 
@@ -268,7 +268,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {p3, v0}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p3, v0}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p3
 
@@ -283,7 +283,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p3, v0}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p3, v0}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p3
 
@@ -294,11 +294,11 @@
     .line 11
     sget-object p3, Lcom/vk/im/engine/models/MemberType;->UNKNOWN:Lcom/vk/im/engine/models/MemberType;
 
-    invoke-static {}, Lcom/vk/core/extensions/SparseArrayExt1;->a()Landroid/util/SparseArray;
+    invoke-static {}, Lcom/vk/core/extensions/x;->a()Landroid/util/SparseArray;
 
     move-result-object p4
 
-    invoke-static {p3, p4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p3, p4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p3
 
@@ -346,7 +346,7 @@
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p6, p5, 0x1
@@ -442,30 +442,30 @@
 
     .line 37
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 38
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 39
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 40
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 1
@@ -493,7 +493,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/engine/models/Profile;",
+            "Lcom/vk/im/engine/models/j;",
             ">;)V"
         }
     .end annotation
@@ -526,10 +526,10 @@
 
     move-object v5, v2
 
-    check-cast v5, Lcom/vk/im/engine/models/Profile;
+    check-cast v5, Lcom/vk/im/engine/models/j;
 
     .line 64
-    invoke-interface {v5}, Lcom/vk/im/engine/models/Profile;->S()Lcom/vk/im/engine/models/MemberType;
+    invoke-interface {v5}, Lcom/vk/im/engine/models/j;->S()Lcom/vk/im/engine/models/MemberType;
 
     move-result-object v5
 
@@ -574,10 +574,10 @@
 
     move-object v6, v5
 
-    check-cast v6, Lcom/vk/im/engine/models/Profile;
+    check-cast v6, Lcom/vk/im/engine/models/j;
 
     .line 67
-    invoke-interface {v6}, Lcom/vk/im/engine/models/Profile;->S()Lcom/vk/im/engine/models/MemberType;
+    invoke-interface {v6}, Lcom/vk/im/engine/models/j;->S()Lcom/vk/im/engine/models/MemberType;
 
     move-result-object v6
 
@@ -624,10 +624,10 @@
 
     move-object v7, v6
 
-    check-cast v7, Lcom/vk/im/engine/models/Profile;
+    check-cast v7, Lcom/vk/im/engine/models/j;
 
     .line 70
-    invoke-interface {v7}, Lcom/vk/im/engine/models/Profile;->S()Lcom/vk/im/engine/models/MemberType;
+    invoke-interface {v7}, Lcom/vk/im/engine/models/j;->S()Lcom/vk/im/engine/models/MemberType;
 
     move-result-object v7
 
@@ -674,10 +674,10 @@
 
     move-object v7, v6
 
-    check-cast v7, Lcom/vk/im/engine/models/Profile;
+    check-cast v7, Lcom/vk/im/engine/models/j;
 
     .line 73
-    invoke-interface {v7}, Lcom/vk/im/engine/models/Profile;->S()Lcom/vk/im/engine/models/MemberType;
+    invoke-interface {v7}, Lcom/vk/im/engine/models/j;->S()Lcom/vk/im/engine/models/MemberType;
 
     move-result-object v7
 
@@ -733,7 +733,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x1
@@ -961,7 +961,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p6, p5, 0x1
@@ -1041,13 +1041,13 @@
 
     const-string v2, "baos.toByteArray()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v0, v2}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     return-object v1
 
@@ -1063,7 +1063,7 @@
     :catchall_1
     move-exception v2
 
-    invoke-static {v0, v1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v2
 .end method
@@ -1117,12 +1117,12 @@
 
     check-cast v1, Landroid/util/SparseArray;
 
-    invoke-static {v2, v1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    invoke-static {v2, v1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -1132,7 +1132,7 @@
     return-object p0
 .end method
 
-.method public final a(Ljava/lang/Integer;Lcom/vk/im/engine/models/MemberType;)Lcom/vk/im/engine/models/Profile;
+.method public final a(Ljava/lang/Integer;Lcom/vk/im/engine/models/MemberType;)Lcom/vk/im/engine/models/j;
     .locals 2
 
     const/4 v0, 0x0
@@ -1165,7 +1165,7 @@
 
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/im/engine/models/Profile;
+    check-cast v0, Lcom/vk/im/engine/models/j;
 
     :cond_0
     return-object v0
@@ -1183,7 +1183,7 @@
     .end annotation
 
     .line 8
-    invoke-static {p1, p1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    invoke-static {p1, p1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     return-void
 .end method
@@ -1194,7 +1194,7 @@
     .line 19
     iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->b:Landroid/util/SparseArray;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/SparseArrayExt1;->g(Landroid/util/SparseArray;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/core/extensions/x;->g(Landroid/util/SparseArray;)Ljava/util/List;
 
     move-result-object v0
 
@@ -1203,7 +1203,7 @@
     .line 20
     iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->c:Landroid/util/SparseArray;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/SparseArrayExt1;->g(Landroid/util/SparseArray;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/core/extensions/x;->g(Landroid/util/SparseArray;)Ljava/util/List;
 
     move-result-object v0
 
@@ -1212,7 +1212,7 @@
     .line 21
     iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->d:Landroid/util/SparseArray;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/SparseArrayExt1;->g(Landroid/util/SparseArray;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/core/extensions/x;->g(Landroid/util/SparseArray;)Ljava/util/List;
 
     move-result-object v0
 
@@ -1221,7 +1221,7 @@
     .line 22
     iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->e:Landroid/util/SparseArray;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/SparseArrayExt1;->g(Landroid/util/SparseArray;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/core/extensions/x;->g(Landroid/util/SparseArray;)Ljava/util/List;
 
     move-result-object v0
 
@@ -1278,13 +1278,13 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/Profile;)V
+.method public final a(Lcom/vk/im/engine/models/j;)V
     .locals 2
 
     .line 9
     iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->a:Ljava/util/Map;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->S()Lcom/vk/im/engine/models/MemberType;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->S()Lcom/vk/im/engine/models/MemberType;
 
     move-result-object v1
 
@@ -1296,7 +1296,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->L()I
+    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->L()I
 
     move-result v1
 
@@ -1470,12 +1470,12 @@
 
     check-cast v1, Landroid/util/SparseArray;
 
-    invoke-static {v2, v1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    invoke-static {v2, v1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -1492,7 +1492,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/engine/models/Profile;",
+            "Lcom/vk/im/engine/models/j;",
             ">;)",
             "Lcom/vk/im/engine/models/ProfilesSimpleInfo;"
         }
@@ -1514,10 +1514,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/models/Profile;
+    check-cast v0, Lcom/vk/im/engine/models/j;
 
     .line 6
-    invoke-virtual {p0, v0}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->a(Lcom/vk/im/engine/models/Profile;)V
+    invoke-virtual {p0, v0}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->a(Lcom/vk/im/engine/models/j;)V
 
     goto :goto_0
 
@@ -1539,7 +1539,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->d:Landroid/util/SparseArray;
 
-    invoke-static {v0, p1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    invoke-static {v0, p1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     return-void
 .end method
@@ -1558,20 +1558,20 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->e:Landroid/util/SparseArray;
 
-    invoke-static {v0, p1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    invoke-static {v0, p1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     return-void
 .end method
 
-.method public final c(Lkotlin/jvm/b/Functions2;)V
+.method public final c(Lkotlin/jvm/b/b;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-",
-            "Lcom/vk/im/engine/models/Profile;",
-            "Lkotlin/Unit;",
+            "Lcom/vk/im/engine/models/j;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
@@ -1618,10 +1618,10 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/im/engine/models/Profile;
+    check-cast v4, Lcom/vk/im/engine/models/j;
 
     .line 7
-    invoke-interface {p1, v4}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v4}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v2, v2, 0x1
 
@@ -1653,14 +1653,14 @@
 
     move-result p1
 
-    invoke-static {v0, p1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;I)Z
+    invoke-static {v0, p1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;I)Z
 
     move-result p1
 
     return p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -1710,7 +1710,7 @@
     return-void
 .end method
 
-.method public final d(Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/Profile;
+.method public final d(Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/j;
     .locals 3
 
     const/4 v0, 0x0
@@ -1742,7 +1742,7 @@
 
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/im/engine/models/Profile;
+    check-cast v0, Lcom/vk/im/engine/models/j;
 
     :cond_0
     return-object v0
@@ -1762,7 +1762,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->b:Landroid/util/SparseArray;
 
-    invoke-static {v0, p1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    invoke-static {v0, p1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     return-void
 .end method
@@ -1782,7 +1782,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->b:Landroid/util/SparseArray;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1792,7 +1792,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->c:Landroid/util/SparseArray;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1802,7 +1802,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->d:Landroid/util/SparseArray;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1812,7 +1812,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->e:Landroid/util/SparseArray;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1832,7 +1832,7 @@
     return p1
 .end method
 
-.method public final get(I)Lcom/vk/im/engine/models/Profile;
+.method public final get(I)Lcom/vk/im/engine/models/j;
     .locals 2
 
     .line 1
@@ -1858,7 +1858,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/models/Profile;
+    check-cast p1, Lcom/vk/im/engine/models/j;
 
     goto :goto_0
 
@@ -1987,7 +1987,7 @@
 
     check-cast v1, Landroid/util/SparseArray;
 
-    invoke-static {v1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;)Z
+    invoke-static {v1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;)Z
 
     move-result v1
 
@@ -2006,7 +2006,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/Profile;",
+            "Lcom/vk/im/engine/models/j;",
             ">;"
         }
     .end annotation
@@ -2049,7 +2049,7 @@
     check-cast v2, Landroid/util/SparseArray;
 
     .line 5
-    invoke-static {v2}, Lcom/vk/core/extensions/SparseArrayExt1;->e(Landroid/util/SparseArray;)Ljava/util/Collection;
+    invoke-static {v2}, Lcom/vk/core/extensions/x;->e(Landroid/util/SparseArray;)Ljava/util/Collection;
 
     move-result-object v2
 
@@ -2212,7 +2212,7 @@
 
     const-string v1, "Base64.encodeToString(toBlob(), Base64.DEFAULT)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

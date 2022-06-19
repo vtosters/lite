@@ -3,12 +3,12 @@
 .source "VideoCatalogVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;)V
+    value = Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh$searchParamsVh$2;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -62,11 +62,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh$searchParamsVh$2;->this$0:Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;
 
-    invoke-static {v0}, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->d(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)Lcom/vk/catalog2/core/y/d/SearchResultsVh;
+    invoke-static {v0}, Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;->d(Lcom/vk/catalog2/core/holders/video/VideoCatalogVh;)Lcom/vk/catalog2/core/y/d/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/y/d/SearchResultsVh;->m()V
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/y/d/b;->m()V
 
     return-void
 .end method

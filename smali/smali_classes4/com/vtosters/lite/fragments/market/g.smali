@@ -11,13 +11,13 @@
 
 .field private final synthetic b:Ljava/util/List;
 
-.field private final synthetic c:Lcom/vtosters/lite/Comment;
+.field private final synthetic c:Lcom/vtosters/lite/q;
 
 .field private final synthetic d:Landroid/content/Context;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Ljava/util/List;Lcom/vtosters/lite/Comment;Landroid/content/Context;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Ljava/util/List;Lcom/vtosters/lite/q;Landroid/content/Context;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,7 +26,7 @@
 
     iput-object p2, p0, Lcom/vtosters/lite/fragments/market/g;->b:Ljava/util/List;
 
-    iput-object p3, p0, Lcom/vtosters/lite/fragments/market/g;->c:Lcom/vtosters/lite/Comment;
+    iput-object p3, p0, Lcom/vtosters/lite/fragments/market/g;->c:Lcom/vtosters/lite/q;
 
     iput-object p4, p0, Lcom/vtosters/lite/fragments/market/g;->d:Landroid/content/Context;
 
@@ -42,7 +42,7 @@
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/market/g;->b:Ljava/util/List;
 
-    iget-object v2, p0, Lcom/vtosters/lite/fragments/market/g;->c:Lcom/vtosters/lite/Comment;
+    iget-object v2, p0, Lcom/vtosters/lite/fragments/market/g;->c:Lcom/vtosters/lite/q;
 
     iget-object v3, p0, Lcom/vtosters/lite/fragments/market/g;->d:Landroid/content/Context;
 
@@ -50,7 +50,7 @@
 
     move v5, p2
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vtosters/lite/fragments/market/GoodFragment;->a(Ljava/util/List;Lcom/vtosters/lite/Comment;Landroid/content/Context;Landroid/content/DialogInterface;I)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vtosters/lite/fragments/market/GoodFragment;->a(Ljava/util/List;Lcom/vtosters/lite/q;Landroid/content/Context;Landroid/content/DialogInterface;I)V
 
     return-void
 .end method

@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroidx/recyclerview/widget/RecyclerView;ZILcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper$Snap;Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper$Speed;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Landroidx/recyclerview/widget/RecyclerView;ZILcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper$Snap;Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper$Speed;ILkotlin/jvm/internal/i;)V
     .locals 6
 
     and-int/lit8 p7, p6, 0x2
@@ -262,7 +262,7 @@
 
     const-string v7, "layoutManager.getChildAt(i)!!"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_7
 
@@ -289,7 +289,7 @@
 
     .line 48
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v4
 
@@ -481,7 +481,7 @@
 
     const-string v1, "layoutManager.findViewByPosition(position)!!"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 38
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
@@ -550,7 +550,7 @@
 
     .line 40
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     const/4 p1, 0x0
 
@@ -577,7 +577,7 @@
 
     const-string v1, "recyclerView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

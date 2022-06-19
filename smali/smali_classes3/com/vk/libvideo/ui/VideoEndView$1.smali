@@ -3,7 +3,7 @@
 .source "VideoEndView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
     .locals 8
 
     .line 1
-    sget-object v0, Lcom/vk/core/widget/LikeAnimator;->INSTANCE:Lcom/vk/core/widget/LikeAnimator;
+    sget-object v0, Lcom/vk/core/widget/b;->b:Lcom/vk/core/widget/b;
 
     iget-object v1, p0, Lcom/vk/libvideo/ui/VideoEndView$1;->this$0:Lcom/vk/libvideo/ui/VideoEndView;
 
@@ -92,7 +92,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/core/widget/LikeAnimator;->a(Lcom/vk/core/widget/LikeAnimator;Landroid/view/View;Landroid/view/View;ZZFILjava/lang/Object;)V
+    invoke-static/range {v0 .. v7}, Lcom/vk/core/widget/b;->a(Lcom/vk/core/widget/b;Landroid/view/View;Landroid/view/View;ZZFILjava/lang/Object;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/libvideo/ui/VideoEndView$1;->this$0:Lcom/vk/libvideo/ui/VideoEndView;
@@ -117,7 +117,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/libvideo/ui/VideoEndView$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

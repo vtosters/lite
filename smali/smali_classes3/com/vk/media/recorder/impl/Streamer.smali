@@ -24,25 +24,25 @@
 
 
 # instance fields
-.field private a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+.field private a:Lcom/vk/media/recorder/impl/connection/d;
 
-.field protected b:Lcom/vk/media/recorder/impl/connection/StreamBuffer;
+.field protected b:Lcom/vk/media/recorder/impl/connection/h;
 
-.field protected c:Lcom/vk/media/recorder/impl/AudioListener;
+.field protected c:Lcom/vk/media/recorder/impl/b;
 
-.field protected d:Lcom/vk/media/recorder/impl/VideoListener;
+.field protected d:Lcom/vk/media/recorder/impl/j;
 
-.field private e:Lcom/vk/media/recorder/impl/StreamRecorder;
+.field private e:Lcom/vk/media/recorder/impl/e;
 
 .field protected f:Lcom/vk/media/recorder/impl/Streamer$b;
 
-.field protected g:Lcom/vk/media/recorder/impl/EncoderVideo;
+.field protected g:Lcom/vk/media/recorder/impl/d;
 
-.field protected h:Lcom/vk/media/recorder/impl/EncoderAudio;
+.field protected h:Lcom/vk/media/recorder/impl/c;
 
-.field i:Lcom/vk/media/recorder/impl/utils/Configs;
+.field i:Lcom/vk/media/recorder/impl/utils/a;
 
-.field j:Lcom/vk/media/recorder/impl/utils/Configs1;
+.field j:Lcom/vk/media/recorder/impl/utils/b;
 
 
 # direct methods
@@ -59,32 +59,32 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->a(Lcom/vk/media/recorder/impl/Streamer$b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/media/recorder/impl/connection/d;->a(Lcom/vk/media/recorder/impl/Streamer$b;)V
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->d:Lcom/vk/media/recorder/impl/VideoListener;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->d:Lcom/vk/media/recorder/impl/j;
 
     if-eqz v0, :cond_1
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/vk/media/recorder/impl/VideoListener;->a(Lcom/vk/media/recorder/impl/Streamer$b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/media/recorder/impl/j;->a(Lcom/vk/media/recorder/impl/Streamer$b;)V
 
     .line 5
     :cond_1
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/AudioListener;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/b;
 
     if-eqz v0, :cond_2
 
     .line 6
-    invoke-virtual {v0, v1}, Lcom/vk/media/recorder/impl/AudioListener;->a(Lcom/vk/media/recorder/impl/Streamer$b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/media/recorder/impl/b;->a(Lcom/vk/media/recorder/impl/Streamer$b;)V
 
     :cond_2
     return-void
@@ -92,33 +92,33 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/media/recorder/impl/connection/ConnectionConfig;)I
+.method public a(Lcom/vk/media/recorder/impl/connection/c;)I
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     if-eqz v0, :cond_1
 
     if-eqz p1, :cond_0
 
     .line 2
-    iget-object v1, p1, Lcom/vk/media/recorder/impl/connection/ConnectionConfig;->a:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vk/media/recorder/impl/connection/c;->a:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p1, Lcom/vk/media/recorder/impl/connection/ConnectionConfig;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
+    iget-object v1, p1, Lcom/vk/media/recorder/impl/connection/c;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p1, Lcom/vk/media/recorder/impl/connection/ConnectionConfig;->c:Lcom/vk/media/recorder/impl/Streamer$AUTH;
+    iget-object v1, p1, Lcom/vk/media/recorder/impl/connection/c;->c:Lcom/vk/media/recorder/impl/Streamer$AUTH;
 
     if-eqz v1, :cond_0
 
     .line 3
     iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->f:Lcom/vk/media/recorder/impl/Streamer$b;
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->a(Lcom/vk/media/recorder/impl/connection/ConnectionConfig;Lcom/vk/media/recorder/impl/Streamer$b;)I
+    invoke-virtual {v0, p1, v1}, Lcom/vk/media/recorder/impl/connection/d;->a(Lcom/vk/media/recorder/impl/connection/c;Lcom/vk/media/recorder/impl/Streamer$b;)I
 
     move-result p1
 
@@ -151,12 +151,12 @@
     .locals 2
 
     .line 6
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     if-eqz v0, :cond_0
 
     .line 7
-    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->a(I)J
+    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/d;->a(I)J
 
     move-result-wide v0
 
@@ -173,21 +173,21 @@
     throw p1
 .end method
 
-.method protected a()Lcom/vk/media/recorder/impl/EncoderVideo;
+.method protected a()Lcom/vk/media/recorder/impl/d;
     .locals 2
 
     .line 40
-    new-instance v0, Lcom/vk/media/recorder/impl/VideoEncoderBuilder;
+    new-instance v0, Lcom/vk/media/recorder/impl/i;
 
-    invoke-direct {v0}, Lcom/vk/media/recorder/impl/VideoEncoderBuilder;-><init>()V
+    invoke-direct {v0}, Lcom/vk/media/recorder/impl/i;-><init>()V
 
     .line 41
-    iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->j:Lcom/vk/media/recorder/impl/utils/Configs1;
+    iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->j:Lcom/vk/media/recorder/impl/utils/b;
 
-    invoke-virtual {v0, v1}, Lcom/vk/media/recorder/impl/VideoEncoderBuilder;->a(Lcom/vk/media/recorder/impl/utils/Configs1;)V
+    invoke-virtual {v0, v1}, Lcom/vk/media/recorder/impl/i;->a(Lcom/vk/media/recorder/impl/utils/b;)V
 
     .line 42
-    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/VideoEncoderBuilder;->a()Lcom/vk/media/recorder/impl/EncoderVideo;
+    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/i;->a()Lcom/vk/media/recorder/impl/d;
 
     move-result-object v0
 
@@ -211,70 +211,70 @@
     iput-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->f:Lcom/vk/media/recorder/impl/Streamer$b;
 
     .line 31
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
-    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->a(Lcom/vk/media/recorder/impl/Streamer$b;)V
+    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/d;->a(Lcom/vk/media/recorder/impl/Streamer$b;)V
 
     return-void
 .end method
 
-.method protected a(Lcom/vk/media/recorder/impl/EncoderAudio;)V
+.method protected a(Lcom/vk/media/recorder/impl/c;)V
     .locals 0
-    .param p1    # Lcom/vk/media/recorder/impl/EncoderAudio;
+    .param p1    # Lcom/vk/media/recorder/impl/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 33
-    iput-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/EncoderAudio;
+    iput-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/c;
 
     return-void
 .end method
 
-.method protected a(Lcom/vk/media/recorder/impl/EncoderVideo;)V
+.method protected a(Lcom/vk/media/recorder/impl/d;)V
     .locals 0
-    .param p1    # Lcom/vk/media/recorder/impl/EncoderVideo;
+    .param p1    # Lcom/vk/media/recorder/impl/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 32
-    iput-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->g:Lcom/vk/media/recorder/impl/EncoderVideo;
+    iput-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->g:Lcom/vk/media/recorder/impl/d;
 
     return-void
 .end method
 
-.method a(Lcom/vk/media/recorder/impl/utils/Configs;)V
+.method a(Lcom/vk/media/recorder/impl/utils/a;)V
     .locals 1
 
     .line 34
-    iput-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->i:Lcom/vk/media/recorder/impl/utils/Configs;
+    iput-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->i:Lcom/vk/media/recorder/impl/utils/a;
 
     .line 35
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     if-eqz v0, :cond_0
 
     .line 36
-    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->a(Lcom/vk/media/recorder/impl/utils/Configs;)V
+    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/d;->a(Lcom/vk/media/recorder/impl/utils/a;)V
 
     :cond_0
     return-void
 .end method
 
-.method a(Lcom/vk/media/recorder/impl/utils/Configs1;)V
+.method a(Lcom/vk/media/recorder/impl/utils/b;)V
     .locals 1
 
     .line 37
-    iput-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->j:Lcom/vk/media/recorder/impl/utils/Configs1;
+    iput-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->j:Lcom/vk/media/recorder/impl/utils/b;
 
     .line 38
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     if-eqz v0, :cond_0
 
     .line 39
-    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->a(Lcom/vk/media/recorder/impl/utils/Configs1;)V
+    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/d;->a(Lcom/vk/media/recorder/impl/utils/b;)V
 
     :cond_0
     return-void
@@ -298,18 +298,18 @@
     if-lt v0, v1, :cond_a
 
     .line 13
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/StreamBuffer;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/h;
 
     if-eqz v0, :cond_9
 
     if-eqz p1, :cond_8
 
     .line 14
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->d:Lcom/vk/media/recorder/impl/VideoListener;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->d:Lcom/vk/media/recorder/impl/j;
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/AudioListener;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/b;
 
     if-eqz v0, :cond_0
 
@@ -331,7 +331,7 @@
     sget-object v0, Lcom/vk/media/recorder/impl/Streamer$MODE;->AUDIO_VIDEO:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
     .line 17
-    iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->d:Lcom/vk/media/recorder/impl/VideoListener;
+    iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->d:Lcom/vk/media/recorder/impl/j;
 
     if-nez v1, :cond_2
 
@@ -342,7 +342,7 @@
 
     .line 19
     :cond_2
-    iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/AudioListener;
+    iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/b;
 
     if-nez v1, :cond_3
 
@@ -352,20 +352,20 @@
     .line 21
     :cond_3
     :goto_1
-    new-instance v1, Lcom/vk/media/recorder/impl/StreamRecorder;
+    new-instance v1, Lcom/vk/media/recorder/impl/e;
 
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/StreamBuffer;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/h;
 
     iget-object v3, p0, Lcom/vk/media/recorder/impl/Streamer;->f:Lcom/vk/media/recorder/impl/Streamer$b;
 
-    invoke-direct {v1, v2, v3, p1, v0}, Lcom/vk/media/recorder/impl/StreamRecorder;-><init>(Lcom/vk/media/recorder/impl/connection/StreamBuffer;Lcom/vk/media/recorder/impl/Streamer$b;Ljava/io/File;Lcom/vk/media/recorder/impl/Streamer$MODE;)V
+    invoke-direct {v1, v2, v3, p1, v0}, Lcom/vk/media/recorder/impl/e;-><init>(Lcom/vk/media/recorder/impl/connection/h;Lcom/vk/media/recorder/impl/Streamer$b;Ljava/io/File;Lcom/vk/media/recorder/impl/Streamer$MODE;)V
 
-    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->e:Lcom/vk/media/recorder/impl/StreamRecorder;
+    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->e:Lcom/vk/media/recorder/impl/e;
 
     .line 22
-    iget-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->e:Lcom/vk/media/recorder/impl/StreamRecorder;
+    iget-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->e:Lcom/vk/media/recorder/impl/e;
 
-    invoke-virtual {p1}, Lcom/vk/media/recorder/impl/StreamRecorder;->a()Z
+    invoke-virtual {p1}, Lcom/vk/media/recorder/impl/e;->a()Z
 
     move-result p1
 
@@ -374,7 +374,7 @@
     const/4 p1, 0x0
 
     .line 23
-    iput-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->e:Lcom/vk/media/recorder/impl/StreamRecorder;
+    iput-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->e:Lcom/vk/media/recorder/impl/e;
 
     goto :goto_2
 
@@ -390,11 +390,11 @@
 
     .line 25
     :cond_5
-    iget-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->d:Lcom/vk/media/recorder/impl/VideoListener;
+    iget-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->d:Lcom/vk/media/recorder/impl/j;
 
-    iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->e:Lcom/vk/media/recorder/impl/StreamRecorder;
+    iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->e:Lcom/vk/media/recorder/impl/e;
 
-    invoke-virtual {p1, v1}, Lcom/vk/media/recorder/impl/VideoListener;->a(Lcom/vk/media/recorder/impl/StreamRecorder;)V
+    invoke-virtual {p1, v1}, Lcom/vk/media/recorder/impl/j;->a(Lcom/vk/media/recorder/impl/e;)V
 
     .line 26
     :cond_6
@@ -408,11 +408,11 @@
 
     .line 27
     :cond_7
-    iget-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/AudioListener;
+    iget-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/b;
 
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->e:Lcom/vk/media/recorder/impl/StreamRecorder;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->e:Lcom/vk/media/recorder/impl/e;
 
-    invoke-virtual {p1, v0}, Lcom/vk/media/recorder/impl/AudioListener;->a(Lcom/vk/media/recorder/impl/StreamRecorder;)V
+    invoke-virtual {p1, v0}, Lcom/vk/media/recorder/impl/b;->a(Lcom/vk/media/recorder/impl/e;)V
 
     goto :goto_2
 
@@ -449,14 +449,14 @@
     .end param
 
     .line 9
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     if-eqz v0, :cond_1
 
     if-eqz p1, :cond_0
 
     .line 10
-    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/d;->a(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -476,12 +476,12 @@
     .locals 2
 
     .line 4
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/StreamBuffer;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/h;
 
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/connection/StreamBuffer;->b()D
+    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/connection/h;->b()D
 
     move-result-wide v0
 
@@ -502,12 +502,12 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->b(I)J
+    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/d;->b(I)J
 
     move-result-wide v0
 
@@ -528,12 +528,12 @@
     .locals 2
 
     .line 11
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     if-eqz v0, :cond_0
 
     .line 12
-    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->c(I)J
+    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/d;->c(I)J
 
     move-result-wide v0
 
@@ -554,7 +554,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/StreamBuffer;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/h;
 
     if-nez v0, :cond_0
 
@@ -565,17 +565,17 @@
     invoke-direct {p0}, Lcom/vk/media/recorder/impl/Streamer;->h()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
     .line 4
-    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->g()V
+    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/connection/d;->g()V
 
     .line 5
-    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     .line 6
     :cond_1
@@ -591,7 +591,7 @@
     iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->f:Lcom/vk/media/recorder/impl/Streamer$b;
 
     .line 10
-    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/StreamBuffer;
+    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/h;
 
     :goto_0
     return-void
@@ -601,12 +601,12 @@
     .locals 2
 
     .line 13
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     if-eqz v0, :cond_0
 
     .line 14
-    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->d(I)J
+    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/d;->d(I)J
 
     move-result-wide v0
 
@@ -627,34 +627,34 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/StreamBuffer;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/h;
 
     if-eqz v0, :cond_3
 
     .line 2
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/EncoderAudio;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/c;
 
     if-nez v0, :cond_1
 
     .line 3
-    new-instance v0, Lcom/vk/media/recorder/impl/AudioEncoderBuilder;
+    new-instance v0, Lcom/vk/media/recorder/impl/a;
 
-    invoke-direct {v0}, Lcom/vk/media/recorder/impl/AudioEncoderBuilder;-><init>()V
+    invoke-direct {v0}, Lcom/vk/media/recorder/impl/a;-><init>()V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->i:Lcom/vk/media/recorder/impl/utils/Configs;
+    iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->i:Lcom/vk/media/recorder/impl/utils/a;
 
-    invoke-virtual {v0, v1}, Lcom/vk/media/recorder/impl/AudioEncoderBuilder;->a(Lcom/vk/media/recorder/impl/utils/Configs;)V
+    invoke-virtual {v0, v1}, Lcom/vk/media/recorder/impl/a;->a(Lcom/vk/media/recorder/impl/utils/a;)V
 
     .line 5
-    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/AudioEncoderBuilder;->a()Lcom/vk/media/recorder/impl/EncoderAudio;
+    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/a;->a()Lcom/vk/media/recorder/impl/c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/EncoderAudio;
+    iput-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/c;
 
     .line 6
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/EncoderAudio;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/c;
 
     if-eqz v0, :cond_0
 
@@ -673,7 +673,7 @@
     .line 8
     :cond_1
     :goto_0
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/AudioListener;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/b;
 
     if-nez v0, :cond_2
 
@@ -686,9 +686,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->i:Lcom/vk/media/recorder/impl/utils/Configs;
+    iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->i:Lcom/vk/media/recorder/impl/utils/a;
 
-    iget v1, v1, Lcom/vk/media/recorder/impl/utils/Configs;->a:I
+    iget v1, v1, Lcom/vk/media/recorder/impl/utils/a;->a:I
 
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -699,24 +699,24 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 10
-    new-instance v0, Lcom/vk/media/recorder/impl/AudioListener;
+    new-instance v0, Lcom/vk/media/recorder/impl/b;
 
-    iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/StreamBuffer;
+    iget-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/h;
 
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/Streamer;->i:Lcom/vk/media/recorder/impl/utils/Configs;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/Streamer;->i:Lcom/vk/media/recorder/impl/utils/a;
 
-    iget v2, v2, Lcom/vk/media/recorder/impl/utils/Configs;->a:I
+    iget v2, v2, Lcom/vk/media/recorder/impl/utils/a;->a:I
 
-    iget-object v3, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/EncoderAudio;
+    iget-object v3, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/c;
 
     iget-object v4, p0, Lcom/vk/media/recorder/impl/Streamer;->f:Lcom/vk/media/recorder/impl/Streamer$b;
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/media/recorder/impl/AudioListener;-><init>(Lcom/vk/media/recorder/impl/connection/StreamBuffer;ILcom/vk/media/recorder/impl/EncoderAudio;Lcom/vk/media/recorder/impl/Streamer$b;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/media/recorder/impl/b;-><init>(Lcom/vk/media/recorder/impl/connection/h;ILcom/vk/media/recorder/impl/c;Lcom/vk/media/recorder/impl/Streamer$b;)V
 
-    iput-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/AudioListener;
+    iput-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/b;
 
     .line 11
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/AudioListener;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/b;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
@@ -738,12 +738,12 @@
     .locals 2
 
     .line 15
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     if-eqz v0, :cond_0
 
     .line 16
-    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->e(I)J
+    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/d;->e(I)J
 
     move-result-wide v0
 
@@ -764,12 +764,12 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/StreamBuffer;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/h;
 
     if-eqz v0, :cond_2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/AudioListener;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/b;
 
     const/4 v1, 0x0
 
@@ -780,7 +780,7 @@
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/AudioListener;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/b;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->join()V
     :try_end_0
@@ -807,19 +807,19 @@
 
     .line 6
     :goto_0
-    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/AudioListener;
+    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/b;
 
     .line 7
-    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/EncoderAudio;
+    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/c;
 
     goto :goto_2
 
     .line 8
     :goto_1
-    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/AudioListener;
+    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/b;
 
     .line 9
-    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/EncoderAudio;
+    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/c;
 
     .line 10
     throw v0
@@ -827,7 +827,7 @@
     .line 11
     :cond_0
     :goto_2
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/EncoderAudio;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/c;
 
     if-eqz v0, :cond_1
 
@@ -835,7 +835,7 @@
     invoke-virtual {v0}, Lcom/vk/media/recorder/impl/EncoderBase;->d()V
 
     .line 13
-    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/EncoderAudio;
+    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->h:Lcom/vk/media/recorder/impl/c;
 
     :cond_1
     return-void
@@ -855,12 +855,12 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->f(I)J
+    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/d;->f(I)J
 
     move-result-wide v0
 
@@ -891,40 +891,40 @@
     if-lt v0, v1, :cond_3
 
     .line 5
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/StreamBuffer;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/h;
 
     if-eqz v0, :cond_2
 
     .line 6
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->d:Lcom/vk/media/recorder/impl/VideoListener;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->d:Lcom/vk/media/recorder/impl/j;
 
     if-eqz v0, :cond_0
 
     .line 7
-    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/VideoListener;->f()V
+    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/j;->f()V
 
     .line 8
     :cond_0
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/AudioListener;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->c:Lcom/vk/media/recorder/impl/b;
 
     if-eqz v0, :cond_1
 
     .line 9
-    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/AudioListener;->b()V
+    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/b;->b()V
 
     .line 10
     :cond_1
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->e:Lcom/vk/media/recorder/impl/StreamRecorder;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->e:Lcom/vk/media/recorder/impl/e;
 
     if-eqz v0, :cond_3
 
     .line 11
-    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/StreamRecorder;->b()V
+    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/e;->b()V
 
     const/4 v0, 0x0
 
     .line 12
-    iput-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->e:Lcom/vk/media/recorder/impl/StreamRecorder;
+    iput-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->e:Lcom/vk/media/recorder/impl/e;
 
     goto :goto_0
 
@@ -947,29 +947,29 @@
     .locals 2
 
     .line 3
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/StreamBuffer;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/h;
 
     if-eqz v0, :cond_2
 
     .line 4
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->d:Lcom/vk/media/recorder/impl/VideoListener;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->d:Lcom/vk/media/recorder/impl/j;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/VideoListener;->a()V
+    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/j;->a()V
 
     .line 6
-    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->d:Lcom/vk/media/recorder/impl/VideoListener;
+    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->d:Lcom/vk/media/recorder/impl/j;
 
     .line 7
-    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->g:Lcom/vk/media/recorder/impl/EncoderVideo;
+    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->g:Lcom/vk/media/recorder/impl/d;
 
     .line 8
     :cond_0
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->g:Lcom/vk/media/recorder/impl/EncoderVideo;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->g:Lcom/vk/media/recorder/impl/d;
 
     if-eqz v0, :cond_1
 
@@ -977,7 +977,7 @@
     invoke-virtual {v0}, Lcom/vk/media/recorder/impl/EncoderBase;->d()V
 
     .line 10
-    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->g:Lcom/vk/media/recorder/impl/EncoderVideo;
+    iput-object v1, p0, Lcom/vk/media/recorder/impl/Streamer;->g:Lcom/vk/media/recorder/impl/d;
 
     :cond_1
     return-void
@@ -997,22 +997,22 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/media/recorder/impl/connection/StreamBuffer;
+    new-instance v0, Lcom/vk/media/recorder/impl/connection/h;
 
     div-int/lit8 v1, p1, 0x2
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/media/recorder/impl/connection/StreamBuffer;-><init>(II)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/media/recorder/impl/connection/h;-><init>(II)V
 
-    iput-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/StreamBuffer;
+    iput-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/h;
 
     .line 2
-    new-instance p1, Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    new-instance p1, Lcom/vk/media/recorder/impl/connection/d;
 
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/StreamBuffer;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->b:Lcom/vk/media/recorder/impl/connection/h;
 
-    invoke-direct {p1, v0}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;-><init>(Lcom/vk/media/recorder/impl/connection/StreamBuffer;)V
+    invoke-direct {p1, v0}, Lcom/vk/media/recorder/impl/connection/d;-><init>(Lcom/vk/media/recorder/impl/connection/h;)V
 
-    iput-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iput-object p1, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     return-void
 .end method
@@ -1021,12 +1021,12 @@
     .locals 1
 
     .line 7
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/Streamer;->a:Lcom/vk/media/recorder/impl/connection/d;
 
     if-eqz v0, :cond_0
 
     .line 8
-    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->g(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/media/recorder/impl/connection/d;->g(I)V
 
     return-void
 

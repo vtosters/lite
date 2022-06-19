@@ -3,7 +3,7 @@
 .source "PlayerWidgetController.kt"
 
 # interfaces
-.implements Lio/reactivex/ObservableOnSubscribe;
+.implements Lc/a/o;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/ObservableOnSubscribe<",
+        "Lc/a/o<",
         "TT;>;"
     }
 .end annotation
@@ -45,12 +45,12 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/ObservableEmitter;)V
+.method public final a(Lc/a/n;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/ObservableEmitter<",
+            "Lc/a/n<",
             "Landroid/content/Context;",
             ">;)V"
         }
@@ -59,7 +59,7 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController$c;->a:Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;
 
-    invoke-static {v0, p1}, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->a(Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;Lio/reactivex/ObservableEmitter;)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->a(Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;Lc/a/n;)V
 
     return-void
 .end method

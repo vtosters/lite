@@ -3,12 +3,12 @@
 .source "CatalogRecyclerAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;
+    value = Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/catalog2/core/ui/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,30 +19,30 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $this_apply:Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;
+.field final synthetic $this_apply:Lcom/vk/catalog2/core/ui/g;
 
-.field final synthetic $wrappedVh$inlined:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
+.field final synthetic $wrappedVh$inlined:Lcom/vk/catalog2/core/holders/common/n;
 
 .field final synthetic this$0:Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;)V
+.method constructor <init>(Lcom/vk/catalog2/core/ui/g;Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;Lcom/vk/catalog2/core/holders/common/n;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$onCreateViewHolder$$inlined$apply$lambda$1;->$this_apply:Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;
+    iput-object p1, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$onCreateViewHolder$$inlined$apply$lambda$1;->$this_apply:Lcom/vk/catalog2/core/ui/g;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$onCreateViewHolder$$inlined$apply$lambda$1;->this$0:Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;
 
-    iput-object p3, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$onCreateViewHolder$$inlined$apply$lambda$1;->$wrappedVh$inlined:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
+    iput-object p3, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$onCreateViewHolder$$inlined$apply$lambda$1;->$wrappedVh$inlined:Lcom/vk/catalog2/core/holders/common/n;
 
     const/4 p1, 0x0
 
@@ -59,7 +59,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$onCreateViewHolder$$inlined$apply$lambda$1;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -76,7 +76,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$onCreateViewHolder$$inlined$apply$lambda$1;->$this_apply:Lcom/vk/catalog2/core/ui/CatalogRecyclerViewHolder;
+    iget-object v1, p0, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter$onCreateViewHolder$$inlined$apply$lambda$1;->$this_apply:Lcom/vk/catalog2/core/ui/g;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/ItemTouchHelper;->startDrag(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 

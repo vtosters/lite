@@ -3,12 +3,12 @@
 .source "ImAudioMsgPlayerProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions;
+.implements Lkotlin/jvm/b/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider;->a(Landroid/content/Context;ILcom/vk/im/engine/ImEngine;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider;->a(Landroid/content/Context;ILcom/vk/im/engine/a;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions<",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/a<",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -61,7 +61,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider$init$2;->invoke()V
 
-    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
 
     return-object v0
 .end method
@@ -76,22 +76,22 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;->S()Lcom/vk/audiomsg/player/AudioMsgTrack;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;->S()Lcom/vk/audiomsg/player/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/AudioMsgTrack;->b()I
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/d;->b()I
 
     move-result v0
 
     .line 3
-    sget-object v1, Lcom/vk/im/ui/reporters/AudioMsgPlayerReporter;->INSTANCE:Lcom/vk/im/ui/reporters/AudioMsgPlayerReporter;
+    sget-object v1, Lcom/vk/im/ui/reporters/b;->b:Lcom/vk/im/ui/reporters/b;
 
-    sget-object v2, Lcom/vk/im/ui/providers/audiomsg/PlayerActionSources;->g:Lcom/vk/im/ui/providers/audiomsg/PlayerActionSource;
+    sget-object v2, Lcom/vk/im/ui/providers/audiomsg/d;->g:Lcom/vk/im/ui/providers/audiomsg/c;
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/ui/reporters/AudioMsgPlayerReporter;->b(Lcom/vk/audiomsg/player/Source;)V
+    invoke-virtual {v1, v2}, Lcom/vk/im/ui/reporters/b;->b(Lcom/vk/audiomsg/player/f;)V
 
     .line 4
     sget-object v1, Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider;->g:Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider;

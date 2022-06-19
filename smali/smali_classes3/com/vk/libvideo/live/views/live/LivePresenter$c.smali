@@ -1,5 +1,5 @@
 .class Lcom/vk/libvideo/live/views/live/LivePresenter$c;
-.super Lio/reactivex/observers/DisposableObserver/DisposableObserver;
+.super Lc/a/c0/a;
 .source "LivePresenter.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lio/reactivex/observers/DisposableObserver/DisposableObserver<",
+        "Lc/a/c0/a<",
         "Lcom/vk/dto/live/LiveSpectators;",
         ">;"
     }
@@ -33,7 +33,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/libvideo/live/views/live/LivePresenter$c;->b:Lcom/vk/libvideo/live/views/live/LivePresenter;
 
-    invoke-direct {p0}, Lio/reactivex/observers/DisposableObserver/DisposableObserver;-><init>()V
+    invoke-direct {p0}, Lc/a/c0/a;-><init>()V
 
     return-void
 .end method
@@ -51,7 +51,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LivePresenter$c;->b:Lcom/vk/libvideo/live/views/live/LivePresenter;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->k(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/live/views/spectators/SpectatorsContract1;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->k(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/live/views/spectators/b;
 
     move-result-object v0
 
@@ -60,17 +60,17 @@
     .line 3
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LivePresenter$c;->b:Lcom/vk/libvideo/live/views/live/LivePresenter;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->k(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/live/views/spectators/SpectatorsContract1;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->k(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/live/views/spectators/b;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/libvideo/live/views/spectators/SpectatorsContract1;->a(Lcom/vk/dto/live/LiveSpectators;)V
+    invoke-interface {v0, p1}, Lcom/vk/libvideo/live/views/spectators/b;->a(Lcom/vk/dto/live/LiveSpectators;)V
 
     .line 4
     :cond_0
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LivePresenter$c;->b:Lcom/vk/libvideo/live/views/live/LivePresenter;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->l(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/a0/i/g/NowContract1;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->l(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/a0/i/g/b;
 
     move-result-object v0
 
@@ -79,11 +79,11 @@
     .line 5
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LivePresenter$c;->b:Lcom/vk/libvideo/live/views/live/LivePresenter;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->l(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/a0/i/g/NowContract1;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LivePresenter;->l(Lcom/vk/libvideo/live/views/live/LivePresenter;)Lcom/vk/libvideo/a0/i/g/b;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/libvideo/a0/i/g/NowContract1;->a(Lcom/vk/dto/live/LiveSpectators;)V
+    invoke-interface {v0, p1}, Lcom/vk/libvideo/a0/i/g/b;->a(Lcom/vk/dto/live/LiveSpectators;)V
 
     .line 6
     :cond_1

@@ -3,12 +3,12 @@
 .source "BaseCheckSignUpPresenter.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lio/reactivex/Observable;)V
+    value = Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lc/a/m;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,12 +22,12 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Lkotlin/Pair<",
         "+",
         "Lcom/vk/auth/api/models/ConfirmPhoneResponse;",
         "+",
-        "Lcom/vk/auth/main/SignUpModel$d;",
+        "Lcom/vk/auth/main/s$d;",
         ">;>;"
     }
 .end annotation
@@ -58,7 +58,7 @@
             "Lkotlin/Pair<",
             "Lcom/vk/auth/api/models/ConfirmPhoneResponse;",
             "+",
-            "Lcom/vk/auth/main/SignUpModel$d;",
+            "Lcom/vk/auth/main/s$d;",
             ">;)V"
         }
     .end annotation
@@ -66,7 +66,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$e;->a:Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;
 
-    invoke-static {v0}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->d(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/main/SignUpStrategy;
+    invoke-static {v0}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->d(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/main/u;
 
     move-result-object v0
 
@@ -86,11 +86,11 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/auth/main/SignUpModel$d;
+    check-cast p1, Lcom/vk/auth/main/s$d;
 
     iget-object v3, p0, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$e;->a:Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;
 
-    invoke-virtual {v0, v1, v2, p1, v3}, Lcom/vk/auth/main/SignUpStrategy;->b(Ljava/lang/String;Lcom/vk/auth/api/models/ConfirmPhoneResponse;Lcom/vk/auth/main/SignUpModel$d;Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)V
+    invoke-virtual {v0, v1, v2, p1, v3}, Lcom/vk/auth/main/u;->b(Ljava/lang/String;Lcom/vk/auth/api/models/ConfirmPhoneResponse;Lcom/vk/auth/main/s$d;Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)V
 
     return-void
 .end method

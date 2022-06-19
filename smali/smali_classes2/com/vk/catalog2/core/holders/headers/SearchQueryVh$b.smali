@@ -3,7 +3,7 @@
 .source "SearchQueryVh.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Consumer;
+.implements Lc/a/z/g;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lc/a/z/g<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -52,15 +52,15 @@
     .line 1
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh$b;->a:Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;
 
-    invoke-static {v0}, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;->b(Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;)Lkotlin/jvm/b/Functions2;
+    invoke-static {v0}, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;->b(Lcom/vk/catalog2/core/holders/headers/SearchQueryVh;)Lkotlin/jvm/b/b;
 
     move-result-object v0
 
     const-string v1, "query"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

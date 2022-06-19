@@ -3,7 +3,7 @@
 .source "BottomPanelPostingControllerImpl.kt"
 
 # interfaces
-.implements Lcom/vk/core/util/ItemClickListener;
+.implements Lcom/vk/core/util/k0;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/core/util/ItemClickListener<",
-        "Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;",
+        "Lcom/vk/core/util/k0<",
+        "Lcom/vk/newsfeed/posting/r/b;",
         ">;"
     }
 .end annotation
@@ -49,7 +49,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;I)V
+.method public a(Lcom/vk/newsfeed/posting/r/b;I)V
     .locals 0
 
     .line 2
@@ -57,11 +57,11 @@
 
     iget-object p2, p2, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl$moreMenuClickListener$2;->this$0:Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;
 
-    invoke-static {p2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b(Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;)Lcom/vk/core/util/TimeoutLock;
+    invoke-static {p2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->b(Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;)Lcom/vk/core/util/j1;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/core/util/TimeoutLock;->a()Z
+    invoke-virtual {p2}, Lcom/vk/core/util/j1;->a()Z
 
     move-result p2
 
@@ -75,17 +75,17 @@
 
     iget-object p2, p2, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl$moreMenuClickListener$2;->this$0:Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;
 
-    invoke-virtual {p2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts14;
+    invoke-virtual {p2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->getPresenter()Lcom/vk/newsfeed/posting/j;
 
     move-result-object p2
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;->a()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/r/b;->a()I
 
     move-result p1
 
-    invoke-interface {p2, p1}, Lcom/vk/newsfeed/posting/PostingContracts14;->i(I)V
+    invoke-interface {p2, p1}, Lcom/vk/newsfeed/posting/j;->i(I)V
 
     .line 4
     :cond_1
@@ -93,11 +93,11 @@
 
     iget-object p1, p1, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl$moreMenuClickListener$2;->this$0:Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->d(Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
+    invoke-static {p1}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->d(Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;)Lcom/vk/core/dialogs/actionspopup/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
 
     return-void
 .end method
@@ -106,9 +106,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;
+    check-cast p1, Lcom/vk/newsfeed/posting/r/b;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl$moreMenuClickListener$2$a;->a(Lcom/vk/newsfeed/posting/r/PopupMenuAdapter2;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl$moreMenuClickListener$2$a;->a(Lcom/vk/newsfeed/posting/r/b;I)V
 
     return-void
 .end method

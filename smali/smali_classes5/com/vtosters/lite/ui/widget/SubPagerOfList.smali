@@ -682,7 +682,7 @@
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/vtosters/lite/ui/widget/SubPagerOfList$f;->a(I)Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/ui/widget/SubPagerOfList$f;->a(I)Lcom/vtosters/lite/ui/widget/e;
 
     move-result-object v1
 
@@ -774,20 +774,20 @@
     if-eq v3, v0, :cond_6
 
     .line 20
-    instance-of v3, v2, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;
+    instance-of v3, v2, Lcom/vtosters/lite/ui/widget/e;
 
     if-eqz v3, :cond_6
 
     .line 21
     move-object v3, v2
 
-    check-cast v3, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;
+    check-cast v3, Lcom/vtosters/lite/ui/widget/e;
 
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v2
 
-    invoke-virtual {v3, v2, p2}, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;->a(II)V
+    invoke-virtual {v3, v2, p2}, Lcom/vtosters/lite/ui/widget/e;->a(II)V
 
     :cond_6
     add-int/lit8 v1, v1, -0x1

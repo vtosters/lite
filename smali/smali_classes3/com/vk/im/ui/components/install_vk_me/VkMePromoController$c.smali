@@ -3,12 +3,12 @@
 .source "VkMePromoController.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
+.implements Lcom/vk/core/dialogs/bottomsheet/h$d;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$a;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
+    value = Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->a(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$a;Ljava/lang/String;Lkotlin/jvm/b/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,17 +22,17 @@
 
 .field final synthetic b:Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$a;
 
-.field final synthetic c:Lkotlin/jvm/b/Functions;
+.field final synthetic c:Lkotlin/jvm/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$a;Lkotlin/jvm/b/Functions;)V
+.method constructor <init>(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$a;Lkotlin/jvm/b/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$a;",
-            "Lkotlin/jvm/b/Functions;",
+            "Lkotlin/jvm/b/a;",
             ")V"
         }
     .end annotation
@@ -42,7 +42,7 @@
 
     iput-object p2, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$c;->b:Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$a;
 
-    iput-object p3, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$c;->c:Lkotlin/jvm/b/Functions;
+    iput-object p3, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$c;->c:Lkotlin/jvm/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,7 +57,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$c;->a:Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->d(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;)Lcom/vk/im/engine/reporters/VkMePromoReporter;
+    invoke-static {v0}, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;->d(Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;)Lcom/vk/im/engine/reporters/p;
 
     move-result-object v0
 
@@ -81,18 +81,18 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vk/im/engine/reporters/VkMePromoReporter;->a(Ljava/lang/String;ZZZ)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vk/im/engine/reporters/p;->a(Ljava/lang/String;ZZZ)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$c;->c:Lkotlin/jvm/b/Functions;
+    iget-object v0, p0, Lcom/vk/im/ui/components/install_vk_me/VkMePromoController$c;->c:Lkotlin/jvm/b/a;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/Unit;
+    check-cast v0, Lkotlin/m;
 
     :cond_0
     return-void

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;
-.super Lcom/vk/im/ui/q/Component;
+.super Lcom/vk/im/ui/q/c;
 .source "ChatInviteComponent.kt"
 
 
@@ -13,24 +13,24 @@
 
 
 # static fields
-.field static final synthetic F:[Lkotlin/u/KProperty5;
+.field static final synthetic F:[Lkotlin/u/j;
 
 
 # instance fields
-.field private final B:Lcom/vk/core/util/Provider2;
+.field private final B:Lcom/vk/core/util/u0;
 
 .field private C:Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent$a;
 
 .field private final D:Landroid/content/Context;
 
-.field private final E:Lcom/vk/im/engine/ImEngine;
+.field private final E:Lcom/vk/im/engine/a;
 
-.field private g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+.field private g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
-.field private final h:Lcom/vk/core/util/Provider2;
+.field private final h:Lcom/vk/core/util/u0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/util/Provider2<",
+            "Lcom/vk/core/util/u0<",
             "Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;",
             ">;"
         }
@@ -44,13 +44,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -58,26 +58,26 @@
 
     const-string v4, "getVc()Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->F:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->F:[Lkotlin/u/j;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Ljava/lang/String;Lcom/vk/im/engine/models/chats/ChatPreview;Z)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/a;Ljava/lang/String;Lcom/vk/im/engine/models/chats/ChatPreview;Z)V
     .locals 16
 
     move-object/from16 v0, p0
 
     .line 1
-    invoke-direct/range {p0 .. p0}, Lcom/vk/im/ui/q/Component;-><init>()V
+    invoke-direct/range {p0 .. p0}, Lcom/vk/im/ui/q/c;-><init>()V
 
     move-object/from16 v1, p1
 
@@ -85,10 +85,10 @@
 
     move-object/from16 v1, p2
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->E:Lcom/vk/im/engine/ImEngine;
+    iput-object v1, v0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->E:Lcom/vk/im/engine/a;
 
     .line 2
-    new-instance v1, Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    new-instance v1, Lcom/vk/im/ui/components/chat_invite/accept/a;
 
     if-eqz p4, :cond_0
 
@@ -127,50 +127,50 @@
 
     move-object v2, v15
 
-    invoke-direct/range {v2 .. v14}, Lcom/vk/im/engine/models/chats/ChatPreview;-><init>(Ljava/lang/String;Lcom/vk/im/engine/models/ImageList;IIZZILjava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v2 .. v14}, Lcom/vk/im/engine/models/chats/ChatPreview;-><init>(Ljava/lang/String;Lcom/vk/im/engine/models/ImageList;IIZZILjava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/i;)V
 
     move-object/from16 v2, p3
 
     :goto_0
     move/from16 v3, p5
 
-    invoke-direct {v1, v2, v15, v3}, Lcom/vk/im/ui/components/chat_invite/accept/Model;-><init>(Ljava/lang/String;Lcom/vk/im/engine/models/chats/ChatPreview;Z)V
+    invoke-direct {v1, v2, v15, v3}, Lcom/vk/im/ui/components/chat_invite/accept/a;-><init>(Ljava/lang/String;Lcom/vk/im/engine/models/chats/ChatPreview;Z)V
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    iput-object v1, v0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
     .line 3
     new-instance v1, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent$vcHolder$1;
 
     invoke-direct {v1, v0}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent$vcHolder$1;-><init>(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)V
 
-    invoke-static {v1}, Lcom/vk/core/util/Provider1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/Provider2;
+    invoke-static {v1}, Lcom/vk/core/util/w0;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/u0;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->h:Lcom/vk/core/util/Provider2;
+    iput-object v1, v0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->h:Lcom/vk/core/util/u0;
 
     .line 4
-    iget-object v1, v0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->h:Lcom/vk/core/util/Provider2;
+    iget-object v1, v0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->h:Lcom/vk/core/util/u0;
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->B:Lcom/vk/core/util/Provider2;
+    iput-object v1, v0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->B:Lcom/vk/core/util/u0;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)Lcom/vk/im/ui/components/chat_invite/accept/Model;
+.method public static final synthetic a(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)Lcom/vk/im/ui/components/chat_invite/accept/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    iget-object p0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;Lcom/vk/im/ui/components/chat_invite/accept/Model;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;Lcom/vk/im/ui/components/chat_invite/accept/a;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
     return-void
 .end method
@@ -270,15 +270,15 @@
 .method private final v()Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->B:Lcom/vk/core/util/Provider2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->B:Lcom/vk/core/util/u0;
 
-    sget-object v1, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->F:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->F:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/Provider1;->a(Lcom/vk/core/util/Provider2;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/w0;->a(Lcom/vk/core/util/u0;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -291,9 +291,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_invite/accept/a;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
 
     move-result-object v0
 
@@ -323,19 +323,19 @@
 
     .line 4
     :cond_2
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->E:Lcom/vk/im/engine/ImEngine;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->E:Lcom/vk/im/engine/a;
 
-    new-instance v1, Lcom/vk/im/engine/commands/chats/ChatsJoinByLinkCmd;
+    new-instance v1, Lcom/vk/im/engine/commands/chats/b;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    iget-object v2, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->b()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_invite/accept/a;->b()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/vk/im/engine/commands/chats/ChatsJoinByLinkCmd;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Lcom/vk/im/engine/commands/chats/b;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p0, v1}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
+    invoke-virtual {v0, p0, v1}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
 
     move-result-object v0
 
@@ -344,7 +344,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent$c;-><init>(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
 
     move-result-object v0
 
@@ -359,12 +359,12 @@
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent$e;-><init>(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)V
 
     .line 8
-    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     .line 9
-    invoke-virtual {p0, v0}, Lcom/vk/im/ui/q/Component;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-virtual {p0, v0}, Lcom/vk/im/ui/q/c;->a(Lio/reactivex/disposables/b;)V
 
     return-void
 .end method
@@ -373,9 +373,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->d()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_invite/accept/a;->d()Z
 
     move-result v0
 
@@ -388,25 +388,25 @@
 
     .line 3
     :cond_0
-    new-instance v0, Lcom/vk/im/engine/commands/chats/ChatsLoadPreviewCmd;
+    new-instance v0, Lcom/vk/im/engine/commands/chats/c;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_invite/accept/a;->b()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
     .line 5
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/commands/chats/ChatsLoadPreviewCmd;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/commands/chats/c;-><init>(Ljava/lang/String;Z)V
 
     .line 6
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->E:Lcom/vk/im/engine/ImEngine;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->E:Lcom/vk/im/engine/a;
 
     .line 7
-    invoke-virtual {v1, p0, v0}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
+    invoke-virtual {v1, p0, v0}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
 
     move-result-object v0
 
@@ -415,7 +415,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent$f;-><init>(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)V
 
-    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
+    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
 
     move-result-object v0
 
@@ -430,16 +430,16 @@
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent$h;-><init>(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)V
 
     .line 11
-    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
 
     move-result-object v0
 
     const-string v1, "engine\n                .\u2026     }\n                })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
-    invoke-virtual {p0, v0}, Lcom/vk/im/ui/q/Component;->a(Lio/reactivex/disposables/Disposable;)V
+    invoke-virtual {p0, v0}, Lcom/vk/im/ui/q/c;->a(Lio/reactivex/disposables/b;)V
 
     return-void
 .end method
@@ -452,9 +452,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(Lcom/vk/im/ui/components/chat_invite/accept/Model;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(Lcom/vk/im/ui/components/chat_invite/accept/a;)V
 
     return-void
 .end method
@@ -470,7 +470,7 @@
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
     const-string v1, "link"
 
@@ -484,9 +484,9 @@
     goto :goto_0
 
     :cond_1
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_invite/accept/a;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -505,9 +505,9 @@
     goto :goto_1
 
     :cond_2
-    iget-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    iget-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_invite/accept/a;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
 
     move-result-object p1
 
@@ -521,11 +521,11 @@
     const/4 v5, 0x0
 
     .line 8
-    invoke-static/range {v0 .. v5}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->a(Lcom/vk/im/ui/components/chat_invite/accept/Model;Ljava/lang/String;Lcom/vk/im/engine/models/chats/ChatPreview;ZILjava/lang/Object;)Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    invoke-static/range {v0 .. v5}, Lcom/vk/im/ui/components/chat_invite/accept/a;->a(Lcom/vk/im/ui/components/chat_invite/accept/a;Ljava/lang/String;Lcom/vk/im/engine/models/chats/ChatPreview;ZILjava/lang/Object;)Lcom/vk/im/ui/components/chat_invite/accept/a;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
     return-void
 .end method
@@ -543,9 +543,9 @@
     .locals 0
 
     .line 2
-    iget-object p3, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->h:Lcom/vk/core/util/Provider2;
+    iget-object p3, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->h:Lcom/vk/core/util/u0;
 
-    invoke-interface {p3}, Lcom/vk/core/util/Provider2;->reset()V
+    invoke-interface {p3}, Lcom/vk/core/util/u0;->reset()V
 
     .line 3
     invoke-direct {p0}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->v()Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;
@@ -556,7 +556,7 @@
 
     invoke-direct {p4, p0}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent$b;-><init>(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)V
 
-    invoke-virtual {p3, p4}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(Lcom/vk/im/ui/components/chat_invite/accept/vc/VcCallback;)V
+    invoke-virtual {p3, p4}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(Lcom/vk/im/ui/components/chat_invite/accept/vc/a;)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->v()Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;
@@ -574,9 +574,9 @@
     .locals 2
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_invite/accept/a;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -585,9 +585,9 @@
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/Model;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->g:Lcom/vk/im/ui/components/chat_invite/accept/a;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_invite/accept/a;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
 
     move-result-object v0
 
@@ -614,7 +614,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/q/Component;->c(Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/q/c;->c(Landroid/os/Bundle;)V
 
     .line 3
     :goto_0
@@ -627,7 +627,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/q/Component;->n()V
+    invoke-super {p0}, Lcom/vk/im/ui/q/c;->n()V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->v()Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;
@@ -651,12 +651,12 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(Lcom/vk/im/ui/components/chat_invite/accept/vc/VcCallback;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(Lcom/vk/im/ui/components/chat_invite/accept/vc/a;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->h:Lcom/vk/core/util/Provider2;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;->h:Lcom/vk/core/util/u0;
 
-    invoke-interface {v0}, Lcom/vk/core/util/Provider2;->u()V
+    invoke-interface {v0}, Lcom/vk/core/util/u0;->u()V
 
     return-void
 .end method
@@ -691,7 +691,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent$onBackPressed$1;-><init>(Lcom/vk/im/ui/components/chat_invite/accept/ChatInviteComponent;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(Lkotlin/jvm/b/Functions;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(Lkotlin/jvm/b/a;)V
 
     return-void
 .end method

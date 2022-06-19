@@ -3,12 +3,12 @@
 .source "SeamlessNewsfeedLoadingDelegate.kt"
 
 # interfaces
-.implements Lio/reactivex/functions/Function;
+.implements Lc/a/z/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(Lio/reactivex/Observable;ILio/reactivex/Observable;)Lio/reactivex/Observable;
+    value = Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(Lc/a/m;ILc/a/m;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Function<",
+        "Lc/a/z/j<",
         "TT;",
-        "Lio/reactivex/ObservableSource<",
+        "Lc/a/p<",
         "+TR;>;>;"
     }
 .end annotation
@@ -37,18 +37,18 @@
 
 .field final synthetic b:I
 
-.field final synthetic c:Lio/reactivex/Observable;
+.field final synthetic c:Lc/a/m;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;ILio/reactivex/Observable;)V
+.method constructor <init>(Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;ILc/a/m;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a;->a:Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;
 
     iput p2, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a;->b:I
 
-    iput-object p3, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a;->c:Lio/reactivex/Observable;
+    iput-object p3, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a;->c:Lc/a/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,14 +57,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)Lio/reactivex/Observable;
+.method public final a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ")",
-            "Lio/reactivex/Observable<",
+            "Lc/a/m<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
@@ -80,7 +80,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
 
     move-result-object p1
 
@@ -88,7 +88,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a$a;-><init>(Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p1
 
@@ -103,13 +103,13 @@
     invoke-virtual {p1, v0}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c(I)V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a;->c:Lio/reactivex/Observable;
+    iget-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a;->c:Lc/a/m;
 
     new-instance v0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a$b;
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a$b;-><init>(Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
     move-result-object p1
 
@@ -123,7 +123,7 @@
     .line 1
     check-cast p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a;->a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)Lio/reactivex/Observable;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a;->a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)Lc/a/m;
 
     move-result-object p1
 

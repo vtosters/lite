@@ -1,15 +1,15 @@
 .class public final Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;
-.super Lcom/vk/im/engine/internal/k/MergeTask;
+.super Lcom/vk/im/engine/internal/k/a;
 .source "DialogInfoMergeTask.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/internal/k/MergeTask<",
+        "Lcom/vk/im/engine/internal/k/a<",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
+        "Lcom/vk/im/engine/internal/storage/models/a;",
         ">;>;"
     }
 .end annotation
@@ -20,7 +20,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/dialogs/DialogApiModel;",
+            "Lcom/vk/im/engine/models/dialogs/c;",
             ">;"
         }
     .end annotation
@@ -34,13 +34,13 @@
         value = {
             "(",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/models/dialogs/DialogApiModel;",
+            "Lcom/vk/im/engine/models/dialogs/c;",
             ">;)V"
         }
     .end annotation
 
     .line 3
-    invoke-static {p1}, Lcom/vk/core/extensions/SparseArrayExt1;->g(Landroid/util/SparseArray;)Ljava/util/List;
+    invoke-static {p1}, Lcom/vk/core/extensions/x;->g(Landroid/util/SparseArray;)Ljava/util/List;
 
     move-result-object p1
 
@@ -49,7 +49,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;)V
+.method public constructor <init>(Lcom/vk/im/engine/models/dialogs/c;)V
     .locals 0
 
     .line 2
@@ -68,31 +68,31 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/dialogs/DialogApiModel;",
+            "Lcom/vk/im/engine/models/dialogs/c;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/k/MergeTask;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/k/a;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;->a:Ljava/util/List;
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/dialogs/DialogApiModel;I)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+.method private final a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/dialogs/c;I)Lcom/vk/im/engine/internal/storage/models/a;
     .locals 34
 
     .line 3
-    new-instance v0, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    new-instance v0, Lcom/vk/im/engine/internal/storage/models/a;
 
     move-object/from16 v1, p2
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;-><init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/storage/models/a;-><init>(Lcom/vk/im/engine/models/dialogs/c;)V
 
     .line 4
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->p()Lcom/vk/im/engine/models/messages/PinnedMsg;
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/c;->p()Lcom/vk/im/engine/models/messages/PinnedMsg;
 
     move-result-object v2
 
@@ -102,9 +102,9 @@
 
     move-object/from16 v4, p1
 
-    invoke-direct {v3, v4}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$createDialogStorageModelWithDefaultsParams$1;-><init>(Lcom/vk/im/engine/ImEnvironment;)V
+    invoke-direct {v3, v4}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$createDialogStorageModelWithDefaultsParams$1;-><init>(Lcom/vk/im/engine/d;)V
 
-    invoke-virtual {v2, v3}, Lcom/vk/im/engine/models/messages/PinnedMsg;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/im/engine/models/messages/PinnedMsg;
+    invoke-virtual {v2, v3}, Lcom/vk/im/engine/models/messages/PinnedMsg;->a(Lkotlin/jvm/b/a;)Lcom/vk/im/engine/models/messages/PinnedMsg;
 
     move-result-object v2
 
@@ -119,7 +119,7 @@
     const/4 v15, 0x0
 
     .line 5
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->p()Lcom/vk/im/engine/models/messages/PinnedMsg;
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/c;->p()Lcom/vk/im/engine/models/messages/PinnedMsg;
 
     move-result-object v2
 
@@ -162,7 +162,7 @@
     const/16 v29, 0x0
 
     .line 6
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->b()Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/c;->b()Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;
 
     move-result-object v1
 
@@ -209,18 +209,18 @@
     move/from16 v31, p3
 
     .line 7
-    invoke-static/range {v0 .. v33}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;IIIIIIIILcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/WritePermission;ZZLcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/messages/DraftMsg;ZLcom/vk/im/engine/models/dialogs/ConversationBar;Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/dialogs/DialogThemeName;Lcom/vk/im/engine/models/conversations/BotKeyboard;ZLcom/vk/im/engine/models/MsgRequestStatus;Lcom/vk/im/engine/models/Member;JLcom/vk/im/engine/models/MsgRequestStatus;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;ZIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    invoke-static/range {v0 .. v33}, Lcom/vk/im/engine/internal/storage/models/a;->a(Lcom/vk/im/engine/internal/storage/models/a;IIIIIIIILcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/WritePermission;ZZLcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/messages/DraftMsg;ZLcom/vk/im/engine/models/dialogs/ConversationBar;Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/dialogs/f;Lcom/vk/im/engine/models/conversations/BotKeyboard;ZLcom/vk/im/engine/models/MsgRequestStatus;Lcom/vk/im/engine/models/Member;JLcom/vk/im/engine/models/MsgRequestStatus;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;ZIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/dialogs/DialogApiModel;Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;I)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+.method private final a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/dialogs/c;Lcom/vk/im/engine/internal/storage/models/a;I)Lcom/vk/im/engine/internal/storage/models/a;
     .locals 41
 
     .line 8
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->p()Lcom/vk/im/engine/models/messages/PinnedMsg;
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/c;->p()Lcom/vk/im/engine/models/messages/PinnedMsg;
 
     move-result-object v0
 
@@ -230,9 +230,9 @@
 
     move-object/from16 v2, p1
 
-    invoke-direct {v1, v2}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$createDialogStorageModelWithMatchLocal$rdPinnedMsg$1;-><init>(Lcom/vk/im/engine/ImEnvironment;)V
+    invoke-direct {v1, v2}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$createDialogStorageModelWithMatchLocal$rdPinnedMsg$1;-><init>(Lcom/vk/im/engine/d;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/messages/PinnedMsg;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/im/engine/models/messages/PinnedMsg;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/messages/PinnedMsg;->a(Lkotlin/jvm/b/a;)Lcom/vk/im/engine/models/messages/PinnedMsg;
 
     move-result-object v0
 
@@ -247,7 +247,7 @@
     move-object v15, v0
 
     .line 9
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->t()Lcom/vk/im/engine/models/messages/PinnedMsg;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/a;->t()Lcom/vk/im/engine/models/messages/PinnedMsg;
 
     move-result-object v0
 
@@ -267,9 +267,9 @@
     if-ne v1, v3, :cond_1
 
     .line 11
-    sget-object v1, Lcom/vk/im/engine/internal/match/CommonSyncLogic;->INSTANCE:Lcom/vk/im/engine/internal/match/CommonSyncLogic;
+    sget-object v1, Lcom/vk/im/engine/internal/match/b;->a:Lcom/vk/im/engine/internal/match/b;
 
-    invoke-virtual {v1, v15, v0}, Lcom/vk/im/engine/internal/match/CommonSyncLogic;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/messages/WithUserContent;)V
+    invoke-virtual {v1, v15, v0}, Lcom/vk/im/engine/internal/match/b;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/messages/WithUserContent;)V
 
     :cond_1
     const/4 v1, 0x1
@@ -296,7 +296,7 @@
 
     if-ne v4, v0, :cond_3
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->u()Z
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/a;->u()Z
 
     move-result v0
 
@@ -309,12 +309,12 @@
 
     .line 13
     :goto_1
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->k()Lcom/vk/im/engine/models/conversations/BotKeyboard;
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/c;->k()Lcom/vk/im/engine/models/conversations/BotKeyboard;
 
     move-result-object v0
 
     .line 14
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->l()Lcom/vk/im/engine/models/conversations/BotKeyboard;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/a;->l()Lcom/vk/im/engine/models/conversations/BotKeyboard;
 
     move-result-object v4
 
@@ -326,13 +326,13 @@
 
     .line 15
     :cond_4
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->m()Z
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/a;->m()Z
 
     move-result v0
 
@@ -345,12 +345,12 @@
 
     .line 16
     :goto_2
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->b()Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/c;->b()Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;
 
     move-result-object v0
 
     .line 17
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->b()Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/a;->b()Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;
 
     move-result-object v4
 
@@ -372,7 +372,7 @@
 
     .line 18
     :cond_9
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->c()Z
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/a;->c()Z
 
     move-result v5
 
@@ -392,11 +392,11 @@
 
     .line 19
     :goto_4
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->r()I
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/c;->r()I
 
     move-result v0
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->x()I
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/a;->x()I
 
     move-result v4
 
@@ -411,14 +411,14 @@
     if-eqz v1, :cond_b
 
     .line 20
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->r()I
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/c;->r()I
 
     move-result v0
 
     goto :goto_6
 
     :cond_b
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->x()I
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/a;->x()I
 
     move-result v0
 
@@ -428,14 +428,14 @@
     if-eqz v1, :cond_c
 
     .line 21
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->g()I
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/c;->g()I
 
     move-result v0
 
     goto :goto_7
 
     :cond_c
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->g()I
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/a;->g()I
 
     move-result v0
 
@@ -443,11 +443,11 @@
     move v7, v0
 
     .line 22
-    new-instance v1, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    new-instance v1, Lcom/vk/im/engine/internal/storage/models/a;
 
     move-object/from16 v0, p2
 
-    invoke-direct {v1, v0}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;-><init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;)V
+    invoke-direct {v1, v0}, Lcom/vk/im/engine/internal/storage/models/a;-><init>(Lcom/vk/im/engine/models/dialogs/c;)V
 
     const/4 v3, 0x0
 
@@ -458,19 +458,19 @@
     const/4 v8, 0x0
 
     .line 23
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->y()I
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/a;->y()I
 
     move-result v9
 
     .line 24
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->h()I
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/a;->h()I
 
     move-result v10
 
     const/4 v11, 0x0
 
     .line 25
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->v()Lcom/vk/im/engine/models/conversations/PushSettings;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/a;->v()Lcom/vk/im/engine/models/conversations/PushSettings;
 
     move-result-object v12
 
@@ -489,13 +489,13 @@
     const/16 v21, 0x0
 
     .line 26
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->e()Z
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/im/engine/models/dialogs/c;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_d
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->j()Lcom/vk/im/engine/models/messages/DraftMsg;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/a;->j()Lcom/vk/im/engine/models/messages/DraftMsg;
 
     move-result-object v0
 
@@ -504,7 +504,7 @@
     :cond_d
     new-instance v0, Lcom/vk/im/engine/models/messages/DraftMsg;
 
-    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/ImEnvironment;->r0()J
+    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/d;->r0()J
 
     move-result-wide v33
 
@@ -522,7 +522,7 @@
 
     move-object/from16 v32, v0
 
-    invoke-direct/range {v32 .. v40}, Lcom/vk/im/engine/models/messages/DraftMsg;-><init>(JLjava/lang/String;Ljava/util/List;Ljava/lang/Integer;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v32 .. v40}, Lcom/vk/im/engine/models/messages/DraftMsg;-><init>(JLjava/lang/String;Ljava/util/List;Ljava/lang/Integer;Ljava/util/List;ILkotlin/jvm/internal/i;)V
 
     :goto_8
     const/16 v23, 0x0
@@ -532,7 +532,7 @@
     const-wide/16 v25, 0x0
 
     .line 27
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/im/engine/internal/storage/models/a;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v27
 
@@ -573,27 +573,27 @@
     move/from16 v32, p4
 
     .line 28
-    invoke-static/range {v1 .. v34}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;IIIIIIIILcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/WritePermission;ZZLcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/messages/DraftMsg;ZLcom/vk/im/engine/models/dialogs/ConversationBar;Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/dialogs/DialogThemeName;Lcom/vk/im/engine/models/conversations/BotKeyboard;ZLcom/vk/im/engine/models/MsgRequestStatus;Lcom/vk/im/engine/models/Member;JLcom/vk/im/engine/models/MsgRequestStatus;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;ZIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    invoke-static/range {v1 .. v34}, Lcom/vk/im/engine/internal/storage/models/a;->a(Lcom/vk/im/engine/internal/storage/models/a;IIIIIIIILcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/WritePermission;ZZLcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/messages/DraftMsg;ZLcom/vk/im/engine/models/dialogs/ConversationBar;Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/dialogs/f;Lcom/vk/im/engine/models/conversations/BotKeyboard;ZLcom/vk/im/engine/models/MsgRequestStatus;Lcom/vk/im/engine/models/Member;JLcom/vk/im/engine/models/MsgRequestStatus;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;ZIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private final a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;Landroid/util/SparseArray;I)Ljava/util/List;
+.method private final a(Lcom/vk/im/engine/d;Ljava/util/List;Landroid/util/SparseArray;I)Ljava/util/List;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/dialogs/DialogApiModel;",
+            "Lcom/vk/im/engine/models/dialogs/c;",
             ">;",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
+            "Lcom/vk/im/engine/internal/storage/models/a;",
             ">;I)",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
+            "Lcom/vk/im/engine/internal/storage/models/a;",
             ">;"
         }
     .end annotation
@@ -626,10 +626,10 @@
     move-result-object v1
 
     .line 31
-    check-cast v1, Lcom/vk/im/engine/models/dialogs/DialogApiModel;
+    check-cast v1, Lcom/vk/im/engine/models/dialogs/c;
 
     .line 32
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->j()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/dialogs/c;->j()I
 
     move-result v2
 
@@ -637,12 +637,12 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    check-cast v2, Lcom/vk/im/engine/internal/storage/models/a;
 
     if-nez v2, :cond_0
 
     .line 33
-    invoke-direct {p0, p1, v1, p4}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/dialogs/DialogApiModel;I)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    invoke-direct {p0, p1, v1, p4}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/dialogs/c;I)Lcom/vk/im/engine/internal/storage/models/a;
 
     move-result-object v1
 
@@ -650,7 +650,7 @@
 
     .line 34
     :cond_0
-    invoke-direct {p0, p1, v1, v2, p4}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/dialogs/DialogApiModel;Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;I)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
+    invoke-direct {p0, p1, v1, v2, p4}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/dialogs/c;Lcom/vk/im/engine/internal/storage/models/a;I)Lcom/vk/im/engine/internal/storage/models/a;
 
     move-result-object v1
 
@@ -662,15 +662,15 @@
 
     .line 36
     :cond_1
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object p1
 
@@ -688,11 +688,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;Landroid/util/SparseArray;I)Ljava/util/List;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;Lcom/vk/im/engine/d;Ljava/util/List;Landroid/util/SparseArray;I)Ljava/util/List;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;->a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;Landroid/util/SparseArray;I)Ljava/util/List;
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;->a(Lcom/vk/im/engine/d;Ljava/util/List;Landroid/util/SparseArray;I)Ljava/util/List;
 
     move-result-object p0
 
@@ -701,26 +701,26 @@
 
 
 # virtual methods
-.method public bridge synthetic b(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
+.method public bridge synthetic b(Lcom/vk/im/engine/d;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;->b(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;->b(Lcom/vk/im/engine/d;)Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected b(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
+.method protected b(Lcom/vk/im/engine/d;)Ljava/util/List;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/d;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
+            "Lcom/vk/im/engine/internal/storage/models/a;",
             ">;"
         }
     .end annotation
@@ -759,7 +759,7 @@
 
     move-result v2
 
-    invoke-interface {v1, v2}, Lcom/vk/im/engine/utils/collection/IntCollection;->d(I)V
+    invoke-interface {v1, v2}, Lcom/vk/im/engine/utils/collection/d;->d(I)V
 
     .line 7
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -778,28 +778,28 @@
     move-result-object v2
 
     .line 8
-    check-cast v2, Lcom/vk/im/engine/models/dialogs/DialogApiModel;
+    check-cast v2, Lcom/vk/im/engine/models/dialogs/c;
 
     .line 9
-    invoke-virtual {v2}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->j()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/models/dialogs/c;->j()I
 
     move-result v2
 
-    invoke-interface {v1, v2}, Lcom/vk/im/engine/utils/collection/IntCollection;->add(I)V
+    invoke-interface {v1, v2}, Lcom/vk/im/engine/utils/collection/d;->add(I)V
 
     goto :goto_0
 
     .line 10
     :cond_1
-    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
     new-instance v2, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$onMerge$1;
 
-    invoke-direct {v2, p0, v1, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$onMerge$1;-><init>(Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;Lcom/vk/im/engine/utils/collection/IntList;Lcom/vk/im/engine/ImEnvironment;)V
+    invoke-direct {v2, p0, v1, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$onMerge$1;-><init>(Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;Lcom/vk/im/engine/utils/collection/g;Lcom/vk/im/engine/d;)V
 
-    invoke-virtual {v0, v2}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
 
     move-result-object p1
 

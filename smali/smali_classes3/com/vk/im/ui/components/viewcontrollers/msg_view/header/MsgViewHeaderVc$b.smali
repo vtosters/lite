@@ -40,13 +40,13 @@
     const-string v0, "it"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result p1
 
-    sget v0, Lcom/vk/im/ui/R11;->more:I
+    sget v0, Lcom/vk/im/ui/h;->more:I
 
     if-ne p1, v0, :cond_0
 

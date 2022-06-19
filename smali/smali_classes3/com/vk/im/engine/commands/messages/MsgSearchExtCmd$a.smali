@@ -177,7 +177,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$a;->a:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -187,7 +187,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$a;->b:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -197,7 +197,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$a;->c:Landroid/util/SparseArray;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -207,7 +207,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$a;->d:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

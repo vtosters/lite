@@ -3,7 +3,7 @@
 .source "NarrativeHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lb/h/h/f/Favable;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lb/h/h/f/a;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -50,13 +50,13 @@
 
 
 # virtual methods
-.method public final a(Lb/h/h/f/Favable;)V
+.method public final a(Lb/h/h/f/a;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder$onFaveClick$2;->$narrative:Lcom/vk/dto/narratives/Narrative;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -75,11 +75,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/h/f/Favable;
+    check-cast p1, Lb/h/h/f/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder$onFaveClick$2;->a(Lb/h/h/f/Favable;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder$onFaveClick$2;->a(Lb/h/h/f/a;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

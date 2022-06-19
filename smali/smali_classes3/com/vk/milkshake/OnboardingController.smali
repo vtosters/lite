@@ -292,7 +292,7 @@
 
     const-string v0, "view.context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/milkshake/OnboardingController;->a(Landroid/content/Context;)V
 
@@ -343,13 +343,13 @@
     return-void
 .end method
 
-.method public abstract a(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
+.method public abstract a(Landroid/view/View;Lkotlin/jvm/b/a;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/Functions<",
-            "Lkotlin/Unit;",
+            "Lkotlin/jvm/b/a<",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation

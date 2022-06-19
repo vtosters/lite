@@ -50,13 +50,13 @@
     .line 1
     sget-object v0, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->c:Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;
 
-    invoke-static {v0}, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->b(Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
+    invoke-static {v0}, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->b(Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/e;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismiss()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e;->dismiss()V
 
     .line 2
     :cond_0
@@ -64,7 +64,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->a(Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
+    invoke-static {v0, v1}, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->a(Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;Lcom/vk/core/dialogs/bottomsheet/e;)V
 
     return-void
 .end method

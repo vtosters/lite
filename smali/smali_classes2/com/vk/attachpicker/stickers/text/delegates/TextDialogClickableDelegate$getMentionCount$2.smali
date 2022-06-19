@@ -3,7 +3,7 @@
 .source "TextDialogClickableDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/mentions/MentionModels;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/mentions/a;",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/mentions/MentionModels;)I
+.method public final a(Lcom/vk/mentions/a;)I
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/mentions/MentionModels3;
+    check-cast p1, Lcom/vk/mentions/u;
 
-    invoke-virtual {p1}, Lcom/vk/mentions/MentionModels3;->d()I
+    invoke-virtual {p1}, Lcom/vk/mentions/u;->d()I
 
     move-result p1
 
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/mentions/MentionModels;
+    check-cast p1, Lcom/vk/mentions/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$getMentionCount$2;->a(Lcom/vk/mentions/MentionModels;)I
+    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$getMentionCount$2;->a(Lcom/vk/mentions/a;)I
 
     move-result p1
 

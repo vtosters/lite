@@ -3,12 +3,12 @@
 .source "PlaylistsContainer.kt"
 
 # interfaces
-.implements Lcom/vk/music/playlist/PlaylistsModel$a;
+.implements Lcom/vk/music/playlist/g$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/playlist/PlaylistsContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/playlist/PlaylistsModel;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/common/BoomModel;)V
+    value = Lcom/vk/music/playlist/PlaylistsContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/playlist/g;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/d;Lcom/vk/music/common/BoomModel;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/music/playlist/PlaylistsModel;)V
+.method public a(Lcom/vk/music/playlist/g;)V
     .locals 0
 
     .line 1
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/music/playlist/PlaylistsModel;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+.method public a(Lcom/vk/music/playlist/g;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
     .locals 0
 
     .line 4
@@ -61,16 +61,16 @@
 
     move-result-object p1
 
-    invoke-static {p2, p1}, Lcom/vk/api/base/ApiExt;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Landroid/content/Context;)V
+    invoke-static {p2, p1}, Lcom/vk/api/base/c;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/music/playlist/PlaylistsModel;Lcom/vk/dto/music/Playlist;)V
+.method public a(Lcom/vk/music/playlist/g;Lcom/vk/dto/music/Playlist;)V
     .locals 1
 
     .line 7
-    invoke-interface {p1}, Lcom/vk/music/playlist/PlaylistsModel;->s()Z
+    invoke-interface {p1}, Lcom/vk/music/playlist/g;->s()Z
 
     move-result v0
 
@@ -79,16 +79,16 @@
     .line 8
     iget-object v0, p0, Lcom/vk/music/playlist/PlaylistsContainer$e;->a:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->i(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vk/music/m/m/PlaylistAdapter;
+    invoke-static {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->i(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vk/music/m/m/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/vk/music/m/m/PlaylistAdapter;->a(Lcom/vk/dto/music/Playlist;)V
+    invoke-virtual {v0, p2}, Lcom/vk/music/m/m/a;->a(Lcom/vk/dto/music/Playlist;)V
 
     .line 9
     iget-object p2, p0, Lcom/vk/music/playlist/PlaylistsContainer$e;->a:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-interface {p1}, Lcom/vk/music/playlist/PlaylistsModel;->o()Ljava/util/List;
+    invoke-interface {p1}, Lcom/vk/music/playlist/g;->o()Ljava/util/List;
 
     move-result-object p1
 
@@ -98,30 +98,30 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/music/playlist/PlaylistsModel;Lcom/vk/dto/music/Playlist;Z)V
+.method public a(Lcom/vk/music/playlist/g;Lcom/vk/dto/music/Playlist;Z)V
     .locals 0
 
     if-eqz p3, :cond_0
 
     .line 5
-    invoke-virtual {p0, p1, p2}, Lcom/vk/music/playlist/PlaylistsContainer$e;->b(Lcom/vk/music/playlist/PlaylistsModel;Lcom/vk/dto/music/Playlist;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/music/playlist/PlaylistsContainer$e;->b(Lcom/vk/music/playlist/g;Lcom/vk/dto/music/Playlist;)V
 
     goto :goto_0
 
     .line 6
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/vk/music/playlist/PlaylistsContainer$e;->a(Lcom/vk/music/playlist/PlaylistsModel;Lcom/vk/dto/music/Playlist;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/music/playlist/PlaylistsContainer$e;->a(Lcom/vk/music/playlist/g;Lcom/vk/dto/music/Playlist;)V
 
     :goto_0
     return-void
 .end method
 
-.method public a(Lcom/vk/music/playlist/PlaylistsModel;Ljava/util/List;)V
+.method public a(Lcom/vk/music/playlist/g;Ljava/util/List;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/playlist/PlaylistsModel;",
+            "Lcom/vk/music/playlist/g;",
             "Ljava/util/List<",
             "Lcom/vk/dto/music/Playlist;",
             ">;)V"
@@ -131,29 +131,29 @@
     .line 2
     iget-object v0, p0, Lcom/vk/music/playlist/PlaylistsContainer$e;->a:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->i(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vk/music/m/m/PlaylistAdapter;
+    invoke-static {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->i(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vk/music/m/m/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/vk/music/ui/common/MusicAdapter;->g(Ljava/util/List;)V
+    invoke-virtual {v0, p2}, Lcom/vk/music/ui/common/b;->g(Ljava/util/List;)V
 
     .line 3
     iget-object p2, p0, Lcom/vk/music/playlist/PlaylistsContainer$e;->a:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-static {p2}, Lcom/vk/music/playlist/PlaylistsContainer;->g(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vk/music/view/v/ViewAdapter;
+    invoke-static {p2}, Lcom/vk/music/playlist/PlaylistsContainer;->g(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vk/music/view/v/f;
 
     move-result-object p2
 
-    invoke-interface {p1}, Lcom/vk/music/playlist/PlaylistsModel;->m()Z
+    invoke-interface {p1}, Lcom/vk/music/playlist/g;->m()Z
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/music/view/v/ViewAdapter;->b(Z)V
+    invoke-virtual {p2, p1}, Lcom/vk/music/view/v/f;->b(Z)V
 
     return-void
 .end method
 
-.method public b(Lcom/vk/music/playlist/PlaylistsModel;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+.method public b(Lcom/vk/music/playlist/g;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
     .locals 2
 
     .line 1
@@ -182,7 +182,7 @@
 
     .line 3
     :cond_0
-    invoke-interface {p1}, Lcom/vk/music/playlist/PlaylistsModel;->o()Ljava/util/List;
+    invoke-interface {p1}, Lcom/vk/music/playlist/g;->o()Ljava/util/List;
 
     move-result-object p1
 
@@ -203,11 +203,11 @@
 
     iget-object v1, p0, Lcom/vk/music/playlist/PlaylistsContainer$e;->a:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-static {v1}, Lcom/vk/music/playlist/PlaylistsContainer;->e(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vtosters/lite/ui/MusicErrorViewHelper;
+    invoke-static {v1}, Lcom/vk/music/playlist/PlaylistsContainer;->e(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vtosters/lite/ui/v;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/ui/MusicErrorViewHelper;->a()Landroid/view/View;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/v;->a()Landroid/view/View;
 
     move-result-object v1
 
@@ -220,21 +220,21 @@
     .line 5
     iget-object p1, p0, Lcom/vk/music/playlist/PlaylistsContainer$e;->a:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-static {p1}, Lcom/vk/music/playlist/PlaylistsContainer;->e(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vtosters/lite/ui/MusicErrorViewHelper;
+    invoke-static {p1}, Lcom/vk/music/playlist/PlaylistsContainer;->e(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vtosters/lite/ui/v;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/MusicErrorViewHelper;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/v;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     :cond_1
     return-void
 .end method
 
-.method public b(Lcom/vk/music/playlist/PlaylistsModel;Lcom/vk/dto/music/Playlist;)V
+.method public b(Lcom/vk/music/playlist/g;Lcom/vk/dto/music/Playlist;)V
     .locals 2
 
     .line 6
-    invoke-interface {p1}, Lcom/vk/music/playlist/PlaylistsModel;->s()Z
+    invoke-interface {p1}, Lcom/vk/music/playlist/g;->s()Z
 
     move-result v0
 
@@ -243,18 +243,18 @@
     .line 7
     iget-object v0, p0, Lcom/vk/music/playlist/PlaylistsContainer$e;->a:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->i(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vk/music/m/m/PlaylistAdapter;
+    invoke-static {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->i(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vk/music/m/m/a;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, p2}, Lcom/vk/music/m/m/PlaylistAdapter;->a(ILcom/vk/dto/music/Playlist;)V
+    invoke-virtual {v0, v1, p2}, Lcom/vk/music/m/m/a;->a(ILcom/vk/dto/music/Playlist;)V
 
     .line 8
     iget-object p2, p0, Lcom/vk/music/playlist/PlaylistsContainer$e;->a:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-interface {p1}, Lcom/vk/music/playlist/PlaylistsModel;->o()Ljava/util/List;
+    invoke-interface {p1}, Lcom/vk/music/playlist/g;->o()Ljava/util/List;
 
     move-result-object p1
 
@@ -264,7 +264,7 @@
     return-void
 .end method
 
-.method public c(Lcom/vk/music/playlist/PlaylistsModel;Lcom/vk/dto/music/Playlist;)V
+.method public c(Lcom/vk/music/playlist/g;Lcom/vk/dto/music/Playlist;)V
     .locals 0
 
     .line 1

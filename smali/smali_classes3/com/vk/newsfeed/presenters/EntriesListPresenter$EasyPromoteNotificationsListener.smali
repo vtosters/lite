@@ -3,7 +3,7 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lb/h/g/l/NotificationListener;
+.implements Lb/h/g/l/e;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lb/h/g/l/NotificationListener<",
+        "Lb/h/g/l/e<",
         "Lorg/json/JSONObject;",
         ">;"
     }
@@ -109,7 +109,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -168,27 +168,27 @@
 
     .line 7
     :cond_3
-    new-instance p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
+    new-instance p1, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 p2, 0x39
 
-    invoke-direct {p1, v0, p2}, Lcom/vtosters/lite/ui/f0/PostDisplayItem;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p1, v0, p2}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     goto :goto_1
 
     .line 8
     :cond_4
-    new-instance p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
+    new-instance p1, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 p2, 0x38
 
-    invoke-direct {p1, v0, p2}, Lcom/vtosters/lite/ui/f0/PostDisplayItem;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p1, v0, p2}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     .line 9
     :goto_1
     iget-object p2, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener;->a:Lcom/vk/newsfeed/presenters/EntriesListPresenter;
 
-    invoke-virtual {p2}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->e()Lcom/vk/lists/DiffListDataSet;
+    invoke-virtual {p2}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->e()Lcom/vk/lists/g;
 
     move-result-object p2
 
@@ -200,10 +200,10 @@
     .line 11
     new-instance v0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$2;
 
-    invoke-direct {v0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$2;-><init>(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
+    invoke-direct {v0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$2;-><init>(Lcom/vtosters/lite/ui/f0/b;)V
 
     .line 12
-    invoke-virtual {p2, p3, v0}, Lcom/vk/lists/ListDataSet;->b(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
+    invoke-virtual {p2, p3, v0}, Lcom/vk/lists/o;->b(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
 
     :cond_5
     return-void

@@ -1,5 +1,5 @@
 .class public abstract Lcom/vk/attachpicker/screen/BaseViewerScreen;
-.super Lcom/vk/core/simplescreen/BaseScreen;
+.super Lcom/vk/core/simplescreen/a;
 .source "BaseViewerScreen.kt"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private final B:Lcom/vk/attachpicker/util/OrientationLocker;
+.field private final B:Lcom/vk/attachpicker/util/c;
 
 .field private C:Landroid/app/Activity;
 
@@ -49,7 +49,7 @@
 
 .field protected g:Landroid/graphics/drawable/Drawable;
 
-.field private h:Lcom/vk/attachpicker/screen/ViewerScreen$h;
+.field private h:Lcom/vk/attachpicker/screen/h0$h;
 
 
 # direct methods
@@ -60,7 +60,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/attachpicker/screen/BaseViewerScreen$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/attachpicker/screen/BaseViewerScreen$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     return-void
 .end method
@@ -69,14 +69,14 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/simplescreen/BaseScreen;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/simplescreen/a;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/attachpicker/util/OrientationLocker;
+    new-instance v0, Lcom/vk/attachpicker/util/c;
 
-    invoke-direct {v0}, Lcom/vk/attachpicker/util/OrientationLocker;-><init>()V
+    invoke-direct {v0}, Lcom/vk/attachpicker/util/c;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->B:Lcom/vk/attachpicker/util/OrientationLocker;
+    iput-object v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->B:Lcom/vk/attachpicker/util/c;
 
     .line 3
     new-instance v0, Landroid/os/Handler;
@@ -117,7 +117,7 @@
 
 
 # virtual methods
-.method public abstract A()Lcom/vk/attachpicker/widget/ImageViewerImageView;
+.method public abstract A()Lcom/vk/attachpicker/widget/i;
 .end method
 
 .method protected final C()Landroid/os/Handler;
@@ -149,11 +149,11 @@
     return-object v0
 .end method
 
-.method protected final K()Lcom/vk/attachpicker/util/OrientationLocker;
+.method protected final K()Lcom/vk/attachpicker/util/c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->B:Lcom/vk/attachpicker/util/OrientationLocker;
+    iget-object v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->B:Lcom/vk/attachpicker/util/c;
 
     return-object v0
 .end method
@@ -178,11 +178,11 @@
     return-object v0
 .end method
 
-.method protected final Q()Lcom/vk/attachpicker/screen/ViewerScreen$h;
+.method protected final Q()Lcom/vk/attachpicker/screen/h0$h;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->h:Lcom/vk/attachpicker/screen/ViewerScreen$h;
+    iget-object v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->h:Lcom/vk/attachpicker/screen/h0$h;
 
     return-object v0
 .end method
@@ -269,24 +269,24 @@
 
     invoke-direct {v0, p0, p2}, Lcom/vk/attachpicker/screen/BaseViewerScreen$onAnimateIn$1;-><init>(Lcom/vk/attachpicker/screen/BaseViewerScreen;Lcom/vk/attachpicker/screen/BaseViewerScreen$d;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
 
     return-void
 
     .line 58
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 59
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
@@ -311,7 +311,7 @@
     move-result v2
 
     .line 62
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->A()Lcom/vk/attachpicker/widget/ImageViewerImageView;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->A()Lcom/vk/attachpicker/widget/i;
 
     move-result-object v3
 
@@ -320,7 +320,7 @@
     if-eqz v3, :cond_0
 
     .line 63
-    invoke-virtual {v3}, Lcom/vk/imageloader/view/VKZoomableImageView;->getDisplayRect()Landroid/graphics/RectF;
+    invoke-virtual {v3}, Lcom/vk/imageloader/view/c;->getDisplayRect()Landroid/graphics/RectF;
 
     move-result-object v5
 
@@ -346,18 +346,18 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 65
     :cond_2
     :goto_1
-    iget-object v6, v0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->B:Lcom/vk/attachpicker/util/OrientationLocker;
+    iget-object v6, v0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->B:Lcom/vk/attachpicker/util/c;
 
     iget-object v8, v0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->C:Landroid/app/Activity;
 
-    invoke-virtual {v6, v8}, Lcom/vk/attachpicker/util/OrientationLocker;->a(Landroid/app/Activity;)V
+    invoke-virtual {v6, v8}, Lcom/vk/attachpicker/util/c;->a(Landroid/app/Activity;)V
 
     const/4 v6, 0x1
 
@@ -371,7 +371,7 @@
 
     invoke-static {v8}, Lcom/vk/extensions/ViewExtKt;->r(Landroid/view/View;)V
 
-    sget-object v8, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v8, Lkotlin/m;->a:Lkotlin/m;
 
     :cond_3
     const/4 v8, 0x0
@@ -521,13 +521,13 @@
 
     if-eqz v11, :cond_9
 
-    invoke-virtual {v3}, Lcom/vk/attachpicker/widget/ImageViewerImageView;->getEntry()Lcom/vk/mediastore/system/MediaStoreEntry;
+    invoke-virtual {v3}, Lcom/vk/attachpicker/widget/i;->getEntry()Lcom/vk/mediastore/system/MediaStoreEntry;
 
     move-result-object v12
 
     invoke-virtual {v11, v12, v6}, Lcom/vk/attachpicker/widget/LocalImageView;->a(Lcom/vk/mediastore/system/MediaStoreEntry;Z)V
 
-    sget-object v11, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v11, Lkotlin/m;->a:Lkotlin/m;
 
     .line 79
     :cond_9
@@ -590,7 +590,7 @@
 
     if-eqz v3, :cond_d
 
-    invoke-virtual {v3}, Lcom/vk/attachpicker/widget/ImageViewerImageView;->getEntry()Lcom/vk/mediastore/system/MediaStoreEntry;
+    invoke-virtual {v3}, Lcom/vk/attachpicker/widget/i;->getEntry()Lcom/vk/mediastore/system/MediaStoreEntry;
 
     move-result-object v3
 
@@ -602,7 +602,7 @@
     :goto_7
     invoke-virtual {v11, v3, v8}, Lcom/vk/attachpicker/widget/LocalImageView;->a(Lcom/vk/mediastore/system/MediaStoreEntry;Z)V
 
-    sget-object v3, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
 
     :cond_e
     :goto_8
@@ -628,13 +628,13 @@
 
     if-eqz v10, :cond_11
 
-    invoke-virtual {v3}, Lcom/vk/attachpicker/widget/ImageViewerImageView;->getEntry()Lcom/vk/mediastore/system/MediaStoreEntry;
+    invoke-virtual {v3}, Lcom/vk/attachpicker/widget/i;->getEntry()Lcom/vk/mediastore/system/MediaStoreEntry;
 
     move-result-object v11
 
     invoke-virtual {v10, v11, v6}, Lcom/vk/attachpicker/widget/LocalImageView;->a(Lcom/vk/mediastore/system/MediaStoreEntry;Z)V
 
-    sget-object v10, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v10, Lkotlin/m;->a:Lkotlin/m;
 
     .line 86
     :cond_11
@@ -675,7 +675,7 @@
 
     .line 90
     :cond_13
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -696,7 +696,7 @@
 
     .line 91
     :goto_a
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
 
     move-result-object v11
 
@@ -706,7 +706,7 @@
 
     if-eqz v11, :cond_15
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
 
     move-result-object v11
 
@@ -1053,7 +1053,7 @@
 
     move-result-object v13
 
-    invoke-static {v13}, Lcom/vk/attachpicker/util/Utils;->a(Landroid/view/View;)I
+    invoke-static {v13}, Lcom/vk/attachpicker/util/f;->a(Landroid/view/View;)I
 
     move-result v13
 
@@ -1062,7 +1062,7 @@
 
     move-result-object v14
 
-    invoke-static {v14}, Lcom/vk/attachpicker/util/Utils;->b(Landroid/view/View;)I
+    invoke-static {v14}, Lcom/vk/attachpicker/util/f;->b(Landroid/view/View;)I
 
     move-result v14
 
@@ -1077,7 +1077,7 @@
 
     invoke-virtual {v8, v9}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    sget-object v8, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object v8, Lkotlin/m;->a:Lkotlin/m;
 
     .line 113
     :cond_24
@@ -1309,7 +1309,7 @@
 
     if-eqz v9, :cond_2f
 
-    sget-object v7, Lcom/vk/core/util/DrawableUtils;->a:Landroid/util/Property;
+    sget-object v7, Lcom/vk/core/util/z;->a:Landroid/util/Property;
 
     const/4 v10, 0x1
 
@@ -1420,7 +1420,7 @@
 
     .line 132
     :cond_2f
-    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -1436,7 +1436,7 @@
 
     if-eqz v4, :cond_33
 
-    sget-object v6, Lcom/vk/core/util/DrawableUtils;->a:Landroid/util/Property;
+    sget-object v6, Lcom/vk/core/util/z;->a:Landroid/util/Property;
 
     const/4 v7, 0x1
 
@@ -1584,18 +1584,18 @@
 
     .line 146
     :cond_33
-    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
     throw v1
 .end method
 
-.method protected final a(Lcom/vk/attachpicker/screen/ViewerScreen$h;)V
+.method protected final a(Lcom/vk/attachpicker/screen/h0$h;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->h:Lcom/vk/attachpicker/screen/ViewerScreen$h;
+    iput-object p1, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->h:Lcom/vk/attachpicker/screen/h0$h;
 
     return-void
 .end method
@@ -1675,7 +1675,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 
@@ -1895,7 +1895,7 @@
     const-string p1, "backgroundDrawable"
 
     .line 25
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -1903,7 +1903,7 @@
     const-string p1, "backgroundDrawableAnimation"
 
     .line 26
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -1978,13 +1978,13 @@
     goto :goto_2
 
     :cond_d
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 
     .line 33
     :cond_e
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 
@@ -2042,7 +2042,7 @@
     goto :goto_3
 
     :cond_10
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 
@@ -2052,7 +2052,7 @@
     goto :goto_3
 
     :cond_12
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 
@@ -2118,11 +2118,11 @@
 
     .line 41
     :cond_17
-    iget-object v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->B:Lcom/vk/attachpicker/util/OrientationLocker;
+    iget-object v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->B:Lcom/vk/attachpicker/util/c;
 
     iget-object v2, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->C:Landroid/app/Activity;
 
-    invoke-virtual {v0, v2}, Lcom/vk/attachpicker/util/OrientationLocker;->b(Landroid/app/Activity;)V
+    invoke-virtual {v0, v2}, Lcom/vk/attachpicker/util/c;->b(Landroid/app/Activity;)V
 
     .line 42
     :goto_7
@@ -2148,7 +2148,7 @@
 
     .line 45
     :cond_18
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 
@@ -2184,11 +2184,11 @@
     iput-boolean v1, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->N:Z
 
     .line 51
-    iget-object v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->B:Lcom/vk/attachpicker/util/OrientationLocker;
+    iget-object v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->B:Lcom/vk/attachpicker/util/c;
 
     iget-object v2, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->C:Landroid/app/Activity;
 
-    invoke-virtual {v0, v2}, Lcom/vk/attachpicker/util/OrientationLocker;->a(Landroid/app/Activity;)V
+    invoke-virtual {v0, v2}, Lcom/vk/attachpicker/util/c;->a(Landroid/app/Activity;)V
 
     .line 52
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
@@ -2207,7 +2207,7 @@
     goto :goto_9
 
     :cond_1a
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v3
 
@@ -2220,7 +2220,7 @@
     .locals 3
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2255,7 +2255,7 @@
     :cond_0
     const-string p1, "backgroundDrawableAnimation"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2281,7 +2281,7 @@
     const-string v1, "configuration"
 
     .line 7
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity()I
 
@@ -2299,19 +2299,19 @@
     iput v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->I:I
 
     .line 9
-    invoke-super {p0, p1}, Lcom/vk/core/simplescreen/BaseScreen;->b(Landroid/view/LayoutInflater;)Landroid/view/View;
+    invoke-super {p0, p1}, Lcom/vk/core/simplescreen/a;->b(Landroid/view/LayoutInflater;)Landroid/view/View;
 
     move-result-object p1
 
     const-string v0, "super.getView(inflater)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     .line 10
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v2
 .end method
@@ -2392,9 +2392,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->B:Lcom/vk/attachpicker/util/OrientationLocker;
+    iget-object v0, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->B:Lcom/vk/attachpicker/util/c;
 
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/util/OrientationLocker;->a(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/util/c;->a(Z)V
 
     return-void
 .end method
@@ -2461,11 +2461,11 @@
     invoke-virtual {p0, v0}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->i(Z)V
 
     .line 7
-    iget-object v1, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->B:Lcom/vk/attachpicker/util/OrientationLocker;
+    iget-object v1, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->B:Lcom/vk/attachpicker/util/c;
 
     iget-object v2, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen;->C:Landroid/app/Activity;
 
-    invoke-virtual {v1, v2}, Lcom/vk/attachpicker/util/OrientationLocker;->b(Landroid/app/Activity;)V
+    invoke-virtual {v1, v2}, Lcom/vk/attachpicker/util/c;->b(Landroid/app/Activity;)V
 
     .line 8
     invoke-virtual {p0, v0}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->j(Z)V
@@ -2696,7 +2696,7 @@
     const-string v0, "backgroundDrawableAnimation"
 
     .line 8
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2728,7 +2728,7 @@
     :cond_0
     const-string v0, "backgroundDrawable"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2751,7 +2751,7 @@
     :cond_0
     const-string v0, "backgroundDrawableAnimation"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2762,7 +2762,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/simplescreen/BaseScreen;->a()V
+    invoke-super {p0}, Lcom/vk/core/simplescreen/a;->a()V
 
     return-void
 .end method

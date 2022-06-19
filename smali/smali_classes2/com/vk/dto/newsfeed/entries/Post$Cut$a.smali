@@ -64,7 +64,7 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/dto/newsfeed/entries/Post$Cut;-><init>(IFZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/dto/newsfeed/entries/Post$Cut;-><init>(IFZILkotlin/jvm/internal/i;)V
 
     return-object v6
 .end method

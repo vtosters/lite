@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 2
@@ -49,13 +49,13 @@
     .line 2
     new-instance v1, Lcom/vk/dto/market/cart/MarketOrderSettings$Companion$parse$1;
 
-    sget-object v2, Lcom/vk/dto/market/cart/MarketOrderSettings2;->d:Lcom/vk/dto/market/cart/MarketOrderSettings$b;
+    sget-object v2, Lcom/vk/dto/market/cart/c;->d:Lcom/vk/dto/market/cart/c$b;
 
-    invoke-direct {v1, v2}, Lcom/vk/dto/market/cart/MarketOrderSettings$Companion$parse$1;-><init>(Lcom/vk/dto/market/cart/MarketOrderSettings$b;)V
+    invoke-direct {v1, v2}, Lcom/vk/dto/market/cart/MarketOrderSettings$Companion$parse$1;-><init>(Lcom/vk/dto/market/cart/c$b;)V
 
     const-string v2, "prices"
 
-    invoke-static {p1, v2, v1}, Lcom/vk/dto/market/cart/MarketOrderSettings4;->a(Lorg/json/JSONObject;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/util/List;
+    invoke-static {p1, v2, v1}, Lcom/vk/dto/market/cart/d;->a(Lorg/json/JSONObject;Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/util/List;
 
     move-result-object v1
 
@@ -75,7 +75,7 @@
 
     const-string v4, "delivery_options"
 
-    invoke-static {p1, v4, v3}, Lcom/vk/dto/market/cart/MarketOrderSettings4;->a(Lorg/json/JSONObject;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Ljava/util/List;
+    invoke-static {p1, v4, v3}, Lcom/vk/dto/market/cart/d;->a(Lorg/json/JSONObject;Ljava/lang/String;Lkotlin/jvm/b/b;)Ljava/util/List;
 
     move-result-object p1
 

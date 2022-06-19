@@ -3,7 +3,7 @@
 .source "PhotoGalleryFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/photogallery/dto/GalleryState2;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/photogallery/dto/c;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/photogallery/dto/GalleryState2;)V
+.method public final a(Lcom/vk/photogallery/dto/c;)V
     .locals 1
 
     .line 1
@@ -60,7 +60,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/avatarpicker/PhotoGalleryFragment$b;->a(Lcom/vk/photogallery/dto/GalleryState2;)V
+    invoke-interface {v0, p1}, Lcom/vk/avatarpicker/PhotoGalleryFragment$b;->a(Lcom/vk/photogallery/dto/c;)V
 
     :cond_0
     return-void
@@ -70,11 +70,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/photogallery/dto/GalleryState2;
+    check-cast p1, Lcom/vk/photogallery/dto/c;
 
-    invoke-virtual {p0, p1}, Lcom/vk/avatarpicker/PhotoGalleryFragment$galleryCallback$1$getSelectionStrategy$1;->a(Lcom/vk/photogallery/dto/GalleryState2;)V
+    invoke-virtual {p0, p1}, Lcom/vk/avatarpicker/PhotoGalleryFragment$galleryCallback$1$getSelectionStrategy$1;->a(Lcom/vk/photogallery/dto/c;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

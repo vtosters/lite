@@ -36,7 +36,7 @@
 .method public final onPreferenceClick(Landroidx/preference/Preference;)Z
     .locals 0
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->s(Landroidx/preference/Preference;)Z
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/n2/q0;->s(Landroidx/preference/Preference;)Z
 
     const/4 p1, 0x0
 

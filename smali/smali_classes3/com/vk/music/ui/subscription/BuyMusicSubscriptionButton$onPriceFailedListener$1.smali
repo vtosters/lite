@@ -3,7 +3,7 @@
 .source "BuyMusicSubscriptionButton.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions1;
+.implements Lkotlin/jvm/b/c;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/jvm/b/c<",
         "Landroid/widget/TextView;",
         "Ljava/lang/Integer;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -61,7 +61,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton$onPriceFailedListener$1;->a(Landroid/widget/TextView;I)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
@@ -87,19 +87,19 @@
     if-eq p2, v1, :cond_0
 
     .line 3
-    sget p2, Lcom/vk/music/m/R4;->music_subscription_unavailable_unknown:I
+    sget p2, Lcom/vk/music/m/i;->music_subscription_unavailable_unknown:I
 
     goto :goto_0
 
     .line 4
     :cond_0
-    sget p2, Lcom/vk/music/m/R4;->music_subscription_unavailable_region:I
+    sget p2, Lcom/vk/music/m/i;->music_subscription_unavailable_region:I
 
     goto :goto_0
 
     .line 5
     :cond_1
-    sget p2, Lcom/vk/music/m/R4;->music_subscription_unavailable_device:I
+    sget p2, Lcom/vk/music/m/i;->music_subscription_unavailable_device:I
 
     .line 6
     :goto_0

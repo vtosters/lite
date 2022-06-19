@@ -3,7 +3,7 @@
 .source "MusicTrack.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
-        "Lcom/vk/dto/common/data/JsonObj;",
-        "Lkotlin/Unit;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/dto/common/data/a;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/common/data/JsonObj;)V
+.method public final a(Lcom/vk/dto/common/data/a;)V
     .locals 2
 
     .line 1
@@ -60,7 +60,7 @@
 
     const-string v1, "id"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -73,7 +73,7 @@
 
     const-string v1, "owner_id"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -82,7 +82,7 @@
 
     const-string v1, "title"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -91,7 +91,7 @@
 
     const-string v1, "subtitle"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -104,7 +104,7 @@
 
     const-string v1, "duration"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -119,7 +119,7 @@
 
     const-string v1, "content_restricted"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -128,7 +128,7 @@
 
     const-string v1, "artist"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 8
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -137,7 +137,7 @@
 
     const-string v1, "url"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 9
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -150,7 +150,7 @@
 
     const-string v1, "track_genre_id"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 10
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -163,7 +163,7 @@
 
     const-string v1, "lyrics_id"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 11
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -172,7 +172,7 @@
 
     const-string v1, "access_key"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 12
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -185,7 +185,7 @@
 
     const-string v1, "is_explicit"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     .line 13
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -194,7 +194,7 @@
 
     const-string v1, "track_code"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 14
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -207,7 +207,7 @@
 
     const-string v1, "date"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 15
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -216,7 +216,7 @@
 
     const-string v1, "album"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Lcom/vk/core/serialize/JSONSerialize;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Lcom/vk/core/serialize/a;)V
 
     .line 16
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -225,7 +225,7 @@
 
     const-string v1, "podcast_info"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Lcom/vk/core/serialize/JSONSerialize;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Lcom/vk/core/serialize/a;)V
 
     .line 17
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -234,7 +234,7 @@
 
     const-string v1, "ads"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 18
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -243,7 +243,7 @@
 
     const-string v1, "main_artists"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 19
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -252,7 +252,7 @@
 
     const-string v1, "featured_artists"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 20
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -265,7 +265,7 @@
 
     const-string v1, "album_part_number"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 21
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -278,7 +278,7 @@
 
     const-string v1, "is_focus_track"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     .line 22
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -287,7 +287,7 @@
 
     const-string v1, "audio_chart_info"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Lcom/vk/core/serialize/JSONSerialize;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Lcom/vk/core/serialize/a;)V
 
     .line 23
     iget-object v0, p0, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicTrack;
@@ -300,7 +300,7 @@
 
     const-string v1, "stories_allowed"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     return-void
 .end method
@@ -309,11 +309,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/common/data/JsonObj;
+    check-cast p1, Lcom/vk/dto/common/data/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->a(Lcom/vk/dto/common/data/JsonObj;)V
+    invoke-virtual {p0, p1}, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;->a(Lcom/vk/dto/common/data/a;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

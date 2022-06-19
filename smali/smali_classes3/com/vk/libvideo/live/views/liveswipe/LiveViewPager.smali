@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private a:Lcom/vk/libvideo/live/views/liveswipe/DepthPageTransformer;
+.field private a:Lcom/vk/libvideo/live/views/liveswipe/a;
 
-.field private b:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+.field private b:Lcom/vk/libvideo/live/views/liveswipe/b;
 
 .field private c:Lcom/vk/libvideo/live/views/live/LiveView;
 
@@ -49,14 +49,14 @@
     invoke-virtual {p0, p2}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
     .line 6
-    new-instance p2, Lcom/vk/libvideo/live/views/liveswipe/DepthPageTransformer;
+    new-instance p2, Lcom/vk/libvideo/live/views/liveswipe/a;
 
-    invoke-direct {p2}, Lcom/vk/libvideo/live/views/liveswipe/DepthPageTransformer;-><init>()V
+    invoke-direct {p2}, Lcom/vk/libvideo/live/views/liveswipe/a;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->a:Lcom/vk/libvideo/live/views/liveswipe/DepthPageTransformer;
+    iput-object p2, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->a:Lcom/vk/libvideo/live/views/liveswipe/a;
 
     .line 7
-    iget-object p2, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->a:Lcom/vk/libvideo/live/views/liveswipe/DepthPageTransformer;
+    iget-object p2, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->a:Lcom/vk/libvideo/live/views/liveswipe/a;
 
     invoke-virtual {p0, p1, p2}, Landroidx/viewpager/widget/ViewPager;->setPageTransformer(ZLandroidx/viewpager/widget/ViewPager$PageTransformer;)V
 
@@ -79,11 +79,11 @@
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;)Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+.method static synthetic a(Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;)Lcom/vk/libvideo/live/views/liveswipe/b;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->b:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+    iget-object p0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->b:Lcom/vk/libvideo/live/views/liveswipe/b;
 
     return-object p0
 .end method
@@ -139,7 +139,7 @@
     return-object v0
 .end method
 
-.method public getLiveAdapter()Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePagerAdapter;
+.method public getLiveAdapter()Lcom/vk/libvideo/live/views/liveswipe/d;
     .locals 1
 
     .line 1
@@ -147,7 +147,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePagerAdapter;
+    check-cast v0, Lcom/vk/libvideo/live/views/liveswipe/d;
 
     return-object v0
 .end method
@@ -203,11 +203,11 @@
     return-void
 .end method
 
-.method public setPresenter(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;)V
+.method public setPresenter(Lcom/vk/libvideo/live/views/liveswipe/b;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->b:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->b:Lcom/vk/libvideo/live/views/liveswipe/b;
 
     return-void
 .end method
@@ -224,11 +224,11 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->getLiveAdapter()Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePagerAdapter;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->getLiveAdapter()Lcom/vk/libvideo/live/views/liveswipe/d;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePagerAdapter;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/liveswipe/d;->a()Ljava/util/List;
 
     move-result-object p1
 
@@ -264,27 +264,27 @@
     if-eq v0, p1, :cond_1
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->getLiveAdapter()Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePagerAdapter;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->getLiveAdapter()Lcom/vk/libvideo/live/views/liveswipe/d;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePagerAdapter;->a(Lcom/vk/libvideo/live/views/live/LiveView;)V
+    invoke-virtual {v0, p1}, Lcom/vk/libvideo/live/views/liveswipe/d;->a(Lcom/vk/libvideo/live/views/live/LiveView;)V
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/live/LiveView;->getPresenter()Lcom/vk/libvideo/live/views/live/LiveContract;
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/live/LiveView;->getPresenter()Lcom/vk/libvideo/live/views/live/a;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/vk/libvideo/live/views/live/LiveContract;->a(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/libvideo/live/views/live/a;->a(Z)V
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/live/LiveView;->getPresenter()Lcom/vk/libvideo/live/views/live/LiveContract;
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/live/LiveView;->getPresenter()Lcom/vk/libvideo/live/views/live/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->start()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->start()V
 
     .line 9
     iput-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->f:Lcom/vk/libvideo/live/views/live/LiveView;
@@ -299,11 +299,11 @@
 
     .line 11
     :cond_2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->a:Lcom/vk/libvideo/live/views/liveswipe/DepthPageTransformer;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveViewPager;->a:Lcom/vk/libvideo/live/views/liveswipe/a;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/libvideo/live/views/liveswipe/DepthPageTransformer;->transformPage(Landroid/view/View;F)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/libvideo/live/views/liveswipe/a;->transformPage(Landroid/view/View;F)V
 
     return-void
 .end method

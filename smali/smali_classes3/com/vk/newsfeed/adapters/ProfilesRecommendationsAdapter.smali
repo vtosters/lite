@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;
-.super Lcom/vk/lists/SimpleAdapter;
+.super Lcom/vk/lists/i0;
 .source "ProfilesRecommendationsAdapter.kt"
 
 
@@ -13,9 +13,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/SimpleAdapter<",
+        "Lcom/vk/lists/i0<",
         "Lcom/vk/dto/common/RecommendedProfile;",
-        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "*>;>;"
     }
 .end annotation
@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$a;-><init>(Lkotlin/jvm/internal/i;)V
 
     sput-object v0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->h:Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$a;
 
@@ -56,7 +56,7 @@
     .locals 0
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
 
     iput-boolean p1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->g:Z
 
@@ -73,7 +73,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(ZILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -91,12 +91,12 @@
     return-void
 .end method
 
-.method public static final a(IZ)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
+.method public static final a(IZ)Lcom/vk/api/execute/f;
     .locals 1
 
     sget-object v0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->h:Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$a;
 
-    invoke-virtual {v0, p0, p1}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$a;->a(IZ)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
+    invoke-virtual {v0, p0, p1}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$a;->a(IZ)Lcom/vk/api/execute/f;
 
     move-result-object p0
 
@@ -112,77 +112,77 @@
     return-object p0
 .end method
 
-.method private final a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+.method private final a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/dto/user/UserProfile;",
             ">;"
         }
     .end annotation
 
     .line 6
-    new-instance v0, Lcom/vk/newsfeed/holders/ImportContactsHolder;
+    new-instance v0, Lcom/vk/newsfeed/holders/a0;
 
-    invoke-direct {v0, p1}, Lcom/vk/newsfeed/holders/ImportContactsHolder;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v0, p1}, Lcom/vk/newsfeed/holders/a0;-><init>(Landroid/view/ViewGroup;)V
 
     .line 7
-    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/ImportContactsHolder;->g0()Landroid/widget/TextView;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/a0;->g0()Landroid/widget/TextView;
 
     move-result-object v1
 
     new-instance v2, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$onCreateImportContactsViewHolder$$inlined$apply$lambda$1;
 
-    invoke-direct {v2, v0, p0, p1}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$onCreateImportContactsViewHolder$$inlined$apply$lambda$1;-><init>(Lcom/vk/newsfeed/holders/ImportContactsHolder;Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;Landroid/view/ViewGroup;)V
+    invoke-direct {v2, v0, p0, p1}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$onCreateImportContactsViewHolder$$inlined$apply$lambda$1;-><init>(Lcom/vk/newsfeed/holders/a0;Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;Landroid/view/ViewGroup;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-object v0
 .end method
 
-.method private final a(Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+.method private final a(Lcom/vk/newsfeed/holders/k;)Lcom/vtosters/lite/ui/b0/i;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;",
+            "Lcom/vk/newsfeed/holders/k;",
             ")",
-            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/dto/common/RecommendedProfile;",
             ">;"
         }
     .end annotation
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;->m0()Landroid/widget/ImageView;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/k;->m0()Landroid/widget/ImageView;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;
 
-    invoke-direct {v1, p1, p0}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;-><init>(Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;)V
+    invoke-direct {v1, p1, p0}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;-><init>(Lcom/vk/newsfeed/holders/k;Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;->l0()Landroid/widget/FrameLayout;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/k;->l0()Landroid/widget/FrameLayout;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$d;
 
-    invoke-direct {v1, p1, p0}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$d;-><init>(Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;)V
+    invoke-direct {v1, p1, p0}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$d;-><init>(Lcom/vk/newsfeed/holders/k;Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/newsfeed/holders/ImportContactsHolder;)V
+.method private final a(Lcom/vk/newsfeed/holders/a0;)V
     .locals 3
 
     .line 16
@@ -195,14 +195,14 @@
     if-eqz v0, :cond_0
 
     .line 17
-    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/ImportContactsHolder;->g0()Landroid/widget/TextView;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/a0;->g0()Landroid/widget/TextView;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 18
-    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/ImportContactsHolder;->h0()Landroid/widget/LinearLayout;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/a0;->h0()Landroid/widget/LinearLayout;
 
     move-result-object p1
 
@@ -212,14 +212,14 @@
 
     .line 19
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/ImportContactsHolder;->g0()Landroid/widget/TextView;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/a0;->g0()Landroid/widget/TextView;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 20
-    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/ImportContactsHolder;->h0()Landroid/widget/LinearLayout;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/a0;->h0()Landroid/widget/LinearLayout;
 
     move-result-object p1
 
@@ -303,12 +303,12 @@
     return-void
 .end method
 
-.method public a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
+.method public a(Lcom/vtosters/lite/ui/b0/i;I)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "*>;I)V"
         }
     .end annotation
@@ -335,39 +335,39 @@
     if-eq v0, v2, :cond_1
 
     .line 9
-    instance-of p2, p1, Lcom/vk/newsfeed/holders/ImportContactsHolder;
+    instance-of p2, p1, Lcom/vk/newsfeed/holders/a0;
 
     if-eqz p2, :cond_5
 
     .line 10
-    check-cast p1, Lcom/vk/newsfeed/holders/ImportContactsHolder;
+    check-cast p1, Lcom/vk/newsfeed/holders/a0;
 
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vk/newsfeed/holders/ImportContactsHolder;)V
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vk/newsfeed/holders/a0;)V
 
     goto :goto_2
 
     .line 11
     :cond_0
-    instance-of p2, p1, Lcom/vk/newsfeed/holders/InfoCardHolder;
+    instance-of p2, p1, Lcom/vk/newsfeed/holders/b0;
 
     if-eqz p2, :cond_5
 
     .line 12
-    check-cast p1, Lcom/vk/newsfeed/holders/InfoCardHolder;
+    check-cast p1, Lcom/vk/newsfeed/holders/b0;
 
     iget-object p2, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->c:Lcom/vk/dto/newsfeed/entries/AbstractProfilesRecommendations$InfoCard;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_2
 
     .line 13
     :cond_1
-    new-instance v0, Lkotlin/t/Ranges1;
+    new-instance v0, Lkotlin/t/d;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, p2}, Lkotlin/t/Ranges1;-><init>(II)V
+    invoke-direct {v0, v2, p2}, Lkotlin/t/d;-><init>(II)V
 
     iget-object v3, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->c:Lcom/vk/dto/newsfeed/entries/AbstractProfilesRecommendations$InfoCard;
 
@@ -393,7 +393,7 @@
 
     move-result v3
 
-    invoke-virtual {v0, v3}, Lkotlin/t/Ranges1;->a(I)Z
+    invoke-virtual {v0, v3}, Lkotlin/t/d;->a(I)Z
 
     move-result v0
 
@@ -411,26 +411,26 @@
 
     .line 14
     :cond_4
-    instance-of v0, p1, Lcom/vk/newsfeed/holders/AbstractRecommendedProfileHolder;
+    instance-of v0, p1, Lcom/vk/newsfeed/holders/a;
 
     if-eqz v0, :cond_5
 
     .line 15
-    check-cast p1, Lcom/vk/newsfeed/holders/AbstractRecommendedProfileHolder;
+    check-cast p1, Lcom/vk/newsfeed/holders/a;
 
-    invoke-virtual {p0, p2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
     const-string v0, "getItemAt(index)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/dto/common/RecommendedProfile;
 
     iget-object v0, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->e:Ljava/lang/String;
 
-    invoke-virtual {p1, p2, v0}, Lcom/vk/newsfeed/holders/AbstractRecommendedProfileHolder;->a(Lcom/vk/dto/common/RecommendedProfile;Ljava/lang/String;)V
+    invoke-virtual {p1, p2, v0}, Lcom/vk/newsfeed/holders/a;->a(Lcom/vk/dto/common/RecommendedProfile;Ljava/lang/String;)V
 
     :cond_5
     :goto_2
@@ -476,7 +476,7 @@
     if-ltz v0, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {p0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -487,7 +487,7 @@
     if-ge v1, v0, :cond_1
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {p0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -499,7 +499,7 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
+    invoke-virtual {p0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -550,7 +550,7 @@
 
     .line 2
     :cond_1
-    invoke-virtual {p0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -677,9 +677,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vtosters/lite/ui/b0/i;I)V
 
     return-void
 .end method
@@ -688,21 +688,21 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "*>;"
         }
     .end annotation
@@ -722,47 +722,47 @@
     if-eq p2, v0, :cond_0
 
     .line 2
-    new-instance p2, Lcom/vk/newsfeed/holders/RecommendedProfileHolder;
+    new-instance p2, Lcom/vk/newsfeed/holders/k0;
 
-    invoke-direct {p2, p1}, Lcom/vk/newsfeed/holders/RecommendedProfileHolder;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vk/newsfeed/holders/k0;-><init>(Landroid/view/ViewGroup;)V
 
-    invoke-direct {p0, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+    invoke-direct {p0, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vk/newsfeed/holders/k;)Lcom/vtosters/lite/ui/b0/i;
 
     goto :goto_0
 
     .line 3
     :cond_0
-    new-instance p2, Lcom/vk/newsfeed/holders/ActionableRecommendedProfileHolder;
+    new-instance p2, Lcom/vk/newsfeed/holders/c;
 
-    invoke-direct {p2, p1}, Lcom/vk/newsfeed/holders/ActionableRecommendedProfileHolder;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vk/newsfeed/holders/c;-><init>(Landroid/view/ViewGroup;)V
 
     goto :goto_0
 
     .line 4
     :cond_1
-    new-instance p2, Lcom/vk/newsfeed/holders/CircleRecommendedProfileHolder;
+    new-instance p2, Lcom/vk/newsfeed/holders/n;
 
-    invoke-direct {p2, p1}, Lcom/vk/newsfeed/holders/CircleRecommendedProfileHolder;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vk/newsfeed/holders/n;-><init>(Landroid/view/ViewGroup;)V
 
-    invoke-direct {p0, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+    invoke-direct {p0, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vk/newsfeed/holders/k;)Lcom/vtosters/lite/ui/b0/i;
 
     goto :goto_0
 
     .line 5
     :cond_2
-    new-instance p2, Lcom/vk/newsfeed/holders/InfoCardHolder;
+    new-instance p2, Lcom/vk/newsfeed/holders/b0;
 
-    invoke-direct {p2, p1}, Lcom/vk/newsfeed/holders/InfoCardHolder;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vk/newsfeed/holders/b0;-><init>(Landroid/view/ViewGroup;)V
 
     iget-object p1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->e:Ljava/lang/String;
 
-    invoke-virtual {p2, p1}, Lcom/vk/newsfeed/holders/InfoCardHolder;->i(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lcom/vk/newsfeed/holders/b0;->i(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 6
     :cond_3
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object p2
 

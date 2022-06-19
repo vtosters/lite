@@ -33,7 +33,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1, p2}, Lcom/vtosters/lite/audio/player/exo/AudioCacheHelper;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2}, Lcom/vtosters/lite/audio/player/exo/a;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

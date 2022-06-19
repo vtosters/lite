@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
-        "Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item;",
+        "Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c;",
         ">",
         "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;"
     }
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item;
+.field private a:Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -23,12 +23,12 @@
     .end annotation
 .end field
 
-.field private b:Lkotlin/jvm/b/Functions2;
+.field private b:Lkotlin/jvm/b/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;"
         }
     .end annotation
@@ -47,54 +47,54 @@
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder$1;
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;)V
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;)Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item;
+.method public static final synthetic a(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;)Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->a:Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->a:Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;)Lkotlin/jvm/b/Functions2;
+.method public static final synthetic b(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;)Lkotlin/jvm/b/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->b:Lkotlin/jvm/b/Functions2;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->b:Lkotlin/jvm/b/b;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item;Lkotlin/jvm/b/Functions2;)V
+.method public a(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c;Lkotlin/jvm/b/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
-            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/b<",
             "-TT;",
-            "Lkotlin/Unit;",
+            "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 2
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->a:Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->a:Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c;
 
     .line 3
-    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->b:Lkotlin/jvm/b/Functions2;
+    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->b:Lkotlin/jvm/b/b;
 
     return-void
 .end method
@@ -105,10 +105,10 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->a:Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item;
+    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->a:Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c;
 
     .line 2
-    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->b:Lkotlin/jvm/b/Functions2;
+    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->b:Lkotlin/jvm/b/b;
 
     return-void
 .end method

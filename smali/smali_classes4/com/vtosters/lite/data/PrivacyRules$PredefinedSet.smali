@@ -192,7 +192,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     iget v1, p0, Lcom/vtosters/lite/data/PrivacyRules$PredefinedSet;->a:I
 
@@ -207,7 +207,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     iget v1, p0, Lcom/vtosters/lite/data/PrivacyRules$PredefinedSet;->b:I
 

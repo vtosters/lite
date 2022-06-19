@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/KProperty5;
+.field static final synthetic a:[Lkotlin/u/j;
 
-.field private static final b:Lcom/vk/api/sdk/utils/ThreadLocalDelegate;
+.field private static final b:Lcom/vk/api/sdk/utils/c;
 
 .field public static final c:Lcom/vk/api/sdk/internal/QueryStringGenerator;
 
@@ -17,13 +17,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/api/sdk/internal/QueryStringGenerator;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -31,15 +31,15 @@
 
     const-string v4, "getStrBuilder()Ljava/lang/StringBuilder;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/api/sdk/internal/QueryStringGenerator;->a:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/api/sdk/internal/QueryStringGenerator;->a:[Lkotlin/u/j;
 
     .line 1
     new-instance v0, Lcom/vk/api/sdk/internal/QueryStringGenerator;
@@ -51,11 +51,11 @@
     .line 2
     sget-object v0, Lcom/vk/api/sdk/internal/QueryStringGenerator$strBuilder$2;->a:Lcom/vk/api/sdk/internal/QueryStringGenerator$strBuilder$2;
 
-    invoke-static {v0}, Lcom/vk/api/sdk/utils/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/api/sdk/utils/ThreadLocalDelegate;
+    invoke-static {v0}, Lcom/vk/api/sdk/utils/e;->a(Lkotlin/jvm/b/a;)Lcom/vk/api/sdk/utils/c;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/api/sdk/internal/QueryStringGenerator;->b:Lcom/vk/api/sdk/utils/ThreadLocalDelegate;
+    sput-object v0, Lcom/vk/api/sdk/internal/QueryStringGenerator;->b:Lcom/vk/api/sdk/utils/c;
 
     return-void
 .end method
@@ -80,7 +80,7 @@
     move-result-object v0
 
     .line 25
-    sget-object v1, Lkotlin/text/Charsets;->a:Ljava/nio/charset/Charset;
+    sget-object v1, Lkotlin/text/d;->a:Ljava/nio/charset/Charset;
 
     if-eqz p1, :cond_0
 
@@ -90,7 +90,7 @@
 
     const-string v1, "(this as java.lang.String).getBytes(charset)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Ljava/security/MessageDigest;->digest([B)[B
 
@@ -99,7 +99,7 @@
     const-string p1, "digested"
 
     .line 26
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -117,7 +117,7 @@
 
     const-string v3, ""
 
-    invoke-static/range {v2 .. v10}, Lkotlin/collections/f;->a([BLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v2 .. v10}, Lkotlin/collections/f;->a([BLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -214,7 +214,7 @@
     const-string v4, "v"
 
     .line 12
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -224,7 +224,7 @@
 
     const-string v4, "access_token"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -234,7 +234,7 @@
 
     const-string v4, "api_id"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -333,7 +333,7 @@
 
     const-string p2, "sb.toString()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -356,7 +356,7 @@
 
     const-string p2, "URLEncoder.encode(this, \"UTF-8\")"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -376,15 +376,15 @@
 .method private final a()Ljava/lang/StringBuilder;
     .locals 3
 
-    sget-object v0, Lcom/vk/api/sdk/internal/QueryStringGenerator;->b:Lcom/vk/api/sdk/utils/ThreadLocalDelegate;
+    sget-object v0, Lcom/vk/api/sdk/internal/QueryStringGenerator;->b:Lcom/vk/api/sdk/utils/c;
 
-    sget-object v1, Lcom/vk/api/sdk/internal/QueryStringGenerator;->a:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/api/sdk/internal/QueryStringGenerator;->a:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/api/sdk/utils/ThreadLocalDelegate1;->a(Lcom/vk/api/sdk/utils/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/api/sdk/utils/e;->a(Lcom/vk/api/sdk/utils/c;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -401,7 +401,7 @@
 
     const-string p2, "this.append(str)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -419,19 +419,19 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/String;ILcom/vk/api/sdk/okhttp/OkHttpMethodCall;)Ljava/lang/String;
+.method public final a(Ljava/lang/String;Ljava/lang/String;ILcom/vk/api/sdk/okhttp/c;)Ljava/lang/String;
     .locals 7
 
     .line 1
-    invoke-virtual {p4}, Lcom/vk/api/sdk/okhttp/OkHttpMethodCall;->b()Ljava/lang/String;
+    invoke-virtual {p4}, Lcom/vk/api/sdk/okhttp/c;->b()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {p4}, Lcom/vk/api/sdk/okhttp/OkHttpMethodCall;->d()Ljava/lang/String;
+    invoke-virtual {p4}, Lcom/vk/api/sdk/okhttp/c;->d()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {p4}, Lcom/vk/api/sdk/okhttp/OkHttpMethodCall;->a()Ljava/util/Map;
+    invoke-virtual {p4}, Lcom/vk/api/sdk/okhttp/c;->a()Ljava/util/Map;
 
     move-result-object v6
 

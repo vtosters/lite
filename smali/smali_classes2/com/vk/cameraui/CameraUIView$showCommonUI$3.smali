@@ -3,7 +3,7 @@
 .source "CameraUIView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/Functions2;
+.implements Lkotlin/jvm/b/b;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/b<",
         "Landroid/view/View;",
-        "Lkotlin/Unit;",
+        "Lkotlin/m;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$3;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-virtual {p1}, Lcom/vk/cameraui/BaseCameraUIView;->getClickLock()Lcom/vk/core/util/TimeoutLock;
+    invoke-virtual {p1}, Lcom/vk/cameraui/BaseCameraUIView;->getClickLock()Lcom/vk/core/util/j1;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/util/TimeoutLock;->a()Z
+    invoke-virtual {p1}, Lcom/vk/core/util/j1;->a()Z
 
     move-result p1
 
@@ -68,11 +68,11 @@
 
     iget-object p1, p0, Lcom/vk/cameraui/CameraUIView$showCommonUI$3;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-virtual {p1}, Lcom/vk/cameraui/BaseCameraUIView;->getShutterLock()Lcom/vk/core/util/TimeoutLock;
+    invoke-virtual {p1}, Lcom/vk/cameraui/BaseCameraUIView;->getShutterLock()Lcom/vk/core/util/j1;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/util/TimeoutLock;->a()Z
+    invoke-virtual {p1}, Lcom/vk/core/util/j1;->a()Z
 
     move-result p1
 
@@ -189,7 +189,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/cameraui/CameraUIView$showCommonUI$3;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method

@@ -3,12 +3,12 @@
 .source "ScreenshotDetector.kt"
 
 # interfaces
-.implements Lio/reactivex/ObservableOnSubscribe;
+.implements Lc/a/o;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/screenshot/ScreenshotDetector;->a()Lio/reactivex/Observable;
+    value = Lcom/vk/core/screenshot/ScreenshotDetector;->a()Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lio/reactivex/ObservableOnSubscribe<",
+        "Lc/a/o<",
         "TT;>;"
     }
 .end annotation
@@ -45,12 +45,12 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/ObservableEmitter;)V
+.method public final a(Lc/a/n;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/reactivex/ObservableEmitter<",
+            "Lc/a/n<",
             "Landroid/net/Uri;",
             ">;)V"
         }
@@ -59,7 +59,7 @@
     .line 1
     new-instance v0, Lcom/vk/core/screenshot/ScreenshotDetector$d$b;
 
-    invoke-direct {v0, p1}, Lcom/vk/core/screenshot/ScreenshotDetector$d$b;-><init>(Lio/reactivex/ObservableEmitter;)V
+    invoke-direct {v0, p1}, Lcom/vk/core/screenshot/ScreenshotDetector$d$b;-><init>(Lc/a/n;)V
 
     .line 2
     iget-object v1, p0, Lcom/vk/core/screenshot/ScreenshotDetector$d;->a:Lcom/vk/core/screenshot/ScreenshotDetector;
@@ -71,7 +71,7 @@
 
     invoke-direct {v1, p0, v0}, Lcom/vk/core/screenshot/ScreenshotDetector$d$a;-><init>(Lcom/vk/core/screenshot/ScreenshotDetector$d;Lcom/vk/core/screenshot/ScreenshotDetector$d$b;)V
 
-    invoke-interface {p1, v1}, Lio/reactivex/ObservableEmitter;->a(Lio/reactivex/functions/Cancellable;)V
+    invoke-interface {p1, v1}, Lc/a/n;->a(Lc/a/z/f;)V
 
     return-void
 .end method

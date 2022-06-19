@@ -58,11 +58,11 @@
 
     sget-object v3, Lcom/vk/metrics/formatter/EventNameFormatters;->c:Lcom/vk/metrics/formatter/EventNameFormatters;
 
-    invoke-virtual {v3}, Lcom/vk/metrics/formatter/EventNameFormatters;->a()Lkotlin/jvm/b/Functions2;
+    invoke-virtual {v3}, Lcom/vk/metrics/formatter/EventNameFormatters;->a()Lkotlin/jvm/b/b;
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3}, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Lcom/vk/metrics/eventtracking/Event;
+    invoke-virtual {v1, v2, v3}, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Lcom/vk/metrics/eventtracking/Event;
 
     move-result-object v1
 
@@ -81,11 +81,11 @@
 
     sget-object v3, Lcom/vk/metrics/formatter/EventNameFormatters;->c:Lcom/vk/metrics/formatter/EventNameFormatters;
 
-    invoke-virtual {v3}, Lcom/vk/metrics/formatter/EventNameFormatters;->b()Lkotlin/jvm/b/Functions2;
+    invoke-virtual {v3}, Lcom/vk/metrics/formatter/EventNameFormatters;->b()Lkotlin/jvm/b/b;
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3}, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Lcom/vk/metrics/eventtracking/Event;
+    invoke-virtual {v1, v2, v3}, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Lcom/vk/metrics/eventtracking/Event;
 
     move-result-object v1
 

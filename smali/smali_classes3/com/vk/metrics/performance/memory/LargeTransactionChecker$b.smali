@@ -142,7 +142,7 @@
 
     const-string v1, "f.javaClass.simpleName"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0, p3, p2}, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$c;->a(Lcom/vk/metrics/performance/memory/LargeTransactionChecker$Type;Landroid/os/Bundle;Ljava/lang/String;)V
 
@@ -176,7 +176,7 @@
 
     const-string v2, "f.javaClass.simpleName"
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, p1, p2}, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$c;->a(Lcom/vk/metrics/performance/memory/LargeTransactionChecker$Type;Landroid/os/Bundle;Ljava/lang/String;)V
 

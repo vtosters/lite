@@ -152,9 +152,9 @@
     move-result-object v1
 
     .line 20
-    iget-object v4, p1, Lio/reactivex/internal/operators/observable/ObservableReplay$InnerDisposable;->child:Lio/reactivex/Observer;
+    iget-object v4, p1, Lio/reactivex/internal/operators/observable/ObservableReplay$InnerDisposable;->child:Lc/a/r;
 
-    invoke-static {v1, v4}, Lio/reactivex/internal/util/NotificationLite;->a(Ljava/lang/Object;Lio/reactivex/Observer;)Z
+    invoke-static {v1, v4}, Lio/reactivex/internal/util/NotificationLite;->a(Ljava/lang/Object;Lc/a/r;)Z
 
     move-result v1
 

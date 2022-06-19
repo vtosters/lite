@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Lcom/vk/im/engine/models/attaches/AttachWithId;
-.implements Lcom/vk/im/engine/models/attaches/WithHiddenPreview;
-.implements Lcom/vk/im/engine/models/attaches/WithLocalFile;
+.implements Lcom/vk/im/engine/models/attaches/e;
+.implements Lcom/vk/im/engine/models/attaches/f;
 
 
 # annotations
@@ -17,7 +17,7 @@
 
 
 # static fields
-.field static final synthetic C:[Lkotlin/u/KProperty5;
+.field static final synthetic C:[Lkotlin/u/j;
 
 .field public static final CREATOR:Lcom/vk/core/serialize/Serializer$c;
     .annotation system Ldalvik/annotation/Signature;
@@ -33,7 +33,7 @@
 # instance fields
 .field private final B:Lcom/vk/im/engine/models/camera/PhotoParams;
 
-.field private final a:Lkotlin/Lazy2;
+.field private final a:Lkotlin/e;
 
 .field private final b:Lcom/vk/dto/stories/model/StoryEntry;
 
@@ -56,13 +56,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/KProperty5;
+    new-array v0, v0, [Lkotlin/u/j;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/engine/models/attaches/AttachStory;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
     move-result-object v2
 
@@ -70,21 +70,21 @@
 
     const-string v4, "getOwner()Lcom/vk/im/engine/models/Member;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
+    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/engine/models/attaches/AttachStory;->C:[Lkotlin/u/KProperty5;
+    sput-object v0, Lcom/vk/im/engine/models/attaches/AttachStory;->C:[Lkotlin/u/j;
 
     new-instance v0, Lcom/vk/im/engine/models/attaches/AttachStory$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachStory$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachStory$b;-><init>(Lkotlin/jvm/internal/i;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/attaches/AttachStory$a;
@@ -116,7 +116,7 @@
 
     const-string v0, "AttachSyncState.fromInt(s.readInt())"
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     const-class v0, Lcom/vk/dto/stories/model/StoryEntry;
@@ -229,19 +229,19 @@
 
     .line 16
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 17
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 
     .line 18
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
 
     throw v1
 .end method
@@ -273,16 +273,16 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/engine/models/attaches/AttachStory$owner$2;-><init>(Lcom/vk/im/engine/models/attaches/AttachStory;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/engine/models/attaches/AttachStory;->a:Lkotlin/Lazy2;
+    iput-object p1, p0, Lcom/vk/im/engine/models/attaches/AttachStory;->a:Lkotlin/e;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/dto/stories/model/StoryEntry;ILcom/vk/im/engine/models/attaches/AttachSyncState;Lcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/camera/UploadParams;Lcom/vk/im/engine/models/camera/VideoParams;Lcom/vk/im/engine/models/camera/PhotoParams;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/dto/stories/model/StoryEntry;ILcom/vk/im/engine/models/attaches/AttachSyncState;Lcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/camera/UploadParams;Lcom/vk/im/engine/models/camera/VideoParams;Lcom/vk/im/engine/models/camera/PhotoParams;ILkotlin/jvm/internal/i;)V
     .locals 9
 
     move/from16 v0, p9
@@ -323,7 +323,7 @@
     .line 4
     new-instance v3, Lcom/vk/im/engine/models/ImageList;
 
-    invoke-direct {v3, v5, v4, v5}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v3, v5, v4, v5}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
 
     goto :goto_2
 
@@ -477,7 +477,7 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v5, v0, v2, v0}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct {v5, v0, v2, v0}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
 
     .line 23
     sget-object v3, Lcom/vk/im/engine/models/attaches/AttachSyncState;->UPLOAD_REQUIRED:Lcom/vk/im/engine/models/attaches/AttachSyncState;
@@ -498,7 +498,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/im/engine/models/camera/UploadParams;Lcom/vk/im/engine/models/camera/VideoParams;Lcom/vk/im/engine/models/camera/PhotoParams;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+.method public synthetic constructor <init>(Lcom/vk/im/engine/models/camera/UploadParams;Lcom/vk/im/engine/models/camera/VideoParams;Lcom/vk/im/engine/models/camera/PhotoParams;ILkotlin/jvm/internal/i;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x2
@@ -1111,7 +1111,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/attaches/AttachStory;->b:Lcom/vk/dto/stories/model/StoryEntry;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1135,7 +1135,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1145,7 +1145,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/attaches/AttachStory;->e:Lcom/vk/im/engine/models/ImageList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1155,7 +1155,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/attaches/AttachStory;->f:Lcom/vk/im/engine/models/ImageList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1165,7 +1165,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/attaches/AttachStory;->g:Lcom/vk/im/engine/models/camera/UploadParams;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1175,7 +1175,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/attaches/AttachStory;->h:Lcom/vk/im/engine/models/camera/VideoParams;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1185,7 +1185,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/models/attaches/AttachStory;->B:Lcom/vk/im/engine/models/camera/PhotoParams;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1255,7 +1255,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/attaches/WithHiddenPreview$a;->a(Lcom/vk/im/engine/models/attaches/WithHiddenPreview;)Lcom/vk/im/engine/models/ImageList;
+    invoke-static {p0}, Lcom/vk/im/engine/models/attaches/e$a;->a(Lcom/vk/im/engine/models/attaches/e;)Lcom/vk/im/engine/models/ImageList;
 
     move-result-object v0
 
@@ -1476,15 +1476,15 @@
 .method public final n()Lcom/vk/im/engine/models/Member;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachStory;->a:Lkotlin/Lazy2;
+    iget-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachStory;->a:Lkotlin/e;
 
-    sget-object v1, Lcom/vk/im/engine/models/attaches/AttachStory;->C:[Lkotlin/u/KProperty5;
+    sget-object v1, Lcom/vk/im/engine/models/attaches/AttachStory;->C:[Lkotlin/u/j;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
