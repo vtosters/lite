@@ -7,9 +7,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import com.vk.core.preference.Preference;
+import androidx.preference.Preference;
+
 import com.vtosters.lite.R;
-import com.vtosters.lite.fragments.MaterialPreferenceFragment.a;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 
 public class MessagesFragment extends MaterialPreferenceToolbarFragment {
@@ -21,25 +21,25 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void prefs() {
-        a("vkme").a(new MessagesFragment.restart());
-        a("vkme_notifs").a(new MessagesFragment.restart());
-        a("isBGStickersEnabled").a(new MessagesFragment.clearCache());
-        a("roundedmsgs").a(new MessagesFragment.restart());
-        a("systememoji").a(new MessagesFragment.restart());
+        findPreference("vkme").setOnPreferenceClickListener(new MessagesFragment.restart());
+        findPreference("vkme_notifs").setOnPreferenceClickListener(new MessagesFragment.restart());
+        findPreference("isBGStickersEnabled").setOnPreferenceClickListener(new MessagesFragment.clearCache());
+        findPreference("roundedmsgs").setOnPreferenceClickListener(new MessagesFragment.restart());
+        findPreference("systememoji").setOnPreferenceClickListener(new MessagesFragment.restart());
     }
 
-    public boolean restart(Preference preference, Object obj) {
+    public boolean restart(Preference preference) {
         restartApplicationWithTimer();
         return true;
     }
 
-    public class restart implements Preference.b {
+    public class restart implements Preference.OnPreferenceClickListener {
         restart() {
         }
 
-        @Override // android.support.v7.preference.Preference.b
-        public boolean a(Preference preference, Object obj) {
-            return MessagesFragment.this.restart(preference, obj);
+        @Override
+        public boolean onPreferenceClick(Preference preference) {
+            return MessagesFragment.this.restart(preference);
         }
     }
 
@@ -53,13 +53,13 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         return true;
     }
 
-    public class clearCache implements Preference.b {
+    public class clearCache implements Preference.OnPreferenceClickListener {
         clearCache() {
         }
 
-        @Override // android.support.v7.preference.Preference.b
-        public boolean a(Preference preference, Object obj) {
-            return MessagesFragment.this.restart(preference, obj);
+        @Override
+        public boolean onPreferenceClick(Preference preference) {
+            return MessagesFragment.this.restart(preference);
         }
     }
 }
