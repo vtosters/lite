@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lkotlin/jvm/b/a;Z)V
+    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lkotlin/jvm/b/Functions;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;
 
-.field final synthetic b:Lkotlin/jvm/b/a;
+.field final synthetic b:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateChatProgress$1;->a:Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateChatProgress$1;->b:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateChatProgress$1;->b:Lkotlin/jvm/b/Functions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,10 +50,10 @@
     move-result-object v1
 
     .line 3
-    sget v4, Lcom/vk/im/ui/m;->vkim_create_casper_chat_progress:I
+    sget v4, Lcom/vk/im/ui/R4;->vkim_create_casper_chat_progress:I
 
     .line 4
-    iget-object v6, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateChatProgress$1;->b:Lkotlin/jvm/b/a;
+    iget-object v6, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateChatProgress$1;->b:Lkotlin/jvm/b/Functions;
 
     .line 5
     new-instance v7, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs$showCreateChatProgress$1$1;
@@ -71,14 +71,14 @@
     const/4 v9, 0x0
 
     .line 6
-    invoke-static/range {v1 .. v9}, Lcom/vk/im/ui/components/viewcontrollers/popup/g;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lb/h/g/k/a;
+    invoke-static/range {v1 .. v9}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupUtils;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lb/h/g/k/VKProgressDialog;
 
     move-result-object v1
 
     .line 7
     invoke-virtual {v1}, Landroid/app/ProgressDialog;->show()V
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->c(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Lb/h/g/k/a;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->c(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Lb/h/g/k/VKProgressDialog;)V
 
     return-void
 .end method

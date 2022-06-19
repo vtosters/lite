@@ -40,13 +40,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/ui/VideoView$f;->a:Lcom/vk/libvideo/ui/VideoView;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/a;
+    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/AutoPlay;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->C()Z
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->C()Z
 
     move-result v0
 

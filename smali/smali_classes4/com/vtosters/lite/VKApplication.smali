@@ -23,7 +23,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/VKApplication$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/VKApplication$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lb/h/u/a;->f:Lb/h/u/a;
+    sget-object v0, Lb/h/u/VkQueueSyncManager;->INSTANCE:Lb/h/u/VkQueueSyncManager;
 
     .line 2
     sget-object v1, Lcom/vtosters/lite/VKApplication$initVkQueue$1;->a:Lcom/vtosters/lite/VKApplication$initVkQueue$1;
@@ -53,7 +53,7 @@
     sget-object v3, Lcom/vtosters/lite/VKApplication$initVkQueue$3;->a:Lcom/vtosters/lite/VKApplication$initVkQueue$3;
 
     .line 5
-    invoke-virtual {v0, v1, v2, v3}, Lb/h/u/a;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1, v2, v3}, Lb/h/u/VkQueueSyncManager;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -66,11 +66,11 @@
 
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory;->b:Lcom/vk/voip/VoipAppBindingFactory;
 
-    invoke-virtual {v1}, Lcom/vk/voip/VoipAppBindingFactory;->a()Lcom/vk/voip/k;
+    invoke-virtual {v1}, Lcom/vk/voip/VoipAppBindingFactory;->a()Lcom/vk/voip/VoipAppBinding;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipWrapper;->a(Lcom/vk/voip/k;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipWrapper;->a(Lcom/vk/voip/VoipAppBinding;)V
 
     .line 2
     sget-object v0, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
@@ -90,15 +90,15 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/t0;->a:Lcom/vk/core/util/t0;
+    sget-object v0, Lcom/vk/core/util/ProcessHelper;->INSTANCE:Lcom/vk/core/util/ProcessHelper;
 
-    invoke-virtual {v0, p0}, Lcom/vk/core/util/t0;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lcom/vk/core/util/ProcessHelper;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "com.vk.audio.service"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -118,9 +118,9 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2
-    sget-object v1, Lcom/vk/core/util/t0;->a:Lcom/vk/core/util/t0;
+    sget-object v1, Lcom/vk/core/util/ProcessHelper;->INSTANCE:Lcom/vk/core/util/ProcessHelper;
 
-    invoke-virtual {v1, p0}, Lcom/vk/core/util/t0;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-virtual {v1, p0}, Lcom/vk/core/util/ProcessHelper;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -166,46 +166,46 @@
     sget-object v0, Lcom/vk/core/network/Network$ClientType;->CLIENT_EMOJI:Lcom/vk/core/network/Network$ClientType;
 
     .line 2
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v1
 
     .line 3
-    invoke-static {v0}, Lcom/vk/core/network/Network;->a(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/x$b;
+    invoke-static {v0}, Lcom/vk/core/network/Network;->a(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/OkHttpClient$b;
 
     move-result-object v2
 
     const-string v3, "emoji"
 
     .line 4
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/vk/emoji/b;->c()Lokhttp3/c;
+    invoke-virtual {v1}, Lcom/vk/emoji/Emoji;->c()Lokhttp3/Cache;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lokhttp3/x$b;->a(Lokhttp3/c;)Lokhttp3/x$b;
+    invoke-virtual {v2, v3}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Cache;)Lokhttp3/OkHttpClient$b;
 
     const-string v3, "builder.cache(emoji.cache)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, v2}, Lcom/vk/core/network/Network;->a(Lcom/vk/core/network/Network$ClientType;Lokhttp3/x$b;)Lokhttp3/x;
+    invoke-static {v0, v2}, Lcom/vk/core/network/Network;->a(Lcom/vk/core/network/Network$ClientType;Lokhttp3/OkHttpClient$b;)Lokhttp3/OkHttpClient;
 
     .line 5
     new-instance v2, Lcom/vtosters/lite/VKApplication$i;
 
     invoke-direct {v2, v0}, Lcom/vtosters/lite/VKApplication$i;-><init>(Lcom/vk/core/network/Network$ClientType;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/emoji/b;->a(Lokhttp3/e$a;)Lcom/vk/emoji/b;
+    invoke-virtual {v1, v2}, Lcom/vk/emoji/Emoji;->a(Lokhttp3/Call$a;)Lcom/vk/emoji/Emoji;
 
-    invoke-virtual {v1}, Lcom/vk/emoji/b;->b()Lc/a/m;
+    invoke-virtual {v1}, Lcom/vk/emoji/Emoji;->b()Lio/reactivex/Observable;
 
     move-result-object v0
 
     sget-object v1, Lcom/vtosters/lite/VKApplication$j;->a:Lcom/vtosters/lite/VKApplication$j;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -219,25 +219,25 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/a;->j()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->j()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 2
-    const-class v1, Lcom/vk/im/engine/events/h;
+    const-class v1, Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Ljava/lang/Class;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Ljava/lang/Class;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
     sget-object v1, Lcom/vtosters/lite/VKApplication$k;->a:Lcom/vtosters/lite/VKApplication$k;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -245,12 +245,12 @@
     sget-object v1, Lcom/vtosters/lite/VKApplication$l;->a:Lcom/vtosters/lite/VKApplication$l;
 
     .line 5
-    invoke-static {}, Lcom/vk/core/util/z0;->c()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->c()Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
     .line 6
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -277,11 +277,11 @@
 
     .line 42
     :try_start_0
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result v0
 
@@ -346,11 +346,11 @@
     .locals 1
 
     .line 25
-    new-instance v0, Lcom/vtosters/lite/y;
+    new-instance v0, Lcom/vtosters/lite/NetworkProxyPreferences;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/y;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/NetworkProxyPreferences;-><init>()V
 
-    invoke-static {p1, v0}, Lb/h/q/d/b;->a(Landroid/content/Context;Ljava/lang/Runnable;)Lb/h/q/d/b;
+    invoke-static {p1, v0}, Lb/h/q/d/FirebaseHelper;->a(Landroid/content/Context;Ljava/lang/Runnable;)Lb/h/q/d/FirebaseHelper;
 
     return-void
 .end method
@@ -359,7 +359,7 @@
     .locals 8
 
     .line 28
-    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
@@ -369,16 +369,16 @@
     move-result-object v1
 
     .line 30
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v2
 
     const-string v3, "VKAccountManager.getCurrent()"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 31
-    invoke-virtual {v2}, Lb/h/h/d/c;->b1()Z
+    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->b1()Z
 
     move-result v3
 
@@ -388,12 +388,12 @@
     new-instance v3, Lcom/vk/im/engine/models/credentials/UserCredentials;
 
     .line 33
-    invoke-virtual {v2}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v4
 
     .line 34
-    invoke-virtual {v2}, Lb/h/h/d/c;->b()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->b()Ljava/lang/String;
 
     move-result-object v5
 
@@ -406,13 +406,13 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Lb/h/h/d/c;->b()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->b()Ljava/lang/String;
 
     move-result-object v5
 
     .line 35
     :goto_0
-    invoke-virtual {v2}, Lb/h/h/d/c;->l0()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->l0()Ljava/lang/String;
 
     move-result-object v7
 
@@ -421,7 +421,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v2}, Lb/h/h/d/c;->l0()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->l0()Ljava/lang/String;
 
     move-result-object v6
 
@@ -440,12 +440,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/ImConfig;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/ImConfig;)V
 
     if-eqz v3, :cond_3
 
     .line 38
-    invoke-static {p1}, Lcom/vtosters/lite/im/bridge/c;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/vtosters/lite/im/bridge/ImBridgesToVkApp;->a(Landroid/content/Context;)V
 
     :cond_3
     return-void
@@ -493,11 +493,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/VKApplication;Lkotlin/jvm/b/b;)V
+.method public static final synthetic a(Lcom/vtosters/lite/VKApplication;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/VKApplication;->a(Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/VKApplication;->a(Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -522,14 +522,14 @@
 
     const-string v1, "com.vtosters.lite"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     .line 40
     sget-object v1, Lcom/vtosters/lite/VKApplication$initLogs$1;->a:Lcom/vtosters/lite/VKApplication$initLogs$1;
 
-    invoke-static {v1}, Lcom/vk/utils/AppUtils;->a(Lkotlin/jvm/b/a;)V
+    invoke-static {v1}, Lcom/vk/utils/AppUtils;->a(Lkotlin/jvm/b/Functions;)V
 
     const/4 v1, 0x0
 
@@ -577,7 +577,7 @@
 
     const-string v2, "it"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Ljava/lang/Throwable;)V
 
@@ -587,15 +587,15 @@
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/b;)V
+.method private final a(Lkotlin/jvm/b/Functions2;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Exception;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -604,14 +604,14 @@
     invoke-direct {p0}, Lcom/vtosters/lite/VKApplication;->g()V
 
     .line 7
-    new-instance v0, Lcom/vk/core/preference/crypto/h;
+    new-instance v0, Lcom/vk/core/preference/crypto/EncryptedPreference2;
 
     sget-object v1, Lcom/vk/core/preference/Preference;->b:Lcom/vk/core/preference/Preference;
 
-    invoke-direct {v0, v1}, Lcom/vk/core/preference/crypto/h;-><init>(Lcom/vk/core/preference/Preference;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/preference/crypto/EncryptedPreference2;-><init>(Lcom/vk/core/preference/Preference;)V
 
     .line 8
-    new-instance v1, Lcom/vk/core/preference/crypto/a;
+    new-instance v1, Lcom/vk/core/preference/crypto/EncryptionManager1;
 
     invoke-virtual {p0}, Landroid/app/Application;->getApplicationContext()Landroid/content/Context;
 
@@ -619,9 +619,9 @@
 
     const-string v3, "applicationContext"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, v2, v0}, Lcom/vk/core/preference/crypto/a;-><init>(Landroid/content/Context;Lcom/vk/core/preference/crypto/g;)V
+    invoke-direct {v1, v2, v0}, Lcom/vk/core/preference/crypto/EncryptionManager1;-><init>(Landroid/content/Context;Lcom/vk/core/preference/crypto/EncryptionManager;)V
 
     .line 9
     sget-object v0, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
@@ -632,44 +632,44 @@
 
     new-instance v2, Lcom/vtosters/lite/VKApplication$c;
 
-    invoke-direct {v2, v1, p1}, Lcom/vtosters/lite/VKApplication$c;-><init>(Lcom/vk/core/preference/crypto/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1, p1}, Lcom/vtosters/lite/VKApplication$c;-><init>(Lcom/vk/core/preference/crypto/EncryptionManager1;Lkotlin/jvm/b/Functions2;)V
 
     invoke-interface {v0, v2}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
     .line 10
-    sget-object p1, Lcom/vk/core/preference/crypto/b;->c:Lcom/vk/core/preference/crypto/b;
+    sget-object p1, Lcom/vk/core/preference/crypto/EncryptedPreference1;->INSTANCE:Lcom/vk/core/preference/crypto/EncryptedPreference1;
 
     sget-object v0, Lcom/vk/core/preference/Preference;->b:Lcom/vk/core/preference/Preference;
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/preference/crypto/b;->a(Lcom/vk/core/preference/Preference;Lcom/vk/core/preference/crypto/d;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/preference/crypto/EncryptedPreference1;->a(Lcom/vk/core/preference/Preference;Lcom/vk/core/preference/crypto/EncryptionManager3;)V
 
     .line 11
-    sget-object p1, Lb/h/q/a;->b:Lb/h/q/a;
+    sget-object p1, Lb/h/q/MetricPrefs;->INSTANCE:Lb/h/q/MetricPrefs;
 
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Lb/h/q/a;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lb/h/q/MetricPrefs;->a(Landroid/content/Context;)V
 
     .line 12
     invoke-direct {p0}, Lcom/vtosters/lite/VKApplication;->t()V
 
     .line 13
-    invoke-static {}, Lcom/vtosters/lite/l0/a;->a()V
+    invoke-static {}, Lcom/vtosters/lite/l0/JobsHelper;->a()V
 
     .line 14
-    invoke-static {}, Lcom/vtosters/lite/l0/a;->b()V
+    invoke-static {}, Lcom/vtosters/lite/l0/JobsHelper;->b()V
 
     .line 15
-    invoke-static {}, Lcom/vk/common/c;->a()V
+    invoke-static {}, Lcom/vk/common/ThemeAppConfigurator;->a()V
 
     .line 16
-    sget-object p1, Lb/h/n/c;->h:Lb/h/n/c;
+    sget-object p1, Lb/h/n/AppLifecycleDispatcher;->INSTANCE:Lb/h/n/AppLifecycleDispatcher;
 
-    invoke-virtual {p1, p0}, Lb/h/n/c;->a(Landroid/app/Application;)V
+    invoke-virtual {p1, p0}, Lb/h/n/AppLifecycleDispatcher;->a(Landroid/app/Application;)V
 
     .line 17
     sget-object p1, Lcom/vk/common/AppStateTracker;->k:Lcom/vk/common/AppStateTracker;
@@ -677,13 +677,13 @@
     invoke-virtual {p1, p0}, Lcom/vk/common/AppStateTracker;->a(Landroid/app/Application;)V
 
     .line 18
-    invoke-static {}, Lb/h/g/g/b;->k()Z
+    invoke-static {}, Lb/h/g/g/BuildInfo;->k()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    invoke-static {}, Lb/h/g/g/b;->i()Z
+    invoke-static {}, Lb/h/g/g/BuildInfo;->i()Z
 
     move-result p1
 
@@ -691,12 +691,12 @@
 
     .line 19
     :cond_0
-    sget-object v0, Lb/h/m/a;->a:Lb/h/m/a;
+    sget-object v0, Lb/h/m/BugtrackerController;->INSTANCE:Lb/h/m/BugtrackerController;
 
     sget-object v2, Lcom/vtosters/lite/VKApplication$initBefore$2;->a:Lcom/vtosters/lite/VKApplication$initBefore$2;
 
     .line 20
-    sget-object v3, Lcom/vtosters/lite/utils/c;->a:Lcom/vtosters/lite/utils/c;
+    sget-object v3, Lcom/vtosters/lite/utils/BugtrackerPermissionHelperImpl;->INSTANCE:Lcom/vtosters/lite/utils/BugtrackerPermissionHelperImpl;
 
     const/4 v4, 0x0
 
@@ -707,18 +707,18 @@
     move-object v1, p0
 
     .line 21
-    invoke-static/range {v0 .. v6}, Lb/h/m/a;->a(Lb/h/m/a;Landroid/app/Application;Lkotlin/jvm/b/a;Lb/h/m/c/a;ZILjava/lang/Object;)V
+    invoke-static/range {v0 .. v6}, Lb/h/m/BugtrackerController;->a(Lb/h/m/BugtrackerController;Landroid/app/Application;Lkotlin/jvm/b/Functions;Lb/h/m/c/BugtrackerPermissionHelper;ZILjava/lang/Object;)V
 
     .line 22
     :cond_1
-    sget-object p1, Lcom/vk/stickers/bridge/g;->c:Lcom/vk/stickers/bridge/g;
+    sget-object p1, Lcom/vk/stickers/bridge/RLottieWrapper;->INSTANCE:Lcom/vk/stickers/bridge/RLottieWrapper;
 
-    invoke-virtual {p1, p0}, Lcom/vk/stickers/bridge/g;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, p0}, Lcom/vk/stickers/bridge/RLottieWrapper;->a(Landroid/content/Context;)V
 
     .line 23
-    sget-object p1, Lcom/vk/stickers/bridge/g;->c:Lcom/vk/stickers/bridge/g;
+    sget-object p1, Lcom/vk/stickers/bridge/RLottieWrapper;->INSTANCE:Lcom/vk/stickers/bridge/RLottieWrapper;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/bridge/g;->c()V
+    invoke-virtual {p1}, Lcom/vk/stickers/bridge/RLottieWrapper;->c()V
 
     .line 24
     invoke-direct {p0}, Lcom/vtosters/lite/VKApplication;->j()V
@@ -736,7 +736,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v2, p1, v1}, Lcom/vk/core/network/Network;->a(ZZLkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v2, p1, v1}, Lcom/vk/core/network/Network;->a(ZZLkotlin/jvm/b/Functions2;)V
 
     if-eqz p1, :cond_0
 
@@ -764,7 +764,7 @@
     invoke-direct {p0}, Lcom/vtosters/lite/VKApplication;->c()V
 
     .line 3
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/vk/medianative/MediaNative;->init(Landroid/content/Context;)V
 
@@ -779,85 +779,85 @@
     .line 6
     new-instance v0, Lcom/vk/reef/ReefFactory;
 
-    new-instance v1, Lcom/vk/reef/e;
+    new-instance v1, Lcom/vk/reef/VkReefApplicationSettings;
 
-    invoke-direct {v1}, Lcom/vk/reef/e;-><init>()V
+    invoke-direct {v1}, Lcom/vk/reef/VkReefApplicationSettings;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/vk/reef/ReefFactory;-><init>(Landroid/app/Application;Lcom/vk/reef/utils/a;)V
+    invoke-direct {v0, p0, v1}, Lcom/vk/reef/ReefFactory;-><init>(Landroid/app/Application;Lcom/vk/reef/utils/ReefApplicationSettings;)V
 
     .line 7
     sget-object v1, Lcom/vtosters/lite/VKApplication$initAfter$1;->a:Lcom/vtosters/lite/VKApplication$initAfter$1;
 
-    invoke-virtual {v0, v1}, Lcom/vk/reef/ReefFactory;->a(Lkotlin/jvm/b/a;)Lcom/vk/reef/ReefFactory;
+    invoke-virtual {v0, v1}, Lcom/vk/reef/ReefFactory;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/reef/ReefFactory;
 
     .line 8
     sget-object v1, Lcom/vtosters/lite/VKApplication$initAfter$2;->a:Lcom/vtosters/lite/VKApplication$initAfter$2;
 
-    invoke-virtual {v0, v1}, Lcom/vk/reef/ReefFactory;->b(Lkotlin/jvm/b/a;)Lcom/vk/reef/ReefFactory;
+    invoke-virtual {v0, v1}, Lcom/vk/reef/ReefFactory;->b(Lkotlin/jvm/b/Functions;)Lcom/vk/reef/ReefFactory;
 
     .line 9
-    new-instance v1, Lcom/vk/reef/f;
+    new-instance v1, Lcom/vk/reef/VkReefClientInfo;
 
-    invoke-direct {v1}, Lcom/vk/reef/f;-><init>()V
+    invoke-direct {v1}, Lcom/vk/reef/VkReefClientInfo;-><init>()V
 
     invoke-virtual {v0, v1}, Lcom/vk/reef/ReefFactory;->a(Lcom/vk/reef/trackers/ReefClientTracker;)Lcom/vk/reef/ReefFactory;
 
-    sput-object v0, Lcom/vigo/metrics/z;->m:Lcom/vk/reef/ReefFactory;
+    sput-object v0, Lcom/vigo/metrics/config;->m:Lcom/vk/reef/ReefFactory;
 
     .line 10
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->i()Lcom/vk/music/common/c$c;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->i()Lcom/vk/music/common/Music$c;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+    invoke-interface {v0}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v0
 
     .line 11
-    sget-object v1, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v1, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    new-instance v2, Lcom/vk/music/n/b;
+    new-instance v2, Lcom/vk/music/n/BoomModelImpl;
 
-    invoke-virtual {v1}, Lcom/vk/music/common/c$a;->f()Lcom/vk/music/restriction/h;
+    invoke-virtual {v1}, Lcom/vk/music/common/Music$a;->f()Lcom/vk/music/restriction/MusicRestrictionManager;
 
     move-result-object v3
 
-    invoke-direct {v2, v0, v3}, Lcom/vk/music/n/b;-><init>(Lcom/vk/music/player/d;Lcom/vk/music/restriction/h;)V
+    invoke-direct {v2, v0, v3}, Lcom/vk/music/n/BoomModelImpl;-><init>(Lcom/vk/music/player/PlayerModel;Lcom/vk/music/restriction/MusicRestrictionManager;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/music/common/c$a;->a(Lcom/vk/music/common/BoomModel;)V
+    invoke-virtual {v1, v2}, Lcom/vk/music/common/Music$a;->a(Lcom/vk/music/common/BoomModel;)V
 
     .line 12
-    sget-object v1, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v1, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v1}, Lcom/vk/music/common/c$a;->g()Lcom/vk/music/restriction/i/a;
+    invoke-virtual {v1}, Lcom/vk/music/common/Music$a;->g()Lcom/vk/music/restriction/i/MusicRestrictionModel;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lcom/vk/music/restriction/i/a;->a(Lcom/vk/music/player/d;)V
+    invoke-interface {v1, v0}, Lcom/vk/music/restriction/i/MusicRestrictionModel;->a(Lcom/vk/music/player/PlayerModel;)V
 
     .line 13
-    sget-object v0, Lcom/vk/music/common/c;->e:Lcom/vk/music/common/c;
+    sget-object v0, Lcom/vk/music/common/Music;->INSTANCE:Lcom/vk/music/common/Music;
 
-    new-instance v1, Lcom/vk/music/a;
+    new-instance v1, Lcom/vk/music/DefaultIntentPlayerHelperFactory;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c;->b()Lcom/vk/music/common/c$d;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lcom/vk/music/common/c$d;->a()Ljava/lang/Class;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music;->b()Lcom/vk/music/common/Music$d;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/vk/music/a;-><init>(Ljava/lang/Class;)V
+    invoke-interface {v2}, Lcom/vk/music/common/Music$d;->a()Ljava/lang/Class;
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/common/c;->a(Lcom/vk/music/common/c$b;)V
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Lcom/vk/music/DefaultIntentPlayerHelperFactory;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v0, v1}, Lcom/vk/music/common/Music;->a(Lcom/vk/music/common/Music$b;)V
 
     .line 14
-    sget-object v0, Lcom/vk/stickers/bridge/g;->c:Lcom/vk/stickers/bridge/g;
+    sget-object v0, Lcom/vk/stickers/bridge/RLottieWrapper;->INSTANCE:Lcom/vk/stickers/bridge/RLottieWrapper;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/bridge/g;->a()V
+    invoke-virtual {v0}, Lcom/vk/stickers/bridge/RLottieWrapper;->a()V
 
     return-void
 .end method
@@ -884,13 +884,13 @@
     invoke-static {p0}, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->a(Landroid/app/Application;)V
 
     .line 3
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {}, Lcom/vtosters/lite/data/o;->i()Lcom/vtosters/lite/data/o;
+    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/content/Context;Lcom/vk/imageloader/f$c;)V
+    invoke-static {v0, v1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/content/Context;Lcom/vk/imageloader/OkHttpNetworkFetcher$c;)V
 
     return-void
 .end method
@@ -919,16 +919,16 @@
     invoke-interface {v0, v1}, Ljava/util/concurrent/ScheduledExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
     .line 3
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vtosters/lite/i0/c;->b(Lb/h/h/d/c;)V
+    invoke-static {v0}, Lcom/vtosters/lite/auth/VKAccountManager;->b(Lcom/vk/auth/api/VKAccount;)V
 
     .line 4
-    sget-object v0, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
+    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->INSTANCE:Lcom/vk/metrics/reporters/PerformanceReporter;
 
-    invoke-virtual {v0, p0}, Lcom/vk/metrics/reporters/a;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p0}, Lcom/vk/metrics/reporters/PerformanceReporter;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -955,7 +955,7 @@
     const/4 v1, 0x1
 
     .line 3
-    invoke-static {v0, v1, v0}, Lcom/vk/utils/AppUtils;->a(Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v0}, Lcom/vk/utils/AppUtils;->a(Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -975,7 +975,7 @@
     .end annotation
 
     .line 2
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
@@ -985,7 +985,7 @@
     const/16 v2, 0xb
 
     .line 4
-    invoke-static {p0, v2, v0, v1}, Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider;->a(Landroid/content/Context;ILcom/vk/im/engine/a;Lkotlin/jvm/b/a;)V
+    invoke-static {p0, v2, v0, v1}, Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider;->a(Landroid/content/Context;ILcom/vk/im/engine/ImEngine;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -1007,7 +1007,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sput-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     .line 3
     sget-object v0, Lcom/vk/core/preference/Preference;->b:Lcom/vk/core/preference/Preference;
@@ -1018,29 +1018,29 @@
 
     const-string v2, "applicationContext"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/core/preference/Preference;->a(Landroid/content/Context;)V
 
     .line 4
-    sget-object v0, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v0, Lcom/vk/core/util/DeviceState;->INSTANCE:Lcom/vk/core/util/DeviceState;
 
     invoke-virtual {p0}, Landroid/app/Application;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/util/v;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/util/DeviceState;->a(Landroid/content/Context;)V
 
     .line 5
-    sget-object v0, Lcom/vk/core/util/p0;->b:Lcom/vk/core/util/p0;
+    sget-object v0, Lcom/vk/core/util/MediaLoadingInfo;->INSTANCE:Lcom/vk/core/util/MediaLoadingInfo;
 
     new-instance v1, Lcom/vtosters/lite/media/MediaLoadingDelegateDefault;
 
     invoke-direct {v1}, Lcom/vtosters/lite/media/MediaLoadingDelegateDefault;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/util/p0;->a(Lcom/vk/core/util/p0$a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/util/MediaLoadingInfo;->a(Lcom/vk/core/util/MediaLoadingInfo$a;)V
 
     const v0, 0x7f121148
 
@@ -1051,7 +1051,7 @@
 
     const-string v1, "getString(R.string.vk_file_provider_authority)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "upload"
 
@@ -1062,7 +1062,7 @@
     const/4 v4, 0x0
 
     .line 7
-    invoke-static {v1, v2, v3, v0, v4}, Lb/h/g/g/b;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-static {v1, v2, v3, v0, v4}, Lb/h/g/g/BuildInfo;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
     .line 8
     invoke-direct {p0}, Lcom/vtosters/lite/VKApplication;->C()Z
@@ -1070,7 +1070,7 @@
     move-result v0
 
     .line 9
-    invoke-static {v0}, Lcom/vk/music/j/a;->g(Z)V
+    invoke-static {v0}, Lcom/vk/music/j/MusicPrefs;->g(Z)V
 
     .line 10
     sget-object v1, Lcom/vk/toggle/FeatureManager;->g:Lcom/vk/toggle/FeatureManager;
@@ -1108,9 +1108,9 @@
     invoke-direct {p0}, Lcom/vtosters/lite/VKApplication;->h()V
 
     .line 14
-    new-instance v1, Lcom/vtosters/lite/utils/m;
+    new-instance v1, Lcom/vtosters/lite/utils/VKCrashHandler;
 
-    invoke-direct {v1}, Lcom/vtosters/lite/utils/m;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/utils/VKCrashHandler;-><init>()V
 
     invoke-static {v1}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
 
@@ -1144,227 +1144,227 @@
     .line 2
     sget-object v0, Lcom/vk/stats/AppUseTime;->f:Lcom/vk/stats/AppUseTime;
 
-    sget-object v1, Lcom/vk/stats/c;->a:Lcom/vk/stats/c;
+    sget-object v1, Lcom/vk/stats/VkParentSectionProvider;->INSTANCE:Lcom/vk/stats/VkParentSectionProvider;
 
     invoke-virtual {v0, v1}, Lcom/vk/stats/AppUseTime;->a(Lcom/vk/stats/AppUseTime$a;)V
 
     .line 3
-    sget-object v0, Lcom/vtosters/lite/bridges/h;->a:Lcom/vtosters/lite/bridges/h;
+    sget-object v0, Lcom/vtosters/lite/bridges/VkAuthBridge;->INSTANCE:Lcom/vtosters/lite/bridges/VkAuthBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/g;->a(Lcom/vk/bridges/f;)V
+    invoke-static {v0}, Lcom/vk/bridges/AuthBridge;->a(Lcom/vk/bridges/AuthBridge3;)V
 
     .line 4
-    sget-object v0, Lcom/vtosters/lite/bridges/a;->a:Lcom/vtosters/lite/bridges/a;
+    sget-object v0, Lcom/vtosters/lite/bridges/CommonAudioBridge;->INSTANCE:Lcom/vtosters/lite/bridges/CommonAudioBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/e;->a(Lcom/vk/bridges/d;)V
+    invoke-static {v0}, Lcom/vk/bridges/AudioBridge;->a(Lcom/vk/bridges/AudioBridge1;)V
 
     .line 5
-    sget-object v0, Lcom/vtosters/lite/bridges/g;->a:Lcom/vtosters/lite/bridges/g;
+    sget-object v0, Lcom/vtosters/lite/bridges/CommonVoipBridge;->INSTANCE:Lcom/vtosters/lite/bridges/CommonVoipBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/n0;->a(Lcom/vk/bridges/m0;)V
+    invoke-static {v0}, Lcom/vk/bridges/VoipBridge1;->a(Lcom/vk/bridges/VoipBridge;)V
 
     .line 6
-    sget-object v0, Lcom/vtosters/lite/bridges/m;->a:Lcom/vtosters/lite/bridges/m;
+    sget-object v0, Lcom/vtosters/lite/bridges/VkUsersBridge;->INSTANCE:Lcom/vtosters/lite/bridges/VkUsersBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/j0;->a(Lcom/vk/bridges/i0;)V
+    invoke-static {v0}, Lcom/vk/bridges/UsersBridge1;->a(Lcom/vk/bridges/UsersBridge;)V
 
     .line 7
-    sget-object v0, Lcom/vtosters/lite/bridges/d;->a:Lcom/vtosters/lite/bridges/d;
+    sget-object v0, Lcom/vtosters/lite/bridges/CommonFriendsBridge;->INSTANCE:Lcom/vtosters/lite/bridges/CommonFriendsBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/m;->a(Lcom/vk/bridges/l;)V
+    invoke-static {v0}, Lcom/vk/bridges/FriendsBridge;->a(Lcom/vk/bridges/FriendsBridge1;)V
 
     .line 8
-    sget-object v0, Lcom/vtosters/lite/bridges/k;->a:Lcom/vtosters/lite/bridges/k;
+    sget-object v0, Lcom/vtosters/lite/bridges/VkSharingBridge;->INSTANCE:Lcom/vtosters/lite/bridges/VkSharingBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/a0;->a(Lcom/vk/bridges/z;)V
+    invoke-static {v0}, Lcom/vk/bridges/SharingBridge;->a(Lcom/vk/bridges/SharingBridge1;)V
 
     .line 9
-    sget-object v0, Lcom/vtosters/lite/bridges/b;->a:Lcom/vtosters/lite/bridges/b;
+    sget-object v0, Lcom/vtosters/lite/bridges/CommonBenchmarkBridge;->INSTANCE:Lcom/vtosters/lite/bridges/CommonBenchmarkBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/i;->a(Lcom/vk/bridges/h;)V
+    invoke-static {v0}, Lcom/vk/bridges/BenchmarkBridge;->a(Lcom/vk/bridges/BenchmarkBridge1;)V
 
     .line 10
-    sget-object v0, Lcom/vtosters/lite/bridges/c;->a:Lcom/vtosters/lite/bridges/c;
+    sget-object v0, Lcom/vtosters/lite/bridges/CommonErrorsBridge;->INSTANCE:Lcom/vtosters/lite/bridges/CommonErrorsBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/k;->a(Lcom/vk/bridges/j;)V
+    invoke-static {v0}, Lcom/vk/bridges/ErrorsBridge;->a(Lcom/vk/bridges/ErrorsBridge1;)V
 
     .line 11
-    sget-object v0, Lcom/vtosters/lite/bridges/f;->a:Lcom/vtosters/lite/bridges/f;
+    sget-object v0, Lcom/vtosters/lite/bridges/CommonUploadBridge;->INSTANCE:Lcom/vtosters/lite/bridges/CommonUploadBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/h0;->a(Lcom/vk/bridges/g0;)V
+    invoke-static {v0}, Lcom/vk/bridges/UploadBridge;->a(Lcom/vk/bridges/UploadBridge1;)V
 
     .line 12
-    sget-object v0, Lcom/vk/pushes/h;->a:Lcom/vk/pushes/h;
+    sget-object v0, Lcom/vk/pushes/VkPushBridge;->INSTANCE:Lcom/vk/pushes/VkPushBridge;
 
-    invoke-static {v0}, Lcom/vk/pushes/f;->a(Lcom/vk/pushes/e;)V
+    invoke-static {v0}, Lcom/vk/pushes/PushBridge1;->a(Lcom/vk/pushes/PushBridge;)V
 
     .line 13
-    sget-object v0, Lcom/vtosters/lite/bridges/j;->a:Lcom/vtosters/lite/bridges/j;
+    sget-object v0, Lcom/vtosters/lite/bridges/VkPostsBridge;->INSTANCE:Lcom/vtosters/lite/bridges/VkPostsBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/x;->a(Lcom/vk/bridges/w;)V
+    invoke-static {v0}, Lcom/vk/bridges/PostsBridge1;->a(Lcom/vk/bridges/PostsBridge2;)V
 
     .line 14
     sget-object v0, Lcom/vtosters/lite/bridges/CommonImageViewer;->a:Lcom/vtosters/lite/bridges/CommonImageViewer;
 
-    invoke-static {v0}, Lcom/vk/bridges/q;->a(Lcom/vk/bridges/p;)V
+    invoke-static {v0}, Lcom/vk/bridges/ImageViewer1;->a(Lcom/vk/bridges/ImageViewer;)V
 
     .line 15
     sget-object v0, Lcom/vtosters/lite/bridges/VkVideoBridge;->e:Lcom/vtosters/lite/bridges/VkVideoBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/l0;->a(Lcom/vk/bridges/k0;)V
+    invoke-static {v0}, Lcom/vk/bridges/VideoBridge;->a(Lcom/vk/bridges/VideoBridge1;)V
 
     .line 16
     sget-object v0, Lcom/vtosters/lite/actionlinks/VKActionLinksBridge;->b:Lcom/vtosters/lite/actionlinks/VKActionLinksBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/c;->a(Lcom/vk/bridges/b;)V
+    invoke-static {v0}, Lcom/vk/bridges/ActionLinksBridge;->a(Lcom/vk/bridges/ActionLinksBridge1;)V
 
     .line 17
-    sget-object v0, Lb/h/d/a;->a:Lb/h/d/a;
+    sget-object v0, Lb/h/d/VkLinksBridge;->INSTANCE:Lb/h/d/VkLinksBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/s;->a(Lcom/vk/bridges/r;)V
+    invoke-static {v0}, Lcom/vk/bridges/LinksBridge1;->a(Lcom/vk/bridges/LinksBridge;)V
 
     .line 18
-    sget-object v0, Lcom/vtosters/lite/bridges/l;->a:Lcom/vtosters/lite/bridges/l;
+    sget-object v0, Lcom/vtosters/lite/bridges/VkStatisticsBridge;->INSTANCE:Lcom/vtosters/lite/bridges/VkStatisticsBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/c0;->a(Lcom/vk/bridges/b0;)V
+    invoke-static {v0}, Lcom/vk/bridges/StatisticsBridge1;->a(Lcom/vk/bridges/StatisticsBridge;)V
 
     .line 19
-    sget-object v0, Lcom/vtosters/lite/bridges/i;->a:Lcom/vtosters/lite/bridges/i;
+    sget-object v0, Lcom/vtosters/lite/bridges/VkNetworkBridge;->INSTANCE:Lcom/vtosters/lite/bridges/VkNetworkBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/v;->a(Lcom/vk/bridges/u;)V
+    invoke-static {v0}, Lcom/vk/bridges/NetworkBridge;->a(Lcom/vk/bridges/NetworkBridge1;)V
 
     .line 20
     sget-object v0, Lcom/vtosters/lite/bridges/CommonStoriesBridge;->e:Lcom/vtosters/lite/bridges/CommonStoriesBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/e0;->a(Lcom/vk/bridges/d0;)V
+    invoke-static {v0}, Lcom/vk/bridges/StoriesBridge1;->a(Lcom/vk/bridges/StoriesBridge;)V
 
     .line 21
-    sget-object v0, Lcom/vk/stickers/bridge/d;->a:Lcom/vk/stickers/bridge/d;
+    sget-object v0, Lcom/vk/stickers/bridge/CommonStickersBridge;->INSTANCE:Lcom/vk/stickers/bridge/CommonStickersBridge;
 
-    invoke-static {v0}, Lcom/vk/stickers/bridge/l;->a(Lcom/vk/stickers/bridge/k;)V
+    invoke-static {v0}, Lcom/vk/stickers/bridge/StickersBridge4;->a(Lcom/vk/stickers/bridge/StickersBridge;)V
 
     .line 22
-    sget-object v0, Lcom/vtosters/lite/bridges/e;->a:Lcom/vtosters/lite/bridges/e;
+    sget-object v0, Lcom/vtosters/lite/bridges/CommonGroupsBridge;->INSTANCE:Lcom/vtosters/lite/bridges/CommonGroupsBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/o;->a(Lcom/vk/bridges/n;)V
+    invoke-static {v0}, Lcom/vk/bridges/GroupsBridge;->a(Lcom/vk/bridges/GroupsBridge1;)V
 
     .line 23
-    sget-object v0, Lcom/vk/auth/internal/a;->d:Lcom/vk/auth/internal/a;
+    sget-object v0, Lcom/vk/auth/internal/AuthLibBridge;->INSTANCE:Lcom/vk/auth/internal/AuthLibBridge;
 
-    new-instance v1, Lcom/vk/auth/q;
+    new-instance v1, Lcom/vk/auth/VkSignUpModel;
 
     sget-object v2, Lcom/vtosters/lite/VKApplication$initBridges$1;->a:Lcom/vtosters/lite/VKApplication$initBridges$1;
 
-    invoke-direct {v1, p0, v2}, Lcom/vk/auth/q;-><init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p0, v2}, Lcom/vk/auth/VkSignUpModel;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/auth/internal/a;->a(Lcom/vk/auth/main/s;)V
+    invoke-virtual {v0, v1}, Lcom/vk/auth/internal/AuthLibBridge;->a(Lcom/vk/auth/main/SignUpModel;)V
 
     .line 24
-    sget-object v0, Lcom/vk/auth/internal/a;->d:Lcom/vk/auth/internal/a;
+    sget-object v0, Lcom/vk/auth/internal/AuthLibBridge;->INSTANCE:Lcom/vk/auth/internal/AuthLibBridge;
 
-    sget-object v1, Lb/h/a0/a;->b:Lb/h/a0/a;
+    sget-object v1, Lb/h/a0/UsersStoreContentResolver;->INSTANCE:Lb/h/a0/UsersStoreContentResolver;
 
-    invoke-virtual {v0, v1}, Lcom/vk/auth/internal/a;->a(Lcom/vk/auth/main/x;)V
+    invoke-virtual {v0, v1}, Lcom/vk/auth/internal/AuthLibBridge;->a(Lcom/vk/auth/main/UsersStore;)V
 
     .line 25
-    sget-object v0, Lcom/vk/auth/internal/a;->d:Lcom/vk/auth/internal/a;
+    sget-object v0, Lcom/vk/auth/internal/AuthLibBridge;->INSTANCE:Lcom/vk/auth/internal/AuthLibBridge;
 
-    new-instance v1, Lcom/vk/auth/j;
+    new-instance v1, Lcom/vk/auth/DefaultTrustedHashProvider;
 
     const/4 v2, 0x0
 
     const/4 v3, 0x3
 
-    invoke-direct {v1, v2, v2, v3, v2}, Lcom/vk/auth/j;-><init>(Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v2, v2, v3, v2}, Lcom/vk/auth/DefaultTrustedHashProvider;-><init>(Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/auth/internal/a;->a(Lcom/vk/auth/main/v;)V
+    invoke-virtual {v0, v1}, Lcom/vk/auth/internal/AuthLibBridge;->a(Lcom/vk/auth/main/TrustedHashProvider;)V
 
     .line 26
     new-instance v0, Lcom/vk/music/stats/MusicStats;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v2, v1, v2}, Lcom/vk/music/stats/MusicStats;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v2, v1, v2}, Lcom/vk/music/stats/MusicStats;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 27
-    sget-object v1, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v1, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/music/common/c$a;->a(Lcom/vk/music/stats/d;)V
+    invoke-virtual {v1, v0}, Lcom/vk/music/common/Music$a;->a(Lcom/vk/music/stats/MusicStatsTracker;)V
 
     .line 28
-    sget-object v1, Lcom/vk/music/common/c;->e:Lcom/vk/music/common/c;
+    sget-object v1, Lcom/vk/music/common/Music;->INSTANCE:Lcom/vk/music/common/Music;
 
-    new-instance v3, Lcom/vk/music/b;
+    new-instance v3, Lcom/vk/music/DefaultPlayerServiceFactory;
 
-    invoke-direct {v3}, Lcom/vk/music/b;-><init>()V
+    invoke-direct {v3}, Lcom/vk/music/DefaultPlayerServiceFactory;-><init>()V
 
-    invoke-virtual {v1, v3}, Lcom/vk/music/common/c;->a(Lcom/vk/music/common/c$d;)V
+    invoke-virtual {v1, v3}, Lcom/vk/music/common/Music;->a(Lcom/vk/music/common/Music$d;)V
 
     .line 29
-    sget-object v1, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v1, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
     new-instance v3, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;
 
-    invoke-direct {v3, v0}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;-><init>(Lcom/vk/music/stats/d;)V
+    invoke-direct {v3, v0}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;-><init>(Lcom/vk/music/stats/MusicStatsTracker;)V
 
-    invoke-virtual {v1, v3}, Lcom/vk/music/common/c$a;->a(Lcom/vk/music/restriction/h;)V
+    invoke-virtual {v1, v3}, Lcom/vk/music/common/Music$a;->a(Lcom/vk/music/restriction/MusicRestrictionManager;)V
 
     .line 30
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    new-instance v1, Lcom/vk/music/notifications/restriction/a;
+    new-instance v1, Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->f()Lcom/vk/music/restriction/h;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->f()Lcom/vk/music/restriction/MusicRestrictionManager;
 
     move-result-object v3
 
     const/4 v4, 0x0
 
-    invoke-direct {v1, v3, v4}, Lcom/vk/music/notifications/restriction/a;-><init>(Lcom/vk/music/restriction/h;Z)V
+    invoke-direct {v1, v3, v4}, Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl;-><init>(Lcom/vk/music/restriction/MusicRestrictionManager;Z)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/common/c$a;->a(Lcom/vk/music/restriction/i/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/common/Music$a;->a(Lcom/vk/music/restriction/i/MusicRestrictionModel;)V
 
     .line 31
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
     sget-object v1, Lcom/vtosters/lite/VKApplication$initBridges$2;->a:Lcom/vtosters/lite/VKApplication$initBridges$2;
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/common/c$a;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/common/Music$a;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 32
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    new-instance v1, Lcom/vk/music/broadcast/a;
+    new-instance v1, Lcom/vk/music/broadcast/MusicBroadcastManager;
 
-    invoke-direct {v1}, Lcom/vk/music/broadcast/a;-><init>()V
+    invoke-direct {v1}, Lcom/vk/music/broadcast/MusicBroadcastManager;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/common/c$a;->a(Lcom/vk/music/broadcast/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/common/Music$a;->a(Lcom/vk/music/broadcast/MusicBroadcastManager;)V
 
     .line 33
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
     new-instance v1, Lcom/vk/music/notification/MusicNotificationManagerProvider;
 
     .line 34
-    invoke-static {}, Lcom/vk/music/common/c$e;->a()Lcom/vk/music/l/a;
+    invoke-static {}, Lcom/vk/music/common/Music$e;->a()Lcom/vk/music/l/ModernMusicTrackModel;
 
     move-result-object v3
 
     .line 35
-    new-instance v4, Lcom/vk/audioipc/communication/j;
+    new-instance v4, Lcom/vk/audioipc/communication/IpcIntentPlayerHelper;
 
     const-class v5, Lcom/vk/audioipc/communication/AudioService;
 
     const/4 v6, 0x2
 
-    invoke-direct {v4, v5, v2, v6, v2}, Lcom/vk/audioipc/communication/j;-><init>(Ljava/lang/Class;Lcom/vk/audioipc/core/m;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v4, v5, v2, v6, v2}, Lcom/vk/audioipc/communication/IpcIntentPlayerHelper;-><init>(Ljava/lang/Class;Lcom/vk/audioipc/core/SerializeManager;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-string v2, "music_player_group"
 
     .line 36
-    invoke-direct {v1, v6, v2, v4, v3}, Lcom/vk/music/notification/MusicNotificationManagerProvider;-><init>(ILjava/lang/String;Lcom/vk/music/n/e;Lcom/vk/music/l/a;)V
+    invoke-direct {v1, v6, v2, v4, v3}, Lcom/vk/music/notification/MusicNotificationManagerProvider;-><init>(ILjava/lang/String;Lcom/vk/music/n/IntentPlayerHelper;Lcom/vk/music/l/ModernMusicTrackModel;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/common/c$a;->a(Lcom/vk/music/notification/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/common/Music$a;->a(Lcom/vk/music/notification/MusicNotificationManager;)V
 
     return-void
 .end method
@@ -1382,23 +1382,23 @@
     .locals 4
 
     .line 2
-    new-instance v0, Lcom/vk/audioipc/core/p/a;
+    new-instance v0, Lcom/vk/audioipc/core/p/AudioServiceAuthBridge;
 
-    sget-object v1, Lcom/vtosters/lite/bridges/h;->a:Lcom/vtosters/lite/bridges/h;
+    sget-object v1, Lcom/vtosters/lite/bridges/VkAuthBridge;->INSTANCE:Lcom/vtosters/lite/bridges/VkAuthBridge;
 
-    invoke-direct {v0, v1}, Lcom/vk/audioipc/core/p/a;-><init>(Lcom/vk/bridges/f;)V
+    invoke-direct {v0, v1}, Lcom/vk/audioipc/core/p/AudioServiceAuthBridge;-><init>(Lcom/vk/bridges/AuthBridge3;)V
 
-    invoke-static {v0}, Lcom/vk/bridges/g;->a(Lcom/vk/bridges/f;)V
+    invoke-static {v0}, Lcom/vk/bridges/AuthBridge;->a(Lcom/vk/bridges/AuthBridge3;)V
 
     .line 3
-    sget-object v0, Lcom/vtosters/lite/bridges/a;->a:Lcom/vtosters/lite/bridges/a;
+    sget-object v0, Lcom/vtosters/lite/bridges/CommonAudioBridge;->INSTANCE:Lcom/vtosters/lite/bridges/CommonAudioBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/e;->a(Lcom/vk/bridges/d;)V
+    invoke-static {v0}, Lcom/vk/bridges/AudioBridge;->a(Lcom/vk/bridges/AudioBridge1;)V
 
     .line 4
-    sget-object v0, Lcom/vtosters/lite/bridges/e;->a:Lcom/vtosters/lite/bridges/e;
+    sget-object v0, Lcom/vtosters/lite/bridges/CommonGroupsBridge;->INSTANCE:Lcom/vtosters/lite/bridges/CommonGroupsBridge;
 
-    invoke-static {v0}, Lcom/vk/bridges/o;->a(Lcom/vk/bridges/n;)V
+    invoke-static {v0}, Lcom/vk/bridges/GroupsBridge;->a(Lcom/vk/bridges/GroupsBridge1;)V
 
     .line 5
     new-instance v0, Lcom/vk/music/stats/MusicStats;
@@ -1407,68 +1407,68 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, v1, v2}, Lcom/vk/music/stats/MusicStats;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v2, v1, v2}, Lcom/vk/music/stats/MusicStats;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 6
-    sget-object v2, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v2, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v2, v0}, Lcom/vk/music/common/c$a;->a(Lcom/vk/music/stats/d;)V
+    invoke-virtual {v2, v0}, Lcom/vk/music/common/Music$a;->a(Lcom/vk/music/stats/MusicStatsTracker;)V
 
     .line 7
-    sget-object v2, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v2, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    new-instance v3, Lcom/vk/music/model/r;
+    new-instance v3, Lcom/vk/music/model/OldPlayerModelFactory;
 
-    invoke-direct {v3}, Lcom/vk/music/model/r;-><init>()V
+    invoke-direct {v3}, Lcom/vk/music/model/OldPlayerModelFactory;-><init>()V
 
-    invoke-virtual {v2, v3}, Lcom/vk/music/common/c$a;->a(Lcom/vk/music/common/c$c;)V
+    invoke-virtual {v2, v3}, Lcom/vk/music/common/Music$a;->a(Lcom/vk/music/common/Music$c;)V
 
     .line 8
-    sget-object v2, Lcom/vk/music/common/c;->e:Lcom/vk/music/common/c;
+    sget-object v2, Lcom/vk/music/common/Music;->INSTANCE:Lcom/vk/music/common/Music;
 
-    new-instance v3, Lcom/vk/music/b;
+    new-instance v3, Lcom/vk/music/DefaultPlayerServiceFactory;
 
-    invoke-direct {v3}, Lcom/vk/music/b;-><init>()V
+    invoke-direct {v3}, Lcom/vk/music/DefaultPlayerServiceFactory;-><init>()V
 
-    invoke-virtual {v2, v3}, Lcom/vk/music/common/c;->a(Lcom/vk/music/common/c$d;)V
+    invoke-virtual {v2, v3}, Lcom/vk/music/common/Music;->a(Lcom/vk/music/common/Music$d;)V
 
     .line 9
-    sget-object v2, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v2, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
     new-instance v3, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;
 
-    invoke-direct {v3, v0}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;-><init>(Lcom/vk/music/stats/d;)V
+    invoke-direct {v3, v0}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;-><init>(Lcom/vk/music/stats/MusicStatsTracker;)V
 
-    invoke-virtual {v2, v3}, Lcom/vk/music/common/c$a;->a(Lcom/vk/music/restriction/h;)V
+    invoke-virtual {v2, v3}, Lcom/vk/music/common/Music$a;->a(Lcom/vk/music/restriction/MusicRestrictionManager;)V
 
     .line 10
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    new-instance v2, Lcom/vk/music/notifications/restriction/a;
+    new-instance v2, Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->f()Lcom/vk/music/restriction/h;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->f()Lcom/vk/music/restriction/MusicRestrictionManager;
 
     move-result-object v3
 
-    invoke-direct {v2, v3, v1}, Lcom/vk/music/notifications/restriction/a;-><init>(Lcom/vk/music/restriction/h;Z)V
+    invoke-direct {v2, v3, v1}, Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl;-><init>(Lcom/vk/music/restriction/MusicRestrictionManager;Z)V
 
-    invoke-virtual {v0, v2}, Lcom/vk/music/common/c$a;->a(Lcom/vk/music/restriction/i/a;)V
+    invoke-virtual {v0, v2}, Lcom/vk/music/common/Music$a;->a(Lcom/vk/music/restriction/i/MusicRestrictionModel;)V
 
     .line 11
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
     sget-object v1, Lcom/vtosters/lite/VKApplication$initBridgesForMusicProcess$1;->a:Lcom/vtosters/lite/VKApplication$initBridgesForMusicProcess$1;
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/common/c$a;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/common/Music$a;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 12
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    new-instance v1, Lcom/vk/music/broadcast/a;
+    new-instance v1, Lcom/vk/music/broadcast/MusicBroadcastManager;
 
-    invoke-direct {v1}, Lcom/vk/music/broadcast/a;-><init>()V
+    invoke-direct {v1}, Lcom/vk/music/broadcast/MusicBroadcastManager;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/common/c$a;->a(Lcom/vk/music/broadcast/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/common/Music$a;->a(Lcom/vk/music/broadcast/MusicBroadcastManager;)V
 
     return-void
 .end method
@@ -1488,29 +1488,29 @@
     .line 2
     sget-object v0, Lcom/vk/catalog2/core/CatalogRegistry;->f:Lcom/vk/catalog2/core/CatalogRegistry;
 
-    new-instance v1, Lb/h/e/b;
+    new-instance v1, Lb/h/e/VkCatalogFactory;
 
-    invoke-direct {v1}, Lb/h/e/b;-><init>()V
+    invoke-direct {v1}, Lb/h/e/VkCatalogFactory;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/catalog2/core/CatalogRegistry;->a(Lb/h/f/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/catalog2/core/CatalogRegistry;->a(Lb/h/f/CatalogConfigurationFactory;)V
 
     .line 3
     sget-object v0, Lcom/vk/catalog2/core/CatalogRegistry;->f:Lcom/vk/catalog2/core/CatalogRegistry;
 
-    new-instance v1, Lb/h/e/a;
+    new-instance v1, Lb/h/e/VkCatalogEntryPointParamsFactory;
 
-    invoke-direct {v1}, Lb/h/e/a;-><init>()V
+    invoke-direct {v1}, Lb/h/e/VkCatalogEntryPointParamsFactory;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/catalog2/core/CatalogRegistry;->a(Lcom/vk/catalog2/core/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/catalog2/core/CatalogRegistry;->a(Lcom/vk/catalog2/core/CatalogEntryPointFactory;)V
 
     .line 4
     sget-object v0, Lcom/vk/catalog2/core/CatalogRegistry;->f:Lcom/vk/catalog2/core/CatalogRegistry;
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/CatalogRegistry;->c()Lcom/vk/catalog2/core/events/common/b;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/CatalogRegistry;->c()Lcom/vk/catalog2/core/events/common/VkCatalogExternalEventsCompositeAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/events/common/b;->b()V
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/events/common/VkCatalogExternalEventsCompositeAdapter;->b()V
 
     return-void
 .end method
@@ -1534,7 +1534,7 @@
 
     const-string v1, "resources"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -1542,7 +1542,7 @@
 
     const-string v1, "resources.configuration"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v0}, Lcom/vtosters/lite/VKApplication;->a(Landroid/content/res/Configuration;)V
 
@@ -1565,9 +1565,9 @@
     .locals 3
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/a1;->a:Lcom/vk/core/util/a1;
+    sget-object v0, Lcom/vk/core/util/StrictModeHelper;->INSTANCE:Lcom/vk/core/util/StrictModeHelper;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/a1;->a()V
+    invoke-virtual {v0}, Lcom/vk/core/util/StrictModeHelper;->a()V
 
     .line 3
     invoke-static {}, Lcom/vk/core/preference/Preference;->a()Landroid/content/SharedPreferences;
@@ -1606,13 +1606,13 @@
     .end annotation
 
     .line 2
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/emoji/b;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/emoji/Emoji;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -1696,7 +1696,7 @@
     :cond_0
     const-string v5, "prefs.getString(Settings\u2026TWORK_EXECUTOR, \"\") ?: \"\""
 
-    invoke-static {v1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     sget-object v5, Lcom/vk/httpexecutor/core/HttpRequestExecutorType;->Companion:Lcom/vk/httpexecutor/core/HttpRequestExecutorType$a;
@@ -1712,7 +1712,7 @@
     move-result-object v5
 
     .line 7
-    invoke-static {v1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1798,17 +1798,17 @@
     new-instance v12, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;
 
     .line 15
-    new-instance v1, Lcom/vk/core/network/utils/d;
+    new-instance v1, Lcom/vk/core/network/utils/NetworkUserAgent;
 
-    invoke-direct {v1}, Lcom/vk/core/network/utils/d;-><init>()V
+    invoke-direct {v1}, Lcom/vk/core/network/utils/NetworkUserAgent;-><init>()V
 
-    invoke-virtual {v1}, Lcom/vk/core/network/utils/d;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/core/network/utils/NetworkUserAgent;->a()Ljava/lang/String;
 
     move-result-object v5
 
     const-string v1, "NetworkUserAgent().userAgent()"
 
-    invoke-static {v5, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 16
     new-instance v6, Lcom/vtosters/lite/VKApplication$initHttpRequestExecutor$config$1;
@@ -1838,7 +1838,7 @@
     move-object v2, p0
 
     .line 21
-    invoke-direct/range {v1 .. v10}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;-><init>(Landroid/content/Context;Ljava/io/File;Ljava/io/File;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Ljava/util/concurrent/ExecutorService;)V
+    invoke-direct/range {v1 .. v10}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;-><init>(Landroid/content/Context;Ljava/io/File;Ljava/io/File;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Ljava/util/concurrent/ExecutorService;)V
 
     .line 22
     sget-object v1, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->b:Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;
@@ -1867,11 +1867,11 @@
     :try_start_2
     sget-object v2, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->b:Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;
 
-    invoke-virtual {v2}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->a()Lcom/vk/httpexecutor/api/g;
+    invoke-virtual {v2}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->a()Lcom/vk/httpexecutor/api/HttpRequestExecutor;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/httpexecutor/api/g;->P()Ljava/io/File;
+    invoke-interface {v2}, Lcom/vk/httpexecutor/api/HttpRequestExecutor;->P()Ljava/io/File;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
@@ -1913,7 +1913,7 @@
     .line 29
     :cond_4
     :goto_2
-    sget-object v0, Lcom/vk/api/internal/d;->d:Lcom/vk/api/internal/d;
+    sget-object v0, Lcom/vk/api/internal/HttpRequestExecutorHelper;->INSTANCE:Lcom/vk/api/internal/HttpRequestExecutorHelper;
 
     .line 30
     sget-object v1, Lcom/vtosters/lite/VKApplication$initHttpRequestExecutor$1;->a:Lcom/vtosters/lite/VKApplication$initHttpRequestExecutor$1;
@@ -1925,7 +1925,7 @@
     sget-object v3, Lcom/vtosters/lite/VKApplication$initHttpRequestExecutor$3;->a:Lcom/vtosters/lite/VKApplication$initHttpRequestExecutor$3;
 
     .line 33
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/api/internal/d;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/api/internal/HttpRequestExecutorHelper;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -1980,48 +1980,48 @@
     invoke-virtual {v0}, Lcom/vk/im/ui/ImUiPrefs;->j()V
 
     .line 3
-    new-instance v6, Lcom/vk/im/engine/reporters/k;
+    new-instance v6, Lcom/vk/im/engine/reporters/ImReporters;
 
     sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-direct {v6, v0, v1}, Lcom/vk/im/engine/reporters/k;-><init>(Lcom/vk/metrics/eventtracking/c;Lcom/vk/bridges/f;)V
+    invoke-direct {v6, v0, v1}, Lcom/vk/im/engine/reporters/ImReporters;-><init>(Lcom/vk/metrics/eventtracking/Tracker;Lcom/vk/bridges/AuthBridge3;)V
 
     .line 4
     sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->j:Lcom/vtosters/lite/im/ImEngineProvider;
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-virtual {v0, p0, v6, v1}, Lcom/vtosters/lite/im/ImEngineProvider;->a(Landroid/content/Context;Lcom/vk/im/engine/reporters/k;Lcom/vk/bridges/f;)Lcom/vk/im/engine/ImConfig;
+    invoke-virtual {v0, p0, v6, v1}, Lcom/vtosters/lite/im/ImEngineProvider;->a(Landroid/content/Context;Lcom/vk/im/engine/reporters/ImReporters;Lcom/vk/bridges/AuthBridge3;)Lcom/vk/im/engine/ImConfig;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/im/ImEngineProvider;->a(Lcom/vk/im/engine/ImConfig;)Lcom/vk/im/engine/a;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/im/ImEngineProvider;->a(Lcom/vk/im/engine/ImConfig;)Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/im/engine/c;->a(Lcom/vk/im/engine/a;)V
+    invoke-static {v0}, Lcom/vk/im/engine/ImEngine1;->a(Lcom/vk/im/engine/ImEngine;)V
 
     .line 5
-    new-instance v0, Lcom/vtosters/lite/im/bridge/d;
+    new-instance v0, Lcom/vtosters/lite/im/bridge/VkAppImBridge;
 
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/bridge/d;-><init>(Lcom/vk/im/engine/a;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/bridge/VkAppImBridge;-><init>(Lcom/vk/im/engine/ImEngine;)V
 
     .line 6
     new-instance v9, Lcom/vk/im/ui/ImUiModule;
 
-    sget-object v3, Lb/h/n/c;->h:Lb/h/n/c;
+    sget-object v3, Lb/h/n/AppLifecycleDispatcher;->INSTANCE:Lb/h/n/AppLifecycleDispatcher;
 
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v4
 
@@ -2031,19 +2031,19 @@
     .line 8
     new-instance v8, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer$a;
 
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/a;->f()Lcom/vk/im/engine/models/f;
+    invoke-virtual {v1}, Lcom/vk/im/engine/ImEngine;->f()Lcom/vk/im/engine/models/ImExperimentsProvider;
 
     move-result-object v1
 
     const-string v2, "imEngine.experimentsProvider"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v8, v1}, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer$a;-><init>(Lcom/vk/im/engine/models/f;)V
+    invoke-direct {v8, v1}, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer$a;-><init>(Lcom/vk/im/engine/models/ImExperimentsProvider;)V
 
     move-object v1, v9
 
@@ -2052,12 +2052,12 @@
     move-object v5, v0
 
     .line 9
-    invoke-direct/range {v1 .. v8}, Lcom/vk/im/ui/ImUiModule;-><init>(Landroid/content/Context;Lb/h/n/c;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/im/engine/reporters/k;Lcom/vk/core/ui/themes/VKThemeHelper;Lcom/vk/im/ui/q/h/b$b;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/im/ui/ImUiModule;-><init>(Landroid/content/Context;Lb/h/n/AppLifecycleDispatcher;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/engine/reporters/ImReporters;Lcom/vk/core/ui/themes/VKThemeHelper;Lcom/vk/im/ui/q/h/VideoAutoPlayer$b;)V
 
-    invoke-static {v9}, Lcom/vk/im/ui/a;->a(Lcom/vk/im/ui/ImUiModule;)V
+    invoke-static {v9}, Lcom/vk/im/ui/ImUiModule1;->a(Lcom/vk/im/ui/ImUiModule;)V
 
     .line 10
-    invoke-static {v0}, Lcom/vk/im/ui/p/c;->a(Lcom/vk/im/ui/p/b;)V
+    invoke-static {v0}, Lcom/vk/im/ui/p/ImBridge7;->a(Lcom/vk/im/ui/p/ImBridge8;)V
 
     .line 11
     invoke-direct {p0, p0}, Lcom/vtosters/lite/VKApplication;->a(Landroid/content/Context;)V
@@ -2071,7 +2071,7 @@
     invoke-direct {p0}, Lcom/vtosters/lite/VKApplication;->q()V
 
     .line 14
-    sget-object v0, Lcom/vk/pushes/g;->e:Lcom/vk/pushes/g;
+    sget-object v0, Lcom/vk/pushes/PushSubscriber;->INSTANCE:Lcom/vk/pushes/PushSubscriber;
 
     const/4 v1, 0x0
 
@@ -2079,7 +2079,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/pushes/g;->a(Lcom/vk/pushes/g;ZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/pushes/PushSubscriber;->a(Lcom/vk/pushes/PushSubscriber;ZILjava/lang/Object;)V
 
     .line 15
     invoke-direct {p0}, Lcom/vtosters/lite/VKApplication;->G()V
@@ -2095,7 +2095,7 @@
     sget-object v1, Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;->l:Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;
 
     .line 18
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v2
 
@@ -2105,7 +2105,7 @@
     invoke-direct {v3, v0}, Lcom/vtosters/lite/VKApplication$initMessenger$1;-><init>(Ljava/util/List;)V
 
     .line 20
-    invoke-virtual {v1, p0, v2, v3}, Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;->a(Landroid/content/Context;Lcom/vk/im/engine/a;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v1, p0, v2, v3}, Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;->a(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -2123,74 +2123,74 @@
     .locals 15
 
     .line 2
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     .line 3
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->f()Lcom/vk/music/restriction/h;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->f()Lcom/vk/music/restriction/MusicRestrictionManager;
 
     move-result-object v12
 
     .line 4
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->g()Lcom/vk/music/restriction/i/a;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->g()Lcom/vk/music/restriction/i/MusicRestrictionModel;
 
     move-result-object v4
 
     .line 5
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->e()Lcom/vk/music/notification/c;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->e()Lcom/vk/music/notification/MusicNotificationManager;
 
     move-result-object v6
 
     .line 6
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->c()Lcom/vk/music/broadcast/a;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->c()Lcom/vk/music/broadcast/MusicBroadcastManager;
 
     move-result-object v0
 
     .line 7
-    invoke-static {}, Lcom/vk/core/util/u;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/core/util/DeviceIdProvider;->b()Ljava/lang/String;
 
     move-result-object v8
 
     .line 8
-    sget-object v2, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v2, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v2}, Lcom/vk/music/common/c$a;->h()Lcom/vk/music/stats/d;
+    invoke-virtual {v2}, Lcom/vk/music/common/Music$a;->h()Lcom/vk/music/stats/MusicStatsTracker;
 
     move-result-object v3
 
     .line 9
-    new-instance v2, Lcom/vtosters/lite/audio/player/j;
+    new-instance v2, Lcom/vtosters/lite/audio/player/BaseAppStateProvider;
 
-    invoke-direct {v2}, Lcom/vtosters/lite/audio/player/j;-><init>()V
+    invoke-direct {v2}, Lcom/vtosters/lite/audio/player/BaseAppStateProvider;-><init>()V
 
     const/4 v5, 0x2
 
-    new-array v5, v5, [Lcom/vk/audioipc/core/q/a;
+    new-array v5, v5, [Lcom/vk/audioipc/core/q/BaseAudioPlayerListener;
 
     .line 10
-    new-instance v7, Lcom/vtosters/lite/g0;
+    new-instance v7, Lcom/vtosters/lite/WidgetUpdatesListener;
 
     new-instance v9, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;
 
     invoke-direct {v9}, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;-><init>()V
 
-    invoke-direct {v7, v9}, Lcom/vtosters/lite/g0;-><init>(Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;)V
+    invoke-direct {v7, v9}, Lcom/vtosters/lite/WidgetUpdatesListener;-><init>(Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;)V
 
     const/4 v9, 0x0
 
     aput-object v7, v5, v9
 
     .line 11
-    new-instance v7, Lcom/vtosters/lite/x;
+    new-instance v7, Lcom/vtosters/lite/MusicBroadcastUpdatesListener;
 
-    invoke-direct {v7, v0}, Lcom/vtosters/lite/x;-><init>(Lcom/vk/music/broadcast/a;)V
+    invoke-direct {v7, v0}, Lcom/vtosters/lite/MusicBroadcastUpdatesListener;-><init>(Lcom/vk/music/broadcast/MusicBroadcastManager;)V
 
     const/4 v13, 0x1
 
@@ -2202,20 +2202,20 @@
     move-result-object v11
 
     .line 13
-    new-instance v14, Lcom/vk/audioipc/player/i/a;
+    new-instance v14, Lcom/vk/audioipc/player/i/AudioPlayerIpcClientBuilder;
 
     const-string v0, "context"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v7
 
     const-string v0, "deviceId"
 
-    invoke-static {v8, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
     sget-object v9, Lcom/vtosters/lite/VKApplication$initMusic$player$1;->a:Lcom/vtosters/lite/VKApplication$initMusic$player$1;
@@ -2228,40 +2228,40 @@
     move-object v5, v12
 
     .line 17
-    invoke-direct/range {v0 .. v11}, Lcom/vk/audioipc/player/i/a;-><init>(Landroid/content/Context;Lcom/vk/audioipc/core/b;Lcom/vk/music/stats/d;Lcom/vk/music/restriction/i/a;Lcom/vk/music/restriction/h;Lcom/vk/music/notification/c;Lcom/vk/bridges/f;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Ljava/util/List;)V
+    invoke-direct/range {v0 .. v11}, Lcom/vk/audioipc/player/i/AudioPlayerIpcClientBuilder;-><init>(Landroid/content/Context;Lcom/vk/audioipc/core/AppStateProvider;Lcom/vk/music/stats/MusicStatsTracker;Lcom/vk/music/restriction/i/MusicRestrictionModel;Lcom/vk/music/restriction/MusicRestrictionManager;Lcom/vk/music/notification/MusicNotificationManager;Lcom/vk/bridges/AuthBridge3;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Ljava/util/List;)V
 
     .line 18
-    invoke-virtual {v14, v13}, Lcom/vk/audioipc/player/i/a;->a(Z)Lcom/vk/audioipc/player/i/a;
+    invoke-virtual {v14, v13}, Lcom/vk/audioipc/player/i/AudioPlayerIpcClientBuilder;->a(Z)Lcom/vk/audioipc/player/i/AudioPlayerIpcClientBuilder;
 
     .line 19
-    invoke-virtual {v14}, Lcom/vk/audioipc/player/i/a;->a()Lcom/vk/audioipc/core/d;
+    invoke-virtual {v14}, Lcom/vk/audioipc/player/i/AudioPlayerIpcClientBuilder;->a()Lcom/vk/audioipc/core/AudioPlayer;
 
     move-result-object v0
 
     .line 20
-    invoke-static {v0}, Lcom/vk/audioipc/core/c;->a(Lcom/vk/audioipc/core/d;)V
+    invoke-static {v0}, Lcom/vk/audioipc/core/ApplicationPlayerHelper;->a(Lcom/vk/audioipc/core/AudioPlayer;)V
 
     .line 21
-    sget-object v1, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v1, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
     new-instance v2, Lcom/vk/music/model/DefaultPlayerModelFactory;
 
-    new-instance v3, Lcom/vk/audioipc/core/exception/a;
+    new-instance v3, Lcom/vk/audioipc/core/exception/ServiceExceptionUtils;
 
-    invoke-direct {v3, v12}, Lcom/vk/audioipc/core/exception/a;-><init>(Lcom/vk/music/restriction/h;)V
+    invoke-direct {v3, v12}, Lcom/vk/audioipc/core/exception/ServiceExceptionUtils;-><init>(Lcom/vk/music/restriction/MusicRestrictionManager;)V
 
-    invoke-direct {v2, v0, v3}, Lcom/vk/music/model/DefaultPlayerModelFactory;-><init>(Lcom/vk/audioipc/core/d;Lcom/vk/audioipc/core/exception/a;)V
+    invoke-direct {v2, v0, v3}, Lcom/vk/music/model/DefaultPlayerModelFactory;-><init>(Lcom/vk/audioipc/core/AudioPlayer;Lcom/vk/audioipc/core/exception/ServiceExceptionUtils;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/music/common/c$a;->a(Lcom/vk/music/common/c$c;)V
+    invoke-virtual {v1, v2}, Lcom/vk/music/common/Music$a;->a(Lcom/vk/music/common/Music$c;)V
 
     .line 22
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    new-instance v1, Lcom/vk/music/notification/b;
+    new-instance v1, Lcom/vk/music/notification/MusicNotificationChannelControllerProvider;
 
-    invoke-direct {v1}, Lcom/vk/music/notification/b;-><init>()V
+    invoke-direct {v1}, Lcom/vk/music/notification/MusicNotificationChannelControllerProvider;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/common/c$a;->a(Lcom/vk/music/notification/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/common/Music$a;->a(Lcom/vk/music/notification/MusicNotificationChannelController;)V
 
     return-void
 .end method
@@ -2283,23 +2283,23 @@
 
     invoke-direct {v0}, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider;-><init>()V
 
-    invoke-static {v0}, Lcom/vk/audioipc/communication/y/a;->a(Lcom/vk/audioipc/core/f;)Lcom/vk/audioipc/communication/y/a;
+    invoke-static {v0}, Lcom/vk/audioipc/communication/y/AudioServiceHelper;->a(Lcom/vk/audioipc/core/AudioPlayerProvider;)Lcom/vk/audioipc/communication/y/AudioServiceHelper;
 
     .line 3
     sget-object v0, Lcom/vtosters/lite/VKApplication$initMusicProcess$1;->a:Lcom/vtosters/lite/VKApplication$initMusicProcess$1;
 
-    invoke-static {v0}, Lcom/vk/audioipc/communication/y/a;->a(Lkotlin/jvm/b/a;)Lcom/vk/audioipc/communication/y/a;
+    invoke-static {v0}, Lcom/vk/audioipc/communication/y/AudioServiceHelper;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/audioipc/communication/y/AudioServiceHelper;
 
     .line 4
     new-instance v0, Lcom/vk/music/notification/MusicNotificationManagerProvider;
 
     .line 5
-    invoke-static {}, Lcom/vk/music/common/c$e;->a()Lcom/vk/music/l/a;
+    invoke-static {}, Lcom/vk/music/common/Music$e;->a()Lcom/vk/music/l/ModernMusicTrackModel;
 
     move-result-object v1
 
     .line 6
-    new-instance v2, Lcom/vk/audioipc/communication/j;
+    new-instance v2, Lcom/vk/audioipc/communication/IpcIntentPlayerHelper;
 
     const-class v3, Lcom/vk/audioipc/communication/AudioService;
 
@@ -2307,19 +2307,19 @@
 
     const/4 v5, 0x2
 
-    invoke-direct {v2, v3, v4, v5, v4}, Lcom/vk/audioipc/communication/j;-><init>(Ljava/lang/Class;Lcom/vk/audioipc/core/m;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v2, v3, v4, v5, v4}, Lcom/vk/audioipc/communication/IpcIntentPlayerHelper;-><init>(Ljava/lang/Class;Lcom/vk/audioipc/core/SerializeManager;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-string v3, "music_player_group"
 
     .line 7
-    invoke-direct {v0, v5, v3, v2, v1}, Lcom/vk/music/notification/MusicNotificationManagerProvider;-><init>(ILjava/lang/String;Lcom/vk/music/n/e;Lcom/vk/music/l/a;)V
+    invoke-direct {v0, v5, v3, v2, v1}, Lcom/vk/music/notification/MusicNotificationManagerProvider;-><init>(ILjava/lang/String;Lcom/vk/music/n/IntentPlayerHelper;Lcom/vk/music/l/ModernMusicTrackModel;)V
 
-    invoke-static {v0}, Lcom/vk/audioipc/communication/y/a;->a(Lcom/vk/music/notification/c;)Lcom/vk/audioipc/communication/y/a;
+    invoke-static {v0}, Lcom/vk/audioipc/communication/y/AudioServiceHelper;->a(Lcom/vk/music/notification/MusicNotificationManager;)Lcom/vk/audioipc/communication/y/AudioServiceHelper;
 
     .line 8
     sget-object v0, Lcom/vtosters/lite/VKApplication$initMusicProcess$2;->a:Lcom/vtosters/lite/VKApplication$initMusicProcess$2;
 
-    invoke-static {v0}, Lcom/vk/audioipc/communication/y/a;->a(Lkotlin/jvm/b/b;)Lcom/vk/audioipc/communication/y/a;
+    invoke-static {v0}, Lcom/vk/audioipc/communication/y/AudioServiceHelper;->a(Lkotlin/jvm/b/Functions2;)Lcom/vk/audioipc/communication/y/AudioServiceHelper;
 
     .line 9
     sget-object v0, Lcom/vk/api/internal/utils/NetworkBroadcastReceiver;->g:Lcom/vk/api/internal/utils/NetworkBroadcastReceiver;
@@ -2362,32 +2362,32 @@
     .locals 4
 
     .line 2
-    sget-object v0, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
+    sget-object v0, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
 
-    sget-object v1, Lcom/vk/navigation/a0;->a:Lcom/vk/navigation/a0;
+    sget-object v1, Lcom/vk/navigation/VKNavigator;->INSTANCE:Lcom/vk/navigation/VKNavigator;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o$b;->a(Lcom/vk/navigation/p;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator$b;->a(Lcom/vk/navigation/NavigatorConfig;)V
 
     .line 3
-    sget-object v0, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
+    sget-object v0, Lcom/vk/core/ui/v/UiTracker;->INSTANCE:Lcom/vk/core/ui/v/UiTracker;
 
-    new-instance v1, Lcom/vk/stats/a;
+    new-instance v1, Lcom/vk/stats/AppScreensHolder;
 
-    invoke-direct {v1}, Lcom/vk/stats/a;-><init>()V
+    invoke-direct {v1}, Lcom/vk/stats/AppScreensHolder;-><init>()V
 
-    sget-object v2, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
+    sget-object v2, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
 
-    invoke-virtual {v2}, Lcom/vk/navigation/o$b;->b()Ljava/lang/Class;
+    invoke-virtual {v2}, Lcom/vk/navigation/Navigator$b;->b()Ljava/lang/Class;
 
     move-result-object v2
 
-    sget-object v3, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
+    sget-object v3, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
 
-    invoke-virtual {v3}, Lcom/vk/navigation/o$b;->a()Ljava/lang/Class;
+    invoke-virtual {v3}, Lcom/vk/navigation/Navigator$b;->a()Ljava/lang/Class;
 
     move-result-object v3
 
-    invoke-virtual {v0, p0, v1, v2, v3}, Lcom/vk/core/ui/v/a;->a(Landroid/app/Application;Lcom/vk/core/ui/v/h;Ljava/lang/Class;Ljava/lang/Class;)V
+    invoke-virtual {v0, p0, v1, v2, v3}, Lcom/vk/core/ui/v/UiTracker;->a(Landroid/app/Application;Lcom/vk/core/ui/v/UiTrackingScreenHolder;Ljava/lang/Class;Ljava/lang/Class;)V
 
     return-void
 .end method
@@ -2408,7 +2408,7 @@
     invoke-direct {p0, p0}, Lcom/vtosters/lite/VKApplication;->a(Landroid/app/Application;)V
 
     .line 3
-    sget-object v0, Lcom/vtosters/lite/n0/a;->a:Lcom/vtosters/lite/n0/a;
+    sget-object v0, Lcom/vtosters/lite/n0/OncePerSessionReporter;->INSTANCE:Lcom/vtosters/lite/n0/OncePerSessionReporter;
 
     sget-object v1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
@@ -2416,7 +2416,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p0, v1}, Lcom/vtosters/lite/n0/a;->a(Landroid/content/Context;Ljava/util/concurrent/ExecutorService;)V
+    invoke-virtual {v0, p0, v1}, Lcom/vtosters/lite/n0/OncePerSessionReporter;->a(Landroid/content/Context;Ljava/util/concurrent/ExecutorService;)V
 
     .line 4
     invoke-direct {p0}, Lcom/vtosters/lite/VKApplication;->l()V
@@ -2425,7 +2425,7 @@
     invoke-direct {p0}, Lcom/vtosters/lite/VKApplication;->A()V
 
     .line 6
-    invoke-static {p0}, Lcom/vk/api/sdk/d;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/vk/api/sdk/VK;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -2464,12 +2464,12 @@
     .line 1
     sget-object v0, Lcom/vtosters/lite/VKApplication$e;->a:Lcom/vtosters/lite/VKApplication$e;
 
-    invoke-static {v0}, Lc/a/e0/a;->a(Lc/a/z/g;)V
+    invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->a(Lio/reactivex/functions/Consumer;)V
 
     .line 2
     sget-object v0, Lcom/vtosters/lite/VKApplication$f;->a:Lcom/vtosters/lite/VKApplication$f;
 
-    invoke-static {v0}, Lc/a/y/b/a;->a(Lc/a/z/j;)V
+    invoke-static {v0}, Lio/reactivex/plugins/RxAndroidPlugins;->a(Lio/reactivex/functions/Function;)V
 
     return-void
 .end method
@@ -2490,11 +2490,11 @@
     invoke-static {p0}, Lcom/vtosters/lite/data/PurchasesManager;->a(Landroid/content/Context;)V
 
     .line 5
-    invoke-static {}, Lcom/vtosters/lite/data/o;->i()Lcom/vtosters/lite/data/o;
+    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/o;->a()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/BenchmarkTracker;->a()V
 
     return-void
 .end method
@@ -2565,29 +2565,29 @@
     invoke-super {p0}, Landroid/app/Application;->onCreate()V
 
     .line 7
-    sget-object v0, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
+    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->INSTANCE:Lcom/vk/metrics/reporters/PerformanceReporter;
 
-    invoke-virtual {v0}, Lcom/vk/metrics/reporters/a;->a()Lb/h/q/c/a/a;
+    invoke-virtual {v0}, Lcom/vk/metrics/reporters/PerformanceReporter;->a()Lb/h/q/c/a/AppStartDurationChecker;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/q/c/a/a;->a()V
+    invoke-virtual {v0}, Lb/h/q/c/a/AppStartDurationChecker;->a()V
 
     .line 8
-    new-instance v0, Lcom/vk/core/util/g1;
+    new-instance v0, Lcom/vk/core/util/TimeLogger;
 
-    invoke-direct {v0}, Lcom/vk/core/util/g1;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/util/TimeLogger;-><init>()V
 
-    invoke-virtual {v0}, Lcom/vk/core/util/g1;->a()Lcom/vk/core/util/g1;
+    invoke-virtual {v0}, Lcom/vk/core/util/TimeLogger;->a()Lcom/vk/core/util/TimeLogger;
 
     .line 9
     new-instance v1, Lcom/vk/utils/AppUtils$a;
 
     const-string v2, "measure"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, v0}, Lcom/vk/utils/AppUtils$a;-><init>(Lcom/vk/core/util/g1;)V
+    invoke-direct {v1, v0}, Lcom/vk/utils/AppUtils$a;-><init>(Lcom/vk/core/util/TimeLogger;)V
 
     .line 10
     invoke-direct {p0}, Lcom/vtosters/lite/VKApplication;->C()Z
@@ -2615,7 +2615,7 @@
 
     invoke-direct {v8, p0}, Lcom/vtosters/lite/VKApplication$onCreate$1;-><init>(Lcom/vtosters/lite/VKApplication;)V
 
-    invoke-direct {v0, v6, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v6, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/utils/AppUtils$a;->c(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2628,7 +2628,7 @@
 
     const-string v8, "initTimeSync"
 
-    invoke-direct {v0, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2641,7 +2641,7 @@
 
     const-string v8, "initQueue"
 
-    invoke-direct {v0, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2652,7 +2652,7 @@
 
     const-string v8, "Navigation"
 
-    invoke-direct {v0, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2663,7 +2663,7 @@
 
     invoke-direct {v6, p0}, Lcom/vtosters/lite/VKApplication$onCreate$5;-><init>(Lcom/vtosters/lite/VKApplication;)V
 
-    invoke-direct {v0, v5, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v5, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2674,7 +2674,7 @@
 
     invoke-direct {v5, p0}, Lcom/vtosters/lite/VKApplication$onCreate$6;-><init>(Lcom/vtosters/lite/VKApplication;)V
 
-    invoke-direct {v0, v4, v5}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v4, v5}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2687,7 +2687,7 @@
 
     const-string v5, "initFirebase"
 
-    invoke-direct {v0, v5, v4}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v5, v4}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2698,7 +2698,7 @@
 
     invoke-direct {v4, p0}, Lcom/vtosters/lite/VKApplication$onCreate$8;-><init>(Lcom/vtosters/lite/VKApplication;)V
 
-    invoke-direct {v0, v3, v4}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v3, v4}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2711,7 +2711,7 @@
 
     const-string v4, "initVkQueue"
 
-    invoke-direct {v0, v4, v3}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v4, v3}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2724,7 +2724,7 @@
 
     const-string v4, "initAfter"
 
-    invoke-direct {v0, v4, v3}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v4, v3}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/utils/AppUtils$a;->b(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2737,7 +2737,7 @@
 
     const-string v4, "musicProcess"
 
-    invoke-direct {v0, v4, v3}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v4, v3}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/utils/AppUtils$a;->b(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2765,9 +2765,9 @@
 
     new-instance v10, Lcom/vtosters/lite/VKApplication$onCreate$12;
 
-    invoke-direct {v10, p0, v8}, Lcom/vtosters/lite/VKApplication$onCreate$12;-><init>(Lcom/vtosters/lite/VKApplication;Lkotlin/jvm/b/b;)V
+    invoke-direct {v10, p0, v8}, Lcom/vtosters/lite/VKApplication$onCreate$12;-><init>(Lcom/vtosters/lite/VKApplication;Lkotlin/jvm/b/Functions2;)V
 
-    invoke-direct {v9, v6, v10}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v9, v6, v10}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v9}, Lcom/vk/utils/AppUtils$a;->c(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2780,7 +2780,7 @@
 
     const-string v9, "receivers"
 
-    invoke-direct {v6, v9, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v6, v9, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v6}, Lcom/vk/utils/AppUtils$a;->c(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2793,7 +2793,7 @@
 
     const-string v9, "messenger"
 
-    invoke-direct {v6, v9, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v6, v9, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v6}, Lcom/vk/utils/AppUtils$a;->c(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2806,7 +2806,7 @@
 
     const-string v9, "AudioMsgPlayer-Init"
 
-    invoke-direct {v6, v9, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v6, v9, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v6}, Lcom/vk/utils/AppUtils$a;->c(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2819,7 +2819,7 @@
 
     const-string v9, "Emoji-Init"
 
-    invoke-direct {v6, v9, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v6, v9, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v6}, Lcom/vk/utils/AppUtils$a;->c(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2830,7 +2830,7 @@
 
     const-string v9, "milkshake"
 
-    invoke-direct {v6, v9, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v6, v9, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v6}, Lcom/vk/utils/AppUtils$a;->c(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2843,7 +2843,7 @@
 
     const-string v9, "analytics"
 
-    invoke-direct {v6, v9, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v6, v9, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v6}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2854,7 +2854,7 @@
 
     invoke-direct {v8, p0}, Lcom/vtosters/lite/VKApplication$onCreate$19;-><init>(Lcom/vtosters/lite/VKApplication;)V
 
-    invoke-direct {v6, v5, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v6, v5, v8}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v6}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2867,7 +2867,7 @@
 
     const-string v8, "nativeloader"
 
-    invoke-direct {v5, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v5, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v5}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2880,7 +2880,7 @@
 
     const-string v8, "contexts"
 
-    invoke-direct {v5, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v5, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v5}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2893,7 +2893,7 @@
 
     const-string v8, "utils"
 
-    invoke-direct {v5, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v5, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v5}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2906,7 +2906,7 @@
 
     const-string v8, "services"
 
-    invoke-direct {v5, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v5, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v5}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2919,7 +2919,7 @@
 
     const-string v8, "other"
 
-    invoke-direct {v5, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v5, v8, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v5}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2930,7 +2930,7 @@
 
     invoke-direct {v6, p0}, Lcom/vtosters/lite/VKApplication$onCreate$25;-><init>(Lcom/vtosters/lite/VKApplication;)V
 
-    invoke-direct {v5, v4, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v5, v4, v6}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v5}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2943,7 +2943,7 @@
 
     const-string v6, "AudioMsgPlayer-Prepare"
 
-    invoke-direct {v4, v6, v5}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v4, v6, v5}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v4}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2956,7 +2956,7 @@
 
     const-string v6, "Emoji-Prepare"
 
-    invoke-direct {v4, v6, v5}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v4, v6, v5}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v4}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2967,7 +2967,7 @@
 
     invoke-direct {v5, p0}, Lcom/vtosters/lite/VKApplication$onCreate$28;-><init>(Lcom/vtosters/lite/VKApplication;)V
 
-    invoke-direct {v4, v3, v5}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v4, v3, v5}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v4}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2980,7 +2980,7 @@
 
     const-string v5, "CollectStoragePermissionStats"
 
-    invoke-direct {v3, v5, v4}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v3, v5, v4}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v3}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -2991,7 +2991,7 @@
 
     const-string v5, "webapp"
 
-    invoke-direct {v3, v5, v4}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v3, v5, v4}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v3}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a$a;)V
 
@@ -3004,14 +3004,14 @@
 
     const-string v0, "after"
 
-    invoke-direct {v3, v0, v4}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v3, v0, v4}, Lcom/vk/utils/AppUtils$a$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v3}, Lcom/vk/utils/AppUtils$a;->b(Lcom/vk/utils/AppUtils$a$a;)V
 
     .line 46
-    sget-object v0, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v0, Lcom/vk/core/util/DeviceState;->INSTANCE:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/v;->n()I
+    invoke-virtual {v0}, Lcom/vk/core/util/DeviceState;->n()I
 
     move-result v0
 
@@ -3025,13 +3025,13 @@
     invoke-virtual {v1, v2}, Lcom/vk/utils/AppUtils$a;->a(Z)V
 
     .line 47
-    sget-object v0, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
+    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->INSTANCE:Lcom/vk/metrics/reporters/PerformanceReporter;
 
-    invoke-virtual {v0}, Lcom/vk/metrics/reporters/a;->c()Lb/h/q/c/c/c;
+    invoke-virtual {v0}, Lcom/vk/metrics/reporters/PerformanceReporter;->c()Lb/h/q/c/c/PerformanceStorage;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/q/c/c/c;->p()V
+    invoke-virtual {v0}, Lb/h/q/c/c/PerformanceStorage;->p()V
 
     .line 48
     sput-boolean v7, Lcom/vtosters/lite/VKApplication;->a:Z
@@ -3056,7 +3056,7 @@
     if-nez v0, :cond_0
 
     .line 4
-    invoke-static {}, Lcom/vk/articles/preload/a;->e()V
+    invoke-static {}, Lcom/vk/articles/preload/WebCachePreloader;->e()V
 
     .line 5
     invoke-static {}, Lcom/vk/webapp/SuperappCore;->c()V

@@ -48,7 +48,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/avatars/StackAvatarView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/avatars/StackAvatarView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -110,7 +110,7 @@
     invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->setChildrenDrawingOrderEnabled(Z)V
 
     .line 10
-    sget-object v3, Lcom/vk/im/ui/o;->StackAvatarView:[I
+    sget-object v3, Lcom/vk/im/ui/R2;->StackAvatarView:[I
 
     const/4 v4, 0x0
 
@@ -119,7 +119,7 @@
     move-result-object p1
 
     .line 11
-    sget p2, Lcom/vk/im/ui/o;->StackAvatarView_vkim_iconSize:I
+    sget p2, Lcom/vk/im/ui/R2;->StackAvatarView_vkim_iconSize:I
 
     invoke-virtual {p1, p2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -128,7 +128,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/avatars/StackAvatarView;->setIconSize(I)V
 
     .line 12
-    sget p2, Lcom/vk/im/ui/o;->StackAvatarView_vkim_iconOffset:I
+    sget p2, Lcom/vk/im/ui/R2;->StackAvatarView_vkim_iconOffset:I
 
     invoke-virtual {p1, p2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -137,7 +137,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/avatars/StackAvatarView;->setOffset(I)V
 
     .line 13
-    sget p2, Lcom/vk/im/ui/o;->StackAvatarView_vkim_strokeWidth:I
+    sget p2, Lcom/vk/im/ui/R2;->StackAvatarView_vkim_strokeWidth:I
 
     invoke-virtual {p1, p2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -146,7 +146,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/avatars/StackAvatarView;->setStrokeWidth(I)V
 
     .line 14
-    sget p2, Lcom/vk/im/ui/o;->StackAvatarView_vkim_strokeColor:I
+    sget p2, Lcom/vk/im/ui/R2;->StackAvatarView_vkim_strokeColor:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -155,7 +155,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/avatars/StackAvatarView;->setStrokeColor(I)V
 
     .line 15
-    sget p2, Lcom/vk/im/ui/o;->StackAvatarView_vkim_extraColor:I
+    sget p2, Lcom/vk/im/ui/R2;->StackAvatarView_vkim_extraColor:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -164,7 +164,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/avatars/StackAvatarView;->setExtraColor(I)V
 
     .line 16
-    sget p2, Lcom/vk/im/ui/o;->StackAvatarView_vkim_useExtraView:I
+    sget p2, Lcom/vk/im/ui/R2;->StackAvatarView_vkim_useExtraView:I
 
     invoke-virtual {p1, p2, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -173,7 +173,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/avatars/StackAvatarView;->setUseExtraView(Z)V
 
     .line 17
-    sget p2, Lcom/vk/im/ui/o;->StackAvatarView_vkim_drawingOrder:I
+    sget p2, Lcom/vk/im/ui/R2;->StackAvatarView_vkim_drawingOrder:I
 
     invoke-virtual {p1, p2, v4}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -251,11 +251,11 @@
     invoke-direct {v2, v3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     .line 25
-    new-instance v3, Lcom/vk/im/ui/drawables/c;
+    new-instance v3, Lcom/vk/im/ui/drawables/CircleDrawable;
 
     iget v4, p0, Lcom/vk/im/ui/views/avatars/StackAvatarView;->d:I
 
-    invoke-direct {v3, v4}, Lcom/vk/im/ui/drawables/c;-><init>(I)V
+    invoke-direct {v3, v4}, Lcom/vk/im/ui/drawables/CircleDrawable;-><init>(I)V
 
     invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -275,11 +275,11 @@
     invoke-virtual {p0, v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 29
-    new-instance v2, Lcom/vk/im/ui/drawables/c;
+    new-instance v2, Lcom/vk/im/ui/drawables/CircleDrawable;
 
     iget v3, p0, Lcom/vk/im/ui/views/avatars/StackAvatarView;->e:I
 
-    invoke-direct {v2, v3}, Lcom/vk/im/ui/drawables/c;-><init>(I)V
+    invoke-direct {v2, v3}, Lcom/vk/im/ui/drawables/CircleDrawable;-><init>(I)V
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -312,7 +312,7 @@
 
     move-result-object p1
 
-    sget v0, Lcom/vk/im/ui/m;->fontRobotoMedium:I
+    sget v0, Lcom/vk/im/ui/R4;->fontRobotoMedium:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -356,12 +356,12 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/im/ui/drawables/c;
+    check-cast v0, Lcom/vk/im/ui/drawables/CircleDrawable;
 
     .line 36
     iget v1, p0, Lcom/vk/im/ui/views/avatars/StackAvatarView;->d:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/drawables/c;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/drawables/CircleDrawable;->a(I)V
 
     .line 37
     iget v0, p0, Lcom/vk/im/ui/views/avatars/StackAvatarView;->c:I
@@ -393,7 +393,7 @@
 
     const-string v0, "context"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -405,14 +405,14 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/AvatarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/AvatarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/drawables/c;
+    new-instance v0, Lcom/vk/im/ui/drawables/CircleDrawable;
 
     iget v1, p0, Lcom/vk/im/ui/views/avatars/StackAvatarView;->d:I
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/drawables/c;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/drawables/CircleDrawable;-><init>(I)V
 
     invoke-virtual {v6, v0}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -439,7 +439,7 @@
 
     const-string v2, "getChildAt(i)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     instance-of v2, v1, Lcom/vk/im/ui/views/avatars/AvatarView;
@@ -491,7 +491,7 @@
 
     const-string v2, "getChildAt(i)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v1, :cond_0
 
@@ -539,19 +539,19 @@
     invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     .line 4
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     const/4 v0, 0x3
 
     .line 5
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;I)Lkotlin/sequences/j;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;I)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 6
-    invoke-interface {p1}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p1}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
@@ -630,19 +630,19 @@
     invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     .line 14
-    invoke-static {p1}, Lkotlin/collections/f;->c([Ljava/lang/Object;)Lkotlin/sequences/j;
+    invoke-static {p1}, Lkotlin/collections/f;->c([Ljava/lang/Object;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     const/4 v0, 0x3
 
     .line 15
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;I)Lkotlin/sequences/j;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;I)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 16
-    invoke-interface {p1}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p1}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
@@ -817,7 +817,7 @@
 
     const-string p5, "getChildAt(i)"
 
-    invoke-static {p4, p5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, p5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-virtual {p4}, Landroid/view/View;->getMeasuredWidth()I
@@ -911,7 +911,7 @@
 
     const-string v5, "getChildAt(i)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     invoke-virtual {v4, v1, v1}, Landroid/view/View;->measure(II)V

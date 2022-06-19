@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -45,97 +45,97 @@
     packed-switch p1, :pswitch_data_0
 
     .line 1
-    new-instance p1, Lcom/vtosters/lite/ui/widget/r;
+    new-instance p1, Lcom/vtosters/lite/ui/widget/WidgetTextView;
 
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/r;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/WidgetTextView;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 2
     :pswitch_0
-    new-instance p1, Lcom/vtosters/lite/ui/widget/p;
+    new-instance p1, Lcom/vtosters/lite/ui/widget/WidgetMatchesView;
 
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/p;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/WidgetMatchesView;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 3
     :pswitch_1
-    new-instance p1, Lcom/vtosters/lite/ui/widget/n;
+    new-instance p1, Lcom/vtosters/lite/ui/widget/WidgetMatchView;
 
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/n;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/WidgetMatchView;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 4
     :pswitch_2
-    new-instance p1, Lcom/vtosters/lite/ui/widget/i;
+    new-instance p1, Lcom/vtosters/lite/ui/widget/WidgetCoverListView;
 
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/i;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/WidgetCoverListView;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 5
     :pswitch_3
-    new-instance p1, Lcom/vtosters/lite/ui/widget/t;
+    new-instance p1, Lcom/vtosters/lite/ui/widget/WidgetTilesView;
 
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/t;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/WidgetTilesView;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 6
     :pswitch_4
-    new-instance p1, Lcom/vtosters/lite/ui/widget/q;
+    new-instance p1, Lcom/vtosters/lite/ui/widget/WidgetTableView;
 
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/q;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/WidgetTableView;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 7
     :pswitch_5
-    new-instance p1, Lcom/vtosters/lite/ui/widget/m;
+    new-instance p1, Lcom/vtosters/lite/ui/widget/WidgetListView;
 
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/m;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/WidgetListView;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 8
     :cond_0
-    new-instance p1, Lcom/vtosters/lite/ui/widget/j;
+    new-instance p1, Lcom/vtosters/lite/ui/widget/WidgetDonationView;
 
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/j;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/widget/WidgetDonationView;-><init>(Landroid/content/Context;)V
 
     :goto_0
     const v0, 0x7f0a0b77
@@ -148,7 +148,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, p2, v1}, Lcom/vk/newsfeed/holders/WidgetHolder;-><init>(Lcom/vtosters/lite/ui/widget/v;Landroid/view/ViewGroup;Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, p1, p2, v1}, Lcom/vk/newsfeed/holders/WidgetHolder;-><init>(Lcom/vtosters/lite/ui/widget/WidgetView;Landroid/view/ViewGroup;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 

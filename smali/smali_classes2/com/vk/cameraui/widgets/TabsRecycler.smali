@@ -3,7 +3,7 @@
 .source "TabsRecycler.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/c;
+.implements Lcom/vk/core/ui/themes/DynamicThemeIgnored;
 
 
 # annotations
@@ -69,7 +69,7 @@
     .end annotation
 .end field
 
-.field private final a:Lcom/vk/cameraui/widgets/a;
+.field private final a:Lcom/vk/cameraui/widgets/TabLinearSnapHelper;
 
 .field private b:F
 
@@ -94,10 +94,10 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/cameraui/widgets/TabsRecycler$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/cameraui/widgets/TabsRecycler$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f060076
 
@@ -139,11 +139,11 @@
     invoke-direct {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 2
-    new-instance p1, Lcom/vk/cameraui/widgets/a;
+    new-instance p1, Lcom/vk/cameraui/widgets/TabLinearSnapHelper;
 
-    invoke-direct {p1}, Lcom/vk/cameraui/widgets/a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/cameraui/widgets/TabLinearSnapHelper;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/cameraui/widgets/TabsRecycler;->a:Lcom/vk/cameraui/widgets/a;
+    iput-object p1, p0, Lcom/vk/cameraui/widgets/TabsRecycler;->a:Lcom/vk/cameraui/widgets/TabLinearSnapHelper;
 
     const/high16 p1, 0x41f00000    # 30.0f
 
@@ -259,9 +259,9 @@
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
     .line 18
-    iget-object p1, p0, Lcom/vk/cameraui/widgets/TabsRecycler;->a:Lcom/vk/cameraui/widgets/a;
+    iget-object p1, p0, Lcom/vk/cameraui/widgets/TabsRecycler;->a:Lcom/vk/cameraui/widgets/TabLinearSnapHelper;
 
-    invoke-virtual {p1, p0}, Lcom/vk/cameraui/widgets/a;->attachToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p1, p0}, Lcom/vk/cameraui/widgets/TabLinearSnapHelper;->attachToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 19
     new-instance p1, Lcom/vk/cameraui/widgets/TabsRecycler$a;
@@ -355,9 +355,9 @@
     .locals 2
 
     .line 11
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/TabsRecycler;->a:Lcom/vk/cameraui/widgets/a;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/TabsRecycler;->a:Lcom/vk/cameraui/widgets/TabLinearSnapHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/a;->c(I)Z
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/TabLinearSnapHelper;->c(I)Z
 
     const/4 p1, 0x1
 
@@ -557,7 +557,7 @@
     :cond_0
     iget-object v8, p0, Lcom/vk/cameraui/widgets/TabsRecycler;->g:Landroid/view/View;
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v8
 
@@ -567,7 +567,7 @@
 
     iget-object v8, p0, Lcom/vk/cameraui/widgets/TabsRecycler;->h:Landroid/view/View;
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v8
 
@@ -919,7 +919,7 @@
 
     .line 5
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -1044,11 +1044,11 @@
     return v0
 .end method
 
-.method public final getTabSnapHelper()Lcom/vk/cameraui/widgets/a;
+.method public final getTabSnapHelper()Lcom/vk/cameraui/widgets/TabLinearSnapHelper;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/TabsRecycler;->a:Lcom/vk/cameraui/widgets/a;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/TabsRecycler;->a:Lcom/vk/cameraui/widgets/TabLinearSnapHelper;
 
     return-object v0
 .end method
@@ -1168,18 +1168,18 @@
 
     .line 9
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 10
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -1287,7 +1287,7 @@
 
     .line 17
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -1363,11 +1363,11 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/cameraui/widgets/TabsRecycler;->a:Lcom/vk/cameraui/widgets/a;
+    iget-object p1, p0, Lcom/vk/cameraui/widgets/TabsRecycler;->a:Lcom/vk/cameraui/widgets/TabLinearSnapHelper;
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1, p2}, Lcom/vk/cameraui/widgets/a;->a(I)Z
+    invoke-virtual {p1, p2}, Lcom/vk/cameraui/widgets/TabLinearSnapHelper;->a(I)Z
 
     return-void
 .end method

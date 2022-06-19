@@ -3,7 +3,7 @@
 .source "ModalDialogsController.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/k;
+.implements Lcom/vk/navigation/ModalDialogCallback;
 
 
 # annotations
@@ -48,13 +48,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/bottomsheet/ModalDialogsController$b;->b:Lcom/vk/libvideo/bottomsheet/ModalDialogsController;
 
-    invoke-static {v0}, Lcom/vk/libvideo/bottomsheet/ModalDialogsController;->b(Lcom/vk/libvideo/bottomsheet/ModalDialogsController;)Lcom/vk/navigation/k;
+    invoke-static {v0}, Lcom/vk/libvideo/bottomsheet/ModalDialogsController;->b(Lcom/vk/libvideo/bottomsheet/ModalDialogsController;)Lcom/vk/navigation/ModalDialogCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/navigation/k;->A(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/navigation/ModalDialogCallback;->A(Ljava/lang/String;)V
 
     .line 2
     :cond_0
@@ -92,13 +92,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/bottomsheet/ModalDialogsController$b;->b:Lcom/vk/libvideo/bottomsheet/ModalDialogsController;
 
-    invoke-static {v0}, Lcom/vk/libvideo/bottomsheet/ModalDialogsController;->b(Lcom/vk/libvideo/bottomsheet/ModalDialogsController;)Lcom/vk/navigation/k;
+    invoke-static {v0}, Lcom/vk/libvideo/bottomsheet/ModalDialogsController;->b(Lcom/vk/libvideo/bottomsheet/ModalDialogsController;)Lcom/vk/navigation/ModalDialogCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/navigation/k;->u(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/navigation/ModalDialogCallback;->u(Ljava/lang/String;)V
 
     .line 2
     :cond_0

@@ -28,7 +28,7 @@
 
 .field private b:I
 
-.field private final c:Lcom/vk/core/dialogs/adapter/b;
+.field private final c:Lcom/vk/core/dialogs/adapter/ViewReferrer;
 
 .field final synthetic d:Lcom/vk/core/dialogs/adapter/ModalAdapter;
 
@@ -74,15 +74,15 @@
 
     .line 6
     :cond_1
-    invoke-static {p1}, Lcom/vk/core/dialogs/adapter/ModalAdapter;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter;)Lcom/vk/core/dialogs/adapter/a;
+    invoke-static {p1}, Lcom/vk/core/dialogs/adapter/ModalAdapter;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter;)Lcom/vk/core/dialogs/adapter/ModalAdapter1;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vk/core/dialogs/adapter/a;->a(Landroid/view/View;)Lcom/vk/core/dialogs/adapter/b;
+    invoke-virtual {p1, p2}, Lcom/vk/core/dialogs/adapter/ModalAdapter1;->a(Landroid/view/View;)Lcom/vk/core/dialogs/adapter/ViewReferrer;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/core/dialogs/adapter/ModalAdapter$c;->c:Lcom/vk/core/dialogs/adapter/b;
+    iput-object p1, p0, Lcom/vk/core/dialogs/adapter/ModalAdapter$c;->c:Lcom/vk/core/dialogs/adapter/ViewReferrer;
 
     return-void
 .end method
@@ -115,11 +115,11 @@
     .line 4
     iget-object v0, p0, Lcom/vk/core/dialogs/adapter/ModalAdapter$c;->d:Lcom/vk/core/dialogs/adapter/ModalAdapter;
 
-    invoke-static {v0}, Lcom/vk/core/dialogs/adapter/ModalAdapter;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter;)Lcom/vk/core/dialogs/adapter/a;
+    invoke-static {v0}, Lcom/vk/core/dialogs/adapter/ModalAdapter;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter;)Lcom/vk/core/dialogs/adapter/ModalAdapter1;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/core/dialogs/adapter/ModalAdapter$c;->c:Lcom/vk/core/dialogs/adapter/b;
+    iget-object v1, p0, Lcom/vk/core/dialogs/adapter/ModalAdapter$c;->c:Lcom/vk/core/dialogs/adapter/ViewReferrer;
 
     iget-object v2, p0, Lcom/vk/core/dialogs/adapter/ModalAdapter$c;->d:Lcom/vk/core/dialogs/adapter/ModalAdapter;
 
@@ -137,7 +137,7 @@
 
     move-result v2
 
-    invoke-virtual {v0, v1, p1, p2, v2}, Lcom/vk/core/dialogs/adapter/a;->a(Lcom/vk/core/dialogs/adapter/b;Ljava/lang/Object;IZ)V
+    invoke-virtual {v0, v1, p1, p2, v2}, Lcom/vk/core/dialogs/adapter/ModalAdapter1;->a(Lcom/vk/core/dialogs/adapter/ViewReferrer;Ljava/lang/Object;IZ)V
 
     goto :goto_0
 
@@ -145,13 +145,13 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/core/dialogs/adapter/ModalAdapter$c;->d:Lcom/vk/core/dialogs/adapter/ModalAdapter;
 
-    invoke-static {v0}, Lcom/vk/core/dialogs/adapter/ModalAdapter;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter;)Lcom/vk/core/dialogs/adapter/a;
+    invoke-static {v0}, Lcom/vk/core/dialogs/adapter/ModalAdapter;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter;)Lcom/vk/core/dialogs/adapter/ModalAdapter1;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/core/dialogs/adapter/ModalAdapter$c;->c:Lcom/vk/core/dialogs/adapter/b;
+    iget-object v1, p0, Lcom/vk/core/dialogs/adapter/ModalAdapter$c;->c:Lcom/vk/core/dialogs/adapter/ViewReferrer;
 
-    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/core/dialogs/adapter/a;->a(Lcom/vk/core/dialogs/adapter/b;Ljava/lang/Object;I)V
+    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/core/dialogs/adapter/ModalAdapter1;->a(Lcom/vk/core/dialogs/adapter/ViewReferrer;Ljava/lang/Object;I)V
 
     :goto_0
     return-void
@@ -199,7 +199,7 @@
     :cond_1
     const-string p1, "item"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

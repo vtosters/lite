@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -116,7 +116,7 @@
 
 
 # virtual methods
-.method public final a()Lcom/facebook/x/f/a;
+.method public final a()Lcom/facebook/x/f/DrawableFactory;
     .locals 1
 
     .line 2

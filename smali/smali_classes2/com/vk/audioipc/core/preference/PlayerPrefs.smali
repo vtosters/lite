@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static final c:Lkotlin/e;
+.field private static final c:Lkotlin/Lazy2;
 
 .field public static final d:Lcom/vk/audioipc/core/preference/PlayerPrefs$a;
 
@@ -31,18 +31,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/audioipc/core/preference/PlayerPrefs$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/audioipc/core/preference/PlayerPrefs$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/audioipc/core/preference/PlayerPrefs;->d:Lcom/vk/audioipc/core/preference/PlayerPrefs$a;
 
     .line 1
     sget-object v0, Lcom/vk/audioipc/core/preference/PlayerPrefs$Companion$instancePrefs$2;->a:Lcom/vk/audioipc/core/preference/PlayerPrefs$Companion$instancePrefs$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/audioipc/core/preference/PlayerPrefs;->c:Lkotlin/e;
+    sput-object v0, Lcom/vk/audioipc/core/preference/PlayerPrefs;->c:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -74,11 +74,11 @@
     return-void
 .end method
 
-.method public static final synthetic e()Lkotlin/e;
+.method public static final synthetic e()Lkotlin/Lazy2;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/audioipc/core/preference/PlayerPrefs;->c:Lkotlin/e;
+    sget-object v0, Lcom/vk/audioipc/core/preference/PlayerPrefs;->c:Lkotlin/Lazy2;
 
     return-object v0
 .end method
@@ -122,7 +122,7 @@
     :cond_0
     const-string v0, "prefName"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -146,7 +146,7 @@
     :cond_0
     const-string p1, "prefName"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -179,7 +179,7 @@
     :cond_0
     const-string p1, "prefName"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -211,7 +211,7 @@
     :cond_0
     const-string v0, "prefName"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -235,7 +235,7 @@
     :cond_0
     const-string p1, "prefName"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -259,7 +259,7 @@
     :cond_0
     const-string p1, "prefName"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -279,7 +279,7 @@
     :cond_0
     const-string v0, "prefName"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -311,7 +311,7 @@
     :cond_0
     const-string v0, "prefName"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method

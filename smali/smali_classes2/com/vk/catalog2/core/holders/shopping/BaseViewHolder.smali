@@ -9,7 +9,7 @@
 # instance fields
 .field private final a:Landroid/view/View;
 
-.field private final b:Lcom/vk/catalog2/core/analytics/g/a;
+.field private final b:Lcom/vk/catalog2/core/analytics/g/CatalogUIClickTracker;
 
 
 # direct methods
@@ -23,20 +23,20 @@
     iput-object p1, p0, Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder;->a:Landroid/view/View;
 
     .line 3
-    new-instance p1, Lcom/vk/catalog2/core/analytics/g/a;
+    new-instance p1, Lcom/vk/catalog2/core/analytics/g/CatalogUIClickTracker;
 
-    invoke-direct {p1}, Lcom/vk/catalog2/core/analytics/g/a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/catalog2/core/analytics/g/CatalogUIClickTracker;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder;->b:Lcom/vk/catalog2/core/analytics/g/a;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder;->b:Lcom/vk/catalog2/core/analytics/g/CatalogUIClickTracker;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder;)Lcom/vk/catalog2/core/analytics/g/a;
+.method public static final synthetic a(Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder;)Lcom/vk/catalog2/core/analytics/g/CatalogUIClickTracker;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder;->b:Lcom/vk/catalog2/core/analytics/g/a;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder;->b:Lcom/vk/catalog2/core/analytics/g/CatalogUIClickTracker;
 
     return-object p0
 .end method
@@ -55,7 +55,7 @@
 
     invoke-direct {v1, p0, p3, p1, p2}, Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder$setupClickTarget$1;-><init>(Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder;ILcom/vk/dto/tags/TagLink;Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->d(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->d(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

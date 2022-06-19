@@ -4,11 +4,11 @@
 
 
 # static fields
-.field static final synthetic c:[Lkotlin/u/j;
+.field static final synthetic c:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lcom/vk/core/util/d1;
+.field private final a:Lcom/vk/core/util/ThreadLocalDelegate;
 
 .field private final b:Landroid/content/Context;
 
@@ -19,13 +19,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/core/util/DurationFormatter;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -33,15 +33,15 @@
 
     const-string v4, "getSb()Ljava/lang/StringBuilder;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/core/util/DurationFormatter;->c:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/core/util/DurationFormatter;->c:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -57,11 +57,11 @@
     .line 2
     sget-object p1, Lcom/vk/core/util/DurationFormatter$sb$2;->a:Lcom/vk/core/util/DurationFormatter$sb$2;
 
-    invoke-static {p1}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {p1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/core/util/DurationFormatter;->a:Lcom/vk/core/util/d1;
+    iput-object p1, p0, Lcom/vk/core/util/DurationFormatter;->a:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-void
 .end method
@@ -69,15 +69,15 @@
 .method private final a()Ljava/lang/StringBuilder;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/util/DurationFormatter;->a:Lcom/vk/core/util/d1;
+    iget-object v0, p0, Lcom/vk/core/util/DurationFormatter;->a:Lcom/vk/core/util/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vk/core/util/DurationFormatter;->c:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/util/DurationFormatter;->c:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -147,7 +147,7 @@
 
     const-string v0, "sb.toString()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -269,7 +269,7 @@
 
     const-string v0, "sb.toString()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -301,7 +301,7 @@
     .line 7
     iget-object v3, p0, Lcom/vk/core/util/DurationFormatter;->b:Landroid/content/Context;
 
-    sget v4, Lb/h/g/b;->duration_accessibility_hours:I
+    sget v4, Lb/h/g/R2;->duration_accessibility_hours:I
 
     invoke-static {v3, v4, v0}, Lcom/vk/core/util/ContextExtKt;->d(Landroid/content/Context;II)Ljava/lang/String;
 
@@ -317,7 +317,7 @@
     .line 8
     iget-object v0, p0, Lcom/vk/core/util/DurationFormatter;->b:Landroid/content/Context;
 
-    sget v3, Lb/h/g/b;->duration_accessibility_minutes:I
+    sget v3, Lb/h/g/R2;->duration_accessibility_minutes:I
 
     invoke-static {v0, v3, v1}, Lcom/vk/core/util/ContextExtKt;->d(Landroid/content/Context;II)Ljava/lang/String;
 
@@ -333,7 +333,7 @@
     .line 9
     iget-object v0, p0, Lcom/vk/core/util/DurationFormatter;->b:Landroid/content/Context;
 
-    sget v1, Lb/h/g/b;->duration_accessibility_seconds:I
+    sget v1, Lb/h/g/R2;->duration_accessibility_seconds:I
 
     invoke-static {v0, v1, p1}, Lcom/vk/core/util/ContextExtKt;->d(Landroid/content/Context;II)Ljava/lang/String;
 

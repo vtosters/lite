@@ -3,7 +3,7 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/util/ArrayList<",
-        "Lcom/vtosters/lite/ui/f0/b;",
+        "Lcom/vtosters/lite/ui/f0/PostDisplayItem;",
         ">;>;"
     }
 .end annotation
@@ -73,7 +73,7 @@
         value = {
             "()",
             "Ljava/util/ArrayList<",
-            "Lcom/vtosters/lite/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/PostDisplayItem;",
             ">;"
         }
     .end annotation

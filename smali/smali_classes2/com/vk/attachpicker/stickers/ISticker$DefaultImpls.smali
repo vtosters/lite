@@ -27,11 +27,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->c()Z
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->c()Z
 
     move-result p0
 
@@ -42,11 +42,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->a()Z
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->a()Z
 
     move-result p0
 
@@ -57,11 +57,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->isVisible()Z
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->isVisible()Z
 
     move-result p0
 
@@ -99,7 +99,7 @@
     .locals 2
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object v0
 
@@ -111,7 +111,7 @@
 
     move-result p0
 
-    invoke-interface {v0, v1, p0}, Lcom/vk/attachpicker/stickers/a0;->b(FF)V
+    invoke-interface {v0, v1, p0}, Lcom/vk/attachpicker/stickers/ISticker1;->b(FF)V
 
     return-void
 .end method
@@ -161,15 +161,15 @@
     invoke-interface {p1, v0}, Lcom/vk/attachpicker/stickers/ISticker;->setStickerAlpha(I)V
 
     .line 7
-    invoke-interface {p1}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p1}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object v0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/attachpicker/stickers/a0;->a(Lcom/vk/attachpicker/stickers/a0;)V
+    invoke-interface {v0, v1}, Lcom/vk/attachpicker/stickers/ISticker1;->a(Lcom/vk/attachpicker/stickers/ISticker1;)V
 
     .line 8
     invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->c()Z
@@ -188,11 +188,11 @@
     .locals 4
 
     .line 21
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/attachpicker/stickers/a0;->b()F
+    invoke-interface {v0}, Lcom/vk/attachpicker/stickers/ISticker1;->b()F
 
     move-result v0
 
@@ -226,7 +226,7 @@
     move-result-object p0
 
     .line 25
-    sget-object p1, Lcom/vk/core/util/h;->f:Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
+    sget-object p1, Lcom/vk/core/util/AnimationUtils;->f:Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
 
     invoke-virtual {p0, p1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -253,11 +253,11 @@
     .locals 0
 
     .line 16
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0, p1, p2, p3}, Lcom/vk/attachpicker/stickers/a0;->a(FFF)V
+    invoke-interface {p0, p1, p2, p3}, Lcom/vk/attachpicker/stickers/ISticker1;->a(FFF)V
 
     return-void
 .end method
@@ -274,11 +274,11 @@
     if-nez p2, :cond_1
 
     .line 11
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p2
 
-    instance-of v0, p0, Lcom/vk/attachpicker/stickers/text/c;
+    instance-of v0, p0, Lcom/vk/attachpicker/stickers/text/MakerOfClickableStickers;
 
     if-nez v0, :cond_0
 
@@ -290,9 +290,9 @@
     move-object v0, p0
 
     :goto_0
-    check-cast v0, Lcom/vk/attachpicker/stickers/text/c;
+    check-cast v0, Lcom/vk/attachpicker/stickers/text/MakerOfClickableStickers;
 
-    invoke-interface {p2, p1, v0}, Lcom/vk/attachpicker/stickers/a0;->a(Landroid/graphics/Canvas;Lcom/vk/attachpicker/stickers/text/c;)V
+    invoke-interface {p2, p1, v0}, Lcom/vk/attachpicker/stickers/ISticker1;->a(Landroid/graphics/Canvas;Lcom/vk/attachpicker/stickers/text/MakerOfClickableStickers;)V
 
     .line 12
     :cond_1
@@ -320,11 +320,11 @@
     .locals 0
 
     .line 2
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->d()Landroid/graphics/Matrix;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->d()Landroid/graphics/Matrix;
 
     move-result-object p0
 
@@ -337,11 +337,11 @@
     .locals 0
 
     .line 17
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0, p1, p2}, Lcom/vk/attachpicker/stickers/a0;->a(Landroid/graphics/Matrix;Landroid/graphics/Matrix;)V
+    invoke-interface {p0, p1, p2}, Lcom/vk/attachpicker/stickers/ISticker1;->a(Landroid/graphics/Matrix;Landroid/graphics/Matrix;)V
 
     return-void
 .end method
@@ -361,11 +361,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0, p1}, Lcom/vk/attachpicker/stickers/a0;->setInEditMode(Z)V
+    invoke-interface {p0, p1}, Lcom/vk/attachpicker/stickers/ISticker1;->setInEditMode(Z)V
 
     return-void
 .end method
@@ -379,7 +379,7 @@
     move-result-object p0
 
     .line 19
-    invoke-static {p0, p1, p2}, Lcom/vk/core/util/o0;->a([Landroid/graphics/PointF;FF)Z
+    invoke-static {p0, p1, p2}, Lcom/vk/core/util/MathUtils;->a([Landroid/graphics/PointF;FF)Z
 
     move-result p0
 
@@ -408,7 +408,7 @@
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p0, 0x0
 
@@ -419,11 +419,11 @@
     .locals 0
 
     .line 2
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0, p1}, Lcom/vk/attachpicker/stickers/a0;->b(F)V
+    invoke-interface {p0, p1}, Lcom/vk/attachpicker/stickers/ISticker1;->b(F)V
 
     return-void
 .end method
@@ -432,11 +432,11 @@
     .locals 0
 
     .line 12
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0, p1, p2}, Lcom/vk/attachpicker/stickers/a0;->a(FF)V
+    invoke-interface {p0, p1, p2}, Lcom/vk/attachpicker/stickers/ISticker1;->a(FF)V
 
     return-void
 .end method
@@ -455,11 +455,11 @@
 
     .line 6
     :cond_0
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/attachpicker/stickers/a0;->b()F
+    invoke-interface {v0}, Lcom/vk/attachpicker/stickers/ISticker1;->b()F
 
     move-result v0
 
@@ -490,11 +490,11 @@
     invoke-virtual {v1, p1, p1, p2, p3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
     .line 9
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p1
 
-    invoke-interface {p1, v0}, Lcom/vk/attachpicker/stickers/a0;->a(F)V
+    invoke-interface {p1, v0}, Lcom/vk/attachpicker/stickers/ISticker1;->a(F)V
 
     .line 10
     invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->d()V
@@ -540,11 +540,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0, p1}, Lcom/vk/attachpicker/stickers/a0;->setRemovable(Z)V
+    invoke-interface {p0, p1}, Lcom/vk/attachpicker/stickers/ISticker1;->setRemovable(Z)V
 
     return-void
 .end method
@@ -560,7 +560,7 @@
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p0, 0x0
 
@@ -581,11 +581,11 @@
 
     .line 12
     :cond_0
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/attachpicker/stickers/a0;->b()F
+    invoke-interface {v0}, Lcom/vk/attachpicker/stickers/ISticker1;->b()F
 
     move-result v0
 
@@ -613,7 +613,7 @@
     move-result-object v0
 
     .line 16
-    sget-object v2, Lcom/vk/core/util/h;->e:Landroidx/interpolator/view/animation/FastOutSlowInInterpolator;
+    sget-object v2, Lcom/vk/core/util/AnimationUtils;->e:Landroidx/interpolator/view/animation/FastOutSlowInInterpolator;
 
     invoke-virtual {v0, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -754,11 +754,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0, p1}, Lcom/vk/attachpicker/stickers/a0;->setStatic(Z)V
+    invoke-interface {p0, p1}, Lcom/vk/attachpicker/stickers/ISticker1;->setStatic(Z)V
 
     return-void
 .end method
@@ -767,11 +767,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->getBottom()F
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->getBottom()F
 
     move-result p0
 
@@ -782,11 +782,11 @@
     .locals 3
 
     .line 3
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/attachpicker/stickers/a0;->a(F)V
+    invoke-interface {v0, p1}, Lcom/vk/attachpicker/stickers/ISticker1;->a(F)V
 
     .line 4
     invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getStickerMatrix()Landroid/graphics/Matrix;
@@ -816,11 +816,11 @@
     .locals 0
 
     .line 2
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0, p1}, Lcom/vk/attachpicker/stickers/a0;->setVisible(Z)V
+    invoke-interface {p0, p1}, Lcom/vk/attachpicker/stickers/ISticker1;->setVisible(Z)V
 
     return-void
 .end method
@@ -895,11 +895,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->getCenterX()F
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->getCenterX()F
 
     move-result p0
 
@@ -910,11 +910,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->getCenterY()F
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->getCenterY()F
 
     move-result p0
 
@@ -925,11 +925,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->getFillPoints()[Landroid/graphics/PointF;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->getFillPoints()[Landroid/graphics/PointF;
 
     move-result-object p0
 
@@ -940,11 +940,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->getInEditMode()Z
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->getInEditMode()Z
 
     move-result p0
 
@@ -955,11 +955,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->getLeft()F
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->getLeft()F
 
     move-result p0
 
@@ -996,11 +996,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->e()F
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->e()F
 
     move-result p0
 
@@ -1011,11 +1011,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->getRight()F
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->getRight()F
 
     move-result p0
 
@@ -1034,11 +1034,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->d()Landroid/graphics/Matrix;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->d()Landroid/graphics/Matrix;
 
     move-result-object p0
 
@@ -1064,11 +1064,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->b()F
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->b()F
 
     move-result p0
 
@@ -1117,11 +1117,11 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/a0;
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker;->getCommons()Lcom/vk/attachpicker/stickers/ISticker1;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/a0;->getTop()F
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/ISticker1;->getTop()F
 
     move-result p0
 

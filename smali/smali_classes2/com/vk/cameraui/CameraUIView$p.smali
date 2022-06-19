@@ -48,7 +48,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/cameraui/CameraUIView$p;->a:Lcom/vk/cameraui/CameraUIView;

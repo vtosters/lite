@@ -3,12 +3,12 @@
 .source "CommunitiesExternalEventHandlerDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1;->a(Lb/h/g/l/f;)V
+    value = Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1;->a(Lb/h/g/l/ProfleEvents5;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Lcom/vk/catalog2/core/blocks/UIBlockList;",
-        "Lcom/vk/lists/t;",
+        "Lcom/vk/lists/PaginationHelper;",
         "Lcom/vk/catalog2/core/blocks/UIBlockList;",
         ">;"
     }
@@ -29,18 +29,18 @@
 
 
 # instance fields
-.field final synthetic $subscriveEvent:Lb/h/g/l/g;
+.field final synthetic $subscriveEvent:Lb/h/g/l/ProfleEvents;
 
 .field final synthetic this$0:Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1;Lb/h/g/l/g;)V
+.method constructor <init>(Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1;Lb/h/g/l/ProfleEvents;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;->this$0:Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1;
 
-    iput-object p2, p0, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;->$subscriveEvent:Lb/h/g/l/g;
+    iput-object p2, p0, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;->$subscriveEvent:Lb/h/g/l/ProfleEvents;
 
     const/4 p1, 0x2
 
@@ -51,7 +51,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/lists/t;)Lcom/vk/catalog2/core/blocks/UIBlockList;
+.method public final a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/lists/PaginationHelper;)Lcom/vk/catalog2/core/blocks/UIBlockList;
     .locals 1
 
     .line 2
@@ -63,7 +63,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2$1;-><init>(Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;)V
 
-    invoke-static {p2, p1, v0}, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate;Lcom/vk/catalog2/core/blocks/UIBlockList;Lkotlin/jvm/b/c;)V
+    invoke-static {p2, p1, v0}, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate;Lcom/vk/catalog2/core/blocks/UIBlockList;Lkotlin/jvm/b/Functions1;)V
 
     return-object p1
 .end method
@@ -74,9 +74,9 @@
     .line 1
     check-cast p1, Lcom/vk/catalog2/core/blocks/UIBlockList;
 
-    check-cast p2, Lcom/vk/lists/t;
+    check-cast p2, Lcom/vk/lists/PaginationHelper;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;->a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/lists/t;)Lcom/vk/catalog2/core/blocks/UIBlockList;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/events/common/CommunitiesExternalEventHandlerDelegate$subscribeOnProfileBus$1$catalogEvent$2;->a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/lists/PaginationHelper;)Lcom/vk/catalog2/core/blocks/UIBlockList;
 
     move-result-object p1
 

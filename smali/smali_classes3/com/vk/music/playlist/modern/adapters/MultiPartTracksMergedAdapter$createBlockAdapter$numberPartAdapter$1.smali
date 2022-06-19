@@ -3,12 +3,12 @@
 .source "MultiPartTracksMergedAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->a(Lcom/vk/music/player/d;Ljava/lang/String;I)V
+    value = Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->a(Lcom/vk/music/player/PlayerModel;Ljava/lang/String;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/ViewGroup;",
-        "Lcom/vk/music/playlist/modern/h/b;",
+        "Lcom/vk/music/playlist/modern/h/MusicNumberPartViewHolder;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/b;
+.method public final a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/MusicNumberPartViewHolder;
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vk/music/playlist/modern/h/b;
+    new-instance v0, Lcom/vk/music/playlist/modern/h/MusicNumberPartViewHolder;
 
-    invoke-direct {v0, p1}, Lcom/vk/music/playlist/modern/h/b;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v0, p1}, Lcom/vk/music/playlist/modern/h/MusicNumberPartViewHolder;-><init>(Landroid/view/ViewGroup;)V
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
     .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter$createBlockAdapter$numberPartAdapter$1;->a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/b;
+    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter$createBlockAdapter$numberPartAdapter$1;->a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/MusicNumberPartViewHolder;
 
     move-result-object p1
 

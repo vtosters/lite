@@ -11,7 +11,7 @@
 # The value of this static final field might be set in the static constructor
 .field private static final c:Ljava/lang/String; = "counters_tag"
 
-.field private static d:Lcom/vk/queue/sync/a;
+.field private static d:Lcom/vk/queue/sync/CancellationSignal;
 
 .field public static final e:Lcom/vtosters/lite/MenuCounterUpdater;
 
@@ -36,7 +36,7 @@
 
     const-string v2, "MenuCounterUpdater::class.java.simpleName"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v1, Lcom/vtosters/lite/MenuCounterUpdater;->a:Ljava/lang/String;
 
@@ -45,7 +45,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vtosters/lite/MenuCounterUpdater;->b:Ljava/lang/String;
 
@@ -75,11 +75,11 @@
     return-object p0
 .end method
 
-.method private final a(Lb/h/u/b/d$b;)V
+.method private final a(Lb/h/u/b/UpdateCountersQueueEvent$b;)V
     .locals 2
 
     .line 28
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -101,17 +101,17 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->a()I
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->a()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->k(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->k(I)V
 
     goto/16 :goto_0
 
@@ -125,17 +125,17 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->a()I
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->a()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->k(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->k(I)V
 
     goto/16 :goto_0
 
@@ -149,11 +149,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->a()I
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->a()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->o(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->o(I)V
 
     goto/16 :goto_0
 
@@ -167,11 +167,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->a()I
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->a()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->c(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->c(I)V
 
     goto/16 :goto_0
 
@@ -185,11 +185,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->a()I
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->a()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->a(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->a(I)V
 
     goto/16 :goto_0
 
@@ -203,11 +203,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->a()I
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->a()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->e(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->e(I)V
 
     goto/16 :goto_0
 
@@ -221,11 +221,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->a()I
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->a()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->i(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->i(I)V
 
     goto/16 :goto_0
 
@@ -239,11 +239,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->a()I
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->a()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->n(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->n(I)V
 
     goto :goto_0
 
@@ -257,11 +257,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->a()I
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->a()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->e(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->e(I)V
 
     goto :goto_0
 
@@ -275,11 +275,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->a()I
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->a()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->b(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->b(I)V
 
     goto :goto_0
 
@@ -293,11 +293,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->a()I
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->a()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->l(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->l(I)V
 
     goto :goto_0
 
@@ -311,11 +311,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->a()I
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->a()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->h(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->h(I)V
 
     goto :goto_0
 
@@ -329,11 +329,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->a()I
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->a()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->d(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->d(I)V
 
     goto :goto_0
 
@@ -347,17 +347,17 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lb/h/u/b/d$b;->a()I
+    invoke-virtual {p1}, Lb/h/u/b/UpdateCountersQueueEvent$b;->a()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->m(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->m(I)V
 
     .line 43
     :cond_0
     :goto_0
     :try_start_0
-    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     new-instance v0, Landroid/content/Intent;
 
@@ -405,20 +405,20 @@
     .end sparse-switch
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/MenuCounterUpdater;Lb/h/u/b/d$b;)V
+.method public static final synthetic a(Lcom/vtosters/lite/MenuCounterUpdater;Lb/h/u/b/UpdateCountersQueueEvent$b;)V
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/MenuCounterUpdater;->a(Lb/h/u/b/d$b;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/MenuCounterUpdater;->a(Lb/h/u/b/UpdateCountersQueueEvent$b;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/MenuCounterUpdater;Lcom/vk/queue/sync/a;)V
+.method public static final synthetic a(Lcom/vtosters/lite/MenuCounterUpdater;Lcom/vk/queue/sync/CancellationSignal;)V
     .locals 0
 
     .line 3
-    sput-object p1, Lcom/vtosters/lite/MenuCounterUpdater;->d:Lcom/vk/queue/sync/a;
+    sput-object p1, Lcom/vtosters/lite/MenuCounterUpdater;->d:Lcom/vk/queue/sync/CancellationSignal;
 
     return-void
 .end method
@@ -436,7 +436,7 @@
     .locals 3
 
     .line 11
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -469,7 +469,7 @@
 
     move-result v2
 
-    invoke-static {v2}, Lcom/vtosters/lite/w;->f(I)V
+    invoke-static {v2}, Lcom/vtosters/lite/MenuCountersState;->f(I)V
 
     const-string v2, "friends"
 
@@ -478,7 +478,7 @@
 
     move-result v2
 
-    invoke-static {v2}, Lcom/vtosters/lite/w;->e(I)V
+    invoke-static {v2}, Lcom/vtosters/lite/MenuCountersState;->e(I)V
 
     const-string v2, "friends_unread_badge"
 
@@ -487,10 +487,10 @@
 
     move-result v2
 
-    invoke-static {v2}, Lcom/vtosters/lite/w;->g(I)V
+    invoke-static {v2}, Lcom/vtosters/lite/MenuCountersState;->g(I)V
 
     .line 17
-    invoke-static {v0}, Lcom/vtosters/lite/w;->k(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->k(I)V
 
     const-string v0, "groups"
 
@@ -499,7 +499,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vtosters/lite/w;->h(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->h(I)V
 
     const-string v0, "photos"
 
@@ -508,7 +508,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vtosters/lite/w;->l(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->l(I)V
 
     const-string v0, "videos"
 
@@ -517,7 +517,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vtosters/lite/w;->n(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->n(I)V
 
     const-string v0, "app_requests"
 
@@ -526,7 +526,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vtosters/lite/w;->a(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->a(I)V
 
     const-string v0, "menu_discover_badge"
 
@@ -535,7 +535,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vtosters/lite/w;->b(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->b(I)V
 
     const-string v0, "friends_recommendations"
 
@@ -544,7 +544,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vtosters/lite/w;->d(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->d(I)V
 
     const-string v0, "support"
 
@@ -553,7 +553,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vtosters/lite/w;->m(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->m(I)V
 
     const-string v0, "vkpay"
 
@@ -562,7 +562,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vtosters/lite/w;->o(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->o(I)V
 
     const-string v0, "faves"
 
@@ -571,7 +571,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vtosters/lite/w;->c(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->c(I)V
 
     const-string v0, "memories"
 
@@ -580,7 +580,7 @@
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/w;->i(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->i(I)V
 
     return-void
 .end method
@@ -598,7 +598,7 @@
     .locals 2
 
     .line 2
-    sget-object v0, Lcom/vtosters/lite/MenuCounterUpdater;->d:Lcom/vk/queue/sync/a;
+    sget-object v0, Lcom/vtosters/lite/MenuCounterUpdater;->d:Lcom/vk/queue/sync/CancellationSignal;
 
     const/4 v1, 0x1
 
@@ -606,7 +606,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/queue/sync/a;->isCancelled()Z
+    invoke-interface {v0}, Lcom/vk/queue/sync/CancellationSignal;->isCancelled()Z
 
     move-result v0
 
@@ -639,13 +639,13 @@
     invoke-direct {p0}, Lcom/vtosters/lite/MenuCounterUpdater;->f()V
 
     .line 4
-    sget-object v0, Lb/h/n/c;->h:Lb/h/n/c;
+    sget-object v0, Lb/h/n/AppLifecycleDispatcher;->INSTANCE:Lb/h/n/AppLifecycleDispatcher;
 
     new-instance v1, Lcom/vtosters/lite/MenuCounterUpdater$a;
 
     invoke-direct {v1}, Lcom/vtosters/lite/MenuCounterUpdater$a;-><init>()V
 
-    invoke-virtual {v0, v1}, Lb/h/n/c;->a(Lb/h/n/c$a;)V
+    invoke-virtual {v0, v1}, Lb/h/n/AppLifecycleDispatcher;->a(Lb/h/n/AppLifecycleDispatcher$a;)V
 
     return-void
 .end method
@@ -663,11 +663,11 @@
     .locals 2
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result v0
 
@@ -708,7 +708,7 @@
     invoke-static {}, Lcom/vtosters/lite/MenuCounterUpdater;->i()V
 
     .line 9
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -741,17 +741,17 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/MenuCounterUpdater;->d:Lcom/vk/queue/sync/a;
+    sget-object v0, Lcom/vtosters/lite/MenuCounterUpdater;->d:Lcom/vk/queue/sync/CancellationSignal;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/queue/sync/a;->cancel()V
+    invoke-interface {v0}, Lcom/vk/queue/sync/CancellationSignal;->cancel()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    sput-object v0, Lcom/vtosters/lite/MenuCounterUpdater;->d:Lcom/vk/queue/sync/a;
+    sput-object v0, Lcom/vtosters/lite/MenuCounterUpdater;->d:Lcom/vk/queue/sync/CancellationSignal;
 
     return-void
 .end method
@@ -760,11 +760,11 @@
     .locals 7
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->b1()Z
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->b1()Z
 
     move-result v0
 
@@ -787,20 +787,20 @@
 
     .line 4
     :cond_1
-    sget-object v1, Lb/h/u/a;->f:Lb/h/u/a;
+    sget-object v1, Lb/h/u/VkQueueSyncManager;->INSTANCE:Lb/h/u/VkQueueSyncManager;
 
     .line 5
-    new-instance v2, Lb/h/u/b/d;
+    new-instance v2, Lb/h/u/b/UpdateCountersQueueEvent;
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v0
 
-    invoke-direct {v2, v0}, Lb/h/u/b/d;-><init>(I)V
+    invoke-direct {v2, v0}, Lb/h/u/b/UpdateCountersQueueEvent;-><init>(I)V
 
     .line 6
     sget-object v3, Lcom/vtosters/lite/MenuCounterUpdater;->c:Ljava/lang/String;
@@ -815,11 +815,11 @@
     sget-object v6, Lcom/vtosters/lite/MenuCounterUpdater$subscribeForCountersUpdates$3;->a:Lcom/vtosters/lite/MenuCounterUpdater$subscribeForCountersUpdates$3;
 
     .line 10
-    invoke-virtual/range {v1 .. v6}, Lb/h/u/a;->a(Lb/h/u/b/c;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Lcom/vk/queue/sync/a;
+    invoke-virtual/range {v1 .. v6}, Lb/h/u/VkQueueSyncManager;->a(Lb/h/u/b/QueueEvent;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Lcom/vk/queue/sync/CancellationSignal;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vtosters/lite/MenuCounterUpdater;->d:Lcom/vk/queue/sync/a;
+    sput-object v0, Lcom/vtosters/lite/MenuCounterUpdater;->d:Lcom/vk/queue/sync/CancellationSignal;
 
     return-void
 .end method
@@ -828,11 +828,11 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lb/h/u/a;->f:Lb/h/u/a;
+    sget-object v0, Lb/h/u/VkQueueSyncManager;->INSTANCE:Lb/h/u/VkQueueSyncManager;
 
     sget-object v1, Lcom/vtosters/lite/MenuCounterUpdater;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lb/h/u/a;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/u/VkQueueSyncManager;->a(Ljava/lang/Object;)V
 
     .line 2
     invoke-static {}, Lcom/vtosters/lite/MenuCounterUpdater;->e()V
@@ -844,20 +844,20 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/api/account/h;
+    new-instance v0, Lcom/vk/api/account/AccountGetCounters;
 
-    invoke-direct {v0}, Lcom/vk/api/account/h;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/account/AccountGetCounters;-><init>()V
 
     new-instance v1, Lcom/vtosters/lite/MenuCounterUpdater$b;
 
     invoke-direct {v1}, Lcom/vtosters/lite/MenuCounterUpdater$b;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, v1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -866,16 +866,16 @@
     .locals 10
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/im/engine/a;->e()Lcom/vk/im/engine/models/e;
+    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->e()Lcom/vk/im/engine/models/ImExperiments;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/im/engine/models/e;->i()Z
+    invoke-interface {v1}, Lcom/vk/im/engine/models/ImExperiments;->i()Z
 
     move-result v1
 
@@ -925,9 +925,9 @@
 
     .line 5
     :goto_1
-    new-instance v1, Lio/reactivex/disposables/a;
+    new-instance v1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {v1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {v1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
     .line 6
     new-instance v2, Ljava/lang/Throwable;
@@ -942,14 +942,14 @@
 
     const-string v3, "Throwable().stackTrace[1]"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     move-result-object v2
 
     .line 7
-    new-instance v3, Lcom/vk/im/engine/commands/dialogs/l;
+    new-instance v3, Lcom/vk/im/engine/commands/dialogs/DialogsCountTotalCmd;
 
     const/4 v6, 0x1
 
@@ -964,28 +964,28 @@
     move-object v4, v3
 
     .line 10
-    invoke-direct/range {v4 .. v9}, Lcom/vk/im/engine/commands/dialogs/l;-><init>(Ljava/util/Collection;ZLcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/im/engine/commands/dialogs/DialogsCountTotalCmd;-><init>(Ljava/util/Collection;ZLcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
 
     .line 11
-    invoke-virtual {v0, v2, v3}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v0, v2, v3}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 12
     new-instance v2, Lcom/vtosters/lite/MenuCounterUpdater$c;
 
-    invoke-direct {v2, v1}, Lcom/vtosters/lite/MenuCounterUpdater$c;-><init>(Lio/reactivex/disposables/a;)V
+    invoke-direct {v2, v1}, Lcom/vtosters/lite/MenuCounterUpdater$c;-><init>(Lio/reactivex/disposables/CompositeDisposable;)V
 
-    invoke-virtual {v0, v2}, Lc/a/t;->a(Lc/a/z/b;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/BiConsumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v2, "imEngine.submitSingle(ca\u2026spose()\n                }"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
-    invoke-virtual {v1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 
@@ -1004,11 +1004,11 @@
     .locals 1
 
     .line 5
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result v0
 
@@ -1040,7 +1040,7 @@
     invoke-direct {v0}, Lcom/vtosters/lite/MenuCounterUpdater;->h()V
 
     .line 9
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

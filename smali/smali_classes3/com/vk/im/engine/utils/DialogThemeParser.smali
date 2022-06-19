@@ -93,7 +93,7 @@
     const-string p2, "attrValue"
 
     .line 27
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 28
     invoke-interface {p4, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -154,13 +154,13 @@
     return p1
 .end method
 
-.method private final a(Lorg/json/JSONObject;Lcom/vk/im/engine/models/dialogs/f;Ljava/util/Map;)Lcom/vk/im/engine/models/dialogs/DialogThemeImpl;
+.method private final a(Lorg/json/JSONObject;Lcom/vk/im/engine/models/dialogs/DialogThemeName;Ljava/util/Map;)Lcom/vk/im/engine/models/dialogs/DialogThemeImpl;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lorg/json/JSONObject;",
-            "Lcom/vk/im/engine/models/dialogs/f;",
+            "Lcom/vk/im/engine/models/dialogs/DialogThemeName;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/Integer;",
@@ -170,7 +170,7 @@
     .end annotation
 
     .line 13
-    invoke-virtual {p2}, Lcom/vk/im/engine/models/dialogs/f;->a()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/im/engine/models/dialogs/DialogThemeName;->a()Ljava/lang/String;
 
     move-result-object p2
 
@@ -180,7 +180,7 @@
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     .line 15
-    sget v1, Lcom/vk/im/engine/h;->accent:I
+    sget v1, Lcom/vk/im/engine/R;->accent:I
 
     const-string v2, "main_tint"
 
@@ -188,34 +188,34 @@
 
     move-result v3
 
-    invoke-static {v0, v1, v3}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v0, v1, v3}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
 
     .line 16
-    sget v1, Lcom/vk/im/engine/h;->header_text:I
+    sget v1, Lcom/vk/im/engine/R;->header_text:I
 
     invoke-direct {p0, p1, p2, v2, p3}, Lcom/vk/im/engine/utils/DialogThemeParser;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)I
 
     move-result v3
 
-    invoke-static {v0, v1, v3}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v0, v1, v3}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
 
     .line 17
-    sget v1, Lcom/vk/im/engine/h;->header_tint:I
+    sget v1, Lcom/vk/im/engine/R;->header_tint:I
 
     invoke-direct {p0, p1, p2, v2, p3}, Lcom/vk/im/engine/utils/DialogThemeParser;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)I
 
     move-result v3
 
-    invoke-static {v0, v1, v3}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v0, v1, v3}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
 
     .line 18
-    sget v1, Lcom/vk/im/engine/h;->toolbar_title_textColor:I
+    sget v1, Lcom/vk/im/engine/R;->toolbar_title_textColor:I
 
     invoke-direct {p0, p1, p2, v2, p3}, Lcom/vk/im/engine/utils/DialogThemeParser;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)I
 
     move-result v2
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v0, v1, v2}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
 
     const/4 v1, 0x3
 
@@ -443,7 +443,7 @@
     const/16 v33, 0x0
 
     .line 22
-    invoke-direct/range {v7 .. v33}, Lcom/vk/im/engine/models/dialogs/BubbleColors;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v7 .. v33}, Lcom/vk/im/engine/models/dialogs/BubbleColors;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method
@@ -457,7 +457,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/engine/models/dialogs/f;",
+            "Lcom/vk/im/engine/models/dialogs/DialogThemeName;",
             ">;",
             "Lorg/json/JSONObject;",
             "Ljava/util/Map<",
@@ -465,7 +465,7 @@
             "Ljava/lang/Integer;",
             ">;)",
             "Ljava/util/Map<",
-            "Lcom/vk/im/engine/models/dialogs/f;",
+            "Lcom/vk/im/engine/models/dialogs/DialogThemeName;",
             "Lcom/vk/im/engine/models/dialogs/DialogTheme;",
             ">;"
         }
@@ -492,7 +492,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/models/dialogs/f;
+    check-cast v1, Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
     .line 4
     new-instance v2, Landroid/util/ArrayMap;
@@ -506,7 +506,7 @@
 
     const-string v4, "schemeJo.keys()"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     :cond_0
@@ -535,10 +535,10 @@
 
     const-string v6, "schemeJo.getJSONObject(a\u2026).getJSONObject(\"colors\")"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
-    invoke-direct {p0, v5, v1, p3}, Lcom/vk/im/engine/utils/DialogThemeParser;->a(Lorg/json/JSONObject;Lcom/vk/im/engine/models/dialogs/f;Ljava/util/Map;)Lcom/vk/im/engine/models/dialogs/DialogThemeImpl;
+    invoke-direct {p0, v5, v1, p3}, Lcom/vk/im/engine/utils/DialogThemeParser;->a(Lorg/json/JSONObject;Lcom/vk/im/engine/models/dialogs/DialogThemeName;Ljava/util/Map;)Lcom/vk/im/engine/models/dialogs/DialogThemeImpl;
 
     move-result-object v5
 
@@ -547,7 +547,7 @@
 
     const-string v7, "appTheme"
 
-    invoke-static {v4, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6, v4}, Lcom/vk/core/ui/themes/VKTheme$a;->a(Ljava/lang/String;)Ljava/util/List;
 
@@ -580,7 +580,7 @@
     :cond_1
     new-instance v3, Lcom/vk/im/engine/models/dialogs/DialogTheme;
 
-    invoke-direct {v3, v1, v2}, Lcom/vk/im/engine/models/dialogs/DialogTheme;-><init>(Lcom/vk/im/engine/models/dialogs/f;Ljava/util/Map;)V
+    invoke-direct {v3, v1, v2}, Lcom/vk/im/engine/models/dialogs/DialogTheme;-><init>(Lcom/vk/im/engine/models/dialogs/DialogThemeName;Ljava/util/Map;)V
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

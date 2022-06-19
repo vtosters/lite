@@ -1,9 +1,9 @@
 .class public final Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;
-.super Lcom/vk/libvideo/autoplay/delegate/a;
+.super Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;
 .source "AutoPlayDelegate.kt"
 
 # interfaces
-.implements Lcom/vk/libvideo/autoplay/h;
+.implements Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 .implements Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;
 
 
@@ -18,7 +18,7 @@
 
 
 # static fields
-.field static final synthetic k0:[Lkotlin/u/j;
+.field static final synthetic k0:[Lkotlin/u/KProperty5;
 
 .field private static l0:I
 
@@ -32,11 +32,11 @@
 
 .field private final I:Landroid/graphics/PorterDuffColorFilter;
 
-.field private final J:Lkotlin/e;
+.field private final J:Lkotlin/Lazy2;
 
 .field private final K:I
 
-.field private L:Lcom/vk/libvideo/dialogs/d;
+.field private L:Lcom/vk/libvideo/dialogs/BaseAnimationDialog;
 
 .field private M:Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$b;
 
@@ -50,7 +50,7 @@
 
 .field private R:Z
 
-.field private final S:Lcom/vk/core/util/b;
+.field private final S:Lcom/vk/core/util/AdapterPosition;
 
 .field private final T:Lcom/vk/media/player/video/view/VideoTextureView;
 
@@ -93,13 +93,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -107,36 +107,36 @@
 
     const-string v4, "getInlineLiveEventsDelegate()Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->k0:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->k0:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/core/util/b;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/ViewGroup;FLandroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/widget/ProgressBar;Landroid/view/View;Lcom/vk/libvideo/ui/DurationView;Lcom/google/android/exoplayer2/ui/VKSubtitleView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/libvideo/ui/VideoErrorView;Landroid/view/ViewGroup;Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;ZZLcom/vk/libvideo/ui/ActionLinkView;Lcom/vk/libvideo/ad/VideoAdLayout;)V
+.method public constructor <init>(Lcom/vk/core/util/AdapterPosition;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/ViewGroup;FLandroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/widget/ProgressBar;Landroid/view/View;Lcom/vk/libvideo/ui/DurationView;Lcom/google/android/exoplayer2/ui/VKSubtitleView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/libvideo/ui/VideoErrorView;Landroid/view/ViewGroup;Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;ZZLcom/vk/libvideo/ui/ActionLinkView;Lcom/vk/libvideo/ad/VideoAdLayout;)V
     .locals 8
 
     move-object v0, p0
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;-><init>()V
 
     move-object v1, p1
 
-    iput-object v1, v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->S:Lcom/vk/core/util/b;
+    iput-object v1, v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->S:Lcom/vk/core/util/AdapterPosition;
 
     move-object v1, p2
 
@@ -265,11 +265,11 @@
 
     invoke-direct {v1, p0, v2}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$inlineLiveEventsDelegate$2;-><init>(Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;Landroid/view/ViewGroup;)V
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->J:Lkotlin/e;
+    iput-object v1, v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->J:Lkotlin/Lazy2;
 
     .line 8
     sget v1, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->l0:I
@@ -309,7 +309,7 @@
 
     move-object p7, v7
 
-    invoke-direct/range {p1 .. p7}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$b;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {p1 .. p7}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$b;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v1, v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->M:Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$b;
 
@@ -318,14 +318,14 @@
 
     move-object p1, v1
 
-    invoke-direct/range {p1 .. p7}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$b;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {p1 .. p7}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$b;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v1, v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->N:Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$b;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/util/b;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/ViewGroup;FLandroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/widget/ProgressBar;Landroid/view/View;Lcom/vk/libvideo/ui/DurationView;Lcom/google/android/exoplayer2/ui/VKSubtitleView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/libvideo/ui/VideoErrorView;Landroid/view/ViewGroup;Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;ZZLcom/vk/libvideo/ui/ActionLinkView;Lcom/vk/libvideo/ad/VideoAdLayout;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/util/AdapterPosition;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/ViewGroup;FLandroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/widget/ProgressBar;Landroid/view/View;Lcom/vk/libvideo/ui/DurationView;Lcom/google/android/exoplayer2/ui/VKSubtitleView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/libvideo/ui/VideoErrorView;Landroid/view/ViewGroup;Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;ZZLcom/vk/libvideo/ui/ActionLinkView;Lcom/vk/libvideo/ad/VideoAdLayout;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 22
 
     move/from16 v0, p20
@@ -523,7 +523,7 @@
     move/from16 v18, p16
 
     .line 1
-    invoke-direct/range {v2 .. v21}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;-><init>(Lcom/vk/core/util/b;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/ViewGroup;FLandroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/widget/ProgressBar;Landroid/view/View;Lcom/vk/libvideo/ui/DurationView;Lcom/google/android/exoplayer2/ui/VKSubtitleView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/libvideo/ui/VideoErrorView;Landroid/view/ViewGroup;Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;ZZLcom/vk/libvideo/ui/ActionLinkView;Lcom/vk/libvideo/ad/VideoAdLayout;)V
+    invoke-direct/range {v2 .. v21}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;-><init>(Lcom/vk/core/util/AdapterPosition;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/ViewGroup;FLandroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/widget/ProgressBar;Landroid/view/View;Lcom/vk/libvideo/ui/DurationView;Lcom/google/android/exoplayer2/ui/VKSubtitleView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/libvideo/ui/VideoErrorView;Landroid/view/ViewGroup;Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;ZZLcom/vk/libvideo/ui/ActionLinkView;Lcom/vk/libvideo/ad/VideoAdLayout;)V
 
     return-void
 .end method
@@ -532,7 +532,7 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->h()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->h()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -541,7 +541,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -586,7 +586,7 @@
     .locals 8
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -604,7 +604,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->h()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->h()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -675,7 +675,7 @@
 
     if-nez v3, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v3
 
@@ -725,7 +725,7 @@
 
     if-nez v3, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v3
 
@@ -767,7 +767,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -778,19 +778,19 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->r()Lcom/vk/libvideo/autoplay/delegate/b;
+    invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->r()Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;->a()V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->r()Lcom/vk/libvideo/autoplay/delegate/b;
+    invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->r()Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;
 
     move-result-object v0
 
@@ -798,7 +798,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/libvideo/autoplay/delegate/b;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;->a(Z)V
 
     :cond_1
     :goto_0
@@ -809,9 +809,9 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/libvideo/autoplay/c;->c:Lcom/vk/libvideo/autoplay/c;
+    sget-object v0, Lcom/vk/libvideo/autoplay/PlaySettings;->INSTANCE:Lcom/vk/libvideo/autoplay/PlaySettings;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/c;->a()Z
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/PlaySettings;->a()Z
 
     move-result v0
 
@@ -822,7 +822,7 @@
 
     if-eqz v0, :cond_0
 
-    sget v1, Lcom/vk/libvideo/e;->ic_sound_off_shadow_48:I
+    sget v1, Lcom/vk/libvideo/R7;->ic_sound_off_shadow_48:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -834,7 +834,7 @@
 
     iget-object v1, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->G:Landroid/content/Context;
 
-    sget v2, Lcom/vk/libvideo/j;->video_accessibility_sound_off:I
+    sget v2, Lcom/vk/libvideo/R11;->video_accessibility_sound_off:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -850,7 +850,7 @@
 
     if-eqz v0, :cond_2
 
-    sget v1, Lcom/vk/libvideo/e;->ic_volume_shadow_48:I
+    sget v1, Lcom/vk/libvideo/R7;->ic_volume_shadow_48:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -862,7 +862,7 @@
 
     iget-object v1, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->G:Landroid/content/Context;
 
-    sget v2, Lcom/vk/libvideo/j;->video_accessibility_sound_on:I
+    sget v2, Lcom/vk/libvideo/R11;->video_accessibility_sound_on:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1049,7 +1049,7 @@
 
     if-eqz v1, :cond_7
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -1091,11 +1091,11 @@
 
     if-nez v1, :cond_9
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->j(Lcom/vk/libvideo/autoplay/a;)Z
+    invoke-direct {p0, v1}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->j(Lcom/vk/libvideo/autoplay/AutoPlay;)Z
 
     move-result v1
 
@@ -1159,7 +1159,7 @@
 
     if-eqz v0, :cond_e
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -1202,14 +1202,14 @@
     .line 26
     iget-object v0, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->W:Landroid/view/View;
 
-    instance-of v1, v0, Lcom/vk/imageloader/view/d;
+    instance-of v1, v0, Lcom/vk/imageloader/view/WithColorFilter;
 
     if-nez v1, :cond_10
 
     move-object v0, v4
 
     :cond_10
-    check-cast v0, Lcom/vk/imageloader/view/d;
+    check-cast v0, Lcom/vk/imageloader/view/WithColorFilter;
 
     if-eqz v0, :cond_13
 
@@ -1241,7 +1241,7 @@
     .line 29
     :cond_12
     :goto_4
-    invoke-interface {v0, v4}, Lcom/vk/imageloader/view/d;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    invoke-interface {v0, v4}, Lcom/vk/imageloader/view/WithColorFilter;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     .line 30
     :cond_13
@@ -1528,11 +1528,11 @@
 
     if-nez v2, :cond_3
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v2
 
-    invoke-direct {v0, v2}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->j(Lcom/vk/libvideo/autoplay/a;)Z
+    invoke-direct {v0, v2}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->j(Lcom/vk/libvideo/autoplay/AutoPlay;)Z
 
     move-result v2
 
@@ -1807,20 +1807,20 @@
     .line 57
     iget-object v1, v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->W:Landroid/view/View;
 
-    instance-of v2, v1, Lcom/vk/imageloader/view/d;
+    instance-of v2, v1, Lcom/vk/imageloader/view/WithColorFilter;
 
     if-nez v2, :cond_e
 
     move-object v1, v5
 
     :cond_e
-    check-cast v1, Lcom/vk/imageloader/view/d;
+    check-cast v1, Lcom/vk/imageloader/view/WithColorFilter;
 
     if-eqz v1, :cond_f
 
     iget-object v2, v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->H:Landroid/graphics/PorterDuffColorFilter;
 
-    invoke-interface {v1, v2}, Lcom/vk/imageloader/view/d;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    invoke-interface {v1, v2}, Lcom/vk/imageloader/view/WithColorFilter;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     .line 58
     :cond_f
@@ -1841,20 +1841,20 @@
     .line 60
     iget-object v1, v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->W:Landroid/view/View;
 
-    instance-of v2, v1, Lcom/vk/imageloader/view/d;
+    instance-of v2, v1, Lcom/vk/imageloader/view/WithColorFilter;
 
     if-nez v2, :cond_11
 
     move-object v1, v5
 
     :cond_11
-    check-cast v1, Lcom/vk/imageloader/view/d;
+    check-cast v1, Lcom/vk/imageloader/view/WithColorFilter;
 
     if-eqz v1, :cond_12
 
     iget-object v2, v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->I:Landroid/graphics/PorterDuffColorFilter;
 
-    invoke-interface {v1, v2}, Lcom/vk/imageloader/view/d;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    invoke-interface {v1, v2}, Lcom/vk/imageloader/view/WithColorFilter;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     .line 61
     :cond_12
@@ -1884,18 +1884,18 @@
     :cond_14
     iget-object v1, v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->W:Landroid/view/View;
 
-    instance-of v2, v1, Lcom/vk/imageloader/view/d;
+    instance-of v2, v1, Lcom/vk/imageloader/view/WithColorFilter;
 
     if-nez v2, :cond_15
 
     move-object v1, v5
 
     :cond_15
-    check-cast v1, Lcom/vk/imageloader/view/d;
+    check-cast v1, Lcom/vk/imageloader/view/WithColorFilter;
 
     if-eqz v1, :cond_16
 
-    invoke-interface {v1, v5}, Lcom/vk/imageloader/view/d;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    invoke-interface {v1, v5}, Lcom/vk/imageloader/view/WithColorFilter;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     .line 64
     :cond_16
@@ -1988,7 +1988,7 @@
 
     if-eqz v2, :cond_19
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v2
 
@@ -2037,11 +2037,11 @@
 
     if-nez v2, :cond_1b
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v2
 
-    invoke-direct {v0, v2}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->j(Lcom/vk/libvideo/autoplay/a;)Z
+    invoke-direct {v0, v2}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->j(Lcom/vk/libvideo/autoplay/AutoPlay;)Z
 
     move-result v2
 
@@ -2096,7 +2096,7 @@
 
     if-eq v1, v2, :cond_1f
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2135,7 +2135,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2143,7 +2143,7 @@
 
     if-eqz v1, :cond_20
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2337,23 +2337,23 @@
     .locals 2
 
     .line 2
-    invoke-static {}, Lcom/vk/libvideo/y/m;->a()Lc/a/m;
+    invoke-static {}, Lcom/vk/libvideo/y/VideoEventBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
-    const-class v1, Lcom/vk/libvideo/y/j;
+    const-class v1, Lcom/vk/libvideo/y/VideoEvents12;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Ljava/lang/Class;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Ljava/lang/Class;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -2362,16 +2362,16 @@
 
     invoke-direct {v1, p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$g;-><init>(Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "VideoEventBus.events()\n \u2026anges()\n                }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-static {v0, p1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Landroid/view/View;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Landroid/view/View;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -2402,7 +2402,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -2410,22 +2410,22 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/libvideo/p;->a(Ljava/lang/String;Lcom/vk/dto/common/VideoFile;)V
+    invoke-static {p1, v0}, Lcom/vk/libvideo/VideoLogger;->a(Ljava/lang/String;Lcom/vk/dto/common/VideoFile;)V
 
     return-void
 .end method
 
-.method private final j(Lcom/vk/libvideo/autoplay/a;)Z
+.method private final j(Lcom/vk/libvideo/autoplay/AutoPlay;)Z
     .locals 1
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/libvideo/autoplay/a;->p()Z
+    invoke-interface {p1}, Lcom/vk/libvideo/autoplay/AutoPlay;->p()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/libvideo/autoplay/a;->getDuration()I
+    invoke-interface {p1}, Lcom/vk/libvideo/autoplay/AutoPlay;->getDuration()I
 
     move-result p1
 
@@ -2521,7 +2521,7 @@
 
     const-string v1, "PREVIEW"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2579,7 +2579,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -2590,7 +2590,7 @@
     if-eqz v0, :cond_4
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -2605,7 +2605,7 @@
 
     if-eqz v0, :cond_1
 
-    sget v1, Lcom/vk/libvideo/e;->bg_video_live_spectators:I
+    sget v1, Lcom/vk/libvideo/R7;->bg_video_live_spectators:I
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
@@ -2615,7 +2615,7 @@
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2633,7 +2633,7 @@
 
     if-eqz v0, :cond_3
 
-    sget v1, Lcom/vk/libvideo/e;->bg_video_live:I
+    sget v1, Lcom/vk/libvideo/R7;->bg_video_live:I
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
@@ -2655,7 +2655,7 @@
 
     if-eqz v0, :cond_5
 
-    sget v1, Lcom/vk/libvideo/e;->bg_video_duration_label:I
+    sget v1, Lcom/vk/libvideo/R7;->bg_video_duration_label:I
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
@@ -2668,7 +2668,7 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -2685,7 +2685,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v2
 
@@ -2701,7 +2701,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$bindRestriction$$inlined$let$lambda$1;-><init>(Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;)V
 
-    invoke-virtual {v1, v0, v2, v3}, Lcom/vk/libvideo/ui/VideoRestrictionView;->a(Lcom/vk/dto/common/Restriction;Lcom/vk/dto/common/Image;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v1, v0, v2, v3}, Lcom/vk/libvideo/ui/VideoRestrictionView;->a(Lcom/vk/dto/common/Restriction;Lcom/vk/dto/common/Image;Lkotlin/jvm/b/Functions;)V
 
     :cond_0
     return-void
@@ -2714,7 +2714,7 @@
     iget-object v0, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->N:Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$b;
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2724,7 +2724,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2734,7 +2734,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2744,7 +2744,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2763,7 +2763,7 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2773,11 +2773,11 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v2
 
@@ -2785,7 +2785,7 @@
 
     move-result-object v2
 
-    invoke-interface {v1, v2}, Lcom/vk/bridges/k0;->a(Lcom/vk/dto/common/VideoFile;)Z
+    invoke-interface {v1, v2}, Lcom/vk/bridges/VideoBridge1;->a(Lcom/vk/dto/common/VideoFile;)Z
 
     move-result v1
 
@@ -2800,7 +2800,7 @@
 
     .line 6
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2812,7 +2812,7 @@
 
     if-eqz v1, :cond_a
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2849,7 +2849,7 @@
 
     .line 9
     :cond_3
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2868,7 +2868,7 @@
 
     .line 11
     :cond_4
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2887,7 +2887,7 @@
 
     .line 13
     :cond_5
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2897,7 +2897,7 @@
 
     if-eqz v1, :cond_6
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2907,7 +2907,7 @@
 
     if-eqz v1, :cond_6
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2939,7 +2939,7 @@
 
     .line 17
     :cond_7
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2949,7 +2949,7 @@
 
     if-eqz v1, :cond_8
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2968,7 +2968,7 @@
 
     .line 19
     :cond_8
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -2998,7 +2998,7 @@
 
     .line 23
     :goto_1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -3010,7 +3010,7 @@
 
     iget-object v1, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->G:Landroid/content/Context;
 
-    sget v2, Lcom/vk/libvideo/j;->video_err_network:I
+    sget v2, Lcom/vk/libvideo/R11;->video_err_network:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3018,13 +3018,13 @@
 
     const-string v2, "context.getString(R.string.video_err_network)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
     .line 24
     :cond_b
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -3036,7 +3036,7 @@
 
     iget-object v1, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->G:Landroid/content/Context;
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v2
 
@@ -3044,7 +3044,7 @@
 
     move-result v2
 
-    invoke-static {v2}, Lcom/vk/libvideo/t;->d(I)I
+    invoke-static {v2}, Lcom/vk/libvideo/VideoUtils;->d(I)I
 
     move-result v2
 
@@ -3054,7 +3054,7 @@
 
     const-string v2, "context.getString(VideoU\u2026ring(autoPlay.errorCode))"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -3075,22 +3075,22 @@
     return-void
 .end method
 
-.method private final r()Lcom/vk/libvideo/autoplay/delegate/b;
+.method private final r()Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->J:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->J:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->k0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->k0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/libvideo/autoplay/delegate/b;
+    check-cast v0, Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;
 
     return-object v0
 .end method
@@ -3106,7 +3106,7 @@
     move-result-object v0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -3136,7 +3136,7 @@
 
     .line 3
     :cond_0
-    sget v1, Lcom/vk/libvideo/j;->label_gif:I
+    sget v1, Lcom/vk/libvideo/R11;->label_gif:I
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3144,13 +3144,13 @@
 
     const-string v0, "context.getString(R.string.label_gif)"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 4
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -3160,7 +3160,7 @@
 
     if-eqz v1, :cond_2
 
-    sget v1, Lcom/vk/libvideo/j;->video_live_upcoming:I
+    sget v1, Lcom/vk/libvideo/R11;->video_live_upcoming:I
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3168,13 +3168,13 @@
 
     const-string v0, "context.getString(R.string.video_live_upcoming)"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 5
     :cond_2
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -3184,7 +3184,7 @@
 
     if-eqz v1, :cond_4
 
-    sget v1, Lcom/vk/libvideo/j;->video_live:I
+    sget v1, Lcom/vk/libvideo/R11;->video_live:I
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3192,7 +3192,7 @@
 
     const-string v1, "context.getString(R.string.video_live)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_3
 
@@ -3202,7 +3202,7 @@
 
     const-string v0, "(this as java.lang.String).toUpperCase()"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -3221,7 +3221,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vk/libvideo/t;->c(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/libvideo/VideoUtils;->c(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3233,7 +3233,7 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -3243,7 +3243,7 @@
 
     if-gtz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -3257,7 +3257,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -3265,7 +3265,7 @@
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -3279,7 +3279,7 @@
 
     if-gez v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -3293,7 +3293,7 @@
 
     .line 3
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -3301,7 +3301,7 @@
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -3329,7 +3329,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v2
 
@@ -3343,7 +3343,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v2
 
@@ -3373,17 +3373,17 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->i()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->i()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->g()Ljava/lang/String;
 
     move-result-object v3
 
@@ -3410,7 +3410,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->L:Lcom/vk/libvideo/dialogs/d;
+    iget-object v0, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->L:Lcom/vk/libvideo/dialogs/BaseAnimationDialog;
 
     if-eqz v0, :cond_0
 
@@ -3429,7 +3429,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -3439,7 +3439,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -3455,7 +3455,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -3498,14 +3498,14 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->f()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->f()Landroid/view/ViewGroup;
 
     move-result-object v0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->S:Lcom/vk/core/util/b;
+    iget-object v1, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->S:Lcom/vk/core/util/AdapterPosition;
 
-    invoke-interface {v1}, Lcom/vk/core/util/b;->k()I
+    invoke-interface {v1}, Lcom/vk/core/util/AdapterPosition;->k()I
 
     move-result v1
 
@@ -3556,13 +3556,13 @@
     invoke-direct {p0, v0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->c(Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->d()Lcom/vk/libvideo/q;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->d()Lcom/vk/libvideo/VideoUI2;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0}, Lcom/vk/libvideo/q;->a(Lcom/vk/libvideo/r;)V
+    invoke-interface {v0, p0}, Lcom/vk/libvideo/VideoUI2;->a(Lcom/vk/libvideo/VideoUI;)V
 
     .line 3
     :cond_0
@@ -3705,7 +3705,7 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-object v0, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->L:Lcom/vk/libvideo/dialogs/d;
+    iput-object v0, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->L:Lcom/vk/libvideo/dialogs/BaseAnimationDialog;
 
     .line 2
     invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->v()Z
@@ -3723,7 +3723,7 @@
     invoke-direct {p0, v1}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->b(Z)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -3733,7 +3733,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -3744,7 +3744,7 @@
     if-eqz v1, :cond_1
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -3766,14 +3766,14 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->getVideoConfig()Lcom/vk/libvideo/autoplay/AutoPlayConfig;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->getVideoConfig()Lcom/vk/libvideo/autoplay/AutoPlayConfig;
 
     move-result-object v4
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->b(Ljava/lang/String;Lcom/vk/media/player/video/view/VideoTextureView;Lcom/vk/libvideo/autoplay/AutoPlayConfig;)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -3815,13 +3815,13 @@
     invoke-direct {p0, v0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->c(Ljava/lang/String;)V
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->d()Lcom/vk/libvideo/q;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->d()Lcom/vk/libvideo/VideoUI2;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0, p0}, Lcom/vk/libvideo/q;->a(Lcom/vk/libvideo/r;)V
+    invoke-interface {v0, p0}, Lcom/vk/libvideo/VideoUI2;->a(Lcom/vk/libvideo/VideoUI;)V
 
     :cond_2
     return-void
@@ -3843,7 +3843,7 @@
     invoke-direct {v0, p0}, Lcom/vk/libvideo/bottomsheet/ModalDialogsController;-><init>(Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;)V
 
     .line 18
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -3854,7 +3854,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/libvideo/bottomsheet/ModalDialogsController;->a(Lcom/vk/dto/common/VideoFile;)V
 
     .line 19
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -3896,14 +3896,14 @@
     invoke-direct {p0, v0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->c(Ljava/lang/String;)V
 
     .line 22
-    invoke-super {p0, p1}, Lcom/vk/libvideo/autoplay/delegate/a;->a(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->a(Landroid/view/View;)V
 
     .line 23
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/libvideo/autoplay/h;)V
+    invoke-virtual {v0, p0}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/libvideo/autoplay/VideoUIEventListener;)V
 
     .line 24
     invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->K()V
@@ -3923,7 +3923,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/libvideo/ad/b;)V
+.method public a(Lcom/vk/libvideo/ad/AdBannerData;)V
     .locals 4
 
     .line 27
@@ -3937,7 +3937,7 @@
     invoke-direct {v1, p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$onAdShow$1;-><init>(Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;)V
 
     .line 29
-    invoke-virtual {v0, v1, p1}, Lcom/vk/libvideo/ad/VideoAdLayout;->a(Lkotlin/jvm/b/a;Lcom/vk/libvideo/ad/b;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/libvideo/ad/VideoAdLayout;->a(Lkotlin/jvm/b/Functions;Lcom/vk/libvideo/ad/AdBannerData;)V
 
     .line 30
     :cond_0
@@ -3966,9 +3966,9 @@
 
     move-result-object v1
 
-    sget v3, Lcom/vk/libvideo/c;->gray_900:I
+    sget v3, Lcom/vk/libvideo/R3;->gray_900:I
 
-    invoke-static {v1, v3}, Lcom/vk/core/util/o1;->a(Landroid/view/View;I)I
+    invoke-static {v1, v3}, Lcom/vk/core/util/ViewUtils;->a(Landroid/view/View;I)I
 
     move-result v1
 
@@ -3980,11 +3980,11 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/ad/b;->e()I
+    invoke-virtual {p1}, Lcom/vk/libvideo/ad/AdBannerData;->e()I
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/ad/b;->c()I
+    invoke-virtual {p1}, Lcom/vk/libvideo/ad/AdBannerData;->c()I
 
     move-result p1
 
@@ -4009,7 +4009,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/libvideo/ad/b;FFZLjava/lang/Integer;)V
+.method public a(Lcom/vk/libvideo/ad/AdBannerData;FFZLjava/lang/Integer;)V
     .locals 6
 
     .line 34
@@ -4031,7 +4031,7 @@
     move-object v4, p5
 
     .line 36
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/libvideo/ad/VideoAdLayout;->a(FFZLjava/lang/Integer;Lkotlin/jvm/b/a;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/libvideo/ad/VideoAdLayout;->a(FFZLjava/lang/Integer;Lkotlin/jvm/b/Functions;)V
 
     .line 37
     :cond_0
@@ -4039,11 +4039,11 @@
 
     move-result-object p2
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/ad/b;->e()I
+    invoke-virtual {p1}, Lcom/vk/libvideo/ad/AdBannerData;->e()I
 
     move-result p3
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/ad/b;->c()I
+    invoke-virtual {p1}, Lcom/vk/libvideo/ad/AdBannerData;->c()I
 
     move-result p1
 
@@ -4074,7 +4074,7 @@
     .locals 3
 
     .line 5
-    invoke-super {p0, p1, p2}, Lcom/vk/libvideo/autoplay/delegate/a;->a(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/libvideo/autoplay/AutoPlayConfig;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->a(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/libvideo/autoplay/AutoPlayConfig;)V
 
     const/4 v0, 0x0
 
@@ -4092,13 +4092,13 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->h()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->h()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v1
 
     iget v1, v1, Lcom/vk/dto/common/VideoFile;->r0:I
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->h()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->h()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v2
 
@@ -4108,11 +4108,11 @@
 
     .line 8
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -4123,49 +4123,49 @@
     if-eqz v0, :cond_1
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->b(Lcom/vk/libvideo/autoplay/h;)V
+    invoke-virtual {v0, p0}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->b(Lcom/vk/libvideo/autoplay/VideoUIEventListener;)V
 
     .line 10
-    invoke-virtual {p1, p0}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/libvideo/autoplay/h;)V
+    invoke-virtual {p1, p0}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/libvideo/autoplay/VideoUIEventListener;)V
 
     .line 11
     :cond_1
-    invoke-virtual {p0, p2}, Lcom/vk/libvideo/autoplay/delegate/a;->a(Lcom/vk/libvideo/autoplay/AutoPlayConfig;)V
+    invoke-virtual {p0, p2}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->a(Lcom/vk/libvideo/autoplay/AutoPlayConfig;)V
 
     .line 12
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/autoplay/delegate/a;->a(Lcom/vk/libvideo/autoplay/VideoAutoPlay;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->a(Lcom/vk/libvideo/autoplay/VideoAutoPlay;)V
 
     .line 13
     invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->K()V
 
     .line 14
-    invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->r()Lcom/vk/libvideo/autoplay/delegate/b;
+    invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->r()Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;
 
     move-result-object p2
 
     if-eqz p2, :cond_2
 
-    invoke-virtual {p2, p1}, Lcom/vk/libvideo/autoplay/delegate/b;->a(Lcom/vk/libvideo/autoplay/a;)V
+    invoke-virtual {p2, p1}, Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;->a(Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     .line 15
     :cond_2
-    invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->r()Lcom/vk/libvideo/autoplay/delegate/b;
+    invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->r()Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1, v1}, Lcom/vk/libvideo/autoplay/delegate/b;->a(Z)V
+    invoke-virtual {p1, v1}, Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;->a(Z)V
 
     :cond_3
     return-void
 .end method
 
-.method public a(Lcom/vk/libvideo/autoplay/a;)V
+.method public a(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 2
 
     const/4 p1, 0x0
@@ -4180,16 +4180,16 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/libvideo/autoplay/a;I)V
+.method public a(Lcom/vk/libvideo/autoplay/AutoPlay;I)V
     .locals 0
 
     .line 2
-    invoke-static {p0, p1, p2}, Lcom/vk/libvideo/autoplay/h$a;->a(Lcom/vk/libvideo/autoplay/h;Lcom/vk/libvideo/autoplay/a;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/libvideo/autoplay/VideoUIEventListener$a;->a(Lcom/vk/libvideo/autoplay/VideoUIEventListener;Lcom/vk/libvideo/autoplay/AutoPlay;I)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/libvideo/autoplay/a;II)V
+.method public a(Lcom/vk/libvideo/autoplay/AutoPlay;II)V
     .locals 0
     .param p2    # I
         .annotation build Landroidx/annotation/StringRes;
@@ -4287,7 +4287,7 @@
 
     .line 7
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -4298,7 +4298,7 @@
     if-eqz v1, :cond_3
 
     .line 8
-    invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->r()Lcom/vk/libvideo/autoplay/delegate/b;
+    invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->r()Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;
 
     move-result-object p2
 
@@ -4306,21 +4306,21 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p2, v0}, Lcom/vk/libvideo/autoplay/delegate/b;->a(Z)V
+    invoke-virtual {p2, v0}, Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;->a(Z)V
 
     .line 9
     :cond_2
-    new-instance p2, Lcom/vk/libvideo/dialogs/e;
+    new-instance p2, Lcom/vk/libvideo/dialogs/LiveVideoDialog;
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->i()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->i()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->g()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -4338,13 +4338,13 @@
 
     move-object v6, p0
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/libvideo/dialogs/e;-><init>(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VideoFile;Lcom/vk/libvideo/dialogs/b;ZZ)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/libvideo/dialogs/LiveVideoDialog;-><init>(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VideoFile;Lcom/vk/libvideo/dialogs/AnimationDialogCallback;ZZ)V
 
     goto :goto_0
 
     .line 10
     :cond_3
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -4362,7 +4362,7 @@
     if-eq v1, v0, :cond_5
 
     :cond_4
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -4373,11 +4373,11 @@
     if-nez v0, :cond_5
 
     .line 12
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/k0;->j()Z
+    invoke-interface {v0}, Lcom/vk/bridges/VideoBridge1;->j()Z
 
     move-result v0
 
@@ -4388,36 +4388,36 @@
     .line 13
     new-instance p2, Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->i()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->i()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {p2, p1, v0, v1, p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;-><init>(Landroid/app/Activity;Lcom/vk/libvideo/autoplay/VideoAutoPlay;Ljava/lang/String;Lcom/vk/libvideo/dialogs/b;)V
+    invoke-direct {p2, p1, v0, v1, p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;-><init>(Landroid/app/Activity;Lcom/vk/libvideo/autoplay/VideoAutoPlay;Ljava/lang/String;Lcom/vk/libvideo/dialogs/AnimationDialogCallback;)V
 
     goto :goto_0
 
     .line 14
     :cond_5
-    new-instance p2, Lcom/vk/libvideo/dialogs/f;
+    new-instance p2, Lcom/vk/libvideo/dialogs/VideoDialog;
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->Q:Lcom/vk/libvideo/ad/AdsDataProvider;
 
-    invoke-direct {p2, p1, v0, v1, p0}, Lcom/vk/libvideo/dialogs/f;-><init>(Landroid/app/Activity;Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/libvideo/ad/AdsDataProvider;Lcom/vk/libvideo/dialogs/b;)V
+    invoke-direct {p2, p1, v0, v1, p0}, Lcom/vk/libvideo/dialogs/VideoDialog;-><init>(Landroid/app/Activity;Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/libvideo/ad/AdsDataProvider;Lcom/vk/libvideo/dialogs/AnimationDialogCallback;)V
 
     .line 15
     :goto_0
-    invoke-virtual {p2}, Lcom/vk/libvideo/dialogs/d;->show()V
+    invoke-virtual {p2}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->show()V
 
     .line 16
-    iput-object p2, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->L:Lcom/vk/libvideo/dialogs/d;
+    iput-object p2, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->L:Lcom/vk/libvideo/dialogs/BaseAnimationDialog;
 
     return-void
 .end method
@@ -4447,7 +4447,7 @@
     invoke-direct {p0, v0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->c(Ljava/lang/String;)V
 
     .line 18
-    invoke-super {p0, p1}, Lcom/vk/libvideo/autoplay/delegate/a;->b(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b(Landroid/view/View;)V
 
     .line 19
     invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->getVideoView()Lcom/vk/media/player/video/view/VideoTextureView;
@@ -4475,7 +4475,7 @@
 
     .line 20
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object p1
 
@@ -4489,7 +4489,7 @@
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object p1
 
@@ -4504,14 +4504,14 @@
     if-eqz p1, :cond_2
 
     .line 21
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->F()V
 
     .line 22
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object p1
 
@@ -4519,7 +4519,7 @@
 
     .line 23
     :cond_2
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object p1
 
@@ -4530,7 +4530,7 @@
     if-nez p1, :cond_3
 
     .line 24
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object p1
 
@@ -4538,14 +4538,14 @@
 
     .line 25
     :cond_3
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->b(Lcom/vk/libvideo/autoplay/h;)V
+    invoke-virtual {p1, p0}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->b(Lcom/vk/libvideo/autoplay/VideoUIEventListener;)V
 
     .line 26
-    iget-object p1, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->L:Lcom/vk/libvideo/dialogs/d;
+    iget-object p1, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->L:Lcom/vk/libvideo/dialogs/BaseAnimationDialog;
 
     if-eqz p1, :cond_4
 
@@ -4572,13 +4572,13 @@
     invoke-static {p1, v2, v3, v4, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;FFILjava/lang/Object;)V
 
     .line 30
-    invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->r()Lcom/vk/libvideo/autoplay/delegate/b;
+    invoke-direct {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;->r()Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    invoke-virtual {p1, v0}, Lcom/vk/libvideo/autoplay/delegate/b;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;->a(Z)V
 
     .line 31
     :cond_5
@@ -4603,7 +4603,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/libvideo/autoplay/a;)V
+.method public b(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 2
 
     const/4 p1, 0x0
@@ -4618,7 +4618,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/libvideo/autoplay/a;II)V
+.method public b(Lcom/vk/libvideo/autoplay/AutoPlay;II)V
     .locals 0
 
     .line 88
@@ -4687,7 +4687,7 @@
     return-void
 .end method
 
-.method public c(Lcom/vk/libvideo/autoplay/a;)V
+.method public c(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 2
 
     const/4 p1, 0x0
@@ -4702,7 +4702,7 @@
     return-void
 .end method
 
-.method public c(Lcom/vk/libvideo/autoplay/a;II)V
+.method public c(Lcom/vk/libvideo/autoplay/AutoPlay;II)V
     .locals 0
 
     .line 11
@@ -4735,16 +4735,16 @@
     return-void
 .end method
 
-.method public d(Lcom/vk/libvideo/autoplay/a;)V
+.method public d(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/libvideo/autoplay/h$a;->a(Lcom/vk/libvideo/autoplay/h;Lcom/vk/libvideo/autoplay/a;)V
+    invoke-static {p0, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener$a;->a(Lcom/vk/libvideo/autoplay/VideoUIEventListener;Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     return-void
 .end method
 
-.method public e(Lcom/vk/libvideo/autoplay/a;)V
+.method public e(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 2
 
     .line 1
@@ -4762,20 +4762,20 @@
     return-void
 .end method
 
-.method public f(Lcom/vk/libvideo/autoplay/a;)V
+.method public f(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/libvideo/autoplay/h$a;->c(Lcom/vk/libvideo/autoplay/h;Lcom/vk/libvideo/autoplay/a;)V
+    invoke-static {p0, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener$a;->c(Lcom/vk/libvideo/autoplay/VideoUIEventListener;Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     return-void
 .end method
 
-.method public g(Lcom/vk/libvideo/autoplay/a;)V
+.method public g(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/libvideo/autoplay/h$a;->b(Lcom/vk/libvideo/autoplay/h;Lcom/vk/libvideo/autoplay/a;)V
+    invoke-static {p0, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener$a;->b(Lcom/vk/libvideo/autoplay/VideoUIEventListener;Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     return-void
 .end method
@@ -4800,7 +4800,7 @@
     return-object v0
 .end method
 
-.method public h(Lcom/vk/libvideo/autoplay/a;)V
+.method public h(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 2
 
     const/4 p1, 0x0
@@ -4815,11 +4815,11 @@
     return-void
 .end method
 
-.method public i(Lcom/vk/libvideo/autoplay/a;)V
+.method public i(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/libvideo/autoplay/h$a;->d(Lcom/vk/libvideo/autoplay/h;Lcom/vk/libvideo/autoplay/a;)V
+    invoke-static {p0, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener$a;->d(Lcom/vk/libvideo/autoplay/VideoUIEventListener;Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     return-void
 .end method
@@ -4879,17 +4879,17 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->d()Lcom/vk/libvideo/q;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->d()Lcom/vk/libvideo/VideoUI2;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0}, Lcom/vk/libvideo/q;->a(Lcom/vk/libvideo/r;)V
+    invoke-interface {v0, p0}, Lcom/vk/libvideo/VideoUI2;->a(Lcom/vk/libvideo/VideoUI;)V
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -4911,7 +4911,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->getVideoConfig()Lcom/vk/libvideo/autoplay/AutoPlayConfig;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->getVideoConfig()Lcom/vk/libvideo/autoplay/AutoPlayConfig;
 
     move-result-object v3
 
@@ -4924,7 +4924,7 @@
     .locals 5
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -4937,17 +4937,17 @@
     move-result v0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->d()Lcom/vk/libvideo/q;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->d()Lcom/vk/libvideo/VideoUI2;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v1, p0}, Lcom/vk/libvideo/q;->a(Lcom/vk/libvideo/r;)V
+    invoke-interface {v1, p0}, Lcom/vk/libvideo/VideoUI2;->a(Lcom/vk/libvideo/VideoUI;)V
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -4969,7 +4969,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->getVideoConfig()Lcom/vk/libvideo/autoplay/AutoPlayConfig;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->getVideoConfig()Lcom/vk/libvideo/autoplay/AutoPlayConfig;
 
     move-result-object v4
 
@@ -4982,7 +4982,7 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -4992,7 +4992,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -5003,7 +5003,7 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -5014,7 +5014,7 @@
     if-nez v0, :cond_2
 
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -5026,7 +5026,7 @@
 
     .line 2
     :cond_2
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -5035,23 +5035,23 @@
     move-result-object v0
 
     .line 3
-    sget-object v1, Lcom/vk/libvideo/autoplay/c;->c:Lcom/vk/libvideo/autoplay/c;
+    sget-object v1, Lcom/vk/libvideo/autoplay/PlaySettings;->INSTANCE:Lcom/vk/libvideo/autoplay/PlaySettings;
 
-    invoke-virtual {v1}, Lcom/vk/libvideo/autoplay/c;->a()Z
+    invoke-virtual {v1}, Lcom/vk/libvideo/autoplay/PlaySettings;->a()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
     .line 4
-    sget-object v1, Lcom/vk/libvideo/autoplay/c;->c:Lcom/vk/libvideo/autoplay/c;
+    sget-object v1, Lcom/vk/libvideo/autoplay/PlaySettings;->INSTANCE:Lcom/vk/libvideo/autoplay/PlaySettings;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/vk/libvideo/autoplay/c;->a(Z)V
+    invoke-virtual {v1, v2}, Lcom/vk/libvideo/autoplay/PlaySettings;->a(Z)V
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -5068,14 +5068,14 @@
 
     .line 7
     :cond_3
-    sget-object v1, Lcom/vk/libvideo/autoplay/c;->c:Lcom/vk/libvideo/autoplay/c;
+    sget-object v1, Lcom/vk/libvideo/autoplay/PlaySettings;->INSTANCE:Lcom/vk/libvideo/autoplay/PlaySettings;
 
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v2}, Lcom/vk/libvideo/autoplay/c;->a(Z)V
+    invoke-virtual {v1, v2}, Lcom/vk/libvideo/autoplay/PlaySettings;->a(Z)V
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyMainVc;
-.super Lcom/vk/im/ui/q/h/a;
+.super Lcom/vk/im/ui/q/h/LazyVc;
 .source "EmptyMainVc.kt"
 
 
@@ -32,7 +32,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/q/h/a;-><init>(ILandroid/view/View;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/q/h/LazyVc;-><init>(ILandroid/view/View;)V
 
     iput-object p3, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyMainVc;->k:Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyMainVc$a;
 
@@ -52,7 +52,7 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->b()Z
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->b()Z
 
     move-result v0
 
@@ -86,9 +86,9 @@
 
     if-eqz v0, :cond_1
 
-    sget-object v1, Lcom/vk/im/ui/formatters/a;->a:Lcom/vk/im/ui/formatters/a;
+    sget-object v1, Lcom/vk/im/ui/formatters/BusinessNotifyCountFormatter;->INSTANCE:Lcom/vk/im/ui/formatters/BusinessNotifyCountFormatter;
 
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->c()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->c()Landroid/view/View;
 
     move-result-object v2
 
@@ -98,11 +98,11 @@
 
     const-string v3, "view.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v3, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyMainVc;->i:I
 
-    invoke-virtual {v1, v2, v3}, Lcom/vk/im/ui/formatters/a;->a(Landroid/content/Context;I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v2, v3}, Lcom/vk/im/ui/formatters/BusinessNotifyCountFormatter;->a(Landroid/content/Context;I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -111,13 +111,13 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 4
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -130,7 +130,7 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->b()Z
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->b()Z
 
     move-result v0
 
@@ -171,13 +171,13 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 4
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -209,7 +209,7 @@
     move-result-object v0
 
     .line 3
-    sget v1, Lcom/vk/im/ui/h;->business_notify_count:I
+    sget v1, Lcom/vk/im/ui/R11;->business_notify_count:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -217,7 +217,7 @@
 
     const-string v2, "view.findViewById(R.id.business_notify_count)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/TextView;
 
@@ -234,10 +234,10 @@
 
     invoke-direct {v3, p0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyMainVc$onInflate$1;-><init>(Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyMainVc;)V
 
-    invoke-static {v1, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v1, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 5
-    sget v1, Lcom/vk/im/ui/h;->msg_request_count:I
+    sget v1, Lcom/vk/im/ui/R11;->msg_request_count:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -245,7 +245,7 @@
 
     const-string v3, "view.findViewById(R.id.msg_request_count)"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Lcom/vk/im/ui/views/msg/MsgRequestCountLabelView;
 
@@ -260,7 +260,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyMainVc$onInflate$2;-><init>(Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyMainVc;)V
 
-    invoke-static {v1, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v1, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 7
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyMainVc;->e()V
@@ -269,7 +269,7 @@
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/EmptyMainVc;->f()V
 
     .line 9
-    sget v1, Lcom/vk/im/ui/h;->empty:I
+    sget v1, Lcom/vk/im/ui/R11;->empty:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -277,7 +277,7 @@
 
     const-string v1, "view.findViewById(R.id.empty)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/EmptyViewForList;
 
@@ -290,15 +290,15 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v1, Lcom/vk/im/ui/f;->ic_message_outline_64:I
+    sget v1, Lcom/vk/im/ui/R12;->ic_message_outline_64:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    sget v1, Lcom/vk/im/ui/c;->icon_outline_secondary:I
+    sget v1, Lcom/vk/im/ui/R5;->icon_outline_secondary:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -311,7 +311,7 @@
     :cond_0
     const-string p1, "emptyView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -319,7 +319,7 @@
     const-string p1, "requestsCountView"
 
     .line 11
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -327,7 +327,7 @@
     const-string p1, "businessNotifyCountView"
 
     .line 12
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -338,10 +338,10 @@
     if-eqz p1, :cond_0
 
     .line 13
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->d()V
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->d()V
 
     .line 14
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->c()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->c()Landroid/view/View;
 
     move-result-object p1
 
@@ -351,14 +351,14 @@
 
     .line 15
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->b()Z
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->b()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
     .line 16
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->c()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->c()Landroid/view/View;
 
     move-result-object p1
 

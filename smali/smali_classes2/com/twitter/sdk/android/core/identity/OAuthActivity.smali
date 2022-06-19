@@ -3,11 +3,11 @@
 .source "OAuthActivity.java"
 
 # interfaces
-.implements Lcom/twitter/sdk/android/core/identity/c$c;
+.implements Lcom/twitter/sdk/android/core/identity/OAuthController$c;
 
 
 # instance fields
-.field a:Lcom/twitter/sdk/android/core/identity/c;
+.field a:Lcom/twitter/sdk/android/core/identity/OAuthController;
 
 .field private b:Landroid/widget/ProgressBar;
 
@@ -42,7 +42,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/twitter/sdk/android/core/identity/OAuthActivity;->a:Lcom/twitter/sdk/android/core/identity/c;
+    iget-object v0, p0, Lcom/twitter/sdk/android/core/identity/OAuthActivity;->a:Lcom/twitter/sdk/android/core/identity/OAuthController;
 
     new-instance v1, Lcom/twitter/sdk/android/core/TwitterAuthException;
 
@@ -52,7 +52,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v2, v1}, Lcom/twitter/sdk/android/core/identity/c;->a(ILcom/twitter/sdk/android/core/TwitterAuthException;)V
+    invoke-virtual {v0, v2, v1}, Lcom/twitter/sdk/android/core/identity/OAuthController;->a(ILcom/twitter/sdk/android/core/TwitterAuthException;)V
 
     return-void
 .end method
@@ -64,12 +64,12 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    sget v0, Lcom/twitter/sdk/android/core/j;->tw__activity_oauth:I
+    sget v0, Lcom/twitter/sdk/android/core/R1;->tw__activity_oauth:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setContentView(I)V
 
     .line 3
-    sget v0, Lcom/twitter/sdk/android/core/i;->tw__spinner:I
+    sget v0, Lcom/twitter/sdk/android/core/R;->tw__spinner:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -80,7 +80,7 @@
     iput-object v0, p0, Lcom/twitter/sdk/android/core/identity/OAuthActivity;->b:Landroid/widget/ProgressBar;
 
     .line 4
-    sget v0, Lcom/twitter/sdk/android/core/i;->tw__web_view:I
+    sget v0, Lcom/twitter/sdk/android/core/R;->tw__web_view:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -121,12 +121,12 @@
     invoke-virtual {v1, v0}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
     .line 7
-    invoke-static {}, Lcom/twitter/sdk/android/core/r;->h()Lcom/twitter/sdk/android/core/r;
+    invoke-static {}, Lcom/twitter/sdk/android/core/TwitterCore;->h()Lcom/twitter/sdk/android/core/TwitterCore;
 
     move-result-object p1
 
     .line 8
-    new-instance v6, Lcom/twitter/sdk/android/core/identity/c;
+    new-instance v6, Lcom/twitter/sdk/android/core/identity/OAuthController;
 
     iget-object v1, p0, Lcom/twitter/sdk/android/core/identity/OAuthActivity;->b:Landroid/widget/ProgressBar;
 
@@ -149,24 +149,24 @@
 
     new-instance v4, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;
 
-    new-instance v0, Lcom/twitter/sdk/android/core/u/n;
+    new-instance v0, Lcom/twitter/sdk/android/core/u/TwitterApi;
 
-    invoke-direct {v0}, Lcom/twitter/sdk/android/core/u/n;-><init>()V
+    invoke-direct {v0}, Lcom/twitter/sdk/android/core/u/TwitterApi;-><init>()V
 
-    invoke-direct {v4, p1, v0}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;-><init>(Lcom/twitter/sdk/android/core/r;Lcom/twitter/sdk/android/core/u/n;)V
+    invoke-direct {v4, p1, v0}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;-><init>(Lcom/twitter/sdk/android/core/TwitterCore;Lcom/twitter/sdk/android/core/u/TwitterApi;)V
 
     move-object v0, v6
 
     move-object v5, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/twitter/sdk/android/core/identity/c;-><init>(Landroid/widget/ProgressBar;Landroid/webkit/WebView;Lcom/twitter/sdk/android/core/TwitterAuthConfig;Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;Lcom/twitter/sdk/android/core/identity/c$c;)V
+    invoke-direct/range {v0 .. v5}, Lcom/twitter/sdk/android/core/identity/OAuthController;-><init>(Landroid/widget/ProgressBar;Landroid/webkit/WebView;Lcom/twitter/sdk/android/core/TwitterAuthConfig;Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;Lcom/twitter/sdk/android/core/identity/OAuthController$c;)V
 
-    iput-object v6, p0, Lcom/twitter/sdk/android/core/identity/OAuthActivity;->a:Lcom/twitter/sdk/android/core/identity/c;
+    iput-object v6, p0, Lcom/twitter/sdk/android/core/identity/OAuthActivity;->a:Lcom/twitter/sdk/android/core/identity/OAuthController;
 
     .line 10
-    iget-object p1, p0, Lcom/twitter/sdk/android/core/identity/OAuthActivity;->a:Lcom/twitter/sdk/android/core/identity/c;
+    iget-object p1, p0, Lcom/twitter/sdk/android/core/identity/OAuthActivity;->a:Lcom/twitter/sdk/android/core/identity/OAuthController;
 
-    invoke-virtual {p1}, Lcom/twitter/sdk/android/core/identity/c;->c()V
+    invoke-virtual {p1}, Lcom/twitter/sdk/android/core/identity/OAuthController;->c()V
 
     return-void
 .end method

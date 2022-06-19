@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/c;)Lcom/vk/dto/notifications/NotificationAction;
+.method public final a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/NotificationsResponseData;)Lcom/vk/dto/notifications/NotificationAction;
     .locals 6
 
     .line 1
@@ -84,7 +84,7 @@
 
     const-string v1, "invite_group_accept"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -100,7 +100,7 @@
 
     const-string v3, "invite_group_decline"
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -108,7 +108,7 @@
 
     .line 7
     :cond_0
-    invoke-virtual {p2}, Lcom/vk/dto/notifications/c;->c()Ljava/util/HashMap;
+    invoke-virtual {p2}, Lcom/vk/dto/notifications/NotificationsResponseData;->c()Ljava/util/HashMap;
 
     move-result-object p1
 
@@ -156,7 +156,7 @@
 
     const-string v3, "group_notify_enable"
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -195,7 +195,7 @@
     if-lez v1, :cond_5
 
     .line 11
-    invoke-virtual {p2}, Lcom/vk/dto/notifications/c;->c()Ljava/util/HashMap;
+    invoke-virtual {p2}, Lcom/vk/dto/notifications/NotificationsResponseData;->c()Ljava/util/HashMap;
 
     move-result-object v1
 
@@ -238,7 +238,7 @@
 
     const-string v1, "action_sheet"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -287,7 +287,7 @@
     .line 17
     sget-object v5, Lcom/vk/dto/notifications/NotificationButton;->f:Lcom/vk/dto/notifications/NotificationButton$b;
 
-    invoke-virtual {v5, v4, p2}, Lcom/vk/dto/notifications/NotificationButton$b;->a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/c;)Lcom/vk/dto/notifications/NotificationButton;
+    invoke-virtual {v5, v4, p2}, Lcom/vk/dto/notifications/NotificationButton$b;->a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/NotificationsResponseData;)Lcom/vk/dto/notifications/NotificationButton;
 
     move-result-object v4
 

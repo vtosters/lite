@@ -3,7 +3,7 @@
 .source "VkExecutors.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/core/concurrent/c;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/core/concurrent/WorkerThread;",
         ">;"
     }
 .end annotation
@@ -55,15 +55,15 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/core/concurrent/c;
+.method public final invoke()Lcom/vk/core/concurrent/WorkerThread;
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/core/concurrent/c;
+    new-instance v0, Lcom/vk/core/concurrent/WorkerThread;
 
     const-string v1, "vk-looper-thread"
 
-    invoke-direct {v0, v1}, Lcom/vk/core/concurrent/c;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/concurrent/WorkerThread;-><init>(Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -72,7 +72,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/concurrent/VkExecutors$looperThread$2;->invoke()Lcom/vk/core/concurrent/c;
+    invoke-virtual {p0}, Lcom/vk/core/concurrent/VkExecutors$looperThread$2;->invoke()Lcom/vk/core/concurrent/WorkerThread;
 
     move-result-object v0
 

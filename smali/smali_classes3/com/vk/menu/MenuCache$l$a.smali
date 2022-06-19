@@ -3,12 +3,12 @@
 .source "MenuCache.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/menu/MenuCache$l;->a(Lcom/vk/core/util/q0;)V
+    value = Lcom/vk/menu/MenuCache$l;->a(Lcom/vk/core/util/Optional;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/menu/SuperAppMenuResponse;",
         ">;"
     }
@@ -64,7 +64,7 @@
 
     const-string v1, "menu"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/menu/MenuCache;->a(Lcom/vk/dto/menu/SuperAppMenuResponse;)V
 
@@ -73,7 +73,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/menu/MenuCache;->b(Lcom/vk/menu/MenuCache;Lio/reactivex/disposables/b;)V
+    invoke-static {v0, v1}, Lcom/vk/menu/MenuCache;->b(Lcom/vk/menu/MenuCache;Lio/reactivex/disposables/Disposable;)V
 
     .line 3
     sget-object v0, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;

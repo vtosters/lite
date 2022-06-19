@@ -76,17 +76,17 @@
     .line 4
     iget-object p1, p0, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder$a;->a:Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;
 
-    invoke-static {p1}, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->a(Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;)Lkotlin/jvm/b/b;
+    invoke-static {p1}, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;->a(Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutTextInputHolder;)Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void

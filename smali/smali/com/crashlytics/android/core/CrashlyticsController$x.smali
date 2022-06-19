@@ -3,7 +3,7 @@
 .source "CrashlyticsController.java"
 
 # interfaces
-.implements Lcom/crashlytics/android/core/p$b;
+.implements Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler$b;
 
 
 # annotations
@@ -38,15 +38,15 @@
 
 
 # virtual methods
-.method public a()Lio/fabric/sdk/android/services/settings/t;
+.method public a()Lio/fabric/sdk/android/services/settings/SettingsData;
     .locals 1
 
     .line 1
-    invoke-static {}, Lio/fabric/sdk/android/services/settings/r;->d()Lio/fabric/sdk/android/services/settings/r;
+    invoke-static {}, Lio/fabric/sdk/android/services/settings/Settings;->d()Lio/fabric/sdk/android/services/settings/Settings;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/services/settings/r;->a()Lio/fabric/sdk/android/services/settings/t;
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/settings/Settings;->a()Lio/fabric/sdk/android/services/settings/SettingsData;
 
     move-result-object v0
 

@@ -164,7 +164,7 @@
     .locals 2
 
     .line 1
-    sget-boolean v0, Lorg/chromium/base/c;->a:Z
+    sget-boolean v0, Lorg/chromium/base/BuildConfig;->a:Z
 
     if-eqz v0, :cond_1
 
@@ -211,7 +211,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -300,7 +300,7 @@
     if-ge v1, v2, :cond_0
 
     .line 6
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v1
 
@@ -312,7 +312,7 @@
 
     .line 7
     :cond_0
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v1
 
@@ -325,14 +325,14 @@
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 8
-    new-instance v1, Lorg/chromium/net/n;
+    new-instance v1, Lorg/chromium/net/ProxyBroadcastReceiver;
 
-    invoke-direct {v1, p0}, Lorg/chromium/net/n;-><init>(Lorg/chromium/net/ProxyChangeListener;)V
+    invoke-direct {v1, p0}, Lorg/chromium/net/ProxyBroadcastReceiver;-><init>(Lorg/chromium/net/ProxyChangeListener;)V
 
     iput-object v1, p0, Lorg/chromium/net/ProxyChangeListener;->e:Landroid/content/BroadcastReceiver;
 
     .line 9
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v1
 
@@ -351,7 +351,7 @@
     invoke-direct {p0}, Lorg/chromium/net/ProxyChangeListener;->c()V
 
     .line 2
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -365,7 +365,7 @@
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 

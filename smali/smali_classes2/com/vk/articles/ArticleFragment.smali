@@ -1,15 +1,15 @@
 .class public final Lcom/vk/articles/ArticleFragment;
-.super Lcom/vk/core/fragments/c;
+.super Lcom/vk/core/fragments/BaseMvpFragment;
 .source "ArticleFragment.kt"
 
 # interfaces
-.implements Lcom/vk/articles/b;
-.implements Lcom/vk/navigation/b0/i;
-.implements Lcom/vk/navigation/b0/k;
+.implements Lcom/vk/articles/ArticleContract1;
+.implements Lcom/vk/navigation/b0/FragmentWithSystemTopBar;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
 .implements Lcom/vk/articles/ArticleWebView$b;
-.implements Lcom/vk/core/ui/themes/f;
-.implements Lcom/vk/navigation/b0/m;
-.implements Lcom/vk/navigation/b0/a;
+.implements Lcom/vk/core/ui/themes/Themable;
+.implements Lcom/vk/navigation/b0/FragmentWithoutStatusBar;
+.implements Lcom/vk/navigation/b0/FragmentWhiteStatusBar;
 
 
 # annotations
@@ -23,16 +23,16 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/c<",
-        "Lcom/vk/articles/a;",
+        "Lcom/vk/core/fragments/BaseMvpFragment<",
+        "Lcom/vk/articles/ArticleContract;",
         ">;",
-        "Lcom/vk/articles/b;",
-        "Lcom/vk/navigation/b0/i;",
-        "Lcom/vk/navigation/b0/k;",
+        "Lcom/vk/articles/ArticleContract1;",
+        "Lcom/vk/navigation/b0/FragmentWithSystemTopBar;",
+        "Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;",
         "Lcom/vk/articles/ArticleWebView$b;",
-        "Lcom/vk/core/ui/themes/f;",
-        "Lcom/vk/navigation/b0/m;",
-        "Lcom/vk/navigation/b0/a;"
+        "Lcom/vk/core/ui/themes/Themable;",
+        "Lcom/vk/navigation/b0/FragmentWithoutStatusBar;",
+        "Lcom/vk/navigation/b0/FragmentWhiteStatusBar;"
     }
 .end annotation
 
@@ -56,9 +56,9 @@
 
 .field private M:Z
 
-.field private final N:Lcom/vk/common/widget/b;
+.field private final N:Lcom/vk/common/widget/DynamicTheme;
 
-.field private final O:Lcom/vk/common/widget/b;
+.field private final O:Lcom/vk/common/widget/DynamicTheme;
 
 .field private P:Landroid/widget/FrameLayout;
 
@@ -102,10 +102,10 @@
 
 .field private j0:Z
 
-.field private final k0:Lb/h/g/l/e;
+.field private final k0:Lb/h/g/l/NotificationListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/dto/newsfeed/entries/FaveEntry;",
             ">;"
         }
@@ -121,7 +121,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/articles/ArticleFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/articles/ArticleFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/articles/ArticleFragment;->l0:Lcom/vk/articles/ArticleFragment$a;
 
@@ -132,7 +132,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
 
     const/4 v0, 0x1
 
@@ -140,25 +140,25 @@
     iput-boolean v0, p0, Lcom/vk/articles/ArticleFragment;->K:Z
 
     .line 3
-    new-instance v0, Lcom/vk/common/widget/b;
+    new-instance v0, Lcom/vk/common/widget/DynamicTheme;
 
-    invoke-direct {v0}, Lcom/vk/common/widget/b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/common/widget/DynamicTheme;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/articles/ArticleFragment;->N:Lcom/vk/common/widget/b;
+    iput-object v0, p0, Lcom/vk/articles/ArticleFragment;->N:Lcom/vk/common/widget/DynamicTheme;
 
     .line 4
-    new-instance v0, Lcom/vk/common/widget/b;
+    new-instance v0, Lcom/vk/common/widget/DynamicTheme;
 
-    invoke-direct {v0}, Lcom/vk/common/widget/b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/common/widget/DynamicTheme;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/articles/ArticleFragment;->O:Lcom/vk/common/widget/b;
+    iput-object v0, p0, Lcom/vk/articles/ArticleFragment;->O:Lcom/vk/common/widget/DynamicTheme;
 
     .line 5
     new-instance v0, Lcom/vk/articles/ArticleFragment$d;
 
     invoke-direct {v0, p0}, Lcom/vk/articles/ArticleFragment$d;-><init>(Lcom/vk/articles/ArticleFragment;)V
 
-    iput-object v0, p0, Lcom/vk/articles/ArticleFragment;->k0:Lb/h/g/l/e;
+    iput-object v0, p0, Lcom/vk/articles/ArticleFragment;->k0:Lb/h/g/l/NotificationListener;
 
     return-void
 .end method
@@ -172,7 +172,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    sget-object v1, Lcom/vk/articles/preload/a;->k:Lcom/vk/articles/preload/a;
+    sget-object v1, Lcom/vk/articles/preload/WebCachePreloader;->INSTANCE:Lcom/vk/articles/preload/WebCachePreloader;
 
     invoke-direct {p0}, Lcom/vk/articles/ArticleFragment;->S4()Ljava/lang/String;
 
@@ -188,7 +188,7 @@
 
     iget-object v5, p0, Lcom/vk/articles/ArticleFragment;->J:Lcom/vk/articles/preload/QueryParameters;
 
-    invoke-virtual {v1, v2, v3, v4, v5}, Lcom/vk/articles/preload/a;->a(Ljava/lang/String;ZZLcom/vk/articles/preload/QueryParameters;)Ljava/lang/String;
+    invoke-virtual {v1, v2, v3, v4, v5}, Lcom/vk/articles/preload/WebCachePreloader;->a(Ljava/lang/String;ZZLcom/vk/articles/preload/QueryParameters;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -204,9 +204,9 @@
 
     if-eqz v3, :cond_0
 
-    sget-object v3, Lcom/vk/articles/preload/a;->k:Lcom/vk/articles/preload/a;
+    sget-object v3, Lcom/vk/articles/preload/WebCachePreloader;->INSTANCE:Lcom/vk/articles/preload/WebCachePreloader;
 
-    invoke-virtual {v3}, Lcom/vk/articles/preload/a;->a()Ljava/util/HashMap;
+    invoke-virtual {v3}, Lcom/vk/articles/preload/WebCachePreloader;->a()Ljava/util/HashMap;
 
     move-result-object v3
 
@@ -302,12 +302,12 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -327,7 +327,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -373,7 +373,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/util/b1;->a(IIIZILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/util/StringUtils;->a(IIIZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -424,7 +424,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/a;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/AbstractErrorView;->setVisibility(I)V
 
     :cond_2
     return-void
@@ -762,17 +762,17 @@
 
     .line 27
     :cond_a
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     :cond_b
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 .end method
 
-.method private final X4()Lcom/vk/common/widget/b;
+.method private final X4()Lcom/vk/common/widget/DynamicTheme;
     .locals 1
 
     .line 1
@@ -780,12 +780,12 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/articles/ArticleFragment;->O:Lcom/vk/common/widget/b;
+    iget-object v0, p0, Lcom/vk/articles/ArticleFragment;->O:Lcom/vk/common/widget/DynamicTheme;
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/vk/articles/ArticleFragment;->N:Lcom/vk/common/widget/b;
+    iget-object v0, p0, Lcom/vk/articles/ArticleFragment;->N:Lcom/vk/common/widget/DynamicTheme;
 
     :goto_0
     return-object v0
@@ -806,7 +806,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -850,11 +850,11 @@
 
     if-eqz p2, :cond_2
 
-    sget-object v0, Lcom/vk/common/widget/b;->e:Lcom/vk/common/widget/b$d;
+    sget-object v0, Lcom/vk/common/widget/DynamicTheme;->e:Lcom/vk/common/widget/DynamicTheme$d;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/widget/b$d;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, p1}, Lcom/vk/common/widget/DynamicTheme$d;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -863,7 +863,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -1443,11 +1443,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/articles/ArticleFragment;Lkotlin/jvm/b/b;)V
+.method public static final synthetic a(Lcom/vk/articles/ArticleFragment;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     .line 7
-    invoke-direct {p0, p1}, Lcom/vk/articles/ArticleFragment;->a(Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1}, Lcom/vk/articles/ArticleFragment;->a(Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -1474,33 +1474,33 @@
     .locals 1
 
     .line 146
-    iget-object v0, p0, Lcom/vk/articles/ArticleFragment;->N:Lcom/vk/common/widget/b;
+    iget-object v0, p0, Lcom/vk/articles/ArticleFragment;->N:Lcom/vk/common/widget/DynamicTheme;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/common/widget/b;->a(Ljava/lang/String;I)Lcom/vk/common/widget/b;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/common/widget/DynamicTheme;->a(Ljava/lang/String;I)Lcom/vk/common/widget/DynamicTheme;
 
     .line 147
-    iget-object p2, p0, Lcom/vk/articles/ArticleFragment;->O:Lcom/vk/common/widget/b;
+    iget-object p2, p0, Lcom/vk/articles/ArticleFragment;->O:Lcom/vk/common/widget/DynamicTheme;
 
-    invoke-virtual {p2, p1, p3}, Lcom/vk/common/widget/b;->a(Ljava/lang/String;I)Lcom/vk/common/widget/b;
+    invoke-virtual {p2, p1, p3}, Lcom/vk/common/widget/DynamicTheme;->a(Ljava/lang/String;I)Lcom/vk/common/widget/DynamicTheme;
 
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/b;)V
+.method private final a(Lkotlin/jvm/b/Functions2;)V
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
@@ -1574,7 +1574,7 @@
     invoke-direct {v1, p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
 
     .line 15
-    new-instance v10, Lcom/vk/fave/entities/e;
+    new-instance v10, Lcom/vk/fave/entities/FaveMetaInfo;
 
     .line 16
     invoke-virtual {p1}, Lcom/vk/dto/articles/Article;->t1()Ljava/lang/String;
@@ -1602,7 +1602,7 @@
     move-object v3, v10
 
     .line 18
-    invoke-direct/range {v3 .. v9}, Lcom/vk/fave/entities/e;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/fave/entities/FaveMetaInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 19
     new-instance v3, Lcom/vk/articles/ArticleFragment$toggleFavorite$1;
@@ -1621,7 +1621,7 @@
     move-object v2, v10
 
     .line 21
-    invoke-static/range {v0 .. v7}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/c;Lkotlin/jvm/b/b;ZILjava/lang/Object;)V
+    invoke-static/range {v0 .. v7}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions2;ZILjava/lang/Object;)V
 
     return-void
 
@@ -1652,7 +1652,7 @@
     move-result v3
 
     .line 26
-    invoke-static {v1, v2, v3}, Lcom/vk/fave/d;->a(Ljava/lang/String;Lcom/vk/dto/photo/Photo;Z)Lcom/vk/dto/attachments/SnippetAttachment;
+    invoke-static {v1, v2, v3}, Lcom/vk/fave/FaveConverter;->a(Ljava/lang/String;Lcom/vk/dto/photo/Photo;Z)Lcom/vk/dto/attachments/SnippetAttachment;
 
     move-result-object v1
 
@@ -1693,7 +1693,7 @@
 
     .line 28
     :cond_7
-    new-instance v9, Lcom/vk/fave/entities/e;
+    new-instance v9, Lcom/vk/fave/entities/FaveMetaInfo;
 
     invoke-virtual {p1}, Lcom/vk/dto/articles/Article;->t1()Ljava/lang/String;
 
@@ -1711,7 +1711,7 @@
 
     move-object v2, v9
 
-    invoke-direct/range {v2 .. v8}, Lcom/vk/fave/entities/e;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/fave/entities/FaveMetaInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 29
     new-instance v3, Lcom/vk/articles/ArticleFragment$toggleFavorite$3;
@@ -1730,7 +1730,7 @@
     const/4 v7, 0x0
 
     .line 31
-    invoke-static/range {v0 .. v7}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/c;Lkotlin/jvm/b/b;ZILjava/lang/Object;)V
+    invoke-static/range {v0 .. v7}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions2;ZILjava/lang/Object;)V
 
     :cond_8
     return-void
@@ -1806,7 +1806,7 @@
 
     .line 80
     :goto_1
-    invoke-direct {p0}, Lcom/vk/articles/ArticleFragment;->X4()Lcom/vk/common/widget/b;
+    invoke-direct {p0}, Lcom/vk/articles/ArticleFragment;->X4()Lcom/vk/common/widget/DynamicTheme;
 
     move-result-object v6
 
@@ -1825,7 +1825,7 @@
 
     if-eqz p1, :cond_19
 
-    invoke-virtual {v6, p1, v9}, Lcom/vk/common/widget/b;->b(Landroid/view/View;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v9}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/view/View;Ljava/lang/String;)V
 
     .line 82
     iget-object p1, p0, Lcom/vk/articles/ArticleFragment;->Y:Landroid/widget/ImageView;
@@ -1844,21 +1844,21 @@
     :goto_2
     if-eqz p1, :cond_18
 
-    invoke-virtual {v6, p1, v5}, Lcom/vk/common/widget/b;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v5}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
     .line 83
     iget-object p1, p0, Lcom/vk/articles/ArticleFragment;->a0:Landroid/widget/TextView;
 
     if-eqz p1, :cond_17
 
-    invoke-virtual {v6, p1, v1}, Lcom/vk/common/widget/b;->b(Landroid/widget/TextView;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v1}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/widget/TextView;Ljava/lang/String;)V
 
     .line 84
     iget-object p1, p0, Lcom/vk/articles/ArticleFragment;->R:Landroid/widget/FrameLayout;
 
     if-eqz p1, :cond_16
 
-    invoke-virtual {v6, p1, v8}, Lcom/vk/common/widget/b;->b(Landroid/view/View;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v8}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/view/View;Ljava/lang/String;)V
 
     .line 85
     iget-object p1, p0, Lcom/vk/articles/ArticleFragment;->T:Landroid/widget/ProgressBar;
@@ -1877,7 +1877,7 @@
     :goto_3
     if-eqz p1, :cond_15
 
-    invoke-virtual {v6, p1, v7}, Lcom/vk/common/widget/b;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v7}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
     .line 86
     iget-object p1, p0, Lcom/vk/articles/ArticleFragment;->U:Lcom/vk/lists/DefaultErrorView;
@@ -1896,7 +1896,7 @@
     :goto_4
     if-eqz p1, :cond_14
 
-    invoke-virtual {v6, p1, v5}, Lcom/vk/common/widget/b;->b(Landroid/widget/TextView;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v5}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/widget/TextView;Ljava/lang/String;)V
 
     .line 87
     iget-object p1, p0, Lcom/vk/articles/ArticleFragment;->U:Lcom/vk/lists/DefaultErrorView;
@@ -1915,14 +1915,14 @@
     :goto_5
     if-eqz p1, :cond_13
 
-    invoke-virtual {v6, p1, v4}, Lcom/vk/common/widget/b;->b(Landroid/widget/TextView;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v4}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/widget/TextView;Ljava/lang/String;)V
 
     .line 88
     iget-object p1, p0, Lcom/vk/articles/ArticleFragment;->e0:Landroid/view/View;
 
     if-eqz p1, :cond_12
 
-    invoke-virtual {v6, p1, v9}, Lcom/vk/common/widget/b;->b(Landroid/view/View;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v9}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/view/View;Ljava/lang/String;)V
 
     .line 89
     iget-object p1, p0, Lcom/vk/articles/ArticleFragment;->f0:Landroid/widget/ImageView;
@@ -1941,7 +1941,7 @@
     :goto_6
     if-eqz p1, :cond_11
 
-    invoke-virtual {v6, p1, v5}, Lcom/vk/common/widget/b;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v5}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
     .line 90
     iget-object p1, p0, Lcom/vk/articles/ArticleFragment;->g0:Landroid/widget/ImageView;
@@ -1960,7 +1960,7 @@
     :goto_7
     if-eqz p1, :cond_10
 
-    invoke-virtual {v6, p1, v3}, Lcom/vk/common/widget/b;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v3}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
     .line 91
     iget-object p1, p0, Lcom/vk/articles/ArticleFragment;->h0:Landroid/widget/ImageView;
@@ -1979,14 +1979,14 @@
     :goto_8
     if-eqz p1, :cond_f
 
-    invoke-virtual {v6, p1, v5}, Lcom/vk/common/widget/b;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v5}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
     .line 92
     iget-object p1, p0, Lcom/vk/articles/ArticleFragment;->i0:Landroid/widget/TextView;
 
     if-eqz p1, :cond_e
 
-    invoke-virtual {v6, p1, v5}, Lcom/vk/common/widget/b;->b(Landroid/widget/TextView;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v5}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/widget/TextView;Ljava/lang/String;)V
 
     .line 93
     iget-object p1, p0, Lcom/vk/articles/ArticleFragment;->b0:Lcom/vk/articles/ArticleWebView;
@@ -1994,7 +1994,7 @@
     if-eqz p1, :cond_a
 
     .line 94
-    invoke-virtual {v6, p1, v8}, Lcom/vk/common/widget/b;->b(Landroid/view/View;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v8}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/view/View;Ljava/lang/String;)V
 
     .line 95
     :cond_a
@@ -2009,7 +2009,7 @@
 
     if-eqz p1, :cond_d
 
-    invoke-virtual {v6, p1, v9}, Lcom/vk/common/widget/b;->b(Landroid/view/View;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v9}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/view/View;Ljava/lang/String;)V
 
     .line 97
     iget-object p1, p0, Lcom/vk/articles/ArticleFragment;->W:Landroidx/appcompat/widget/Toolbar;
@@ -2025,9 +2025,9 @@
     const-string p2, "it"
 
     .line 98
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v6, p1, v5}, Lcom/vk/common/widget/b;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v5}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
     .line 99
     :cond_b
@@ -2035,7 +2035,7 @@
 
     if-eqz p1, :cond_c
 
-    invoke-virtual {v6, v5}, Lcom/vk/common/widget/b;->a(Ljava/lang/String;)I
+    invoke-virtual {v6, v5}, Lcom/vk/common/widget/DynamicTheme;->a(Ljava/lang/String;)I
 
     move-result p2
 
@@ -2059,79 +2059,79 @@
 
     .line 101
     :cond_d
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 102
     :cond_e
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 103
     :cond_f
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 104
     :cond_10
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 105
     :cond_11
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 106
     :cond_12
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 107
     :cond_13
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 108
     :cond_14
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 109
     :cond_15
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 110
     :cond_16
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 111
     :cond_17
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 112
     :cond_18
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 113
     :cond_19
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
@@ -2152,7 +2152,7 @@
 
     if-eqz v12, :cond_2e
 
-    invoke-virtual {v6, v12, v9}, Lcom/vk/common/widget/b;->a(Landroid/view/View;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v6, v12, v9}, Lcom/vk/common/widget/DynamicTheme;->a(Landroid/view/View;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
 
     move-result-object v12
 
@@ -2175,7 +2175,7 @@
     :goto_9
     if-eqz v11, :cond_2d
 
-    invoke-virtual {v6, v11, v5}, Lcom/vk/common/widget/b;->a(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v6, v11, v5}, Lcom/vk/common/widget/DynamicTheme;->a(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
 
     move-result-object v11
 
@@ -2188,7 +2188,7 @@
 
     if-eqz v11, :cond_2c
 
-    invoke-virtual {v6, v11, v1}, Lcom/vk/common/widget/b;->a(Landroid/widget/TextView;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v6, v11, v1}, Lcom/vk/common/widget/DynamicTheme;->a(Landroid/widget/TextView;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
 
     move-result-object v1
 
@@ -2201,7 +2201,7 @@
 
     if-eqz v2, :cond_2b
 
-    invoke-virtual {v6, v2, v8}, Lcom/vk/common/widget/b;->a(Landroid/view/View;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v6, v2, v8}, Lcom/vk/common/widget/DynamicTheme;->a(Landroid/view/View;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
 
@@ -2226,7 +2226,7 @@
     :goto_a
     if-eqz v2, :cond_2a
 
-    invoke-virtual {v6, v2, v7}, Lcom/vk/common/widget/b;->a(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v6, v2, v7}, Lcom/vk/common/widget/DynamicTheme;->a(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
 
@@ -2251,7 +2251,7 @@
     :goto_b
     if-eqz v2, :cond_29
 
-    invoke-virtual {v6, v2, v5}, Lcom/vk/common/widget/b;->a(Landroid/widget/TextView;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v6, v2, v5}, Lcom/vk/common/widget/DynamicTheme;->a(Landroid/widget/TextView;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
 
@@ -2276,7 +2276,7 @@
     :goto_c
     if-eqz v2, :cond_28
 
-    invoke-virtual {v6, v2, v4}, Lcom/vk/common/widget/b;->a(Landroid/widget/TextView;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v6, v2, v4}, Lcom/vk/common/widget/DynamicTheme;->a(Landroid/widget/TextView;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
 
@@ -2289,7 +2289,7 @@
 
     if-eqz v2, :cond_27
 
-    invoke-virtual {v6, v2, v9}, Lcom/vk/common/widget/b;->a(Landroid/view/View;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v6, v2, v9}, Lcom/vk/common/widget/DynamicTheme;->a(Landroid/view/View;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
 
@@ -2314,7 +2314,7 @@
     :goto_d
     if-eqz v2, :cond_26
 
-    invoke-virtual {v6, v2, v5}, Lcom/vk/common/widget/b;->a(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v6, v2, v5}, Lcom/vk/common/widget/DynamicTheme;->a(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
 
@@ -2339,7 +2339,7 @@
     :goto_e
     if-eqz v2, :cond_25
 
-    invoke-virtual {v6, v2, v3}, Lcom/vk/common/widget/b;->a(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v6, v2, v3}, Lcom/vk/common/widget/DynamicTheme;->a(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
 
@@ -2364,7 +2364,7 @@
     :goto_f
     if-eqz v2, :cond_24
 
-    invoke-virtual {v6, v2, v5}, Lcom/vk/common/widget/b;->a(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v6, v2, v5}, Lcom/vk/common/widget/DynamicTheme;->a(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
 
@@ -2377,7 +2377,7 @@
 
     if-eqz v2, :cond_23
 
-    invoke-virtual {v6, v2, v5}, Lcom/vk/common/widget/b;->a(Landroid/widget/TextView;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v6, v2, v5}, Lcom/vk/common/widget/DynamicTheme;->a(Landroid/widget/TextView;Ljava/lang/String;)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
 
@@ -2428,84 +2428,84 @@
 
     .line 132
     :cond_22
-    invoke-static {}, Lcom/vk/articles/preload/a;->e()V
+    invoke-static {}, Lcom/vk/articles/preload/WebCachePreloader;->e()V
 
     .line 133
-    sget-object p2, Lcom/vk/articles/preload/a;->k:Lcom/vk/articles/preload/a;
+    sget-object p2, Lcom/vk/articles/preload/WebCachePreloader;->INSTANCE:Lcom/vk/articles/preload/WebCachePreloader;
 
-    invoke-virtual {p2, p1}, Lcom/vk/articles/preload/a;->a(Z)V
+    invoke-virtual {p2, p1}, Lcom/vk/articles/preload/WebCachePreloader;->a(Z)V
 
     goto :goto_10
 
     .line 134
     :cond_23
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 135
     :cond_24
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 136
     :cond_25
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 137
     :cond_26
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 138
     :cond_27
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 139
     :cond_28
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 140
     :cond_29
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 141
     :cond_2a
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 142
     :cond_2b
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 143
     :cond_2c
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 144
     :cond_2d
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 145
     :cond_2e
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
@@ -2583,7 +2583,7 @@
 
     if-eqz v0, :cond_2
 
-    sget-object v2, Lcom/vk/common/widget/b;->e:Lcom/vk/common/widget/b$d;
+    sget-object v2, Lcom/vk/common/widget/DynamicTheme;->e:Lcom/vk/common/widget/DynamicTheme$d;
 
     if-eqz v0, :cond_0
 
@@ -2601,9 +2601,9 @@
 
     const-string v4, "toolbar?.navigationIcon!!"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v3}, Lcom/vk/common/widget/b$d;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2, v3}, Lcom/vk/common/widget/DynamicTheme$d;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -2612,7 +2612,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -2623,7 +2623,7 @@
 
     if-eqz v0, :cond_5
 
-    sget-object v2, Lcom/vk/common/widget/b;->e:Lcom/vk/common/widget/b$d;
+    sget-object v2, Lcom/vk/common/widget/DynamicTheme;->e:Lcom/vk/common/widget/DynamicTheme$d;
 
     if-eqz v0, :cond_3
 
@@ -2639,7 +2639,7 @@
     :goto_2
     if-eqz v3, :cond_4
 
-    invoke-virtual {v2, v3}, Lcom/vk/common/widget/b$d;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2, v3}, Lcom/vk/common/widget/DynamicTheme$d;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -2648,7 +2648,7 @@
     goto :goto_3
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -2659,7 +2659,7 @@
 
     if-eqz v0, :cond_8
 
-    sget-object v2, Lcom/vk/common/widget/b;->e:Lcom/vk/common/widget/b$d;
+    sget-object v2, Lcom/vk/common/widget/DynamicTheme;->e:Lcom/vk/common/widget/DynamicTheme$d;
 
     if-eqz v0, :cond_6
 
@@ -2675,7 +2675,7 @@
     :goto_4
     if-eqz v3, :cond_7
 
-    invoke-virtual {v2, v3}, Lcom/vk/common/widget/b$d;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2, v3}, Lcom/vk/common/widget/DynamicTheme$d;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -2684,7 +2684,7 @@
     goto :goto_5
 
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -2695,7 +2695,7 @@
 
     if-eqz v0, :cond_a
 
-    sget-object v2, Lcom/vk/common/widget/b;->e:Lcom/vk/common/widget/b$d;
+    sget-object v2, Lcom/vk/common/widget/DynamicTheme;->e:Lcom/vk/common/widget/DynamicTheme$d;
 
     const v3, 0x7f080767
 
@@ -2707,9 +2707,9 @@
 
     const-string v4, "ContextCompat.getDrawabl\u2026le.ic_share_outline_24)!!"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v3}, Lcom/vk/common/widget/b$d;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2, v3}, Lcom/vk/common/widget/DynamicTheme$d;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -2718,7 +2718,7 @@
     goto :goto_6
 
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -2729,7 +2729,7 @@
 
     if-eqz v0, :cond_c
 
-    sget-object v2, Lcom/vk/common/widget/b;->e:Lcom/vk/common/widget/b$d;
+    sget-object v2, Lcom/vk/common/widget/DynamicTheme;->e:Lcom/vk/common/widget/DynamicTheme$d;
 
     const v3, 0x7f0804cd
 
@@ -2741,9 +2741,9 @@
 
     const-string v1, "ContextCompat.getDrawabl\u2026wable.ic_games_actions)!!"
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v3}, Lcom/vk/common/widget/b$d;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2, v3}, Lcom/vk/common/widget/DynamicTheme$d;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -2752,7 +2752,7 @@
     goto :goto_7
 
     :cond_b
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -2783,7 +2783,7 @@
 
     .line 59
     :cond_e
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -2866,7 +2866,7 @@
 
     const-string v3, "activity!!"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f080376
 
@@ -2932,18 +2932,18 @@
 
     .line 14
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 15
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -3031,7 +3031,7 @@
 
     if-eqz v0, :cond_e
 
-    invoke-static {v0}, Lcom/vk/extensions/t/a;->b(Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {v0}, Lcom/vk/extensions/t/ToolbarExt;->b(Landroidx/appcompat/widget/Toolbar;)V
 
     :cond_e
     const v0, 0x7f0a0441
@@ -3120,7 +3120,7 @@
     goto :goto_6
 
     :cond_13
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -3173,7 +3173,7 @@
     const v4, 0x7f0802f6
 
     :goto_8
-    invoke-virtual {v3, v4}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(I)V
+    invoke-virtual {v3, v4}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(I)V
 
     .line 30
     :cond_17
@@ -3213,21 +3213,21 @@
     if-lez v3, :cond_1a
 
     .line 32
-    new-instance v3, Lcom/vk/api/users/f;
+    new-instance v3, Lcom/vk/api/users/UsersGetOne;
 
     invoke-virtual {p1}, Lcom/vk/dto/newsfeed/Owner;->getUid()I
 
     move-result p1
 
-    invoke-direct {v3, p1}, Lcom/vk/api/users/f;-><init>(I)V
+    invoke-direct {v3, p1}, Lcom/vk/api/users/UsersGetOne;-><init>(I)V
 
-    invoke-static {v3, v2, v4, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v3, v2, v4, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     sget-object v3, Lcom/vk/articles/ArticleFragment$m;->a:Lcom/vk/articles/ArticleFragment$m;
 
-    invoke-virtual {p1, v3}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v3}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -3235,7 +3235,7 @@
 
     .line 33
     :cond_1a
-    new-instance v3, Lcom/vk/api/groups/i;
+    new-instance v3, Lcom/vk/api/groups/GroupsGetById;
 
     invoke-virtual {p1}, Lcom/vk/dto/newsfeed/Owner;->getUid()I
 
@@ -3243,15 +3243,15 @@
 
     neg-int p1, p1
 
-    invoke-direct {v3, p1}, Lcom/vk/api/groups/i;-><init>(I)V
+    invoke-direct {v3, p1}, Lcom/vk/api/groups/GroupsGetById;-><init>(I)V
 
-    invoke-static {v3, v2, v4, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v3, v2, v4, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     sget-object v3, Lcom/vk/articles/ArticleFragment$n;->a:Lcom/vk/articles/ArticleFragment$n;
 
-    invoke-virtual {p1, v3}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v3}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -3262,21 +3262,21 @@
     invoke-direct {v3, p0}, Lcom/vk/articles/ArticleFragment$i;-><init>(Lcom/vk/articles/ArticleFragment;)V
 
     .line 35
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object v4
 
     .line 36
-    invoke-virtual {p1, v3, v4}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v3, v4}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v3, "it"
 
     .line 37
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/b;->b(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->b(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_c
 
@@ -3311,7 +3311,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/articles/ArticleFragment$setupToolbar$6;-><init>(Lcom/vk/articles/ArticleFragment;)V
 
-    invoke-static {p1, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 42
     :cond_1d
@@ -3351,7 +3351,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/articles/ArticleFragment$setupToolbar$7;-><init>(Lcom/vk/articles/ArticleFragment;)V
 
-    invoke-static {p1, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 45
     :cond_20
@@ -3419,7 +3419,7 @@
 
     .line 51
     :cond_26
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -3562,7 +3562,7 @@
     .locals 8
 
     .line 2
-    new-instance v7, Lcom/vk/core/dialogs/actionspopup/a$b;
+    new-instance v7, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     const/4 v2, 0x1
 
@@ -3576,7 +3576,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/dialogs/actionspopup/a$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 3
     new-instance v4, Lcom/vk/articles/ArticleFragment$showPopupMenu$builder$1;
@@ -3591,7 +3591,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 4
     iget-boolean p1, p0, Lcom/vk/articles/ArticleFragment;->K:Z
@@ -3615,7 +3615,7 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 6
     invoke-virtual {p0}, Lcom/vk/articles/ArticleFragment;->z4()Z
@@ -3641,7 +3641,7 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     goto :goto_0
 
@@ -3663,7 +3663,7 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 9
     :cond_1
@@ -3711,7 +3711,7 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 11
     :cond_3
@@ -3748,17 +3748,17 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 13
     :cond_4
-    invoke-virtual {v7}, Lcom/vk/core/dialogs/actionspopup/a$b;->c()Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-virtual {v7}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     return-void
 
     .line 14
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -3805,7 +3805,7 @@
     move-object v2, v1
 
     :goto_1
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -3840,7 +3840,7 @@
     move-result-object v1
 
     :cond_3
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -3917,7 +3917,7 @@
     :goto_1
     const/4 v2, 0x2
 
-    invoke-static {p1, v1, v0, v2, v0}, Lcom/vk/extensions/e;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
+    invoke-static {p1, v1, v0, v2, v0}, Lcom/vk/extensions/ImageViewExt;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
 
     goto :goto_4
 
@@ -3933,7 +3933,7 @@
 
     .line 11
     :goto_2
-    invoke-direct {p0}, Lcom/vk/articles/ArticleFragment;->X4()Lcom/vk/common/widget/b;
+    invoke-direct {p0}, Lcom/vk/articles/ArticleFragment;->X4()Lcom/vk/common/widget/DynamicTheme;
 
     move-result-object v1
 
@@ -3953,14 +3953,14 @@
     :goto_3
     if-eqz v2, :cond_6
 
-    invoke-virtual {v1, v2, p1}, Lcom/vk/common/widget/b;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, p1}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
     :cond_5
     :goto_4
     return-void
 
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -4106,7 +4106,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/a;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/AbstractErrorView;->setVisibility(I)V
 
     :cond_2
     return-void
@@ -4140,7 +4140,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/a;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/AbstractErrorView;->setVisibility(I)V
 
     :cond_2
     return-void
@@ -4160,11 +4160,11 @@
 
     move-result v0
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v1
 
@@ -4243,7 +4243,7 @@
     const p1, 0x7f040022
 
     :goto_0
-    invoke-static {v0, p1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, p1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     goto :goto_2
 
@@ -4259,7 +4259,7 @@
 
     .line 3
     :goto_1
-    invoke-direct {p0}, Lcom/vk/articles/ArticleFragment;->X4()Lcom/vk/common/widget/b;
+    invoke-direct {p0}, Lcom/vk/articles/ArticleFragment;->X4()Lcom/vk/common/widget/DynamicTheme;
 
     move-result-object v0
 
@@ -4267,14 +4267,14 @@
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/common/widget/b;->b(Landroid/widget/TextView;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/common/widget/DynamicTheme;->b(Landroid/widget/TextView;Ljava/lang/String;)V
 
     :cond_3
     :goto_2
     return-void
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -4287,7 +4287,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->b(Lcom/vk/navigation/b0/a;)Z
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->b(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)Z
 
     move-result v0
 
@@ -4298,7 +4298,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->a(Lcom/vk/navigation/b0/a;)I
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->a(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)I
 
     move-result v0
 
@@ -4315,22 +4315,22 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/a;->b(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/ActivityExt;->b(Landroid/app/Activity;)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lc/a/m;)Lc/a/m;
+.method public a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;"
         }
     .end annotation
@@ -4354,14 +4354,14 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/core/ui/v/g;)V
+.method public a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
     .locals 8
 
     .line 35
@@ -4420,9 +4420,9 @@
     move-object v0, v7
 
     .line 39
-    invoke-direct/range {v0 .. v6}, Lcom/vk/stat/scheme/SchemeStat$EventItem;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventItem$Type;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/stat/scheme/SchemeStat$EventItem;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventItem$Type;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {p1, v7}, Lcom/vk/core/ui/v/g;->a(Lcom/vk/stat/scheme/SchemeStat$EventItem;)V
+    invoke-virtual {p1, v7}, Lcom/vk/core/ui/v/UiTrackingScreen;->a(Lcom/vk/stat/scheme/SchemeStat$EventItem;)V
 
     return-void
 .end method
@@ -4471,12 +4471,12 @@
     const v1, 0x7f0802f6
 
     :goto_0
-    invoke-virtual {p1, v1}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(I)V
+    invoke-virtual {p1, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(I)V
 
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -4521,7 +4521,7 @@
     goto :goto_3
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -4550,14 +4550,14 @@
 
     const-string p2, "activity!!"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/articles/ArticleFragment;->d(Landroid/content/Context;)V
 
     goto :goto_4
 
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -4570,15 +4570,15 @@
     .locals 1
 
     .line 148
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/articles/a;
+    check-cast v0, Lcom/vk/articles/ArticleContract;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/articles/a;->a(Lcom/vk/dto/polls/PollInfo;)V
+    invoke-interface {v0, p1}, Lcom/vk/articles/ArticleContract;->a(Lcom/vk/dto/polls/PollInfo;)V
 
     :cond_0
     return-void
@@ -4615,7 +4615,7 @@
 
     invoke-direct {v1, p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/fave/FaveController;->a(Lb/h/h/f/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/fave/FaveController;->a(Lb/h/h/f/Favable;)V
 
     .line 66
     :cond_0
@@ -4652,14 +4652,14 @@
 
     const-string v0, "activity!!"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/articles/ArticleFragment;->d(Landroid/content/Context;)V
 
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -4685,11 +4685,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/articles/a;
+    check-cast v0, Lcom/vk/articles/ArticleContract;
 
     if-eqz v0, :cond_3
 
@@ -4701,7 +4701,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/articles/ArticleFragment$share$1;-><init>(Lcom/vk/articles/ArticleFragment;)V
 
-    invoke-interface {v0, p1, v1, v2}, Lcom/vk/articles/a;->a(Lcom/vk/dto/polls/PollInfo;ZLkotlin/jvm/b/b;)V
+    invoke-interface {v0, p1, v1, v2}, Lcom/vk/articles/ArticleContract;->a(Lcom/vk/dto/polls/PollInfo;ZLkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 
@@ -4711,11 +4711,11 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/vk/bridges/a0;->a()Lcom/vk/bridges/z;
+    invoke-static {}, Lcom/vk/bridges/SharingBridge;->a()Lcom/vk/bridges/SharingBridge1;
 
     move-result-object v0
 
-    invoke-static {p0}, Lcom/vk/navigation/b;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/a;
+    invoke-static {p0}, Lcom/vk/navigation/ActivityLauncher1;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/ActivityLauncher;
 
     move-result-object v1
 
@@ -4723,13 +4723,13 @@
 
     const/16 v3, 0x3e7
 
-    invoke-interface {v0, v1, p1, v2, v3}, Lcom/vk/bridges/z;->a(Lcom/vk/navigation/a;Ljava/lang/Object;Ljava/lang/String;I)V
+    invoke-interface {v0, v1, p1, v2, v3}, Lcom/vk/bridges/SharingBridge1;->a(Lcom/vk/navigation/ActivityLauncher;Ljava/lang/Object;Ljava/lang/String;I)V
 
     goto :goto_0
 
     .line 63
     :cond_1
-    invoke-static {}, Lcom/vk/bridges/a0;->a()Lcom/vk/bridges/z;
+    invoke-static {}, Lcom/vk/bridges/SharingBridge;->a()Lcom/vk/bridges/SharingBridge1;
 
     move-result-object v0
 
@@ -4741,14 +4741,14 @@
 
     const-string v2, "activity!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/SharingBridge1;->a(Landroid/content/Context;Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -4788,7 +4788,7 @@
     invoke-direct {p0}, Lcom/vk/articles/ArticleFragment;->P4()V
 
     .line 2
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->o()Z
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->o()Z
 
     move-result v0
 
@@ -4982,7 +4982,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -5079,22 +5079,22 @@
     .line 7
     new-instance p1, Lcom/vk/articles/ArticlePresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/articles/ArticlePresenter;-><init>(Lcom/vk/articles/b;)V
+    invoke-direct {p1, p0}, Lcom/vk/articles/ArticlePresenter;-><init>(Lcom/vk/articles/ArticleContract1;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/c;->a(Lb/h/r/c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/BaseMvpFragment;->a(Lb/h/r/BaseScreenContract;)V
 
     .line 8
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
     const/16 v0, 0x75
 
-    iget-object v1, p0, Lcom/vk/articles/ArticleFragment;->k0:Lb/h/g/l/e;
+    iget-object v1, p0, Lcom/vk/articles/ArticleFragment;->k0:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {p1, v0, v1}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v0, v1}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     return-void
 .end method
@@ -5118,7 +5118,7 @@
 
     const-string v1, "activity!!"
 
-    invoke-static {p3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p3}, Lcom/vk/articles/ArticleFragment;->c(Landroid/content/Context;)V
 
@@ -5141,11 +5141,11 @@
 
     if-eqz p3, :cond_0
 
-    sget-object v3, Lcom/vk/articles/preload/a;->k:Lcom/vk/articles/preload/a;
+    sget-object v3, Lcom/vk/articles/preload/WebCachePreloader;->INSTANCE:Lcom/vk/articles/preload/WebCachePreloader;
 
     const-string v4, "it"
 
-    invoke-static {p3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
@@ -5153,7 +5153,7 @@
 
     const-string p3, "it.applicationContext"
 
-    invoke-static {v4, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0}, Lcom/vk/articles/ArticleFragment;->S4()Ljava/lang/String;
 
@@ -5169,7 +5169,7 @@
 
     iget-object v8, p0, Lcom/vk/articles/ArticleFragment;->J:Lcom/vk/articles/preload/QueryParameters;
 
-    invoke-virtual/range {v3 .. v8}, Lcom/vk/articles/preload/a;->a(Landroid/content/Context;Ljava/lang/String;ZZLcom/vk/articles/preload/QueryParameters;)Lcom/vk/articles/ArticleWebView;
+    invoke-virtual/range {v3 .. v8}, Lcom/vk/articles/preload/WebCachePreloader;->a(Landroid/content/Context;Ljava/lang/String;ZZLcom/vk/articles/preload/QueryParameters;)Lcom/vk/articles/ArticleWebView;
 
     move-result-object p3
 
@@ -5351,7 +5351,7 @@
 
     const/4 v4, 0x2
 
-    invoke-static {p3, v3, v2, v4, v0}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/m;
+    invoke-static {p3, v3, v2, v4, v0}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/Unit;
 
     :cond_9
     :goto_1
@@ -5380,7 +5380,7 @@
     goto :goto_2
 
     :cond_a
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -5428,7 +5428,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/articles/ArticleFragment$e;-><init>(Lcom/vk/articles/ArticleFragment;)V
 
-    invoke-virtual {p3, v3}, Lcom/vk/lists/a;->setRetryClickListener(Lcom/vk/lists/r;)V
+    invoke-virtual {p3, v3}, Lcom/vk/lists/AbstractErrorView;->setRetryClickListener(Lcom/vk/lists/OnRetryClickListener;)V
 
     .line 27
     :cond_c
@@ -5440,7 +5440,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/articles/ArticleFragment$onCreateView$3;-><init>(Lcom/vk/articles/ArticleFragment;)V
 
-    invoke-virtual {p3, v3}, Lcom/vk/articles/ArticleWebView;->setOnPageFinishedListener(Lkotlin/jvm/b/c;)V
+    invoke-virtual {p3, v3}, Lcom/vk/articles/ArticleWebView;->setOnPageFinishedListener(Lkotlin/jvm/b/Functions1;)V
 
     .line 28
     :cond_d
@@ -5452,7 +5452,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/articles/ArticleFragment$onCreateView$4;-><init>(Lcom/vk/articles/ArticleFragment;)V
 
-    invoke-virtual {p3, v3}, Lcom/vk/articles/ArticleWebView;->setOnPageErrorListener(Lkotlin/jvm/b/c;)V
+    invoke-virtual {p3, v3}, Lcom/vk/articles/ArticleWebView;->setOnPageErrorListener(Lkotlin/jvm/b/Functions1;)V
 
     .line 29
     :cond_e
@@ -5532,7 +5532,7 @@
 
     if-eqz p3, :cond_12
 
-    invoke-static {p3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -5553,7 +5553,7 @@
 
     if-eqz v3, :cond_11
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -5574,13 +5574,13 @@
 
     .line 39
     :cond_11
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 40
     :cond_12
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -5609,7 +5609,7 @@
 
     .line 42
     :cond_16
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -5618,18 +5618,18 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/articles/ArticleFragment;->k0:Lb/h/g/l/e;
+    iget-object v1, p0, Lcom/vk/articles/ArticleFragment;->k0:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     .line 2
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onDestroy()V
 
     return-void
 .end method
@@ -5641,7 +5641,7 @@
 
     .line 1
     :try_start_0
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onDestroyView()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onDestroyView()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -5710,18 +5710,18 @@
     invoke-virtual {v1, v0}, Lcom/vk/articles/ArticleWebView;->setOnScrollChangeListener(Lcom/vk/articles/ArticleWebView$e;)V
 
     .line 9
-    invoke-virtual {v1, v0}, Lcom/vk/articles/ArticleWebView;->setOnPageFinishedListener(Lkotlin/jvm/b/c;)V
+    invoke-virtual {v1, v0}, Lcom/vk/articles/ArticleWebView;->setOnPageFinishedListener(Lkotlin/jvm/b/Functions1;)V
 
     .line 10
-    invoke-virtual {v1, v0}, Lcom/vk/articles/ArticleWebView;->setOnPageErrorListener(Lkotlin/jvm/b/c;)V
+    invoke-virtual {v1, v0}, Lcom/vk/articles/ArticleWebView;->setOnPageErrorListener(Lkotlin/jvm/b/Functions1;)V
 
     .line 11
     invoke-virtual {v1}, Lcom/vk/articles/ArticleWebView;->onPause()V
 
     .line 12
-    sget-object v2, Lcom/vk/articles/preload/a;->k:Lcom/vk/articles/preload/a;
+    sget-object v2, Lcom/vk/articles/preload/WebCachePreloader;->INSTANCE:Lcom/vk/articles/preload/WebCachePreloader;
 
-    invoke-virtual {v2, v1}, Lcom/vk/articles/preload/a;->a(Lcom/vk/articles/ArticleWebView;)V
+    invoke-virtual {v2, v1}, Lcom/vk/articles/preload/WebCachePreloader;->a(Lcom/vk/articles/ArticleWebView;)V
 
     .line 13
     iput-object v0, p0, Lcom/vk/articles/ArticleFragment;->b0:Lcom/vk/articles/ArticleWebView;
@@ -5762,7 +5762,7 @@
     invoke-virtual {v0, v1, p0}, Lcom/vk/stats/AppUseTime;->a(Lcom/vk/stats/AppUseTime$Section;Lcom/vk/core/fragments/FragmentImpl;)V
 
     .line 4
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onPause()V
 
     return-void
 .end method
@@ -5771,7 +5771,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onResume()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -5782,7 +5782,7 @@
 
     const-string v1, "activity!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v0}, Lcom/vk/articles/ArticleFragment;->d(Landroid/content/Context;)V
 
@@ -5820,7 +5820,7 @@
 
     .line 7
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -5831,7 +5831,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/c;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/BaseMvpFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
     invoke-direct {p0, p1}, Lcom/vk/articles/ArticleFragment;->b(Landroid/view/View;)V
@@ -5853,7 +5853,7 @@
 
     const-string p2, "activity!!"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/articles/ArticleFragment;->b(Landroid/content/Context;)V
 
@@ -5867,9 +5867,9 @@
     if-eqz p1, :cond_0
 
     .line 7
-    sget-object p1, Lcom/vk/articles/preload/a;->k:Lcom/vk/articles/preload/a;
+    sget-object p1, Lcom/vk/articles/preload/WebCachePreloader;->INSTANCE:Lcom/vk/articles/preload/WebCachePreloader;
 
-    invoke-virtual {p1}, Lcom/vk/articles/preload/a;->c()Z
+    invoke-virtual {p1}, Lcom/vk/articles/preload/WebCachePreloader;->c()Z
 
     move-result p1
 
@@ -5909,7 +5909,7 @@
 
     .line 11
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -5982,7 +5982,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {v0}, Lcom/vk/extensions/t/a;->b(Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {v0}, Lcom/vk/extensions/t/ToolbarExt;->b(Landroidx/appcompat/widget/Toolbar;)V
 
     :cond_1
     return-void

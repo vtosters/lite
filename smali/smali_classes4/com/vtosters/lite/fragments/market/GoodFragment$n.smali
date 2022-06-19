@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field final synthetic a:Lb/h/g/k/a;
+.field final synthetic a:Lb/h/g/k/VKProgressDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lb/h/g/k/a;)V
+.method constructor <init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lb/h/g/k/VKProgressDialog;)V
     .locals 0
 
     .line 1
-    iput-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$n;->a:Lb/h/g/k/a;
+    iput-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$n;->a:Lb/h/g/k/VKProgressDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,14 +39,14 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$n;->a:Lb/h/g/k/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$n;->a:Lb/h/g/k/VKProgressDialog;
 
-    invoke-static {v0}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {v0}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/app/Dialog;)V
 
     const v0, 0x7f120369
 
     .line 2
-    invoke-static {v0}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 .end method

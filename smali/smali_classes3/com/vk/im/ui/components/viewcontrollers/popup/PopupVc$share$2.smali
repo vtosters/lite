@@ -3,7 +3,7 @@
 .source "PopupVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/im/ui/components/viewcontrollers/popup/e;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateShare;",
         ">;"
     }
 .end annotation
@@ -49,21 +49,21 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/ui/components/viewcontrollers/popup/e;
+.method public final invoke()Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateShare;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/popup/e;
+    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateShare;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc$share$2;->$context:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc$share$2;->this$0:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
 
-    invoke-static {v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;)Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+    invoke-static {v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;)Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/e;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/f;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateShare;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;)V
 
     return-object v0
 .end method
@@ -72,7 +72,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc$share$2;->invoke()Lcom/vk/im/ui/components/viewcontrollers/popup/e;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc$share$2;->invoke()Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateShare;
 
     move-result-object v0
 

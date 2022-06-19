@@ -3,17 +3,17 @@
 .source "VKDraweeView.java"
 
 # interfaces
-.implements Lcom/vk/imageloader/view/d;
+.implements Lcom/vk/imageloader/view/WithColorFilter;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<DH::",
-        "Lcom/facebook/u/e/b;",
+        "Lcom/facebook/u/e/DraweeHierarchy;",
         ">",
         "Landroid/widget/ImageView;",
-        "Lcom/vk/imageloader/view/d;"
+        "Lcom/vk/imageloader/view/WithColorFilter;"
     }
 .end annotation
 
@@ -23,10 +23,10 @@
 
 
 # instance fields
-.field private a:Lcom/facebook/drawee/view/b;
+.field private a:Lcom/facebook/drawee/view/DraweeHolder;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/facebook/drawee/view/b<",
+            "Lcom/facebook/drawee/view/DraweeHolder<",
             "TDH;>;"
         }
     .end annotation
@@ -139,11 +139,11 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-static {v0, p1}, Lcom/facebook/drawee/view/b;->a(Lcom/facebook/u/e/b;Landroid/content/Context;)Lcom/facebook/drawee/view/b;
+    invoke-static {v0, p1}, Lcom/facebook/drawee/view/DraweeHolder;->a(Lcom/facebook/u/e/DraweeHierarchy;Landroid/content/Context;)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iput-object p1, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
     .line 4
     invoke-virtual {p0}, Landroid/widget/ImageView;->getImageTintList()Landroid/content/res/ColorStateList;
@@ -218,9 +218,9 @@
     .locals 1
 
     .line 6
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/b;->f()V
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/DraweeHolder;->f()V
 
     return-void
 .end method
@@ -229,9 +229,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/b;->g()V
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/DraweeHolder;->g()V
 
     return-void
 .end method
@@ -254,17 +254,17 @@
     return-void
 .end method
 
-.method public getController()Lcom/facebook/u/e/a;
+.method public getController()Lcom/facebook/u/e/DraweeController;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/b;->a()Lcom/facebook/u/e/a;
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/DraweeHolder;->a()Lcom/facebook/u/e/DraweeController;
 
     move-result-object v0
 
@@ -277,7 +277,7 @@
     return-object v0
 .end method
 
-.method public getHierarchy()Lcom/facebook/u/e/b;
+.method public getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -286,11 +286,11 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/b;->b()Lcom/facebook/u/e/b;
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/DraweeHolder;->b()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
@@ -309,11 +309,11 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -390,9 +390,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/view/b;->a(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/view/DraweeHolder;->a(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -435,25 +435,25 @@
     return-void
 .end method
 
-.method public setController(Lcom/facebook/u/e/a;)V
+.method public setController(Lcom/facebook/u/e/DraweeController;)V
     .locals 1
-    .param p1    # Lcom/facebook/u/e/a;
+    .param p1    # Lcom/facebook/u/e/DraweeController;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/view/b;->a(Lcom/facebook/u/e/a;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/view/DraweeHolder;->a(Lcom/facebook/u/e/DraweeController;)V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object p1, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
-    invoke-virtual {p1}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -463,7 +463,7 @@
     return-void
 .end method
 
-.method public setHierarchy(Lcom/facebook/u/e/b;)V
+.method public setHierarchy(Lcom/facebook/u/e/DraweeHierarchy;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -472,17 +472,17 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/view/b;->a(Lcom/facebook/u/e/b;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/view/DraweeHolder;->a(Lcom/facebook/u/e/DraweeHierarchy;)V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object p1, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
-    invoke-virtual {p1}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -496,11 +496,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/view/b;->a(Lcom/facebook/u/e/a;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/view/DraweeHolder;->a(Lcom/facebook/u/e/DraweeController;)V
 
     .line 2
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
@@ -512,11 +512,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/view/b;->a(Lcom/facebook/u/e/a;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/view/DraweeHolder;->a(Lcom/facebook/u/e/DraweeController;)V
 
     .line 2
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -528,11 +528,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/view/b;->a(Lcom/facebook/u/e/a;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/view/DraweeHolder;->a(Lcom/facebook/u/e/DraweeController;)V
 
     .line 2
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -544,11 +544,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/view/b;->a(Lcom/facebook/u/e/a;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/view/DraweeHolder;->a(Lcom/facebook/u/e/DraweeController;)V
 
     .line 2
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageURI(Landroid/net/Uri;)V
@@ -569,16 +569,16 @@
     .locals 3
 
     .line 1
-    invoke-static {p0}, Lcom/facebook/common/internal/f;->a(Ljava/lang/Object;)Lcom/facebook/common/internal/f$b;
+    invoke-static {p0}, Lcom/facebook/common/internal/Objects;->a(Ljava/lang/Object;)Lcom/facebook/common/internal/Objects$b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/b;
+    iget-object v1, p0, Lcom/vk/imageloader/view/VKDraweeView;->a:Lcom/facebook/drawee/view/DraweeHolder;
 
     if-eqz v1, :cond_0
 
     .line 2
-    invoke-virtual {v1}, Lcom/facebook/drawee/view/b;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/facebook/drawee/view/DraweeHolder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -590,10 +590,10 @@
     :goto_0
     const-string v2, "holder"
 
-    invoke-virtual {v0, v2, v1}, Lcom/facebook/common/internal/f$b;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/facebook/common/internal/f$b;
+    invoke-virtual {v0, v2, v1}, Lcom/facebook/common/internal/Objects$b;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/facebook/common/internal/Objects$b;
 
     .line 3
-    invoke-virtual {v0}, Lcom/facebook/common/internal/f$b;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/facebook/common/internal/Objects$b;->toString()Ljava/lang/String;
 
     move-result-object v0
 

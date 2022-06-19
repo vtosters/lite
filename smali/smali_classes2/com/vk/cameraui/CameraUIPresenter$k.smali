@@ -3,7 +3,7 @@
 .source "CameraUIPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/mediastore/system/b$f;
+.implements Lcom/vk/mediastore/system/MediaStoreController$f;
 
 
 # annotations
@@ -40,7 +40,7 @@
         value = {
             "(",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/mediastore/system/a;",
+            "Lcom/vk/mediastore/system/AlbumEntry;",
             ">;)V"
         }
     .end annotation

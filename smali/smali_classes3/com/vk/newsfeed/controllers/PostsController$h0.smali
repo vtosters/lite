@@ -3,12 +3,12 @@
 .source "PostsController.kt"
 
 # interfaces
-.implements Lcom/vk/core/view/links/a$a;
+.implements Lcom/vk/core/view/links/ClickableLinkSpan$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/controllers/PostsController;->a(Landroid/content/Context;Ljava/util/List;ILkotlin/jvm/b/b;)V
+    value = Lcom/vk/newsfeed/controllers/PostsController;->a(Landroid/content/Context;Ljava/util/List;ILkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/core/dialogs/bottomsheet/e;
+.field final synthetic a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/dialogs/bottomsheet/e;)V
+.method constructor <init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/newsfeed/controllers/PostsController$h0;->a:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object p1, p0, Lcom/vk/newsfeed/controllers/PostsController$h0;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,9 +38,9 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/newsfeed/controllers/PostsController$h0;->a:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object p1, p0, Lcom/vk/newsfeed/controllers/PostsController$h0;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->dismiss()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismiss()V
 
     return-void
 .end method

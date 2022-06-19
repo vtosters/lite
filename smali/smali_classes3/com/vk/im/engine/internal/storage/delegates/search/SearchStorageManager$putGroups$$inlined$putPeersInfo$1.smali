@@ -3,7 +3,7 @@
 .source "SearchStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lio/requery/android/database/sqlite/SQLiteDatabase;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -174,7 +174,7 @@
 
     move-result v5
 
-    invoke-static {v10, v5}, Lcom/vk/im/engine/utils/e;->a(Lcom/vk/im/engine/models/PeerType;I)I
+    invoke-static {v10, v5}, Lcom/vk/im/engine/utils/ImDialogsUtils;->a(Lcom/vk/im/engine/models/PeerType;I)I
 
     move-result v5
 
@@ -216,7 +216,7 @@
 
     move-result v11
 
-    invoke-static {v12, v11}, Lcom/vk/im/engine/utils/e;->a(Lcom/vk/im/engine/models/PeerType;I)I
+    invoke-static {v12, v11}, Lcom/vk/im/engine/utils/ImDialogsUtils;->a(Lcom/vk/im/engine/models/PeerType;I)I
 
     move-result v11
 
@@ -299,7 +299,7 @@
 
     .line 32
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -348,7 +348,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/search/SearchStorageManager$putGroups$$inlined$putPeersInfo$1;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

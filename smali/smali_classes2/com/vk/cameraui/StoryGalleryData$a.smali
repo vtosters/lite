@@ -66,7 +66,7 @@
 
     const-string v2, "Uri.parse(it.readString()!!)"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-direct {v0, v1, p1}, Lcom/vk/cameraui/StoryGalleryData;-><init>(ZLandroid/net/Uri;)V
@@ -75,7 +75,7 @@
 
     .line 6
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

@@ -79,7 +79,7 @@
 
     iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment$bindStoriesResponse$1;->a:Lcom/vk/newsfeed/NewsfeedFragment;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/NewsfeedFragment;->b(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/core/util/w;
+    invoke-static {v0}, Lcom/vk/newsfeed/NewsfeedFragment;->b(Lcom/vk/newsfeed/NewsfeedFragment;)Lcom/vk/core/util/Dismissable;
 
     move-result-object v0
 
@@ -98,7 +98,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/newsfeed/NewsfeedFragment$bindStoriesResponse$1$1;-><init>(Lcom/vk/newsfeed/NewsfeedFragment$bindStoriesResponse$1;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->a(Lkotlin/jvm/b/Functions;)V
 
     :cond_0
     return-void

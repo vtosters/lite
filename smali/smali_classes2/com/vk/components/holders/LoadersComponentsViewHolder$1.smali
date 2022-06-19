@@ -3,7 +3,7 @@
 .source "LoadersComponentsViewHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/core/drawable/c;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/core/drawable/CircularProgressDrawable;",
         ">;"
     }
 .end annotation
@@ -45,15 +45,15 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/core/drawable/c;
+.method public final invoke()Lcom/vk/core/drawable/CircularProgressDrawable;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/core/drawable/c;
+    new-instance v0, Lcom/vk/core/drawable/CircularProgressDrawable;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lcom/vk/core/drawable/c;-><init>(Z)V
+    invoke-direct {v0, v1}, Lcom/vk/core/drawable/CircularProgressDrawable;-><init>(Z)V
 
     .line 3
     iget-object v1, p0, Lcom/vk/components/holders/LoadersComponentsViewHolder$1;->this$0:Lcom/vk/components/holders/LoadersComponentsViewHolder;
@@ -62,7 +62,7 @@
 
     const-string v2, "itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -76,18 +76,18 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/core/drawable/c;->a(II)V
+    invoke-virtual {v0, v2, v1}, Lcom/vk/core/drawable/CircularProgressDrawable;->a(II)V
 
     const/high16 v1, 0x40800000    # 4.0f
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/vk/core/drawable/c;->b(F)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/drawable/CircularProgressDrawable;->b(F)V
 
     .line 5
-    invoke-virtual {v0, v2}, Lcom/vk/core/drawable/c;->b(Z)V
+    invoke-virtual {v0, v2}, Lcom/vk/core/drawable/CircularProgressDrawable;->b(Z)V
 
     .line 6
-    invoke-virtual {v0, v2}, Lcom/vk/core/drawable/c;->a(Z)V
+    invoke-virtual {v0, v2}, Lcom/vk/core/drawable/CircularProgressDrawable;->a(Z)V
 
     return-object v0
 .end method
@@ -96,7 +96,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/components/holders/LoadersComponentsViewHolder$1;->invoke()Lcom/vk/core/drawable/c;
+    invoke-virtual {p0}, Lcom/vk/components/holders/LoadersComponentsViewHolder$1;->invoke()Lcom/vk/core/drawable/CircularProgressDrawable;
 
     move-result-object v0
 

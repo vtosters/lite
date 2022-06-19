@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/audio/player/SavedTracks$e;
-.super Lcom/vtosters/lite/audio/utils/a;
+.super Lcom/vtosters/lite/audio/utils/AsyncTaskCompat;
 .source "SavedTracks.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/audio/utils/a<",
+        "Lcom/vtosters/lite/audio/utils/AsyncTaskCompat<",
         "Ljava/lang/Void;",
         "Ljava/lang/Void;",
         "Ljava/lang/Void;",
@@ -45,7 +45,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/audio/player/SavedTracks$e;->b:Lcom/vtosters/lite/audio/player/SavedTracks;
 
-    invoke-direct {p0}, Lcom/vtosters/lite/audio/utils/a;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/audio/utils/AsyncTaskCompat;-><init>()V
 
     .line 2
     new-instance v0, Ljava/util/ArrayList;
@@ -67,9 +67,9 @@
     .locals 6
 
     .line 1
-    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {p1}, Lcom/vtosters/lite/data/v/a;->a(Landroid/content/Context;)Lcom/vtosters/lite/data/v/a;
+    invoke-static {p1}, Lcom/vtosters/lite/data/v/Database;->a(Landroid/content/Context;)Lcom/vtosters/lite/data/v/Database;
 
     move-result-object p1
 
@@ -107,7 +107,7 @@
     check-cast v2, Lcom/vtosters/lite/audio/player/SavedTrack;
 
     .line 5
-    invoke-virtual {v2}, Lcom/vtosters/lite/audio/f/a;->getId()J
+    invoke-virtual {v2}, Lcom/vtosters/lite/audio/f/DataObject;->getId()J
 
     move-result-wide v2
 
@@ -123,7 +123,7 @@
     :cond_0
     sget-object v1, Lcom/vtosters/lite/audio/player/SavedTrack;->g:Lcom/vtosters/lite/audio/player/SavedTrack$b;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/audio/f/b;->b()Ljava/util/Collection;
+    invoke-virtual {v1}, Lcom/vtosters/lite/audio/f/DataProvider;->b()Ljava/util/Collection;
 
     move-result-object v1
 
@@ -147,7 +147,7 @@
     check-cast v2, Lcom/vtosters/lite/audio/player/SavedTrack;
 
     .line 7
-    invoke-virtual {v2}, Lcom/vtosters/lite/audio/f/a;->getId()J
+    invoke-virtual {v2}, Lcom/vtosters/lite/audio/f/DataObject;->getId()J
 
     move-result-wide v4
 
@@ -162,7 +162,7 @@
     if-nez v4, :cond_1
 
     .line 8
-    invoke-virtual {v2}, Lcom/vtosters/lite/audio/f/a;->F()Z
+    invoke-virtual {v2}, Lcom/vtosters/lite/audio/f/DataObject;->F()Z
 
     .line 9
     invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
@@ -205,7 +205,7 @@
     iput v0, v1, Lcom/vtosters/lite/audio/player/SavedTrack;->d:I
 
     .line 14
-    invoke-virtual {v1}, Lcom/vtosters/lite/audio/f/a;->G()Z
+    invoke-virtual {v1}, Lcom/vtosters/lite/audio/f/DataObject;->G()Z
 
     .line 15
     invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
@@ -250,7 +250,7 @@
     .line 20
     sget-object v0, Lcom/vtosters/lite/audio/player/SavedTrack;->g:Lcom/vtosters/lite/audio/player/SavedTrack$b;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/f/b;->b()Ljava/util/Collection;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/f/DataProvider;->b()Ljava/util/Collection;
 
     move-result-object v0
 

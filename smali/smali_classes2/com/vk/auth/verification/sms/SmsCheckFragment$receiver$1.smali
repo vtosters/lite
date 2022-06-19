@@ -64,7 +64,7 @@
 
     const-string p2, "intent.extras ?: return"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p2, "com.google.android.gms.auth.api.phone.EXTRA_STATUS"
 
@@ -107,7 +107,7 @@
 
     const-string p2, "extras.getParcelable<Int\u2026CONSENT_INTENT) ?: return"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     :try_start_0

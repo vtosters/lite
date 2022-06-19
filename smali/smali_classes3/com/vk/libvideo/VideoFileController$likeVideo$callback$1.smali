@@ -3,7 +3,7 @@
 .source "VideoFileController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/libvideo/VideoFileController$likeVideo$callback$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/vk/libvideo/y/g;
+    new-instance v0, Lcom/vk/libvideo/y/VideoEvents;
 
     iget-object v1, p0, Lcom/vk/libvideo/VideoFileController$likeVideo$callback$1;->this$0:Lcom/vk/libvideo/VideoFileController;
 
@@ -78,12 +78,12 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/y/g;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/y/VideoEvents;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lcom/vk/libvideo/y/k;
+    new-instance v0, Lcom/vk/libvideo/y/VideoEvents2;
 
     iget-object v1, p0, Lcom/vk/libvideo/VideoFileController$likeVideo$callback$1;->this$0:Lcom/vk/libvideo/VideoFileController;
 
@@ -91,11 +91,11 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/y/k;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/y/VideoEvents2;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
     .line 3
     :goto_0
-    invoke-static {v0}, Lcom/vk/libvideo/y/m;->a(Lcom/vk/libvideo/y/a;)V
+    invoke-static {v0}, Lcom/vk/libvideo/y/VideoEventBus;->a(Lcom/vk/libvideo/y/VideoEvents1;)V
 
     return-void
 .end method

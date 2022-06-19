@@ -21,7 +21,7 @@
 # static fields
 .field private static final a:Landroid/os/Handler;
 
-.field private static final b:Lcom/vk/core/util/k;
+.field private static final b:Lcom/vk/core/util/AppSettings;
 
 .field private static final c:Ljava/util/Vector;
     .annotation system Ldalvik/annotation/Signature;
@@ -98,11 +98,11 @@
     sput-object v1, Lcom/vk/common/AppStateTracker;->a:Landroid/os/Handler;
 
     .line 3
-    new-instance v1, Lcom/vk/core/util/k;
+    new-instance v1, Lcom/vk/core/util/AppSettings;
 
-    invoke-direct {v1}, Lcom/vk/core/util/k;-><init>()V
+    invoke-direct {v1}, Lcom/vk/core/util/AppSettings;-><init>()V
 
-    sput-object v1, Lcom/vk/common/AppStateTracker;->b:Lcom/vk/core/util/k;
+    sput-object v1, Lcom/vk/common/AppStateTracker;->b:Lcom/vk/core/util/AppSettings;
 
     .line 4
     new-instance v1, Ljava/util/Vector;
@@ -367,11 +367,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/common/AppStateTracker;)Lcom/vk/core/util/k;
+.method public static final synthetic b(Lcom/vk/common/AppStateTracker;)Lcom/vk/core/util/AppSettings;
     .locals 0
 
     .line 1
-    sget-object p0, Lcom/vk/common/AppStateTracker;->b:Lcom/vk/core/util/k;
+    sget-object p0, Lcom/vk/common/AppStateTracker;->b:Lcom/vk/core/util/AppSettings;
 
     return-object p0
 .end method
@@ -471,7 +471,7 @@
 
     sget-object v1, Lcom/vk/common/AppStateTracker$saveOldActivity$1;->a:Lcom/vk/common/AppStateTracker$saveOldActivity$1;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)V
 
     .line 3
     sget-object v0, Lcom/vk/common/AppStateTracker;->j:Ljava/util/List;
@@ -514,7 +514,7 @@
     check-cast v2, Landroid/app/Activity;
 
     :cond_1
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -623,7 +623,7 @@
 
     invoke-direct {v0}, Lcom/vk/common/AppStateTracker$h;-><init>()V
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(Lcom/vk/core/ui/themes/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(Lcom/vk/core/ui/themes/ActivitiesProvider;)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "PostingInteractor.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/PostingInteractor;->a(ZZ)Lc/a/m;
+    value = Lcom/vk/newsfeed/posting/PostingInteractor;->a(ZZ)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -47,28 +47,28 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/newsfeed/posting/dto/f;)Lcom/vk/newsfeed/posting/dto/f;
+.method public final a(Lcom/vk/newsfeed/posting/dto/PostingSettings1;)Lcom/vk/newsfeed/posting/dto/PostingSettings1;
     .locals 3
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/f;->e()Lcom/vk/newsfeed/posting/dto/PosterSettings;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/PostingSettings1;->e()Lcom/vk/newsfeed/posting/dto/PosterSettings;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v1, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v1, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v2, "posterSettings"
 
-    invoke-virtual {v1, v2, v0}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
+    invoke-virtual {v1, v2, v0}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
     .line 3
     :cond_0
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingInteractor$e;->a:Lcom/vk/newsfeed/posting/PostingInteractor;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/f;->b()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/PostingSettings1;->b()Lcom/vk/dto/common/data/VKList;
 
     move-result-object v1
 
@@ -91,9 +91,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/newsfeed/posting/dto/f;
+    check-cast p1, Lcom/vk/newsfeed/posting/dto/PostingSettings1;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingInteractor$e;->a(Lcom/vk/newsfeed/posting/dto/f;)Lcom/vk/newsfeed/posting/dto/f;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingInteractor$e;->a(Lcom/vk/newsfeed/posting/dto/PostingSettings1;)Lcom/vk/newsfeed/posting/dto/PostingSettings1;
 
     return-object p1
 .end method

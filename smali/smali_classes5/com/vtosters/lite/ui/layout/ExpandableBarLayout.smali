@@ -20,9 +20,9 @@
 
 .field private final e:Landroid/graphics/Paint;
 
-.field private f:Lcom/vk/common/g/m;
+.field private f:Lcom/vk/common/g/VoidFloat;
 
-.field private g:Lcom/vk/common/g/l;
+.field private g:Lcom/vk/common/g/VoidFBool;
 
 .field private h:Landroid/animation/TimeInterpolator;
 
@@ -338,20 +338,20 @@
     return-object p0
 .end method
 
-.method static synthetic c(Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;)Lcom/vk/common/g/l;
+.method static synthetic c(Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;)Lcom/vk/common/g/VoidFBool;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->g:Lcom/vk/common/g/l;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->g:Lcom/vk/common/g/VoidFBool;
 
     return-object p0
 .end method
 
-.method static synthetic d(Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;)Lcom/vk/common/g/m;
+.method static synthetic d(Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;)Lcom/vk/common/g/VoidFloat;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->f:Lcom/vk/common/g/m;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->f:Lcom/vk/common/g/VoidFloat;
 
     return-object p0
 .end method
@@ -1213,20 +1213,20 @@
     return-void
 .end method
 
-.method public setOpenListener(Lcom/vk/common/g/l;)V
+.method public setOpenListener(Lcom/vk/common/g/VoidFBool;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->g:Lcom/vk/common/g/l;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->g:Lcom/vk/common/g/VoidFBool;
 
     return-void
 .end method
 
-.method public setProgressListener(Lcom/vk/common/g/m;)V
+.method public setProgressListener(Lcom/vk/common/g/VoidFloat;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->f:Lcom/vk/common/g/m;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->f:Lcom/vk/common/g/VoidFloat;
 
     return-void
 .end method

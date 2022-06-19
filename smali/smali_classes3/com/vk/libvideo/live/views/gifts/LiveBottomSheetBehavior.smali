@@ -145,14 +145,14 @@
     iput-object v0, p0, Lcom/vk/libvideo/live/views/gifts/LiveBottomSheetBehavior;->u:Landroidx/customview/widget/ViewDragHelper$Callback;
 
     .line 9
-    sget-object v0, Lcom/vk/libvideo/l;->BottomSheetBehavior_Layout:[I
+    sget-object v0, Lcom/vk/libvideo/R5;->BottomSheetBehavior_Layout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
     .line 10
-    sget v0, Lcom/vk/libvideo/l;->BottomSheetBehavior_Layout_behavior_peekHeight:I
+    sget v0, Lcom/vk/libvideo/R5;->BottomSheetBehavior_Layout_behavior_peekHeight:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
@@ -174,7 +174,7 @@
 
     .line 13
     :cond_0
-    sget v0, Lcom/vk/libvideo/l;->BottomSheetBehavior_Layout_behavior_peekHeight:I
+    sget v0, Lcom/vk/libvideo/R5;->BottomSheetBehavior_Layout_behavior_peekHeight:I
 
     invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -184,7 +184,7 @@
 
     .line 14
     :goto_0
-    sget v0, Lcom/vk/libvideo/l;->BottomSheetBehavior_Layout_behavior_hideable:I
+    sget v0, Lcom/vk/libvideo/R5;->BottomSheetBehavior_Layout_behavior_hideable:I
 
     const/4 v1, 0x0
 
@@ -195,7 +195,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/libvideo/live/views/gifts/LiveBottomSheetBehavior;->a(Z)V
 
     .line 15
-    sget v0, Lcom/vk/libvideo/l;->BottomSheetBehavior_Layout_behavior_skipCollapsed:I
+    sget v0, Lcom/vk/libvideo/R5;->BottomSheetBehavior_Layout_behavior_skipCollapsed:I
 
     invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -1183,7 +1183,7 @@
 
     move-result-object p3
 
-    sget v2, Lcom/vk/libvideo/d;->design_bottom_sheet_peek_height_min:I
+    sget v2, Lcom/vk/libvideo/R8;->design_bottom_sheet_peek_height_min:I
 
     invoke-virtual {p3, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

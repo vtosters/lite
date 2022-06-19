@@ -3,12 +3,12 @@
 .source "DialogsEntryStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/b;Lcom/vk/im/engine/internal/storage/delegates/dialogs/b;)V
+    value = Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogContentWriter1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/internal/storage/models/a;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/internal/storage/models/a;)I
+.method public final a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;)I
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/a;->getId()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->getId()I
 
     move-result p1
 
@@ -71,9 +71,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$entryMemCache$1;->a(Lcom/vk/im/engine/internal/storage/models/a;)I
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$entryMemCache$1;->a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;)I
 
     move-result p1
 

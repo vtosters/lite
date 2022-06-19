@@ -3,8 +3,8 @@
 .source "ObservableFlatMap.java"
 
 # interfaces
-.implements Lio/reactivex/disposables/b;
-.implements Lc/a/r;
+.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/Observer;
 
 
 # annotations
@@ -25,8 +25,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Lio/reactivex/disposables/b;",
-        "Lc/a/r<",
+        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/Observer<",
         "TT;>;"
     }
 .end annotation
@@ -65,10 +65,10 @@
 
 .field volatile done:Z
 
-.field final downstream:Lc/a/r;
+.field final downstream:Lio/reactivex/Observer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TU;>;"
         }
     .end annotation
@@ -80,12 +80,12 @@
 
 .field lastIndex:I
 
-.field final mapper:Lc/a/z/j;
+.field final mapper:Lio/reactivex/functions/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/j<",
+            "Lio/reactivex/functions/Function<",
             "-TT;+",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "+TU;>;>;"
         }
     .end annotation
@@ -104,10 +104,10 @@
     .end annotation
 .end field
 
-.field volatile queue:Lc/a/a0/b/j;
+.field volatile queue:Lc/a/a0/b/SimplePlainQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/a0/b/j<",
+            "Lc/a/a0/b/SimplePlainQueue<",
             "TU;>;"
         }
     .end annotation
@@ -117,7 +117,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Queue<",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "+TU;>;>;"
         }
     .end annotation
@@ -125,7 +125,7 @@
 
 .field uniqueId:J
 
-.field upstream:Lio/reactivex/disposables/b;
+.field upstream:Lio/reactivex/disposables/Disposable;
 
 .field wip:I
 
@@ -149,16 +149,16 @@
     return-void
 .end method
 
-.method constructor <init>(Lc/a/r;Lc/a/z/j;ZII)V
+.method constructor <init>(Lio/reactivex/Observer;Lio/reactivex/functions/Function;ZII)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TU;>;",
-            "Lc/a/z/j<",
+            "Lio/reactivex/functions/Function<",
             "-TT;+",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "+TU;>;>;ZII)V"
         }
     .end annotation
@@ -174,10 +174,10 @@
     iput-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->errors:Lio/reactivex/internal/util/AtomicThrowable;
 
     .line 3
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->downstream:Lc/a/r;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->downstream:Lio/reactivex/Observer;
 
     .line 4
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->mapper:Lc/a/z/j;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->mapper:Lio/reactivex/functions/Function;
 
     .line 5
     iput-boolean p3, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->delayErrors:Z
@@ -214,12 +214,12 @@
 
 
 # virtual methods
-.method a(Lc/a/p;)V
+.method a(Lio/reactivex/ObservableSource;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "+TU;>;)V"
         }
     .end annotation
@@ -258,7 +258,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lc/a/p;
+    check-cast v0, Lio/reactivex/ObservableSource;
 
     const/4 v1, 0x1
 
@@ -324,32 +324,32 @@
     if-eqz v1, :cond_3
 
     .line 14
-    invoke-interface {p1, v0}, Lc/a/p;->a(Lc/a/r;)V
+    invoke-interface {p1, v0}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
 
     :cond_3
     :goto_1
     return-void
 .end method
 
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/b;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->upstream:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
     .line 3
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->downstream:Lc/a/r;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {p1, p0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p1, p0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
 
     :cond_0
     return-void
@@ -383,9 +383,9 @@
     if-eqz v0, :cond_0
 
     .line 40
-    iget-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->downstream:Lc/a/r;
+    iget-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {p2, p1}, Lc/a/r;->b(Ljava/lang/Object;)V
+    invoke-interface {p2, p1}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
 
     .line 41
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
@@ -398,23 +398,23 @@
 
     .line 42
     :cond_0
-    iget-object v0, p2, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->queue:Lc/a/a0/b/k;
+    iget-object v0, p2, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
     if-nez v0, :cond_1
 
     .line 43
-    new-instance v0, Lio/reactivex/internal/queue/a;
+    new-instance v0, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
     iget v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->bufferSize:I
 
-    invoke-direct {v0, v1}, Lio/reactivex/internal/queue/a;-><init>(I)V
+    invoke-direct {v0, v1}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;-><init>(I)V
 
     .line 44
-    iput-object v0, p2, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->queue:Lc/a/a0/b/k;
+    iput-object v0, p2, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
     .line 45
     :cond_1
-    invoke-interface {v0, p1}, Lc/a/a0/b/k;->offer(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Lc/a/a0/b/SimpleQueue;->offer(Ljava/lang/Object;)Z
 
     .line 46
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
@@ -441,7 +441,7 @@
     if-eqz v0, :cond_0
 
     .line 49
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -467,7 +467,7 @@
 
     .line 53
     :cond_1
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -518,9 +518,9 @@
     if-eq v0, v2, :cond_1
 
     .line 60
-    iget-object v2, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->downstream:Lc/a/r;
+    iget-object v2, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {v2, v0}, Lc/a/r;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v2, v0}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
 
     :cond_1
     return v1
@@ -633,9 +633,9 @@
     if-eqz v1, :cond_1
 
     .line 25
-    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->downstream:Lc/a/r;
+    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {v1, p1}, Lc/a/r;->b(Ljava/lang/Object;)V
+    invoke-interface {v1, p1}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
 
     .line 26
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
@@ -648,7 +648,7 @@
 
     .line 27
     :cond_1
-    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->queue:Lc/a/a0/b/j;
+    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->queue:Lc/a/a0/b/SimplePlainQueue;
 
     if-nez v1, :cond_3
 
@@ -660,11 +660,11 @@
     if-ne v1, v3, :cond_2
 
     .line 29
-    new-instance v1, Lio/reactivex/internal/queue/a;
+    new-instance v1, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
     iget v3, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->bufferSize:I
 
-    invoke-direct {v1, v3}, Lio/reactivex/internal/queue/a;-><init>(I)V
+    invoke-direct {v1, v3}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;-><init>(I)V
 
     goto :goto_0
 
@@ -678,11 +678,11 @@
 
     .line 31
     :goto_0
-    iput-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->queue:Lc/a/a0/b/j;
+    iput-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->queue:Lc/a/a0/b/SimplePlainQueue;
 
     .line 32
     :cond_3
-    invoke-interface {v1, p1}, Lc/a/a0/b/k;->offer(Ljava/lang/Object;)Z
+    invoke-interface {v1, p1}, Lc/a/a0/b/SimpleQueue;->offer(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -719,7 +719,7 @@
     move-exception p1
 
     .line 36
-    invoke-static {p1}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 37
     iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->errors:Lio/reactivex/internal/util/AtomicThrowable;
@@ -872,17 +872,17 @@
     .line 2
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->mapper:Lc/a/z/j;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->mapper:Lio/reactivex/functions/Function;
 
-    invoke-interface {v0, p1}, Lc/a/z/j;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lio/reactivex/functions/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     const-string v0, "The mapper returned a null ObservableSource"
 
-    invoke-static {p1, v0}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    check-cast p1, Lc/a/p;
+    check-cast p1, Lio/reactivex/ObservableSource;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
@@ -939,7 +939,7 @@
     .line 10
     :cond_2
     :goto_0
-    invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->a(Lc/a/p;)V
+    invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->a(Lio/reactivex/ObservableSource;)V
 
     return-void
 
@@ -947,12 +947,12 @@
     move-exception p1
 
     .line 11
-    invoke-static {p1}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 12
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 13
     invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->a(Ljava/lang/Throwable;)V
@@ -964,9 +964,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 2
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->observers:Ljava/util/concurrent/atomic/AtomicReference;
@@ -1052,7 +1052,7 @@
     .locals 14
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->downstream:Lc/a/r;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->downstream:Lio/reactivex/Observer;
 
     const/4 v1, 0x1
 
@@ -1070,7 +1070,7 @@
 
     .line 3
     :cond_1
-    iget-object v3, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->queue:Lc/a/a0/b/j;
+    iget-object v3, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->queue:Lc/a/a0/b/SimplePlainQueue;
 
     if-eqz v3, :cond_4
 
@@ -1086,7 +1086,7 @@
 
     .line 5
     :cond_2
-    invoke-interface {v3}, Lc/a/a0/b/j;->poll()Ljava/lang/Object;
+    invoke-interface {v3}, Lc/a/a0/b/SimplePlainQueue;->poll()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -1096,7 +1096,7 @@
 
     .line 6
     :cond_3
-    invoke-interface {v0, v4}, Lc/a/r;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, v4}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -1106,7 +1106,7 @@
     iget-boolean v3, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->done:Z
 
     .line 8
-    iget-object v4, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->queue:Lc/a/a0/b/j;
+    iget-object v4, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->queue:Lc/a/a0/b/SimplePlainQueue;
 
     .line 9
     iget-object v5, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->observers:Ljava/util/concurrent/atomic/AtomicReference;
@@ -1163,7 +1163,7 @@
     if-eqz v4, :cond_6
 
     .line 15
-    invoke-interface {v4}, Lc/a/a0/b/k;->isEmpty()Z
+    invoke-interface {v4}, Lc/a/a0/b/SimpleQueue;->isEmpty()Z
 
     move-result v3
 
@@ -1189,13 +1189,13 @@
     if-nez v1, :cond_7
 
     .line 18
-    invoke-interface {v0}, Lc/a/r;->b()V
+    invoke-interface {v0}, Lio/reactivex/Observer;->b()V
 
     goto :goto_3
 
     .line 19
     :cond_7
-    invoke-interface {v0, v1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
 
     :cond_8
     :goto_3
@@ -1293,14 +1293,14 @@
     aget-object v10, v5, v7
 
     .line 28
-    iget-object v11, v10, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->queue:Lc/a/a0/b/k;
+    iget-object v11, v10, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
     if-eqz v11, :cond_14
 
     .line 29
     :cond_11
     :try_start_1
-    invoke-interface {v11}, Lc/a/a0/b/k;->poll()Ljava/lang/Object;
+    invoke-interface {v11}, Lc/a/a0/b/SimpleQueue;->poll()Ljava/lang/Object;
 
     move-result-object v12
     :try_end_1
@@ -1312,7 +1312,7 @@
 
     .line 30
     :cond_12
-    invoke-interface {v0, v12}, Lc/a/r;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, v12}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
 
     .line 31
     invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->a()Z
@@ -1327,7 +1327,7 @@
     move-exception v11
 
     .line 32
-    invoke-static {v11}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v11}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 33
     invoke-virtual {v10}, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->a()V
@@ -1364,14 +1364,14 @@
     iget-boolean v11, v10, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->done:Z
 
     .line 38
-    iget-object v12, v10, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->queue:Lc/a/a0/b/k;
+    iget-object v12, v10, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
     if-eqz v11, :cond_17
 
     if-eqz v12, :cond_15
 
     .line 39
-    invoke-interface {v12}, Lc/a/a0/b/k;->isEmpty()Z
+    invoke-interface {v12}, Lc/a/a0/b/SimpleQueue;->isEmpty()Z
 
     move-result v11
 
@@ -1446,7 +1446,7 @@
 
     move-result-object v4
 
-    check-cast v4, Lc/a/p;
+    check-cast v4, Lio/reactivex/ObservableSource;
 
     if-nez v4, :cond_1b
 
@@ -1469,7 +1469,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     .line 50
-    invoke-virtual {p0, v4}, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->a(Lc/a/p;)V
+    invoke-virtual {p0, v4}, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;->a(Lio/reactivex/ObservableSource;)V
 
     :goto_b
     move v4, v3
@@ -1535,7 +1535,7 @@
     if-eq v0, v1, :cond_0
 
     .line 6
-    invoke-static {v0}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :cond_0
     return-void

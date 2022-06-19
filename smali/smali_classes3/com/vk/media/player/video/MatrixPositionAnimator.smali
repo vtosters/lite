@@ -10,7 +10,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/vk/media/player/video/VideoResizer$VideoFitType;ILandroid/graphics/Rect;Lcom/vk/media/player/video/VideoResizer$VideoFitType;IZLcom/vk/media/player/video/f;)V
+.method public constructor <init>(Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/vk/media/player/video/VideoResizer$VideoFitType;ILandroid/graphics/Rect;Lcom/vk/media/player/video/VideoResizer$VideoFitType;IZLcom/vk/media/player/video/MatrixProvider;)V
     .locals 39
 
     move-object/from16 v15, p0
@@ -91,11 +91,11 @@
 
     move-result v9
 
-    invoke-interface/range {p9 .. p9}, Lcom/vk/media/player/video/f;->getContentWidth()I
+    invoke-interface/range {p9 .. p9}, Lcom/vk/media/player/video/MatrixProvider;->getContentWidth()I
 
     move-result v10
 
-    invoke-interface/range {p9 .. p9}, Lcom/vk/media/player/video/f;->getContentHeight()I
+    invoke-interface/range {p9 .. p9}, Lcom/vk/media/player/video/MatrixProvider;->getContentHeight()I
 
     move-result v11
 
@@ -162,11 +162,11 @@
 
     move-result v29
 
-    invoke-interface/range {p9 .. p9}, Lcom/vk/media/player/video/f;->getContentWidth()I
+    invoke-interface/range {p9 .. p9}, Lcom/vk/media/player/video/MatrixProvider;->getContentWidth()I
 
     move-result v30
 
-    invoke-interface/range {p9 .. p9}, Lcom/vk/media/player/video/f;->getContentHeight()I
+    invoke-interface/range {p9 .. p9}, Lcom/vk/media/player/video/MatrixProvider;->getContentHeight()I
 
     move-result v31
 
@@ -209,7 +209,7 @@
     const/4 v6, 0x1
 
     .line 29
-    invoke-interface {v14, v6}, Lcom/vk/media/player/video/f;->a(Z)V
+    invoke-interface {v14, v6}, Lcom/vk/media/player/video/MatrixProvider;->a(Z)V
 
     const/16 v6, 0x8
 
@@ -230,11 +230,11 @@
 
     move-result v29
 
-    invoke-interface/range {p9 .. p9}, Lcom/vk/media/player/video/f;->getContentWidth()I
+    invoke-interface/range {p9 .. p9}, Lcom/vk/media/player/video/MatrixProvider;->getContentWidth()I
 
     move-result v30
 
-    invoke-interface/range {p9 .. p9}, Lcom/vk/media/player/video/f;->getContentHeight()I
+    invoke-interface/range {p9 .. p9}, Lcom/vk/media/player/video/MatrixProvider;->getContentHeight()I
 
     move-result v31
 
@@ -399,7 +399,7 @@
 
     move-object/from16 v31, p9
 
-    invoke-direct/range {v16 .. v31}, Lcom/vk/media/player/video/MatrixPositionAnimator$5;-><init>(FIFFIFIFFIFFIILcom/vk/media/player/video/f;)V
+    invoke-direct/range {v16 .. v31}, Lcom/vk/media/player/video/MatrixPositionAnimator$5;-><init>(FIFFIFIFFIFFIILcom/vk/media/player/video/MatrixProvider;)V
 
     .line 46
     new-instance v1, Lcom/vk/media/player/video/MatrixPositionAnimator$6;
@@ -466,7 +466,7 @@
 
     move/from16 v19, v35
 
-    invoke-direct/range {v0 .. v19}, Lcom/vk/media/player/video/MatrixPositionAnimator$6;-><init>(Lcom/vk/media/player/video/MatrixPositionAnimator;FFFFFFFFFFLandroid/graphics/Rect;IIIILcom/vk/media/player/video/f;II)V
+    invoke-direct/range {v0 .. v19}, Lcom/vk/media/player/video/MatrixPositionAnimator$6;-><init>(Lcom/vk/media/player/video/MatrixPositionAnimator;FFFFFFFFFFLandroid/graphics/Rect;IIIILcom/vk/media/player/video/MatrixProvider;II)V
 
     const/4 v0, 0x0
 
@@ -503,7 +503,7 @@
 
     move/from16 v11, v21
 
-    invoke-direct/range {v0 .. v11}, Lcom/vk/media/player/video/MatrixPositionAnimator$a;-><init>(Lcom/vk/media/player/video/MatrixPositionAnimator$6;Lcom/vk/media/player/video/MatrixPositionAnimator$5;FFFFLcom/vk/media/player/video/f;FFFF)V
+    invoke-direct/range {v0 .. v11}, Lcom/vk/media/player/video/MatrixPositionAnimator$a;-><init>(Lcom/vk/media/player/video/MatrixPositionAnimator$6;Lcom/vk/media/player/video/MatrixPositionAnimator$5;FFFFLcom/vk/media/player/video/MatrixProvider;FFFF)V
 
     move-object/from16 v0, p0
 
@@ -514,7 +514,7 @@
 
     move-object/from16 v2, p9
 
-    invoke-direct {v1, v2}, Lcom/vk/media/player/video/MatrixPositionAnimator$b;-><init>(Lcom/vk/media/player/video/f;)V
+    invoke-direct {v1, v2}, Lcom/vk/media/player/video/MatrixPositionAnimator$b;-><init>(Lcom/vk/media/player/video/MatrixProvider;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 

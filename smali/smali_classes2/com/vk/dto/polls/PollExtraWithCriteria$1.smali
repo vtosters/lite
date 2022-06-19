@@ -3,7 +3,7 @@
 .source "PollExtraWithCriteria.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/dto/polls/c;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/dto/polls/PollVotersCriteria1;",
         ">;"
     }
 .end annotation
@@ -45,12 +45,12 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/dto/polls/c;
+.method public final invoke()Lcom/vk/dto/polls/PollVotersCriteria1;
     .locals 3
 
     .line 2
     :try_start_0
-    new-instance v0, Lcom/vk/dto/polls/c;
+    new-instance v0, Lcom/vk/dto/polls/PollVotersCriteria1;
 
     iget-object v1, p0, Lcom/vk/dto/polls/PollExtraWithCriteria$1;->$obj:Lorg/json/JSONObject;
 
@@ -62,9 +62,9 @@
 
     const-string v2, "obj.getJSONObject(\"get_voters_criteria\")"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/polls/c;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/polls/PollVotersCriteria1;-><init>(Lorg/json/JSONObject;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -81,7 +81,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/polls/PollExtraWithCriteria$1;->invoke()Lcom/vk/dto/polls/c;
+    invoke-virtual {p0}, Lcom/vk/dto/polls/PollExtraWithCriteria$1;->invoke()Lcom/vk/dto/polls/PollVotersCriteria1;
 
     move-result-object v0
 

@@ -32,5 +32,5 @@
     return-void
 .end method
 
-.method public abstract a(Lcom/vk/dto/common/data/e;)V
+.method public abstract a(Lcom/vk/dto/common/data/Purchase1;)V
 .end method

@@ -29,21 +29,21 @@
 
 
 # direct methods
-.method constructor <init>(Lc/a/r;JLjava/util/concurrent/TimeUnit;Lc/a/s;)V
+.method constructor <init>(Lio/reactivex/Observer;JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;J",
             "Ljava/util/concurrent/TimeUnit;",
-            "Lc/a/s;",
+            "Lio/reactivex/Scheduler;",
             ")V"
         }
     .end annotation
 
     .line 1
-    invoke-direct/range {p0 .. p5}, Lio/reactivex/internal/operators/observable/ObservableSampleTimed$SampleTimedObserver;-><init>(Lc/a/r;JLjava/util/concurrent/TimeUnit;Lc/a/s;)V
+    invoke-direct/range {p0 .. p5}, Lio/reactivex/internal/operators/observable/ObservableSampleTimed$SampleTimedObserver;-><init>(Lio/reactivex/Observer;JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)V
 
     return-void
 .end method
@@ -54,9 +54,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSampleTimed$SampleTimedObserver;->downstream:Lc/a/r;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSampleTimed$SampleTimedObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {v0}, Lc/a/r;->b()V
+    invoke-interface {v0}, Lio/reactivex/Observer;->b()V
 
     return-void
 .end method

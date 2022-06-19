@@ -42,7 +42,7 @@
     .end param
 
     .line 2
-    invoke-static {p1}, Lcom/vk/dto/common/i;->a(Lcom/vk/core/serialize/Serializer;)Lcom/vk/dto/common/VideoFile;
+    invoke-static {p1}, Lcom/vk/dto/common/VideoFileFactory;->a(Lcom/vk/core/serialize/Serializer;)Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 

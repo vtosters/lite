@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Lcom/vk/common/links/f;)Z
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/photo/Photo;",
         ">;"
     }
@@ -36,11 +36,11 @@
 
 .field final synthetic c:Ljava/lang/String;
 
-.field final synthetic d:Lcom/vk/common/links/f;
+.field final synthetic d:Lcom/vk/common/links/OpenCallback;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;ZLjava/lang/String;Lcom/vk/common/links/f;)V
+.method constructor <init>(Landroid/content/Context;ZLjava/lang/String;Lcom/vk/common/links/OpenCallback;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$y;->a:Landroid/content/Context;
@@ -49,7 +49,7 @@
 
     iput-object p3, p0, Lcom/vk/common/links/OpenFunctionsKt$y;->c:Ljava/lang/String;
 
-    iput-object p4, p0, Lcom/vk/common/links/OpenFunctionsKt$y;->d:Lcom/vk/common/links/f;
+    iput-object p4, p0, Lcom/vk/common/links/OpenFunctionsKt$y;->d:Lcom/vk/common/links/OpenCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -82,7 +82,7 @@
     if-nez v1, :cond_0
 
     .line 3
-    invoke-static {}, Lcom/vk/bridges/q;->a()Lcom/vk/bridges/p;
+    invoke-static {}, Lcom/vk/bridges/ImageViewer1;->a()Lcom/vk/bridges/ImageViewer;
 
     move-result-object v1
 
@@ -90,26 +90,26 @@
 
     move-result-object p1
 
-    new-instance v3, Lcom/vk/bridges/p$b;
+    new-instance v3, Lcom/vk/bridges/ImageViewer$b;
 
-    invoke-direct {v3}, Lcom/vk/bridges/p$b;-><init>()V
+    invoke-direct {v3}, Lcom/vk/bridges/ImageViewer$b;-><init>()V
 
-    invoke-interface {v1, v2, p1, v0, v3}, Lcom/vk/bridges/p;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
+    invoke-interface {v1, v2, p1, v0, v3}, Lcom/vk/bridges/ImageViewer;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
 
     goto :goto_0
 
     .line 4
     :cond_0
-    invoke-static {}, Lcom/vk/bridges/x;->a()Lcom/vk/bridges/w;
+    invoke-static {}, Lcom/vk/bridges/PostsBridge1;->a()Lcom/vk/bridges/PostsBridge2;
 
     move-result-object v1
 
     const-string v3, "photo"
 
     .line 5
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1, p1}, Lcom/vk/bridges/w;->a(Lcom/vk/dto/photo/Photo;)Lcom/vk/bridges/y;
+    invoke-interface {v1, p1}, Lcom/vk/bridges/PostsBridge2;->a(Lcom/vk/dto/photo/Photo;)Lcom/vk/bridges/PostsBridge;
 
     move-result-object p1
 
@@ -127,25 +127,25 @@
 
     iget-object v1, p0, Lcom/vk/common/links/OpenFunctionsKt$y;->c:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/vk/core/extensions/z;->i(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/vk/core/extensions/StringExt;->i(Ljava/lang/String;)I
 
     move-result v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/bridges/y;->c(I)Lcom/vk/bridges/y;
+    invoke-virtual {p1, v1}, Lcom/vk/bridges/PostsBridge;->c(I)Lcom/vk/bridges/PostsBridge;
 
     .line 7
     :cond_2
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 8
     :goto_0
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$y;->d:Lcom/vk/common/links/f;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$y;->d:Lcom/vk/common/links/OpenCallback;
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lcom/vk/common/links/f;->a()V
+    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->a()V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     goto :goto_1
 
@@ -159,13 +159,13 @@
 
     .line 9
     :cond_4
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$y;->d:Lcom/vk/common/links/f;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$y;->d:Lcom/vk/common/links/OpenCallback;
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1}, Lcom/vk/common/links/f;->b()V
+    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->b()V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_5
     :goto_2

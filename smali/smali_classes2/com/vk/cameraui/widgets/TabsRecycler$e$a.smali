@@ -57,11 +57,11 @@
 
     iget-object v0, v0, Lcom/vk/cameraui/widgets/TabsRecycler$e;->a:Lcom/vk/cameraui/widgets/TabsRecycler;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/TabsRecycler;->getTabSnapHelper()Lcom/vk/cameraui/widgets/a;
+    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/TabsRecycler;->getTabSnapHelper()Lcom/vk/cameraui/widgets/TabLinearSnapHelper;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/a;->b(I)Z
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/widgets/TabLinearSnapHelper;->b(I)Z
 
     :cond_0
     return-void

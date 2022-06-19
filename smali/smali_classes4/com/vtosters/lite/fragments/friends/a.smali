@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/fragments/friends/d$l;
+.field private final synthetic a:Lcom/vtosters/lite/fragments/friends/FriendsListFragment$l;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/friends/d$l;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/friends/FriendsListFragment$l;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/friends/a;->a:Lcom/vtosters/lite/fragments/friends/d$l;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/friends/a;->a:Lcom/vtosters/lite/fragments/friends/FriendsListFragment$l;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/friends/a;->a:Lcom/vtosters/lite/fragments/friends/d$l;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/friends/a;->a:Lcom/vtosters/lite/fragments/friends/FriendsListFragment$l;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/friends/d$l;->a()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/friends/FriendsListFragment$l;->a()V
 
     return-void
 .end method

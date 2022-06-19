@@ -153,7 +153,7 @@
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
     .line 14
-    sget v0, Lcom/vk/libvideo/h;->video_player_ads_panel:I
+    sget v0, Lcom/vk/libvideo/R9;->video_player_ads_panel:I
 
     const/4 v1, 0x0
 
@@ -176,7 +176,7 @@
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 17
-    sget v0, Lcom/vk/libvideo/g;->ads_title:I
+    sget v0, Lcom/vk/libvideo/R;->ads_title:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -194,7 +194,7 @@
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 19
-    sget v0, Lcom/vk/libvideo/g;->ads_button:I
+    sget v0, Lcom/vk/libvideo/R;->ads_button:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

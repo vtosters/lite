@@ -3,7 +3,7 @@
 .source "ChooseCountryFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/auth/enterphone/choosecountry/Country;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -91,18 +91,18 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/auth/enterphone/choosecountry/e;
+    instance-of v1, v0, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment1;
 
     if-nez v1, :cond_1
 
     const/4 v0, 0x0
 
     :cond_1
-    check-cast v0, Lcom/vk/auth/enterphone/choosecountry/e;
+    check-cast v0, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment1;
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0, p1}, Lcom/vk/auth/enterphone/choosecountry/e;->a(Lcom/vk/auth/enterphone/choosecountry/Country;)V
+    invoke-interface {v0, p1}, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment1;->a(Lcom/vk/auth/enterphone/choosecountry/Country;)V
 
     :cond_2
     return-void
@@ -116,7 +116,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment$onCreate$1;->a(Lcom/vk/auth/enterphone/choosecountry/Country;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

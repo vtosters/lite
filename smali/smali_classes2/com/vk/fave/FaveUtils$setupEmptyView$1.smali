@@ -3,7 +3,7 @@
 .source "FaveUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/fave/FaveUtils$setupEmptyView$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -60,19 +60,19 @@
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/feedlikes/d/b$a;
+    new-instance v0, Lcom/vk/feedlikes/d/FeedLikesFragment$a;
 
-    invoke-direct {v0}, Lcom/vk/feedlikes/d/b$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/feedlikes/d/FeedLikesFragment$a;-><init>()V
 
     iget-object v1, p0, Lcom/vk/fave/FaveUtils$setupEmptyView$1;->$view:Landroid/view/View;
 
-    check-cast v1, Lcom/vk/fave/views/f;
+    check-cast v1, Lcom/vk/fave/views/FaveEmptyListView;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

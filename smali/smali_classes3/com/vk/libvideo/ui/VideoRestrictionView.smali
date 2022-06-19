@@ -13,13 +13,13 @@
 
 
 # static fields
-.field static final synthetic B:[Lkotlin/u/j;
+.field static final synthetic B:[Lkotlin/u/KProperty5;
 
-.field private static final C:Lkotlin/e;
+.field private static final C:Lkotlin/Lazy2;
 
-.field private static final D:Lkotlin/e;
+.field private static final D:Lkotlin/Lazy2;
 
-.field private static final E:Lkotlin/e;
+.field private static final E:Lkotlin/Lazy2;
 
 .field public static final F:Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;
 
@@ -39,7 +39,7 @@
 
 .field private final g:Z
 
-.field private final h:Lkotlin/e;
+.field private final h:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -48,13 +48,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/libvideo/ui/VideoRestrictionView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -62,50 +62,50 @@
 
     const-string v4, "getHalfDefaultMargin()I"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->B:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->B:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->F:Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;
 
     .line 1
     sget-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$smallSize$2;->a:Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$smallSize$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->C:Lkotlin/e;
+    sput-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->C:Lkotlin/Lazy2;
 
     .line 2
     sget-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$mediumSize$2;->a:Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$mediumSize$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->D:Lkotlin/e;
+    sput-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->D:Lkotlin/Lazy2;
 
     .line 3
     sget-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$blur$2;->a:Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$blur$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->E:Lkotlin/e;
+    sput-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->E:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -125,7 +125,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/libvideo/ui/VideoRestrictionView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/libvideo/ui/VideoRestrictionView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -145,7 +145,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/libvideo/ui/VideoRestrictionView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/libvideo/ui/VideoRestrictionView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -159,11 +159,11 @@
     .line 3
     sget-object p3, Lcom/vk/libvideo/ui/VideoRestrictionView$halfDefaultMargin$2;->a:Lcom/vk/libvideo/ui/VideoRestrictionView$halfDefaultMargin$2;
 
-    invoke-static {p3}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p3}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p3
 
-    iput-object p3, p0, Lcom/vk/libvideo/ui/VideoRestrictionView;->h:Lkotlin/e;
+    iput-object p3, p0, Lcom/vk/libvideo/ui/VideoRestrictionView;->h:Lkotlin/Lazy2;
 
     .line 4
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
@@ -171,7 +171,7 @@
     move-result-object p3
 
     .line 5
-    sget-object v0, Lcom/vk/libvideo/l;->VideoRestrictionView:[I
+    sget-object v0, Lcom/vk/libvideo/R5;->VideoRestrictionView:[I
 
     const/4 v1, 0x0
 
@@ -182,7 +182,7 @@
 
     .line 7
     :try_start_0
-    sget p3, Lcom/vk/libvideo/l;->VideoRestrictionView_vrv_always_show_button:I
+    sget p3, Lcom/vk/libvideo/R5;->VideoRestrictionView_vrv_always_show_button:I
 
     invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -191,7 +191,7 @@
     iput-boolean p3, p0, Lcom/vk/libvideo/ui/VideoRestrictionView;->g:Z
 
     .line 8
-    sget p3, Lcom/vk/libvideo/l;->VideoRestrictionView_vrv_mode:I
+    sget p3, Lcom/vk/libvideo/R5;->VideoRestrictionView_vrv_mode:I
 
     invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -204,7 +204,7 @@
 
     move-result-object p3
 
-    sget v0, Lcom/vk/libvideo/l;->VideoRestrictionView_vrv_size:I
+    sget v0, Lcom/vk/libvideo/R5;->VideoRestrictionView_vrv_size:I
 
     const/4 v2, 0x2
 
@@ -217,7 +217,7 @@
     iput-object p3, p0, Lcom/vk/libvideo/ui/VideoRestrictionView;->e:Lcom/vk/libvideo/ui/VideoRestrictionView$VideoRestrictionSize;
 
     .line 10
-    sget p3, Lcom/vk/libvideo/l;->VideoRestrictionView_vrv_corner_radius:I
+    sget p3, Lcom/vk/libvideo/R5;->VideoRestrictionView_vrv_corner_radius:I
 
     invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -231,16 +231,16 @@
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 12
-    sget p2, Lcom/vk/libvideo/h;->video_restricion_view:I
+    sget p2, Lcom/vk/libvideo/R9;->video_restricion_view:I
 
     invoke-static {p1, p2, p0}, Landroid/view/ViewGroup;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 13
-    sget p1, Lcom/vk/libvideo/g;->video_restriction_holder_image:I
+    sget p1, Lcom/vk/libvideo/R;->video_restriction_holder_image:I
 
     const/4 p2, 0x0
 
-    invoke-static {p0, p1, p2, v2, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, p2, v2, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -249,9 +249,9 @@
     iput-object p1, p0, Lcom/vk/libvideo/ui/VideoRestrictionView;->a:Lcom/vk/imageloader/view/VKImageView;
 
     .line 14
-    sget p1, Lcom/vk/libvideo/g;->video_restriction_holder_button:I
+    sget p1, Lcom/vk/libvideo/R;->video_restriction_holder_button:I
 
-    invoke-static {p0, p1, p2, v2, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, p2, v2, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -260,9 +260,9 @@
     iput-object p1, p0, Lcom/vk/libvideo/ui/VideoRestrictionView;->d:Landroid/widget/TextView;
 
     .line 15
-    sget p1, Lcom/vk/libvideo/g;->video_restriction_holder_title:I
+    sget p1, Lcom/vk/libvideo/R;->video_restriction_holder_title:I
 
-    invoke-static {p0, p1, p2, v2, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, p2, v2, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -271,9 +271,9 @@
     iput-object p1, p0, Lcom/vk/libvideo/ui/VideoRestrictionView;->b:Landroid/widget/TextView;
 
     .line 16
-    sget p1, Lcom/vk/libvideo/g;->video_restriction_holder_icon:I
+    sget p1, Lcom/vk/libvideo/R;->video_restriction_holder_icon:I
 
-    invoke-static {p0, p1, p2, v2, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, p2, v2, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -315,13 +315,13 @@
     .line 22
     iget-object p1, p0, Lcom/vk/libvideo/ui/VideoRestrictionView;->a:Lcom/vk/imageloader/view/VKImageView;
 
-    sget p2, Lcom/vk/libvideo/b;->placeholder_icon_background:I
+    sget p2, Lcom/vk/libvideo/R4;->placeholder_icon_background:I
 
     invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
     move-result p2
 
-    invoke-virtual {p1, p2}, Lcom/vk/imageloader/view/a;->setPlaceholderColor(I)V
+    invoke-virtual {p1, p2}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderColor(I)V
 
     return-void
 
@@ -334,7 +334,7 @@
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -499,11 +499,11 @@
     return p1
 .end method
 
-.method public static final synthetic b()Lkotlin/e;
+.method public static final synthetic b()Lkotlin/Lazy2;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->E:Lkotlin/e;
+    sget-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->E:Lkotlin/Lazy2;
 
     return-object v0
 .end method
@@ -521,20 +521,20 @@
     return p1
 .end method
 
-.method public static final synthetic c()Lkotlin/e;
+.method public static final synthetic c()Lkotlin/Lazy2;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->D:Lkotlin/e;
+    sget-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->D:Lkotlin/Lazy2;
 
     return-object v0
 .end method
 
-.method public static final synthetic d()Lkotlin/e;
+.method public static final synthetic d()Lkotlin/Lazy2;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->C:Lkotlin/e;
+    sget-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->C:Lkotlin/Lazy2;
 
     return-object v0
 .end method
@@ -600,15 +600,15 @@
 .method private final getHalfDefaultMargin()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/libvideo/ui/VideoRestrictionView;->h:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/libvideo/ui/VideoRestrictionView;->h:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/libvideo/ui/VideoRestrictionView;->B:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/libvideo/ui/VideoRestrictionView;->B:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -629,20 +629,20 @@
     .line 2
     iget-object v0, p0, Lcom/vk/libvideo/ui/VideoRestrictionView;->a:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vk/imageloader/view/a;->a(FFFF)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vk/imageloader/view/GenericVKImageView;->a(FFFF)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/dto/common/Restriction;Lcom/vk/dto/common/Image;Lkotlin/jvm/b/a;)V
+.method public final a(Lcom/vk/dto/common/Restriction;Lcom/vk/dto/common/Image;Lkotlin/jvm/b/Functions;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/common/Restriction;",
             "Lcom/vk/dto/common/Image;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -716,7 +716,7 @@
 
     move-result-object v4
 
-    sget v5, Lcom/vk/libvideo/c;->white:I
+    sget v5, Lcom/vk/libvideo/R3;->white:I
 
     invoke-static {v4, v5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -726,7 +726,7 @@
 
     .line 8
     :cond_4
-    sget v4, Lcom/vk/libvideo/b;->text_placeholder:I
+    sget v4, Lcom/vk/libvideo/R4;->text_placeholder:I
 
     invoke-static {v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -743,7 +743,7 @@
 
     move-result-object v4
 
-    sget v5, Lcom/vk/libvideo/c;->white:I
+    sget v5, Lcom/vk/libvideo/R3;->white:I
 
     invoke-static {v4, v5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -753,7 +753,7 @@
 
     .line 11
     :cond_5
-    sget v4, Lcom/vk/libvideo/b;->text_placeholder:I
+    sget v4, Lcom/vk/libvideo/R4;->text_placeholder:I
 
     invoke-static {v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -770,9 +770,9 @@
     .line 13
     new-instance v4, Lcom/vk/libvideo/ui/VideoRestrictionView$bind$$inlined$apply$lambda$1;
 
-    invoke-direct {v4, p0, p1, v2, p3}, Lcom/vk/libvideo/ui/VideoRestrictionView$bind$$inlined$apply$lambda$1;-><init>(Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/dto/common/Restriction;ZLkotlin/jvm/b/a;)V
+    invoke-direct {v4, p0, p1, v2, p3}, Lcom/vk/libvideo/ui/VideoRestrictionView$bind$$inlined$apply$lambda$1;-><init>(Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/dto/common/Restriction;ZLkotlin/jvm/b/Functions;)V
 
-    invoke-static {v3, v4}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v3, v4}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 14
     invoke-virtual {p1}, Lcom/vk/dto/common/Restriction;->u1()Lcom/vk/dto/common/RestrictionButton;
@@ -811,7 +811,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v3}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
@@ -822,7 +822,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v3}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
@@ -835,7 +835,7 @@
 
     move-result-object v3
 
-    sget v5, Lcom/vk/libvideo/c;->white:I
+    sget v5, Lcom/vk/libvideo/R3;->white:I
 
     invoke-static {v3, v5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -845,7 +845,7 @@
 
     .line 19
     :cond_8
-    sget v3, Lcom/vk/libvideo/b;->text_placeholder:I
+    sget v3, Lcom/vk/libvideo/R4;->text_placeholder:I
 
     invoke-static {v3}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -871,7 +871,7 @@
     .line 24
     sget-object v3, Lcom/vk/libvideo/ui/VideoRestrictionView;->F:Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;
 
-    invoke-virtual {v3}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a()Lcom/facebook/x/i/a;
+    invoke-virtual {v3}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a()Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
 
     move-result-object v3
 
@@ -887,7 +887,7 @@
     move-object v3, v4
 
     :goto_9
-    invoke-virtual {p3, v3}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {p3, v3}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 25
     invoke-virtual {p1}, Lcom/vk/dto/common/Restriction;->x1()Z
@@ -907,7 +907,7 @@
 
     move-result-object v3
 
-    sget v5, Lcom/vk/libvideo/c;->black_alpha60:I
+    sget v5, Lcom/vk/libvideo/R3;->black_alpha60:I
 
     invoke-static {v3, v5}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -1027,7 +1027,7 @@
 
     move-result-object p3
 
-    sget v0, Lcom/vk/libvideo/c;->white:I
+    sget v0, Lcom/vk/libvideo/R3;->white:I
 
     invoke-static {p3, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -1037,7 +1037,7 @@
 
     .line 38
     :cond_11
-    sget p3, Lcom/vk/libvideo/b;->placeholder_icon_foreground_primary:I
+    sget p3, Lcom/vk/libvideo/R4;->placeholder_icon_foreground_primary:I
 
     invoke-static {p3}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -1422,7 +1422,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/ui/VideoRestrictionView;->a:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {v0, p1, p1, p1, p1}, Lcom/vk/imageloader/view/a;->a(FFFF)V
+    invoke-virtual {v0, p1, p1, p1, p1}, Lcom/vk/imageloader/view/GenericVKImageView;->a(FFFF)V
 
     return-void
 .end method
@@ -1447,17 +1447,17 @@
     if-eq p1, v1, :cond_0
 
     .line 3
-    sget-object p1, Lcom/facebook/drawee/drawable/r$b;->o:Lcom/facebook/drawee/drawable/r$b;
+    sget-object p1, Lcom/facebook/drawee/drawable/ScalingUtils$b;->o:Lcom/facebook/drawee/drawable/ScalingUtils$b;
 
     goto :goto_0
 
     .line 4
     :cond_0
-    sget-object p1, Lcom/facebook/drawee/drawable/r$b;->k:Lcom/facebook/drawee/drawable/r$b;
+    sget-object p1, Lcom/facebook/drawee/drawable/ScalingUtils$b;->k:Lcom/facebook/drawee/drawable/ScalingUtils$b;
 
     .line 5
     :goto_0
-    invoke-virtual {v0, p1}, Lcom/vk/imageloader/view/a;->setActualScaleType(Lcom/facebook/drawee/drawable/r$b;)V
+    invoke-virtual {v0, p1}, Lcom/vk/imageloader/view/GenericVKImageView;->setActualScaleType(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
 
     return-void
 .end method

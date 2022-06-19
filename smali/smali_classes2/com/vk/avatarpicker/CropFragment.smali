@@ -3,7 +3,7 @@
 .source "CropFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private a:Lio/reactivex/disposables/b;
+.field private a:Lio/reactivex/disposables/Disposable;
 
 .field private b:Lcom/vk/avatarpicker/CropFragment$b;
 
@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/avatarpicker/CropFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/avatarpicker/CropFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/avatarpicker/CropFragment;->h:Lcom/vk/avatarpicker/CropFragment$a;
 
@@ -71,15 +71,15 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/crop/CropImageView;->h()Lcom/vk/crop/g;
+    invoke-virtual {v0}, Lcom/vk/crop/CropImageView;->h()Lcom/vk/crop/CropOverlayView;
 
     move-result-object v0
 
     const-string v3, "cropImageView.overlayView()"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lcom/vk/crop/c;->getCropWidth()F
+    invoke-interface {v0}, Lcom/vk/crop/CropAreaProvider;->getCropWidth()F
 
     move-result v0
 
@@ -96,18 +96,18 @@
 
     const-string v1, "cropImageView.cropBitmap(maxWidth)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 3
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -136,18 +136,18 @@
     :cond_0
     const-string p0, "cropImageView"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/avatarpicker/CropFragment;Lio/reactivex/disposables/b;)V
+.method public static final synthetic a(Lcom/vk/avatarpicker/CropFragment;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/avatarpicker/CropFragment;->a:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/avatarpicker/CropFragment;->a:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -156,7 +156,7 @@
     .locals 1
 
     .line 2
-    invoke-static {}, Lb/h/g/m/d;->p()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->p()Ljava/io/File;
 
     move-result-object v0
 
@@ -170,7 +170,7 @@
 
     const-string v0, "Uri.fromFile(file)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -184,11 +184,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/avatarpicker/CropFragment;)Lio/reactivex/disposables/b;
+.method public static final synthetic c(Lcom/vk/avatarpicker/CropFragment;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/avatarpicker/CropFragment;->a:Lio/reactivex/disposables/b;
+    iget-object p0, p0, Lcom/vk/avatarpicker/CropFragment;->a:Lio/reactivex/disposables/Disposable;
 
     return-object p0
 .end method
@@ -279,7 +279,7 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -296,7 +296,7 @@
 
     move-result-object p1
 
-    sget p3, Lcom/vk/avatarpicker/c;->fragment_crop:I
+    sget p3, Lcom/vk/avatarpicker/R;->fragment_crop:I
 
     const/4 v0, 0x0
 
@@ -309,7 +309,7 @@
     :cond_0
     const-string p1, "contextWrapper"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -323,11 +323,11 @@
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroyView()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/avatarpicker/CropFragment;->a:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/avatarpicker/CropFragment;->a:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void
@@ -340,7 +340,7 @@
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
-    sget p2, Lcom/vk/avatarpicker/b;->crop_image_view:I
+    sget p2, Lcom/vk/avatarpicker/R1;->crop_image_view:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -348,14 +348,14 @@
 
     const-string v0, "view.findViewById(R.id.crop_image_view)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/crop/CropImageView;
 
     iput-object p2, p0, Lcom/vk/avatarpicker/CropFragment;->d:Lcom/vk/crop/CropImageView;
 
     .line 3
-    sget p2, Lcom/vk/avatarpicker/b;->done_button:I
+    sget p2, Lcom/vk/avatarpicker/R1;->done_button:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -363,12 +363,12 @@
 
     const-string v0, "view.findViewById(R.id.done_button)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/avatarpicker/CropFragment;->e:Landroid/view/View;
 
     .line 4
-    sget p2, Lcom/vk/avatarpicker/b;->toolbar:I
+    sget p2, Lcom/vk/avatarpicker/R1;->toolbar:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -376,7 +376,7 @@
 
     const-string p2, "view.findViewById(R.id.toolbar)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/appcompat/widget/Toolbar;
 
@@ -393,7 +393,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/avatarpicker/CropFragment$onViewCreated$1;-><init>(Lcom/vk/avatarpicker/CropFragment;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/avatarpicker/CropFragment;->f:Landroidx/appcompat/widget/Toolbar;
@@ -411,7 +411,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lc/a/m;
+    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -424,14 +424,14 @@
     sget-object v0, Lcom/vk/avatarpicker/CropFragment$e;->a:Lcom/vk/avatarpicker/CropFragment$e;
 
     .line 10
-    invoke-virtual {p1, p2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 
     :cond_0
     const-string p1, "imageUri"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -439,7 +439,7 @@
     const-string p1, "toolbar"
 
     .line 11
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -447,7 +447,7 @@
     const-string p1, "doneButton"
 
     .line 12
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 .end method
@@ -471,7 +471,7 @@
     :cond_0
     const-string v0, "contextWrapper"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

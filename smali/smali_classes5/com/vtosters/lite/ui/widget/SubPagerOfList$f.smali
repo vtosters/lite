@@ -19,7 +19,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Lcom/vtosters/lite/ui/widget/e;",
+            "Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;",
             ">;"
         }
     .end annotation
@@ -45,7 +45,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vtosters/lite/ui/widget/e$c;",
+            "Lcom/vtosters/lite/ui/widget/SubPagerOfListItem$c;",
             ">;"
         }
     .end annotation
@@ -57,7 +57,7 @@
 
 
 # virtual methods
-.method public a(I)Lcom/vtosters/lite/ui/widget/e;
+.method public a(I)Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -69,7 +69,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vtosters/lite/ui/widget/e;
+    check-cast p1, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;
 
     return-object p1
 .end method
@@ -98,9 +98,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vtosters/lite/ui/widget/e$c;
+    check-cast v2, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem$c;
 
-    invoke-virtual {v2, v0}, Lcom/vtosters/lite/ui/widget/e$c;->b(Z)V
+    invoke-virtual {v2, v0}, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem$c;->b(Z)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -199,18 +199,18 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vtosters/lite/ui/widget/e;
+    check-cast v1, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;
 
     .line 6
-    invoke-virtual {v1}, Lcom/vtosters/lite/ui/widget/e;->getListAdapter()Lcom/vtosters/lite/ui/widget/e$c;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;->getListAdapter()Lcom/vtosters/lite/ui/widget/SubPagerOfListItem$c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vtosters/lite/ui/widget/e$c;->k()Z
+    invoke-virtual {v2}, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem$c;->k()Z
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/vtosters/lite/ui/widget/e;->setIsShowFirstItemMode(Z)V
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;->setIsShowFirstItemMode(Z)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -244,7 +244,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vtosters/lite/ui/widget/e$c;
+    check-cast v2, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem$c;
 
     if-eq v1, p1, :cond_0
 
@@ -256,7 +256,7 @@
     const/4 v3, 0x0
 
     :goto_1
-    invoke-virtual {v2, v3}, Lcom/vtosters/lite/ui/widget/e$c;->b(Z)V
+    invoke-virtual {v2, v3}, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem$c;->b(Z)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -273,7 +273,7 @@
     .locals 0
 
     .line 1
-    check-cast p3, Lcom/vtosters/lite/ui/widget/e;
+    check-cast p3, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;
 
     .line 2
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
@@ -286,7 +286,7 @@
     .line 4
     iget-object p1, p0, Lcom/vtosters/lite/ui/widget/SubPagerOfList$f;->b:Ljava/util/List;
 
-    iget-object p2, p3, Lcom/vtosters/lite/ui/widget/e;->H:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
+    iget-object p2, p3, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;->H:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
 
     invoke-interface {p1, p2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
@@ -316,9 +316,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vtosters/lite/ui/widget/e$c;
+    check-cast p1, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem$c;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/widget/e$c;->j()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem$c;->j()Ljava/lang/String;
 
     move-result-object p1
 
@@ -332,16 +332,16 @@
     check-cast p1, Lcom/vtosters/lite/ui/widget/SubPagerOfList;
 
     .line 2
-    new-instance v0, Lcom/vtosters/lite/ui/widget/e;
+    new-instance v0, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;
 
     iget v1, p0, Lcom/vtosters/lite/ui/widget/SubPagerOfList$f;->d:I
 
-    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/widget/e;-><init>(Lcom/vtosters/lite/ui/widget/SubPagerOfList;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;-><init>(Lcom/vtosters/lite/ui/widget/SubPagerOfList;I)V
 
     .line 3
     iget-object v1, p0, Lcom/vtosters/lite/ui/widget/SubPagerOfList$f;->b:Ljava/util/List;
 
-    iget-object v2, v0, Lcom/vtosters/lite/ui/widget/e;->H:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
+    iget-object v2, v0, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;->H:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -352,13 +352,13 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vtosters/lite/ui/widget/e$c;
+    check-cast v1, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem$c;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/ui/widget/e$c;->k()Z
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem$c;->k()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/widget/e;->setIsShowFirstItemMode(Z)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;->setIsShowFirstItemMode(Z)V
 
     .line 5
     iget-object v1, p0, Lcom/vtosters/lite/ui/widget/SubPagerOfList$f;->c:Ljava/util/List;
@@ -367,14 +367,14 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vtosters/lite/ui/widget/e$c;
+    check-cast v1, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem$c;
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/widget/e;->setAdapter(Lcom/vtosters/lite/ui/widget/e$c;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;->setAdapter(Lcom/vtosters/lite/ui/widget/SubPagerOfListItem$c;)V
 
     .line 6
     iget-object v1, p0, Lcom/vtosters/lite/ui/widget/SubPagerOfList$f;->e:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/widget/e;->setDivider(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/widget/SubPagerOfListItem;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
     .line 7
     iget-object v1, p0, Lcom/vtosters/lite/ui/widget/SubPagerOfList$f;->a:Landroid/util/SparseArray;

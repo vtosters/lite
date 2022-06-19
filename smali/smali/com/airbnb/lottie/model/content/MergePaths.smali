@@ -3,7 +3,7 @@
 .source "MergePaths.java"
 
 # interfaces
-.implements Lcom/airbnb/lottie/model/content/b;
+.implements Lcom/airbnb/lottie/model/content/ContentModel;
 
 
 # annotations
@@ -52,13 +52,13 @@
     return-object v0
 .end method
 
-.method public a(Lcom/airbnb/lottie/f;Lcom/airbnb/lottie/model/layer/a;)Lcom/airbnb/lottie/r/b/c;
+.method public a(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;)Lcom/airbnb/lottie/r/b/Content;
     .locals 0
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 2
-    invoke-virtual {p1}, Lcom/airbnb/lottie/f;->c()Z
+    invoke-virtual {p1}, Lcom/airbnb/lottie/LottieDrawable;->c()Z
 
     move-result p1
 
@@ -67,7 +67,7 @@
     const-string p1, "Animation contains merge paths but they are disabled."
 
     .line 3
-    invoke-static {p1}, Lcom/airbnb/lottie/u/d;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/airbnb/lottie/u/Logger;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -75,9 +75,9 @@
 
     .line 4
     :cond_0
-    new-instance p1, Lcom/airbnb/lottie/r/b/l;
+    new-instance p1, Lcom/airbnb/lottie/r/b/MergePathsContent;
 
-    invoke-direct {p1, p0}, Lcom/airbnb/lottie/r/b/l;-><init>(Lcom/airbnb/lottie/model/content/MergePaths;)V
+    invoke-direct {p1, p0}, Lcom/airbnb/lottie/r/b/MergePathsContent;-><init>(Lcom/airbnb/lottie/model/content/MergePaths;)V
 
     return-object p1
 .end method

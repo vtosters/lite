@@ -3,12 +3,12 @@
 .source "OkHttpExecutor.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/api/sdk/okhttp/OkHttpExecutor;-><init>(Lcom/vk/api/sdk/okhttp/b;)V
+    value = Lcom/vk/api/sdk/okhttp/OkHttpExecutor;-><init>(Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/api/sdk/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/api/sdk/VKOkHttpProvider;",
         ">;"
     }
 .end annotation
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/api/sdk/m;
+.method public final invoke()Lcom/vk/api/sdk/VKOkHttpProvider;
     .locals 2
 
     .line 2
@@ -57,7 +57,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -66,24 +66,24 @@
     .line 3
     iget-object v0, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor$okHttpProvider$2;->this$0:Lcom/vk/api/sdk/okhttp/OkHttpExecutor;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->b()Lcom/vk/api/sdk/okhttp/b;
+    invoke-virtual {v0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->b()Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/api/sdk/okhttp/b;->h()Lcom/vk/api/sdk/m;
+    invoke-virtual {v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;->h()Lcom/vk/api/sdk/VKOkHttpProvider;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lcom/vk/api/sdk/okhttp/OkHttpExecutor;Lcom/vk/api/sdk/m;)V
+    invoke-static {v0, v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lcom/vk/api/sdk/okhttp/OkHttpExecutor;Lcom/vk/api/sdk/VKOkHttpProvider;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor$okHttpProvider$2;->this$0:Lcom/vk/api/sdk/okhttp/OkHttpExecutor;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->b()Lcom/vk/api/sdk/okhttp/b;
+    invoke-virtual {v0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->b()Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/okhttp/b;->h()Lcom/vk/api/sdk/m;
+    invoke-virtual {v0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;->h()Lcom/vk/api/sdk/VKOkHttpProvider;
 
     move-result-object v0
 
@@ -104,7 +104,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor$okHttpProvider$2;->invoke()Lcom/vk/api/sdk/m;
+    invoke-virtual {p0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor$okHttpProvider$2;->invoke()Lcom/vk/api/sdk/VKOkHttpProvider;
 
     move-result-object v0
 

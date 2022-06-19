@@ -3,7 +3,7 @@
 .source "VideoView.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Landroid/graphics/Bitmap;",
         ">;"
     }
@@ -62,7 +62,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/libvideo/ui/VideoView;->a(Lcom/vk/libvideo/ui/VideoView;Lio/reactivex/disposables/b;)V
+    invoke-static {v0, v1}, Lcom/vk/libvideo/ui/VideoView;->a(Lcom/vk/libvideo/ui/VideoView;Lio/reactivex/disposables/Disposable;)V
 
     .line 2
     iget-boolean v0, p0, Lcom/vk/libvideo/ui/VideoView$i;->b:Z
@@ -86,7 +86,7 @@
 
     move-result-object v2
 
-    sget v3, Lcom/vk/libvideo/c;->black_alpha60:I
+    sget v3, Lcom/vk/libvideo/R3;->black_alpha60:I
 
     invoke-static {v2, v3}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 

@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/observable/ObservableObserveOn;
-.super Lio/reactivex/internal/operators/observable/a;
+.super Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;
 .source "ObservableObserveOn.java"
 
 
@@ -15,14 +15,14 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/internal/operators/observable/a<",
+        "Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream<",
         "TT;TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final b:Lc/a/s;
+.field final b:Lio/reactivex/Scheduler;
 
 .field final c:Z
 
@@ -30,23 +30,23 @@
 
 
 # direct methods
-.method public constructor <init>(Lc/a/p;Lc/a/s;ZI)V
+.method public constructor <init>(Lio/reactivex/ObservableSource;Lio/reactivex/Scheduler;ZI)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "TT;>;",
-            "Lc/a/s;",
+            "Lio/reactivex/Scheduler;",
             "ZI)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/a;-><init>(Lc/a/p;)V
+    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;-><init>(Lio/reactivex/ObservableSource;)V
 
     .line 2
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn;->b:Lc/a/s;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn;->b:Lio/reactivex/Scheduler;
 
     .line 3
     iput-boolean p3, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn;->c:Z
@@ -59,38 +59,38 @@
 
 
 # virtual methods
-.method protected b(Lc/a/r;)V
+.method protected b(Lio/reactivex/Observer;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn;->b:Lc/a/s;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn;->b:Lio/reactivex/Scheduler;
 
-    instance-of v1, v0, Lio/reactivex/internal/schedulers/k;
+    instance-of v1, v0, Lio/reactivex/internal/schedulers/TrampolineScheduler;
 
     if-eqz v1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/a;->a:Lc/a/p;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;->a:Lio/reactivex/ObservableSource;
 
-    invoke-interface {v0, p1}, Lc/a/p;->a(Lc/a/r;)V
+    invoke-interface {v0, p1}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    invoke-virtual {v0}, Lc/a/s;->a()Lc/a/s$c;
+    invoke-virtual {v0}, Lio/reactivex/Scheduler;->a()Lio/reactivex/Scheduler$c;
 
     move-result-object v0
 
     .line 4
-    iget-object v1, p0, Lio/reactivex/internal/operators/observable/a;->a:Lc/a/p;
+    iget-object v1, p0, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;->a:Lio/reactivex/ObservableSource;
 
     new-instance v2, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;
 
@@ -98,9 +98,9 @@
 
     iget v4, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn;->d:I
 
-    invoke-direct {v2, p1, v0, v3, v4}, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;-><init>(Lc/a/r;Lc/a/s$c;ZI)V
+    invoke-direct {v2, p1, v0, v3, v4}, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;-><init>(Lio/reactivex/Observer;Lio/reactivex/Scheduler$c;ZI)V
 
-    invoke-interface {v1, v2}, Lc/a/p;->a(Lc/a/r;)V
+    invoke-interface {v1, v2}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
 
     :goto_0
     return-void

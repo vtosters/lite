@@ -24,7 +24,7 @@
     iput v0, p0, Lcom/google/maps/android/ui/a;->c:I
 
     .line 3
-    sget v0, Lb/d/b/a/b;->amu_bubble_mask:I
+    sget v0, Lb/d/b/a/R1;->amu_bubble_mask:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -33,7 +33,7 @@
     iput-object v0, p0, Lcom/google/maps/android/ui/a;->b:Landroid/graphics/drawable/Drawable;
 
     .line 4
-    sget v0, Lb/d/b/a/b;->amu_bubble_shadow:I
+    sget v0, Lb/d/b/a/R1;->amu_bubble_shadow:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

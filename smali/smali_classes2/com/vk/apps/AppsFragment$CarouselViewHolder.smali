@@ -1,5 +1,5 @@
 .class public final Lcom/vk/apps/AppsFragment$CarouselViewHolder;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "AppsFragment.kt"
 
 
@@ -22,7 +22,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/apps/AppsFragment$h;",
         ">;"
     }
@@ -51,7 +51,7 @@
 
     const p1, 0x7f0d0275
 
-    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     new-instance p1, Lcom/vk/apps/AppsFragment$CarouselViewHolder$a;

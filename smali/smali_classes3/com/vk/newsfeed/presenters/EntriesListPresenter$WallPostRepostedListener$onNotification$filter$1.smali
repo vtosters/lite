@@ -3,12 +3,12 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener;->a(IILb/h/g/l/b;)V
+    value = Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener;->a(IILb/h/g/l/EventWallPostReposted;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -28,14 +28,14 @@
 
 
 # instance fields
-.field final synthetic $payload:Lb/h/g/l/b;
+.field final synthetic $payload:Lb/h/g/l/EventWallPostReposted;
 
 
 # direct methods
-.method constructor <init>(Lb/h/g/l/b;)V
+.method constructor <init>(Lb/h/g/l/EventWallPostReposted;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$filter$1;->$payload:Lb/h/g/l/b;
+    iput-object p1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$filter$1;->$payload:Lb/h/g/l/EventWallPostReposted;
 
     const/4 p1, 0x1
 
@@ -64,9 +64,9 @@
 
     move-result v2
 
-    iget-object v3, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$filter$1;->$payload:Lb/h/g/l/b;
+    iget-object v3, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$filter$1;->$payload:Lb/h/g/l/EventWallPostReposted;
 
-    invoke-virtual {v3}, Lb/h/g/l/b;->c()I
+    invoke-virtual {v3}, Lb/h/g/l/EventWallPostReposted;->c()I
 
     move-result v3
 
@@ -76,9 +76,9 @@
 
     move-result v0
 
-    iget-object v2, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$filter$1;->$payload:Lb/h/g/l/b;
+    iget-object v2, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$filter$1;->$payload:Lb/h/g/l/EventWallPostReposted;
 
-    invoke-virtual {v2}, Lb/h/g/l/b;->b()I
+    invoke-virtual {v2}, Lb/h/g/l/EventWallPostReposted;->b()I
 
     move-result v2
 
@@ -102,9 +102,9 @@
 
     move-result v0
 
-    iget-object v2, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$filter$1;->$payload:Lb/h/g/l/b;
+    iget-object v2, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$filter$1;->$payload:Lb/h/g/l/EventWallPostReposted;
 
-    invoke-virtual {v2}, Lb/h/g/l/b;->c()I
+    invoke-virtual {v2}, Lb/h/g/l/EventWallPostReposted;->c()I
 
     move-result v2
 
@@ -118,9 +118,9 @@
 
     move-result p1
 
-    iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$filter$1;->$payload:Lb/h/g/l/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$filter$1;->$payload:Lb/h/g/l/EventWallPostReposted;
 
-    invoke-virtual {v0}, Lb/h/g/l/b;->b()I
+    invoke-virtual {v0}, Lb/h/g/l/EventWallPostReposted;->b()I
 
     move-result v0
 

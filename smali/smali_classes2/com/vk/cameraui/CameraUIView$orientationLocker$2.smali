@@ -3,7 +3,7 @@
 .source "CameraUIView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/attachpicker/util/c;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/attachpicker/util/OrientationLocker;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/attachpicker/util/c;
+.method public final invoke()Lcom/vk/attachpicker/util/OrientationLocker;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/attachpicker/util/c;
+    new-instance v0, Lcom/vk/attachpicker/util/OrientationLocker;
 
-    invoke-direct {v0}, Lcom/vk/attachpicker/util/c;-><init>()V
+    invoke-direct {v0}, Lcom/vk/attachpicker/util/OrientationLocker;-><init>()V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/cameraui/CameraUIView$orientationLocker$2;->invoke()Lcom/vk/attachpicker/util/c;
+    invoke-virtual {p0}, Lcom/vk/cameraui/CameraUIView$orientationLocker$2;->invoke()Lcom/vk/attachpicker/util/OrientationLocker;
 
     move-result-object v0
 

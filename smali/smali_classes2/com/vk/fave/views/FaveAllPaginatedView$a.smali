@@ -1,5 +1,5 @@
 .class public final Lcom/vk/fave/views/FaveAllPaginatedView$a;
-.super Lcom/vk/lists/j;
+.super Lcom/vk/lists/FooterEmptyViewProvider;
 .source "FaveAllPaginatedView.kt"
 
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/j;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/FooterEmptyViewProvider;-><init>()V
 
     return-void
 .end method
@@ -30,9 +30,9 @@
     .locals 0
 
     .line 1
-    new-instance p2, Lcom/vk/fave/views/f;
+    new-instance p2, Lcom/vk/fave/views/FaveEmptyListView;
 
-    invoke-direct {p2, p1}, Lcom/vk/fave/views/f;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vk/fave/views/FaveEmptyListView;-><init>(Landroid/content/Context;)V
 
     return-object p2
 .end method

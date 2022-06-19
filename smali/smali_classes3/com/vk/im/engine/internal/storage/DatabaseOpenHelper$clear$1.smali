@@ -3,7 +3,7 @@
 .source "DatabaseOpenHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lio/requery/android/database/sqlite/SQLiteDatabase;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,11 +52,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper$clear$1;->this$0:Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;
 
-    invoke-static {v0}, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->a(Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;)Lcom/vk/im/engine/internal/storage/structure/c;
+    invoke-static {v0}, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->a(Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;)Lcom/vk/im/engine/internal/storage/structure/DbSchema;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/engine/internal/storage/structure/c;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbSchema;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper$clear$1;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

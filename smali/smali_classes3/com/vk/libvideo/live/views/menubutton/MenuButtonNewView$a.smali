@@ -40,11 +40,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView$a;->a:Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;->getPresenterLocal()Lcom/vk/libvideo/live/views/menubutton/a;
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;->getPresenterLocal()Lcom/vk/libvideo/live/views/menubutton/MenuButtonContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/libvideo/live/views/menubutton/a;->c0()V
+    invoke-interface {p1}, Lcom/vk/libvideo/live/views/menubutton/MenuButtonContract;->c0()V
 
     return-void
 .end method

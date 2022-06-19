@@ -3,7 +3,7 @@
 .source "PostingAttachGalleryPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/attachpicker/p$c;
+.implements Lcom/vk/attachpicker/SelectionContext$c;
 
 
 # annotations
@@ -52,11 +52,11 @@
 
     iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$d;->a:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/p;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/SelectionContext;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/p;->g()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/SelectionContext;->g()I
 
     move-result v0
 
@@ -73,20 +73,20 @@
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$d;->a:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/p;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->t()Lcom/vk/attachpicker/SelectionContext;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vk/attachpicker/p;->c(Lcom/vk/mediastore/system/MediaStoreEntry;)Z
+    invoke-virtual {p1, p2}, Lcom/vk/attachpicker/SelectionContext;->c(Lcom/vk/mediastore/system/MediaStoreEntry;)Z
 
     .line 3
     iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$d;->a:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->d(Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;)Lcom/vk/newsfeed/posting/attachments/gallery/d;
+    invoke-static {p1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->d(Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;)Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
 
     move-result-object p1
 
-    sget-object p2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v0, 0x7f12011c
 
@@ -114,9 +114,9 @@
 
     const-string v0, "AppContextHolder.context\u2026mit, maxAttachmentsCount)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, p2}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->j(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->j(Ljava/lang/String;)V
 
     :cond_0
     return-void

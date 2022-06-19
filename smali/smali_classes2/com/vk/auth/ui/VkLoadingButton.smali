@@ -31,7 +31,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkLoadingButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkLoadingButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -51,7 +51,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkLoadingButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkLoadingButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -78,7 +78,7 @@
     move-result-object v0
 
     .line 6
-    sget v1, Lcom/vk/auth/r/f;->vk_auth_loader_button_layout:I
+    sget v1, Lcom/vk/auth/r/R8;->vk_auth_loader_button_layout:I
 
     const/4 v2, 0x1
 
@@ -87,7 +87,7 @@
     move-result-object v0
 
     .line 7
-    sget v1, Lcom/vk/auth/r/e;->vk_loading_btn_textView:I
+    sget v1, Lcom/vk/auth/r/R5;->vk_loading_btn_textView:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -95,14 +95,14 @@
 
     const-string v3, "view.findViewById(R.id.vk_loading_btn_textView)"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Lcom/vk/auth/ui/VkAuthTextView;
 
     iput-object v1, p0, Lcom/vk/auth/ui/VkLoadingButton;->b:Lcom/vk/auth/ui/VkAuthTextView;
 
     .line 8
-    sget v1, Lcom/vk/auth/r/e;->vk_loading_btn_progress:I
+    sget v1, Lcom/vk/auth/r/R5;->vk_loading_btn_progress:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -110,7 +110,7 @@
 
     const-string v1, "view.findViewById(R.id.vk_loading_btn_progress)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/pnikosis/materialishprogress/ProgressWheel;
 
@@ -119,14 +119,14 @@
     if-eqz p2, :cond_0
 
     .line 9
-    sget-object v0, Lcom/vk/auth/r/i;->VkLoadingButton:[I
+    sget-object v0, Lcom/vk/auth/r/R4;->VkLoadingButton:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
     .line 10
-    sget v0, Lcom/vk/auth/r/i;->VkLoadingButton_android_text:I
+    sget v0, Lcom/vk/auth/r/R4;->VkLoadingButton_android_text:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
 
@@ -135,7 +135,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/auth/ui/VkLoadingButton;->setText(Ljava/lang/CharSequence;)V
 
     .line 11
-    sget v0, Lcom/vk/auth/r/i;->VkLoadingButton_android_textColor:I
+    sget v0, Lcom/vk/auth/r/R4;->VkLoadingButton_android_textColor:I
 
     invoke-virtual {p2, v0, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -181,7 +181,7 @@
 
     const-string v0, "textColorStateList"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
@@ -199,7 +199,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2

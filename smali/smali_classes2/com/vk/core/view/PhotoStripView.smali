@@ -193,11 +193,11 @@
     return p0
 .end method
 
-.method static synthetic b(Lcom/vk/core/view/PhotoStripView;)Lcom/facebook/drawee/view/c;
+.method static synthetic b(Lcom/vk/core/view/PhotoStripView;)Lcom/facebook/drawee/view/MultiDraweeHolder;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object p0, p0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
     return-object p0
 .end method
@@ -247,7 +247,7 @@
 
     move-result-object v0
 
-    sget v1, Lb/h/z/e;->ic_post_morelikes:I
+    sget v1, Lb/h/z/R8;->ic_post_morelikes:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -374,9 +374,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/c;->d()I
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/MultiDraweeHolder;->d()I
 
     move-result v0
 
@@ -490,13 +490,13 @@
 
     .line 8
     :cond_2
-    iget-object v7, p0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v7, p0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v7, v3}, Lcom/facebook/drawee/view/c;->a(I)Lcom/facebook/drawee/view/b;
+    invoke-virtual {v7, v3}, Lcom/facebook/drawee/view/MultiDraweeHolder;->a(I)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object v7
 
-    invoke-virtual {v7}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v7}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
 
@@ -858,9 +858,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/c;->d()I
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/MultiDraweeHolder;->d()I
 
     move-result v0
 
@@ -879,7 +879,7 @@
 
     move-result-object v1
 
-    sget v2, Lb/h/z/e;->user_placeholder:I
+    sget v2, Lb/h/z/R8;->user_placeholder:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -891,23 +891,23 @@
     invoke-virtual {p0}, Lcom/vk/imageloader/view/VKMultiImageView;->a()V
 
     .line 5
-    iget-object v1, p0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v1, p0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v1, v0}, Lcom/facebook/drawee/view/c;->a(I)Lcom/facebook/drawee/view/b;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/facebook/drawee/view/b;->b()Lcom/facebook/u/e/b;
+    invoke-virtual {v1, v0}, Lcom/facebook/drawee/view/MultiDraweeHolder;->a(I)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object v1
 
-    check-cast v1, Lcom/facebook/drawee/generic/a;
+    invoke-virtual {v1}, Lcom/facebook/drawee/view/DraweeHolder;->b()Lcom/facebook/u/e/DraweeHierarchy;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     invoke-static {}, Lcom/facebook/drawee/generic/RoundingParams;->i()Lcom/facebook/drawee/generic/RoundingParams;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {v1, v2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     add-int/lit8 v0, v0, 0x1
 

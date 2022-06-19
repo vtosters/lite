@@ -3,7 +3,7 @@
 .source "NestedListTransformer.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/i;
+.implements Lcom/vk/catalog2/core/CatalogResponseTransformer;
 
 
 # annotations
@@ -26,7 +26,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/NestedListTransformer$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/NestedListTransformer$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/catalog2/core/NestedListTransformer;->a:Lcom/vk/catalog2/core/NestedListTransformer$a;
 
@@ -128,7 +128,7 @@
 
     const-string v3, "name"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p1, p1, Lcom/vk/dto/group/Group;->d:Ljava/lang/String;
 
@@ -149,7 +149,7 @@
 
     const-string v3, "fullName"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p1, p1, Lcom/vk/dto/user/UserProfile;->f:Ljava/lang/String;
 
@@ -1420,7 +1420,7 @@
     move/from16 v12, p6
 
     .line 76
-    invoke-direct/range {v0 .. v15}, Lcom/vk/catalog2/core/blocks/UIBlockProfile;-><init>(Ljava/lang/String;Lcom/vk/catalog2/core/api/dto/CatalogViewType;Lcom/vk/catalog2/core/api/dto/CatalogDataType;Ljava/lang/String;ILjava/util/List;ZLcom/vk/catalog2/core/api/dto/CatalogUserMeta;Lcom/vk/dto/user/UserProfile;Ljava/lang/String;Ljava/util/List;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v15}, Lcom/vk/catalog2/core/blocks/UIBlockProfile;-><init>(Ljava/lang/String;Lcom/vk/catalog2/core/api/dto/CatalogViewType;Lcom/vk/catalog2/core/api/dto/CatalogDataType;Ljava/lang/String;ILjava/util/List;ZLcom/vk/catalog2/core/api/dto/CatalogUserMeta;Lcom/vk/dto/user/UserProfile;Ljava/lang/String;Ljava/util/List;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v16
 .end method
@@ -2886,19 +2886,19 @@
     move-result-object v3
 
     .line 3
-    invoke-static {v3}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v3}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
     .line 4
     sget-object v4, Lcom/vk/catalog2/core/NestedListTransformer$toBaseLinkBannerBlock$link$1;->a:Lcom/vk/catalog2/core/NestedListTransformer$toBaseLinkBannerBlock$link$1;
 
-    invoke-static {v3, v4}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v3, v4}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
     .line 5
-    invoke-static {v3}, Lkotlin/sequences/m;->h(Lkotlin/sequences/j;)Ljava/lang/Object;
+    invoke-static {v3}, Lkotlin/sequences/m;->h(Lkotlin/sequences/Sequence;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -3435,14 +3435,14 @@
 
     .line 8
     :cond_2
-    invoke-static {v12}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v12}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
     .line 9
     sget-object v4, Lcom/vk/catalog2/core/NestedListTransformer$toBaseLinkGridBlock$contentOwners$1;->a:Lcom/vk/catalog2/core/NestedListTransformer$toBaseLinkGridBlock$contentOwners$1;
 
-    invoke-static {v3, v4}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v3, v4}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
@@ -3451,31 +3451,31 @@
 
     invoke-direct {v4, v0, v1}, Lcom/vk/catalog2/core/NestedListTransformer$toBaseLinkGridBlock$contentOwners$2;-><init>(Lcom/vk/catalog2/core/NestedListTransformer;Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;)V
 
-    invoke-static {v3, v4}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v3, v4}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
     .line 11
-    invoke-static {v3}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {v3}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object v16
 
     .line 12
-    invoke-static {v12}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v12}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
     .line 13
     sget-object v4, Lcom/vk/catalog2/core/NestedListTransformer$toBaseLinkGridBlock$videos$1;->a:Lcom/vk/catalog2/core/NestedListTransformer$toBaseLinkGridBlock$videos$1;
 
-    invoke-static {v3, v4}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v3, v4}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
     .line 14
     sget-object v4, Lcom/vk/catalog2/core/NestedListTransformer$toBaseLinkGridBlock$videos$2;->a:Lcom/vk/catalog2/core/NestedListTransformer$toBaseLinkGridBlock$videos$2;
 
-    invoke-static {v3, v4}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v3, v4}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
@@ -3484,12 +3484,12 @@
 
     invoke-direct {v4, v0, v1}, Lcom/vk/catalog2/core/NestedListTransformer$toBaseLinkGridBlock$videos$3;-><init>(Lcom/vk/catalog2/core/NestedListTransformer;Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;)V
 
-    invoke-static {v3, v4}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v3, v4}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
     .line 16
-    invoke-static {v1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {v1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object v13
 
@@ -3937,19 +3937,19 @@
     move-result-object v1
 
     .line 7
-    invoke-static {v1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
     .line 8
     const-class v2, Lcom/vk/dto/music/Thumb;
 
-    invoke-static {v1, v2}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Ljava/lang/Class;)Lkotlin/sequences/j;
+    invoke-static {v1, v2}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Ljava/lang/Class;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
     .line 9
-    invoke-static {v1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {v1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object v1
 
@@ -4103,14 +4103,14 @@
     move-result-object p1
 
     .line 19
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 20
     const-class p2, Lcom/vk/dto/music/SearchSuggestion;
 
-    invoke-static {p1, p2}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Ljava/lang/Class;)Lkotlin/sequences/j;
+    invoke-static {p1, p2}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Ljava/lang/Class;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
@@ -4119,12 +4119,12 @@
 
     invoke-direct {p2, p0, v0}, Lcom/vk/catalog2/core/NestedListTransformer$transformToListOfBlocks$22;-><init>(Lcom/vk/catalog2/core/NestedListTransformer;Lcom/vk/catalog2/core/NestedListTransformer$a$a;)V
 
-    invoke-static {p1, p2}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {p1, p2}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 22
-    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object p1
 
@@ -5534,9 +5534,9 @@
 
     move-result-object v4
 
-    invoke-static {v2, v3, v4}, Lcom/vk/catalog2/video/c;->a(Lcom/vk/dto/common/VideoFile;Ljava/util/Map;Ljava/util/Map;)V
+    invoke-static {v2, v3, v4}, Lcom/vk/catalog2/video/VideoOwnerFiller;->a(Lcom/vk/dto/common/VideoFile;Ljava/util/Map;Ljava/util/Map;)V
 
-    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v3, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     invoke-interface {v0, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 

@@ -3,18 +3,18 @@
 .source "WebPImage.java"
 
 # interfaces
-.implements Lcom/facebook/imagepipeline/animated/base/b;
-.implements Lcom/facebook/x/a/a/c;
+.implements Lcom/facebook/imagepipeline/animated/base/AnimatedImage;
+.implements Lcom/facebook/x/a/a/AnimatedImageDecoder;
 
 
 # annotations
-.annotation build Lcom/facebook/common/internal/d;
+.annotation build Lcom/facebook/common/internal/DoNotStrip;
 .end annotation
 
 
 # instance fields
 .field private mNativeContext:J
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end field
 
@@ -22,7 +22,7 @@
 # direct methods
 .method public constructor <init>()V
     .locals 0
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 
     .line 1
@@ -33,7 +33,7 @@
 
 .method constructor <init>(J)V
     .locals 0
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 
     .line 2
@@ -66,7 +66,7 @@
 
     .line 6
     :goto_0
-    invoke-static {v0}, Lcom/facebook/common/internal/g;->a(Z)V
+    invoke-static {v0}, Lcom/facebook/common/internal/Preconditions;->a(Z)V
 
     .line 7
     invoke-static {p0, p1, p2}, Lcom/facebook/animated/webp/WebPImage;->nativeCreateFromNativeMemory(JI)Lcom/facebook/animated/webp/WebPImage;
@@ -229,7 +229,7 @@
     throw p1
 .end method
 
-.method public a(JI)Lcom/facebook/imagepipeline/animated/base/b;
+.method public a(JI)Lcom/facebook/imagepipeline/animated/base/AnimatedImage;
     .locals 0
 
     .line 1
@@ -240,7 +240,7 @@
     return-object p1
 .end method
 
-.method public a(Ljava/nio/ByteBuffer;)Lcom/facebook/imagepipeline/animated/base/b;
+.method public a(Ljava/nio/ByteBuffer;)Lcom/facebook/imagepipeline/animated/base/AnimatedImage;
     .locals 0
 
     .line 2
@@ -273,7 +273,7 @@
     return-object p1
 .end method
 
-.method public bridge synthetic b(I)Lcom/facebook/imagepipeline/animated/base/c;
+.method public bridge synthetic b(I)Lcom/facebook/imagepipeline/animated/base/AnimatedImageFrame;
     .locals 0
 
     .line 1

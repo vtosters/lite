@@ -48,10 +48,10 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lcom/vk/core/dialogs/bottomsheet/d;
+    check-cast p1, Lcom/vk/core/dialogs/bottomsheet/MenuBottomSheetAction;
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/d;->d()I
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/MenuBottomSheetAction;->d()I
 
     move-result p1
 
@@ -59,10 +59,10 @@
 
     move-result-object p1
 
-    check-cast p2, Lcom/vk/core/dialogs/bottomsheet/d;
+    check-cast p2, Lcom/vk/core/dialogs/bottomsheet/MenuBottomSheetAction;
 
     .line 3
-    invoke-virtual {p2}, Lcom/vk/core/dialogs/bottomsheet/d;->d()I
+    invoke-virtual {p2}, Lcom/vk/core/dialogs/bottomsheet/MenuBottomSheetAction;->d()I
 
     move-result p2
 

@@ -51,15 +51,15 @@
 
 .field private static t:Z
 
-.field private static u:Lkotlin/jvm/b/c;
+.field private static u:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/content/DialogInterface;",
             "-",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -69,43 +69,43 @@
 
 .field private static w:Z
 
-.field private static x:Lkotlin/jvm/b/c;
+.field private static x:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/widget/EditText;",
             "-",
             "Landroid/widget/TextView;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private static y:Lkotlin/jvm/b/c;
+.field private static y:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/content/DialogInterface;",
             "-",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private static z:Lkotlin/jvm/b/c;
+.field private static z:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/content/DialogInterface;",
             "-",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -134,7 +134,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->A:Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;
 
@@ -200,7 +200,7 @@
     iput-boolean p1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->a:Z
 
     .line 3
-    sget p1, Lb/h/z/h;->vk_alert_dialog:I
+    sget p1, Lb/h/z/R10;->vk_alert_dialog:I
 
     invoke-super {p0, p1}, Landroidx/appcompat/app/AlertDialog$Builder;->setView(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -266,11 +266,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lkotlin/jvm/b/c;)V
+.method public static final synthetic a(Lkotlin/jvm/b/Functions1;)V
     .locals 0
 
     .line 4
-    sput-object p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->u:Lkotlin/jvm/b/c;
+    sput-object p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->u:Lkotlin/jvm/b/Functions1;
 
     return-void
 .end method
@@ -311,11 +311,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lkotlin/jvm/b/c;)V
+.method public static final synthetic b(Lkotlin/jvm/b/Functions1;)V
     .locals 0
 
     .line 3
-    sput-object p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->x:Lkotlin/jvm/b/c;
+    sput-object p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->x:Lkotlin/jvm/b/Functions1;
 
     return-void
 .end method
@@ -347,11 +347,11 @@
     return-void
 .end method
 
-.method public static final synthetic c(Lkotlin/jvm/b/c;)V
+.method public static final synthetic c(Lkotlin/jvm/b/Functions1;)V
     .locals 0
 
     .line 3
-    sput-object p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->z:Lkotlin/jvm/b/c;
+    sput-object p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->z:Lkotlin/jvm/b/Functions1;
 
     return-void
 .end method
@@ -383,11 +383,11 @@
     return-void
 .end method
 
-.method public static final synthetic d(Lkotlin/jvm/b/c;)V
+.method public static final synthetic d(Lkotlin/jvm/b/Functions1;)V
     .locals 0
 
     .line 3
-    sput-object p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->y:Lkotlin/jvm/b/c;
+    sput-object p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->y:Lkotlin/jvm/b/Functions1;
 
     return-void
 .end method
@@ -410,11 +410,11 @@
     return v0
 .end method
 
-.method public static final synthetic f()Lkotlin/jvm/b/c;
+.method public static final synthetic f()Lkotlin/jvm/b/Functions1;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->u:Lkotlin/jvm/b/c;
+    sget-object v0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->u:Lkotlin/jvm/b/Functions1;
 
     return-object v0
 .end method
@@ -455,11 +455,11 @@
     return-object v0
 .end method
 
-.method public static final synthetic i()Lkotlin/jvm/b/c;
+.method public static final synthetic i()Lkotlin/jvm/b/Functions1;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->x:Lkotlin/jvm/b/c;
+    sget-object v0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->x:Lkotlin/jvm/b/Functions1;
 
     return-object v0
 .end method
@@ -482,11 +482,11 @@
     return-object v0
 .end method
 
-.method public static final synthetic l()Lkotlin/jvm/b/c;
+.method public static final synthetic l()Lkotlin/jvm/b/Functions1;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->z:Lkotlin/jvm/b/c;
+    sget-object v0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->z:Lkotlin/jvm/b/Functions1;
 
     return-object v0
 .end method
@@ -509,11 +509,11 @@
     return-object v0
 .end method
 
-.method public static final synthetic o()Lkotlin/jvm/b/c;
+.method public static final synthetic o()Lkotlin/jvm/b/Functions1;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->y:Lkotlin/jvm/b/c;
+    sget-object v0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->y:Lkotlin/jvm/b/Functions1;
 
     return-object v0
 .end method
@@ -610,7 +610,7 @@
     const-string v1, "dialog"
 
     .line 3
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
@@ -618,7 +618,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {}, Lcom/vk/core/drawable/l$a;->c()Lcom/vk/core/drawable/f;
+    invoke-static {}, Lcom/vk/core/drawable/VkUiDrawableHelper$a;->c()Lcom/vk/core/drawable/InnerStrokeDrawable;
 
     move-result-object v2
 
@@ -1136,7 +1136,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -1174,7 +1174,7 @@
     .line 4
     new-instance v0, Landroidx/appcompat/app/AlertDialog$Builder;
 
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -1184,7 +1184,7 @@
 
     const-string v1, "AlertDialog.Builder(AppC\u2026tHolder.context).create()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
@@ -1208,7 +1208,7 @@
     invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
     .line 9
-    sget v3, Lb/h/z/g;->customContent:I
+    sget v3, Lb/h/z/R;->customContent:I
 
     invoke-virtual {v0, v3}, Landroidx/appcompat/app/AppCompatDialog;->findViewById(I)Landroid/view/View;
 
@@ -1253,7 +1253,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -1302,7 +1302,7 @@
 
     const-string v6, "getChildAt(i)"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 18
     instance-of v5, v5, Landroid/widget/EditText;
@@ -1321,7 +1321,7 @@
 
     .line 19
     :cond_6
-    sget v1, Lb/h/z/g;->parentContent:I
+    sget v1, Lb/h/z/R;->parentContent:I
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/app/AppCompatDialog;->findViewById(I)Landroid/view/View;
 

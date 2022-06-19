@@ -3,7 +3,7 @@
 .source "FriendsImportFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -84,17 +84,17 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$q;->a:Lcom/vk/friends/recommendations/FriendsImportFragment;
 
-    invoke-static {p1}, Lcom/vk/friends/recommendations/FriendsImportFragment;->b(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/friends/recommendations/c;
+    invoke-static {p1}, Lcom/vk/friends/recommendations/FriendsImportFragment;->b(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object p1
 
     const-string v0, "adapter.list"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -121,7 +121,7 @@
 
     iget-object v2, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$q;->b:Lcom/vk/dto/user/RequestUserProfile;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -140,11 +140,11 @@
     .line 3
     iget-object p1, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$q;->a:Lcom/vk/friends/recommendations/FriendsImportFragment;
 
-    invoke-static {p1}, Lcom/vk/friends/recommendations/FriendsImportFragment;->b(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/friends/recommendations/c;
+    invoke-static {p1}, Lcom/vk/friends/recommendations/FriendsImportFragment;->b(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0, v0}, Lcom/vk/lists/i0;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {p1, v0, v0}, Lcom/vk/lists/SimpleAdapter;->a(Ljava/lang/Object;Ljava/lang/Object;)V
 
     :cond_4
     return-void

@@ -75,7 +75,7 @@
     iput-object p3, p0, Lcom/vtosters/lite/SendActivity$l;->e:Ljava/lang/String;
 
     .line 5
-    invoke-static {p3}, Lcom/vk/common/links/b;->a(Ljava/lang/String;)Z
+    invoke-static {p3}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/String;)Z
 
     move-result p2
 

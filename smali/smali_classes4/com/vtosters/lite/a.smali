@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # instance fields
@@ -34,7 +34,7 @@
 
     iget-object v1, p0, Lcom/vtosters/lite/a;->b:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/BirthdayBroadcastReceiver;->a(Landroid/content/Context;Ljava/util/List;)Lkotlin/m;
+    invoke-static {v0, v1}, Lcom/vtosters/lite/BirthdayBroadcastReceiver;->a(Landroid/content/Context;Ljava/util/List;)Lkotlin/Unit;
 
     move-result-object v0
 

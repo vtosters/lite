@@ -3,7 +3,7 @@
 .source "NewsfeedFeedbackPollFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment$addButton$1;->this$0:Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->getPresenter()Lcom/vk/newsfeed/feedback/a;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->getPresenter()Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;
 
     move-result-object p1
 
@@ -64,19 +64,19 @@
 
     iget-object v0, p0, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment$addButton$1;->$answer:Lcom/vk/dto/newsfeed/entries/FeedbackPoll$Answer;
 
-    invoke-interface {p1, v0}, Lcom/vk/newsfeed/feedback/a;->a(Lcom/vk/dto/newsfeed/entries/FeedbackPoll$Answer;)V
+    invoke-interface {p1, v0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;->a(Lcom/vk/dto/newsfeed/entries/FeedbackPoll$Answer;)V
 
     .line 2
     :cond_0
     iget-object p1, p0, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment$addButton$1;->this$0:Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->getPresenter()Lcom/vk/newsfeed/feedback/a;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->getPresenter()Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/feedback/a;->d1()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;->d1()V
 
     :cond_1
     return-void
@@ -90,7 +90,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment$addButton$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

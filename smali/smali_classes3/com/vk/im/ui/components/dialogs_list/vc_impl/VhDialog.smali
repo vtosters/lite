@@ -26,11 +26,11 @@
 
 .field private final d:Ljava/lang/String;
 
-.field private final e:Lcom/vk/im/ui/formatters/d;
+.field private final e:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
 .field private final f:Ljava/lang/StringBuilder;
 
-.field private final g:Lcom/vk/im/ui/formatters/c;
+.field private final g:Lcom/vk/im/ui/formatters/DialogUnreadCountFormatter;
 
 .field private final h:Ljava/lang/StringBuilder;
 
@@ -38,11 +38,11 @@
 
 .field private final j:Ljava/lang/StringBuffer;
 
-.field private final k:Lcom/vk/im/ui/formatters/j;
+.field private final k:Lcom/vk/im/ui/formatters/MsgAttachFormatter;
 
-.field private final l:Lcom/vk/im/ui/formatters/n;
+.field private final l:Lcom/vk/im/ui/formatters/MsgNestedFormatter;
 
-.field private final m:Lcom/vk/im/ui/formatters/b;
+.field private final m:Lcom/vk/im/ui/formatters/ComposingFormatter;
 
 .field private final n:Landroid/text/SpannableStringBuilder;
 
@@ -63,7 +63,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->s:Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog$c;
 
@@ -77,7 +77,7 @@
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/formatters/j;
+    new-instance v0, Lcom/vk/im/ui/formatters/MsgAttachFormatter;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -85,24 +85,24 @@
 
     const-string v2, "v.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/j;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/MsgAttachFormatter;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->k:Lcom/vk/im/ui/formatters/j;
+    iput-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->k:Lcom/vk/im/ui/formatters/MsgAttachFormatter;
 
     .line 3
-    new-instance v0, Lcom/vk/im/ui/formatters/n;
+    new-instance v0, Lcom/vk/im/ui/formatters/MsgNestedFormatter;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/n;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/MsgNestedFormatter;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->l:Lcom/vk/im/ui/formatters/n;
+    iput-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->l:Lcom/vk/im/ui/formatters/MsgNestedFormatter;
 
     .line 4
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -112,9 +112,9 @@
     const-string v1, "context"
 
     .line 5
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v1, Lcom/vk/im/ui/c;->im_new_theme:I
+    sget v1, Lcom/vk/im/ui/R5;->im_new_theme:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->g(Landroid/content/Context;I)Z
 
@@ -123,7 +123,7 @@
     iput-boolean v1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->b:Z
 
     .line 6
-    sget v1, Lcom/vk/im/ui/h;->dialog:I
+    sget v1, Lcom/vk/im/ui/R11;->dialog:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -131,14 +131,14 @@
 
     const-string v1, "v.findViewById(R.id.dialog)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/dialogs/DialogItemView;
 
     iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->a:Lcom/vk/im/ui/views/dialogs/DialogItemView;
 
     .line 7
-    sget p1, Lcom/vk/im/ui/m;->vkim_loading:I
+    sget p1, Lcom/vk/im/ui/R4;->vkim_loading:I
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -146,18 +146,18 @@
 
     const-string v1, "context.getString(R.string.vkim_loading)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->d:Ljava/lang/String;
 
     .line 8
-    new-instance p1, Lcom/vk/im/ui/formatters/d;
+    new-instance p1, Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->d:Ljava/lang/String;
 
-    invoke-direct {p1, v1}, Lcom/vk/im/ui/formatters/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v1}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->e:Lcom/vk/im/ui/formatters/d;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->e:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     .line 9
     new-instance p1, Ljava/lang/StringBuilder;
@@ -167,11 +167,11 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->f:Ljava/lang/StringBuilder;
 
     .line 10
-    new-instance p1, Lcom/vk/im/ui/formatters/c;
+    new-instance p1, Lcom/vk/im/ui/formatters/DialogUnreadCountFormatter;
 
-    invoke-direct {p1}, Lcom/vk/im/ui/formatters/c;-><init>()V
+    invoke-direct {p1}, Lcom/vk/im/ui/formatters/DialogUnreadCountFormatter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->g:Lcom/vk/im/ui/formatters/c;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->g:Lcom/vk/im/ui/formatters/DialogUnreadCountFormatter;
 
     .line 11
     new-instance p1, Ljava/lang/StringBuilder;
@@ -195,11 +195,11 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->j:Ljava/lang/StringBuffer;
 
     .line 14
-    new-instance p1, Lcom/vk/im/ui/formatters/b;
+    new-instance p1, Lcom/vk/im/ui/formatters/ComposingFormatter;
 
-    invoke-direct {p1, v0}, Lcom/vk/im/ui/formatters/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v0}, Lcom/vk/im/ui/formatters/ComposingFormatter;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->m:Lcom/vk/im/ui/formatters/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->m:Lcom/vk/im/ui/formatters/ComposingFormatter;
 
     .line 15
     new-instance p1, Landroid/text/SpannableStringBuilder;
@@ -216,13 +216,13 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->o:Landroid/text/SpannableStringBuilder;
 
     .line 17
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object p1
 
     const-string v0, "Emoji.instance()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 18
     iget-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->a:Lcom/vk/im/ui/views/dialogs/DialogItemView;
@@ -231,7 +231,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog$1;-><init>(Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 19
     iget-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->a:Lcom/vk/im/ui/views/dialogs/DialogItemView;
@@ -279,9 +279,9 @@
     .locals 3
 
     .line 81
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->k:Lcom/vk/im/ui/formatters/j;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->k:Lcom/vk/im/ui/formatters/MsgAttachFormatter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/formatters/j;->a(Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/formatters/MsgAttachFormatter;->a(Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -296,7 +296,7 @@
     invoke-virtual {v1}, Landroid/text/SpannableStringBuilder;->clear()V
 
     .line 84
-    sget-object v1, Lcom/vk/im/ui/components/dialogs_list/formatters/h;->b:Lcom/vk/im/ui/components/dialogs_list/formatters/h;
+    sget-object v1, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;->INSTANCE:Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->o:Landroid/text/SpannableStringBuilder;
 
@@ -306,14 +306,14 @@
 
     const-string v2, "attachSb.append(attachDescr)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0, p1, p2, p3}, Lcom/vk/im/ui/components/dialogs_list/formatters/h;->a(Landroid/text/SpannableStringBuilder;Lcom/vk/im/engine/models/messages/Msg;Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Landroid/text/SpannableStringBuilder;
+    invoke-virtual {v1, v0, p1, p2, p3}, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;->a(Landroid/text/SpannableStringBuilder;Lcom/vk/im/engine/models/messages/Msg;Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Landroid/text/SpannableStringBuilder;
 
     .line 85
     iget-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->o:Landroid/text/SpannableStringBuilder;
 
-    invoke-static {p1}, Lcom/vk/extensions/k;->a(Landroid/text/SpannableStringBuilder;)Landroid/text/SpannableString;
+    invoke-static {p1}, Lcom/vk/extensions/SpannableExt;->a(Landroid/text/SpannableStringBuilder;)Landroid/text/SpannableString;
 
     move-result-object p1
 
@@ -327,9 +327,9 @@
     .locals 2
 
     .line 86
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->l:Lcom/vk/im/ui/formatters/n;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->l:Lcom/vk/im/ui/formatters/MsgNestedFormatter;
 
-    invoke-virtual {v0, p1, p4}, Lcom/vk/im/ui/formatters/n;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/messages/NestedMsg$Type;)Ljava/lang/String;
+    invoke-virtual {v0, p1, p4}, Lcom/vk/im/ui/formatters/MsgNestedFormatter;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/messages/NestedMsg$Type;)Ljava/lang/String;
 
     move-result-object p4
 
@@ -344,7 +344,7 @@
     invoke-virtual {v0}, Landroid/text/SpannableStringBuilder;->clear()V
 
     .line 89
-    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/h;->b:Lcom/vk/im/ui/components/dialogs_list/formatters/h;
+    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;->INSTANCE:Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->o:Landroid/text/SpannableStringBuilder;
 
@@ -354,14 +354,14 @@
 
     const-string v1, "attachSb.append(description)"
 
-    invoke-static {p4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p4, p1, p2, p3}, Lcom/vk/im/ui/components/dialogs_list/formatters/h;->a(Landroid/text/SpannableStringBuilder;Lcom/vk/im/engine/models/messages/Msg;Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Landroid/text/SpannableStringBuilder;
+    invoke-virtual {v0, p4, p1, p2, p3}, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;->a(Landroid/text/SpannableStringBuilder;Lcom/vk/im/engine/models/messages/Msg;Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Landroid/text/SpannableStringBuilder;
 
     .line 90
     iget-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->o:Landroid/text/SpannableStringBuilder;
 
-    invoke-static {p1}, Lcom/vk/extensions/k;->a(Landroid/text/SpannableStringBuilder;)Landroid/text/SpannableString;
+    invoke-static {p1}, Lcom/vk/extensions/SpannableExt;->a(Landroid/text/SpannableStringBuilder;)Landroid/text/SpannableString;
 
     move-result-object p1
 
@@ -389,7 +389,7 @@
             "(",
             "Lcom/vk/im/engine/models/ProfilesSimpleInfo;",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/typing/a;",
+            "Lcom/vk/im/engine/models/typing/MsgComposing;",
             ">;",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -413,11 +413,11 @@
     invoke-virtual {v1}, Landroid/text/SpannableStringBuilder;->clear()V
 
     .line 34
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->m:Lcom/vk/im/ui/formatters/b;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->m:Lcom/vk/im/ui/formatters/ComposingFormatter;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->n:Landroid/text/SpannableStringBuilder;
 
-    invoke-virtual {v1, p1, p2, p3, v2}, Lcom/vk/im/ui/formatters/b;->a(Lcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/Dialog;Landroid/text/SpannableStringBuilder;)V
+    invoke-virtual {v1, p1, p2, p3, v2}, Lcom/vk/im/ui/formatters/ComposingFormatter;->a(Lcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/Dialog;Landroid/text/SpannableStringBuilder;)V
 
     .line 35
     iget-object v1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->n:Landroid/text/SpannableStringBuilder;
@@ -466,11 +466,11 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/im/engine/models/typing/a;
+    check-cast p2, Lcom/vk/im/engine/models/typing/MsgComposing;
 
     if-eqz p2, :cond_2
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/models/typing/a;->b()Lcom/vk/im/engine/models/typing/ComposingType;
+    invoke-virtual {p2}, Lcom/vk/im/engine/models/typing/MsgComposing;->b()Lcom/vk/im/engine/models/typing/ComposingType;
 
     move-result-object v3
 
@@ -692,11 +692,11 @@
 
     move-result-object p4
 
-    invoke-virtual {p1, p3, p4}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->a(Ljava/lang/Integer;Lcom/vk/im/engine/models/MemberType;)Lcom/vk/im/engine/models/j;
+    invoke-virtual {p1, p3, p4}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->a(Ljava/lang/Integer;Lcom/vk/im/engine/models/MemberType;)Lcom/vk/im/engine/models/Profile;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/im/ui/views/dialogs/DialogItemView;->setSender(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {p2, p1}, Lcom/vk/im/ui/views/dialogs/DialogItemView;->setSender(Lcom/vk/im/engine/models/Profile;)V
 
     goto :goto_6
 
@@ -894,13 +894,13 @@
     if-eqz v2, :cond_4
 
     .line 72
-    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->g:Lcom/vk/im/ui/formatters/c;
+    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->g:Lcom/vk/im/ui/formatters/DialogUnreadCountFormatter;
 
     iget p3, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->countUnread:I
 
     iget-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->h:Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, p3, v0}, Lcom/vk/im/ui/formatters/c;->a(ILjava/lang/StringBuilder;)V
+    invoke-virtual {p2, p3, v0}, Lcom/vk/im/ui/formatters/DialogUnreadCountFormatter;->a(ILjava/lang/StringBuilder;)V
 
     .line 73
     iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->a:Lcom/vk/im/ui/views/dialogs/DialogItemView;
@@ -989,7 +989,7 @@
             "(",
             "Lcom/vk/im/engine/models/messages/Msg;",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/typing/a;",
+            "Lcom/vk/im/engine/models/typing/MsgComposing;",
             ">;)V"
         }
     .end annotation
@@ -1201,13 +1201,13 @@
 
     move-result p2
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->get(I)Lcom/vk/im/engine/models/j;
+    invoke-virtual {p1, p2}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->get(I)Lcom/vk/im/engine/models/Profile;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->d0()Lcom/vk/dto/user/OnlineInfo;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->d0()Lcom/vk/dto/user/OnlineInfo;
 
     move-result-object p1
 
@@ -1327,7 +1327,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/im/ui/themes/a;->a(Lcom/vk/im/engine/models/dialogs/DialogTheme;)I
+    invoke-static {p1}, Lcom/vk/im/ui/themes/DialogThemesExt;->a(Lcom/vk/im/engine/models/dialogs/DialogTheme;)I
 
     move-result p1
 
@@ -1370,11 +1370,11 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->e:Lcom/vk/im/ui/formatters/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->e:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog;->f:Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p2, p1, v2}, Lcom/vk/im/ui/formatters/d;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/lang/StringBuilder;)V
+    invoke-virtual {v0, p2, p1, v2}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/lang/StringBuilder;)V
 
     .line 4
     invoke-virtual {p2}, Lcom/vk/im/engine/models/dialogs/Dialog;->I1()I
@@ -1391,13 +1391,13 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0, p2}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->a(Ljava/lang/Integer;Lcom/vk/im/engine/models/MemberType;)Lcom/vk/im/engine/models/j;
+    invoke-virtual {p1, v0, p2}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->a(Ljava/lang/Integer;Lcom/vk/im/engine/models/MemberType;)Lcom/vk/im/engine/models/Profile;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->T()Z
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->T()Z
 
     move-result v1
 
@@ -1459,13 +1459,13 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v1, p2}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->a(Ljava/lang/Integer;Lcom/vk/im/engine/models/MemberType;)Lcom/vk/im/engine/models/j;
+    invoke-virtual {p1, v1, p2}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->a(Ljava/lang/Integer;Lcom/vk/im/engine/models/MemberType;)Lcom/vk/im/engine/models/Profile;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->U()Z
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->U()Z
 
     move-result v0
 
@@ -1488,7 +1488,7 @@
     .line 1
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -1500,7 +1500,7 @@
     :cond_0
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x3ecccccd    # 0.4f
 
@@ -1522,7 +1522,7 @@
             "Ljava/lang/CharSequence;",
             "Lcom/vk/im/engine/models/ProfilesSimpleInfo;",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/typing/a;",
+            "Lcom/vk/im/engine/models/typing/MsgComposing;",
             ">;ZZZZ)V"
         }
     .end annotation

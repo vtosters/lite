@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static final c:Lkotlin/e;
+.field private static final c:Lkotlin/Lazy2;
 
 .field public static final d:Lcom/vk/libvideo/ui/ActionLinkView$a;
 
@@ -31,18 +31,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/ui/ActionLinkView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/ui/ActionLinkView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/libvideo/ui/ActionLinkView;->d:Lcom/vk/libvideo/ui/ActionLinkView$a;
 
     .line 1
     sget-object v0, Lcom/vk/libvideo/ui/ActionLinkView$Companion$MAX_WIDTH$2;->a:Lcom/vk/libvideo/ui/ActionLinkView$Companion$MAX_WIDTH$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/libvideo/ui/ActionLinkView;->c:Lkotlin/e;
+    sput-object v0, Lcom/vk/libvideo/ui/ActionLinkView;->c:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/libvideo/ui/ActionLinkView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/libvideo/ui/ActionLinkView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -82,7 +82,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/libvideo/ui/ActionLinkView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/libvideo/ui/ActionLinkView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -98,12 +98,12 @@
 
     move-result-object p1
 
-    sget p2, Lcom/vk/libvideo/h;->action_link_view:I
+    sget p2, Lcom/vk/libvideo/R9;->action_link_view:I
 
     invoke-virtual {p1, p2, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 3
-    sget p1, Lcom/vk/libvideo/g;->action_link_icon:I
+    sget p1, Lcom/vk/libvideo/R;->action_link_icon:I
 
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -111,14 +111,14 @@
 
     const-string p2, "findViewById(R.id.action_link_icon)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
     iput-object p1, p0, Lcom/vk/libvideo/ui/ActionLinkView;->a:Landroid/widget/ImageView;
 
     .line 4
-    sget p1, Lcom/vk/libvideo/g;->action_link_text:I
+    sget p1, Lcom/vk/libvideo/R;->action_link_text:I
 
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     const-string p2, "findViewById(R.id.action_link_text)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -140,7 +140,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -190,7 +190,7 @@
 
     if-eqz p1, :cond_1
 
-    sget p1, Lcom/vk/libvideo/j;->live_broadcast_link_open_user:I
+    sget p1, Lcom/vk/libvideo/R11;->live_broadcast_link_open_user:I
 
     goto :goto_1
 
@@ -204,7 +204,7 @@
 
     if-eqz p1, :cond_1
 
-    sget p1, Lcom/vk/libvideo/j;->live_broadcast_link_open_post:I
+    sget p1, Lcom/vk/libvideo/R11;->live_broadcast_link_open_post:I
 
     goto :goto_1
 
@@ -218,7 +218,7 @@
 
     if-eqz p1, :cond_1
 
-    sget p1, Lcom/vk/libvideo/j;->live_broadcast_link_open_poll:I
+    sget p1, Lcom/vk/libvideo/R11;->live_broadcast_link_open_poll:I
 
     goto :goto_1
 
@@ -232,7 +232,7 @@
 
     if-eqz p1, :cond_1
 
-    sget p1, Lcom/vk/libvideo/j;->live_broadcast_link_open_link:I
+    sget p1, Lcom/vk/libvideo/R11;->live_broadcast_link_open_link:I
 
     goto :goto_1
 
@@ -246,7 +246,7 @@
 
     if-eqz p1, :cond_1
 
-    sget p1, Lcom/vk/libvideo/j;->live_broadcast_link_open_product:I
+    sget p1, Lcom/vk/libvideo/R11;->live_broadcast_link_open_product:I
 
     goto :goto_1
 
@@ -284,11 +284,11 @@
     .end sparse-switch
 .end method
 
-.method public static final synthetic a()Lkotlin/e;
+.method public static final synthetic a()Lkotlin/Lazy2;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/libvideo/ui/ActionLinkView;->c:Lkotlin/e;
+    sget-object v0, Lcom/vk/libvideo/ui/ActionLinkView;->c:Lkotlin/Lazy2;
 
     return-object v0
 .end method
@@ -320,7 +320,7 @@
 
     if-eqz p1, :cond_1
 
-    sget p1, Lcom/vk/libvideo/e;->ic_users_16:I
+    sget p1, Lcom/vk/libvideo/R7;->ic_users_16:I
 
     goto :goto_1
 
@@ -334,7 +334,7 @@
 
     if-eqz p1, :cond_1
 
-    sget p1, Lcom/vk/libvideo/e;->ic_user_16:I
+    sget p1, Lcom/vk/libvideo/R7;->ic_user_16:I
 
     goto :goto_1
 
@@ -348,7 +348,7 @@
 
     if-eqz p1, :cond_1
 
-    sget p1, Lcom/vk/libvideo/e;->ic_newsfeed_16:I
+    sget p1, Lcom/vk/libvideo/R7;->ic_newsfeed_16:I
 
     goto :goto_1
 
@@ -362,7 +362,7 @@
 
     if-eqz p1, :cond_1
 
-    sget p1, Lcom/vk/libvideo/e;->ic_poll_16:I
+    sget p1, Lcom/vk/libvideo/R7;->ic_poll_16:I
 
     goto :goto_1
 
@@ -376,7 +376,7 @@
 
     if-eqz p1, :cond_1
 
-    sget p1, Lcom/vk/libvideo/e;->ic_link_16:I
+    sget p1, Lcom/vk/libvideo/R7;->ic_link_16:I
 
     goto :goto_1
 
@@ -390,7 +390,7 @@
 
     if-eqz p1, :cond_1
 
-    sget p1, Lcom/vk/libvideo/e;->ic_services_16:I
+    sget p1, Lcom/vk/libvideo/R7;->ic_services_16:I
 
     goto :goto_1
 
@@ -404,7 +404,7 @@
 
     if-eqz p1, :cond_1
 
-    sget p1, Lcom/vk/libvideo/e;->ic_market_16:I
+    sget p1, Lcom/vk/libvideo/R7;->ic_market_16:I
 
     goto :goto_1
 
@@ -418,21 +418,21 @@
 
     if-eqz p1, :cond_1
 
-    sget p1, Lcom/vk/libvideo/e;->ic_article_16:I
+    sget p1, Lcom/vk/libvideo/R7;->ic_article_16:I
 
     goto :goto_1
 
     .line 10
     :cond_1
     :goto_0
-    sget p1, Lcom/vk/libvideo/e;->ic_link_16:I
+    sget p1, Lcom/vk/libvideo/R7;->ic_link_16:I
 
     .line 11
     :goto_1
-    sget v0, Lcom/vk/libvideo/b;->media_overlay_button_foreground:I
+    sget v0, Lcom/vk/libvideo/R4;->media_overlay_button_foreground:I
 
     .line 12
-    invoke-static {p1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {p1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object p1
 

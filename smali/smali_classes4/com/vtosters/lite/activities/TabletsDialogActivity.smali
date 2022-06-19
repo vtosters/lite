@@ -30,7 +30,7 @@
     const/high16 v0, 0x42000000    # 32.0f
 
     .line 3
-    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v0
 
@@ -39,7 +39,7 @@
     const/high16 v0, 0x443e0000    # 760.0f
 
     .line 4
-    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v0
 
@@ -210,9 +210,9 @@
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/core/view/a;
+    new-instance v0, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
 
-    invoke-direct {v0, p0}, Lcom/vk/core/view/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;-><init>(Landroid/content/Context;)V
 
     .line 3
     iget-boolean v1, p0, Lcom/vtosters/lite/VKActivity;->B:Z

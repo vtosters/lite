@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -89,7 +89,7 @@
 
     move-result-object v10
 
-    invoke-static {v10, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     sget-object v11, Lcom/vk/dto/newsfeed/Owner;->h:Lcom/vk/dto/newsfeed/Owner$b;
@@ -169,7 +169,7 @@
 
     move-result-object v10
 
-    invoke-static {v10, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     sget-object v11, Lcom/vk/dto/newsfeed/Owner;->h:Lcom/vk/dto/newsfeed/Owner$b;
@@ -238,7 +238,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 17
     sget-object v5, Lcom/vk/dto/stickers/SpecialEvent;->e:Lcom/vk/dto/stickers/SpecialEvent$b;
@@ -286,7 +286,7 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v4 .. v9}, Lcom/vk/dto/stickers/SpecialEvents;-><init>(Ljava/util/ArrayList;JILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/dto/stickers/SpecialEvents;-><init>(Ljava/util/ArrayList;JILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     :goto_8
     return-object p1

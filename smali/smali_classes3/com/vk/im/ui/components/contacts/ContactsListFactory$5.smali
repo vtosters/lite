@@ -3,7 +3,7 @@
 .source "ContactsListFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/d;
+.implements Lkotlin/jvm/b/Functions4;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/d<",
+        "Lkotlin/jvm/b/Functions4<",
         "Lcom/vk/im/engine/models/Source;",
         "Lcom/vk/im/ui/components/contacts/SortOrder;",
         "Ljava/lang/Boolean;",
-        "Lcom/vk/im/ui/components/contacts/tasks/b;",
+        "Lcom/vk/im/ui/components/contacts/tasks/FriendsListLoadCmd;",
         ">;"
     }
 .end annotation
@@ -58,11 +58,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/Source;Lcom/vk/im/ui/components/contacts/SortOrder;Z)Lcom/vk/im/ui/components/contacts/tasks/b;
+.method public final a(Lcom/vk/im/engine/models/Source;Lcom/vk/im/ui/components/contacts/SortOrder;Z)Lcom/vk/im/ui/components/contacts/tasks/FriendsListLoadCmd;
     .locals 7
 
     .line 2
-    new-instance p2, Lcom/vk/im/ui/components/contacts/tasks/b;
+    new-instance p2, Lcom/vk/im/ui/components/contacts/tasks/FriendsListLoadCmd;
 
     .line 3
     sget-object v5, Lcom/vk/im/ui/components/contacts/SortOrder;->BY_NAME:Lcom/vk/im/ui/components/contacts/SortOrder;
@@ -80,7 +80,7 @@
     move-object v4, p1
 
     .line 4
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/components/contacts/tasks/b;-><init>(IIZLcom/vk/im/engine/models/Source;Lcom/vk/im/ui/components/contacts/SortOrder;Ljava/lang/Object;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/components/contacts/tasks/FriendsListLoadCmd;-><init>(IIZLcom/vk/im/engine/models/Source;Lcom/vk/im/ui/components/contacts/SortOrder;Ljava/lang/Object;)V
 
     return-object p2
 .end method
@@ -99,7 +99,7 @@
 
     move-result p3
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/im/ui/components/contacts/ContactsListFactory$5;->a(Lcom/vk/im/engine/models/Source;Lcom/vk/im/ui/components/contacts/SortOrder;Z)Lcom/vk/im/ui/components/contacts/tasks/b;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/im/ui/components/contacts/ContactsListFactory$5;->a(Lcom/vk/im/engine/models/Source;Lcom/vk/im/ui/components/contacts/SortOrder;Z)Lcom/vk/im/ui/components/contacts/tasks/FriendsListLoadCmd;
 
     move-result-object p1
 

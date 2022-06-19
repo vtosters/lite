@@ -3,7 +3,7 @@
 .source "AttachmentsEditorView.java"
 
 # interfaces
-.implements Lcom/vk/attachpicker/m;
+.implements Lcom/vk/attachpicker/AttachmentsEditorUtils1;
 .implements Landroid/view/View$OnClickListener;
 
 
@@ -43,11 +43,11 @@
 
 .field private N:Z
 
-.field private O:Lio/reactivex/disposables/b;
+.field private O:Lio/reactivex/disposables/Disposable;
 
 .field private P:Lcom/vk/core/fragments/FragmentImpl;
 
-.field private Q:Lcom/vk/attachpicker/k;
+.field private Q:Lcom/vk/attachpicker/AttachmentsEditorUtils;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -386,11 +386,11 @@
 
     check-cast p2, Landroid/widget/ProgressBar;
 
-    new-instance p3, Lcom/vk/core/drawable/c;
+    new-instance p3, Lcom/vk/core/drawable/CircularProgressDrawable;
 
     const/4 p4, 0x1
 
-    invoke-direct {p3, p4}, Lcom/vk/core/drawable/c;-><init>(Z)V
+    invoke-direct {p3, p4}, Lcom/vk/core/drawable/CircularProgressDrawable;-><init>(Z)V
 
     invoke-virtual {p2, p3}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -401,9 +401,9 @@
 
     check-cast p2, Landroid/widget/ProgressBar;
 
-    new-instance p3, Lcom/vk/core/drawable/c;
+    new-instance p3, Lcom/vk/core/drawable/CircularProgressDrawable;
 
-    invoke-direct {p3, p4}, Lcom/vk/core/drawable/c;-><init>(Z)V
+    invoke-direct {p3, p4}, Lcom/vk/core/drawable/CircularProgressDrawable;-><init>(Z)V
 
     invoke-virtual {p2, p3}, Landroid/widget/ProgressBar;->setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -870,9 +870,9 @@
 
     check-cast p2, Landroid/widget/ProgressBar;
 
-    new-instance v1, Lcom/vk/core/drawable/c;
+    new-instance v1, Lcom/vk/core/drawable/CircularProgressDrawable;
 
-    invoke-direct {v1, v6}, Lcom/vk/core/drawable/c;-><init>(Z)V
+    invoke-direct {v1, v6}, Lcom/vk/core/drawable/CircularProgressDrawable;-><init>(Z)V
 
     invoke-virtual {p2, v1}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -883,9 +883,9 @@
 
     check-cast p2, Landroid/widget/ProgressBar;
 
-    new-instance v1, Lcom/vk/core/drawable/c;
+    new-instance v1, Lcom/vk/core/drawable/CircularProgressDrawable;
 
-    invoke-direct {v1, v6}, Lcom/vk/core/drawable/c;-><init>(Z)V
+    invoke-direct {v1, v6}, Lcom/vk/core/drawable/CircularProgressDrawable;-><init>(Z)V
 
     invoke-virtual {p2, v1}, Landroid/widget/ProgressBar;->setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -1183,11 +1183,11 @@
 
     check-cast v1, Landroid/widget/ProgressBar;
 
-    new-instance v2, Lcom/vk/core/drawable/c;
+    new-instance v2, Lcom/vk/core/drawable/CircularProgressDrawable;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, v3}, Lcom/vk/core/drawable/c;-><init>(Z)V
+    invoke-direct {v2, v3}, Lcom/vk/core/drawable/CircularProgressDrawable;-><init>(Z)V
 
     invoke-virtual {v1, v2}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -1198,9 +1198,9 @@
 
     check-cast v1, Landroid/widget/ProgressBar;
 
-    new-instance v2, Lcom/vk/core/drawable/c;
+    new-instance v2, Lcom/vk/core/drawable/CircularProgressDrawable;
 
-    invoke-direct {v2, v3}, Lcom/vk/core/drawable/c;-><init>(Z)V
+    invoke-direct {v2, v3}, Lcom/vk/core/drawable/CircularProgressDrawable;-><init>(Z)V
 
     invoke-virtual {v1, v2}, Landroid/widget/ProgressBar;->setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -1269,7 +1269,7 @@
     return-object p2
 .end method
 
-.method static synthetic a(Lcom/vk/dto/common/VideoFile;Lcom/vk/imageloader/view/VKImageView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/dto/common/VideoFile;)Lkotlin/m;
+.method static synthetic a(Lcom/vk/dto/common/VideoFile;Lcom/vk/imageloader/view/VKImageView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/dto/common/VideoFile;)Lkotlin/Unit;
     .locals 1
 
     .line 160
@@ -1315,7 +1315,7 @@
     invoke-virtual {p2, p0}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     .line 164
-    sget-object p0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p0
 .end method
@@ -1642,7 +1642,7 @@
 
     move-object v3, p3
 
-    invoke-virtual/range {v0 .. v8}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Landroid/view/View;Z)V
+    invoke-virtual/range {v0 .. v8}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Landroid/view/View;Z)V
 
     return-void
 .end method
@@ -1662,13 +1662,13 @@
     return-void
 .end method
 
-.method private a(Lcom/vtosters/lite/attachments/b;)V
+.method private a(Lcom/vtosters/lite/attachments/PendingAttachment;)V
     .locals 3
 
     .line 220
     new-instance v0, Lcom/vtosters/lite/ui/AttachmentsEditorView$c;
 
-    invoke-direct {v0, p0, p1}, Lcom/vtosters/lite/ui/AttachmentsEditorView$c;-><init>(Lcom/vtosters/lite/ui/AttachmentsEditorView;Lcom/vtosters/lite/attachments/b;)V
+    invoke-direct {v0, p0, p1}, Lcom/vtosters/lite/ui/AttachmentsEditorView$c;-><init>(Lcom/vtosters/lite/ui/AttachmentsEditorView;Lcom/vtosters/lite/attachments/PendingAttachment;)V
 
     const-wide/16 v1, 0x12c
 
@@ -1695,11 +1695,11 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vtosters/lite/ui/AttachmentsEditorView;Lcom/vtosters/lite/attachments/b;)V
+.method static synthetic a(Lcom/vtosters/lite/ui/AttachmentsEditorView;Lcom/vtosters/lite/attachments/PendingAttachment;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vtosters/lite/attachments/b;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vtosters/lite/attachments/PendingAttachment;)V
 
     return-void
 .end method
@@ -1929,11 +1929,11 @@
     return-void
 .end method
 
-.method static synthetic k()Lkotlin/m;
+.method static synthetic k()Lkotlin/Unit;
     .locals 1
 
     .line 1
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -2356,7 +2356,7 @@
 
     check-cast v2, Lcom/vk/dto/common/Attachment;
 
-    invoke-static {v1, v2}, Lcom/vtosters/lite/attachments/a;->a(Lcom/vk/dto/common/Attachment;Lcom/vk/dto/common/Attachment;)Z
+    invoke-static {v1, v2}, Lcom/vtosters/lite/attachments/AttachmentUtils;->a(Lcom/vk/dto/common/Attachment;Lcom/vk/dto/common/Attachment;)Z
 
     move-result v1
 
@@ -2622,23 +2622,23 @@
 
 
 # virtual methods
-.method public synthetic a(Lio/reactivex/disposables/b;)Lkotlin/m;
+.method public synthetic a(Lio/reactivex/disposables/Disposable;)Lkotlin/Unit;
     .locals 1
 
     .line 165
-    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->O:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->O:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
     .line 166
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 167
     :cond_0
-    iput-object p1, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->O:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->O:Lio/reactivex/disposables/Disposable;
 
     .line 168
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -2698,14 +2698,14 @@
 
     .line 118
     :cond_1
-    instance-of v0, p1, Lcom/vtosters/lite/attachments/b;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PendingAttachment;
 
     if-eqz v0, :cond_2
 
     .line 119
-    check-cast p1, Lcom/vtosters/lite/attachments/b;
+    check-cast p1, Lcom/vtosters/lite/attachments/PendingAttachment;
 
-    invoke-interface {p1}, Lcom/vtosters/lite/attachments/b;->V()I
+    invoke-interface {p1}, Lcom/vtosters/lite/attachments/PendingAttachment;->V()I
 
     move-result p1
 
@@ -2781,7 +2781,7 @@
     .line 9
     iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->b:Ljava/util/ArrayList;
 
-    invoke-static {p1, v0}, Lcom/vtosters/lite/attachments/a;->a(Lcom/vk/dto/common/Attachment;Ljava/util/List;)I
+    invoke-static {p1, v0}, Lcom/vtosters/lite/attachments/AttachmentUtils;->a(Lcom/vk/dto/common/Attachment;Ljava/util/List;)I
 
     move-result v0
 
@@ -2889,7 +2889,7 @@
     if-eqz p1, :cond_1e
 
     .line 26
-    invoke-direct {p0, v1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vtosters/lite/attachments/b;)V
+    invoke-direct {p0, v1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vtosters/lite/attachments/PendingAttachment;)V
 
     goto/16 :goto_4
 
@@ -2966,7 +2966,7 @@
     .line 35
     check-cast p1, Lcom/vtosters/lite/attachments/PendingAudioAttachment;
 
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vtosters/lite/attachments/b;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vtosters/lite/attachments/PendingAttachment;)V
 
     goto/16 :goto_4
 
@@ -3020,7 +3020,7 @@
     if-eqz p1, :cond_1e
 
     .line 43
-    invoke-direct {p0, v1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vtosters/lite/attachments/b;)V
+    invoke-direct {p0, v1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vtosters/lite/attachments/PendingAttachment;)V
 
     goto/16 :goto_4
 
@@ -3149,7 +3149,7 @@
 
     move-result-object v5
 
-    invoke-static {v3, v4, v5}, Lcom/vtosters/lite/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {v3, v4, v5}, Lcom/vtosters/lite/ui/b0/o/DocumentHolder;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3204,7 +3204,7 @@
 
     move-result-object v1
 
-    invoke-static {v6, v7, v1}, Lcom/vtosters/lite/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {v6, v7, v1}, Lcom/vtosters/lite/ui/b0/o/DocumentHolder;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3252,7 +3252,7 @@
     .line 66
     check-cast p1, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
 
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vtosters/lite/attachments/b;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->a(Lcom/vtosters/lite/attachments/PendingAttachment;)V
 
     goto/16 :goto_4
 
@@ -4217,7 +4217,7 @@
     check-cast v1, Lcom/vk/dto/common/Attachment;
 
     .line 3
-    instance-of v1, v1, Lcom/vtosters/lite/attachments/b;
+    instance-of v1, v1, Lcom/vtosters/lite/attachments/PendingAttachment;
 
     if-eqz v1, :cond_0
 
@@ -4277,7 +4277,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/k;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/AttachmentsEditorUtils;
 
     if-nez v0, :cond_0
 
@@ -4316,9 +4316,9 @@
 
     .line 5
     :cond_1
-    iget-object p1, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/k;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/AttachmentsEditorUtils;
 
-    invoke-interface {p1, v1}, Lcom/vk/attachpicker/k;->a(Lcom/vtosters/lite/attachments/VideoAttachment;)V
+    invoke-interface {p1, v1}, Lcom/vk/attachpicker/AttachmentsEditorUtils;->a(Lcom/vtosters/lite/attachments/VideoAttachment;)V
 
     goto/16 :goto_0
 
@@ -4343,9 +4343,9 @@
 
     .line 8
     :cond_2
-    iget-object p1, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/k;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/AttachmentsEditorUtils;
 
-    invoke-interface {p1, v1}, Lcom/vk/attachpicker/k;->a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
+    invoke-interface {p1, v1}, Lcom/vk/attachpicker/AttachmentsEditorUtils;->a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
 
     goto :goto_0
 
@@ -4360,7 +4360,7 @@
     if-eqz v0, :cond_3
 
     .line 10
-    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/k;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/AttachmentsEditorUtils;
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -4368,7 +4368,7 @@
 
     check-cast p1, Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 
-    invoke-interface {v0, p1}, Lcom/vk/attachpicker/k;->a(Lcom/vtosters/lite/attachments/PendingVideoAttachment;)V
+    invoke-interface {v0, p1}, Lcom/vk/attachpicker/AttachmentsEditorUtils;->a(Lcom/vtosters/lite/attachments/PendingVideoAttachment;)V
 
     goto :goto_0
 
@@ -4383,7 +4383,7 @@
     if-eqz v0, :cond_4
 
     .line 12
-    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/k;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/AttachmentsEditorUtils;
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -4391,15 +4391,15 @@
 
     check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-interface {v0, p1}, Lcom/vk/attachpicker/k;->a(Lcom/vtosters/lite/attachments/VideoAttachment;)V
+    invoke-interface {v0, p1}, Lcom/vk/attachpicker/AttachmentsEditorUtils;->a(Lcom/vtosters/lite/attachments/VideoAttachment;)V
 
     goto :goto_0
 
     .line 13
     :cond_4
-    iget-object p1, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/k;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/AttachmentsEditorUtils;
 
-    invoke-interface {p1, v1}, Lcom/vk/attachpicker/k;->a(Lcom/vtosters/lite/attachments/PendingVideoAttachment;)V
+    invoke-interface {p1, v1}, Lcom/vk/attachpicker/AttachmentsEditorUtils;->a(Lcom/vtosters/lite/attachments/PendingVideoAttachment;)V
 
     goto :goto_0
 
@@ -4414,7 +4414,7 @@
     if-eqz v0, :cond_5
 
     .line 15
-    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/k;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/AttachmentsEditorUtils;
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -4422,7 +4422,7 @@
 
     check-cast p1, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
-    invoke-interface {v0, p1}, Lcom/vk/attachpicker/k;->a(Lcom/vtosters/lite/attachments/PendingPhotoAttachment;)V
+    invoke-interface {v0, p1}, Lcom/vk/attachpicker/AttachmentsEditorUtils;->a(Lcom/vtosters/lite/attachments/PendingPhotoAttachment;)V
 
     goto :goto_0
 
@@ -4437,7 +4437,7 @@
     if-eqz v0, :cond_6
 
     .line 17
-    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/k;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/AttachmentsEditorUtils;
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -4445,15 +4445,15 @@
 
     check-cast p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    invoke-interface {v0, p1}, Lcom/vk/attachpicker/k;->a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
+    invoke-interface {v0, p1}, Lcom/vk/attachpicker/AttachmentsEditorUtils;->a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
 
     goto :goto_0
 
     .line 18
     :cond_6
-    iget-object p1, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/k;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/AttachmentsEditorUtils;
 
-    invoke-interface {p1, v1}, Lcom/vk/attachpicker/k;->a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
+    invoke-interface {p1, v1}, Lcom/vk/attachpicker/AttachmentsEditorUtils;->a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
 
     :goto_0
     return-void
@@ -4498,15 +4498,15 @@
     return-void
 .end method
 
-.method public setAttachmentsClickListener(Lcom/vk/attachpicker/k;)V
+.method public setAttachmentsClickListener(Lcom/vk/attachpicker/AttachmentsEditorUtils;)V
     .locals 0
-    .param p1    # Lcom/vk/attachpicker/k;
+    .param p1    # Lcom/vk/attachpicker/AttachmentsEditorUtils;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
     .line 1
-    iput-object p1, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/k;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/AttachmentsEditorView;->Q:Lcom/vk/attachpicker/AttachmentsEditorUtils;
 
     return-void
 .end method

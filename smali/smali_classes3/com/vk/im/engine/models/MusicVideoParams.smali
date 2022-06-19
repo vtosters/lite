@@ -69,7 +69,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/MusicVideoParams$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/MusicVideoParams$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/MusicVideoParams$a;
@@ -103,7 +103,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v9}, Lcom/vk/im/engine/models/MusicVideoParams;-><init>(Ljava/lang/String;JZLjava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/im/engine/models/MusicVideoParams;-><init>(Ljava/lang/String;JZLjava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -245,7 +245,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;JZLjava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/String;JZLjava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 5
 
     and-int/lit8 p9, p8, 0x1
@@ -361,35 +361,35 @@
     move-result v5
 
     .line 6
-    sget-object v0, Lcom/vk/dto/common/data/c;->a:Lcom/vk/dto/common/data/c$a;
+    sget-object v0, Lcom/vk/dto/common/data/JsonParser;->a:Lcom/vk/dto/common/data/JsonParser$a;
 
-    sget-object v1, Lcom/vk/dto/music/Genre;->c:Lcom/vk/dto/common/data/c;
+    sget-object v1, Lcom/vk/dto/music/Genre;->c:Lcom/vk/dto/common/data/JsonParser;
 
     const-string v6, "genres"
 
-    invoke-virtual {v0, p1, v6, v1}, Lcom/vk/dto/common/data/c$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
+    invoke-virtual {v0, p1, v6, v1}, Lcom/vk/dto/common/data/JsonParser$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
 
     move-result-object v6
 
     .line 7
-    sget-object v0, Lcom/vk/dto/common/data/c;->a:Lcom/vk/dto/common/data/c$a;
+    sget-object v0, Lcom/vk/dto/common/data/JsonParser;->a:Lcom/vk/dto/common/data/JsonParser$a;
 
-    sget-object v1, Lcom/vk/dto/music/Artist;->B:Lcom/vk/dto/common/data/c;
+    sget-object v1, Lcom/vk/dto/music/Artist;->B:Lcom/vk/dto/common/data/JsonParser;
 
     const-string v7, "main_artists"
 
-    invoke-virtual {v0, p1, v7, v1}, Lcom/vk/dto/common/data/c$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
+    invoke-virtual {v0, p1, v7, v1}, Lcom/vk/dto/common/data/JsonParser$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
 
     move-result-object v7
 
     .line 8
-    sget-object v0, Lcom/vk/dto/common/data/c;->a:Lcom/vk/dto/common/data/c$a;
+    sget-object v0, Lcom/vk/dto/common/data/JsonParser;->a:Lcom/vk/dto/common/data/JsonParser$a;
 
-    sget-object v1, Lcom/vk/dto/music/Artist;->B:Lcom/vk/dto/common/data/c;
+    sget-object v1, Lcom/vk/dto/music/Artist;->B:Lcom/vk/dto/common/data/JsonParser;
 
     const-string v8, "featured_artists"
 
-    invoke-virtual {v0, p1, v8, v1}, Lcom/vk/dto/common/data/c$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
+    invoke-virtual {v0, p1, v8, v1}, Lcom/vk/dto/common/data/JsonParser$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
 
     move-result-object v8
 
@@ -454,7 +454,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/MusicVideoParams;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -478,7 +478,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/MusicVideoParams;->d:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -488,7 +488,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/MusicVideoParams;->e:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -498,7 +498,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/models/MusicVideoParams;->f:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

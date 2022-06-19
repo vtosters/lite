@@ -3,7 +3,7 @@
 .source "IdentityAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
     iget-object p1, p1, Lcom/vk/identity/adapters/IdentityAdapter$ButtonHolder;->a:Lcom/vk/identity/adapters/IdentityAdapter;
 
-    invoke-static {p1}, Lcom/vk/identity/adapters/IdentityAdapter;->c(Lcom/vk/identity/adapters/IdentityAdapter;)Lkotlin/jvm/b/d;
+    invoke-static {p1}, Lcom/vk/identity/adapters/IdentityAdapter;->c(Lcom/vk/identity/adapters/IdentityAdapter;)Lkotlin/jvm/b/Functions4;
 
     move-result-object p1
 
@@ -76,7 +76,7 @@
 
     const/4 v2, 0x0
 
-    invoke-interface {p1, v0, v2, v1}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0, v2, v1}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -89,7 +89,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/identity/adapters/IdentityAdapter$ButtonHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

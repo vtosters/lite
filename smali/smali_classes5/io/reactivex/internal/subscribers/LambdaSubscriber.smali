@@ -3,10 +3,10 @@
 .source "LambdaSubscriber.java"
 
 # interfaces
-.implements Lc/a/h;
-.implements Le/b/d;
-.implements Lio/reactivex/disposables/b;
-.implements Lc/a/c0/b;
+.implements Lio/reactivex/FlowableSubscriber;
+.implements Le/b/Subscription;
+.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/observers/DisposableObserver/LambdaConsumerIntrospection;
 
 
 # annotations
@@ -16,13 +16,13 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Le/b/d;",
+        "Le/b/Subscription;",
         ">;",
-        "Lc/a/h<",
+        "Lio/reactivex/FlowableSubscriber<",
         "TT;>;",
-        "Le/b/d;",
-        "Lio/reactivex/disposables/b;",
-        "Lc/a/c0/b;"
+        "Le/b/Subscription;",
+        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/observers/DisposableObserver/LambdaConsumerIntrospection;"
     }
 .end annotation
 
@@ -32,12 +32,12 @@
 
 
 # instance fields
-.field final onComplete:Lc/a/z/a;
+.field final onComplete:Lio/reactivex/functions/Action;
 
-.field final onError:Lc/a/z/g;
+.field final onError:Lio/reactivex/functions/Consumer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/g<",
+            "Lio/reactivex/functions/Consumer<",
             "-",
             "Ljava/lang/Throwable;",
             ">;"
@@ -45,21 +45,21 @@
     .end annotation
 .end field
 
-.field final onNext:Lc/a/z/g;
+.field final onNext:Lio/reactivex/functions/Consumer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/g<",
+            "Lio/reactivex/functions/Consumer<",
             "-TT;>;"
         }
     .end annotation
 .end field
 
-.field final onSubscribe:Lc/a/z/g;
+.field final onSubscribe:Lio/reactivex/functions/Consumer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/g<",
+            "Lio/reactivex/functions/Consumer<",
             "-",
-            "Le/b/d;",
+            "Le/b/Subscription;",
             ">;"
         }
     .end annotation
@@ -67,21 +67,21 @@
 
 
 # direct methods
-.method public constructor <init>(Lc/a/z/g;Lc/a/z/g;Lc/a/z/a;Lc/a/z/g;)V
+.method public constructor <init>(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Action;Lio/reactivex/functions/Consumer;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/z/g<",
+            "Lio/reactivex/functions/Consumer<",
             "-TT;>;",
-            "Lc/a/z/g<",
+            "Lio/reactivex/functions/Consumer<",
             "-",
             "Ljava/lang/Throwable;",
             ">;",
-            "Lc/a/z/a;",
-            "Lc/a/z/g<",
+            "Lio/reactivex/functions/Action;",
+            "Lio/reactivex/functions/Consumer<",
             "-",
-            "Le/b/d;",
+            "Le/b/Subscription;",
             ">;)V"
         }
     .end annotation
@@ -90,16 +90,16 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onNext:Lc/a/z/g;
+    iput-object p1, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onNext:Lio/reactivex/functions/Consumer;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onError:Lc/a/z/g;
+    iput-object p2, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onError:Lio/reactivex/functions/Consumer;
 
     .line 4
-    iput-object p3, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onComplete:Lc/a/z/a;
+    iput-object p3, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onComplete:Lio/reactivex/functions/Action;
 
     .line 5
-    iput-object p4, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onSubscribe:Lc/a/z/g;
+    iput-object p4, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onSubscribe:Lio/reactivex/functions/Consumer;
 
     return-void
 .end method
@@ -114,18 +114,18 @@
 
     move-result-object v0
 
-    check-cast v0, Le/b/d;
+    check-cast v0, Le/b/Subscription;
 
-    invoke-interface {v0, p1, p2}, Le/b/d;->a(J)V
+    invoke-interface {v0, p1, p2}, Le/b/Subscription;->a(J)V
 
     return-void
 .end method
 
-.method public a(Le/b/d;)V
+.method public a(Le/b/Subscription;)V
     .locals 1
 
     .line 1
-    invoke-static {p0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Le/b/d;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Le/b/Subscription;)Z
 
     move-result v0
 
@@ -133,9 +133,9 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onSubscribe:Lc/a/z/g;
+    iget-object v0, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onSubscribe:Lio/reactivex/functions/Consumer;
 
-    invoke-interface {v0, p0}, Lc/a/z/g;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p0}, Lio/reactivex/functions/Consumer;->accept(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -145,10 +145,10 @@
     move-exception v0
 
     .line 3
-    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 4
-    invoke-interface {p1}, Le/b/d;->cancel()V
+    invoke-interface {p1}, Le/b/Subscription;->cancel()V
 
     .line 5
     invoke-virtual {p0, v0}, Lio/reactivex/internal/subscribers/LambdaSubscriber;->a(Ljava/lang/Throwable;)V
@@ -175,9 +175,9 @@
 
     .line 8
     :try_start_0
-    iget-object v0, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onError:Lc/a/z/g;
+    iget-object v0, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onError:Lio/reactivex/functions/Consumer;
 
-    invoke-interface {v0, p1}, Lc/a/z/g;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lio/reactivex/functions/Consumer;->accept(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -187,7 +187,7 @@
     move-exception v0
 
     .line 9
-    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 10
     new-instance v1, Lio/reactivex/exceptions/CompositeException;
@@ -206,13 +206,13 @@
 
     invoke-direct {v1, v2}, Lio/reactivex/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
 
-    invoke-static {v1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     .line 11
     :cond_0
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -235,9 +235,9 @@
 
     .line 8
     :try_start_0
-    iget-object v0, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onComplete:Lc/a/z/a;
+    iget-object v0, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onComplete:Lio/reactivex/functions/Action;
 
-    invoke-interface {v0}, Lc/a/z/a;->run()V
+    invoke-interface {v0}, Lio/reactivex/functions/Action;->run()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -247,10 +247,10 @@
     move-exception v0
 
     .line 9
-    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 10
-    invoke-static {v0}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :cond_0
     :goto_0
@@ -274,9 +274,9 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onNext:Lc/a/z/g;
+    iget-object v0, p0, Lio/reactivex/internal/subscribers/LambdaSubscriber;->onNext:Lio/reactivex/functions/Consumer;
 
-    invoke-interface {v0, p1}, Lc/a/z/g;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lio/reactivex/functions/Consumer;->accept(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -286,16 +286,16 @@
     move-exception p1
 
     .line 3
-    invoke-static {p1}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 4
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Le/b/d;
+    check-cast v0, Le/b/Subscription;
 
-    invoke-interface {v0}, Le/b/d;->cancel()V
+    invoke-interface {v0}, Le/b/Subscription;->cancel()V
 
     .line 5
     invoke-virtual {p0, p1}, Lio/reactivex/internal/subscribers/LambdaSubscriber;->a(Ljava/lang/Throwable;)V

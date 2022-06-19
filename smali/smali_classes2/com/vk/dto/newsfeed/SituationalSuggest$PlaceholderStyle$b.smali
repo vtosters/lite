@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -58,7 +58,7 @@
     move-object v1, v0
 
     :goto_0
-    invoke-static {v1}, Lcom/vk/dto/newsfeed/g;->a(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/vk/dto/newsfeed/SituationalSuggest1;->a(Ljava/lang/String;)I
 
     move-result v1
 
@@ -77,7 +77,7 @@
     move-object v2, v0
 
     :goto_1
-    invoke-static {v2}, Lcom/vk/dto/newsfeed/g;->a(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/vk/dto/newsfeed/SituationalSuggest1;->a(Ljava/lang/String;)I
 
     move-result v2
 
@@ -96,7 +96,7 @@
     move-object v3, v0
 
     :goto_2
-    invoke-static {v3}, Lcom/vk/dto/newsfeed/g;->a(Ljava/lang/String;)I
+    invoke-static {v3}, Lcom/vk/dto/newsfeed/SituationalSuggest1;->a(Ljava/lang/String;)I
 
     move-result v3
 
@@ -110,7 +110,7 @@
     move-result-object v0
 
     :cond_3
-    invoke-static {v0}, Lcom/vk/dto/newsfeed/g;->a(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/vk/dto/newsfeed/SituationalSuggest1;->a(Ljava/lang/String;)I
 
     move-result v4
 

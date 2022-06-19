@@ -3,7 +3,7 @@
 .source "PostPreviewPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -54,13 +54,13 @@
 
     iget-object v0, v0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter$onPublishButtonClicked$2;->this$0:Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/b;
+    invoke-static {v0}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/postpreview/b;->h0(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->h0(Z)V
 
     .line 2
     instance-of v0, p1, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;
@@ -83,7 +83,7 @@
 
     iget-object v1, v1, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter$onPublishButtonClicked$2;->this$0:Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;
 
-    invoke-static {v1}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/b;
+    invoke-static {v1}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
     move-result-object v1
 
@@ -99,7 +99,7 @@
 
     move-result-object p1
 
-    invoke-interface {v1, v0, p1}, Lcom/vk/newsfeed/postpreview/b;->a(Ljava/lang/Integer;Ljava/lang/String;)V
+    invoke-interface {v1, v0, p1}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->a(Ljava/lang/Integer;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -109,11 +109,11 @@
 
     iget-object p1, p1, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter$onPublishButtonClicked$2;->this$0:Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/b;
+    invoke-static {p1}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
     move-result-object p1
 
-    invoke-interface {p1, v0}, Lcom/vk/newsfeed/postpreview/b;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-interface {p1, v0}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     goto :goto_0
 
@@ -123,11 +123,11 @@
 
     iget-object p1, p1, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter$onPublishButtonClicked$2;->this$0:Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/b;
+    invoke-static {p1}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/postpreview/b;->b4()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->b4()V
 
     :goto_0
     return-void

@@ -3,7 +3,7 @@
 .source "PostPreviewPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/postpreview/a;
+.implements Lcom/vk/newsfeed/postpreview/PostPreviewContract;
 
 
 # instance fields
@@ -11,27 +11,27 @@
 
 .field private b:Ljava/lang/String;
 
-.field private c:Lkotlin/jvm/b/a;
+.field private c:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final d:Lcom/vk/newsfeed/postpreview/b;
+.field private final d:Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/newsfeed/postpreview/b;)V
+.method public constructor <init>(Lcom/vk/newsfeed/postpreview/PostPreviewContract1;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/b;
+    iput-object p1, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
     return-void
 .end method
@@ -45,19 +45,19 @@
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/dto/newsfeed/e;ZZ)V
+.method private final a(Lcom/vk/dto/newsfeed/PostPreviewWithInfo;ZZ)V
     .locals 28
 
     move-object/from16 v6, p0
 
     .line 17
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v7
 
     const-string v0, "VKAccountManager.getCurrent()"
 
-    invoke-static {v7, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v8, 0x0
 
@@ -70,7 +70,7 @@
     .line 18
     new-instance v0, Lcom/vk/dto/newsfeed/Owner;
 
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->b()Lcom/vk/dto/group/Group;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->b()Lcom/vk/dto/group/Group;
 
     move-result-object v1
 
@@ -86,7 +86,7 @@
     :goto_0
     neg-int v11, v1
 
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->b()Lcom/vk/dto/group/Group;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->b()Lcom/vk/dto/group/Group;
 
     move-result-object v1
 
@@ -102,7 +102,7 @@
     move-object v12, v9
 
     :goto_1
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->b()Lcom/vk/dto/group/Group;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->b()Lcom/vk/dto/group/Group;
 
     move-result-object v1
 
@@ -118,7 +118,7 @@
     move-object v13, v9
 
     :goto_2
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->b()Lcom/vk/dto/group/Group;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->b()Lcom/vk/dto/group/Group;
 
     move-result-object v1
 
@@ -144,7 +144,7 @@
 
     move-object v10, v0
 
-    invoke-direct/range {v10 .. v18}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v10 .. v18}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_4
 
@@ -152,19 +152,19 @@
     :cond_4
     new-instance v0, Lcom/vk/dto/newsfeed/Owner;
 
-    invoke-virtual {v7}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v7}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v20
 
-    invoke-virtual {v7}, Lb/h/h/d/c;->Z()Ljava/lang/String;
+    invoke-virtual {v7}, Lcom/vk/auth/api/VKAccount;->Z()Ljava/lang/String;
 
     move-result-object v21
 
-    invoke-virtual {v7}, Lb/h/h/d/c;->d0()Ljava/lang/String;
+    invoke-virtual {v7}, Lcom/vk/auth/api/VKAccount;->d0()Ljava/lang/String;
 
     move-result-object v22
 
-    invoke-virtual {v7}, Lb/h/h/d/c;->G0()Lcom/vk/dto/common/VerifyInfo$VerifyInfoJSONSerialize;
+    invoke-virtual {v7}, Lcom/vk/auth/api/VKAccount;->G0()Lcom/vk/dto/common/VerifyInfo$VerifyInfoJSONSerialize;
 
     move-result-object v23
 
@@ -178,14 +178,14 @@
 
     move-object/from16 v19, v0
 
-    invoke-direct/range {v19 .. v27}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v19 .. v27}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 20
     :goto_4
     iput-object v0, v6, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->a:Lcom/vk/dto/newsfeed/Owner;
 
     .line 21
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object v0
 
@@ -225,7 +225,7 @@
     invoke-static/range {v0 .. v5}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->a(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;ZZZILjava/lang/Object;)V
 
     .line 24
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->a()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->a()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v0
 
@@ -236,7 +236,7 @@
     if-eqz p2, :cond_6
 
     .line 25
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->b()Lcom/vk/dto/group/Group;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->b()Lcom/vk/dto/group/Group;
 
     move-result-object v0
 
@@ -248,7 +248,7 @@
 
     .line 26
     :cond_6
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->d()Lcom/vk/dto/user/UserProfile;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->d()Lcom/vk/dto/user/UserProfile;
 
     move-result-object v0
 
@@ -271,10 +271,10 @@
 
     .line 27
     :goto_6
-    iget-object v1, v6, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/b;
+    iget-object v1, v6, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
     .line 28
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->a()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->a()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v2
 
@@ -289,7 +289,7 @@
 
     .line 29
     :goto_7
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->a()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->a()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v3
 
@@ -297,9 +297,9 @@
 
     if-eqz v3, :cond_a
 
-    iget-object v4, v6, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/b;
+    iget-object v4, v6, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
-    invoke-interface {v4}, Lcom/vk/newsfeed/postpreview/b;->r4()I
+    invoke-interface {v4}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->r4()I
 
     move-result v4
 
@@ -322,11 +322,11 @@
 
     .line 30
     :goto_8
-    invoke-virtual {v7}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v7}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v0
 
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->d()Lcom/vk/dto/user/UserProfile;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->d()Lcom/vk/dto/user/UserProfile;
 
     move-result-object v4
 
@@ -353,11 +353,11 @@
     move/from16 v3, p2
 
     .line 31
-    invoke-interface/range {v0 .. v5}, Lcom/vk/newsfeed/postpreview/b;->a(Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;)V
+    invoke-interface/range {v0 .. v5}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->a(Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;)V
 
     .line 32
     :cond_c
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object v0
 
@@ -371,7 +371,7 @@
     if-eqz v0, :cond_d
 
     .line 34
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object v1
 
@@ -388,7 +388,7 @@
     invoke-virtual {v1, v2}, Lcom/vk/dto/newsfeed/Owner;->i(I)V
 
     .line 35
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object v1
 
@@ -405,7 +405,7 @@
     invoke-virtual {v1, v2}, Lcom/vk/dto/newsfeed/Owner;->e(Ljava/lang/String;)V
 
     .line 36
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object v1
 
@@ -422,7 +422,7 @@
     invoke-virtual {v1, v2}, Lcom/vk/dto/newsfeed/Owner;->f(Ljava/lang/String;)V
 
     .line 37
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object v1
 
@@ -439,7 +439,7 @@
     invoke-virtual {v1, v0}, Lcom/vk/dto/newsfeed/Owner;->a(Lcom/vk/dto/common/VerifyInfo;)V
 
     .line 38
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object v0
 
@@ -454,7 +454,7 @@
     invoke-virtual {v0, v1, v10}, Lcom/vk/dto/newsfeed/Flags;->c(IZ)V
 
     .line 39
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/e;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/PostPreviewWithInfo;->c()Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object v0
 
@@ -468,14 +468,14 @@
     .locals 6
 
     .line 40
-    sget-object v0, Lcom/vk/newsfeed/x;->a:Lcom/vk/newsfeed/x;
+    sget-object v0, Lcom/vk/newsfeed/PostDisplayItemsBuilder;->INSTANCE:Lcom/vk/newsfeed/PostDisplayItemsBuilder;
 
     .line 41
-    new-instance v1, Lcom/vtosters/lite/ui/f0/a$a;
+    new-instance v1, Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;
 
-    invoke-direct {v1}, Lcom/vtosters/lite/ui/f0/a$a;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;-><init>()V
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/ui/f0/a$a;->a()Lcom/vtosters/lite/ui/f0/a;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;->a()Lcom/vtosters/lite/ui/f0/PostDisplayContext;
 
     move-result-object v2
 
@@ -488,30 +488,30 @@
     move-object v1, p1
 
     .line 42
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Ljava/lang/String;Z)Ljava/util/ArrayList;
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/PostDisplayItemsBuilder;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/PostDisplayContext;Ljava/lang/String;Ljava/lang/String;Z)Ljava/util/ArrayList;
 
     move-result-object p1
 
     .line 43
-    iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/postpreview/b;->v(Ljava/util/List;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->v(Ljava/util/List;)V
 
     .line 44
-    iget-object p1, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/b;
+    iget-object p1, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
     const/4 v0, 0x1
 
-    invoke-interface {p1, v0}, Lcom/vk/newsfeed/postpreview/b;->h0(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->h0(Z)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;Lcom/vk/dto/newsfeed/e;ZZ)V
+.method public static final synthetic a(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;Lcom/vk/dto/newsfeed/PostPreviewWithInfo;ZZ)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->a(Lcom/vk/dto/newsfeed/e;ZZ)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->a(Lcom/vk/dto/newsfeed/PostPreviewWithInfo;ZZ)V
 
     return-void
 .end method
@@ -552,28 +552,28 @@
     .locals 1
 
     .line 46
-    iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/postpreview/b;->l0(Z)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->l0(Z)V
 
     .line 47
-    iget-object p1, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/b;
+    iget-object p1, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
-    invoke-interface {p1, p2}, Lcom/vk/newsfeed/postpreview/b;->setLoadingVisible(Z)V
+    invoke-interface {p1, p2}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->setLoadingVisible(Z)V
 
     .line 48
-    iget-object p1, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/b;
+    iget-object p1, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
-    invoke-interface {p1, p3}, Lcom/vk/newsfeed/postpreview/b;->q0(Z)V
+    invoke-interface {p1, p3}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->q0(Z)V
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/b;
+.method public static final synthetic b(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;)Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/b;
+    iget-object p0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
     return-object p0
 .end method
@@ -584,11 +584,11 @@
     .locals 4
 
     .line 11
-    iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/postpreview/b;->h0(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->h0(Z)V
 
     .line 12
     iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->b:Ljava/lang/String;
@@ -619,18 +619,18 @@
 
     invoke-direct {v2, p0, v1, v0}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter$onPublishButtonClicked$2;-><init>(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;Landroid/util/SparseArray;Ljava/lang/String;)V
 
-    iput-object v2, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->c:Lkotlin/jvm/b/a;
+    iput-object v2, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->c:Lkotlin/jvm/b/Functions;
 
     .line 16
-    iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->c:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->c:Lkotlin/jvm/b/Functions;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_1
     return-void
@@ -640,13 +640,13 @@
     .locals 4
 
     .line 3
-    iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/d/c;->d0()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->d0()Ljava/lang/String;
 
     move-result-object v1
 
@@ -660,7 +660,7 @@
     move-object v1, v2
 
     :goto_0
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/postpreview/b;->I(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/postpreview/PostPreviewContract1;->I(Ljava/lang/String;)V
 
     const-string v0, "params"
 
@@ -728,18 +728,18 @@
 
     invoke-direct {v1, p0, p1, v2, v0}, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter$onStart$1;-><init>(Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;IZZ)V
 
-    iput-object v1, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->c:Lkotlin/jvm/b/a;
+    iput-object v1, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->c:Lkotlin/jvm/b/Functions;
 
     .line 10
-    iget-object p1, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->c:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->c:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_3
     return-void
@@ -749,13 +749,13 @@
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/PostPreviewContract1;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x3
 
-    invoke-static {v0, v1, v1, v2, v1}, Lcom/vk/newsfeed/postpreview/b$a;->a(Lcom/vk/newsfeed/postpreview/b;Ljava/lang/Integer;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v1, v2, v1}, Lcom/vk/newsfeed/postpreview/PostPreviewContract$a;->a(Lcom/vk/newsfeed/postpreview/PostPreviewContract1;Ljava/lang/Integer;Ljava/lang/String;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -764,15 +764,15 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->c:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->c:Lkotlin/jvm/b/Functions;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_0
     return-void

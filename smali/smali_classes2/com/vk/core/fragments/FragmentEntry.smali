@@ -61,7 +61,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/fragments/FragmentEntry$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/fragments/FragmentEntry$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/fragments/FragmentEntry;->e:Lcom/vk/core/fragments/FragmentEntry$b;
 
@@ -111,14 +111,14 @@
 
     const-string v1, "UUID.randomUUID().toString()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1, p2, v0}, Lcom/vk/core/fragments/FragmentEntry;-><init>(Ljava/lang/Class;Landroid/os/Bundle;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Class;Landroid/os/Bundle;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/Class;Landroid/os/Bundle;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -176,7 +176,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Class;Landroid/os/Bundle;Ljava/lang/String;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/Class;Landroid/os/Bundle;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -193,7 +193,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/fragments/FragmentEntry;->c:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/fragments/j/b/b;->a(Ljava/lang/String;)Lcom/vk/core/fragments/j/b/a;
+    invoke-virtual {p1, v0}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->a(Ljava/lang/String;)Lcom/vk/core/fragments/j/b/ParentSupportFragment;
 
     move-result-object p1
 
@@ -245,7 +245,7 @@
     iget-object v2, p1, Lcom/vk/core/fragments/FragmentEntry;->c:Ljava/lang/String;
 
     :cond_1
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

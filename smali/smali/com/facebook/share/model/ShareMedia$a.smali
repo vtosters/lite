@@ -3,7 +3,7 @@
 .source "ShareMedia.java"
 
 # interfaces
-.implements Lcom/facebook/share/model/a;
+.implements Lcom/facebook/share/model/ShareModelBuilder;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Lcom/facebook/share/model/ShareMedia$a;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/facebook/share/model/a<",
+        "Lcom/facebook/share/model/ShareModelBuilder<",
         "TM;TB;>;"
     }
 .end annotation

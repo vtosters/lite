@@ -48,7 +48,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/music/ui/common/formatting/b;->a:Lcom/vk/music/ui/common/formatting/b;
+    sget-object v1, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->INSTANCE:Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;
 
     iget-object v2, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView$f;->a:Lcom/vk/music/view/audio_player/ModernSmallPlayerView;
 
@@ -58,13 +58,13 @@
 
     const-string v3, "context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView$f;->b:Lcom/vk/dto/music/MusicTrack;
 
-    sget v4, Lcom/vk/music/m/a;->text_secondary:I
+    sget v4, Lcom/vk/music/m/R1;->text_secondary:I
 
-    invoke-virtual {v1, v2, v3, v4}, Lcom/vk/music/ui/common/formatting/b;->b(Landroid/content/Context;Lcom/vk/dto/music/MusicTrack;I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v2, v3, v4}, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->b(Landroid/content/Context;Lcom/vk/dto/music/MusicTrack;I)Ljava/lang/CharSequence;
 
     move-result-object v1
 

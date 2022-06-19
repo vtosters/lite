@@ -3,12 +3,12 @@
 .source "FaveController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/c;Lkotlin/jvm/b/b;Z)V
+    value = Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions2;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -30,7 +30,7 @@
 
 
 # instance fields
-.field final synthetic a:Lb/h/h/f/a;
+.field final synthetic a:Lb/h/h/f/Favable;
 
 .field final synthetic b:Z
 
@@ -38,16 +38,16 @@
 
 .field final synthetic d:Landroid/content/Context;
 
-.field final synthetic e:Lcom/vk/fave/entities/e;
+.field final synthetic e:Lcom/vk/fave/entities/FaveMetaInfo;
 
-.field final synthetic f:Lkotlin/jvm/b/b;
+.field final synthetic f:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lb/h/h/f/a;ZZLandroid/content/Context;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lb/h/h/f/Favable;ZZLandroid/content/Context;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/fave/FaveController$m;->a:Lb/h/h/f/a;
+    iput-object p1, p0, Lcom/vk/fave/FaveController$m;->a:Lb/h/h/f/Favable;
 
     iput-boolean p2, p0, Lcom/vk/fave/FaveController$m;->b:Z
 
@@ -55,9 +55,9 @@
 
     iput-object p4, p0, Lcom/vk/fave/FaveController$m;->d:Landroid/content/Context;
 
-    iput-object p5, p0, Lcom/vk/fave/FaveController$m;->e:Lcom/vk/fave/entities/e;
+    iput-object p5, p0, Lcom/vk/fave/FaveController$m;->e:Lcom/vk/fave/entities/FaveMetaInfo;
 
-    iput-object p6, p0, Lcom/vk/fave/FaveController$m;->f:Lkotlin/jvm/b/b;
+    iput-object p6, p0, Lcom/vk/fave/FaveController$m;->f:Lkotlin/jvm/b/Functions2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -72,7 +72,7 @@
     const-string v0, "isSuccess"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -81,11 +81,11 @@
     if-eqz p1, :cond_1
 
     .line 2
-    iget-object p1, p0, Lcom/vk/fave/FaveController$m;->a:Lb/h/h/f/a;
+    iget-object p1, p0, Lcom/vk/fave/FaveController$m;->a:Lb/h/h/f/Favable;
 
     iget-boolean v0, p0, Lcom/vk/fave/FaveController$m;->b:Z
 
-    invoke-interface {p1, v0}, Lb/h/h/f/a;->h(Z)V
+    invoke-interface {p1, v0}, Lb/h/h/f/Favable;->h(Z)V
 
     .line 3
     iget-boolean p1, p0, Lcom/vk/fave/FaveController$m;->c:Z
@@ -97,19 +97,19 @@
 
     iget-object v0, p0, Lcom/vk/fave/FaveController$m;->d:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/vk/fave/FaveController$m;->a:Lb/h/h/f/a;
+    iget-object v1, p0, Lcom/vk/fave/FaveController$m;->a:Lb/h/h/f/Favable;
 
-    iget-object v2, p0, Lcom/vk/fave/FaveController$m;->e:Lcom/vk/fave/entities/e;
+    iget-object v2, p0, Lcom/vk/fave/FaveController$m;->e:Lcom/vk/fave/entities/FaveMetaInfo;
 
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/fave/FaveController;->a(Lcom/vk/fave/FaveController;Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/fave/FaveController;->a(Lcom/vk/fave/FaveController;Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;)V
 
     .line 5
     :cond_0
     sget-object p1, Lcom/vk/fave/FaveController;->a:Lcom/vk/fave/FaveController;
 
-    iget-object v0, p0, Lcom/vk/fave/FaveController$m;->a:Lb/h/h/f/a;
+    iget-object v0, p0, Lcom/vk/fave/FaveController$m;->a:Lb/h/h/f/Favable;
 
-    invoke-virtual {p1, v0}, Lcom/vk/fave/FaveController;->a(Lb/h/h/f/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/fave/FaveController;->a(Lb/h/h/f/Favable;)V
 
     .line 6
     sget-object p1, Lcom/vtosters/lite/MenuCounterUpdater;->e:Lcom/vtosters/lite/MenuCounterUpdater;
@@ -133,17 +133,17 @@
     invoke-static {p1}, Lcom/vk/log/L;->b([Ljava/lang/Object;)V
 
     .line 8
-    iget-object p1, p0, Lcom/vk/fave/FaveController$m;->f:Lkotlin/jvm/b/b;
+    iget-object p1, p0, Lcom/vk/fave/FaveController$m;->f:Lkotlin/jvm/b/Functions2;
 
     if-eqz p1, :cond_2
 
-    iget-object v1, p0, Lcom/vk/fave/FaveController$m;->a:Lb/h/h/f/a;
+    iget-object v1, p0, Lcom/vk/fave/FaveController$m;->a:Lb/h/h/f/Favable;
 
-    invoke-interface {p1, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     .line 9
     :cond_2
@@ -158,7 +158,7 @@
     const/4 v2, 0x0
 
     .line 10
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :cond_3
     :goto_0

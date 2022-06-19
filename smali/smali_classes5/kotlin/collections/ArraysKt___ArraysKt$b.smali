@@ -3,12 +3,12 @@
 .source "Sequences.kt"
 
 # interfaces
-.implements Lkotlin/sequences/j;
+.implements Lkotlin/sequences/Sequence;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkotlin/collections/ArraysKt___ArraysKt;->a([F)Lkotlin/sequences/j;
+    value = Lkotlin/collections/ArraysKt___ArraysKt;->a([F)Lkotlin/sequences/Sequence;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/sequences/j<",
+        "Lkotlin/sequences/Sequence<",
         "Ljava/lang/Float;",
         ">;"
     }
@@ -58,7 +58,7 @@
     .line 1
     iget-object v0, p0, Lkotlin/collections/ArraysKt___ArraysKt$b;->a:[F
 
-    invoke-static {v0}, Lkotlin/jvm/internal/e;->a([F)Lkotlin/collections/w;
+    invoke-static {v0}, Lkotlin/jvm/internal/ArrayIterators2;->a([F)Lkotlin/collections/Iterators3;
 
     move-result-object v0
 

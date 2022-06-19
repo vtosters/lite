@@ -40,11 +40,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/cameraui/CameraUIView$s;->a:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-virtual {p1}, Lcom/vk/cameraui/BaseCameraUIView;->getClickLock()Lcom/vk/core/util/j1;
+    invoke-virtual {p1}, Lcom/vk/cameraui/BaseCameraUIView;->getClickLock()Lcom/vk/core/util/TimeoutLock;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/util/j1;->a()Z
+    invoke-virtual {p1}, Lcom/vk/core/util/TimeoutLock;->a()Z
 
     move-result p1
 
@@ -52,11 +52,11 @@
 
     iget-object p1, p0, Lcom/vk/cameraui/CameraUIView$s;->a:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-virtual {p1}, Lcom/vk/cameraui/BaseCameraUIView;->getShutterLock()Lcom/vk/core/util/j1;
+    invoke-virtual {p1}, Lcom/vk/cameraui/BaseCameraUIView;->getShutterLock()Lcom/vk/core/util/TimeoutLock;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/util/j1;->a()Z
+    invoke-virtual {p1}, Lcom/vk/core/util/TimeoutLock;->a()Z
 
     move-result p1
 
@@ -71,7 +71,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/libvideo/a0/c;->s()V
+    invoke-interface {p1}, Lcom/vk/libvideo/a0/LiveBroadcastProvider;->s()V
 
     :cond_0
     return-void

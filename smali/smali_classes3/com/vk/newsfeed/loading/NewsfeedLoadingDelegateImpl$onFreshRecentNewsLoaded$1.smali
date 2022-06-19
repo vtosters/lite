@@ -3,7 +3,7 @@
 .source "NewsfeedLoadingDelegateImpl.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl$onFreshRecentNewsLoaded$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -66,22 +66,22 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl$onFreshRecentNewsLoaded$1;->this$0:Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b(Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;)Lcom/vk/newsfeed/contracts/p;
+    invoke-static {v0}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b(Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;)Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/f;->G0()I
+    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/EntriesListContract1;->G0()I
 
     move-result v0
 
     .line 3
     iget-object v1, p0, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl$onFreshRecentNewsLoaded$1;->this$0:Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;
 
-    invoke-static {v1}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b(Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;)Lcom/vk/newsfeed/contracts/p;
+    invoke-static {v1}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b(Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;)Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/newsfeed/contracts/f;->A0()I
+    invoke-interface {v1}, Lcom/vk/newsfeed/contracts/EntriesListContract1;->A0()I
 
     move-result v1
 
@@ -95,25 +95,25 @@
     :cond_0
     iget-object v1, p0, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl$onFreshRecentNewsLoaded$1;->this$0:Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;
 
-    invoke-static {v1}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b(Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;)Lcom/vk/newsfeed/contracts/p;
+    invoke-static {v1}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b(Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;)Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl$onFreshRecentNewsLoaded$1;->this$0:Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;
 
-    invoke-static {v2}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->a(Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;)Lcom/vk/newsfeed/contracts/n;
+    invoke-static {v2}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->a(Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;)Lcom/vk/newsfeed/contracts/NewsfeedContract2;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/newsfeed/contracts/e;->A()Lcom/vk/lists/o;
+    invoke-interface {v2}, Lcom/vk/newsfeed/contracts/EntriesListContract;->A()Lcom/vk/lists/ListDataSet;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/vk/lists/o;->c:Ljava/util/ArrayList;
+    iget-object v2, v2, Lcom/vk/lists/ListDataSet;->c:Ljava/util/ArrayList;
 
     const-string v3, "presenter.getDataSet().list"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -139,14 +139,14 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vtosters/lite/ui/f0/b;
+    check-cast v3, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
     .line 8
-    iget-object v3, v3, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v3, v3, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     iget-object v5, p0, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl$onFreshRecentNewsLoaded$1;->$firstCommonEntry:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -164,7 +164,7 @@
 
     .line 10
     :goto_0
-    invoke-interface {v1, v2}, Lcom/vk/newsfeed/contracts/f;->j(I)I
+    invoke-interface {v1, v2}, Lcom/vk/newsfeed/contracts/EntriesListContract1;->j(I)I
 
     move-result v1
 
@@ -178,20 +178,20 @@
     .line 11
     iget-object v0, p0, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl$onFreshRecentNewsLoaded$1;->this$0:Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b(Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;)Lcom/vk/newsfeed/contracts/p;
+    invoke-static {v0}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b(Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;)Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
     move-result-object v0
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/contracts/p;->q(I)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/contracts/NewsfeedContract;->q(I)V
 
     .line 12
     iget-object v0, p0, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl$onFreshRecentNewsLoaded$1;->this$0:Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b(Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;)Lcom/vk/newsfeed/contracts/p;
+    invoke-static {v0}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b(Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;)Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/p;->x1()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/NewsfeedContract;->x1()V
 
     goto :goto_1
 
@@ -199,11 +199,11 @@
     :cond_4
     iget-object v0, p0, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl$onFreshRecentNewsLoaded$1;->this$0:Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b(Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;)Lcom/vk/newsfeed/contracts/p;
+    invoke-static {v0}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b(Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;)Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/p;->E1()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/NewsfeedContract;->E1()V
 
     :goto_1
     return-void

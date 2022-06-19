@@ -3,7 +3,7 @@
 .source "VkBottomSheetBehavior.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/b$a;
+.implements Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener$a;
 
 
 # annotations
@@ -23,7 +23,7 @@
         ">",
         "Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior<",
         "TV;>;",
-        "Lcom/vk/core/ui/b$a;"
+        "Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener$a;"
     }
 .end annotation
 
@@ -92,7 +92,7 @@
 
 .field private v:Z
 
-.field private w:Lcom/vk/core/ui/b;
+.field private w:Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;
 
 .field public x:I
 
@@ -240,22 +240,22 @@
     check-cast p1, Landroidx/viewpager/widget/ViewPager;
 
     .line 6
-    iget-object v0, p0, Lcom/vk/core/ui/VkBottomSheetBehavior;->w:Lcom/vk/core/ui/b;
+    iget-object v0, p0, Lcom/vk/core/ui/VkBottomSheetBehavior;->w:Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;
 
     if-nez v0, :cond_1
 
     .line 7
-    new-instance v0, Lcom/vk/core/ui/b;
+    new-instance v0, Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;
 
-    invoke-direct {v0, p0}, Lcom/vk/core/ui/b;-><init>(Lcom/vk/core/ui/b$a;)V
+    invoke-direct {v0, p0}, Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;-><init>(Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener$a;)V
 
-    iput-object v0, p0, Lcom/vk/core/ui/VkBottomSheetBehavior;->w:Lcom/vk/core/ui/b;
+    iput-object v0, p0, Lcom/vk/core/ui/VkBottomSheetBehavior;->w:Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;
 
     .line 8
     :cond_1
-    iget-object v0, p0, Lcom/vk/core/ui/VkBottomSheetBehavior;->w:Lcom/vk/core/ui/b;
+    iget-object v0, p0, Lcom/vk/core/ui/VkBottomSheetBehavior;->w:Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/ui/b;->a(Landroidx/viewpager/widget/ViewPager;)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;->a(Landroidx/viewpager/widget/ViewPager;)V
 
     .line 9
     invoke-static {p1}, Lcom/vk/core/ui/VkBottomSheetBehavior;->b(Landroidx/viewpager/widget/ViewPager;)Landroid/view/View;

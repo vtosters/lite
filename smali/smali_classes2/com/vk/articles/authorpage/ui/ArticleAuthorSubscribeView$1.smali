@@ -3,7 +3,7 @@
 .source "ArticleAuthorSubscribeView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -69,17 +69,17 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorSubscribeView$1;->this$0:Lcom/vk/articles/authorpage/ui/ArticleAuthorSubscribeView;
 
-    invoke-virtual {p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorSubscribeView;->getToggleSubscription()Lkotlin/jvm/b/a;
+    invoke-virtual {p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorSubscribeView;->getToggleSubscription()Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_1
     :goto_0
@@ -94,7 +94,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorSubscribeView$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

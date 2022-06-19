@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -39,7 +39,7 @@
     .locals 9
 
     .line 1
-    sget-object v0, Lcom/vk/dto/common/data/ApiApplication;->b0:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/common/data/ApiApplication;->b0:Lcom/vk/dto/common/data/JsonParser;
 
     const-string v1, "app"
 
@@ -49,9 +49,9 @@
 
     const-string v2, "json.getJSONObject(\"app\")"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -95,13 +95,13 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/dto/stories/model/clickable/ClickableApp;-><init>(Lcom/vk/dto/stories/model/actions/ActionApp;Lcom/vk/dto/common/data/ApiApplication;ZILjava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/dto/stories/model/clickable/ClickableApp;-><init>(Lcom/vk/dto/stories/model/actions/ActionApp;Lcom/vk/dto/common/data/ApiApplication;ZILjava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object p1
 
     .line 6
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

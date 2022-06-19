@@ -3,12 +3,12 @@
 .source "NarrativeController.kt"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/narratives/NarrativeController;->a(Lcom/vk/dto/narratives/Narrative;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/narratives/NarrativeController;->a(Lcom/vk/dto/narratives/Narrative;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/base/ApiCallback<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -29,21 +29,21 @@
 # instance fields
 .field final synthetic a:Lcom/vk/dto/narratives/Narrative;
 
-.field final synthetic b:Lkotlin/jvm/b/a;
+.field final synthetic b:Lkotlin/jvm/b/Functions;
 
-.field final synthetic c:Lkotlin/jvm/b/b;
+.field final synthetic c:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/dto/narratives/Narrative;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lcom/vk/dto/narratives/Narrative;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vk/narratives/NarrativeController$a;->a:Lcom/vk/dto/narratives/Narrative;
 
-    iput-object p2, p0, Lcom/vk/narratives/NarrativeController$a;->b:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/narratives/NarrativeController$a;->b:Lkotlin/jvm/b/Functions;
 
-    iput-object p3, p0, Lcom/vk/narratives/NarrativeController$a;->c:Lkotlin/jvm/b/b;
+    iput-object p3, p0, Lcom/vk/narratives/NarrativeController$a;->c:Lkotlin/jvm/b/Functions2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,12 +56,12 @@
     .locals 1
 
     .line 11
-    invoke-static {p1}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
 
     .line 12
-    iget-object v0, p0, Lcom/vk/narratives/NarrativeController$a;->c:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/narratives/NarrativeController$a;->c:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -128,20 +128,20 @@
     move-result-object v2
 
     .line 3
-    invoke-static {}, Lcom/vk/narratives/NarrativeController;->a()Lb/h/v/d;
+    invoke-static {}, Lcom/vk/narratives/NarrativeController;->a()Lb/h/v/RxBus;
 
     move-result-object v3
 
-    new-instance v4, Lcom/vk/narratives/a;
+    new-instance v4, Lcom/vk/narratives/NarrativeController1;
 
-    invoke-direct {v4, v2}, Lcom/vk/narratives/a;-><init>(Lcom/vk/dto/narratives/Narrative;)V
+    invoke-direct {v4, v2}, Lcom/vk/narratives/NarrativeController1;-><init>(Lcom/vk/dto/narratives/Narrative;)V
 
-    invoke-virtual {v3, v4}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v3, v4}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     .line 4
-    sget-object v3, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v3, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v3}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v3}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v3
 
@@ -151,16 +151,16 @@
 
     invoke-direct {v5, v2}, Lcom/vtosters/lite/attachments/NarrativeAttachment;-><init>(Lcom/vk/dto/narratives/Narrative;)V
 
-    invoke-virtual {v3, v4, v5}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v3, v4, v5}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 5
-    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/NotificationCenter;
 
     move-result-object v2
 
     const/16 v3, 0x65
 
-    invoke-virtual {v2, v3, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v2, v3, v1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 6
     iget-object v1, v0, Lcom/vk/narratives/NarrativeController$a;->a:Lcom/vk/dto/narratives/Narrative;
@@ -172,7 +172,7 @@
     if-eqz v1, :cond_0
 
     .line 7
-    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/NotificationCenter;
 
     move-result-object v1
 
@@ -184,13 +184,13 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v1, v2, v3}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 8
     :cond_0
-    iget-object v1, v0, Lcom/vk/narratives/NarrativeController$a;->b:Lkotlin/jvm/b/a;
+    iget-object v1, v0, Lcom/vk/narratives/NarrativeController$a;->b:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     goto :goto_0
 
@@ -202,10 +202,10 @@
     const/4 v4, 0x2
 
     .line 9
-    invoke-static {v2, v3, v4, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v2, v3, v4, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 10
-    iget-object v1, v0, Lcom/vk/narratives/NarrativeController$a;->c:Lkotlin/jvm/b/b;
+    iget-object v1, v0, Lcom/vk/narratives/NarrativeController$a;->c:Lkotlin/jvm/b/Functions2;
 
     new-instance v2, Ljava/lang/Exception;
 
@@ -213,7 +213,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v1, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_0
     return-void

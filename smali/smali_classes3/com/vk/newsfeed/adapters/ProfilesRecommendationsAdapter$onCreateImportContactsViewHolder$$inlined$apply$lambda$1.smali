@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
+    value = Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/newsfeed/holders/a0;
+.field final synthetic a:Lcom/vk/newsfeed/holders/ImportContactsHolder;
 
 .field final synthetic b:Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;
 
@@ -26,10 +26,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/holders/a0;Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;Landroid/view/ViewGroup;)V
+.method constructor <init>(Lcom/vk/newsfeed/holders/ImportContactsHolder;Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;Landroid/view/ViewGroup;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$onCreateImportContactsViewHolder$$inlined$apply$lambda$1;->a:Lcom/vk/newsfeed/holders/a0;
+    iput-object p1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$onCreateImportContactsViewHolder$$inlined$apply$lambda$1;->a:Lcom/vk/newsfeed/holders/ImportContactsHolder;
 
     iput-object p2, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$onCreateImportContactsViewHolder$$inlined$apply$lambda$1;->b:Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;
 
@@ -74,7 +74,7 @@
     const/4 v6, 0x0
 
     .line 5
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "ImUiModule.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/ImUiModule;->b(I)Lcom/vk/core/ui/w/b;
+    value = Lcom/vk/im/ui/ImUiModule;->b(I)Lcom/vk/core/ui/w/VkViewPoolProvider;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/content/Context;",
-        "Lcom/vk/im/ui/components/dialogs_list/vc_impl/c;",
+        "Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListAdapter;",
         ">;"
     }
 .end annotation
@@ -56,17 +56,17 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;)Lcom/vk/im/ui/components/dialogs_list/vc_impl/c;
+.method public final a(Landroid/content/Context;)Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListAdapter;
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/c;
+    new-instance v0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListAdapter;
 
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/c;-><init>(Landroid/view/LayoutInflater;)V
+    invoke-direct {v0, p1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListAdapter;-><init>(Landroid/view/LayoutInflater;)V
 
     return-object v0
 .end method
@@ -77,7 +77,7 @@
     .line 1
     check-cast p1, Landroid/content/Context;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/ImUiModule$getDialogsViewPool$1;->a(Landroid/content/Context;)Lcom/vk/im/ui/components/dialogs_list/vc_impl/c;
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/ImUiModule$getDialogsViewPool$1;->a(Landroid/content/Context;)Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListAdapter;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "LivePresenter.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/libvideo/y/j;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/libvideo/y/VideoEvents12;",
         ">;"
     }
 .end annotation
@@ -44,7 +44,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/libvideo/y/j;)V
+.method public a(Lcom/vk/libvideo/y/VideoEvents12;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -69,9 +69,9 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/y/j;
+    check-cast p1, Lcom/vk/libvideo/y/VideoEvents12;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/live/LivePresenter$h;->a(Lcom/vk/libvideo/y/j;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/live/LivePresenter$h;->a(Lcom/vk/libvideo/y/VideoEvents12;)V
 
     return-void
 .end method

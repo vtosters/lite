@@ -41,14 +41,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/articles/AMP$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/articles/AMP$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/articles/AMP;->d:Lcom/vk/dto/articles/AMP$b;
 
     .line 1
-    new-instance v0, Lcom/vk/dto/articles/AMP$a;
+    new-instance v0, Lcom/vk/dto/articles/Serializer$a;
 
-    invoke-direct {v0}, Lcom/vk/dto/articles/AMP$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/dto/articles/Serializer$a;-><init>()V
 
     .line 2
     sput-object v0, Lcom/vk/dto/articles/AMP;->CREATOR:Lcom/vk/core/serialize/Serializer$c;
@@ -119,7 +119,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/articles/AMP;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

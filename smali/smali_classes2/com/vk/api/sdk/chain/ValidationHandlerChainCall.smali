@@ -1,5 +1,5 @@
 .class public final Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;
-.super Lcom/vk/api/sdk/chain/g;
+.super Lcom/vk/api/sdk/chain/RetryChainCall;
 .source "ValidationHandlerChainCall.kt"
 
 
@@ -9,17 +9,17 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lcom/vk/api/sdk/chain/g<",
+        "Lcom/vk/api/sdk/chain/RetryChainCall<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field private final c:Lcom/vk/api/sdk/chain/b;
+.field private final c:Lcom/vk/api/sdk/chain/ChainCall;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/api/sdk/chain/b<",
+            "Lcom/vk/api/sdk/chain/ChainCall<",
             "TT;>;"
         }
     .end annotation
@@ -27,27 +27,27 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/api/sdk/VKApiManager;ILcom/vk/api/sdk/chain/b;)V
+.method public constructor <init>(Lcom/vk/api/sdk/VKApiManager;ILcom/vk/api/sdk/chain/ChainCall;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/api/sdk/VKApiManager;",
             "I",
-            "Lcom/vk/api/sdk/chain/b<",
+            "Lcom/vk/api/sdk/chain/ChainCall<",
             "+TT;>;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/api/sdk/chain/g;-><init>(Lcom/vk/api/sdk/VKApiManager;I)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/api/sdk/chain/RetryChainCall;-><init>(Lcom/vk/api/sdk/VKApiManager;I)V
 
-    iput-object p3, p0, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;->c:Lcom/vk/api/sdk/chain/b;
+    iput-object p3, p0, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;->c:Lcom/vk/api/sdk/chain/ChainCall;
 
     return-void
 .end method
 
-.method private final a(Ljava/lang/String;Lkotlin/jvm/b/d;)Ljava/lang/Object;
+.method private final a(Ljava/lang/String;Lkotlin/jvm/b/Functions4;)Ljava/lang/Object;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -55,25 +55,25 @@
             "Ljava/lang/Object;",
             ">(",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/d<",
+            "Lkotlin/jvm/b/Functions4<",
             "-",
-            "Lcom/vk/api/sdk/i;",
+            "Lcom/vk/api/sdk/VKApiValidationHandler;",
             "-",
             "Ljava/lang/String;",
             "-",
-            "Lcom/vk/api/sdk/i$a<",
+            "Lcom/vk/api/sdk/VKApiValidationHandler$a<",
             "TT;>;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)TT;"
         }
     .end annotation
 
     .line 15
-    invoke-virtual {p0}, Lcom/vk/api/sdk/chain/b;->a()Lcom/vk/api/sdk/VKApiManager;
+    invoke-virtual {p0}, Lcom/vk/api/sdk/chain/ChainCall;->a()Lcom/vk/api/sdk/VKApiManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/VKApiManager;->d()Lcom/vk/api/sdk/i;
+    invoke-virtual {v0}, Lcom/vk/api/sdk/VKApiManager;->d()Lcom/vk/api/sdk/VKApiValidationHandler;
 
     move-result-object v0
 
@@ -87,18 +87,18 @@
     invoke-direct {v1, v2}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
     .line 17
-    new-instance v2, Lcom/vk/api/sdk/i$a;
+    new-instance v2, Lcom/vk/api/sdk/VKApiValidationHandler$a;
 
-    invoke-direct {v2, v1}, Lcom/vk/api/sdk/i$a;-><init>(Ljava/util/concurrent/CountDownLatch;)V
+    invoke-direct {v2, v1}, Lcom/vk/api/sdk/VKApiValidationHandler$a;-><init>(Ljava/util/concurrent/CountDownLatch;)V
 
     .line 18
-    invoke-interface {p2, v0, p1, v2}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0, p1, v2}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 19
     invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->await()V
 
     .line 20
-    invoke-virtual {v2}, Lcom/vk/api/sdk/i$a;->b()Ljava/lang/Object;
+    invoke-virtual {v2}, Lcom/vk/api/sdk/VKApiValidationHandler$a;->b()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -120,16 +120,16 @@
 
     sget-object v1, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall$handleValidation$credentials$1;->c:Lcom/vk/api/sdk/chain/ValidationHandlerChainCall$handleValidation$credentials$1;
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;->a(Ljava/lang/String;Lkotlin/jvm/b/d;)Ljava/lang/Object;
+    invoke-direct {p0, v0, v1}, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions4;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/api/sdk/i$b;
+    check-cast v0, Lcom/vk/api/sdk/VKApiValidationHandler$b;
 
     if-eqz v0, :cond_2
 
     .line 9
-    invoke-virtual {v0}, Lcom/vk/api/sdk/i$b;->c()Z
+    invoke-virtual {v0}, Lcom/vk/api/sdk/VKApiValidationHandler$b;->c()Z
 
     move-result v1
 
@@ -137,11 +137,11 @@
 
     if-ne v1, v2, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/api/sdk/chain/b;->a()Lcom/vk/api/sdk/VKApiManager;
+    invoke-virtual {p0}, Lcom/vk/api/sdk/chain/ChainCall;->a()Lcom/vk/api/sdk/VKApiManager;
 
     move-result-object p1
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/i$b;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/api/sdk/VKApiValidationHandler$b;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -149,7 +149,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/i$b;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/api/sdk/VKApiValidationHandler$b;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -160,12 +160,12 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -174,7 +174,7 @@
     throw p1
 .end method
 
-.method private final a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Lcom/vk/api/sdk/chain/a;)V
+.method private final a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Lcom/vk/api/sdk/chain/ChainArgs;)V
     .locals 2
 
     .line 11
@@ -184,7 +184,7 @@
 
     sget-object v1, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall$handleCaptcha$captcha$1;->c:Lcom/vk/api/sdk/chain/ValidationHandlerChainCall$handleCaptcha$captcha$1;
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;->a(Ljava/lang/String;Lkotlin/jvm/b/d;)Ljava/lang/Object;
+    invoke-direct {p0, v0, v1}, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions4;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -197,10 +197,10 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/api/sdk/chain/a;->b(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lcom/vk/api/sdk/chain/ChainArgs;->b(Ljava/lang/String;)V
 
     .line 13
-    invoke-virtual {p2, v0}, Lcom/vk/api/sdk/chain/a;->a(Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Lcom/vk/api/sdk/chain/ChainArgs;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -209,7 +209,7 @@
     throw p1
 .end method
 
-.method private final b(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Lcom/vk/api/sdk/chain/a;)V
+.method private final b(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Lcom/vk/api/sdk/chain/ChainArgs;)V
     .locals 2
 
     .line 1
@@ -219,7 +219,7 @@
 
     sget-object v1, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall$handleUserConfirmation$confirmation$1;->c:Lcom/vk/api/sdk/chain/ValidationHandlerChainCall$handleUserConfirmation$confirmation$1;
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;->a(Ljava/lang/String;Lkotlin/jvm/b/d;)Ljava/lang/Object;
+    invoke-direct {p0, v0, v1}, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions4;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -234,7 +234,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -245,7 +245,7 @@
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/api/sdk/chain/a;->a(Z)V
+    invoke-virtual {p2, p1}, Lcom/vk/api/sdk/chain/ChainArgs;->a(Z)V
 
     return-void
 
@@ -260,12 +260,12 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/api/sdk/chain/a;)Ljava/lang/Object;
+.method public a(Lcom/vk/api/sdk/chain/ChainArgs;)Ljava/lang/Object;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/api/sdk/chain/a;",
+            "Lcom/vk/api/sdk/chain/ChainArgs;",
             ")TT;"
         }
     .end annotation
@@ -277,7 +277,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/api/sdk/chain/g;->b()I
+    invoke-virtual {p0}, Lcom/vk/api/sdk/chain/RetryChainCall;->b()I
 
     move-result v0
 
@@ -288,9 +288,9 @@
     .line 2
     :goto_0
     :try_start_0
-    iget-object v2, p0, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;->c:Lcom/vk/api/sdk/chain/b;
+    iget-object v2, p0, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;->c:Lcom/vk/api/sdk/chain/ChainCall;
 
-    invoke-virtual {v2, p1}, Lcom/vk/api/sdk/chain/b;->a(Lcom/vk/api/sdk/chain/a;)Ljava/lang/Object;
+    invoke-virtual {v2, p1}, Lcom/vk/api/sdk/chain/ChainCall;->a(Lcom/vk/api/sdk/chain/ChainArgs;)Ljava/lang/Object;
 
     move-result-object p1
     :try_end_0
@@ -308,7 +308,7 @@
 
     if-eqz v3, :cond_0
 
-    invoke-direct {p0, v2, p1}, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Lcom/vk/api/sdk/chain/a;)V
+    invoke-direct {p0, v2, p1}, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Lcom/vk/api/sdk/chain/ChainArgs;)V
 
     goto :goto_1
 
@@ -332,7 +332,7 @@
 
     if-eqz v3, :cond_2
 
-    invoke-direct {p0, v2, p1}, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;->b(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Lcom/vk/api/sdk/chain/a;)V
+    invoke-direct {p0, v2, p1}, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall;->b(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Lcom/vk/api/sdk/chain/ChainArgs;)V
 
     :goto_1
     if-eq v1, v0, :cond_3

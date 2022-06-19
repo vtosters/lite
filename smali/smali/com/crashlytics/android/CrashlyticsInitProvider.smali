@@ -23,11 +23,11 @@
 
 
 # virtual methods
-.method a(Landroid/content/Context;Lio/fabric/sdk/android/services/common/m;Lcom/crashlytics/android/CrashlyticsInitProvider$a;)Z
+.method a(Landroid/content/Context;Lio/fabric/sdk/android/services/common/FirebaseInfo;Lcom/crashlytics/android/CrashlyticsInitProvider$a;)Z
     .locals 0
 
     .line 1
-    invoke-virtual {p2, p1}, Lio/fabric/sdk/android/services/common/m;->b(Landroid/content/Context;)Z
+    invoke-virtual {p2, p1}, Lio/fabric/sdk/android/services/common/FirebaseInfo;->b(Landroid/content/Context;)Z
 
     move-result p2
 
@@ -86,17 +86,17 @@
     move-result-object v1
 
     .line 2
-    new-instance v2, Lio/fabric/sdk/android/services/common/m;
+    new-instance v2, Lio/fabric/sdk/android/services/common/FirebaseInfo;
 
-    invoke-direct {v2}, Lio/fabric/sdk/android/services/common/m;-><init>()V
+    invoke-direct {v2}, Lio/fabric/sdk/android/services/common/FirebaseInfo;-><init>()V
 
     .line 3
-    new-instance v3, Lcom/crashlytics/android/b;
+    new-instance v3, Lcom/crashlytics/android/ManifestEnabledCheckStrategy;
 
-    invoke-direct {v3}, Lcom/crashlytics/android/b;-><init>()V
+    invoke-direct {v3}, Lcom/crashlytics/android/ManifestEnabledCheckStrategy;-><init>()V
 
     .line 4
-    invoke-virtual {p0, v1, v2, v3}, Lcom/crashlytics/android/CrashlyticsInitProvider;->a(Landroid/content/Context;Lio/fabric/sdk/android/services/common/m;Lcom/crashlytics/android/CrashlyticsInitProvider$a;)Z
+    invoke-virtual {p0, v1, v2, v3}, Lcom/crashlytics/android/CrashlyticsInitProvider;->a(Landroid/content/Context;Lio/fabric/sdk/android/services/common/FirebaseInfo;Lcom/crashlytics/android/CrashlyticsInitProvider$a;)Z
 
     move-result v2
 
@@ -107,25 +107,25 @@
     const/4 v2, 0x0
 
     :try_start_0
-    new-array v4, v3, [Lio/fabric/sdk/android/h;
+    new-array v4, v3, [Lio/fabric/sdk/android/Kit;
 
     .line 5
-    new-instance v5, Lcom/crashlytics/android/a;
+    new-instance v5, Lcom/crashlytics/android/Crashlytics;
 
-    invoke-direct {v5}, Lcom/crashlytics/android/a;-><init>()V
+    invoke-direct {v5}, Lcom/crashlytics/android/Crashlytics;-><init>()V
 
     aput-object v5, v4, v2
 
-    invoke-static {v1, v4}, Lio/fabric/sdk/android/c;->a(Landroid/content/Context;[Lio/fabric/sdk/android/h;)Lio/fabric/sdk/android/c;
+    invoke-static {v1, v4}, Lio/fabric/sdk/android/Fabric;->a(Landroid/content/Context;[Lio/fabric/sdk/android/Kit;)Lio/fabric/sdk/android/Fabric;
 
     .line 6
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object v1
 
     const-string v4, "CrashlyticsInitProvider initialization successful"
 
-    invoke-interface {v1, v0, v4}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v0, v4}, Lio/fabric/sdk/android/Logger;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -133,13 +133,13 @@
 
     .line 7
     :catch_0
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object v1
 
     const-string v3, "CrashlyticsInitProvider initialization unsuccessful"
 
-    invoke-interface {v1, v0, v3}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v0, v3}, Lio/fabric/sdk/android/Logger;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 

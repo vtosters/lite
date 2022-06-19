@@ -19,25 +19,25 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/e;",
+            "Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/im/engine/models/q;
+.field private final b:Lcom/vk/im/engine/models/Weight;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lcom/vk/im/engine/models/q;)V
+.method public constructor <init>(Ljava/util/List;Lcom/vk/im/engine/models/Weight;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/e;",
+            "Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;",
             ">;",
-            "Lcom/vk/im/engine/models/q;",
+            "Lcom/vk/im/engine/models/Weight;",
             ")V"
         }
     .end annotation
@@ -47,18 +47,18 @@
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->a:Ljava/util/List;
 
-    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->b:Lcom/vk/im/engine/models/q;
+    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->b:Lcom/vk/im/engine/models/Weight;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/vk/im/engine/models/q;
+.method public final a()Lcom/vk/im/engine/models/Weight;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->b:Lcom/vk/im/engine/models/q;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->b:Lcom/vk/im/engine/models/Weight;
 
     return-object v0
 .end method
@@ -69,7 +69,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/e;",
+            "Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;",
             ">;"
         }
     .end annotation
@@ -95,17 +95,17 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->a:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->b:Lcom/vk/im/engine/models/q;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->b:Lcom/vk/im/engine/models/Weight;
 
-    iget-object p1, p1, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->b:Lcom/vk/im/engine/models/q;
+    iget-object p1, p1, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->b:Lcom/vk/im/engine/models/Weight;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -146,11 +146,11 @@
     :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->b:Lcom/vk/im/engine/models/q;
+    iget-object v2, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->b:Lcom/vk/im/engine/models/Weight;
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/models/q;->hashCode()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/models/Weight;->hashCode()I
 
     move-result v1
 
@@ -179,7 +179,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->b:Lcom/vk/im/engine/models/q;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdCacheHelper$b;->b:Lcom/vk/im/engine/models/Weight;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

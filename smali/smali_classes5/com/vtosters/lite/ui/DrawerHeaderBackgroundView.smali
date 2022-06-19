@@ -138,7 +138,7 @@
     :cond_0
     const/high16 p2, 0x43340000    # 180.0f
 
-    invoke-static {p2}, Ld/a/a/c/e;->a(F)I
+    invoke-static {p2}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result p2
 

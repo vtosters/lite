@@ -3,7 +3,7 @@
 .source "ObservableReplay.java"
 
 # interfaces
-.implements Lc/a/p;
+.implements Lio/reactivex/ObservableSource;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "TT;>;"
     }
 .end annotation
@@ -77,12 +77,12 @@
 
 
 # virtual methods
-.method public a(Lc/a/r;)V
+.method public a(Lio/reactivex/Observer;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;)V"
         }
     .end annotation
@@ -131,10 +131,10 @@
     :cond_1
     new-instance v1, Lio/reactivex/internal/operators/observable/ObservableReplay$InnerDisposable;
 
-    invoke-direct {v1, v0, p1}, Lio/reactivex/internal/operators/observable/ObservableReplay$InnerDisposable;-><init>(Lio/reactivex/internal/operators/observable/ObservableReplay$ReplayObserver;Lc/a/r;)V
+    invoke-direct {v1, v0, p1}, Lio/reactivex/internal/operators/observable/ObservableReplay$InnerDisposable;-><init>(Lio/reactivex/internal/operators/observable/ObservableReplay$ReplayObserver;Lio/reactivex/Observer;)V
 
     .line 6
-    invoke-interface {p1, v1}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p1, v1}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
 
     .line 7
     invoke-virtual {v0, v1}, Lio/reactivex/internal/operators/observable/ObservableReplay$ReplayObserver;->a(Lio/reactivex/internal/operators/observable/ObservableReplay$InnerDisposable;)Z

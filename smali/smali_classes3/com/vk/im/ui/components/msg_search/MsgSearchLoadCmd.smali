@@ -1,12 +1,12 @@
 .class public final Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd;
-.super Lcom/vk/im/engine/i/a;
+.super Lcom/vk/im/engine/i/BaseImEngineCmd;
 .source "MsgSearchLoadCmd.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/a<",
+        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
         "Lcom/vk/im/ui/components/msg_search/MsgSearchState;",
         ">;"
     }
@@ -40,7 +40,7 @@
     move-object v0, p0
 
     .line 4
-    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
 
     move-object v1, p1
 
@@ -102,7 +102,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Lcom/vk/im/engine/models/SearchMode;Lcom/vk/im/engine/models/Source;IILjava/lang/Long;Ljava/lang/Integer;ZILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Lcom/vk/im/engine/models/SearchMode;Lcom/vk/im/engine/models/Source;IILjava/lang/Long;Ljava/lang/Integer;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 9
 
     move/from16 v0, p9
@@ -235,11 +235,11 @@
     return-object p0
 .end method
 
-.method private final b(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/contacts/j$a;
+.method private final b(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/contacts/HintDialogsGetCmd$a;
     .locals 8
 
     .line 1
-    new-instance v7, Lcom/vk/im/engine/commands/contacts/j;
+    new-instance v7, Lcom/vk/im/engine/commands/contacts/HintDialogsGetCmd;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd;->e:Lcom/vk/im/engine/models/Source;
 
@@ -255,26 +255,26 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/commands/contacts/j;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/commands/contacts/HintDialogsGetCmd;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-interface {p1, p0, v7}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
+    invoke-interface {p1, p0, v7}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
 
     move-result-object p1
 
     const-string v0, "env.submitCommandDirect(\u20260, source, awaitNetwork))"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/vk/im/engine/commands/contacts/j$a;
+    check-cast p1, Lcom/vk/im/engine/commands/contacts/HintDialogsGetCmd$a;
 
     return-object p1
 .end method
 
-.method private final c(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/contacts/m$a;
+.method private final c(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;
     .locals 8
 
     .line 2
-    new-instance v7, Lcom/vk/im/engine/commands/contacts/m;
+    new-instance v7, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd;->e:Lcom/vk/im/engine/models/Source;
 
@@ -290,17 +290,17 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/commands/contacts/m;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-interface {p1, p0, v7}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
+    invoke-interface {p1, p0, v7}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
 
     move-result-object p1
 
     const-string v0, "env.submitCommandDirect(\u20260, source, awaitNetwork))"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/vk/im/engine/commands/contacts/m$a;
+    check-cast p1, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;
 
     return-object p1
 .end method
@@ -336,7 +336,7 @@
     return-object v9
 .end method
 
-.method public a(Lcom/vk/im/engine/d;)Lcom/vk/im/ui/components/msg_search/MsgSearchState;
+.method public a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/ui/components/msg_search/MsgSearchState;
     .locals 25
 
     move-object/from16 v0, p0
@@ -346,14 +346,14 @@
 
     move-object/from16 v2, p1
 
-    invoke-interface {v2, v0, v1}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
+    invoke-interface {v2, v0, v1}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$a;
 
     .line 5
-    sget-object v3, Lcom/vk/im/engine/utils/i;->a:Lcom/vk/im/engine/utils/i;
+    sget-object v3, Lcom/vk/im/engine/utils/MsgSearchTokenizer1;->INSTANCE:Lcom/vk/im/engine/utils/MsgSearchTokenizer1;
 
     iget-object v4, v0, Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd;->c:Ljava/lang/String;
 
@@ -363,11 +363,11 @@
 
     const/4 v7, 0x2
 
-    invoke-static {v3, v4, v5, v7, v6}, Lcom/vk/im/engine/utils/i;->a(Lcom/vk/im/engine/utils/i;Ljava/lang/String;ZILjava/lang/Object;)Lcom/vk/im/engine/utils/l;
+    invoke-static {v3, v4, v5, v7, v6}, Lcom/vk/im/engine/utils/MsgSearchTokenizer1;->a(Lcom/vk/im/engine/utils/MsgSearchTokenizer1;Ljava/lang/String;ZILjava/lang/Object;)Lcom/vk/im/engine/utils/MsgSearchTokenizer;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/utils/l;->a()Ljava/util/List;
+    invoke-virtual {v3}, Lcom/vk/im/engine/utils/MsgSearchTokenizer;->a()Ljava/util/List;
 
     move-result-object v13
 
@@ -380,13 +380,13 @@
     move-result-object v8
 
     .line 8
-    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/d;->Z()Lcom/vk/im/engine/models/Member;
+    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/ImEnvironment;->Z()Lcom/vk/im/engine/models/Member;
 
     move-result-object v9
 
     const-string v3, "env.member"
 
-    invoke-static {v9, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     sget-object v10, Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd$onExecute$formatting$1;->a:Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd$onExecute$formatting$1;
@@ -412,7 +412,7 @@
     move-result-object v12
 
     .line 12
-    invoke-virtual/range {v7 .. v13}, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->a(Ljava/util/Collection;Lcom/vk/im/engine/models/Member;Lkotlin/jvm/b/b;ZLcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/util/List;)Lkotlin/Pair;
+    invoke-virtual/range {v7 .. v13}, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->a(Ljava/util/Collection;Lcom/vk/im/engine/models/Member;Lkotlin/jvm/b/Functions2;ZLcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/util/List;)Lkotlin/Pair;
 
     move-result-object v4
 
@@ -444,7 +444,7 @@
     :goto_1
     if-eqz v7, :cond_2
 
-    invoke-direct/range {p0 .. p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd;->b(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/contacts/j$a;
+    invoke-direct/range {p0 .. p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd;->b(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/contacts/HintDialogsGetCmd$a;
 
     move-result-object v7
 
@@ -471,7 +471,7 @@
     :goto_3
     if-eqz v14, :cond_4
 
-    invoke-direct/range {p0 .. p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd;->c(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/contacts/m$a;
+    invoke-direct/range {p0 .. p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd;->c(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;
 
     move-result-object v5
 
@@ -484,7 +484,7 @@
     if-eqz v7, :cond_5
 
     .line 16
-    invoke-virtual {v7}, Lcom/vk/im/engine/commands/contacts/j$a;->b()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v7}, Lcom/vk/im/engine/commands/contacts/HintDialogsGetCmd$a;->b()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v8
 
@@ -505,7 +505,7 @@
     if-eqz v5, :cond_6
 
     .line 17
-    invoke-virtual {v5}, Lcom/vk/im/engine/commands/contacts/m$a;->b()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v5}, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;->b()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v8
 
@@ -559,14 +559,14 @@
 
     move-object/from16 v17, v8
 
-    invoke-direct/range {v10 .. v24}, Lcom/vk/im/ui/components/msg_search/MsgSearchState;-><init>(Ljava/util/List;Ljava/util/List;Landroid/util/SparseArray;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lcom/vk/im/engine/models/Member;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;ZZLcom/vk/im/engine/models/SearchMode;Lcom/vk/im/engine/models/Source;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v10 .. v24}, Lcom/vk/im/ui/components/msg_search/MsgSearchState;-><init>(Ljava/util/List;Ljava/util/List;Landroid/util/SparseArray;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lcom/vk/im/engine/models/Member;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;ZZLcom/vk/im/engine/models/SearchMode;Lcom/vk/im/engine/models/Source;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 19
-    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/d;->Z()Lcom/vk/im/engine/models/Member;
+    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/ImEnvironment;->Z()Lcom/vk/im/engine/models/Member;
 
     move-result-object v2
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6, v2}, Lcom/vk/im/ui/components/msg_search/MsgSearchState;->a(Lcom/vk/im/engine/models/Member;)V
 
@@ -592,7 +592,7 @@
     if-eqz v7, :cond_7
 
     .line 23
-    invoke-virtual {v7}, Lcom/vk/im/engine/commands/contacts/j$a;->a()Ljava/util/List;
+    invoke-virtual {v7}, Lcom/vk/im/engine/commands/contacts/HintDialogsGetCmd$a;->a()Ljava/util/List;
 
     move-result-object v2
 
@@ -611,7 +611,7 @@
     if-eqz v5, :cond_8
 
     .line 24
-    invoke-virtual {v5}, Lcom/vk/im/engine/commands/contacts/m$a;->a()Ljava/util/List;
+    invoke-virtual {v5}, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;->a()Ljava/util/List;
 
     move-result-object v2
 
@@ -683,7 +683,7 @@
 
     move-result-object v2
 
-    invoke-static {v10, v2}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    invoke-static {v10, v2}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     .line 33
     invoke-virtual {v1}, Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$a;->d()Ljava/util/List;
@@ -716,11 +716,11 @@
     return-object v6
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd;->a(Lcom/vk/im/engine/d;)Lcom/vk/im/ui/components/msg_search/MsgSearchState;
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/ui/components/msg_search/MsgSearchState;
 
     move-result-object p1
 
@@ -758,7 +758,7 @@
     iget-object v2, p1, Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd;->b:Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd;
 
     :cond_1
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

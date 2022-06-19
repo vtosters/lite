@@ -18,19 +18,19 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/facebook/datasource/d;
+.field final synthetic a:Lcom/facebook/datasource/DataSubscriber;
 
 .field final synthetic b:Lcom/facebook/datasource/AbstractDataSource;
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/datasource/AbstractDataSource;Lcom/facebook/datasource/d;)V
+.method constructor <init>(Lcom/facebook/datasource/AbstractDataSource;Lcom/facebook/datasource/DataSubscriber;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/facebook/datasource/AbstractDataSource$b;->b:Lcom/facebook/datasource/AbstractDataSource;
 
-    iput-object p2, p0, Lcom/facebook/datasource/AbstractDataSource$b;->a:Lcom/facebook/datasource/d;
+    iput-object p2, p0, Lcom/facebook/datasource/AbstractDataSource$b;->a:Lcom/facebook/datasource/DataSubscriber;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,11 +43,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/datasource/AbstractDataSource$b;->a:Lcom/facebook/datasource/d;
+    iget-object v0, p0, Lcom/facebook/datasource/AbstractDataSource$b;->a:Lcom/facebook/datasource/DataSubscriber;
 
     iget-object v1, p0, Lcom/facebook/datasource/AbstractDataSource$b;->b:Lcom/facebook/datasource/AbstractDataSource;
 
-    invoke-interface {v0, v1}, Lcom/facebook/datasource/d;->d(Lcom/facebook/datasource/b;)V
+    invoke-interface {v0, v1}, Lcom/facebook/datasource/DataSubscriber;->d(Lcom/facebook/datasource/DataSource;)V
 
     return-void
 .end method

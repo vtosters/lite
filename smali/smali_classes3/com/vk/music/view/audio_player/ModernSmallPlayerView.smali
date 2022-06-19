@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -46,7 +46,7 @@
 
 .field private final g:Landroid/widget/ImageView;
 
-.field private h:Lcom/vk/music/player/d;
+.field private h:Lcom/vk/music/player/PlayerModel;
 
 
 # direct methods
@@ -57,7 +57,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/view/audio_player/ModernSmallPlayerView$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/view/audio_player/ModernSmallPlayerView$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v0, 0x6
 
@@ -87,7 +87,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -107,7 +107,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -123,7 +123,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/vk/music/m/g;->music_modern_small_player:I
+    sget p2, Lcom/vk/music/m/R;->music_modern_small_player:I
 
     invoke-virtual {p1, p2, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -135,14 +135,14 @@
     const-string p2, "LayoutInflater.from(cont\u2026ernSmallPlayerView)\n    }"
 
     .line 5
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->a:Landroid/view/View;
 
     .line 6
     iget-object p1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->a:Landroid/view/View;
 
-    sget p2, Lcom/vk/music/m/e;->tv_title:I
+    sget p2, Lcom/vk/music/m/R5;->tv_title:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -150,7 +150,7 @@
 
     const-string p2, "itemView.findViewById(R.id.tv_title)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -159,7 +159,7 @@
     .line 7
     iget-object p1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->a:Landroid/view/View;
 
-    sget p2, Lcom/vk/music/m/e;->tv_artist:I
+    sget p2, Lcom/vk/music/m/R5;->tv_artist:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -167,7 +167,7 @@
 
     const-string p2, "itemView.findViewById(R.id.tv_artist)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -176,7 +176,7 @@
     .line 8
     iget-object p1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->a:Landroid/view/View;
 
-    sget p2, Lcom/vk/music/m/e;->iv_explicit:I
+    sget p2, Lcom/vk/music/m/R5;->iv_explicit:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -184,7 +184,7 @@
 
     const-string p2, "itemView.findViewById(R.id.iv_explicit)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -193,7 +193,7 @@
     .line 9
     iget-object p1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->a:Landroid/view/View;
 
-    sget p2, Lcom/vk/music/m/e;->pb_loading:I
+    sget p2, Lcom/vk/music/m/R5;->pb_loading:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -201,7 +201,7 @@
 
     const-string p2, "itemView.findViewById(R.id.pb_loading)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ProgressBar;
 
@@ -210,7 +210,7 @@
     .line 10
     iget-object p1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->a:Landroid/view/View;
 
-    sget p2, Lcom/vk/music/m/e;->player_navigation_shadow:I
+    sget p2, Lcom/vk/music/m/R5;->player_navigation_shadow:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -218,12 +218,12 @@
 
     const-string p2, "itemView.findViewById(R.\u2026player_navigation_shadow)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->a:Landroid/view/View;
 
-    sget p2, Lcom/vk/music/m/e;->bottom_shadow:I
+    sget p2, Lcom/vk/music/m/R5;->bottom_shadow:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -231,12 +231,12 @@
 
     const-string p2, "itemView.findViewById(R.id.bottom_shadow)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     iget-object p1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->a:Landroid/view/View;
 
-    sget p2, Lcom/vk/music/m/e;->iv_play_pause:I
+    sget p2, Lcom/vk/music/m/R5;->iv_play_pause:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -252,14 +252,14 @@
     const-string p3, "itemView.findViewById<Im\u2026ernSmallPlayerView)\n    }"
 
     .line 14
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->f:Landroid/widget/ImageView;
 
     .line 15
     iget-object p1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->a:Landroid/view/View;
 
-    sget p2, Lcom/vk/music/m/e;->iv_next_close:I
+    sget p2, Lcom/vk/music/m/R5;->iv_next_close:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -273,22 +273,22 @@
     invoke-virtual {p2, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 17
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->g:Landroid/widget/ImageView;
 
     .line 18
-    sget-object p1, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object p1, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {p1}, Lcom/vk/music/common/c$a;->i()Lcom/vk/music/common/c$c;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+    invoke-virtual {p1}, Lcom/vk/music/common/Music$a;->i()Lcom/vk/music/common/Music$c;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/d;
+    invoke-interface {p1}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/PlayerModel;
 
     .line 19
     sget-object p1, Lcom/vk/music/player/PlayerMode;->AUDIO:Lcom/vk/music/player/PlayerMode;
@@ -301,7 +301,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -570,18 +570,18 @@
 
     if-ne p1, v2, :cond_2
 
-    sget p1, Lcom/vk/music/m/i;->accessibility_rewind_on_15_sec_forward:I
+    sget p1, Lcom/vk/music/m/R4;->accessibility_rewind_on_15_sec_forward:I
 
     goto :goto_1
 
     :cond_2
-    sget p1, Lcom/vk/music/m/i;->music_talkback_next:I
+    sget p1, Lcom/vk/music/m/R4;->music_talkback_next:I
 
     goto :goto_1
 
     .line 21
     :cond_3
-    sget p1, Lcom/vk/music/m/i;->ui_accessibility_close:I
+    sget p1, Lcom/vk/music/m/R4;->ui_accessibility_close:I
 
     .line 22
     :goto_1
@@ -678,13 +678,13 @@
     if-eqz p1, :cond_1
 
     .line 20
-    sget p1, Lcom/vk/music/m/i;->music_talkback_play:I
+    sget p1, Lcom/vk/music/m/R4;->music_talkback_play:I
 
     goto :goto_1
 
     .line 21
     :cond_1
-    sget p1, Lcom/vk/music/m/i;->music_talkback_pause:I
+    sget p1, Lcom/vk/music/m/R4;->music_talkback_pause:I
 
     .line 22
     :goto_1
@@ -745,9 +745,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->A0()Z
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->A0()Z
 
     move-result v0
 
@@ -760,9 +760,9 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->stop()V
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->stop()V
 
     :goto_0
     return-void
@@ -785,17 +785,17 @@
     if-ne v0, v1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->K0()V
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->K0()V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->next()V
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->next()V
 
     :goto_0
     return-void
@@ -853,9 +853,9 @@
     invoke-direct {p0}, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->f()V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->A0()Z
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->A0()Z
 
     move-result v0
 
@@ -864,9 +864,9 @@
     .line 7
     iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->g:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/d;
+    iget-object v1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v1}, Lcom/vk/music/player/d;->A0()Z
+    invoke-interface {v1}, Lcom/vk/music/player/PlayerModel;->A0()Z
 
     move-result v1
 
@@ -989,9 +989,9 @@
     iput-object v0, v8, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->C:Lcom/vk/dto/music/MusicTrack;
 
     .line 9
-    iget-object v0, v8, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/d;
+    iget-object v0, v8, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->A0()Z
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->A0()Z
 
     move-result v0
 
@@ -1091,9 +1091,9 @@
     invoke-direct {p0}, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->f()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->S()Lcom/vk/dto/music/MusicTrack;
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->S()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v8
 
@@ -1101,7 +1101,7 @@
 
     const-string v0, "playerModel.currentTrack ?: return"
 
-    invoke-static {v8, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-virtual {v8}, Lcom/vk/dto/music/MusicTrack;->D1()Z
@@ -1121,9 +1121,9 @@
     iput-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->B:Lcom/vk/music/player/PlayerMode;
 
     .line 5
-    iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->A0()Z
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->A0()Z
 
     move-result v0
 
@@ -1132,17 +1132,17 @@
     .line 6
     iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->g:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/d;
+    iget-object v1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v1}, Lcom/vk/music/player/d;->A0()Z
+    invoke-interface {v1}, Lcom/vk/music/player/PlayerModel;->A0()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/d;
+    iget-object v1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v1}, Lcom/vk/music/player/d;->L0()Z
+    invoke-interface {v1}, Lcom/vk/music/player/PlayerModel;->L0()Z
 
     move-result v1
 
@@ -1171,7 +1171,7 @@
     .line 7
     iget-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->C:Lcom/vk/dto/music/MusicTrack;
 
-    invoke-static {v8, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v8, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1303,17 +1303,17 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->i()Lcom/vk/music/common/c$c;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->i()Lcom/vk/music/common/Music$c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/d;
+    invoke-interface {v0}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/PlayerModel;
 
     return-void
 .end method
@@ -1329,19 +1329,19 @@
     move-result p1
 
     .line 2
-    sget v0, Lcom/vk/music/m/e;->iv_play_pause:I
+    sget v0, Lcom/vk/music/m/R5;->iv_play_pause:I
 
     if-ne p1, v0, :cond_0
 
-    iget-object p1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/d;
+    iget-object p1, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->h:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {p1}, Lcom/vk/music/player/d;->y0()V
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->y0()V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    sget v0, Lcom/vk/music/m/e;->iv_next_close:I
+    sget v0, Lcom/vk/music/m/R5;->iv_next_close:I
 
     if-ne p1, v0, :cond_1
 
@@ -1351,7 +1351,7 @@
 
     .line 4
     :cond_1
-    invoke-static {}, Lcom/vk/bridges/e;->a()Lcom/vk/bridges/d;
+    invoke-static {}, Lcom/vk/bridges/AudioBridge;->a()Lcom/vk/bridges/AudioBridge1;
 
     move-result-object p1
 
@@ -1359,7 +1359,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/bridges/d;->c(Landroid/content/Context;)V
+    invoke-interface {p1, v0}, Lcom/vk/bridges/AudioBridge1;->c(Landroid/content/Context;)V
 
     :cond_2
     :goto_0
@@ -1370,55 +1370,55 @@
     .locals 2
 
     .line 1
-    sget v0, Lcom/vk/music/m/d;->ic_play_24:I
+    sget v0, Lcom/vk/music/m/R6;->ic_play_24:I
 
-    sget v1, Lcom/vk/music/m/a;->accent:I
+    sget v1, Lcom/vk/music/m/R1;->accent:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->D:Landroid/graphics/drawable/Drawable;
 
     .line 2
-    sget v0, Lcom/vk/music/m/d;->ic_pause_24:I
+    sget v0, Lcom/vk/music/m/R6;->ic_pause_24:I
 
-    sget v1, Lcom/vk/music/m/a;->accent:I
+    sget v1, Lcom/vk/music/m/R1;->accent:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->E:Landroid/graphics/drawable/Drawable;
 
     .line 3
-    sget v0, Lcom/vk/music/m/d;->ic_next_24:I
+    sget v0, Lcom/vk/music/m/R6;->ic_next_24:I
 
-    sget v1, Lcom/vk/music/m/a;->accent:I
+    sget v1, Lcom/vk/music/m/R1;->accent:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->F:Landroid/graphics/drawable/Drawable;
 
     .line 4
-    sget v0, Lcom/vk/music/m/d;->ic_forward_15_24:I
+    sget v0, Lcom/vk/music/m/R6;->ic_forward_15_24:I
 
-    sget v1, Lcom/vk/music/m/a;->accent:I
+    sget v1, Lcom/vk/music/m/R1;->accent:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView;->G:Landroid/graphics/drawable/Drawable;
 
     .line 5
-    sget v0, Lcom/vk/music/m/d;->ic_cancel_24:I
+    sget v0, Lcom/vk/music/m/R6;->ic_cancel_24:I
 
-    sget v1, Lcom/vk/music/m/a;->icon_secondary:I
+    sget v1, Lcom/vk/music/m/R1;->icon_secondary:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v0
 

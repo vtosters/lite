@@ -3,12 +3,12 @@
 .source "GoodsDataProviders.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/picker/FaveLinksDataProvider;->a(Lcom/vk/fave/entities/c;)Ljava/util/List;
+    value = Lcom/vk/market/picker/FaveLinksDataProvider;->a(Lcom/vk/fave/entities/FaveResponseEntries1;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/attachments/SnippetAttachment;",
-        "Lcom/vk/market/picker/b;",
+        "Lcom/vk/market/picker/FaveGoodViewModel;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/attachments/SnippetAttachment;)Lcom/vk/market/picker/b;
+.method public final a(Lcom/vk/dto/attachments/SnippetAttachment;)Lcom/vk/market/picker/FaveGoodViewModel;
     .locals 0
 
     .line 1
-    invoke-static {p1}, Lcom/vk/market/picker/e;->a(Lcom/vk/dto/attachments/SnippetAttachment;)Lcom/vk/market/picker/b;
+    invoke-static {p1}, Lcom/vk/market/picker/GoodsDataProviders;->a(Lcom/vk/dto/attachments/SnippetAttachment;)Lcom/vk/market/picker/FaveGoodViewModel;
 
     move-result-object p1
 
@@ -75,14 +75,14 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 2
 
-    const-class v0, Lcom/vk/market/picker/e;
+    const-class v0, Lcom/vk/market/picker/GoodsDataProviders;
 
     const-string v1, "app_armUpload"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/e;
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/KDeclarationContainer;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
     .line 1
     check-cast p1, Lcom/vk/dto/attachments/SnippetAttachment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/market/picker/FaveLinksDataProvider$convertToViewModel$3;->a(Lcom/vk/dto/attachments/SnippetAttachment;)Lcom/vk/market/picker/b;
+    invoke-virtual {p0, p1}, Lcom/vk/market/picker/FaveLinksDataProvider$convertToViewModel$3;->a(Lcom/vk/dto/attachments/SnippetAttachment;)Lcom/vk/market/picker/FaveGoodViewModel;
 
     move-result-object p1
 

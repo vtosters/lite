@@ -63,7 +63,7 @@
 
     move-object v1, v8
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;-><init>(Ljava/lang/String;ILcom/vk/stat/scheme/SchemeStat$TypeAppStarts$StartMethod;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;-><init>(Ljava/lang/String;ILcom/vk/stat/scheme/SchemeStat$TypeAppStarts$StartMethod;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v8, Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;->SPRINGBOARD:Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;
 
@@ -88,7 +88,7 @@
 
     move-object v9, v1
 
-    invoke-direct/range {v9 .. v15}, Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;-><init>(Ljava/lang/String;ILcom/vk/stat/scheme/SchemeStat$TypeAppStarts$StartMethod;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v9 .. v15}, Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;-><init>(Ljava/lang/String;ILcom/vk/stat/scheme/SchemeStat$TypeAppStarts$StartMethod;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;->PUSH:Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;
 
@@ -111,7 +111,7 @@
 
     move-object v3, v1
 
-    invoke-direct/range {v3 .. v9}, Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;-><init>(Ljava/lang/String;ILcom/vk/stat/scheme/SchemeStat$TypeAppStarts$StartMethod;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;-><init>(Ljava/lang/String;ILcom/vk/stat/scheme/SchemeStat$TypeAppStarts$StartMethod;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;->COMPANION:Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;
 
@@ -145,7 +145,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/lang/String;ILcom/vk/stat/scheme/SchemeStat$TypeAppStarts$StartMethod;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+.method synthetic constructor <init>(Ljava/lang/String;ILcom/vk/stat/scheme/SchemeStat$TypeAppStarts$StartMethod;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x2

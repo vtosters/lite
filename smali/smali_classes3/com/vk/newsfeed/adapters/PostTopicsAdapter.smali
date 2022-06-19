@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/adapters/PostTopicsAdapter;
-.super Lcom/vk/lists/i0;
+.super Lcom/vk/lists/SimpleAdapter;
 .source "PostTopicsAdapter.kt"
 
 
@@ -14,7 +14,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/i0<",
+        "Lcom/vk/lists/SimpleAdapter<",
         "Lcom/vk/dto/newsfeed/PostTopic;",
         "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
         ">;"
@@ -35,7 +35,7 @@
     .end annotation
 .end field
 
-.field private e:Lcom/vk/core/view/links/a$a;
+.field private e:Lcom/vk/core/view/links/ClickableLinkSpan$a;
 
 
 # direct methods
@@ -46,7 +46,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/adapters/PostTopicsAdapter$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/adapters/PostTopicsAdapter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -55,7 +55,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
 
     const/4 v0, -0x1
 
@@ -111,7 +111,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/newsfeed/adapters/PostTopicsAdapter$selectById$index$1;-><init>(I)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->d(Lkotlin/jvm/b/b;)I
+    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->d(Lkotlin/jvm/b/Functions2;)I
 
     move-result p1
 
@@ -126,11 +126,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/view/links/a$a;)V
+.method public final a(Lcom/vk/core/view/links/ClickableLinkSpan$a;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/newsfeed/adapters/PostTopicsAdapter;->e:Lcom/vk/core/view/links/a$a;
+    iput-object p1, p0, Lcom/vk/newsfeed/adapters/PostTopicsAdapter;->e:Lcom/vk/core/view/links/ClickableLinkSpan$a;
 
     return-void
 .end method
@@ -139,7 +139,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-super {p0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result v0
 
@@ -172,7 +172,7 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -191,7 +191,7 @@
 
     add-int/lit8 p2, p2, -0x1
 
-    invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -201,7 +201,7 @@
 
     check-cast p1, Lcom/vk/newsfeed/adapters/PostTopicsAdapter$c;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -213,9 +213,9 @@
 
     check-cast p1, Lcom/vk/newsfeed/adapters/PostTopicsAdapter$b;
 
-    iget-object p2, p0, Lcom/vk/newsfeed/adapters/PostTopicsAdapter;->e:Lcom/vk/core/view/links/a$a;
+    iget-object p2, p0, Lcom/vk/newsfeed/adapters/PostTopicsAdapter;->e:Lcom/vk/core/view/links/ClickableLinkSpan$a;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     :cond_1
     :goto_0

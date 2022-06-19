@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/n2/j;->a:Landroidx/preference/Preference;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/n2/q0;->t(Landroidx/preference/Preference;)Lkotlin/m;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->t(Landroidx/preference/Preference;)Lkotlin/Unit;
 
     move-result-object v0
 

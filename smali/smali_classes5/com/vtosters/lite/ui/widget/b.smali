@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/ui/widget/d;
+.field private final synthetic a:Lcom/vtosters/lite/ui/widget/MenuListView;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/ui/widget/d;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/ui/widget/MenuListView;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/ui/widget/b;->a:Lcom/vtosters/lite/ui/widget/d;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/widget/b;->a:Lcom/vtosters/lite/ui/widget/MenuListView;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/b;->a:Lcom/vtosters/lite/ui/widget/d;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/b;->a:Lcom/vtosters/lite/ui/widget/MenuListView;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/widget/d;->c()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/widget/MenuListView;->c()V
 
     return-void
 .end method

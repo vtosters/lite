@@ -3,7 +3,7 @@
 .source "FlexLayout.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -63,7 +63,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/common/view/flex/FlexLayout$addViewsWithAnimation$2;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -101,7 +101,7 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/common/view/flex/f;
+    check-cast v3, Lcom/vk/common/view/flex/SizeEntities2;
 
     iget-object v4, p0, Lcom/vk/common/view/flex/FlexLayout$addViewsWithAnimation$2;->$childrenSizes:Ljava/util/List;
 
@@ -109,13 +109,13 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/common/view/flex/e;
+    check-cast v4, Lcom/vk/common/view/flex/SizeEntities1;
 
-    invoke-virtual {v4}, Lcom/vk/common/view/flex/e;->b()I
+    invoke-virtual {v4}, Lcom/vk/common/view/flex/SizeEntities1;->b()I
 
     move-result v4
 
-    invoke-virtual {v3, v4}, Lcom/vk/common/view/flex/f;->e(I)V
+    invoke-virtual {v3, v4}, Lcom/vk/common/view/flex/SizeEntities2;->e(I)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -136,7 +136,7 @@
 
     invoke-direct {v4, p0}, Lcom/vk/common/view/flex/FlexLayout$addViewsWithAnimation$2$1;-><init>(Lcom/vk/common/view/flex/FlexLayout$addViewsWithAnimation$2;)V
 
-    invoke-static {v2, v3, v0, v1, v4}, Lcom/vk/common/view/flex/FlexLayout;->a(Lcom/vk/common/view/flex/FlexLayout;Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-static {v2, v3, v0, v1, v4}, Lcom/vk/common/view/flex/FlexLayout;->a(Lcom/vk/common/view/flex/FlexLayout;Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method

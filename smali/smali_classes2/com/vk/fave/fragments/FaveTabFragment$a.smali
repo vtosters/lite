@@ -1,5 +1,5 @@
 .class public final Lcom/vk/fave/fragments/FaveTabFragment$a;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "FaveTabFragment.kt"
 
 
@@ -32,7 +32,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/fave/fragments/FaveTabFragment$a$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/fave/fragments/FaveTabFragment$a$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/fave/fragments/FaveTabFragment$a;->S0:Lcom/vk/fave/fragments/FaveTabFragment$a$a;
 
@@ -45,7 +45,7 @@
     .line 1
     const-class v0, Lcom/vk/fave/fragments/FaveTabFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     return-void
 .end method
@@ -58,7 +58,7 @@
     .line 1
     sget-object v0, Lcom/vk/fave/fragments/FaveTabFragment$a;->S0:Lcom/vk/fave/fragments/FaveTabFragment$a$a;
 
-    iget-object v1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     invoke-virtual {v0, v1, p1, p2}, Lcom/vk/fave/fragments/FaveTabFragment$a$a;->a(Landroid/os/Bundle;Lcom/vk/fave/entities/FaveCategory;Lcom/vk/fave/entities/FaveSource;)V
 

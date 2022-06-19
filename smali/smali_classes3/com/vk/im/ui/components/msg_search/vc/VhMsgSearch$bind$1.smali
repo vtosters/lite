@@ -3,12 +3,12 @@
 .source "VhMsgSearch.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch;->a(Lcom/vk/im/ui/components/msg_search/vc/b;)V
+    value = Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch;->a(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $model:Lcom/vk/im/ui/components/msg_search/vc/b;
+.field final synthetic $model:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels2;
 
 .field final synthetic this$0:Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch;Lcom/vk/im/ui/components/msg_search/vc/b;)V
+.method constructor <init>(Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch;Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels2;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch$bind$1;->this$0:Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch$bind$1;->$model:Lcom/vk/im/ui/components/msg_search/vc/b;
+    iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch$bind$1;->$model:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels2;
 
     const/4 p1, 0x1
 
@@ -56,19 +56,19 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch$bind$1;->this$0:Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch;->a(Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch;)Lcom/vk/im/ui/components/msg_search/vc/p;
+    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch;->a(Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch;)Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch$bind$1;->$model:Lcom/vk/im/ui/components/msg_search/vc/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch$bind$1;->$model:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels2;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/b;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels2;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch$bind$1;->$model:Lcom/vk/im/ui/components/msg_search/vc/b;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch$bind$1;->$model:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels2;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/msg_search/vc/b;->c()Lcom/vk/im/engine/models/messages/Msg;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels2;->c()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object v1
 
@@ -82,7 +82,7 @@
 
     move-result v2
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/vk/im/ui/components/msg_search/vc/p;->a(Lcom/vk/im/engine/models/dialogs/Dialog;II)V
+    invoke-interface {p1, v0, v1, v2}, Lcom/vk/im/ui/components/msg_search/vc/VcCallback;->a(Lcom/vk/im/engine/models/dialogs/Dialog;II)V
 
     return-void
 .end method
@@ -95,7 +95,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/VhMsgSearch$bind$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

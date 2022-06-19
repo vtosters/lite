@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/facebook/drawee/view/DraweeView<",
-        "Lcom/facebook/drawee/generic/a;",
+        "Lcom/facebook/drawee/generic/GenericDraweeHierarchy;",
         ">;"
     }
 .end annotation
@@ -67,14 +67,14 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/facebook/drawee/generic/a;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/facebook/drawee/generic/GenericDraweeHierarchy;)V
     .locals 0
 
     .line 1
     invoke-direct {p0, p1}, Lcom/facebook/drawee/view/DraweeView;-><init>(Landroid/content/Context;)V
 
     .line 2
-    invoke-virtual {p0, p2}, Lcom/facebook/drawee/view/DraweeView;->setHierarchy(Lcom/facebook/u/e/b;)V
+    invoke-virtual {p0, p2}, Lcom/facebook/drawee/view/DraweeView;->setHierarchy(Lcom/facebook/u/e/DraweeHierarchy;)V
 
     return-void
 .end method
@@ -85,7 +85,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/facebook/x/j/b;->c()Z
+    invoke-static {}, Lcom/facebook/x/j/FrescoSystrace;->c()Z
 
     move-result v0
 
@@ -94,37 +94,37 @@
     const-string v0, "GenericDraweeView#inflateHierarchy"
 
     .line 2
-    invoke-static {v0}, Lcom/facebook/x/j/b;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/facebook/x/j/FrescoSystrace;->a(Ljava/lang/String;)V
 
     .line 3
     :cond_0
-    invoke-static {p1, p2}, Lcom/facebook/drawee/generic/c;->a(Landroid/content/Context;Landroid/util/AttributeSet;)Lcom/facebook/drawee/generic/b;
+    invoke-static {p1, p2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyInflater;->a(Landroid/content/Context;Landroid/util/AttributeSet;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
     move-result-object p1
 
     .line 4
-    invoke-virtual {p1}, Lcom/facebook/drawee/generic/b;->f()F
+    invoke-virtual {p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->f()F
 
     move-result p2
 
     invoke-virtual {p0, p2}, Lcom/facebook/drawee/view/DraweeView;->setAspectRatio(F)V
 
     .line 5
-    invoke-virtual {p1}, Lcom/facebook/drawee/generic/b;->a()Lcom/facebook/drawee/generic/a;
+    invoke-virtual {p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a()Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/DraweeView;->setHierarchy(Lcom/facebook/u/e/b;)V
+    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/DraweeView;->setHierarchy(Lcom/facebook/u/e/DraweeHierarchy;)V
 
     .line 6
-    invoke-static {}, Lcom/facebook/x/j/b;->c()Z
+    invoke-static {}, Lcom/facebook/x/j/FrescoSystrace;->c()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
     .line 7
-    invoke-static {}, Lcom/facebook/x/j/b;->a()V
+    invoke-static {}, Lcom/facebook/x/j/FrescoSystrace;->a()V
 
     :cond_1
     return-void

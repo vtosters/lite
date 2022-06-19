@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IIIILcom/vk/common/links/f;)Z
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IIIILcom/vk/common/links/OpenCallback;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vtosters/lite/NewsComment;",
         ">;"
     }
@@ -40,11 +40,11 @@
 
 .field final synthetic e:Landroid/content/Context;
 
-.field final synthetic f:Lcom/vk/common/links/f;
+.field final synthetic f:Lcom/vk/common/links/OpenCallback;
 
 
 # direct methods
-.method constructor <init>(IIIILandroid/content/Context;Lcom/vk/common/links/f;)V
+.method constructor <init>(IIIILandroid/content/Context;Lcom/vk/common/links/OpenCallback;)V
     .locals 0
 
     iput p1, p0, Lcom/vk/common/links/OpenFunctionsKt$d1;->a:I
@@ -57,7 +57,7 @@
 
     iput-object p5, p0, Lcom/vk/common/links/OpenFunctionsKt$d1;->e:Landroid/content/Context;
 
-    iput-object p6, p0, Lcom/vk/common/links/OpenFunctionsKt$d1;->f:Lcom/vk/common/links/f;
+    iput-object p6, p0, Lcom/vk/common/links/OpenFunctionsKt$d1;->f:Lcom/vk/common/links/OpenCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -113,14 +113,14 @@
     .line 8
     iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$d1;->e:Landroid/content/Context;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 9
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$d1;->f:Lcom/vk/common/links/f;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$d1;->f:Lcom/vk/common/links/OpenCallback;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/common/links/f;->a()V
+    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->a()V
 
     :cond_0
     return-void

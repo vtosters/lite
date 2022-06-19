@@ -123,7 +123,7 @@
 
     .line 2
     :cond_0
-    invoke-static {v0}, Lorg/chromium/support_lib_boundary/a/a;->a(Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
+    invoke-static {v0}, Lorg/chromium/support_lib_boundary/a/BoundaryInterfaceReflectionUtil;->a(Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -148,7 +148,7 @@
     invoke-direct {v1, p3}, Landroidx/webkit/internal/VisualStateCallbackAdapter;-><init>(Landroidx/webkit/WebViewCompat$VisualStateCallback;)V
 
     .line 2
-    invoke-static {v1}, Lorg/chromium/support_lib_boundary/a/a;->a(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
+    invoke-static {v1}, Lorg/chromium/support_lib_boundary/a/BoundaryInterfaceReflectionUtil;->a(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
 
     move-result-object p3
 
@@ -169,7 +169,7 @@
     invoke-direct {v1, p1}, Landroidx/webkit/internal/WebMessageAdapter;-><init>(Landroidx/webkit/WebMessageCompat;)V
 
     .line 2
-    invoke-static {v1}, Lorg/chromium/support_lib_boundary/a/a;->a(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
+    invoke-static {v1}, Lorg/chromium/support_lib_boundary/a/BoundaryInterfaceReflectionUtil;->a(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
 
     move-result-object p1
 
@@ -190,7 +190,7 @@
     invoke-direct {v0, p1, p2}, Landroidx/webkit/internal/WebViewRenderProcessClientAdapter;-><init>(Ljava/util/concurrent/Executor;Landroidx/webkit/WebViewRenderProcessClient;)V
 
     .line 2
-    invoke-static {v0}, Lorg/chromium/support_lib_boundary/a/a;->a(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
+    invoke-static {v0}, Lorg/chromium/support_lib_boundary/a/BoundaryInterfaceReflectionUtil;->a(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
 
     move-result-object p1
 

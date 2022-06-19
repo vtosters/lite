@@ -3,12 +3,12 @@
 .source "DialogInfoMergeTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;->b(Lcom/vk/im/engine/d;)Ljava/util/List;
+    value = Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;->b(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,33 +19,33 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/im/engine/internal/storage/models/a;",
+        "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
         ">;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $env:Lcom/vk/im/engine/d;
+.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
 
-.field final synthetic $ids:Lcom/vk/im/engine/utils/collection/g;
+.field final synthetic $ids:Lcom/vk/im/engine/utils/collection/IntList;
 
 .field final synthetic this$0:Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;Lcom/vk/im/engine/utils/collection/g;Lcom/vk/im/engine/d;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;Lcom/vk/im/engine/utils/collection/IntList;Lcom/vk/im/engine/ImEnvironment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;
 
-    iput-object p2, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$onMerge$1;->$ids:Lcom/vk/im/engine/utils/collection/g;
+    iput-object p2, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$onMerge$1;->$ids:Lcom/vk/im/engine/utils/collection/IntList;
 
-    iput-object p3, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/d;
+    iput-object p3, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     const/4 p1, 0x1
 
@@ -64,45 +64,45 @@
             "Lcom/vk/im/engine/internal/storage/StorageManager;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/a;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$onMerge$1;->$ids:Lcom/vk/im/engine/utils/collection/g;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$onMerge$1;->$ids:Lcom/vk/im/engine/utils/collection/IntList;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->d()I
 
     move-result p1
 
     .line 3
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;
 
-    iget-object v2, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     invoke-static {v1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;->a(Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;)Ljava/util/List;
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3, v0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;->a(Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;Lcom/vk/im/engine/d;Ljava/util/List;Landroid/util/SparseArray;I)Ljava/util/List;
+    invoke-static {v1, v2, v3, v0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;->a(Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;Landroid/util/SparseArray;I)Ljava/util/List;
 
     move-result-object p1
 

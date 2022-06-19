@@ -40,13 +40,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartDocPreviewHolder$c;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartDocPreviewHolder;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartDocPreviewHolder;->c()Lcom/vk/im/ui/q/h/b$c;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartDocPreviewHolder;->c()Lcom/vk/im/ui/q/h/VideoAutoPlayer$c;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/im/ui/q/h/b$c;->f()V
+    invoke-interface {p1}, Lcom/vk/im/ui/q/h/VideoAutoPlayer$c;->f()V
 
     :cond_0
     return-void

@@ -1,5 +1,5 @@
 .class final Lcom/vk/navigation/NavigationDelegateBottom$b;
-.super Lcom/vk/music/player/c$a;
+.super Lcom/vk/music/player/PlayerListener$a;
 .source "NavigationDelegateBottom.kt"
 
 
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom$b;->a:Lcom/vk/navigation/NavigationDelegateBottom;
 
-    invoke-direct {p0}, Lcom/vk/music/player/c$a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/music/player/PlayerListener$a;-><init>()V
 
     return-void
 .end method
@@ -61,7 +61,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/e;)V
+.method public a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/TrackInfo;)V
     .locals 1
 
     .line 1
@@ -89,7 +89,7 @@
     if-eqz p2, :cond_1
 
     .line 2
-    invoke-virtual {p2}, Lcom/vk/music/player/e;->o()Z
+    invoke-virtual {p2}, Lcom/vk/music/player/TrackInfo;->o()Z
 
     move-result p2
 

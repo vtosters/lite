@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static a:Lcom/vk/core/dialogs/bottomsheet/e;
+.field private static a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 .field private static b:I
 
@@ -61,7 +61,7 @@
     invoke-direct {v0}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;-><init>()V
 
     .line 12
-    sget v1, Lcom/vk/catalog2/core/r;->bottom_menu_simple_item_view:I
+    sget v1, Lcom/vk/catalog2/core/R7;->bottom_menu_simple_item_view:I
 
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
@@ -69,7 +69,7 @@
 
     const-string v2, "LayoutInflater.from(context)"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, p1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(ILandroid/view/LayoutInflater;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
@@ -78,7 +78,7 @@
 
     invoke-direct {p1}, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$a;-><init>()V
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
+    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter1;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 14
     new-instance p1, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$b;
@@ -95,11 +95,11 @@
     return-object p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/e;
+.method public static final synthetic a(Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
     .locals 0
 
     .line 1
-    sget-object p0, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;->a:Lcom/vk/core/dialogs/bottomsheet/e;
+    sget-object p0, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-object p0
 .end method
@@ -147,7 +147,7 @@
     move-result v0
 
     .line 21
-    sget v1, Lcom/vk/catalog2/core/q;->record:I
+    sget v1, Lcom/vk/catalog2/core/R10;->record:I
 
     if-ne v0, v1, :cond_0
 
@@ -155,7 +155,7 @@
 
     .line 22
     :cond_0
-    sget v1, Lcom/vk/catalog2/core/q;->select:I
+    sget v1, Lcom/vk/catalog2/core/R10;->select:I
 
     if-ne v0, v1, :cond_3
 
@@ -165,24 +165,24 @@
 
     move-result p2
 
-    sget v0, Lcom/vk/catalog2/core/q;->select:I
+    sget v0, Lcom/vk/catalog2/core/R10;->select:I
 
     if-ne p2, v0, :cond_1
 
-    sget-object p2, Lcom/vk/navigation/q;->p0:Ljava/lang/String;
+    sget-object p2, Lcom/vk/navigation/NavigatorKeys;->p0:Ljava/lang/String;
 
     goto :goto_1
 
     :cond_1
-    sget-object p2, Lcom/vk/navigation/q;->q0:Ljava/lang/String;
+    sget-object p2, Lcom/vk/navigation/NavigatorKeys;->q0:Ljava/lang/String;
 
     .line 24
     :goto_1
-    sget-object v0, Lcom/vk/catalog2/video/d;->C:Lcom/vk/catalog2/video/d$a;
+    sget-object v0, Lcom/vk/catalog2/video/VideoUploadFragment;->C:Lcom/vk/catalog2/video/VideoUploadFragment$a;
 
     sget v1, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;->b:I
 
-    invoke-virtual {v0, v1, p2}, Lcom/vk/catalog2/video/d$a;->a(ILjava/lang/String;)Lcom/vk/catalog2/video/d;
+    invoke-virtual {v0, v1, p2}, Lcom/vk/catalog2/video/VideoUploadFragment$a;->a(ILjava/lang/String;)Lcom/vk/catalog2/video/VideoUploadFragment;
 
     move-result-object p2
 
@@ -221,17 +221,17 @@
 
     .line 27
     :cond_3
-    sget p2, Lcom/vk/catalog2/core/q;->link:I
+    sget p2, Lcom/vk/catalog2/core/R10;->link:I
 
     if-ne v0, p2, :cond_4
 
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object p2
 
     sget v0, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;->b:I
 
-    invoke-interface {p2, p1, v0}, Lcom/vk/bridges/k0;->a(Landroid/app/Activity;I)V
+    invoke-interface {p2, p1, v0}, Lcom/vk/bridges/VideoBridge1;->a(Landroid/app/Activity;I)V
 
     :cond_4
     :goto_2
@@ -247,11 +247,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;Lcom/vk/core/dialogs/bottomsheet/e;)V
+.method public static final synthetic a(Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
     .locals 0
 
     .line 3
-    sput-object p1, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;->a:Lcom/vk/core/dialogs/bottomsheet/e;
+    sput-object p1, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method
@@ -277,14 +277,14 @@
     invoke-virtual {v1, p2}, Lcom/vk/core/dialogs/adapter/ModalAdapter;->setItems(Ljava/util/List;)V
 
     .line 7
-    new-instance p2, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance p2, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 8
     sget-object p1, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$c;->a:Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$c;
 
-    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 v2, 0x1
 
@@ -297,16 +297,16 @@
     move-object v0, p2
 
     .line 9
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const-string p1, "video_catalog_upload"
 
     .line 10
-    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
-    sput-object p1, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;->a:Lcom/vk/core/dialogs/bottomsheet/e;
+    sput-object p1, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method

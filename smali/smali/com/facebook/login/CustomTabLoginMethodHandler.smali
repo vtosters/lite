@@ -75,7 +75,7 @@
     const/16 p1, 0x14
 
     .line 2
-    invoke-static {p1}, Lcom/facebook/internal/r;->a(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/facebook/internal/Utility;->a(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -192,11 +192,11 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {}, Lcom/facebook/e;->e()Landroid/content/Context;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->e()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/facebook/internal/s;->a(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/facebook/internal/Validate;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -239,7 +239,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/facebook/internal/r;->f(Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-static {v0}, Lcom/facebook/internal/Utility;->f(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -248,7 +248,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/facebook/internal/r;->f(Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-static {p1}, Lcom/facebook/internal/Utility;->f(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -327,7 +327,7 @@
     move-result-object v3
 
     .line 25
-    invoke-static {v3}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -351,13 +351,13 @@
 
     .line 27
     :goto_0
-    invoke-static {p1}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_5
 
-    invoke-static {v2}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
 
     move-result v4
 

@@ -30,14 +30,14 @@
     if-eqz p2, :cond_0
 
     .line 2
-    sget-object v1, Lb/h/g/f;->AutoAdjustLinearLayout:[I
+    sget-object v1, Lb/h/g/R5;->AutoAdjustLinearLayout:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 3
-    sget p2, Lb/h/g/f;->AutoAdjustLinearLayout_vk_layout_isAdjust:I
+    sget p2, Lb/h/g/R5;->AutoAdjustLinearLayout_vk_layout_isAdjust:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 

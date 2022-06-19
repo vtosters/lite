@@ -3,7 +3,7 @@
 .source "PhotoGalleryFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -39,7 +39,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/avatarpicker/PhotoGalleryFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/avatarpicker/PhotoGalleryFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/avatarpicker/PhotoGalleryFragment;->f:Lcom/vk/avatarpicker/PhotoGalleryFragment$a;
 
@@ -122,7 +122,7 @@
 
     move-result-object p1
 
-    sget p3, Lcom/vk/avatarpicker/c;->fragment_photo_view:I
+    sget p3, Lcom/vk/avatarpicker/R;->fragment_photo_view:I
 
     const/4 v0, 0x0
 
@@ -135,7 +135,7 @@
     :cond_0
     const-string p1, "contextWrapper"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -149,7 +149,7 @@
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
-    sget p2, Lcom/vk/avatarpicker/b;->gallery_view:I
+    sget p2, Lcom/vk/avatarpicker/R1;->gallery_view:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -157,14 +157,14 @@
 
     const-string v0, "view.findViewById(R.id.gallery_view)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/photogallery/PhotoGalleryView;
 
     iput-object p2, p0, Lcom/vk/avatarpicker/PhotoGalleryFragment;->a:Lcom/vk/photogallery/PhotoGalleryView;
 
     .line 3
-    sget p2, Lcom/vk/avatarpicker/b;->toolbar:I
+    sget p2, Lcom/vk/avatarpicker/R1;->toolbar:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -172,7 +172,7 @@
 
     const-string p2, "view.findViewById(R.id.toolbar)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/appcompat/widget/Toolbar;
 
@@ -205,7 +205,7 @@
     :cond_0
     const-string p1, "toolbar"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -213,7 +213,7 @@
     const-string p1, "galleryView"
 
     .line 6
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 .end method
@@ -237,7 +237,7 @@
     :cond_0
     const-string v0, "contextWrapper"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

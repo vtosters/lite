@@ -3,12 +3,12 @@
 .source "AutoPlayNow.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/autoplay/AutoPlayNow;-><init>(Lcom/vk/libvideo/autoplay/a;Lcom/vk/libvideo/autoplay/AutoPlayConfig;Lcom/vk/media/player/video/view/VideoTextureView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+    value = Lcom/vk/libvideo/autoplay/AutoPlayNow;-><init>(Lcom/vk/libvideo/autoplay/AutoPlay;Lcom/vk/libvideo/autoplay/AutoPlayConfig;Lcom/vk/media/player/video/view/VideoTextureView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/libvideo/s$b;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/libvideo/VideoUI$b;",
         ">;"
     }
 .end annotation
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/libvideo/s$b;
+.method public final invoke()Lcom/vk/libvideo/VideoUI$b;
     .locals 2
 
     .line 2
@@ -55,14 +55,14 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/libvideo/s$b;
+    instance-of v1, v0, Lcom/vk/libvideo/VideoUI$b;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vk/libvideo/s$b;
+    check-cast v0, Lcom/vk/libvideo/VideoUI$b;
 
     return-object v0
 .end method
@@ -71,7 +71,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/AutoPlayNow$singleProvider$2;->invoke()Lcom/vk/libvideo/s$b;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/AutoPlayNow$singleProvider$2;->invoke()Lcom/vk/libvideo/VideoUI$b;
 
     move-result-object v0
 

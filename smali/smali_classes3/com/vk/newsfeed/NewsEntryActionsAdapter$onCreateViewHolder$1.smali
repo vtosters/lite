@@ -3,7 +3,7 @@
 .source "NewsEntryActionsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $holder:Lcom/vk/newsfeed/a;
+.field final synthetic $holder:Lcom/vk/newsfeed/NewsEntryActionsAdapter1;
 
 .field final synthetic this$0:Lcom/vk/newsfeed/NewsEntryActionsAdapter;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/NewsEntryActionsAdapter;Lcom/vk/newsfeed/a;)V
+.method constructor <init>(Lcom/vk/newsfeed/NewsEntryActionsAdapter;Lcom/vk/newsfeed/NewsEntryActionsAdapter1;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/newsfeed/NewsEntryActionsAdapter$onCreateViewHolder$1;->this$0:Lcom/vk/newsfeed/NewsEntryActionsAdapter;
 
-    iput-object p2, p0, Lcom/vk/newsfeed/NewsEntryActionsAdapter$onCreateViewHolder$1;->$holder:Lcom/vk/newsfeed/a;
+    iput-object p2, p0, Lcom/vk/newsfeed/NewsEntryActionsAdapter$onCreateViewHolder$1;->$holder:Lcom/vk/newsfeed/NewsEntryActionsAdapter1;
 
     const/4 p1, 0x1
 
@@ -54,24 +54,24 @@
     .locals 2
 
     .line 1
-    iget-object p1, p0, Lcom/vk/newsfeed/NewsEntryActionsAdapter$onCreateViewHolder$1;->$holder:Lcom/vk/newsfeed/a;
+    iget-object p1, p0, Lcom/vk/newsfeed/NewsEntryActionsAdapter$onCreateViewHolder$1;->$holder:Lcom/vk/newsfeed/NewsEntryActionsAdapter1;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/newsfeed/i;
+    check-cast p1, Lcom/vk/newsfeed/NewsEntryActionsAdapter2;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/i;->a()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/NewsEntryActionsAdapter2;->a()I
 
     move-result p1
 
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/NewsEntryActionsAdapter$onCreateViewHolder$1;->this$0:Lcom/vk/newsfeed/NewsEntryActionsAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/NewsEntryActionsAdapter;->j()Lcom/vk/newsfeed/j;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/NewsEntryActionsAdapter;->j()Lcom/vk/newsfeed/NewsEntryActionsAdapter3;
 
     move-result-object v0
 
@@ -89,7 +89,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/dialogs/actionspopup/a;
+    check-cast v1, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     goto :goto_0
 
@@ -97,7 +97,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-interface {v0, v1, p1}, Lcom/vk/newsfeed/j;->a(Lcom/vk/core/dialogs/actionspopup/a;I)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/newsfeed/NewsEntryActionsAdapter3;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup;I)V
 
     :cond_1
     return-void
@@ -111,7 +111,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/NewsEntryActionsAdapter$onCreateViewHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

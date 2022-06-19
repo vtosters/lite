@@ -3,12 +3,12 @@
 .source "ViewExt.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/c;)V
+    value = Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $onClick:Lkotlin/jvm/b/c;
+.field final synthetic $onClick:Lkotlin/jvm/b/Functions1;
 
 .field final synthetic $onTouchListener:Lcom/vk/extensions/ViewExtKt$n;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/extensions/ViewExtKt$n;Lkotlin/jvm/b/c;)V
+.method constructor <init>(Lcom/vk/extensions/ViewExtKt$n;Lkotlin/jvm/b/Functions1;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/extensions/ViewExtKt$setOnClickListenerWithCoordinates$1;->$onTouchListener:Lcom/vk/extensions/ViewExtKt$n;
 
-    iput-object p2, p0, Lcom/vk/extensions/ViewExtKt$setOnClickListenerWithCoordinates$1;->$onClick:Lkotlin/jvm/b/c;
+    iput-object p2, p0, Lcom/vk/extensions/ViewExtKt$setOnClickListenerWithCoordinates$1;->$onClick:Lkotlin/jvm/b/Functions1;
 
     const/4 p1, 0x1
 
@@ -62,7 +62,7 @@
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/extensions/ViewExtKt$setOnClickListenerWithCoordinates$1;->$onClick:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/extensions/ViewExtKt$setOnClickListenerWithCoordinates$1;->$onClick:Lkotlin/jvm/b/Functions1;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -80,7 +80,7 @@
 
     move-result-object p1
 
-    invoke-interface {v0, v1, p1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1, p1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -93,7 +93,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/extensions/ViewExtKt$setOnClickListenerWithCoordinates$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

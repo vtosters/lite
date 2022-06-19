@@ -3,7 +3,7 @@
 .source "ZhukovHolder.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -54,7 +54,7 @@
 
     iget-object p1, p1, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder$a;->d:Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->d(Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;)Lcom/vk/bridges/p$d;
+    invoke-static {p1}, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;->d(Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;)Lcom/vk/bridges/ImageViewer$d;
 
     move-result-object p1
 
@@ -62,7 +62,7 @@
 
     const/4 v0, 0x1
 
-    invoke-interface {p1, v0}, Lcom/vk/bridges/p$d;->a(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/bridges/ImageViewer$d;->a(Z)V
 
     :cond_0
     return-void

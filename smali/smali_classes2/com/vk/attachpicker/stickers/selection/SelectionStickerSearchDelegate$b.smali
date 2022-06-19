@@ -49,7 +49,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$b;->a:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;
 
-    invoke-static {v0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->f(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)Lcom/vk/attachpicker/stickers/selection/f/f;
+    invoke-static {v0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->f(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;
 
     move-result-object v0
 
@@ -59,9 +59,9 @@
 
     const-string v2, "lm"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/attachpicker/stickers/selection/f/f;->a(ILandroidx/recyclerview/widget/GridLayoutManager;)I
+    invoke-virtual {v0, p1, v1}, Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;->a(ILandroidx/recyclerview/widget/GridLayoutManager;)I
 
     move-result p1
 

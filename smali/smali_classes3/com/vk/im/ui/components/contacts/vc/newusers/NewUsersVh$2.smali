@@ -3,12 +3,12 @@
 .source "NewUsersVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/contacts/vc/newusers/a;)V
+    value = Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersCallback;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,21 +52,21 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh$2;->this$0:Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->a(Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;)Lcom/vk/im/ui/components/contacts/vc/newusers/a;
+    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->a(Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;)Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersCallback;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh$2;->this$0:Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->b(Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;)Lcom/vk/im/ui/components/contacts/vc/newusers/b;
+    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->b(Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;)Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersItemItem;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/contacts/vc/newusers/b;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersItemItem;->a()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/im/ui/components/contacts/vc/newusers/a;->c(Ljava/util/List;)V
+    invoke-interface {p1, v0}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersCallback;->c(Ljava/util/List;)V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh$2;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -36,12 +36,12 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/audio/utils/e;->a()Z
+    invoke-static {}, Lcom/vtosters/lite/audio/utils/Utils;->a()Z
 
     move-result p1
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/audio/player/PlayerService;->i()Lcom/vtosters/lite/audio/g/b;
+    invoke-static {}, Lcom/vtosters/lite/audio/player/PlayerService;->i()Lcom/vtosters/lite/audio/g/StaticObservableEvent;
 
     move-result-object p2
 
@@ -51,7 +51,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, v0, p1}, Lcom/vtosters/lite/audio/g/b;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {p2, v0, p1}, Lcom/vtosters/lite/audio/g/StaticObservableEvent;->a(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method

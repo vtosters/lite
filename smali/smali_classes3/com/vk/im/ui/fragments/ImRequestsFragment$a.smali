@@ -1,5 +1,5 @@
 .class public Lcom/vk/im/ui/fragments/ImRequestsFragment$a;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "ImRequestsFragment.kt"
 
 
@@ -28,12 +28,12 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, p1}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/Class;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1

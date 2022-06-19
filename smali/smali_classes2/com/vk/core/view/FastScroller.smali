@@ -286,14 +286,14 @@
     .end param
 
     .line 3
-    sget-object v0, Lb/h/z/m;->FastScroller:[I
+    sget-object v0, Lb/h/z/R3;->FastScroller:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
     .line 4
-    sget v0, Lb/h/z/m;->FastScroller_fsTrackColor:I
+    sget v0, Lb/h/z/R3;->FastScroller_fsTrackColor:I
 
     iget v1, p0, Lcom/vk/core/view/FastScroller;->a:I
 
@@ -304,7 +304,7 @@
     iput v0, p0, Lcom/vk/core/view/FastScroller;->a:I
 
     .line 5
-    sget v0, Lb/h/z/m;->FastScroller_fsTrackWidth:I
+    sget v0, Lb/h/z/R3;->FastScroller_fsTrackWidth:I
 
     iget v1, p0, Lcom/vk/core/view/FastScroller;->b:I
 
@@ -315,7 +315,7 @@
     iput v0, p0, Lcom/vk/core/view/FastScroller;->b:I
 
     .line 6
-    sget v0, Lb/h/z/m;->FastScroller_fsHandle:I
+    sget v0, Lb/h/z/R3;->FastScroller_fsHandle:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -333,7 +333,7 @@
 
     move-result-object p1
 
-    sget v0, Lb/h/z/e;->fastscroller_section_indicator:I
+    sget v0, Lb/h/z/R8;->fastscroller_section_indicator:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

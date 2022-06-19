@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/single/SingleSubscribeOn;
-.super Lc/a/t;
+.super Lio/reactivex/Single;
 .source "SingleSubscribeOn.java"
 
 
@@ -15,58 +15,58 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lc/a/t<",
+        "Lio/reactivex/Single<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final a:Lc/a/x;
+.field final a:Lio/reactivex/SingleSource;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/x<",
+            "Lio/reactivex/SingleSource<",
             "+TT;>;"
         }
     .end annotation
 .end field
 
-.field final b:Lc/a/s;
+.field final b:Lio/reactivex/Scheduler;
 
 
 # direct methods
-.method public constructor <init>(Lc/a/x;Lc/a/s;)V
+.method public constructor <init>(Lio/reactivex/SingleSource;Lio/reactivex/Scheduler;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/x<",
+            "Lio/reactivex/SingleSource<",
             "+TT;>;",
-            "Lc/a/s;",
+            "Lio/reactivex/Scheduler;",
             ")V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lc/a/t;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/Single;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn;->a:Lc/a/x;
+    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn;->a:Lio/reactivex/SingleSource;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn;->b:Lc/a/s;
+    iput-object p2, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn;->b:Lio/reactivex/Scheduler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected b(Lc/a/v;)V
+.method protected b(Lio/reactivex/SingleObserver;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/v<",
+            "Lio/reactivex/SingleObserver<",
             "-TT;>;)V"
         }
     .end annotation
@@ -74,24 +74,24 @@
     .line 1
     new-instance v0, Lio/reactivex/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;
 
-    iget-object v1, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn;->a:Lc/a/x;
+    iget-object v1, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn;->a:Lio/reactivex/SingleSource;
 
-    invoke-direct {v0, p1, v1}, Lio/reactivex/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;-><init>(Lc/a/v;Lc/a/x;)V
+    invoke-direct {v0, p1, v1}, Lio/reactivex/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;-><init>(Lio/reactivex/SingleObserver;Lio/reactivex/SingleSource;)V
 
     .line 2
-    invoke-interface {p1, v0}, Lc/a/v;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p1, v0}, Lio/reactivex/SingleObserver;->a(Lio/reactivex/disposables/Disposable;)V
 
     .line 3
-    iget-object p1, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn;->b:Lc/a/s;
+    iget-object p1, p0, Lio/reactivex/internal/operators/single/SingleSubscribeOn;->b:Lio/reactivex/Scheduler;
 
-    invoke-virtual {p1, v0}, Lc/a/s;->a(Ljava/lang/Runnable;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0}, Lio/reactivex/Scheduler;->a(Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 4
     iget-object v0, v0, Lio/reactivex/internal/operators/single/SingleSubscribeOn$SubscribeOnObserver;->task:Lio/reactivex/internal/disposables/SequentialDisposable;
 
-    invoke-virtual {v0, p1}, Lio/reactivex/internal/disposables/SequentialDisposable;->a(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/internal/disposables/SequentialDisposable;->a(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method

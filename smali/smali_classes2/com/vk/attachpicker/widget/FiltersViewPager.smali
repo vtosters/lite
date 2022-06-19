@@ -183,7 +183,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/attachpicker/widget/FiltersViewPager$a;-><init>(Lcom/vk/attachpicker/widget/FiltersViewPager;)V
 
-    invoke-static {p0, v0}, Lcom/vk/attachpicker/util/f;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-static {p0, v0}, Lcom/vk/attachpicker/util/Utils;->a(Landroid/view/View;Ljava/lang/Runnable;)V
 
     return-void
 .end method

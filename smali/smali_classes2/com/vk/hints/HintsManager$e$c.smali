@@ -3,12 +3,12 @@
 .source "HintsManager.kt"
 
 # interfaces
-.implements Lcom/vk/core/util/w;
+.implements Lcom/vk/core/util/Dismissable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/hints/HintsManager$e;->b(Landroid/app/Activity;Lcom/vk/dto/hints/Hint;)Lcom/vk/core/util/w;
+    value = Lcom/vk/hints/HintsManager$e;->b(Landroid/app/Activity;Lcom/vk/dto/hints/Hint;)Lcom/vk/core/util/Dismissable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

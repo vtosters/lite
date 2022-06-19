@@ -3,7 +3,7 @@
 .source "LazyJVM.kt"
 
 # interfaces
-.implements Lkotlin/e;
+.implements Lkotlin/Lazy2;
 .implements Ljava/io/Serializable;
 
 
@@ -20,7 +20,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lkotlin/e<",
+        "Lkotlin/Lazy2<",
         "TT;>;",
         "Ljava/io/Serializable;"
     }
@@ -46,10 +46,10 @@
 
 .field private final final:Ljava/lang/Object;
 
-.field private volatile initializer:Lkotlin/jvm/b/a;
+.field private volatile initializer:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+TT;>;"
         }
     .end annotation
@@ -64,7 +64,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lkotlin/SafePublicationLazyImpl$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lkotlin/SafePublicationLazyImpl$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     const-class v0, Lkotlin/SafePublicationLazyImpl;
@@ -84,12 +84,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+TT;>;)V"
         }
     .end annotation
@@ -98,10 +98,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lkotlin/SafePublicationLazyImpl;->initializer:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lkotlin/SafePublicationLazyImpl;->initializer:Lkotlin/jvm/b/Functions;
 
     .line 3
-    sget-object p1, Lkotlin/l;->a:Lkotlin/l;
+    sget-object p1, Lkotlin/Lazy;->INSTANCE:Lkotlin/Lazy;
 
     iput-object p1, p0, Lkotlin/SafePublicationLazyImpl;->_value:Ljava/lang/Object;
 
@@ -134,7 +134,7 @@
     .line 1
     iget-object v0, p0, Lkotlin/SafePublicationLazyImpl;->_value:Ljava/lang/Object;
 
-    sget-object v1, Lkotlin/l;->a:Lkotlin/l;
+    sget-object v1, Lkotlin/Lazy;->INSTANCE:Lkotlin/Lazy;
 
     if-eq v0, v1, :cond_0
 
@@ -161,7 +161,7 @@
     iget-object v0, p0, Lkotlin/SafePublicationLazyImpl;->_value:Ljava/lang/Object;
 
     .line 2
-    sget-object v1, Lkotlin/l;->a:Lkotlin/l;
+    sget-object v1, Lkotlin/Lazy;->INSTANCE:Lkotlin/Lazy;
 
     if-eq v0, v1, :cond_0
 
@@ -169,19 +169,19 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lkotlin/SafePublicationLazyImpl;->initializer:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lkotlin/SafePublicationLazyImpl;->initializer:Lkotlin/jvm/b/Functions;
 
     if-eqz v0, :cond_1
 
     .line 4
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
     .line 5
     sget-object v1, Lkotlin/SafePublicationLazyImpl;->a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    sget-object v2, Lkotlin/l;->a:Lkotlin/l;
+    sget-object v2, Lkotlin/Lazy;->INSTANCE:Lkotlin/Lazy;
 
     invoke-virtual {v1, p0, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -192,7 +192,7 @@
     const/4 v1, 0x0
 
     .line 6
-    iput-object v1, p0, Lkotlin/SafePublicationLazyImpl;->initializer:Lkotlin/jvm/b/a;
+    iput-object v1, p0, Lkotlin/SafePublicationLazyImpl;->initializer:Lkotlin/jvm/b/Functions;
 
     return-object v0
 

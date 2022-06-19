@@ -3,7 +3,7 @@
 .source "AttachActivity.java"
 
 # interfaces
-.implements Lcom/vk/attachpicker/widget/l;
+.implements Lcom/vk/attachpicker/widget/OnItemClickListener;
 
 
 # annotations

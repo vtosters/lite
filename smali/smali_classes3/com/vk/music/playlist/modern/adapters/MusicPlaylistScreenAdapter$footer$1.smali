@@ -3,12 +3,12 @@
 .source "MusicPlaylistScreenAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;-><init>(ZLkotlin/jvm/b/a;Lcom/vk/music/playlist/b;Lcom/vk/music/player/d;Lcom/vk/core/ui/k;)V
+    value = Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;-><init>(ZLkotlin/jvm/b/Functions;Lcom/vk/music/playlist/ModernPlaylistModel;Lcom/vk/music/player/PlayerModel;Lcom/vk/core/ui/IdClickListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/ViewGroup;",
-        "Lcom/vk/music/playlist/modern/h/e;",
+        "Lcom/vk/music/playlist/modern/h/MusicPlaylistFooterViewHolder;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/e;
+.method public final a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/MusicPlaylistFooterViewHolder;
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vk/music/playlist/modern/h/e;
+    new-instance v0, Lcom/vk/music/playlist/modern/h/MusicPlaylistFooterViewHolder;
 
-    invoke-direct {v0, p1}, Lcom/vk/music/playlist/modern/h/e;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v0, p1}, Lcom/vk/music/playlist/modern/h/MusicPlaylistFooterViewHolder;-><init>(Landroid/view/ViewGroup;)V
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
     .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$footer$1;->a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/e;
+    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$footer$1;->a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/MusicPlaylistFooterViewHolder;
 
     move-result-object p1
 

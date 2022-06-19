@@ -25,7 +25,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/api/sdk/ui/VKConfirmationActivity$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/sdk/ui/VKConfirmationActivity$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/api/sdk/ui/VKConfirmationActivity;->b:Lcom/vk/api/sdk/ui/VKConfirmationActivity$a;
 
@@ -68,9 +68,9 @@
     invoke-super {p0}, Landroid/app/Activity;->finish()V
 
     .line 2
-    sget-object v0, Lcom/vk/api/sdk/utils/g;->c:Lcom/vk/api/sdk/utils/g;
+    sget-object v0, Lcom/vk/api/sdk/utils/VKValidationLocker;->INSTANCE:Lcom/vk/api/sdk/utils/VKValidationLocker;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/g;->b()V
+    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/VKValidationLocker;->b()V
 
     const/4 v0, 0x0
 
@@ -106,7 +106,7 @@
     invoke-direct {p1, p0, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
     .line 5
-    sget v0, Lcom/vk/api/sdk/c;->vk_confirm:I
+    sget v0, Lcom/vk/api/sdk/R1;->vk_confirm:I
 
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -171,9 +171,9 @@
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
     .line 2
-    sget-object v0, Lcom/vk/api/sdk/utils/g;->c:Lcom/vk/api/sdk/utils/g;
+    sget-object v0, Lcom/vk/api/sdk/utils/VKValidationLocker;->INSTANCE:Lcom/vk/api/sdk/utils/VKValidationLocker;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/g;->b()V
+    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/VKValidationLocker;->b()V
 
     return-void
 .end method

@@ -48,11 +48,11 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/music/ui/common/formatting/b;->a:Lcom/vk/music/ui/common/formatting/b;
+    sget-object v1, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->INSTANCE:Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;
 
     iget-object v2, p0, Lcom/vk/music/view/audio_player/ModernSmallPlayerView$g;->b:Lcom/vk/dto/music/MusicTrack;
 
-    invoke-virtual {v1, v2}, Lcom/vk/music/ui/common/formatting/b;->a(Lcom/vk/dto/music/MusicTrack;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v2}, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->a(Lcom/vk/dto/music/MusicTrack;)Ljava/lang/CharSequence;
 
     move-result-object v1
 

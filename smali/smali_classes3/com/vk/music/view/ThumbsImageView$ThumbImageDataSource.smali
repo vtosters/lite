@@ -22,8 +22,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/facebook/datasource/AbstractDataSource<",
-        "Lcom/facebook/common/references/a<",
-        "Lcom/facebook/x/g/c;",
+        "Lcom/facebook/common/references/CloseableReference<",
+        "Lcom/facebook/x/g/CloseableImage;",
         ">;>;"
     }
 .end annotation
@@ -32,11 +32,11 @@
 # static fields
 .field private static final j:Ljava/util/concurrent/ExecutorService;
 
-.field private static final k:Lcom/vk/core/util/d1;
+.field private static final k:Lcom/vk/core/util/ThreadLocalDelegate;
 
-.field private static final l:Lcom/vk/core/util/d1;
+.field private static final l:Lcom/vk/core/util/ThreadLocalDelegate;
 
-.field private static final m:Lcom/vk/core/util/d1;
+.field private static final m:Lcom/vk/core/util/ThreadLocalDelegate;
 
 .field public static final n:Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource$c;
 
@@ -44,10 +44,10 @@
 # instance fields
 .field private final g:Landroid/graphics/Paint;
 
-.field private final h:Lcom/facebook/datasource/b;
+.field private final h:Lcom/facebook/datasource/DataSource;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/facebook/datasource/b<",
+            "Lcom/facebook/datasource/DataSource<",
             "*>;"
         }
     .end annotation
@@ -64,7 +64,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->n:Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource$c;
 
@@ -80,29 +80,29 @@
     .line 2
     sget-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource$Companion$srcRect$2;->a:Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource$Companion$srcRect$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->k:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->k:Lcom/vk/core/util/ThreadLocalDelegate;
 
     .line 3
     sget-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource$Companion$dstRect$2;->a:Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource$Companion$dstRect$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->l:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->l:Lcom/vk/core/util/ThreadLocalDelegate;
 
     .line 4
     sget-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource$Companion$stringBuilder$2;->a:Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource$Companion$stringBuilder$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->m:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->m:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-void
 .end method
@@ -133,7 +133,7 @@
     iput-object p2, p0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->g:Landroid/graphics/Paint;
 
     .line 3
-    new-instance p2, Lcom/facebook/cache/common/g;
+    new-instance p2, Lcom/facebook/cache/common/SimpleCacheKey;
 
     iget v0, p0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->i:I
 
@@ -141,51 +141,51 @@
 
     move-result-object v0
 
-    invoke-direct {p2, v0}, Lcom/facebook/cache/common/g;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, v0}, Lcom/facebook/cache/common/SimpleCacheKey;-><init>(Ljava/lang/String;)V
 
     .line 4
     sget-object v0, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
+    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
 
     move-result-object v0
 
     const-string v1, "FrescoWrapper.getImagePipeline()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/facebook/x/d/g;->e()Lcom/facebook/x/c/p;
+    invoke-virtual {v0}, Lcom/facebook/x/d/ImagePipeline;->e()Lcom/facebook/x/c/MemoryCache;
 
     move-result-object v0
 
     .line 5
-    invoke-interface {v0, p2}, Lcom/facebook/x/c/p;->get(Ljava/lang/Object;)Lcom/facebook/common/references/a;
+    invoke-interface {v0, p2}, Lcom/facebook/x/c/MemoryCache;->get(Ljava/lang/Object;)Lcom/facebook/common/references/CloseableReference;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 6
-    invoke-virtual {v1}, Lcom/facebook/common/references/a;->d()Z
+    invoke-virtual {v1}, Lcom/facebook/common/references/CloseableReference;->d()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 7
-    invoke-static {}, Lcom/facebook/datasource/g;->j()Lcom/facebook/datasource/g;
+    invoke-static {}, Lcom/facebook/datasource/SimpleDataSource;->j()Lcom/facebook/datasource/SimpleDataSource;
 
     move-result-object p1
 
     .line 8
-    invoke-virtual {p1, v1}, Lcom/facebook/datasource/g;->b(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Lcom/facebook/datasource/SimpleDataSource;->b(Ljava/lang/Object;)Z
 
     const-string p2, "SimpleDataSource.create<\u2026 cached\n                }"
 
     .line 9
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->h:Lcom/facebook/datasource/b;
+    iput-object p1, p0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->h:Lcom/facebook/datasource/DataSource;
 
     const/4 p1, 0x1
 
@@ -196,7 +196,7 @@
 
     .line 11
     :cond_0
-    invoke-direct {p0, p1}, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->a(Ljava/util/List;)[Lcom/facebook/datasource/b;
+    invoke-direct {p0, p1}, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->a(Ljava/util/List;)[Lcom/facebook/datasource/DataSource;
 
     move-result-object p1
 
@@ -206,29 +206,29 @@
 
     move-result-object p1
 
-    check-cast p1, [Lcom/facebook/datasource/b;
+    check-cast p1, [Lcom/facebook/datasource/DataSource;
 
-    invoke-static {p1}, Lcom/facebook/x/e/d;->a([Lcom/facebook/datasource/b;)Lcom/facebook/x/e/d;
+    invoke-static {p1}, Lcom/facebook/x/e/ListDataSource;->a([Lcom/facebook/datasource/DataSource;)Lcom/facebook/x/e/ListDataSource;
 
     move-result-object p1
 
     .line 12
     new-instance v1, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource$a;
 
-    invoke-direct {v1, p0, v0, p2}, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource$a;-><init>(Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;Lcom/facebook/x/c/p;Lcom/facebook/cache/common/g;)V
+    invoke-direct {v1, p0, v0, p2}, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource$a;-><init>(Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;Lcom/facebook/x/c/MemoryCache;Lcom/facebook/cache/common/SimpleCacheKey;)V
 
     .line 13
     sget-object p2, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->j:Ljava/util/concurrent/ExecutorService;
 
     .line 14
-    invoke-virtual {p1, v1, p2}, Lcom/facebook/datasource/AbstractDataSource;->a(Lcom/facebook/datasource/d;Ljava/util/concurrent/Executor;)V
+    invoke-virtual {p1, v1, p2}, Lcom/facebook/datasource/AbstractDataSource;->a(Lcom/facebook/datasource/DataSubscriber;Ljava/util/concurrent/Executor;)V
 
     const-string p2, "ListDataSource.create(*a\u2026ecutor)\n                }"
 
     .line 15
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->h:Lcom/facebook/datasource/b;
+    iput-object p1, p0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->h:Lcom/facebook/datasource/DataSource;
 
     :goto_0
     return-void
@@ -241,8 +241,8 @@
             "(",
             "Landroid/graphics/Canvas;",
             "Ljava/util/List<",
-            "Lcom/facebook/common/references/a<",
-            "Lcom/facebook/x/g/c;",
+            "Lcom/facebook/common/references/CloseableReference<",
+            "Lcom/facebook/x/g/CloseableImage;",
             ">;>;)I"
         }
     .end annotation
@@ -270,27 +270,27 @@
 
     move-object v9, v2
 
-    check-cast v9, Lcom/facebook/common/references/a;
+    check-cast v9, Lcom/facebook/common/references/CloseableReference;
 
     .line 13
     :try_start_0
-    invoke-virtual {v9}, Lcom/facebook/common/references/a;->b()Ljava/lang/Object;
+    invoke-virtual {v9}, Lcom/facebook/common/references/CloseableReference;->b()Ljava/lang/Object;
 
     move-result-object v2
 
-    instance-of v3, v2, Lcom/facebook/x/g/b;
+    instance-of v3, v2, Lcom/facebook/x/g/CloseableBitmap;
 
     if-nez v3, :cond_0
 
     const/4 v2, 0x0
 
     :cond_0
-    check-cast v2, Lcom/facebook/x/g/b;
+    check-cast v2, Lcom/facebook/x/g/CloseableBitmap;
 
     if-eqz v2, :cond_1
 
     .line 14
-    invoke-virtual {v2}, Lcom/facebook/x/g/b;->d()Landroid/graphics/Bitmap;
+    invoke-virtual {v2}, Lcom/facebook/x/g/CloseableBitmap;->d()Landroid/graphics/Bitmap;
 
     move-result-object v10
 
@@ -309,7 +309,7 @@
 
     const-string v2, "img"
 
-    invoke-static {v10, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -348,7 +348,7 @@
 
     .line 17
     :cond_1
-    invoke-static {v9}, Lcom/facebook/common/references/a;->b(Lcom/facebook/common/references/a;)V
+    invoke-static {v9}, Lcom/facebook/common/references/CloseableReference;->b(Lcom/facebook/common/references/CloseableReference;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -357,7 +357,7 @@
     :catchall_0
     move-exception p1
 
-    invoke-static {v9}, Lcom/facebook/common/references/a;->b(Lcom/facebook/common/references/a;)V
+    invoke-static {v9}, Lcom/facebook/common/references/CloseableReference;->b(Lcom/facebook/common/references/CloseableReference;)V
 
     throw p1
 
@@ -365,11 +365,11 @@
     return v0
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;Ljava/util/List;)Lcom/facebook/common/references/a;
+.method public static final synthetic a(Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;Ljava/util/List;)Lcom/facebook/common/references/CloseableReference;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->b(Ljava/util/List;)Lcom/facebook/common/references/a;
+    invoke-direct {p0, p1}, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->b(Ljava/util/List;)Lcom/facebook/common/references/CloseableReference;
 
     move-result-object p0
 
@@ -495,7 +495,7 @@
 
     const-string p2, "with(stringBuilder) {\n  \u2026\n            }.toString()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -631,7 +631,7 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;Lcom/facebook/common/references/a;Z)Z
+.method public static final synthetic a(Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;Lcom/facebook/common/references/CloseableReference;Z)Z
     .locals 0
 
     .line 2
@@ -642,7 +642,7 @@
     return p0
 .end method
 
-.method private final a(Ljava/util/List;)[Lcom/facebook/datasource/b;
+.method private final a(Ljava/util/List;)[Lcom/facebook/datasource/DataSource;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -650,9 +650,9 @@
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;)[",
-            "Lcom/facebook/datasource/b<",
-            "Lcom/facebook/common/references/a<",
-            "Lcom/facebook/x/g/c;",
+            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/common/references/CloseableReference<",
+            "Lcom/facebook/x/g/CloseableImage;",
             ">;>;"
         }
     .end annotation
@@ -690,7 +690,7 @@
     .line 40
     sget-object v2, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v2}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
+    invoke-virtual {v2}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
 
     move-result-object v2
 
@@ -704,7 +704,7 @@
     sget-object v4, Lcom/facebook/imagepipeline/request/ImageRequest$RequestLevel;->FULL_FETCH:Lcom/facebook/imagepipeline/request/ImageRequest$RequestLevel;
 
     .line 42
-    invoke-virtual {v2, v1, v3, v4}, Lcom/facebook/x/d/g;->a(Lcom/facebook/imagepipeline/request/ImageRequest;Ljava/lang/Object;Lcom/facebook/imagepipeline/request/ImageRequest$RequestLevel;)Lcom/facebook/datasource/b;
+    invoke-virtual {v2, v1, v3, v4}, Lcom/facebook/x/d/ImagePipeline;->a(Lcom/facebook/imagepipeline/request/ImageRequest;Ljava/lang/Object;Lcom/facebook/imagepipeline/request/ImageRequest$RequestLevel;)Lcom/facebook/datasource/DataSource;
 
     move-result-object v1
 
@@ -716,7 +716,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    new-array p1, p1, [Lcom/facebook/datasource/b;
+    new-array p1, p1, [Lcom/facebook/datasource/DataSource;
 
     .line 44
     invoke-interface {v0, p1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -725,7 +725,7 @@
 
     if-eqz p1, :cond_1
 
-    check-cast p1, [Lcom/facebook/datasource/b;
+    check-cast p1, [Lcom/facebook/datasource/DataSource;
 
     return-object p1
 
@@ -739,17 +739,17 @@
     throw p1
 .end method
 
-.method private final b(Ljava/util/List;)Lcom/facebook/common/references/a;
+.method private final b(Ljava/util/List;)Lcom/facebook/common/references/CloseableReference;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/facebook/common/references/a<",
-            "Lcom/facebook/x/g/c;",
+            "Lcom/facebook/common/references/CloseableReference<",
+            "Lcom/facebook/x/g/CloseableImage;",
             ">;>;)",
-            "Lcom/facebook/common/references/a<",
-            "Lcom/facebook/x/g/c;",
+            "Lcom/facebook/common/references/CloseableReference<",
+            "Lcom/facebook/x/g/CloseableImage;",
             ">;"
         }
     .end annotation
@@ -783,7 +783,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/common/references/a;
+    check-cast p1, Lcom/facebook/common/references/CloseableReference;
 
     return-object p1
 
@@ -791,15 +791,15 @@
     :cond_1
     sget-object v1, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v1}, Lcom/vk/imageloader/FrescoWrapper;->c()Lcom/facebook/x/d/j;
+    invoke-virtual {v1}, Lcom/vk/imageloader/FrescoWrapper;->c()Lcom/facebook/x/d/ImagePipelineFactory;
 
     move-result-object v1
 
     const-string v2, "FrescoWrapper.getImagePipelineFactory()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/facebook/x/d/j;->h()Lcom/facebook/x/b/f;
+    invoke-virtual {v1}, Lcom/facebook/x/d/ImagePipelineFactory;->h()Lcom/facebook/x/b/PlatformBitmapFactory;
 
     move-result-object v1
 
@@ -809,7 +809,7 @@
 
     iget v4, p0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->i:I
 
-    invoke-virtual {v1, v2, v4}, Lcom/facebook/x/b/f;->a(II)Lcom/facebook/common/references/a;
+    invoke-virtual {v1, v2, v4}, Lcom/facebook/x/b/PlatformBitmapFactory;->a(II)Lcom/facebook/common/references/CloseableReference;
 
     move-result-object v0
     :try_end_0
@@ -817,7 +817,7 @@
 
     .line 5
     :try_start_1
-    invoke-virtual {v0}, Lcom/facebook/common/references/a;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/facebook/common/references/CloseableReference;->b()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -831,29 +831,29 @@
     invoke-direct {p0, v2, p1}, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->a(Landroid/graphics/Canvas;Ljava/util/List;)I
 
     .line 7
-    new-instance p1, Lcom/facebook/x/g/d;
+    new-instance p1, Lcom/facebook/x/g/CloseableStaticBitmap;
 
     .line 8
-    sget-object v1, Lcom/facebook/x/g/g;->d:Lcom/facebook/x/g/h;
+    sget-object v1, Lcom/facebook/x/g/ImmutableQualityInfo;->d:Lcom/facebook/x/g/QualityInfo;
 
     .line 9
-    invoke-direct {p1, v0, v1, v3}, Lcom/facebook/x/g/d;-><init>(Lcom/facebook/common/references/a;Lcom/facebook/x/g/h;I)V
+    invoke-direct {p1, v0, v1, v3}, Lcom/facebook/x/g/CloseableStaticBitmap;-><init>(Lcom/facebook/common/references/CloseableReference;Lcom/facebook/x/g/QualityInfo;I)V
 
-    invoke-static {p1}, Lcom/facebook/common/references/a;->a(Ljava/io/Closeable;)Lcom/facebook/common/references/a;
+    invoke-static {p1}, Lcom/facebook/common/references/CloseableReference;->a(Ljava/io/Closeable;)Lcom/facebook/common/references/CloseableReference;
 
     move-result-object p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 10
-    invoke-static {v0}, Lcom/facebook/common/references/a;->b(Lcom/facebook/common/references/a;)V
+    invoke-static {v0}, Lcom/facebook/common/references/CloseableReference;->b(Lcom/facebook/common/references/CloseableReference;)V
 
     return-object p1
 
     :catchall_0
     move-exception p1
 
-    invoke-static {v0}, Lcom/facebook/common/references/a;->b(Lcom/facebook/common/references/a;)V
+    invoke-static {v0}, Lcom/facebook/common/references/CloseableReference;->b(Lcom/facebook/common/references/CloseableReference;)V
 
     throw p1
 
@@ -863,29 +863,29 @@
     return-object v0
 .end method
 
-.method public static final synthetic j()Lcom/vk/core/util/d1;
+.method public static final synthetic j()Lcom/vk/core/util/ThreadLocalDelegate;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->l:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->l:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-object v0
 .end method
 
-.method public static final synthetic k()Lcom/vk/core/util/d1;
+.method public static final synthetic k()Lcom/vk/core/util/ThreadLocalDelegate;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->k:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->k:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-object v0
 .end method
 
-.method public static final synthetic l()Lcom/vk/core/util/d1;
+.method public static final synthetic l()Lcom/vk/core/util/ThreadLocalDelegate;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->m:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->m:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-object v0
 .end method
@@ -902,9 +902,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->h:Lcom/facebook/datasource/b;
+    iget-object v0, p0, Lcom/vk/music/view/ThumbsImageView$ThumbImageDataSource;->h:Lcom/facebook/datasource/DataSource;
 
-    invoke-interface {v0}, Lcom/facebook/datasource/b;->close()Z
+    invoke-interface {v0}, Lcom/facebook/datasource/DataSource;->close()Z
 
     move-result v0
 

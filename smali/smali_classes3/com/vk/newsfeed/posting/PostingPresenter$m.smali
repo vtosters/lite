@@ -3,7 +3,7 @@
 .source "PostingPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,10 +22,10 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lkotlin/Pair<",
         "+",
-        "Lcom/vk/newsfeed/posting/dto/c;",
+        "Lcom/vk/newsfeed/posting/dto/PostingDraft;",
         "+",
         "Ljava/lang/Boolean;",
         ">;>;"
@@ -56,7 +56,7 @@
         value = {
             "(",
             "Lkotlin/Pair<",
-            "Lcom/vk/newsfeed/posting/dto/c;",
+            "Lcom/vk/newsfeed/posting/dto/PostingDraft;",
             "Ljava/lang/Boolean;",
             ">;)V"
         }
@@ -69,7 +69,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/newsfeed/posting/dto/c;
+    check-cast v1, Lcom/vk/newsfeed/posting/dto/PostingDraft;
 
     invoke-virtual {p1}, Lkotlin/Pair;->d()Ljava/lang/Object;
 
@@ -81,7 +81,7 @@
 
     move-result p1
 
-    invoke-static {v0, v1, p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/newsfeed/posting/PostingPresenter;Lcom/vk/newsfeed/posting/dto/c;Z)V
+    invoke-static {v0, v1, p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/newsfeed/posting/PostingPresenter;Lcom/vk/newsfeed/posting/dto/PostingDraft;Z)V
 
     return-void
 .end method

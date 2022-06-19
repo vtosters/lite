@@ -3,7 +3,7 @@
 .source "OsUtil.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/util/Map<",
         "Ljava/lang/Integer;",
         "+",
@@ -82,7 +82,7 @@
     .end annotation
 
     .line 2
-    new-instance v0, Lkotlin/t/d;
+    new-instance v0, Lkotlin/t/Ranges1;
 
     sget-object v1, Lcom/vk/core/util/OsUtil;->d:Lcom/vk/core/util/OsUtil;
 
@@ -92,7 +92,7 @@
 
     const/16 v2, 0x16
 
-    invoke-direct {v0, v2, v1}, Lkotlin/t/d;-><init>(II)V
+    invoke-direct {v0, v2, v1}, Lkotlin/t/Ranges1;-><init>(II)V
 
     .line 3
     new-instance v1, Ljava/util/LinkedHashMap;

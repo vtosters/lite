@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-.field final synthetic b:Lcom/vk/newsfeed/posting/newposter/g;
+.field final synthetic b:Lcom/vk/newsfeed/posting/newposter/NewPosterFragmentBuilder;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/posting/PostingPresenter;Lcom/vk/newsfeed/posting/newposter/g;)V
+.method constructor <init>(Lcom/vk/newsfeed/posting/PostingPresenter;Lcom/vk/newsfeed/posting/newposter/NewPosterFragmentBuilder;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/newsfeed/posting/newposter/g;",
+            "Lcom/vk/newsfeed/posting/newposter/NewPosterFragmentBuilder;",
             ")V"
         }
     .end annotation
@@ -37,7 +37,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/newsfeed/posting/PostingPresenter$f;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    iput-object p2, p0, Lcom/vk/newsfeed/posting/PostingPresenter$f;->b:Lcom/vk/newsfeed/posting/newposter/g;
+    iput-object p2, p0, Lcom/vk/newsfeed/posting/PostingPresenter$f;->b:Lcom/vk/newsfeed/posting/newposter/NewPosterFragmentBuilder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,11 +58,11 @@
     invoke-virtual {v0, p0}, Lcom/vk/core/vc/KeyboardController;->b(Lcom/vk/core/vc/KeyboardController$a;)Z
 
     .line 3
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$f;->b:Lcom/vk/newsfeed/posting/newposter/g;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$f;->b:Lcom/vk/newsfeed/posting/newposter/NewPosterFragmentBuilder;
 
     iget-object v1, p0, Lcom/vk/newsfeed/posting/PostingPresenter$f;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v1}, Lcom/vk/newsfeed/posting/PostingPresenter;->m(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/k;
+    invoke-static {v1}, Lcom/vk/newsfeed/posting/PostingPresenter;->m(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts2;
 
     move-result-object v1
 
@@ -72,7 +72,7 @@
 
     const/16 v2, 0x32
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     return-void
 

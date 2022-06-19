@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -33,7 +33,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/core/tips/TipTextWindow$a;Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog;
+.method public static synthetic a(Lcom/vk/core/tips/TipTextWindow$a;Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog;
     .locals 21
 
     move/from16 v0, p18
@@ -71,7 +71,7 @@
     if-eqz v1, :cond_2
 
     .line 1
-    sget v1, Lb/h/z/c;->tip_background:I
+    sget v1, Lb/h/z/R4;->tip_background:I
 
     move v10, v1
 
@@ -86,7 +86,7 @@
     if-eqz v1, :cond_3
 
     .line 2
-    sget v1, Lb/h/z/c;->white:I
+    sget v1, Lb/h/z/R4;->white:I
 
     move v11, v1
 
@@ -205,9 +205,9 @@
     if-eqz v0, :cond_c
 
     .line 3
-    new-instance v0, Lcom/vk/core/tips/b$c;
+    new-instance v0, Lcom/vk/core/tips/WindowBackground$c;
 
-    invoke-direct {v0}, Lcom/vk/core/tips/b$c;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/tips/WindowBackground$c;-><init>()V
 
     move-object/from16 v20, v0
 
@@ -227,7 +227,7 @@
 
     move-object/from16 v7, p4
 
-    invoke-virtual/range {v3 .. v20}, Lcom/vk/core/tips/TipTextWindow$a;->a(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;)Landroidx/appcompat/app/AlertDialog;
+    invoke-virtual/range {v3 .. v20}, Lcom/vk/core/tips/TipTextWindow$a;->a(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;)Landroidx/appcompat/app/AlertDialog;
 
     move-result-object v0
 
@@ -236,7 +236,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;)Landroidx/appcompat/app/AlertDialog;
+.method public final a(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;)Landroidx/appcompat/app/AlertDialog;
     .locals 23
     .param p7    # I
         .annotation build Landroidx/annotation/ColorRes;
@@ -258,11 +258,11 @@
             "II",
             "Landroid/graphics/drawable/Drawable;",
             "FZZZZI",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Landroid/view/View;",
             ">;",
-            "Lcom/vk/core/tips/b$a;",
+            "Lcom/vk/core/tips/WindowBackground$a;",
             ")",
             "Landroidx/appcompat/app/AlertDialog;"
         }
@@ -322,7 +322,7 @@
 
     const/16 v22, 0x0
 
-    invoke-direct/range {v1 .. v22}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v22}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object/from16 v2, p2
 

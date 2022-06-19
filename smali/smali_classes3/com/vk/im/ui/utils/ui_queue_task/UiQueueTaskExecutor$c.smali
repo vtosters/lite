@@ -3,7 +3,7 @@
 .source "UiQueueTaskExecutor.java"
 
 # interfaces
-.implements Lcom/vk/im/ui/utils/ui_queue_task/d;
+.implements Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTaskListener;
 
 
 # annotations
@@ -44,12 +44,12 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/ui/utils/ui_queue_task/c;Ljava/lang/Object;)V
+.method public a(Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/ui/utils/ui_queue_task/c<",
+            "Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask<",
             "*>;",
             "Ljava/lang/Object;",
             ")V"
@@ -64,12 +64,12 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/im/ui/utils/ui_queue_task/c;Ljava/lang/Throwable;)V
+.method public a(Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;Ljava/lang/Throwable;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/ui/utils/ui_queue_task/c<",
+            "Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask<",
             "*>;",
             "Ljava/lang/Throwable;",
             ")V"

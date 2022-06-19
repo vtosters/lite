@@ -3,12 +3,12 @@
 .source "AttachMusicActivity.java"
 
 # interfaces
-.implements Lcom/vk/music/player/d$a;
+.implements Lcom/vk/music/player/PlayerModel$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/attach/AttachMusicActivity;->a([Landroidx/recyclerview/widget/RecyclerView$Adapter;)Lcom/vk/music/player/d$a;
+    value = Lcom/vk/music/attach/AttachMusicActivity;->a([Landroidx/recyclerview/widget/RecyclerView$Adapter;)Lcom/vk/music/player/PlayerModel$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -39,9 +39,9 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/music/player/d;)V
+.method public a(Lcom/vk/music/player/PlayerModel;)V
     .locals 1
-    .param p1    # Lcom/vk/music/player/d;
+    .param p1    # Lcom/vk/music/player/PlayerModel;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -56,9 +56,9 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/music/player/d;)V
+.method public b(Lcom/vk/music/player/PlayerModel;)V
     .locals 1
-    .param p1    # Lcom/vk/music/player/d;
+    .param p1    # Lcom/vk/music/player/PlayerModel;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -73,9 +73,9 @@
     return-void
 .end method
 
-.method public c(Lcom/vk/music/player/d;)V
+.method public c(Lcom/vk/music/player/PlayerModel;)V
     .locals 0
-    .param p1    # Lcom/vk/music/player/d;
+    .param p1    # Lcom/vk/music/player/PlayerModel;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -83,9 +83,9 @@
     return-void
 .end method
 
-.method public d(Lcom/vk/music/player/d;)V
+.method public d(Lcom/vk/music/player/PlayerModel;)V
     .locals 1
-    .param p1    # Lcom/vk/music/player/d;
+    .param p1    # Lcom/vk/music/player/PlayerModel;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

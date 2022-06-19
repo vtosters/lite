@@ -637,7 +637,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lorg/chromium/base/d;->c()Landroid/content/SharedPreferences;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->c()Landroid/content/SharedPreferences;
 
     move-result-object v0
 

@@ -40,13 +40,13 @@
 
     iget-object p1, p1, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$subtitleSpannableString$2;->this$0:Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->getPresenter()Lcom/vk/newsfeed/posting/settings/a;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->getPresenter()Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/settings/a;->P0()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;->P0()V
 
     :cond_0
     return-void

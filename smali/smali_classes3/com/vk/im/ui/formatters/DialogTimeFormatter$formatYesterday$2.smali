@@ -3,7 +3,7 @@
 .source "DialogTimeFormatter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/text/SimpleDateFormat;",
         ">;"
     }
@@ -68,7 +68,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/formatters/DialogTimeFormatter$formatYesterday$2;->$context:Landroid/content/Context;
 
-    sget v2, Lcom/vk/im/ui/m;->vkim_dialogs_list_time_yesterday:I
+    sget v2, Lcom/vk/im/ui/R4;->vkim_dialogs_list_time_yesterday:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

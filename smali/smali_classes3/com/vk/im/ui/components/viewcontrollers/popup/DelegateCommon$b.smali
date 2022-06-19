@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(Landroid/view/View;Ljava/util/List;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(Landroid/view/View;Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,18 +20,18 @@
 # instance fields
 .field final synthetic a:Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;
 
-.field final synthetic b:Lkotlin/jvm/b/b;
+.field final synthetic b:Lkotlin/jvm/b/Functions2;
 
 .field final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;Lkotlin/jvm/b/b;Ljava/util/List;)V
+.method constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;Lkotlin/jvm/b/Functions2;Ljava/util/List;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon$b;->a:Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon$b;->b:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon$b;->b:Lkotlin/jvm/b/Functions2;
 
     iput-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon$b;->c:Ljava/util/List;
 
@@ -58,7 +58,7 @@
 
     .line 2
     :cond_0
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon$b;->b:Lkotlin/jvm/b/b;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon$b;->b:Lkotlin/jvm/b/Functions2;
 
     if-eqz p1, :cond_1
 
@@ -68,11 +68,11 @@
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_1
     return-void

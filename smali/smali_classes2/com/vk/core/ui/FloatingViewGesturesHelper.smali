@@ -19,23 +19,23 @@
 
 
 # instance fields
-.field private final B:Lkotlin/jvm/b/b;
+.field private final B:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Landroid/view/MotionEvent;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final C:Lkotlin/jvm/b/b;
+.field private final C:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Landroid/view/View;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -57,23 +57,23 @@
 
 .field private final f:Landroid/view/View;
 
-.field private final g:Lkotlin/jvm/b/b;
+.field private final g:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Landroid/view/View;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final h:Lkotlin/jvm/b/b;
+.field private final h:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Landroid/view/MotionEvent;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -88,38 +88,38 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->F:Lcom/vk/core/ui/FloatingViewGesturesHelper$Companion;
 
     return-void
 .end method
 
-.method private constructor <init>(Landroid/view/View;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;FF)V
+.method private constructor <init>(Landroid/view/View;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;FF)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/view/MotionEvent;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/view/MotionEvent;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;FF)V"
         }
     .end annotation
@@ -129,13 +129,13 @@
 
     iput-object p1, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->f:Landroid/view/View;
 
-    iput-object p2, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->g:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->g:Lkotlin/jvm/b/Functions2;
 
-    iput-object p3, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->h:Lkotlin/jvm/b/b;
+    iput-object p3, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->h:Lkotlin/jvm/b/Functions2;
 
-    iput-object p4, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->B:Lkotlin/jvm/b/b;
+    iput-object p4, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->B:Lkotlin/jvm/b/Functions2;
 
-    iput-object p5, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->C:Lkotlin/jvm/b/b;
+    iput-object p5, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->C:Lkotlin/jvm/b/Functions2;
 
     iput p6, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->D:F
 
@@ -186,11 +186,11 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/view/View;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;FFLkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/view/View;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;FFLkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
-    invoke-direct/range {p0 .. p7}, Lcom/vk/core/ui/FloatingViewGesturesHelper;-><init>(Landroid/view/View;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;FF)V
+    invoke-direct/range {p0 .. p7}, Lcom/vk/core/ui/FloatingViewGesturesHelper;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;FF)V
 
     return-void
 .end method
@@ -285,20 +285,20 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/core/ui/FloatingViewGesturesHelper;)Lkotlin/jvm/b/b;
+.method public static final synthetic b(Lcom/vk/core/ui/FloatingViewGesturesHelper;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->C:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->C:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/core/ui/FloatingViewGesturesHelper;)Lkotlin/jvm/b/b;
+.method public static final synthetic c(Lcom/vk/core/ui/FloatingViewGesturesHelper;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->g:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->g:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -414,7 +414,7 @@
 
     const-string v3, "config"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
@@ -441,13 +441,13 @@
     .line 5
     iget-object v0, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->b:Lcom/vk/core/ui/Machine;
 
-    sget-object v2, Lcom/vk/core/ui/f;->b:Lcom/vk/core/ui/f;
+    sget-object v2, Lcom/vk/core/ui/FloatingViewGesturesHelper5;->INSTANCE:Lcom/vk/core/ui/FloatingViewGesturesHelper5;
 
     new-instance v3, Lcom/vk/core/ui/FloatingViewGesturesHelper$onTouch$3;
 
     invoke-direct {v3, p0, p1}, Lcom/vk/core/ui/FloatingViewGesturesHelper$onTouch$3;-><init>(Lcom/vk/core/ui/FloatingViewGesturesHelper;F)V
 
-    invoke-virtual {v0, v2, v3}, Lcom/vk/core/ui/Machine;->b(Lcom/vk/core/ui/r;Lkotlin/jvm/b/a;)Z
+    invoke-virtual {v0, v2, v3}, Lcom/vk/core/ui/Machine;->b(Lcom/vk/core/ui/FloatingViewGesturesHelper4;Lkotlin/jvm/b/Functions;)Z
 
     .line 6
     iget-object p1, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->d:Landroid/view/VelocityTracker;
@@ -495,11 +495,11 @@
 
     iget-object v5, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->b:Lcom/vk/core/ui/Machine;
 
-    sget-object v6, Lcom/vk/core/ui/g;->b:Lcom/vk/core/ui/g;
+    sget-object v6, Lcom/vk/core/ui/FloatingViewGesturesHelper1;->INSTANCE:Lcom/vk/core/ui/FloatingViewGesturesHelper1;
 
     const/4 v7, 0x0
 
-    invoke-static {v5, v6, v7, v2, v7}, Lcom/vk/core/ui/Machine;->a(Lcom/vk/core/ui/Machine;Lcom/vk/core/ui/r;Lkotlin/jvm/b/a;ILjava/lang/Object;)Z
+    invoke-static {v5, v6, v7, v2, v7}, Lcom/vk/core/ui/Machine;->a(Lcom/vk/core/ui/Machine;Lcom/vk/core/ui/FloatingViewGesturesHelper4;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Z
 
     move-result v2
 
@@ -530,13 +530,13 @@
     :cond_2
     iget-object v2, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->b:Lcom/vk/core/ui/Machine;
 
-    sget-object v5, Lcom/vk/core/ui/p;->b:Lcom/vk/core/ui/p;
+    sget-object v5, Lcom/vk/core/ui/FloatingViewGesturesHelper2;->INSTANCE:Lcom/vk/core/ui/FloatingViewGesturesHelper2;
 
     new-instance v6, Lcom/vk/core/ui/FloatingViewGesturesHelper$onTouch$$inlined$let$lambda$1;
 
     invoke-direct {v6, p0, v0}, Lcom/vk/core/ui/FloatingViewGesturesHelper$onTouch$$inlined$let$lambda$1;-><init>(Lcom/vk/core/ui/FloatingViewGesturesHelper;I)V
 
-    invoke-virtual {v2, v5, v6}, Lcom/vk/core/ui/Machine;->b(Lcom/vk/core/ui/r;Lkotlin/jvm/b/a;)Z
+    invoke-virtual {v2, v5, v6}, Lcom/vk/core/ui/Machine;->b(Lcom/vk/core/ui/FloatingViewGesturesHelper4;Lkotlin/jvm/b/Functions;)Z
 
     .line 13
     :goto_0
@@ -592,9 +592,9 @@
     invoke-direct {p0, v0, v1}, Lcom/vk/core/ui/FloatingViewGesturesHelper;->a(FZ)V
 
     .line 17
-    iget-object v0, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->B:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->B:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {v0, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 18
     :cond_5
@@ -610,9 +610,9 @@
 
     .line 19
     :cond_6
-    iget-object p1, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->B:Lkotlin/jvm/b/b;
+    iget-object p1, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->B:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
@@ -652,9 +652,9 @@
 
     .line 25
     :cond_8
-    iget-object p1, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->h:Lkotlin/jvm/b/b;
+    iget-object p1, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper;->h:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 26
     :cond_9

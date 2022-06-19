@@ -3,7 +3,7 @@
 .source "ChangeSpeakerByRaiseToEarController.kt"
 
 # interfaces
-.implements Lcom/vk/core/sensors/a$b;
+.implements Lcom/vk/core/sensors/HeadphonesDetector$b;
 
 
 # annotations

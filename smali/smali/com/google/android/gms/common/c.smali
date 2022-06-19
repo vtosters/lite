@@ -391,9 +391,9 @@
     if-eqz v0, :cond_2
 
     .line 73
-    sget v0, Lb/d/a/c/b/a;->common_full_open_on_phone:I
+    sget v0, Lb/d/a/c/b/R;->common_full_open_on_phone:I
 
-    sget v3, Lb/d/a/c/b/b;->common_open_on_phone:I
+    sget v3, Lb/d/a/c/b/R1;->common_open_on_phone:I
 
     .line 74
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -419,7 +419,7 @@
 
     move-result-object v3
 
-    sget v6, Lb/d/a/c/b/b;->common_google_play_services_notification_ticker:I
+    sget v6, Lb/d/a/c/b/R1;->common_google_play_services_notification_ticker:I
 
     .line 78
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

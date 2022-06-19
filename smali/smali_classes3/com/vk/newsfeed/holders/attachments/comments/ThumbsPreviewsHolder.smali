@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;
-.super Lcom/vk/newsfeed/holders/h;
+.super Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;
 .source "ThumbsPreviewsHolder.kt"
 
 
@@ -13,7 +13,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/newsfeed/holders/h<",
+        "Lcom/vk/newsfeed/holders/BaseNewsEntryHolder<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         ">;"
     }
@@ -21,11 +21,11 @@
 
 
 # static fields
-.field static final synthetic L:[Lkotlin/u/j;
+.field static final synthetic L:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final F:Lcom/vtosters/lite/ui/u;
+.field private final F:Lcom/vtosters/lite/ui/FlowLayout;
 
 .field private G:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -50,16 +50,16 @@
     .end annotation
 .end field
 
-.field private J:Lcom/vk/bridges/p$d;
+.field private J:Lcom/vk/bridges/ImageViewer$d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/bridges/p$d<",
+            "Lcom/vk/bridges/ImageViewer$d<",
             "*>;"
         }
     .end annotation
 .end field
 
-.field private final K:Lkotlin/e;
+.field private final K:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -68,13 +68,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -82,21 +82,21 @@
 
     const-string v4, "getPhotoCallback()Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder$PhotoViewerHelper;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->L:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->L:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -105,38 +105,38 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/ui/u;
+    new-instance v0, Lcom/vtosters/lite/ui/FlowLayout;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/ui/u;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/ui/FlowLayout;-><init>(Landroid/content/Context;)V
 
     const v1, 0x7f0a00c4
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setId(I)V
 
-    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/h;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x2
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v1, v2, v0, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v2, v0, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vtosters/lite/ui/u;
+    check-cast p1, Lcom/vtosters/lite/ui/FlowLayout;
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->F:Lcom/vtosters/lite/ui/u;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->F:Lcom/vtosters/lite/ui/FlowLayout;
 
     .line 3
     new-instance p1, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
@@ -157,14 +157,14 @@
 
     invoke-direct {p1, p0}, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder$photoCallback$2;-><init>(Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->K:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->K:Lkotlin/Lazy2;
 
     .line 6
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -175,27 +175,27 @@
     move-result p1
 
     .line 7
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
     const-string v1, "resources"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v1, 0x41000000    # 8.0f
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v0, v1}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
 
     move-result v0
 
     .line 8
-    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->F:Lcom/vtosters/lite/ui/u;
+    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->F:Lcom/vtosters/lite/ui/FlowLayout;
 
     invoke-virtual {v1, p1, v0, p1, v0}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
     .line 9
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->F:Lcom/vtosters/lite/ui/u;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->F:Lcom/vtosters/lite/ui/FlowLayout;
 
     const/4 v0, 0x0
 
@@ -243,11 +243,11 @@
     return p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;)Lcom/vtosters/lite/ui/u;
+.method public static final synthetic a(Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;)Lcom/vtosters/lite/ui/FlowLayout;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->F:Lcom/vtosters/lite/ui/u;
+    iget-object p0, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->F:Lcom/vtosters/lite/ui/FlowLayout;
 
     return-object p0
 .end method
@@ -261,16 +261,16 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;Lcom/vk/bridges/p$d;)V
+.method public static final synthetic a(Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;Lcom/vk/bridges/ImageViewer$d;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->J:Lcom/vk/bridges/p$d;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->J:Lcom/vk/bridges/ImageViewer$d;
 
     return-void
 .end method
 
-.method private final b(II)Lcom/vk/newsfeed/holders/attachments/k;
+.method private final b(II)Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;
     .locals 3
 
     const/4 v0, 0x0
@@ -293,15 +293,15 @@
     :cond_0
     new-instance p1, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, v2, v1, p2, v0}, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder;-><init>(Landroid/view/ViewGroup;ZILkotlin/jvm/internal/i;)V
+    invoke-direct {p1, v2, v1, p2, v0}, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder;-><init>(Landroid/view/ViewGroup;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object v0, p1
 
@@ -311,11 +311,11 @@
     :cond_1
     new-instance v0, Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, p1}, Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;-><init>(Landroid/view/ViewGroup;)V
 
@@ -323,15 +323,15 @@
 
     .line 24
     :cond_2
-    new-instance v0, Lcom/vk/newsfeed/holders/attachments/comments/a;
+    new-instance v0, Lcom/vk/newsfeed/holders/attachments/comments/PhotoThumbnailHolder;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, p1}, Lcom/vk/newsfeed/holders/attachments/comments/a;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v0, p1}, Lcom/vk/newsfeed/holders/attachments/comments/PhotoThumbnailHolder;-><init>(Landroid/view/ViewGroup;)V
 
     .line 25
     iget-object p1, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -349,15 +349,15 @@
 .method private final o0()Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder$b;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->K:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->K:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->L:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->L:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -370,7 +370,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->J:Lcom/vk/bridges/p$d;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->J:Lcom/vk/bridges/ImageViewer$d;
 
     if-eqz v0, :cond_0
 
@@ -383,7 +383,7 @@
     if-eqz v0, :cond_1
 
     .line 3
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -392,7 +392,7 @@
     .line 4
     sget-object v1, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder$openPhoto$photos$1;->a:Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder$openPhoto$photos$1;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -401,14 +401,14 @@
     .line 5
     sget-object v1, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder$openPhoto$photos$2;->a:Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder$openPhoto$photos$2;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 6
-    invoke-static {v0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {v0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object v0
 
@@ -421,7 +421,7 @@
     if-eqz v0, :cond_2
 
     .line 7
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -434,7 +434,7 @@
     if-eqz v1, :cond_2
 
     .line 8
-    invoke-static {}, Lcom/vk/bridges/q;->a()Lcom/vk/bridges/p;
+    invoke-static {}, Lcom/vk/bridges/ImageViewer1;->a()Lcom/vk/bridges/ImageViewer;
 
     move-result-object v2
 
@@ -442,11 +442,11 @@
 
     move-result-object v3
 
-    invoke-interface {v2, p1, v0, v1, v3}, Lcom/vk/bridges/p;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
+    invoke-interface {v2, p1, v0, v1, v3}, Lcom/vk/bridges/ImageViewer;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->J:Lcom/vk/bridges/p$d;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->J:Lcom/vk/bridges/ImageViewer$d;
 
     :cond_2
     return-void
@@ -454,20 +454,20 @@
 
 
 # virtual methods
-.method public a(Lcom/vtosters/lite/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
     .locals 1
 
     .line 4
-    instance-of v0, p1, Lcom/vk/newsfeed/h0/b;
+    instance-of v0, p1, Lcom/vk/newsfeed/h0/AttachmentsPostDisplayItem;
 
     if-eqz v0, :cond_0
 
     .line 5
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/newsfeed/h0/b;
+    check-cast v0, Lcom/vk/newsfeed/h0/AttachmentsPostDisplayItem;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/h0/b;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/h0/AttachmentsPostDisplayItem;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -475,7 +475,7 @@
 
     .line 6
     :cond_0
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
 
     return-void
 .end method
@@ -484,7 +484,7 @@
     .locals 9
 
     .line 2
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->F:Lcom/vtosters/lite/ui/u;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->F:Lcom/vtosters/lite/ui/FlowLayout;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->removeAllViews()V
 
@@ -523,43 +523,43 @@
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
     .line 7
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 
     const-string v0, "resources"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v1, 0x40800000    # 4.0f
 
-    invoke-static {p1, v1}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
+    invoke-static {p1, v1}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
 
     move-result p1
 
     .line 8
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v2, 0x42f00000    # 120.0f
 
-    invoke-static {v1, v2}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v1, v2}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
 
     move-result v1
 
     .line 9
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->e0()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v0, 0x42a00000    # 80.0f
 
-    invoke-static {v2, v0}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v2, v0}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
 
     move-result v0
 
@@ -609,13 +609,13 @@
     goto :goto_2
 
     :cond_1
-    invoke-direct {p0, v6, v3}, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->b(II)Lcom/vk/newsfeed/holders/attachments/k;
+    invoke-direct {p0, v6, v3}, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->b(II)Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;
 
     move-result-object v7
 
     .line 14
     :goto_2
-    instance-of v3, v7, Lcom/vk/newsfeed/holders/attachments/k;
+    instance-of v3, v7, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;
 
     if-eqz v3, :cond_2
 
@@ -625,27 +625,27 @@
     invoke-virtual {v3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 16
-    new-instance v3, Lcom/vtosters/lite/ui/u$a;
+    new-instance v3, Lcom/vtosters/lite/ui/FlowLayout$a;
 
-    invoke-direct {v3, p1, p1}, Lcom/vtosters/lite/ui/u$a;-><init>(II)V
+    invoke-direct {v3, p1, p1}, Lcom/vtosters/lite/ui/FlowLayout$a;-><init>(II)V
 
     .line 17
-    iput v1, v3, Lcom/vtosters/lite/ui/u$a;->f:I
+    iput v1, v3, Lcom/vtosters/lite/ui/FlowLayout$a;->f:I
 
     .line 18
-    iput v0, v3, Lcom/vtosters/lite/ui/u$a;->g:I
+    iput v0, v3, Lcom/vtosters/lite/ui/FlowLayout$a;->g:I
 
     .line 19
-    iget-object v6, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->F:Lcom/vtosters/lite/ui/u;
+    iget-object v6, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->F:Lcom/vtosters/lite/ui/FlowLayout;
 
     iget-object v8, v7, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v6, v8, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 20
-    check-cast v7, Lcom/vk/newsfeed/holders/attachments/k;
+    check-cast v7, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;
 
-    invoke-virtual {v7, v4}, Lcom/vk/newsfeed/holders/attachments/k;->a(Lcom/vk/dto/common/Attachment;)V
+    invoke-virtual {v7, v4}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->a(Lcom/vk/dto/common/Attachment;)V
 
     :cond_2
     move v3, v5

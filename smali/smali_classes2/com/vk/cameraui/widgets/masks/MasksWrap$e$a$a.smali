@@ -46,7 +46,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/dto/masks/a;
+    check-cast p1, Lcom/vk/dto/masks/MasksListItem;
 
     iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$e$a$a;->b:Ljava/util/ArrayList;
 
@@ -54,9 +54,9 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/dto/masks/a;
+    check-cast p2, Lcom/vk/dto/masks/MasksListItem;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -73,7 +73,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/dto/masks/a;
+    check-cast p1, Lcom/vk/dto/masks/MasksListItem;
 
     iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$e$a$a;->b:Ljava/util/ArrayList;
 
@@ -81,9 +81,9 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/dto/masks/a;
+    check-cast p2, Lcom/vk/dto/masks/MasksListItem;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

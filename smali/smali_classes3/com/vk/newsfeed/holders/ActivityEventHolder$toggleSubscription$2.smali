@@ -3,7 +3,7 @@
 .source "ActivityEventHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -88,7 +88,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {p1, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/newsfeed/holders/ActivityEventHolder$toggleSubscription$2;->this$0:Lcom/vk/newsfeed/holders/ActivityEventHolder;
@@ -99,11 +99,11 @@
 
     const/16 v0, 0x8
 
-    invoke-static {p1, v0}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 5
     :cond_0
-    sget-object v1, Lcom/vk/newsfeed/b0;->d:Lcom/vk/newsfeed/b0;
+    sget-object v1, Lcom/vk/newsfeed/PostsAnalytics;->INSTANCE:Lcom/vk/newsfeed/PostsAnalytics;
 
     iget-object p1, p0, Lcom/vk/newsfeed/holders/ActivityEventHolder$toggleSubscription$2;->this$0:Lcom/vk/newsfeed/holders/ActivityEventHolder;
 
@@ -131,7 +131,7 @@
 
     const-string v5, "activity"
 
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/newsfeed/b0;->a(IILjava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/newsfeed/PostsAnalytics;->a(IILjava/lang/String;Ljava/lang/String;Z)V
 
     return-void
 .end method
@@ -148,7 +148,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/ActivityEventHolder$toggleSubscription$2;->a(I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

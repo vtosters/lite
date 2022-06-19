@@ -3,7 +3,7 @@
 .source "MsgPartArticleHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Landroid/widget/TextView;",
         ">;"
     }
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/im/ui/h;->blocked_title:I
+    sget v1, Lcom/vk/im/ui/R11;->blocked_title:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -21,41 +21,41 @@
 # instance fields
 .field private final B:Landroid/view/View;
 
-.field private C:Lkotlin/jvm/b/a;
+.field private C:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private D:Lkotlin/jvm/b/a;
+.field private D:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private E:Lkotlin/jvm/b/a;
+.field private E:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private F:Lkotlin/jvm/b/a;
+.field private F:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -86,7 +86,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/view/search/AnimStartSearchView$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/view/search/AnimStartSearchView$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/16 v0, 0x2a
 
@@ -122,12 +122,12 @@
 
     move-result-object p1
 
-    sget v0, Lb/h/z/h;->search_view_with_anim_start:I
+    sget v0, Lb/h/z/R10;->search_view_with_anim_start:I
 
     invoke-virtual {p1, v0, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 4
-    sget p1, Lb/h/z/g;->etv_search:I
+    sget p1, Lb/h/z/R;->etv_search:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -135,14 +135,14 @@
 
     const-string v0, "findViewById(R.id.etv_search)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/EditText;
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->b:Landroid/widget/EditText;
 
     .line 5
-    sget p1, Lb/h/z/g;->v_back_btn:I
+    sget p1, Lb/h/z/R;->v_back_btn:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -150,12 +150,12 @@
 
     const-string v0, "findViewById(R.id.v_back_btn)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->c:Landroid/view/View;
 
     .line 6
-    sget p1, Lb/h/z/g;->iv_icon_search:I
+    sget p1, Lb/h/z/R;->iv_icon_search:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -163,12 +163,12 @@
 
     const-string v0, "findViewById(R.id.iv_icon_search)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->d:Landroid/view/View;
 
     .line 7
-    sget p1, Lb/h/z/g;->iv_icon_voice:I
+    sget p1, Lb/h/z/R;->iv_icon_voice:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -176,12 +176,12 @@
 
     const-string v0, "findViewById(R.id.iv_icon_voice)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->e:Landroid/view/View;
 
     .line 8
-    sget p1, Lb/h/z/g;->iv_icon_cancel:I
+    sget p1, Lb/h/z/R;->iv_icon_cancel:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -189,12 +189,12 @@
 
     const-string v0, "findViewById(R.id.iv_icon_cancel)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->f:Landroid/view/View;
 
     .line 9
-    sget p1, Lb/h/z/g;->ll_search_container:I
+    sget p1, Lb/h/z/R;->ll_search_container:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -202,14 +202,14 @@
 
     const-string v0, "findViewById(R.id.ll_search_container)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/ViewGroup;
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->g:Landroid/view/ViewGroup;
 
     .line 10
-    sget p1, Lb/h/z/g;->fl_bg_left_part:I
+    sget p1, Lb/h/z/R;->fl_bg_left_part:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -217,12 +217,12 @@
 
     const-string v0, "findViewById(R.id.fl_bg_left_part)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->h:Landroid/view/View;
 
     .line 11
-    sget p1, Lb/h/z/g;->fl_bg_right_part:I
+    sget p1, Lb/h/z/R;->fl_bg_right_part:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -230,7 +230,7 @@
 
     const-string v0, "findViewById(R.id.fl_bg_right_part)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->B:Landroid/view/View;
 
@@ -295,12 +295,12 @@
 
     move-result-object p1
 
-    sget p2, Lb/h/z/h;->search_view_with_anim_start:I
+    sget p2, Lb/h/z/R10;->search_view_with_anim_start:I
 
     invoke-virtual {p1, p2, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 21
-    sget p1, Lb/h/z/g;->etv_search:I
+    sget p1, Lb/h/z/R;->etv_search:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -308,14 +308,14 @@
 
     const-string p2, "findViewById(R.id.etv_search)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/EditText;
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->b:Landroid/widget/EditText;
 
     .line 22
-    sget p1, Lb/h/z/g;->v_back_btn:I
+    sget p1, Lb/h/z/R;->v_back_btn:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -323,12 +323,12 @@
 
     const-string p2, "findViewById(R.id.v_back_btn)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->c:Landroid/view/View;
 
     .line 23
-    sget p1, Lb/h/z/g;->iv_icon_search:I
+    sget p1, Lb/h/z/R;->iv_icon_search:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -336,12 +336,12 @@
 
     const-string p2, "findViewById(R.id.iv_icon_search)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->d:Landroid/view/View;
 
     .line 24
-    sget p1, Lb/h/z/g;->iv_icon_voice:I
+    sget p1, Lb/h/z/R;->iv_icon_voice:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -349,12 +349,12 @@
 
     const-string p2, "findViewById(R.id.iv_icon_voice)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->e:Landroid/view/View;
 
     .line 25
-    sget p1, Lb/h/z/g;->iv_icon_cancel:I
+    sget p1, Lb/h/z/R;->iv_icon_cancel:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -362,12 +362,12 @@
 
     const-string p2, "findViewById(R.id.iv_icon_cancel)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->f:Landroid/view/View;
 
     .line 26
-    sget p1, Lb/h/z/g;->ll_search_container:I
+    sget p1, Lb/h/z/R;->ll_search_container:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -375,14 +375,14 @@
 
     const-string p2, "findViewById(R.id.ll_search_container)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/ViewGroup;
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->g:Landroid/view/ViewGroup;
 
     .line 27
-    sget p1, Lb/h/z/g;->fl_bg_left_part:I
+    sget p1, Lb/h/z/R;->fl_bg_left_part:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -390,12 +390,12 @@
 
     const-string p2, "findViewById(R.id.fl_bg_left_part)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->h:Landroid/view/View;
 
     .line 28
-    sget p1, Lb/h/z/g;->fl_bg_right_part:I
+    sget p1, Lb/h/z/R;->fl_bg_right_part:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -403,7 +403,7 @@
 
     const-string p2, "findViewById(R.id.fl_bg_right_part)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->B:Landroid/view/View;
 
@@ -468,12 +468,12 @@
 
     move-result-object p1
 
-    sget p2, Lb/h/z/h;->search_view_with_anim_start:I
+    sget p2, Lb/h/z/R10;->search_view_with_anim_start:I
 
     invoke-virtual {p1, p2, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 38
-    sget p1, Lb/h/z/g;->etv_search:I
+    sget p1, Lb/h/z/R;->etv_search:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -481,14 +481,14 @@
 
     const-string p2, "findViewById(R.id.etv_search)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/EditText;
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->b:Landroid/widget/EditText;
 
     .line 39
-    sget p1, Lb/h/z/g;->v_back_btn:I
+    sget p1, Lb/h/z/R;->v_back_btn:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -496,12 +496,12 @@
 
     const-string p2, "findViewById(R.id.v_back_btn)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->c:Landroid/view/View;
 
     .line 40
-    sget p1, Lb/h/z/g;->iv_icon_search:I
+    sget p1, Lb/h/z/R;->iv_icon_search:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -509,12 +509,12 @@
 
     const-string p2, "findViewById(R.id.iv_icon_search)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->d:Landroid/view/View;
 
     .line 41
-    sget p1, Lb/h/z/g;->iv_icon_voice:I
+    sget p1, Lb/h/z/R;->iv_icon_voice:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -522,12 +522,12 @@
 
     const-string p2, "findViewById(R.id.iv_icon_voice)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->e:Landroid/view/View;
 
     .line 42
-    sget p1, Lb/h/z/g;->iv_icon_cancel:I
+    sget p1, Lb/h/z/R;->iv_icon_cancel:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -535,12 +535,12 @@
 
     const-string p2, "findViewById(R.id.iv_icon_cancel)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->f:Landroid/view/View;
 
     .line 43
-    sget p1, Lb/h/z/g;->ll_search_container:I
+    sget p1, Lb/h/z/R;->ll_search_container:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -548,14 +548,14 @@
 
     const-string p2, "findViewById(R.id.ll_search_container)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/ViewGroup;
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->g:Landroid/view/ViewGroup;
 
     .line 44
-    sget p1, Lb/h/z/g;->fl_bg_left_part:I
+    sget p1, Lb/h/z/R;->fl_bg_left_part:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -563,12 +563,12 @@
 
     const-string p2, "findViewById(R.id.fl_bg_left_part)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->h:Landroid/view/View;
 
     .line 45
-    sget p1, Lb/h/z/g;->fl_bg_right_part:I
+    sget p1, Lb/h/z/R;->fl_bg_right_part:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -576,7 +576,7 @@
 
     const-string p2, "findViewById(R.id.fl_bg_right_part)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->B:Landroid/view/View;
 
@@ -699,7 +699,7 @@
     const-string v0, "animator"
 
     .line 8
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v0, 0xc8
 
@@ -813,13 +813,13 @@
     const-string v2, "animator"
 
     .line 11
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vk/core/view/search/AnimStartSearchView$showVoiceAndCancelWithAnim$$inlined$also$lambda$2;
 
     invoke-direct {v2, v0, p1}, Lcom/vk/core/view/search/AnimStartSearchView$showVoiceAndCancelWithAnim$$inlined$also$lambda$2;-><init>(Landroid/view/View;Landroid/view/View;)V
 
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/a;)Landroid/animation/ValueAnimator;
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/Functions;)Landroid/animation/ValueAnimator;
 
     .line 12
     new-instance p1, Landroid/view/animation/AccelerateDecelerateInterpolator;
@@ -894,7 +894,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->b:Landroid/widget/EditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/View;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->b:Landroid/widget/EditText;
@@ -910,17 +910,17 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->b:Landroid/widget/EditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public final e()Lc/a/m;
+.method public final e()Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/String;",
             ">;"
         }
@@ -929,7 +929,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->b:Landroid/widget/EditText;
 
-    invoke-static {v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/widget/EditText;)Lc/a/m;
+    invoke-static {v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/widget/EditText;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -958,36 +958,36 @@
     return-void
 .end method
 
-.method public final getBackButtonAction()Lkotlin/jvm/b/a;
+.method public final getBackButtonAction()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->C:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->C:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
 
-.method public final getCancelButtonAction()Lkotlin/jvm/b/a;
+.method public final getCancelButtonAction()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->E:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->E:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
@@ -1009,36 +1009,36 @@
     return-object v0
 .end method
 
-.method public final getSearchClickedAction()Lkotlin/jvm/b/a;
+.method public final getSearchClickedAction()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->F:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->F:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
 
-.method public final getVoiceButtonAction()Lkotlin/jvm/b/a;
+.method public final getVoiceButtonAction()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->D:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->D:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
@@ -1060,21 +1060,21 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->c:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->C:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->C:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     goto :goto_0
 
@@ -1082,21 +1082,21 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->e:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->D:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->D:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     goto :goto_0
 
@@ -1104,57 +1104,57 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/core/view/search/AnimStartSearchView;->f:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    iget-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->E:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->E:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_2
     :goto_0
     return-void
 .end method
 
-.method public final setBackButtonAction(Lkotlin/jvm/b/a;)V
+.method public final setBackButtonAction(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->C:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->C:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public final setCancelButtonAction(Lkotlin/jvm/b/a;)V
+.method public final setCancelButtonAction(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->E:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->E:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -1242,36 +1242,36 @@
     return-void
 .end method
 
-.method public final setSearchClickedAction(Lkotlin/jvm/b/a;)V
+.method public final setSearchClickedAction(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->F:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->F:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public final setVoiceButtonAction(Lkotlin/jvm/b/a;)V
+.method public final setVoiceButtonAction(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->D:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/core/view/search/AnimStartSearchView;->D:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method

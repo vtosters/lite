@@ -1,5 +1,5 @@
 .class public final Lcom/vk/fave/fragments/holders/PageInputHolder;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "PageInputHolder.kt"
 
 # interfaces
@@ -9,8 +9,8 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
-        "Lcom/vk/fave/entities/i;",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+        "Lcom/vk/fave/entities/FaveEntries2;",
         ">;",
         "Landroid/view/View$OnAttachStateChangeListener;"
     }
@@ -20,16 +20,16 @@
 # instance fields
 .field private final c:Lcom/vk/core/view/search/RoundedSearchView;
 
-.field private d:Lio/reactivex/disposables/b;
+.field private d:Lio/reactivex/disposables/Disposable;
 
-.field private final e:Lcom/vk/navigation/c;
+.field private final e:Lcom/vk/navigation/ActivityResulter;
 
-.field private final f:Lkotlin/jvm/b/b;
+.field private final f:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -37,16 +37,16 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -54,9 +54,9 @@
     const v0, 0x7f0d041f
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
-    iput-object p2, p0, Lcom/vk/fave/fragments/holders/PageInputHolder;->f:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/fave/fragments/holders/PageInputHolder;->f:Lkotlin/jvm/b/Functions2;
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -69,7 +69,7 @@
 
     const-string p2, "itemView.findViewById(R.id.search_view)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/view/search/RoundedSearchView;
 
@@ -80,7 +80,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/fave/fragments/holders/PageInputHolder$d;-><init>(Lcom/vk/fave/fragments/holders/PageInputHolder;)V
 
-    iput-object p1, p0, Lcom/vk/fave/fragments/holders/PageInputHolder;->e:Lcom/vk/navigation/c;
+    iput-object p1, p0, Lcom/vk/fave/fragments/holders/PageInputHolder;->e:Lcom/vk/navigation/ActivityResulter;
 
     .line 4
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -94,7 +94,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/fave/fragments/holders/PageInputHolder$1;-><init>(Lcom/vk/fave/fragments/holders/PageInputHolder;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/core/view/search/RoundedSearchView;->setEditMode(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/core/view/search/RoundedSearchView;->setEditMode(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -125,7 +125,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -133,7 +133,7 @@
 
     const-string v1, "itemView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -153,19 +153,19 @@
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-static {}, Lcom/vk/core/utils/i;->b()Z
+    invoke-static {}, Lcom/vk/core/utils/VoiceUtils;->b()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 3
-    invoke-static {v0}, Lcom/vk/core/utils/i;->a(Landroid/app/Activity;)Z
+    invoke-static {v0}, Lcom/vk/core/utils/VoiceUtils;->a(Landroid/app/Activity;)Z
 
     .line 4
-    iget-object v1, p0, Lcom/vk/fave/fragments/holders/PageInputHolder;->e:Lcom/vk/navigation/c;
+    iget-object v1, p0, Lcom/vk/fave/fragments/holders/PageInputHolder;->e:Lcom/vk/navigation/ActivityResulter;
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->b(Lcom/vk/navigation/c;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->b(Lcom/vk/navigation/ActivityResulter;)V
 
     goto :goto_0
 
@@ -177,7 +177,7 @@
     const/4 v3, 0x2
 
     .line 5
-    invoke-static {v0, v1, v3, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v3, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :goto_0
     return-void
@@ -185,7 +185,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/fave/entities/i;)V
+.method public a(Lcom/vk/fave/entities/FaveEntries2;)V
     .locals 1
 
     .line 2
@@ -193,7 +193,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/fave/entities/i;->a()Ljava/lang/Integer;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveEntries2;->a()Ljava/lang/Integer;
 
     move-result-object p1
 
@@ -218,27 +218,27 @@
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/fave/entities/i;
+    check-cast p1, Lcom/vk/fave/entities/FaveEntries2;
 
-    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/holders/PageInputHolder;->a(Lcom/vk/fave/entities/i;)V
+    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/holders/PageInputHolder;->a(Lcom/vk/fave/entities/FaveEntries2;)V
 
     return-void
 .end method
 
-.method public final g0()Lkotlin/jvm/b/b;
+.method public final g0()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/fave/fragments/holders/PageInputHolder;->f:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/fave/fragments/holders/PageInputHolder;->f:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
@@ -249,14 +249,14 @@
     .line 1
     iget-object p1, p0, Lcom/vk/fave/fragments/holders/PageInputHolder;->c:Lcom/vk/core/view/search/RoundedSearchView;
 
-    invoke-virtual {p1}, Lcom/vk/core/view/search/RoundedSearchView;->d()Lb/h/v/c;
+    invoke-virtual {p1}, Lcom/vk/core/view/search/RoundedSearchView;->d()Lb/h/v/InitialValueObservable;
 
     move-result-object p1
 
     .line 2
     sget-object v0, Lcom/vk/fave/fragments/holders/PageInputHolder$a;->a:Lcom/vk/fave/fragments/holders/PageInputHolder$a;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -265,25 +265,25 @@
 
     const-wide/16 v1, 0xc8
 
-    invoke-virtual {p1, v1, v2, v0}, Lc/a/m;->b(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {p1, v1, v2, v0}, Lio/reactivex/Observable;->b(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 4
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 5
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -296,11 +296,11 @@
     sget-object v1, Lcom/vk/fave/fragments/holders/PageInputHolder$c;->a:Lcom/vk/fave/fragments/holders/PageInputHolder$c;
 
     .line 8
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/fave/fragments/holders/PageInputHolder;->d:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/fave/fragments/holders/PageInputHolder;->d:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -309,11 +309,11 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/fave/fragments/holders/PageInputHolder;->d:Lio/reactivex/disposables/b;
+    iget-object p1, p0, Lcom/vk/fave/fragments/holders/PageInputHolder;->d:Lio/reactivex/disposables/Disposable;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void

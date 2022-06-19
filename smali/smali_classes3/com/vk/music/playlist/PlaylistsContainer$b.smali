@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/playlist/PlaylistsContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/playlist/g;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/d;Lcom/vk/music/common/BoomModel;)V
+    value = Lcom/vk/music/playlist/PlaylistsContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/playlist/PlaylistsModel;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/common/BoomModel;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,11 +40,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/playlist/PlaylistsContainer$b;->a:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-virtual {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->getModel$app_armUpload()Lcom/vk/music/playlist/g;
+    invoke-virtual {v0}, Lcom/vk/music/playlist/PlaylistsContainer;->getModel$app_armUpload()Lcom/vk/music/playlist/PlaylistsModel;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/playlist/g;->C()V
+    invoke-interface {v0}, Lcom/vk/music/playlist/PlaylistsModel;->C()V
 
     return-void
 .end method

@@ -156,7 +156,7 @@
 
     iget-object v2, p0, Lcom/vk/libvideo/ui/VideoView$o;->a:Lcom/vk/libvideo/ui/VideoView;
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/a;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/AutoPlay;
 
     move-result-object v2
 
@@ -164,7 +164,7 @@
 
     if-eqz v2, :cond_6
 
-    invoke-interface {v2}, Lcom/vk/libvideo/autoplay/a;->y()Z
+    invoke-interface {v2}, Lcom/vk/libvideo/autoplay/AutoPlay;->y()Z
 
     move-result v2
 
@@ -173,13 +173,13 @@
     :cond_6
     iget-object v2, p0, Lcom/vk/libvideo/ui/VideoView$o;->a:Lcom/vk/libvideo/ui/VideoView;
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/a;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/AutoPlay;
 
     move-result-object v2
 
     if-eqz v2, :cond_7
 
-    invoke-interface {v2}, Lcom/vk/libvideo/autoplay/a;->Z2()Z
+    invoke-interface {v2}, Lcom/vk/libvideo/autoplay/AutoPlay;->Z2()Z
 
     move-result v2
 
@@ -188,13 +188,13 @@
     :cond_7
     iget-object v2, p0, Lcom/vk/libvideo/ui/VideoView$o;->a:Lcom/vk/libvideo/ui/VideoView;
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/a;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/AutoPlay;
 
     move-result-object v2
 
     if-eqz v2, :cond_8
 
-    invoke-interface {v2}, Lcom/vk/libvideo/autoplay/a;->s()Z
+    invoke-interface {v2}, Lcom/vk/libvideo/autoplay/AutoPlay;->s()Z
 
     move-result v2
 
@@ -202,13 +202,13 @@
 
     iget-object v2, p0, Lcom/vk/libvideo/ui/VideoView$o;->a:Lcom/vk/libvideo/ui/VideoView;
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/a;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/AutoPlay;
 
     move-result-object v2
 
     if-eqz v2, :cond_a
 
-    invoke-interface {v2}, Lcom/vk/libvideo/autoplay/a;->A()Z
+    invoke-interface {v2}, Lcom/vk/libvideo/autoplay/AutoPlay;->A()Z
 
     move-result v2
 
@@ -217,13 +217,13 @@
     :cond_8
     iget-object v2, p0, Lcom/vk/libvideo/ui/VideoView$o;->a:Lcom/vk/libvideo/ui/VideoView;
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/a;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/AutoPlay;
 
     move-result-object v2
 
     if-eqz v2, :cond_9
 
-    invoke-interface {v2}, Lcom/vk/libvideo/autoplay/a;->H()Z
+    invoke-interface {v2}, Lcom/vk/libvideo/autoplay/AutoPlay;->H()Z
 
     move-result v2
 
@@ -231,13 +231,13 @@
 
     iget-object v2, p0, Lcom/vk/libvideo/ui/VideoView$o;->a:Lcom/vk/libvideo/ui/VideoView;
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/a;
+    invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/AutoPlay;
 
     move-result-object v2
 
     if-eqz v2, :cond_a
 
-    invoke-interface {v2}, Lcom/vk/libvideo/autoplay/a;->A()Z
+    invoke-interface {v2}, Lcom/vk/libvideo/autoplay/AutoPlay;->A()Z
 
     move-result v2
 

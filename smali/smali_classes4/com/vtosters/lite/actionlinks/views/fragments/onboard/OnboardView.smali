@@ -1,9 +1,9 @@
 .class public final Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;
-.super Lcom/vtosters/lite/actionlinks/c/a/d;
+.super Lcom/vtosters/lite/actionlinks/c/a/WrappedView;
 .source "OnboardView.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/actionlinks/views/fragments/onboard/b;
+.implements Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard1;
 
 
 # annotations
@@ -24,13 +24,13 @@
 # instance fields
 .field public E:Lcom/vk/cameraui/utils/CameraTracker;
 
-.field public F:Lcom/vk/api/video/m$c;
+.field public F:Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;
 
 .field public G:Landroid/view/ViewGroup;
 
 .field private H:Landroidx/viewpager/widget/ViewPager;
 
-.field private I:Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;
+.field private I:Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard;
 
 .field public J:Landroid/widget/ProgressBar;
 
@@ -59,7 +59,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->T:Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView$a;
 
@@ -72,7 +72,7 @@
 
     const-string v1, "OnboardView::class.java.simpleName"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->S:Ljava/lang/String;
 
@@ -83,7 +83,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vtosters/lite/actionlinks/c/a/d;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/actionlinks/c/a/WrappedView;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView$d;
@@ -152,7 +152,7 @@
     :cond_1
     const-string v0, "progress"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -160,7 +160,7 @@
     const-string v0, "errorHolder"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -168,7 +168,7 @@
     const-string v0, "pageIndicator"
 
     .line 7
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -176,7 +176,7 @@
     const-string v0, "button"
 
     .line 8
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -194,7 +194,7 @@
     :cond_0
     const-string p0, "pageIndicator"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -216,7 +216,7 @@
     :cond_0
     const-string v0, "buttonText"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -236,7 +236,7 @@
     :cond_0
     const-string v0, "chevron"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -252,11 +252,11 @@
     return-object v0
 .end method
 
-.method public final T4()Lcom/vk/api/video/m$c;
+.method public final T4()Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->F:Lcom/vk/api/video/m$c;
+    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->F:Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;
 
     if-eqz v0, :cond_0
 
@@ -265,7 +265,7 @@
     :cond_0
     const-string v0, "slides"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -285,7 +285,7 @@
     :cond_0
     const-string v0, "stat"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -369,11 +369,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/api/video/m$c;)V
+.method public a(Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;)V
     .locals 5
 
     .line 4
-    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->F:Lcom/vk/api/video/m$c;
+    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->F:Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;
 
     .line 5
     new-instance v0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView$Adapter;
@@ -384,9 +384,9 @@
 
     const-string v2, "childFragmentManager"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/api/video/m$c;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;->a()Ljava/util/List;
 
     move-result-object v2
 
@@ -407,7 +407,7 @@
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {p1}, Lcom/vk/api/video/m$c;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;->a()Ljava/util/List;
 
     move-result-object v2
 
@@ -417,13 +417,13 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/api/video/m$b;
+    check-cast v2, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;
 
-    invoke-virtual {v2}, Lcom/vk/api/video/m$b;->b()I
+    invoke-virtual {v2}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;->b()I
 
     move-result v2
 
-    invoke-virtual {p1}, Lcom/vk/api/video/m$c;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;->b()Ljava/lang/String;
 
     move-result-object v4
 
@@ -451,7 +451,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p1}, Lcom/vk/api/video/m$c;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;->a()Ljava/util/List;
 
     move-result-object v2
 
@@ -459,9 +459,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/api/video/m$b;
+    check-cast v2, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;
 
-    invoke-virtual {v2}, Lcom/vk/api/video/m$b;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -472,7 +472,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/api/video/m$c;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;->a()Ljava/util/List;
 
     move-result-object p1
 
@@ -487,7 +487,7 @@
     :cond_2
     const-string p1, "pageIndicator"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -495,7 +495,7 @@
     const-string p1, "buttonText"
 
     .line 12
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -503,7 +503,7 @@
     const-string p1, "chevron"
 
     .line 13
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -511,7 +511,7 @@
     const-string p1, "stat"
 
     .line 14
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -525,11 +525,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;)V
+.method public a(Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->I:Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;
+    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->I:Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard;
 
     return-void
 .end method
@@ -550,11 +550,11 @@
     return-void
 .end method
 
-.method public getPresenter()Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;
+.method public getPresenter()Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->I:Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;
+    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->I:Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard;
 
     return-object v0
 .end method
@@ -587,7 +587,7 @@
     :cond_0
     const-string v0, "progress"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -613,13 +613,13 @@
 
     const-string v2, "childFragmentManager"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->F:Lcom/vk/api/video/m$c;
+    iget-object v2, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->F:Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2}, Lcom/vk/api/video/m$c;->a()Ljava/util/List;
+    invoke-virtual {v2}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;->a()Ljava/util/List;
 
     move-result-object v2
 
@@ -632,7 +632,7 @@
     :cond_0
     const-string p1, "slides"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -693,7 +693,7 @@
 
     const-string v0, "contentView.findViewById\u2026tion_onboarding_progress)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ProgressBar;
 
@@ -712,7 +712,7 @@
 
     const-string v0, "contentView.findViewById\u2026_onboarding_error_holder)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/ViewGroup;
 
@@ -731,7 +731,7 @@
 
     const-string v0, "contentView.findViewById\u2026nboarding_viewers_reload)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/Button;
 
@@ -750,7 +750,7 @@
 
     const-string v0, "contentView.findViewById\u2026ection_onboarding_button)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/Button;
 
@@ -769,7 +769,7 @@
 
     const-string v0, "contentView.findViewById\u2026n_onboarding_button_text)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -788,7 +788,7 @@
 
     const-string v0, "contentView.findViewById\u2026ection_onboarding_holder)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/FrameLayout;
 
@@ -807,7 +807,7 @@
 
     const-string v0, "contentView.findViewById\u2026nboarding_page_indicator)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/widget/PageIndicator;
 
@@ -826,7 +826,7 @@
 
     const-string v0, "contentView.findViewById\u2026nboarding_button_chevron)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -886,12 +886,12 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     :cond_1
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
@@ -899,7 +899,7 @@
     const-string p1, "holder"
 
     .line 14
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
@@ -938,7 +938,7 @@
     return-object p1
 
     :cond_4
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
@@ -946,73 +946,73 @@
     const-string p1, "reload"
 
     .line 19
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 20
     :cond_6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 21
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     .line 22
     :cond_8
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 23
     :cond_9
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 24
     :cond_a
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 25
     :cond_b
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 26
     :cond_c
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 27
     :cond_d
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 28
     :cond_e
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 29
     :cond_f
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 30
     :cond_10
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
@@ -1031,7 +1031,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0}, Lcom/vtosters/lite/actionlinks/c/a/d;->onDestroyView()V
+    invoke-super {p0}, Lcom/vtosters/lite/actionlinks/c/a/WrappedView;->onDestroyView()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -1053,7 +1053,7 @@
 
     const-string v2, "decorView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/Window;->getNavigationBarColor()I
 
@@ -1069,13 +1069,13 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;
+    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lb/h/r/a;->onDestroy()V
+    invoke-interface {v0}, Lb/h/r/BaseContract;->onDestroy()V
 
     :cond_1
     return-void
@@ -1088,13 +1088,13 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->onDismiss(Landroid/content/DialogInterface;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;
+    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;->L1()Landroid/content/DialogInterface$OnDismissListener;
+    invoke-interface {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard;->L1()Landroid/content/DialogInterface$OnDismissListener;
 
     move-result-object p1
 
@@ -1112,16 +1112,16 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/actionlinks/c/a/d;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/actionlinks/c/a/WrappedView;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/c/a/d;->P4()Lcom/vtosters/lite/actionlinks/c/a/c;
+    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/c/a/WrappedView;->P4()Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/c/a/c;->S4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/c/a/ItemsDialogWrapper;->S4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object p1
 
@@ -1131,13 +1131,13 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;
+    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;->start()V
+    invoke-interface {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard;->start()V
 
     :cond_1
     return-void
@@ -1181,7 +1181,7 @@
     const-string v0, "pageIndicator"
 
     .line 5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1189,7 +1189,7 @@
     const-string v0, "button"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1214,7 +1214,7 @@
     :cond_0
     const-string v0, "errorHolder"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

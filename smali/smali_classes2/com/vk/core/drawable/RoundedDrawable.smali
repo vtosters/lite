@@ -1,20 +1,20 @@
 .class public final Lcom/vk/core/drawable/RoundedDrawable;
-.super Lcom/vk/core/drawable/d;
+.super Lcom/vk/core/drawable/DrawableWrapper;
 .source "RoundedDrawable.kt"
 
 
 # static fields
-.field static final synthetic f:[Lkotlin/u/j;
+.field static final synthetic f:[Lkotlin/u/KProperty5;
 
 
 # instance fields
 .field private b:Z
 
-.field private final c:Lkotlin/e;
+.field private final c:Lkotlin/Lazy2;
 
-.field private final d:Lkotlin/e;
+.field private final d:Lkotlin/Lazy2;
 
-.field private final e:Lkotlin/e;
+.field private final e:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -23,13 +23,13 @@
 
     const/4 v0, 0x3
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/core/drawable/RoundedDrawable;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -37,9 +37,9 @@
 
     const-string v4, "getCorners()[F"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
@@ -49,7 +49,7 @@
 
     const-class v2, Lcom/vk/core/drawable/RoundedDrawable;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -57,9 +57,9 @@
 
     const-string v4, "getCornersPath()Landroid/graphics/Path;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x1
 
@@ -69,7 +69,7 @@
 
     const-class v2, Lcom/vk/core/drawable/RoundedDrawable;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -77,15 +77,15 @@
 
     const-string v4, "getCachedRect()Landroid/graphics/RectF;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/core/drawable/RoundedDrawable;->f:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/core/drawable/RoundedDrawable;->f:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -99,34 +99,34 @@
     .end param
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/core/drawable/d;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0, p1}, Lcom/vk/core/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     .line 2
     sget-object v0, Lcom/vk/core/drawable/RoundedDrawable$corners$2;->a:Lcom/vk/core/drawable/RoundedDrawable$corners$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/core/drawable/RoundedDrawable;->c:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/core/drawable/RoundedDrawable;->c:Lkotlin/Lazy2;
 
     .line 3
     sget-object v0, Lcom/vk/core/drawable/RoundedDrawable$cornersPath$2;->a:Lcom/vk/core/drawable/RoundedDrawable$cornersPath$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/core/drawable/RoundedDrawable;->d:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/core/drawable/RoundedDrawable;->d:Lkotlin/Lazy2;
 
     .line 4
     sget-object v0, Lcom/vk/core/drawable/RoundedDrawable$cachedRect$2;->a:Lcom/vk/core/drawable/RoundedDrawable$cachedRect$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/core/drawable/RoundedDrawable;->e:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/core/drawable/RoundedDrawable;->e:Lkotlin/Lazy2;
 
     .line 5
     invoke-direct {p0, p2}, Lcom/vk/core/drawable/RoundedDrawable;->a(F)V
@@ -145,7 +145,7 @@
 
     const-string p2, "drawable.paint"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x1
 
@@ -158,15 +158,15 @@
 .method private final a()Landroid/graphics/RectF;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/drawable/RoundedDrawable;->e:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/core/drawable/RoundedDrawable;->e:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/drawable/RoundedDrawable;->f:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/drawable/RoundedDrawable;->f:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -230,7 +230,7 @@
 
     const-string v0, "bounds"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/core/drawable/RoundedDrawable;->a(Landroid/graphics/Rect;)V
 
@@ -320,15 +320,15 @@
 .method private final b()[F
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/drawable/RoundedDrawable;->c:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/core/drawable/RoundedDrawable;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/drawable/RoundedDrawable;->f:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/drawable/RoundedDrawable;->f:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -340,15 +340,15 @@
 .method private final c()Landroid/graphics/Path;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/drawable/RoundedDrawable;->d:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/core/drawable/RoundedDrawable;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/drawable/RoundedDrawable;->f:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/drawable/RoundedDrawable;->f:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -380,7 +380,7 @@
 
     const-string v1, "canvas.clipBounds"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     invoke-direct {p0}, Lcom/vk/core/drawable/RoundedDrawable;->c()Landroid/graphics/Path;
@@ -391,7 +391,7 @@
 
     .line 4
     :try_start_0
-    invoke-super {p0, p1}, Lcom/vk/core/drawable/d;->draw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Lcom/vk/core/drawable/DrawableWrapper;->draw(Landroid/graphics/Canvas;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -409,7 +409,7 @@
 
     .line 6
     :cond_0
-    invoke-super {p0, p1}, Lcom/vk/core/drawable/d;->draw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Lcom/vk/core/drawable/DrawableWrapper;->draw(Landroid/graphics/Canvas;)V
 
     :goto_0
     return-void
@@ -419,7 +419,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/drawable/d;->onBoundsChange(Landroid/graphics/Rect;)V
+    invoke-super {p0, p1}, Lcom/vk/core/drawable/DrawableWrapper;->onBoundsChange(Landroid/graphics/Rect;)V
 
     .line 2
     invoke-direct {p0, p1}, Lcom/vk/core/drawable/RoundedDrawable;->a(Landroid/graphics/Rect;)V

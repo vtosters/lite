@@ -3,12 +3,12 @@
 .source "VkCatalogConfiguration.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/api/f;
+.implements Lcom/vk/catalog2/core/api/CatalogRequestFactory;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/VkCatalogConfiguration;->a(Lcom/vk/catalog2/core/blocks/UIBlock;Ljava/lang/String;Lcom/vk/catalog2/core/e;)Lcom/vk/catalog2/core/presenters/c;
+    value = Lcom/vk/catalog2/core/VkCatalogConfiguration;->a(Lcom/vk/catalog2/core/blocks/UIBlock;Ljava/lang/String;Lcom/vk/catalog2/core/CatalogEntryPointParams;)Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/catalog2/core/api/f<",
+        "Lcom/vk/catalog2/core/api/CatalogRequestFactory<",
         "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
         ">;"
     }
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)Lc/a/m;
+.method public final a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)Lio/reactivex/Observable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -59,8 +59,8 @@
             "Ljava/lang/String;",
             "Ljava/lang/Integer;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/catalog2/core/api/dto/d<",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
             "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
             ">;>;"
         }
@@ -77,7 +77,7 @@
     iget-object p1, p0, Lcom/vk/catalog2/core/VkCatalogConfiguration$a;->b:Ljava/lang/String;
 
     :goto_0
-    invoke-virtual {p3, p1, p2}, Lcom/vk/catalog2/core/VkCatalogConfiguration;->a(Ljava/lang/String;Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {p3, p1, p2}, Lcom/vk/catalog2/core/VkCatalogConfiguration;->a(Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p1
 

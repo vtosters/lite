@@ -44,7 +44,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/articles/ArticleFragment$setupControls$4$1;-><init>(Lcom/vk/articles/ArticleFragment$setupControls$4;Landroid/view/View;)V
 
-    invoke-static {v0, v1}, Lcom/vk/articles/ArticleFragment;->a(Lcom/vk/articles/ArticleFragment;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/articles/ArticleFragment;->a(Lcom/vk/articles/ArticleFragment;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

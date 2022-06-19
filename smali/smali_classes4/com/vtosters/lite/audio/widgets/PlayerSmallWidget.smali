@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static c:Lio/reactivex/disposables/b;
+.field private static c:Lio/reactivex/disposables/Disposable;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -22,7 +22,7 @@
     const/4 v0, 0x0
 
     .line 2
-    sput-object v0, Lcom/vtosters/lite/audio/widgets/PlayerSmallWidget;->c:Lio/reactivex/disposables/b;
+    sput-object v0, Lcom/vtosters/lite/audio/widgets/PlayerSmallWidget;->c:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -46,9 +46,9 @@
     move-object/from16 v2, p2
 
     .line 1
-    sget-object v3, Lcom/vk/music/common/c;->d:Lcom/vk/music/common/c$b;
+    sget-object v3, Lcom/vk/music/common/Music;->d:Lcom/vk/music/common/Music$b;
 
-    invoke-interface {v3}, Lcom/vk/music/common/c$b;->a()Lcom/vk/music/n/e;
+    invoke-interface {v3}, Lcom/vk/music/common/Music$b;->a()Lcom/vk/music/n/IntentPlayerHelper;
 
     move-result-object v3
 
@@ -64,19 +64,19 @@
     invoke-direct {v4, v5, v6}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
     .line 3
-    sget-object v5, Lcom/vk/music/common/c$a;->a:Lcom/vk/music/common/c$c;
+    sget-object v5, Lcom/vk/music/common/Music$a;->a:Lcom/vk/music/common/Music$c;
 
-    invoke-interface {v5}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+    invoke-interface {v5}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v5
 
     .line 4
-    invoke-interface {v5}, Lcom/vk/music/player/d;->v0()Lcom/vk/music/player/e;
+    invoke-interface {v5}, Lcom/vk/music/player/PlayerModel;->v0()Lcom/vk/music/player/TrackInfo;
 
     move-result-object v6
 
     .line 5
-    invoke-interface {v5}, Lcom/vk/music/player/d;->Q()Lcom/vk/music/player/PlayState;
+    invoke-interface {v5}, Lcom/vk/music/player/PlayerModel;->Q()Lcom/vk/music/player/PlayState;
 
     move-result-object v7
 
@@ -88,7 +88,7 @@
 
     .line 6
     :cond_0
-    invoke-virtual {v6}, Lcom/vk/music/player/e;->e()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {v6}, Lcom/vk/music/player/TrackInfo;->e()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v9
 
@@ -116,7 +116,7 @@
 
     aput-object v14, v13, v11
 
-    invoke-virtual {v6, v13}, Lcom/vk/music/player/e;->a([Lcom/vk/music/player/PlayerAction;)Z
+    invoke-virtual {v6, v13}, Lcom/vk/music/player/TrackInfo;->a([Lcom/vk/music/player/PlayerAction;)Z
 
     move-result v13
 
@@ -143,7 +143,7 @@
 
     aput-object v15, v14, v11
 
-    invoke-virtual {v6, v14}, Lcom/vk/music/player/e;->a([Lcom/vk/music/player/PlayerAction;)Z
+    invoke-virtual {v6, v14}, Lcom/vk/music/player/TrackInfo;->a([Lcom/vk/music/player/PlayerAction;)Z
 
     move-result v14
 
@@ -162,7 +162,7 @@
 
     .line 9
     :goto_5
-    invoke-static {v5}, Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget;->a(Lcom/vk/music/player/d;)Z
+    invoke-static {v5}, Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget;->a(Lcom/vk/music/player/PlayerModel;)Z
 
     move-result v15
 
@@ -213,19 +213,19 @@
 
     .line 12
     :goto_8
-    invoke-interface {v5}, Lcom/vk/music/player/d;->N0()Z
+    invoke-interface {v5}, Lcom/vk/music/player/PlayerModel;->N0()Z
 
     move-result v16
 
     xor-int/lit8 v16, v16, 0x1
 
     .line 13
-    invoke-interface {v5}, Lcom/vk/music/player/d;->H0()Z
+    invoke-interface {v5}, Lcom/vk/music/player/PlayerModel;->H0()Z
 
     move-result v8
 
     .line 14
-    invoke-interface {v5}, Lcom/vk/music/player/d;->h()Lcom/vk/music/player/LoopMode;
+    invoke-interface {v5}, Lcom/vk/music/player/PlayerModel;->h()Lcom/vk/music/player/LoopMode;
 
     move-result-object v5
 
@@ -258,7 +258,7 @@
     aput-object v20, v2, v17
 
     .line 19
-    invoke-virtual {v6, v2}, Lcom/vk/music/player/e;->a([Lcom/vk/music/player/PlayerAction;)Z
+    invoke-virtual {v6, v2}, Lcom/vk/music/player/TrackInfo;->a([Lcom/vk/music/player/PlayerAction;)Z
 
     move-result v2
 
@@ -278,7 +278,7 @@
 
     move-result v2
 
-    invoke-virtual {v3, v0, v2}, Lcom/vk/music/n/e;->a(Landroid/content/Context;Z)Landroid/content/Intent;
+    invoke-virtual {v3, v0, v2}, Lcom/vk/music/n/IntentPlayerHelper;->a(Landroid/content/Context;Z)Landroid/content/Intent;
 
     move-result-object v2
 
@@ -300,7 +300,7 @@
 
     .line 22
     :cond_b
-    invoke-virtual {v3, v0}, Lcom/vk/music/n/e;->d(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v3, v0}, Lcom/vk/music/n/IntentPlayerHelper;->d(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v2
 
@@ -321,7 +321,7 @@
 
     .line 23
     :cond_c
-    invoke-virtual {v3, v0}, Lcom/vk/music/n/e;->g(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v3, v0}, Lcom/vk/music/n/IntentPlayerHelper;->g(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v2
 
@@ -348,7 +348,7 @@
     aput-object v2, v10, v17
 
     .line 25
-    invoke-virtual {v6, v10}, Lcom/vk/music/player/e;->a([Lcom/vk/music/player/PlayerAction;)Z
+    invoke-virtual {v6, v10}, Lcom/vk/music/player/TrackInfo;->a([Lcom/vk/music/player/PlayerAction;)Z
 
     move-result v2
 
@@ -364,7 +364,7 @@
     .line 26
     :cond_e
     :goto_d
-    invoke-virtual {v3, v0, v8}, Lcom/vk/music/n/e;->b(Landroid/content/Context;Z)Landroid/content/Intent;
+    invoke-virtual {v3, v0, v8}, Lcom/vk/music/n/IntentPlayerHelper;->b(Landroid/content/Context;Z)Landroid/content/Intent;
 
     move-result-object v2
 
@@ -392,7 +392,7 @@
     aput-object v2, v10, v17
 
     .line 29
-    invoke-virtual {v6, v10}, Lcom/vk/music/player/e;->a([Lcom/vk/music/player/PlayerAction;)Z
+    invoke-virtual {v6, v10}, Lcom/vk/music/player/TrackInfo;->a([Lcom/vk/music/player/PlayerAction;)Z
 
     move-result v2
 
@@ -408,7 +408,7 @@
     .line 30
     :cond_10
     :goto_f
-    invoke-virtual {v3, v0, v5}, Lcom/vk/music/n/e;->a(Landroid/content/Context;Lcom/vk/music/player/LoopMode;)Landroid/content/Intent;
+    invoke-virtual {v3, v0, v5}, Lcom/vk/music/n/IntentPlayerHelper;->a(Landroid/content/Context;Lcom/vk/music/player/LoopMode;)Landroid/content/Intent;
 
     move-result-object v2
 
@@ -498,7 +498,7 @@
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 36
-    invoke-static {v0, v9, v1}, Lcom/vk/music/ui/common/formatting/b;->c(Landroid/content/Context;Lcom/vk/dto/music/MusicTrack;I)Ljava/lang/CharSequence;
+    invoke-static {v0, v9, v1}, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->c(Landroid/content/Context;Lcom/vk/dto/music/MusicTrack;I)Ljava/lang/CharSequence;
 
     move-result-object v15
 
@@ -508,10 +508,10 @@
 
     invoke-virtual {v12, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v15, Lcom/vk/music/ui/common/formatting/b;->a:Lcom/vk/music/ui/common/formatting/b;
+    sget-object v15, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->INSTANCE:Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;
 
     .line 37
-    invoke-virtual {v15, v9}, Lcom/vk/music/ui/common/formatting/b;->a(Lcom/vk/dto/music/MusicTrack;)Ljava/lang/CharSequence;
+    invoke-virtual {v15, v9}, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->a(Lcom/vk/dto/music/MusicTrack;)Ljava/lang/CharSequence;
 
     move-result-object v15
 
@@ -531,12 +531,12 @@
 
     .line 39
     :cond_15
-    sget-object v12, Lcom/vtosters/lite/audio/widgets/PlayerSmallWidget;->c:Lio/reactivex/disposables/b;
+    sget-object v12, Lcom/vtosters/lite/audio/widgets/PlayerSmallWidget;->c:Lio/reactivex/disposables/Disposable;
 
     if-eqz v12, :cond_16
 
     .line 40
-    invoke-interface {v12}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v12}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_16
     if-eqz v16, :cond_17
@@ -550,14 +550,14 @@
     const/high16 v12, 0x43020000    # 130.0f
 
     .line 42
-    invoke-static {v9, v12}, Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget;->a(Lcom/vk/dto/music/MusicTrack;F)Lc/a/m;
+    invoke-static {v9, v12}, Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget;->a(Lcom/vk/dto/music/MusicTrack;F)Lio/reactivex/Observable;
 
     move-result-object v12
 
     sget-object v15, Lcom/vtosters/lite/audio/widgets/e;->a:Lcom/vtosters/lite/audio/widgets/e;
 
     .line 43
-    invoke-virtual {v12, v15}, Lc/a/m;->b(Lc/a/z/a;)Lc/a/m;
+    invoke-virtual {v12, v15}, Lio/reactivex/Observable;->b(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
 
     move-result-object v12
 
@@ -570,11 +570,11 @@
     invoke-direct {v1, v4}, Lcom/vtosters/lite/audio/widgets/d;-><init>(Landroid/widget/RemoteViews;)V
 
     .line 44
-    invoke-virtual {v12, v15, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v12, v15, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
-    sput-object v1, Lcom/vtosters/lite/audio/widgets/PlayerSmallWidget;->c:Lio/reactivex/disposables/b;
+    sput-object v1, Lcom/vtosters/lite/audio/widgets/PlayerSmallWidget;->c:Lio/reactivex/disposables/Disposable;
 
     .line 45
     :goto_15
@@ -1134,7 +1134,7 @@
     const/4 v0, 0x0
 
     .line 1
-    sput-object v0, Lcom/vtosters/lite/audio/widgets/PlayerSmallWidget;->c:Lio/reactivex/disposables/b;
+    sput-object v0, Lcom/vtosters/lite/audio/widgets/PlayerSmallWidget;->c:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

@@ -1027,7 +1027,7 @@
     const-string v1, "GLThread.stopEglContextLocked -- mHaveEglContext - drop"
 
     .line 2
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lorg/webrtc/videoengine/GLTextureView$GLThread;->mEglHelper:Lorg/webrtc/videoengine/GLTextureView$EglHelper;
@@ -1336,7 +1336,7 @@
 
     const-string v1, "GLTextureView"
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-static {}, Lorg/webrtc/videoengine/GLTextureView;->access$800()Lorg/webrtc/videoengine/GLTextureView$GLThreadManager;
@@ -1492,7 +1492,7 @@
     const-string v1, "GLThread.requestExitAndWait"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-static {}, Lorg/webrtc/videoengine/GLTextureView;->access$800()Lorg/webrtc/videoengine/GLTextureView$GLThreadManager;

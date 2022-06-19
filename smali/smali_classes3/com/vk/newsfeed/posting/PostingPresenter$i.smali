@@ -3,7 +3,7 @@
 .source "PostingPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/newsfeed/posting/dto/f;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/newsfeed/posting/dto/PostingSettings1;",
         ">;"
     }
 .end annotation
@@ -46,54 +46,54 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/newsfeed/posting/dto/f;)V
+.method public final a(Lcom/vk/newsfeed/posting/dto/PostingSettings1;)V
     .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$i;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->f(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/f;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->f(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts13;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/f;->b()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/PostingSettings1;->b()Lcom/vk/dto/common/data/VKList;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/newsfeed/posting/f;->a(Lcom/vk/dto/common/data/VKList;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/newsfeed/posting/PostingContracts13;->a(Lcom/vk/dto/common/data/VKList;Z)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$i;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->g(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/mentions/j;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->g(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/mentions/MentionSelectInterfaces1;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/f;->c()Lcom/vk/api/base/VkPaginationList;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/PostingSettings1;->c()Lcom/vk/api/base/VkPaginationList;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/mentions/j;->a(Lcom/vk/api/base/VkPaginationList;)V
+    invoke-interface {v0, v1}, Lcom/vk/mentions/MentionSelectInterfaces1;->a(Lcom/vk/api/base/VkPaginationList;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$i;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->g(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/mentions/j;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->g(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/mentions/MentionSelectInterfaces1;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/f;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/PostingSettings1;->a()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/mentions/j;->a(Ljava/util/List;)V
+    invoke-interface {v0, v1}, Lcom/vk/mentions/MentionSelectInterfaces1;->a(Ljava/util/List;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$i;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/f;->d()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/PostingSettings1;->d()I
 
     move-result v1
 
@@ -102,18 +102,18 @@
     .line 5
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$i;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->b(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/helpers/a;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->b(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/helpers/PostingArgumentsHelper;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/helpers/a;->E()Z
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/helpers/PostingArgumentsHelper;->E()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/f;->e()Lcom/vk/newsfeed/posting/dto/PosterSettings;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/PostingSettings1;->e()Lcom/vk/newsfeed/posting/dto/PosterSettings;
 
     move-result-object p1
 
@@ -132,9 +132,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/newsfeed/posting/dto/f;
+    check-cast p1, Lcom/vk/newsfeed/posting/dto/PostingSettings1;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingPresenter$i;->a(Lcom/vk/newsfeed/posting/dto/f;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingPresenter$i;->a(Lcom/vk/newsfeed/posting/dto/PostingSettings1;)V
 
     return-void
 .end method

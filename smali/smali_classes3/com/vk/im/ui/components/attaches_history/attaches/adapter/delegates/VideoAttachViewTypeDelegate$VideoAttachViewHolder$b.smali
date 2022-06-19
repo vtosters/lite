@@ -50,7 +50,7 @@
 
     iget-object v0, v0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;->n:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate;->a()Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/g;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate;->a()Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachCallback;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/g;->a(Landroid/view/View;Lcom/vk/im/engine/models/attaches/HistoryAttach;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachCallback;->a(Landroid/view/View;Lcom/vk/im/engine/models/attaches/HistoryAttach;)V
 
     :cond_0
     return-void

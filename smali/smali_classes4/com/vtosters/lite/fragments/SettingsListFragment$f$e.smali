@@ -1,11 +1,11 @@
 .class Lcom/vtosters/lite/fragments/SettingsListFragment$f$e;
-.super Lcom/vtosters/lite/ui/b0/n/h;
+.super Lcom/vtosters/lite/ui/b0/n/MaterialListButtonRedHolder;
 .source "SettingsListFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/fragments/SettingsListFragment$f;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
+    value = Lcom/vtosters/lite/fragments/SettingsListFragment$f;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$f$e;->d:Lcom/vtosters/lite/fragments/SettingsListFragment$f;
 
-    invoke-direct {p0, p2}, Lcom/vtosters/lite/ui/b0/n/h;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/ui/b0/n/MaterialListButtonRedHolder;-><init>(Landroid/view/ViewGroup;)V
 
     return-void
 .end method

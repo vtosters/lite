@@ -64,7 +64,7 @@
 
     const-string v0, "item"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, p2}, Lcom/vk/debug/TogglesFragment$b;->a(Lcom/vk/debug/TogglesFragment$b;Lcom/vk/toggle/FeatureManager$b;)V
 
@@ -85,7 +85,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -102,7 +102,7 @@
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vk/core/ui/themes/d;->a(Z)V
+    invoke-static {p1}, Lcom/vk/core/ui/themes/MilkshakeHelper;->a(Z)V
 
     :cond_0
     return-void

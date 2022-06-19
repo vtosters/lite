@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/httpexecutor/okhttp/interceptors/AutoCancelOnTimeoutInterceptorFix;->a(Lokhttp3/e;J)V
+    value = Lcom/vk/httpexecutor/okhttp/interceptors/AutoCancelOnTimeoutInterceptorFix;->a(Lokhttp3/Call;J)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lokhttp3/e;
+.field final synthetic a:Lokhttp3/Call;
 
 
 # direct methods
-.method constructor <init>(Lokhttp3/e;)V
+.method constructor <init>(Lokhttp3/Call;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/httpexecutor/okhttp/interceptors/AutoCancelOnTimeoutInterceptorFix$b;->a:Lokhttp3/e;
+    iput-object p1, p0, Lcom/vk/httpexecutor/okhttp/interceptors/AutoCancelOnTimeoutInterceptorFix$b;->a:Lokhttp3/Call;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,9 +38,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/httpexecutor/okhttp/interceptors/AutoCancelOnTimeoutInterceptorFix$b;->a:Lokhttp3/e;
+    iget-object v0, p0, Lcom/vk/httpexecutor/okhttp/interceptors/AutoCancelOnTimeoutInterceptorFix$b;->a:Lokhttp3/Call;
 
-    invoke-interface {v0}, Lokhttp3/e;->cancel()V
+    invoke-interface {v0}, Lokhttp3/Call;->cancel()V
 
     return-void
 .end method

@@ -6,19 +6,19 @@
 # instance fields
 .field private final a:Landroid/content/Context;
 
-.field private final b:Lcom/vk/im/engine/internal/storage/structure/c;
+.field private final b:Lcom/vk/im/engine/internal/storage/structure/DbSchema;
 
-.field private final c:Lcom/vk/im/engine/internal/storage/structure/a;
+.field private final c:Lcom/vk/im/engine/internal/storage/structure/DbMigration;
 
 .field private final d:Lcom/vk/im/engine/models/Member;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/im/engine/internal/storage/structure/c;Lcom/vk/im/engine/internal/storage/structure/a;Lcom/vk/im/engine/models/Member;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/im/engine/internal/storage/structure/DbSchema;Lcom/vk/im/engine/internal/storage/structure/DbMigration;Lcom/vk/im/engine/models/Member;)V
     .locals 2
 
     .line 1
-    invoke-interface {p3}, Lcom/vk/im/engine/internal/storage/structure/c;->getVersion()I
+    invoke-interface {p3}, Lcom/vk/im/engine/internal/storage/structure/DbSchema;->getVersion()I
 
     move-result v0
 
@@ -28,20 +28,20 @@
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->a:Landroid/content/Context;
 
-    iput-object p3, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/c;
+    iput-object p3, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/DbSchema;
 
-    iput-object p4, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->c:Lcom/vk/im/engine/internal/storage/structure/a;
+    iput-object p4, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->c:Lcom/vk/im/engine/internal/storage/structure/DbMigration;
 
     iput-object p5, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->d:Lcom/vk/im/engine/models/Member;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;)Lcom/vk/im/engine/internal/storage/structure/c;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;)Lcom/vk/im/engine/internal/storage/structure/DbSchema;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/c;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/DbSchema;
 
     return-object p0
 .end method
@@ -58,13 +58,13 @@
 
     const-string v1, "writableDatabase"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper$clear$1;
 
     invoke-direct {v1, p0}, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper$clear$1;-><init>(Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;)V
 
-    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -89,7 +89,7 @@
     const-string v0, "nativeLibsPath"
 
     .line 3
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -145,7 +145,7 @@
     const-string p2, "super.createConfiguratio\u2026ver.so\", null))\n        }"
 
     .line 6
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -171,9 +171,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/c;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/DbSchema;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/engine/internal/storage/structure/c;->b(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbSchema;->b(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
     return-void
 .end method
@@ -182,9 +182,9 @@
     .locals 0
 
     .line 1
-    iget-object p2, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/c;
+    iget-object p2, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/DbSchema;
 
-    invoke-interface {p2, p1}, Lcom/vk/im/engine/internal/storage/structure/c;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
+    invoke-interface {p2, p1}, Lcom/vk/im/engine/internal/storage/structure/DbSchema;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
     return-void
 .end method
@@ -197,23 +197,23 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/c;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/DbSchema;
 
-    invoke-interface {v1}, Lcom/vk/im/engine/internal/storage/structure/c;->getVersion()I
+    invoke-interface {v1}, Lcom/vk/im/engine/internal/storage/structure/DbSchema;->getVersion()I
 
     move-result v1
 
     if-eq v0, v1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/c;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/DbSchema;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/engine/internal/storage/structure/c;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/engine/internal/storage/structure/DbSchema;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/c;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/DbSchema;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/structure/c;->getVersion()I
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/structure/DbSchema;->getVersion()I
 
     move-result v0
 
@@ -227,17 +227,17 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/im/engine/internal/storage/structure/a$a;
+    new-instance v0, Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;
 
     iget-object v1, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->d:Lcom/vk/im/engine/models/Member;
 
-    invoke-direct {v0, p1, p2, p3, v1}, Lcom/vk/im/engine/internal/storage/structure/a$a;-><init>(Lio/requery/android/database/sqlite/SQLiteDatabase;IILcom/vk/im/engine/models/Member;)V
+    invoke-direct {v0, p1, p2, p3, v1}, Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;-><init>(Lio/requery/android/database/sqlite/SQLiteDatabase;IILcom/vk/im/engine/models/Member;)V
 
     .line 2
     :try_start_0
-    iget-object p2, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->c:Lcom/vk/im/engine/internal/storage/structure/a;
+    iget-object p2, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->c:Lcom/vk/im/engine/internal/storage/structure/DbMigration;
 
-    invoke-interface {p2, v0}, Lcom/vk/im/engine/internal/storage/structure/a;->a(Lcom/vk/im/engine/internal/storage/structure/a$a;)V
+    invoke-interface {p2, v0}, Lcom/vk/im/engine/internal/storage/structure/DbMigration;->a(Lcom/vk/im/engine/internal/storage/structure/DbMigration$a;)V
     :try_end_0
     .catch Lcom/vk/im/engine/internal/storage/structure/DbException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -258,9 +258,9 @@
 
     .line 5
     :cond_0
-    iget-object p2, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/c;
+    iget-object p2, p0, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;->b:Lcom/vk/im/engine/internal/storage/structure/DbSchema;
 
-    invoke-interface {p2, p1}, Lcom/vk/im/engine/internal/storage/structure/c;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
+    invoke-interface {p2, p1}, Lcom/vk/im/engine/internal/storage/structure/DbSchema;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
     :goto_0
     return-void

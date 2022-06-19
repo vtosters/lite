@@ -3,7 +3,7 @@
 .source "WithUserContent.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/models/messages/g;
+.implements Lcom/vk/im/engine/models/messages/WithFrom;
 
 
 # annotations
@@ -73,11 +73,11 @@
 .method public abstract a(Lcom/vk/im/engine/models/messages/NestedMsg$Type;)I
 .end method
 
-.method public abstract a(Lkotlin/jvm/b/b;Z)Lcom/vk/im/engine/models/attaches/Attach;
+.method public abstract a(Lkotlin/jvm/b/Functions2;Z)Lcom/vk/im/engine/models/attaches/Attach;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             "Ljava/lang/Boolean;",
@@ -129,14 +129,14 @@
     .end annotation
 .end method
 
-.method public abstract a(Lkotlin/jvm/b/b;)V
+.method public abstract a(Lkotlin/jvm/b/Functions2;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/messages/NestedMsg;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -153,16 +153,16 @@
     .end annotation
 .end method
 
-.method public abstract a(ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+.method public abstract a(ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             "Ljava/lang/Boolean;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             "+",
@@ -189,27 +189,27 @@
     .end annotation
 .end method
 
-.method public abstract b(Lkotlin/jvm/b/b;)V
+.method public abstract b(Lkotlin/jvm/b/Functions2;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/messages/NestedMsg;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 .end method
 
-.method public abstract b(Lkotlin/jvm/b/b;Z)V
+.method public abstract b(Lkotlin/jvm/b/Functions2;Z)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/messages/NestedMsg;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;Z)V"
         }
     .end annotation

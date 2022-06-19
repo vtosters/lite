@@ -50,7 +50,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/music/m/i;->audio_ad_title:I
+    sget v2, Lcom/vk/music/m/R4;->audio_ad_title:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

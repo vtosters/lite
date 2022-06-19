@@ -18,13 +18,13 @@
 .method public abstract G()V
 .end method
 
-.method public abstract a(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+.method public abstract a(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
             "Ljava/util/concurrent/TimeUnit;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Integer;",
             ">;"
         }

@@ -67,7 +67,7 @@
     move-result-object v1
 
     .line 3
-    invoke-static {v1}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -89,7 +89,7 @@
     const-string v3, "FacebookSDK"
 
     .line 5
-    invoke-static {v3, v1}, Lcom/facebook/internal/r;->a(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-static {v3, v1}, Lcom/facebook/internal/Utility;->a(Ljava/lang/String;Ljava/lang/Exception;)V
 
     move-object v3, v2
 
@@ -99,7 +99,7 @@
     .line 6
     iget-object v1, p0, Lcom/facebook/internal/FetchedAppSettingsManager$a;->c:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lcom/facebook/internal/FetchedAppSettingsManager;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/facebook/internal/h;
+    invoke-static {v1, v3}, Lcom/facebook/internal/FetchedAppSettingsManager;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/facebook/internal/FetchedAppSettings;
 
     move-result-object v2
 
@@ -116,7 +116,7 @@
     .line 8
     iget-object v3, p0, Lcom/facebook/internal/FetchedAppSettingsManager$a;->c:Ljava/lang/String;
 
-    invoke-static {v3, v1}, Lcom/facebook/internal/FetchedAppSettingsManager;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/facebook/internal/h;
+    invoke-static {v3, v1}, Lcom/facebook/internal/FetchedAppSettingsManager;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/facebook/internal/FetchedAppSettings;
 
     .line 9
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -143,7 +143,7 @@
     if-eqz v2, :cond_2
 
     .line 12
-    invoke-virtual {v2}, Lcom/facebook/internal/h;->h()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/facebook/internal/FetchedAppSettings;->h()Ljava/lang/String;
 
     move-result-object v1
 
@@ -173,13 +173,13 @@
     :cond_2
     iget-object v1, p0, Lcom/facebook/internal/FetchedAppSettingsManager$a;->c:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lcom/facebook/internal/g;->a(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    invoke-static {v1, v0}, Lcom/facebook/internal/FetchedAppGateKeepersManager;->a(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     .line 18
-    invoke-static {}, Lcom/facebook/appevents/internal/c;->b()V
+    invoke-static {}, Lcom/facebook/appevents/internal/AutomaticAnalyticsLogger;->b()V
 
     .line 19
-    invoke-static {}, Lcom/facebook/appevents/internal/f;->e()V
+    invoke-static {}, Lcom/facebook/appevents/internal/InAppPurchaseActivityLifecycleTracker;->e()V
 
     .line 20
     invoke-static {}, Lcom/facebook/internal/FetchedAppSettingsManager;->d()Ljava/util/concurrent/atomic/AtomicReference;

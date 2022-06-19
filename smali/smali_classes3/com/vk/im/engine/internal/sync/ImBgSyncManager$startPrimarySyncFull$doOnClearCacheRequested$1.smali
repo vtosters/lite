@@ -3,7 +3,7 @@
 .source "ImBgSyncManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/engine/internal/sync/ImBgSyncManager$startPrimarySyncFull$doOnClearCacheRequested$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -62,11 +62,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager$startPrimarySyncFull$doOnClearCacheRequested$1;->this$0:Lcom/vk/im/engine/internal/sync/ImBgSyncManager;
 
-    invoke-static {v0}, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->c(Lcom/vk/im/engine/internal/sync/ImBgSyncManager;)Lcom/vk/im/engine/internal/sync/b;
+    invoke-static {v0}, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->c(Lcom/vk/im/engine/internal/sync/ImBgSyncManager;)Lcom/vk/im/engine/internal/sync/ImBgSyncManagerEventListener;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/sync/b;->a()V
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/sync/ImBgSyncManagerEventListener;->a()V
 
     return-void
 .end method

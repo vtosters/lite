@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static a(Lkotlin/jvm/b/c;Ljava/lang/Object;Lkotlin/coroutines/a;)Lkotlin/coroutines/a;
+.method public static a(Lkotlin/jvm/b/Functions1;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -13,22 +13,22 @@
             "T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-TR;-",
-            "Lkotlin/coroutines/a<",
+            "Lkotlin/coroutines/Continuation<",
             "-TT;>;+",
             "Ljava/lang/Object;",
             ">;TR;",
-            "Lkotlin/coroutines/a<",
+            "Lkotlin/coroutines/Continuation<",
             "-TT;>;)",
-            "Lkotlin/coroutines/a<",
-            "Lkotlin/m;",
+            "Lkotlin/coroutines/Continuation<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-static {p2}, Lkotlin/coroutines/jvm/internal/e;->a(Lkotlin/coroutines/a;)Lkotlin/coroutines/a;
+    invoke-static {p2}, Lkotlin/coroutines/jvm/internal/DebugProbes;->a(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     .line 2
     instance-of v0, p0, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;
@@ -38,7 +38,7 @@
     .line 3
     check-cast p0, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;
 
-    invoke-virtual {p0, p1, p2}, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->a(Ljava/lang/Object;Lkotlin/coroutines/a;)Lkotlin/coroutines/a;
+    invoke-virtual {p0, p1, p2}, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
 
@@ -46,7 +46,7 @@
 
     .line 4
     :cond_0
-    invoke-interface {p2}, Lkotlin/coroutines/a;->getContext()Lkotlin/coroutines/c;
+    invoke-interface {p2}, Lkotlin/coroutines/Continuation;->getContext()Lkotlin/coroutines/CoroutineContext;
 
     move-result-object v4
 
@@ -62,7 +62,7 @@
 
     if-eqz p2, :cond_1
 
-    invoke-direct {v0, p2, p2, p0, p1}, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$3;-><init>(Lkotlin/coroutines/a;Lkotlin/coroutines/a;Lkotlin/jvm/b/c;Ljava/lang/Object;)V
+    invoke-direct {v0, p2, p2, p0, p1}, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$3;-><init>(Lkotlin/coroutines/Continuation;Lkotlin/coroutines/Continuation;Lkotlin/jvm/b/Functions1;Ljava/lang/Object;)V
 
     move-object p0, v0
 
@@ -93,7 +93,7 @@
 
     move-object v6, p1
 
-    invoke-direct/range {v0 .. v6}, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4;-><init>(Lkotlin/coroutines/a;Lkotlin/coroutines/c;Lkotlin/coroutines/a;Lkotlin/coroutines/c;Lkotlin/jvm/b/c;Ljava/lang/Object;)V
+    invoke-direct/range {v0 .. v6}, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4;-><init>(Lkotlin/coroutines/Continuation;Lkotlin/coroutines/CoroutineContext;Lkotlin/coroutines/Continuation;Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/b/Functions1;Ljava/lang/Object;)V
 
     move-object p0, v7
 

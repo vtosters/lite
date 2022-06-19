@@ -1,9 +1,9 @@
 .class public final Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "FriendsSuggestNearbyFragment.kt"
 
 # interfaces
-.implements Lcom/vk/friends/recommendations/f$a;
+.implements Lcom/vk/friends/recommendations/NearbyController$a;
 
 
 # annotations
@@ -18,24 +18,24 @@
 
 
 # static fields
-.field static final synthetic J:[Lkotlin/u/j;
+.field static final synthetic J:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final F:Lcom/vk/common/g/g;
+.field private final F:Lcom/vk/common/g/VoidF1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/common/g/g<",
+            "Lcom/vk/common/g/VoidF1<",
             "Lcom/vk/dto/user/UserProfile;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final G:Lcom/vk/common/g/j;
+.field private final G:Lcom/vk/common/g/VoidF2Int;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/common/g/j<",
+            "Lcom/vk/common/g/VoidF2Int<",
             "Lcom/vk/dto/user/RequestUserProfile;",
             "Ljava/lang/Boolean;",
             ">;"
@@ -43,7 +43,7 @@
     .end annotation
 .end field
 
-.field private final H:Lkotlin/e;
+.field private final H:Lkotlin/Lazy2;
 
 .field private I:Lcom/vk/lists/RecyclerPaginatedView;
 
@@ -54,13 +54,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -68,15 +68,15 @@
 
     const-string v4, "getAdapter()Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$Adapter;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->J:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->J:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -85,32 +85,32 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$g;
 
     invoke-direct {v0, p0}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$g;-><init>(Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;)V
 
-    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->F:Lcom/vk/common/g/g;
+    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->F:Lcom/vk/common/g/VoidF1;
 
     .line 3
     new-instance v0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$e;
 
     invoke-direct {v0, p0}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$e;-><init>(Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;)V
 
-    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->G:Lcom/vk/common/g/j;
+    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->G:Lcom/vk/common/g/VoidF2Int;
 
     .line 4
     new-instance v0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$adapter$2;
 
     invoke-direct {v0, p0}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$adapter$2;-><init>(Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->H:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->H:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -118,15 +118,15 @@
 .method private final P4()Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->H:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->H:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->J:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->J:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -135,11 +135,11 @@
     return-object v0
 .end method
 
-.method public static final synthetic a(Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;)Lcom/vk/common/g/j;
+.method public static final synthetic a(Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;)Lcom/vk/common/g/VoidF2Int;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->G:Lcom/vk/common/g/j;
+    iget-object p0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->G:Lcom/vk/common/g/VoidF2Int;
 
     return-object p0
 .end method
@@ -152,24 +152,24 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/vk/api/execute/f;->a(IZ)Lcom/vk/api/execute/f;
+    invoke-static {v0, v1}, Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;->a(IZ)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
 
     move-result-object v0
 
     .line 4
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_NEARBY:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-virtual {v0, v2}, Lcom/vk/api/execute/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vk/api/execute/f;
+    invoke-virtual {v0, v2}, Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
 
     .line 5
     iget-object v2, p1, Lcom/vk/dto/user/UserProfile;->X:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Lcom/vk/api/execute/f;->e(Ljava/lang/String;)Lcom/vk/api/execute/f;
+    invoke-virtual {v0, v2}, Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;->e(Ljava/lang/String;)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
 
     const/4 v2, 0x0
 
     .line 6
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -190,7 +190,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -204,17 +204,17 @@
 
     if-eqz p1, :cond_0
 
-    new-instance v2, Lcom/vk/friends/recommendations/d;
+    new-instance v2, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment1;
 
-    invoke-direct {v2, p1}, Lcom/vk/friends/recommendations/d;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, p1}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     move-object p1, v2
 
     :cond_0
-    check-cast p1, Lc/a/z/g;
+    check-cast p1, Lio/reactivex/functions/Consumer;
 
     .line 10
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -239,11 +239,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;)Lcom/vk/common/g/g;
+.method public static final synthetic c(Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;)Lcom/vk/common/g/VoidF1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->F:Lcom/vk/common/g/g;
+    iget-object p0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;->F:Lcom/vk/common/g/VoidF1;
 
     return-object p0
 .end method
@@ -265,7 +265,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0, v1}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/core/ui/d;
+    invoke-static {p1, v1, v0, v1}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/core/ui/CardItemDecorator;
 
     :cond_0
     return-void
@@ -286,7 +286,7 @@
     const-string v1, "view"
 
     .line 2
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f040099
 
@@ -299,7 +299,7 @@
     const v3, 0x7f0a0d9d
 
     .line 3
-    invoke-static {v0, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v0, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v3
 
@@ -320,13 +320,13 @@
 
     invoke-direct {v4, p0, p1, p2}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$onCreateView$$inlined$let$lambda$1;-><init>(Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)V
 
-    invoke-static {v3, p0, v4}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+    invoke-static {v3, p0, v4}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
 
     :cond_1
     const v4, 0x7f0a0b7a
 
     .line 6
-    invoke-static {v0, v4, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v0, v4, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v1
 
@@ -353,7 +353,7 @@
 
     invoke-direct {v2, v3, p0, p1, p2}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$onCreateView$$inlined$let$lambda$2;-><init>(Landroidx/appcompat/widget/Toolbar;Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)V
 
-    invoke-static {v1, v2}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;)Lcom/vk/core/ui/d;
+    invoke-static {v1, v2}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;)Lcom/vk/core/ui/CardItemDecorator;
 
     .line 10
     invoke-virtual {v1, p3}, Lcom/vk/lists/RecyclerPaginatedView;->setSwipeRefreshEnabled(Z)V
@@ -372,19 +372,19 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lme/grishka/appkit/views/a;->a(Landroid/app/Activity;)Lme/grishka/appkit/views/a;
+    invoke-static {v4}, Lme/grishka/appkit/views/DividerItemDecoration;->a(Landroid/app/Activity;)Lme/grishka/appkit/views/DividerItemDecoration;
 
     move-result-object v4
 
     .line 13
-    invoke-virtual {v4, p3}, Lme/grishka/appkit/views/a;->b(I)V
+    invoke-virtual {v4, p3}, Lme/grishka/appkit/views/DividerItemDecoration;->b(I)V
 
     .line 14
     new-instance p3, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$f;
 
     invoke-direct {p3, v3, p0, p1, p2}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$f;-><init>(Landroidx/appcompat/widget/Toolbar;Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)V
 
-    invoke-virtual {v4, p3}, Lme/grishka/appkit/views/a;->a(Lme/grishka/appkit/views/a$a;)Lme/grishka/appkit/views/a;
+    invoke-virtual {v4, p3}, Lme/grishka/appkit/views/DividerItemDecoration;->a(Lme/grishka/appkit/views/DividerItemDecoration$a;)Lme/grishka/appkit/views/DividerItemDecoration;
 
     .line 15
     invoke-virtual {v2, v4}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
@@ -397,7 +397,7 @@
 
     move-result-object p1
 
-    invoke-static {v3, p1}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-static {v3, p1}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 17
     :cond_3
@@ -424,9 +424,9 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/friends/recommendations/f;->f:Lcom/vk/friends/recommendations/f;
+    sget-object v0, Lcom/vk/friends/recommendations/NearbyController;->INSTANCE:Lcom/vk/friends/recommendations/NearbyController;
 
-    invoke-virtual {v0, p0}, Lcom/vk/friends/recommendations/f;->b(Lcom/vk/friends/recommendations/f$a;)V
+    invoke-virtual {v0, p0}, Lcom/vk/friends/recommendations/NearbyController;->b(Lcom/vk/friends/recommendations/NearbyController$a;)V
 
     .line 2
     sget-object v0, Lcom/vk/stats/AppUseTime;->f:Lcom/vk/stats/AppUseTime;
@@ -436,7 +436,7 @@
     invoke-virtual {v0, v1, p0}, Lcom/vk/stats/AppUseTime;->a(Lcom/vk/stats/AppUseTime$Section;Lcom/vk/core/fragments/FragmentImpl;)V
 
     .line 3
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onPause()V
 
     return-void
 .end method
@@ -445,7 +445,7 @@
     .locals 9
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
 
     .line 2
     sget-object v0, Lcom/vk/stats/AppUseTime;->f:Lcom/vk/stats/AppUseTime;
@@ -484,7 +484,7 @@
     const v6, 0x7f120a1e
 
     .line 8
-    invoke-virtual/range {v2 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v2 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method
@@ -519,7 +519,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "MsgSearchListAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter;-><init>(Lcom/vk/im/ui/components/msg_search/vc/p;Landroid/view/LayoutInflater;)V
+    value = Lcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter;-><init>(Lcom/vk/im/ui/components/msg_search/vc/VcCallback;Landroid/view/LayoutInflater;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/ViewGroup;",
-        "Lcom/vk/im/ui/components/msg_search/vc/s;",
+        "Lcom/vk/im/ui/components/msg_search/vc/VhHints1;",
         ">;"
     }
 .end annotation
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/components/msg_search/vc/s;
+.method public final a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/components/msg_search/vc/VhHints1;
     .locals 6
 
     .line 1
-    sget-object v0, Lcom/vk/im/ui/components/msg_search/vc/s;->c:Lcom/vk/im/ui/components/msg_search/vc/s$a;
+    sget-object v0, Lcom/vk/im/ui/components/msg_search/vc/VhHints1;->c:Lcom/vk/im/ui/components/msg_search/vc/VhHints$a;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter$6;->this$0:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter;
 
@@ -66,19 +66,19 @@
 
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter$6;->this$0:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/views/adapter_delegate/a;->k()I
+    invoke-virtual {v2}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->k()I
 
     move-result v4
 
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter$6;->this$0:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter;->m()Lcom/vk/im/ui/components/msg_search/vc/p;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter;->m()Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     move-result-object v5
 
     move-object v2, p1
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/im/ui/components/msg_search/vc/s$a;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;ILcom/vk/im/ui/components/msg_search/vc/p;)Lcom/vk/im/ui/components/msg_search/vc/s;
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/im/ui/components/msg_search/vc/VhHints$a;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;ILcom/vk/im/ui/components/msg_search/vc/VcCallback;)Lcom/vk/im/ui/components/msg_search/vc/VhHints1;
 
     move-result-object p1
 
@@ -91,7 +91,7 @@
     .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter$6;->a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/components/msg_search/vc/s;
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter$6;->a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/components/msg_search/vc/VhHints1;
 
     move-result-object p1
 

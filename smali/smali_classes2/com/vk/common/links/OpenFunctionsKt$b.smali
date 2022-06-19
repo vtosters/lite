@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;ILjava/lang/String;Lcom/vk/common/links/f;)Z
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;ILjava/lang/String;Lcom/vk/common/links/OpenCallback;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lorg/json/JSONObject;",
         ">;"
     }
@@ -34,18 +34,18 @@
 
 .field final synthetic b:Landroid/content/Context;
 
-.field final synthetic c:Lcom/vk/common/links/f;
+.field final synthetic c:Lcom/vk/common/links/OpenCallback;
 
 
 # direct methods
-.method constructor <init>(ILandroid/content/Context;Lcom/vk/common/links/f;)V
+.method constructor <init>(ILandroid/content/Context;Lcom/vk/common/links/OpenCallback;)V
     .locals 0
 
     iput p1, p0, Lcom/vk/common/links/OpenFunctionsKt$b;->a:I
 
     iput-object p2, p0, Lcom/vk/common/links/OpenFunctionsKt$b;->b:Landroid/content/Context;
 
-    iput-object p3, p0, Lcom/vk/common/links/OpenFunctionsKt$b;->c:Lcom/vk/common/links/f;
+    iput-object p3, p0, Lcom/vk/common/links/OpenFunctionsKt$b;->c:Lcom/vk/common/links/OpenCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -60,7 +60,7 @@
     const-string v0, "response"
 
     .line 1
-    invoke-static {p1, v0}, Lcom/vk/api/base/f;->a(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/vk/dto/common/d;
+    invoke-static {p1, v0}, Lcom/vk/api/base/ApiUtils;->a(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/vk/dto/common/JSONArrayWithCount;
 
     move-result-object p1
 
@@ -68,7 +68,7 @@
 
     if-eqz p1, :cond_6
 
-    iget-object p1, p1, Lcom/vk/dto/common/d;->b:Lorg/json/JSONArray;
+    iget-object p1, p1, Lcom/vk/dto/common/JSONArrayWithCount;->b:Lorg/json/JSONArray;
 
     .line 2
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
@@ -77,7 +77,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v2, v1}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
+    invoke-static {v2, v1}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
 
     move-result-object v1
 
@@ -164,7 +164,7 @@
 
     const v0, 0x7f120031
 
-    invoke-static {p1, v0}, Lcom/vk/core/util/ContextExtKt;->m(Landroid/content/Context;I)Lkotlin/m;
+    invoke-static {p1, v0}, Lcom/vk/core/util/ContextExtKt;->m(Landroid/content/Context;I)Lkotlin/Unit;
 
     goto :goto_2
 
@@ -182,22 +182,22 @@
 
     iget-object v0, p0, Lcom/vk/common/links/OpenFunctionsKt$b;->b:Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 9
     :goto_2
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$b;->c:Lcom/vk/common/links/f;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$b;->c:Lcom/vk/common/links/OpenCallback;
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1}, Lcom/vk/common/links/f;->a()V
+    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->a()V
 
     :cond_5
     return-void
 
     .line 10
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method

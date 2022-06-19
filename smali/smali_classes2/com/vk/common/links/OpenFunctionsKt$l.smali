@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/f;Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/disposables/b;
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/disposables/Disposable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/api/execute/e$b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/api/execute/ExecuteResolveScreenName$b;",
         ">;"
     }
 .end annotation
@@ -36,11 +36,11 @@
 
 .field final synthetic c:Ljava/lang/String;
 
-.field final synthetic d:Lcom/vk/common/links/f;
+.field final synthetic d:Lcom/vk/common/links/OpenCallback;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/f;)V
+.method constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$l;->a:Landroid/content/Context;
@@ -49,7 +49,7 @@
 
     iput-object p3, p0, Lcom/vk/common/links/OpenFunctionsKt$l;->c:Ljava/lang/String;
 
-    iput-object p4, p0, Lcom/vk/common/links/OpenFunctionsKt$l;->d:Lcom/vk/common/links/f;
+    iput-object p4, p0, Lcom/vk/common/links/OpenFunctionsKt$l;->d:Lcom/vk/common/links/OpenCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,11 +58,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/execute/e$b;)V
+.method public final a(Lcom/vk/api/execute/ExecuteResolveScreenName$b;)V
     .locals 11
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/api/execute/e$b;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/execute/ExecuteResolveScreenName$b;->f()Ljava/lang/String;
 
     move-result-object v0
 
@@ -92,7 +92,7 @@
 
     iget-object v1, p0, Lcom/vk/common/links/OpenFunctionsKt$l;->a:Landroid/content/Context;
 
-    invoke-virtual {p1}, Lcom/vk/api/execute/e$b;->e()I
+    invoke-virtual {p1}, Lcom/vk/api/execute/ExecuteResolveScreenName$b;->e()I
 
     move-result p1
 
@@ -108,13 +108,13 @@
 
     iget-object v7, p0, Lcom/vk/common/links/OpenFunctionsKt$l;->c:Ljava/lang/String;
 
-    iget-object v8, p0, Lcom/vk/common/links/OpenFunctionsKt$l;->d:Lcom/vk/common/links/f;
+    iget-object v8, p0, Lcom/vk/common/links/OpenFunctionsKt$l;->d:Lcom/vk/common/links/OpenCallback;
 
     const/16 v9, 0x18
 
     const/4 v10, 0x0
 
-    invoke-static/range {v1 .. v10}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/f;ILjava/lang/Object;)Z
+    invoke-static/range {v1 .. v10}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;ILjava/lang/Object;)Z
 
     goto :goto_1
 
@@ -130,7 +130,7 @@
 
     iget-object v1, p0, Lcom/vk/common/links/OpenFunctionsKt$l;->a:Landroid/content/Context;
 
-    invoke-virtual {p1}, Lcom/vk/api/execute/e$b;->e()I
+    invoke-virtual {p1}, Lcom/vk/api/execute/ExecuteResolveScreenName$b;->e()I
 
     move-result v2
 
@@ -144,24 +144,24 @@
 
     iget-object v7, p0, Lcom/vk/common/links/OpenFunctionsKt$l;->c:Ljava/lang/String;
 
-    iget-object v8, p0, Lcom/vk/common/links/OpenFunctionsKt$l;->d:Lcom/vk/common/links/f;
+    iget-object v8, p0, Lcom/vk/common/links/OpenFunctionsKt$l;->d:Lcom/vk/common/links/OpenCallback;
 
     const/16 v9, 0x18
 
     const/4 v10, 0x0
 
-    invoke-static/range {v1 .. v10}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/f;ILjava/lang/Object;)Z
+    invoke-static/range {v1 .. v10}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;ILjava/lang/Object;)Z
 
     goto :goto_1
 
     .line 4
     :cond_2
     :goto_0
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$l;->d:Lcom/vk/common/links/f;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$l;->d:Lcom/vk/common/links/OpenCallback;
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lcom/vk/common/links/f;->b()V
+    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->b()V
 
     :cond_3
     :goto_1
@@ -171,9 +171,9 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Lcom/vk/api/execute/e$b;
+    check-cast p1, Lcom/vk/api/execute/ExecuteResolveScreenName$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/common/links/OpenFunctionsKt$l;->a(Lcom/vk/api/execute/e$b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/common/links/OpenFunctionsKt$l;->a(Lcom/vk/api/execute/ExecuteResolveScreenName$b;)V
 
     return-void
 .end method

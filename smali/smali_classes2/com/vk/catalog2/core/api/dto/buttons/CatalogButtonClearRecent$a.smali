@@ -62,7 +62,7 @@
 
     .line 4
     :goto_0
-    invoke-static {p1}, Lcom/vk/core/extensions/w;->a(Lcom/vk/core/serialize/Serializer;)Ljava/util/List;
+    invoke-static {p1}, Lcom/vk/core/extensions/SerializerExt;->a(Lcom/vk/core/serialize/Serializer;)Ljava/util/List;
 
     move-result-object p1
 

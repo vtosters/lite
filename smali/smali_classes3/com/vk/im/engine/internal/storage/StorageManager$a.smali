@@ -81,27 +81,27 @@
 
     iget-object p1, p0, Lcom/vk/im/engine/internal/storage/StorageManager$a;->a:Lcom/vk/im/engine/internal/storage/StorageManager;
 
-    invoke-static {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->b(Lcom/vk/im/engine/internal/storage/StorageManager;)Lcom/vk/im/engine/internal/storage/a;
+    invoke-static {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->b(Lcom/vk/im/engine/internal/storage/StorageManager;)Lcom/vk/im/engine/internal/storage/StorageChangesListener;
 
     move-result-object p1
 
     .line 3
-    invoke-static {p2}, Lcom/vk/im/engine/utils/collection/e;->a(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/d;
+    invoke-static {p2}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/IntCollection;
 
     move-result-object p2
 
     .line 4
-    invoke-static {p3}, Lcom/vk/im/engine/utils/collection/e;->a(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/d;
+    invoke-static {p3}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/IntCollection;
 
     move-result-object p3
 
     .line 5
-    invoke-static {p4}, Lcom/vk/im/engine/utils/collection/e;->a(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/d;
+    invoke-static {p4}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/IntCollection;
 
     move-result-object p4
 
     .line 6
-    invoke-interface {p1, p2, p3, p4}, Lcom/vk/im/engine/internal/storage/a;->a(Lcom/vk/im/engine/utils/collection/d;Lcom/vk/im/engine/utils/collection/d;Lcom/vk/im/engine/utils/collection/d;)V
+    invoke-interface {p1, p2, p3, p4}, Lcom/vk/im/engine/internal/storage/StorageChangesListener;->a(Lcom/vk/im/engine/utils/collection/IntCollection;Lcom/vk/im/engine/utils/collection/IntCollection;Lcom/vk/im/engine/utils/collection/IntCollection;)V
 
     :cond_1
     :goto_0

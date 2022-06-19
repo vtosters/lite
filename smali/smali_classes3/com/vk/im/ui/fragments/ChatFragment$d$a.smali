@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/fragments/ChatFragment$d;->a(Ljava/util/List;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/im/ui/fragments/ChatFragment$d;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,18 +22,18 @@
 
 .field final synthetic b:Ljava/util/List;
 
-.field final synthetic c:Lkotlin/jvm/b/b;
+.field final synthetic c:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/fragments/ChatFragment$d;Ljava/util/List;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lcom/vk/im/ui/fragments/ChatFragment$d;Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/ui/fragments/ChatFragment$d$a;->a:Lcom/vk/im/ui/fragments/ChatFragment$d;
 
     iput-object p2, p0, Lcom/vk/im/ui/fragments/ChatFragment$d$a;->b:Ljava/util/List;
 
-    iput-object p3, p0, Lcom/vk/im/ui/fragments/ChatFragment$d$a;->c:Lkotlin/jvm/b/b;
+    iput-object p3, p0, Lcom/vk/im/ui/fragments/ChatFragment$d$a;->c:Lkotlin/jvm/b/Functions2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,9 +50,9 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/fragments/ChatFragment$d$a;->b:Ljava/util/List;
 
-    iget-object v2, p0, Lcom/vk/im/ui/fragments/ChatFragment$d$a;->c:Lkotlin/jvm/b/b;
+    iget-object v2, p0, Lcom/vk/im/ui/fragments/ChatFragment$d$a;->c:Lkotlin/jvm/b/Functions2;
 
-    invoke-static {v0, v1, v2}, Lcom/vk/im/ui/fragments/ChatFragment$d;->a(Lcom/vk/im/ui/fragments/ChatFragment$d;Ljava/util/List;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1, v2}, Lcom/vk/im/ui/fragments/ChatFragment$d;->a(Lcom/vk/im/ui/fragments/ChatFragment$d;Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

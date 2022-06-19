@@ -1,5 +1,5 @@
 .class public Lcom/vk/discover/DiscoverFeedFragment$a;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "DiscoverFeedFragment.kt"
 
 
@@ -39,7 +39,7 @@
     .end annotation
 
     .line 3
-    invoke-direct {p0, p6}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, p6}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     iput-object p1, p0, Lcom/vk/discover/DiscoverFeedFragment$a;->S0:Lcom/vk/discover/DiscoverItemsContainer;
 
@@ -56,30 +56,30 @@
 
     .line 5
     :cond_0
-    iget-object p1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string p2, "discover_id"
 
     invoke-virtual {p1, p2, p5}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     .line 6
-    iget-object p1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object p2, Lcom/vk/navigation/q;->Z:Ljava/lang/String;
+    sget-object p2, Lcom/vk/navigation/NavigatorKeys;->Z:Ljava/lang/String;
 
     invoke-virtual {p1, p2, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
-    iget-object p1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object p2, Lcom/vk/navigation/q;->b0:Ljava/lang/String;
+    sget-object p2, Lcom/vk/navigation/NavigatorKeys;->b0:Ljava/lang/String;
 
     invoke-virtual {p1, p2, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/discover/DiscoverItemsContainer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/discover/DiscoverDataProvider$DiscoverId;Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/discover/DiscoverItemsContainer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/discover/DiscoverDataProvider$DiscoverId;Ljava/lang/Class;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 7
 
     and-int/lit8 p8, p7, 0x10
@@ -127,7 +127,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0}, Lcom/vk/navigation/o;->d()V
+    invoke-super {p0}, Lcom/vk/navigation/Navigator;->d()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/discover/DiscoverFeedFragment$a;->S0:Lcom/vk/discover/DiscoverItemsContainer;

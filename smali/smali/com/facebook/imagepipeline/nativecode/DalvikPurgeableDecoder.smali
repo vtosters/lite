@@ -3,11 +3,11 @@
 .source "DalvikPurgeableDecoder.java"
 
 # interfaces
-.implements Lcom/facebook/imagepipeline/platform/f;
+.implements Lcom/facebook/imagepipeline/platform/PlatformDecoder;
 
 
 # annotations
-.annotation build Lcom/facebook/common/internal/d;
+.annotation build Lcom/facebook/common/internal/DoNotStrip;
 .end annotation
 
 
@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field private final mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/a;
+.field private final mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/BitmapCounter;
 
 
 # direct methods
@@ -51,28 +51,28 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {}, Lcom/facebook/imagepipeline/memory/b;->a()Lcom/facebook/imagepipeline/memory/a;
+    invoke-static {}, Lcom/facebook/imagepipeline/memory/BitmapCounterProvider;->a()Lcom/facebook/imagepipeline/memory/BitmapCounter;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/a;
+    iput-object v0, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/BitmapCounter;
 
     return-void
 .end method
 
-.method public static endsWithEOI(Lcom/facebook/common/references/a;I)Z
+.method public static endsWithEOI(Lcom/facebook/common/references/CloseableReference;I)Z
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/common/references/a<",
+            "Lcom/facebook/common/references/CloseableReference<",
             "Lcom/facebook/common/memory/PooledByteBuffer;",
             ">;I)Z"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/facebook/common/references/a;->b()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/facebook/common/references/CloseableReference;->b()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -155,17 +155,17 @@
 .end method
 
 .method private static native nativePinBitmap(Landroid/graphics/Bitmap;)V
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end method
 
 
 # virtual methods
-.method protected abstract decodeByteArrayAsPurgeable(Lcom/facebook/common/references/a;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+.method protected abstract decodeByteArrayAsPurgeable(Lcom/facebook/common/references/CloseableReference;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/common/references/a<",
+            "Lcom/facebook/common/references/CloseableReference<",
             "Lcom/facebook/common/memory/PooledByteBuffer;",
             ">;",
             "Landroid/graphics/BitmapFactory$Options;",
@@ -175,16 +175,16 @@
     .end annotation
 .end method
 
-.method public decodeFromEncodedImage(Lcom/facebook/x/g/e;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;)Lcom/facebook/common/references/a;
+.method public decodeFromEncodedImage(Lcom/facebook/x/g/EncodedImage;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;)Lcom/facebook/common/references/CloseableReference;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/x/g/e;",
+            "Lcom/facebook/x/g/EncodedImage;",
             "Landroid/graphics/Bitmap$Config;",
             "Landroid/graphics/Rect;",
             ")",
-            "Lcom/facebook/common/references/a<",
+            "Lcom/facebook/common/references/CloseableReference<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -193,30 +193,30 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, p2, p3, v0}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->decodeFromEncodedImageWithColorSpace(Lcom/facebook/x/g/e;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;Z)Lcom/facebook/common/references/a;
+    invoke-virtual {p0, p1, p2, p3, v0}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->decodeFromEncodedImageWithColorSpace(Lcom/facebook/x/g/EncodedImage;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;Z)Lcom/facebook/common/references/CloseableReference;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public decodeFromEncodedImageWithColorSpace(Lcom/facebook/x/g/e;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;Z)Lcom/facebook/common/references/a;
+.method public decodeFromEncodedImageWithColorSpace(Lcom/facebook/x/g/EncodedImage;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;Z)Lcom/facebook/common/references/CloseableReference;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/x/g/e;",
+            "Lcom/facebook/x/g/EncodedImage;",
             "Landroid/graphics/Bitmap$Config;",
             "Landroid/graphics/Rect;",
             "Z)",
-            "Lcom/facebook/common/references/a<",
+            "Lcom/facebook/common/references/CloseableReference<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/facebook/x/g/e;->j()I
+    invoke-virtual {p1}, Lcom/facebook/x/g/EncodedImage;->j()I
 
     move-result p3
 
@@ -226,44 +226,44 @@
     move-result-object p2
 
     .line 3
-    invoke-virtual {p1}, Lcom/facebook/x/g/e;->b()Lcom/facebook/common/references/a;
+    invoke-virtual {p1}, Lcom/facebook/x/g/EncodedImage;->b()Lcom/facebook/common/references/CloseableReference;
 
     move-result-object p1
 
     .line 4
-    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 5
     :try_start_0
-    invoke-virtual {p0, p1, p2}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->decodeByteArrayAsPurgeable(Lcom/facebook/common/references/a;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-virtual {p0, p1, p2}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->decodeByteArrayAsPurgeable(Lcom/facebook/common/references/CloseableReference;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p2
 
     .line 6
-    invoke-virtual {p0, p2}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->pinBitmap(Landroid/graphics/Bitmap;)Lcom/facebook/common/references/a;
+    invoke-virtual {p0, p2}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->pinBitmap(Landroid/graphics/Bitmap;)Lcom/facebook/common/references/CloseableReference;
 
     move-result-object p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 7
-    invoke-static {p1}, Lcom/facebook/common/references/a;->b(Lcom/facebook/common/references/a;)V
+    invoke-static {p1}, Lcom/facebook/common/references/CloseableReference;->b(Lcom/facebook/common/references/CloseableReference;)V
 
     return-object p2
 
     :catchall_0
     move-exception p2
 
-    invoke-static {p1}, Lcom/facebook/common/references/a;->b(Lcom/facebook/common/references/a;)V
+    invoke-static {p1}, Lcom/facebook/common/references/CloseableReference;->b(Lcom/facebook/common/references/CloseableReference;)V
 
     throw p2
 .end method
 
-.method protected abstract decodeJPEGByteArrayAsPurgeable(Lcom/facebook/common/references/a;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+.method protected abstract decodeJPEGByteArrayAsPurgeable(Lcom/facebook/common/references/CloseableReference;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/common/references/a<",
+            "Lcom/facebook/common/references/CloseableReference<",
             "Lcom/facebook/common/memory/PooledByteBuffer;",
             ">;I",
             "Landroid/graphics/BitmapFactory$Options;",
@@ -273,16 +273,16 @@
     .end annotation
 .end method
 
-.method public decodeJPEGFromEncodedImage(Lcom/facebook/x/g/e;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;I)Lcom/facebook/common/references/a;
+.method public decodeJPEGFromEncodedImage(Lcom/facebook/x/g/EncodedImage;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;I)Lcom/facebook/common/references/CloseableReference;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/x/g/e;",
+            "Lcom/facebook/x/g/EncodedImage;",
             "Landroid/graphics/Bitmap$Config;",
             "Landroid/graphics/Rect;",
             "I)",
-            "Lcom/facebook/common/references/a<",
+            "Lcom/facebook/common/references/CloseableReference<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -301,30 +301,30 @@
     move v4, p4
 
     .line 1
-    invoke-virtual/range {v0 .. v5}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->decodeJPEGFromEncodedImageWithColorSpace(Lcom/facebook/x/g/e;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;IZ)Lcom/facebook/common/references/a;
+    invoke-virtual/range {v0 .. v5}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->decodeJPEGFromEncodedImageWithColorSpace(Lcom/facebook/x/g/EncodedImage;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;IZ)Lcom/facebook/common/references/CloseableReference;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public decodeJPEGFromEncodedImageWithColorSpace(Lcom/facebook/x/g/e;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;IZ)Lcom/facebook/common/references/a;
+.method public decodeJPEGFromEncodedImageWithColorSpace(Lcom/facebook/x/g/EncodedImage;Landroid/graphics/Bitmap$Config;Landroid/graphics/Rect;IZ)Lcom/facebook/common/references/CloseableReference;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/x/g/e;",
+            "Lcom/facebook/x/g/EncodedImage;",
             "Landroid/graphics/Bitmap$Config;",
             "Landroid/graphics/Rect;",
             "IZ)",
-            "Lcom/facebook/common/references/a<",
+            "Lcom/facebook/common/references/CloseableReference<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/facebook/x/g/e;->j()I
+    invoke-virtual {p1}, Lcom/facebook/x/g/EncodedImage;->j()I
 
     move-result p3
 
@@ -334,54 +334,54 @@
     move-result-object p2
 
     .line 3
-    invoke-virtual {p1}, Lcom/facebook/x/g/e;->b()Lcom/facebook/common/references/a;
+    invoke-virtual {p1}, Lcom/facebook/x/g/EncodedImage;->b()Lcom/facebook/common/references/CloseableReference;
 
     move-result-object p1
 
     .line 4
-    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 5
     :try_start_0
-    invoke-virtual {p0, p1, p4, p2}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->decodeJPEGByteArrayAsPurgeable(Lcom/facebook/common/references/a;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-virtual {p0, p1, p4, p2}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->decodeJPEGByteArrayAsPurgeable(Lcom/facebook/common/references/CloseableReference;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p2
 
     .line 6
-    invoke-virtual {p0, p2}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->pinBitmap(Landroid/graphics/Bitmap;)Lcom/facebook/common/references/a;
+    invoke-virtual {p0, p2}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->pinBitmap(Landroid/graphics/Bitmap;)Lcom/facebook/common/references/CloseableReference;
 
     move-result-object p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 7
-    invoke-static {p1}, Lcom/facebook/common/references/a;->b(Lcom/facebook/common/references/a;)V
+    invoke-static {p1}, Lcom/facebook/common/references/CloseableReference;->b(Lcom/facebook/common/references/CloseableReference;)V
 
     return-object p2
 
     :catchall_0
     move-exception p2
 
-    invoke-static {p1}, Lcom/facebook/common/references/a;->b(Lcom/facebook/common/references/a;)V
+    invoke-static {p1}, Lcom/facebook/common/references/CloseableReference;->b(Lcom/facebook/common/references/CloseableReference;)V
 
     throw p2
 .end method
 
-.method public pinBitmap(Landroid/graphics/Bitmap;)Lcom/facebook/common/references/a;
+.method public pinBitmap(Landroid/graphics/Bitmap;)Lcom/facebook/common/references/CloseableReference;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/graphics/Bitmap;",
             ")",
-            "Lcom/facebook/common/references/a<",
+            "Lcom/facebook/common/references/CloseableReference<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     :try_start_0
@@ -390,22 +390,22 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 3
-    iget-object v0, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/a;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/BitmapCounter;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/imagepipeline/memory/a;->b(Landroid/graphics/Bitmap;)Z
+    invoke-virtual {v0, p1}, Lcom/facebook/imagepipeline/memory/BitmapCounter;->b(Landroid/graphics/Bitmap;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 4
-    iget-object v0, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/a;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/BitmapCounter;
 
-    invoke-virtual {v0}, Lcom/facebook/imagepipeline/memory/a;->d()Lcom/facebook/common/references/c;
+    invoke-virtual {v0}, Lcom/facebook/imagepipeline/memory/BitmapCounter;->d()Lcom/facebook/common/references/ResourceReleaser;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/facebook/common/references/a;->a(Ljava/lang/Object;Lcom/facebook/common/references/c;)Lcom/facebook/common/references/a;
+    invoke-static {p1, v0}, Lcom/facebook/common/references/CloseableReference;->a(Ljava/lang/Object;Lcom/facebook/common/references/ResourceReleaser;)Lcom/facebook/common/references/CloseableReference;
 
     move-result-object p1
 
@@ -413,7 +413,7 @@
 
     .line 5
     :cond_0
-    invoke-static {p1}, Lcom/facebook/imageutils/a;->a(Landroid/graphics/Bitmap;)I
+    invoke-static {p1}, Lcom/facebook/imageutils/BitmapUtil;->a(Landroid/graphics/Bitmap;)I
 
     move-result v0
 
@@ -438,10 +438,10 @@
 
     const/4 v0, 0x1
 
-    iget-object v2, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/a;
+    iget-object v2, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/BitmapCounter;
 
     .line 9
-    invoke-virtual {v2}, Lcom/facebook/imagepipeline/memory/a;->a()I
+    invoke-virtual {v2}, Lcom/facebook/imagepipeline/memory/BitmapCounter;->a()I
 
     move-result v2
 
@@ -453,10 +453,10 @@
 
     const/4 v0, 0x2
 
-    iget-object v2, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/a;
+    iget-object v2, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/BitmapCounter;
 
     .line 10
-    invoke-virtual {v2}, Lcom/facebook/imagepipeline/memory/a;->e()J
+    invoke-virtual {v2}, Lcom/facebook/imagepipeline/memory/BitmapCounter;->e()J
 
     move-result-wide v2
 
@@ -468,10 +468,10 @@
 
     const/4 v0, 0x3
 
-    iget-object v2, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/a;
+    iget-object v2, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/BitmapCounter;
 
     .line 11
-    invoke-virtual {v2}, Lcom/facebook/imagepipeline/memory/a;->b()I
+    invoke-virtual {v2}, Lcom/facebook/imagepipeline/memory/BitmapCounter;->b()I
 
     move-result v2
 
@@ -483,10 +483,10 @@
 
     const/4 v0, 0x4
 
-    iget-object v2, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/a;
+    iget-object v2, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->mUnpooledBitmapsCounter:Lcom/facebook/imagepipeline/memory/BitmapCounter;
 
     .line 12
-    invoke-virtual {v2}, Lcom/facebook/imagepipeline/memory/a;->c()I
+    invoke-virtual {v2}, Lcom/facebook/imagepipeline/memory/BitmapCounter;->c()I
 
     move-result v2
 
@@ -517,7 +517,7 @@
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
     .line 16
-    invoke-static {v0}, Lcom/facebook/common/internal/l;->a(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {v0}, Lcom/facebook/common/internal/Throwables;->a(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     const/4 p1, 0x0
 

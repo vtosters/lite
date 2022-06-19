@@ -3,7 +3,7 @@
 .source "OkHttpRequestExecutor.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/httpexecutor/okhttp/a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/httpexecutor/okhttp/MetricsCollector;",
         ">;"
     }
 .end annotation
@@ -45,13 +45,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/httpexecutor/okhttp/a;
+.method public final invoke()Lcom/vk/httpexecutor/okhttp/MetricsCollector;
     .locals 1
 
     .line 2
     iget-object v0, p0, Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor$metricsCollector$2;->this$0:Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;
 
-    invoke-static {v0}, Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;->a(Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;)Lcom/vk/httpexecutor/okhttp/a;
+    invoke-static {v0}, Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;->a(Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;)Lcom/vk/httpexecutor/okhttp/MetricsCollector;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor$metricsCollector$2;->invoke()Lcom/vk/httpexecutor/okhttp/a;
+    invoke-virtual {p0}, Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor$metricsCollector$2;->invoke()Lcom/vk/httpexecutor/okhttp/MetricsCollector;
 
     move-result-object v0
 

@@ -8,18 +8,18 @@
 
 
 # instance fields
-.field private okHttpClient:Lokhttp3/x;
+.field private okHttpClient:Lokhttp3/OkHttpClient;
 
 
 # direct methods
-.method public constructor <init>(Lokhttp3/x;)V
+.method public constructor <init>(Lokhttp3/OkHttpClient;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lvigo/sdk/utils/AbstractSender;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lvigo/sdk/utils/OkHttp3Sender;->okHttpClient:Lokhttp3/x;
+    iput-object p1, p0, Lvigo/sdk/utils/OkHttp3Sender;->okHttpClient:Lokhttp3/OkHttpClient;
 
     return-void
 .end method
@@ -110,7 +110,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lokhttp3/t;->e(Ljava/lang/String;)Lokhttp3/t;
+    invoke-static {p1}, Lokhttp3/HttpUrl;->e(Ljava/lang/String;)Lokhttp3/HttpUrl;
 
     move-result-object v0
 
@@ -148,7 +148,7 @@
 
     .line 4
     :cond_0
-    invoke-virtual {v0}, Lokhttp3/t;->i()Lokhttp3/t$a;
+    invoke-virtual {v0}, Lokhttp3/HttpUrl;->i()Lokhttp3/HttpUrl$a;
 
     move-result-object v0
 
@@ -183,17 +183,17 @@
 
     check-cast v4, Ljava/lang/String;
 
-    invoke-virtual {v0, v3, v4}, Lokhttp3/t$a;->b(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/t$a;
+    invoke-virtual {v0, v3, v4}, Lokhttp3/HttpUrl$a;->b(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/HttpUrl$a;
 
     goto :goto_0
 
     .line 7
     :cond_1
-    invoke-virtual {v0}, Lokhttp3/t$a;->a()Lokhttp3/t;
+    invoke-virtual {v0}, Lokhttp3/HttpUrl$a;->a()Lokhttp3/HttpUrl;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lokhttp3/t;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Lokhttp3/HttpUrl;->toString()Ljava/lang/String;
 
     move-result-object p2
 
@@ -202,19 +202,19 @@
     invoke-static {v2, p2}, Lvigo/sdk/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 8
-    new-instance p2, Lokhttp3/z$a;
+    new-instance p2, Lokhttp3/Request$a;
 
-    invoke-direct {p2}, Lokhttp3/z$a;-><init>()V
+    invoke-direct {p2}, Lokhttp3/Request$a;-><init>()V
 
     .line 9
-    invoke-virtual {v0}, Lokhttp3/t$a;->a()Lokhttp3/t;
+    invoke-virtual {v0}, Lokhttp3/HttpUrl$a;->a()Lokhttp3/HttpUrl;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lokhttp3/z$a;->a(Lokhttp3/t;)Lokhttp3/z$a;
+    invoke-virtual {p2, v0}, Lokhttp3/Request$a;->a(Lokhttp3/HttpUrl;)Lokhttp3/Request$a;
 
     .line 10
-    invoke-virtual {p2}, Lokhttp3/z$a;->a()Lokhttp3/z;
+    invoke-virtual {p2}, Lokhttp3/Request$a;->a()Lokhttp3/Request;
 
     move-result-object p2
 
@@ -229,28 +229,28 @@
 
     .line 12
     :try_start_0
-    iget-object v4, p0, Lvigo/sdk/utils/OkHttp3Sender;->okHttpClient:Lokhttp3/x;
+    iget-object v4, p0, Lvigo/sdk/utils/OkHttp3Sender;->okHttpClient:Lokhttp3/OkHttpClient;
 
-    invoke-virtual {v4, p2}, Lokhttp3/x;->a(Lokhttp3/z;)Lokhttp3/e;
+    invoke-virtual {v4, p2}, Lokhttp3/OkHttpClient;->a(Lokhttp3/Request;)Lokhttp3/Call;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lokhttp3/e;->execute()Lokhttp3/b0;
+    invoke-interface {p2}, Lokhttp3/Call;->execute()Lokhttp3/Response;
 
     move-result-object p2
 
     .line 13
-    invoke-virtual {p2}, Lokhttp3/b0;->a()Lokhttp3/c0;
+    invoke-virtual {p2}, Lokhttp3/Response;->a()Lokhttp3/ResponseBody;
 
     move-result-object v4
 
     if-eqz v4, :cond_2
 
-    invoke-virtual {p2}, Lokhttp3/b0;->a()Lokhttp3/c0;
+    invoke-virtual {p2}, Lokhttp3/Response;->a()Lokhttp3/ResponseBody;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lokhttp3/c0;->b()[B
+    invoke-virtual {v4}, Lokhttp3/ResponseBody;->b()[B
 
     move-result-object v4
 
@@ -263,25 +263,25 @@
     iput-object v4, v0, Lvigo/sdk/VigoResponse;->body:[B
 
     .line 14
-    invoke-virtual {p2}, Lokhttp3/b0;->d()I
+    invoke-virtual {p2}, Lokhttp3/Response;->d()I
 
     move-result v4
 
     iput v4, v0, Lvigo/sdk/VigoResponse;->code:I
 
     .line 15
-    invoke-virtual {p2}, Lokhttp3/b0;->a()Lokhttp3/c0;
+    invoke-virtual {p2}, Lokhttp3/Response;->a()Lokhttp3/ResponseBody;
 
     move-result-object v4
 
     if-eqz v4, :cond_3
 
     .line 16
-    invoke-virtual {p2}, Lokhttp3/b0;->a()Lokhttp3/c0;
+    invoke-virtual {p2}, Lokhttp3/Response;->a()Lokhttp3/ResponseBody;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lokhttp3/c0;->close()V
+    invoke-virtual {p2}, Lokhttp3/ResponseBody;->close()V
 
     :cond_3
     const-string p2, "executeGet result = %d, url = %s"

@@ -46,13 +46,13 @@
 
     move-result-object p1
 
-    sget-object v0, Lcom/vk/core/ui/g;->b:Lcom/vk/core/ui/g;
+    sget-object v0, Lcom/vk/core/ui/FloatingViewGesturesHelper1;->INSTANCE:Lcom/vk/core/ui/FloatingViewGesturesHelper1;
 
     new-instance v1, Lcom/vk/core/ui/FloatingViewGesturesHelper$reset$$inlined$apply$lambda$2$1;
 
     invoke-direct {v1, p0}, Lcom/vk/core/ui/FloatingViewGesturesHelper$reset$$inlined$apply$lambda$2$1;-><init>(Lcom/vk/core/ui/FloatingViewGesturesHelper$reset$$inlined$apply$lambda$2;)V
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/ui/Machine;->a(Lcom/vk/core/ui/r;Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/ui/Machine;->a(Lcom/vk/core/ui/FloatingViewGesturesHelper4;Lkotlin/jvm/b/Functions;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper$reset$$inlined$apply$lambda$2;->a:Lcom/vk/core/ui/FloatingViewGesturesHelper;
@@ -61,13 +61,13 @@
 
     move-result-object p1
 
-    sget-object v0, Lcom/vk/core/ui/l;->b:Lcom/vk/core/ui/l;
+    sget-object v0, Lcom/vk/core/ui/FloatingViewGesturesHelper3;->INSTANCE:Lcom/vk/core/ui/FloatingViewGesturesHelper3;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x2
 
-    invoke-static {p1, v0, v1, v2, v1}, Lcom/vk/core/ui/Machine;->a(Lcom/vk/core/ui/Machine;Lcom/vk/core/ui/r;Lkotlin/jvm/b/a;ILjava/lang/Object;)Z
+    invoke-static {p1, v0, v1, v2, v1}, Lcom/vk/core/ui/Machine;->a(Lcom/vk/core/ui/Machine;Lcom/vk/core/ui/FloatingViewGesturesHelper4;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Z
 
     .line 3
     iget-boolean p1, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper$reset$$inlined$apply$lambda$2;->b:Z
@@ -77,7 +77,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/core/ui/FloatingViewGesturesHelper$reset$$inlined$apply$lambda$2;->a:Lcom/vk/core/ui/FloatingViewGesturesHelper;
 
-    invoke-static {p1}, Lcom/vk/core/ui/FloatingViewGesturesHelper;->b(Lcom/vk/core/ui/FloatingViewGesturesHelper;)Lkotlin/jvm/b/b;
+    invoke-static {p1}, Lcom/vk/core/ui/FloatingViewGesturesHelper;->b(Lcom/vk/core/ui/FloatingViewGesturesHelper;)Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
@@ -87,7 +87,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void

@@ -1,10 +1,10 @@
 .class public final Lcom/vk/friends/catalog/FriendsCatalogFragment;
-.super Lcom/vk/catalog2/core/x/b;
+.super Lcom/vk/catalog2/core/x/CatalogFragment;
 .source "FriendsCatalogFragment.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/util/g;
-.implements Lcom/vk/navigation/v;
+.implements Lcom/vk/catalog2/core/util/CatalogOnClickListener;
+.implements Lcom/vk/navigation/ScrolledToTop;
 
 
 # annotations
@@ -21,7 +21,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/catalog2/core/x/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/catalog2/core/x/CatalogFragment;-><init>()V
 
     return-void
 .end method
@@ -45,7 +45,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
+    invoke-virtual {v0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
 
     move-result-object v0
 
@@ -74,15 +74,15 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/x/a;->R4()Lcom/vk/catalog2/core/holders/common/n;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/x/BaseCatalogFragment;->R4()Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/catalog2/core/holders/common/j;
+    check-cast v0, Lcom/vk/catalog2/core/holders/common/CatalogScrollableViewHolder;
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/j;->F()V
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogScrollableViewHolder;->F()V
 
     const/4 v0, 0x1
 
@@ -98,7 +98,7 @@
     throw v0
 .end method
 
-.method public a(Landroid/content/Context;Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;)Lcom/vk/catalog2/core/holders/common/n;
+.method public a(Landroid/content/Context;Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;)Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
     .locals 6
 
     const p2, 0x7f120439
@@ -110,7 +110,7 @@
 
     const-string p1, "context.getString(R.string.friends)"
 
-    invoke-static {v4, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance p1, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;
@@ -127,7 +127,7 @@
 
     move-object v3, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;Ljava/lang/String;Z)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;Ljava/lang/String;Z)V
 
     return-object p1
 .end method
@@ -159,7 +159,7 @@
     return-void
 .end method
 
-.method protected e(Landroid/os/Bundle;)Lcom/vk/catalog2/core/a;
+.method protected e(Landroid/os/Bundle;)Lcom/vk/catalog2/core/CatalogConfiguration;
     .locals 1
 
     .line 1
@@ -169,7 +169,7 @@
 
     if-eqz p1, :cond_0
 
-    sget-object v0, Lcom/vk/navigation/q;->Z:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->Z:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -182,19 +182,19 @@
     :cond_0
     sget-object p1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {p1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object p1
 
     :goto_0
     const-string v0, "arguments?.getString(Nav\u2026ntScreen.FRIENDS.toName()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Lcom/vk/friends/catalog/a;
+    new-instance v0, Lcom/vk/friends/catalog/FriendsCatalogConfiguration;
 
-    invoke-direct {v0, p1}, Lcom/vk/friends/catalog/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/vk/friends/catalog/FriendsCatalogConfiguration;-><init>(Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -227,7 +227,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/x/a;->R4()Lcom/vk/catalog2/core/holders/common/n;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/x/BaseCatalogFragment;->R4()Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     move-result-object v0
 
@@ -278,7 +278,7 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/x/a;->R4()Lcom/vk/catalog2/core/holders/common/n;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/x/BaseCatalogFragment;->R4()Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     move-result-object p1
 
@@ -341,7 +341,7 @@
     const/4 p1, 0x0
 
     .line 2
-    invoke-static {p1}, Lcom/vtosters/lite/w;->g(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->g(I)V
 
     return-void
 .end method

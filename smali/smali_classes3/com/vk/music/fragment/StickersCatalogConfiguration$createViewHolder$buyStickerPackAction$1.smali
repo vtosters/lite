@@ -3,12 +3,12 @@
 .source "StickersCatalogConfiguration.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/fragment/StickersCatalogConfiguration;->a(Lcom/vk/catalog2/core/api/dto/CatalogDataType;Lcom/vk/catalog2/core/api/dto/CatalogViewType;Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/catalog2/core/e;)Lcom/vk/catalog2/core/holders/common/n;
+    value = Lcom/vk/music/fragment/StickersCatalogConfiguration;->a(Lcom/vk/catalog2/core/api/dto/CatalogDataType;Lcom/vk/catalog2/core/api/dto/CatalogViewType;Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/catalog2/core/CatalogEntryPointParams;)Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/stickers/StickerStockItem;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $params:Lcom/vk/catalog2/core/e;
+.field final synthetic $params:Lcom/vk/catalog2/core/CatalogEntryPointParams;
 
 .field final synthetic this$0:Lcom/vk/music/fragment/StickersCatalogConfiguration;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/music/fragment/StickersCatalogConfiguration;Lcom/vk/catalog2/core/e;)V
+.method constructor <init>(Lcom/vk/music/fragment/StickersCatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/music/fragment/StickersCatalogConfiguration$createViewHolder$buyStickerPackAction$1;->this$0:Lcom/vk/music/fragment/StickersCatalogConfiguration;
 
-    iput-object p2, p0, Lcom/vk/music/fragment/StickersCatalogConfiguration$createViewHolder$buyStickerPackAction$1;->$params:Lcom/vk/catalog2/core/e;
+    iput-object p2, p0, Lcom/vk/music/fragment/StickersCatalogConfiguration$createViewHolder$buyStickerPackAction$1;->$params:Lcom/vk/catalog2/core/CatalogEntryPointParams;
 
     const/4 p1, 0x1
 
@@ -56,13 +56,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/fragment/StickersCatalogConfiguration$createViewHolder$buyStickerPackAction$1;->this$0:Lcom/vk/music/fragment/StickersCatalogConfiguration;
 
-    iget-object v1, p0, Lcom/vk/music/fragment/StickersCatalogConfiguration$createViewHolder$buyStickerPackAction$1;->$params:Lcom/vk/catalog2/core/e;
+    iget-object v1, p0, Lcom/vk/music/fragment/StickersCatalogConfiguration$createViewHolder$buyStickerPackAction$1;->$params:Lcom/vk/catalog2/core/CatalogEntryPointParams;
 
-    invoke-virtual {v1}, Lcom/vk/catalog2/core/e;->n()Lcom/vk/stickers/bridge/o;
+    invoke-virtual {v1}, Lcom/vk/catalog2/core/CatalogEntryPointParams;->n()Lcom/vk/stickers/bridge/StickersBridge1;
 
     move-result-object v1
 
-    invoke-static {v0, v1, p1}, Lcom/vk/music/fragment/StickersCatalogConfiguration;->a(Lcom/vk/music/fragment/StickersCatalogConfiguration;Lcom/vk/stickers/bridge/o;Lcom/vk/dto/stickers/StickerStockItem;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/music/fragment/StickersCatalogConfiguration;->a(Lcom/vk/music/fragment/StickersCatalogConfiguration;Lcom/vk/stickers/bridge/StickersBridge1;Lcom/vk/dto/stickers/StickerStockItem;)V
 
     return-void
 .end method
@@ -75,7 +75,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/music/fragment/StickersCatalogConfiguration$createViewHolder$buyStickerPackAction$1;->a(Lcom/vk/dto/stickers/StickerStockItem;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -54,7 +54,7 @@
     return-object v0
 .end method
 
-.method public final runBlockingOnMainThread(Lkotlin/jvm/b/a;)V
+.method public final runBlockingOnMainThread(Lkotlin/jvm/b/Functions;)V
     .locals 3
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -62,7 +62,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Ljava/lang/Object;",
             ">;)V"
@@ -78,14 +78,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 
@@ -102,7 +102,7 @@
 
     new-instance v2, Landroidx/recyclerview/widget/internal/MainThreadHelper$runBlockingOnMainThread$1;
 
-    invoke-direct {v2, p1, v0}, Landroidx/recyclerview/widget/internal/MainThreadHelper$runBlockingOnMainThread$1;-><init>(Lkotlin/jvm/b/a;Ljava/util/concurrent/CountDownLatch;)V
+    invoke-direct {v2, p1, v0}, Landroidx/recyclerview/widget/internal/MainThreadHelper$runBlockingOnMainThread$1;-><init>(Lkotlin/jvm/b/Functions;Ljava/util/concurrent/CountDownLatch;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

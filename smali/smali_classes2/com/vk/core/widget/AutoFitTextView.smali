@@ -27,7 +27,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/widget/AutoFitTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/widget/AutoFitTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -47,7 +47,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/widget/AutoFitTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/widget/AutoFitTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -59,14 +59,14 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 2
-    sget-object p3, Lb/h/g/f;->AutoFitTextView:[I
+    sget-object p3, Lb/h/g/R5;->AutoFitTextView:[I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 3
-    sget p2, Lb/h/g/f;->AutoFitTextView_minTextSize:I
+    sget p2, Lb/h/g/R5;->AutoFitTextView_minTextSize:I
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -81,7 +81,7 @@
     iput p2, p0, Lcom/vk/core/widget/AutoFitTextView;->a:I
 
     .line 4
-    sget p2, Lb/h/g/f;->AutoFitTextView_maxTextSize:I
+    sget p2, Lb/h/g/R5;->AutoFitTextView_maxTextSize:I
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getTextSize()F
 
@@ -109,7 +109,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2

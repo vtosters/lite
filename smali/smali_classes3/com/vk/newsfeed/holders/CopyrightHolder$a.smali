@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -95,7 +95,7 @@
 
     const-string v0, "viewGroup.findViewById<T\u2026pyright_author_name_text)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Landroid/widget/TextView;
 
@@ -129,11 +129,11 @@
     return-object p0
 .end method
 
-.method private final a(Landroid/content/Context;IILcom/vk/dto/newsfeed/entries/Copyright$Type;Lcom/vk/api/newsfeed/b$a;)Ljava/lang/CharSequence;
+.method private final a(Landroid/content/Context;IILcom/vk/dto/newsfeed/entries/Copyright$Type;Lcom/vk/api/newsfeed/GetCopyrightInfoRequest$a;)Ljava/lang/CharSequence;
     .locals 4
 
     .line 8
-    invoke-virtual {p5}, Lcom/vk/api/newsfeed/b$a;->c()I
+    invoke-virtual {p5}, Lcom/vk/api/newsfeed/GetCopyrightInfoRequest$a;->c()I
 
     move-result v0
 
@@ -176,7 +176,7 @@
     const-string v3, "when (response.ownerSex)\u2026e_used_neu)\n            }"
 
     .line 12
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -298,7 +298,7 @@
     new-array p3, p3, [Ljava/lang/Object;
 
     .line 23
-    invoke-virtual {p5}, Lcom/vk/api/newsfeed/b$a;->b()Ljava/lang/String;
+    invoke-virtual {p5}, Lcom/vk/api/newsfeed/GetCopyrightInfoRequest$a;->b()Ljava/lang/String;
 
     move-result-object p4
 
@@ -306,7 +306,7 @@
 
     aput-object v0, p3, v2
 
-    invoke-virtual {p5}, Lcom/vk/api/newsfeed/b$a;->d()Ljava/lang/String;
+    invoke-virtual {p5}, Lcom/vk/api/newsfeed/GetCopyrightInfoRequest$a;->d()Ljava/lang/String;
 
     move-result-object p4
 
@@ -318,16 +318,16 @@
 
     const-string p2, "ctx.getString(templateSt\u2026ing, response.sourceName)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/holders/CopyrightHolder$a;Landroid/content/Context;IILcom/vk/dto/newsfeed/entries/Copyright$Type;Lcom/vk/api/newsfeed/b$a;)Ljava/lang/CharSequence;
+.method public static final synthetic a(Lcom/vk/newsfeed/holders/CopyrightHolder$a;Landroid/content/Context;IILcom/vk/dto/newsfeed/entries/Copyright$Type;Lcom/vk/api/newsfeed/GetCopyrightInfoRequest$a;)Ljava/lang/CharSequence;
     .locals 0
 
     .line 2
-    invoke-direct/range {p0 .. p5}, Lcom/vk/newsfeed/holders/CopyrightHolder$a;->a(Landroid/content/Context;IILcom/vk/dto/newsfeed/entries/Copyright$Type;Lcom/vk/api/newsfeed/b$a;)Ljava/lang/CharSequence;
+    invoke-direct/range {p0 .. p5}, Lcom/vk/newsfeed/holders/CopyrightHolder$a;->a(Landroid/content/Context;IILcom/vk/dto/newsfeed/entries/Copyright$Type;Lcom/vk/api/newsfeed/GetCopyrightInfoRequest$a;)Ljava/lang/CharSequence;
 
     move-result-object p0
 

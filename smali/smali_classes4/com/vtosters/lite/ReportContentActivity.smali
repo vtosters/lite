@@ -122,7 +122,7 @@
 
     .line 7
     :cond_0
-    new-instance v0, Lcom/vk/api/execute/a;
+    new-instance v0, Lcom/vk/api/execute/ExecuteContentReport;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -184,22 +184,22 @@
 
     move v7, p1
 
-    invoke-direct/range {v2 .. v8}, Lcom/vk/api/execute/a;-><init>(IILjava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/api/execute/ExecuteContentReport;-><init>(IILjava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
     new-instance p1, Lcom/vtosters/lite/ReportContentActivity$c;
 
     invoke-direct {p1, p0, p0}, Lcom/vtosters/lite/ReportContentActivity$c;-><init>(Lcom/vtosters/lite/ReportContentActivity;Landroid/content/Context;)V
 
     .line 12
-    invoke-virtual {v0, p1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, p1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p1
 
     .line 13
-    invoke-virtual {p1, p0}, Lcom/vk/api/base/b;->a(Landroid/content/Context;)Lcom/vk/api/base/b;
+    invoke-virtual {p1, p0}, Lcom/vk/api/base/ApiCallbackDisposable;->a(Landroid/content/Context;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     .line 14
-    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -258,11 +258,11 @@
     iput-object p1, p0, Lcom/vtosters/lite/ReportContentActivity;->a:Lcom/vtosters/lite/activities/LogoutReceiver;
 
     .line 4
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/h/d/c;->F0()Z
+    invoke-virtual {p1}, Lcom/vk/auth/api/VKAccount;->F0()Z
 
     move-result p1
 
@@ -322,7 +322,7 @@
     .line 10
     new-instance v3, Lcom/vk/webapp/VkUiFragment$a;
 
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/webapp/f;->a(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/webapp/ReportAppInputData;->a(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -330,7 +330,7 @@
 
     const/16 p1, 0x4d2
 
-    invoke-virtual {v3, p0, p1}, Lcom/vk/navigation/o;->a(Landroid/app/Activity;I)V
+    invoke-virtual {v3, p0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/app/Activity;I)V
 
     goto :goto_1
 

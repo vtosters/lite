@@ -3,7 +3,7 @@
 .source "FaveBasePresenter.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$o;
+.implements Lcom/vk/lists/PaginationHelper$o;
 
 
 # annotations
@@ -16,10 +16,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T::",
-        "Lcom/vk/fave/entities/f;",
+        "Lcom/vk/fave/entities/FaveResponseEntries3;",
         ">",
         "Lcom/vk/newsfeed/presenters/EntriesListPresenter;",
-        "Lcom/vk/lists/t$o<",
+        "Lcom/vk/lists/PaginationHelper$o<",
         "TT;>;"
     }
 .end annotation
@@ -42,7 +42,7 @@
 
 .field private R:Lcom/vk/fave/entities/FaveTag;
 
-.field private S:Lcom/vk/fave/entities/f;
+.field private S:Lcom/vk/fave/entities/FaveResponseEntries3;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -52,22 +52,22 @@
 
 .field private T:Lcom/vk/fave/entities/FaveSource;
 
-.field private U:Lio/reactivex/disposables/d;
+.field private U:Lio/reactivex/disposables/SerialDisposable;
 
-.field private final V:Lb/h/g/l/e;
+.field private final V:Lb/h/g/l/NotificationListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final W:Lcom/vk/fave/fragments/contracts/b;
+.field private final W:Lcom/vk/fave/fragments/contracts/FaveBaseView;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/fave/fragments/contracts/b<",
+            "Lcom/vk/fave/fragments/contracts/FaveBaseView<",
             "TT;>;"
         }
     .end annotation
@@ -82,7 +82,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/16 v0, 0xb
 
@@ -217,48 +217,48 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/fave/fragments/contracts/b;)V
+.method public constructor <init>(Lcom/vk/fave/fragments/contracts/FaveBaseView;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/fave/fragments/contracts/b<",
+            "Lcom/vk/fave/fragments/contracts/FaveBaseView<",
             "TT;>;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;-><init>(Lcom/vk/newsfeed/contracts/f;)V
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;-><init>(Lcom/vk/newsfeed/contracts/EntriesListContract1;)V
 
-    iput-object p1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->W:Lcom/vk/fave/fragments/contracts/b;
+    iput-object p1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->W:Lcom/vk/fave/fragments/contracts/FaveBaseView;
 
     .line 2
-    new-instance p1, Lio/reactivex/disposables/d;
+    new-instance p1, Lio/reactivex/disposables/SerialDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/d;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/SerialDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->U:Lio/reactivex/disposables/d;
+    iput-object p1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->U:Lio/reactivex/disposables/SerialDisposable;
 
     .line 3
     new-instance p1, Lcom/vk/fave/fragments/contracts/FaveBasePresenter$d;
 
     invoke-direct {p1, p0}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter$d;-><init>(Lcom/vk/fave/fragments/contracts/FaveBasePresenter;)V
 
-    iput-object p1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->V:Lb/h/g/l/e;
+    iput-object p1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->V:Lb/h/g/l/NotificationListener;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/fave/fragments/contracts/FaveBasePresenter;)Lcom/vk/fave/fragments/contracts/b;
+.method public static final synthetic a(Lcom/vk/fave/fragments/contracts/FaveBasePresenter;)Lcom/vk/fave/fragments/contracts/FaveBaseView;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->W:Lcom/vk/fave/fragments/contracts/b;
+    iget-object p0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->W:Lcom/vk/fave/fragments/contracts/FaveBaseView;
 
     return-object p0
 .end method
 
-.method private final a(Lb/h/h/f/a;)V
+.method private final a(Lb/h/h/f/Favable;)V
     .locals 5
 
     .line 34
@@ -297,11 +297,11 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/a;
+    invoke-virtual {v3}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/Favable;
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -335,7 +335,7 @@
     if-eqz v1, :cond_4
 
     .line 35
-    invoke-virtual {v1, p1}, Lcom/vk/dto/newsfeed/entries/FaveEntry;->a(Lb/h/h/f/a;)Lcom/vk/dto/newsfeed/entries/FaveEntry;
+    invoke-virtual {v1, p1}, Lcom/vk/dto/newsfeed/entries/FaveEntry;->a(Lb/h/h/f/Favable;)Lcom/vk/dto/newsfeed/entries/FaveEntry;
 
     move-result-object p1
 
@@ -367,7 +367,7 @@
     .line 30
     iget-object v0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->R:Lcom/vk/fave/entities/FaveTag;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -380,7 +380,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -388,12 +388,12 @@
 
     invoke-direct {v1, p1}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter$onEntryRemoveTag$setOfEntries$1;-><init>(Lcom/vk/fave/entities/FaveTag;)V
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 32
-    invoke-static {p1}, Lkotlin/sequences/m;->n(Lkotlin/sequences/j;)Ljava/util/Set;
+    invoke-static {p1}, Lkotlin/sequences/m;->n(Lkotlin/sequences/Sequence;)Ljava/util/Set;
 
     move-result-object p1
 
@@ -406,11 +406,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/fave/fragments/contracts/FaveBasePresenter;Lcom/vk/fave/entities/f;)V
+.method public static final synthetic a(Lcom/vk/fave/fragments/contracts/FaveBasePresenter;Lcom/vk/fave/entities/FaveResponseEntries3;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->S:Lcom/vk/fave/entities/f;
+    iput-object p1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->S:Lcom/vk/fave/entities/FaveResponseEntries3;
 
     return-void
 .end method
@@ -442,7 +442,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -450,12 +450,12 @@
 
     invoke-direct {v1, p1}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter$onEntryRenameTag$setOfEntries$1;-><init>(Lcom/vk/fave/entities/FaveTag;)V
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 4
-    invoke-static {p1}, Lkotlin/sequences/m;->n(Lkotlin/sequences/j;)Ljava/util/Set;
+    invoke-static {p1}, Lkotlin/sequences/m;->n(Lkotlin/sequences/Sequence;)Ljava/util/Set;
 
     move-result-object p1
 
@@ -478,7 +478,7 @@
     return-object v0
 .end method
 
-.method public final D()Lcom/vk/fave/entities/f;
+.method public final D()Lcom/vk/fave/entities/FaveResponseEntries3;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -487,7 +487,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->S:Lcom/vk/fave/entities/f;
+    iget-object v0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->S:Lcom/vk/fave/entities/FaveResponseEntries3;
 
     return-object v0
 .end method
@@ -510,14 +510,14 @@
     return-object v0
 .end method
 
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;"
         }
     .end annotation
@@ -525,13 +525,13 @@
     const/4 p2, 0x0
 
     .line 37
-    invoke-interface {p0, p2, p1}, Lcom/vk/lists/t$o;->a(ILcom/vk/lists/t;)Lc/a/m;
+    invoke-interface {p0, p2, p1}, Lcom/vk/lists/PaginationHelper$o;->a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "loadNext(0, helper)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -546,25 +546,25 @@
             "Ljava/lang/String;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vtosters/lite/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/PostDisplayItem;",
             ">;"
         }
     .end annotation
 
     .line 42
-    sget-object v0, Lcom/vk/fave/e;->a:Lcom/vk/fave/e;
+    sget-object v0, Lcom/vk/fave/FaveDisplayItemsBuilder;->INSTANCE:Lcom/vk/fave/FaveDisplayItemsBuilder;
 
-    iget-object p2, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->W:Lcom/vk/fave/fragments/contracts/b;
+    iget-object p2, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->W:Lcom/vk/fave/fragments/contracts/FaveBaseView;
 
-    invoke-interface {p2}, Lcom/vk/newsfeed/contracts/f;->e()Lcom/vtosters/lite/ui/f0/a;
+    invoke-interface {p2}, Lcom/vk/newsfeed/contracts/EntriesListContract1;->e()Lcom/vtosters/lite/ui/f0/PostDisplayContext;
 
     move-result-object v2
 
-    invoke-interface {p0}, Lcom/vk/newsfeed/contracts/e;->getRef()Ljava/lang/String;
+    invoke-interface {p0}, Lcom/vk/newsfeed/contracts/EntriesListContract;->getRef()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface {p0}, Lcom/vk/newsfeed/contracts/e;->v0()Ljava/lang/String;
+    invoke-interface {p0}, Lcom/vk/newsfeed/contracts/EntriesListContract;->v0()Ljava/lang/String;
 
     move-result-object v4
 
@@ -576,7 +576,7 @@
 
     move-object v1, p1
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/fave/e;->a(Lcom/vk/fave/e;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/util/ArrayList;
+    invoke-static/range {v0 .. v7}, Lcom/vk/fave/FaveDisplayItemsBuilder;->a(Lcom/vk/fave/FaveDisplayItemsBuilder;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/PostDisplayContext;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -601,20 +601,20 @@
     iget-object p1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->R:Lcom/vk/fave/entities/FaveTag;
 
     .line 16
-    sget-object p2, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
+    sget-object p2, Lcom/vk/fave/FaveConverter;->INSTANCE:Lcom/vk/fave/FaveConverter;
 
     move-object v1, p3
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/FaveEntry;
 
-    invoke-virtual {p2, v1}, Lcom/vk/fave/d;->a(Lcom/vk/dto/newsfeed/entries/FaveEntry;)Lcom/vk/fave/entities/FaveType;
+    invoke-virtual {p2, v1}, Lcom/vk/fave/FaveConverter;->a(Lcom/vk/dto/newsfeed/entries/FaveEntry;)Lcom/vk/fave/entities/FaveType;
 
     move-result-object p2
 
     .line 17
-    sget-object v2, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
+    sget-object v2, Lcom/vk/fave/FaveConverter;->INSTANCE:Lcom/vk/fave/FaveConverter;
 
-    invoke-virtual {v2, p3}, Lcom/vk/fave/d;->b(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Z
+    invoke-virtual {v2, p3}, Lcom/vk/fave/FaveConverter;->b(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Z
 
     move-result p3
 
@@ -731,9 +731,9 @@
 
     .line 24
     :cond_7
-    check-cast p3, Lb/h/h/f/a;
+    check-cast p3, Lb/h/h/f/Favable;
 
-    invoke-direct {p0, p3}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->a(Lb/h/h/f/a;)V
+    invoke-direct {p0, p3}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->a(Lb/h/h/f/Favable;)V
 
     goto :goto_4
 
@@ -773,7 +773,7 @@
     if-eqz p1, :cond_a
 
     .line 27
-    invoke-direct {p0, p1}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->a(Lb/h/h/f/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->a(Lb/h/h/f/Favable;)V
 
     goto :goto_4
 
@@ -812,27 +812,27 @@
     iput-object p3, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->R:Lcom/vk/fave/entities/FaveTag;
 
     .line 5
-    iget-object p1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->W:Lcom/vk/fave/fragments/contracts/b;
+    iget-object p1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->W:Lcom/vk/fave/fragments/contracts/FaveBaseView;
 
-    invoke-interface {p1}, Lcom/vk/fave/fragments/contracts/b;->isResumed()Z
+    invoke-interface {p1}, Lcom/vk/fave/fragments/contracts/FaveBaseView;->isResumed()Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
     .line 6
-    iget-object p1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->W:Lcom/vk/fave/fragments/contracts/b;
+    iget-object p1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->W:Lcom/vk/fave/fragments/contracts/FaveBaseView;
 
-    invoke-interface {p1}, Lcom/vk/fave/fragments/contracts/b;->p1()V
+    invoke-interface {p1}, Lcom/vk/fave/fragments/contracts/FaveBaseView;->p1()V
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->t()Lcom/vk/lists/t;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->t()Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p1}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->h()V
 
     goto :goto_1
 
@@ -890,33 +890,33 @@
     return-void
 .end method
 
-.method public final a(Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/fave/entities/e;)V
+.method public final a(Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/fave/entities/FaveMetaInfo;)V
     .locals 1
 
     .line 43
-    sget-object v0, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
+    sget-object v0, Lcom/vk/fave/FaveConverter;->INSTANCE:Lcom/vk/fave/FaveConverter;
 
-    invoke-virtual {v0, p2}, Lcom/vk/fave/d;->c(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lb/h/h/f/a;
+    invoke-virtual {v0, p2}, Lcom/vk/fave/FaveConverter;->c(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lb/h/h/f/Favable;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
     .line 44
-    invoke-static {p1, p2, p3}, Lcom/vk/fave/FaveController;->b(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;)V
+    invoke-static {p1, p2, p3}, Lcom/vk/fave/FaveController;->b(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -926,28 +926,28 @@
     .line 38
     new-instance v0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter$b;
 
-    invoke-direct {v0, p0, p3, p2}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter$b;-><init>(Lcom/vk/fave/fragments/contracts/FaveBasePresenter;Lcom/vk/lists/t;Z)V
+    invoke-direct {v0, p0, p3, p2}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter$b;-><init>(Lcom/vk/fave/fragments/contracts/FaveBasePresenter;Lcom/vk/lists/PaginationHelper;Z)V
 
     .line 39
     sget-object p2, Lcom/vk/fave/fragments/contracts/FaveBasePresenter$c;->a:Lcom/vk/fave/fragments/contracts/FaveBasePresenter$c;
 
     .line 40
-    invoke-virtual {p1, v0, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 41
-    iget-object p2, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->U:Lio/reactivex/disposables/d;
+    iget-object p2, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->U:Lio/reactivex/disposables/SerialDisposable;
 
-    invoke-virtual {p2, p1}, Lio/reactivex/disposables/d;->a(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {p2, p1}, Lio/reactivex/disposables/SerialDisposable;->a(Lio/reactivex/disposables/Disposable;)Z
 
     :cond_0
     return-void
 .end method
 
-.method public abstract a(Lcom/vk/fave/entities/f;)Z
+.method public abstract a(Lcom/vk/fave/entities/FaveResponseEntries3;)Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"
@@ -962,48 +962,48 @@
     invoke-super {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->b(Landroid/os/Bundle;)V
 
     .line 7
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->V:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->V:Lb/h/g/l/NotificationListener;
 
     const/16 v1, 0x4b1
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 8
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->V:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->V:Lb/h/g/l/NotificationListener;
 
     const/16 v1, 0x4b2
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 9
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->V:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->V:Lb/h/g/l/NotificationListener;
 
     const/16 v1, 0x4b4
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 10
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->V:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->V:Lb/h/g/l/NotificationListener;
 
     const/16 v1, 0x4b5
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     return-void
 .end method
@@ -1012,9 +1012,9 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
+    sget-object v0, Lcom/vk/fave/FaveConverter;->INSTANCE:Lcom/vk/fave/FaveConverter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/fave/d;->c(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lb/h/h/f/a;
+    invoke-virtual {v0, p1}, Lcom/vk/fave/FaveConverter;->c(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lb/h/h/f/Favable;
 
     move-result-object p1
 
@@ -1036,9 +1036,9 @@
 
     .line 3
     :cond_1
-    sget-object v0, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
+    sget-object v0, Lcom/vk/fave/FaveConverter;->INSTANCE:Lcom/vk/fave/FaveConverter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/fave/d;->d(Lb/h/h/f/a;)Lcom/vk/fave/entities/FaveType;
+    invoke-virtual {v0, p1}, Lcom/vk/fave/FaveConverter;->d(Lb/h/h/f/Favable;)Lcom/vk/fave/entities/FaveType;
 
     move-result-object p1
 
@@ -1124,18 +1124,18 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->V:Lb/h/g/l/e;
+    iget-object v1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->V:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->U:Lio/reactivex/disposables/d;
+    iget-object v0, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->U:Lio/reactivex/disposables/SerialDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/d;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/SerialDisposable;->o()V
 
     .line 3
     invoke-super {p0}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->onDestroy()V
@@ -1151,37 +1151,37 @@
     return v0
 .end method
 
-.method public x()Lcom/vk/lists/t;
+.method public x()Lcom/vk/lists/PaginationHelper;
     .locals 3
 
     .line 1
-    invoke-static {p0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$o;)Lcom/vk/lists/t$k;
+    invoke-static {p0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$o;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object v0
 
     const/16 v1, 0x19
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/vk/lists/t$k;->b(I)Lcom/vk/lists/t$k;
+    invoke-virtual {v0, v1}, Lcom/vk/lists/PaginationHelper$k;->b(I)Lcom/vk/lists/PaginationHelper$k;
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/lists/t$k;->d(I)Lcom/vk/lists/t$k;
+    invoke-virtual {v0, v1}, Lcom/vk/lists/PaginationHelper$k;->d(I)Lcom/vk/lists/PaginationHelper$k;
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->u()Lcom/vk/lists/y;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->u()Lcom/vk/lists/PreloadCallback;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/t$k;->a(Lcom/vk/lists/y;)Lcom/vk/lists/t$k;
+    invoke-virtual {v0, v1}, Lcom/vk/lists/PaginationHelper$k;->a(Lcom/vk/lists/PreloadCallback;)Lcom/vk/lists/PaginationHelper$k;
 
     .line 5
-    iget-object v1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->W:Lcom/vk/fave/fragments/contracts/b;
+    iget-object v1, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->W:Lcom/vk/fave/fragments/contracts/FaveBaseView;
 
     const-string v2, "builder"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1, v0}, Lcom/vk/newsfeed/contracts/f;->a(Lcom/vk/lists/t$k;)Lcom/vk/lists/t;
+    invoke-interface {v1, v0}, Lcom/vk/newsfeed/contracts/EntriesListContract1;->a(Lcom/vk/lists/PaginationHelper$k;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object v0
 

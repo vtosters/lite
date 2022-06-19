@@ -51,43 +51,43 @@
     return-void
 .end method
 
-.method private final a(Lc/a/t;)Lc/a/t;
+.method private final a(Lio/reactivex/Single;)Lio/reactivex/Single;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lc/a/t<",
+            "Lio/reactivex/Single<",
             "TT;>;)",
-            "Lc/a/t<",
+            "Lio/reactivex/Single<",
             "TT;>;"
         }
     .end annotation
 
     .line 14
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object p1
 
     .line 15
     sget-object v0, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->i()Lc/a/s;
+    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->i()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/t;->b(Lc/a/s;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lio/reactivex/Single;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object p1
 
     const-string v0, "this.observeOn(AndroidSc\u2026owPriorityLocalScheduler)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -144,7 +144,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Landroid/graphics/Bitmap;)Lc/a/t;
+.method public final a(Landroid/content/Context;Landroid/graphics/Bitmap;)Lio/reactivex/Single;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -152,7 +152,7 @@
             "Landroid/content/Context;",
             "Landroid/graphics/Bitmap;",
             ")",
-            "Lc/a/t<",
+            "Lio/reactivex/Single<",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;>;"
@@ -164,7 +164,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/ml/MLFeatures$a;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v0}, Lc/a/t;->b(Ljava/util/concurrent/Callable;)Lc/a/t;
+    invoke-static {v0}, Lio/reactivex/Single;->b(Ljava/util/concurrent/Callable;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -173,16 +173,16 @@
 
     invoke-direct {v0, p2}, Lcom/vk/ml/MLFeatures$b;-><init>(Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {p1, v0}, Lc/a/t;->b(Lc/a/z/j;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lio/reactivex/Single;->b(Lio/reactivex/functions/Function;)Lio/reactivex/Single;
 
     move-result-object p1
 
     const-string p2, "Single.fromCallable {\n  \u2026del.run(bitmap)\n        }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
-    invoke-direct {p0, p1}, Lcom/vk/ml/MLFeatures;->a(Lc/a/t;)Lc/a/t;
+    invoke-direct {p0, p1}, Lcom/vk/ml/MLFeatures;->a(Lio/reactivex/Single;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -205,7 +205,7 @@
 
     sget-object v2, Lcom/vk/ml/MLFeatures;->a:Lcom/vk/ml/ModelsManager;
 
-    invoke-direct {v1, p1, v2}, Lcom/vk/ml/model/BrandsNNModel;-><init>(Landroid/content/Context;Lcom/vk/ml/model/a/b;)V
+    invoke-direct {v1, p1, v2}, Lcom/vk/ml/model/BrandsNNModel;-><init>(Landroid/content/Context;Lcom/vk/ml/model/a/ModelDtoProvider;)V
 
     sput-object v1, Lcom/vk/ml/MLFeatures;->c:Lcom/vk/ml/model/BrandsNNModel;
 

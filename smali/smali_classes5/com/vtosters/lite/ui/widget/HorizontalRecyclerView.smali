@@ -96,7 +96,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/a0;->HorizontalRecyclerView:[I
+    sget-object v0, Lcom/vtosters/lite/R;->HorizontalRecyclerView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

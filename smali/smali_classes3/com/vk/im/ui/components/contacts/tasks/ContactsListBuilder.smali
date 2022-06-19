@@ -9,13 +9,13 @@
         value = {
             "Ljava/util/Map<",
             "Lcom/vk/im/ui/components/contacts/SortOrder;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/engine/models/j;",
+            "Lcom/vk/im/engine/models/Profile;",
             ">;",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/j;",
+            "Lcom/vk/im/engine/models/Profile;",
             ">;>;>;"
         }
     .end annotation
@@ -44,7 +44,7 @@
 
     sget-object v2, Lcom/vk/im/ui/components/contacts/tasks/ContactsListBuilder$sortStrategies$1;->a:Lcom/vk/im/ui/components/contacts/tasks/ContactsListBuilder$sortStrategies$1;
 
-    invoke-static {v1, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -57,7 +57,7 @@
 
     sget-object v2, Lcom/vk/im/ui/components/contacts/tasks/ContactsListBuilder$sortStrategies$2;->a:Lcom/vk/im/ui/components/contacts/tasks/ContactsListBuilder$sortStrategies$2;
 
-    invoke-static {v1, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -95,7 +95,7 @@
             "Lcom/vk/im/ui/components/contacts/SortOrder;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/j;",
+            "Lcom/vk/im/engine/models/Profile;",
             ">;"
         }
     .end annotation
@@ -128,7 +128,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/core/extensions/x;->e(Landroid/util/SparseArray;)Ljava/util/Collection;
+    invoke-static {v1}, Lcom/vk/core/extensions/SparseArrayExt1;->e(Landroid/util/SparseArray;)Ljava/util/Collection;
 
     move-result-object v1
 
@@ -139,7 +139,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/extensions/x;->e(Landroid/util/SparseArray;)Ljava/util/Collection;
+    invoke-static {p1}, Lcom/vk/core/extensions/SparseArrayExt1;->e(Landroid/util/SparseArray;)Ljava/util/Collection;
 
     move-result-object p1
 
@@ -202,9 +202,9 @@
 
     if-eqz p1, :cond_3
 
-    check-cast p1, Lkotlin/jvm/b/b;
+    check-cast p1, Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -213,7 +213,7 @@
     return-object p1
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

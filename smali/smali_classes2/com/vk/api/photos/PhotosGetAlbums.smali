@@ -1,5 +1,5 @@
 .class public Lcom/vk/api/photos/PhotosGetAlbums;
-.super Lcom/vk/api/base/d;
+.super Lcom/vk/api/base/ApiRequest;
 .source "PhotosGetAlbums.java"
 
 
@@ -14,7 +14,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/d<",
+        "Lcom/vk/api/base/ApiRequest<",
         "Lcom/vk/api/photos/PhotosGetAlbums$b;",
         ">;"
     }
@@ -32,14 +32,14 @@
     const-string v0, "photos.getAlbums"
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
     const-string v0, "owner_id"
 
     .line 2
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     :cond_0
     const/4 p1, 0x1
@@ -47,20 +47,20 @@
     const-string v0, "need_covers"
 
     .line 3
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     if-eqz p2, :cond_1
 
     const-string p2, "need_system"
 
     .line 4
-    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     :cond_1
     const-string p2, "photo_sizes"
 
     .line 5
-    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     .line 6
     iput-object p3, p0, Lcom/vk/api/photos/PhotosGetAlbums;->F:Lcom/vk/api/photos/PhotosGetAlbums$a;
@@ -93,7 +93,7 @@
     .line 2
     sget-object v9, Lcom/vk/api/base/ApiConfig;->d:Lcom/vk/api/base/ApiConfig$a;
 
-    invoke-interface {v9}, Lb/h/h/a$a;->a()F
+    invoke-interface {v9}, Lb/h/h/ModelConfig$a;->a()F
 
     move-result v9
 
@@ -139,11 +139,11 @@
     invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
     .line 5
-    invoke-static {v0, v6}, Lcom/vk/api/base/f;->a(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/vk/dto/common/d;
+    invoke-static {v0, v6}, Lcom/vk/api/base/ApiUtils;->a(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/vk/dto/common/JSONArrayWithCount;
 
     move-result-object v14
 
-    iget-object v14, v14, Lcom/vk/dto/common/d;->b:Lorg/json/JSONArray;
+    iget-object v14, v14, Lcom/vk/dto/common/JSONArrayWithCount;->b:Lorg/json/JSONArray;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -230,7 +230,7 @@
     .line 11
     sget-object v14, Lcom/vk/api/base/ApiConfig;->d:Lcom/vk/api/base/ApiConfig$a;
 
-    invoke-interface {v14}, Lb/h/h/a$a;->getContext()Landroid/content/Context;
+    invoke-interface {v14}, Lb/h/h/ModelConfig$a;->getContext()Landroid/content/Context;
 
     move-result-object v14
 
@@ -528,7 +528,7 @@
     .line 32
     sget-object v7, Lcom/vk/api/base/ApiConfig;->d:Lcom/vk/api/base/ApiConfig$a;
 
-    invoke-interface {v7}, Lb/h/h/a$a;->getContext()Landroid/content/Context;
+    invoke-interface {v7}, Lb/h/h/ModelConfig$a;->getContext()Landroid/content/Context;
 
     move-result-object v7
 
@@ -754,7 +754,7 @@
     .line 49
     sget-object v5, Lcom/vk/api/base/ApiConfig;->d:Lcom/vk/api/base/ApiConfig$a;
 
-    invoke-interface {v5}, Lb/h/h/a$a;->getContext()Landroid/content/Context;
+    invoke-interface {v5}, Lb/h/h/ModelConfig$a;->getContext()Landroid/content/Context;
 
     move-result-object v5
 

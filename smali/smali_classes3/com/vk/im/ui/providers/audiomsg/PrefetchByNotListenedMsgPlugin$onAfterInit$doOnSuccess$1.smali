@@ -3,12 +3,12 @@
 .source "PrefetchByNotListenedMsgPlugin.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;->a(Lcom/vk/audiomsg/player/a;)V
+    value = Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;->a(Lcom/vk/audiomsg/player/AudioMsgPlayer;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/util/Collection<",
         "+",
-        "Lcom/vk/audiomsg/player/d;",
+        "Lcom/vk/audiomsg/player/AudioMsgTrack;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $player:Lcom/vk/audiomsg/player/a;
+.field final synthetic $player:Lcom/vk/audiomsg/player/AudioMsgPlayer;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/audiomsg/player/a;)V
+.method constructor <init>(Lcom/vk/audiomsg/player/AudioMsgPlayer;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$onAfterInit$doOnSuccess$1;->$player:Lcom/vk/audiomsg/player/a;
+    iput-object p1, p0, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$onAfterInit$doOnSuccess$1;->$player:Lcom/vk/audiomsg/player/AudioMsgPlayer;
 
     const/4 p1, 0x1
 
@@ -55,23 +55,23 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/audiomsg/player/d;",
+            "Lcom/vk/audiomsg/player/AudioMsgTrack;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$onAfterInit$doOnSuccess$1;->$player:Lcom/vk/audiomsg/player/a;
+    iget-object v0, p0, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$onAfterInit$doOnSuccess$1;->$player:Lcom/vk/audiomsg/player/AudioMsgPlayer;
 
     invoke-static {}, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;->a()Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$a;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;->b()Lcom/vk/audiomsg/player/e;
+    invoke-static {}, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;->b()Lcom/vk/audiomsg/player/PrefetchTag;
 
     move-result-object v2
 
-    invoke-interface {v0, v1, v2, p1}, Lcom/vk/audiomsg/player/a;->b(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/e;Ljava/util/Collection;)V
+    invoke-interface {v0, v1, v2, p1}, Lcom/vk/audiomsg/player/AudioMsgPlayer;->b(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/PrefetchTag;Ljava/util/Collection;)V
 
     return-void
 .end method
@@ -84,7 +84,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$onAfterInit$doOnSuccess$1;->a(Ljava/util/Collection;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

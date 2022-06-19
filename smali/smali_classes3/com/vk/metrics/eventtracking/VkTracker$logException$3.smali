@@ -3,7 +3,7 @@
 .source "VkTracker.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/metrics/eventtracking/VkTracker$logException$3;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -68,7 +68,7 @@
 
     iget-object v1, p0, Lcom/vk/metrics/eventtracking/VkTracker$logException$3;->$trackerId:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lcom/vk/metrics/eventtracking/VkTracker;Ljava/lang/String;)Lcom/vk/metrics/eventtracking/c;
+    invoke-static {v0, v1}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lcom/vk/metrics/eventtracking/VkTracker;Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Tracker;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
 
     iget-object v1, p0, Lcom/vk/metrics/eventtracking/VkTracker$logException$3;->$th:Ljava/lang/Throwable;
 
-    invoke-interface {v0, v1}, Lcom/vk/metrics/eventtracking/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Lcom/vk/metrics/eventtracking/Tracker;->a(Ljava/lang/Throwable;)V
 
     :cond_0
     return-void

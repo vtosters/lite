@@ -1,5 +1,5 @@
 .class Lcom/vk/music/fragment/AudioPlayerFragment$e;
-.super Lcom/vk/music/player/c$a;
+.super Lcom/vk/music/player/PlayerListener$a;
 .source "AudioPlayerFragment.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    invoke-direct {p0}, Lcom/vk/music/player/c$a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/music/player/PlayerListener$a;-><init>()V
 
     return-void
 .end method
@@ -54,9 +54,9 @@
     .line 2
     sget-object v1, Lcom/vk/music/fragment/AudioPlayerFragment$b;->b:[I
 
-    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->h()Lcom/vk/music/player/LoopMode;
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->h()Lcom/vk/music/player/LoopMode;
 
     move-result-object v0
 
@@ -192,9 +192,9 @@
     if-eqz v1, :cond_5
 
     .line 13
-    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->H0()Z
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->H0()Z
 
     move-result v0
 
@@ -242,14 +242,14 @@
     :cond_5
     iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    iget-object v0, v0, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
+    iget-object v0, v0, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->D:Lcom/vk/music/view/x/ControlsHolder;
 
     if-eqz v0, :cond_6
 
     .line 21
-    invoke-virtual {v0}, Lcom/vk/music/view/x/p;->k0()V
+    invoke-virtual {v0}, Lcom/vk/music/view/x/ControlsHolder;->k0()V
 
     :cond_6
     return-void
@@ -261,20 +261,20 @@
     .line 14
     iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    iget-object v0, v0, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
+    iget-object v0, v0, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->D:Lcom/vk/music/view/x/ControlsHolder;
 
     if-eqz v0, :cond_0
 
     .line 15
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/music/view/x/p;->a(IJ)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/music/view/x/ControlsHolder;->a(IJ)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/e;)V
+.method public a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/TrackInfo;)V
     .locals 5
 
     .line 1
@@ -291,28 +291,28 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->C:Lcom/vk/music/dto/a;
+    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->C:Lcom/vk/music/dto/PlayerInfo;
 
     if-nez p1, :cond_1
 
     sget-object p1, Lcom/vk/music/player/PlayState;->IDLE:Lcom/vk/music/player/PlayState;
 
     :cond_1
-    iput-object p1, v0, Lcom/vk/music/dto/a;->b:Lcom/vk/music/player/PlayState;
+    iput-object p1, v0, Lcom/vk/music/dto/PlayerInfo;->b:Lcom/vk/music/player/PlayState;
 
     .line 4
     iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object v0, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->C:Lcom/vk/music/dto/a;
+    iget-object v0, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->C:Lcom/vk/music/dto/PlayerInfo;
 
-    iput-object p2, v0, Lcom/vk/music/dto/a;->a:Lcom/vk/music/player/e;
+    iput-object p2, v0, Lcom/vk/music/dto/PlayerInfo;->a:Lcom/vk/music/player/TrackInfo;
 
     .line 5
     invoke-virtual {p1}, Lcom/vk/music/fragment/AudioPlayerFragment;->P4()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object p1
 
-    iput-object p1, v0, Lcom/vk/music/dto/a;->d:Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    iput-object p1, v0, Lcom/vk/music/dto/PlayerInfo;->d:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     .line 6
     iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
@@ -332,9 +332,9 @@
     :cond_2
     iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/music/view/v/a;->a()V
+    invoke-virtual {p1}, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->a()V
 
     .line 9
     iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
@@ -346,7 +346,7 @@
     goto :goto_0
 
     :cond_3
-    invoke-virtual {p2}, Lcom/vk/music/player/e;->e()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p2}, Lcom/vk/music/player/TrackInfo;->e()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v0
 
@@ -374,7 +374,7 @@
 
     aput-object v4, v3, v2
 
-    invoke-virtual {p2, v3}, Lcom/vk/music/player/e;->a([Lcom/vk/music/player/PlayerAction;)Z
+    invoke-virtual {p2, v3}, Lcom/vk/music/player/TrackInfo;->a([Lcom/vk/music/player/PlayerAction;)Z
 
     move-result v3
 
@@ -403,7 +403,7 @@
 
     aput-object v4, v3, v2
 
-    invoke-virtual {p2, v3}, Lcom/vk/music/player/e;->a([Lcom/vk/music/player/PlayerAction;)Z
+    invoke-virtual {p2, v3}, Lcom/vk/music/player/TrackInfo;->a([Lcom/vk/music/player/PlayerAction;)Z
 
     move-result p2
 
@@ -420,48 +420,48 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/music/player/e;)V
+.method public a(Lcom/vk/music/player/TrackInfo;)V
     .locals 1
 
     .line 12
     iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    iget-object v0, v0, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
+    iget-object v0, v0, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->D:Lcom/vk/music/view/x/ControlsHolder;
 
     if-eqz v0, :cond_0
 
     .line 13
-    invoke-virtual {v0, p1}, Lcom/vk/music/view/x/p;->b(Lcom/vk/music/player/e;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/view/x/ControlsHolder;->b(Lcom/vk/music/player/TrackInfo;)V
 
     :cond_0
     return-void
 .end method
 
-.method public b(Lcom/vk/music/player/e;)V
+.method public b(Lcom/vk/music/player/TrackInfo;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    iget-object v0, v0, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
+    iget-object v0, v0, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->D:Lcom/vk/music/view/x/ControlsHolder;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p1}, Lcom/vk/music/view/x/p;->b(Lcom/vk/music/player/e;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/view/x/ControlsHolder;->b(Lcom/vk/music/player/TrackInfo;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    iget-object v0, v0, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
+    iget-object v0, v0, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->D:Lcom/vk/music/view/x/ControlsHolder;
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/view/x/p;->c(Lcom/vk/music/player/e;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/view/x/ControlsHolder;->c(Lcom/vk/music/player/TrackInfo;)V
 
     :cond_0
     return-void
@@ -481,33 +481,33 @@
     .line 1
     iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object v0, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->C:Lcom/vk/music/dto/a;
+    iget-object v0, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->C:Lcom/vk/music/dto/PlayerInfo;
 
-    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {p1}, Lcom/vk/music/player/d;->x0()Ljava/util/List;
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->x0()Ljava/util/List;
 
     move-result-object p1
 
-    iput-object p1, v0, Lcom/vk/music/dto/a;->c:Ljava/util/List;
+    iput-object p1, v0, Lcom/vk/music/dto/PlayerInfo;->c:Ljava/util/List;
 
     .line 2
     iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    iget-object v0, p1, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
+    iget-object v0, p1, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->D:Lcom/vk/music/view/x/ControlsHolder;
 
-    invoke-virtual {p1, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vtosters/lite/ui/b0/i;)V
+    invoke-virtual {p1, v0}, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    iget-object v0, p1, Lcom/vk/music/view/v/a;->E:Lcom/vk/music/view/x/s;
+    iget-object v0, p1, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->E:Lcom/vk/music/view/x/PlaylistHolder;
 
-    invoke-virtual {p1, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vtosters/lite/ui/b0/i;)V
+    invoke-virtual {p1, v0}, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;)V
 
     return-void
 .end method

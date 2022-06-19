@@ -3,7 +3,7 @@
 .source "FlexLayout.kt"
 
 # interfaces
-.implements Lcom/vk/common/view/flex/d;
+.implements Lcom/vk/common/view/flex/ImagesAdapterView;
 
 
 # annotations
@@ -32,11 +32,11 @@
 
 .field private D:I
 
-.field private E:Lkotlin/jvm/b/a;
+.field private E:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -48,24 +48,24 @@
 
 .field private H:I
 
-.field private final a:Lcom/vk/common/view/flex/c;
+.field private final a:Lcom/vk/common/view/flex/FlexLayoutDragListener;
 
 .field private final b:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
             "Ljava/util/List<",
-            "Lcom/vk/common/view/flex/e;",
+            "Lcom/vk/common/view/flex/SizeEntities1;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private final c:Lcom/vk/common/view/flex/b;
+.field private final c:Lcom/vk/common/view/flex/SizeEntities;
 
 .field private d:Lcom/vk/common/view/flex/FlexLayoutResult;
 
-.field private e:Lcom/vk/common/view/flex/strategy/e;
+.field private e:Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy3;
 
 .field private f:Lcom/vk/common/view/flex/FlexLayout$b;
 
@@ -82,7 +82,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/common/view/flex/FlexLayout$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/common/view/flex/FlexLayout$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v0, 0x4
 
@@ -112,15 +112,15 @@
     invoke-direct {p0, p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
     .line 2
-    new-instance p1, Lcom/vk/common/view/flex/c;
+    new-instance p1, Lcom/vk/common/view/flex/FlexLayoutDragListener;
 
-    new-instance v0, Lcom/vk/common/view/flex/a;
+    new-instance v0, Lcom/vk/common/view/flex/FlexLayout1;
 
-    invoke-direct {v0, p0}, Lcom/vk/common/view/flex/a;-><init>(Lcom/vk/common/view/flex/FlexLayout;)V
+    invoke-direct {v0, p0}, Lcom/vk/common/view/flex/FlexLayout1;-><init>(Lcom/vk/common/view/flex/FlexLayout;)V
 
-    invoke-direct {p1, p0, v0}, Lcom/vk/common/view/flex/c;-><init>(Lcom/vk/common/view/flex/FlexLayout;Lcom/vk/common/view/flex/FlexLayout$d;)V
+    invoke-direct {p1, p0, v0}, Lcom/vk/common/view/flex/FlexLayoutDragListener;-><init>(Lcom/vk/common/view/flex/FlexLayout;Lcom/vk/common/view/flex/FlexLayout$d;)V
 
-    iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->a:Lcom/vk/common/view/flex/c;
+    iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->a:Lcom/vk/common/view/flex/FlexLayoutDragListener;
 
     .line 3
     new-instance p1, Ljava/util/ArrayList;
@@ -130,7 +130,7 @@
     iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->b:Ljava/util/ArrayList;
 
     .line 4
-    new-instance p1, Lcom/vk/common/view/flex/b;
+    new-instance p1, Lcom/vk/common/view/flex/SizeEntities;
 
     invoke-static {}, Lkotlin/collections/l;->a()Ljava/util/List;
 
@@ -150,9 +150,9 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/common/view/flex/b;-><init>(IIIILjava/util/List;II)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/common/view/flex/SizeEntities;-><init>(IIIILjava/util/List;II)V
 
-    iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/b;
+    iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/SizeEntities;
 
     .line 5
     new-instance p1, Ljava/util/ArrayList;
@@ -170,12 +170,12 @@
 
     invoke-direct {p1}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->e:Lcom/vk/common/view/flex/strategy/e;
+    iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->e:Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy3;
 
     .line 7
-    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->e:Lcom/vk/common/view/flex/strategy/e;
+    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->e:Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy3;
 
-    invoke-interface {p1}, Lcom/vk/common/view/flex/strategy/e;->a()I
+    invoke-interface {p1}, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy3;->a()I
 
     move-result p1
 
@@ -200,7 +200,7 @@
     :goto_1
     if-ge v5, v2, :cond_0
 
-    new-instance v12, Lcom/vk/common/view/flex/e;
+    new-instance v12, Lcom/vk/common/view/flex/SizeEntities1;
 
     const/4 v7, 0x0
 
@@ -214,7 +214,7 @@
 
     move-object v6, v12
 
-    invoke-direct/range {v6 .. v11}, Lcom/vk/common/view/flex/e;-><init>(IIIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v6 .. v11}, Lcom/vk/common/view/flex/SizeEntities1;-><init>(IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v4, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -292,7 +292,7 @@
 
     move-object v2, v1
 
-    check-cast v2, Lcom/vk/common/view/flex/e;
+    check-cast v2, Lcom/vk/common/view/flex/SizeEntities1;
 
     const/4 v3, 0x0
 
@@ -304,7 +304,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/common/view/flex/e;->a(Lcom/vk/common/view/flex/e;IIIILjava/lang/Object;)Lcom/vk/common/view/flex/e;
+    invoke-static/range {v2 .. v7}, Lcom/vk/common/view/flex/SizeEntities1;->a(Lcom/vk/common/view/flex/SizeEntities1;IIIILjava/lang/Object;)Lcom/vk/common/view/flex/SizeEntities1;
 
     move-result-object v1
 
@@ -324,15 +324,15 @@
 
     move-object v2, v1
 
-    check-cast v2, Lcom/vk/common/view/flex/f;
+    check-cast v2, Lcom/vk/common/view/flex/SizeEntities2;
 
     .line 36
-    invoke-virtual {v2}, Lcom/vk/common/view/flex/f;->g()I
+    invoke-virtual {v2}, Lcom/vk/common/view/flex/SizeEntities2;->g()I
 
     move-result v1
 
     .line 37
-    invoke-virtual {v2}, Lcom/vk/common/view/flex/f;->b()I
+    invoke-virtual {v2}, Lcom/vk/common/view/flex/SizeEntities2;->b()I
 
     move-result v3
 
@@ -368,7 +368,7 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v2 .. v9}, Lcom/vk/common/view/flex/f;->a(Lcom/vk/common/view/flex/f;IIIIIILjava/lang/Object;)Lcom/vk/common/view/flex/f;
+    invoke-static/range {v2 .. v9}, Lcom/vk/common/view/flex/SizeEntities2;->a(Lcom/vk/common/view/flex/SizeEntities2;IIIIIILjava/lang/Object;)Lcom/vk/common/view/flex/SizeEntities2;
 
     move-result-object v1
 
@@ -404,19 +404,19 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/common/view/flex/f;
+    check-cast v4, Lcom/vk/common/view/flex/SizeEntities2;
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/vk/common/view/flex/e;
+    check-cast v5, Lcom/vk/common/view/flex/SizeEntities1;
 
-    invoke-virtual {v5}, Lcom/vk/common/view/flex/e;->b()I
+    invoke-virtual {v5}, Lcom/vk/common/view/flex/SizeEntities1;->b()I
 
     move-result v5
 
-    invoke-virtual {v4, v5}, Lcom/vk/common/view/flex/f;->e(I)V
+    invoke-virtual {v4, v5}, Lcom/vk/common/view/flex/SizeEntities2;->e(I)V
 
     add-int/lit8 v3, v3, 0x1
 
@@ -439,7 +439,7 @@
     const-string v0, "fromView"
 
     .line 47
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, v2}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -454,7 +454,7 @@
 
     invoke-direct {p1, p0, p3, p4}, Lcom/vk/common/view/flex/FlexLayout$moveWithAnimation$1;-><init>(Lcom/vk/common/view/flex/FlexLayout;Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;)V
 
-    iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->E:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->E:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -467,7 +467,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/vtosters/lite/a0;->FlexLayout:[I
+    sget-object v1, Lcom/vtosters/lite/R;->FlexLayout:[I
 
     invoke-virtual {v0, p1, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -531,7 +531,7 @@
     throw v0
 .end method
 
-.method private final a(Landroid/view/View;ILcom/vk/common/view/flex/e;II)V
+.method private final a(Landroid/view/View;ILcom/vk/common/view/flex/SizeEntities1;II)V
     .locals 1
 
     .line 79
@@ -540,18 +540,18 @@
     if-eqz v0, :cond_0
 
     .line 80
-    new-instance p4, Lcom/vk/im/ui/views/image_zhukov/j;
+    new-instance p4, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;
 
-    invoke-direct {p4}, Lcom/vk/im/ui/views/image_zhukov/j;-><init>()V
+    invoke-direct {p4}, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;-><init>()V
 
     .line 81
-    invoke-virtual {v0, p2, p4}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->a(ILcom/vk/im/ui/views/image_zhukov/j;)V
+    invoke-virtual {v0, p2, p4}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->a(ILcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;)V
 
     .line 82
-    iget p2, p4, Lcom/vk/im/ui/views/image_zhukov/j;->a:I
+    iget p2, p4, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;->a:I
 
     .line 83
-    iget p4, p4, Lcom/vk/im/ui/views/image_zhukov/j;->b:I
+    iget p4, p4, Lcom/vk/im/ui/views/image_zhukov/ZhukovItemSize;->b:I
 
     goto :goto_0
 
@@ -627,13 +627,13 @@
 
     move-result p1
 
-    invoke-virtual {p3, p1}, Lcom/vk/common/view/flex/e;->b(I)V
+    invoke-virtual {p3, p1}, Lcom/vk/common/view/flex/SizeEntities1;->b(I)V
 
     .line 93
-    invoke-virtual {p3, p2}, Lcom/vk/common/view/flex/e;->c(I)V
+    invoke-virtual {p3, p2}, Lcom/vk/common/view/flex/SizeEntities1;->c(I)V
 
     .line 94
-    invoke-virtual {p3, p4}, Lcom/vk/common/view/flex/e;->a(I)V
+    invoke-virtual {p3, p4}, Lcom/vk/common/view/flex/SizeEntities1;->a(I)V
 
     return-void
 .end method
@@ -647,16 +647,16 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/common/view/flex/FlexLayout;Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+.method public static final synthetic a(Lcom/vk/common/view/flex/FlexLayout;Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 5
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/common/view/flex/FlexLayout;->a(Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/common/view/flex/FlexLayout;->a(Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/common/view/flex/FlexLayout;Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+.method static synthetic a(Lcom/vk/common/view/flex/FlexLayout;Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p6, p5, 0x4
@@ -674,7 +674,7 @@
     sget-object p4, Lcom/vk/common/view/flex/FlexLayout$startAnimation$1;->a:Lcom/vk/common/view/flex/FlexLayout$startAnimation$1;
 
     :cond_1
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/common/view/flex/FlexLayout;->a(Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/common/view/flex/FlexLayout;->a(Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -704,20 +704,20 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+.method private final a(Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
     .locals 15
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/common/view/flex/FlexLayoutResult;",
             "Lcom/vk/common/view/flex/FlexLayoutResult;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Float;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -777,14 +777,14 @@
 
     move-object v12, v8
 
-    check-cast v12, Lcom/vk/common/view/flex/f;
+    check-cast v12, Lcom/vk/common/view/flex/SizeEntities2;
 
     .line 57
-    invoke-virtual {v12}, Lcom/vk/common/view/flex/f;->f()I
+    invoke-virtual {v12}, Lcom/vk/common/view/flex/SizeEntities2;->f()I
 
     move-result v12
 
-    invoke-static {v6, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Landroid/view/View;->getId()I
 
@@ -809,7 +809,7 @@
 
     .line 58
     :goto_2
-    check-cast v8, Lcom/vk/common/view/flex/f;
+    check-cast v8, Lcom/vk/common/view/flex/SizeEntities2;
 
     if-eqz v8, :cond_8
 
@@ -836,14 +836,14 @@
 
     move-object v13, v12
 
-    check-cast v13, Lcom/vk/common/view/flex/f;
+    check-cast v13, Lcom/vk/common/view/flex/SizeEntities2;
 
     .line 61
-    invoke-virtual {v13}, Lcom/vk/common/view/flex/f;->f()I
+    invoke-virtual {v13}, Lcom/vk/common/view/flex/SizeEntities2;->f()I
 
     move-result v13
 
-    invoke-static {v6, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Landroid/view/View;->getId()I
 
@@ -867,24 +867,24 @@
     move-object v12, v10
 
     :goto_4
-    check-cast v12, Lcom/vk/common/view/flex/f;
+    check-cast v12, Lcom/vk/common/view/flex/SizeEntities2;
 
     if-nez v12, :cond_6
 
     .line 62
-    invoke-virtual {v8}, Lcom/vk/common/view/flex/f;->c()I
+    invoke-virtual {v8}, Lcom/vk/common/view/flex/SizeEntities2;->c()I
 
     move-result v5
 
-    invoke-virtual {v8}, Lcom/vk/common/view/flex/f;->e()I
+    invoke-virtual {v8}, Lcom/vk/common/view/flex/SizeEntities2;->e()I
 
     move-result v7
 
-    invoke-virtual {v8}, Lcom/vk/common/view/flex/f;->d()I
+    invoke-virtual {v8}, Lcom/vk/common/view/flex/SizeEntities2;->d()I
 
     move-result v9
 
-    invoke-virtual {v8}, Lcom/vk/common/view/flex/f;->a()I
+    invoke-virtual {v8}, Lcom/vk/common/view/flex/SizeEntities2;->a()I
 
     move-result v8
 
@@ -894,7 +894,7 @@
 
     .line 63
     :cond_6
-    invoke-static {v8, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v8, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v7
 
@@ -915,7 +915,7 @@
     .line 65
     new-instance v7, Lcom/vk/common/view/flex/FlexLayout$f;
 
-    invoke-direct {v7, v12, v8, v6}, Lcom/vk/common/view/flex/FlexLayout$f;-><init>(Lcom/vk/common/view/flex/f;Lcom/vk/common/view/flex/f;Landroid/view/View;)V
+    invoke-direct {v7, v12, v8, v6}, Lcom/vk/common/view/flex/FlexLayout$f;-><init>(Lcom/vk/common/view/flex/SizeEntities2;Lcom/vk/common/view/flex/SizeEntities2;Landroid/view/View;)V
 
     invoke-virtual {v5, v7}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -948,7 +948,7 @@
 
     move-object/from16 v4, p3
 
-    invoke-direct {v3, v4}, Lcom/vk/common/view/flex/FlexLayout$g;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v4}, Lcom/vk/common/view/flex/FlexLayout$g;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -960,7 +960,7 @@
 
     move-object/from16 v3, p4
 
-    invoke-direct {v2, p0, v3}, Lcom/vk/common/view/flex/FlexLayout$h;-><init>(Lcom/vk/common/view/flex/FlexLayout;Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, p0, v3}, Lcom/vk/common/view/flex/FlexLayout$h;-><init>(Lcom/vk/common/view/flex/FlexLayout;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -997,7 +997,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/common/view/flex/e;",
+            "Lcom/vk/common/view/flex/SizeEntities1;",
             ">;IIZ)V"
         }
     .end annotation
@@ -1030,7 +1030,7 @@
     if-eqz p4, :cond_0
 
     .line 77
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v3}, Lcom/vk/extensions/ViewExtKt;->i(Landroid/view/View;)Z
 
@@ -1042,7 +1042,7 @@
 
     .line 78
     :cond_0
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1050,7 +1050,7 @@
 
     move-object v5, v2
 
-    check-cast v5, Lcom/vk/common/view/flex/e;
+    check-cast v5, Lcom/vk/common/view/flex/SizeEntities1;
 
     move-object v2, p0
 
@@ -1060,7 +1060,7 @@
 
     move v7, p3
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/common/view/flex/FlexLayout;->a(Landroid/view/View;ILcom/vk/common/view/flex/e;II)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/common/view/flex/FlexLayout;->a(Landroid/view/View;ILcom/vk/common/view/flex/SizeEntities1;II)V
 
     :goto_1
     add-int/lit8 v1, v1, 0x1
@@ -1090,20 +1090,20 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/common/view/flex/e;",
+            "Lcom/vk/common/view/flex/SizeEntities1;",
             ">;)",
             "Lcom/vk/common/view/flex/FlexLayoutResult;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/common/view/flex/FlexLayout;->e:Lcom/vk/common/view/flex/strategy/e;
+    iget-object v0, p0, Lcom/vk/common/view/flex/FlexLayout;->e:Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy3;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/common/view/flex/strategy/e;->a(I)Lcom/vk/common/view/flex/strategy/c;
+    invoke-interface {v0, v1}, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy3;->a(I)Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy1;
 
     move-result-object v0
 
@@ -1115,7 +1115,7 @@
     move-result v5
 
     .line 3
-    instance-of v1, v0, Lcom/vk/common/view/flex/strategy/j;
+    instance-of v1, v0, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy7;
 
     if-eqz v1, :cond_0
 
@@ -1135,7 +1135,7 @@
     move v6, v2
 
     .line 5
-    new-instance v10, Lcom/vk/common/view/flex/b;
+    new-instance v10, Lcom/vk/common/view/flex/SizeEntities;
 
     const/high16 v2, -0x80000000
 
@@ -1179,10 +1179,10 @@
     move-object v7, p1
 
     .line 9
-    invoke-direct/range {v2 .. v9}, Lcom/vk/common/view/flex/b;-><init>(IIIILjava/util/List;II)V
+    invoke-direct/range {v2 .. v9}, Lcom/vk/common/view/flex/SizeEntities;-><init>(IIIILjava/util/List;II)V
 
     .line 10
-    invoke-interface {v0, v10}, Lcom/vk/common/view/flex/strategy/c;->a(Lcom/vk/common/view/flex/b;)Lcom/vk/common/view/flex/FlexLayoutResult;
+    invoke-interface {v0, v10}, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy1;->a(Lcom/vk/common/view/flex/SizeEntities;)Lcom/vk/common/view/flex/FlexLayoutResult;
 
     move-result-object v0
 
@@ -1213,20 +1213,20 @@
 
     if-ltz v2, :cond_3
 
-    check-cast v3, Lcom/vk/common/view/flex/f;
+    check-cast v3, Lcom/vk/common/view/flex/SizeEntities2;
 
     .line 13
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/common/view/flex/e;
+    check-cast v2, Lcom/vk/common/view/flex/SizeEntities1;
 
-    invoke-virtual {v2}, Lcom/vk/common/view/flex/e;->b()I
+    invoke-virtual {v2}, Lcom/vk/common/view/flex/SizeEntities1;->b()I
 
     move-result v2
 
-    invoke-virtual {v3, v2}, Lcom/vk/common/view/flex/f;->e(I)V
+    invoke-virtual {v3, v2}, Lcom/vk/common/view/flex/SizeEntities2;->e(I)V
 
     move v2, v4
 
@@ -1250,7 +1250,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/common/view/flex/e;",
+            "Lcom/vk/common/view/flex/SizeEntities1;",
             ">;"
         }
     .end annotation
@@ -1269,7 +1269,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    new-instance v9, Lcom/vk/common/view/flex/e;
+    new-instance v9, Lcom/vk/common/view/flex/SizeEntities1;
 
     const/4 v3, 0x0
 
@@ -1283,7 +1283,7 @@
 
     move-object v2, v9
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/common/view/flex/e;-><init>(IIIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/common/view/flex/SizeEntities1;-><init>(IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1350,23 +1350,23 @@
     move-result v4
 
     .line 18
-    invoke-virtual {v1, p0, v4}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->a(Landroid/view/ViewGroup;I)Lcom/vk/newsfeed/holders/zhukov/a;
+    invoke-virtual {v1, p0, v4}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->a(Landroid/view/ViewGroup;I)Lcom/vk/newsfeed/holders/zhukov/BaseHolder;
 
     move-result-object v4
 
     if-eqz v4, :cond_0
 
     .line 19
-    invoke-virtual {v1, v4, v2}, Lcom/vk/newsfeed/adapters/b;->a(Lcom/vk/newsfeed/holders/zhukov/a;I)V
+    invoke-virtual {v1, v4, v2}, Lcom/vk/newsfeed/adapters/ImagesAdapter;->a(Lcom/vk/newsfeed/holders/zhukov/BaseHolder;I)V
 
     .line 20
-    iget-object v4, v4, Lcom/vk/im/ui/views/image_zhukov/l;->a:Landroid/view/View;
+    iget-object v4, v4, Lcom/vk/im/ui/views/image_zhukov/ZhukovViewHolder;->a:Landroid/view/View;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v4, v5}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v4
 
@@ -1441,23 +1441,23 @@
     move-result v5
 
     .line 27
-    invoke-virtual {v1, p0, v5}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->a(Landroid/view/ViewGroup;I)Lcom/vk/newsfeed/holders/zhukov/a;
+    invoke-virtual {v1, p0, v5}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->a(Landroid/view/ViewGroup;I)Lcom/vk/newsfeed/holders/zhukov/BaseHolder;
 
     move-result-object v5
 
     if-eqz v5, :cond_0
 
     .line 28
-    invoke-virtual {v1, v5, v4}, Lcom/vk/newsfeed/adapters/b;->a(Lcom/vk/newsfeed/holders/zhukov/a;I)V
+    invoke-virtual {v1, v5, v4}, Lcom/vk/newsfeed/adapters/ImagesAdapter;->a(Lcom/vk/newsfeed/holders/zhukov/BaseHolder;I)V
 
     .line 29
-    iget-object v5, v5, Lcom/vk/im/ui/views/image_zhukov/l;->a:Landroid/view/View;
+    iget-object v5, v5, Lcom/vk/im/ui/views/image_zhukov/ZhukovViewHolder;->a:Landroid/view/View;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    invoke-static {v5, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v5, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v4
 
@@ -1501,7 +1501,7 @@
 
     .line 4
     :cond_0
-    iget-object p2, p0, Lcom/vk/common/view/flex/FlexLayout;->a:Lcom/vk/common/view/flex/c;
+    iget-object p2, p0, Lcom/vk/common/view/flex/FlexLayout;->a:Lcom/vk/common/view/flex/FlexLayoutDragListener;
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
@@ -1523,7 +1523,7 @@
 
     const-string v0, "Collections.singletonList(position)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1}, Lcom/vk/common/view/flex/FlexLayout;->c(Ljava/util/List;)V
 
@@ -1649,7 +1649,7 @@
     invoke-static {v5, v6}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 15
-    new-instance v13, Lcom/vk/common/view/flex/e;
+    new-instance v13, Lcom/vk/common/view/flex/SizeEntities1;
 
     const/4 v8, 0x0
 
@@ -1663,7 +1663,7 @@
 
     move-object v7, v13
 
-    invoke-direct/range {v7 .. v12}, Lcom/vk/common/view/flex/e;-><init>(IIIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v7 .. v12}, Lcom/vk/common/view/flex/SizeEntities1;-><init>(IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 16
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getMeasuredWidth()I
@@ -1682,7 +1682,7 @@
 
     move-object v9, v13
 
-    invoke-direct/range {v6 .. v11}, Lcom/vk/common/view/flex/FlexLayout;->a(Landroid/view/View;ILcom/vk/common/view/flex/e;II)V
+    invoke-direct/range {v6 .. v11}, Lcom/vk/common/view/flex/FlexLayout;->a(Landroid/view/View;ILcom/vk/common/view/flex/SizeEntities1;II)V
 
     .line 17
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1720,7 +1720,7 @@
 
     invoke-direct {v2, p0, v0, p1, v1}, Lcom/vk/common/view/flex/FlexLayout$addViewsWithAnimation$2;-><init>(Lcom/vk/common/view/flex/FlexLayout;Ljava/util/List;Ljava/util/List;Lcom/vk/common/view/flex/FlexLayoutResult;)V
 
-    iput-object v2, p0, Lcom/vk/common/view/flex/FlexLayout;->E:Lkotlin/jvm/b/a;
+    iput-object v2, p0, Lcom/vk/common/view/flex/FlexLayout;->E:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -1826,7 +1826,7 @@
 
     invoke-direct {p1, p0, v0, v1}, Lcom/vk/common/view/flex/FlexLayout$removeViewsWithAnimation$2;-><init>(Lcom/vk/common/view/flex/FlexLayout;Ljava/util/List;Lcom/vk/common/view/flex/FlexLayoutResult;)V
 
-    iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->E:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->E:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -1835,9 +1835,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/common/view/flex/FlexLayout;->a:Lcom/vk/common/view/flex/c;
+    iget-object v0, p0, Lcom/vk/common/view/flex/FlexLayout;->a:Lcom/vk/common/view/flex/FlexLayoutDragListener;
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/view/flex/c;->a(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lcom/vk/common/view/flex/FlexLayoutDragListener;->a(Landroid/graphics/Canvas;)V
 
     .line 2
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchDraw(Landroid/graphics/Canvas;)V
@@ -1849,9 +1849,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/common/view/flex/FlexLayout;->a:Lcom/vk/common/view/flex/c;
+    iget-object v0, p0, Lcom/vk/common/view/flex/FlexLayout;->a:Lcom/vk/common/view/flex/FlexLayoutDragListener;
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/view/flex/c;->a(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/common/view/flex/FlexLayoutDragListener;->a(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -1882,9 +1882,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/common/view/flex/FlexLayout;->a:Lcom/vk/common/view/flex/c;
+    iget-object v0, p0, Lcom/vk/common/view/flex/FlexLayout;->a:Lcom/vk/common/view/flex/FlexLayoutDragListener;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/common/view/flex/c;->a(II)I
+    invoke-virtual {v0, p1, p2}, Lcom/vk/common/view/flex/FlexLayoutDragListener;->a(II)I
 
     move-result p1
 
@@ -1955,7 +1955,7 @@
 
     move-result-object p4
 
-    check-cast p4, Lcom/vk/common/view/flex/f;
+    check-cast p4, Lcom/vk/common/view/flex/SizeEntities2;
 
     .line 5
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
@@ -1969,19 +1969,19 @@
 
     move-result-object p5
 
-    invoke-virtual {p4}, Lcom/vk/common/view/flex/f;->c()I
+    invoke-virtual {p4}, Lcom/vk/common/view/flex/SizeEntities2;->c()I
 
     move-result v0
 
-    invoke-virtual {p4}, Lcom/vk/common/view/flex/f;->e()I
+    invoke-virtual {p4}, Lcom/vk/common/view/flex/SizeEntities2;->e()I
 
     move-result v1
 
-    invoke-virtual {p4}, Lcom/vk/common/view/flex/f;->d()I
+    invoke-virtual {p4}, Lcom/vk/common/view/flex/SizeEntities2;->d()I
 
     move-result v2
 
-    invoke-virtual {p4}, Lcom/vk/common/view/flex/f;->a()I
+    invoke-virtual {p4}, Lcom/vk/common/view/flex/SizeEntities2;->a()I
 
     move-result p4
 
@@ -2046,7 +2046,7 @@
 
     const-string v2, "childrenSizeCache[childCount]"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Ljava/util/List;
 
@@ -2068,23 +2068,23 @@
     invoke-static/range {v2 .. v8}, Lcom/vk/common/view/flex/FlexLayout;->a(Lcom/vk/common/view/flex/FlexLayout;Ljava/util/List;IIZILjava/lang/Object;)V
 
     .line 10
-    iget-object v2, p0, Lcom/vk/common/view/flex/FlexLayout;->e:Lcom/vk/common/view/flex/strategy/e;
+    iget-object v2, p0, Lcom/vk/common/view/flex/FlexLayout;->e:Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy3;
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v3
 
-    invoke-interface {v2, v3}, Lcom/vk/common/view/flex/strategy/e;->a(I)Lcom/vk/common/view/flex/strategy/c;
+    invoke-interface {v2, v3}, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy3;->a(I)Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy1;
 
     move-result-object v2
 
     .line 11
-    instance-of v3, v2, Lcom/vk/common/view/flex/strategy/j;
+    instance-of v3, v2, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy7;
 
     if-eqz v3, :cond_1
 
     .line 12
-    iget-object p2, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/b;
+    iget-object p2, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/SizeEntities;
 
     const/high16 v3, -0x80000000
 
@@ -2092,10 +2092,10 @@
 
     move-result v4
 
-    invoke-virtual {p2, v4}, Lcom/vk/common/view/flex/b;->d(I)V
+    invoke-virtual {p2, v4}, Lcom/vk/common/view/flex/SizeEntities;->d(I)V
 
     .line 13
-    iget-object p2, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/b;
+    iget-object p2, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/SizeEntities;
 
     iget v4, p0, Lcom/vk/common/view/flex/FlexLayout;->H:I
 
@@ -2103,66 +2103,66 @@
 
     move-result v3
 
-    invoke-virtual {p2, v3}, Lcom/vk/common/view/flex/b;->a(I)V
+    invoke-virtual {p2, v3}, Lcom/vk/common/view/flex/SizeEntities;->a(I)V
 
     .line 14
-    iget-object p2, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/b;
+    iget-object p2, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/SizeEntities;
 
     iget v3, p0, Lcom/vk/common/view/flex/FlexLayout;->H:I
 
-    invoke-virtual {p2, v3}, Lcom/vk/common/view/flex/b;->b(I)V
+    invoke-virtual {p2, v3}, Lcom/vk/common/view/flex/SizeEntities;->b(I)V
 
     goto :goto_0
 
     .line 15
     :cond_1
-    iget-object v3, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/b;
+    iget-object v3, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/SizeEntities;
 
     iget v4, p0, Lcom/vk/common/view/flex/FlexLayout;->C:I
 
-    invoke-virtual {v3, v4}, Lcom/vk/common/view/flex/b;->d(I)V
+    invoke-virtual {v3, v4}, Lcom/vk/common/view/flex/SizeEntities;->d(I)V
 
     .line 16
-    iget-object v3, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/b;
+    iget-object v3, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/SizeEntities;
 
     iget v4, p0, Lcom/vk/common/view/flex/FlexLayout;->D:I
 
-    invoke-virtual {v3, v4}, Lcom/vk/common/view/flex/b;->a(I)V
+    invoke-virtual {v3, v4}, Lcom/vk/common/view/flex/SizeEntities;->a(I)V
 
     .line 17
-    iget-object v3, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/b;
+    iget-object v3, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/SizeEntities;
 
-    invoke-virtual {v3, p2}, Lcom/vk/common/view/flex/b;->b(I)V
+    invoke-virtual {v3, p2}, Lcom/vk/common/view/flex/SizeEntities;->b(I)V
 
     .line 18
     :goto_0
-    iget-object p2, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/b;
+    iget-object p2, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/SizeEntities;
 
-    invoke-virtual {p2, p1}, Lcom/vk/common/view/flex/b;->c(I)V
+    invoke-virtual {p2, p1}, Lcom/vk/common/view/flex/SizeEntities;->c(I)V
 
     .line 19
-    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/b;
+    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/SizeEntities;
 
-    invoke-virtual {p1, v0}, Lcom/vk/common/view/flex/b;->a(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vk/common/view/flex/SizeEntities;->a(Ljava/util/List;)V
 
     .line 20
-    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/b;
+    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/SizeEntities;
 
     iget p2, p0, Lcom/vk/common/view/flex/FlexLayout;->G:I
 
-    invoke-virtual {p1, p2}, Lcom/vk/common/view/flex/b;->f(I)V
+    invoke-virtual {p1, p2}, Lcom/vk/common/view/flex/SizeEntities;->f(I)V
 
     .line 21
-    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/b;
+    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/SizeEntities;
 
     iget p2, p0, Lcom/vk/common/view/flex/FlexLayout;->F:I
 
-    invoke-virtual {p1, p2}, Lcom/vk/common/view/flex/b;->e(I)V
+    invoke-virtual {p1, p2}, Lcom/vk/common/view/flex/SizeEntities;->e(I)V
 
     .line 22
-    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/b;
+    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/SizeEntities;
 
-    invoke-interface {v2, p1}, Lcom/vk/common/view/flex/strategy/c;->a(Lcom/vk/common/view/flex/b;)Lcom/vk/common/view/flex/FlexLayoutResult;
+    invoke-interface {v2, p1}, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy1;->a(Lcom/vk/common/view/flex/SizeEntities;)Lcom/vk/common/view/flex/FlexLayoutResult;
 
     move-result-object p1
 
@@ -2195,11 +2195,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/view/flex/f;
+    check-cast v0, Lcom/vk/common/view/flex/SizeEntities2;
 
-    iget-object v2, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/b;
+    iget-object v2, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/SizeEntities;
 
-    invoke-virtual {v2}, Lcom/vk/common/view/flex/b;->a()Ljava/util/List;
+    invoke-virtual {v2}, Lcom/vk/common/view/flex/SizeEntities;->a()Ljava/util/List;
 
     move-result-object v2
 
@@ -2207,13 +2207,13 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/common/view/flex/e;
+    check-cast v2, Lcom/vk/common/view/flex/SizeEntities1;
 
-    invoke-virtual {v2}, Lcom/vk/common/view/flex/e;->b()I
+    invoke-virtual {v2}, Lcom/vk/common/view/flex/SizeEntities1;->b()I
 
     move-result v2
 
-    invoke-virtual {v0, v2}, Lcom/vk/common/view/flex/f;->e(I)V
+    invoke-virtual {v0, v2}, Lcom/vk/common/view/flex/SizeEntities2;->e(I)V
 
     add-int/lit8 p2, p2, 0x1
 
@@ -2239,9 +2239,9 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/common/view/flex/f;
+    check-cast p2, Lcom/vk/common/view/flex/SizeEntities2;
 
-    invoke-virtual {p2}, Lcom/vk/common/view/flex/f;->g()I
+    invoke-virtual {p2}, Lcom/vk/common/view/flex/SizeEntities2;->g()I
 
     move-result p2
 
@@ -2256,9 +2256,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/view/flex/f;
+    check-cast v0, Lcom/vk/common/view/flex/SizeEntities2;
 
-    invoke-virtual {v0}, Lcom/vk/common/view/flex/f;->b()I
+    invoke-virtual {v0}, Lcom/vk/common/view/flex/SizeEntities2;->b()I
 
     move-result v0
 
@@ -2302,21 +2302,21 @@
     invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->setMeasuredDimension(II)V
 
     .line 32
-    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->E:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->E:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_4
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_4
     const/4 p1, 0x0
 
     .line 33
-    iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->E:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->E:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -2328,7 +2328,7 @@
     iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout;->h:Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;
 
     .line 2
-    invoke-virtual {p1, p0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->a(Lcom/vk/common/view/flex/d;)V
+    invoke-virtual {p1, p0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/ExtendedImagesAdapter;->a(Lcom/vk/common/view/flex/ImagesAdapterView;)V
 
     return-void
 .end method
@@ -2376,9 +2376,9 @@
     iput p1, p0, Lcom/vk/common/view/flex/FlexLayout;->G:I
 
     .line 2
-    iget-object v0, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/b;
+    iget-object v0, p0, Lcom/vk/common/view/flex/FlexLayout;->c:Lcom/vk/common/view/flex/SizeEntities;
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/view/flex/b;->f(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/common/view/flex/SizeEntities;->f(I)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "AndroidContactsStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lio/requery/android/database/sqlite/SQLiteDatabase;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -82,14 +82,14 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/models/contacts/a;
+    check-cast v1, Lcom/vk/im/engine/models/contacts/AndroidContact;
 
     const-string v3, "stmt"
 
     .line 4
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/contacts/a;->getId()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/contacts/AndroidContact;->getId()I
 
     move-result v3
 
@@ -98,7 +98,7 @@
     invoke-static {p1, v4, v3}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteStatement;II)V
 
     .line 5
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/contacts/a;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/contacts/AndroidContact;->a()Ljava/lang/String;
 
     move-result-object v3
 
@@ -109,7 +109,7 @@
     const/4 v3, 0x3
 
     .line 6
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/contacts/a;->b()Ljava/util/Set;
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/contacts/AndroidContact;->b()Ljava/util/Set;
 
     move-result-object v6
 
@@ -121,7 +121,7 @@
 
     if-eqz v4, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/contacts/a;->b()Ljava/util/Set;
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/contacts/AndroidContact;->b()Ljava/util/Set;
 
     move-result-object v1
 
@@ -129,7 +129,7 @@
 
     const-string v4, ","
 
-    invoke-static {v1, v4, v2, v5, v2}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;Ljava/lang/String;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1, v4, v2, v5, v2}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;Ljava/lang/String;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -143,12 +143,12 @@
 
     .line 8
     :cond_1
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 9
-    invoke-static {p1, v2}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v2}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     return-void
 
@@ -163,7 +163,7 @@
     :catchall_1
     move-exception v1
 
-    invoke-static {p1, v0}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
 .end method
@@ -176,7 +176,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/android_contacts/AndroidContactsStorageManager$put$1;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

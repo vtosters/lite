@@ -3,7 +3,7 @@
 .source "PostingAttachmentsHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/String;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -52,7 +52,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$attachPhotosAndVideosFromDevice$1;->this$0:Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;)Lcom/vk/newsfeed/posting/a;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;)Lcom/vk/newsfeed/posting/PostingContracts1;
 
     move-result-object v0
 
@@ -60,7 +60,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/a;->j(Ljava/lang/String;)Z
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts1;->j(Ljava/lang/String;)Z
 
     move-result p1
 

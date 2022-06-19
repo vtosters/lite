@@ -9,7 +9,7 @@
         "<T:",
         "Landroid/app/Activity;",
         ":",
-        "Lcom/vk/core/fragments/e;",
+        "Lcom/vk/core/fragments/FragmentManagerImplProvider;",
         ">",
         "Ljava/lang/Object;"
     }
@@ -22,7 +22,7 @@
         value = {
             "Ljava/util/concurrent/CopyOnWriteArrayList<",
             "Ljava/lang/ref/WeakReference<",
-            "Lcom/vk/navigation/g;",
+            "Lcom/vk/navigation/Dismissed;",
             ">;>;"
         }
     .end annotation
@@ -32,13 +32,13 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/navigation/f;",
+            "Lcom/vk/navigation/DialogStackChangeListener;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private c:Lcom/vk/core/ui/v/e;
+.field private c:Lcom/vk/core/ui/v/UiTrackingListeners2;
 
 .field private final d:Landroid/app/Activity;
     .annotation system Ldalvik/annotation/Signature;
@@ -82,15 +82,15 @@
     iput-object p1, p0, Lcom/vk/navigation/NavigationDelegate;->b:Ljava/util/ArrayList;
 
     .line 4
-    sget-object p1, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
+    sget-object p1, Lcom/vk/core/ui/v/UiTracker;->INSTANCE:Lcom/vk/core/ui/v/UiTracker;
 
     iget-object p2, p0, Lcom/vk/navigation/NavigationDelegate;->d:Landroid/app/Activity;
 
-    invoke-virtual {p1, p2}, Lcom/vk/core/ui/v/a;->a(Landroid/app/Activity;)Lcom/vk/core/ui/v/e;
+    invoke-virtual {p1, p2}, Lcom/vk/core/ui/v/UiTracker;->a(Landroid/app/Activity;)Lcom/vk/core/ui/v/UiTrackingListeners2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/navigation/NavigationDelegate;->c:Lcom/vk/core/ui/v/e;
+    iput-object p1, p0, Lcom/vk/navigation/NavigationDelegate;->c:Lcom/vk/core/ui/v/UiTrackingListeners2;
 
     return-void
 .end method
@@ -133,13 +133,13 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/navigation/g;
+    check-cast v1, Lcom/vk/navigation/Dismissed;
 
     if-eqz v1, :cond_0
 
     const/4 v2, 0x1
 
-    invoke-interface {v1, v2}, Lcom/vk/navigation/g;->a(Z)V
+    invoke-interface {v1, v2}, Lcom/vk/navigation/Dismissed;->a(Z)V
 
     goto :goto_0
 
@@ -168,12 +168,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/navigation/f;
+    check-cast v1, Lcom/vk/navigation/DialogStackChangeListener;
 
     const/4 v2, 0x0
 
     .line 12
-    invoke-interface {v1, v2}, Lcom/vk/navigation/f;->d0(I)V
+    invoke-interface {v1, v2}, Lcom/vk/navigation/DialogStackChangeListener;->d0(I)V
 
     goto :goto_1
 
@@ -261,18 +261,18 @@
     if-eqz p2, :cond_1
 
     .line 20
-    instance-of v0, p1, Lcom/vk/navigation/r;
+    instance-of v0, p1, Lcom/vk/navigation/NewIntentFragment;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vk/navigation/r;
+    check-cast p1, Lcom/vk/navigation/NewIntentFragment;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1, p2}, Lcom/vk/navigation/r;->b(Landroid/content/Intent;)V
+    invoke-interface {p1, p2}, Lcom/vk/navigation/NewIntentFragment;->b(Landroid/content/Intent;)V
 
     :cond_1
     return-void
@@ -307,7 +307,7 @@
 
     move-result p3
 
-    invoke-virtual {p1, p2, p3, v0, v1}, Lcom/vk/core/fragments/FragmentNavigationController;->a(Lcom/vk/core/fragments/FragmentEntry;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, p2, p3, v0, v1}, Lcom/vk/core/fragments/FragmentNavigationController;->a(Lcom/vk/core/fragments/FragmentEntry;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 
@@ -319,7 +319,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/navigation/f;)V
+.method public final a(Lcom/vk/navigation/DialogStackChangeListener;)V
     .locals 1
 
     .line 13
@@ -330,7 +330,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/navigation/g;)V
+.method public a(Lcom/vk/navigation/Dismissed;)V
     .locals 2
 
     .line 2
@@ -338,9 +338,9 @@
 
     new-instance v1, Lcom/vk/navigation/NavigationDelegate$onDismissStackDialog$1;
 
-    invoke-direct {v1, p1}, Lcom/vk/navigation/NavigationDelegate$onDismissStackDialog$1;-><init>(Lcom/vk/navigation/g;)V
+    invoke-direct {v1, p1}, Lcom/vk/navigation/NavigationDelegate$onDismissStackDialog$1;-><init>(Lcom/vk/navigation/Dismissed;)V
 
-    invoke-static {v0, v1}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
+    invoke-static {v0, v1}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
 
     .line 3
     iget-object p1, p0, Lcom/vk/navigation/NavigationDelegate;->b:Ljava/util/ArrayList;
@@ -361,7 +361,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/navigation/f;
+    check-cast v0, Lcom/vk/navigation/DialogStackChangeListener;
 
     .line 5
     iget-object v1, p0, Lcom/vk/navigation/NavigationDelegate;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -370,7 +370,7 @@
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/navigation/f;->d0(I)V
+    invoke-interface {v0, v1}, Lcom/vk/navigation/DialogStackChangeListener;->d0(I)V
 
     goto :goto_0
 
@@ -476,7 +476,7 @@
     return-void
 .end method
 
-.method public final b(Lcom/vk/navigation/f;)V
+.method public final b(Lcom/vk/navigation/DialogStackChangeListener;)V
     .locals 1
 
     .line 5
@@ -487,7 +487,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/navigation/g;)V
+.method public b(Lcom/vk/navigation/Dismissed;)V
     .locals 2
 
     .line 1
@@ -518,7 +518,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/navigation/f;
+    check-cast v0, Lcom/vk/navigation/DialogStackChangeListener;
 
     .line 4
     iget-object v1, p0, Lcom/vk/navigation/NavigationDelegate;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -527,7 +527,7 @@
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/navigation/f;->d0(I)V
+    invoke-interface {v0, v1}, Lcom/vk/navigation/DialogStackChangeListener;->d0(I)V
 
     goto :goto_0
 
@@ -566,13 +566,13 @@
 
     move-result-object p1
 
-    sget-object v0, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
+    sget-object v0, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
 
-    invoke-virtual {v0}, Lcom/vk/navigation/o$b;->b()Ljava/lang/Class;
+    invoke-virtual {v0}, Lcom/vk/navigation/Navigator$b;->b()Ljava/lang/Class;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -592,7 +592,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -609,9 +609,9 @@
     move-result-object v0
 
     .line 11
-    sget-object v3, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
+    sget-object v3, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
 
-    invoke-virtual {v3}, Lcom/vk/navigation/o$b;->a()Ljava/lang/Class;
+    invoke-virtual {v3}, Lcom/vk/navigation/Navigator$b;->a()Ljava/lang/Class;
 
     move-result-object v3
 
@@ -619,7 +619,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -630,9 +630,9 @@
     move-result-object p1
 
     .line 12
-    sget-object v0, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
+    sget-object v0, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
 
-    invoke-virtual {v0}, Lcom/vk/navigation/o$b;->b()Ljava/lang/Class;
+    invoke-virtual {v0}, Lcom/vk/navigation/Navigator$b;->b()Ljava/lang/Class;
 
     move-result-object v0
 
@@ -640,7 +640,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -732,7 +732,7 @@
     .end annotation
 
     .line 2
-    const-class v0, Lcom/vk/navigation/t;
+    const-class v0, Lcom/vk/navigation/ReorderableFragment;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
@@ -747,13 +747,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/navigation/NavigationDelegate;->d:Landroid/app/Activity;
 
-    check-cast v0, Lcom/vk/core/fragments/e;
+    check-cast v0, Lcom/vk/core/fragments/FragmentManagerImplProvider;
 
-    invoke-interface {v0}, Lcom/vk/core/fragments/e;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
+    invoke-interface {v0}, Lcom/vk/core/fragments/FragmentManagerImplProvider;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/j/b/b;->e()Lcom/vk/core/fragments/j/b/a;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->e()Lcom/vk/core/fragments/j/b/ParentSupportFragment;
 
     move-result-object v0
 
@@ -778,14 +778,14 @@
     if-eqz v0, :cond_0
 
     .line 4
-    instance-of v1, v0, Lcom/vk/navigation/r;
+    instance-of v1, v0, Lcom/vk/navigation/NewIntentFragment;
 
     if-eqz v1, :cond_0
 
     .line 5
-    check-cast v0, Lcom/vk/navigation/r;
+    check-cast v0, Lcom/vk/navigation/NewIntentFragment;
 
-    invoke-interface {v0, p1}, Lcom/vk/navigation/r;->b(Landroid/content/Intent;)V
+    invoke-interface {v0, p1}, Lcom/vk/navigation/NewIntentFragment;->b(Landroid/content/Intent;)V
 
     :cond_0
     return-void
@@ -831,9 +831,9 @@
     .line 1
     iget-object v0, p0, Lcom/vk/navigation/NavigationDelegate;->d:Landroid/app/Activity;
 
-    check-cast v0, Lcom/vk/core/fragments/e;
+    check-cast v0, Lcom/vk/core/fragments/FragmentManagerImplProvider;
 
-    invoke-interface {v0}, Lcom/vk/core/fragments/e;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
+    invoke-interface {v0}, Lcom/vk/core/fragments/FragmentManagerImplProvider;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
 
     move-result-object v0
 
@@ -924,7 +924,7 @@
     return v1
 .end method
 
-.method public final h()Lcom/vk/navigation/g;
+.method public final h()Lcom/vk/navigation/Dismissed;
     .locals 4
 
     .line 1
@@ -994,17 +994,17 @@
 
     move-object v2, v0
 
-    check-cast v2, Lcom/vk/navigation/g;
+    check-cast v2, Lcom/vk/navigation/Dismissed;
 
     :cond_3
     return-object v2
 .end method
 
-.method protected final i()Lcom/vk/core/ui/v/e;
+.method protected final i()Lcom/vk/core/ui/v/UiTrackingListeners2;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegate;->c:Lcom/vk/core/ui/v/e;
+    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegate;->c:Lcom/vk/core/ui/v/UiTrackingListeners2;
 
     return-object v0
 .end method

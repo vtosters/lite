@@ -3,7 +3,7 @@
 .source "IntArrayList.java"
 
 # interfaces
-.implements Lcom/vk/im/engine/utils/collection/g;
+.implements Lcom/vk/im/engine/utils/collection/IntList;
 .implements Ljava/io/Serializable;
 
 
@@ -129,13 +129,13 @@
     return-object v0
 .end method
 
-.method private static a(Lcom/vk/im/engine/utils/collection/d;Ljava/lang/String;)Ljava/lang/String;
+.method private static a(Lcom/vk/im/engine/utils/collection/IntCollection;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
     if-eqz p0, :cond_2
 
     .line 18
-    invoke-interface {p0}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
+    invoke-interface {p0}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
 
     move-result v0
 
@@ -162,14 +162,14 @@
 
     .line 21
     :goto_0
-    invoke-interface {p0}, Lcom/vk/im/engine/utils/collection/d;->size()I
+    invoke-interface {p0}, Lcom/vk/im/engine/utils/collection/IntCollection;->size()I
 
     move-result v3
 
     if-ge v2, v3, :cond_1
 
     .line 22
-    invoke-interface {p0, v2}, Lcom/vk/im/engine/utils/collection/d;->b(I)I
+    invoke-interface {p0, v2}, Lcom/vk/im/engine/utils/collection/IntCollection;->b(I)I
 
     move-result v3
 
@@ -408,7 +408,7 @@
     .locals 0
 
     .line 8
-    invoke-static {p0, p1}, Lcom/vk/im/engine/utils/collection/IntArrayList;->a(Lcom/vk/im/engine/utils/collection/d;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/vk/im/engine/utils/collection/IntArrayList;->a(Lcom/vk/im/engine/utils/collection/IntCollection;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -468,7 +468,7 @@
     throw p2
 .end method
 
-.method public a(Lcom/vk/im/engine/utils/collection/d$a;)V
+.method public a(Lcom/vk/im/engine/utils/collection/IntCollection$a;)V
     .locals 2
 
     const/4 v0, 0x0
@@ -486,7 +486,7 @@
 
     move-result v1
 
-    invoke-interface {p1, v1}, Lcom/vk/im/engine/utils/collection/d$a;->a(I)V
+    invoke-interface {p1, v1}, Lcom/vk/im/engine/utils/collection/IntCollection$a;->a(I)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -496,13 +496,13 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/utils/collection/d;)V
+.method public a(Lcom/vk/im/engine/utils/collection/IntCollection;)V
     .locals 2
 
     .line 15
     iget v0, p0, Lcom/vk/im/engine/utils/collection/IntArrayList;->size:I
 
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->size()I
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->size()I
 
     move-result v1
 
@@ -514,14 +514,14 @@
 
     .line 16
     :goto_0
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->size()I
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->size()I
 
     move-result v1
 
     if-ge v0, v1, :cond_0
 
     .line 17
-    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/d;->b(I)I
+    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->b(I)I
 
     move-result v1
 
@@ -617,7 +617,7 @@
     return p1
 .end method
 
-.method public b(Lcom/vk/im/engine/utils/collection/d;)Z
+.method public b(Lcom/vk/im/engine/utils/collection/IntCollection;)Z
     .locals 3
 
     const/4 v0, 0x0
@@ -626,14 +626,14 @@
 
     .line 3
     :goto_0
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->size()I
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->size()I
 
     move-result v2
 
     if-ge v0, v2, :cond_1
 
     .line 4
-    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/d;->b(I)I
+    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->b(I)I
 
     move-result v2
 

@@ -72,7 +72,7 @@
     const-string p2, "adapter down!"
 
     .line 4
-    invoke-static {p1, p2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     iget-object p1, p0, Lorg/webrtc/voiceengine/Bluetooth$1;->this$0:Lorg/webrtc/voiceengine/Bluetooth;

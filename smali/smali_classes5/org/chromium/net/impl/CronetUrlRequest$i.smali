@@ -106,7 +106,7 @@
     :try_start_2
     iget-object v1, p0, Lorg/chromium/net/impl/CronetUrlRequest$i;->b:Lorg/chromium/net/impl/CronetUrlRequest;
 
-    invoke-static {v1}, Lorg/chromium/net/impl/CronetUrlRequest;->g(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/s;
+    invoke-static {v1}, Lorg/chromium/net/impl/CronetUrlRequest;->g(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/VersionSafeCallbacks5;
 
     move-result-object v1
 
@@ -114,11 +114,11 @@
 
     iget-object v3, p0, Lorg/chromium/net/impl/CronetUrlRequest$i;->b:Lorg/chromium/net/impl/CronetUrlRequest;
 
-    invoke-static {v3}, Lorg/chromium/net/impl/CronetUrlRequest;->f(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/k;
+    invoke-static {v3}, Lorg/chromium/net/impl/CronetUrlRequest;->f(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/UrlResponseInfoImpl;
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3, v0}, Lorg/chromium/net/impl/s;->a(Lorg/chromium/net/w;Lorg/chromium/net/x;Ljava/nio/ByteBuffer;)V
+    invoke-virtual {v1, v2, v3, v0}, Lorg/chromium/net/impl/VersionSafeCallbacks5;->a(Lorg/chromium/net/UrlRequest;Lorg/chromium/net/UrlResponseInfo;Ljava/nio/ByteBuffer;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 

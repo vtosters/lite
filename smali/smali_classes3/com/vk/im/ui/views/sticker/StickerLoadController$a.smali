@@ -3,7 +3,7 @@
 .source "StickerLoadController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/airbnb/lottie/d;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/airbnb/lottie/LottieComposition;",
         ">;"
     }
 .end annotation
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/airbnb/lottie/d;)V
+.method public final a(Lcom/airbnb/lottie/LottieComposition;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/views/sticker/StickerLoadController$a;->a:Lcom/vk/im/ui/views/sticker/StickerLoadController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/views/sticker/StickerLoadController;->a(Lcom/vk/im/ui/views/sticker/StickerLoadController;)Lcom/vk/im/ui/views/sticker/d;
+    invoke-static {v0}, Lcom/vk/im/ui/views/sticker/StickerLoadController;->a(Lcom/vk/im/ui/views/sticker/StickerLoadController;)Lcom/vk/im/ui/views/sticker/StickerAnimationCallback;
 
     move-result-object v0
 
@@ -60,9 +60,9 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/views/sticker/d;->a(Lcom/airbnb/lottie/d;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/views/sticker/StickerAnimationCallback;->a(Lcom/airbnb/lottie/LottieComposition;)V
 
     .line 2
     :cond_0
@@ -70,12 +70,12 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/im/ui/views/sticker/StickerLoadController;->a(Lcom/vk/im/ui/views/sticker/StickerLoadController;Lcom/vk/im/ui/views/sticker/d;)V
+    invoke-static {p1, v0}, Lcom/vk/im/ui/views/sticker/StickerLoadController;->a(Lcom/vk/im/ui/views/sticker/StickerLoadController;Lcom/vk/im/ui/views/sticker/StickerAnimationCallback;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/im/ui/views/sticker/StickerLoadController$a;->a:Lcom/vk/im/ui/views/sticker/StickerLoadController;
 
-    invoke-static {p1, v0}, Lcom/vk/im/ui/views/sticker/StickerLoadController;->a(Lcom/vk/im/ui/views/sticker/StickerLoadController;Lio/reactivex/disposables/b;)V
+    invoke-static {p1, v0}, Lcom/vk/im/ui/views/sticker/StickerLoadController;->a(Lcom/vk/im/ui/views/sticker/StickerLoadController;Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -84,9 +84,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/airbnb/lottie/d;
+    check-cast p1, Lcom/airbnb/lottie/LottieComposition;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/sticker/StickerLoadController$a;->a(Lcom/airbnb/lottie/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/sticker/StickerLoadController$a;->a(Lcom/airbnb/lottie/LottieComposition;)V
 
     return-void
 .end method

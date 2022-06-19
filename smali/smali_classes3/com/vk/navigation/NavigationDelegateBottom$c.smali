@@ -1,5 +1,5 @@
 .class final Lcom/vk/navigation/NavigationDelegateBottom$c;
-.super Lcom/vk/core/ui/v/j/g/a;
+.super Lcom/vk/core/ui/v/j/g/UiTrackingPagerAdapter;
 .source "NavigationDelegateBottom.kt"
 
 
@@ -29,7 +29,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/ui/v/j/g/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/ui/v/j/g/UiTrackingPagerAdapter;-><init>()V
 
     iput-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom$c;->c:Landroid/view/View;
 
@@ -94,7 +94,7 @@
 
     const-string v1, "contentView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Lcom/vk/navigation/right/RightMenu$a;->a(Landroid/content/Context;)F
 

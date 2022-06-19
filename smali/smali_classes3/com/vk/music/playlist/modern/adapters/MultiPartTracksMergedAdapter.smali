@@ -1,5 +1,5 @@
 .class public final Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;
-.super Lcom/vk/lists/p;
+.super Lcom/vk/lists/MergedAdapter;
 .source "MultiPartTracksMergedAdapter.kt"
 
 
@@ -8,19 +8,19 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Lcom/vk/music/ui/common/b<",
+            "Lcom/vk/music/ui/common/MusicAdapter<",
             "Lcom/vk/dto/music/MusicTrack;",
-            "Lcom/vk/music/ui/common/o<",
+            "Lcom/vk/music/ui/common/MusicViewHolder<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;>;>;"
         }
     .end annotation
 .end field
 
-.field private final C:Lcom/vk/core/ui/k;
+.field private final C:Lcom/vk/core/ui/IdClickListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/ui/k<",
+            "Lcom/vk/core/ui/IdClickListener<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;"
         }
@@ -29,7 +29,7 @@
 
 .field private f:Ljava/lang/String;
 
-.field private g:Lcom/vk/music/player/d;
+.field private g:Lcom/vk/music/player/PlayerModel;
 
 .field private h:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -43,21 +43,21 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/core/ui/k;)V
+.method public constructor <init>(Lcom/vk/core/ui/IdClickListener;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/core/ui/k<",
+            "Lcom/vk/core/ui/IdClickListener<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/p;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/MergedAdapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->C:Lcom/vk/core/ui/k;
+    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->C:Lcom/vk/core/ui/IdClickListener;
 
     .line 2
     new-instance p1, Ljava/util/ArrayList;
@@ -76,7 +76,7 @@
     return-void
 .end method
 
-.method private final a(Ljava/util/List;Ljava/lang/String;Lcom/vk/music/player/d;)Landroid/util/SparseArray;
+.method private final a(Ljava/util/List;Ljava/lang/String;Lcom/vk/music/player/PlayerModel;)Landroid/util/SparseArray;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -85,7 +85,7 @@
             "Lcom/vk/dto/music/MusicTrack;",
             ">;",
             "Ljava/lang/String;",
-            "Lcom/vk/music/player/d;",
+            "Lcom/vk/music/player/PlayerModel;",
             ")",
             "Landroid/util/SparseArray<",
             "Ljava/util/ArrayList<",
@@ -122,7 +122,7 @@
 
     iget v3, v1, Lcom/vk/dto/music/MusicTrack;->R:I
 
-    invoke-static {v2, v3}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;I)Z
+    invoke-static {v2, v3}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;I)Z
 
     move-result v2
 
@@ -131,7 +131,7 @@
     .line 15
     iget v2, v1, Lcom/vk/dto/music/MusicTrack;->R:I
 
-    invoke-direct {p0, p3, p2, v2}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->a(Lcom/vk/music/player/d;Ljava/lang/String;I)V
+    invoke-direct {p0, p3, p2, v2}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->a(Lcom/vk/music/player/PlayerModel;Ljava/lang/String;I)V
 
     .line 16
     :cond_0
@@ -160,7 +160,7 @@
     .line 24
     iget v0, p2, Lcom/vk/dto/music/MusicTrack;->R:I
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;I)Z
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;I)Z
 
     move-result v0
 
@@ -193,7 +193,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/music/player/d;Ljava/lang/String;I)V
+.method private final a(Lcom/vk/music/player/PlayerModel;Ljava/lang/String;I)V
     .locals 3
 
     const/4 v0, -0x1
@@ -201,14 +201,14 @@
     if-eq p3, v0, :cond_0
 
     .line 17
-    sget-object v0, Lcom/vk/music/ui/common/l;->b:Lcom/vk/music/ui/common/l$a;
+    sget-object v0, Lcom/vk/music/ui/common/MusicSingleItemAdapter;->b:Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;
 
     sget-object v1, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter$createBlockAdapter$numberPartAdapter$1;->a:Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter$createBlockAdapter$numberPartAdapter$1;
 
     const/4 v2, 0x0
 
     .line 18
-    invoke-virtual {v0, v1, v2}, Lcom/vk/music/ui/common/l$a;->a(Lkotlin/jvm/b/b;Ljava/lang/String;)Lcom/vk/music/ui/common/l;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     move-result-object v0
 
@@ -217,19 +217,19 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 20
-    invoke-virtual {p0, v0}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 21
     :cond_0
-    invoke-direct {p0, p2, p1}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->b(Ljava/lang/String;Lcom/vk/music/player/d;)Lcom/vk/music/ui/track/adapters/c;
+    invoke-direct {p0, p2, p1}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->b(Ljava/lang/String;Lcom/vk/music/player/PlayerModel;)Lcom/vk/music/ui/track/adapters/MusicAlbumMusicTrackItemAdapter;
 
     move-result-object p1
 
     .line 22
-    invoke-virtual {p0, p1}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p0, p1}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 23
     iget-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->B:Landroid/util/SparseArray;
@@ -239,15 +239,15 @@
     return-void
 .end method
 
-.method private final b(Ljava/lang/String;Lcom/vk/music/player/d;)Lcom/vk/music/ui/track/adapters/c;
+.method private final b(Ljava/lang/String;Lcom/vk/music/player/PlayerModel;)Lcom/vk/music/ui/track/adapters/MusicAlbumMusicTrackItemAdapter;
     .locals 2
 
     .line 5
-    new-instance v0, Lcom/vk/music/ui/track/adapters/c;
+    new-instance v0, Lcom/vk/music/ui/track/adapters/MusicAlbumMusicTrackItemAdapter;
 
-    iget-object v1, p0, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->C:Lcom/vk/core/ui/k;
+    iget-object v1, p0, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->C:Lcom/vk/core/ui/IdClickListener;
 
-    invoke-direct {v0, p1, p2, v1}, Lcom/vk/music/ui/track/adapters/c;-><init>(Ljava/lang/String;Lcom/vk/music/player/d;Lcom/vk/core/ui/k;)V
+    invoke-direct {v0, p1, p2, v1}, Lcom/vk/music/ui/track/adapters/MusicAlbumMusicTrackItemAdapter;-><init>(Ljava/lang/String;Lcom/vk/music/player/PlayerModel;Lcom/vk/core/ui/IdClickListener;)V
 
     return-object v0
 .end method
@@ -256,7 +256,7 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/lists/p;->j()I
+    invoke-virtual {p0}, Lcom/vk/lists/MergedAdapter;->j()I
 
     move-result v0
 
@@ -266,30 +266,30 @@
     if-ge v1, v0, :cond_2
 
     .line 2
-    invoke-virtual {p0, v1}, Lcom/vk/lists/p;->H(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    invoke-virtual {p0, v1}, Lcom/vk/lists/MergedAdapter;->H(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v2
 
-    instance-of v3, v2, Lcom/vk/music/ui/common/b;
+    instance-of v3, v2, Lcom/vk/music/ui/common/MusicAdapter;
 
     if-nez v3, :cond_0
 
     const/4 v2, 0x0
 
     :cond_0
-    check-cast v2, Lcom/vk/music/ui/common/b;
+    check-cast v2, Lcom/vk/music/ui/common/MusicAdapter;
 
     if-eqz v2, :cond_1
 
     .line 3
-    invoke-virtual {v2, p1}, Lcom/vk/lists/i0;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v2, p1}, Lcom/vk/lists/SimpleAdapter;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
     .line 4
-    invoke-virtual {v2, p1}, Lcom/vk/lists/i0;->a(Ljava/lang/Object;)V
+    invoke-virtual {v2, p1}, Lcom/vk/lists/SimpleAdapter;->a(Ljava/lang/Object;)V
 
     return-void
 
@@ -308,11 +308,11 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/lists/p;->I(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    invoke-virtual {p0, p1}, Lcom/vk/lists/MergedAdapter;->I(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/music/ui/track/adapters/c;
+    instance-of v1, v0, Lcom/vk/music/ui/track/adapters/MusicAlbumMusicTrackItemAdapter;
 
     const/4 v2, 0x0
 
@@ -321,23 +321,23 @@
     move-object v0, v2
 
     :cond_0
-    check-cast v0, Lcom/vk/music/ui/track/adapters/c;
+    check-cast v0, Lcom/vk/music/ui/track/adapters/MusicAlbumMusicTrackItemAdapter;
 
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-virtual {p0, v0}, Lcom/vk/lists/p;->b(Landroidx/recyclerview/widget/RecyclerView$Adapter;)I
+    invoke-virtual {p0, v0}, Lcom/vk/lists/MergedAdapter;->b(Landroidx/recyclerview/widget/RecyclerView$Adapter;)I
 
     move-result v1
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
     const-string v2, "adapter.list"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sub-int/2addr p1, v1
 
@@ -367,14 +367,14 @@
     return-void
 .end method
 
-.method public final a(Ljava/lang/String;Lcom/vk/music/player/d;)V
+.method public final a(Ljava/lang/String;Lcom/vk/music/player/PlayerModel;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->f:Ljava/lang/String;
 
     .line 2
-    iput-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->g:Lcom/vk/music/player/d;
+    iput-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->g:Lcom/vk/music/player/PlayerModel;
 
     return-void
 .end method
@@ -393,7 +393,7 @@
     if-eqz p2, :cond_0
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/lists/p;->k()V
+    invoke-virtual {p0}, Lcom/vk/lists/MergedAdapter;->k()V
 
     .line 4
     iget-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->B:Landroid/util/SparseArray;
@@ -407,7 +407,7 @@
 
     .line 6
     :cond_0
-    iget-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->g:Lcom/vk/music/player/d;
+    iget-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->g:Lcom/vk/music/player/PlayerModel;
 
     iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->f:Ljava/lang/String;
 
@@ -416,7 +416,7 @@
     if-eqz v0, :cond_1
 
     .line 7
-    invoke-direct {p0, p1, v0, p2}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->a(Ljava/util/List;Ljava/lang/String;Lcom/vk/music/player/d;)Landroid/util/SparseArray;
+    invoke-direct {p0, p1, v0, p2}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->a(Ljava/util/List;Ljava/lang/String;Lcom/vk/music/player/PlayerModel;)Landroid/util/SparseArray;
 
     move-result-object p2
 
@@ -453,9 +453,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/ui/common/b;
+    check-cast v1, Lcom/vk/music/ui/common/MusicAdapter;
 
-    invoke-virtual {v1, v2}, Lcom/vk/music/ui/common/b;->g(Ljava/util/List;)V
+    invoke-virtual {v1, v2}, Lcom/vk/music/ui/common/MusicAdapter;->g(Ljava/util/List;)V
 
     add-int/lit8 p1, p1, 0x1
 
@@ -486,7 +486,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/lists/p;->k()V
+    invoke-virtual {p0}, Lcom/vk/lists/MergedAdapter;->k()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->B:Landroid/util/SparseArray;

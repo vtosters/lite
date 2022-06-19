@@ -12,15 +12,15 @@
 
 
 # static fields
-.field static final synthetic c:[Lkotlin/u/j;
+.field static final synthetic c:[Lkotlin/u/KProperty5;
 
 .field private static volatile d:Z
 
 
 # instance fields
-.field private final a:Lcom/vk/core/util/d1;
+.field private final a:Lcom/vk/core/util/ThreadLocalDelegate;
 
-.field private final b:Lcom/vk/im/engine/d;
+.field private final b:Lcom/vk/im/engine/ImEnvironment;
 
 
 # direct methods
@@ -29,13 +29,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -43,41 +43,41 @@
 
     const-string v4, "getInvocations()Landroid/util/SparseArray;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->c:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->c:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/d;)V
+.method public constructor <init>(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->b:Lcom/vk/im/engine/d;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->b:Lcom/vk/im/engine/ImEnvironment;
 
     .line 2
     sget-object p1, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector$invocations$2;->a:Lcom/vk/im/engine/internal/causation/CycleInvocationDetector$invocations$2;
 
-    invoke-static {p1}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {p1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->a:Lcom/vk/core/util/d1;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->a:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-void
 .end method
@@ -88,20 +88,20 @@
         value = {
             "()",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/internal/causation/a;",
+            "Lcom/vk/im/engine/internal/causation/CauseProducer;",
             ">;"
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->a:Lcom/vk/core/util/d1;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->a:Lcom/vk/core/util/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->c:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->c:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -110,11 +110,11 @@
     return-object v0
 .end method
 
-.method private final b(Lcom/vk/im/engine/internal/causation/a;)V
+.method private final b(Lcom/vk/im/engine/internal/causation/CauseProducer;)V
     .locals 2
 
     .line 1
-    invoke-static {p1}, Lcom/vk/im/engine/internal/causation/c;->a(Lcom/vk/im/engine/internal/causation/a;)Lcom/vk/im/engine/internal/causation/e;
+    invoke-static {p1}, Lcom/vk/im/engine/internal/causation/CauseProducer1;->a(Lcom/vk/im/engine/internal/causation/CauseProducer;)Lcom/vk/im/engine/internal/causation/WithCause;
 
     move-result-object p1
 
@@ -122,29 +122,29 @@
 
     invoke-direct {v0}, Lcom/vk/im/engine/exceptions/CycleInvocationException;-><init>()V
 
-    invoke-static {p1, v0}, Lcom/vk/im/engine/internal/causation/c;->a(Ljava/lang/Object;Ljava/lang/Throwable;)Lcom/vk/im/engine/internal/causation/e;
+    invoke-static {p1, v0}, Lcom/vk/im/engine/internal/causation/CauseProducer1;->a(Ljava/lang/Object;Ljava/lang/Throwable;)Lcom/vk/im/engine/internal/causation/WithCause;
 
     move-result-object p1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->b:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->b:Lcom/vk/im/engine/ImEnvironment;
 
-    new-instance v1, Lcom/vk/im/engine/events/x;
+    new-instance v1, Lcom/vk/im/engine/events/OnHistoryCorruptionDetectedEvent;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/internal/causation/e;->a()Lcom/vk/im/engine/internal/causation/a;
+    invoke-interface {p1}, Lcom/vk/im/engine/internal/causation/WithCause;->a()Lcom/vk/im/engine/internal/causation/CauseProducer;
 
     move-result-object p1
 
-    invoke-direct {v1, p1}, Lcom/vk/im/engine/events/x;-><init>(Lcom/vk/im/engine/internal/causation/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/im/engine/events/OnHistoryCorruptionDetectedEvent;-><init>(Lcom/vk/im/engine/internal/causation/CauseProducer;)V
 
-    invoke-interface {v0, p0, v1}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/a;)V
+    invoke-interface {v0, p0, v1}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/Event;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/internal/causation/a;)Z
+.method public final a(Lcom/vk/im/engine/internal/causation/CauseProducer;)Z
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -175,7 +175,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/causation/a;->a()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/causation/CauseProducer;->a()I
 
     move-result v4
 
@@ -190,14 +190,14 @@
 
     move-result-object v3
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/causation/a;->a()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/causation/CauseProducer;->a()I
 
     move-result v4
 
     invoke-virtual {v3, v4, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 4
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/causation/a;->b()Lcom/vk/im/engine/internal/causation/a;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/causation/CauseProducer;->b()Lcom/vk/im/engine/internal/causation/CauseProducer;
 
     move-result-object v1
 
@@ -218,7 +218,7 @@
     sput-boolean v1, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->d:Z
 
     .line 7
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->b(Lcom/vk/im/engine/internal/causation/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->b(Lcom/vk/im/engine/internal/causation/CauseProducer;)V
 
     return v1
 
@@ -228,7 +228,7 @@
     if-le v2, v1, :cond_3
 
     .line 8
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->b(Lcom/vk/im/engine/internal/causation/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;->b(Lcom/vk/im/engine/internal/causation/CauseProducer;)V
 
     :cond_3
     return v0

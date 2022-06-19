@@ -3,12 +3,12 @@
 .source "MusicCustomImagesContainer.kt"
 
 # interfaces
-.implements Lcom/vk/music/artists/list/b$a;
+.implements Lcom/vk/music/artists/list/MusicCustomImagesModel$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/artists/list/MusicCustomImagesContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/artists/list/b;ZLjava/lang/String;)V
+    value = Lcom/vk/music/artists/list/MusicCustomImagesContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/artists/list/MusicCustomImagesModel;ZLjava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,34 +40,34 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/music/artists/list/b;)V
+.method public a(Lcom/vk/music/artists/list/MusicCustomImagesModel;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer$b;->a:Lcom/vk/music/artists/list/MusicCustomImagesContainer;
 
-    invoke-static {v0}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->f(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vk/music/view/v/f;
+    invoke-static {v0}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->f(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vk/music/view/v/ViewAdapter;
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/vk/music/artists/list/b;->m()Z
+    invoke-interface {p1}, Lcom/vk/music/artists/list/MusicCustomImagesModel;->m()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/view/v/f;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/view/v/ViewAdapter;->b(Z)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer$b;->a:Lcom/vk/music/artists/list/MusicCustomImagesContainer;
 
-    invoke-static {v0}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->b(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vk/music/m/k/a;
+    invoke-static {v0}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->b(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vk/music/m/k/MusicCustomImageAdapter;
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/vk/music/artists/list/b;->Z()Ljava/util/List;
+    invoke-interface {p1}, Lcom/vk/music/artists/list/MusicCustomImagesModel;->Z()Ljava/util/List;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/ui/common/b;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/ui/common/MusicAdapter;->setItems(Ljava/util/List;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer$b;->a:Lcom/vk/music/artists/list/MusicCustomImagesContainer;
@@ -77,7 +77,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/music/artists/list/b;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+.method public a(Lcom/vk/music/artists/list/MusicCustomImagesModel;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
     .locals 2
 
     .line 6
@@ -106,7 +106,7 @@
 
     .line 8
     :cond_0
-    invoke-interface {p1}, Lcom/vk/music/artists/list/b;->Z()Ljava/util/List;
+    invoke-interface {p1}, Lcom/vk/music/artists/list/MusicCustomImagesModel;->Z()Ljava/util/List;
 
     move-result-object p1
 
@@ -131,11 +131,11 @@
 
     iget-object v1, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer$b;->a:Lcom/vk/music/artists/list/MusicCustomImagesContainer;
 
-    invoke-static {v1}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vtosters/lite/ui/v;
+    invoke-static {v1}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vtosters/lite/ui/MusicErrorViewHelper;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/ui/v;->a()Landroid/view/View;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/MusicErrorViewHelper;->a()Landroid/view/View;
 
     move-result-object v1
 
@@ -148,22 +148,22 @@
     .line 10
     iget-object p1, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer$b;->a:Lcom/vk/music/artists/list/MusicCustomImagesContainer;
 
-    invoke-static {p1}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vtosters/lite/ui/v;
+    invoke-static {p1}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vtosters/lite/ui/MusicErrorViewHelper;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/v;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/MusicErrorViewHelper;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     :cond_1
     return-void
 .end method
 
-.method public a(Lcom/vk/music/artists/list/b;Ljava/util/List;)V
+.method public a(Lcom/vk/music/artists/list/MusicCustomImagesModel;Ljava/util/List;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/artists/list/b;",
+            "Lcom/vk/music/artists/list/MusicCustomImagesModel;",
             "Ljava/util/List<",
             "+",
             "Lcom/vk/dto/music/CustomImage;",
@@ -174,20 +174,20 @@
     .line 4
     iget-object v0, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer$b;->a:Lcom/vk/music/artists/list/MusicCustomImagesContainer;
 
-    invoke-static {v0}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->f(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vk/music/view/v/f;
+    invoke-static {v0}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->f(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vk/music/view/v/ViewAdapter;
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/vk/music/artists/list/b;->m()Z
+    invoke-interface {p1}, Lcom/vk/music/artists/list/MusicCustomImagesModel;->m()Z
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/view/v/f;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/view/v/ViewAdapter;->b(Z)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer$b;->a:Lcom/vk/music/artists/list/MusicCustomImagesContainer;
 
-    invoke-static {p1}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->b(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vk/music/m/k/a;
+    invoke-static {p1}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->b(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vk/music/m/k/MusicCustomImageAdapter;
 
     move-result-object p1
 
@@ -195,7 +195,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vk/music/ui/common/b;->g(Ljava/util/List;)V
+    invoke-virtual {p1, p2}, Lcom/vk/music/ui/common/MusicAdapter;->g(Ljava/util/List;)V
 
     return-void
 .end method

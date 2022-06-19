@@ -3,7 +3,7 @@
 .source "CreateChatTransferPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/im/engine/models/dialogs/g;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/im/engine/models/dialogs/DialogsExt;",
         ">;"
     }
 .end annotation
@@ -46,14 +46,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/dialogs/g;)V
+.method public final a(Lcom/vk/im/engine/models/dialogs/DialogsExt;)V
     .locals 2
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/g;->a()Lcom/vk/im/engine/models/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/DialogsExt;->a()Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/g;->b()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/DialogsExt;->b()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object p1
 
@@ -64,7 +64,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/a;->d(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/EntityIntMap;->d(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -74,7 +74,7 @@
 
     const-string v1, "dialogs.getCached(toUid) ?: return@Consumer"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     iget-object v1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter$e;->a:Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;
@@ -84,11 +84,11 @@
     .line 3
     iget-object v1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter$e;->a:Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;
 
-    invoke-static {v1}, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;->c(Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;)Lcom/vtosters/lite/fragments/money/createtransfer/chat/b;
+    invoke-static {v1}, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;->c(Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;)Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferContract1;
 
     move-result-object v1
 
-    invoke-interface {v1, v0, p1}, Lcom/vtosters/lite/fragments/money/createtransfer/chat/b;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesInfo;)V
+    invoke-interface {v1, v0, p1}, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferContract1;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesInfo;)V
 
     :cond_0
     return-void
@@ -98,9 +98,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/dialogs/g;
+    check-cast p1, Lcom/vk/im/engine/models/dialogs/DialogsExt;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter$e;->a(Lcom/vk/im/engine/models/dialogs/g;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter$e;->a(Lcom/vk/im/engine/models/dialogs/DialogsExt;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "AudioPlayerListenersNotifyManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/audioipc/core/e;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/audioipc/core/AudioPlayerListener;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/audioipc/core/e;)V
+.method public final a(Lcom/vk/audioipc/core/AudioPlayerListener;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementComplete$1;->this$0:Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;
 
-    invoke-static {v0}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->a(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;)Lcom/vk/audioipc/core/d;
+    invoke-static {v0}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->a(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;)Lcom/vk/audioipc/core/AudioPlayer;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/audioipc/core/e;->c(Lcom/vk/audioipc/core/d;)V
+    invoke-interface {p1, v0}, Lcom/vk/audioipc/core/AudioPlayerListener;->c(Lcom/vk/audioipc/core/AudioPlayer;)V
 
     return-void
 .end method
@@ -65,11 +65,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/audioipc/core/e;
+    check-cast p1, Lcom/vk/audioipc/core/AudioPlayerListener;
 
-    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementComplete$1;->a(Lcom/vk/audioipc/core/e;)V
+    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementComplete$1;->a(Lcom/vk/audioipc/core/AudioPlayerListener;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

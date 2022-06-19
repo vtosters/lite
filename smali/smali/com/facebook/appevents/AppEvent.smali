@@ -207,7 +207,7 @@
     move-result-object p0
 
     .line 34
-    invoke-static {p0}, Lcom/facebook/appevents/internal/b;->a([B)Ljava/lang/String;
+    invoke-static {p0}, Lcom/facebook/appevents/internal/AppEventUtility;->a([B)Ljava/lang/String;
 
     move-result-object p0
     :try_end_0
@@ -220,7 +220,7 @@
     move-exception p0
 
     .line 35
-    invoke-static {v0, p0}, Lcom/facebook/internal/r;->a(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-static {v0, p0}, Lcom/facebook/internal/Utility;->a(Ljava/lang/String;Ljava/lang/Exception;)V
 
     const-string p0, "1"
 
@@ -230,7 +230,7 @@
     move-exception p0
 
     .line 36
-    invoke-static {v0, p0}, Lcom/facebook/internal/r;->a(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-static {v0, p0}, Lcom/facebook/internal/Utility;->a(Ljava/lang/String;Ljava/lang/Exception;)V
 
     const-string p0, "0"
 
@@ -343,12 +343,12 @@
 
     .line 28
     :cond_2
-    invoke-static {v0}, Lcom/facebook/appevents/m/a;->a(Ljava/util/Map;)V
+    invoke-static {v0}, Lcom/facebook/appevents/m/AddressFilterManager;->a(Ljava/util/Map;)V
 
     .line 29
     iget-object p1, p0, Lcom/facebook/appevents/AppEvent;->name:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lcom/facebook/appevents/m/b;->a(Ljava/util/Map;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/facebook/appevents/m/RestrictiveDataManager;->a(Ljava/util/Map;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -515,7 +515,7 @@
     const-string p4, "Created app event \'%s\'"
 
     .line 19
-    invoke-static {p1, p3, p4, p2}, Lcom/facebook/internal/l;->a(Lcom/facebook/LoggingBehavior;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p1, p3, p4, p2}, Lcom/facebook/internal/Logger;->a(Lcom/facebook/LoggingBehavior;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_1
     return-object v0

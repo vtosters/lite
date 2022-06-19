@@ -3,7 +3,7 @@
 .source "MusicPlaylistFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/dto/music/Playlist;",
         ">;"
     }
@@ -51,15 +51,15 @@
     .line 2
     iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$playlistProvider$1;->this$0:Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/music/playlist/modern/d;
+    check-cast v0, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/music/playlist/modern/d;->e()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistContract4;->e()Lcom/vk/dto/music/Playlist;
 
     move-result-object v0
 

@@ -65,14 +65,14 @@
 
     move-result-object p1
 
-    sget p2, Lcom/vk/catalog2/core/r;->catalog_loading_and_error_view:I
+    sget p2, Lcom/vk/catalog2/core/R7;->catalog_loading_and_error_view:I
 
     const/4 p3, 0x1
 
     invoke-virtual {p1, p2, p0, p3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 7
-    sget p1, Lcom/vk/catalog2/core/q;->loading:I
+    sget p1, Lcom/vk/catalog2/core/R10;->loading:I
 
     invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -80,12 +80,12 @@
 
     const-string p2, "findViewById(R.id.loading)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/catalog2/core/ui/view/CatalogLoadingAndErrorView;->a:Landroid/view/View;
 
     .line 8
-    sget p1, Lcom/vk/catalog2/core/q;->retry:I
+    sget p1, Lcom/vk/catalog2/core/R10;->retry:I
 
     invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -93,12 +93,12 @@
 
     const-string p2, "findViewById(R.id.retry)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/catalog2/core/ui/view/CatalogLoadingAndErrorView;->b:Landroid/view/View;
 
     .line 9
-    sget p1, Lcom/vk/catalog2/core/q;->error_text:I
+    sget p1, Lcom/vk/catalog2/core/R10;->error_text:I
 
     invoke-virtual {p0, p1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -106,7 +106,7 @@
 
     const-string p2, "findViewById(R.id.error_text)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 

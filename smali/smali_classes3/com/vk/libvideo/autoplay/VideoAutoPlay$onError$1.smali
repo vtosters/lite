@@ -3,7 +3,7 @@
 .source "VideoAutoPlay.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -60,7 +60,7 @@
     invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->Y()V
 
     .line 3
-    sget-object v0, Lcom/vk/media/player/c;->e:Lcom/vk/media/player/c;
+    sget-object v0, Lcom/vk/media/player/PlayerFactory;->INSTANCE:Lcom/vk/media/player/PlayerFactory;
 
     iget-object v1, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$onError$1;->this$0:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
@@ -74,12 +74,12 @@
 
     const-string v2, "videoFile.uniqueKey()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/media/player/c;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/media/player/PlayerFactory;->b(Ljava/lang/String;)V
 
     .line 4
-    invoke-static {p1}, Lcom/vk/libvideo/t;->d(I)I
+    invoke-static {p1}, Lcom/vk/libvideo/VideoUtils;->d(I)I
 
     move-result v0
 
@@ -94,7 +94,7 @@
 
     iget-object v2, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$onError$1;->this$0:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
-    invoke-virtual {v1, v2, v0, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventDispatcher;->a(Lcom/vk/libvideo/autoplay/a;II)V
+    invoke-virtual {v1, v2, v0, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventDispatcher;->a(Lcom/vk/libvideo/autoplay/AutoPlay;II)V
 
     :cond_0
     return-void
@@ -112,7 +112,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/libvideo/autoplay/VideoAutoPlay$onError$1;->a(I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Ljava/util/concurrent/Callable<",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -56,27 +56,27 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/SettingsListFragment$d;->call()Lkotlin/m;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/SettingsListFragment$d;->call()Lkotlin/Unit;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public call()Lkotlin/m;
+.method public call()Lkotlin/Unit;
     .locals 3
 
     .line 2
-    sget-object v0, Lcom/vk/bridges/g;->a:Lcom/vk/bridges/f;
+    sget-object v0, Lcom/vk/bridges/AuthBridge;->a:Lcom/vk/bridges/AuthBridge3;
 
     const-string v1, "user"
 
     const/4 v2, 0x1
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/bridges/f;->a(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/bridges/AuthBridge3;->a(Ljava/lang/String;Z)V
 
     .line 3
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method

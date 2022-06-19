@@ -3,12 +3,12 @@
 .source "PlayerListenersNotifyManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/audio/player/PlayerListenersNotifyManager;->a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/e;)V
+    value = Lcom/vtosters/lite/audio/player/PlayerListenersNotifyManager;->a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/TrackInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/music/player/c;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/music/player/PlayerListener;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -30,16 +30,16 @@
 # instance fields
 .field final synthetic $state:Lcom/vk/music/player/PlayState;
 
-.field final synthetic $track:Lcom/vk/music/player/e;
+.field final synthetic $track:Lcom/vk/music/player/TrackInfo;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/e;)V
+.method constructor <init>(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/TrackInfo;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vtosters/lite/audio/player/PlayerListenersNotifyManager$notifyOnStateChanged$1;->$state:Lcom/vk/music/player/PlayState;
 
-    iput-object p2, p0, Lcom/vtosters/lite/audio/player/PlayerListenersNotifyManager$notifyOnStateChanged$1;->$track:Lcom/vk/music/player/e;
+    iput-object p2, p0, Lcom/vtosters/lite/audio/player/PlayerListenersNotifyManager$notifyOnStateChanged$1;->$track:Lcom/vk/music/player/TrackInfo;
 
     const/4 p1, 0x1
 
@@ -50,15 +50,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/music/player/c;)V
+.method public final a(Lcom/vk/music/player/PlayerListener;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerListenersNotifyManager$notifyOnStateChanged$1;->$state:Lcom/vk/music/player/PlayState;
 
-    iget-object v1, p0, Lcom/vtosters/lite/audio/player/PlayerListenersNotifyManager$notifyOnStateChanged$1;->$track:Lcom/vk/music/player/e;
+    iget-object v1, p0, Lcom/vtosters/lite/audio/player/PlayerListenersNotifyManager$notifyOnStateChanged$1;->$track:Lcom/vk/music/player/TrackInfo;
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/music/player/c;->a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/e;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/music/player/PlayerListener;->a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/TrackInfo;)V
 
     return-void
 .end method
@@ -67,11 +67,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/music/player/c;
+    check-cast p1, Lcom/vk/music/player/PlayerListener;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/audio/player/PlayerListenersNotifyManager$notifyOnStateChanged$1;->a(Lcom/vk/music/player/c;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/audio/player/PlayerListenersNotifyManager$notifyOnStateChanged$1;->a(Lcom/vk/music/player/PlayerListener;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

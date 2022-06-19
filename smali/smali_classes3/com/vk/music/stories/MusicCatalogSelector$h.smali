@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/stories/MusicCatalogSelector;->a(Landroidx/appcompat/app/AppCompatActivity;Lkotlin/jvm/b/b;Landroid/content/DialogInterface$OnCancelListener;)V
+    value = Lcom/vk/music/stories/MusicCatalogSelector;->a(Landroidx/appcompat/app/AppCompatActivity;Lkotlin/jvm/b/Functions2;Landroid/content/DialogInterface$OnCancelListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -48,11 +48,11 @@
 
     iget-object p1, p0, Lcom/vk/music/stories/MusicCatalogSelector$h;->a:Lcom/vk/music/stories/MusicCatalogSelector;
 
-    invoke-static {p1}, Lcom/vk/music/stories/MusicCatalogSelector;->f(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/music/stories/f;
+    invoke-static {p1}, Lcom/vk/music/stories/MusicCatalogSelector;->f(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/music/stories/MusicStoriesPlayerModel;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/music/stories/f;->A0()Z
+    invoke-virtual {p1}, Lcom/vk/music/stories/MusicStoriesPlayerModel;->A0()Z
 
     move-result p1
 
@@ -61,11 +61,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/music/stories/MusicCatalogSelector$h;->a:Lcom/vk/music/stories/MusicCatalogSelector;
 
-    invoke-static {p1}, Lcom/vk/music/stories/MusicCatalogSelector;->f(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/music/stories/f;
+    invoke-static {p1}, Lcom/vk/music/stories/MusicCatalogSelector;->f(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/music/stories/MusicStoriesPlayerModel;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/music/stories/f;->e()V
+    invoke-virtual {p1}, Lcom/vk/music/stories/MusicStoriesPlayerModel;->e()V
 
     .line 3
     iget-object p1, p0, Lcom/vk/music/stories/MusicCatalogSelector$h;->a:Lcom/vk/music/stories/MusicCatalogSelector;
@@ -80,11 +80,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/music/stories/MusicCatalogSelector$h;->a:Lcom/vk/music/stories/MusicCatalogSelector;
 
-    invoke-static {p1}, Lcom/vk/music/stories/MusicCatalogSelector;->f(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/music/stories/f;
+    invoke-static {p1}, Lcom/vk/music/stories/MusicCatalogSelector;->f(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/music/stories/MusicStoriesPlayerModel;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/music/stories/f;->stop()V
+    invoke-virtual {p1}, Lcom/vk/music/stories/MusicStoriesPlayerModel;->stop()V
 
     .line 5
     :goto_0

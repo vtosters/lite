@@ -58,7 +58,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/io/File;ZZZJ[BLcom/vk/audio/AudioMessageSource;ZILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/io/File;ZZZJ[BLcom/vk/audio/AudioMessageSource;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 9
 
     move/from16 v0, p10
@@ -234,7 +234,7 @@
 
     iget-object v1, p1, Lcom/vk/audio/AudioRecorder$b;->a:Ljava/io/File;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -270,7 +270,7 @@
 
     iget-object v1, p1, Lcom/vk/audio/AudioRecorder$b;->f:[B
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -280,7 +280,7 @@
 
     iget-object v1, p1, Lcom/vk/audio/AudioRecorder$b;->g:Lcom/vk/audio/AudioMessageSource;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

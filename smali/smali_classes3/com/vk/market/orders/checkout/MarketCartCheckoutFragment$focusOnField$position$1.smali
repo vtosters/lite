@@ -3,7 +3,7 @@
 .source "MarketCartCheckoutFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/market/orders/adapter/e;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/market/orders/adapter/MarketCartCheckoutAdapter7;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/market/orders/adapter/e;)Z
+.method public final a(Lcom/vk/market/orders/adapter/MarketCartCheckoutAdapter7;)Z
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/market/orders/adapter/e;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/market/orders/adapter/MarketCartCheckoutAdapter7;->a()Ljava/lang/String;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$focusOnField$position$1;->$id:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -67,9 +67,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/market/orders/adapter/e;
+    check-cast p1, Lcom/vk/market/orders/adapter/MarketCartCheckoutAdapter7;
 
-    invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$focusOnField$position$1;->a(Lcom/vk/market/orders/adapter/e;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$focusOnField$position$1;->a(Lcom/vk/market/orders/adapter/MarketCartCheckoutAdapter7;)Z
 
     move-result p1
 

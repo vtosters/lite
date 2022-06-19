@@ -3,12 +3,12 @@
 .source "MsgHistoryFromLocalMergeTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;->b(Lcom/vk/im/engine/d;)Ljava/util/List;
+    value = Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;->b(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
         "Ljava/util/List<",
         "Lcom/vk/im/engine/models/messages/Msg;",
@@ -29,7 +29,7 @@
 
 
 # instance fields
-.field final synthetic $env:Lcom/vk/im/engine/d;
+.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
 
 .field final synthetic $msgListSorted:Ljava/util/List;
 
@@ -37,12 +37,12 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;Lcom/vk/im/engine/d;Ljava/util/List;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;
 
-    iput-object p2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/d;
+    iput-object p2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     iput-object p3, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask$onMerge$1;->$msgListSorted:Ljava/util/List;
 
@@ -86,18 +86,18 @@
     move-result v3
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->d()I
 
     move-result v6
 
     .line 3
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;
 
-    iget-object v2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     iget-object v4, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask$onMerge$1;->$msgListSorted:Ljava/util/List;
 
@@ -105,32 +105,32 @@
 
     move-result-object v5
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;Lcom/vk/im/engine/d;ILjava/util/List;Lcom/vk/im/engine/internal/merge/messages/WeightStrategy;I)Ljava/util/List;
+    invoke-static/range {v1 .. v6}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;Lcom/vk/im/engine/ImEnvironment;ILjava/util/List;Lcom/vk/im/engine/internal/merge/messages/WeightStrategy;I)Ljava/util/List;
 
     move-result-object p1
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;
 
-    invoke-static {v0}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;->b(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;)Lkotlin/jvm/b/b;
+    invoke-static {v0}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;->b(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;)Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     .line 5
     :cond_0
     iget-object v0, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;
 
-    iget-object v1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-static {v0, v1, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;Lcom/vk/im/engine/d;Ljava/util/Collection;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;Lcom/vk/im/engine/ImEnvironment;Ljava/util/Collection;)V
 
     .line 6
     invoke-static {p1}, Lkotlin/collections/l;->e(Ljava/util/Collection;)Ljava/util/List;

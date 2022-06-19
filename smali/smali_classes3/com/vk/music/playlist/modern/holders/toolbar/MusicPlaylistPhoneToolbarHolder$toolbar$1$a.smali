@@ -42,7 +42,7 @@
 
     iget-object p1, p1, Lcom/vk/music/playlist/modern/holders/toolbar/MusicPlaylistPhoneToolbarHolder$toolbar$1;->this$0:Lcom/vk/music/playlist/modern/holders/toolbar/MusicPlaylistPhoneToolbarHolder;
 
-    invoke-static {p1}, Lcom/vk/music/playlist/modern/holders/toolbar/MusicPlaylistPhoneToolbarHolder;->e(Lcom/vk/music/playlist/modern/holders/toolbar/MusicPlaylistPhoneToolbarHolder;)Lcom/vk/core/ui/k;
+    invoke-static {p1}, Lcom/vk/music/playlist/modern/holders/toolbar/MusicPlaylistPhoneToolbarHolder;->e(Lcom/vk/music/playlist/modern/holders/toolbar/MusicPlaylistPhoneToolbarHolder;)Lcom/vk/core/ui/IdClickListener;
 
     move-result-object p1
 
@@ -52,7 +52,7 @@
 
     const/4 v2, 0x2
 
-    invoke-static {p1, v1, v0, v2, v0}, Lcom/vk/core/ui/k$b;->a(Lcom/vk/core/ui/k;ILjava/lang/Object;ILjava/lang/Object;)V
+    invoke-static {p1, v1, v0, v2, v0}, Lcom/vk/core/ui/IdClickListener$b;->a(Lcom/vk/core/ui/IdClickListener;ILjava/lang/Object;ILjava/lang/Object;)V
 
     return-void
 .end method

@@ -67,9 +67,9 @@
 
     iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$h;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object v1, v1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v1, v1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    invoke-virtual {v1}, Lcom/vk/music/view/v/a;->getCount()I
+    invoke-virtual {v1}, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->getCount()I
 
     move-result v1
 

@@ -3,7 +3,7 @@
 .source "LivesTabsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,7 +52,7 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment$onViewCreated$$inlined$let$lambda$1;->this$0:Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;
 
-    invoke-virtual {p1}, Ld/a/a/a/l;->b5()I
+    invoke-virtual {p1}, Lme/grishka/appkit/fragments/TabbedLoaderFragment;->b5()I
 
     move-result p1
 
@@ -60,13 +60,13 @@
 
     iget-object p1, p0, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment$onViewCreated$$inlined$let$lambda$1;->this$0:Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;
 
-    invoke-virtual {p1}, Ld/a/a/a/l;->Z4()I
+    invoke-virtual {p1}, Lme/grishka/appkit/fragments/TabbedLoaderFragment;->Z4()I
 
     move-result p1
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment$onViewCreated$$inlined$let$lambda$1;->this$0:Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;
 
-    invoke-virtual {v0}, Ld/a/a/a/l;->b5()I
+    invoke-virtual {v0}, Lme/grishka/appkit/fragments/TabbedLoaderFragment;->b5()I
 
     move-result v0
 
@@ -75,19 +75,19 @@
     .line 2
     iget-object p1, p0, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment$onViewCreated$$inlined$let$lambda$1;->this$0:Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;
 
-    invoke-virtual {p1}, Ld/a/a/a/l;->Z4()I
+    invoke-virtual {p1}, Lme/grishka/appkit/fragments/TabbedLoaderFragment;->Z4()I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Ld/a/a/a/l;->t0(I)Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {p1, v0}, Lme/grishka/appkit/fragments/TabbedLoaderFragment;->t0(I)Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    check-cast p1, Lcom/vtosters/lite/fragments/lives/c;
+    check-cast p1, Lcom/vtosters/lite/fragments/lives/LivesPostListFragment;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/lives/c;->F()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/lives/LivesPostListFragment;->F()V
 
     goto :goto_0
 
@@ -113,7 +113,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment$onViewCreated$$inlined$let$lambda$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

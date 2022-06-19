@@ -3,12 +3,12 @@
 .source "DiscoverFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/discover/DiscoverFragment;->d(Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/discover/DiscoverFragment;->d(Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $callback:Lkotlin/jvm/b/a;
+.field final synthetic $callback:Lkotlin/jvm/b/Functions;
 
 .field final synthetic this$0:Lcom/vk/discover/DiscoverFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/discover/DiscoverFragment;Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lcom/vk/discover/DiscoverFragment;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/discover/DiscoverFragment$setOnResumeCallback$1;->this$0:Lcom/vk/discover/DiscoverFragment;
 
-    iput-object p2, p0, Lcom/vk/discover/DiscoverFragment$setOnResumeCallback$1;->$callback:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/discover/DiscoverFragment$setOnResumeCallback$1;->$callback:Lkotlin/jvm/b/Functions;
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/discover/DiscoverFragment$setOnResumeCallback$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -64,16 +64,16 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment$setOnResumeCallback$1;->$callback:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFragment$setOnResumeCallback$1;->$callback:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     .line 3
     iget-object v0, p0, Lcom/vk/discover/DiscoverFragment$setOnResumeCallback$1;->this$0:Lcom/vk/discover/DiscoverFragment;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/discover/DiscoverFragment;->a(Lcom/vk/discover/DiscoverFragment;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, v1}, Lcom/vk/discover/DiscoverFragment;->a(Lcom/vk/discover/DiscoverFragment;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method

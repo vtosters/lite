@@ -5,7 +5,7 @@
 # interfaces
 .implements Ljava/lang/Runnable;
 .implements Ljava/util/concurrent/Callable;
-.implements Lio/reactivex/disposables/b;
+.implements Lio/reactivex/disposables/Disposable;
 
 
 # annotations
@@ -18,7 +18,7 @@
         "Ljava/util/concurrent/Callable<",
         "Ljava/lang/Object;",
         ">;",
-        "Lio/reactivex/disposables/b;"
+        "Lio/reactivex/disposables/Disposable;"
     }
 .end annotation
 
@@ -74,7 +74,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Runnable;Lio/reactivex/internal/disposables/a;)V
+.method public constructor <init>(Ljava/lang/Runnable;Lio/reactivex/internal/disposables/DisposableContainer;)V
     .locals 1
 
     const/4 v0, 0x3
@@ -295,9 +295,9 @@
     if-eqz v1, :cond_4
 
     .line 9
-    check-cast v0, Lio/reactivex/internal/disposables/a;
+    check-cast v0, Lio/reactivex/internal/disposables/DisposableContainer;
 
-    invoke-interface {v0, p0}, Lio/reactivex/internal/disposables/a;->c(Lio/reactivex/disposables/b;)Z
+    invoke-interface {v0, p0}, Lio/reactivex/internal/disposables/DisposableContainer;->c(Lio/reactivex/disposables/Disposable;)Z
 
     :cond_6
     :goto_3
@@ -337,7 +337,7 @@
 
     .line 3
     :try_start_1
-    invoke-static {v4}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v4}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -366,9 +366,9 @@
     if-eqz v0, :cond_0
 
     .line 7
-    check-cast v0, Lio/reactivex/internal/disposables/a;
+    check-cast v0, Lio/reactivex/internal/disposables/DisposableContainer;
 
-    invoke-interface {v0, p0}, Lio/reactivex/internal/disposables/a;->c(Lio/reactivex/disposables/b;)Z
+    invoke-interface {v0, p0}, Lio/reactivex/internal/disposables/DisposableContainer;->c(Lio/reactivex/disposables/Disposable;)Z
 
     .line 8
     :cond_0
@@ -423,9 +423,9 @@
     if-eqz v0, :cond_2
 
     .line 13
-    check-cast v0, Lio/reactivex/internal/disposables/a;
+    check-cast v0, Lio/reactivex/internal/disposables/DisposableContainer;
 
-    invoke-interface {v0, p0}, Lio/reactivex/internal/disposables/a;->c(Lio/reactivex/disposables/b;)Z
+    invoke-interface {v0, p0}, Lio/reactivex/internal/disposables/DisposableContainer;->c(Lio/reactivex/disposables/Disposable;)Z
 
     .line 14
     :cond_2

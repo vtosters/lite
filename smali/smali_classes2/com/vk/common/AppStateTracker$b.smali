@@ -35,11 +35,11 @@
     .line 2
     sget-object v0, Lcom/vk/common/AppStateTracker;->k:Lcom/vk/common/AppStateTracker;
 
-    invoke-static {v0}, Lcom/vk/common/AppStateTracker;->b(Lcom/vk/common/AppStateTracker;)Lcom/vk/core/util/k;
+    invoke-static {v0}, Lcom/vk/common/AppStateTracker;->b(Lcom/vk/common/AppStateTracker;)Lcom/vk/core/util/AppSettings;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/core/util/k;->b(J)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/core/util/AppSettings;->b(J)V
 
     return-void
 .end method
@@ -59,11 +59,11 @@
     .line 1
     sget-object v0, Lcom/vk/common/AppStateTracker;->k:Lcom/vk/common/AppStateTracker;
 
-    invoke-static {v0}, Lcom/vk/common/AppStateTracker;->b(Lcom/vk/common/AppStateTracker;)Lcom/vk/core/util/k;
+    invoke-static {v0}, Lcom/vk/common/AppStateTracker;->b(Lcom/vk/common/AppStateTracker;)Lcom/vk/core/util/AppSettings;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/core/util/k;->b(J)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/core/util/AppSettings;->b(J)V
 
     return-void
 .end method

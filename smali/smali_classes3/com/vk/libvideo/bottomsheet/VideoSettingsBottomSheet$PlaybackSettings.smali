@@ -51,11 +51,11 @@
     new-instance v7, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$PlaybackSettings;
 
     .line 1
-    sget v4, Lcom/vk/libvideo/g;->video_quality:I
+    sget v4, Lcom/vk/libvideo/R;->video_quality:I
 
-    sget v5, Lcom/vk/libvideo/e;->ic_settings_outline_28:I
+    sget v5, Lcom/vk/libvideo/R7;->ic_settings_outline_28:I
 
-    sget v6, Lcom/vk/libvideo/j;->video_playback_quality:I
+    sget v6, Lcom/vk/libvideo/R11;->video_playback_quality:I
 
     const-string v2, "QUALITY"
 
@@ -74,11 +74,11 @@
     new-instance v1, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$PlaybackSettings;
 
     .line 2
-    sget v11, Lcom/vk/libvideo/g;->video_subtitles:I
+    sget v11, Lcom/vk/libvideo/R;->video_subtitles:I
 
-    sget v12, Lcom/vk/libvideo/e;->ic_subtitles_outline_28:I
+    sget v12, Lcom/vk/libvideo/R7;->ic_subtitles_outline_28:I
 
-    sget v13, Lcom/vk/libvideo/j;->video_playback_subtitles:I
+    sget v13, Lcom/vk/libvideo/R11;->video_playback_subtitles:I
 
     const-string v9, "SUBTITLE"
 
@@ -97,11 +97,11 @@
     new-instance v1, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$PlaybackSettings;
 
     .line 3
-    sget v6, Lcom/vk/libvideo/g;->video_playback_speed:I
+    sget v6, Lcom/vk/libvideo/R;->video_playback_speed:I
 
-    sget v7, Lcom/vk/libvideo/e;->ic_play_speed_outline_28:I
+    sget v7, Lcom/vk/libvideo/R7;->ic_play_speed_outline_28:I
 
-    sget v8, Lcom/vk/libvideo/j;->video_playback_speed:I
+    sget v8, Lcom/vk/libvideo/R11;->video_playback_speed:I
 
     const-string v4, "SPEED"
 

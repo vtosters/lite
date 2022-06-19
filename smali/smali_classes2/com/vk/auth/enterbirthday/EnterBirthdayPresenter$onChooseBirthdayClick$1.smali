@@ -3,7 +3,7 @@
 .source "EnterBirthdayPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lkotlin/Pair<",
         "+",
         "Ljava/lang/Integer;",
@@ -114,7 +114,7 @@
     :goto_0
     iget-object v3, p0, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter$onChooseBirthdayClick$1;->a:Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;
 
-    invoke-static {v3}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;->c(Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;)Lcom/vk/auth/enterbirthday/a;
+    invoke-static {v3}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;->c(Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;)Lcom/vk/auth/enterbirthday/EnterBirthdayView;
 
     move-result-object v3
 
@@ -124,7 +124,7 @@
 
     invoke-direct {v4, p0, p1}, Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter$onChooseBirthdayClick$1$1;-><init>(Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter$onChooseBirthdayClick$1;Lkotlin/Pair;)V
 
-    invoke-interface {v3, v2, v0, v1, v4}, Lcom/vk/auth/enterbirthday/a;->a(Lcom/vk/auth/enterbirthday/SimpleDate;Lcom/vk/auth/enterbirthday/SimpleDate;Lcom/vk/auth/enterbirthday/SimpleDate;Lkotlin/jvm/b/b;)V
+    invoke-interface {v3, v2, v0, v1, v4}, Lcom/vk/auth/enterbirthday/EnterBirthdayView;->a(Lcom/vk/auth/enterbirthday/SimpleDate;Lcom/vk/auth/enterbirthday/SimpleDate;Lcom/vk/auth/enterbirthday/SimpleDate;Lkotlin/jvm/b/Functions2;)V
 
     :cond_1
     return-void

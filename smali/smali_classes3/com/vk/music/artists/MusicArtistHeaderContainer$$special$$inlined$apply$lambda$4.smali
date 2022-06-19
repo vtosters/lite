@@ -3,12 +3,12 @@
 .source "MusicArtistHeaderContainer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/artists/MusicArtistHeaderContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/sections/f;Z)V
+    value = Lcom/vk/music/artists/MusicArtistHeaderContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/sections/MusicSectionsModel;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -60,7 +60,7 @@
 
     iget-object v0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer$$special$$inlined$apply$lambda$4;->this$0:Lcom/vk/music/artists/MusicArtistHeaderContainer;
 
-    invoke-static {v0}, Lcom/vk/music/artists/MusicArtistHeaderContainer;->i(Lcom/vk/music/artists/MusicArtistHeaderContainer;)Lcom/vk/music/sections/f;
+    invoke-static {v0}, Lcom/vk/music/artists/MusicArtistHeaderContainer;->i(Lcom/vk/music/artists/MusicArtistHeaderContainer;)Lcom/vk/music/sections/MusicSectionsModel;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
 
     const/4 v2, 0x0
 
-    invoke-interface {v0, p1, v1, v2}, Lcom/vk/music/sections/f;->a(Lcom/vk/dto/music/Section;Lcom/vk/dto/music/MusicTrack;Z)V
+    invoke-interface {v0, p1, v1, v2}, Lcom/vk/music/sections/MusicSectionsModel;->a(Lcom/vk/dto/music/Section;Lcom/vk/dto/music/MusicTrack;Z)V
 
     :cond_0
     return-void
@@ -82,7 +82,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/music/artists/MusicArtistHeaderContainer$$special$$inlined$apply$lambda$4;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

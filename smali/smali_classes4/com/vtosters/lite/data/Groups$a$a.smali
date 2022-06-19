@@ -3,7 +3,7 @@
 .source "Groups.java"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/base/ApiCallback<",
         "Ljava/util/ArrayList<",
         "Lcom/vk/dto/group/Group;",
         ">;>;"
@@ -43,7 +43,7 @@
     .locals 0
 
     .line 4
-    invoke-static {}, Lcom/vtosters/lite/j0/d;->b()Ljava/util/List;
+    invoke-static {}, Lcom/vtosters/lite/j0/GroupsCache;->b()Ljava/util/List;
 
     move-result-object p1
 
@@ -78,7 +78,7 @@
     invoke-static {p1}, Lcom/vtosters/lite/data/Groups;->a(Ljava/util/List;)V
 
     .line 3
-    invoke-static {p1}, Lcom/vtosters/lite/j0/d;->a(Ljava/util/List;)V
+    invoke-static {p1}, Lcom/vtosters/lite/j0/GroupsCache;->a(Ljava/util/List;)V
 
     return-void
 .end method

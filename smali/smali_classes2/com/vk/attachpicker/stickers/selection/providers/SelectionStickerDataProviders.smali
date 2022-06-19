@@ -24,17 +24,17 @@
     return-void
 .end method
 
-.method public static final a(Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;)Lkotlin/jvm/b/a;
+.method public static final a(Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;)Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;",
             ")",
-            "Lkotlin/jvm/b/a<",
-            "Lc/a/m<",
+            "Lkotlin/jvm/b/Functions<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
-            "Lcom/vk/attachpicker/stickers/selection/h/a;",
+            "Lcom/vk/attachpicker/stickers/selection/h/ClickableItem;",
             ">;>;>;"
         }
     .end annotation

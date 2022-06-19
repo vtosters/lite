@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/e;Ljava/util/Collection;)V
+    value = Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/PrefetchTag;Ljava/util/Collection;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/audiomsg/player/d;
+.field final synthetic a:Lcom/vk/audiomsg/player/AudioMsgTrack;
 
 .field final synthetic b:Lcom/vk/audiomsg/player/impl/PrefetchDelegate;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/audiomsg/player/d;Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/e;)V
+.method constructor <init>(Lcom/vk/audiomsg/player/AudioMsgTrack;Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/PrefetchTag;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$h;->a:Lcom/vk/audiomsg/player/d;
+    iput-object p1, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$h;->a:Lcom/vk/audiomsg/player/AudioMsgTrack;
 
     iput-object p2, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$h;->b:Lcom/vk/audiomsg/player/impl/PrefetchDelegate;
 
@@ -44,9 +44,9 @@
     .line 1
     iget-object v0, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$h;->b:Lcom/vk/audiomsg/player/impl/PrefetchDelegate;
 
-    iget-object v1, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$h;->a:Lcom/vk/audiomsg/player/d;
+    iget-object v1, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$h;->a:Lcom/vk/audiomsg/player/AudioMsgTrack;
 
-    invoke-static {v0, v1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->a(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/d;)V
+    invoke-static {v0, v1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->a(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
 
     return-void
 .end method

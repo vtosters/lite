@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/playlist/PlaylistsContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/playlist/g;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/d;Lcom/vk/music/common/BoomModel;)V
+    value = Lcom/vk/music/playlist/PlaylistsContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/playlist/PlaylistsModel;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/common/BoomModel;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -80,25 +80,25 @@
 
     if-eqz p1, :cond_2
 
-    check-cast p1, Lcom/vk/music/playlist/f;
+    check-cast p1, Lcom/vk/music/playlist/PlaylistsFiltersAdapter1;
 
-    invoke-virtual {p1, p3}, Lcom/vk/music/playlist/f;->getItem(I)Lcom/vk/music/playlist/a;
+    invoke-virtual {p1, p3}, Lcom/vk/music/playlist/PlaylistsFiltersAdapter1;->getItem(I)Lcom/vk/music/playlist/PlaylistsFiltersAdapter;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/a;->a()I
+    invoke-virtual {p1}, Lcom/vk/music/playlist/PlaylistsFiltersAdapter;->a()I
 
     move-result p1
 
     iget-object p2, p0, Lcom/vk/music/playlist/PlaylistsContainer$c;->c:Lcom/vk/music/playlist/PlaylistsContainer;
 
-    invoke-virtual {p2}, Lcom/vk/music/playlist/PlaylistsContainer;->getModel$app_armUpload()Lcom/vk/music/playlist/g;
+    invoke-virtual {p2}, Lcom/vk/music/playlist/PlaylistsContainer;->getModel$app_armUpload()Lcom/vk/music/playlist/PlaylistsModel;
 
     move-result-object p2
 
-    invoke-interface {p2, p1}, Lcom/vk/music/playlist/g;->c(I)V
+    invoke-interface {p2, p1}, Lcom/vk/music/playlist/PlaylistsModel;->c(I)V
 
     :cond_1
     return-void

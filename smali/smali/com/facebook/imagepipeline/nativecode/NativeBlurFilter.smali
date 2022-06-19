@@ -4,7 +4,7 @@
 
 
 # annotations
-.annotation build Lcom/facebook/common/internal/d;
+.annotation build Lcom/facebook/common/internal/DoNotStrip;
 .end annotation
 
 
@@ -31,7 +31,7 @@
     .locals 3
 
     .line 1
-    invoke-static {p0}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 v0, 0x1
 
@@ -48,7 +48,7 @@
 
     .line 2
     :goto_0
-    invoke-static {v2}, Lcom/facebook/common/internal/g;->a(Z)V
+    invoke-static {v2}, Lcom/facebook/common/internal/Preconditions;->a(Z)V
 
     if-lez p2, :cond_1
 
@@ -59,7 +59,7 @@
 
     .line 3
     :goto_1
-    invoke-static {v0}, Lcom/facebook/common/internal/g;->a(Z)V
+    invoke-static {v0}, Lcom/facebook/common/internal/Preconditions;->a(Z)V
 
     .line 4
     invoke-static {p0, p1, p2}, Lcom/facebook/imagepipeline/nativecode/NativeBlurFilter;->nativeIterativeBoxBlur(Landroid/graphics/Bitmap;II)V
@@ -68,6 +68,6 @@
 .end method
 
 .method private static native nativeIterativeBoxBlur(Landroid/graphics/Bitmap;II)V
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end method

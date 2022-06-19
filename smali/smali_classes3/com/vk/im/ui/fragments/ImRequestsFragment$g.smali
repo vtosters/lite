@@ -3,7 +3,7 @@
 .source "ImRequestsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/im/engine/events/s;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/im/engine/events/OnDialogsCountUpdateEvent;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/events/s;)V
+.method public final a(Lcom/vk/im/engine/events/OnDialogsCountUpdateEvent;)V
     .locals 0
 
     .line 1
@@ -61,9 +61,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/s;
+    check-cast p1, Lcom/vk/im/engine/events/OnDialogsCountUpdateEvent;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/fragments/ImRequestsFragment$g;->a(Lcom/vk/im/engine/events/s;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/fragments/ImRequestsFragment$g;->a(Lcom/vk/im/engine/events/OnDialogsCountUpdateEvent;)V
 
     return-void
 .end method

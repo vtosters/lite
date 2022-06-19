@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -35,19 +35,19 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/dto/common/data/c;
+.method public final a()Lcom/vk/dto/common/data/JsonParser;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/tags/Tag;",
             ">;"
         }
     .end annotation
 
     .line 12
-    invoke-static {}, Lcom/vk/dto/tags/Tag;->w1()Lcom/vk/dto/common/data/c;
+    invoke-static {}, Lcom/vk/dto/tags/Tag;->w1()Lcom/vk/dto/common/data/JsonParser;
 
     move-result-object v0
 
@@ -119,7 +119,7 @@
 
     const-string v6, "json.getJSONObject(ServerKeys.LINK)"
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/tags/TagLink$c;->a(Lorg/json/JSONObject;)Lcom/vk/dto/tags/TagLink;
 

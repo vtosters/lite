@@ -69,7 +69,7 @@
     .locals 1
 
     .line 4
-    sget p1, Lcom/vk/im/ui/o;->ColorProgressBar_android_color:I
+    sget p1, Lcom/vk/im/ui/R2;->ColorProgressBar_android_color:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -78,7 +78,7 @@
     if-eqz p1, :cond_0
 
     .line 5
-    sget p1, Lcom/vk/im/ui/o;->ColorProgressBar_android_color:I
+    sget p1, Lcom/vk/im/ui/R2;->ColorProgressBar_android_color:I
 
     const/high16 v0, -0x1000000
 
@@ -96,7 +96,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/im/ui/o;->ColorProgressBar:[I
+    sget-object v0, Lcom/vk/im/ui/R2;->ColorProgressBar:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 

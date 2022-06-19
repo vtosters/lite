@@ -3,7 +3,7 @@
 .source "VideoFeedDialog.kt"
 
 # interfaces
-.implements Lcom/vk/libvideo/dialogs/b;
+.implements Lcom/vk/libvideo/dialogs/AnimationDialogCallback;
 
 
 # annotations
@@ -22,9 +22,9 @@
 
 .field private final b:[I
 
-.field private final c:Lcom/vk/media/player/k/b$b;
+.field private final c:Lcom/vk/media/player/k/PlayerUtils$b;
 
-.field private d:Lcom/vk/libvideo/ui/e;
+.field private d:Lcom/vk/libvideo/ui/VideoListItemView;
 
 .field final synthetic e:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
@@ -58,13 +58,13 @@
     iput-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->b:[I
 
     .line 4
-    new-instance p1, Lcom/vk/media/player/k/b$b;
+    new-instance p1, Lcom/vk/media/player/k/PlayerUtils$b;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, v0, v0}, Lcom/vk/media/player/k/b$b;-><init>(II)V
+    invoke-direct {p1, v0, v0}, Lcom/vk/media/player/k/PlayerUtils$b;-><init>(II)V
 
-    iput-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->c:Lcom/vk/media/player/k/b$b;
+    iput-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->c:Lcom/vk/media/player/k/PlayerUtils$b;
 
     return-void
 .end method
@@ -75,7 +75,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/e;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/VideoListItemView;
 
     if-eqz v0, :cond_0
 
@@ -107,7 +107,7 @@
     .line 5
     new-instance v2, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g$b;
 
-    invoke-direct {v2, v0, p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g$b;-><init>(Lcom/vk/libvideo/ui/e;Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;)V
+    invoke-direct {v2, v0, p0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g$b;-><init>(Lcom/vk/libvideo/ui/VideoListItemView;Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;)V
 
     invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
 
@@ -124,7 +124,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/e;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/VideoListItemView;
 
     const/4 v1, 0x1
 
@@ -178,7 +178,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/e;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/VideoListItemView;
 
     if-eqz v0, :cond_0
 
@@ -216,7 +216,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/e;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/VideoListItemView;
 
     if-eqz v0, :cond_0
 
@@ -226,52 +226,52 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/e;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/VideoListItemView;
 
     if-eqz v0, :cond_1
 
     .line 3
     iget-object v1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->e:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v1, v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Lcom/vk/libvideo/ui/e;)V
+    invoke-static {v1, v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Lcom/vk/libvideo/ui/VideoListItemView;)V
 
     const/4 v1, 0x0
 
     .line 4
-    iput-object v1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/e;
+    iput-object v1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/VideoListItemView;
 
     .line 5
     iget-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->e:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v2, v1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Lcom/vk/libvideo/dialogs/d;)V
+    invoke-static {v2, v1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->a(Lcom/vk/libvideo/dialogs/VideoFeedDialog;Lcom/vk/libvideo/dialogs/BaseAnimationDialog;)V
 
     .line 6
     iget-object v1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->e:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->m(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/c0/a;
+    invoke-static {v1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->m(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/c0/VideoSnapHelper;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/ui/e;->getListPosition()I
+    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoListItemView;->getListPosition()I
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/vk/libvideo/c0/a;->b(I)V
+    invoke-virtual {v1, v0}, Lcom/vk/libvideo/c0/VideoSnapHelper;->b(I)V
 
     .line 7
     :cond_1
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->e:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->i(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/core/utils/e;
+    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->i(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/core/utils/OrientationListener;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/utils/e;->e()V
+    invoke-virtual {v0}, Lcom/vk/core/utils/OrientationListener;->e()V
 
     .line 8
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->e:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->i(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/core/utils/e;
+    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->i(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/core/utils/OrientationListener;
 
     move-result-object v0
 
@@ -298,7 +298,7 @@
     .locals 7
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/e;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/VideoListItemView;
 
     if-eqz v0, :cond_1
 
@@ -363,16 +363,16 @@
     return-object v1
 .end method
 
-.method public final a(Lcom/vk/libvideo/ui/e;)V
+.method public final a(Lcom/vk/libvideo/ui/VideoListItemView;)V
     .locals 2
 
     .line 1
-    iput-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/e;
+    iput-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/VideoListItemView;
 
     if-eqz p1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->c:Lcom/vk/media/player/k/b$b;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->c:Lcom/vk/media/player/k/PlayerUtils$b;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getWidth()I
 
@@ -382,7 +382,7 @@
 
     move-result p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/media/player/k/b$b;->a(II)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/media/player/k/PlayerUtils$b;->a(II)V
 
     :cond_0
     return-void
@@ -392,7 +392,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/e;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/VideoListItemView;
 
     if-eqz v0, :cond_1
 
@@ -475,7 +475,7 @@
     invoke-static/range {v1 .. v10}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;JJLjava/lang/Runnable;Landroid/view/animation/Interpolator;ZILjava/lang/Object;)Landroid/view/ViewPropertyAnimator;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/e;
+    iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->d:Lcom/vk/libvideo/ui/VideoListItemView;
 
     if-eqz v0, :cond_0
 

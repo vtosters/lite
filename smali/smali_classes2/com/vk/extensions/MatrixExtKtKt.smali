@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
-.field private static final b:Lcom/vk/core/util/d1;
+.field private static final b:Lcom/vk/core/util/ThreadLocalDelegate;
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference0Impl;
 
@@ -23,7 +23,7 @@
 
     const-string v3, "libui_release"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/e;
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/KDeclarationContainer;
 
     move-result-object v2
 
@@ -31,24 +31,24 @@
 
     const-string v4, "getMatrixFloats()[F"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/k;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/KProperty1;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/extensions/MatrixExtKtKt;->a:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/extensions/MatrixExtKtKt;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     sget-object v0, Lcom/vk/extensions/MatrixExtKtKt$matrixFloats$2;->a:Lcom/vk/extensions/MatrixExtKtKt$matrixFloats$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/extensions/MatrixExtKtKt;->b:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vk/extensions/MatrixExtKtKt;->b:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-void
 .end method
@@ -104,9 +104,9 @@
 .method private static final a()[F
     .locals 3
 
-    sget-object v0, Lcom/vk/extensions/MatrixExtKtKt;->b:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vk/extensions/MatrixExtKtKt;->b:Lcom/vk/core/util/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vk/extensions/MatrixExtKtKt;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/extensions/MatrixExtKtKt;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
@@ -114,7 +114,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, v2, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 

@@ -3,7 +3,7 @@
 .source "LikesFooterHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vtosters/lite/ui/y/b;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vtosters/lite/ui/y/LikeLabelFormatter;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vtosters/lite/ui/y/b;
+.method public final invoke()Lcom/vtosters/lite/ui/y/LikeLabelFormatter;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vtosters/lite/ui/y/b;
+    new-instance v0, Lcom/vtosters/lite/ui/y/LikeLabelFormatter;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/ui/y/b;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/ui/y/LikeLabelFormatter;-><init>()V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/LikesFooterHolder$formatter$2;->invoke()Lcom/vtosters/lite/ui/y/b;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/LikesFooterHolder$formatter$2;->invoke()Lcom/vtosters/lite/ui/y/LikeLabelFormatter;
 
     move-result-object v0
 

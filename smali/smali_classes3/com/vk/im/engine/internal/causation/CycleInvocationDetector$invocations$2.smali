@@ -3,12 +3,12 @@
 .source "CycleInvocationDetector.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;-><init>(Lcom/vk/im/engine/d;)V
+    value = Lcom/vk/im/engine/internal/causation/CycleInvocationDetector;-><init>(Lcom/vk/im/engine/ImEnvironment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Landroid/util/SparseArray<",
-        "Lcom/vk/im/engine/internal/causation/a;",
+        "Lcom/vk/im/engine/internal/causation/CauseProducer;",
         ">;>;"
     }
 .end annotation
@@ -62,7 +62,7 @@
         value = {
             "()",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/internal/causation/a;",
+            "Lcom/vk/im/engine/internal/causation/CauseProducer;",
             ">;"
         }
     .end annotation

@@ -542,7 +542,7 @@
 
     move-object/from16 v24, v0
 
-    invoke-direct/range {v24 .. v30}, Lcom/vk/core/network/utils/NetworkType;-><init>(Ljava/lang/String;ILjava/util/Set;Ljava/util/Set;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v24 .. v30}, Lcom/vk/core/network/utils/NetworkType;-><init>(Ljava/lang/String;ILjava/util/Set;Ljava/util/Set;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/network/utils/NetworkType;->WIFI:Lcom/vk/core/network/utils/NetworkType;
 
@@ -569,7 +569,7 @@
 
     move-object/from16 v24, v0
 
-    invoke-direct/range {v24 .. v30}, Lcom/vk/core/network/utils/NetworkType;-><init>(Ljava/lang/String;ILjava/util/Set;Ljava/util/Set;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v24 .. v30}, Lcom/vk/core/network/utils/NetworkType;-><init>(Ljava/lang/String;ILjava/util/Set;Ljava/util/Set;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/network/utils/NetworkType;->WIMAX:Lcom/vk/core/network/utils/NetworkType;
 
@@ -590,7 +590,7 @@
 
     move-object/from16 v24, v0
 
-    invoke-direct/range {v24 .. v30}, Lcom/vk/core/network/utils/NetworkType;-><init>(Ljava/lang/String;ILjava/util/Set;Ljava/util/Set;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v24 .. v30}, Lcom/vk/core/network/utils/NetworkType;-><init>(Ljava/lang/String;ILjava/util/Set;Ljava/util/Set;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/network/utils/NetworkType;->ETHERNET:Lcom/vk/core/network/utils/NetworkType;
 
@@ -615,7 +615,7 @@
 
     move-object/from16 v31, v0
 
-    invoke-direct/range {v31 .. v37}, Lcom/vk/core/network/utils/NetworkType;-><init>(Ljava/lang/String;ILjava/util/Set;Ljava/util/Set;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v31 .. v37}, Lcom/vk/core/network/utils/NetworkType;-><init>(Ljava/lang/String;ILjava/util/Set;Ljava/util/Set;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/network/utils/NetworkType;->BLUETOOTH:Lcom/vk/core/network/utils/NetworkType;
 
@@ -646,7 +646,7 @@
 
     move-object/from16 v23, v0
 
-    invoke-direct/range {v23 .. v29}, Lcom/vk/core/network/utils/NetworkType;-><init>(Ljava/lang/String;ILjava/util/Set;Ljava/util/Set;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v23 .. v29}, Lcom/vk/core/network/utils/NetworkType;-><init>(Ljava/lang/String;ILjava/util/Set;Ljava/util/Set;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/network/utils/NetworkType;->VPN:Lcom/vk/core/network/utils/NetworkType;
 
@@ -658,7 +658,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/network/utils/NetworkType$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/network/utils/NetworkType$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/network/utils/NetworkType;->Companion:Lcom/vk/core/network/utils/NetworkType$a;
 
@@ -747,7 +747,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/lang/String;ILjava/util/Set;Ljava/util/Set;ILkotlin/jvm/internal/i;)V
+.method synthetic constructor <init>(Ljava/lang/String;ILjava/util/Set;Ljava/util/Set;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x2

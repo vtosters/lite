@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/ml/MLFeatures;->a(Landroid/content/Context;Landroid/graphics/Bitmap;)Lc/a/t;
+    value = Lcom/vk/ml/MLFeatures;->a(Landroid/content/Context;Landroid/graphics/Bitmap;)Lio/reactivex/Single;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -71,7 +71,7 @@
 
     move-result-object v3
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/ml/model/HashTagsNNModel;-><init>(Landroid/content/Context;Lcom/vk/ml/model/a/b;)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/ml/model/HashTagsNNModel;-><init>(Landroid/content/Context;Lcom/vk/ml/model/a/ModelDtoProvider;)V
 
     invoke-static {v0, v1}, Lcom/vk/ml/MLFeatures;->a(Lcom/vk/ml/MLFeatures;Lcom/vk/ml/model/HashTagsNNModel;)V
     :try_end_0

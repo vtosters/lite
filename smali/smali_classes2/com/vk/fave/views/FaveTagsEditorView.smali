@@ -22,20 +22,20 @@
 # instance fields
 .field private a:Lcom/vk/lists/RecyclerPaginatedView;
 
-.field private b:Lcom/vk/fave/fragments/adapters/j;
+.field private b:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
 
-.field private c:Lcom/vk/lists/t;
+.field private c:Lcom/vk/lists/PaginationHelper;
 
-.field private d:Lio/reactivex/disposables/b;
+.field private d:Lio/reactivex/disposables/Disposable;
 
 .field private e:Z
 
-.field private final f:Lcom/vk/fave/views/h;
+.field private final f:Lcom/vk/fave/views/FaveTagsEditorView2;
 
-.field private final g:Lb/h/g/l/e;
+.field private final g:Lb/h/g/l/NotificationListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Ljava/lang/Object;",
             ">;"
         }
@@ -51,7 +51,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/fave/views/FaveTagsEditorView$Companion;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/fave/views/FaveTagsEditorView$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/fave/views/FaveTagsEditorView;->h:Lcom/vk/fave/views/FaveTagsEditorView$Companion;
 
@@ -65,7 +65,7 @@
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     .line 2
-    new-instance p1, Lcom/vk/fave/fragments/adapters/j;
+    new-instance p1, Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
 
     new-instance v0, Lcom/vk/fave/views/FaveTagsEditorView$adapter$1;
 
@@ -79,23 +79,23 @@
 
     invoke-direct {v2, p0}, Lcom/vk/fave/views/FaveTagsEditorView$adapter$3;-><init>(Lcom/vk/fave/views/FaveTagsEditorView;)V
 
-    invoke-direct {p1, v0, v1, v2}, Lcom/vk/fave/fragments/adapters/j;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {p1, v0, v1, v2}, Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object p1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/j;
+    iput-object p1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
 
     .line 3
-    new-instance p1, Lcom/vk/fave/views/h;
+    new-instance p1, Lcom/vk/fave/views/FaveTagsEditorView2;
 
-    invoke-direct {p1, p0}, Lcom/vk/fave/views/h;-><init>(Lcom/vk/fave/views/FaveTagsEditorView;)V
+    invoke-direct {p1, p0}, Lcom/vk/fave/views/FaveTagsEditorView2;-><init>(Lcom/vk/fave/views/FaveTagsEditorView;)V
 
-    iput-object p1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->f:Lcom/vk/fave/views/h;
+    iput-object p1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->f:Lcom/vk/fave/views/FaveTagsEditorView2;
 
     .line 4
-    new-instance p1, Lcom/vk/fave/views/i;
+    new-instance p1, Lcom/vk/fave/views/FaveTagsEditorView1;
 
-    invoke-direct {p1, p0}, Lcom/vk/fave/views/i;-><init>(Lcom/vk/fave/views/FaveTagsEditorView;)V
+    invoke-direct {p1, p0}, Lcom/vk/fave/views/FaveTagsEditorView1;-><init>(Lcom/vk/fave/views/FaveTagsEditorView;)V
 
-    iput-object p1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->g:Lb/h/g/l/e;
+    iput-object p1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->g:Lb/h/g/l/NotificationListener;
 
     .line 5
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -132,16 +132,16 @@
 
     invoke-direct {p1, p0}, Lcom/vk/fave/views/FaveTagsEditorView$1;-><init>(Lcom/vk/fave/views/FaveTagsEditorView;)V
 
-    invoke-static {p0, p1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {p0, p1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/fave/views/FaveTagsEditorView;)Lio/reactivex/disposables/b;
+.method public static final synthetic a(Lcom/vk/fave/views/FaveTagsEditorView;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->d:Lio/reactivex/disposables/b;
+    iget-object p0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->d:Lio/reactivex/disposables/Disposable;
 
     return-object p0
 .end method
@@ -156,7 +156,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -175,11 +175,11 @@
     if-ne p1, v0, :cond_0
 
     .line 9
-    iget-object p1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->c:Lcom/vk/lists/t;
+    iget-object p1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->c:Lcom/vk/lists/PaginationHelper;
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->h()V
 
     goto :goto_1
 
@@ -196,9 +196,9 @@
     const/4 p1, 0x0
 
     .line 11
-    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/j;
+    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -210,9 +210,9 @@
     if-ge p1, v0, :cond_2
 
     .line 12
-    iget-object v1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/j;
+    iget-object v1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
 
-    invoke-virtual {v1}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -237,18 +237,18 @@
     if-ne v1, v2, :cond_1
 
     .line 13
-    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/j;
+    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     .line 14
-    iget-object p2, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/j;
+    iget-object p2, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
 
-    invoke-virtual {p2, p1}, Lcom/vk/fave/fragments/adapters/j;->H(I)I
+    invoke-virtual {p2, p1}, Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;->H(I)I
 
     move-result p1
 
@@ -276,7 +276,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vk/fave/dialogs/FaveInputFunctionsKt;->a(Landroid/content/Context;Lcom/vk/fave/entities/FaveTag;)V
 
@@ -301,11 +301,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/fave/views/FaveTagsEditorView;Lio/reactivex/disposables/b;)V
+.method public static final synthetic a(Lcom/vk/fave/views/FaveTagsEditorView;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->d:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->d:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -357,7 +357,7 @@
     invoke-virtual {v1}, Lcom/vk/lists/AbstractPaginatedView$c;->a()V
 
     .line 8
-    iget-object v1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/j;
+    iget-object v1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
 
     invoke-virtual {v0, v1}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -368,7 +368,7 @@
 
     const-string v2, "it.recyclerView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -389,34 +389,34 @@
     invoke-virtual {v3, v2, v1, v2, v1}, Landroid/view/ViewGroup;->setPaddingRelative(IIII)V
 
     .line 12
-    iget-object v1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->f:Lcom/vk/fave/views/h;
+    iget-object v1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->f:Lcom/vk/fave/views/FaveTagsEditorView2;
 
-    invoke-static {v1}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$o;)Lcom/vk/lists/t$k;
+    invoke-static {v1}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$o;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object v1
 
     .line 13
-    invoke-virtual {v1, v2}, Lcom/vk/lists/t$k;->d(I)Lcom/vk/lists/t$k;
+    invoke-virtual {v1, v2}, Lcom/vk/lists/PaginationHelper$k;->d(I)Lcom/vk/lists/PaginationHelper$k;
 
     const-string v3, "PaginationHelper\n       \u2026      .setPreloadCount(0)"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
-    invoke-static {v1, v0}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {v1, v0}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->c:Lcom/vk/lists/t;
+    iput-object v1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->c:Lcom/vk/lists/PaginationHelper;
 
     .line 15
     new-instance v1, Landroidx/recyclerview/widget/ItemTouchHelper;
 
     new-instance v3, Lcom/vk/fave/views/FaveTagsEditorView$a;
 
-    iget-object v4, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/j;
+    iget-object v4, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
 
-    invoke-direct {v3, v4}, Lcom/vk/fave/views/FaveTagsEditorView$a;-><init>(Lcom/vk/fave/fragments/adapters/j;)V
+    invoke-direct {v3, v4}, Lcom/vk/fave/views/FaveTagsEditorView$a;-><init>(Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;)V
 
     invoke-direct {v1, v3}, Landroidx/recyclerview/widget/ItemTouchHelper;-><init>(Landroidx/recyclerview/widget/ItemTouchHelper$Callback;)V
 
@@ -445,7 +445,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -507,9 +507,9 @@
     .end annotation
 
     .line 3
-    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/j;
+    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -522,9 +522,9 @@
     if-le v0, v1, :cond_0
 
     .line 4
-    iget-object v1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/j;
+    iget-object v1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
 
-    invoke-virtual {v1}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -532,9 +532,9 @@
 
     .line 5
     :cond_0
-    iget-object v1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/j;
+    iget-object v1, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
 
-    invoke-virtual {v1, v0}, Lcom/vk/fave/fragments/adapters/j;->H(I)I
+    invoke-virtual {v1, v0}, Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;->H(I)I
 
     move-result v0
 
@@ -549,7 +549,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FaveTag;)Lc/a/m;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FaveTag;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -560,22 +560,22 @@
 
     if-eqz v1, :cond_1
 
-    new-instance v2, Lcom/vk/fave/views/j;
+    new-instance v2, Lcom/vk/fave/views/FaveTagsEditorView3;
 
-    invoke-direct {v2, v1}, Lcom/vk/fave/views/j;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1}, Lcom/vk/fave/views/FaveTagsEditorView3;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     move-object v1, v2
 
     :cond_1
-    check-cast v1, Lc/a/z/g;
+    check-cast v1, Lio/reactivex/functions/Consumer;
 
     .line 8
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -612,9 +612,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/j;
+    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->b:Lcom/vk/fave/fragments/adapters/TagsEditorAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     return-void
 .end method
@@ -625,26 +625,26 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->g:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->g:Lb/h/g/l/NotificationListener;
 
     const/16 v1, 0x4b0
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 2
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->g:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->g:Lb/h/g/l/NotificationListener;
 
     const/16 v1, 0x4b5
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     return-void
 .end method
@@ -653,13 +653,13 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->g:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/fave/views/FaveTagsEditorView;->g:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {p1, v0}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {p1, v0}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     return-void
 .end method

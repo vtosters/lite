@@ -3,7 +3,7 @@
 .source "UserNotificationHolder.kt"
 
 # interfaces
-.implements Lcom/vk/mediastore/system/b$f;
+.implements Lcom/vk/mediastore/system/MediaStoreController$f;
 
 
 # annotations
@@ -40,7 +40,7 @@
         value = {
             "(",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/mediastore/system/a;",
+            "Lcom/vk/mediastore/system/AlbumEntry;",
             ">;)V"
         }
     .end annotation
@@ -69,7 +69,7 @@
     .line 3
     iget-object v1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$f;->a:Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;
 
-    invoke-static {v1}, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->b(Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;)Lcom/vtosters/lite/ui/adapters/g;
+    invoke-static {v1}, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->b(Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;)Lcom/vtosters/lite/ui/adapters/PhotoSmallPickerAdapter;
 
     move-result-object v1
 
@@ -81,15 +81,15 @@
 
     const-string v0, "mediaStore[0]"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/vk/mediastore/system/a;
+    check-cast p1, Lcom/vk/mediastore/system/AlbumEntry;
 
-    invoke-virtual {p1}, Lcom/vk/mediastore/system/a;->a()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/vk/mediastore/system/AlbumEntry;->a()Ljava/util/ArrayList;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lcom/vtosters/lite/ui/adapters/g;->m(Ljava/util/List;)V
+    invoke-virtual {v1, p1}, Lcom/vtosters/lite/ui/adapters/PhotoSmallPickerAdapter;->m(Ljava/util/List;)V
 
     goto :goto_1
 
@@ -103,7 +103,7 @@
     .line 5
     iget-object p1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$f;->a:Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->b(Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;)Lcom/vtosters/lite/ui/adapters/g;
+    invoke-static {p1}, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->b(Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;)Lcom/vtosters/lite/ui/adapters/PhotoSmallPickerAdapter;
 
     move-result-object p1
 
@@ -113,7 +113,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/adapters/g;->m(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/adapters/PhotoSmallPickerAdapter;->m(Ljava/util/List;)V
 
     :cond_2
     :goto_1

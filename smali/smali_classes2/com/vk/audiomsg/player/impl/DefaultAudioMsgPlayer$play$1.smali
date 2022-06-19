@@ -3,12 +3,12 @@
 .source "DefaultAudioMsgPlayer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;->a(Lcom/vk/audiomsg/player/f;)V
+    value = Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;->a(Lcom/vk/audiomsg/player/Source;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $source:Lcom/vk/audiomsg/player/f;
+.field final synthetic $source:Lcom/vk/audiomsg/player/Source;
 
 .field final synthetic this$0:Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;Lcom/vk/audiomsg/player/f;)V
+.method constructor <init>(Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;Lcom/vk/audiomsg/player/Source;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$play$1;->this$0:Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;
 
-    iput-object p2, p0, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$play$1;->$source:Lcom/vk/audiomsg/player/f;
+    iput-object p2, p0, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$play$1;->$source:Lcom/vk/audiomsg/player/Source;
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$play$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -73,22 +73,22 @@
     iget-object v1, p0, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$play$1;->this$0:Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;
 
     .line 4
-    invoke-static {v1}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;->i(Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;)Lcom/vk/audiomsg/player/impl/a;
+    invoke-static {v1}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;->i(Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;)Lcom/vk/audiomsg/player/impl/PlayerState;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/audiomsg/player/impl/a;->e()Z
+    invoke-virtual {v2}, Lcom/vk/audiomsg/player/impl/PlayerState;->e()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
     .line 5
-    invoke-static {v1}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;->i(Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;)Lcom/vk/audiomsg/player/impl/a;
+    invoke-static {v1}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;->i(Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;)Lcom/vk/audiomsg/player/impl/PlayerState;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/audiomsg/player/impl/a;->d()Z
+    invoke-virtual {v2}, Lcom/vk/audiomsg/player/impl/PlayerState;->d()Z
 
     move-result v2
 
@@ -98,21 +98,21 @@
 
     .line 6
     :cond_0
-    invoke-static {v1}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;->i(Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;)Lcom/vk/audiomsg/player/impl/a;
+    invoke-static {v1}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;->i(Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;)Lcom/vk/audiomsg/player/impl/PlayerState;
 
     move-result-object v1
 
     .line 7
-    invoke-virtual {v1}, Lcom/vk/audiomsg/player/impl/a;->b()Lcom/vk/audiomsg/player/j/a;
+    invoke-virtual {v1}, Lcom/vk/audiomsg/player/impl/PlayerState;->b()Lcom/vk/audiomsg/player/j/MediaPlayer;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$play$1;->$source:Lcom/vk/audiomsg/player/f;
+    iget-object v2, p0, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$play$1;->$source:Lcom/vk/audiomsg/player/Source;
 
-    invoke-interface {v1, v2}, Lcom/vk/audiomsg/player/j/a;->a(Lcom/vk/audiomsg/player/f;)V
+    invoke-interface {v1, v2}, Lcom/vk/audiomsg/player/j/MediaPlayer;->a(Lcom/vk/audiomsg/player/Source;)V
 
     .line 8
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

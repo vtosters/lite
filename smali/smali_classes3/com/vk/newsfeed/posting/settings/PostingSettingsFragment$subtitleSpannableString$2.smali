@@ -3,7 +3,7 @@
 .source "PostingSettingsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Landroid/text/SpannableString;",
         ">;"
     }
@@ -49,7 +49,7 @@
     .locals 7
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f120b59
 
@@ -59,10 +59,10 @@
 
     const-string v1, "AppContextHolder.context\u2026s_set_source_description)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v2, 0x7f120b5a
 
@@ -72,7 +72,7 @@
 
     const-string v2, "AppContextHolder.context\u2026_source_description_more)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     new-instance v2, Ljava/lang/StringBuilder;
@@ -122,18 +122,18 @@
     invoke-virtual {v2, v3, v6, v4, v5}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
     .line 9
-    new-instance v3, Lcom/vtosters/lite/v;
+    new-instance v3, Lcom/vtosters/lite/LinkSpan;
 
     new-instance v4, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$subtitleSpannableString$2$b;
 
     invoke-direct {v4, p0, v0, v1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$subtitleSpannableString$2$b;-><init>(Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$subtitleSpannableString$2;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Lcom/vtosters/lite/v;-><init>(Lcom/vk/core/view/links/a$a;)V
+    invoke-direct {v3, v4}, Lcom/vtosters/lite/LinkSpan;-><init>(Lcom/vk/core/view/links/ClickableLinkSpan$a;)V
 
     const v4, 0x7f040022
 
     .line 10
-    invoke-virtual {v3, v4}, Lcom/vk/core/view/links/a;->a(I)V
+    invoke-virtual {v3, v4}, Lcom/vk/core/view/links/ClickableLinkSpan;->a(I)V
 
     .line 11
     invoke-virtual {v0}, Ljava/lang/String;->length()I

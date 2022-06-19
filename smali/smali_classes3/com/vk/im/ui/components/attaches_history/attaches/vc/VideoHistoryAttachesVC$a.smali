@@ -3,7 +3,7 @@
 .source "VideoHistoryAttachesVC.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/g;
+.implements Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachCallback;
 
 
 # annotations

@@ -60,7 +60,7 @@
     new-instance v10, Lcom/vk/core/ui/themes/VKTheme;
 
     .line 1
-    sget v8, Lb/h/g/e;->VkLightStyle:I
+    sget v8, Lb/h/g/R3;->VkLightStyle:I
 
     const-string v2, "VKAPP_LIGHT"
 
@@ -87,7 +87,7 @@
     new-instance v1, Lcom/vk/core/ui/themes/VKTheme;
 
     .line 2
-    sget v18, Lb/h/g/e;->VkDarkStyle:I
+    sget v18, Lb/h/g/R3;->VkDarkStyle:I
 
     const-string v12, "VKAPP_DARK"
 
@@ -114,7 +114,7 @@
     new-instance v1, Lcom/vk/core/ui/themes/VKTheme;
 
     .line 3
-    sget v10, Lb/h/g/e;->VkMeLightTheme:I
+    sget v10, Lb/h/g/R3;->VkMeLightTheme:I
 
     const-string v4, "VKME_LIGHT"
 
@@ -141,7 +141,7 @@
     new-instance v1, Lcom/vk/core/ui/themes/VKTheme;
 
     .line 4
-    sget v10, Lb/h/g/e;->VkMeDarkTheme:I
+    sget v10, Lb/h/g/R3;->VkMeDarkTheme:I
 
     const-string v4, "VKME_DARK"
 
@@ -166,7 +166,7 @@
     new-instance v1, Lcom/vk/core/ui/themes/VKTheme;
 
     .line 5
-    sget v10, Lb/h/g/e;->VkMilkLightStyle:I
+    sget v10, Lb/h/g/R3;->VkMilkLightStyle:I
 
     const-string v4, "VKAPP_MILK_LIGHT"
 
@@ -193,7 +193,7 @@
     new-instance v1, Lcom/vk/core/ui/themes/VKTheme;
 
     .line 6
-    sget v10, Lb/h/g/e;->VkMilkDarkStyle:I
+    sget v10, Lb/h/g/R3;->VkMilkDarkStyle:I
 
     const-string v4, "VKAPP_MILK_DARK"
 
@@ -221,7 +221,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/ui/themes/VKTheme$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/ui/themes/VKTheme$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/ui/themes/VKTheme;->Companion:Lcom/vk/core/ui/themes/VKTheme$a;
 

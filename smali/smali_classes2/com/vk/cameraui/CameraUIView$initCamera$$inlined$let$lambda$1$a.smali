@@ -48,7 +48,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/libvideo/a0/f;->g()V
+    invoke-interface {p1}, Lcom/vk/libvideo/a0/MasksProvider;->g()V
 
     :cond_0
     return-void

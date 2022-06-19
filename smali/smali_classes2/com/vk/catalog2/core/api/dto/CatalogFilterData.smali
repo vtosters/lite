@@ -22,10 +22,10 @@
     .end annotation
 .end field
 
-.field public static final e:Lcom/vk/dto/common/data/c;
+.field public static final e:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/catalog2/core/api/dto/CatalogFilterData;",
             ">;"
         }
@@ -51,7 +51,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/CatalogFilterData$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/CatalogFilterData$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/catalog2/core/api/dto/CatalogFilterData$b;
@@ -66,7 +66,7 @@
 
     invoke-direct {v0}, Lcom/vk/catalog2/core/api/dto/CatalogFilterData$a;-><init>()V
 
-    sput-object v0, Lcom/vk/catalog2/core/api/dto/CatalogFilterData;->e:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/catalog2/core/api/dto/CatalogFilterData;->e:Lcom/vk/dto/common/data/JsonParser;
 
     return-void
 .end method
@@ -179,7 +179,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogFilterData;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -189,7 +189,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogFilterData;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -199,7 +199,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogFilterData;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -315,7 +315,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p0}, Lcom/vk/core/extensions/k;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/vk/core/extensions/GeneralFunctions;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 

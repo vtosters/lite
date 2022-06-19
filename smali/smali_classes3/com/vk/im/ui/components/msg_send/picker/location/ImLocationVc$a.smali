@@ -3,8 +3,8 @@
 .source "ImLocationVc.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/msg_send/picker/location/f;
-.implements Lcom/vk/im/ui/components/msg_send/picker/menu/b;
+.implements Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;
+.implements Lcom/vk/im/ui/components/msg_send/picker/menu/MenuTitleCallback;
 
 
 # annotations

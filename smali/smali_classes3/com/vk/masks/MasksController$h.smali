@@ -3,7 +3,7 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "Lcom/vk/api/masks/MasksGetModel$MasksGetModelResponse;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "Lcom/vk/core/network/RxFileDownloader$c;",
         ">;>;"
     }
@@ -46,14 +46,14 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/api/masks/MasksGetModel$MasksGetModelResponse;)Lc/a/p;
+.method public a(Lcom/vk/api/masks/MasksGetModel$MasksGetModelResponse;)Lio/reactivex/ObservableSource;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/api/masks/MasksGetModel$MasksGetModelResponse;",
             ")",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "Lcom/vk/core/network/RxFileDownloader$c;",
             ">;"
         }
@@ -68,16 +68,16 @@
     .line 1
     iget-object v0, p0, Lcom/vk/masks/MasksController$h;->a:Lcom/vk/masks/MasksController;
 
-    invoke-static {v0}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/d;
+    invoke-static {v0}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/MasksStorage;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/masks/d;->c()I
+    invoke-virtual {v0}, Lcom/vk/masks/MasksStorage;->c()I
 
     move-result v0
 
     .line 2
-    invoke-static {}, Lcom/vk/media/camera/l/a;->b()Ljava/io/File;
+    invoke-static {}, Lcom/vk/media/camera/l/CameraMasksUtils;->b()Ljava/io/File;
 
     move-result-object v1
 
@@ -103,7 +103,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -111,26 +111,26 @@
 
     .line 7
     :cond_0
-    invoke-static {v1}, Lb/h/g/m/d;->k(Ljava/io/File;)Z
+    invoke-static {v1}, Lb/h/g/m/FileUtils;->k(Ljava/io/File;)Z
 
     const-string v0, "masks_model.zip"
 
     .line 8
-    invoke-static {v0}, Lb/h/g/m/d;->b(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->b(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
     .line 9
-    invoke-static {p1, v0}, Lcom/vk/core/network/RxFileDownloader;->a(Ljava/lang/String;Ljava/io/File;)Lc/a/m;
+    invoke-static {p1, v0}, Lcom/vk/core/network/RxFileDownloader;->a(Ljava/lang/String;Ljava/io/File;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 10
-    invoke-static {v1}, Lcom/vk/masks/MasksController;->a(Ljava/io/File;)Lc/a/z/j;
+    invoke-static {v1}, Lcom/vk/masks/MasksController;->a(Ljava/io/File;)Lio/reactivex/functions/Function;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -139,7 +139,7 @@
     invoke-direct {v0, p0, v2}, Lcom/vk/masks/MasksController$h$a;-><init>(Lcom/vk/masks/MasksController$h;I)V
 
     .line 11
-    invoke-virtual {p1, v0}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -157,7 +157,7 @@
     .line 1
     check-cast p1, Lcom/vk/api/masks/MasksGetModel$MasksGetModelResponse;
 
-    invoke-virtual {p0, p1}, Lcom/vk/masks/MasksController$h;->a(Lcom/vk/api/masks/MasksGetModel$MasksGetModelResponse;)Lc/a/p;
+    invoke-virtual {p0, p1}, Lcom/vk/masks/MasksController$h;->a(Lcom/vk/api/masks/MasksGetModel$MasksGetModelResponse;)Lio/reactivex/ObservableSource;
 
     move-result-object p1
 

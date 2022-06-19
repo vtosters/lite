@@ -3,7 +3,7 @@
 .source "ComponentsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/core/ui/d;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/core/ui/CardItemDecorator;",
         ">;"
     }
 .end annotation
@@ -49,7 +49,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/core/ui/d;
+.method public final invoke()Lcom/vk/core/ui/CardItemDecorator;
     .locals 4
 
     .line 2
@@ -72,18 +72,18 @@
 
     .line 3
     :goto_0
-    instance-of v1, v0, Lcom/vk/lists/s;
+    instance-of v1, v0, Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     if-eqz v1, :cond_1
 
     .line 4
-    check-cast v0, Lcom/vk/lists/s;
+    check-cast v0, Lcom/vk/lists/PaginatedRecyclerAdapter;
 
-    iget-object v0, v0, Lcom/vk/lists/s;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, v0, Lcom/vk/lists/PaginatedRecyclerAdapter;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     .line 5
     :cond_1
-    new-instance v1, Lcom/vk/core/ui/d;
+    new-instance v1, Lcom/vk/core/ui/CardItemDecorator;
 
     iget-object v2, p0, Lcom/vk/components/ComponentsFragment$setupDecorators$decorator$1;->this$0:Lcom/vk/components/ComponentsFragment;
 
@@ -93,13 +93,13 @@
 
     if-eqz v0, :cond_2
 
-    check-cast v0, Lcom/vk/core/ui/o;
+    check-cast v0, Lcom/vk/core/ui/Provider;
 
     iget-boolean v3, p0, Lcom/vk/components/ComponentsFragment$setupDecorators$decorator$1;->$isTabletDecorator:Z
 
     xor-int/lit8 v3, v3, 0x1
 
-    invoke-direct {v1, v2, v0, v3}, Lcom/vk/core/ui/d;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/o;Z)V
+    invoke-direct {v1, v2, v0, v3}, Lcom/vk/core/ui/CardItemDecorator;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/Provider;Z)V
 
     return-object v1
 
@@ -117,7 +117,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/components/ComponentsFragment$setupDecorators$decorator$1;->invoke()Lcom/vk/core/ui/d;
+    invoke-virtual {p0}, Lcom/vk/components/ComponentsFragment$setupDecorators$decorator$1;->invoke()Lcom/vk/core/ui/CardItemDecorator;
 
     move-result-object v0
 

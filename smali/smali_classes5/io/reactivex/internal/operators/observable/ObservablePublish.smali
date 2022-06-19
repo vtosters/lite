@@ -1,10 +1,10 @@
 .class public final Lio/reactivex/internal/operators/observable/ObservablePublish;
-.super Lc/a/b0/a;
+.super Lio/reactivex/observables/ConnectableObservable;
 .source "ObservablePublish.java"
 
 # interfaces
-.implements Lc/a/a0/b/d;
-.implements Lio/reactivex/internal/operators/observable/b0;
+.implements Lc/a/a0/b/HasUpstreamObservableSource;
+.implements Lio/reactivex/internal/operators/observable/ObservablePublishClassic;
 
 
 # annotations
@@ -21,21 +21,21 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lc/a/b0/a<",
+        "Lio/reactivex/observables/ConnectableObservable<",
         "TT;>;",
-        "Lc/a/a0/b/d<",
+        "Lc/a/a0/b/HasUpstreamObservableSource<",
         "TT;>;",
-        "Lio/reactivex/internal/operators/observable/b0<",
+        "Lio/reactivex/internal/operators/observable/ObservablePublishClassic<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final a:Lc/a/p;
+.field final a:Lio/reactivex/ObservableSource;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "TT;>;"
         }
     .end annotation
@@ -51,10 +51,10 @@
     .end annotation
 .end field
 
-.field final c:Lc/a/p;
+.field final c:Lio/reactivex/ObservableSource;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "TT;>;"
         }
     .end annotation
@@ -62,14 +62,14 @@
 
 
 # direct methods
-.method private constructor <init>(Lc/a/p;Lc/a/p;Ljava/util/concurrent/atomic/AtomicReference;)V
+.method private constructor <init>(Lio/reactivex/ObservableSource;Lio/reactivex/ObservableSource;Ljava/util/concurrent/atomic/AtomicReference;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "TT;>;",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "TT;>;",
             "Ljava/util/concurrent/atomic/AtomicReference<",
             "Lio/reactivex/internal/operators/observable/ObservablePublish$a<",
@@ -78,13 +78,13 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lc/a/b0/a;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/observables/ConnectableObservable;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservablePublish;->c:Lc/a/p;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservablePublish;->c:Lio/reactivex/ObservableSource;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservablePublish;->a:Lc/a/p;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservablePublish;->a:Lio/reactivex/ObservableSource;
 
     .line 4
     iput-object p3, p0, Lio/reactivex/internal/operators/observable/ObservablePublish;->b:Ljava/util/concurrent/atomic/AtomicReference;
@@ -92,16 +92,16 @@
     return-void
 .end method
 
-.method public static g(Lc/a/p;)Lc/a/b0/a;
+.method public static g(Lio/reactivex/ObservableSource;)Lio/reactivex/observables/ConnectableObservable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "TT;>;)",
-            "Lc/a/b0/a<",
+            "Lio/reactivex/observables/ConnectableObservable<",
             "TT;>;"
         }
     .end annotation
@@ -119,9 +119,9 @@
     .line 3
     new-instance v2, Lio/reactivex/internal/operators/observable/ObservablePublish;
 
-    invoke-direct {v2, v1, p0, v0}, Lio/reactivex/internal/operators/observable/ObservablePublish;-><init>(Lc/a/p;Lc/a/p;Ljava/util/concurrent/atomic/AtomicReference;)V
+    invoke-direct {v2, v1, p0, v0}, Lio/reactivex/internal/operators/observable/ObservablePublish;-><init>(Lio/reactivex/ObservableSource;Lio/reactivex/ObservableSource;Ljava/util/concurrent/atomic/AtomicReference;)V
 
-    invoke-static {v2}, Lc/a/e0/a;->a(Lc/a/b0/a;)Lc/a/b0/a;
+    invoke-static {v2}, Lio/reactivex/plugins/RxJavaPlugins;->a(Lio/reactivex/observables/ConnectableObservable;)Lio/reactivex/observables/ConnectableObservable;
 
     move-result-object p0
 
@@ -130,32 +130,32 @@
 
 
 # virtual methods
-.method protected b(Lc/a/r;)V
+.method protected b(Lio/reactivex/Observer;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservablePublish;->c:Lc/a/p;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservablePublish;->c:Lio/reactivex/ObservableSource;
 
-    invoke-interface {v0, p1}, Lc/a/p;->a(Lc/a/r;)V
+    invoke-interface {v0, p1}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
 
     return-void
 .end method
 
-.method public g(Lc/a/z/g;)V
+.method public g(Lio/reactivex/functions/Consumer;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/z/g<",
+            "Lio/reactivex/functions/Consumer<",
             "-",
-            "Lio/reactivex/disposables/b;",
+            "Lio/reactivex/disposables/Disposable;",
             ">;)V"
         }
     .end annotation
@@ -231,16 +231,16 @@
     .line 9
     :goto_1
     :try_start_0
-    invoke-interface {p1, v0}, Lc/a/z/g;->accept(Ljava/lang/Object;)V
+    invoke-interface {p1, v0}, Lio/reactivex/functions/Consumer;->accept(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v2, :cond_4
 
     .line 10
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservablePublish;->a:Lc/a/p;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservablePublish;->a:Lio/reactivex/ObservableSource;
 
-    invoke-interface {p1, v0}, Lc/a/p;->a(Lc/a/r;)V
+    invoke-interface {p1, v0}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
 
     :cond_4
     return-void
@@ -249,7 +249,7 @@
     move-exception p1
 
     .line 11
-    invoke-static {p1}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 12
     invoke-static {p1}, Lio/reactivex/internal/util/ExceptionHelper;->b(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;

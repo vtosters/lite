@@ -58,7 +58,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/SituationalSuggest$SituationalPost$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/SituationalSuggest$SituationalPost$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/newsfeed/SituationalSuggest$SituationalPost;->d:Lcom/vk/dto/newsfeed/SituationalSuggest$SituationalPost$b;
 
@@ -203,7 +203,7 @@
 
     .line 8
     :try_start_3
-    invoke-static {v2, v3}, Lcom/vtosters/lite/attachments/a;->a(Ljava/io/DataOutputStream;Lcom/vk/dto/common/Attachment;)V
+    invoke-static {v2, v3}, Lcom/vtosters/lite/attachments/AttachmentUtils;->a(Ljava/io/DataOutputStream;Lcom/vk/dto/common/Attachment;)V
 
     .line 9
     invoke-virtual {v4}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B

@@ -3,7 +3,7 @@
 .source "FriendsRecommendationsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/api/friends/l$a;
+.implements Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse$a;
 
 
 # annotations

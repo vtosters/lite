@@ -42,9 +42,9 @@
     :try_start_0
     iget-object v0, p0, Lcom/vk/core/network/RxFileDownloader$b$a;->a:Lcom/vk/core/network/RxFileDownloader$b;
 
-    iget-object v0, v0, Lcom/vk/core/network/RxFileDownloader$b;->a:Lokhttp3/b0;
+    iget-object v0, v0, Lcom/vk/core/network/RxFileDownloader$b;->a:Lokhttp3/Response;
 
-    invoke-virtual {v0}, Lokhttp3/b0;->close()V
+    invoke-virtual {v0}, Lokhttp3/Response;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

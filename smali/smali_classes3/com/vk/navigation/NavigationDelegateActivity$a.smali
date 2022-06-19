@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -60,27 +60,27 @@
     return-object v0
 .end method
 
-.method protected final b(Lcom/vk/navigation/NavigationDelegateActivity;)Lcom/vtosters/lite/ui/e0/a;
+.method protected final b(Lcom/vk/navigation/NavigationDelegateActivity;)Lcom/vtosters/lite/ui/e0/NavigationDelegateLeftMenu;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/navigation/NavigationDelegateActivity;",
             ")",
-            "Lcom/vtosters/lite/ui/e0/a<",
+            "Lcom/vtosters/lite/ui/e0/NavigationDelegateLeftMenu<",
             "Lcom/vk/navigation/NavigationDelegateActivity;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/ui/e0/a;
+    new-instance v0, Lcom/vtosters/lite/ui/e0/NavigationDelegateLeftMenu;
 
     invoke-virtual {p1}, Lcom/vk/navigation/NavigationDelegateActivity;->w1()Z
 
     move-result v1
 
-    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/e0/a;-><init>(Landroid/app/Activity;Z)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/e0/NavigationDelegateLeftMenu;-><init>(Landroid/app/Activity;Z)V
 
     return-object v0
 .end method

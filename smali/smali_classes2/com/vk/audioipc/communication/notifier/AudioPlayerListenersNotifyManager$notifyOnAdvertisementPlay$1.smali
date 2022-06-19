@@ -3,12 +3,12 @@
 .source "AudioPlayerListenersNotifyManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->b(Lcom/vk/music/player/a;)V
+    value = Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->b(Lcom/vk/music/player/AdvertisementInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/audioipc/core/e;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/audioipc/core/AudioPlayerListener;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $advertisementInfo:Lcom/vk/music/player/a;
+.field final synthetic $advertisementInfo:Lcom/vk/music/player/AdvertisementInfo;
 
 .field final synthetic this$0:Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;Lcom/vk/music/player/a;)V
+.method constructor <init>(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;Lcom/vk/music/player/AdvertisementInfo;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPlay$1;->this$0:Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;
 
-    iput-object p2, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPlay$1;->$advertisementInfo:Lcom/vk/music/player/a;
+    iput-object p2, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPlay$1;->$advertisementInfo:Lcom/vk/music/player/AdvertisementInfo;
 
     const/4 p1, 0x1
 
@@ -50,19 +50,19 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/audioipc/core/e;)V
+.method public final a(Lcom/vk/audioipc/core/AudioPlayerListener;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPlay$1;->this$0:Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;
 
-    invoke-static {v0}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->a(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;)Lcom/vk/audioipc/core/d;
+    invoke-static {v0}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->a(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;)Lcom/vk/audioipc/core/AudioPlayer;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPlay$1;->$advertisementInfo:Lcom/vk/music/player/a;
+    iget-object v1, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPlay$1;->$advertisementInfo:Lcom/vk/music/player/AdvertisementInfo;
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/audioipc/core/e;->a(Lcom/vk/audioipc/core/d;Lcom/vk/music/player/a;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/audioipc/core/AudioPlayerListener;->a(Lcom/vk/audioipc/core/AudioPlayer;Lcom/vk/music/player/AdvertisementInfo;)V
 
     return-void
 .end method
@@ -71,11 +71,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/audioipc/core/e;
+    check-cast p1, Lcom/vk/audioipc/core/AudioPlayerListener;
 
-    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPlay$1;->a(Lcom/vk/audioipc/core/e;)V
+    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnAdvertisementPlay$1;->a(Lcom/vk/audioipc/core/AudioPlayerListener;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

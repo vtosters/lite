@@ -44,7 +44,7 @@
 
 .field final b:Landroid/os/Handler;
 
-.field c:Landroid/support/v4/os/a;
+.field c:Landroid/support/v4/os/IResultReceiver;
 
 
 # direct methods
@@ -99,11 +99,11 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Landroid/support/v4/os/a$a;->a(Landroid/os/IBinder;)Landroid/support/v4/os/a;
+    invoke-static {p1}, Landroid/support/v4/os/IResultReceiver$a;->a(Landroid/os/IBinder;)Landroid/support/v4/os/IResultReceiver;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroid/support/v4/os/ResultReceiver;->c:Landroid/support/v4/os/a;
+    iput-object p1, p0, Landroid/support/v4/os/ResultReceiver;->c:Landroid/support/v4/os/IResultReceiver;
 
     return-void
 .end method
@@ -147,13 +147,13 @@
 
     .line 5
     :cond_1
-    iget-object v0, p0, Landroid/support/v4/os/ResultReceiver;->c:Landroid/support/v4/os/a;
+    iget-object v0, p0, Landroid/support/v4/os/ResultReceiver;->c:Landroid/support/v4/os/IResultReceiver;
 
     if-eqz v0, :cond_2
 
     .line 6
     :try_start_0
-    invoke-interface {v0, p1, p2}, Landroid/support/v4/os/a;->a(ILandroid/os/Bundle;)V
+    invoke-interface {v0, p1, p2}, Landroid/support/v4/os/IResultReceiver;->a(ILandroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -178,7 +178,7 @@
 
     .line 2
     :try_start_0
-    iget-object p2, p0, Landroid/support/v4/os/ResultReceiver;->c:Landroid/support/v4/os/a;
+    iget-object p2, p0, Landroid/support/v4/os/ResultReceiver;->c:Landroid/support/v4/os/IResultReceiver;
 
     if-nez p2, :cond_0
 
@@ -187,11 +187,11 @@
 
     invoke-direct {p2, p0}, Landroid/support/v4/os/ResultReceiver$b;-><init>(Landroid/support/v4/os/ResultReceiver;)V
 
-    iput-object p2, p0, Landroid/support/v4/os/ResultReceiver;->c:Landroid/support/v4/os/a;
+    iput-object p2, p0, Landroid/support/v4/os/ResultReceiver;->c:Landroid/support/v4/os/IResultReceiver;
 
     .line 4
     :cond_0
-    iget-object p2, p0, Landroid/support/v4/os/ResultReceiver;->c:Landroid/support/v4/os/a;
+    iget-object p2, p0, Landroid/support/v4/os/ResultReceiver;->c:Landroid/support/v4/os/IResultReceiver;
 
     invoke-interface {p2}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 

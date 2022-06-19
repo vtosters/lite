@@ -100,9 +100,9 @@
     iput-boolean v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$d;->g:Z
 
     .line 6
-    sget-object v1, Lcom/vk/cameraui/widgets/shutter/a;->L0:Lcom/vk/cameraui/widgets/shutter/a$a;
+    sget-object v1, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->L0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController$a;
 
-    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/a$a;->b()I
+    invoke-virtual {v1}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController$a;->b()I
 
     move-result v1
 
@@ -125,9 +125,9 @@
     iput v0, p0, Lcom/vk/cameraui/widgets/shutter/ShutterButton$d;->l:I
 
     .line 11
-    sget-object v0, Lcom/vk/cameraui/widgets/shutter/a;->L0:Lcom/vk/cameraui/widgets/shutter/a$a;
+    sget-object v0, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController;->L0:Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController$a;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/a$a;->a()I
+    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/shutter/ShutterButtonDrawingController$a;->a()I
 
     move-result v0
 

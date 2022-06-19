@@ -3,7 +3,7 @@
 .source "ImEngineProvider.kt"
 
 # interfaces
-.implements Lc/a/z/l;
+.implements Lio/reactivex/functions/Predicate;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/l<",
-        "Lcom/vk/im/engine/events/h;",
+        "Lio/reactivex/functions/Predicate<",
+        "Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/events/h;)Z
+.method public final a(Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;)Z
     .locals 1
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/events/h;->c()Lcom/vk/im/engine/models/ImBgSyncState;
+    invoke-virtual {p1}, Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;->c()Lcom/vk/im/engine/models/ImBgSyncState;
 
     move-result-object p1
 
@@ -83,9 +83,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/h;
+    check-cast p1, Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/im/ImEngineProvider$e;->a(Lcom/vk/im/engine/events/h;)Z
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/im/ImEngineProvider$e;->a(Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;)Z
 
     move-result p1
 

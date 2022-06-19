@@ -3,7 +3,7 @@
 .source "VhHints.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -60,7 +60,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/HintVh$bind$1;->this$0:Lcom/vk/im/ui/components/msg_search/vc/HintVh;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/vc/HintVh;->a(Lcom/vk/im/ui/components/msg_search/vc/HintVh;)Lcom/vk/im/ui/components/msg_search/vc/p;
+    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/vc/HintVh;->a(Lcom/vk/im/ui/components/msg_search/vc/HintVh;)Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     move-result-object p1
 
@@ -70,7 +70,7 @@
 
     const/4 v2, 0x0
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/vk/im/ui/components/msg_search/vc/p;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;I)V
+    invoke-interface {p1, v0, v1, v2}, Lcom/vk/im/ui/components/msg_search/vc/VcCallback;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;I)V
 
     return-void
 .end method
@@ -83,7 +83,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/HintVh$bind$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -19,10 +19,10 @@
     .end annotation
 .end field
 
-.field public static final f:Lcom/vk/dto/common/data/c;
+.field public static final f:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/music/CustomImage;",
             ">;"
         }
@@ -61,7 +61,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/music/CustomImage$b;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/music/CustomImage;->f:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/dto/music/CustomImage;->f:Lcom/vk/dto/common/data/JsonParser;
 
     return-void
 .end method
@@ -178,11 +178,11 @@
     iput-object v0, p0, Lcom/vk/dto/music/CustomImage;->e:Lcom/vk/dto/common/Image;
 
     .line 12
-    sget-object v0, Lcom/vk/dto/music/Meta;->d:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/music/Meta;->d:Lcom/vk/dto/common/data/JsonParser;
 
     const-string v1, "meta"
 
-    invoke-static {p1, v1, v0}, Lcom/vk/dto/common/data/c;->b(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/lang/Object;
+    invoke-static {p1, v1, v0}, Lcom/vk/dto/common/data/JsonParser;->b(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/lang/Object;
 
     move-result-object p1
 

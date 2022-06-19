@@ -1,5 +1,5 @@
 .class public final Lcom/vtosters/lite/audio/player/SavedTrack;
-.super Lcom/vtosters/lite/audio/f/a;
+.super Lcom/vtosters/lite/audio/f/DataObject;
 .source "SavedTrack.java"
 
 # interfaces
@@ -16,7 +16,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/audio/f/a<",
+        "Lcom/vtosters/lite/audio/f/DataObject<",
         "Lcom/vtosters/lite/audio/player/SavedTrack;",
         ">;",
         "Landroid/os/Parcelable;",
@@ -67,7 +67,7 @@
     sput-object v0, Lcom/vtosters/lite/audio/player/SavedTrack;->g:Lcom/vtosters/lite/audio/player/SavedTrack$b;
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/audio/e;->a()[Ljava/lang/String;
+    invoke-static {}, Lcom/vtosters/lite/audio/MusicDatabaseHelper;->a()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -79,14 +79,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/audio/f/a;->a([Ljava/lang/String;[Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/vtosters/lite/audio/f/DataObject;->a([Ljava/lang/String;[Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/vtosters/lite/audio/player/SavedTrack;->h:[Ljava/lang/String;
 
     .line 3
-    invoke-static {}, Lcom/vtosters/lite/audio/e;->a()[Ljava/lang/String;
+    invoke-static {}, Lcom/vtosters/lite/audio/MusicDatabaseHelper;->a()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -117,7 +117,7 @@
     .line 4
     sget-object v0, Lcom/vtosters/lite/audio/player/SavedTrack;->g:Lcom/vtosters/lite/audio/player/SavedTrack$b;
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/audio/f/a;-><init>(Lcom/vtosters/lite/audio/f/b;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/audio/f/DataObject;-><init>(Lcom/vtosters/lite/audio/f/DataProvider;)V
 
     return-void
 .end method
@@ -128,7 +128,7 @@
     .line 5
     sget-object v0, Lcom/vtosters/lite/audio/player/SavedTrack;->g:Lcom/vtosters/lite/audio/player/SavedTrack$b;
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/audio/f/a;-><init>(Lcom/vtosters/lite/audio/f/b;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/audio/f/DataObject;-><init>(Lcom/vtosters/lite/audio/f/DataProvider;)V
 
     .line 6
     const-class v0, Lcom/vk/dto/music/MusicTrack;
@@ -170,7 +170,7 @@
     .line 1
     sget-object v0, Lcom/vtosters/lite/audio/player/SavedTrack;->g:Lcom/vtosters/lite/audio/player/SavedTrack$b;
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/audio/f/a;-><init>(Lcom/vtosters/lite/audio/f/b;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/audio/f/DataObject;-><init>(Lcom/vtosters/lite/audio/f/DataProvider;)V
 
     .line 2
     iput-object p1, p0, Lcom/vtosters/lite/audio/player/SavedTrack;->f:Lcom/vk/dto/music/MusicTrack;
@@ -194,37 +194,37 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/common/f/a;
+    new-instance v0, Lcom/vk/common/f/Table;
 
     const-string v1, "saved_track"
 
-    invoke-direct {v0, v1}, Lcom/vk/common/f/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vk/common/f/Table;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vtosters/lite/audio/player/SavedTrack;->a(Lcom/vk/common/f/a;)Lcom/vk/common/f/a;
+    invoke-static {v0}, Lcom/vtosters/lite/audio/player/SavedTrack;->a(Lcom/vk/common/f/Table;)Lcom/vk/common/f/Table;
 
-    invoke-virtual {v0}, Lcom/vk/common/f/a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/common/f/Table;->a()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected static a(Lcom/vk/common/f/a;)Lcom/vk/common/f/a;
+.method protected static a(Lcom/vk/common/f/Table;)Lcom/vk/common/f/Table;
     .locals 2
 
     .line 1
-    invoke-static {p0}, Lcom/vtosters/lite/audio/e;->a(Lcom/vk/common/f/a;)Lcom/vk/common/f/a;
+    invoke-static {p0}, Lcom/vtosters/lite/audio/MusicDatabaseHelper;->a(Lcom/vk/common/f/Table;)Lcom/vk/common/f/Table;
 
     const-string v0, "position"
 
     .line 2
-    invoke-virtual {p0, v0}, Lcom/vk/common/f/a;->a(Ljava/lang/String;)Lcom/vk/common/f/a$b;
+    invoke-virtual {p0, v0}, Lcom/vk/common/f/Table;->a(Ljava/lang/String;)Lcom/vk/common/f/Table$b;
 
     move-result-object v0
 
     const-string v1, "file"
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/f/a$b;->d(Ljava/lang/String;)Lcom/vk/common/f/a$b;
+    invoke-virtual {v0, v1}, Lcom/vk/common/f/Table$b;->d(Ljava/lang/String;)Lcom/vk/common/f/Table$b;
 
     return-object p0
 .end method
@@ -246,7 +246,7 @@
     .line 8
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/SavedTrack;->f:Lcom/vk/dto/music/MusicTrack;
 
-    invoke-static {p1, v0}, Lcom/vtosters/lite/audio/e;->a(Landroid/content/ContentValues;Lcom/vk/dto/music/MusicTrack;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/audio/MusicDatabaseHelper;->a(Landroid/content/ContentValues;Lcom/vk/dto/music/MusicTrack;)V
 
     .line 9
     sget-object v0, Lcom/vtosters/lite/audio/player/SavedTrack;->h:[Ljava/lang/String;
@@ -285,7 +285,7 @@
     .locals 2
 
     .line 3
-    invoke-super {p0, p1}, Lcom/vtosters/lite/audio/f/a;->a(Landroid/database/Cursor;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/audio/f/DataObject;->a(Landroid/database/Cursor;)V
 
     .line 4
     sget v0, Lcom/vtosters/lite/audio/player/SavedTrack;->B:I
@@ -319,7 +319,7 @@
     .line 7
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/SavedTrack;->f:Lcom/vk/dto/music/MusicTrack;
 
-    invoke-static {p1, v0}, Lcom/vtosters/lite/audio/e;->a(Landroid/database/Cursor;Lcom/vk/dto/music/MusicTrack;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/audio/MusicDatabaseHelper;->a(Landroid/database/Cursor;Lcom/vk/dto/music/MusicTrack;)V
 
     return-void
 .end method

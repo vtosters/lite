@@ -3,12 +3,12 @@
 .source "UsersStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/b;)V
+    value = Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/utils/collection/d;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/utils/collection/IntCollection;",
         "Landroid/util/SparseArray<",
         "Lcom/vk/im/engine/internal/storage/models/UserStorageModel;",
         ">;>;"
@@ -41,12 +41,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+.method public final a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/d;",
+            "Lcom/vk/im/engine/utils/collection/IntCollection;",
             ")",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/internal/storage/models/UserStorageModel;",
@@ -59,7 +59,7 @@
     check-cast v0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;
 
     .line 1
-    invoke-static {v0, p1}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+    invoke-static {v0, p1}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
 
     move-result-object p1
 
@@ -74,12 +74,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
     const-class v0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -98,9 +98,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/utils/collection/d;
+    check-cast p1, Lcom/vk/im/engine/utils/collection/IntCollection;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$memCacheHelper$2;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$memCacheHelper$2;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "MsgSearchComponent.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/im/engine/events/a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/im/engine/events/Event;",
         ">;"
     }
 .end annotation
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/events/a;)V
+.method public final a(Lcom/vk/im/engine/events/Event;)V
     .locals 3
 
     .line 1
-    instance-of v0, p1, Lcom/vk/im/engine/events/g0;
+    instance-of v0, p1, Lcom/vk/im/engine/events/OnMsgSendEvent;
 
     if-eqz v0, :cond_0
 
@@ -64,7 +64,7 @@
 
     .line 2
     :cond_0
-    instance-of v0, p1, Lcom/vk/im/engine/events/y;
+    instance-of v0, p1, Lcom/vk/im/engine/events/OnImEngineInvalidateEvent;
 
     if-eqz v0, :cond_1
 
@@ -108,7 +108,7 @@
 
     .line 4
     :cond_2
-    instance-of p1, p1, Lcom/vk/im/engine/events/w;
+    instance-of p1, p1, Lcom/vk/im/engine/events/OnHintsUpdateEvent;
 
     if-eqz p1, :cond_5
 
@@ -140,11 +140,11 @@
 
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$i;->a:Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->d(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/a;
+    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->d(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/a;->a()Lcom/vk/im/engine/models/SearchMode;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;->a()Lcom/vk/im/engine/models/SearchMode;
 
     move-result-object p1
 
@@ -155,13 +155,13 @@
     .line 5
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$i;->a:Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->e(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lio/reactivex/disposables/b;
+    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->e(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 6
     :cond_4
@@ -169,7 +169,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->a(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;Lio/reactivex/disposables/b;)V
+    invoke-static {p1, v0}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->a(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;Lio/reactivex/disposables/Disposable;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$i;->a:Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;
@@ -196,7 +196,7 @@
 
     move-result v2
 
-    invoke-virtual {p1, p1, v1, v2, v0}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/SearchMode;ILkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p1, v1, v2, v0}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/SearchMode;ILkotlin/jvm/b/Functions;)V
 
     :cond_5
     :goto_1
@@ -207,9 +207,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/a;
+    check-cast p1, Lcom/vk/im/engine/events/Event;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$i;->a(Lcom/vk/im/engine/events/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$i;->a(Lcom/vk/im/engine/events/Event;)V
 
     return-void
 .end method

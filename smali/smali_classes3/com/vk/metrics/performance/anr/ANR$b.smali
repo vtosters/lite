@@ -44,7 +44,7 @@
 
     const-string v0, "Thread.getDefaultUncaughtExceptionHandler()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/metrics/performance/anr/ANR$b;->a:Ljava/lang/Thread$UncaughtExceptionHandler;
 

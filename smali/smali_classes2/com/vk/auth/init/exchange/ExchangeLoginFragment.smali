@@ -1,9 +1,9 @@
 .class public Lcom/vk/auth/init/exchange/ExchangeLoginFragment;
-.super Lcom/vk/auth/base/e;
+.super Lcom/vk/auth/base/LandingFragment;
 .source "ExchangeLoginFragment.kt"
 
 # interfaces
-.implements Lcom/vk/auth/init/exchange/b;
+.implements Lcom/vk/auth/init/exchange/ExchangeLoginView;
 
 
 # annotations
@@ -16,10 +16,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/auth/base/e<",
-        "Lcom/vk/auth/init/exchange/a;",
+        "Lcom/vk/auth/base/LandingFragment<",
+        "Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;",
         ">;",
-        "Lcom/vk/auth/init/exchange/b;"
+        "Lcom/vk/auth/init/exchange/ExchangeLoginView;"
     }
 .end annotation
 
@@ -50,7 +50,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -59,7 +59,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/auth/base/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/auth/base/LandingFragment;-><init>()V
 
     return-void
 .end method
@@ -107,7 +107,7 @@
 
     const-string v1, "TransitionSet()\n        \u2026eChildren(recycler, true)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
@@ -133,13 +133,13 @@
 
     .line 6
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 7
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -148,7 +148,7 @@
     .locals 6
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/e;->I4()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/LandingFragment;->I4()Landroid/widget/ImageView;
 
     move-result-object v0
 
@@ -174,7 +174,7 @@
 
     const-string v5, "requireContext()"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, v4}, Lcom/vk/api/sdk/utils/VKUtils;->a(Landroid/content/Context;)I
 
@@ -235,7 +235,7 @@
     :cond_0
     const-string p0, "adapter"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -248,7 +248,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/auth/init/exchange/c;",
+            "Lcom/vk/auth/init/exchange/UserItem;",
             ">;I)V"
         }
     .end annotation
@@ -269,7 +269,7 @@
     if-le v1, v2, :cond_0
 
     .line 4
-    sget v1, Lcom/vk/auth/r/g;->vk_auth_account_continue_as:I
+    sget v1, Lcom/vk/auth/r/R;->vk_auth_account_continue_as:I
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -279,9 +279,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/auth/init/exchange/c;
+    check-cast p1, Lcom/vk/auth/init/exchange/UserItem;
 
-    invoke-virtual {p1}, Lcom/vk/auth/init/exchange/c;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/auth/init/exchange/UserItem;->c()Ljava/lang/String;
 
     move-result-object p1
 
@@ -295,7 +295,7 @@
 
     .line 5
     :cond_0
-    sget p1, Lcom/vk/auth/r/g;->vk_auth_account_continue:I
+    sget p1, Lcom/vk/auth/r/R;->vk_auth_account_continue:I
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
@@ -309,11 +309,11 @@
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/auth/init/exchange/ExchangeLoginFragment;)Lcom/vk/auth/main/i;
+.method public static final synthetic c(Lcom/vk/auth/init/exchange/ExchangeLoginFragment;)Lcom/vk/auth/main/AuthUiManager;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->C4()Lcom/vk/auth/main/i;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->C4()Lcom/vk/auth/main/AuthUiManager;
 
     move-result-object p0
 
@@ -333,22 +333,22 @@
     :cond_0
     const-string p0, "disabledSettingsButtons"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/auth/init/exchange/ExchangeLoginFragment;)Lcom/vk/auth/init/exchange/a;
+.method public static final synthetic e(Lcom/vk/auth/init/exchange/ExchangeLoginFragment;)Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/auth/init/exchange/a;
+    check-cast p0, Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;
 
     return-object p0
 .end method
@@ -366,7 +366,7 @@
     :cond_0
     const-string p0, "settingsDoneButton"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -375,18 +375,18 @@
 
 
 # virtual methods
-.method protected a(Landroid/os/Bundle;Ljava/lang/Integer;)Lcom/vk/auth/init/exchange/a;
+.method protected a(Landroid/os/Bundle;Ljava/lang/Integer;)Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;
     .locals 0
 
     .line 3
-    new-instance p1, Lcom/vk/auth/init/exchange/a;
+    new-instance p1, Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;
 
-    invoke-direct {p1, p2}, Lcom/vk/auth/init/exchange/a;-><init>(Ljava/lang/Integer;)V
+    invoke-direct {p1, p2}, Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;-><init>(Ljava/lang/Integer;)V
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/auth/init/exchange/c;)V
+.method public a(Lcom/vk/auth/init/exchange/UserItem;)V
     .locals 1
 
     .line 7
@@ -394,14 +394,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/auth/init/exchange/UsersAdapter;->a(Lcom/vk/auth/init/exchange/c;)V
+    invoke-virtual {v0, p1}, Lcom/vk/auth/init/exchange/UsersAdapter;->a(Lcom/vk/auth/init/exchange/UserItem;)V
 
     return-void
 
     :cond_0
     const-string p1, "adapter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -414,7 +414,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/auth/init/exchange/c;",
+            "Lcom/vk/auth/init/exchange/UserItem;",
             ">;I)V"
         }
     .end annotation
@@ -435,7 +435,7 @@
     const-string p1, "adapter"
 
     .line 6
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -446,23 +446,23 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1, p2}, Lcom/vk/auth/init/exchange/b$a;->a(Lcom/vk/auth/init/exchange/b;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1, p2}, Lcom/vk/auth/init/exchange/ExchangeLoginView$a;->a(Lcom/vk/auth/init/exchange/ExchangeLoginView;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/auth/base/a;
+.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/auth/base/AuthPresenter;
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->e(Landroid/os/Bundle;)Lcom/vk/auth/init/exchange/a;
+    invoke-virtual {p0, p1}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->e(Landroid/os/Bundle;)Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public e(Landroid/os/Bundle;)Lcom/vk/auth/init/exchange/a;
+.method public e(Landroid/os/Bundle;)Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;
     .locals 3
 
     if-eqz p1, :cond_0
@@ -494,7 +494,7 @@
 
     .line 5
     :goto_0
-    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->a(Landroid/os/Bundle;Ljava/lang/Integer;)Lcom/vk/auth/init/exchange/a;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->a(Landroid/os/Bundle;Ljava/lang/Integer;)Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;
 
     move-result-object p1
 
@@ -546,7 +546,7 @@
     :cond_1
     const-string p1, "settingsButton"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -554,7 +554,7 @@
     const-string p1, "useAnotherAccountButton"
 
     .line 5
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -562,7 +562,7 @@
     const-string p1, "adapter"
 
     .line 6
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -588,7 +588,7 @@
     .line 2
     new-instance p1, Lcom/vk/auth/init/exchange/UsersAdapter;
 
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->C4()Lcom/vk/auth/main/i;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->C4()Lcom/vk/auth/main/AuthUiManager;
 
     move-result-object v0
 
@@ -602,7 +602,7 @@
     invoke-direct {v2, p0}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2;-><init>(Lcom/vk/auth/init/exchange/ExchangeLoginFragment;)V
 
     .line 4
-    invoke-direct {p1, v0, v1, v2}, Lcom/vk/auth/init/exchange/UsersAdapter;-><init>(Lcom/vk/auth/main/i;Lkotlin/jvm/b/c;Lkotlin/jvm/b/c;)V
+    invoke-direct {p1, v0, v1, v2}, Lcom/vk/auth/init/exchange/UsersAdapter;-><init>(Lcom/vk/auth/main/AuthUiManager;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)V
 
     iput-object p1, p0, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->g:Lcom/vk/auth/init/exchange/UsersAdapter;
 
@@ -613,7 +613,7 @@
     .locals 1
 
     .line 1
-    sget p3, Lcom/vk/auth/r/f;->vk_auth_exchange_login_fragment:I
+    sget p3, Lcom/vk/auth/r/R8;->vk_auth_exchange_login_fragment:I
 
     const/4 v0, 0x0
 
@@ -641,11 +641,11 @@
     invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->removeItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/auth/init/exchange/a;
+    check-cast v0, Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;
 
     invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->o2()V
 
@@ -658,14 +658,14 @@
     const-string v0, "userItemDecoration"
 
     .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_1
     const-string v0, "recycler"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -677,13 +677,13 @@
     invoke-super {p0, p1}, Lcom/vk/auth/base/BaseAuthFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/auth/init/exchange/a;
+    check-cast v0, Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/auth/init/exchange/a;->x()Ljava/lang/Integer;
+    invoke-virtual {v0}, Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;->x()Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -705,10 +705,10 @@
     .locals 5
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/auth/base/e;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/auth/base/LandingFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
-    sget p2, Lcom/vk/auth/r/e;->recycler:I
+    sget p2, Lcom/vk/auth/r/R5;->recycler:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -716,7 +716,7 @@
 
     const-string v0, "view.findViewById(R.id.recycler)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -799,11 +799,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onViewCreated$1;-><init>(Lcom/vk/auth/init/exchange/ExchangeLoginFragment;)V
 
-    invoke-static {p2, v1}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, v1}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 9
     :cond_1
-    sget p2, Lcom/vk/auth/r/e;->use_another_account:I
+    sget p2, Lcom/vk/auth/r/R5;->use_another_account:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -811,7 +811,7 @@
 
     const-string v1, "view.findViewById(R.id.use_another_account)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->B:Landroid/view/View;
 
@@ -824,10 +824,10 @@
 
     invoke-direct {v1, p0}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onViewCreated$2;-><init>(Lcom/vk/auth/init/exchange/ExchangeLoginFragment;)V
 
-    invoke-static {p2, v1}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, v1}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 11
-    sget p2, Lcom/vk/auth/r/e;->register:I
+    sget p2, Lcom/vk/auth/r/R5;->register:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -844,11 +844,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onViewCreated$3;-><init>(Lcom/vk/auth/init/exchange/ExchangeLoginFragment;)V
 
-    invoke-static {p2, v1}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, v1}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 13
     :cond_2
-    sget p2, Lcom/vk/auth/r/e;->settings:I
+    sget p2, Lcom/vk/auth/r/R5;->settings:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -856,7 +856,7 @@
 
     const-string v1, "view.findViewById(R.id.settings)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->D:Landroid/view/View;
 
@@ -872,7 +872,7 @@
     invoke-virtual {p2, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 15
-    sget p2, Lcom/vk/auth/r/e;->settings_done:I
+    sget p2, Lcom/vk/auth/r/R5;->settings_done:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -880,7 +880,7 @@
 
     const-string v1, "view.findViewById(R.id.settings_done)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->E:Landroid/view/View;
 
@@ -896,7 +896,7 @@
     invoke-virtual {p2, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 17
-    sget p2, Lcom/vk/auth/r/e;->disabled_settings_buttons:I
+    sget p2, Lcom/vk/auth/r/R5;->disabled_settings_buttons:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -904,7 +904,7 @@
 
     const-string v0, "view.findViewById(R.id.disabled_settings_buttons)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroidx/constraintlayout/widget/Group;
 
@@ -917,13 +917,13 @@
     invoke-direct {p0}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->K4()V
 
     .line 20
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/auth/init/exchange/a;
+    check-cast p1, Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;
 
-    invoke-virtual {p1, p0}, Lcom/vk/auth/init/exchange/a;->a(Lcom/vk/auth/init/exchange/b;)V
+    invoke-virtual {p1, p0}, Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;->a(Lcom/vk/auth/init/exchange/ExchangeLoginView;)V
 
     return-void
 
@@ -931,7 +931,7 @@
     const-string p1, "settingsDoneButton"
 
     .line 21
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -939,7 +939,7 @@
     const-string p1, "settingsButton"
 
     .line 22
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -947,7 +947,7 @@
     const-string p1, "useAnotherAccountButton"
 
     .line 23
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -955,18 +955,18 @@
     const-string p1, "userItemDecoration"
 
     .line 24
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 25
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -974,18 +974,18 @@
     const-string p1, "adapter"
 
     .line 26
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     :cond_a
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 27
     :cond_b
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method

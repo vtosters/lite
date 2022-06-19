@@ -3,12 +3,12 @@
 .source "CatalogSectionPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->r()Lio/reactivex/disposables/b;
+    value = Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->r()Lio/reactivex/disposables/Disposable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/catalog2/core/w/e/b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/catalog2/core/w/e/CatalogCommand6;",
         ">;"
     }
 .end annotation
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/w/e/b;)V
+.method public final a(Lcom/vk/catalog2/core/w/e/CatalogCommand6;)V
     .locals 7
 
     .line 1
-    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/o;
+    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/CatalogCommand2;
 
     if-eqz v0, :cond_1
 
@@ -69,9 +69,9 @@
 
     move-object v2, p1
 
-    check-cast v2, Lcom/vk/catalog2/core/w/e/o;
+    check-cast v2, Lcom/vk/catalog2/core/w/e/CatalogCommand2;
 
-    invoke-virtual {v2}, Lcom/vk/catalog2/core/w/e/o;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/catalog2/core/w/e/CatalogCommand2;->a()Ljava/lang/String;
 
     move-result-object v3
 
@@ -85,37 +85,37 @@
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 5
     new-instance v3, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$1;
 
-    invoke-direct {v3, p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$1;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/b;)V
+    invoke-direct {v3, p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$1;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/CatalogCommand6;)V
 
-    invoke-static {v0, v3}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v3}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 6
     new-instance v3, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$2;
 
-    invoke-direct {v3, p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$2;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/b;)V
+    invoke-direct {v3, p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$2;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/CatalogCommand6;)V
 
-    invoke-static {v0, v3}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v3}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 7
-    invoke-static {p1}, Lkotlin/sequences/m;->d(Lkotlin/sequences/j;)Z
+    invoke-static {p1}, Lkotlin/sequences/m;->d(Lkotlin/sequences/Sequence;)Z
 
     move-result p1
 
     .line 8
     iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-static {v0, v2}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;Lcom/vk/catalog2/core/w/e/o;)Lcom/vk/catalog2/core/holders/common/i;
+    invoke-static {v0, v2}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;Lcom/vk/catalog2/core/w/e/CatalogCommand2;)Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
 
     move-result-object v0
 
@@ -127,17 +127,17 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-virtual {v2}, Lcom/vk/catalog2/core/w/e/o;->d()Z
+    invoke-virtual {v2}, Lcom/vk/catalog2/core/w/e/CatalogCommand2;->d()Z
 
     move-result v1
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(ZLcom/vk/catalog2/core/holders/common/i;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(ZLcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;)V
 
     goto/16 :goto_2
 
     .line 10
     :cond_1
-    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/p;
+    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/CatalogCommand1;
 
     const/4 v1, 0x0
 
@@ -161,21 +161,21 @@
     move-result-object v0
 
     .line 12
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 13
     new-instance v4, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$3;
 
-    invoke-direct {v4, p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$3;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/b;)V
+    invoke-direct {v4, p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$3;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/CatalogCommand6;)V
 
-    invoke-static {v0, v4}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v4}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 14
-    invoke-static {p1}, Lkotlin/sequences/m;->d(Lkotlin/sequences/j;)Z
+    invoke-static {p1}, Lkotlin/sequences/m;->d(Lkotlin/sequences/Sequence;)Z
 
     move-result p1
 
@@ -184,13 +184,13 @@
     .line 15
     iget-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-static {p1, v1, v3, v2, v3}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;ZLcom/vk/catalog2/core/holders/common/i;ILjava/lang/Object;)V
+    invoke-static {p1, v1, v3, v2, v3}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;ZLcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;ILjava/lang/Object;)V
 
     goto/16 :goto_2
 
     .line 16
     :cond_2
-    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/n;
+    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/CatalogCommand3;
 
     if-eqz v0, :cond_3
 
@@ -208,21 +208,21 @@
     move-result-object v0
 
     .line 18
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 19
     new-instance v4, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$4;
 
-    invoke-direct {v4, p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$4;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/b;)V
+    invoke-direct {v4, p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$4;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/CatalogCommand6;)V
 
-    invoke-static {v0, v4}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v4}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 20
-    invoke-static {p1}, Lkotlin/sequences/m;->d(Lkotlin/sequences/j;)Z
+    invoke-static {p1}, Lkotlin/sequences/m;->d(Lkotlin/sequences/Sequence;)Z
 
     move-result p1
 
@@ -231,13 +231,13 @@
     .line 21
     iget-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-static {p1, v1, v3, v2, v3}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;ZLcom/vk/catalog2/core/holders/common/i;ILjava/lang/Object;)V
+    invoke-static {p1, v1, v3, v2, v3}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;ZLcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;ILjava/lang/Object;)V
 
     goto/16 :goto_2
 
     .line 22
     :cond_3
-    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/l;
+    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/CatalogCommand7;
 
     if-eqz v0, :cond_4
 
@@ -255,21 +255,21 @@
     move-result-object v1
 
     .line 24
-    invoke-static {v1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
     .line 25
     new-instance v2, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$5;
 
-    invoke-direct {v2, p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$5;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/b;)V
+    invoke-direct {v2, p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$5;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/CatalogCommand6;)V
 
-    invoke-static {v1, v2}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v1, v2}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
     .line 26
-    invoke-static {v1}, Lkotlin/sequences/m;->d(Lkotlin/sequences/j;)Z
+    invoke-static {v1}, Lkotlin/sequences/m;->d(Lkotlin/sequences/Sequence;)Z
 
     move-result v1
 
@@ -282,9 +282,9 @@
 
     new-instance v2, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$6;
 
-    invoke-direct {v2, p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$6;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/b;)V
+    invoke-direct {v2, p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$6;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/CatalogCommand6;)V
 
-    invoke-static {v1, v2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
+    invoke-static {v1, v2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
 
     .line 28
     iget-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
@@ -295,7 +295,7 @@
 
     .line 29
     :cond_4
-    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/k;
+    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/CatalogCommand;
 
     if-eqz v0, :cond_5
 
@@ -319,9 +319,9 @@
 
     new-instance v2, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$7;
 
-    invoke-direct {v2, p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$7;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/b;)V
+    invoke-direct {v2, p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$7;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/CatalogCommand6;)V
 
-    invoke-static {v1, v2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
+    invoke-static {v1, v2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
 
     .line 32
     iget-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
@@ -332,7 +332,7 @@
 
     .line 33
     :cond_5
-    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/e;
+    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/CatalogCommand8;
 
     if-eqz v0, :cond_6
 
@@ -345,13 +345,13 @@
     if-eqz v0, :cond_10
 
     .line 34
-    check-cast p1, Lcom/vk/catalog2/core/w/e/e;
+    check-cast p1, Lcom/vk/catalog2/core/w/e/CatalogCommand8;
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/e;->a()Lkotlin/jvm/b/b;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand8;->a()Lkotlin/jvm/b/Functions2;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -366,7 +366,7 @@
     .line 35
     iget-object v1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/e;->b()Lkotlin/jvm/b/c;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand8;->b()Lkotlin/jvm/b/Functions1;
 
     move-result-object p1
 
@@ -376,11 +376,11 @@
 
     iget-object v2, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-virtual {v2}, Lcom/vk/catalog2/core/presenters/c;->b()Lcom/vk/lists/t;
+    invoke-virtual {v2}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->b()Lcom/vk/lists/PaginationHelper;
 
     move-result-object v2
 
-    invoke-interface {p1, v0, v2}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0, v2}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -392,7 +392,7 @@
 
     .line 36
     :cond_6
-    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/j;
+    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/CatalogCommand10;
 
     if-eqz v0, :cond_7
 
@@ -405,13 +405,13 @@
     if-eqz v0, :cond_10
 
     .line 37
-    check-cast p1, Lcom/vk/catalog2/core/w/e/j;
+    check-cast p1, Lcom/vk/catalog2/core/w/e/CatalogCommand10;
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/j;->a()Lkotlin/jvm/b/b;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand10;->a()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -426,25 +426,25 @@
     .line 38
     iget-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/presenters/c;->o()Lcom/vk/catalog2/core/holders/common/g;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->o()Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;
 
     move-result-object p1
 
     if-eqz p1, :cond_10
 
-    invoke-interface {p1}, Lcom/vk/catalog2/core/holders/common/f;->e()V
+    invoke-interface {p1}, Lcom/vk/catalog2/core/holders/common/CatalogListViewHolder;->e()V
 
     goto/16 :goto_2
 
     .line 39
     :cond_7
-    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/c;
+    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/CatalogCommand5;
 
     if-eqz v0, :cond_10
 
     iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/presenters/c;->o()Lcom/vk/catalog2/core/holders/common/g;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->o()Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;
 
     move-result-object v0
 
@@ -477,9 +477,9 @@
     if-eqz v4, :cond_10
 
     .line 40
-    check-cast p1, Lcom/vk/catalog2/core/w/e/c;
+    check-cast p1, Lcom/vk/catalog2/core/w/e/CatalogCommand5;
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/c;->a()Lcom/vk/catalog2/core/util/EditorMode;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand5;->a()Lcom/vk/catalog2/core/util/EditorMode;
 
     move-result-object v5
 
@@ -505,32 +505,32 @@
 
     .line 41
     :cond_9
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/g;->c()V
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;->c()V
 
     .line 42
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/c;->a()Lcom/vk/catalog2/core/util/EditorMode;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand5;->a()Lcom/vk/catalog2/core/util/EditorMode;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/util/h;->a(Lcom/vk/catalog2/core/util/EditorMode;)V
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/util/CatalogProcessEditorCmd;->a(Lcom/vk/catalog2/core/util/EditorMode;)V
 
     .line 43
     iget-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-static {p1, v1, v3, v2, v3}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;ZLcom/vk/catalog2/core/holders/common/i;ILjava/lang/Object;)V
+    invoke-static {p1, v1, v3, v2, v3}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;ZLcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;ILjava/lang/Object;)V
 
     goto :goto_2
 
     .line 44
     :cond_a
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/c;->a()Lcom/vk/catalog2/core/util/EditorMode;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand5;->a()Lcom/vk/catalog2/core/util/EditorMode;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/util/h;->a(Lcom/vk/catalog2/core/util/EditorMode;)V
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/util/CatalogProcessEditorCmd;->a(Lcom/vk/catalog2/core/util/EditorMode;)V
 
     .line 45
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/g;->b()Ljava/util/List;
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;->b()Ljava/util/List;
 
     move-result-object p1
 
@@ -572,16 +572,16 @@
     invoke-static {v2, v1, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;Ljava/util/List;Ljava/util/List;)V
 
     .line 48
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/g;->c()V
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;->c()V
 
     .line 49
     iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-static {v0}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->b(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;)Lcom/vk/catalog2/core/presenters/e;
+    invoke-static {v0}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->b(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;)Lcom/vk/catalog2/core/presenters/CatalogReorderingPresenter;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4, p1}, Lcom/vk/catalog2/core/presenters/e;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v0, v4, p1}, Lcom/vk/catalog2/core/presenters/CatalogReorderingPresenter;->a(Ljava/lang/String;Ljava/util/List;)V
 
     goto :goto_2
 
@@ -600,7 +600,7 @@
     move-result-object v3
 
     :cond_e
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -612,11 +612,11 @@
 
     .line 51
     :cond_f
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/c;->a()Lcom/vk/catalog2/core/util/EditorMode;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand5;->a()Lcom/vk/catalog2/core/util/EditorMode;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/util/h;->a(Lcom/vk/catalog2/core/util/EditorMode;)V
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/util/CatalogProcessEditorCmd;->a(Lcom/vk/catalog2/core/util/EditorMode;)V
 
     :cond_10
     :goto_2
@@ -627,9 +627,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/catalog2/core/w/e/b;
+    check-cast p1, Lcom/vk/catalog2/core/w/e/CatalogCommand6;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a(Lcom/vk/catalog2/core/w/e/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a(Lcom/vk/catalog2/core/w/e/CatalogCommand6;)V
 
     return-void
 .end method

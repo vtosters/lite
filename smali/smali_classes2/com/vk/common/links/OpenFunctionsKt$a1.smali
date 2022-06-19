@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IILjava/lang/String;Ljava/lang/Integer;Lcom/vk/common/links/f;)Z
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IILjava/lang/String;Ljava/lang/Integer;Lcom/vk/common/links/OpenCallback;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "[",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         ">;"
@@ -33,7 +33,7 @@
 # instance fields
 .field final synthetic a:Landroid/content/Context;
 
-.field final synthetic b:Lcom/vk/common/links/f;
+.field final synthetic b:Lcom/vk/common/links/OpenCallback;
 
 .field final synthetic c:Ljava/lang/Integer;
 
@@ -43,12 +43,12 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Lcom/vk/common/links/f;Ljava/lang/Integer;ILjava/lang/String;)V
+.method constructor <init>(Landroid/content/Context;Lcom/vk/common/links/OpenCallback;Ljava/lang/Integer;ILjava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$a1;->a:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/common/links/OpenFunctionsKt$a1;->b:Lcom/vk/common/links/f;
+    iput-object p2, p0, Lcom/vk/common/links/OpenFunctionsKt$a1;->b:Lcom/vk/common/links/OpenCallback;
 
     iput-object p3, p0, Lcom/vk/common/links/OpenFunctionsKt$a1;->c:Ljava/lang/Integer;
 
@@ -69,7 +69,7 @@
     const-string v0, "r"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     array-length v0, p1
 
@@ -92,10 +92,10 @@
 
     const v0, 0x7f120b3c
 
-    invoke-static {p1, v0}, Lcom/vk/core/util/ContextExtKt;->m(Landroid/content/Context;I)Lkotlin/m;
+    invoke-static {p1, v0}, Lcom/vk/core/util/ContextExtKt;->m(Landroid/content/Context;I)Lkotlin/Unit;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$a1;->b:Lcom/vk/common/links/f;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$a1;->b:Lcom/vk/common/links/OpenCallback;
 
     if-eqz p1, :cond_3
 
@@ -103,7 +103,7 @@
 
     invoke-direct {v0}, Lcom/vk/common/links/PostNotFoundException;-><init>()V
 
-    invoke-interface {p1, v0}, Lcom/vk/common/links/f;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0}, Lcom/vk/common/links/OpenCallback;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
@@ -115,64 +115,64 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcom/vk/bridges/x;->a()Lcom/vk/bridges/w;
+    invoke-static {}, Lcom/vk/bridges/PostsBridge1;->a()Lcom/vk/bridges/PostsBridge2;
 
     move-result-object v0
 
     aget-object p1, p1, v1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/w;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vk/bridges/y;
+    invoke-interface {v0, p1}, Lcom/vk/bridges/PostsBridge2;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vk/bridges/PostsBridge;
 
     move-result-object p1
 
     iget v0, p0, Lcom/vk/common/links/OpenFunctionsKt$a1;->d:I
 
-    invoke-virtual {p1, v0}, Lcom/vk/bridges/y;->c(I)Lcom/vk/bridges/y;
+    invoke-virtual {p1, v0}, Lcom/vk/bridges/PostsBridge;->c(I)Lcom/vk/bridges/PostsBridge;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/common/links/OpenFunctionsKt$a1;->e:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/bridges/y;->a(Ljava/lang/String;)Lcom/vk/bridges/y;
+    invoke-virtual {p1, v0}, Lcom/vk/bridges/PostsBridge;->a(Ljava/lang/String;)Lcom/vk/bridges/PostsBridge;
 
     iget-object v0, p0, Lcom/vk/common/links/OpenFunctionsKt$a1;->a:Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     goto :goto_1
 
     .line 5
     :cond_2
-    invoke-static {}, Lcom/vk/bridges/x;->a()Lcom/vk/bridges/w;
+    invoke-static {}, Lcom/vk/bridges/PostsBridge1;->a()Lcom/vk/bridges/PostsBridge2;
 
     move-result-object v0
 
     aget-object p1, p1, v1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/w;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vk/bridges/y;
+    invoke-interface {v0, p1}, Lcom/vk/bridges/PostsBridge2;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vk/bridges/PostsBridge;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/common/links/OpenFunctionsKt$a1;->e:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/bridges/y;->a(Ljava/lang/String;)Lcom/vk/bridges/y;
+    invoke-virtual {p1, v0}, Lcom/vk/bridges/PostsBridge;->a(Ljava/lang/String;)Lcom/vk/bridges/PostsBridge;
 
     iget-object v0, p0, Lcom/vk/common/links/OpenFunctionsKt$a1;->a:Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 6
     :cond_3
     :goto_1
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$a1;->b:Lcom/vk/common/links/f;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$a1;->b:Lcom/vk/common/links/OpenCallback;
 
     if-eqz p1, :cond_4
 
-    invoke-interface {p1}, Lcom/vk/common/links/f;->a()V
+    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->a()V
 
     :cond_4
     return-void

@@ -1,9 +1,9 @@
 .class public final Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;
-.super Lcom/vk/core/dialogs/bottomsheet/k/b/a;
+.super Lcom/vk/core/dialogs/bottomsheet/k/b/BaseModalBottomSheetController;
 .source "MusicBuyMusicSubscriptionController.kt"
 
 # interfaces
-.implements Lcom/vk/music/notifications/b;
+.implements Lcom/vk/music/notifications/MusicBuySubscriptionPageManager;
 
 
 # annotations
@@ -20,28 +20,28 @@
 
 .field private E:Landroid/view/View;
 
-.field private F:Lcom/vk/core/dialogs/bottomsheet/k/a;
+.field private F:Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;
 
 .field private final G:Landroidx/appcompat/app/AppCompatActivity;
 
-.field private final H:Lcom/vk/music/subscription/b;
+.field private final H:Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;
 
-.field private final I:Lkotlin/jvm/b/a;
+.field private final I:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final J:Lkotlin/jvm/b/b;
+.field private final J:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/dto/common/data/Subscription;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -62,44 +62,44 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/appcompat/app/AppCompatActivity;Lcom/vk/music/subscription/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;Lcom/vk/core/dialogs/bottomsheet/k/a$b;)V
+.method public constructor <init>(Landroidx/appcompat/app/AppCompatActivity;Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet$b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/appcompat/app/AppCompatActivity;",
-            "Lcom/vk/music/subscription/b;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/common/data/Subscription;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
             "Landroid/view/View$OnClickListener;",
             "Landroid/view/View$OnClickListener;",
             "Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;",
-            "Lcom/vk/core/dialogs/bottomsheet/k/a$b;",
+            "Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet$b;",
             ")V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/dialogs/bottomsheet/k/b/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/dialogs/bottomsheet/k/b/BaseModalBottomSheetController;-><init>()V
 
     iput-object p1, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->G:Landroidx/appcompat/app/AppCompatActivity;
 
-    iput-object p2, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->H:Lcom/vk/music/subscription/b;
+    iput-object p2, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->H:Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;
 
-    iput-object p3, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->I:Lkotlin/jvm/b/a;
+    iput-object p3, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->I:Lkotlin/jvm/b/Functions;
 
-    iput-object p4, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->J:Lkotlin/jvm/b/b;
+    iput-object p4, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->J:Lkotlin/jvm/b/Functions2;
 
     iput-object p5, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->K:Landroid/view/View$OnClickListener;
 
@@ -108,12 +108,12 @@
     iput-object p7, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->M:Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;
 
     .line 2
-    invoke-virtual {p0, p8}, Lcom/vk/core/dialogs/bottomsheet/k/b/a;->a(Lcom/vk/core/dialogs/bottomsheet/k/a$b;)V
+    invoke-virtual {p0, p8}, Lcom/vk/core/dialogs/bottomsheet/k/b/BaseModalBottomSheetController;->a(Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet$b;)V
 
     const/4 p1, 0x0
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/core/dialogs/bottomsheet/k/b/a;->b(Z)V
+    invoke-virtual {p0, p1}, Lcom/vk/core/dialogs/bottomsheet/k/b/BaseModalBottomSheetController;->b(Z)V
 
     .line 4
     new-instance p1, Lcom/vk/core/dialogs/bottomsheet/modern/impl/CustomisableBottomSheetBehavior;
@@ -140,21 +140,21 @@
     invoke-virtual {p1, p2}, Lcom/vk/core/dialogs/bottomsheet/modern/impl/CustomisableBottomSheetBehavior;->c(I)V
 
     .line 8
-    invoke-virtual {p0, p1}, Lcom/vk/core/dialogs/bottomsheet/k/b/a;->a(Lcom/vk/core/dialogs/bottomsheet/modern/impl/CustomisableBottomSheetBehavior;)V
+    invoke-virtual {p0, p1}, Lcom/vk/core/dialogs/bottomsheet/k/b/BaseModalBottomSheetController;->a(Lcom/vk/core/dialogs/bottomsheet/modern/impl/CustomisableBottomSheetBehavior;)V
 
     .line 9
     new-instance p1, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$2;
 
     invoke-direct {p1, p0}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$2;-><init>(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/core/dialogs/bottomsheet/k/b/a;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/core/dialogs/bottomsheet/k/b/BaseModalBottomSheetController;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 10
     new-instance p1, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$a;
 
     invoke-direct {p1, p0}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$a;-><init>(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/core/dialogs/bottomsheet/k/b/a;->a(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {p0, p1}, Lcom/vk/core/dialogs/bottomsheet/k/b/BaseModalBottomSheetController;->a(Landroid/content/DialogInterface$OnDismissListener;)V
 
     return-void
 .end method
@@ -182,10 +182,10 @@
 
     const-string v2, "context.getDrawable(R.dr\u2026music_bacground_blured)!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 16
-    new-instance v2, Lcom/facebook/drawee/drawable/m;
+    new-instance v2, Lcom/facebook/drawee/drawable/RoundedBitmapDrawable;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -199,7 +199,7 @@
 
     move-result-object v1
 
-    invoke-direct {v2, p1, v1}, Lcom/facebook/drawee/drawable/m;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+    invoke-direct {v2, p1, v1}, Lcom/facebook/drawee/drawable/RoundedBitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
     const/16 p1, 0x8
 
@@ -240,7 +240,7 @@
     aput v1, p1, v0
 
     .line 17
-    invoke-virtual {v2, p1}, Lcom/facebook/drawee/drawable/o;->a([F)V
+    invoke-virtual {v2, p1}, Lcom/facebook/drawee/drawable/RoundedDrawable;->a([F)V
 
     return-object v2
 
@@ -256,7 +256,7 @@
 
     .line 19
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -274,11 +274,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)Lcom/vk/core/dialogs/bottomsheet/k/a;
+.method public static final synthetic a(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;
     .locals 0
 
     .line 3
-    iget-object p0, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->F:Lcom/vk/core/dialogs/bottomsheet/k/a;
+    iget-object p0, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->F:Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;
 
     return-object p0
 .end method
@@ -301,11 +301,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)Lkotlin/jvm/b/a;
+.method public static final synthetic c(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)Lkotlin/jvm/b/Functions;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->I:Lkotlin/jvm/b/a;
+    iget-object p0, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->I:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method
@@ -416,11 +416,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic f(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)Lkotlin/jvm/b/b;
+.method public static final synthetic f(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->J:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->J:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -476,7 +476,7 @@
     const-string v2, "viewGroup"
 
     .line 9
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v9, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$h;
 
@@ -496,7 +496,7 @@
 
     invoke-direct/range {v2 .. v8}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$h;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;Lcom/vk/core/fragments/FragmentImpl;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)V
 
-    invoke-static {v9}, Lcom/vk/core/util/m;->a(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+    invoke-static {v9}, Lcom/vk/core/util/BitmapUtils;->a(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -514,7 +514,7 @@
 
     const-string v3, "viewGroup.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v2}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->a(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
@@ -547,15 +547,15 @@
     return-object v0
 .end method
 
-.method public a(Landroidx/appcompat/app/AppCompatActivity;Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/k/a;
+.method public a(Landroidx/appcompat/app/AppCompatActivity;Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;
     .locals 0
 
     .line 5
-    invoke-super {p0, p1, p2}, Lcom/vk/core/dialogs/bottomsheet/k/b/a;->a(Landroidx/appcompat/app/AppCompatActivity;Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/k/a;
+    invoke-super {p0, p1, p2}, Lcom/vk/core/dialogs/bottomsheet/k/b/BaseModalBottomSheetController;->a(Landroidx/appcompat/app/AppCompatActivity;Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->F:Lcom/vk/core/dialogs/bottomsheet/k/a;
+    iput-object p1, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->F:Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;
 
     return-object p1
 .end method
@@ -566,7 +566,7 @@
     const-string v0, "MusicBuyMusicSubscriptionController"
 
     .line 4
-    invoke-virtual {p0, p1, v0}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->a(Landroidx/appcompat/app/AppCompatActivity;Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/k/a;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->a(Landroidx/appcompat/app/AppCompatActivity;Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;
 
     return-void
 .end method
@@ -651,18 +651,18 @@
     .line 10
     new-instance v8, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$b;
 
-    iget-object v9, v7, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->H:Lcom/vk/music/subscription/b;
+    iget-object v9, v7, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->H:Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;
 
-    invoke-direct {v8, v9, v1, v2}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$b;-><init>(Lcom/vk/music/subscription/b;Lkotlin/jvm/b/b;Landroid/view/View$OnClickListener;)V
+    invoke-direct {v8, v9, v1, v2}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$b;-><init>(Lcom/vk/music/subscription/MusicBuySubscriptionPageViewFactory;Lkotlin/jvm/b/Functions2;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {v15, v8}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
     .line 11
-    sget-object v8, Lcom/vk/core/ui/e;->h:Lcom/vk/core/ui/e$a;
+    sget-object v8, Lcom/vk/core/ui/CarouselPageTransformer;->h:Lcom/vk/core/ui/CarouselPageTransformer$a;
 
     const-string v9, "this"
 
-    invoke-static {v15, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v15, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v11, 0x0
 
@@ -682,7 +682,7 @@
 
     move-object/from16 v15, v16
 
-    invoke-static/range {v8 .. v15}, Lcom/vk/core/ui/e$a;->a(Lcom/vk/core/ui/e$a;Landroidx/viewpager/widget/ViewPager;IIIIILjava/lang/Object;)V
+    invoke-static/range {v8 .. v15}, Lcom/vk/core/ui/CarouselPageTransformer$a;->a(Lcom/vk/core/ui/CarouselPageTransformer$a;Landroidx/viewpager/widget/ViewPager;IIIIILjava/lang/Object;)V
 
     .line 12
     invoke-virtual/range {p1 .. p1}, Landroidx/viewpager/widget/ViewPager;->getAdapter()Landroidx/viewpager/widget/PagerAdapter;
@@ -719,7 +719,7 @@
 
     move-object v6, v9
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$d;-><init>(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;Lkotlin/jvm/b/b;Landroid/view/View$OnClickListener;IILcom/vk/core/widget/PageIndicator;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$d;-><init>(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;Lkotlin/jvm/b/Functions2;Landroid/view/View$OnClickListener;IILcom/vk/core/widget/PageIndicator;)V
 
     move-object/from16 v0, p1
 
@@ -737,7 +737,7 @@
     const-string v0, "rootView"
 
     .line 15
-    invoke-static {v10, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v10
 .end method

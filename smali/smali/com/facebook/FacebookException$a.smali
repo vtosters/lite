@@ -44,7 +44,7 @@
     :try_start_0
     iget-object p1, p0, Lcom/facebook/FacebookException$a;->a:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/facebook/internal/u/d/b;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/facebook/internal/u/d/ErrorReportHandler;->a(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

@@ -3,7 +3,7 @@
 .source "DialogBarVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/im/ui/formatters/linkparser/a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/im/ui/formatters/linkparser/LinkParser;",
         ">;"
     }
 .end annotation
@@ -45,13 +45,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/ui/formatters/linkparser/a;
+.method public final invoke()Lcom/vk/im/ui/formatters/linkparser/LinkParser;
     .locals 1
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$linkParser$2;->this$0:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;)Lcom/vk/im/ui/formatters/linkparser/a;
+    invoke-static {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;)Lcom/vk/im/ui/formatters/linkparser/LinkParser;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$linkParser$2;->invoke()Lcom/vk/im/ui/formatters/linkparser/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$linkParser$2;->invoke()Lcom/vk/im/ui/formatters/linkparser/LinkParser;
 
     move-result-object v0
 

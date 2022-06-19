@@ -80,17 +80,17 @@
     :goto_0
     iget-object v1, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh$b;->a:Lcom/vk/catalog2/core/holders/headers/ToolbarVh;
 
-    invoke-static {v1}, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->c(Lcom/vk/catalog2/core/holders/headers/ToolbarVh;)Lcom/vk/catalog2/core/w/a;
+    invoke-static {v1}, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;->c(Lcom/vk/catalog2/core/holders/headers/ToolbarVh;)Lcom/vk/catalog2/core/w/CatalogCommandsBus;
 
     move-result-object v1
 
-    new-instance v2, Lcom/vk/catalog2/core/w/e/c;
+    new-instance v2, Lcom/vk/catalog2/core/w/e/CatalogCommand5;
 
-    invoke-direct {v2, v0, p1}, Lcom/vk/catalog2/core/w/e/c;-><init>(Lcom/vk/catalog2/core/util/EditorMode;Ljava/lang/String;)V
+    invoke-direct {v2, v0, p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand5;-><init>(Lcom/vk/catalog2/core/util/EditorMode;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
-    invoke-virtual {v1, v2, p1}, Lcom/vk/catalog2/core/w/a;->a(Lcom/vk/catalog2/core/w/e/b;Z)V
+    invoke-virtual {v1, v2, p1}, Lcom/vk/catalog2/core/w/CatalogCommandsBus;->a(Lcom/vk/catalog2/core/w/e/CatalogCommand6;Z)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh$b;->a:Lcom/vk/catalog2/core/holders/headers/ToolbarVh;

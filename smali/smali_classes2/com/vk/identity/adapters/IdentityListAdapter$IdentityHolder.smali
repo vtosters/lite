@@ -65,14 +65,14 @@
 
     invoke-direct {p1, p0}, Lcom/vk/identity/adapters/IdentityListAdapter$IdentityHolder$1;-><init>(Lcom/vk/identity/adapters/IdentityListAdapter$IdentityHolder;)V
 
-    invoke-static {p2, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/vk/identity/b/e;)V
+.method public final a(Lcom/vk/identity/b/IdentityAdapterItem5;)V
     .locals 2
 
     .line 1
@@ -80,9 +80,9 @@
 
     const-string v1, "titleView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/e;->b()Lcom/vk/dto/identity/IdentityCard;
+    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem5;->b()Lcom/vk/dto/identity/IdentityCard;
 
     move-result-object v1
 
@@ -97,9 +97,9 @@
 
     const-string v1, "subtitle"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/e;->b()Lcom/vk/dto/identity/IdentityCard;
+    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem5;->b()Lcom/vk/dto/identity/IdentityCard;
 
     move-result-object p1
 

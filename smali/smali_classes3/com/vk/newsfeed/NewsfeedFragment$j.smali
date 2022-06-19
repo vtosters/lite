@@ -40,13 +40,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/NewsfeedFragment$j;->a:Lcom/vk/newsfeed/NewsfeedFragment;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/newsfeed/presenters/l;
+    check-cast p1, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
 
-    invoke-virtual {p1, p2}, Lcom/vk/newsfeed/presenters/l;->b(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;->b(Z)V
 
     return-void
 .end method

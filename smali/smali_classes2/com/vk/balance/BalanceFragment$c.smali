@@ -40,15 +40,15 @@
     .line 1
     iget-object v0, p0, Lcom/vk/balance/BalanceFragment$c;->a:Lcom/vk/balance/BalanceFragment;
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/balance/a;
+    check-cast v0, Lcom/vk/balance/BalanceContract;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/balance/a;->C()V
+    invoke-interface {v0}, Lcom/vk/balance/BalanceContract;->C()V
 
     :cond_0
     return-void

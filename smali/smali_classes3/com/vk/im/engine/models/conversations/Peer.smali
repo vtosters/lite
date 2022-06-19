@@ -42,7 +42,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/conversations/Peer$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/conversations/Peer$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/conversations/Peer$a;
@@ -70,7 +70,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/models/conversations/Peer;-><init>(ILcom/vk/im/engine/models/PeerType;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/models/conversations/Peer;-><init>(ILcom/vk/im/engine/models/PeerType;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -79,12 +79,12 @@
     .locals 2
 
     .line 5
-    invoke-static {p1}, Lcom/vk/im/engine/utils/e;->d(I)Lcom/vk/im/engine/models/PeerType;
+    invoke-static {p1}, Lcom/vk/im/engine/utils/ImDialogsUtils;->d(I)Lcom/vk/im/engine/models/PeerType;
 
     move-result-object v0
 
     .line 6
-    invoke-static {p1}, Lcom/vk/im/engine/utils/e;->c(I)I
+    invoke-static {p1}, Lcom/vk/im/engine/utils/ImDialogsUtils;->c(I)I
 
     move-result v1
 
@@ -109,7 +109,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILcom/vk/im/engine/models/PeerType;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ILcom/vk/im/engine/models/PeerType;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x1
@@ -161,7 +161,7 @@
 
     const-string v2, "PeerType.fromTypeAsInt(s.readInt())"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     invoke-virtual {p1}, Lcom/vk/core/serialize/Serializer;->n()I
@@ -174,7 +174,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -187,7 +187,7 @@
     .locals 1
 
     .line 8
-    invoke-static {p2, p1}, Lcom/vk/im/engine/utils/e;->a(ILcom/vk/im/engine/models/PeerType;)I
+    invoke-static {p2, p1}, Lcom/vk/im/engine/utils/ImDialogsUtils;->a(ILcom/vk/im/engine/models/PeerType;)I
 
     move-result v0
 
@@ -256,7 +256,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/conversations/Peer;->b:Lcom/vk/im/engine/models/PeerType;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

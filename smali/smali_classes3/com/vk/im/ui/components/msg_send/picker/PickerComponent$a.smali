@@ -41,7 +41,7 @@
 .method public abstract a()V
 .end method
 
-.method public abstract a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;)V
+.method public abstract a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -51,13 +51,13 @@
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;",
             "Ljava/lang/String;",
-            "Lcom/vk/im/engine/models/messages/e;",
+            "Lcom/vk/im/engine/models/messages/MsgSendSource;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;Landroid/view/View;Lkotlin/jvm/b/a;)V
+.method public abstract a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Landroid/view/View;Lkotlin/jvm/b/Functions;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -67,10 +67,10 @@
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;",
             "Ljava/lang/String;",
-            "Lcom/vk/im/engine/models/messages/e;",
+            "Lcom/vk/im/engine/models/messages/MsgSendSource;",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation

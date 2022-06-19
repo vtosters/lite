@@ -3,12 +3,12 @@
 .source "CronetHttpRequestExecutor.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor;->a(Lcom/vk/httpexecutor/api/e;)Lcom/vk/httpexecutor/api/i;
+    value = Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor;->a(Lcom/vk/httpexecutor/api/HttpRequest;)Lcom/vk/httpexecutor/api/HttpResponse;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Throwable;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $urlRequest:Lorg/chromium/net/j;
+.field final synthetic $urlRequest:Lorg/chromium/net/ExperimentalUrlRequest;
 
 
 # direct methods
-.method constructor <init>(Lorg/chromium/net/j;)V
+.method constructor <init>(Lorg/chromium/net/ExperimentalUrlRequest;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor$launchRequestAndAwaitImpl$responseInputStream$2;->$urlRequest:Lorg/chromium/net/j;
+    iput-object p1, p0, Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor$launchRequestAndAwaitImpl$responseInputStream$2;->$urlRequest:Lorg/chromium/net/ExperimentalUrlRequest;
 
     const/4 p1, 0x1
 
@@ -50,9 +50,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor$launchRequestAndAwaitImpl$responseInputStream$2;->$urlRequest:Lorg/chromium/net/j;
+    iget-object v0, p0, Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor$launchRequestAndAwaitImpl$responseInputStream$2;->$urlRequest:Lorg/chromium/net/ExperimentalUrlRequest;
 
-    invoke-virtual {v0}, Lorg/chromium/net/w;->a()V
+    invoke-virtual {v0}, Lorg/chromium/net/UrlRequest;->a()V
 
     throw p1
 .end method
@@ -65,7 +65,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/httpexecutor/cronet/CronetHttpRequestExecutor$launchRequestAndAwaitImpl$responseInputStream$2;->a(Ljava/lang/Throwable;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

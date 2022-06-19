@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
-        "Lcom/vk/market/common/c;",
+        "Lcom/vk/market/common/GoodViewModel;",
         ">",
         "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;"
     }
@@ -21,20 +21,20 @@
 
 .field private final c:Landroid/widget/TextView;
 
-.field private final d:Lcom/vk/core/util/s0;
+.field private final d:Lcom/vk/core/util/PriceFormatter;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -49,7 +49,7 @@
     const v2, 0x7f0a04ca
 
     .line 2
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -60,7 +60,7 @@
     const v2, 0x7f0a04cb
 
     .line 3
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -71,7 +71,7 @@
     const v2, 0x7f0a04cc
 
     .line 4
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -80,18 +80,18 @@
     iput-object v0, p0, Lcom/vk/market/common/BaseGoodsViewHolder;->c:Landroid/widget/TextView;
 
     .line 5
-    new-instance v0, Lcom/vk/core/util/s0;
+    new-instance v0, Lcom/vk/core/util/PriceFormatter;
 
-    invoke-direct {v0}, Lcom/vk/core/util/s0;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/util/PriceFormatter;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/market/common/BaseGoodsViewHolder;->d:Lcom/vk/core/util/s0;
+    iput-object v0, p0, Lcom/vk/market/common/BaseGoodsViewHolder;->d:Lcom/vk/core/util/PriceFormatter;
 
     .line 6
     new-instance v0, Lcom/vk/market/common/BaseGoodsViewHolder$1;
 
-    invoke-direct {v0, p0, p2}, Lcom/vk/market/common/BaseGoodsViewHolder$1;-><init>(Lcom/vk/market/common/BaseGoodsViewHolder;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p0, p2}, Lcom/vk/market/common/BaseGoodsViewHolder$1;-><init>(Lcom/vk/market/common/BaseGoodsViewHolder;Lkotlin/jvm/b/Functions2;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->d(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->d(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -107,7 +107,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/market/common/c;)V
+.method public a(Lcom/vk/market/common/GoodViewModel;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -118,7 +118,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/market/common/BaseGoodsViewHolder;->b:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/market/common/c;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/market/common/GoodViewModel;->e()Ljava/lang/String;
 
     move-result-object v1
 
@@ -127,19 +127,19 @@
     .line 3
     iget-object v0, p0, Lcom/vk/market/common/BaseGoodsViewHolder;->c:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/vk/market/common/BaseGoodsViewHolder;->d:Lcom/vk/core/util/s0;
+    iget-object v1, p0, Lcom/vk/market/common/BaseGoodsViewHolder;->d:Lcom/vk/core/util/PriceFormatter;
 
-    invoke-virtual {p1}, Lcom/vk/market/common/c;->d()J
+    invoke-virtual {p1}, Lcom/vk/market/common/GoodViewModel;->d()J
 
     move-result-wide v2
 
-    invoke-virtual {p1}, Lcom/vk/market/common/c;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/market/common/GoodViewModel;->a()Ljava/lang/String;
 
     move-result-object v4
 
     const/4 v5, 0x1
 
-    invoke-virtual {v1, v2, v3, v4, v5}, Lcom/vk/core/util/s0;->a(JLjava/lang/String;Z)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v2, v3, v4, v5}, Lcom/vk/core/util/PriceFormatter;->a(JLjava/lang/String;Z)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -150,7 +150,7 @@
 
     new-instance v1, Lcom/vk/market/common/BaseGoodsViewHolder$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/market/common/BaseGoodsViewHolder$a;-><init>(Lcom/vk/market/common/BaseGoodsViewHolder;Lcom/vk/market/common/c;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/market/common/BaseGoodsViewHolder$a;-><init>(Lcom/vk/market/common/BaseGoodsViewHolder;Lcom/vk/market/common/GoodViewModel;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->post(Ljava/lang/Runnable;)Z
 

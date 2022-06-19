@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -35,20 +35,20 @@
 
 
 # virtual methods
-.method public final a(IZ)Lcom/vk/api/execute/f;
+.method public final a(IZ)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
     .locals 0
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/data/n;->m()V
+    invoke-static {}, Lcom/vtosters/lite/data/Analytics;->m()V
 
     .line 2
-    invoke-static {p1, p2}, Lcom/vk/api/execute/f;->a(IZ)Lcom/vk/api/execute/f;
+    invoke-static {p1, p2}, Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;->a(IZ)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
 
     move-result-object p1
 
     const-string p2, "ExecuteSetSubscriptionStatus.create(id, subscribe)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

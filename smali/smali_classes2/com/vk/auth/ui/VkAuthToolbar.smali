@@ -37,7 +37,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/ui/VkAuthToolbar$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/ui/VkAuthToolbar$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/auth/ui/VkAuthToolbar;->g:Lcom/vk/auth/ui/VkAuthToolbar$a;
 
@@ -59,7 +59,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkAuthToolbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkAuthToolbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkAuthToolbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkAuthToolbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -93,7 +93,7 @@
     .line 3
     new-instance v0, Landroidx/appcompat/widget/AppCompatImageButton;
 
-    sget v1, Lcom/vk/auth/r/b;->toolbarNavigationButtonStyle:I
+    sget v1, Lcom/vk/auth/r/R3;->toolbarNavigationButtonStyle:I
 
     const/4 v2, 0x0
 
@@ -138,7 +138,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
     .line 10
-    sget-object v0, Lcom/vk/auth/r/i;->VkAuthToolbar:[I
+    sget-object v0, Lcom/vk/auth/r/R4;->VkAuthToolbar:[I
 
     const/4 v1, 0x0
 
@@ -148,7 +148,7 @@
 
     .line 11
     :try_start_0
-    sget p2, Lcom/vk/auth/r/i;->VkAuthToolbar_title:I
+    sget p2, Lcom/vk/auth/r/R4;->VkAuthToolbar_title:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -165,16 +165,16 @@
     invoke-virtual {p0, p2}, Lcom/vk/auth/ui/VkAuthToolbar;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 12
-    sget p2, Lcom/vk/auth/r/i;->VkAuthToolbar_titleTextAppearance:I
+    sget p2, Lcom/vk/auth/r/R4;->VkAuthToolbar_titleTextAppearance:I
 
-    sget p3, Lcom/vk/auth/r/h;->VkAuth_ToolbarTitleTextAppearance:I
+    sget p3, Lcom/vk/auth/r/R7;->VkAuth_ToolbarTitleTextAppearance:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result p2
 
     .line 13
-    sget p3, Lcom/vk/auth/r/i;->VkAuthToolbar_navigationIcon:I
+    sget p3, Lcom/vk/auth/r/R4;->VkAuthToolbar_navigationIcon:I
 
     invoke-virtual {p1, p3}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -183,14 +183,14 @@
     invoke-virtual {p0, p3}, Lcom/vk/auth/ui/VkAuthToolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 14
-    sget p3, Lcom/vk/auth/r/i;->VkAuthToolbar_navigationContentDescription:I
+    sget p3, Lcom/vk/auth/r/R4;->VkAuthToolbar_navigationContentDescription:I
 
     invoke-virtual {p1, p3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object p3
 
     .line 15
-    sget v0, Lcom/vk/auth/r/i;->VkAuthToolbar_pictureTint:I
+    sget v0, Lcom/vk/auth/r/R4;->VkAuthToolbar_pictureTint:I
 
     const/4 v3, -0x1
 
@@ -201,7 +201,7 @@
     iput v0, p0, Lcom/vk/auth/ui/VkAuthToolbar;->f:I
 
     .line 16
-    sget v0, Lcom/vk/auth/r/i;->VkAuthToolbar_picture:I
+    sget v0, Lcom/vk/auth/r/R4;->VkAuthToolbar_picture:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -210,7 +210,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/auth/ui/VkAuthToolbar;->setPicture(Landroid/graphics/drawable/Drawable;)V
 
     .line 17
-    sget v0, Lcom/vk/auth/r/i;->VkAuthToolbar_picture_height:I
+    sget v0, Lcom/vk/auth/r/R4;->VkAuthToolbar_picture_height:I
 
     const/high16 v4, -0x40800000    # -1.0f
 
@@ -219,7 +219,7 @@
     move-result v0
 
     .line 18
-    sget v5, Lcom/vk/auth/r/i;->VkAuthToolbar_picture_width:I
+    sget v5, Lcom/vk/auth/r/R4;->VkAuthToolbar_picture_width:I
 
     invoke-virtual {p1, v5, v4}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
@@ -246,7 +246,7 @@
 
     .line 20
     :cond_1
-    sget v0, Lcom/vk/auth/r/i;->VkAuthToolbar_titlePriority:I
+    sget v0, Lcom/vk/auth/r/R4;->VkAuthToolbar_titlePriority:I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -255,7 +255,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/auth/ui/VkAuthToolbar;->setTitlePriority(I)V
 
     .line 21
-    sget v0, Lcom/vk/auth/r/i;->VkAuthToolbar_maxButtonHeight:I
+    sget v0, Lcom/vk/auth/r/R4;->VkAuthToolbar_maxButtonHeight:I
 
     invoke-virtual {p1, v0, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -300,7 +300,7 @@
     throw p2
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -315,7 +315,7 @@
     if-eqz p4, :cond_1
 
     .line 1
-    sget p3, Lcom/vk/auth/r/b;->toolbarStyle:I
+    sget p3, Lcom/vk/auth/r/R3;->toolbarStyle:I
 
     :cond_1
     invoke-direct {p0, p1, p2, p3}, Lcom/vk/auth/ui/VkAuthToolbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -622,7 +622,7 @@
 
     const-string v1, "titleView.text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -642,7 +642,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/auth/ui/VkAuthToolbar;->c:Landroidx/appcompat/widget/AppCompatImageButton;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -935,15 +935,15 @@
     return-void
 .end method
 
-.method public final setNavigationOnClickListener(Lkotlin/jvm/b/b;)V
+.method public final setNavigationOnClickListener(Lkotlin/jvm/b/Functions2;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -951,9 +951,9 @@
     .line 2
     iget-object v0, p0, Lcom/vk/auth/ui/VkAuthToolbar;->c:Landroidx/appcompat/widget/AppCompatImageButton;
 
-    new-instance v1, Lcom/vk/auth/ui/b;
+    new-instance v1, Lcom/vk/auth/ui/VkAuthToolbar1;
 
-    invoke-direct {v1, p1}, Lcom/vk/auth/ui/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p1}, Lcom/vk/auth/ui/VkAuthToolbar1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

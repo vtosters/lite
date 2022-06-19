@@ -16,7 +16,7 @@
 
 .field private final c:F
 
-.field private final d:Lcom/vk/im/engine/a;
+.field private final d:Lcom/vk/im/engine/ImEngine;
 
 
 # direct methods
@@ -42,11 +42,11 @@
     iput v0, p0, Lcom/vtosters/lite/directshare/ImDirectShareService;->c:F
 
     .line 5
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vtosters/lite/directshare/ImDirectShareService;->d:Lcom/vk/im/engine/a;
+    iput-object v0, p0, Lcom/vtosters/lite/directshare/ImDirectShareService;->d:Lcom/vk/im/engine/ImEngine;
 
     return-void
 .end method
@@ -83,7 +83,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 5
-    sget-object v1, Lcom/vk/navigation/q;->Q:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->Q:Ljava/lang/String;
 
     invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/Dialog;->getId()I
 
@@ -192,7 +192,7 @@
 
     .line 17
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -219,20 +219,20 @@
 
     move v1, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 3
-    iget-object p1, p0, Lcom/vtosters/lite/directshare/ImDirectShareService;->d:Lcom/vk/im/engine/a;
+    iget-object p1, p0, Lcom/vtosters/lite/directshare/ImDirectShareService;->d:Lcom/vk/im/engine/ImEngine;
 
     const-string v0, "DirectShare"
 
-    invoke-virtual {p1, v0, v7}, Lcom/vk/im/engine/a;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v7}, Lcom/vk/im/engine/ImEngine;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
 
     move-result-object p1
 
     const-string v0, "engine.submitCommand(\"DirectShare\", cmd)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd$a;
 
@@ -249,15 +249,15 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/im/ui/p/b;->q()Lcom/vk/im/ui/p/m;
+    invoke-interface {v2}, Lcom/vk/im/ui/p/ImBridge8;->q()Lcom/vk/im/ui/p/ImBridge6;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/im/ui/p/m;->a()Ljava/lang/Class;
+    invoke-interface {v2}, Lcom/vk/im/ui/p/ImBridge6;->a()Ljava/lang/Class;
 
     move-result-object v2
 
@@ -272,7 +272,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -283,7 +283,7 @@
     .locals 3
 
     .line 2
-    sget-object v0, Lcom/vk/im/ui/views/avatars/b;->a:Lcom/vk/im/ui/views/avatars/b;
+    sget-object v0, Lcom/vk/im/ui/views/avatars/AvatarBitmapFactory;->INSTANCE:Lcom/vk/im/ui/views/avatars/AvatarBitmapFactory;
 
     const/16 v1, 0x30
 
@@ -295,7 +295,7 @@
 
     invoke-direct {v2, p1, p2}, Lcom/vtosters/lite/directshare/ImDirectShareService$getTargetIcon$1;-><init>(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/views/avatars/b;->a(ILkotlin/jvm/b/b;)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/views/avatars/AvatarBitmapFactory;->a(ILkotlin/jvm/b/Functions2;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -305,7 +305,7 @@
 
     const-string p2, "Icon.createWithBitmap(Av\u2026log, profiles)\n        })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -327,11 +327,11 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {p1}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result p1
 
@@ -344,15 +344,15 @@
 
     const-string p2, "Collections.emptyList()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     .line 3
     :cond_0
-    iget-object p1, p0, Lcom/vtosters/lite/directshare/ImDirectShareService;->d:Lcom/vk/im/engine/a;
+    iget-object p1, p0, Lcom/vtosters/lite/directshare/ImDirectShareService;->d:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/a;->d()Lcom/vk/im/engine/ImConfig;
+    invoke-virtual {p1}, Lcom/vk/im/engine/ImEngine;->d()Lcom/vk/im/engine/ImConfig;
 
     move-result-object p1
 

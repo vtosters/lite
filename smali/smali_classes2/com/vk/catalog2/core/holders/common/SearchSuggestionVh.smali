@@ -1,5 +1,5 @@
 .class public Lcom/vk/catalog2/core/holders/common/SearchSuggestionVh;
-.super Lcom/vk/catalog2/core/y/b;
+.super Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;
 .source "SearchSuggestionVh.kt"
 
 
@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method public constructor <init>(IILcom/vk/catalog2/core/util/g;)V
+.method public constructor <init>(IILcom/vk/catalog2/core/util/CatalogOnClickListener;)V
     .locals 0
     .param p1    # I
         .annotation build Landroidx/annotation/LayoutRes;
@@ -24,7 +24,7 @@
     .end param
 
     .line 1
-    invoke-direct {p0, p3}, Lcom/vk/catalog2/core/y/b;-><init>(Lcom/vk/catalog2/core/util/g;)V
+    invoke-direct {p0, p3}, Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;-><init>(Lcom/vk/catalog2/core/util/CatalogOnClickListener;)V
 
     iput p1, p0, Lcom/vk/catalog2/core/holders/common/SearchSuggestionVh;->d:I
 
@@ -53,7 +53,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/catalog2/core/holders/common/SearchSuggestionVh$createView$1;-><init>(Lcom/vk/catalog2/core/holders/common/SearchSuggestionVh;)V
 
-    invoke-direct {p1, p3, v0, p2, v2}, Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;-><init>(IILandroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+    invoke-direct {p1, p3, v0, p2, v2}, Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;-><init>(IILandroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
 
     iput-object p1, p0, Lcom/vk/catalog2/core/holders/common/SearchSuggestionVh;->c:Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;
 
@@ -66,20 +66,20 @@
 
     const-string p2, "delegate.itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     :cond_0
     const-string p1, "delegate"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 3
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -114,14 +114,14 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/music/ui/common/o;->a(Ljava/lang/Object;I)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/music/ui/common/MusicViewHolder;->a(Ljava/lang/Object;I)V
 
     return-void
 
     :cond_1
     const-string p1, "delegate"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

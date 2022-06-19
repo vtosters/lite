@@ -3,12 +3,12 @@
 .source "WebPFrame.java"
 
 # interfaces
-.implements Lcom/facebook/imagepipeline/animated/base/c;
+.implements Lcom/facebook/imagepipeline/animated/base/AnimatedImageFrame;
 
 
 # instance fields
 .field private mNativeContext:J
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end field
 
@@ -16,7 +16,7 @@
 # direct methods
 .method constructor <init>(J)V
     .locals 0
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 
     .line 1

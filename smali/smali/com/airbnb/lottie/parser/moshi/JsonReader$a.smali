@@ -17,11 +17,11 @@
 # instance fields
 .field final a:[Ljava/lang/String;
 
-.field final b:Lokio/l;
+.field final b:Lokio/Options;
 
 
 # direct methods
-.method private constructor <init>([Ljava/lang/String;Lokio/l;)V
+.method private constructor <init>([Ljava/lang/String;Lokio/Options;)V
     .locals 0
 
     .line 1
@@ -31,7 +31,7 @@
     iput-object p1, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader$a;->a:[Ljava/lang/String;
 
     .line 3
-    iput-object p2, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader$a;->b:Lokio/l;
+    iput-object p2, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader$a;->b:Lokio/Options;
 
     return-void
 .end method
@@ -46,9 +46,9 @@
     new-array v0, v0, [Lokio/ByteString;
 
     .line 2
-    new-instance v1, Lokio/c;
+    new-instance v1, Lokio/Buffer;
 
-    invoke-direct {v1}, Lokio/c;-><init>()V
+    invoke-direct {v1}, Lokio/Buffer;-><init>()V
 
     const/4 v2, 0x0
 
@@ -61,13 +61,13 @@
     .line 4
     aget-object v3, p0, v2
 
-    invoke-static {v1, v3}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->a(Lokio/d;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->a(Lokio/BufferedSink;Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {v1}, Lokio/c;->readByte()B
+    invoke-virtual {v1}, Lokio/Buffer;->readByte()B
 
     .line 6
-    invoke-virtual {v1}, Lokio/c;->P()Lokio/ByteString;
+    invoke-virtual {v1}, Lokio/Buffer;->P()Lokio/ByteString;
 
     move-result-object v3
 
@@ -87,11 +87,11 @@
 
     check-cast p0, [Ljava/lang/String;
 
-    invoke-static {v0}, Lokio/l;->a([Lokio/ByteString;)Lokio/l;
+    invoke-static {v0}, Lokio/Options;->a([Lokio/ByteString;)Lokio/Options;
 
     move-result-object v0
 
-    invoke-direct {v1, p0, v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$a;-><init>([Ljava/lang/String;Lokio/l;)V
+    invoke-direct {v1, p0, v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$a;-><init>([Ljava/lang/String;Lokio/Options;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 

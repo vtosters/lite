@@ -1,5 +1,5 @@
 .class Lcom/vk/music/view/SmallPlayerView$a;
-.super Lcom/vk/music/ui/common/o;
+.super Lcom/vk/music/ui/common/MusicViewHolder;
 .source "SmallPlayerView.java"
 
 # interfaces
@@ -18,10 +18,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/music/ui/common/o<",
+        "Lcom/vk/music/ui/common/MusicViewHolder<",
         "Landroid/util/Pair<",
         "Lcom/vk/music/player/PlayState;",
-        "Lcom/vk/music/player/e;",
+        "Lcom/vk/music/player/TrackInfo;",
         ">;>;",
         "Landroid/view/View$OnClickListener;"
     }
@@ -37,7 +37,7 @@
 
 .field private E:Z
 
-.field private F:Lcom/vk/music/player/d;
+.field private F:Lcom/vk/music/player/PlayerModel;
 
 .field final b:Lcom/vk/music/view/ThumbsImageView;
 
@@ -59,20 +59,20 @@
     .locals 2
 
     .line 1
-    sget v0, Lcom/vk/music/m/g;->music_small_player:I
+    sget v0, Lcom/vk/music/m/R;->music_small_player:I
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, v0, p1, v1}, Lcom/vk/music/ui/common/o;-><init>(ILandroid/view/ViewGroup;Z)V
+    invoke-direct {p0, v0, p1, v1}, Lcom/vk/music/ui/common/MusicViewHolder;-><init>(ILandroid/view/ViewGroup;Z)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object p1
 
-    sget v0, Lcom/vk/music/m/d;->ic_play_28:I
+    sget v0, Lcom/vk/music/m/R6;->ic_play_28:I
 
-    sget v1, Lcom/vk/music/m/a;->icon_outline_secondary:I
+    sget v1, Lcom/vk/music/m/R1;->icon_outline_secondary:I
 
     invoke-static {p1, v0, v1}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
@@ -81,13 +81,13 @@
     iput-object p1, p0, Lcom/vk/music/view/SmallPlayerView$a;->g:Landroid/graphics/drawable/Drawable;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object p1
 
-    sget v0, Lcom/vk/music/m/d;->ic_pause_28:I
+    sget v0, Lcom/vk/music/m/R6;->ic_pause_28:I
 
-    sget v1, Lcom/vk/music/m/a;->icon_outline_secondary:I
+    sget v1, Lcom/vk/music/m/R1;->icon_outline_secondary:I
 
     invoke-static {p1, v0, v1}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
@@ -96,13 +96,13 @@
     iput-object p1, p0, Lcom/vk/music/view/SmallPlayerView$a;->h:Landroid/graphics/drawable/Drawable;
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object p1
 
-    sget v0, Lcom/vk/music/m/d;->ic_next_28:I
+    sget v0, Lcom/vk/music/m/R6;->ic_next_28:I
 
-    sget v1, Lcom/vk/music/m/a;->icon_outline_secondary:I
+    sget v1, Lcom/vk/music/m/R1;->icon_outline_secondary:I
 
     invoke-static {p1, v0, v1}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
@@ -111,13 +111,13 @@
     iput-object p1, p0, Lcom/vk/music/view/SmallPlayerView$a;->B:Landroid/graphics/drawable/Drawable;
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object p1
 
-    sget v0, Lcom/vk/music/m/d;->ic_forward_15_20:I
+    sget v0, Lcom/vk/music/m/R6;->ic_forward_15_20:I
 
-    sget v1, Lcom/vk/music/m/a;->icon_outline_secondary:I
+    sget v1, Lcom/vk/music/m/R1;->icon_outline_secondary:I
 
     invoke-static {p1, v0, v1}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
@@ -138,18 +138,18 @@
     iput-boolean p1, p0, Lcom/vk/music/view/SmallPlayerView$a;->E:Z
 
     .line 8
-    sget-object p1, Lcom/vk/music/common/c$a;->a:Lcom/vk/music/common/c$c;
+    sget-object p1, Lcom/vk/music/common/Music$a;->a:Lcom/vk/music/common/Music$c;
 
-    invoke-interface {p1}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+    invoke-interface {p1}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/music/view/SmallPlayerView$a;->F:Lcom/vk/music/player/d;
+    iput-object p1, p0, Lcom/vk/music/view/SmallPlayerView$a;->F:Lcom/vk/music/player/PlayerModel;
 
     .line 9
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    sget v0, Lcom/vk/music/m/e;->image:I
+    sget v0, Lcom/vk/music/m/R5;->image:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -162,7 +162,7 @@
     .line 10
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    sget v0, Lcom/vk/music/m/e;->title:I
+    sget v0, Lcom/vk/music/m/R5;->title:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -175,7 +175,7 @@
     .line 11
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    sget v0, Lcom/vk/music/m/e;->play_pause:I
+    sget v0, Lcom/vk/music/m/R5;->play_pause:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -193,7 +193,7 @@
     .line 13
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    sget v0, Lcom/vk/music/m/e;->next:I
+    sget v0, Lcom/vk/music/m/R5;->next:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -228,7 +228,7 @@
     .line 18
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    sget v0, Lcom/vk/music/m/e;->player_view_progress:I
+    sget v0, Lcom/vk/music/m/R5;->player_view_progress:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -241,11 +241,11 @@
     .line 19
     iget-object p1, p0, Lcom/vk/music/view/SmallPlayerView$a;->D:Lcom/vk/core/drawable/IndeterminateHorizontalProgressDrawable;
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v1, Lcom/vk/music/m/a;->accent:I
+    sget v1, Lcom/vk/music/m/R1;->accent:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -258,7 +258,7 @@
     return-void
 .end method
 
-.method private static a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/d;)V
+.method private static a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerModel;)V
     .locals 1
 
     .line 39
@@ -267,23 +267,23 @@
     if-ne p0, v0, :cond_0
 
     .line 40
-    invoke-interface {p1}, Lcom/vk/music/player/d;->e()V
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->e()V
 
     goto :goto_0
 
     .line 41
     :cond_0
-    invoke-interface {p1}, Lcom/vk/music/player/d;->t()V
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->t()V
 
     :goto_0
     return-void
 .end method
 
-.method private static a(Lcom/vk/music/player/e;Lcom/vk/music/player/d;)V
+.method private static a(Lcom/vk/music/player/TrackInfo;Lcom/vk/music/player/PlayerModel;)V
     .locals 0
 
     .line 35
-    invoke-virtual {p0}, Lcom/vk/music/player/e;->e()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p0}, Lcom/vk/music/player/TrackInfo;->e()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object p0
 
@@ -297,13 +297,13 @@
     if-eqz p0, :cond_0
 
     .line 37
-    invoke-interface {p1}, Lcom/vk/music/player/d;->K0()V
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->K0()V
 
     goto :goto_0
 
     .line 38
     :cond_0
-    invoke-interface {p1}, Lcom/vk/music/player/d;->next()V
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->next()V
 
     :cond_1
     :goto_0
@@ -328,7 +328,7 @@
             "(",
             "Landroid/util/Pair<",
             "Lcom/vk/music/player/PlayState;",
-            "Lcom/vk/music/player/e;",
+            "Lcom/vk/music/player/TrackInfo;",
             ">;)V"
         }
     .end annotation
@@ -346,10 +346,10 @@
     .line 5
     iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    check-cast p1, Lcom/vk/music/player/e;
+    check-cast p1, Lcom/vk/music/player/TrackInfo;
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/music/player/e;->n()Z
+    invoke-virtual {p1}, Lcom/vk/music/player/TrackInfo;->n()Z
 
     move-result v2
 
@@ -362,7 +362,7 @@
     .line 7
     iget-object v2, p0, Lcom/vk/music/view/SmallPlayerView$a;->b:Lcom/vk/music/view/ThumbsImageView;
 
-    invoke-virtual {p1}, Lcom/vk/music/player/e;->e()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vk/music/player/TrackInfo;->e()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v5
 
@@ -372,12 +372,12 @@
 
     if-eqz v5, :cond_0
 
-    sget v5, Lcom/vk/music/m/d;->ic_podcast_24:I
+    sget v5, Lcom/vk/music/m/R6;->ic_podcast_24:I
 
     goto :goto_0
 
     :cond_0
-    sget v5, Lcom/vk/music/m/d;->ic_song_24:I
+    sget v5, Lcom/vk/music/m/R6;->ic_song_24:I
 
     :goto_0
     invoke-virtual {v2, v5}, Lcom/vk/music/view/ThumbsImageView;->setEmptyPlaceholder(I)V
@@ -385,13 +385,13 @@
     .line 8
     iget-object v2, p0, Lcom/vk/music/view/SmallPlayerView$a;->b:Lcom/vk/music/view/ThumbsImageView;
 
-    invoke-virtual {p1}, Lcom/vk/music/player/e;->o()Z
+    invoke-virtual {p1}, Lcom/vk/music/player/TrackInfo;->o()Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/music/player/e;->e()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vk/music/player/TrackInfo;->e()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v5
 
@@ -410,13 +410,13 @@
     .line 9
     iget-object v2, p0, Lcom/vk/music/view/SmallPlayerView$a;->e:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/music/player/e;->o()Z
+    invoke-virtual {p1}, Lcom/vk/music/player/TrackInfo;->o()Z
 
     move-result v5
 
     if-eqz v5, :cond_2
 
-    sget-object v5, Lcom/vk/music/ui/common/formatting/b;->a:Lcom/vk/music/ui/common/formatting/b;
+    sget-object v5, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->INSTANCE:Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;
 
     iget-object v6, p0, Lcom/vk/music/view/SmallPlayerView$a;->e:Landroid/widget/TextView;
 
@@ -425,14 +425,14 @@
     move-result-object v6
 
     .line 10
-    invoke-virtual {p1}, Lcom/vk/music/player/e;->e()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vk/music/player/TrackInfo;->e()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v7
 
-    sget v8, Lcom/vk/music/m/a;->text_secondary:I
+    sget v8, Lcom/vk/music/m/R1;->text_secondary:I
 
     .line 11
-    invoke-virtual {v5, v6, v7, v8}, Lcom/vk/music/ui/common/formatting/b;->b(Landroid/content/Context;Lcom/vk/dto/music/MusicTrack;I)Ljava/lang/CharSequence;
+    invoke-virtual {v5, v6, v7, v8}, Lcom/vk/music/ui/common/formatting/MusicTrackFormatter;->b(Landroid/content/Context;Lcom/vk/dto/music/MusicTrack;I)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -446,7 +446,7 @@
 
     move-result-object v5
 
-    sget v6, Lcom/vk/music/m/i;->audio_ad_title:I
+    sget v6, Lcom/vk/music/m/R4;->audio_ad_title:I
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -459,7 +459,7 @@
     .line 14
     iget-object v2, p0, Lcom/vk/music/view/SmallPlayerView$a;->d:Landroid/widget/ImageButton;
 
-    invoke-virtual {p1}, Lcom/vk/music/player/e;->e()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vk/music/player/TrackInfo;->e()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v5
 
@@ -480,7 +480,7 @@
     invoke-virtual {v2, v5}, Landroid/widget/ImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 15
-    invoke-virtual {p1}, Lcom/vk/music/player/e;->e()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vk/music/player/TrackInfo;->e()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v2
 
@@ -493,11 +493,11 @@
     .line 16
     iget-object v2, p0, Lcom/vk/music/view/SmallPlayerView$a;->d:Landroid/widget/ImageButton;
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v5
 
-    sget v6, Lcom/vk/music/m/i;->accessibility_rewind_on_15_sec_forward:I
+    sget v6, Lcom/vk/music/m/R4;->accessibility_rewind_on_15_sec_forward:I
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -511,11 +511,11 @@
     :cond_4
     iget-object v2, p0, Lcom/vk/music/view/SmallPlayerView$a;->d:Landroid/widget/ImageButton;
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v5
 
-    sget v6, Lcom/vk/music/m/i;->music_talkback_next:I
+    sget v6, Lcom/vk/music/m/R4;->music_talkback_next:I
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -533,7 +533,7 @@
 
     aput-object v6, v5, v0
 
-    invoke-virtual {p1, v5}, Lcom/vk/music/player/e;->a([Lcom/vk/music/player/PlayerAction;)Z
+    invoke-virtual {p1, v5}, Lcom/vk/music/player/TrackInfo;->a([Lcom/vk/music/player/PlayerAction;)Z
 
     move-result v5
 
@@ -548,7 +548,7 @@
 
     aput-object v6, v5, v0
 
-    invoke-virtual {p1, v5}, Lcom/vk/music/player/e;->a([Lcom/vk/music/player/PlayerAction;)Z
+    invoke-virtual {p1, v5}, Lcom/vk/music/player/TrackInfo;->a([Lcom/vk/music/player/PlayerAction;)Z
 
     move-result v5
 
@@ -590,11 +590,11 @@
     .line 24
     iget-object v1, p0, Lcom/vk/music/view/SmallPlayerView$a;->c:Landroid/widget/ImageButton;
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v2
 
-    sget v3, Lcom/vk/music/m/i;->music_talkback_pause:I
+    sget v3, Lcom/vk/music/m/R4;->music_talkback_pause:I
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -615,11 +615,11 @@
     .line 26
     iget-object v1, p0, Lcom/vk/music/view/SmallPlayerView$a;->c:Landroid/widget/ImageButton;
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v2
 
-    sget v3, Lcom/vk/music/m/i;->music_talkback_play:I
+    sget v3, Lcom/vk/music/m/R4;->music_talkback_play:I
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -634,7 +634,7 @@
     invoke-virtual {v1, v0}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
 
     .line 28
-    invoke-virtual {p1}, Lcom/vk/music/player/e;->o()Z
+    invoke-virtual {p1}, Lcom/vk/music/player/TrackInfo;->o()Z
 
     move-result v0
 
@@ -643,11 +643,11 @@
     .line 29
     iget-object v0, p0, Lcom/vk/music/view/SmallPlayerView$a;->f:Landroid/widget/ProgressBar;
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v1
 
-    sget v2, Lcom/vk/music/m/d;->drawer_player_progress:I
+    sget v2, Lcom/vk/music/m/R6;->drawer_player_progress:I
 
     invoke-static {v1, v2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -661,11 +661,11 @@
     :cond_8
     iget-object v0, p0, Lcom/vk/music/view/SmallPlayerView$a;->f:Landroid/widget/ProgressBar;
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v1
 
-    sget v2, Lcom/vk/music/m/d;->drawer_player_progress_ad:I
+    sget v2, Lcom/vk/music/m/R6;->drawer_player_progress_ad:I
 
     invoke-static {v1, v2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -681,7 +681,7 @@
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/vk/music/player/e;->d()I
+    invoke-virtual {p1}, Lcom/vk/music/player/TrackInfo;->d()I
 
     move-result v1
 
@@ -690,7 +690,7 @@
     .line 32
     iget-object v0, p0, Lcom/vk/music/view/SmallPlayerView$a;->f:Landroid/widget/ProgressBar;
 
-    invoke-virtual {p1}, Lcom/vk/music/player/e;->d()I
+    invoke-virtual {p1}, Lcom/vk/music/player/TrackInfo;->d()I
 
     move-result v1
 
@@ -698,15 +698,15 @@
 
     .line 33
     :cond_9
-    invoke-virtual {p0, p1}, Lcom/vk/music/view/SmallPlayerView$a;->a(Lcom/vk/music/player/e;)V
+    invoke-virtual {p0, p1}, Lcom/vk/music/view/SmallPlayerView$a;->a(Lcom/vk/music/player/TrackInfo;)V
 
     .line 34
-    invoke-virtual {p0, p1}, Lcom/vk/music/view/SmallPlayerView$a;->b(Lcom/vk/music/player/e;)V
+    invoke-virtual {p0, p1}, Lcom/vk/music/view/SmallPlayerView$a;->b(Lcom/vk/music/player/TrackInfo;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/music/player/e;)V
+.method public a(Lcom/vk/music/player/TrackInfo;)V
     .locals 0
 
     return-void
@@ -723,13 +723,13 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/music/player/e;)V
+.method public b(Lcom/vk/music/player/TrackInfo;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/music/view/SmallPlayerView$a;->f:Landroid/widget/ProgressBar;
 
-    invoke-virtual {p1}, Lcom/vk/music/player/e;->g()I
+    invoke-virtual {p1}, Lcom/vk/music/player/TrackInfo;->g()I
 
     move-result p1
 
@@ -749,7 +749,7 @@
     .line 2
     iget-object v1, p0, Lcom/vk/music/view/SmallPlayerView$a;->b:Lcom/vk/music/view/ThumbsImageView;
 
-    sget v2, Lcom/vk/music/m/d;->ic_song_24:I
+    sget v2, Lcom/vk/music/m/R6;->ic_song_24:I
 
     invoke-virtual {v1, v2}, Lcom/vk/music/view/ThumbsImageView;->setEmptyPlaceholder(I)V
 
@@ -763,7 +763,7 @@
     .line 4
     iget-object v1, p0, Lcom/vk/music/view/SmallPlayerView$a;->e:Landroid/widget/TextView;
 
-    sget v2, Lcom/vk/music/m/i;->loading:I
+    sget v2, Lcom/vk/music/m/R4;->loading:I
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -777,11 +777,11 @@
     .line 6
     iget-object v1, p0, Lcom/vk/music/view/SmallPlayerView$a;->c:Landroid/widget/ImageButton;
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v2
 
-    sget v3, Lcom/vk/music/m/i;->music_talkback_pause:I
+    sget v3, Lcom/vk/music/m/R4;->music_talkback_pause:I
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -837,15 +837,15 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget p1, Lcom/vk/music/m/i;->music_player_loading_message:I
+    sget p1, Lcom/vk/music/m/R4;->music_player_loading_message:I
 
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->d0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->d0()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -855,7 +855,7 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->d0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->d0()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -869,7 +869,7 @@
 
     .line 5
     :cond_2
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->d0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->d0()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -883,7 +883,7 @@
 
     .line 6
     :cond_3
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->d0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->d0()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -894,7 +894,7 @@
     check-cast v0, Lcom/vk/music/player/PlayState;
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->d0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->d0()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -902,10 +902,10 @@
 
     iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    check-cast v1, Lcom/vk/music/player/e;
+    check-cast v1, Lcom/vk/music/player/TrackInfo;
 
     .line 8
-    sget v2, Lcom/vk/music/m/e;->play_pause:I
+    sget v2, Lcom/vk/music/m/R5;->play_pause:I
 
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -914,15 +914,15 @@
     if-ne v2, v3, :cond_4
 
     .line 9
-    iget-object p1, p0, Lcom/vk/music/view/SmallPlayerView$a;->F:Lcom/vk/music/player/d;
+    iget-object p1, p0, Lcom/vk/music/view/SmallPlayerView$a;->F:Lcom/vk/music/player/PlayerModel;
 
-    invoke-static {v0, p1}, Lcom/vk/music/view/SmallPlayerView$a;->a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/d;)V
+    invoke-static {v0, p1}, Lcom/vk/music/view/SmallPlayerView$a;->a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerModel;)V
 
     goto :goto_0
 
     .line 10
     :cond_4
-    sget v0, Lcom/vk/music/m/e;->next:I
+    sget v0, Lcom/vk/music/m/R5;->next:I
 
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -931,21 +931,21 @@
     if-ne v0, v2, :cond_5
 
     .line 11
-    iget-object p1, p0, Lcom/vk/music/view/SmallPlayerView$a;->F:Lcom/vk/music/player/d;
+    iget-object p1, p0, Lcom/vk/music/view/SmallPlayerView$a;->F:Lcom/vk/music/player/PlayerModel;
 
-    invoke-static {v1, p1}, Lcom/vk/music/view/SmallPlayerView$a;->a(Lcom/vk/music/player/e;Lcom/vk/music/player/d;)V
+    invoke-static {v1, p1}, Lcom/vk/music/view/SmallPlayerView$a;->a(Lcom/vk/music/player/TrackInfo;Lcom/vk/music/player/PlayerModel;)V
 
     goto :goto_0
 
     .line 12
     :cond_5
-    sget-object v0, Lcom/vk/bridges/e;->a:Lcom/vk/bridges/d;
+    sget-object v0, Lcom/vk/bridges/AudioBridge;->a:Lcom/vk/bridges/AudioBridge1;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/d;->c(Landroid/content/Context;)V
+    invoke-interface {v0, p1}, Lcom/vk/bridges/AudioBridge1;->c(Landroid/content/Context;)V
 
     :goto_0
     return-void

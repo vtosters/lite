@@ -3,9 +3,9 @@
 .source "EventAttachment.kt"
 
 # interfaces
-.implements Lcom/vk/dto/common/k;
-.implements Lcom/vk/newsfeed/i0/b;
-.implements Lb/h/h/f/a;
+.implements Lcom/vk/dto/common/WithOwner;
+.implements Lcom/vk/newsfeed/i0/PostingDraftJsonItem;
+.implements Lb/h/h/f/Favable;
 
 
 # annotations
@@ -66,7 +66,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/attachments/EventAttachment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/attachments/EventAttachment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vtosters/lite/attachments/EventAttachment;->G:Lcom/vtosters/lite/attachments/EventAttachment$b;
 
@@ -195,9 +195,9 @@
     .locals 5
 
     .line 1
-    sget-object v0, Lcom/vk/newsfeed/i0/b;->w:Lcom/vk/newsfeed/i0/b$a;
+    sget-object v0, Lcom/vk/newsfeed/i0/PostingDraftJsonItem;->w:Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;
 
-    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/b$a;->a(Lcom/vk/newsfeed/i0/b;)Lorg/json/JSONObject;
+    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;->a(Lcom/vk/newsfeed/i0/PostingDraftJsonItem;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -380,7 +380,7 @@
 
     iget-object v1, p1, Lcom/vtosters/lite/attachments/EventAttachment;->f:Lcom/vk/dto/newsfeed/Owner;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -396,7 +396,7 @@
 
     iget-object v1, p1, Lcom/vtosters/lite/attachments/EventAttachment;->h:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -418,7 +418,7 @@
 
     iget-object v1, p1, Lcom/vtosters/lite/attachments/EventAttachment;->D:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -428,7 +428,7 @@
 
     iget-object v1, p1, Lcom/vtosters/lite/attachments/EventAttachment;->E:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -438,7 +438,7 @@
 
     iget-object p1, p1, Lcom/vtosters/lite/attachments/EventAttachment;->F:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -641,7 +641,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f120110
 
@@ -651,7 +651,7 @@
 
     const-string v1, "AppContextHolder.context\u2026ng(R.string.attach_event)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -660,7 +660,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/dto/attachments/a;->q:I
+    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->q:I
 
     return v0
 .end method

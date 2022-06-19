@@ -3,12 +3,12 @@
 .source "StickersExternalEventHandlerDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;-><init>(Lcom/vk/catalog2/core/w/a;)V
+    value = Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;-><init>(Lcom/vk/catalog2/core/w/CatalogCommandsBus;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/catalog2/core/blocks/UIBlock;",
         "Ljava/lang/Boolean;",
         ">;"

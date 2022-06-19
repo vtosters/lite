@@ -3,12 +3,12 @@
 .source "MsgSendViaBgCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d(Lcom/vk/im/engine/d;)V
+    value = Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d(Lcom/vk/im/engine/ImEnvironment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/instantjobs/InstantJob;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -50,13 +50,13 @@
     .locals 1
 
     .line 1
-    instance-of v0, p1, Lcom/vk/im/engine/internal/j/f/a;
+    instance-of v0, p1, Lcom/vk/im/engine/internal/j/f/GroupCanSendAnyToMeChangeJob;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vk/im/engine/internal/j/f/a;
+    check-cast p1, Lcom/vk/im/engine/internal/j/f/GroupCanSendAnyToMeChangeJob;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/j/f/a;->l()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/j/f/GroupCanSendAnyToMeChangeJob;->l()I
 
     move-result p1
 

@@ -3,30 +3,30 @@
 .source "GridListVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/f;
+.implements Lcom/vk/catalog2/core/holders/common/CatalogListViewHolder;
 
 
 # instance fields
 .field private final B:I
 
-.field private final a:Lcom/vk/lists/o;
+.field private final a:Lcom/vk/lists/ListDataSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/lists/o<",
+            "Lcom/vk/lists/ListDataSet<",
             "Lcom/vk/catalog2/core/blocks/UIBlock;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private b:Lcom/vk/catalog2/core/holders/common/i;
+.field private b:Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
 
 .field private final c:Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;
 
-.field private final d:Lcom/vk/music/ui/track/b/f;
+.field private final d:Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/music/ui/track/b/f<",
+            "Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper<",
             "Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;",
             ">;"
         }
@@ -37,13 +37,13 @@
 
 .field private f:Lcom/vk/catalog2/core/blocks/UIBlockList;
 
-.field private final g:Lcom/vk/catalog2/core/a;
+.field private final g:Lcom/vk/catalog2/core/CatalogConfiguration;
 
 .field private final h:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/catalog2/core/a;ILcom/vk/catalog2/core/e;I)V
+.method public constructor <init>(Lcom/vk/catalog2/core/CatalogConfiguration;ILcom/vk/catalog2/core/CatalogEntryPointParams;I)V
     .locals 8
     .param p4    # I
         .annotation build Landroidx/annotation/LayoutRes;
@@ -53,45 +53,45 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->g:Lcom/vk/catalog2/core/a;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->g:Lcom/vk/catalog2/core/CatalogConfiguration;
 
     iput p2, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->h:I
 
     iput p4, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->B:I
 
     .line 2
-    new-instance p1, Lcom/vk/lists/o;
+    new-instance p1, Lcom/vk/lists/ListDataSet;
 
-    invoke-direct {p1}, Lcom/vk/lists/o;-><init>()V
+    invoke-direct {p1}, Lcom/vk/lists/ListDataSet;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->a:Lcom/vk/lists/o;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->a:Lcom/vk/lists/ListDataSet;
 
     .line 3
     new-instance p1, Lcom/vk/catalog2/core/holders/containers/GridListVh$a;
 
     invoke-direct {p1}, Lcom/vk/catalog2/core/holders/containers/GridListVh$a;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->b:Lcom/vk/catalog2/core/holders/common/i;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->b:Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
 
     .line 4
     new-instance p1, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;
 
-    iget-object p2, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->g:Lcom/vk/catalog2/core/a;
+    iget-object p2, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->g:Lcom/vk/catalog2/core/CatalogConfiguration;
 
-    iget-object p4, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->a:Lcom/vk/lists/o;
+    iget-object p4, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->a:Lcom/vk/lists/ListDataSet;
 
     new-instance v0, Lcom/vk/catalog2/core/holders/containers/GridListVh$adapter$1;
 
     invoke-direct {v0, p0}, Lcom/vk/catalog2/core/holders/containers/GridListVh$adapter$1;-><init>(Lcom/vk/catalog2/core/holders/containers/GridListVh;)V
 
-    invoke-direct {p1, p2, p4, p3, v0}, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/lists/o;Lcom/vk/catalog2/core/e;Lkotlin/jvm/b/a;)V
+    invoke-direct {p1, p2, p4, p3, v0}, Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/lists/ListDataSet;Lcom/vk/catalog2/core/CatalogEntryPointParams;Lkotlin/jvm/b/Functions;)V
 
     iput-object p1, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->c:Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;
 
     .line 5
-    new-instance p1, Lcom/vk/music/ui/track/b/f;
+    new-instance p1, Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;
 
-    invoke-virtual {p3}, Lcom/vk/catalog2/core/e;->k()Lcom/vk/music/player/d;
+    invoke-virtual {p3}, Lcom/vk/catalog2/core/CatalogEntryPointParams;->k()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v2
 
@@ -107,14 +107,14 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/music/ui/track/b/f;-><init>(Lcom/vk/music/player/d;Landroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/c;Landroid/os/Handler;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;-><init>(Lcom/vk/music/player/PlayerModel;Landroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/Functions1;Landroid/os/Handler;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->d:Lcom/vk/music/ui/track/b/f;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->d:Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/catalog2/core/a;ILcom/vk/catalog2/core/e;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/catalog2/core/CatalogConfiguration;ILcom/vk/catalog2/core/CatalogEntryPointParams;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x8
@@ -122,10 +122,10 @@
     if-eqz p5, :cond_0
 
     .line 6
-    sget p4, Lcom/vk/catalog2/core/r;->catalog_slider_item_view:I
+    sget p4, Lcom/vk/catalog2/core/R7;->catalog_slider_item_view:I
 
     :cond_0
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/catalog2/core/holders/containers/GridListVh;-><init>(Lcom/vk/catalog2/core/a;ILcom/vk/catalog2/core/e;I)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/catalog2/core/holders/containers/GridListVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;ILcom/vk/catalog2/core/CatalogEntryPointParams;I)V
 
     return-void
 .end method
@@ -134,11 +134,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/holders/containers/GridListVh;->f()Lcom/vk/catalog2/core/holders/common/i;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/holders/containers/GridListVh;->f()Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/i;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)Z
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)Z
 
     move-result p1
 
@@ -169,7 +169,7 @@
     :cond_0
     const-string v0, "recyclerView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -189,7 +189,7 @@
     move-result-object p1
 
     .line 5
-    sget p2, Lcom/vk/catalog2/core/q;->paginated_list:I
+    sget p2, Lcom/vk/catalog2/core/R10;->paginated_list:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -218,7 +218,7 @@
     invoke-virtual {p3, v1}, Landroid/view/ViewGroup;->setDescendantFocusability(I)V
 
     .line 8
-    new-instance v1, Lcom/vk/catalog2/core/ui/f;
+    new-instance v1, Lcom/vk/catalog2/core/ui/CatalogRecyclerAimator;
 
     const/4 v2, 0x0
 
@@ -226,14 +226,14 @@
 
     const/4 v4, 0x2
 
-    invoke-direct {v1, v3, v2, v4, v2}, Lcom/vk/catalog2/core/ui/f;-><init>(ZLjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v3, v2, v4, v2}, Lcom/vk/catalog2/core/ui/CatalogRecyclerAimator;-><init>(ZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {p3, v1}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
 
     .line 9
-    iget-object v1, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->g:Lcom/vk/catalog2/core/a;
+    iget-object v1, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->g:Lcom/vk/catalog2/core/CatalogConfiguration;
 
-    invoke-interface {v1}, Lcom/vk/catalog2/core/a;->f()Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
+    invoke-interface {v1}, Lcom/vk/catalog2/core/CatalogConfiguration;->f()Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
 
     move-result-object v1
 
@@ -251,21 +251,21 @@
     invoke-virtual {p3, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 13
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->d:Lcom/vk/music/ui/track/b/f;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->d:Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;
 
-    invoke-virtual {v0}, Lcom/vk/music/ui/track/b/f;->b()V
+    invoke-virtual {v0}, Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;->b()V
 
     const-string v0, "findViewById<androidx.re\u2026lper.init()\n            }"
 
     .line 14
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->e:Landroidx/recyclerview/widget/RecyclerView;
 
     const-string p2, "inflater.inflate(layoutI\u2026)\n            }\n        }"
 
     .line 15
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -274,9 +274,9 @@
     .locals 1
 
     .line 28
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->d:Lcom/vk/music/ui/track/b/f;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->d:Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;
 
-    invoke-virtual {v0}, Lcom/vk/music/ui/track/b/f;->a()V
+    invoke-virtual {v0}, Lcom/vk/music/ui/track/b/PlayingTrackIndicationHelper;->a()V
 
     return-void
 .end method
@@ -299,7 +299,7 @@
 
     if-eqz v0, :cond_4
 
-    sget v2, Lcom/vk/catalog2/core/q;->catalog_ui_test_list:I
+    sget v2, Lcom/vk/catalog2/core/R10;->catalog_ui_test_list:I
 
     invoke-virtual {p1}, Lcom/vk/catalog2/core/blocks/UIBlock;->t1()Ljava/lang/String;
 
@@ -321,7 +321,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -330,7 +330,7 @@
     if-eqz v0, :cond_2
 
     .line 19
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->a:Lcom/vk/lists/o;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->a:Lcom/vk/lists/ListDataSet;
 
     move-object v1, p1
 
@@ -340,7 +340,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/o;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/ListDataSet;->setItems(Ljava/util/List;)V
 
     goto :goto_1
 
@@ -376,7 +376,7 @@
     move-result-object v0
 
     .line 22
-    new-instance v7, Lcom/vk/catalog2/core/util/b;
+    new-instance v7, Lcom/vk/catalog2/core/util/BlockListDiffCallback;
 
     const/4 v4, 0x0
 
@@ -388,7 +388,7 @@
 
     move-object v3, v0
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/catalog2/core/util/b;-><init>(Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/catalog2/core/util/BlockListDiffCallback;-><init>(Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-static {v7}, Landroidx/recyclerview/widget/DiffUtil;->calculateDiff(Landroidx/recyclerview/widget/DiffUtil$Callback;)Landroidx/recyclerview/widget/DiffUtil$DiffResult;
 
@@ -396,7 +396,7 @@
 
     const-string v2, "DiffUtil.calculateDiff(B\u2026urrentBlocks, newBlocks))"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 23
     iget-object v2, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->c:Lcom/vk/catalog2/core/ui/CatalogRecyclerAdapter;
@@ -423,7 +423,7 @@
     const-string p1, "recyclerView"
 
     .line 27
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -432,7 +432,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/f$a;->a(Lcom/vk/catalog2/core/holders/common/f;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogListViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogListViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
 
     return-void
 .end method
@@ -441,16 +441,16 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/f$a;->a(Lcom/vk/catalog2/core/holders/common/f;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogListViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogListViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/catalog2/core/holders/common/i;)V
+.method public a(Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->b:Lcom/vk/catalog2/core/holders/common/i;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->b:Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
 
     return-void
 .end method
@@ -477,25 +477,25 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/core/ui/TabletUiHelper;-><init>(Landroidx/recyclerview/widget/RecyclerView;ZZLkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/core/ui/TabletUiHelper;-><init>(Landroidx/recyclerview/widget/RecyclerView;ZZLkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v7
 
     :cond_0
     const-string v0, "recyclerView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public f()Lcom/vk/catalog2/core/holders/common/i;
+.method public f()Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->b:Lcom/vk/catalog2/core/holders/common/i;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/GridListVh;->b:Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
 
     return-object v0
 .end method

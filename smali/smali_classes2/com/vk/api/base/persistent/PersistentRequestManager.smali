@@ -88,7 +88,7 @@
 
     const-string v0, "iterator()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 17
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
@@ -117,16 +117,16 @@
     .locals 3
 
     .line 11
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "persistent_request_queue"
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 12
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -148,13 +148,13 @@
     invoke-virtual {v2, p1}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
 
     .line 14
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     invoke-static {v2}, Lkotlin/collections/l;->s(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Ljava/util/List;)V
 
     .line 15
     new-instance v0, Ljava/lang/StringBuilder;
@@ -255,15 +255,15 @@
     .locals 2
 
     .line 15
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "persistent_request_queue"
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -316,7 +316,7 @@
     const-string v1, "Request "
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/api/base/persistent/PersistentRequest;->u1()Lcom/vk/api/base/d;
+    invoke-virtual {p1}, Lcom/vk/api/base/persistent/PersistentRequest;->u1()Lcom/vk/api/base/ApiRequest;
 
     move-result-object v2
 
@@ -326,7 +326,7 @@
 
     .line 3
     :try_start_0
-    invoke-virtual {v2}, Lcom/vk/api/base/d;->d()Ljava/lang/Object;
+    invoke-virtual {v2}, Lcom/vk/api/base/ApiRequest;->d()Ljava/lang/Object;
 
     move-result-object v5
 
@@ -341,7 +341,7 @@
 
     invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Lcom/vk/api/sdk/o/b;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/api/sdk/o/VKRequest;->a()Ljava/lang/String;
 
     move-result-object v7
 
@@ -472,7 +472,7 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Lcom/vk/api/sdk/o/b;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/api/sdk/o/VKRequest;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -520,7 +520,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Lcom/vk/api/sdk/o/b;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/api/sdk/o/VKRequest;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -551,16 +551,16 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "persistent_request_queue"
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 2
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -598,13 +598,13 @@
     check-cast v0, Lcom/vk/api/base/persistent/PersistentRequest;
 
     .line 5
-    sget-object v3, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v3, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     invoke-static {v2}, Lkotlin/collections/l;->s(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object v2
 
-    invoke-virtual {v3, v1, v2}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v3, v1, v2}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Ljava/util/List;)V
 
     .line 6
     new-instance v1, Ljava/lang/StringBuilder;
@@ -775,7 +775,7 @@
 
     const-wide/16 v2, 0x2710
 
-    invoke-static {v0, v2, v3, v1}, Lcom/vk/core/concurrent/a;->a(Ljava/lang/Object;JLkotlin/jvm/b/a;)V
+    invoke-static {v0, v2, v3, v1}, Lcom/vk/core/concurrent/ConcurrentExt;->a(Ljava/lang/Object;JLkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -798,12 +798,12 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/api/base/d;)V
+.method public final a(Lcom/vk/api/base/ApiRequest;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/api/base/d<",
+            "Lcom/vk/api/base/ApiRequest<",
             "*>;)V"
         }
     .end annotation
@@ -817,7 +817,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/vk/api/sdk/o/b;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/sdk/o/VKRequest;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -834,7 +834,7 @@
 
     new-instance v1, Lcom/vk/api/base/persistent/PersistentRequestManager$b;
 
-    invoke-direct {v1, p1}, Lcom/vk/api/base/persistent/PersistentRequestManager$b;-><init>(Lcom/vk/api/base/d;)V
+    invoke-direct {v1, p1}, Lcom/vk/api/base/persistent/PersistentRequestManager$b;-><init>(Lcom/vk/api/base/ApiRequest;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 

@@ -3,7 +3,7 @@
 .source "AudioService.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/audioipc/communication/r;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/audioipc/communication/ServiceCmd;",
         ">;"
     }
 .end annotation
@@ -45,17 +45,17 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/audioipc/communication/r;
+.method public final invoke()Lcom/vk/audioipc/communication/ServiceCmd;
     .locals 1
 
     .line 2
     iget-object v0, p0, Lcom/vk/audioipc/communication/AudioService$getLastCmdRequest$1;->this$0:Lcom/vk/audioipc/communication/AudioService;
 
-    invoke-static {v0}, Lcom/vk/audioipc/communication/AudioService;->c(Lcom/vk/audioipc/communication/AudioService;)Lcom/vk/audioipc/communication/w/d/b;
+    invoke-static {v0}, Lcom/vk/audioipc/communication/AudioService;->c(Lcom/vk/audioipc/communication/AudioService;)Lcom/vk/audioipc/communication/w/d/RequestServiceActionProcessor;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/w/d/b;->c()Lcom/vk/audioipc/communication/r;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/w/d/RequestServiceActionProcessor;->c()Lcom/vk/audioipc/communication/ServiceCmd;
 
     move-result-object v0
 
@@ -66,7 +66,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/audioipc/communication/AudioService$getLastCmdRequest$1;->invoke()Lcom/vk/audioipc/communication/r;
+    invoke-virtual {p0}, Lcom/vk/audioipc/communication/AudioService$getLastCmdRequest$1;->invoke()Lcom/vk/audioipc/communication/ServiceCmd;
 
     move-result-object v0
 

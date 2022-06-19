@@ -3,7 +3,7 @@
 .source "VideoAutoPlay.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -72,7 +72,7 @@
 
     iget-object v1, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$initAdDelegate$6;->this$0:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
-    invoke-virtual {v0, v1}, Lcom/vk/libvideo/autoplay/AutoPlayInstanceHolder;->a(Lcom/vk/libvideo/autoplay/a;)Z
+    invoke-virtual {v0, v1}, Lcom/vk/libvideo/autoplay/AutoPlayInstanceHolder;->a(Lcom/vk/libvideo/autoplay/AutoPlay;)Z
 
     move-result v0
 

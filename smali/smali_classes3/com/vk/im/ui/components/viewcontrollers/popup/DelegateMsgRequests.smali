@@ -29,7 +29,7 @@
 
 .field private final e:Landroid/content/Context;
 
-.field private final f:Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+.field private final f:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
 
 # direct methods
@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Ljava/lang/Object;
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/f;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;)V
     .locals 0
 
     .line 1
@@ -60,7 +60,7 @@
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->e:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
     return-void
 .end method
@@ -100,11 +100,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;Lkotlin/jvm/b/a;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->c(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->c(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -127,13 +127,13 @@
     return-void
 .end method
 
-.method private final c(Lkotlin/jvm/b/a;)V
+.method private final c(Lkotlin/jvm/b/Functions;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -142,7 +142,7 @@
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->e:Landroid/content/Context;
 
     .line 4
-    sget v3, Lcom/vk/im/ui/m;->vkim_popup_msg_request_decline_all_progress_desc:I
+    sget v3, Lcom/vk/im/ui/R4;->vkim_popup_msg_request_decline_all_progress_desc:I
 
     .line 5
     new-instance v6, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests$showDeclineAllProgressImpl$1;
@@ -162,7 +162,7 @@
     move-object v5, p1
 
     .line 6
-    invoke-static/range {v0 .. v8}, Lcom/vk/im/ui/components/viewcontrollers/popup/g;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lb/h/g/k/a;
+    invoke-static/range {v0 .. v8}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupUtils;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lb/h/g/k/VKProgressDialog;
 
     move-result-object p1
 
@@ -203,16 +203,16 @@
     return-void
 .end method
 
-.method public final a(Ljava/lang/String;Lkotlin/jvm/b/b;)V
+.method public final a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
     .locals 19
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -239,7 +239,7 @@
     const/4 v6, 0x0
 
     .line 19
-    sget v2, Lcom/vk/im/ui/m;->vkim_popup_chat_request_decline_submit_desc:I
+    sget v2, Lcom/vk/im/ui/R4;->vkim_popup_chat_request_decline_submit_desc:I
 
     const/4 v7, 0x1
 
@@ -255,12 +255,12 @@
 
     const-string v2, "context.getString(R.stri\u2026ecline_submit_desc, name)"
 
-    invoke-static {v7, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
     iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->e:Landroid/content/Context;
 
-    sget v9, Lcom/vk/im/ui/m;->vkim_popup_chat_request_decline_submit_yes:I
+    sget v9, Lcom/vk/im/ui/R4;->vkim_popup_chat_request_decline_submit_yes:I
 
     invoke-virtual {v2, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -268,11 +268,11 @@
 
     const-string v9, "context.getString(R.stri\u2026quest_decline_submit_yes)"
 
-    invoke-static {v2, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v9, v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->e:Landroid/content/Context;
 
-    sget v10, Lcom/vk/im/ui/c;->destructive:I
+    sget v10, Lcom/vk/im/ui/R5;->destructive:I
 
     invoke-static {v9, v10}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -287,7 +287,7 @@
     .line 21
     iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->e:Landroid/content/Context;
 
-    sget v11, Lcom/vk/im/ui/m;->vkim_popup_chat_request_decline_submit_no:I
+    sget v11, Lcom/vk/im/ui/R4;->vkim_popup_chat_request_decline_submit_no:I
 
     invoke-virtual {v2, v11}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -295,11 +295,11 @@
 
     const-string v11, "context.getString(R.stri\u2026equest_decline_submit_no)"
 
-    invoke-static {v2, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v11, v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->e:Landroid/content/Context;
 
-    sget v12, Lcom/vk/im/ui/c;->destructive:I
+    sget v12, Lcom/vk/im/ui/R5;->destructive:I
 
     invoke-static {v11, v12}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -314,12 +314,12 @@
     .line 22
     new-instance v13, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests$showRejectChatMsgRequest$1;
 
-    invoke-direct {v13, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests$showRejectChatMsgRequest$1;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v13, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests$showRejectChatMsgRequest$1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     .line 23
     new-instance v14, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests$showRejectChatMsgRequest$2;
 
-    invoke-direct {v14, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests$showRejectChatMsgRequest$2;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v14, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests$showRejectChatMsgRequest$2;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     const/4 v15, 0x0
 
@@ -335,7 +335,7 @@
     move-object/from16 v16, v1
 
     .line 25
-    invoke-static/range {v3 .. v18}, Lcom/vk/im/ui/components/viewcontrollers/popup/g;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-static/range {v3 .. v18}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupUtils;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v1
 
@@ -349,13 +349,13 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -369,13 +369,13 @@
     iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->e:Landroid/content/Context;
 
     .line 5
-    sget v4, Lcom/vk/im/ui/m;->vkim_popup_msg_request_decline_all_submit_desc:I
+    sget v4, Lcom/vk/im/ui/R4;->vkim_popup_msg_request_decline_all_submit_desc:I
 
     .line 6
-    sget v6, Lcom/vk/im/ui/m;->vkim_popup_msg_request_decline_submit_yes:I
+    sget v6, Lcom/vk/im/ui/R4;->vkim_popup_msg_request_decline_submit_yes:I
 
     .line 7
-    sget v8, Lcom/vk/im/ui/m;->vkim_popup_msg_request_decline_submit_no:I
+    sget v8, Lcom/vk/im/ui/R4;->vkim_popup_msg_request_decline_submit_no:I
 
     .line 8
     new-instance v14, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests$showDeclineAllSubmit$1;
@@ -405,7 +405,7 @@
     move-object/from16 v11, p1
 
     .line 9
-    invoke-static/range {v1 .. v16}, Lcom/vk/im/ui/components/viewcontrollers/popup/g;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-static/range {v1 .. v16}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupUtils;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v1
 
@@ -419,13 +419,13 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;Z)V
+.method public final a(Lkotlin/jvm/b/Functions;Z)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;Z)V"
         }
     .end annotation
@@ -434,25 +434,25 @@
     invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->b()V
 
     .line 12
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
     sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->g:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/f;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;->a(Ljava/lang/Object;)V
 
     .line 13
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
     .line 14
     new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests$showDeclineAllProgress$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests$showDeclineAllProgress$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests$showDeclineAllProgress$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;Lkotlin/jvm/b/Functions;)V
 
     .line 15
     sget-object p1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->g:Ljava/lang/Object;
 
     .line 16
-    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/popup/f;->a(Lkotlin/jvm/b/a;Ljava/lang/Object;Z)V
+    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;->a(Lkotlin/jvm/b/Functions;Ljava/lang/Object;Z)V
 
     return-void
 .end method
@@ -461,11 +461,11 @@
     .locals 2
 
     .line 10
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
     sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->g:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/f;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;->a(Ljava/lang/Object;)V
 
     .line 11
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->d:Landroid/app/Dialog;
@@ -478,13 +478,13 @@
     return-void
 .end method
 
-.method public final b(Lkotlin/jvm/b/a;)V
+.method public final b(Lkotlin/jvm/b/Functions;)V
     .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -498,13 +498,13 @@
     iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->e:Landroid/content/Context;
 
     .line 4
-    sget v4, Lcom/vk/im/ui/m;->vkim_popup_msg_request_decline_submit_desc:I
+    sget v4, Lcom/vk/im/ui/R4;->vkim_popup_msg_request_decline_submit_desc:I
 
     .line 5
-    sget v6, Lcom/vk/im/ui/m;->vkim_popup_msg_request_decline_submit_yes:I
+    sget v6, Lcom/vk/im/ui/R4;->vkim_popup_msg_request_decline_submit_yes:I
 
     .line 6
-    sget v8, Lcom/vk/im/ui/m;->vkim_popup_msg_request_decline_submit_no:I
+    sget v8, Lcom/vk/im/ui/R4;->vkim_popup_msg_request_decline_submit_no:I
 
     .line 7
     new-instance v14, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests$showDeclineSubmit$1;
@@ -534,7 +534,7 @@
     move-object/from16 v11, p1
 
     .line 8
-    invoke-static/range {v1 .. v16}, Lcom/vk/im/ui/components/viewcontrollers/popup/g;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-static/range {v1 .. v16}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupUtils;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v1
 

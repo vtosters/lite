@@ -3,12 +3,12 @@
 .source "MarketBottomPickerDialogHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/orders/MarketBottomPickerDialogHelper;->a(Landroid/content/Context;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/market/orders/MarketBottomPickerDialogHelper;->a(Landroid/content/Context;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,22 +19,22 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $dialogHolder:Lcom/vk/market/orders/b;
+.field final synthetic $dialogHolder:Lcom/vk/market/orders/MarketBottomPickerDialogHelper2;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/market/orders/b;)V
+.method constructor <init>(Lcom/vk/market/orders/MarketBottomPickerDialogHelper2;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$showDialog$adapter$1;->$dialogHolder:Lcom/vk/market/orders/b;
+    iput-object p1, p0, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$showDialog$adapter$1;->$dialogHolder:Lcom/vk/market/orders/MarketBottomPickerDialogHelper2;
 
     const/4 p1, 0x0
 
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$showDialog$adapter$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -60,9 +60,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$showDialog$adapter$1;->$dialogHolder:Lcom/vk/market/orders/b;
+    iget-object v0, p0, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$showDialog$adapter$1;->$dialogHolder:Lcom/vk/market/orders/MarketBottomPickerDialogHelper2;
 
-    invoke-virtual {v0}, Lcom/vk/market/orders/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper2;->a()V
 
     return-void
 .end method

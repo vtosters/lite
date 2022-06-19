@@ -3,7 +3,7 @@
 .source "ExchangeLoginFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,13 +19,13 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/auth/init/exchange/c;",
+        "Lcom/vk/auth/init/exchange/UserItem;",
         ">;",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -64,7 +64,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$1;->a(Ljava/util/List;I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -75,7 +75,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/auth/init/exchange/c;",
+            "Lcom/vk/auth/init/exchange/UserItem;",
             ">;I)V"
         }
     .end annotation
@@ -83,7 +83,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$1;->this$0:Lcom/vk/auth/init/exchange/ExchangeLoginFragment;
 
-    invoke-static {v0}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->e(Lcom/vk/auth/init/exchange/ExchangeLoginFragment;)Lcom/vk/auth/init/exchange/a;
+    invoke-static {v0}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->e(Lcom/vk/auth/init/exchange/ExchangeLoginFragment;)Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;
 
     move-result-object v0
 
@@ -91,13 +91,13 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/auth/init/exchange/c;
+    check-cast v1, Lcom/vk/auth/init/exchange/UserItem;
 
-    invoke-virtual {v1}, Lcom/vk/auth/init/exchange/c;->e()I
+    invoke-virtual {v1}, Lcom/vk/auth/init/exchange/UserItem;->e()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/auth/init/exchange/a;->e(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;->e(I)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$1;->this$0:Lcom/vk/auth/init/exchange/ExchangeLoginFragment;

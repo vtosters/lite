@@ -1,5 +1,5 @@
 .class public final Lcom/vk/market/attached/TaggedGoodsViewController;
-.super Lcom/vk/market/common/h;
+.super Lcom/vk/market/common/RecyclerController;
 .source "TaggedGoodsViewController.kt"
 
 
@@ -12,12 +12,12 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/market/common/h<",
+        "Lcom/vk/market/common/RecyclerController<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/tags/Tag;",
         ">;",
-        "Lcom/vk/market/attached/c;",
-        "Lcom/vk/market/attached/f;",
+        "Lcom/vk/market/attached/TaggedGoodsAdapter;",
+        "Lcom/vk/market/attached/TaggedGoodsAdapter2;",
         ">;"
     }
 .end annotation
@@ -35,28 +35,28 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/market/attached/TaggedGoodsViewController$Companion;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/market/attached/TaggedGoodsViewController$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/market/attached/TaggedGoodsViewController;->d:Lcom/vk/market/attached/TaggedGoodsViewController$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/View;Lcom/vk/market/common/GoodsAdapter;Lcom/vk/market/common/e;)V
+.method public constructor <init>(Landroid/view/View;Lcom/vk/market/common/GoodsAdapter;Lcom/vk/market/common/GoodsDataProviders;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
             "Lcom/vk/market/common/GoodsAdapter<",
-            "Lcom/vk/market/attached/c;",
-            "Lcom/vk/market/attached/f;",
+            "Lcom/vk/market/attached/TaggedGoodsAdapter;",
+            "Lcom/vk/market/attached/TaggedGoodsAdapter2;",
             ">;",
-            "Lcom/vk/market/common/e<",
+            "Lcom/vk/market/common/GoodsDataProviders<",
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/tags/Tag;",
             ">;",
-            "Lcom/vk/market/attached/c;",
+            "Lcom/vk/market/attached/TaggedGoodsAdapter;",
             ">;)V"
         }
     .end annotation
@@ -76,7 +76,7 @@
     move-object v3, p3
 
     .line 1
-    invoke-direct/range {v0 .. v6}, Lcom/vk/market/common/h;-><init>(Landroid/view/View;Lcom/vk/market/common/g;Lcom/vk/market/common/e;Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/market/common/RecyclerController;-><init>(Landroid/view/View;Lcom/vk/market/common/GoodsAdapter1;Lcom/vk/market/common/GoodsDataProviders;Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method

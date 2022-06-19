@@ -24,7 +24,7 @@
 
     .line 1
     :try_start_0
-    const-class v0, Lcom/facebook/drawee/controller/a;
+    const-class v0, Lcom/facebook/drawee/controller/AbstractDraweeController;
 
     const/4 v1, 0x0
 
@@ -63,7 +63,7 @@
     throw v0
 .end method
 
-.method public static a(Lcom/facebook/u/e/a;)V
+.method public static a(Lcom/facebook/u/e/DraweeController;)V
     .locals 2
 
     .line 1

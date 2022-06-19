@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/fragments/stack/FStackGroup$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/fragments/stack/FStackGroup$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/core/fragments/stack/FStackGroup$a;
@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/LinkedList;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/util/LinkedList;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -202,13 +202,13 @@
     return-object v0
 .end method
 
-.method public final a(Lcom/vk/core/fragments/FragmentEntry;Lkotlin/jvm/b/c;)V
+.method public final a(Lcom/vk/core/fragments/FragmentEntry;Lkotlin/jvm/b/Functions1;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/core/fragments/FragmentEntry;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Lcom/vk/core/fragments/FragmentEntry;",
             "-",
@@ -246,7 +246,7 @@
 
     move-result-object v2
 
-    invoke-interface {p2, v2, p1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v2, p1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -381,7 +381,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -610,7 +610,7 @@
 
     const-string v1, "stacks.first"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/core/fragments/stack/FStack;
 

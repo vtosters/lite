@@ -3,7 +3,7 @@
 .source "VkSnackbar.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/MotionEvent;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
     .locals 1
 
     .line 1
-    sget-object p1, Lcom/vk/core/dialogs/snackbar/b;->e:Lcom/vk/core/dialogs/snackbar/b;
+    sget-object p1, Lcom/vk/core/dialogs/snackbar/VkSnackbarManager;->INSTANCE:Lcom/vk/core/dialogs/snackbar/VkSnackbarManager;
 
     iget-object v0, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$createContentView$6;->this$0:Lcom/vk/core/dialogs/snackbar/VkSnackbar;
 
@@ -58,7 +58,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/snackbar/b;->f(Lcom/vk/core/dialogs/snackbar/b$a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/snackbar/VkSnackbarManager;->f(Lcom/vk/core/dialogs/snackbar/VkSnackbarManager$a;)V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$createContentView$6;->a(Landroid/view/MotionEvent;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

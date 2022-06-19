@@ -3,8 +3,8 @@
 .source "AbstractDirectTask.java"
 
 # interfaces
-.implements Lio/reactivex/disposables/b;
-.implements Lc/a/f0/a;
+.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/schedulers/SchedulerRunnableIntrospection;
 
 
 # annotations
@@ -13,8 +13,8 @@
         "Ljava/util/concurrent/atomic/AtomicReference<",
         "Ljava/util/concurrent/Future<",
         "*>;>;",
-        "Lio/reactivex/disposables/b;",
-        "Lc/a/f0/a;"
+        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/schedulers/SchedulerRunnableIntrospection;"
     }
 .end annotation
 
@@ -56,7 +56,7 @@
     .line 1
     new-instance v0, Ljava/util/concurrent/FutureTask;
 
-    sget-object v1, Lc/a/a0/a/a;->b:Ljava/lang/Runnable;
+    sget-object v1, Lc/a/a0/a/Functions;->b:Ljava/lang/Runnable;
 
     const/4 v2, 0x0
 
@@ -67,7 +67,7 @@
     .line 2
     new-instance v0, Ljava/util/concurrent/FutureTask;
 
-    sget-object v1, Lc/a/a0/a/a;->b:Ljava/lang/Runnable;
+    sget-object v1, Lc/a/a0/a/Functions;->b:Ljava/lang/Runnable;
 
     invoke-direct {v0, v1, v2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
 

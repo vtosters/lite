@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/libvideo/live/views/live/b;
+.field private a:Lcom/vk/libvideo/live/views/live/LiveContract1;
 
 .field private b:Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine$State;
 
@@ -30,7 +30,7 @@
 
 .field private i:Ljava/lang/String;
 
-.field private j:Lcom/vk/libvideo/live/views/error/a;
+.field private j:Lcom/vk/libvideo/live/views/error/ErrorContract;
 
 
 # direct methods
@@ -69,7 +69,7 @@
     iput-object v0, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->i:Ljava/lang/String;
 
     .line 10
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->j:Lcom/vk/libvideo/live/views/error/a;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->j:Lcom/vk/libvideo/live/views/error/ErrorContract;
 
     return-void
 .end method
@@ -154,16 +154,16 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/libvideo/live/views/live/b;)V
+.method public a(Lcom/vk/libvideo/live/views/live/LiveContract1;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->a:Lcom/vk/libvideo/live/views/live/b;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->a:Lcom/vk/libvideo/live/views/live/LiveContract1;
 
     return-void
 .end method
 
-.method public a(Ljava/lang/String;Ljava/lang/String;Lcom/vk/libvideo/live/views/error/a;)V
+.method public a(Ljava/lang/String;Ljava/lang/String;Lcom/vk/libvideo/live/views/error/ErrorContract;)V
     .locals 0
 
     .line 3
@@ -173,7 +173,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->i:Ljava/lang/String;
 
     .line 5
-    iput-object p3, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->j:Lcom/vk/libvideo/live/views/error/a;
+    iput-object p3, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->j:Lcom/vk/libvideo/live/views/error/ErrorContract;
 
     return-void
 .end method
@@ -182,7 +182,7 @@
     .locals 4
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->a:Lcom/vk/libvideo/live/views/live/b;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->a:Lcom/vk/libvideo/live/views/live/LiveContract1;
 
     if-eqz v0, :cond_2
 
@@ -194,13 +194,13 @@
     if-ne v1, v2, :cond_0
 
     .line 4
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/b;->l1()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract1;->l1()V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/b;->b()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract1;->b()V
 
     .line 6
     :goto_0
@@ -211,23 +211,23 @@
     if-ne v0, v1, :cond_1
 
     .line 7
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->a:Lcom/vk/libvideo/live/views/live/b;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->a:Lcom/vk/libvideo/live/views/live/LiveContract1;
 
     iget-object v1, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->h:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->i:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->j:Lcom/vk/libvideo/live/views/error/a;
+    iget-object v3, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->j:Lcom/vk/libvideo/live/views/error/ErrorContract;
 
-    invoke-interface {v0, v1, v2, v3}, Lcom/vk/libvideo/live/views/live/b;->a(Ljava/lang/String;Ljava/lang/String;Lcom/vk/libvideo/live/views/error/a;)V
+    invoke-interface {v0, v1, v2, v3}, Lcom/vk/libvideo/live/views/live/LiveContract1;->a(Ljava/lang/String;Ljava/lang/String;Lcom/vk/libvideo/live/views/error/ErrorContract;)V
 
     goto :goto_1
 
     .line 8
     :cond_1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->a:Lcom/vk/libvideo/live/views/live/b;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/ProgressErrorStateMashine;->a:Lcom/vk/libvideo/live/views/live/LiveContract1;
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/b;->o1()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract1;->o1()V
 
     :cond_2
     :goto_1

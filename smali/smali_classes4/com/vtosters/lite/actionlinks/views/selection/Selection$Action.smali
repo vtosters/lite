@@ -21,10 +21,10 @@
 
 .field private final c:Z
 
-.field private d:Lkotlin/jvm/b/a;
+.field private d:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Ljava/lang/Object;",
             ">;"
@@ -34,7 +34,7 @@
 
 
 # direct methods
-.method public constructor <init>(IIZLkotlin/jvm/b/a;)V
+.method public constructor <init>(IIZLkotlin/jvm/b/Functions;)V
     .locals 0
     .param p1    # I
         .annotation build Landroidx/annotation/DrawableRes;
@@ -47,7 +47,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(IIZ",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Ljava/lang/Object;",
             ">;)V"
@@ -63,12 +63,12 @@
 
     iput-boolean p3, p0, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;->c:Z
 
-    iput-object p4, p0, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;->d:Lkotlin/jvm/b/a;
+    iput-object p4, p0, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;->d:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIZLkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IIZLkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p6, p5, 0x4
@@ -86,26 +86,26 @@
     sget-object p4, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action$1;->a:Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action$1;
 
     :cond_1
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;-><init>(IIZLkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;-><init>(IIZLkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lkotlin/jvm/b/a;
+.method public final a()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;->d:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;->d:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method

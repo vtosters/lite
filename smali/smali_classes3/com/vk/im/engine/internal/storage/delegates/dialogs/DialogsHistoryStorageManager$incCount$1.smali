@@ -3,7 +3,7 @@
 .source "DialogsHistoryStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/internal/storage/models/b;",
-        "Lcom/vk/im/engine/internal/storage/models/b;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;",
+        "Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;",
         ">;"
     }
 .end annotation
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/internal/storage/models/b;)Lcom/vk/im/engine/internal/storage/models/b;
+.method public final a(Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;)Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
     .locals 8
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/b;->a()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;->a()I
 
     move-result v0
 
@@ -68,7 +68,7 @@
 
     move-object v2, p1
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/im/engine/internal/storage/models/b;->a(Lcom/vk/im/engine/internal/storage/models/b;Lcom/vk/im/engine/models/dialogs/DialogsFilter;IIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/b;
+    invoke-static/range {v2 .. v7}, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;->a(Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;Lcom/vk/im/engine/models/dialogs/DialogsFilter;IIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
 
     move-result-object p1
 
@@ -79,9 +79,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/b;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager$incCount$1;->a(Lcom/vk/im/engine/internal/storage/models/b;)Lcom/vk/im/engine/internal/storage/models/b;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager$incCount$1;->a(Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;)Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
 
     move-result-object p1
 

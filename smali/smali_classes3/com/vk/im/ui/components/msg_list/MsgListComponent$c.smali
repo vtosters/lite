@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -35,11 +35,11 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/im/log/a;
+.method public final a()Lcom/vk/im/log/ImLogger;
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->b0()Lcom/vk/im/log/a;
+    invoke-static {}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->b0()Lcom/vk/im/log/ImLogger;
 
     move-result-object v0
 

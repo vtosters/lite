@@ -3,7 +3,7 @@
 .source "VideoAutoPlay.kt"
 
 # interfaces
-.implements Lc/a/z/c;
+.implements Lio/reactivex/functions/BiFunction;
 
 
 # annotations
@@ -26,12 +26,12 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/c<",
+        "Lio/reactivex/functions/BiFunction<",
         "Lkotlin/Pair<",
         "+",
         "Lcom/vk/dto/common/VideoFile;",
         "+",
-        "Lcom/vk/media/player/video/e;",
+        "Lcom/vk/media/player/video/ExoVideoSource2;",
         ">;",
         "Lcom/vk/libvideo/ad/AdState;",
         "Lcom/vk/libvideo/autoplay/VideoAutoPlay$b;",
@@ -75,7 +75,7 @@
             "Lkotlin/Pair<",
             "+",
             "Lcom/vk/dto/common/VideoFile;",
-            "Lcom/vk/media/player/video/e;",
+            "Lcom/vk/media/player/video/ExoVideoSource2;",
             ">;",
             "Lcom/vk/libvideo/ad/AdState;",
             ")",
@@ -93,12 +93,12 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/media/player/video/e;
+    check-cast p1, Lcom/vk/media/player/video/ExoVideoSource2;
 
     .line 2
     new-instance v1, Lcom/vk/libvideo/autoplay/VideoAutoPlay$b;
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/vk/libvideo/autoplay/VideoAutoPlay$b;-><init>(Lcom/vk/dto/common/VideoFile;Lcom/vk/media/player/video/e;Lcom/vk/libvideo/ad/AdState;)V
+    invoke-direct {v1, v0, p1, p2}, Lcom/vk/libvideo/autoplay/VideoAutoPlay$b;-><init>(Lcom/vk/dto/common/VideoFile;Lcom/vk/media/player/video/ExoVideoSource2;Lcom/vk/libvideo/ad/AdState;)V
 
     return-object v1
 .end method

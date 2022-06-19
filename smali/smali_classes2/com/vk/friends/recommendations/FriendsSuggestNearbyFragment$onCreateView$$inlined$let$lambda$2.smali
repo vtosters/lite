@@ -3,7 +3,7 @@
 .source "FriendsSuggestNearbyFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Landroidx/recyclerview/widget/RecyclerView;",
         "Ljava/lang/Boolean;",
         "Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$c;",

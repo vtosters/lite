@@ -3,7 +3,7 @@
 .source "InstantJobNotifier.kt"
 
 # interfaces
-.implements Lcom/vk/instantjobs/components/appstate/a$a;
+.implements Lcom/vk/instantjobs/components/appstate/AppStateDetector$a;
 
 
 # annotations

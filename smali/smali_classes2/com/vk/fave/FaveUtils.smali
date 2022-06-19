@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/core/view/links/LinkedTextView;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;)V
+.method private final a(Lcom/vk/core/view/links/LinkedTextView;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -38,8 +38,8 @@
             "Lcom/vk/core/view/links/LinkedTextView;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -75,7 +75,7 @@
 
     const-string v2, ""
 
-    invoke-direct {v1, p4, v2}, Lcom/vk/fave/FaveUtils$a;-><init>(Lkotlin/jvm/b/a;Ljava/lang/String;)V
+    invoke-direct {v1, p4, v2}, Lcom/vk/fave/FaveUtils$a;-><init>(Lkotlin/jvm/b/Functions;Ljava/lang/String;)V
 
     .line 4
     new-instance p4, Landroid/text/SpannableString;
@@ -169,7 +169,7 @@
     if-eqz p1, :cond_1
 
     .line 34
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -193,19 +193,19 @@
     move-result-object v0
 
     .line 36
-    invoke-static {p1, v0}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v0}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     const-string v0, "DrawableUtils.tint(\n    \u2026             ))\n        )"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     .line 37
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -296,7 +296,7 @@
     .locals 6
 
     .line 11
-    instance-of v0, p1, Lcom/vk/lists/e;
+    instance-of v0, p1, Lcom/vk/lists/DefaultListEmptyView;
 
     const/4 v1, 0x1
 
@@ -316,7 +316,7 @@
     .line 13
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/lists/e;
+    check-cast v0, Lcom/vk/lists/DefaultListEmptyView;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
@@ -332,7 +332,7 @@
     :cond_0
     move-object p4, p1
 
-    check-cast p4, Lcom/vk/lists/e;
+    check-cast p4, Lcom/vk/lists/DefaultListEmptyView;
 
     invoke-virtual {p4}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
@@ -356,23 +356,23 @@
     const-string v0, "if (tag == null) {\n     \u2026g.name)\n                }"
 
     .line 15
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-nez p3, :cond_1
 
     if-nez p2, :cond_1
 
     .line 16
-    instance-of v0, p1, Lcom/vk/fave/views/f;
+    instance-of v0, p1, Lcom/vk/fave/views/FaveEmptyListView;
 
     if-eqz v0, :cond_1
 
     .line 17
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/fave/views/f;
+    check-cast v0, Lcom/vk/fave/views/FaveEmptyListView;
 
-    invoke-virtual {v0}, Lcom/vk/fave/views/f;->getTitleView()Lcom/vk/core/view/links/LinkedTextView;
+    invoke-virtual {v0}, Lcom/vk/fave/views/FaveEmptyListView;->getTitleView()Lcom/vk/core/view/links/LinkedTextView;
 
     move-result-object v3
 
@@ -389,7 +389,7 @@
 
     const-string v4, "view.context.getString(R\u2026mman_category_color_part)"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 19
     sget-object v4, Lcom/vk/fave/FaveUtils;->a:Lcom/vk/fave/FaveUtils;
@@ -398,7 +398,7 @@
 
     invoke-direct {v5, p1}, Lcom/vk/fave/FaveUtils$setupEmptyView$1;-><init>(Landroid/view/View;)V
 
-    invoke-direct {v4, v3, p4, v0, v5}, Lcom/vk/fave/FaveUtils;->a(Lcom/vk/core/view/links/LinkedTextView;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v4, v3, p4, v0, v5}, Lcom/vk/fave/FaveUtils;->a(Lcom/vk/core/view/links/LinkedTextView;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     goto :goto_1
 
@@ -406,9 +406,9 @@
     :cond_1
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/lists/e;
+    check-cast v0, Lcom/vk/lists/DefaultListEmptyView;
 
-    invoke-virtual {v0, p4}, Lcom/vk/lists/e;->setTitle(Ljava/lang/String;)V
+    invoke-virtual {v0, p4}, Lcom/vk/lists/DefaultListEmptyView;->setTitle(Ljava/lang/String;)V
 
     :goto_1
     if-eqz p3, :cond_2
@@ -416,7 +416,7 @@
     .line 21
     move-object p3, p1
 
-    check-cast p3, Lcom/vk/lists/e;
+    check-cast p3, Lcom/vk/lists/DefaultListEmptyView;
 
     invoke-virtual {p3}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
@@ -430,13 +430,13 @@
 
     const-string v0, "view.context.getString(R.string.fave_clear_filter)"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 22
-    invoke-virtual {p3, p4}, Lcom/vk/lists/e;->setActionText(Ljava/lang/String;)V
+    invoke-virtual {p3, p4}, Lcom/vk/lists/DefaultListEmptyView;->setActionText(Ljava/lang/String;)V
 
     .line 23
-    invoke-virtual {p3, v1}, Lcom/vk/lists/e;->setActionButtonVisible(Z)V
+    invoke-virtual {p3, v1}, Lcom/vk/lists/DefaultListEmptyView;->setActionButtonVisible(Z)V
 
     goto :goto_2
 
@@ -444,19 +444,19 @@
     :cond_2
     move-object p3, p1
 
-    check-cast p3, Lcom/vk/lists/e;
+    check-cast p3, Lcom/vk/lists/DefaultListEmptyView;
 
-    invoke-virtual {p3, v2}, Lcom/vk/lists/e;->setActionButtonVisible(Z)V
+    invoke-virtual {p3, v2}, Lcom/vk/lists/DefaultListEmptyView;->setActionButtonVisible(Z)V
 
     .line 25
     :goto_2
     move-object p3, p1
 
-    check-cast p3, Lcom/vk/lists/e;
+    check-cast p3, Lcom/vk/lists/DefaultListEmptyView;
 
     sget-object p4, Lcom/vk/fave/FaveUtils$b;->a:Lcom/vk/fave/FaveUtils$b;
 
-    invoke-virtual {p3, p4}, Lcom/vk/lists/e;->setActionListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p3, p4}, Lcom/vk/lists/DefaultListEmptyView;->setActionListener(Landroid/view/View$OnClickListener;)V
 
     if-eqz p2, :cond_3
 
@@ -511,7 +511,7 @@
     if-eqz p1, :cond_1
 
     .line 3
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -535,19 +535,19 @@
     move-result-object v0
 
     .line 5
-    invoke-static {p1, v0}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v0}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     const-string v0, "DrawableUtils.tint(\n    \u2026ndary\n                )))"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     .line 6
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

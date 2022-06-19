@@ -1,12 +1,12 @@
 .class public final Lcom/vtosters/lite/fragments/location/LocationFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "LocationFragment.kt"
 
 # interfaces
-.implements Lpub/devrel/easypermissions/b$a;
-.implements Lcom/vk/attachpicker/r;
-.implements Lcom/vk/navigation/b0/a;
-.implements Lcom/vtosters/lite/fragments/location/c;
+.implements Lpub/devrel/easypermissions/EasyPermissions$a;
+.implements Lcom/vk/attachpicker/SupportExternalToolbarContainer;
+.implements Lcom/vk/navigation/b0/FragmentWhiteStatusBar;
+.implements Lcom/vtosters/lite/fragments/location/SlideOffsetNotify;
 
 
 # annotations
@@ -28,7 +28,7 @@
     .end annotation
 .end field
 
-.field private H:Lcom/vtosters/lite/ui/x;
+.field private H:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
 .field private I:Landroidx/appcompat/widget/Toolbar;
 
@@ -60,7 +60,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     const v0, 0x7f0d01d4
 
@@ -88,7 +88,7 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->P:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -143,7 +143,7 @@
     const/4 v4, 0x0
 
     .line 5
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;-><init>(Landroid/app/Activity;Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$a;Lcom/vk/im/ui/components/msg_send/picker/location/d;Z)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;-><init>(Landroid/app/Activity;Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$a;Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;Z)V
 
     iput-object v0, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;
 
@@ -178,7 +178,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -201,7 +201,7 @@
 
     .line 9
     :cond_5
-    sget-object v1, Lb/h/k/c;->b:Lb/h/k/c;
+    sget-object v1, Lb/h/k/IdleTaskHandler1;->INSTANCE:Lb/h/k/IdleTaskHandler1;
 
     iget-object v2, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->T:Lcom/vtosters/lite/fragments/location/LocationFragment$b;
 
@@ -209,7 +209,7 @@
 
     const-wide/16 v5, 0x1f4
 
-    invoke-virtual/range {v1 .. v6}, Lb/h/k/c;->a(Ljava/lang/Runnable;JJ)V
+    invoke-virtual/range {v1 .. v6}, Lb/h/k/IdleTaskHandler1;->a(Ljava/lang/Runnable;JJ)V
 
     return-void
 .end method
@@ -218,7 +218,7 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/ui/x;
+    new-instance v0, Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -228,9 +228,9 @@
 
     invoke-direct {v2, p0}, Lcom/vtosters/lite/fragments/location/LocationFragment$d;-><init>(Lcom/vtosters/lite/fragments/location/LocationFragment;)V
 
-    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/ui/x;-><init>(Landroid/app/Activity;Lcom/vtosters/lite/ui/x$i;)V
+    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/ui/SearchViewWrapper;-><init>(Landroid/app/Activity;Lcom/vtosters/lite/ui/SearchViewWrapper$i;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->H:Lcom/vtosters/lite/ui/x;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->H:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     const/4 v0, 0x1
 
@@ -276,19 +276,19 @@
 
     const-string v1, "activity?.menuInflater!!"
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0, v2}, Lcom/vtosters/lite/fragments/location/LocationFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     return-void
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -358,7 +358,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-static {p0, p1, v1}, Lcom/vk/core/extensions/j;->a(Landroidx/fragment/app/Fragment;Landroid/view/View;Z)V
+    invoke-static {p0, p1, v1}, Lcom/vk/core/extensions/FragmentExt;->a(Landroidx/fragment/app/Fragment;Landroid/view/View;Z)V
 
     const p1, 0x7f1201bc
 
@@ -440,7 +440,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->b(Lcom/vk/navigation/b0/a;)Z
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->b(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)Z
 
     move-result v0
 
@@ -488,7 +488,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->a(Lcom/vk/navigation/b0/a;)I
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->a(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)I
 
     move-result v0
 
@@ -503,7 +503,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lcom/vk/extensions/t/a;->b(Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p1}, Lcom/vk/extensions/t/ToolbarExt;->b(Landroidx/appcompat/widget/Toolbar;)V
 
     .line 5
     :cond_0
@@ -531,7 +531,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -587,7 +587,7 @@
     invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/Fragment;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 2
-    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/i;->a(IILandroid/content/Intent;)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/VoiceUtils;->a(IILandroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -611,11 +611,11 @@
     if-nez v1, :cond_2
 
     .line 4
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->H:Lcom/vtosters/lite/ui/x;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->H:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1, v0}, Lcom/vtosters/lite/ui/x;->b(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/ui/SearchViewWrapper;->b(Ljava/lang/String;)V
 
     .line 5
     :cond_1
@@ -676,7 +676,7 @@
 
     .line 2
     :cond_0
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->H:Lcom/vtosters/lite/ui/x;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->H:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     if-eqz p1, :cond_2
 
@@ -694,17 +694,17 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {p1, v0, p2}, Lcom/vtosters/lite/ui/x;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-virtual {p1, v0, p2}, Lcom/vtosters/lite/ui/SearchViewWrapper;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 3
     :cond_2
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->H:Lcom/vtosters/lite/ui/x;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->H:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     if-eqz p1, :cond_3
 
     const/4 p2, 0x1
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/x;->e(Z)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/SearchViewWrapper;->e(Z)V
 
     :cond_3
     return-void
@@ -787,7 +787,7 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->H:Lcom/vtosters/lite/ui/x;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->H:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     .line 2
     iput-object v0, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->I:Landroidx/appcompat/widget/Toolbar;
@@ -819,18 +819,18 @@
     iput-object v0, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->R:Lcom/vtosters/lite/fragments/location/LocationFragment$a;
 
     .line 3
-    sget-object v1, Lb/h/k/c;->b:Lb/h/k/c;
+    sget-object v1, Lb/h/k/IdleTaskHandler1;->INSTANCE:Lb/h/k/IdleTaskHandler1;
 
     iget-object v2, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->T:Lcom/vtosters/lite/fragments/location/LocationFragment$b;
 
-    invoke-virtual {v1, v2}, Lb/h/k/c;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2}, Lb/h/k/IdleTaskHandler1;->a(Ljava/lang/Runnable;)V
 
     .line 4
     iget-object v1, p0, Lcom/vtosters/lite/fragments/location/LocationFragment;->F:Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/q/c;->h()V
+    invoke-virtual {v1}, Lcom/vk/im/ui/q/Component;->h()V
 
     .line 5
     :cond_0
@@ -908,7 +908,7 @@
     move-object v2, p0
 
     .line 9
-    invoke-virtual/range {v0 .. v10}, Lcom/vk/permission/RequiredPermissionHelper$a;->b(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/a;Z)Lcom/vk/permission/RequiredPermissionHelper;
+    invoke-virtual/range {v0 .. v10}, Lcom/vk/permission/RequiredPermissionHelper$a;->b(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)Lcom/vk/permission/RequiredPermissionHelper;
 
     move-result-object p1
 
@@ -926,7 +926,7 @@
 
     .line 11
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

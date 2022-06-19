@@ -1,5 +1,5 @@
 .class public final Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "AttachVideoFragment.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/dto/common/VideoFile;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -29,12 +29,12 @@
 # instance fields
 .field private final B:Lcom/vk/libvideo/ui/VideoRestrictionView;
 
-.field private C:Lio/reactivex/disposables/b;
+.field private C:Lio/reactivex/disposables/Disposable;
 
-.field private final D:Lcom/vk/core/util/k0;
+.field private final D:Lcom/vk/core/util/ItemClickListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/util/k0<",
+            "Lcom/vk/core/util/ItemClickListener<",
             "Lcom/vk/dto/common/VideoFile;",
             ">;"
         }
@@ -63,16 +63,16 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/attachpicker/base/f;Lcom/vk/core/util/k0;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/attachpicker/base/StreamParcelableSelection;Lcom/vk/core/util/ItemClickListener;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lcom/vk/attachpicker/base/f<",
+            "Lcom/vk/attachpicker/base/StreamParcelableSelection<",
             "Lcom/vk/dto/common/VideoFile;",
             ">;",
-            "Lcom/vk/core/util/k0<",
+            "Lcom/vk/core/util/ItemClickListener<",
             "-",
             "Lcom/vk/dto/common/VideoFile;",
             ">;)V"
@@ -82,9 +82,9 @@
     const v0, 0x7f0d0128
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
-    iput-object p3, p0, Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;->D:Lcom/vk/core/util/k0;
+    iput-object p3, p0, Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;->D:Lcom/vk/core/util/ItemClickListener;
 
     .line 2
     new-instance p3, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;
@@ -95,7 +95,7 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    invoke-direct {p3, v0, p2}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;-><init>(Landroid/view/ViewGroup;Lcom/vk/attachpicker/base/f;)V
+    invoke-direct {p3, v0, p2}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;-><init>(Landroid/view/ViewGroup;Lcom/vk/attachpicker/base/StreamParcelableSelection;)V
 
     iput-object p3, p0, Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;->c:Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;
 
@@ -110,7 +110,7 @@
 
     const-string p3, "itemView.findViewById(R.id.preview)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/imageloader/view/VKImageView;
 
@@ -127,7 +127,7 @@
 
     const-string p3, "itemView.findViewById(R.id.title)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -144,7 +144,7 @@
 
     const-string p3, "itemView.findViewById(R.id.subtitle_date)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -161,7 +161,7 @@
 
     const-string p3, "itemView.findViewById(R.id.subtitle_views)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -178,7 +178,7 @@
 
     const-string p3, "itemView.findViewById(R.id.duration)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/libvideo/ui/DurationView;
 
@@ -195,7 +195,7 @@
 
     const-string p3, "itemView.findViewById(R.\u2026o_small_item_restriction)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/libvideo/ui/VideoRestrictionView;
 
@@ -214,7 +214,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p2, p1}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     .line 10
     iget-object p1, p0, Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;->d:Lcom/vk/imageloader/view/VKImageView;
@@ -282,7 +282,7 @@
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingStart()I
 
@@ -290,7 +290,7 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
 
@@ -298,7 +298,7 @@
 
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getPaddingStart()I
 
@@ -306,7 +306,7 @@
 
     iget-object v2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v2, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/View;->getPaddingBottom()I
 
@@ -330,7 +330,7 @@
 
     const-string p2, "itemView.findViewById<View>(R.id.menu)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x0
 
@@ -374,7 +374,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder$a;-><init>(Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, p2}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->a(Lkotlin/jvm/b/Functions2;)V
 
     return-void
 
@@ -408,11 +408,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;Lio/reactivex/disposables/b;)V
+.method public static final synthetic a(Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;->C:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;->C:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -421,7 +421,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/dto/common/VideoFile;
 
@@ -467,7 +467,7 @@
     move-object v1, p1
 
     .line 10
-    invoke-static/range {v0 .. v10}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Landroid/view/View;ZILjava/lang/Object;)V
+    invoke-static/range {v0 .. v10}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Landroid/view/View;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -481,11 +481,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;)Lio/reactivex/disposables/b;
+.method public static final synthetic d(Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;->C:Lio/reactivex/disposables/b;
+    iget-object p0, p0, Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;->C:Lio/reactivex/disposables/Disposable;
 
     return-object p0
 .end method
@@ -535,7 +535,7 @@
 
     iget-object v2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -543,7 +543,7 @@
 
     const-string v3, "itemView.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v4, p1
 
@@ -573,13 +573,13 @@
 
     iget-object v2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1, v4, v5}, Lcom/vk/core/utils/VideoFormatter;->a(Landroid/content/Context;Lcom/vk/dto/common/MusicVideoFile;I)Ljava/lang/CharSequence;
 
@@ -609,7 +609,7 @@
     .line 11
     iget v0, p1, Lcom/vk/dto/common/VideoFile;->N:I
 
-    invoke-static {v0}, Lcom/vk/core/util/b1;->b(I)Z
+    invoke-static {v0}, Lcom/vk/core/util/StringUtils;->b(I)Z
 
     move-result v0
 
@@ -622,7 +622,7 @@
     .line 12
     iget v0, p1, Lcom/vk/dto/common/VideoFile;->N:I
 
-    invoke-static {v0}, Lcom/vk/core/util/b1;->a(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/core/util/StringUtils;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -631,7 +631,7 @@
 
     iget-object v5, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v5, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
@@ -657,7 +657,7 @@
 
     iget-object v4, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
@@ -689,13 +689,13 @@
 
     iget-object v3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/vk/core/util/i1;->a(ILandroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {v2, v1}, Lcom/vk/core/util/TimeUtils;->a(ILandroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -753,9 +753,9 @@
 
     const-string v2, "durationText.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v1, p1}, Lcom/vk/libvideo/t;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;)Ljava/lang/String;
+    invoke-static {v1, p1}, Lcom/vk/libvideo/VideoUtils;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -782,7 +782,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;->d:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -796,13 +796,13 @@
     if-nez p1, :cond_2
 
     .line 3
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
     const-string v0, "parent"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -810,7 +810,7 @@
 
     if-eqz v1, :cond_0
 
-    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     move-object v2, p1
 
@@ -836,7 +836,7 @@
 
     const-string v3, "videos_user"
 
-    invoke-static/range {v1 .. v11}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;ZLcom/vk/common/links/f;Ljava/lang/Integer;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v11}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;ZLcom/vk/common/links/OpenCallback;Ljava/lang/Integer;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -845,19 +845,19 @@
 
     .line 4
     :cond_1
-    iget-object p1, p0, Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;->D:Lcom/vk/core/util/k0;
+    iget-object p1, p0, Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;->D:Lcom/vk/core/util/ItemClickListener;
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     const-string v1, "item"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v1
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/core/util/k0;->a(Ljava/lang/Object;I)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/core/util/ItemClickListener;->a(Ljava/lang/Object;I)V
 
     :cond_2
     :goto_0

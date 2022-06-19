@@ -3,7 +3,7 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/lang/Integer;",
-        "Lcom/vtosters/lite/ui/f0/b;",
-        "Lkotlin/m;",
+        "Lcom/vtosters/lite/ui/f0/PostDisplayItem;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -57,32 +57,32 @@
     .line 1
     check-cast p1, Ljava/lang/Integer;
 
-    check-cast p2, Lcom/vtosters/lite/ui/f0/b;
+    check-cast p2, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$onAttachmentDeleted$$inlined$forEach$lambda$1;->a(Ljava/lang/Integer;Lcom/vtosters/lite/ui/f0/b;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$onAttachmentDeleted$$inlined$forEach$lambda$1;->a(Ljava/lang/Integer;Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method public final a(Ljava/lang/Integer;Lcom/vtosters/lite/ui/f0/b;)V
+.method public final a(Ljava/lang/Integer;Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
     .locals 1
 
     .line 2
-    instance-of v0, p2, Lcom/vk/newsfeed/h0/a;
+    instance-of v0, p2, Lcom/vk/newsfeed/h0/AttachmentPostDisplayItem;
 
     if-eqz v0, :cond_0
 
-    check-cast p2, Lcom/vk/newsfeed/h0/a;
+    check-cast p2, Lcom/vk/newsfeed/h0/AttachmentPostDisplayItem;
 
-    invoke-virtual {p2}, Lcom/vk/newsfeed/h0/a;->f()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p2}, Lcom/vk/newsfeed/h0/AttachmentPostDisplayItem;->f()Lcom/vk/dto/common/Attachment;
 
     move-result-object p2
 
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$onAttachmentDeleted$$inlined$forEach$lambda$1;->$attachment$inlined:Lcom/vk/dto/common/Attachment;
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -91,19 +91,19 @@
     .line 3
     iget-object p2, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$onAttachmentDeleted$$inlined$forEach$lambda$1;->this$0:Lcom/vk/newsfeed/presenters/EntriesListPresenter;
 
-    invoke-virtual {p2}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->e()Lcom/vk/lists/g;
+    invoke-virtual {p2}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->e()Lcom/vk/lists/DiffListDataSet;
 
     move-result-object p2
 
     const-string v0, "i"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/lists/o;->j(I)V
+    invoke-virtual {p2, p1}, Lcom/vk/lists/ListDataSet;->j(I)V
 
     :cond_0
     return-void

@@ -50,13 +50,13 @@
     invoke-virtual {p1, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
     .line 3
-    sget-object v0, Lb/h/k/c;->b:Lb/h/k/c;
+    sget-object v0, Lb/h/k/IdleTaskHandler1;->INSTANCE:Lb/h/k/IdleTaskHandler1;
 
     const-wide/16 v2, 0x0
 
     const-wide/16 v4, 0x20
 
-    invoke-virtual/range {v0 .. v5}, Lb/h/k/c;->a(Ljava/lang/Runnable;JJ)V
+    invoke-virtual/range {v0 .. v5}, Lb/h/k/IdleTaskHandler1;->a(Ljava/lang/Runnable;JJ)V
 
     return-void
 .end method

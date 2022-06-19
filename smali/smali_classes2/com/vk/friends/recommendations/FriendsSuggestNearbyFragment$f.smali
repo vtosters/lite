@@ -3,7 +3,7 @@
 .source "FriendsSuggestNearbyFragment.kt"
 
 # interfaces
-.implements Lme/grishka/appkit/views/a$a;
+.implements Lme/grishka/appkit/views/DividerItemDecoration$a;
 
 
 # annotations
@@ -48,7 +48,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/lists/i0;->size()I
+    invoke-virtual {v1}, Lcom/vk/lists/SimpleAdapter;->size()I
 
     move-result v1
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/market/common/GoodsAdapter;
-.super Lcom/vk/market/common/g;
+.super Lcom/vk/market/common/GoodsAdapter1;
 .source "GoodsAdapter.kt"
 
 
@@ -7,11 +7,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
-        "Lcom/vk/market/common/c;",
+        "Lcom/vk/market/common/GoodViewModel;",
         "VH:",
         "Lcom/vk/market/common/BaseGoodsViewHolder<",
         "TT;>;>",
-        "Lcom/vk/market/common/g<",
+        "Lcom/vk/market/common/GoodsAdapter1<",
         "TT;TVH;>;"
     }
 .end annotation
@@ -27,21 +27,21 @@
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/market/common/b;
+.field private final b:Lcom/vk/market/common/GoodsAdapter2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/market/common/b<",
+            "Lcom/vk/market/common/GoodsAdapter2<",
             "TT;TVH;>;"
         }
     .end annotation
 .end field
 
-.field private final c:Lkotlin/jvm/b/b;
+.field private final c:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "TT;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -49,26 +49,26 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/market/common/b;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Lcom/vk/market/common/GoodsAdapter2;Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/market/common/b<",
+            "Lcom/vk/market/common/GoodsAdapter2<",
             "TT;TVH;>;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/market/common/g;-><init>()V
+    invoke-direct {p0}, Lcom/vk/market/common/GoodsAdapter1;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/market/common/GoodsAdapter;->b:Lcom/vk/market/common/b;
+    iput-object p1, p0, Lcom/vk/market/common/GoodsAdapter;->b:Lcom/vk/market/common/GoodsAdapter2;
 
-    iput-object p2, p0, Lcom/vk/market/common/GoodsAdapter;->c:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/market/common/GoodsAdapter;->c:Lkotlin/jvm/b/Functions2;
 
     .line 2
     new-instance p1, Ljava/util/ArrayList;
@@ -80,11 +80,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/market/common/GoodsAdapter;)Lkotlin/jvm/b/b;
+.method public static final synthetic a(Lcom/vk/market/common/GoodsAdapter;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/market/common/GoodsAdapter;->c:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/market/common/GoodsAdapter;->c:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -109,7 +109,7 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/market/common/GoodsAdapter;->b:Lcom/vk/market/common/b;
+    iget-object v0, p0, Lcom/vk/market/common/GoodsAdapter;->b:Lcom/vk/market/common/GoodsAdapter2;
 
     iget-object v1, p0, Lcom/vk/market/common/GoodsAdapter;->a:Ljava/util/List;
 
@@ -117,9 +117,9 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/market/common/c;
+    check-cast p2, Lcom/vk/market/common/GoodViewModel;
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/market/common/b;->a(Lcom/vk/market/common/BaseGoodsViewHolder;Lcom/vk/market/common/c;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/market/common/GoodsAdapter2;->a(Lcom/vk/market/common/BaseGoodsViewHolder;Lcom/vk/market/common/GoodViewModel;)V
 
     return-void
 .end method
@@ -196,7 +196,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/market/common/GoodsAdapter;->a:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Ljava/util/Collection;)V
+    invoke-static {v0, p1}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Ljava/util/Collection;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
@@ -237,13 +237,13 @@
     .end annotation
 
     .line 2
-    iget-object p2, p0, Lcom/vk/market/common/GoodsAdapter;->b:Lcom/vk/market/common/b;
+    iget-object p2, p0, Lcom/vk/market/common/GoodsAdapter;->b:Lcom/vk/market/common/GoodsAdapter2;
 
     new-instance v0, Lcom/vk/market/common/GoodsAdapter$onCreateViewHolder$1;
 
     invoke-direct {v0, p0}, Lcom/vk/market/common/GoodsAdapter$onCreateViewHolder$1;-><init>(Lcom/vk/market/common/GoodsAdapter;)V
 
-    invoke-interface {p2, p1, v0}, Lcom/vk/market/common/b;->a(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)Lcom/vk/market/common/BaseGoodsViewHolder;
+    invoke-interface {p2, p1, v0}, Lcom/vk/market/common/GoodsAdapter2;->a(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)Lcom/vk/market/common/BaseGoodsViewHolder;
 
     move-result-object p1
 

@@ -157,7 +157,7 @@
     if-eq v0, v2, :cond_4
 
     .line 3
-    invoke-static {p0}, Lcom/vtosters/lite/audio/utils/e;->b(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/vtosters/lite/audio/utils/Utils;->b(Ljava/lang/String;)Z
 
     move-result p0
 
@@ -204,7 +204,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 7
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/vtosters/lite/audio/player/SavedTracks;->b(Landroid/content/Context;)Ljava/util/List;
 
@@ -228,7 +228,7 @@
     check-cast v2, Ljava/io/File;
 
     .line 8
-    invoke-static {v2}, Lcom/vtosters/lite/audio/utils/e;->a(Ljava/io/File;)Z
+    invoke-static {v2}, Lcom/vtosters/lite/audio/utils/Utils;->a(Ljava/io/File;)Z
 
     move-result v3
 

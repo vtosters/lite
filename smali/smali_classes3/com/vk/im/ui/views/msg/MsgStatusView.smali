@@ -92,7 +92,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/im/ui/c;->im_bubble_sending_status_tint_color:I
+    sget v1, Lcom/vk/im/ui/R5;->im_bubble_sending_status_tint_color:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -103,7 +103,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/im/ui/c;->im_bubble_sending_error_tint_color:I
+    sget v2, Lcom/vk/im/ui/R5;->im_bubble_sending_error_tint_color:I
 
     invoke-static {v1, v2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -380,7 +380,7 @@
     const v0, 0x7fffffff
 
     .line 7
-    invoke-static {p1, v2, v0, v4}, Lcom/vk/im/ui/views/e;->b(IIII)I
+    invoke-static {p1, v2, v0, v4}, Lcom/vk/im/ui/views/MeasureUtils;->b(IIII)I
 
     move-result p1
 
@@ -395,7 +395,7 @@
     add-int/2addr v2, v1
 
     .line 10
-    invoke-static {p2, v3, v0, v2}, Lcom/vk/im/ui/views/e;->b(IIII)I
+    invoke-static {p2, v3, v0, v2}, Lcom/vk/im/ui/views/MeasureUtils;->b(IIII)I
 
     move-result p2
 

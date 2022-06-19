@@ -3,7 +3,7 @@
 .source "ErrorStateVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/n;
+.implements Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
 
 # instance fields
@@ -13,13 +13,13 @@
 
 .field private final c:Lcom/vk/core/network/NetworkReceiver;
 
-.field private final d:Lcom/vk/catalog2/core/holders/common/k;
+.field private final d:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
 
-.field private final e:Lkotlin/jvm/b/a;
+.field private final e:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -27,14 +27,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/catalog2/core/holders/common/k;Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/catalog2/core/holders/common/k;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -42,9 +42,9 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;->d:Lcom/vk/catalog2/core/holders/common/k;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;->d:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
 
-    iput-object p2, p0, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;->e:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;->e:Lkotlin/jvm/b/Functions;
 
     .line 2
     new-instance p1, Lcom/vk/core/network/NetworkReceiver;
@@ -53,27 +53,27 @@
 
     invoke-direct {p2, p0}, Lcom/vk/catalog2/core/holders/common/ErrorStateVh$receiver$1;-><init>(Lcom/vk/catalog2/core/holders/common/ErrorStateVh;)V
 
-    invoke-direct {p1, p2}, Lcom/vk/core/network/NetworkReceiver;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {p1, p2}, Lcom/vk/core/network/NetworkReceiver;-><init>(Lkotlin/jvm/b/Functions;)V
 
     iput-object p1, p0, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;->c:Lcom/vk/core/network/NetworkReceiver;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/holders/common/ErrorStateVh;)Lkotlin/jvm/b/a;
+.method public static final synthetic a(Lcom/vk/catalog2/core/holders/common/ErrorStateVh;)Lkotlin/jvm/b/Functions;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;->e:Lkotlin/jvm/b/a;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;->e:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/catalog2/core/holders/common/ErrorStateVh;)Lcom/vk/catalog2/core/holders/common/k;
+.method public static final synthetic b(Lcom/vk/catalog2/core/holders/common/ErrorStateVh;)Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;->d:Lcom/vk/catalog2/core/holders/common/k;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;->d:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
 
     return-object p0
 .end method
@@ -84,7 +84,7 @@
     .locals 1
 
     .line 4
-    sget p3, Lcom/vk/catalog2/core/r;->catalog_error_layout:I
+    sget p3, Lcom/vk/catalog2/core/R7;->catalog_error_layout:I
 
     const/4 v0, 0x0
 
@@ -95,7 +95,7 @@
     const-string p2, "it"
 
     .line 5
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -119,13 +119,13 @@
     invoke-virtual {p2, p3, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 7
-    sget p2, Lcom/vk/catalog2/core/q;->loading_and_error_view:I
+    sget p2, Lcom/vk/catalog2/core/R10;->loading_and_error_view:I
 
     const/4 p3, 0x0
 
     const/4 v0, 0x2
 
-    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -144,7 +144,7 @@
     const-string p2, "inflater.inflate(R.layou\u2026)\n            }\n        }"
 
     .line 10
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -179,7 +179,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
 
     return-void
 .end method
@@ -188,7 +188,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
 
     return-void
 .end method
@@ -220,7 +220,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, p1}, Lcom/vk/api/base/f;->a(Landroid/content/Context;Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v1, p1}, Lcom/vk/api/base/ApiUtils;->a(Landroid/content/Context;Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -231,18 +231,18 @@
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 4
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -260,7 +260,7 @@
     :cond_0
     const-string v0, "loadingErrorView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

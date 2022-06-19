@@ -1,13 +1,13 @@
 .class public final Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;
-.super Lcom/vk/im/engine/i/a;
+.super Lcom/vk/im/engine/i/BaseImEngineCmd;
 .source "AccountInfoGetCmd.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/a<",
-        "Lcom/vk/im/engine/models/b<",
+        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
+        "Lcom/vk/im/engine/models/EntityValue<",
         "Lcom/vk/im/engine/models/account/AccountInfo;",
         ">;>;"
     }
@@ -25,7 +25,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->b:Lcom/vk/im/engine/models/Source;
 
@@ -34,7 +34,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/im/engine/models/Source;ZILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/im/engine/models/Source;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -50,32 +50,32 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
+.method private final b(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             ")",
-            "Lcom/vk/im/engine/models/b<",
+            "Lcom/vk/im/engine/models/EntityValue<",
             "Lcom/vk/im/engine/models/account/AccountInfo;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->c(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->c(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityValue;->e()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/b;->d()Z
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityValue;->d()Z
 
     move-result v1
 
@@ -83,7 +83,7 @@
 
     .line 3
     :cond_0
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->d(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->d(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object v0
 
@@ -91,25 +91,25 @@
     return-object v0
 .end method
 
-.method private final c(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
+.method private final c(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             ")",
-            "Lcom/vk/im/engine/models/b<",
+            "Lcom/vk/im/engine/models/EntityValue<",
             "Lcom/vk/im/engine/models/account/AccountInfo;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->r0()J
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->r0()J
 
     move-result-wide v0
 
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->c0()Lcom/vk/im/engine/ImConfig;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->c0()Lcom/vk/im/engine/ImConfig;
 
     move-result-object v2
 
@@ -120,7 +120,7 @@
     sub-long/2addr v0, v2
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -156,30 +156,30 @@
 
     .line 4
     :goto_1
-    new-instance v1, Lcom/vk/im/engine/models/b;
+    new-instance v1, Lcom/vk/im/engine/models/EntityValue;
 
-    invoke-direct {v1, p1, v0}, Lcom/vk/im/engine/models/b;-><init>(Ljava/lang/Object;Z)V
+    invoke-direct {v1, p1, v0}, Lcom/vk/im/engine/models/EntityValue;-><init>(Ljava/lang/Object;Z)V
 
     return-object v1
 .end method
 
-.method private final d(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
+.method private final d(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
     .locals 31
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             ")",
-            "Lcom/vk/im/engine/models/b<",
+            "Lcom/vk/im/engine/models/EntityValue<",
             "Lcom/vk/im/engine/models/account/AccountInfo;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vk/im/engine/internal/f/c/a;
+    new-instance v0, Lcom/vk/im/engine/internal/f/c/AccountInfoGetApiCmd;
 
-    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/d;->Z()Lcom/vk/im/engine/models/Member;
+    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/ImEnvironment;->Z()Lcom/vk/im/engine/models/Member;
 
     move-result-object v1
 
@@ -187,26 +187,26 @@
 
     move-result v1
 
-    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/d;->p0()Ljava/lang/String;
+    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/ImEnvironment;->p0()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "env.languageCode"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object/from16 v3, p0
 
     iget-boolean v4, v3, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->c:Z
 
-    invoke-direct {v0, v1, v2, v4}, Lcom/vk/im/engine/internal/f/c/a;-><init>(ILjava/lang/String;Z)V
+    invoke-direct {v0, v1, v2, v4}, Lcom/vk/im/engine/internal/f/c/AccountInfoGetApiCmd;-><init>(ILjava/lang/String;Z)V
 
     .line 2
-    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/a;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/ApiCommand;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -214,7 +214,7 @@
 
     check-cast v4, Lcom/vk/im/engine/models/account/AccountInfo;
 
-    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/d;->r0()J
+    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/ImEnvironment;->r0()J
 
     move-result-wide v27
 
@@ -271,7 +271,7 @@
     move-result-object v0
 
     .line 3
-    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v1
 
@@ -279,26 +279,26 @@
 
     invoke-direct {v2, v0}, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd$loadByNetwork$1;-><init>(Lcom/vk/im/engine/models/account/AccountInfo;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     .line 4
-    new-instance v1, Lcom/vk/im/engine/models/b;
+    new-instance v1, Lcom/vk/im/engine/models/EntityValue;
 
-    invoke-direct {v1, v0}, Lcom/vk/im/engine/models/b;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v1, v0}, Lcom/vk/im/engine/models/EntityValue;-><init>(Ljava/lang/Object;)V
 
     return-object v1
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
+.method public a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             ")",
-            "Lcom/vk/im/engine/models/b<",
+            "Lcom/vk/im/engine/models/EntityValue<",
             "Lcom/vk/im/engine/models/account/AccountInfo;",
             ">;"
         }
@@ -328,7 +328,7 @@
     if-ne v0, v1, :cond_0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->d(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->d(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object p1
 
@@ -343,7 +343,7 @@
 
     .line 4
     :cond_1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->b(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->b(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object p1
 
@@ -351,7 +351,7 @@
 
     .line 5
     :cond_2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->c(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->c(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object p1
 
@@ -359,11 +359,11 @@
     return-object p1
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object p1
 
@@ -385,7 +385,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/account/AccountInfoGetCmd;->b:Lcom/vk/im/engine/models/Source;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

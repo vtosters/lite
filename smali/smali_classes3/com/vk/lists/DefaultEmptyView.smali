@@ -3,7 +3,7 @@
 .source "DefaultEmptyView.java"
 
 # interfaces
-.implements Lcom/vk/lists/v;
+.implements Lcom/vk/lists/PaginationListEmptyView;
 
 
 # instance fields
@@ -153,7 +153,7 @@
 
     const/16 p2, 0x20
 
-    invoke-static {p1, p2}, Lcom/vk/lists/k0;->a(Landroid/content/res/Resources;I)I
+    invoke-static {p1, p2}, Lcom/vk/lists/Util;->a(Landroid/content/res/Resources;I)I
 
     move-result p1
 
@@ -164,7 +164,7 @@
 
     const/16 p2, 0x3c
 
-    invoke-static {p0, p2}, Lcom/vk/lists/k0;->a(Landroid/content/res/Resources;I)I
+    invoke-static {p0, p2}, Lcom/vk/lists/Util;->a(Landroid/content/res/Resources;I)I
 
     move-result p0
 
@@ -200,7 +200,7 @@
 
     const/16 v1, 0x20
 
-    invoke-static {v0, v1}, Lcom/vk/lists/k0;->a(Landroid/content/res/Resources;I)I
+    invoke-static {v0, v1}, Lcom/vk/lists/Util;->a(Landroid/content/res/Resources;I)I
 
     move-result v0
 
@@ -209,7 +209,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lcom/vk/lists/k0;->a(Landroid/content/res/Resources;I)I
+    invoke-static {v2, v1}, Lcom/vk/lists/Util;->a(Landroid/content/res/Resources;I)I
 
     move-result v1
 
@@ -220,7 +220,7 @@
 
     const/16 v3, 0x38
 
-    invoke-static {v2, v3}, Lcom/vk/lists/k0;->a(Landroid/content/res/Resources;I)I
+    invoke-static {v2, v3}, Lcom/vk/lists/Util;->a(Landroid/content/res/Resources;I)I
 
     move-result v2
 
@@ -236,14 +236,14 @@
 
     move-result-object p1
 
-    sget v0, Lcom/vk/lists/d0;->view_default_empty:I
+    sget v0, Lcom/vk/lists/R2;->view_default_empty:I
 
     const/4 v1, 0x1
 
     invoke-virtual {p1, v0, p0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 7
-    sget p1, Lcom/vk/lists/c0;->image:I
+    sget p1, Lcom/vk/lists/R5;->image:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -254,7 +254,7 @@
     iput-object p1, p0, Lcom/vk/lists/DefaultEmptyView;->a:Landroid/widget/ImageView;
 
     .line 8
-    sget p1, Lcom/vk/lists/c0;->text:I
+    sget p1, Lcom/vk/lists/R5;->text:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -267,9 +267,9 @@
     .line 9
     iget-object p1, p0, Lcom/vk/lists/DefaultEmptyView;->b:Landroid/widget/TextView;
 
-    sget v0, Lcom/vk/lists/a0;->text_placeholder:I
+    sget v0, Lcom/vk/lists/R1;->text_placeholder:I
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     return-void
 .end method
@@ -280,7 +280,7 @@
     .locals 1
 
     .line 10
-    sget v0, Lcom/vk/lists/e0;->liblists_empty_list:I
+    sget v0, Lcom/vk/lists/R3;->liblists_empty_list:I
 
     invoke-virtual {p0, v0}, Lcom/vk/lists/DefaultEmptyView;->setText(I)V
 

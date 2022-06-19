@@ -3,12 +3,12 @@
 .source "FriendsRecommendationsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+    value = Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -51,12 +51,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/friends/h$b;)Lcom/vk/dto/common/data/VKFromList;
+.method public final a(Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual$b;)Lcom/vk/dto/common/data/VKFromList;
     .locals 23
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/api/friends/h$b;",
+            "Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual$b;",
             ")",
             "Lcom/vk/dto/common/data/VKFromList<",
             "Lcom/vk/friends/recommendations/Item;",
@@ -69,14 +69,14 @@
     .line 1
     iget-object v1, v0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$n;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/api/friends/h$b;->b()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual$b;->b()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-static {v1, v2}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/api/friends/h$b;->a()Lcom/vk/dto/common/data/VKFromList;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual$b;->a()Lcom/vk/dto/common/data/VKFromList;
 
     move-result-object v1
 
@@ -204,7 +204,7 @@
 
     move-object v8, v3
 
-    invoke-direct/range {v8 .. v18}, Lcom/vk/friends/recommendations/Item;-><init>(Lcom/vk/friends/recommendations/Item$Type;IIILcom/vk/dto/user/RequestUserProfile;ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v8 .. v18}, Lcom/vk/friends/recommendations/Item;-><init>(Lcom/vk/friends/recommendations/Item$Type;IIILcom/vk/dto/user/RequestUserProfile;ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -244,7 +244,7 @@
 
     move-object v6, v3
 
-    invoke-direct/range {v6 .. v16}, Lcom/vk/friends/recommendations/Item;-><init>(Lcom/vk/friends/recommendations/Item$Type;IIILcom/vk/dto/user/RequestUserProfile;ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v6 .. v16}, Lcom/vk/friends/recommendations/Item;-><init>(Lcom/vk/friends/recommendations/Item$Type;IIILcom/vk/dto/user/RequestUserProfile;ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -313,7 +313,7 @@
 
     move-object v12, v3
 
-    invoke-direct/range {v12 .. v22}, Lcom/vk/friends/recommendations/Item;-><init>(Lcom/vk/friends/recommendations/Item$Type;IIILcom/vk/dto/user/RequestUserProfile;ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v12 .. v22}, Lcom/vk/friends/recommendations/Item;-><init>(Lcom/vk/friends/recommendations/Item$Type;IIILcom/vk/dto/user/RequestUserProfile;ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -344,7 +344,7 @@
 
     move-object v6, v3
 
-    invoke-direct/range {v6 .. v16}, Lcom/vk/friends/recommendations/Item;-><init>(Lcom/vk/friends/recommendations/Item$Type;IIILcom/vk/dto/user/RequestUserProfile;ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v6 .. v16}, Lcom/vk/friends/recommendations/Item;-><init>(Lcom/vk/friends/recommendations/Item$Type;IIILcom/vk/dto/user/RequestUserProfile;ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -358,9 +358,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/friends/h$b;
+    check-cast p1, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$n;->a(Lcom/vk/api/friends/h$b;)Lcom/vk/dto/common/data/VKFromList;
+    invoke-virtual {p0, p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$n;->a(Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual$b;)Lcom/vk/dto/common/data/VKFromList;
 
     move-result-object p1
 

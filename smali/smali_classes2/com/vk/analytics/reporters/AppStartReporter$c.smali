@@ -3,7 +3,7 @@
 .source "AppStartReporter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lkotlin/m;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/m;)V
+.method public final a(Lkotlin/Unit;)V
     .locals 1
 
     .line 1
@@ -62,22 +62,22 @@
     if-nez p1, :cond_0
 
     .line 3
-    sget-object p1, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
+    sget-object p1, Lcom/vk/metrics/reporters/PerformanceReporter;->INSTANCE:Lcom/vk/metrics/reporters/PerformanceReporter;
 
-    invoke-virtual {p1}, Lcom/vk/metrics/reporters/a;->c()Lb/h/q/c/c/c;
+    invoke-virtual {p1}, Lcom/vk/metrics/reporters/PerformanceReporter;->c()Lb/h/q/c/c/PerformanceStorage;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/q/c/c/c;->b()V
+    invoke-virtual {p1}, Lb/h/q/c/c/PerformanceStorage;->b()V
 
     .line 4
-    sget-object p1, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
+    sget-object p1, Lcom/vk/metrics/reporters/PerformanceReporter;->INSTANCE:Lcom/vk/metrics/reporters/PerformanceReporter;
 
-    invoke-virtual {p1}, Lcom/vk/metrics/reporters/a;->c()Lb/h/q/c/c/c;
+    invoke-virtual {p1}, Lcom/vk/metrics/reporters/PerformanceReporter;->c()Lb/h/q/c/c/PerformanceStorage;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/q/c/c/c;->a()V
+    invoke-virtual {p1}, Lb/h/q/c/c/PerformanceStorage;->a()V
 
     :cond_0
     return-void
@@ -87,9 +87,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
-    invoke-virtual {p0, p1}, Lcom/vk/analytics/reporters/AppStartReporter$c;->a(Lkotlin/m;)V
+    invoke-virtual {p0, p1}, Lcom/vk/analytics/reporters/AppStartReporter$c;->a(Lkotlin/Unit;)V
 
     return-void
 .end method

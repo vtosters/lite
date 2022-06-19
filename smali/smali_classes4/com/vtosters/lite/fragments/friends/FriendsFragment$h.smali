@@ -3,7 +3,7 @@
 .source "FriendsFragment.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/ui/x$j;
+.implements Lcom/vtosters/lite/ui/SearchViewWrapper$j;
 
 
 # annotations

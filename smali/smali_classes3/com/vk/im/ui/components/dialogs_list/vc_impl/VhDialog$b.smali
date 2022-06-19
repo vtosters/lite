@@ -57,7 +57,7 @@
 
     const-string v2, "anchor"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1, p1, v0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhDialog$d;->a(Landroid/view/View;Lcom/vk/im/engine/models/dialogs/Dialog;)V
 

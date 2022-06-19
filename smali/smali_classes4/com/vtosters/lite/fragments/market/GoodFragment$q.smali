@@ -3,7 +3,7 @@
 .source "GoodFragment.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/ui/b0/p/j;
+.implements Lcom/vtosters/lite/ui/b0/p/OnProductButtonsClickListener;
 
 
 # annotations

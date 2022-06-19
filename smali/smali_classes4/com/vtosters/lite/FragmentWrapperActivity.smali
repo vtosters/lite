@@ -3,8 +3,8 @@
 .source "FragmentWrapperActivity.java"
 
 # interfaces
-.implements Lcom/vk/navigation/u;
-.implements Lcom/vk/core/ui/v/j/d;
+.implements Lcom/vk/navigation/ResulterProvider;
+.implements Lcom/vk/core/ui/v/j/UiTracking2;
 
 
 # annotations
@@ -20,7 +20,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/navigation/c;",
+            "Lcom/vk/navigation/ActivityResulter;",
             ">;"
         }
     .end annotation
@@ -79,7 +79,7 @@
 
     .line 3
     :goto_0
-    invoke-static {v0}, Lcom/vk/navigation/o;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
+    invoke-static {v0}, Lcom/vk/navigation/Navigator;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
     if-eqz v1, :cond_3
 
     .line 5
-    const-class v0, Lcom/vk/webapp/fragments/k;
+    const-class v0, Lcom/vk/webapp/fragments/RestoreFragment;
 
     invoke-virtual {v0, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
@@ -121,11 +121,11 @@
 
     .line 7
     :goto_1
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result v1
 
@@ -151,7 +151,7 @@
     .line 10
     :cond_5
     :goto_2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
 
     move-result-object v0
 
@@ -163,7 +163,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/navigation/c;)V
+.method public a(Lcom/vk/navigation/ActivityResulter;)V
     .locals 1
 
     .line 11
@@ -178,7 +178,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/navigation/c;)V
+.method public b(Lcom/vk/navigation/ActivityResulter;)V
     .locals 1
 
     .line 1
@@ -245,7 +245,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
 
     move-result-object v1
 
@@ -284,10 +284,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/navigation/c;
+    check-cast v1, Lcom/vk/navigation/ActivityResulter;
 
     .line 4
-    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/c;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/ActivityResulter;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -442,11 +442,11 @@
 
     move-result-object v3
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v4
 
-    invoke-static {p0, v3, v4}, Lcom/vk/extensions/b;->a(Landroid/app/Activity;Landroid/view/View;Z)V
+    invoke-static {p0, v3, v4}, Lcom/vk/extensions/ActivityExt;->a(Landroid/app/Activity;Landroid/view/View;Z)V
 
     .line 19
     :cond_5
@@ -463,7 +463,7 @@
     invoke-direct {p0, v3}, Lcom/vtosters/lite/FragmentWrapperActivity;->a(Landroid/view/View;)V
 
     .line 22
-    sget-object v4, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
+    sget-object v4, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -473,7 +473,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lcom/vk/navigation/o$b;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
+    invoke-virtual {v4, v5}, Lcom/vk/navigation/Navigator$b;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
 
     move-result-object v4
 
@@ -487,7 +487,7 @@
     if-nez p1, :cond_7
 
     .line 24
-    const-class p1, Lcom/vk/navigation/b0/i;
+    const-class p1, Lcom/vk/navigation/b0/FragmentWithSystemTopBar;
 
     invoke-virtual {v4}, Lcom/vk/core/fragments/FragmentEntry;->u1()Ljava/lang/Class;
 
@@ -504,7 +504,7 @@
 
     .line 26
     :cond_6
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
 
     move-result-object p1
 
@@ -535,7 +535,7 @@
 
     move-result-object p1
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -557,7 +557,7 @@
     const/4 v1, 0x0
 
     :goto_1
-    invoke-static {p0, p1, v1}, Lcom/vk/extensions/b;->a(Landroid/app/Activity;Landroid/view/View;Z)V
+    invoke-static {p0, p1, v1}, Lcom/vk/extensions/ActivityExt;->a(Landroid/app/Activity;Landroid/view/View;Z)V
 
     .line 29
     :cond_9
@@ -643,9 +643,9 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vk/core/view/a;
+    new-instance v0, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
 
-    invoke-direct {v0, p0}, Lcom/vk/core/view/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method

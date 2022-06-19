@@ -104,7 +104,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/core/util/h;->d:Landroid/view/animation/DecelerateInterpolator;
+    sget-object v1, Lcom/vk/core/util/AnimationUtils;->d:Landroid/view/animation/DecelerateInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 

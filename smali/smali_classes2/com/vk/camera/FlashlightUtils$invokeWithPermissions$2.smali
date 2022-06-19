@@ -3,12 +3,12 @@
 .source "FlashlightUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/camera/FlashlightUtils;->c(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/camera/FlashlightUtils;->c(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/util/List<",
         "+",
         "Ljava/lang/String;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $denyCallback:Lkotlin/jvm/b/a;
+.field final synthetic $denyCallback:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/camera/FlashlightUtils$invokeWithPermissions$2;->$denyCallback:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/camera/FlashlightUtils$invokeWithPermissions$2;->$denyCallback:Lkotlin/jvm/b/Functions;
 
     const/4 p1, 0x1
 
@@ -61,15 +61,15 @@
     .end annotation
 
     .line 1
-    iget-object p1, p0, Lcom/vk/camera/FlashlightUtils$invokeWithPermissions$2;->$denyCallback:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/camera/FlashlightUtils$invokeWithPermissions$2;->$denyCallback:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void
@@ -83,7 +83,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/camera/FlashlightUtils$invokeWithPermissions$2;->a(Ljava/util/List;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

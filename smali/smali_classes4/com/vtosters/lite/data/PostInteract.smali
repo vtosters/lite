@@ -646,7 +646,7 @@
     const-string v0, "post_interaction"
 
     .line 10
-    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v0
 
@@ -655,7 +655,7 @@
     const-string v2, "post_id"
 
     .line 11
-    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 12
     invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
@@ -664,14 +664,14 @@
 
     const-string v1, "action"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     iget-object p1, p0, Lcom/vtosters/lite/data/PostInteract;->a:Ljava/lang/String;
 
     const-string v1, "ref"
 
     .line 13
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 14
     iget-object p1, p0, Lcom/vtosters/lite/data/PostInteract;->g:Ljava/lang/String;
@@ -687,7 +687,7 @@
 
     const-string v1, "track_code"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 16
     :cond_0
@@ -702,7 +702,7 @@
     const-string p1, "link"
 
     .line 17
-    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 18
     iget-object p1, p0, Lcom/vtosters/lite/data/PostInteract;->e:Ljava/lang/String;
@@ -731,7 +731,7 @@
 
     const-string p2, "ad_data"
 
-    invoke-virtual {v0, p2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, p2, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 22
     :cond_2
@@ -748,7 +748,7 @@
 
     const-string p2, "card_data"
 
-    invoke-virtual {v0, p2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, p2, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 24
     :cond_3
@@ -765,7 +765,7 @@
 
     const-string p2, "element"
 
-    invoke-virtual {v0, p2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, p2, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 26
     iput-object v1, p0, Lcom/vtosters/lite/data/PostInteract;->B:Ljava/lang/String;
@@ -774,13 +774,13 @@
     if-eqz p3, :cond_5
 
     .line 27
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->e()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$l;->e()Lcom/vtosters/lite/data/Analytics$l;
 
     goto :goto_0
 
     .line 28
     :cond_5
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
     :cond_6
     :goto_0
@@ -828,7 +828,7 @@
     if-eqz p1, :cond_2
 
     .line 3
-    invoke-static {p1}, Lcom/vtosters/lite/data/n;->g(Ljava/util/List;)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/Analytics;->g(Ljava/util/List;)V
 
     goto :goto_0
 
@@ -839,7 +839,7 @@
     if-eqz p1, :cond_2
 
     .line 5
-    invoke-static {p1}, Lcom/vtosters/lite/data/n;->g(Ljava/util/List;)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/Analytics;->g(Ljava/util/List;)V
 
     :cond_2
     :goto_0

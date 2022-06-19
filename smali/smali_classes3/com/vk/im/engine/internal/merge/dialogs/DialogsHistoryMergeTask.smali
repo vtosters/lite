@@ -1,13 +1,13 @@
 .class public final Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;
-.super Lcom/vk/im/engine/internal/k/a;
+.super Lcom/vk/im/engine/internal/k/MergeTask;
 .source "DialogsHistoryMergeTask.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/internal/k/a<",
-        "Lkotlin/m;",
+        "Lcom/vk/im/engine/internal/k/MergeTask<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -18,7 +18,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/dialogs/c;",
+            "Lcom/vk/im/engine/models/dialogs/DialogApiModel;",
             ">;"
         }
     .end annotation
@@ -26,9 +26,9 @@
 
 .field private final b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
-.field private final c:Lcom/vk/im/engine/models/q;
+.field private final c:Lcom/vk/im/engine/models/Weight;
 
-.field private final d:Lcom/vk/im/engine/models/q;
+.field private final d:Lcom/vk/im/engine/models/Weight;
 
 .field private final e:Z
 
@@ -36,31 +36,31 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;ZZ)V
+.method public constructor <init>(Ljava/util/List;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;ZZ)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/dialogs/c;",
+            "Lcom/vk/im/engine/models/dialogs/DialogApiModel;",
             ">;",
             "Lcom/vk/im/engine/models/dialogs/DialogsFilter;",
-            "Lcom/vk/im/engine/models/q;",
-            "Lcom/vk/im/engine/models/q;",
+            "Lcom/vk/im/engine/models/Weight;",
+            "Lcom/vk/im/engine/models/Weight;",
             "ZZ)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/k/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/k/MergeTask;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->a:Ljava/util/List;
 
     iput-object p2, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
-    iput-object p3, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->c:Lcom/vk/im/engine/models/q;
+    iput-object p3, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->c:Lcom/vk/im/engine/models/Weight;
 
-    iput-object p4, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->d:Lcom/vk/im/engine/models/q;
+    iput-object p4, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->d:Lcom/vk/im/engine/models/Weight;
 
     iput-boolean p5, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->e:Z
 
@@ -69,46 +69,46 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;)Lcom/vk/im/engine/models/q;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;)Lcom/vk/im/engine/models/Weight;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->d:Lcom/vk/im/engine/models/q;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->d:Lcom/vk/im/engine/models/Weight;
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;Lcom/vk/im/engine/d;)V
+.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;Lcom/vk/im/engine/ImEnvironment;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->c(Lcom/vk/im/engine/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->c(Lcom/vk/im/engine/ImEnvironment;)V
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;Lcom/vk/im/engine/d;)V
+.method public static final synthetic b(Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;Lcom/vk/im/engine/ImEnvironment;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->d(Lcom/vk/im/engine/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->d(Lcom/vk/im/engine/ImEnvironment;)V
 
     return-void
 .end method
 
-.method private final c(Lcom/vk/im/engine/d;)V
+.method private final c(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 10
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
 
     move-result-object v1
 
@@ -129,7 +129,7 @@
 
     move-result v2
 
-    invoke-interface {v9, v2}, Lcom/vk/im/engine/utils/collection/d;->d(I)V
+    invoke-interface {v9, v2}, Lcom/vk/im/engine/utils/collection/IntCollection;->d(I)V
 
     .line 6
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -148,26 +148,26 @@
     move-result-object v2
 
     .line 7
-    check-cast v2, Lcom/vk/im/engine/models/dialogs/c;
+    check-cast v2, Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     .line 8
-    invoke-virtual {v2}, Lcom/vk/im/engine/models/dialogs/c;->j()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->j()I
 
     move-result v2
 
-    invoke-interface {v9, v2}, Lcom/vk/im/engine/utils/collection/d;->add(I)V
+    invoke-interface {v9, v2}, Lcom/vk/im/engine/utils/collection/IntCollection;->add(I)V
 
     goto :goto_0
 
     .line 9
     :cond_0
-    iget-object v2, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->c:Lcom/vk/im/engine/models/q;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->c:Lcom/vk/im/engine/models/Weight;
 
     iget-object v3, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
     sget-object v4, Lcom/vk/im/engine/models/Direction;->BEFORE:Lcom/vk/im/engine/models/Direction;
 
-    iget-object v5, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->d:Lcom/vk/im/engine/models/q;
+    iget-object v5, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->d:Lcom/vk/im/engine/models/Weight;
 
     const/4 v6, 0x0
 
@@ -175,7 +175,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v1 .. v8}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Direction;Lcom/vk/im/engine/models/q;IILjava/lang/Object;)Ljava/util/List;
+    invoke-static/range {v1 .. v8}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Direction;Lcom/vk/im/engine/models/Weight;IILjava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
@@ -203,10 +203,10 @@
 
     move-object v3, v2
 
-    check-cast v3, Lcom/vk/im/engine/internal/storage/models/c;
+    check-cast v3, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;
 
     .line 12
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/c;->c()I
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;->c()I
 
     move-result v3
 
@@ -241,7 +241,7 @@
 
     move-result v2
 
-    invoke-interface {v0, v2}, Lcom/vk/im/engine/utils/collection/d;->d(I)V
+    invoke-interface {v0, v2}, Lcom/vk/im/engine/utils/collection/IntCollection;->d(I)V
 
     .line 15
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -260,48 +260,48 @@
     move-result-object v2
 
     .line 16
-    check-cast v2, Lcom/vk/im/engine/internal/storage/models/c;
+    check-cast v2, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;
 
     .line 17
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/c;->a()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;->a()I
 
     move-result v2
 
-    invoke-interface {v0, v2}, Lcom/vk/im/engine/utils/collection/d;->add(I)V
+    invoke-interface {v0, v2}, Lcom/vk/im/engine/utils/collection/IntCollection;->add(I)V
 
     goto :goto_3
 
     .line 18
     :cond_4
-    invoke-interface {v0, v9}, Lcom/vk/im/engine/utils/collection/d;->b(Lcom/vk/im/engine/utils/collection/d;)Z
+    invoke-interface {v0, v9}, Lcom/vk/im/engine/utils/collection/IntCollection;->b(Lcom/vk/im/engine/utils/collection/IntCollection;)Z
 
     .line 19
-    sget-object v1, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v1, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/q$a;->c()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/Weight$a;->c()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v1
 
     .line 20
     new-instance v2, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask$a;
 
-    invoke-direct {v2, p0, v1, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask$a;-><init>(Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/d;)V
+    invoke-direct {v2, p0, v1, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask$a;-><init>(Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/ImEnvironment;)V
 
-    invoke-interface {v0, v2}, Lcom/vk/im/engine/utils/collection/d;->a(Lcom/vk/im/engine/utils/collection/d$a;)V
+    invoke-interface {v0, v2}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Lcom/vk/im/engine/utils/collection/IntCollection$a;)V
 
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;Lcom/vk/im/engine/d;)V
+.method public static final synthetic c(Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;Lcom/vk/im/engine/ImEnvironment;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->e(Lcom/vk/im/engine/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->e(Lcom/vk/im/engine/ImEnvironment;)V
 
     return-void
 .end method
 
-.method private final d(Lcom/vk/im/engine/d;)V
+.method private final d(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 2
 
     .line 1
@@ -311,41 +311,41 @@
 
     invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;-><init>(Ljava/util/List;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method private final e(Lcom/vk/im/engine/d;)V
+.method private final e(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 11
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
 
     move-result-object v0
 
     .line 3
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->b(Lcom/vk/im/engine/models/dialogs/DialogsFilter;)Lcom/vk/im/engine/internal/storage/models/d;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->b(Lcom/vk/im/engine/models/dialogs/DialogsFilter;)Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
 
     move-result-object v1
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->d()I
 
     move-result p1
 
@@ -362,13 +362,13 @@
     if-eqz v1, :cond_1
 
     .line 6
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/d;->c()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->c()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->c:Lcom/vk/im/engine/models/q;
+    iget-object v3, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->c:Lcom/vk/im/engine/models/Weight;
 
-    invoke-virtual {v2, v3}, Lcom/vk/im/engine/models/q;->a(Lcom/vk/im/engine/models/q;)I
+    invoke-virtual {v2, v3}, Lcom/vk/im/engine/models/Weight;->a(Lcom/vk/im/engine/models/Weight;)I
 
     move-result v2
 
@@ -384,13 +384,13 @@
     if-eqz v1, :cond_2
 
     .line 7
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/d;->c()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->c()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->d:Lcom/vk/im/engine/models/q;
+    iget-object v3, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->d:Lcom/vk/im/engine/models/Weight;
 
-    invoke-virtual {v2, v3}, Lcom/vk/im/engine/models/q;->a(Lcom/vk/im/engine/models/q;)I
+    invoke-virtual {v2, v3}, Lcom/vk/im/engine/models/Weight;->a(Lcom/vk/im/engine/models/Weight;)I
 
     move-result v2
 
@@ -409,22 +409,22 @@
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     .line 9
-    new-instance v10, Lcom/vk/im/engine/internal/storage/models/d;
+    new-instance v10, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
 
     .line 10
     iget-object v3, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
     .line 11
-    iget-object v4, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->d:Lcom/vk/im/engine/models/q;
+    iget-object v4, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->d:Lcom/vk/im/engine/models/Weight;
 
     .line 12
     iget-boolean v5, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->f:Z
 
     .line 13
-    invoke-direct {v10, v3, v4, v5, p1}, Lcom/vk/im/engine/internal/storage/models/d;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/q;ZI)V
+    invoke-direct {v10, v3, v4, v5, p1}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Weight;ZI)V
 
     .line 14
-    invoke-static {v10, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v10, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -432,7 +432,7 @@
 
     xor-int/2addr p1, v1
 
-    invoke-static {v2, v10, p1}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;Ljava/lang/Object;Z)V
+    invoke-static {v2, v10, p1}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;Ljava/lang/Object;Z)V
 
     .line 15
     iget-object p1, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
@@ -470,12 +470,12 @@
     check-cast v4, Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
     .line 18
-    invoke-virtual {v0, v4}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->b(Lcom/vk/im/engine/models/dialogs/DialogsFilter;)Lcom/vk/im/engine/internal/storage/models/d;
+    invoke-virtual {v0, v4}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->b(Lcom/vk/im/engine/models/dialogs/DialogsFilter;)Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
 
     move-result-object v3
 
     .line 19
-    invoke-virtual {v10}, Lcom/vk/im/engine/internal/storage/models/d;->b()Z
+    invoke-virtual {v10}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->b()Z
 
     move-result v5
 
@@ -483,21 +483,21 @@
 
     if-eqz v3, :cond_5
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/d;->b()Z
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->b()Z
 
     move-result v5
 
     if-nez v5, :cond_4
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/d;->c()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->c()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v3
 
-    invoke-virtual {v10}, Lcom/vk/im/engine/internal/storage/models/d;->c()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v10}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->c()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v5
 
-    invoke-virtual {v3, v5}, Lcom/vk/im/engine/models/q;->a(Lcom/vk/im/engine/models/q;)I
+    invoke-virtual {v3, v5}, Lcom/vk/im/engine/models/Weight;->a(Lcom/vk/im/engine/models/Weight;)I
 
     move-result v3
 
@@ -530,7 +530,7 @@
     move-object v3, v10
 
     .line 20
-    invoke-static/range {v3 .. v9}, Lcom/vk/im/engine/internal/storage/models/d;->a(Lcom/vk/im/engine/internal/storage/models/d;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/q;ZIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/d;
+    invoke-static/range {v3 .. v9}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->a(Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Weight;ZIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
 
     move-result-object v3
 
@@ -547,30 +547,30 @@
 
 
 # virtual methods
-.method public bridge synthetic b(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic b(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->b(Lcom/vk/im/engine/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;->b(Lcom/vk/im/engine/ImEnvironment;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method protected b(Lcom/vk/im/engine/d;)V
+.method protected b(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 2
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask$onMerge$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask$onMerge$1;-><init>(Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;Lcom/vk/im/engine/d;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask$onMerge$1;-><init>(Lcom/vk/im/engine/internal/merge/dialogs/DialogsHistoryMergeTask;Lcom/vk/im/engine/ImEnvironment;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     return-void
 .end method

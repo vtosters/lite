@@ -149,7 +149,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/im/ui/j;->vkim_msg_send_picker_controls:I
+    sget v1, Lcom/vk/im/ui/R13;->vkim_msg_send_picker_controls:I
 
     const/4 v2, 0x1
 
@@ -160,7 +160,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerVc;
 
-    sget v1, Lcom/vk/im/ui/h;->vkim_caption_view:I
+    sget v1, Lcom/vk/im/ui/R11;->vkim_caption_view:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -168,7 +168,7 @@
 
     const-string v2, "findViewById(R.id.vkim_caption_view)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/EditText;
 
@@ -240,12 +240,12 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1$addControlsView$$inlined$apply$lambda$2;-><init>(Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerVc;
 
-    sget v1, Lcom/vk/im/ui/h;->vkim_caption_separator:I
+    sget v1, Lcom/vk/im/ui/R11;->vkim_caption_separator:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -253,14 +253,14 @@
 
     const-string v2, "findViewById(R.id.vkim_caption_separator)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->b(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Landroid/view/View;)V
 
     .line 8
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerVc;
 
-    sget v1, Lcom/vk/im/ui/h;->vkim_send_btn:I
+    sget v1, Lcom/vk/im/ui/R11;->vkim_send_btn:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -268,7 +268,7 @@
 
     const-string v2, "findViewById(R.id.vkim_send_btn)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Lcom/vk/core/view/ArrowSendButton;
 
@@ -277,7 +277,7 @@
     .line 9
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerVc;
 
-    sget v1, Lcom/vk/im/ui/h;->vkim_confirm_btn:I
+    sget v1, Lcom/vk/im/ui/R11;->vkim_confirm_btn:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -300,7 +300,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1$addControlsView$$inlined$apply$lambda$3;-><init>(Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 11
     :cond_0
@@ -314,7 +314,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1$addControlsView$$inlined$apply$lambda$4;-><init>(Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 12
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerVc;
@@ -327,12 +327,12 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1$addControlsView$$inlined$apply$lambda$5;-><init>(Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 13
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerVc;
 
-    sget v1, Lcom/vk/im/ui/h;->vkim_picker_search_container:I
+    sget v1, Lcom/vk/im/ui/R11;->vkim_picker_search_container:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -343,7 +343,7 @@
     .line 14
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerVc;
 
-    sget v1, Lcom/vk/im/ui/h;->vkim_picker_search:I
+    sget v1, Lcom/vk/im/ui/R11;->vkim_picker_search:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -352,19 +352,19 @@
     check-cast p1, Lcom/vk/core/view/search/ModernSearchView;
 
     .line 15
-    invoke-virtual {p1}, Lcom/vk/core/view/search/ModernSearchView;->c()Lb/h/v/c;
+    invoke-virtual {p1}, Lcom/vk/core/view/search/ModernSearchView;->c()Lb/h/v/InitialValueObservable;
 
     move-result-object v1
 
     .line 16
-    invoke-virtual {v1}, Lb/h/v/c;->p()Lc/a/m;
+    invoke-virtual {v1}, Lb/h/v/InitialValueObservable;->p()Lio/reactivex/Observable;
 
     move-result-object v1
 
     const-wide/16 v2, 0x1
 
     .line 17
-    invoke-virtual {v1, v2, v3}, Lc/a/m;->c(J)Lc/a/m;
+    invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->c(J)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -373,16 +373,16 @@
     .line 18
     sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v1, v2, v3, v4}, Lc/a/m;->b(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v1, v2, v3, v4}, Lio/reactivex/Observable;->b(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 19
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -391,22 +391,22 @@
 
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1$b;-><init>(Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;)V
 
-    invoke-virtual {v1, v2}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
     const-string v2, "queryChangeEvents()\n    \u2026                        }"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 21
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerVc;
 
-    invoke-static {v2}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->e(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)Lio/reactivex/disposables/a;
+    invoke-static {v2}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->e(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)V
+    invoke-static {v1, v2}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)V
 
     .line 22
     new-instance v1, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1$c;
@@ -420,10 +420,10 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1$addControlsView$$inlined$apply$lambda$8;-><init>(Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;)V
 
-    invoke-virtual {p1, v1}, Lcom/vk/core/view/search/ModernSearchView;->setOnActionBackListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v1}, Lcom/vk/core/view/search/ModernSearchView;->setOnActionBackListener(Lkotlin/jvm/b/Functions;)V
 
     .line 24
-    invoke-virtual {p1}, Lcom/vk/core/view/search/ModernSearchView;->getOnActionBackListener()Lkotlin/jvm/b/a;
+    invoke-virtual {p1}, Lcom/vk/core/view/search/ModernSearchView;->getOnActionBackListener()Lkotlin/jvm/b/Functions;
 
     move-result-object v1
 
@@ -431,7 +431,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {p1, v1, v3, v2, v3}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static {p1, v1, v3, v2, v3}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     const/4 v1, 0x0
 
@@ -470,26 +470,26 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerVc;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->e(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)Lio/reactivex/disposables/a;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->e(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerVc;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->j(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)Lkotlin/jvm/b/a;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->j(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     .line 3
     :cond_0
@@ -497,7 +497,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->b(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->b(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/Functions;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerVc;
@@ -621,17 +621,17 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$show$1;->a:Lcom/vk/im/ui/components/msg_send/picker/PickerVc;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->i(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)Lkotlin/jvm/b/a;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->i(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     .line 2
     :cond_0
@@ -639,7 +639,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method

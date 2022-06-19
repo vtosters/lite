@@ -40,7 +40,7 @@
 
     iget-object v2, p0, Lcom/vtosters/lite/fragments/n2/d0;->c:Landroid/widget/ArrayAdapter;
 
-    invoke-static {v0, v1, v2, p1}, Lcom/vtosters/lite/fragments/n2/q0;->a(Landroid/widget/AutoCompleteTextView;Ljava/lang/String;Landroid/widget/ArrayAdapter;Landroid/view/View;)V
+    invoke-static {v0, v1, v2, p1}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->a(Landroid/widget/AutoCompleteTextView;Ljava/lang/String;Landroid/widget/ArrayAdapter;Landroid/view/View;)V
 
     return-void
 .end method

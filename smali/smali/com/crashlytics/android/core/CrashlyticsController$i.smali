@@ -69,11 +69,11 @@
     iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$i;->f:Lcom/crashlytics/android/core/CrashlyticsController;
 
     .line 2
-    invoke-static {v0}, Lcom/crashlytics/android/core/CrashlyticsController;->d(Lcom/crashlytics/android/core/CrashlyticsController;)Lcom/crashlytics/android/core/a;
+    invoke-static {v0}, Lcom/crashlytics/android/core/CrashlyticsController;->d(Lcom/crashlytics/android/core/CrashlyticsController;)Lcom/crashlytics/android/core/AppData;
 
     move-result-object v0
 
-    iget-object v2, v0, Lcom/crashlytics/android/core/a;->a:Ljava/lang/String;
+    iget-object v2, v0, Lcom/crashlytics/android/core/AppData;->a:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/crashlytics/android/core/CrashlyticsController$i;->b:Ljava/lang/String;
 
@@ -93,7 +93,7 @@
     move-object v0, p1
 
     .line 4
-    invoke-static/range {v0 .. v7}, Lcom/crashlytics/android/core/n0;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static/range {v0 .. v7}, Lcom/crashlytics/android/core/SessionProtobufHelper;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
 .end method

@@ -58,7 +58,7 @@
 
     const-string v2, "users"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v2, Ljava/util/ArrayList;
@@ -102,7 +102,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v2}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -116,7 +116,7 @@
 
     iget-boolean v2, v2, Lcom/vk/common/links/OpenFunctionsKt$v;->c:Z
 
-    invoke-static {v0, v1, v3, v2}, Lcom/vtosters/lite/fragments/gifts/h;->a(Landroid/content/Context;Ljava/util/ArrayList;Ljava/lang/String;Z)V
+    invoke-static {v0, v1, v3, v2}, Lcom/vtosters/lite/fragments/gifts/GiftsCatalogFragment;->a(Landroid/content/Context;Ljava/util/ArrayList;Ljava/lang/String;Z)V
 
     goto :goto_1
 
@@ -132,17 +132,17 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IILjava/lang/Object;)Lkotlin/m;
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IILjava/lang/Object;)Lkotlin/Unit;
 
     .line 7
     :goto_1
     iget-object v0, p0, Lcom/vk/common/links/OpenFunctionsKt$v$a;->a:Lcom/vk/common/links/OpenFunctionsKt$v;
 
-    iget-object v0, v0, Lcom/vk/common/links/OpenFunctionsKt$v;->d:Lcom/vk/common/links/f;
+    iget-object v0, v0, Lcom/vk/common/links/OpenFunctionsKt$v;->d:Lcom/vk/common/links/OpenCallback;
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0}, Lcom/vk/common/links/f;->a()V
+    invoke-interface {v0}, Lcom/vk/common/links/OpenCallback;->a()V
 
     :cond_2
     return-void

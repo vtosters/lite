@@ -3,7 +3,7 @@
 .source "SmsCheckFragment.kt"
 
 # interfaces
-.implements Lcom/vk/auth/verification/sms/b;
+.implements Lcom/vk/auth/verification/sms/SmsCheckView;
 
 
 # annotations
@@ -16,12 +16,12 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<V::",
-        "Lcom/vk/auth/verification/sms/b;",
+        "Lcom/vk/auth/verification/sms/SmsCheckView;",
         ">",
         "Lcom/vk/auth/verification/base/BaseCheckFragment<",
-        "Lcom/vk/auth/verification/sms/a<",
+        "Lcom/vk/auth/verification/sms/SmsCheckPresenter<",
         "TV;*>;>;",
-        "Lcom/vk/auth/verification/sms/b;"
+        "Lcom/vk/auth/verification/sms/SmsCheckView;"
     }
 .end annotation
 
@@ -44,7 +44,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/verification/sms/SmsCheckFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/verification/sms/SmsCheckFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Landroid/content/IntentFilter;
@@ -93,7 +93,7 @@
 
     const-string v1, "requireContext()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -117,7 +117,7 @@
     :cond_0
     const-string v0, "smsRetrieverClient"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -157,13 +157,13 @@
 
     .line 3
     :goto_0
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/auth/verification/sms/a;
+    check-cast p2, Lcom/vk/auth/verification/sms/SmsCheckPresenter;
 
-    invoke-interface {p2, p1}, Lcom/vk/auth/verification/sms/a;->b(Ljava/lang/String;)V
+    invoke-interface {p2, p1}, Lcom/vk/auth/verification/sms/SmsCheckPresenter;->b(Ljava/lang/String;)V
 
     :cond_2
     :goto_1
@@ -185,7 +185,7 @@
 
     const-string v2, "SmsRetriever.getClient(appContext)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/vk/auth/verification/sms/SmsCheckFragment;->R:Lcom/google/android/gms/auth/c/d/c;
 

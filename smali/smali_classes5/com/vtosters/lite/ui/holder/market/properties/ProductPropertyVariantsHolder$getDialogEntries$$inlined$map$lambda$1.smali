@@ -3,12 +3,12 @@
 .source "ProductPropertyVariantsHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder;->a(Ljava/util/List;Lcom/vtosters/lite/ui/holder/market/properties/e;Lkotlin/jvm/b/b;)Ljava/util/List;
+    value = Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder;->a(Ljava/util/List;Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;Lkotlin/jvm/b/Functions2;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,30 +19,30 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $onClick$inlined:Lkotlin/jvm/b/b;
+.field final synthetic $onClick$inlined:Lkotlin/jvm/b/Functions2;
 
-.field final synthetic $selectedVariant$inlined:Lcom/vtosters/lite/ui/holder/market/properties/e;
+.field final synthetic $selectedVariant$inlined:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
-.field final synthetic $variant:Lcom/vtosters/lite/ui/holder/market/properties/e;
+.field final synthetic $variant:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/ui/holder/market/properties/e;Lcom/vtosters/lite/ui/holder/market/properties/e;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$getDialogEntries$$inlined$map$lambda$1;->$variant:Lcom/vtosters/lite/ui/holder/market/properties/e;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$getDialogEntries$$inlined$map$lambda$1;->$variant:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
-    iput-object p2, p0, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$getDialogEntries$$inlined$map$lambda$1;->$selectedVariant$inlined:Lcom/vtosters/lite/ui/holder/market/properties/e;
+    iput-object p2, p0, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$getDialogEntries$$inlined$map$lambda$1;->$selectedVariant$inlined:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
-    iput-object p3, p0, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$getDialogEntries$$inlined$map$lambda$1;->$onClick$inlined:Lkotlin/jvm/b/b;
+    iput-object p3, p0, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$getDialogEntries$$inlined$map$lambda$1;->$onClick$inlined:Lkotlin/jvm/b/Functions2;
 
     const/4 p1, 0x0
 
@@ -59,7 +59,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$getDialogEntries$$inlined$map$lambda$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -68,11 +68,11 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$getDialogEntries$$inlined$map$lambda$1;->$onClick$inlined:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$getDialogEntries$$inlined$map$lambda$1;->$onClick$inlined:Lkotlin/jvm/b/Functions2;
 
-    iget-object v1, p0, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$getDialogEntries$$inlined$map$lambda$1;->$variant:Lcom/vtosters/lite/ui/holder/market/properties/e;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyVariantsHolder$getDialogEntries$$inlined$map$lambda$1;->$variant:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
-    invoke-interface {v0, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

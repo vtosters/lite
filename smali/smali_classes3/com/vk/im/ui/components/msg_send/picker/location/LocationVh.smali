@@ -1,20 +1,20 @@
 .class public final Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;
-.super Lcom/vk/im/ui/views/adapter_delegate/d;
+.super Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;
 .source "LocationVh.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/views/adapter_delegate/d<",
-        "Lcom/vk/im/ui/components/msg_send/picker/location/c;",
+        "Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder<",
+        "Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field public a:Lcom/vk/im/ui/components/msg_send/picker/location/c;
+.field public a:Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;
 
 .field private final b:Landroid/widget/TextView;
 
@@ -24,13 +24,13 @@
 
 .field private final e:Landroid/widget/TextView;
 
-.field private f:Lcom/vk/im/ui/components/msg_send/picker/location/b;
+.field private f:Lcom/vk/im/ui/components/msg_send/picker/location/LocationCallback;
 
 .field private final g:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_send/picker/location/b;I)V
+.method public constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_send/picker/location/LocationCallback;I)V
     .locals 2
     .param p3    # I
         .annotation build Landroidx/annotation/DrawableRes;
@@ -38,9 +38,9 @@
     .end param
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/d;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->f:Lcom/vk/im/ui/components/msg_send/picker/location/b;
+    iput-object p2, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->f:Lcom/vk/im/ui/components/msg_send/picker/location/LocationCallback;
 
     iput p3, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->g:I
 
@@ -49,15 +49,15 @@
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget p3, Lcom/vk/im/ui/h;->vkim_location_title:I
+    sget p3, Lcom/vk/im/ui/R11;->vkim_location_title:I
 
     const/4 v0, 0x2
 
     const/4 v1, 0x0
 
-    invoke-static {p1, p3, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p3, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -68,11 +68,11 @@
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget p3, Lcom/vk/im/ui/h;->vkim_location_subtitle:I
+    sget p3, Lcom/vk/im/ui/R11;->vkim_location_subtitle:I
 
-    invoke-static {p1, p3, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p3, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -83,11 +83,11 @@
     .line 4
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget p3, Lcom/vk/im/ui/h;->vkim_location_ic:I
+    sget p3, Lcom/vk/im/ui/R11;->vkim_location_ic:I
 
-    invoke-static {p1, p3, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p3, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -98,11 +98,11 @@
     .line 5
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget p3, Lcom/vk/im/ui/h;->vkim_location_info:I
+    sget p3, Lcom/vk/im/ui/R11;->vkim_location_info:I
 
-    invoke-static {p1, p3, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p3, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -113,38 +113,38 @@
     .line 6
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p3, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh$1;
 
     invoke-direct {p3, p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh$1;-><init>(Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;)V
 
-    invoke-static {p1, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 7
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh$2;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh$2;-><init>(Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/im/ui/components/msg_send/picker/location/c;)V
+.method public a(Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;)V
     .locals 8
 
     .line 2
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->a:Lcom/vk/im/ui/components/msg_send/picker/location/c;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->a:Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/c;->b()Lcom/vk/dto/geo/GeoLocation;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;->b()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object v0
 
@@ -153,20 +153,20 @@
 
     const-string v2, "itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     .line 5
-    iget-object v3, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->f:Lcom/vk/im/ui/components/msg_send/picker/location/b;
+    iget-object v3, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->f:Lcom/vk/im/ui/components/msg_send/picker/location/LocationCallback;
 
     const/4 v4, 0x1
 
     if-eqz v3, :cond_0
 
-    invoke-interface {v3, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/b;->b(Lcom/vk/im/ui/components/msg_send/picker/location/c;)Z
+    invoke-interface {v3, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationCallback;->b(Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;)Z
 
     move-result v3
 
@@ -175,7 +175,7 @@
     .line 6
     iget-object v2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    sget v3, Lcom/vk/im/ui/f;->bg_picker_file_item_selection:I
+    sget v3, Lcom/vk/im/ui/R12;->bg_picker_file_item_selection:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -185,7 +185,7 @@
     :cond_0
     iget-object v3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -193,9 +193,9 @@
 
     const-string v5, "itemView.context"
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v5, Lcom/vk/im/ui/c;->selectableItemBackground:I
+    sget v5, Lcom/vk/im/ui/R5;->selectableItemBackground:I
 
     invoke-static {v2, v5}, Lcom/vk/core/util/ContextExtKt;->l(Landroid/content/Context;I)I
 
@@ -284,7 +284,7 @@
     goto :goto_4
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -294,7 +294,7 @@
     :cond_5
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->d:Lcom/vk/im/ui/views/FrescoImageView;
 
-    sget v3, Lcom/vk/im/ui/f;->ic_place_48:I
+    sget v3, Lcom/vk/im/ui/R12;->ic_place_48:I
 
     invoke-virtual {v2, v3}, Lcom/vk/im/ui/views/FrescoImageView;->setPlaceholder(I)V
 
@@ -310,7 +310,7 @@
     .line 14
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->d:Lcom/vk/im/ui/views/FrescoImageView;
 
-    sget v3, Lcom/vk/im/ui/f;->ic_send:I
+    sget v3, Lcom/vk/im/ui/R12;->ic_send:I
 
     invoke-virtual {v2, v3}, Lcom/vk/im/ui/views/FrescoImageView;->setPlaceholder(I)V
 
@@ -342,7 +342,7 @@
     if-gez v3, :cond_a
 
     .line 18
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/c;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;->a()Ljava/lang/String;
 
     move-result-object v3
 
@@ -363,7 +363,7 @@
     if-eqz v3, :cond_9
 
     .line 19
-    sget p1, Lcom/vk/im/ui/m;->loading:I
+    sget p1, Lcom/vk/im/ui/R4;->loading:I
 
     invoke-virtual {v1, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -373,7 +373,7 @@
 
     .line 20
     :cond_9
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/c;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;->a()Ljava/lang/String;
 
     move-result-object p1
 
@@ -392,13 +392,13 @@
 
     const-string v3, "context"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/dto/geo/GeoLocation;->z1()I
 
     move-result v3
 
-    invoke-static {v1, v3}, Lcom/vk/core/utils/a;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v1, v3}, Lcom/vk/core/utils/AddressesUtils;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -462,7 +462,7 @@
 
     .line 26
     :cond_e
-    sget p1, Lcom/vk/im/ui/m;->vkim_address:I
+    sget p1, Lcom/vk/im/ui/R4;->vkim_address:I
 
     invoke-virtual {v1, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -505,31 +505,31 @@
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/c;)V
+.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)V
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/msg_send/picker/location/c;
+    check-cast p1, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->a(Lcom/vk/im/ui/components/msg_send/picker/location/c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->a(Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;)V
 
     return-void
 .end method
 
-.method public final e0()Lcom/vk/im/ui/components/msg_send/picker/location/b;
+.method public final e0()Lcom/vk/im/ui/components/msg_send/picker/location/LocationCallback;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->f:Lcom/vk/im/ui/components/msg_send/picker/location/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->f:Lcom/vk/im/ui/components/msg_send/picker/location/LocationCallback;
 
     return-object v0
 .end method
 
-.method public final f0()Lcom/vk/im/ui/components/msg_send/picker/location/c;
+.method public final f0()Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->a:Lcom/vk/im/ui/components/msg_send/picker/location/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->a:Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;
 
     if-eqz v0, :cond_0
 
@@ -538,7 +538,7 @@
     :cond_0
     const-string v0, "model"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

@@ -20,7 +20,7 @@
 # instance fields
 .field private final a:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field private final b:Lio/fabric/sdk/android/services/common/n;
+.field private final b:Lio/fabric/sdk/android/services/common/InstallerPackageNameProvider;
 
 .field private final c:Z
 
@@ -36,19 +36,19 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Collection<",
-            "Lio/fabric/sdk/android/h;",
+            "Lio/fabric/sdk/android/Kit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field i:Lio/fabric/sdk/android/services/common/c;
+.field i:Lio/fabric/sdk/android/services/common/AdvertisingInfoProvider;
 
-.field j:Lio/fabric/sdk/android/services/common/b;
+.field j:Lio/fabric/sdk/android/services/common/AdvertisingInfo;
 
 .field k:Z
 
-.field l:Lio/fabric/sdk/android/services/common/m;
+.field l:Lio/fabric/sdk/android/services/common/FirebaseInfo;
 
 
 # direct methods
@@ -85,7 +85,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/util/Collection<",
-            "Lio/fabric/sdk/android/h;",
+            "Lio/fabric/sdk/android/Kit;",
             ">;)V"
         }
     .end annotation
@@ -119,25 +119,25 @@
     iput-object p4, p0, Lio/fabric/sdk/android/services/common/IdManager;->h:Ljava/util/Collection;
 
     .line 7
-    new-instance p2, Lio/fabric/sdk/android/services/common/n;
+    new-instance p2, Lio/fabric/sdk/android/services/common/InstallerPackageNameProvider;
 
-    invoke-direct {p2}, Lio/fabric/sdk/android/services/common/n;-><init>()V
+    invoke-direct {p2}, Lio/fabric/sdk/android/services/common/InstallerPackageNameProvider;-><init>()V
 
-    iput-object p2, p0, Lio/fabric/sdk/android/services/common/IdManager;->b:Lio/fabric/sdk/android/services/common/n;
+    iput-object p2, p0, Lio/fabric/sdk/android/services/common/IdManager;->b:Lio/fabric/sdk/android/services/common/InstallerPackageNameProvider;
 
     .line 8
-    new-instance p2, Lio/fabric/sdk/android/services/common/c;
+    new-instance p2, Lio/fabric/sdk/android/services/common/AdvertisingInfoProvider;
 
-    invoke-direct {p2, p1}, Lio/fabric/sdk/android/services/common/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lio/fabric/sdk/android/services/common/AdvertisingInfoProvider;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lio/fabric/sdk/android/services/common/IdManager;->i:Lio/fabric/sdk/android/services/common/c;
+    iput-object p2, p0, Lio/fabric/sdk/android/services/common/IdManager;->i:Lio/fabric/sdk/android/services/common/AdvertisingInfoProvider;
 
     .line 9
-    new-instance p2, Lio/fabric/sdk/android/services/common/m;
+    new-instance p2, Lio/fabric/sdk/android/services/common/FirebaseInfo;
 
-    invoke-direct {p2}, Lio/fabric/sdk/android/services/common/m;-><init>()V
+    invoke-direct {p2}, Lio/fabric/sdk/android/services/common/FirebaseInfo;-><init>()V
 
-    iput-object p2, p0, Lio/fabric/sdk/android/services/common/IdManager;->l:Lio/fabric/sdk/android/services/common/m;
+    iput-object p2, p0, Lio/fabric/sdk/android/services/common/IdManager;->l:Lio/fabric/sdk/android/services/common/FirebaseInfo;
 
     const/4 p2, 0x1
 
@@ -158,7 +158,7 @@
     if-nez p3, :cond_0
 
     .line 12
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object p3
 
@@ -182,7 +182,7 @@
     move-result-object v0
 
     .line 14
-    invoke-interface {p3, p4, v0}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p3, p4, v0}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     const-string p3, "com.crashlytics.CollectUserIdentifiers"
@@ -200,7 +200,7 @@
     if-nez p2, :cond_1
 
     .line 17
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object p2
 
@@ -224,7 +224,7 @@
     move-result-object p1
 
     .line 19
-    invoke-interface {p2, p4, p1}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, p4, p1}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     return-void
@@ -297,14 +297,14 @@
     .locals 1
 
     .line 3
-    invoke-virtual {p0}, Lio/fabric/sdk/android/services/common/IdManager;->b()Lio/fabric/sdk/android/services/common/b;
+    invoke-virtual {p0}, Lio/fabric/sdk/android/services/common/IdManager;->b()Lio/fabric/sdk/android/services/common/AdvertisingInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 4
-    iget-object v0, v0, Lio/fabric/sdk/android/services/common/b;->a:Ljava/lang/String;
+    iget-object v0, v0, Lio/fabric/sdk/android/services/common/AdvertisingInfo;->a:Ljava/lang/String;
 
     invoke-direct {p0, p1, v0}, Lio/fabric/sdk/android/services/common/IdManager;->a(Landroid/content/SharedPreferences;Ljava/lang/String;)V
 
@@ -538,14 +538,14 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lio/fabric/sdk/android/services/common/IdManager;->b()Lio/fabric/sdk/android/services/common/b;
+    invoke-virtual {p0}, Lio/fabric/sdk/android/services/common/IdManager;->b()Lio/fabric/sdk/android/services/common/AdvertisingInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-boolean v0, v0, Lio/fabric/sdk/android/services/common/b;->b:Z
+    iget-boolean v0, v0, Lio/fabric/sdk/android/services/common/AdvertisingInfo;->b:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -570,7 +570,7 @@
     return v0
 .end method
 
-.method declared-synchronized b()Lio/fabric/sdk/android/services/common/b;
+.method declared-synchronized b()Lio/fabric/sdk/android/services/common/AdvertisingInfo;
     .locals 1
 
     monitor-enter p0
@@ -582,13 +582,13 @@
     if-nez v0, :cond_0
 
     .line 9
-    iget-object v0, p0, Lio/fabric/sdk/android/services/common/IdManager;->i:Lio/fabric/sdk/android/services/common/c;
+    iget-object v0, p0, Lio/fabric/sdk/android/services/common/IdManager;->i:Lio/fabric/sdk/android/services/common/AdvertisingInfoProvider;
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/c;->a()Lio/fabric/sdk/android/services/common/b;
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/AdvertisingInfoProvider;->a()Lio/fabric/sdk/android/services/common/AdvertisingInfo;
 
     move-result-object v0
 
-    iput-object v0, p0, Lio/fabric/sdk/android/services/common/IdManager;->j:Lio/fabric/sdk/android/services/common/b;
+    iput-object v0, p0, Lio/fabric/sdk/android/services/common/IdManager;->j:Lio/fabric/sdk/android/services/common/AdvertisingInfo;
 
     const/4 v0, 0x1
 
@@ -597,7 +597,7 @@
 
     .line 11
     :cond_0
-    iget-object v0, p0, Lio/fabric/sdk/android/services/common/IdManager;->j:Lio/fabric/sdk/android/services/common/b;
+    iget-object v0, p0, Lio/fabric/sdk/android/services/common/IdManager;->j:Lio/fabric/sdk/android/services/common/AdvertisingInfo;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -701,18 +701,18 @@
 
     move-result-object v2
 
-    check-cast v2, Lio/fabric/sdk/android/h;
+    check-cast v2, Lio/fabric/sdk/android/Kit;
 
     .line 3
-    instance-of v3, v2, Lio/fabric/sdk/android/services/common/k;
+    instance-of v3, v2, Lio/fabric/sdk/android/services/common/DeviceIdentifierProvider;
 
     if-eqz v3, :cond_0
 
     .line 4
-    check-cast v2, Lio/fabric/sdk/android/services/common/k;
+    check-cast v2, Lio/fabric/sdk/android/services/common/DeviceIdentifierProvider;
 
     .line 5
-    invoke-interface {v2}, Lio/fabric/sdk/android/services/common/k;->a()Ljava/util/Map;
+    invoke-interface {v2}, Lio/fabric/sdk/android/services/common/DeviceIdentifierProvider;->a()Ljava/util/Map;
 
     move-result-object v2
 
@@ -768,11 +768,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lio/fabric/sdk/android/services/common/IdManager;->b:Lio/fabric/sdk/android/services/common/n;
+    iget-object v0, p0, Lio/fabric/sdk/android/services/common/IdManager;->b:Lio/fabric/sdk/android/services/common/InstallerPackageNameProvider;
 
     iget-object v1, p0, Lio/fabric/sdk/android/services/common/IdManager;->e:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lio/fabric/sdk/android/services/common/n;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lio/fabric/sdk/android/services/common/InstallerPackageNameProvider;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -909,11 +909,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lio/fabric/sdk/android/services/common/IdManager;->l:Lio/fabric/sdk/android/services/common/m;
+    iget-object v0, p0, Lio/fabric/sdk/android/services/common/IdManager;->l:Lio/fabric/sdk/android/services/common/FirebaseInfo;
 
     iget-object v1, p0, Lio/fabric/sdk/android/services/common/IdManager;->e:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lio/fabric/sdk/android/services/common/m;->b(Landroid/content/Context;)Z
+    invoke-virtual {v0, v1}, Lio/fabric/sdk/android/services/common/FirebaseInfo;->b(Landroid/content/Context;)Z
 
     move-result v0
 

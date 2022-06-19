@@ -52,20 +52,20 @@
     .line 2
     iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout$a;->a:Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
-    invoke-static {p1}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->b(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/b;
+    invoke-static {p1}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->b(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/refreshlayout/b;->setAlpha(I)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->setAlpha(I)V
 
     .line 3
     iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout$a;->a:Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
-    invoke-static {p1}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->b(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/b;
+    invoke-static {p1}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->b(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/refreshlayout/b;->start()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->start()V
 
     .line 4
     iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout$a;->a:Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
@@ -100,16 +100,16 @@
     :cond_0
     iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout$a;->a:Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
-    invoke-static {p1}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->b(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/b;
+    invoke-static {p1}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->b(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/refreshlayout/b;->stop()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->stop()V
 
     .line 8
     iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout$a;->a:Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
-    invoke-static {p1}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->h(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/a;
+    invoke-static {p1}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->h(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
 
     move-result-object p1
 
@@ -165,7 +165,7 @@
     :goto_0
     iget-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout$a;->a:Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
-    invoke-static {p1}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->h(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/a;
+    invoke-static {p1}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->h(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
 
     move-result-object v0
 

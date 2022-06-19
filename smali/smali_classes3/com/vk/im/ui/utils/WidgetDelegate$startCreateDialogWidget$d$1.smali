@@ -3,12 +3,12 @@
 .source "WidgetDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/utils/WidgetDelegate;->a(ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/im/ui/utils/WidgetDelegate;->a(ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/im/ui/utils/shortcuts/a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;",
         ">;"
     }
 .end annotation
@@ -49,7 +49,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/ui/utils/shortcuts/a;
+.method public final invoke()Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;
     .locals 2
 
     .line 2
@@ -57,7 +57,7 @@
 
     iget v1, p0, Lcom/vk/im/ui/utils/WidgetDelegate$startCreateDialogWidget$d$1;->$dialogId:I
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/utils/WidgetDelegate;->a(Lcom/vk/im/ui/utils/WidgetDelegate;I)Lcom/vk/im/ui/utils/shortcuts/a;
+    invoke-static {v0, v1}, Lcom/vk/im/ui/utils/WidgetDelegate;->a(Lcom/vk/im/ui/utils/WidgetDelegate;I)Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/utils/WidgetDelegate$startCreateDialogWidget$d$1;->invoke()Lcom/vk/im/ui/utils/shortcuts/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/utils/WidgetDelegate$startCreateDialogWidget$d$1;->invoke()Lcom/vk/im/ui/utils/shortcuts/ImDialogShortcutArgs;
 
     move-result-object v0
 

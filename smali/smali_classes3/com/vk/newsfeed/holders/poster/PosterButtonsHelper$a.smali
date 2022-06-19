@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -82,7 +82,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1, p2}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseBooleanArray;IZ)V
+    invoke-static {v0, p1, p2}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseBooleanArray;IZ)V
 
     return-void
 .end method

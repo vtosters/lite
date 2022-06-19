@@ -51,11 +51,11 @@
 
     iget-object v0, p0, Lcom/vk/core/view/search/ModernSearchView$g;->a:Lcom/vk/core/view/search/ModernSearchView;
 
-    invoke-static {v0}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;)Lcom/vk/core/ui/s;
+    invoke-static {v0}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;)Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/s;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/TalkBackDrawable;)V
 
     .line 2
     :cond_0
@@ -114,7 +114,7 @@
 
     .line 10
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method

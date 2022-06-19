@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -137,7 +137,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p1, v1}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, p1, v1}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     :goto_1
     return-object v0
@@ -163,7 +163,7 @@
 
     const-string v2, "Uri.fromFile(it).toString()"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, p2, p3, p1}, Lcom/vk/im/engine/models/Image;-><init>(IILjava/lang/String;)V
 
@@ -176,7 +176,7 @@
 
     const/4 p2, 0x0
 
-    invoke-direct {v0, p2, p1, p2}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, p2, p1, p2}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     :goto_0
     return-object v0
@@ -203,7 +203,7 @@
 
     const/4 p2, 0x0
 
-    invoke-direct {v0, p2, p1, p2}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, p2, p1, p2}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     :goto_0
     return-object v0

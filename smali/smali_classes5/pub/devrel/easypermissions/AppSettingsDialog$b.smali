@@ -181,7 +181,7 @@
 
     iget-object v0, p0, Lpub/devrel/easypermissions/AppSettingsDialog$b;->b:Landroid/content/Context;
 
-    sget v1, Lpub/devrel/easypermissions/d;->rationale_ask_again:I
+    sget v1, Lpub/devrel/easypermissions/R;->rationale_ask_again:I
 
     .line 3
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -207,7 +207,7 @@
 
     iget-object v0, p0, Lpub/devrel/easypermissions/AppSettingsDialog$b;->b:Landroid/content/Context;
 
-    sget v1, Lpub/devrel/easypermissions/d;->title_settings_dialog:I
+    sget v1, Lpub/devrel/easypermissions/R;->title_settings_dialog:I
 
     .line 5
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

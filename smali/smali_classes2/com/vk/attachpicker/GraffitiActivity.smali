@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private final G:Lcom/vk/core/util/j1;
+.field private final G:Lcom/vk/core/util/TimeoutLock;
 
 .field private H:Ljava/lang/String;
 
@@ -61,13 +61,13 @@
     invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/core/util/j1;
+    new-instance v0, Lcom/vk/core/util/TimeoutLock;
 
     const-wide/16 v1, 0x12c
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/core/util/j1;-><init>(J)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/core/util/TimeoutLock;-><init>(J)V
 
-    iput-object v0, p0, Lcom/vk/attachpicker/GraffitiActivity;->G:Lcom/vk/core/util/j1;
+    iput-object v0, p0, Lcom/vk/attachpicker/GraffitiActivity;->G:Lcom/vk/core/util/TimeoutLock;
 
     .line 3
     new-instance v0, Landroid/os/Handler;
@@ -126,12 +126,12 @@
     .line 4
     iget-object v2, p0, Lcom/vk/attachpicker/GraffitiActivity;->P:Lcom/vk/attachpicker/drawing/DrawingView;
 
-    invoke-virtual {v2}, Lcom/vk/attachpicker/drawing/DrawingView;->getDrawingStateCopy()Lcom/vk/attachpicker/drawing/d;
+    invoke-virtual {v2}, Lcom/vk/attachpicker/drawing/DrawingView;->getDrawingStateCopy()Lcom/vk/attachpicker/drawing/DrawingState;
 
     move-result-object v2
 
     .line 5
-    invoke-virtual {v2}, Lcom/vk/attachpicker/drawing/d;->e()Landroid/graphics/Path;
+    invoke-virtual {v2}, Lcom/vk/attachpicker/drawing/DrawingState;->e()Landroid/graphics/Path;
 
     move-result-object v3
 
@@ -146,7 +146,7 @@
     invoke-virtual {v3, v4, v5}, Landroid/graphics/Path;->computeBounds(Landroid/graphics/RectF;Z)V
 
     .line 8
-    invoke-virtual {v2}, Lcom/vk/attachpicker/drawing/d;->d()F
+    invoke-virtual {v2}, Lcom/vk/attachpicker/drawing/DrawingState;->d()F
 
     move-result v3
 
@@ -249,7 +249,7 @@
 
     neg-float v7, v7
 
-    invoke-virtual {v2, v3, v7}, Lcom/vk/attachpicker/drawing/d;->b(FF)V
+    invoke-virtual {v2, v3, v7}, Lcom/vk/attachpicker/drawing/DrawingState;->b(FF)V
 
     .line 22
     invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
@@ -316,24 +316,24 @@
     float-to-int v3, v7
 
     .line 26
-    invoke-virtual {v2, v0, v5, v5}, Lcom/vk/attachpicker/drawing/d;->a(FFF)V
+    invoke-virtual {v2, v0, v5, v5}, Lcom/vk/attachpicker/drawing/DrawingState;->a(FFF)V
 
     .line 27
-    invoke-static {v1, v3}, Lcom/vk/core/util/m;->b(II)Landroid/graphics/Bitmap;
+    invoke-static {v1, v3}, Lcom/vk/core/util/BitmapUtils;->b(II)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/attachpicker/GraffitiActivity;->J:Landroid/graphics/Bitmap;
 
     .line 28
-    new-instance v0, Lcom/vk/attachpicker/drawing/a;
+    new-instance v0, Lcom/vk/attachpicker/drawing/DrawingCanvas;
 
     iget-object v1, p0, Lcom/vk/attachpicker/GraffitiActivity;->J:Landroid/graphics/Bitmap;
 
-    invoke-direct {v0, v1}, Lcom/vk/attachpicker/drawing/a;-><init>(Landroid/graphics/Bitmap;)V
+    invoke-direct {v0, v1}, Lcom/vk/attachpicker/drawing/DrawingCanvas;-><init>(Landroid/graphics/Bitmap;)V
 
     .line 29
-    invoke-virtual {v0, v2}, Lcom/vk/attachpicker/drawing/a;->a(Lcom/vk/attachpicker/drawing/d;)V
+    invoke-virtual {v0, v2}, Lcom/vk/attachpicker/drawing/DrawingCanvas;->a(Lcom/vk/attachpicker/drawing/DrawingState;)V
 
     .line 30
     iget v0, p0, Lcom/vk/attachpicker/GraffitiActivity;->N:I
@@ -347,7 +347,7 @@
 
     neg-int v0, v0
 
-    invoke-static {v2, v0, v1}, Lcom/vk/core/util/m;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
+    invoke-static {v2, v0, v1}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -363,7 +363,7 @@
 
     iget-object v4, p0, Lcom/vk/attachpicker/GraffitiActivity;->J:Landroid/graphics/Bitmap;
 
-    invoke-static {v4}, Lcom/vk/core/util/m;->c(Landroid/graphics/Bitmap;)F
+    invoke-static {v4}, Lcom/vk/core/util/BitmapUtils;->c(Landroid/graphics/Bitmap;)F
 
     move-result v4
 
@@ -375,7 +375,7 @@
 
     move-result v2
 
-    invoke-virtual {v0, v2}, Lcom/vk/imageloader/view/a;->setAspectRatio(F)V
+    invoke-virtual {v0, v2}, Lcom/vk/imageloader/view/GenericVKImageView;->setAspectRatio(F)V
 
     .line 33
     iget-object v0, p0, Lcom/vk/attachpicker/GraffitiActivity;->Y:Lcom/vk/imageloader/view/VKImageView;
@@ -1012,7 +1012,7 @@
     move-object v2, p0
 
     .line 4
-    invoke-virtual/range {v1 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v1 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method
@@ -1022,7 +1022,7 @@
 
     .line 1
     :try_start_0
-    invoke-static {}, Lb/h/g/m/d;->u()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->u()Ljava/io/File;
 
     move-result-object v0
 
@@ -1110,7 +1110,7 @@
     const/4 v1, 0x0
 
     .line 12
-    invoke-static {v0, v1}, Lcom/vk/core/util/k1;->a(IZ)V
+    invoke-static {v0, v1}, Lcom/vk/core/util/ToastUtils;->a(IZ)V
 
     :goto_0
     return-void
@@ -1122,9 +1122,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/GraffitiActivity;->G:Lcom/vk/core/util/j1;
+    iget-object v0, p0, Lcom/vk/attachpicker/GraffitiActivity;->G:Lcom/vk/core/util/TimeoutLock;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/j1;->b()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/TimeoutLock;->b()Z
 
     move-result v0
 
@@ -1134,9 +1134,9 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/attachpicker/GraffitiActivity;->G:Lcom/vk/core/util/j1;
+    iget-object v0, p0, Lcom/vk/attachpicker/GraffitiActivity;->G:Lcom/vk/core/util/TimeoutLock;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/j1;->c()V
+    invoke-virtual {v0}, Lcom/vk/core/util/TimeoutLock;->c()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/attachpicker/GraffitiActivity;->W:Lcom/vk/attachpicker/widget/RotateLayout;
@@ -1549,7 +1549,7 @@
 
     sub-int/2addr v1, v2
 
-    invoke-virtual {p1, v1}, Lcom/vk/imageloader/view/a;->setMaxHeight(I)V
+    invoke-virtual {p1, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setMaxHeight(I)V
 
     .line 36
     iget-object p1, p0, Lcom/vk/attachpicker/GraffitiActivity;->Y:Lcom/vk/imageloader/view/VKImageView;
@@ -1566,7 +1566,7 @@
 
     sub-int/2addr v1, v2
 
-    invoke-virtual {p1, v1}, Lcom/vk/imageloader/view/a;->setMaxWidth(I)V
+    invoke-virtual {p1, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setMaxWidth(I)V
 
     .line 37
     iget-object p1, p0, Lcom/vk/attachpicker/GraffitiActivity;->Y:Lcom/vk/imageloader/view/VKImageView;
@@ -1651,25 +1651,25 @@
     .line 45
     iget-object p1, p0, Lcom/vk/attachpicker/GraffitiActivity;->H:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->b(Ljava/lang/String;)Lc/a/m;
+    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->b(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 46
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 47
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1682,7 +1682,7 @@
     invoke-direct {v1, p0}, Lcom/vk/attachpicker/GraffitiActivity$f;-><init>(Lcom/vk/attachpicker/GraffitiActivity;)V
 
     .line 48
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     .line 49
     iget-object p1, p0, Lcom/vk/attachpicker/GraffitiActivity;->d0:Landroid/widget/TextView;
@@ -1698,7 +1698,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/attachpicker/GraffitiActivity$g;-><init>(Lcom/vk/attachpicker/GraffitiActivity;)V
 
-    invoke-static {p1, v0}, Lcom/vk/attachpicker/util/f;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-static {p1, v0}, Lcom/vk/attachpicker/util/Utils;->a(Landroid/view/View;Ljava/lang/Runnable;)V
 
     goto :goto_0
 

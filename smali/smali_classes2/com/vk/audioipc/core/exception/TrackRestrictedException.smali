@@ -27,7 +27,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/audioipc/core/exception/TrackRestrictedException$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/audioipc/core/exception/TrackRestrictedException$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -40,7 +40,7 @@
     const/4 v1, 0x1
 
     .line 1
-    invoke-direct {p0, v0, v1, v0}, Lcom/vk/audioipc/core/exception/ServiceException;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v1, v0}, Lcom/vk/audioipc/core/exception/ServiceException;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object p1, p0, Lcom/vk/audioipc/core/exception/TrackRestrictedException;->track:Lcom/vk/dto/music/MusicTrack;
 
@@ -73,7 +73,7 @@
 
     iget-object p1, p1, Lcom/vk/audioipc/core/exception/TrackRestrictedException;->track:Lcom/vk/dto/music/MusicTrack;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

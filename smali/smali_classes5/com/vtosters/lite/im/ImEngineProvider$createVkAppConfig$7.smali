@@ -3,12 +3,12 @@
 .source "ImEngineProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/im/ImEngineProvider;->a(Landroid/content/Context;Lcom/vk/im/engine/reporters/k;Lcom/vk/bridges/f;)Lcom/vk/im/engine/ImConfig;
+    value = Lcom/vtosters/lite/im/ImEngineProvider;->a(Landroid/content/Context;Lcom/vk/im/engine/reporters/ImReporters;Lcom/vk/bridges/AuthBridge3;)Lcom/vk/im/engine/ImConfig;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vtosters/lite/im/converters/ImVideoConverter;",
         ">;"
     }
@@ -27,18 +27,18 @@
 
 
 # instance fields
-.field final synthetic $sp:Lkotlin/e;
+.field final synthetic $sp:Lkotlin/Lazy2;
 
-.field final synthetic $sp$metadata:Lkotlin/u/j;
+.field final synthetic $sp$metadata:Lkotlin/u/KProperty5;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/e;Lkotlin/u/j;)V
+.method constructor <init>(Lkotlin/Lazy2;Lkotlin/u/KProperty5;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$7;->$sp:Lkotlin/e;
+    iput-object p1, p0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$7;->$sp:Lkotlin/Lazy2;
 
-    iput-object p2, p0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$7;->$sp$metadata:Lkotlin/u/j;
+    iput-object p2, p0, Lcom/vtosters/lite/im/ImEngineProvider$createVkAppConfig$7;->$sp$metadata:Lkotlin/u/KProperty5;
 
     const/4 p1, 0x0
 
@@ -65,7 +65,7 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v2, v1}, Lcom/vtosters/lite/im/converters/ImVideoConverter;-><init>(Lcom/vk/media/ext/VideoEncoderSettings;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v2, v1}, Lcom/vtosters/lite/im/converters/ImVideoConverter;-><init>(Lcom/vk/media/ext/VideoEncoderSettings;Lkotlin/jvm/b/Functions;)V
 
     return-object v0
 .end method

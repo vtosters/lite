@@ -106,7 +106,7 @@
     move-object v5, v1
 
     .line 2
-    invoke-direct/range {v5 .. v11}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v5 .. v11}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->POST_MEDIA:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -131,7 +131,7 @@
     move-object v3, v1
 
     .line 3
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->POST_TEXT:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -150,7 +150,7 @@
     move-object v3, v1
 
     .line 4
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->HASHTAGS:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -169,7 +169,7 @@
     move-object v3, v1
 
     .line 5
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->STORIES:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -188,7 +188,7 @@
     move-object v3, v1
 
     .line 6
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->LAZY_STORIES:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -207,7 +207,7 @@
     move-object v3, v1
 
     .line 7
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->LIVE:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -226,7 +226,7 @@
     move-object v3, v1
 
     .line 8
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->TITLE:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -245,7 +245,7 @@
     move-object v3, v1
 
     .line 9
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->INFO:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -264,7 +264,7 @@
     move-object v3, v1
 
     .line 10
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->ARTICLES:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -283,7 +283,7 @@
     move-object v3, v1
 
     .line 11
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->ARTICLE:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -302,7 +302,7 @@
     move-object v3, v1
 
     .line 12
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->SHEET:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -321,7 +321,7 @@
     move-object v3, v1
 
     .line 13
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->CAROUSEL:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -340,7 +340,7 @@
     move-object v3, v1
 
     .line 14
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->GAMES_CAROUSEL:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -359,7 +359,7 @@
     move-object v3, v1
 
     .line 15
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->EXPERTS:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -378,7 +378,7 @@
     move-object v3, v1
 
     .line 16
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->PODCAST:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -397,7 +397,7 @@
     move-object v3, v1
 
     .line 17
-    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/dto/discover/DiscoverItem$Template;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/dto/discover/DiscoverItem$Template;->ADS_COMPACT:Lcom/vk/dto/discover/DiscoverItem$Template;
 
@@ -430,7 +430,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+.method synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x2

@@ -52,13 +52,13 @@
 
     iget-object v0, v0, Lcom/vtosters/lite/fragments/SettingsListFragment$f;->c:Lcom/vtosters/lite/fragments/SettingsListFragment;
 
-    invoke-virtual {v0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const-string v1, "https://vk.com/jobs?w=job38"
 
-    invoke-static {v0, v1}, Lcom/vk/common/links/c;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/common/links/LinkProcessor;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method

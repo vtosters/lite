@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/util/state/cache/DatabaseCache;->a(Ljava/lang/String;Ljava/lang/Class;)Lcom/vk/core/util/state/b;
+    value = Lcom/vk/core/util/state/cache/DatabaseCache;->a(Ljava/lang/String;Ljava/lang/Class;)Lcom/vk/core/util/state/AppStateCacheEntry;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Ljava/util/concurrent/Callable<",
-        "Lcom/vk/core/util/state/b;",
+        "Lcom/vk/core/util/state/AppStateCacheEntry;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method public final call()Lcom/vk/core/util/state/b;
+.method public final call()Lcom/vk/core/util/state/AppStateCacheEntry;
     .locals 3
 
     .line 2
@@ -64,7 +64,7 @@
 
     iget-object v2, p0, Lcom/vk/core/util/state/cache/DatabaseCache$c;->c:Ljava/lang/Class;
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/util/state/cache/DatabaseCache;->a(Lcom/vk/core/util/state/cache/DatabaseCache;Ljava/lang/String;Ljava/lang/Class;)Lcom/vk/core/util/state/b;
+    invoke-static {v0, v1, v2}, Lcom/vk/core/util/state/cache/DatabaseCache;->a(Lcom/vk/core/util/state/cache/DatabaseCache;Ljava/lang/String;Ljava/lang/Class;)Lcom/vk/core/util/state/AppStateCacheEntry;
 
     move-result-object v0
 
@@ -75,7 +75,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/util/state/cache/DatabaseCache$c;->call()Lcom/vk/core/util/state/b;
+    invoke-virtual {p0}, Lcom/vk/core/util/state/cache/DatabaseCache$c;->call()Lcom/vk/core/util/state/AppStateCacheEntry;
 
     move-result-object v0
 

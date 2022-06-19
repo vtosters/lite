@@ -12,7 +12,7 @@
 
 .field private final d:Lcom/vk/market/common/ui/SquareImageView;
 
-.field private final e:Lcom/vk/core/util/s0;
+.field private final e:Lcom/vk/core/util/PriceFormatter;
 
 .field private f:Lcom/vk/dto/common/Good;
 
@@ -92,11 +92,11 @@
     iput-object p2, p0, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;->d:Lcom/vk/market/common/ui/SquareImageView;
 
     .line 8
-    new-instance p2, Lcom/vk/core/util/s0;
+    new-instance p2, Lcom/vk/core/util/PriceFormatter;
 
-    invoke-direct {p2}, Lcom/vk/core/util/s0;-><init>()V
+    invoke-direct {p2}, Lcom/vk/core/util/PriceFormatter;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;->e:Lcom/vk/core/util/s0;
+    iput-object p2, p0, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;->e:Lcom/vk/core/util/PriceFormatter;
 
     .line 9
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -105,7 +105,7 @@
 
     const-string p2, "viewGroup.context"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -122,7 +122,7 @@
 
     const-string v0, "itemView"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/view/View;->getPaddingTop()I
 
@@ -130,7 +130,7 @@
 
     iget-object v2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/View;->getPaddingBottom()I
 
@@ -141,18 +141,18 @@
     .line 11
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder$1;
 
     invoke-direct {p2, p0}, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder$1;-><init>(Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/view/ViewGroup;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/view/ViewGroup;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -177,7 +177,7 @@
     return-object p0
 .end method
 
-.method private final a(Ljava/lang/Iterable;ZLkotlin/jvm/b/a;)Ljava/lang/Iterable;
+.method private final a(Ljava/lang/Iterable;ZLkotlin/jvm/b/Functions;)Ljava/lang/Iterable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -186,7 +186,7 @@
             ">(",
             "Ljava/lang/Iterable<",
             "+TT;>;Z",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+TT;>;)",
             "Ljava/lang/Iterable<",
             "TT;>;"
@@ -196,7 +196,7 @@
     if-eqz p2, :cond_0
 
     .line 23
-    invoke-interface {p3}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p3}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p2
 
@@ -216,7 +216,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -242,7 +242,7 @@
 
     const-string p2, "itemView.context.getStri\u2026operty_mask, name, value)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -290,7 +290,7 @@
 
     const-string v1, "title"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p1, Lcom/vk/dto/common/Good;->c:Ljava/lang/String;
 
@@ -311,7 +311,7 @@
     :goto_0
     const-string v1, "good.propertyValues ?: emptyList()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     new-instance v1, Ljava/util/ArrayList;
@@ -382,7 +382,7 @@
 
     invoke-direct {v4, p0, p1}, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder$bind$descriptionString$2;-><init>(Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;Lcom/vk/dto/common/Good;)V
 
-    invoke-direct {p0, v1, v0, v4}, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;->a(Ljava/lang/Iterable;ZLkotlin/jvm/b/a;)Ljava/lang/Iterable;
+    invoke-direct {p0, v1, v0, v4}, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;->a(Ljava/lang/Iterable;ZLkotlin/jvm/b/Functions;)Ljava/lang/Iterable;
 
     move-result-object v5
 
@@ -403,7 +403,7 @@
     const-string v6, " \u00b7 "
 
     .line 13
-    invoke-static/range {v5 .. v13}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v5 .. v13}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -424,14 +424,14 @@
     .line 15
     iget-object v2, p0, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v2}, Lcom/vk/extensions/ViewExtKt;->r(Landroid/view/View;)V
 
     .line 16
     iget-object v2, p0, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v2, v0}, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;->a(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
 
@@ -441,7 +441,7 @@
     :cond_5
     iget-object v0, p0, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
@@ -451,9 +451,9 @@
 
     const-string v1, "price"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;->e:Lcom/vk/core/util/s0;
+    iget-object v1, p0, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;->e:Lcom/vk/core/util/PriceFormatter;
 
     iget v2, p1, Lcom/vk/dto/common/Good;->f:I
 
@@ -462,10 +462,10 @@
 
     const-string v5, "good.price_currency_name"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
-    invoke-virtual {v1, v2, v4, v3}, Lcom/vk/core/util/s0;->a(ILjava/lang/String;Z)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v2, v4, v3}, Lcom/vk/core/util/PriceFormatter;->a(ILjava/lang/String;Z)Ljava/lang/CharSequence;
 
     move-result-object v1
 

@@ -41,7 +41,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/fave/fragments/FaveNewFragment$c;->a:Lcom/vk/fave/fragments/FaveNewFragment;
 
-    invoke-static {v0}, Lcom/vk/fave/fragments/FaveNewFragment;->a(Lcom/vk/fave/fragments/FaveNewFragment;)Lcom/vk/fave/fragments/adapters/e;
+    invoke-static {v0}, Lcom/vk/fave/fragments/FaveNewFragment;->a(Lcom/vk/fave/fragments/FaveNewFragment;)Lcom/vk/fave/fragments/adapters/FaveNewMergeAdapter;
 
     move-result-object v0
 
@@ -58,7 +58,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/fave/fragments/FaveNewFragment$c;->a:Lcom/vk/fave/fragments/FaveNewFragment;
 
-    invoke-static {v0}, Lcom/vk/fave/fragments/FaveNewFragment;->a(Lcom/vk/fave/fragments/FaveNewFragment;)Lcom/vk/fave/fragments/adapters/e;
+    invoke-static {v0}, Lcom/vk/fave/fragments/FaveNewFragment;->a(Lcom/vk/fave/fragments/FaveNewFragment;)Lcom/vk/fave/fragments/adapters/FaveNewMergeAdapter;
 
     move-result-object v0
 

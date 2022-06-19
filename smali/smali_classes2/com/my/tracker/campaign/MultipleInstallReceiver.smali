@@ -37,7 +37,7 @@
     const-string p1, "MultipleInstallReceiver: attempt to call, but it was called before"
 
     .line 2
-    invoke-static {p1}, Lcom/my/tracker/b;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/Tracer;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -45,7 +45,7 @@
     const-string v0, "MultipleInstallReceiver called"
 
     .line 3
-    invoke-static {v0}, Lcom/my/tracker/b;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/Tracer;->a(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -164,7 +164,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/my/tracker/b;->a(Ljava/lang/String;)V
+    invoke-static {v4}, Lcom/my/tracker/Tracer;->a(Ljava/lang/String;)V
 
     .line 19
     :try_start_0
@@ -210,7 +210,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/my/tracker/b;->a(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/my/tracker/Tracer;->a(Ljava/lang/String;)V
 
     goto :goto_0
 

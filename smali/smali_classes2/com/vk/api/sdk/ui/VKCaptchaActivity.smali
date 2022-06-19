@@ -33,7 +33,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/api/sdk/ui/VKCaptchaActivity$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/sdk/ui/VKCaptchaActivity$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/api/sdk/ui/VKCaptchaActivity;->e:Lcom/vk/api/sdk/ui/VKCaptchaActivity$a;
 
@@ -104,9 +104,9 @@
     sput-object v0, Lcom/vk/api/sdk/ui/VKCaptchaActivity;->d:Ljava/lang/String;
 
     .line 3
-    sget-object v0, Lcom/vk/api/sdk/utils/g;->c:Lcom/vk/api/sdk/utils/g;
+    sget-object v0, Lcom/vk/api/sdk/utils/VKValidationLocker;->INSTANCE:Lcom/vk/api/sdk/utils/VKValidationLocker;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/g;->b()V
+    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/VKValidationLocker;->b()V
 
     const/4 v0, 0x0
 
@@ -141,7 +141,7 @@
     :cond_0
     const-string p0, "image"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -167,9 +167,9 @@
     sput-object v0, Lcom/vk/api/sdk/ui/VKCaptchaActivity;->d:Ljava/lang/String;
 
     .line 3
-    sget-object v0, Lcom/vk/api/sdk/utils/g;->c:Lcom/vk/api/sdk/utils/g;
+    sget-object v0, Lcom/vk/api/sdk/utils/VKValidationLocker;->INSTANCE:Lcom/vk/api/sdk/utils/VKValidationLocker;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/g;->b()V
+    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/VKValidationLocker;->b()V
 
     .line 4
     invoke-virtual {p0}, Lcom/vk/api/sdk/ui/VKCaptchaActivity;->finish()V
@@ -180,7 +180,7 @@
     const-string v0, "input"
 
     .line 5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -200,7 +200,7 @@
     :cond_0
     const-string p0, "progress"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -478,7 +478,7 @@
     move-result-object p1
 
     .line 34
-    sget v0, Lcom/vk/api/sdk/c;->vk_captcha_hint:I
+    sget v0, Lcom/vk/api/sdk/R1;->vk_captcha_hint:I
 
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -532,55 +532,55 @@
 
     .line 41
     :cond_0
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 42
     :cond_1
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 43
     :cond_2
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 44
     :cond_3
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 45
     :cond_4
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 46
     :cond_5
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 47
     :cond_6
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 48
     :cond_7
-    invoke-static {v8}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 49
     :cond_8
-    invoke-static {v8}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 .end method
@@ -589,9 +589,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/api/sdk/utils/g;->c:Lcom/vk/api/sdk/utils/g;
+    sget-object v0, Lcom/vk/api/sdk/utils/VKValidationLocker;->INSTANCE:Lcom/vk/api/sdk/utils/VKValidationLocker;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/g;->b()V
+    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/VKValidationLocker;->b()V
 
     .line 2
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V

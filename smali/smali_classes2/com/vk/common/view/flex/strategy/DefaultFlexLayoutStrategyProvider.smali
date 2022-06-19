@@ -3,35 +3,35 @@
 .source "FlexLayoutStrategy.kt"
 
 # interfaces
-.implements Lcom/vk/common/view/flex/strategy/e;
+.implements Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy3;
 
 
 # static fields
-.field static final synthetic m:[Lkotlin/u/j;
+.field static final synthetic m:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lkotlin/e;
+.field private final a:Lkotlin/Lazy2;
 
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
-.field private final c:Lkotlin/e;
+.field private final c:Lkotlin/Lazy2;
 
-.field private final d:Lkotlin/e;
+.field private final d:Lkotlin/Lazy2;
 
-.field private final e:Lkotlin/e;
+.field private final e:Lkotlin/Lazy2;
 
-.field private final f:Lkotlin/e;
+.field private final f:Lkotlin/Lazy2;
 
-.field private final g:Lkotlin/e;
+.field private final g:Lkotlin/Lazy2;
 
-.field private final h:Lkotlin/e;
+.field private final h:Lkotlin/Lazy2;
 
-.field private final i:Lkotlin/e;
+.field private final i:Lkotlin/Lazy2;
 
-.field private final j:Lkotlin/e;
+.field private final j:Lkotlin/Lazy2;
 
-.field private final k:Lkotlin/e;
+.field private final k:Lkotlin/Lazy2;
 
 .field private final l:I
 
@@ -44,11 +44,11 @@
 
     const/16 v1, 0xb
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -56,9 +56,9 @@
 
     const-string v5, "getStrategy0()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy0;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -66,7 +66,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -74,9 +74,9 @@
 
     const-string v5, "getStrategy1()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy1;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x1
 
@@ -84,7 +84,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -92,9 +92,9 @@
 
     const-string v5, "getStrategy2()Lcom/vk/common/view/flex/strategy/FlexLayoutZhukovStrategy2;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x2
 
@@ -102,7 +102,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -110,9 +110,9 @@
 
     const-string v5, "getStrategy3()Lcom/vk/common/view/flex/strategy/FlexLayoutZhukovStrategy3;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x3
 
@@ -120,7 +120,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -128,9 +128,9 @@
 
     const-string v5, "getStrategy4()Lcom/vk/common/view/flex/strategy/FlexLayoutZhukovStrategy4;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x4
 
@@ -138,7 +138,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -146,9 +146,9 @@
 
     const-string v5, "getStrategy5()Lcom/vk/common/view/flex/strategy/FlexLayoutZhukovStrategyFrom5To10;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x5
 
@@ -156,7 +156,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -164,9 +164,9 @@
 
     const-string v5, "getStrategy6()Lcom/vk/common/view/flex/strategy/FlexLayoutZhukovStrategyFrom5To10;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x6
 
@@ -174,7 +174,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -182,9 +182,9 @@
 
     const-string v5, "getStrategy7()Lcom/vk/common/view/flex/strategy/FlexLayoutZhukovStrategyFrom5To10;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x7
 
@@ -192,7 +192,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -200,9 +200,9 @@
 
     const-string v5, "getStrategy8()Lcom/vk/common/view/flex/strategy/FlexLayoutZhukovStrategyFrom5To10;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v3, 0x8
 
@@ -210,7 +210,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -218,9 +218,9 @@
 
     const-string v5, "getStrategy9()Lcom/vk/common/view/flex/strategy/FlexLayoutZhukovStrategyFrom5To10;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v3, 0x9
 
@@ -228,7 +228,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -236,15 +236,15 @@
 
     const-string v4, "getStrategy10()Lcom/vk/common/view/flex/strategy/FlexLayoutZhukovStrategyFrom5To10;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v0, 0xa
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -258,101 +258,101 @@
     .line 2
     sget-object v0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy0$2;->a:Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy0$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->a:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->a:Lkotlin/Lazy2;
 
     .line 3
     sget-object v0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy1$2;->a:Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy1$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->b:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->b:Lkotlin/Lazy2;
 
     .line 4
     sget-object v0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy2$2;->a:Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy2$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->c:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->c:Lkotlin/Lazy2;
 
     .line 5
     sget-object v0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy3$2;->a:Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy3$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->d:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->d:Lkotlin/Lazy2;
 
     .line 6
     sget-object v0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy4$2;->a:Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy4$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->e:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->e:Lkotlin/Lazy2;
 
     .line 7
     sget-object v0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy5$2;->a:Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy5$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->f:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->f:Lkotlin/Lazy2;
 
     .line 8
     sget-object v0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy6$2;->a:Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy6$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->g:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->g:Lkotlin/Lazy2;
 
     .line 9
     sget-object v0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy7$2;->a:Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy7$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->h:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->h:Lkotlin/Lazy2;
 
     .line 10
     sget-object v0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy8$2;->a:Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy8$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->i:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->i:Lkotlin/Lazy2;
 
     .line 11
     sget-object v0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy9$2;->a:Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy9$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->j:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->j:Lkotlin/Lazy2;
 
     .line 12
     sget-object v0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy10$2;->a:Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy10$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->k:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->k:Lkotlin/Lazy2;
 
     const/16 v0, 0xa
 
@@ -373,7 +373,7 @@
     return v0
 .end method
 
-.method public a(I)Lcom/vk/common/view/flex/strategy/c;
+.method public a(I)Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy1;
     .locals 3
 
     packed-switch p1, :pswitch_data_0
@@ -405,7 +405,7 @@
 
     .line 3
     :pswitch_0
-    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->d()Lcom/vk/common/view/flex/strategy/i;
+    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->d()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
 
     move-result-object p1
 
@@ -413,7 +413,7 @@
 
     .line 4
     :pswitch_1
-    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->l()Lcom/vk/common/view/flex/strategy/i;
+    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->l()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
 
     move-result-object p1
 
@@ -421,7 +421,7 @@
 
     .line 5
     :pswitch_2
-    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->k()Lcom/vk/common/view/flex/strategy/i;
+    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->k()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
 
     move-result-object p1
 
@@ -429,7 +429,7 @@
 
     .line 6
     :pswitch_3
-    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->j()Lcom/vk/common/view/flex/strategy/i;
+    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->j()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
 
     move-result-object p1
 
@@ -437,7 +437,7 @@
 
     .line 7
     :pswitch_4
-    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->i()Lcom/vk/common/view/flex/strategy/i;
+    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->i()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
 
     move-result-object p1
 
@@ -445,7 +445,7 @@
 
     .line 8
     :pswitch_5
-    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->h()Lcom/vk/common/view/flex/strategy/i;
+    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->h()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
 
     move-result-object p1
 
@@ -453,7 +453,7 @@
 
     .line 9
     :pswitch_6
-    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->g()Lcom/vk/common/view/flex/strategy/h;
+    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->g()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy5;
 
     move-result-object p1
 
@@ -461,7 +461,7 @@
 
     .line 10
     :pswitch_7
-    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->f()Lcom/vk/common/view/flex/strategy/g;
+    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->f()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy;
 
     move-result-object p1
 
@@ -469,7 +469,7 @@
 
     .line 11
     :pswitch_8
-    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->e()Lcom/vk/common/view/flex/strategy/f;
+    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->e()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy6;
 
     move-result-object p1
 
@@ -477,7 +477,7 @@
 
     .line 12
     :pswitch_9
-    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->c()Lcom/vk/common/view/flex/strategy/b;
+    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->c()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy11;
 
     move-result-object p1
 
@@ -485,7 +485,7 @@
 
     .line 13
     :pswitch_a
-    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->b()Lcom/vk/common/view/flex/strategy/a;
+    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->b()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy0;
 
     move-result-object p1
 
@@ -508,222 +508,222 @@
     .end packed-switch
 .end method
 
-.method protected b()Lcom/vk/common/view/flex/strategy/a;
+.method protected b()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy0;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->a:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->a:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/view/flex/strategy/a;
+    check-cast v0, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy0;
 
     return-object v0
 .end method
 
-.method protected c()Lcom/vk/common/view/flex/strategy/b;
+.method protected c()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy11;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/view/flex/strategy/b;
+    check-cast v0, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy11;
 
     return-object v0
 .end method
 
-.method protected d()Lcom/vk/common/view/flex/strategy/i;
+.method protected d()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->k:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->k:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0xa
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/view/flex/strategy/i;
+    check-cast v0, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
 
     return-object v0
 .end method
 
-.method protected e()Lcom/vk/common/view/flex/strategy/f;
+.method protected e()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy6;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->c:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/view/flex/strategy/f;
+    check-cast v0, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy6;
 
     return-object v0
 .end method
 
-.method protected f()Lcom/vk/common/view/flex/strategy/g;
+.method protected f()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->d:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/view/flex/strategy/g;
+    check-cast v0, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy;
 
     return-object v0
 .end method
 
-.method protected g()Lcom/vk/common/view/flex/strategy/h;
+.method protected g()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy5;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->e:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->e:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x4
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/view/flex/strategy/h;
+    check-cast v0, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy5;
 
     return-object v0
 .end method
 
-.method protected h()Lcom/vk/common/view/flex/strategy/i;
+.method protected h()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->f:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->f:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x5
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/view/flex/strategy/i;
+    check-cast v0, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
 
     return-object v0
 .end method
 
-.method protected i()Lcom/vk/common/view/flex/strategy/i;
+.method protected i()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->g:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->g:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x6
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/view/flex/strategy/i;
+    check-cast v0, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
 
     return-object v0
 .end method
 
-.method protected j()Lcom/vk/common/view/flex/strategy/i;
+.method protected j()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->h:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->h:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x7
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/view/flex/strategy/i;
+    check-cast v0, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
 
     return-object v0
 .end method
 
-.method protected k()Lcom/vk/common/view/flex/strategy/i;
+.method protected k()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->i:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->i:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0x8
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/view/flex/strategy/i;
+    check-cast v0, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
 
     return-object v0
 .end method
 
-.method protected l()Lcom/vk/common/view/flex/strategy/i;
+.method protected l()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->j:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->j:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider;->m:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0x9
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/view/flex/strategy/i;
+    check-cast v0, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy2;
 
     return-object v0
 .end method

@@ -3,7 +3,7 @@
 .source "BaseCheckSignUpPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$subscribeValidatePhoneObservable$6$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -64,11 +64,11 @@
 
     iget-object v0, v0, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$subscribeValidatePhoneObservable$6;->a:Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;
 
-    invoke-static {v0}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->c(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/main/t;
+    invoke-static {v0}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->c(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/main/SignUpRouter;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/auth/main/t;->c()V
+    invoke-interface {v0}, Lcom/vk/auth/main/SignUpRouter;->c()V
 
     return-void
 .end method

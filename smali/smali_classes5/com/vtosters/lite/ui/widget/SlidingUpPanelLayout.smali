@@ -60,7 +60,7 @@
 
 .field private T:Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout$e;
 
-.field private final U:Lcom/vk/core/widget/i;
+.field private final U:Lcom/vk/core/widget/ViewDragHelper;
 
 .field private V:Z
 
@@ -208,7 +208,7 @@
     if-eqz v5, :cond_0
 
     .line 19
-    iput-object v2, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iput-object v2, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
     return-void
 
@@ -239,7 +239,7 @@
 
     .line 24
     :cond_1
-    sget-object v6, Lcom/vtosters/lite/a0;->SlidingUpPanelLayout:[I
+    sget-object v6, Lcom/vtosters/lite/R;->SlidingUpPanelLayout:[I
 
     invoke-virtual {p1, p2, v6}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -409,20 +409,20 @@
 
     invoke-direct {p3, p0, v2}, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout$c;-><init>(Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout$a;)V
 
-    invoke-static {p0, p2, p3}, Lcom/vk/core/widget/i;->a(Landroid/view/ViewGroup;FLcom/vk/core/widget/i$c;)Lcom/vk/core/widget/i;
+    invoke-static {p0, p2, p3}, Lcom/vk/core/widget/ViewDragHelper;->a(Landroid/view/ViewGroup;FLcom/vk/core/widget/ViewDragHelper$c;)Lcom/vk/core/widget/ViewDragHelper;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iput-object p2, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
     .line 44
-    iget-object p2, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object p2, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
     int-to-float p3, v5
 
     mul-float p3, p3, p1
 
-    invoke-virtual {p2, p3}, Lcom/vk/core/widget/i;->a(F)V
+    invoke-virtual {p2, p3}, Lcom/vk/core/widget/ViewDragHelper;->a(F)V
 
     .line 45
     iput-boolean v4, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->N:Z
@@ -972,11 +972,11 @@
     return p0
 .end method
 
-.method static synthetic g(Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;)Lcom/vk/core/widget/i;
+.method static synthetic g(Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;)Lcom/vk/core/widget/ViewDragHelper;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
     return-object p0
 .end method
@@ -1277,7 +1277,7 @@
     move-result p1
 
     .line 29
-    iget-object p2, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object p2, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
     iget-object v1, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->F:Landroid/view/View;
 
@@ -1285,7 +1285,7 @@
 
     move-result v2
 
-    invoke-virtual {p2, v1, v2, p1}, Lcom/vk/core/widget/i;->b(Landroid/view/View;II)Z
+    invoke-virtual {p2, v1, v2, p1}, Lcom/vk/core/widget/ViewDragHelper;->b(Landroid/view/View;II)Z
 
     move-result p1
 
@@ -1429,13 +1429,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
     if-eqz v0, :cond_1
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/widget/i;->a(Z)Z
+    invoke-virtual {v0, v1}, Lcom/vk/core/widget/ViewDragHelper;->a(Z)Z
 
     move-result v0
 
@@ -1449,9 +1449,9 @@
     if-nez v0, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
-    invoke-virtual {v0}, Lcom/vk/core/widget/i;->a()V
+    invoke-virtual {v0}, Lcom/vk/core/widget/ViewDragHelper;->a()V
 
     return-void
 
@@ -1840,18 +1840,18 @@
 
     if-nez v0, :cond_9
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
-    invoke-virtual {v0}, Lcom/vk/core/widget/i;->g()Z
+    invoke-virtual {v0}, Lcom/vk/core/widget/ViewDragHelper;->g()Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
     .line 27
-    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
-    invoke-virtual {v0}, Lcom/vk/core/widget/i;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/widget/ViewDragHelper;->b()V
 
     .line 28
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->setAction(I)V
@@ -1876,9 +1876,9 @@
     if-eqz v0, :cond_b
 
     .line 32
-    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
-    invoke-virtual {v0, v2}, Lcom/vk/core/widget/i;->a(I)V
+    invoke-virtual {v0, v2}, Lcom/vk/core/widget/ViewDragHelper;->a(I)V
 
     .line 33
     :cond_b
@@ -1892,9 +1892,9 @@
     .line 34
     :cond_c
     :goto_2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
-    invoke-virtual {v0}, Lcom/vk/core/widget/i;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/widget/ViewDragHelper;->b()V
 
     .line 35
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
@@ -2252,10 +2252,10 @@
 
     if-ne v0, v2, :cond_2
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/core/widget/i;->g()Z
+    invoke-virtual {v0}, Lcom/vk/core/widget/ViewDragHelper;->g()Z
 
     move-result v0
 
@@ -2282,9 +2282,9 @@
     if-eqz v0, :cond_3
 
     .line 6
-    iget-object p1, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
-    invoke-virtual {p1}, Lcom/vk/core/widget/i;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/widget/ViewDragHelper;->b()V
 
     return v1
 
@@ -2338,9 +2338,9 @@
     move-result v2
 
     .line 12
-    iget-object v3, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object v3, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
-    invoke-virtual {v3}, Lcom/vk/core/widget/i;->e()I
+    invoke-virtual {v3}, Lcom/vk/core/widget/ViewDragHelper;->e()I
 
     move-result v3
 
@@ -2374,9 +2374,9 @@
 
     .line 14
     :cond_6
-    iget-object p1, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
-    invoke-virtual {p1}, Lcom/vk/core/widget/i;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/widget/ViewDragHelper;->b()V
 
     .line 15
     iput-boolean v5, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->M:Z
@@ -2385,18 +2385,18 @@
 
     .line 16
     :cond_7
-    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
-    invoke-virtual {v0}, Lcom/vk/core/widget/i;->g()Z
+    invoke-virtual {v0}, Lcom/vk/core/widget/ViewDragHelper;->g()Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
     .line 17
-    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/widget/i;->a(Landroid/view/MotionEvent;)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/widget/ViewDragHelper;->a(Landroid/view/MotionEvent;)V
 
     return v5
 
@@ -2413,9 +2413,9 @@
     .line 21
     :cond_9
     :goto_0
-    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/widget/i;->b(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/core/widget/ViewDragHelper;->b(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
@@ -3091,9 +3091,9 @@
     .line 2
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/i;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->U:Lcom/vk/core/widget/ViewDragHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/widget/i;->a(Landroid/view/MotionEvent;)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/widget/ViewDragHelper;->a(Landroid/view/MotionEvent;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

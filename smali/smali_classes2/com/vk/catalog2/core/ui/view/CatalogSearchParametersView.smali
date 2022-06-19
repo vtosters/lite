@@ -59,12 +59,12 @@
 
     move-result-object p1
 
-    sget p3, Lcom/vk/catalog2/core/r;->catalog_video_search_parameters_view:I
+    sget p3, Lcom/vk/catalog2/core/R7;->catalog_video_search_parameters_view:I
 
     invoke-virtual {p1, p3, p0, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 7
-    sget p1, Lcom/vk/catalog2/core/q;->subtitle:I
+    sget p1, Lcom/vk/catalog2/core/R10;->subtitle:I
 
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -72,14 +72,14 @@
 
     const-string p2, "findViewById(R.id.subtitle)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
     iput-object p1, p0, Lcom/vk/catalog2/core/ui/view/CatalogSearchParametersView;->b:Landroid/widget/TextView;
 
     .line 8
-    sget p1, Lcom/vk/catalog2/core/q;->close:I
+    sget p1, Lcom/vk/catalog2/core/R10;->close:I
 
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -87,7 +87,7 @@
 
     const-string p2, "findViewById(R.id.close)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/catalog2/core/ui/view/CatalogSearchParametersView;->c:Landroid/view/View;
 

@@ -3,7 +3,7 @@
 .source "SpanPressableTextView.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/views/span/b;
+.implements Lcom/vk/im/ui/views/span/OnSpanClickListener;
 
 
 # annotations
@@ -46,11 +46,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView$d;->a:Lcom/vk/im/ui/views/span/SpanPressableTextView;
 
-    invoke-static {p1}, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d(Lcom/vk/im/ui/views/span/SpanPressableTextView;)Lcom/vk/core/util/j1;
+    invoke-static {p1}, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d(Lcom/vk/im/ui/views/span/SpanPressableTextView;)Lcom/vk/core/util/TimeoutLock;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/util/j1;->a()Z
+    invoke-virtual {p1}, Lcom/vk/core/util/TimeoutLock;->a()Z
 
     move-result p1
 
@@ -59,7 +59,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView$d;->a:Lcom/vk/im/ui/views/span/SpanPressableTextView;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/views/span/SpanPressableTextView;->getOnSpanClickListener()Lcom/vk/im/ui/views/span/b;
+    invoke-virtual {p1}, Lcom/vk/im/ui/views/span/SpanPressableTextView;->getOnSpanClickListener()Lcom/vk/im/ui/views/span/OnSpanClickListener;
 
     move-result-object p1
 
@@ -81,7 +81,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView$d;->a:Lcom/vk/im/ui/views/span/SpanPressableTextView;
 
-    invoke-interface {p1, v0, p2}, Lcom/vk/im/ui/views/span/b;->a(Landroid/view/View;Landroid/text/style/ClickableSpan;)V
+    invoke-interface {p1, v0, p2}, Lcom/vk/im/ui/views/span/OnSpanClickListener;->a(Landroid/view/View;Landroid/text/style/ClickableSpan;)V
 
     :cond_0
     return-void

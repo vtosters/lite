@@ -1,5 +1,5 @@
 .class public Lcom/vk/dto/live/LiveEventModel;
-.super Lcom/vk/dto/common/e;
+.super Lcom/vk/dto/common/Model;
 .source "LiveEventModel.java"
 
 # interfaces
@@ -104,7 +104,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     return-void
 .end method
@@ -113,7 +113,7 @@
     .locals 3
 
     .line 77
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     .line 78
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -365,7 +365,7 @@
     .locals 0
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     .line 3
     iput p5, p0, Lcom/vk/dto/live/LiveEventModel;->d:I
@@ -440,7 +440,7 @@
     move-object/from16 v3, p7
 
     .line 13
-    invoke-direct/range {p0 .. p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct/range {p0 .. p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     move/from16 v4, p2
 

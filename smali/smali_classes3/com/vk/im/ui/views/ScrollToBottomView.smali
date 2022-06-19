@@ -3,7 +3,7 @@
 .source "ScrollToBottomView.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -34,7 +34,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/ScrollToBottomView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/ScrollToBottomView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/16 v0, 0x2a
 
@@ -63,7 +63,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/ScrollToBottomView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/ScrollToBottomView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -83,7 +83,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/ScrollToBottomView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/ScrollToBottomView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -139,7 +139,7 @@
     invoke-virtual {p3}, Landroid/widget/TextView;->setSingleLine()V
 
     .line 10
-    sget-object p3, Lcom/vk/im/ui/o;->ScrollToBottomView:[I
+    sget-object p3, Lcom/vk/im/ui/R2;->ScrollToBottomView:[I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -148,7 +148,7 @@
     const-string p2, "ta"
 
     .line 11
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/im/ui/views/ScrollToBottomView;->setupAttrsStyle(Landroid/content/res/TypedArray;)V
 
@@ -168,7 +168,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -269,7 +269,7 @@
     iget-object v0, p0, Lcom/vk/im/ui/views/ScrollToBottomView;->a:Landroidx/appcompat/widget/AppCompatImageView;
 
     .line 2
-    sget v1, Lcom/vk/im/ui/o;->ScrollToBottomView_vkim_stb_icon:I
+    sget v1, Lcom/vk/im/ui/R2;->ScrollToBottomView_vkim_stb_icon:I
 
     const/4 v2, 0x0
 
@@ -286,7 +286,7 @@
 
     const-string v3, "context"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v3, p0, Lcom/vk/im/ui/views/ScrollToBottomView;->c:I
 
@@ -300,7 +300,7 @@
     iget-object v0, p0, Lcom/vk/im/ui/views/ScrollToBottomView;->b:Landroidx/appcompat/widget/AppCompatTextView;
 
     .line 5
-    sget v1, Lcom/vk/im/ui/o;->ScrollToBottomView_vkim_stb_counter_bg:I
+    sget v1, Lcom/vk/im/ui/R2;->ScrollToBottomView_vkim_stb_counter_bg:I
 
     invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -309,7 +309,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 6
-    sget v1, Lcom/vk/im/ui/o;->ScrollToBottomView_vkim_stb_counter_fontFamily:I
+    sget v1, Lcom/vk/im/ui/R2;->ScrollToBottomView_vkim_stb_counter_fontFamily:I
 
     invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -331,7 +331,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
     .line 8
-    sget v1, Lcom/vk/im/ui/o;->ScrollToBottomView_vkim_stb_counter_textSize:I
+    sget v1, Lcom/vk/im/ui/R2;->ScrollToBottomView_vkim_stb_counter_textSize:I
 
     const/16 v2, 0xc
 
@@ -343,10 +343,10 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/a0;->d(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/TextViewExt;->d(Landroid/widget/TextView;I)V
 
     .line 9
-    sget v1, Lcom/vk/im/ui/o;->ScrollToBottomView_vkim_stb_counter_textColor:I
+    sget v1, Lcom/vk/im/ui/R2;->ScrollToBottomView_vkim_stb_counter_textColor:I
 
     const/4 v2, -0x1
 
@@ -591,7 +591,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v2, p0, Lcom/vk/im/ui/views/ScrollToBottomView;->c:I
 

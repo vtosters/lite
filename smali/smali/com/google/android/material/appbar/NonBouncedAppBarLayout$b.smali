@@ -47,7 +47,7 @@
     iput v0, p0, Lcom/google/android/material/appbar/NonBouncedAppBarLayout$b;->a:I
 
     .line 3
-    sget-object v1, Lcom/vtosters/lite/a0;->AppBarLayout_Layout:[I
+    sget-object v1, Lcom/vtosters/lite/R;->AppBarLayout_Layout:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

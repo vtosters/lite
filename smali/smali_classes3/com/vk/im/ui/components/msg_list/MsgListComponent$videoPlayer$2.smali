@@ -3,12 +3,12 @@
 .source "MsgListComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_list/MsgListComponent;-><init>(Lcom/vk/im/ui/components/msg_list/d;)V
+    value = Lcom/vk/im/ui/components/msg_list/MsgListComponent;-><init>(Lcom/vk/im/ui/components/msg_list/MsgListComponentConfig;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/im/ui/q/h/b;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/im/ui/q/h/VideoAutoPlayer;",
         ">;"
     }
 .end annotation
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/ui/q/h/b;
+.method public final invoke()Lcom/vk/im/ui/q/h/VideoAutoPlayer;
     .locals 3
 
     .line 2
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/ImUiModule;->e()Lcom/vk/im/ui/q/h/b$b;
+    invoke-virtual {v0}, Lcom/vk/im/ui/ImUiModule;->e()Lcom/vk/im/ui/q/h/VideoAutoPlayer$b;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
 
     const/4 v2, 0x1
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/q/h/b$b;->a(Landroid/content/Context;Z)Lcom/vk/im/ui/q/h/b;
+    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/q/h/VideoAutoPlayer$b;->a(Landroid/content/Context;Z)Lcom/vk/im/ui/q/h/VideoAutoPlayer;
 
     move-result-object v0
 
@@ -78,7 +78,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_list/MsgListComponent$videoPlayer$2;->invoke()Lcom/vk/im/ui/q/h/b;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_list/MsgListComponent$videoPlayer$2;->invoke()Lcom/vk/im/ui/q/h/VideoAutoPlayer;
 
     move-result-object v0
 

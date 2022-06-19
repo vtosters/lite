@@ -3,12 +3,12 @@
 .source "GoodsPickerHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/picker/GoodsPickerHelper;->a(Landroid/content/Context;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;ZILkotlin/jvm/b/a;Lkotlin/jvm/b/a;)Lcom/vk/core/dialogs/bottomsheet/e;
+    value = Lcom/vk/market/picker/GoodsPickerHelper;->a(Landroid/content/Context;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ZILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $dialog:Lcom/vk/core/dialogs/bottomsheet/e;
+.field final synthetic $dialog:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
-.field final synthetic $openMiniAppListener:Lkotlin/jvm/b/a;
+.field final synthetic $openMiniAppListener:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/dialogs/bottomsheet/e;Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$2;->$dialog:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object p1, p0, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$2;->$dialog:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
-    iput-object p2, p0, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$2;->$openMiniAppListener:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$2;->$openMiniAppListener:Lkotlin/jvm/b/Functions;
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$2;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -64,14 +64,14 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$2;->$dialog:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object v0, p0, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$2;->$dialog:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e;->G4()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->G4()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$2;->$openMiniAppListener:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$2;->$openMiniAppListener:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

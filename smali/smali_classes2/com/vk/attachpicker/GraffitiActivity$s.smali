@@ -110,7 +110,7 @@
 .method public synthetic c()V
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/attachpicker/drawing/e;->a(Lcom/vk/attachpicker/drawing/DrawingView$a;)V
+    invoke-static {p0}, Lcom/vk/attachpicker/drawing/DrawingView1;->a(Lcom/vk/attachpicker/drawing/DrawingView$a;)V
 
     return-void
 .end method

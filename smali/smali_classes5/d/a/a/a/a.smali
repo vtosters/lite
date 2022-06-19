@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Ld/a/a/a/h;
+.field private final synthetic a:Lme/grishka/appkit/fragments/AppKitFragment;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld/a/a/a/h;)V
+.method public synthetic constructor <init>(Lme/grishka/appkit/fragments/AppKitFragment;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ld/a/a/a/a;->a:Ld/a/a/a/h;
+    iput-object p1, p0, Ld/a/a/a/a;->a:Lme/grishka/appkit/fragments/AppKitFragment;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Ld/a/a/a/a;->a:Ld/a/a/a/h;
+    iget-object v0, p0, Ld/a/a/a/a;->a:Lme/grishka/appkit/fragments/AppKitFragment;
 
-    invoke-virtual {v0, p1}, Ld/a/a/a/h;->a(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lme/grishka/appkit/fragments/AppKitFragment;->a(Landroid/view/View;)V
 
     return-void
 .end method

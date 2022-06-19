@@ -3,7 +3,7 @@
 .source "EntriesListFragment.kt"
 
 # interfaces
-.implements Lcom/vk/utils/f/c;
+.implements Lcom/vk/utils/f/RotationSensorEventProvider;
 
 
 # annotations
@@ -44,7 +44,7 @@
     .locals 3
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/utils/f/c$a;->a(Lcom/vk/utils/f/c;FF)V
+    invoke-static {p0, p1, p2}, Lcom/vk/utils/f/RotationSensorEventProvider$a;->a(Lcom/vk/utils/f/RotationSensorEventProvider;FF)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/EntriesListFragment$f;->a:Lcom/vk/newsfeed/EntriesListFragment;
@@ -81,11 +81,11 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/newsfeed/holders/poster/a;
+    check-cast v2, Lcom/vk/newsfeed/holders/poster/PosterHolder;
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2, p1, p2}, Lcom/vk/newsfeed/holders/poster/a;->a(FF)V
+    invoke-virtual {v2, p1, p2}, Lcom/vk/newsfeed/holders/poster/PosterHolder;->a(FF)V
 
     :cond_0
     add-int/lit8 v1, v1, 0x1
@@ -112,7 +112,7 @@
     .end param
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/utils/f/c$a;->b(Lcom/vk/utils/f/c;FF)V
+    invoke-static {p0, p1, p2}, Lcom/vk/utils/f/RotationSensorEventProvider$a;->b(Lcom/vk/utils/f/RotationSensorEventProvider;FF)V
 
     return-void
 .end method

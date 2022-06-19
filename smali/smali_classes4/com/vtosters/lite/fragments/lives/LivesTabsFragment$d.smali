@@ -48,7 +48,7 @@
     .line 2
     iget-object p1, p0, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment$d;->b:Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;
 
-    invoke-virtual {p1}, Ld/a/a/a/l;->b5()I
+    invoke-virtual {p1}, Lme/grishka/appkit/fragments/TabbedLoaderFragment;->b5()I
 
     move-result p1
 
@@ -56,13 +56,13 @@
 
     iget-object p1, p0, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment$d;->b:Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;
 
-    invoke-virtual {p1}, Ld/a/a/a/l;->Z4()I
+    invoke-virtual {p1}, Lme/grishka/appkit/fragments/TabbedLoaderFragment;->Z4()I
 
     move-result p1
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment$d;->b:Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;
 
-    invoke-virtual {v0}, Ld/a/a/a/l;->b5()I
+    invoke-virtual {v0}, Lme/grishka/appkit/fragments/TabbedLoaderFragment;->b5()I
 
     move-result v0
 
@@ -71,19 +71,19 @@
     .line 3
     iget-object p1, p0, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment$d;->b:Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;
 
-    invoke-virtual {p1}, Ld/a/a/a/l;->Z4()I
+    invoke-virtual {p1}, Lme/grishka/appkit/fragments/TabbedLoaderFragment;->Z4()I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Ld/a/a/a/l;->t0(I)Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {p1, v0}, Lme/grishka/appkit/fragments/TabbedLoaderFragment;->t0(I)Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    check-cast p1, Lcom/vtosters/lite/fragments/lives/c;
+    check-cast p1, Lcom/vtosters/lite/fragments/lives/LivesPostListFragment;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/lives/c;->F()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/lives/LivesPostListFragment;->F()V
 
     goto :goto_0
 

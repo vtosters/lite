@@ -3,7 +3,7 @@
 .source "CreateChatComponent.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lio/reactivex/disposables/Disposable;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/disposables/b;)V
+.method public final a(Lio/reactivex/disposables/Disposable;)V
     .locals 3
 
     .line 1
@@ -56,13 +56,13 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/im/ui/m;->vkim_msg_chat_creating:I
+    sget v1, Lcom/vk/im/ui/R4;->vkim_msg_chat_creating:I
 
     new-instance v2, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$createChat$1$1;
 
-    invoke-direct {v2, p1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$createChat$1$1;-><init>(Lio/reactivex/disposables/b;)V
+    invoke-direct {v2, p1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$createChat$1$1;-><init>(Lio/reactivex/disposables/Disposable;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/new_chat/CreateChatVC;->a(ILkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/new_chat/CreateChatVC;->a(ILkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -71,9 +71,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lio/reactivex/disposables/b;
+    check-cast p1, Lio/reactivex/disposables/Disposable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$createChat$1;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$createChat$1;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

@@ -65,7 +65,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/notifications/settings/NotificationSettingsCategory$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/notifications/settings/NotificationSettingsCategory$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;->E:Lcom/vk/dto/notifications/settings/NotificationSettingsCategory$b;
 
@@ -211,7 +211,7 @@
 
     const-string v3, "custom"
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -376,7 +376,7 @@
 
     const-string v1, "off"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -497,7 +497,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -589,7 +589,7 @@
     :goto_0
     const-class v2, Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -612,7 +612,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;->a:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -628,7 +628,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;->b:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -644,7 +644,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;->c:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -660,7 +660,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;->d:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -676,7 +676,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;->e:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -692,7 +692,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;->f:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -708,7 +708,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;->g:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -724,7 +724,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;->h:Ljava/util/ArrayList;
 
-    invoke-static {v1, p1}, Lcom/vk/core/extensions/c;->a(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
+    invoke-static {v1, p1}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
 
     move-result p1
 
@@ -890,7 +890,7 @@
     .line 8
     iget-object v1, p0, Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;->h:Ljava/util/ArrayList;
 
-    invoke-static {v1}, Lcom/vk/core/extensions/c;->a(Ljava/util/ArrayList;)I
+    invoke-static {v1}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/ArrayList;)I
 
     move-result v1
 
@@ -913,7 +913,7 @@
 
     const-string v1, "on"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

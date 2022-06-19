@@ -3,7 +3,7 @@
 .source "AbstractPaginatedView.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field protected B:Lcom/vk/lists/j;
+.field protected B:Lcom/vk/lists/FooterEmptyViewProvider;
 
 .field protected C:Z
 
@@ -46,41 +46,41 @@
     .end annotation
 .end field
 
-.field protected final G:Lcom/vk/lists/r;
+.field protected final G:Lcom/vk/lists/OnRetryClickListener;
 
-.field protected final H:Lcom/vk/lists/r;
+.field protected final H:Lcom/vk/lists/OnRetryClickListener;
 
 .field protected a:Landroid/view/View;
 
-.field protected b:Lcom/vk/lists/a;
+.field protected b:Lcom/vk/lists/AbstractErrorView;
 
 .field protected c:Landroid/view/View;
 
 .field protected d:Landroid/widget/FrameLayout;
 
-.field private e:Lkotlin/jvm/b/a;
+.field private e:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private f:Lkotlin/jvm/b/a;
+.field private f:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field protected g:Lcom/vk/lists/k;
+.field protected g:Lcom/vk/lists/FooterErrorViewProvider;
 
-.field protected h:Lcom/vk/lists/l;
+.field protected h:Lcom/vk/lists/FooterLoadingViewProvider;
 
 
 # direct methods
@@ -115,19 +115,19 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 4
-    sget-object v0, Lcom/vk/lists/k;->a:Lcom/vk/lists/k;
+    sget-object v0, Lcom/vk/lists/FooterErrorViewProvider;->a:Lcom/vk/lists/FooterErrorViewProvider;
 
-    iput-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->g:Lcom/vk/lists/k;
+    iput-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->g:Lcom/vk/lists/FooterErrorViewProvider;
 
     .line 5
-    sget-object v0, Lcom/vk/lists/l;->a:Lcom/vk/lists/l;
+    sget-object v0, Lcom/vk/lists/FooterLoadingViewProvider;->a:Lcom/vk/lists/FooterLoadingViewProvider;
 
-    iput-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->h:Lcom/vk/lists/l;
+    iput-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->h:Lcom/vk/lists/FooterLoadingViewProvider;
 
     .line 6
-    sget-object v0, Lcom/vk/lists/j;->a:Lcom/vk/lists/j;
+    sget-object v0, Lcom/vk/lists/FooterEmptyViewProvider;->a:Lcom/vk/lists/FooterEmptyViewProvider;
 
-    iput-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->B:Lcom/vk/lists/j;
+    iput-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->B:Lcom/vk/lists/FooterEmptyViewProvider;
 
     const/4 v0, 0x0
 
@@ -142,14 +142,14 @@
 
     invoke-direct {v0, p0}, Lcom/vk/lists/AbstractPaginatedView$a;-><init>(Lcom/vk/lists/AbstractPaginatedView;)V
 
-    iput-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->G:Lcom/vk/lists/r;
+    iput-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->G:Lcom/vk/lists/OnRetryClickListener;
 
     .line 10
     new-instance v0, Lcom/vk/lists/AbstractPaginatedView$b;
 
     invoke-direct {v0, p0}, Lcom/vk/lists/AbstractPaginatedView$b;-><init>(Lcom/vk/lists/AbstractPaginatedView;)V
 
-    iput-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->H:Lcom/vk/lists/r;
+    iput-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->H:Lcom/vk/lists/OnRetryClickListener;
 
     .line 11
     invoke-virtual {p0, p1, p2, p3}, Lcom/vk/lists/AbstractPaginatedView;->a(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -172,11 +172,11 @@
     return-object p0
 .end method
 
-.method static synthetic a(Lcom/vk/lists/AbstractPaginatedView;)Lkotlin/jvm/b/a;
+.method static synthetic a(Lcom/vk/lists/AbstractPaginatedView;)Lkotlin/jvm/b/Functions;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/lists/AbstractPaginatedView;->e:Lkotlin/jvm/b/a;
+    iget-object p0, p0, Lcom/vk/lists/AbstractPaginatedView;->e:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method
@@ -196,11 +196,11 @@
     return-object p0
 .end method
 
-.method static synthetic b(Lcom/vk/lists/AbstractPaginatedView;)Lkotlin/jvm/b/a;
+.method static synthetic b(Lcom/vk/lists/AbstractPaginatedView;)Lkotlin/jvm/b/Functions;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/lists/AbstractPaginatedView;->f:Lkotlin/jvm/b/a;
+    iget-object p0, p0, Lcom/vk/lists/AbstractPaginatedView;->f:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method
@@ -230,7 +230,7 @@
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
     const/4 v3, 0x2
 
@@ -261,7 +261,7 @@
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
     const/4 v2, 0x1
 
@@ -316,7 +316,7 @@
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
     const/4 v2, 0x1
 
@@ -477,26 +477,26 @@
     invoke-virtual {p0, p3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     .line 5
-    invoke-virtual {p0, p1, p2}, Lcom/vk/lists/AbstractPaginatedView;->b(Landroid/content/Context;Landroid/util/AttributeSet;)Lcom/vk/lists/a;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/lists/AbstractPaginatedView;->b(Landroid/content/Context;Landroid/util/AttributeSet;)Lcom/vk/lists/AbstractErrorView;
 
     move-result-object p3
 
-    iput-object p3, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iput-object p3, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
     .line 6
-    iget-object p3, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object p3, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
-    invoke-virtual {p3, v0}, Lcom/vk/lists/a;->setVisibility(I)V
+    invoke-virtual {p3, v0}, Lcom/vk/lists/AbstractErrorView;->setVisibility(I)V
 
     .line 7
-    iget-object p3, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object p3, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
-    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->G:Lcom/vk/lists/r;
+    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->G:Lcom/vk/lists/OnRetryClickListener;
 
-    invoke-virtual {p3, v1}, Lcom/vk/lists/a;->setRetryClickListener(Lcom/vk/lists/r;)V
+    invoke-virtual {p3, v1}, Lcom/vk/lists/AbstractErrorView;->setRetryClickListener(Lcom/vk/lists/OnRetryClickListener;)V
 
     .line 8
-    iget-object p3, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object p3, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
     invoke-virtual {p0, p3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
@@ -587,9 +587,9 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/lists/h;)V
+.method public a(Lcom/vk/lists/EmptyViewConfiguration;)V
     .locals 5
-    .param p1    # Lcom/vk/lists/h;
+    .param p1    # Lcom/vk/lists/EmptyViewConfiguration;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -600,27 +600,27 @@
     .line 33
     iget-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->c:Landroid/view/View;
 
-    instance-of v1, v0, Lcom/vk/lists/v;
+    instance-of v1, v0, Lcom/vk/lists/PaginationListEmptyView;
 
     if-eqz v1, :cond_1
 
     .line 34
-    check-cast v0, Lcom/vk/lists/v;
+    check-cast v0, Lcom/vk/lists/PaginationListEmptyView;
 
     if-eqz p1, :cond_0
 
     .line 35
-    invoke-interface {p1}, Lcom/vk/lists/h;->a()Ljava/lang/CharSequence;
+    invoke-interface {p1}, Lcom/vk/lists/EmptyViewConfiguration;->a()Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lcom/vk/lists/v;->setText(Ljava/lang/CharSequence;)V
+    invoke-interface {v0, p1}, Lcom/vk/lists/PaginationListEmptyView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
     .line 36
     :cond_0
-    invoke-interface {v0}, Lcom/vk/lists/v;->a()V
+    invoke-interface {v0}, Lcom/vk/lists/PaginationListEmptyView;->a()V
 
     .line 37
     :cond_1
@@ -659,7 +659,7 @@
 
     aput-object v2, p1, v4
 
-    iget-object v2, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object v2, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
     aput-object v2, p1, v1
 
@@ -684,7 +684,7 @@
 
     aput-object v2, p1, v4
 
-    iget-object v2, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object v2, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
     aput-object v2, p1, v1
 
@@ -717,18 +717,18 @@
     const/4 v0, 0x0
 
     .line 24
-    invoke-virtual {p0, p1, v0}, Lcom/vk/lists/AbstractPaginatedView;->a(Ljava/lang/Throwable;Lcom/vk/lists/i;)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/lists/AbstractPaginatedView;->a(Ljava/lang/Throwable;Lcom/vk/lists/ErrorViewConfiguration;)V
 
     return-void
 .end method
 
-.method public a(Ljava/lang/Throwable;Lcom/vk/lists/i;)V
+.method public a(Ljava/lang/Throwable;Lcom/vk/lists/ErrorViewConfiguration;)V
     .locals 3
     .param p1    # Ljava/lang/Throwable;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p2    # Lcom/vk/lists/i;
+    .param p2    # Lcom/vk/lists/ErrorViewConfiguration;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -739,30 +739,30 @@
     if-eqz p2, :cond_0
 
     .line 26
-    iget-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
-    invoke-interface {p2, p1}, Lcom/vk/lists/i;->a(Ljava/lang/Throwable;)Ljava/lang/CharSequence;
+    invoke-interface {p2, p1}, Lcom/vk/lists/ErrorViewConfiguration;->a(Ljava/lang/Throwable;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/a;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/AbstractErrorView;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 27
-    iget-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
-    invoke-interface {p2, p1}, Lcom/vk/lists/i;->b(Ljava/lang/Throwable;)Z
+    invoke-interface {p2, p1}, Lcom/vk/lists/ErrorViewConfiguration;->b(Ljava/lang/Throwable;)Z
 
     move-result p2
 
-    invoke-virtual {v0, p2}, Lcom/vk/lists/a;->setRetryBtnVisible(Z)V
+    invoke-virtual {v0, p2}, Lcom/vk/lists/AbstractErrorView;->setRetryBtnVisible(Z)V
 
     goto :goto_0
 
     .line 28
     :cond_0
-    iget-object p2, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object p2, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
-    invoke-virtual {p2}, Lcom/vk/lists/a;->b()V
+    invoke-virtual {p2}, Lcom/vk/lists/AbstractErrorView;->b()V
 
     :goto_0
     const/4 p2, 0x4
@@ -772,7 +772,7 @@
     const/4 v0, 0x0
 
     .line 29
-    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
     aput-object v1, p2, v0
 
@@ -834,7 +834,7 @@
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
     const/4 v2, 0x1
 
@@ -879,7 +879,7 @@
     return-object v0
 .end method
 
-.method protected b(Landroid/content/Context;Landroid/util/AttributeSet;)Lcom/vk/lists/a;
+.method protected b(Landroid/content/Context;Landroid/util/AttributeSet;)Lcom/vk/lists/AbstractErrorView;
     .locals 2
 
     .line 4
@@ -888,14 +888,14 @@
     invoke-direct {v0, p1}, Lcom/vk/lists/DefaultErrorView;-><init>(Landroid/content/Context;)V
 
     .line 5
-    sget-object v1, Lcom/vk/lists/f0;->AbstractPaginatedView:[I
+    sget-object v1, Lcom/vk/lists/R4;->AbstractPaginatedView:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 6
-    sget v1, Lcom/vk/lists/f0;->AbstractPaginatedView_errorBackgroundColor:I
+    sget v1, Lcom/vk/lists/R4;->AbstractPaginatedView_errorBackgroundColor:I
 
     invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -923,7 +923,7 @@
 
     .line 9
     :cond_0
-    sget p2, Lcom/vk/lists/f0;->AbstractPaginatedView_errorFitCenter:I
+    sget p2, Lcom/vk/lists/R4;->AbstractPaginatedView_errorFitCenter:I
 
     const/4 v1, 0x0
 
@@ -969,7 +969,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/vk/lists/d0;->view_default_loading:I
+    sget p2, Lcom/vk/lists/R2;->view_default_loading:I
 
     const/4 v0, 0x0
 
@@ -1010,7 +1010,7 @@
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
     const/4 v2, 0x1
 
@@ -1065,7 +1065,7 @@
     return v0
 .end method
 
-.method protected abstract getDataInfoProvider()Lcom/vk/lists/t$l;
+.method protected abstract getDataInfoProvider()Lcom/vk/lists/PaginationHelper$l;
 .end method
 
 .method public getEmptyView()Landroid/view/View;
@@ -1077,47 +1077,47 @@
     return-object v0
 .end method
 
-.method public getErrorView()Lcom/vk/lists/a;
+.method public getErrorView()Lcom/vk/lists/AbstractErrorView;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
     return-object v0
 .end method
 
-.method public getLoadNextRetryClickListener()Lkotlin/jvm/b/a;
+.method public getLoadNextRetryClickListener()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->f:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->f:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
 
-.method public getReloadRetryClickListener()Lkotlin/jvm/b/a;
+.method public getReloadRetryClickListener()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->e:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/lists/AbstractPaginatedView;->e:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
@@ -1128,7 +1128,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, v0, v0}, Lcom/vk/lists/AbstractPaginatedView;->a(Ljava/lang/Throwable;Lcom/vk/lists/i;)V
+    invoke-virtual {p0, v0, v0}, Lcom/vk/lists/AbstractPaginatedView;->a(Ljava/lang/Throwable;Lcom/vk/lists/ErrorViewConfiguration;)V
 
     return-void
 .end method
@@ -1182,29 +1182,29 @@
     return p1
 .end method
 
-.method public setFooterEmptyViewProvider(Lcom/vk/lists/j;)V
+.method public setFooterEmptyViewProvider(Lcom/vk/lists/FooterEmptyViewProvider;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/lists/AbstractPaginatedView;->B:Lcom/vk/lists/j;
+    iput-object p1, p0, Lcom/vk/lists/AbstractPaginatedView;->B:Lcom/vk/lists/FooterEmptyViewProvider;
 
     return-void
 .end method
 
-.method public setFooterErrorViewProvider(Lcom/vk/lists/k;)V
+.method public setFooterErrorViewProvider(Lcom/vk/lists/FooterErrorViewProvider;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/lists/AbstractPaginatedView;->g:Lcom/vk/lists/k;
+    iput-object p1, p0, Lcom/vk/lists/AbstractPaginatedView;->g:Lcom/vk/lists/FooterErrorViewProvider;
 
     return-void
 .end method
 
-.method public setFooterLoadingViewProvider(Lcom/vk/lists/l;)V
+.method public setFooterLoadingViewProvider(Lcom/vk/lists/FooterLoadingViewProvider;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/lists/AbstractPaginatedView;->h:Lcom/vk/lists/l;
+    iput-object p1, p0, Lcom/vk/lists/AbstractPaginatedView;->h:Lcom/vk/lists/FooterLoadingViewProvider;
 
     return-void
 .end method
@@ -1215,36 +1215,36 @@
 .method protected abstract setLayoutManagerFromBuilder(Lcom/vk/lists/AbstractPaginatedView$c;)V
 .end method
 
-.method public setOnLoadNextRetryClickListener(Lkotlin/jvm/b/a;)V
+.method public setOnLoadNextRetryClickListener(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/lists/AbstractPaginatedView;->f:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/lists/AbstractPaginatedView;->f:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public setOnReloadRetryClickListener(Lkotlin/jvm/b/a;)V
+.method public setOnReloadRetryClickListener(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/lists/AbstractPaginatedView;->e:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/lists/AbstractPaginatedView;->e:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -1274,7 +1274,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/a;
+    iget-object v1, p0, Lcom/vk/lists/AbstractPaginatedView;->b:Lcom/vk/lists/AbstractErrorView;
 
     invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 

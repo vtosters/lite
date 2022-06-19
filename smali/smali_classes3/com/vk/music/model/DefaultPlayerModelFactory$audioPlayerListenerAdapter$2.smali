@@ -3,12 +3,12 @@
 .source "DefaultPlayerModelFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/model/DefaultPlayerModelFactory;-><init>(Lcom/vk/audioipc/core/d;Lcom/vk/audioipc/core/exception/a;)V
+    value = Lcom/vk/music/model/DefaultPlayerModelFactory;-><init>(Lcom/vk/audioipc/core/AudioPlayer;Lcom/vk/audioipc/core/exception/ServiceExceptionUtils;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vtosters/lite/audio/player/h;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vtosters/lite/audio/player/AudioPlayerListenerAdapter;",
         ">;"
     }
 .end annotation
@@ -45,31 +45,31 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vtosters/lite/audio/player/h;
+.method public final invoke()Lcom/vtosters/lite/audio/player/AudioPlayerListenerAdapter;
     .locals 4
 
     .line 2
-    new-instance v0, Lcom/vtosters/lite/audio/player/h;
+    new-instance v0, Lcom/vtosters/lite/audio/player/AudioPlayerListenerAdapter;
 
     iget-object v1, p0, Lcom/vk/music/model/DefaultPlayerModelFactory$audioPlayerListenerAdapter$2;->this$0:Lcom/vk/music/model/DefaultPlayerModelFactory;
 
-    invoke-static {v1}, Lcom/vk/music/model/DefaultPlayerModelFactory;->a(Lcom/vk/music/model/DefaultPlayerModelFactory;)Lcom/vk/audioipc/core/d;
+    invoke-static {v1}, Lcom/vk/music/model/DefaultPlayerModelFactory;->a(Lcom/vk/music/model/DefaultPlayerModelFactory;)Lcom/vk/audioipc/core/AudioPlayer;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/vk/music/model/DefaultPlayerModelFactory$audioPlayerListenerAdapter$2;->this$0:Lcom/vk/music/model/DefaultPlayerModelFactory;
 
-    invoke-static {v2}, Lcom/vk/music/model/DefaultPlayerModelFactory;->c(Lcom/vk/music/model/DefaultPlayerModelFactory;)Lcom/vtosters/lite/audio/player/a0;
+    invoke-static {v2}, Lcom/vk/music/model/DefaultPlayerModelFactory;->c(Lcom/vk/music/model/DefaultPlayerModelFactory;)Lcom/vtosters/lite/audio/player/TrackInfoAdapter;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/vk/music/model/DefaultPlayerModelFactory$audioPlayerListenerAdapter$2;->this$0:Lcom/vk/music/model/DefaultPlayerModelFactory;
 
-    invoke-static {v3}, Lcom/vk/music/model/DefaultPlayerModelFactory;->b(Lcom/vk/music/model/DefaultPlayerModelFactory;)Lcom/vk/audioipc/core/exception/a;
+    invoke-static {v3}, Lcom/vk/music/model/DefaultPlayerModelFactory;->b(Lcom/vk/music/model/DefaultPlayerModelFactory;)Lcom/vk/audioipc/core/exception/ServiceExceptionUtils;
 
     move-result-object v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/audio/player/h;-><init>(Lcom/vk/audioipc/core/d;Lcom/vtosters/lite/audio/player/a0;Lcom/vk/audioipc/core/exception/a;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/audio/player/AudioPlayerListenerAdapter;-><init>(Lcom/vk/audioipc/core/AudioPlayer;Lcom/vtosters/lite/audio/player/TrackInfoAdapter;Lcom/vk/audioipc/core/exception/ServiceExceptionUtils;)V
 
     return-object v0
 .end method
@@ -78,7 +78,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/music/model/DefaultPlayerModelFactory$audioPlayerListenerAdapter$2;->invoke()Lcom/vtosters/lite/audio/player/h;
+    invoke-virtual {p0}, Lcom/vk/music/model/DefaultPlayerModelFactory$audioPlayerListenerAdapter$2;->invoke()Lcom/vtosters/lite/audio/player/AudioPlayerListenerAdapter;
 
     move-result-object v0
 

@@ -167,7 +167,7 @@
 
     iget-object v1, p1, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$b;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -177,7 +177,7 @@
 
     iget-object v1, p1, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$b;->b:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -187,7 +187,7 @@
 
     iget-object v1, p1, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$b;->c:Lcom/vk/im/engine/models/messages/MsgFromUser;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -197,7 +197,7 @@
 
     iget-object p1, p1, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$b;->d:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -3,12 +3,12 @@
 .source "PurchasesManager.java"
 
 # interfaces
-.implements Lc/a/w;
+.implements Lio/reactivex/SingleOnSubscribe;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/data/PurchasesManager$a;->a(Ljava/lang/Boolean;)Lc/a/x;
+    value = Lcom/vtosters/lite/data/PurchasesManager$a;->a(Ljava/lang/Boolean;)Lio/reactivex/SingleSource;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/w<",
+        "Lio/reactivex/SingleOnSubscribe<",
         "Lcom/vtosters/lite/data/PurchasesManager$GooglePlayLocale;",
         ">;"
     }
@@ -38,12 +38,12 @@
 
 
 # virtual methods
-.method public a(Lc/a/u;)V
+.method public a(Lio/reactivex/SingleEmitter;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/u<",
+            "Lio/reactivex/SingleEmitter<",
             "Lcom/vtosters/lite/data/PurchasesManager$GooglePlayLocale;",
             ">;)V"
         }
@@ -68,7 +68,7 @@
     .line 3
     new-instance v1, Lcom/vtosters/lite/data/PurchasesManager$a$a$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/vtosters/lite/data/PurchasesManager$a$a$a;-><init>(Lcom/vtosters/lite/data/PurchasesManager$a$a;Lc/a/u;)V
+    invoke-direct {v1, p0, p1}, Lcom/vtosters/lite/data/PurchasesManager$a$a$a;-><init>(Lcom/vtosters/lite/data/PurchasesManager$a$a;Lio/reactivex/SingleEmitter;)V
 
     invoke-static {v0, v1}, Lcom/vtosters/lite/data/PurchasesManager;->a(Ljava/util/Map;Lcom/vtosters/lite/data/PurchasesManager$p;)V
 

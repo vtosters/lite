@@ -56,7 +56,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/discover/DiscoverDataProvider$TemporaryCache$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/discover/DiscoverDataProvider$TemporaryCache$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/discover/DiscoverDataProvider$TemporaryCache;->c:Lcom/vk/discover/DiscoverDataProvider$TemporaryCache$b;
 
@@ -78,7 +78,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lcom/vk/discover/DiscoverDataProvider$TemporaryCache;-><init>(Ljava/util/HashSet;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v1, v0}, Lcom/vk/discover/DiscoverDataProvider$TemporaryCache;-><init>(Ljava/util/HashSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -111,7 +111,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/HashSet;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/util/HashSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -223,13 +223,13 @@
     throw v0
 .end method
 
-.method public final u1()Lio/reactivex/disposables/b;
+.method public final u1()Lio/reactivex/disposables/Disposable;
     .locals 3
 
     .line 1
     sget-object v0, Lcom/vk/discover/DiscoverDataProvider$TemporaryCache;->c:Lcom/vk/discover/DiscoverDataProvider$TemporaryCache$b;
 
-    invoke-static {v0}, Lcom/vk/discover/DiscoverDataProvider$TemporaryCache$b;->a(Lcom/vk/discover/DiscoverDataProvider$TemporaryCache$b;)Lc/a/m;
+    invoke-static {v0}, Lcom/vk/discover/DiscoverDataProvider$TemporaryCache$b;->a(Lcom/vk/discover/DiscoverDataProvider$TemporaryCache$b;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -239,13 +239,13 @@
 
     sget-object v2, Lcom/vk/discover/DiscoverDataProvider$TemporaryCache$d;->a:Lcom/vk/discover/DiscoverDataProvider$TemporaryCache$d;
 
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "keys.subscribe({ items.a\u2026it.items) }, { L.e(it) })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

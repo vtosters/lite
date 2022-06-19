@@ -21,7 +21,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/core/util/t;->e()Z
+    invoke-static {}, Lcom/vk/core/util/Device;->e()Z
 
     move-result v0
 

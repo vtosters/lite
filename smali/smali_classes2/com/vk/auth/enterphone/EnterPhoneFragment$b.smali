@@ -44,13 +44,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/auth/enterphone/EnterPhoneFragment$b;->a:Lcom/vk/auth/enterphone/EnterPhoneFragment;
 
-    invoke-static {p1}, Lcom/vk/auth/enterphone/EnterPhoneFragment;->a(Lcom/vk/auth/enterphone/EnterPhoneFragment;)Lcom/vk/auth/enterphone/c;
+    invoke-static {p1}, Lcom/vk/auth/enterphone/EnterPhoneFragment;->a(Lcom/vk/auth/enterphone/EnterPhoneFragment;)Lcom/vk/auth/enterphone/EnterPhonePresenter;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/vk/auth/enterphone/EnterPhoneFragment$b;->b:Ljava/lang/String;
 
-    invoke-interface {p1, p2}, Lcom/vk/auth/base/a;->a(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, Lcom/vk/auth/base/AuthPresenter;->a(Ljava/lang/String;)V
 
     return-void
 .end method

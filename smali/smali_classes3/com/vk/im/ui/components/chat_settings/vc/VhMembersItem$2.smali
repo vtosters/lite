@@ -3,12 +3,12 @@
 .source "VhMembersItem.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/chat_settings/vc/VhMembersItem;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/a;Landroid/view/ViewGroup;)V
+    value = Lcom/vk/im/ui/components/chat_settings/vc/VhMembersItem;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;Landroid/view/ViewGroup;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,7 +52,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhMembersItem$2;->this$0:Lcom/vk/im/ui/components/chat_settings/vc/VhMembersItem;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/vc/VhMembersItem;->e0()Lcom/vk/im/ui/components/chat_settings/vc/a;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/vc/VhMembersItem;->e0()Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;
 
     move-result-object p1
 
@@ -62,7 +62,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/im/ui/components/chat_settings/vc/a;->b(Lcom/vk/im/engine/models/dialogs/DialogMember;)V
+    invoke-interface {p1, v0}, Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;->b(Lcom/vk/im/engine/models/dialogs/DialogMember;)V
 
     return-void
 .end method
@@ -75,7 +75,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/VhMembersItem$2;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

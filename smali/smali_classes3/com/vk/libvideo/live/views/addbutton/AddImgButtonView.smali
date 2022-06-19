@@ -3,11 +3,11 @@
 .source "AddImgButtonView.java"
 
 # interfaces
-.implements Lcom/vk/libvideo/live/views/addbutton/b;
+.implements Lcom/vk/libvideo/live/views/addbutton/AddButtonContract1;
 
 
 # instance fields
-.field private a:Lcom/vk/libvideo/live/views/addbutton/a;
+.field private a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
 
 # direct methods
@@ -44,7 +44,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/vk/libvideo/e;->vkim_ripple_light_borderless:I
+    sget p2, Lcom/vk/libvideo/R7;->vkim_ripple_light_borderless:I
 
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -55,11 +55,11 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;)Lcom/vk/libvideo/live/views/addbutton/a;
+.method static synthetic a(Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;)Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
+    iget-object p0, p0, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     return-object p0
 .end method
@@ -100,25 +100,25 @@
 
     .line 12
     :cond_0
-    sget v0, Lcom/vk/libvideo/e;->ic_done_outline_shadow_48:I
+    sget v0, Lcom/vk/libvideo/R7;->ic_done_outline_shadow_48:I
 
     goto :goto_0
 
     .line 13
     :cond_1
-    sget v0, Lcom/vk/libvideo/e;->ic_follow_outline_shadow_48:I
+    sget v0, Lcom/vk/libvideo/R7;->ic_follow_outline_shadow_48:I
 
     goto :goto_0
 
     .line 14
     :cond_2
-    sget v0, Lcom/vk/libvideo/e;->ic_user_added_outline_shadow_48:I
+    sget v0, Lcom/vk/libvideo/R7;->ic_user_added_outline_shadow_48:I
 
     goto :goto_0
 
     .line 15
     :cond_3
-    sget v0, Lcom/vk/libvideo/e;->ic_user_add_outline_shadow_48:I
+    sget v0, Lcom/vk/libvideo/R7;->ic_user_add_outline_shadow_48:I
 
     :goto_0
     if-eq v0, v2, :cond_4
@@ -163,12 +163,12 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->a()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->a()V
 
     .line 4
     :cond_0
@@ -253,22 +253,22 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->e()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->e()V
 
     :cond_0
     return-void
 .end method
 
-.method public getPresenter()Lcom/vk/libvideo/live/views/addbutton/a;
+.method public getPresenter()Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     return-object v0
 .end method
@@ -277,18 +277,18 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->getPresenter()Lcom/vk/libvideo/live/views/addbutton/a;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->getPresenter()Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public setPresenter(Lcom/vk/libvideo/live/views/addbutton/a;)V
+.method public setPresenter(Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     return-void
 .end method
@@ -297,9 +297,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/live/views/addbutton/a;
+    check-cast p1, Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->setPresenter(Lcom/vk/libvideo/live/views/addbutton/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->setPresenter(Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;)V
 
     return-void
 .end method
@@ -327,12 +327,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->t()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->t()V
 
     :cond_0
     return-void

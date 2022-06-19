@@ -3,7 +3,7 @@
 .source "PopupHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -61,7 +61,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper$showActions$2;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -70,9 +70,9 @@
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vk/im/ui/reporters/c;->b:Lcom/vk/im/ui/reporters/c;
+    sget-object v0, Lcom/vk/im/ui/reporters/DialogActionReporter;->INSTANCE:Lcom/vk/im/ui/reporters/DialogActionReporter;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/reporters/c;->a()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/reporters/DialogActionReporter;->a()V
 
     return-void
 .end method

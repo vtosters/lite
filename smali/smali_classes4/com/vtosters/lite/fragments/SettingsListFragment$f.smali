@@ -1,9 +1,9 @@
 .class Lcom/vtosters/lite/fragments/SettingsListFragment$f;
-.super Lcom/vtosters/lite/ui/b0/j;
+.super Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;
 .source "SettingsListFragment.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/n;
+.implements Lcom/vk/core/ui/MilkshakeProvider;
 
 
 # annotations
@@ -22,14 +22,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/fragments/SettingsListFragment;Lcom/vtosters/lite/ui/b0/j$b;)V
+.method constructor <init>(Lcom/vtosters/lite/fragments/SettingsListFragment;Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$b;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$f;->c:Lcom/vtosters/lite/fragments/SettingsListFragment;
 
     .line 2
-    invoke-direct {p0, p2}, Lcom/vtosters/lite/ui/b0/j;-><init>(Lcom/vtosters/lite/ui/b0/j$b;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;-><init>(Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$b;)V
 
     return-void
 .end method
@@ -40,7 +40,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/j;->getItemCount()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->getItemCount()I
 
     move-result v0
 
@@ -54,7 +54,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/j;->j()Ljava/util/List;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->j()Ljava/util/List;
 
     move-result-object v0
 
@@ -62,9 +62,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vtosters/lite/ui/b0/j$a;
+    check-cast p1, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
-    iget p1, p1, Lcom/vtosters/lite/ui/b0/j$a;->c:I
+    iget p1, p1, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->c:I
 
     and-int/lit8 p1, p1, 0x2
 
@@ -98,7 +98,7 @@
         value = {
             "()",
             "Ljava/util/ArrayList<",
-            "Lcom/vtosters/lite/ui/b0/j$a;",
+            "Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;",
             ">;"
         }
     .end annotation
@@ -117,7 +117,7 @@
 
     const/4 v2, 0x2
 
-    invoke-static {v2, v1}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v2, v1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v3
 
@@ -131,7 +131,7 @@
     if-eqz v3, :cond_2
 
     .line 4
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v3
 
@@ -152,7 +152,7 @@
     const/4 v3, 0x4
 
     .line 5
-    new-instance v10, Lcom/vtosters/lite/ui/b0/n/k$a;
+    new-instance v10, Lcom/vtosters/lite/ui/b0/n/PreferenceSwitchItemHolder$a;
 
     iget-object v4, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$f;->c:Lcom/vtosters/lite/fragments/SettingsListFragment;
 
@@ -181,23 +181,23 @@
 
     move-object v4, v10
 
-    invoke-direct/range {v4 .. v9}, Lcom/vtosters/lite/ui/b0/n/k$a;-><init>(IILjava/lang/Object;Ljava/lang/Runnable;Ljava/lang/Boolean;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vtosters/lite/ui/b0/n/PreferenceSwitchItemHolder$a;-><init>(IILjava/lang/Object;Ljava/lang/Runnable;Ljava/lang/Boolean;)V
 
     .line 7
-    invoke-static {v3, v10}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v3, v10}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v3
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 8
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    invoke-static {v2, v1}, Lcom/vtosters/lite/ui/b0/j$a;->a(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v2, v1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->a(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v3
 
@@ -205,7 +205,7 @@
 
     .line 9
     :cond_1
-    invoke-static {v2, v1}, Lcom/vtosters/lite/ui/b0/j$a;->d(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v2, v1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->d(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v3
 
@@ -213,7 +213,7 @@
 
     .line 10
     :cond_2
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v3
 
@@ -248,14 +248,14 @@
 
     const/4 v3, 0x1
 
-    invoke-static {v3, v4}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v3, v4}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v4
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 12
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v4
 
@@ -284,18 +284,18 @@
 
     move-result-object v7
 
-    const-class v8, Lcom/vtosters/lite/fragments/w1;
+    const-class v8, Lcom/vtosters/lite/fragments/SettingsAccountFragment;
 
     invoke-direct {v5, v4, v6, v7, v8}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Ljava/lang/Class;)V
 
-    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v4
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 14
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v4
 
@@ -324,11 +324,11 @@
 
     move-result-object v7
 
-    const-class v8, Lcom/vtosters/lite/fragments/z1;
+    const-class v8, Lcom/vtosters/lite/fragments/SettingsGeneralFragment;
 
     invoke-direct {v5, v4, v6, v7, v8}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Ljava/lang/Class;)V
 
-    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v4
 
@@ -344,7 +344,7 @@
     if-eqz v4, :cond_7
 
     .line 17
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v4
 
@@ -373,13 +373,13 @@
 
     move-result-object v7
 
-    new-instance v8, Lcom/vk/webapp/fragments/l$a;
+    new-instance v8, Lcom/vk/webapp/fragments/SecurityFragment$a;
 
-    invoke-direct {v8}, Lcom/vk/webapp/fragments/l$a;-><init>()V
+    invoke-direct {v8}, Lcom/vk/webapp/fragments/SecurityFragment$a;-><init>()V
 
-    invoke-direct {v5, v4, v6, v7, v8}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Lcom/vk/navigation/o;)V
+    invoke-direct {v5, v4, v6, v7, v8}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Lcom/vk/navigation/Navigator;)V
 
-    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v4
 
@@ -387,7 +387,7 @@
 
     .line 19
     :cond_7
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v4
 
@@ -416,20 +416,20 @@
 
     move-result-object v7
 
-    new-instance v8, Lcom/vk/webapp/fragments/h$a;
+    new-instance v8, Lcom/vk/webapp/fragments/PrivacyFragment$a;
 
-    invoke-direct {v8}, Lcom/vk/webapp/fragments/h$a;-><init>()V
+    invoke-direct {v8}, Lcom/vk/webapp/fragments/PrivacyFragment$a;-><init>()V
 
-    invoke-direct {v5, v4, v6, v7, v8}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Lcom/vk/navigation/o;)V
+    invoke-direct {v5, v4, v6, v7, v8}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Lcom/vk/navigation/Navigator;)V
 
-    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v4
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 21
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v4
 
@@ -458,29 +458,29 @@
 
     move-result-object v7
 
-    const-class v8, Lcom/vtosters/lite/fragments/w2/a;
+    const-class v8, Lcom/vtosters/lite/fragments/w2/BlacklistFragment;
 
     invoke-direct {v5, v4, v6, v7, v8}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Ljava/lang/Class;)V
 
-    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v4
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 23
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lb/h/h/d/c;->N0()Z
+    invoke-virtual {v4}, Lcom/vk/auth/api/VKAccount;->N0()Z
 
     move-result v4
 
     if-eqz v4, :cond_b
 
     .line 24
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v4
 
@@ -515,9 +515,9 @@
 
     invoke-direct {v8, v9}, Lcom/vk/identity/fragments/IdentityListFragment$a;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v5, v4, v6, v7, v8}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Lcom/vk/navigation/o;)V
+    invoke-direct {v5, v4, v6, v7, v8}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Lcom/vk/navigation/Navigator;)V
 
-    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v4
 
@@ -534,7 +534,7 @@
     if-eqz v4, :cond_d
 
     .line 27
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v4
 
@@ -567,7 +567,7 @@
 
     invoke-direct {v5, v4, v6, v7, v8}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Ljava/lang/Class;)V
 
-    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v4
 
@@ -575,12 +575,12 @@
 
     .line 29
     :cond_d
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v4
 
     .line 30
-    invoke-virtual {v4}, Lb/h/h/d/c;->Y()Z
+    invoke-virtual {v4}, Lcom/vk/auth/api/VKAccount;->Y()Z
 
     move-result v5
 
@@ -592,7 +592,7 @@
     invoke-direct {v5, v3}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$a;-><init>(I)V
 
     .line 32
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v6
 
@@ -621,9 +621,9 @@
 
     move-result-object v9
 
-    invoke-direct {v7, v6, v8, v9, v5}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Lcom/vk/navigation/o;)V
+    invoke-direct {v7, v6, v8, v9, v5}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Lcom/vk/navigation/Navigator;)V
 
-    invoke-static {v3, v7}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v3, v7}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v5
 
@@ -631,19 +631,19 @@
 
     .line 34
     :cond_f
-    invoke-virtual {v4}, Lb/h/h/d/c;->a1()Z
+    invoke-virtual {v4}, Lcom/vk/auth/api/VKAccount;->a1()Z
 
     move-result v5
 
     if-nez v5, :cond_10
 
-    invoke-virtual {v4}, Lb/h/h/d/c;->X0()Z
+    invoke-virtual {v4}, Lcom/vk/auth/api/VKAccount;->X0()Z
 
     move-result v5
 
     if-nez v5, :cond_10
 
-    invoke-virtual {v4}, Lb/h/h/d/c;->c1()Z
+    invoke-virtual {v4}, Lcom/vk/auth/api/VKAccount;->c1()Z
 
     move-result v5
 
@@ -659,7 +659,7 @@
 
     .line 35
     :cond_10
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v5
 
@@ -688,11 +688,11 @@
 
     move-result-object v8
 
-    const-class v9, Lcom/vtosters/lite/fragments/n2/q0;
+    const-class v9, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;
 
     invoke-direct {v6, v5, v7, v8, v9}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Ljava/lang/Class;)V
 
-    invoke-static {v3, v6}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v3, v6}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v5
 
@@ -700,14 +700,14 @@
 
     .line 37
     :cond_12
-    invoke-static {}, Lb/h/g/g/b;->l()Z
+    invoke-static {}, Lb/h/g/g/BuildInfo;->l()Z
 
     move-result v5
 
     if-eqz v5, :cond_14
 
     .line 38
-    invoke-virtual {v4}, Lb/h/h/d/c;->k0()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/vk/auth/api/VKAccount;->k0()Ljava/lang/String;
 
     move-result-object v5
 
@@ -717,26 +717,26 @@
 
     if-nez v5, :cond_13
 
-    invoke-virtual {v4}, Lb/h/h/d/c;->X0()Z
+    invoke-virtual {v4}, Lcom/vk/auth/api/VKAccount;->X0()Z
 
     move-result v5
 
     if-eqz v5, :cond_14
 
     :cond_13
-    sget-object v5, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v5, Lcom/vk/core/util/DeviceState;->INSTANCE:Lcom/vk/core/util/DeviceState;
 
     .line 39
-    invoke-virtual {v5}, Lcom/vk/core/util/v;->v()Z
+    invoke-virtual {v5}, Lcom/vk/core/util/DeviceState;->v()Z
 
     move-result v5
 
     if-eqz v5, :cond_14
 
-    sget-object v5, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v5, Lcom/vk/core/util/DeviceState;->INSTANCE:Lcom/vk/core/util/DeviceState;
 
     .line 40
-    invoke-virtual {v5}, Lcom/vk/core/util/v;->r()Z
+    invoke-virtual {v5}, Lcom/vk/core/util/DeviceState;->r()Z
 
     move-result v5
 
@@ -753,7 +753,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v4}, Lb/h/h/d/c;->C()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/vk/auth/api/VKAccount;->C()Ljava/lang/String;
 
     move-result-object v9
 
@@ -773,7 +773,7 @@
 
     invoke-direct {v5, v6, v7, v8, v9}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Ljava/lang/Runnable;)V
 
-    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v5
 
@@ -781,13 +781,13 @@
 
     .line 42
     :cond_14
-    invoke-virtual {v4}, Lb/h/h/d/c;->a1()Z
+    invoke-virtual {v4}, Lcom/vk/auth/api/VKAccount;->a1()Z
 
     move-result v5
 
     if-nez v5, :cond_15
 
-    invoke-virtual {v4}, Lb/h/h/d/c;->c1()Z
+    invoke-virtual {v4}, Lcom/vk/auth/api/VKAccount;->c1()Z
 
     move-result v4
 
@@ -824,17 +824,17 @@
     invoke-direct {v11, p0}, Lcom/vtosters/lite/fragments/SettingsListFragment$f$d;-><init>(Lcom/vtosters/lite/fragments/SettingsListFragment$f;)V
 
     .line 46
-    invoke-virtual/range {v5 .. v11}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v5 .. v11}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     .line 47
     :cond_16
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v4
 
     if-nez v4, :cond_17
 
-    invoke-static {v2, v1}, Lcom/vtosters/lite/ui/b0/j$a;->a(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v2, v1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->a(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v4
 
@@ -842,14 +842,14 @@
 
     .line 48
     :cond_17
-    invoke-static {v2, v1}, Lcom/vtosters/lite/ui/b0/j$a;->d(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v2, v1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->d(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v4
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 49
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v4
 
@@ -878,26 +878,26 @@
 
     move-result-object v7
 
-    new-instance v8, Lb/h/a/a$b;
+    new-instance v8, Lcom/vk/about/AboutAppFragment$b;
 
-    invoke-direct {v8}, Lb/h/a/a$b;-><init>()V
+    invoke-direct {v8}, Lcom/vk/about/AboutAppFragment$b;-><init>()V
 
-    invoke-direct {v5, v4, v6, v7, v8}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Lcom/vk/navigation/o;)V
+    invoke-direct {v5, v4, v6, v7, v8}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Lcom/vk/navigation/Navigator;)V
 
-    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v3, v5}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v3
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 51
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v3
 
     if-nez v3, :cond_19
 
-    invoke-static {v2, v1}, Lcom/vtosters/lite/ui/b0/j$a;->a(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v2, v1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->a(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v1
 
@@ -913,7 +913,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/vtosters/lite/ui/b0/j$a;->e(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v1, v2}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->e(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v1
 
@@ -926,14 +926,14 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/fragments/SettingsListFragment$f;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
+    invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/fragments/SettingsListFragment$f;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
     .locals 1
 
     const/4 v0, 0x2
@@ -949,21 +949,21 @@
     if-eq p2, v0, :cond_0
 
     .line 2
-    new-instance p2, Lcom/vtosters/lite/ui/b0/n/i;
+    new-instance p2, Lcom/vtosters/lite/ui/b0/n/PreferenceIconItemHolder;
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$f;->c:Lcom/vtosters/lite/fragments/SettingsListFragment;
 
-    invoke-direct {p2, p1, v0}, Lcom/vtosters/lite/ui/b0/n/i;-><init>(Landroid/view/ViewGroup;Lcom/vk/common/g/g;)V
+    invoke-direct {p2, p1, v0}, Lcom/vtosters/lite/ui/b0/n/PreferenceIconItemHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/common/g/VoidF1;)V
 
     return-object p2
 
     .line 3
     :cond_0
-    new-instance p2, Lcom/vtosters/lite/ui/b0/n/k;
+    new-instance p2, Lcom/vtosters/lite/ui/b0/n/PreferenceSwitchItemHolder;
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$f;->c:Lcom/vtosters/lite/fragments/SettingsListFragment;
 
-    invoke-direct {p2, p1, v0}, Lcom/vtosters/lite/ui/b0/n/k;-><init>(Landroid/view/ViewGroup;Lcom/vk/common/g/g;)V
+    invoke-direct {p2, p1, v0}, Lcom/vtosters/lite/ui/b0/n/PreferenceSwitchItemHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/common/g/VoidF1;)V
 
     return-object p2
 
@@ -977,9 +977,9 @@
 
     .line 5
     :cond_2
-    new-instance p2, Lcom/vtosters/lite/ui/b0/n/c;
+    new-instance p2, Lcom/vtosters/lite/ui/b0/n/BackgroundHolder;
 
-    invoke-direct {p2, p1}, Lcom/vtosters/lite/ui/b0/n/c;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vtosters/lite/ui/b0/n/BackgroundHolder;-><init>(Landroid/view/ViewGroup;)V
 
     return-object p2
 .end method

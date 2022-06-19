@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field private c:Lcom/facebook/login/a;
+.field private c:Lcom/facebook/login/GetTokenClient;
 
 
 # direct methods
@@ -57,22 +57,22 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/a;
+    iget-object v0, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/GetTokenClient;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/facebook/internal/o;->a()V
+    invoke-virtual {v0}, Lcom/facebook/internal/PlatformServiceClient;->a()V
 
     .line 3
-    iget-object v0, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/a;
+    iget-object v0, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/GetTokenClient;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/facebook/internal/o;->a(Lcom/facebook/internal/o$b;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/internal/PlatformServiceClient;->a(Lcom/facebook/internal/PlatformServiceClient$b;)V
 
     .line 4
-    iput-object v1, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/a;
+    iput-object v1, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/GetTokenClient;
 
     :cond_0
     return-void
@@ -132,7 +132,7 @@
 
     invoke-direct {v1, p0, p2, p1}, Lcom/facebook/login/GetTokenLoginMethodHandler$b;-><init>(Lcom/facebook/login/GetTokenLoginMethodHandler;Landroid/os/Bundle;Lcom/facebook/login/LoginClient$Request;)V
 
-    invoke-static {v0, v1}, Lcom/facebook/internal/r;->a(Ljava/lang/String;Lcom/facebook/internal/r$c;)V
+    invoke-static {v0, v1}, Lcom/facebook/internal/Utility;->a(Ljava/lang/String;Lcom/facebook/internal/Utility$c;)V
 
     :goto_1
     return-void
@@ -142,7 +142,7 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/facebook/login/a;
+    new-instance v0, Lcom/facebook/login/GetTokenClient;
 
     iget-object v1, p0, Lcom/facebook/login/LoginMethodHandler;->b:Lcom/facebook/login/LoginClient;
 
@@ -155,14 +155,14 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/facebook/login/a;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/facebook/login/GetTokenClient;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/a;
+    iput-object v0, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/GetTokenClient;
 
     .line 3
-    iget-object v0, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/a;
+    iget-object v0, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/GetTokenClient;
 
-    invoke-virtual {v0}, Lcom/facebook/internal/o;->b()Z
+    invoke-virtual {v0}, Lcom/facebook/internal/PlatformServiceClient;->b()Z
 
     move-result v0
 
@@ -184,9 +184,9 @@
     invoke-direct {v0, p0, p1}, Lcom/facebook/login/GetTokenLoginMethodHandler$a;-><init>(Lcom/facebook/login/GetTokenLoginMethodHandler;Lcom/facebook/login/LoginClient$Request;)V
 
     .line 6
-    iget-object p1, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/a;
+    iget-object p1, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/GetTokenClient;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/internal/o;->a(Lcom/facebook/internal/o$b;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/internal/PlatformServiceClient;->a(Lcom/facebook/internal/PlatformServiceClient$b;)V
 
     const/4 p1, 0x1
 
@@ -197,18 +197,18 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/a;
+    iget-object v0, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/GetTokenClient;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/facebook/internal/o;->a(Lcom/facebook/internal/o$b;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/internal/PlatformServiceClient;->a(Lcom/facebook/internal/PlatformServiceClient$b;)V
 
     .line 3
     :cond_0
-    iput-object v1, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/a;
+    iput-object v1, p0, Lcom/facebook/login/GetTokenLoginMethodHandler;->c:Lcom/facebook/login/GetTokenClient;
 
     .line 4
     iget-object v0, p0, Lcom/facebook/login/LoginMethodHandler;->b:Lcom/facebook/login/LoginClient;

@@ -13,7 +13,7 @@
     return-void
 .end method
 
-.method public static getNativeImageTranscoderFactory(IZ)Lcom/facebook/x/k/d;
+.method public static getNativeImageTranscoderFactory(IZ)Lcom/facebook/x/k/ImageTranscoderFactory;
     .locals 6
 
     const-string v0, "com.facebook.imagepipeline.nativecode.NativeJpegTranscoderFactory"
@@ -64,7 +64,7 @@
 
     move-result-object p0
 
-    check-cast p0, Lcom/facebook/x/k/d;
+    check-cast p0, Lcom/facebook/x/k/ImageTranscoderFactory;
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_6
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_5

@@ -3,12 +3,12 @@
 .source "AudioPlayerIpcClient.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audioipc/player/AudioPlayerIpcClient;-><init>(Landroid/content/Context;Ljava/util/concurrent/ExecutorService;Lcom/vk/bridges/f;Ljava/lang/String;Lcom/vk/music/restriction/i/a;Lcom/vk/music/notification/c;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/audioipc/player/AudioPlayerIpcClient;-><init>(Landroid/content/Context;Ljava/util/concurrent/ExecutorService;Lcom/vk/bridges/AuthBridge3;Ljava/lang/String;Lcom/vk/music/restriction/i/MusicRestrictionModel;Lcom/vk/music/notification/MusicNotificationManager;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/audioipc/core/communication/a<",
-        "Lcom/vk/audioipc/communication/p;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/audioipc/core/communication/ActionSender<",
+        "Lcom/vk/audioipc/communication/ServiceAction;",
         ">;>;"
     }
 .end annotation
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/audioipc/core/communication/a;
+.method public final invoke()Lcom/vk/audioipc/core/communication/ActionSender;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/audioipc/core/communication/a<",
-            "Lcom/vk/audioipc/communication/p;",
+            "Lcom/vk/audioipc/core/communication/ActionSender<",
+            "Lcom/vk/audioipc/communication/ServiceAction;",
             ">;"
         }
     .end annotation
@@ -60,7 +60,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/audioipc/player/AudioPlayerIpcClient$getActionSender$1;->this$0:Lcom/vk/audioipc/player/AudioPlayerIpcClient;
 
-    invoke-static {v0}, Lcom/vk/audioipc/player/AudioPlayerIpcClient;->a(Lcom/vk/audioipc/player/AudioPlayerIpcClient;)Lcom/vk/audioipc/core/communication/a;
+    invoke-static {v0}, Lcom/vk/audioipc/player/AudioPlayerIpcClient;->a(Lcom/vk/audioipc/player/AudioPlayerIpcClient;)Lcom/vk/audioipc/core/communication/ActionSender;
 
     move-result-object v0
 
@@ -71,7 +71,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/audioipc/player/AudioPlayerIpcClient$getActionSender$1;->invoke()Lcom/vk/audioipc/core/communication/a;
+    invoke-virtual {p0}, Lcom/vk/audioipc/player/AudioPlayerIpcClient$getActionSender$1;->invoke()Lcom/vk/audioipc/core/communication/ActionSender;
 
     move-result-object v0
 

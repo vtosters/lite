@@ -3,7 +3,7 @@
 .source "ItemHintView.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/actionlinks/views/holders/hint/b;
+.implements Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHint1;
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private a:Lcom/vtosters/lite/actionlinks/views/holders/hint/a;
+.field private a:Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHint;
 
 .field private final b:Landroid/widget/TextView;
 
@@ -36,7 +36,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHintView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHintView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -56,7 +56,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHintView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHintView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -87,7 +87,7 @@
 
     const-string p2, "findViewById(R.id.collection_item_hint_hint)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -96,7 +96,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -121,22 +121,22 @@
 
 
 # virtual methods
-.method public bridge synthetic getPresenter()Lb/h/r/a;
+.method public bridge synthetic getPresenter()Lb/h/r/BaseContract;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHintView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/holders/hint/a;
+    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHintView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHint;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vtosters/lite/actionlinks/views/holders/hint/a;
+.method public getPresenter()Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHint;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHintView;->a:Lcom/vtosters/lite/actionlinks/views/holders/hint/a;
+    iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHintView;->a:Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHint;
 
     return-object v0
 .end method
@@ -145,27 +145,27 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vtosters/lite/actionlinks/views/holders/hint/b$a;->a(Lcom/vtosters/lite/actionlinks/views/holders/hint/b;Z)V
+    invoke-static {p0, p1}, Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHint$a1;->a(Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHint1;Z)V
 
     return-void
 .end method
 
-.method public bridge synthetic setPresenter(Lb/h/r/a;)V
+.method public bridge synthetic setPresenter(Lb/h/r/BaseContract;)V
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/actionlinks/views/holders/hint/a;
+    check-cast p1, Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHint;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHintView;->setPresenter(Lcom/vtosters/lite/actionlinks/views/holders/hint/a;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHintView;->setPresenter(Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHint;)V
 
     return-void
 .end method
 
-.method public setPresenter(Lcom/vtosters/lite/actionlinks/views/holders/hint/a;)V
+.method public setPresenter(Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHint;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHintView;->a:Lcom/vtosters/lite/actionlinks/views/holders/hint/a;
+    iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHintView;->a:Lcom/vtosters/lite/actionlinks/views/holders/hint/ItemHint;
 
     return-void
 .end method

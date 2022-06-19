@@ -269,7 +269,7 @@
     iput-boolean v0, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->M:Z
 
     .line 21
-    sget-object v0, Lcom/pnikosis/materialishprogress/a;->ProgressWheel:[I
+    sget-object v0, Lcom/pnikosis/materialishprogress/R;->ProgressWheel:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -621,7 +621,7 @@
     iput v0, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->a:I
 
     .line 17
-    sget v0, Lcom/pnikosis/materialishprogress/a;->ProgressWheel_matProg_circleRadius:I
+    sget v0, Lcom/pnikosis/materialishprogress/R;->ProgressWheel_matProg_circleRadius:I
 
     iget v1, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->a:I
 
@@ -637,7 +637,7 @@
     iput v0, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->a:I
 
     .line 19
-    sget v0, Lcom/pnikosis/materialishprogress/a;->ProgressWheel_matProg_fillRadius:I
+    sget v0, Lcom/pnikosis/materialishprogress/R;->ProgressWheel_matProg_fillRadius:I
 
     const/4 v1, 0x0
 
@@ -648,7 +648,7 @@
     iput-boolean v0, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->d:Z
 
     .line 20
-    sget v0, Lcom/pnikosis/materialishprogress/a;->ProgressWheel_matProg_barWidth:I
+    sget v0, Lcom/pnikosis/materialishprogress/R;->ProgressWheel_matProg_barWidth:I
 
     iget v2, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->b:I
 
@@ -663,7 +663,7 @@
     iput v0, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->b:I
 
     .line 21
-    sget v0, Lcom/pnikosis/materialishprogress/a;->ProgressWheel_matProg_rimWidth:I
+    sget v0, Lcom/pnikosis/materialishprogress/R;->ProgressWheel_matProg_rimWidth:I
 
     iget v2, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->c:I
 
@@ -678,7 +678,7 @@
     iput v0, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->c:I
 
     .line 22
-    sget v0, Lcom/pnikosis/materialishprogress/a;->ProgressWheel_matProg_spinSpeed:I
+    sget v0, Lcom/pnikosis/materialishprogress/R;->ProgressWheel_matProg_spinSpeed:I
 
     iget v2, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->H:F
 
@@ -697,7 +697,7 @@
     iput v0, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->H:F
 
     .line 25
-    sget v0, Lcom/pnikosis/materialishprogress/a;->ProgressWheel_matProg_barSpinCycleTime:I
+    sget v0, Lcom/pnikosis/materialishprogress/R;->ProgressWheel_matProg_barSpinCycleTime:I
 
     iget-wide v2, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->f:D
 
@@ -713,7 +713,7 @@
     iput-wide v2, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->f:D
 
     .line 27
-    sget v0, Lcom/pnikosis/materialishprogress/a;->ProgressWheel_matProg_barColor:I
+    sget v0, Lcom/pnikosis/materialishprogress/R;->ProgressWheel_matProg_barColor:I
 
     iget v2, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->C:I
 
@@ -724,7 +724,7 @@
     iput v0, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->C:I
 
     .line 28
-    sget v0, Lcom/pnikosis/materialishprogress/a;->ProgressWheel_matProg_rimColor:I
+    sget v0, Lcom/pnikosis/materialishprogress/R;->ProgressWheel_matProg_rimColor:I
 
     iget v2, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->D:I
 
@@ -735,7 +735,7 @@
     iput v0, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->D:I
 
     .line 29
-    sget v0, Lcom/pnikosis/materialishprogress/a;->ProgressWheel_matProg_linearProgress:I
+    sget v0, Lcom/pnikosis/materialishprogress/R;->ProgressWheel_matProg_linearProgress:I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -744,7 +744,7 @@
     iput-boolean v0, p0, Lcom/pnikosis/materialishprogress/ProgressWheel;->J:Z
 
     .line 30
-    sget v0, Lcom/pnikosis/materialishprogress/a;->ProgressWheel_matProg_progressIndeterminate:I
+    sget v0, Lcom/pnikosis/materialishprogress/R;->ProgressWheel_matProg_progressIndeterminate:I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 

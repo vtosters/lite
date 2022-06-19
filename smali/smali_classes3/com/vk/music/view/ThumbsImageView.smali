@@ -3,7 +3,7 @@
 .source "ThumbsImageView.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -24,7 +24,7 @@
 
 .field private C:I
 
-.field private D:Lcom/facebook/imagepipeline/request/a;
+.field private D:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
 .field private E:Lcom/vk/music/view/ThumbsImageView;
 
@@ -79,7 +79,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/view/ThumbsImageView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/view/ThumbsImageView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     invoke-static {v1}, Lcom/facebook/imagepipeline/request/ImageRequest;->a(Ljava/lang/String;)Lcom/facebook/imagepipeline/request/ImageRequest;
@@ -106,7 +106,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/view/ThumbsImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/view/ThumbsImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -126,7 +126,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/view/ThumbsImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/view/ThumbsImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -147,7 +147,7 @@
     iput-object p3, p0, Lcom/vk/music/view/ThumbsImageView;->g:Ljava/util/List;
 
     .line 4
-    sget p3, Lcom/vk/music/m/b;->black_alpha8:I
+    sget p3, Lcom/vk/music/m/R3;->black_alpha8:I
 
     invoke-static {p1, p3}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;I)I
 
@@ -165,7 +165,7 @@
     if-eqz p2, :cond_3
 
     .line 6
-    sget-object v0, Lcom/vk/music/m/j;->ThumbsImageView:[I
+    sget-object v0, Lcom/vk/music/m/R9;->ThumbsImageView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -182,7 +182,7 @@
     iput v1, p0, Lcom/vk/music/view/ThumbsImageView;->F:I
 
     .line 8
-    sget v1, Lcom/vk/music/m/j;->ThumbsImageView_tiv_empty_tint:I
+    sget v1, Lcom/vk/music/m/R9;->ThumbsImageView_tiv_empty_tint:I
 
     invoke-virtual {v0, v1, p3}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -200,7 +200,7 @@
     iput v1, p0, Lcom/vk/music/view/ThumbsImageView;->H:I
 
     .line 10
-    sget v1, Lcom/vk/music/m/j;->ThumbsImageView_tiv_background_image:I
+    sget v1, Lcom/vk/music/m/R9;->ThumbsImageView_tiv_background_image:I
 
     invoke-virtual {v0, v1, p3}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -209,7 +209,7 @@
     iput v1, p0, Lcom/vk/music/view/ThumbsImageView;->I:I
 
     .line 11
-    sget v1, Lcom/vk/music/m/j;->ThumbsImageView_tiv_empty_resource:I
+    sget v1, Lcom/vk/music/m/R9;->ThumbsImageView_tiv_empty_resource:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -218,7 +218,7 @@
     iput-object v1, p0, Lcom/vk/music/view/ThumbsImageView;->J:Landroid/graphics/drawable/Drawable;
 
     .line 12
-    sget v1, Lcom/vk/music/m/j;->GenericDraweeHierarchy_roundedCornerRadius:I
+    sget v1, Lcom/vk/music/m/R9;->GenericDraweeHierarchy_roundedCornerRadius:I
 
     const/4 v2, 0x0
 
@@ -229,7 +229,7 @@
     iput v1, p0, Lcom/vk/music/view/ThumbsImageView;->O:F
 
     .line 13
-    sget v1, Lcom/vk/music/m/j;->ThumbsImageView_tiv_border_color:I
+    sget v1, Lcom/vk/music/m/R9;->ThumbsImageView_tiv_border_color:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -237,7 +237,7 @@
 
     if-nez v1, :cond_1
 
-    sget v1, Lcom/vk/music/m/j;->ThumbsImageView_tiv_border_width:I
+    sget v1, Lcom/vk/music/m/R9;->ThumbsImageView_tiv_border_width:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -274,7 +274,7 @@
     iput p2, p0, Lcom/vk/music/view/ThumbsImageView;->M:I
 
     .line 16
-    sget p2, Lcom/vk/music/m/j;->ThumbsImageView_tiv_border_color:I
+    sget p2, Lcom/vk/music/m/R9;->ThumbsImageView_tiv_border_color:I
 
     iget v1, p0, Lcom/vk/music/view/ThumbsImageView;->L:I
 
@@ -285,7 +285,7 @@
     iput p2, p0, Lcom/vk/music/view/ThumbsImageView;->L:I
 
     .line 17
-    sget p2, Lcom/vk/music/m/j;->ThumbsImageView_tiv_border_width:I
+    sget p2, Lcom/vk/music/m/R9;->ThumbsImageView_tiv_border_width:I
 
     iget v1, p0, Lcom/vk/music/view/ThumbsImageView;->N:F
 
@@ -385,47 +385,47 @@
     iput-object p2, p0, Lcom/vk/music/view/ThumbsImageView;->P:Lcom/facebook/drawee/drawable/RoundedCornersDrawable;
 
     .line 29
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/drawee/generic/a;
+    check-cast p1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     iget-object p2, p0, Lcom/vk/music/view/ThumbsImageView;->P:Lcom/facebook/drawee/drawable/RoundedCornersDrawable;
 
-    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/a;->d(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->d(Landroid/graphics/drawable/Drawable;)V
 
     .line 30
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/drawee/generic/a;
+    check-cast p1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     const-string p2, "hierarchy"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p3
 
-    check-cast p3, Lcom/facebook/drawee/generic/a;
+    check-cast p3, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    invoke-static {p3, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p3}, Lcom/facebook/drawee/generic/a;->b()I
+    invoke-virtual {p3}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->b()I
 
     move-result p2
 
     div-int/lit8 p2, p2, 0x2
 
-    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/a;->a(I)V
+    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(I)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -459,16 +459,16 @@
     return p0
 .end method
 
-.method private final a(Lcom/facebook/u/b/a/e;Ljava/util/List;)Lcom/facebook/u/b/a/e;
+.method private final a(Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;Ljava/util/List;)Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/u/b/a/e;",
+            "Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;",
             "Ljava/util/List<",
             "Lcom/vk/dto/music/Thumb;",
             ">;)",
-            "Lcom/facebook/u/b/a/e;"
+            "Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;"
         }
     .end annotation
 
@@ -478,7 +478,7 @@
     invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->b(Ljava/lang/Object;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     .line 13
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/common/internal/j;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/common/internal/Supplier;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     if-nez p2, :cond_0
 
@@ -550,9 +550,9 @@
     move-result-object p2
 
     .line 19
-    iget-object v0, p0, Lcom/vk/music/view/ThumbsImageView;->D:Lcom/facebook/imagepipeline/request/a;
+    iget-object v0, p0, Lcom/vk/music/view/ThumbsImageView;->D:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
-    invoke-virtual {p2, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p2, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/Postprocessor;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 20
     invoke-virtual {p2}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a()Lcom/facebook/imagepipeline/request/ImageRequest;
@@ -630,7 +630,7 @@
 
     invoke-direct {v0, v1, p0, p2}, Lcom/vk/music/view/ThumbsImageView$c;-><init>(Ljava/util/List;Lcom/vk/music/view/ThumbsImageView;Ljava/util/List;)V
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/common/internal/j;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/common/internal/Supplier;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     :goto_3
     return-object p1
@@ -714,35 +714,35 @@
     if-eqz v3, :cond_2
 
     .line 3
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     iget-object v3, p0, Lcom/vk/music/view/ThumbsImageView;->J:Landroid/graphics/drawable/Drawable;
 
-    sget-object v4, Lcom/facebook/drawee/drawable/r$b;->n:Lcom/facebook/drawee/drawable/r$b;
+    sget-object v4, Lcom/facebook/drawee/drawable/ScalingUtils$b;->n:Lcom/facebook/drawee/drawable/ScalingUtils$b;
 
-    invoke-virtual {v0, v3, v4}, Lcom/facebook/drawee/generic/a;->a(Landroid/graphics/drawable/Drawable;Lcom/facebook/drawee/drawable/r$b;)V
+    invoke-virtual {v0, v3, v4}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Landroid/graphics/drawable/Drawable;Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
 
     goto :goto_2
 
     .line 4
     :cond_2
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v3
 
-    check-cast v3, Lcom/facebook/drawee/generic/a;
+    check-cast v3, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    invoke-virtual {v3, v0}, Lcom/facebook/drawee/generic/a;->e(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v3, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->e(Landroid/graphics/drawable/Drawable;)V
 
     .line 5
     :goto_2
     iget-object v0, p0, Lcom/vk/music/view/ThumbsImageView;->g:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -798,37 +798,37 @@
     :cond_6
     sget-object v0, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->d()Lcom/facebook/u/b/a/e;
+    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->d()Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     move-result-object v0
 
     .line 10
     invoke-virtual {v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->j()Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast v0, Lcom/facebook/u/b/a/e;
+    check-cast v0, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 11
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getController()Lcom/facebook/u/e/a;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getController()Lcom/facebook/u/e/DraweeController;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     const-string v1, "FrescoWrapper.newDraweeC\u2026OldController(controller)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, Lcom/facebook/u/b/a/e;
+    check-cast v0, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 12
-    invoke-direct {p0, v0, p1}, Lcom/vk/music/view/ThumbsImageView;->a(Lcom/facebook/u/b/a/e;Ljava/util/List;)Lcom/facebook/u/b/a/e;
+    invoke-direct {p0, v0, p1}, Lcom/vk/music/view/ThumbsImageView;->a(Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;Ljava/util/List;)Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 13
-    invoke-virtual {v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/a;
+    invoke-virtual {v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/AbstractDraweeController;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/DraweeView;->setController(Lcom/facebook/u/e/a;)V
+    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/DraweeView;->setController(Lcom/facebook/u/e/DraweeController;)V
 
     :cond_7
     :goto_5
@@ -928,15 +928,15 @@
     invoke-virtual {p1, v0}, Lcom/facebook/drawee/drawable/RoundedCornersDrawable;->a([F)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/drawee/generic/a;
+    check-cast p1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     const-string p2, "hierarchy"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/facebook/drawee/generic/RoundingParams;
 
@@ -946,7 +946,7 @@
     invoke-virtual {p2, v0}, Lcom/facebook/drawee/generic/RoundingParams;->a([F)Lcom/facebook/drawee/generic/RoundingParams;
 
     .line 8
-    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     return-void
 .end method
@@ -1122,17 +1122,17 @@
     iput p1, p0, Lcom/vk/music/view/ThumbsImageView;->I:I
 
     .line 2
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {v1, p1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/a;->b(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->b(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -1150,11 +1150,11 @@
 
     .line 1
     :cond_0
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     invoke-virtual {p0}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
 
@@ -1162,13 +1162,13 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1, p1}, Lcom/vk/core/util/ContextExtKt;->j(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/a;->b(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->b(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -1254,7 +1254,7 @@
 
     const-string v3, "context"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v3, p0, Lcom/vk/music/view/ThumbsImageView;->F:I
 
@@ -1262,7 +1262,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/core/extensions/f;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/core/extensions/DrawableExt;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
 
@@ -1272,7 +1272,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/core/extensions/f;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/core/extensions/DrawableExt;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
 
     .line 3
     :cond_2
@@ -1376,11 +1376,11 @@
     return-void
 .end method
 
-.method public final setPostProcessorForSingle(Lcom/facebook/imagepipeline/request/a;)V
+.method public final setPostProcessorForSingle(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/music/view/ThumbsImageView;->D:Lcom/facebook/imagepipeline/request/a;
+    iput-object p1, p0, Lcom/vk/music/view/ThumbsImageView;->D:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
     return-void
 .end method

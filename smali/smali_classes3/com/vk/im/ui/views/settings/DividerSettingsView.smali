@@ -3,7 +3,7 @@
 .source "DividerSettingsView.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # instance fields
@@ -124,14 +124,14 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/im/ui/o;->DividerSettingsView:[I
+    sget-object v0, Lcom/vk/im/ui/R2;->DividerSettingsView:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 2
-    sget p2, Lcom/vk/im/ui/o;->DividerSettingsView_vkim_lineSize:I
+    sget p2, Lcom/vk/im/ui/R2;->DividerSettingsView_vkim_lineSize:I
 
     const/4 p3, 0x1
 
@@ -142,7 +142,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/settings/DividerSettingsView;->setLineSize(I)V
 
     .line 3
-    sget p2, Lcom/vk/im/ui/o;->DividerSettingsView_vkim_lineColor:I
+    sget p2, Lcom/vk/im/ui/R2;->DividerSettingsView_vkim_lineColor:I
 
     const/high16 p3, -0x1000000
 
@@ -308,7 +308,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/views/settings/DividerSettingsView;->a:Landroid/graphics/Paint;
 
-    sget v1, Lcom/vk/im/ui/c;->separator_alpha:I
+    sget v1, Lcom/vk/im/ui/R5;->separator_alpha:I
 
     invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 

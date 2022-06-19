@@ -3,12 +3,12 @@
 .source "AutoPlayDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;-><init>(Lcom/vk/core/util/b;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/ViewGroup;FLandroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/widget/ProgressBar;Landroid/view/View;Lcom/vk/libvideo/ui/DurationView;Lcom/google/android/exoplayer2/ui/VKSubtitleView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/libvideo/ui/VideoErrorView;Landroid/view/ViewGroup;Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;ZZLcom/vk/libvideo/ui/ActionLinkView;Lcom/vk/libvideo/ad/VideoAdLayout;)V
+    value = Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;-><init>(Lcom/vk/core/util/AdapterPosition;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/ViewGroup;FLandroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/widget/ProgressBar;Landroid/view/View;Lcom/vk/libvideo/ui/DurationView;Lcom/google/android/exoplayer2/ui/VKSubtitleView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/libvideo/ui/VideoErrorView;Landroid/view/ViewGroup;Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;ZZLcom/vk/libvideo/ui/ActionLinkView;Lcom/vk/libvideo/ad/VideoAdLayout;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/libvideo/autoplay/delegate/b;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;",
         ">;"
     }
 .end annotation
@@ -49,7 +49,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/libvideo/autoplay/delegate/b;
+.method public final invoke()Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;
     .locals 5
 
     .line 2
@@ -66,7 +66,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    new-instance v0, Lcom/vk/libvideo/autoplay/delegate/b;
+    new-instance v0, Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;
 
     iget-object v1, p0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$inlineLiveEventsDelegate$2;->$liveInlineHolder:Landroid/view/ViewGroup;
 
@@ -86,7 +86,7 @@
 
     invoke-direct {v4, p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$inlineLiveEventsDelegate$2$a;-><init>(Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$inlineLiveEventsDelegate$2;)V
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/libvideo/autoplay/delegate/b;-><init>(Landroid/view/ViewGroup;Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;ZLcom/vk/libvideo/live/views/live/d;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;-><init>(Landroid/view/ViewGroup;Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;ZLcom/vk/libvideo/live/views/live/LiveStateListner;)V
 
     goto :goto_0
 
@@ -101,7 +101,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$inlineLiveEventsDelegate$2;->invoke()Lcom/vk/libvideo/autoplay/delegate/b;
+    invoke-virtual {p0}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$inlineLiveEventsDelegate$2;->invoke()Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;
 
     move-result-object v0
 

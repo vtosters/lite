@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/fragments/z1;
+.field private final synthetic a:Lcom/vtosters/lite/fragments/SettingsGeneralFragment;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/z1;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/SettingsGeneralFragment;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/z;->a:Lcom/vtosters/lite/fragments/z1;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/z;->a:Lcom/vtosters/lite/fragments/SettingsGeneralFragment;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/z;->a:Lcom/vtosters/lite/fragments/z1;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/z;->a:Lcom/vtosters/lite/fragments/SettingsGeneralFragment;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/fragments/z1;->a(Landroid/content/DialogInterface;I)V
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/fragments/SettingsGeneralFragment;->a(Landroid/content/DialogInterface;I)V
 
     return-void
 .end method

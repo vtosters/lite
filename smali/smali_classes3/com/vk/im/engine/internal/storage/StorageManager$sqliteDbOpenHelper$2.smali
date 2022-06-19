@@ -3,12 +3,12 @@
 .source "StorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/StorageManager;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/im/engine/internal/storage/structure/c;Lcom/vk/im/engine/internal/storage/structure/a;Lcom/vk/im/engine/models/Member;Ljava/util/List;Lcom/vk/im/engine/internal/storage/a;Lcom/vk/im/engine/internal/storage/e;)V
+    value = Lcom/vk/im/engine/internal/storage/StorageManager;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/im/engine/internal/storage/structure/DbSchema;Lcom/vk/im/engine/internal/storage/structure/DbMigration;Lcom/vk/im/engine/models/Member;Ljava/util/List;Lcom/vk/im/engine/internal/storage/StorageChangesListener;Lcom/vk/im/engine/internal/storage/StorageTriggerFactory;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;",
         ">;"
     }
@@ -79,13 +79,13 @@
 
     iget-object v1, p0, Lcom/vk/im/engine/internal/storage/StorageManager$sqliteDbOpenHelper$2;->this$0:Lcom/vk/im/engine/internal/storage/StorageManager;
 
-    invoke-static {v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f(Lcom/vk/im/engine/internal/storage/StorageManager;)Lcom/vk/im/engine/internal/storage/structure/c;
+    invoke-static {v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f(Lcom/vk/im/engine/internal/storage/StorageManager;)Lcom/vk/im/engine/internal/storage/structure/DbSchema;
 
     move-result-object v4
 
     iget-object v1, p0, Lcom/vk/im/engine/internal/storage/StorageManager$sqliteDbOpenHelper$2;->this$0:Lcom/vk/im/engine/internal/storage/StorageManager;
 
-    invoke-static {v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->e(Lcom/vk/im/engine/internal/storage/StorageManager;)Lcom/vk/im/engine/internal/storage/structure/a;
+    invoke-static {v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->e(Lcom/vk/im/engine/internal/storage/StorageManager;)Lcom/vk/im/engine/internal/storage/structure/DbMigration;
 
     move-result-object v5
 
@@ -93,7 +93,7 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/im/engine/internal/storage/structure/c;Lcom/vk/im/engine/internal/storage/structure/a;Lcom/vk/im/engine/models/Member;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/internal/storage/DatabaseOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/im/engine/internal/storage/structure/DbSchema;Lcom/vk/im/engine/internal/storage/structure/DbMigration;Lcom/vk/im/engine/models/Member;)V
 
     return-object v0
 .end method

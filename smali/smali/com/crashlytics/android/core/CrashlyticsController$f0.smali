@@ -22,11 +22,11 @@
 
 .field private final b:Lcom/crashlytics/android/core/Report;
 
-.field private final c:Lcom/crashlytics/android/core/m0;
+.field private final c:Lcom/crashlytics/android/core/ReportUploader;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/crashlytics/android/core/Report;Lcom/crashlytics/android/core/m0;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/crashlytics/android/core/Report;Lcom/crashlytics/android/core/ReportUploader;)V
     .locals 0
 
     .line 1
@@ -39,7 +39,7 @@
     iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController$f0;->b:Lcom/crashlytics/android/core/Report;
 
     .line 4
-    iput-object p3, p0, Lcom/crashlytics/android/core/CrashlyticsController$f0;->c:Lcom/crashlytics/android/core/m0;
+    iput-object p3, p0, Lcom/crashlytics/android/core/CrashlyticsController$f0;->c:Lcom/crashlytics/android/core/ReportUploader;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 
     .line 2
     :cond_0
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object v0
 
@@ -70,14 +70,14 @@
 
     const-string v2, "Attempting to send crash report at time of crash..."
 
-    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$f0;->c:Lcom/crashlytics/android/core/m0;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$f0;->c:Lcom/crashlytics/android/core/ReportUploader;
 
     iget-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController$f0;->b:Lcom/crashlytics/android/core/Report;
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/m0;->a(Lcom/crashlytics/android/core/Report;)Z
+    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/ReportUploader;->a(Lcom/crashlytics/android/core/Report;)Z
 
     return-void
 .end method

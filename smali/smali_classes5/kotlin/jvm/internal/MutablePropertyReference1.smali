@@ -3,7 +3,7 @@
 .source "MutablePropertyReference1.java"
 
 # interfaces
-.implements Lkotlin/u/h;
+.implements Lkotlin/u/KProperty4;
 
 
 # direct methods
@@ -18,28 +18,28 @@
 
 
 # virtual methods
-.method public a()Lkotlin/u/l$a;
+.method public a()Lkotlin/u/KProperty$a;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lkotlin/jvm/internal/PropertyReference;->g()Lkotlin/u/j;
+    invoke-virtual {p0}, Lkotlin/jvm/internal/PropertyReference;->g()Lkotlin/u/KProperty5;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/u/h;
+    check-cast v0, Lkotlin/u/KProperty4;
 
-    invoke-interface {v0}, Lkotlin/u/l;->a()Lkotlin/u/l$a;
+    invoke-interface {v0}, Lkotlin/u/KProperty2;->a()Lkotlin/u/KProperty$a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected c()Lkotlin/u/b;
+.method protected c()Lkotlin/u/KCallable;
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/MutablePropertyReference1;)Lkotlin/u/h;
+    invoke-static {p0}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/MutablePropertyReference1;)Lkotlin/u/KProperty4;
 
     return-object p0
 .end method
@@ -48,7 +48,7 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0, p1}, Lkotlin/u/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Lkotlin/u/KProperty2;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

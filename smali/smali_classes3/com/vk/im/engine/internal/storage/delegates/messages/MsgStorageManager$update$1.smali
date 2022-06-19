@@ -3,7 +3,7 @@
 .source "MsgStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,16 +19,16 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lio/requery/android/database/sqlite/SQLiteDatabase;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $localIds:Lcom/vk/im/engine/utils/collection/g;
+.field final synthetic $localIds:Lcom/vk/im/engine/utils/collection/IntList;
 
 .field final synthetic $msgs:Ljava/util/Collection;
 
@@ -36,12 +36,12 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;Lcom/vk/im/engine/utils/collection/g;Ljava/util/Collection;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;Lcom/vk/im/engine/utils/collection/IntList;Ljava/util/Collection;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$update$1;->this$0:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;
 
-    iput-object p2, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$update$1;->$localIds:Lcom/vk/im/engine/utils/collection/g;
+    iput-object p2, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$update$1;->$localIds:Lcom/vk/im/engine/utils/collection/IntList;
 
     iput-object p3, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$update$1;->$msgs:Ljava/util/Collection;
 
@@ -60,9 +60,9 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$update$1;->this$0:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;
 
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$update$1;->$localIds:Lcom/vk/im/engine/utils/collection/g;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$update$1;->$localIds:Lcom/vk/im/engine/utils/collection/IntList;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseBooleanArray;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseBooleanArray;
 
     move-result-object p1
 
@@ -127,7 +127,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$update$1;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

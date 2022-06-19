@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/discover/holders/LazyStoriesHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/discover/b;Z)V
+    value = Lcom/vk/discover/holders/LazyStoriesHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/discover/DiscoverAdapter;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,7 +40,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/discover/holders/LazyStoriesHolder$a;->a:Lcom/vk/discover/holders/LazyStoriesHolder;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->f0()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->f0()V
 
     return-void
 .end method

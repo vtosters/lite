@@ -3,7 +3,7 @@
 .source "MainActivity.java"
 
 # interfaces
-.implements Lcom/vk/navigation/u;
+.implements Lcom/vk/navigation/ResulterProvider;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/navigation/c;",
+            "Lcom/vk/navigation/ActivityResulter;",
             ">;"
         }
     .end annotation
@@ -97,7 +97,7 @@
     if-eqz p1, :cond_0
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
 
     move-result-object p2
 
@@ -117,13 +117,13 @@
     if-nez p2, :cond_1
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
 
     move-result-object p1
 
-    sget-object p2, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
+    sget-object p2, Lcom/vk/newsfeed/Feed2049;->INSTANCE:Lcom/vk/newsfeed/Feed2049;
 
-    invoke-virtual {p2}, Lcom/vk/newsfeed/e;->d()Ljava/lang/Class;
+    invoke-virtual {p2}, Lcom/vk/newsfeed/Feed2049;->d()Ljava/lang/Class;
 
     move-result-object p2
 
@@ -142,10 +142,10 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/im/ui/p/f;->a:Lcom/vk/im/ui/p/f$a;
+    sget-object v0, Lcom/vk/im/ui/p/ImBridge14;->a:Lcom/vk/im/ui/p/ImBridge$a3;
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/im/ui/p/f$a;->a()Landroid/content/ComponentName;
+    invoke-virtual {v0}, Lcom/vk/im/ui/p/ImBridge$a3;->a()Landroid/content/ComponentName;
 
     move-result-object v0
 
@@ -163,7 +163,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/navigation/c;)V
+.method public a(Lcom/vk/navigation/ActivityResulter;)V
     .locals 1
 
     .line 6
@@ -174,7 +174,7 @@
     if-eqz v0, :cond_0
 
     .line 7
-    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->a(Lcom/vk/navigation/c;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->a(Lcom/vk/navigation/ActivityResulter;)V
 
     goto :goto_0
 
@@ -233,7 +233,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/navigation/c;)V
+.method public b(Lcom/vk/navigation/ActivityResulter;)V
     .locals 1
 
     .line 7
@@ -244,7 +244,7 @@
     if-eqz v0, :cond_0
 
     .line 8
-    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->b(Lcom/vk/navigation/c;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->b(Lcom/vk/navigation/ActivityResulter;)V
 
     goto :goto_0
 
@@ -289,7 +289,7 @@
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->x1()V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
 
     move-result-object v0
 
@@ -341,10 +341,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/navigation/c;
+    check-cast v1, Lcom/vk/navigation/ActivityResulter;
 
     .line 10
-    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/c;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/ActivityResulter;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_1
 
@@ -448,7 +448,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
@@ -472,13 +472,13 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-static {p0, v0, v1}, Lcom/vk/extensions/b;->a(Landroid/app/Activity;Landroid/view/View;Z)V
+    invoke-static {p0, v0, v1}, Lcom/vk/extensions/ActivityExt;->a(Landroid/app/Activity;Landroid/view/View;Z)V
 
     .line 13
     :cond_2
-    new-instance v0, Lcom/vk/core/view/a;
+    new-instance v0, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
 
-    invoke-direct {v0, p0}, Lcom/vk/core/view/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;-><init>(Landroid/content/Context;)V
 
     const v1, 0x7f0a0480
 
@@ -486,7 +486,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setId(I)V
 
     .line 15
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
 
     move-result-object v1
 
@@ -498,22 +498,22 @@
     move-result-object v0
 
     .line 17
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/d/c;->b1()Z
+    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->b1()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
     .line 18
-    invoke-static {}, Lcom/vtosters/lite/c0;->c()Lcom/vtosters/lite/c0;
+    invoke-static {}, Lcom/vtosters/lite/ShortcutManagerWrapper;->c()Lcom/vtosters/lite/ShortcutManagerWrapper;
 
     move-result-object v1
 
-    invoke-virtual {v1, p0}, Lcom/vtosters/lite/c0;->a(Landroid/content/Context;)V
+    invoke-virtual {v1, p0}, Lcom/vtosters/lite/ShortcutManagerWrapper;->a(Landroid/content/Context;)V
 
     .line 19
     invoke-virtual {v0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
@@ -521,9 +521,9 @@
     move-result-object v1
 
     .line 20
-    sget-object v2, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
+    sget-object v2, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
 
-    invoke-virtual {v2, v1}, Lcom/vk/navigation/o$b;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
+    invoke-virtual {v2, v1}, Lcom/vk/navigation/Navigator$b;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
 
     move-result-object v1
 
@@ -631,13 +631,13 @@
     iput-boolean v0, p0, Lcom/vtosters/lite/MainActivity;->I:Z
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
+    sget-object v1, Lcom/vk/newsfeed/Feed2049;->INSTANCE:Lcom/vk/newsfeed/Feed2049;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/e;->d()Ljava/lang/Class;
+    invoke-virtual {v1}, Lcom/vk/newsfeed/Feed2049;->d()Ljava/lang/Class;
 
     move-result-object v1
 
@@ -688,7 +688,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/core/util/j0;->a(Landroid/content/Intent;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/IntentUtils;->a(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -724,9 +724,9 @@
     invoke-virtual {v0}, Lcom/vk/updates/InAppUpdatesManager;->c()V
 
     .line 3
-    sget-object v0, Lcom/vk/newsfeed/e0;->e:Lcom/vk/newsfeed/e0;
+    sget-object v0, Lcom/vk/newsfeed/SpecialEventController;->INSTANCE:Lcom/vk/newsfeed/SpecialEventController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/e0;->e()V
+    invoke-virtual {v0}, Lcom/vk/newsfeed/SpecialEventController;->e()V
 
     return-void
 .end method

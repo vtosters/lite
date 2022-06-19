@@ -3,7 +3,7 @@
 .source "VkAlertDialog.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -30,14 +30,14 @@
 # instance fields
 .field final synthetic $dialog$inlined:Lkotlin/jvm/internal/Ref$ObjectRef;
 
-.field final synthetic $this_apply:Lcom/vk/core/dialogs/alert/a;
+.field final synthetic $this_apply:Lcom/vk/core/dialogs/alert/InputView;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/dialogs/alert/a;Lkotlin/jvm/internal/Ref$ObjectRef;)V
+.method constructor <init>(Lcom/vk/core/dialogs/alert/InputView;Lkotlin/jvm/internal/Ref$ObjectRef;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$show$$inlined$apply$lambda$1;->$this_apply:Lcom/vk/core/dialogs/alert/a;
+    iput-object p1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$show$$inlined$apply$lambda$1;->$this_apply:Lcom/vk/core/dialogs/alert/InputView;
 
     iput-object p2, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$show$$inlined$apply$lambda$1;->$dialog$inlined:Lkotlin/jvm/internal/Ref$ObjectRef;
 
@@ -62,15 +62,15 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->o()Lkotlin/jvm/b/c;
+    invoke-static {}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->o()Lkotlin/jvm/b/Functions1;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$show$$inlined$apply$lambda$1;->$this_apply:Lcom/vk/core/dialogs/alert/a;
+    iget-object v1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$show$$inlined$apply$lambda$1;->$this_apply:Lcom/vk/core/dialogs/alert/InputView;
 
-    invoke-virtual {v1}, Lcom/vk/core/dialogs/alert/a;->getEtInput()Landroid/widget/EditText;
+    invoke-virtual {v1}, Lcom/vk/core/dialogs/alert/InputView;->getEtInput()Landroid/widget/EditText;
 
     move-result-object v1
 
@@ -80,13 +80,13 @@
 
     const-string v2, "etInput.text"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1, v1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, v1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void
@@ -100,7 +100,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$show$$inlined$apply$lambda$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

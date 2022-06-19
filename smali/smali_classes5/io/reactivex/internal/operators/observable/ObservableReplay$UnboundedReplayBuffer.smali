@@ -71,7 +71,7 @@
 
     .line 6
     :cond_0
-    iget-object v0, p1, Lio/reactivex/internal/operators/observable/ObservableReplay$InnerDisposable;->child:Lc/a/r;
+    iget-object v0, p1, Lio/reactivex/internal/operators/observable/ObservableReplay$InnerDisposable;->child:Lio/reactivex/Observer;
 
     const/4 v1, 0x1
 
@@ -117,7 +117,7 @@
     move-result-object v4
 
     .line 12
-    invoke-static {v4, v0}, Lio/reactivex/internal/util/NotificationLite;->a(Ljava/lang/Object;Lc/a/r;)Z
+    invoke-static {v4, v0}, Lio/reactivex/internal/util/NotificationLite;->a(Ljava/lang/Object;Lio/reactivex/Observer;)Z
 
     move-result v4
 

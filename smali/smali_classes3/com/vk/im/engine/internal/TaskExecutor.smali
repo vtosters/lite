@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic i:[Lkotlin/u/j;
+.field static final synthetic i:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -30,20 +30,20 @@
     .end annotation
 .end field
 
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
-.field private final c:Lkotlin/e;
+.field private final c:Lkotlin/Lazy2;
 
-.field private final d:Lcom/vk/im/engine/d;
+.field private final d:Lcom/vk/im/engine/ImEnvironment;
 
-.field private final e:Lcom/vk/core/util/h1;
+.field private final e:Lcom/vk/core/util/TimeProvider;
 
 .field private final f:Lcom/vk/im/engine/internal/TaskExecutor$d;
 
-.field private final g:Lkotlin/jvm/b/b;
+.field private final g:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/String;",
             "Ljava/util/concurrent/ExecutorService;",
             ">;"
@@ -51,7 +51,7 @@
     .end annotation
 .end field
 
-.field private final h:Lcom/vk/im/log/a;
+.field private final h:Lcom/vk/im/log/ImLogger;
 
 
 # direct methods
@@ -62,11 +62,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -74,9 +74,9 @@
 
     const-string v5, "getCachedExecutor()Ljava/util/concurrent/ExecutorService;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -84,7 +84,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -92,26 +92,26 @@
 
     const-string v4, "getScheduledExecutor()Ljava/util/concurrent/ScheduledExecutorService;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/im/engine/internal/TaskExecutor;->i:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/im/engine/internal/TaskExecutor;->i:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/d;)V
+.method public constructor <init>(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 8
 
     .line 5
-    new-instance v2, Lcom/vk/core/util/h1;
+    new-instance v2, Lcom/vk/core/util/TimeProvider;
 
-    invoke-direct {v2}, Lcom/vk/core/util/h1;-><init>()V
+    invoke-direct {v2}, Lcom/vk/core/util/TimeProvider;-><init>()V
 
     .line 6
     new-instance v3, Lcom/vk/im/engine/internal/TaskExecutor$d;
@@ -136,25 +136,25 @@
     const-string v0, "ImTaskExecutor[BG]"
 
     .line 10
-    invoke-static {v0}, Lcom/vk/im/log/b;->a(Ljava/lang/String;)Lcom/vk/im/log/a;
+    invoke-static {v0}, Lcom/vk/im/log/ImLoggerFactory;->a(Ljava/lang/String;)Lcom/vk/im/log/ImLogger;
 
     move-result-object v7
 
     const-string v0, "ImLoggerFactory.create(\"ImTaskExecutor[BG]\")"
 
-    invoke-static {v7, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v0, p0
 
     move-object v1, p1
 
     .line 11
-    invoke-direct/range {v0 .. v7}, Lcom/vk/im/engine/internal/TaskExecutor;-><init>(Lcom/vk/im/engine/d;Lcom/vk/core/util/h1;Lcom/vk/im/engine/internal/TaskExecutor$d;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lcom/vk/im/log/a;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/im/engine/internal/TaskExecutor;-><init>(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/core/util/TimeProvider;Lcom/vk/im/engine/internal/TaskExecutor$d;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lcom/vk/im/log/ImLogger;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/d;Lcom/vk/core/util/h1;Lcom/vk/im/engine/internal/TaskExecutor$d;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lcom/vk/im/log/a;)V
+.method public constructor <init>(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/core/util/TimeProvider;Lcom/vk/im/engine/internal/TaskExecutor$d;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lcom/vk/im/log/ImLogger;)V
     .locals 0
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
@@ -162,24 +162,24 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
-            "Lcom/vk/core/util/h1;",
+            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/core/util/TimeProvider;",
             "Lcom/vk/im/engine/internal/TaskExecutor$d;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/String;",
             "+",
             "Ljava/util/concurrent/ExecutorService;",
             ">;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Ljava/util/concurrent/ExecutorService;",
             ">;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Ljava/util/concurrent/ScheduledExecutorService;",
             ">;",
-            "Lcom/vk/im/log/a;",
+            "Lcom/vk/im/log/ImLogger;",
             ")V"
         }
     .end annotation
@@ -187,15 +187,15 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/TaskExecutor;->d:Lcom/vk/im/engine/d;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/TaskExecutor;->d:Lcom/vk/im/engine/ImEnvironment;
 
-    iput-object p2, p0, Lcom/vk/im/engine/internal/TaskExecutor;->e:Lcom/vk/core/util/h1;
+    iput-object p2, p0, Lcom/vk/im/engine/internal/TaskExecutor;->e:Lcom/vk/core/util/TimeProvider;
 
     iput-object p3, p0, Lcom/vk/im/engine/internal/TaskExecutor;->f:Lcom/vk/im/engine/internal/TaskExecutor$d;
 
-    iput-object p4, p0, Lcom/vk/im/engine/internal/TaskExecutor;->g:Lkotlin/jvm/b/b;
+    iput-object p4, p0, Lcom/vk/im/engine/internal/TaskExecutor;->g:Lkotlin/jvm/b/Functions2;
 
-    iput-object p7, p0, Lcom/vk/im/engine/internal/TaskExecutor;->h:Lcom/vk/im/log/a;
+    iput-object p7, p0, Lcom/vk/im/engine/internal/TaskExecutor;->h:Lcom/vk/im/log/ImLogger;
 
     .line 2
     new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
@@ -207,38 +207,38 @@
     .line 3
     new-instance p1, Lcom/vk/im/engine/internal/TaskExecutor$cachedExecutor$2;
 
-    invoke-direct {p1, p5}, Lcom/vk/im/engine/internal/TaskExecutor$cachedExecutor$2;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {p1, p5}, Lcom/vk/im/engine/internal/TaskExecutor$cachedExecutor$2;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/TaskExecutor;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/TaskExecutor;->b:Lkotlin/Lazy2;
 
     .line 4
     new-instance p1, Lcom/vk/im/engine/internal/TaskExecutor$scheduledExecutor$2;
 
-    invoke-direct {p1, p6}, Lcom/vk/im/engine/internal/TaskExecutor$scheduledExecutor$2;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {p1, p6}, Lcom/vk/im/engine/internal/TaskExecutor$scheduledExecutor$2;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/TaskExecutor;->c:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/TaskExecutor;->c:Lkotlin/Lazy2;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/TaskExecutor;)Lcom/vk/im/engine/d;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/TaskExecutor;)Lcom/vk/im/engine/ImEnvironment;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->d:Lcom/vk/im/engine/d;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->d:Lcom/vk/im/engine/ImEnvironment;
 
     return-object p0
 .end method
 
-.method private final a(Ljava/lang/Object;Lcom/vk/im/engine/internal/causation/a;Lkotlin/jvm/b/a;)Ljava/util/concurrent/Callable;
+.method private final a(Ljava/lang/Object;Lcom/vk/im/engine/internal/causation/CauseProducer;Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Callable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -246,8 +246,8 @@
             "Ljava/lang/Object;",
             ">(",
             "Ljava/lang/Object;",
-            "Lcom/vk/im/engine/internal/causation/a;",
-            "Lkotlin/jvm/b/a<",
+            "Lcom/vk/im/engine/internal/causation/CauseProducer;",
+            "Lkotlin/jvm/b/Functions<",
             "+TT;>;)",
             "Ljava/util/concurrent/Callable<",
             "TT;>;"
@@ -257,7 +257,7 @@
     .line 24
     new-instance v0, Lcom/vk/im/engine/internal/TaskExecutor$e;
 
-    invoke-direct {v0, p0, p1, p3, p2}, Lcom/vk/im/engine/internal/TaskExecutor$e;-><init>(Lcom/vk/im/engine/internal/TaskExecutor;Ljava/lang/Object;Lkotlin/jvm/b/a;Lcom/vk/im/engine/internal/causation/a;)V
+    invoke-direct {v0, p0, p1, p3, p2}, Lcom/vk/im/engine/internal/TaskExecutor$e;-><init>(Lcom/vk/im/engine/internal/TaskExecutor;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lcom/vk/im/engine/internal/causation/CauseProducer;)V
 
     return-object v0
 .end method
@@ -287,9 +287,9 @@
     if-nez v0, :cond_1
 
     .line 22
-    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->g:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->g:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -304,16 +304,16 @@
     return-object v0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/TaskExecutor;Ljava/lang/String;Lcom/vk/im/engine/internal/causation/a;Ljava/lang/Throwable;)V
+.method public static final synthetic a(Lcom/vk/im/engine/internal/TaskExecutor;Ljava/lang/String;Lcom/vk/im/engine/internal/causation/CauseProducer;Ljava/lang/Throwable;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/internal/TaskExecutor;->a(Ljava/lang/String;Lcom/vk/im/engine/internal/causation/a;Ljava/lang/Throwable;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/internal/TaskExecutor;->a(Ljava/lang/String;Lcom/vk/im/engine/internal/causation/CauseProducer;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method private final a(Ljava/lang/String;Lcom/vk/im/engine/internal/causation/a;Ljava/lang/Throwable;)V
+.method private final a(Ljava/lang/String;Lcom/vk/im/engine/internal/causation/CauseProducer;Ljava/lang/Throwable;)V
     .locals 2
 
     const/4 v0, 0x0
@@ -321,7 +321,7 @@
     if-eqz p2, :cond_0
 
     .line 25
-    invoke-virtual {p2}, Lcom/vk/im/engine/internal/causation/a;->c()Ljava/lang/Throwable;
+    invoke-virtual {p2}, Lcom/vk/im/engine/internal/causation/CauseProducer;->c()Ljava/lang/Throwable;
 
     move-result-object v1
 
@@ -331,82 +331,82 @@
     move-object v1, v0
 
     :goto_0
-    invoke-static {p3, v1}, Lcom/vk/core/util/c0;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-static {p3, v1}, Lcom/vk/core/util/ExceptionExt;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 26
-    iget-object v1, p0, Lcom/vk/im/engine/internal/TaskExecutor;->h:Lcom/vk/im/log/a;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/TaskExecutor;->h:Lcom/vk/im/log/ImLogger;
 
-    invoke-interface {v1, p1, p3}, Lcom/vk/im/log/a;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, p1, p3}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 27
-    invoke-static {p3}, Lcom/vk/im/engine/exceptions/a;->b(Ljava/lang/Throwable;)Z
+    invoke-static {p3}, Lcom/vk/im/engine/exceptions/EngineExceptionsExt;->b(Ljava/lang/Throwable;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
     .line 28
-    iget-object p1, p0, Lcom/vk/im/engine/internal/TaskExecutor;->d:Lcom/vk/im/engine/d;
+    iget-object p1, p0, Lcom/vk/im/engine/internal/TaskExecutor;->d:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->c0()Lcom/vk/im/engine/ImConfig;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->c0()Lcom/vk/im/engine/ImConfig;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/ImConfig;->P()Lcom/vk/metrics/eventtracking/c;
+    invoke-virtual {p1}, Lcom/vk/im/engine/ImConfig;->P()Lcom/vk/metrics/eventtracking/Tracker;
 
     move-result-object p1
 
     if-eqz p3, :cond_1
 
-    invoke-interface {p1, p3}, Lcom/vk/metrics/eventtracking/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, p3}, Lcom/vk/metrics/eventtracking/Tracker;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 29
     :cond_2
     :goto_1
-    invoke-static {p3}, Lcom/vk/im/engine/exceptions/a;->a(Ljava/lang/Throwable;)Z
+    invoke-static {p3}, Lcom/vk/im/engine/exceptions/EngineExceptionsExt;->a(Ljava/lang/Throwable;)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
     .line 30
-    invoke-static {p2}, Lcom/vk/im/engine/internal/causation/c;->a(Lcom/vk/im/engine/internal/causation/a;)Lcom/vk/im/engine/internal/causation/e;
+    invoke-static {p2}, Lcom/vk/im/engine/internal/causation/CauseProducer1;->a(Lcom/vk/im/engine/internal/causation/CauseProducer;)Lcom/vk/im/engine/internal/causation/WithCause;
 
     move-result-object p1
 
-    invoke-static {p1, p3}, Lcom/vk/im/engine/internal/causation/c;->a(Ljava/lang/Object;Ljava/lang/Throwable;)Lcom/vk/im/engine/internal/causation/e;
+    invoke-static {p1, p3}, Lcom/vk/im/engine/internal/causation/CauseProducer1;->a(Ljava/lang/Object;Ljava/lang/Throwable;)Lcom/vk/im/engine/internal/causation/WithCause;
 
     move-result-object p1
 
     .line 31
-    iget-object p3, p0, Lcom/vk/im/engine/internal/TaskExecutor;->d:Lcom/vk/im/engine/d;
+    iget-object p3, p0, Lcom/vk/im/engine/internal/TaskExecutor;->d:Lcom/vk/im/engine/ImEnvironment;
 
-    new-instance v0, Lcom/vk/im/engine/events/x;
+    new-instance v0, Lcom/vk/im/engine/events/OnHistoryCorruptionDetectedEvent;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/internal/causation/e;->a()Lcom/vk/im/engine/internal/causation/a;
+    invoke-interface {p1}, Lcom/vk/im/engine/internal/causation/WithCause;->a()Lcom/vk/im/engine/internal/causation/CauseProducer;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lcom/vk/im/engine/events/x;-><init>(Lcom/vk/im/engine/internal/causation/a;)V
+    invoke-direct {v0, p1}, Lcom/vk/im/engine/events/OnHistoryCorruptionDetectedEvent;-><init>(Lcom/vk/im/engine/internal/causation/CauseProducer;)V
 
-    invoke-interface {p3, p2, v0}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/a;)V
+    invoke-interface {p3, p2, v0}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/Event;)V
 
     :cond_3
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/engine/internal/TaskExecutor;)Lcom/vk/im/log/a;
+.method public static final synthetic b(Lcom/vk/im/engine/internal/TaskExecutor;)Lcom/vk/im/log/ImLogger;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->h:Lcom/vk/im/log/a;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->h:Lcom/vk/im/log/ImLogger;
 
     return-object p0
 .end method
@@ -414,15 +414,15 @@
 .method private final b()Ljava/util/concurrent/ExecutorService;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/engine/internal/TaskExecutor;->i:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/engine/internal/TaskExecutor;->i:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -443,15 +443,15 @@
 .method private final c()Ljava/util/concurrent/ScheduledExecutorService;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->c:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/engine/internal/TaskExecutor;->i:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/engine/internal/TaskExecutor;->i:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -460,48 +460,48 @@
     return-object v0
 .end method
 
-.method public static final synthetic d(Lcom/vk/im/engine/internal/TaskExecutor;)Lcom/vk/core/util/h1;
+.method public static final synthetic d(Lcom/vk/im/engine/internal/TaskExecutor;)Lcom/vk/core/util/TimeProvider;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->e:Lcom/vk/core/util/h1;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->e:Lcom/vk/core/util/TimeProvider;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
+.method public final a(Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<V:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/vk/im/engine/i/c<",
+            "Lcom/vk/im/engine/i/ImEngineCmd<",
             "TV;>;)TV;"
         }
     .end annotation
 
     .line 18
-    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->d:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->d:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/internal/causation/e;->a()Lcom/vk/im/engine/internal/causation/a;
+    invoke-interface {p1}, Lcom/vk/im/engine/internal/causation/WithCause;->a()Lcom/vk/im/engine/internal/causation/CauseProducer;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/im/engine/d;->a(Lcom/vk/im/engine/internal/causation/a;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/engine/ImEnvironment;->a(Lcom/vk/im/engine/internal/causation/CauseProducer;)V
 
     .line 19
-    invoke-interface {p1}, Lcom/vk/im/engine/internal/causation/e;->a()Lcom/vk/im/engine/internal/causation/a;
+    invoke-interface {p1}, Lcom/vk/im/engine/internal/causation/WithCause;->a()Lcom/vk/im/engine/internal/causation/CauseProducer;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/im/engine/internal/TaskExecutor$run$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/internal/TaskExecutor$run$1;-><init>(Lcom/vk/im/engine/internal/TaskExecutor;Lcom/vk/im/engine/i/c;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/internal/TaskExecutor$run$1;-><init>(Lcom/vk/im/engine/internal/TaskExecutor;Lcom/vk/im/engine/i/ImEngineCmd;)V
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/vk/im/engine/internal/TaskExecutor;->a(Ljava/lang/Object;Lcom/vk/im/engine/internal/causation/a;Lkotlin/jvm/b/a;)Ljava/util/concurrent/Callable;
+    invoke-direct {p0, p1, v0, v1}, Lcom/vk/im/engine/internal/TaskExecutor;->a(Ljava/lang/Object;Lcom/vk/im/engine/internal/causation/CauseProducer;Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Callable;
 
     move-result-object p1
 
@@ -636,22 +636,22 @@
     invoke-direct {v1, v2, v0}, Lcom/vk/im/engine/exceptions/ImEngineException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 14
-    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->h:Lcom/vk/im/log/a;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->h:Lcom/vk/im/log/ImLogger;
 
-    invoke-interface {v0, v1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
 
     .line 15
-    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->d:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->d:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/d;->c0()Lcom/vk/im/engine/ImConfig;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/vk/im/engine/ImConfig;->P()Lcom/vk/metrics/eventtracking/c;
+    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->c0()Lcom/vk/im/engine/ImConfig;
 
     move-result-object v0
 
-    invoke-interface {v0, v1}, Lcom/vk/metrics/eventtracking/c;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v0}, Lcom/vk/im/engine/ImConfig;->P()Lcom/vk/metrics/eventtracking/Tracker;
+
+    move-result-object v0
+
+    invoke-interface {v0, v1}, Lcom/vk/metrics/eventtracking/Tracker;->a(Ljava/lang/Throwable;)V
 
     .line 16
     :goto_2
@@ -674,14 +674,14 @@
     throw v0
 .end method
 
-.method public final declared-synchronized b(Lcom/vk/im/engine/i/c;)Ljava/util/concurrent/Future;
+.method public final declared-synchronized b(Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/util/concurrent/Future;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<V:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/vk/im/engine/i/c<",
+            "Lcom/vk/im/engine/i/ImEngineCmd<",
             "TV;>;)",
             "Ljava/util/concurrent/Future<",
             "TV;>;"
@@ -692,16 +692,16 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->d:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/TaskExecutor;->d:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/internal/causation/e;->a()Lcom/vk/im/engine/internal/causation/a;
+    invoke-interface {p1}, Lcom/vk/im/engine/internal/causation/WithCause;->a()Lcom/vk/im/engine/internal/causation/CauseProducer;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/im/engine/d;->a(Lcom/vk/im/engine/internal/causation/a;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/engine/ImEnvironment;->a(Lcom/vk/im/engine/internal/causation/CauseProducer;)V
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/i/c;->b()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/im/engine/i/ImEngineCmd;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -709,15 +709,15 @@
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/vk/im/engine/internal/causation/e;->a()Lcom/vk/im/engine/internal/causation/a;
+    invoke-interface {p1}, Lcom/vk/im/engine/internal/causation/WithCause;->a()Lcom/vk/im/engine/internal/causation/CauseProducer;
 
     move-result-object v1
 
     new-instance v2, Lcom/vk/im/engine/internal/TaskExecutor$submit$1;
 
-    invoke-direct {v2, p0, p1}, Lcom/vk/im/engine/internal/TaskExecutor$submit$1;-><init>(Lcom/vk/im/engine/internal/TaskExecutor;Lcom/vk/im/engine/i/c;)V
+    invoke-direct {v2, p0, p1}, Lcom/vk/im/engine/internal/TaskExecutor$submit$1;-><init>(Lcom/vk/im/engine/internal/TaskExecutor;Lcom/vk/im/engine/i/ImEngineCmd;)V
 
-    invoke-direct {p0, p1, v1, v2}, Lcom/vk/im/engine/internal/TaskExecutor;->a(Ljava/lang/Object;Lcom/vk/im/engine/internal/causation/a;Lkotlin/jvm/b/a;)Ljava/util/concurrent/Callable;
+    invoke-direct {p0, p1, v1, v2}, Lcom/vk/im/engine/internal/TaskExecutor;->a(Ljava/lang/Object;Lcom/vk/im/engine/internal/causation/CauseProducer;Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Callable;
 
     move-result-object p1
 
@@ -727,7 +727,7 @@
 
     const-string v0, "executor(cmd.queueName).\u2026{ cmd.onExecute(imEnv) })"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

@@ -3,7 +3,7 @@
 .source "TintTextView.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # instance fields
@@ -76,7 +76,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/TintTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/TintTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -96,7 +96,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/TintTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/TintTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -108,7 +108,7 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/vk/core/view/TextViewColorStateListAndAlphaSupportPreV23;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 3
-    sget-object p3, Lb/h/z/m;->TintTextView:[I
+    sget-object p3, Lb/h/z/R3;->TintTextView:[I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -130,7 +130,7 @@
     .line 5
     :cond_0
     :goto_0
-    sget p2, Lb/h/z/m;->TintTextView_backgroundTint:I
+    sget p2, Lb/h/z/R3;->TintTextView_backgroundTint:I
 
     const/4 p3, 0x0
 
@@ -141,21 +141,21 @@
     iput p2, p0, Lcom/vk/core/view/TintTextView;->b:I
 
     .line 6
-    sget p2, Lb/h/z/m;->TintTextView_drawableTint:I
+    sget p2, Lb/h/z/R3;->TintTextView_drawableTint:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result p2
 
     .line 7
-    sget v0, Lb/h/z/m;->TintTextView_drawableLeftTint:I
+    sget v0, Lb/h/z/R3;->TintTextView_drawableLeftTint:I
 
     invoke-virtual {p1, v0, p2}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result v0
 
     .line 8
-    sget v1, Lb/h/z/m;->TintTextView_drawableStartTint:I
+    sget v1, Lb/h/z/R3;->TintTextView_drawableStartTint:I
 
     invoke-virtual {p1, v1, v0}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -164,7 +164,7 @@
     iput v0, p0, Lcom/vk/core/view/TintTextView;->c:I
 
     .line 9
-    sget v0, Lb/h/z/m;->TintTextView_drawableTopTint:I
+    sget v0, Lb/h/z/R3;->TintTextView_drawableTopTint:I
 
     invoke-virtual {p1, v0, p2}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -173,14 +173,14 @@
     iput v0, p0, Lcom/vk/core/view/TintTextView;->d:I
 
     .line 10
-    sget v0, Lb/h/z/m;->TintTextView_drawableRightTint:I
+    sget v0, Lb/h/z/R3;->TintTextView_drawableRightTint:I
 
     invoke-virtual {p1, v0, p2}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result v0
 
     .line 11
-    sget v1, Lb/h/z/m;->TintTextView_drawableEndTint:I
+    sget v1, Lb/h/z/R3;->TintTextView_drawableEndTint:I
 
     invoke-virtual {p1, v1, v0}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -189,7 +189,7 @@
     iput v0, p0, Lcom/vk/core/view/TintTextView;->e:I
 
     .line 12
-    sget v0, Lb/h/z/m;->TintTextView_drawableBottomTint:I
+    sget v0, Lb/h/z/R3;->TintTextView_drawableBottomTint:I
 
     invoke-virtual {p1, v0, p2}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -283,7 +283,7 @@
     throw p2
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -318,7 +318,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/view/TintTextView;->E:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-static {p1, p2, v0}, Lcom/vk/core/extensions/f;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p2, v0}, Lcom/vk/core/extensions/DrawableExt;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
 
@@ -350,7 +350,7 @@
 
     const-string v1, "this.compoundDrawables"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawablesRelative()[Landroid/graphics/drawable/Drawable;
@@ -359,7 +359,7 @@
 
     const-string v2, "this.compoundDrawablesRelative"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -601,7 +601,7 @@
 
     const-string v1, "this.compoundDrawablesRelative"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -643,7 +643,7 @@
 
     const-string v1, "this.compoundDrawablesRelative"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -711,7 +711,7 @@
 
     const-string v1, "this.compoundDrawablesRelative"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -753,7 +753,7 @@
 
     const-string v1, "this.compoundDrawablesRelative"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -811,7 +811,7 @@
 
     const-string v1, "this.compoundDrawablesRelative"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 

@@ -13,11 +13,11 @@
 
 
 # static fields
-.field static final synthetic q:[Lkotlin/u/j;
+.field static final synthetic q:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lio/reactivex/disposables/a;
+.field private final a:Lio/reactivex/disposables/CompositeDisposable;
 
 .field private b:Landroid/view/ViewGroup;
 
@@ -35,27 +35,27 @@
 
 .field private i:Lcom/vk/core/dialogs/bottomsheet/BottomSheetViewer;
 
-.field private j:Lkotlin/jvm/b/a;
+.field private j:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private k:Lkotlin/jvm/b/a;
+.field private k:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final l:Lkotlin/e;
+.field private final l:Lkotlin/Lazy2;
 
 .field private m:I
 
@@ -72,13 +72,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -86,21 +86,21 @@
 
     const-string v4, "getLayoutInflater()Landroid/view/LayoutInflater;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->q:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->q:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -116,22 +116,22 @@
     iput-object p2, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->p:Lcom/vk/im/ui/components/msg_send/picker/PickerVc$b;
 
     .line 2
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 3
     new-instance p1, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$layoutInflater$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$layoutInflater$2;-><init>(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->l:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->l:Lkotlin/Lazy2;
 
     const/4 p1, -0x1
 
@@ -235,16 +235,16 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/a;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 6
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->k:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->k:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -255,12 +255,12 @@
 
     .line 20
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -271,7 +271,7 @@
 
     .line 17
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -294,11 +294,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/a;)V
+.method public static final synthetic b(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->j:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->j:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -325,18 +325,18 @@
     :cond_0
     const-string p0, "captionView"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)Lio/reactivex/disposables/a;
+.method public static final synthetic e(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)Lio/reactivex/disposables/CompositeDisposable;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a:Lio/reactivex/disposables/a;
+    iget-object p0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a:Lio/reactivex/disposables/CompositeDisposable;
 
     return-object p0
 .end method
@@ -362,15 +362,15 @@
 .method private final h()Landroid/view/LayoutInflater;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->l:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->l:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->q:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->q:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -390,20 +390,20 @@
     return-object p0
 .end method
 
-.method public static final synthetic i(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)Lkotlin/jvm/b/a;
+.method public static final synthetic i(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)Lkotlin/jvm/b/Functions;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->k:Lkotlin/jvm/b/a;
+    iget-object p0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->k:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method
 
-.method public static final synthetic j(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)Lkotlin/jvm/b/a;
+.method public static final synthetic j(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;)Lkotlin/jvm/b/Functions;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->j:Lkotlin/jvm/b/a;
+    iget-object p0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->j:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method
@@ -439,7 +439,7 @@
     :cond_0
     const-string p0, "sendButton"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -493,7 +493,7 @@
 
     .line 13
     :cond_1
-    iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->j:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->j:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_2
 
@@ -522,24 +522,24 @@
     const/4 p1, 0x0
 
     .line 16
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->k:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->k:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 21
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->j:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->j:Lkotlin/jvm/b/Functions;
 
     .line 22
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->n:Landroid/os/Handler;
@@ -559,15 +559,15 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/b;)V
+.method public final a(Lkotlin/jvm/b/Functions2;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/core/view/search/ModernSearchView;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -575,9 +575,9 @@
     .line 18
     new-instance v0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$expandAndDo$1;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$expandAndDo$1;-><init>(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc$expandAndDo$1;-><init>(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->k:Lkotlin/jvm/b/a;
+    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->k:Lkotlin/jvm/b/Functions;
 
     .line 19
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->i:Lcom/vk/core/dialogs/bottomsheet/BottomSheetViewer;
@@ -615,7 +615,7 @@
     :cond_1
     const-string v0, "captionView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

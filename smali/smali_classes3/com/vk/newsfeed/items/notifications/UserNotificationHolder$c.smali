@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -586,15 +586,15 @@
     if-eqz p1, :cond_5
 
     .line 24
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
     const/16 p3, 0x6c
 
-    invoke-virtual {p1, p3, p2}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, p3, p2}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -619,13 +619,13 @@
     if-eqz p3, :cond_4
 
     .line 27
-    sget-object v0, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v0, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     iget-object v2, p2, Lcom/vk/dto/common/data/UserNotification;->C:Ljava/lang/String;
 
     const-string p2, "notification.buttonUrl"
 
-    invoke-static {v2, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -635,7 +635,7 @@
 
     move-object v1, p1
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -645,7 +645,7 @@
 
     iget-object p2, p2, Lcom/vk/dto/common/data/UserNotification;->D:Ljava/lang/String;
 
-    invoke-static {p1, p3, p2}, Lcom/vk/common/links/e;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p3, p2}, Lcom/vk/common/links/LinkUtils;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -676,13 +676,13 @@
 
     .line 30
     :goto_0
-    sget-object v1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0, p1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v1, v0, p1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 31
     iget-boolean v0, p1, Lcom/vk/dto/common/data/UserNotification;->b:Z
@@ -690,25 +690,25 @@
     if-nez v0, :cond_1
 
     .line 32
-    new-instance v0, Lcom/vk/api/internal/h;
+    new-instance v0, Lcom/vk/api/internal/InternalHideNotificationRequest;
 
     iget v1, p1, Lcom/vk/dto/common/data/UserNotification;->a:I
 
-    invoke-direct {v0, p2, v1}, Lcom/vk/api/internal/h;-><init>(ZI)V
+    invoke-direct {v0, p2, v1}, Lcom/vk/api/internal/InternalHideNotificationRequest;-><init>(ZI)V
 
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->h()Lcom/vk/api/base/d;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->h()Lcom/vk/api/base/ApiRequest;
 
     .line 33
     new-instance p2, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$c$a;
 
     invoke-direct {p2, p1}, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$c$a;-><init>(Lcom/vk/dto/common/data/UserNotification;)V
 
-    invoke-virtual {v0, p2}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, p2}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p1
 
     .line 34
-    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     :cond_1
     return-void

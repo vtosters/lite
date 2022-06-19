@@ -1,9 +1,9 @@
 .class public final Lcom/vk/debug/TogglesFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "TogglesFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/v;
+.implements Lcom/vk/navigation/ScrolledToTop;
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 .field private H:Lcom/vk/core/view/search/RoundedSearchView;
 
-.field private I:Lio/reactivex/disposables/b;
+.field private I:Lio/reactivex/disposables/Disposable;
 
 .field private final J:Lcom/vk/debug/TogglesFragment$c;
 
@@ -35,7 +35,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/debug/TogglesFragment$c;
@@ -108,7 +108,7 @@
 
     const-string v3, "Locale.ENGLISH"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v4, "null cannot be cast to non-null type java.lang.String"
 
@@ -120,16 +120,16 @@
 
     const-string v5, "(this as java.lang.String).toLowerCase(locale)"
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lcom/vk/core/extensions/z;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/core/extensions/StringExt;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 3
     sget-object v6, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    invoke-static {v6, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p1, :cond_8
 
@@ -137,9 +137,9 @@
 
     move-result-object p1
 
-    invoke-static {p1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lcom/vk/core/extensions/z;->g(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/core/extensions/StringExt;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -183,7 +183,7 @@
 
     sget-object v10, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    invoke-static {v10, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v9, :cond_6
 
@@ -191,7 +191,7 @@
 
     move-result-object v9
 
-    invoke-static {v9, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v10, 0x0
 
@@ -263,11 +263,11 @@
     .locals 7
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -275,7 +275,7 @@
 
     const-string v1, "AppContextHolder.context.resources"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -309,37 +309,37 @@
 
     .line 4
     :cond_0
-    instance-of v3, v2, Lcom/vk/lists/s;
+    instance-of v3, v2, Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     if-eqz v3, :cond_1
 
     .line 5
-    check-cast v2, Lcom/vk/lists/s;
+    check-cast v2, Lcom/vk/lists/PaginatedRecyclerAdapter;
 
-    iget-object v2, v2, Lcom/vk/lists/s;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v2, v2, Lcom/vk/lists/PaginatedRecyclerAdapter;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     .line 6
     :cond_1
-    new-instance v3, Lcom/vk/core/ui/d;
+    new-instance v3, Lcom/vk/core/ui/CardItemDecorator;
 
     iget-object v4, p0, Lcom/vk/debug/TogglesFragment;->F:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz v2, :cond_8
 
-    check-cast v2, Lcom/vk/core/ui/o;
+    check-cast v2, Lcom/vk/core/ui/Provider;
 
     xor-int/lit8 v5, v1, 0x1
 
-    invoke-direct {v3, v4, v2, v5}, Lcom/vk/core/ui/d;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/o;Z)V
+    invoke-direct {v3, v4, v2, v5}, Lcom/vk/core/ui/CardItemDecorator;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/Provider;Z)V
 
     const/high16 v2, 0x40c00000    # 6.0f
 
     .line 7
-    invoke-static {v2}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v2}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v4
 
-    invoke-static {v2}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v2}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v2
 
@@ -349,7 +349,7 @@
 
     const/high16 v6, 0x41000000    # 8.0f
 
-    invoke-static {v6}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v6}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v6
 
@@ -359,7 +359,7 @@
     const/4 v6, 0x0
 
     :goto_0
-    invoke-virtual {v3, v4, v2, v6, v5}, Lcom/vk/core/ui/d;->a(IIII)V
+    invoke-virtual {v3, v4, v2, v6, v5}, Lcom/vk/core/ui/CardItemDecorator;->a(IIII)V
 
     .line 8
     iget-object v2, p0, Lcom/vk/debug/TogglesFragment;->F:Landroidx/recyclerview/widget/RecyclerView;
@@ -384,7 +384,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v0
 
@@ -434,7 +434,7 @@
 
     .line 14
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -483,17 +483,17 @@
 
     invoke-direct {v1, p0}, Lcom/vk/debug/TogglesFragment$setupSearchView$1;-><init>(Lcom/vk/debug/TogglesFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/RoundedSearchView;->setEditMode(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/RoundedSearchView;->setEditMode(Lkotlin/jvm/b/Functions;)V
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/core/view/search/RoundedSearchView;->d()Lb/h/v/c;
+    invoke-virtual {v0}, Lcom/vk/core/view/search/RoundedSearchView;->d()Lb/h/v/InitialValueObservable;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Lcom/vk/debug/TogglesFragment$d;->a:Lcom/vk/debug/TogglesFragment$d;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -502,11 +502,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/debug/TogglesFragment$e;-><init>(Lcom/vk/debug/TogglesFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/debug/TogglesFragment;->I:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/debug/TogglesFragment;->I:Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -547,7 +547,7 @@
     .line 4
     iget-object v1, p0, Lcom/vk/debug/TogglesFragment;->G:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {p0, v1}, Lcom/vtosters/lite/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, v1}, Lcom/vtosters/lite/ViewUtils;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     .line 5
     new-instance v1, Lcom/vk/debug/TogglesFragment$f;
@@ -567,7 +567,7 @@
 
     .line 7
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -612,19 +612,19 @@
     if-eqz v0, :cond_2
 
     .line 2
-    invoke-static {}, Lcom/vk/core/utils/i;->b()Z
+    invoke-static {}, Lcom/vk/core/utils/VoiceUtils;->b()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
     .line 3
-    invoke-static {v0}, Lcom/vk/core/utils/i;->a(Landroid/app/Activity;)Z
+    invoke-static {v0}, Lcom/vk/core/utils/VoiceUtils;->a(Landroid/app/Activity;)Z
 
     .line 4
     iget-object v1, p0, Lcom/vk/debug/TogglesFragment;->K:Lcom/vk/debug/TogglesFragment$h;
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->b(Lcom/vk/navigation/c;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->b(Lcom/vk/navigation/ActivityResulter;)V
 
     goto :goto_1
 
@@ -636,7 +636,7 @@
     const/4 v3, 0x2
 
     .line 5
-    invoke-static {v0, v2, v3, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v2, v3, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :goto_1
     return-void
@@ -770,7 +770,7 @@
     const/4 v1, 0x0
 
     .line 9
-    invoke-static {p2, p3, v0, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p2, p3, v0, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :cond_0
     return-object p1
@@ -791,11 +791,11 @@
     iput-object v0, p0, Lcom/vk/debug/TogglesFragment;->H:Lcom/vk/core/view/search/RoundedSearchView;
 
     .line 4
-    iget-object v0, p0, Lcom/vk/debug/TogglesFragment;->I:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/debug/TogglesFragment;->I:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 5
     :cond_0

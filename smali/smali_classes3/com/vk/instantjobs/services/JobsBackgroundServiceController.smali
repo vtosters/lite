@@ -85,13 +85,13 @@
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/a;)V
+.method private final a(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -101,9 +101,9 @@
 
     if-eqz p1, :cond_0
 
-    new-instance v1, Lcom/vk/instantjobs/services/a;
+    new-instance v1, Lcom/vk/instantjobs/services/JobsBackgroundServiceController1;
 
-    invoke-direct {v1, p1}, Lcom/vk/instantjobs/services/a;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/instantjobs/services/JobsBackgroundServiceController1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     move-object p1, v1
 
@@ -206,7 +206,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/instantjobs/services/JobsBackgroundServiceController$onServiceRunStateChanged$1;-><init>(Z)V
 
-    invoke-direct {p0, v0}, Lcom/vk/instantjobs/services/JobsBackgroundServiceController;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/instantjobs/services/JobsBackgroundServiceController;->a(Lkotlin/jvm/b/Functions;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

@@ -14,15 +14,15 @@
 
 
 # static fields
-.field static final synthetic j:[Lkotlin/u/j;
+.field static final synthetic j:[Lkotlin/u/KProperty5;
 
 
 # instance fields
 .field private final a:Landroid/os/Handler;
 
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
-.field private final c:Lkotlin/e;
+.field private final c:Lkotlin/Lazy2;
 
 .field private final d:Lcom/vk/core/sensors/ContinuousMovementDetector$a;
 
@@ -53,11 +53,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -65,9 +65,9 @@
 
     const-string v5, "getSensorManager()Landroid/hardware/SensorManager;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -75,7 +75,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -83,21 +83,21 @@
 
     const-string v4, "getAccelerometerSensor()Landroid/hardware/Sensor;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/core/sensors/ContinuousMovementDetector;->j:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/core/sensors/ContinuousMovementDetector;->j:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/core/sensors/ContinuousMovementDetector$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/sensors/ContinuousMovementDetector$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/sensors/ContinuousMovementDetector$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -126,22 +126,22 @@
 
     invoke-direct {p1, p0}, Lcom/vk/core/sensors/ContinuousMovementDetector$sensorManager$2;-><init>(Lcom/vk/core/sensors/ContinuousMovementDetector;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/core/sensors/ContinuousMovementDetector;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/core/sensors/ContinuousMovementDetector;->b:Lkotlin/Lazy2;
 
     .line 4
     new-instance p1, Lcom/vk/core/sensors/ContinuousMovementDetector$accelerometerSensor$2;
 
     invoke-direct {p1, p0}, Lcom/vk/core/sensors/ContinuousMovementDetector$accelerometerSensor$2;-><init>(Lcom/vk/core/sensors/ContinuousMovementDetector;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/core/sensors/ContinuousMovementDetector;->c:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/core/sensors/ContinuousMovementDetector;->c:Lkotlin/Lazy2;
 
     .line 5
     new-instance p1, Lcom/vk/core/sensors/ContinuousMovementDetector$a;
@@ -289,15 +289,15 @@
 .method private final b()Landroid/hardware/Sensor;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/sensors/ContinuousMovementDetector;->c:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/core/sensors/ContinuousMovementDetector;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/sensors/ContinuousMovementDetector;->j:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/sensors/ContinuousMovementDetector;->j:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -320,15 +320,15 @@
 .method private final c()Landroid/hardware/SensorManager;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/sensors/ContinuousMovementDetector;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/core/sensors/ContinuousMovementDetector;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/sensors/ContinuousMovementDetector;->j:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/sensors/ContinuousMovementDetector;->j:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

@@ -1,9 +1,9 @@
 .class public Lcom/vk/dto/group/Group;
-.super Lcom/vk/dto/common/e;
+.super Lcom/vk/dto/common/Model;
 .source "Group.java"
 
 # interfaces
-.implements Lcom/vk/dto/common/c;
+.implements Lcom/vk/dto/common/Indexable;
 .implements Lcom/vk/core/serialize/Serializer$StreamParcelable;
 
 
@@ -26,10 +26,10 @@
     .end annotation
 .end field
 
-.field public static final Z:Lcom/vk/dto/common/data/c;
+.field public static final Z:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/group/Group;",
             ">;"
         }
@@ -123,7 +123,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/group/Group$b;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/group/Group;->Z:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/dto/group/Group;->Z:Lcom/vk/dto/common/data/JsonParser;
 
     return-void
 .end method
@@ -132,7 +132,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     const/4 v0, 0x1
 
@@ -169,7 +169,7 @@
     .locals 3
 
     .line 98
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     const/4 v0, 0x1
 
@@ -482,7 +482,7 @@
     .locals 2
 
     .line 8
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     const/4 v0, 0x1
 
@@ -676,7 +676,7 @@
     const-string v4, "admin_level"
 
     .line 44
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     const/4 v5, 0x1
 
@@ -710,14 +710,14 @@
 
     .line 51
     :try_start_0
-    sget-object v8, Lb/h/h/a;->b:Lb/h/h/a$a;
+    sget-object v8, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
 
-    invoke-interface {v8}, Lb/h/h/a$a;->a()F
+    invoke-interface {v8}, Lb/h/h/ModelConfig$a;->a()F
 
     move-result v8
 
     .line 52
-    sget-boolean v9, Lb/h/h/a;->a:Z
+    sget-boolean v9, Lb/h/h/ModelConfig;->a:Z
 
     const-string v10, "id"
 

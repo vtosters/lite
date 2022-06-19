@@ -280,7 +280,7 @@
     :cond_a
     new-instance v1, Ljava/lang/String;
 
-    sget-object v2, Lokhttp3/f0/c;->i:Ljava/nio/charset/Charset;
+    sget-object v2, Lokhttp3/f0/Util;->i:Ljava/nio/charset/Charset;
 
     invoke-direct {v1, v0, v5, v6, v2}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
 
@@ -390,7 +390,7 @@
     .line 25
     aget-object v4, p1, v3
 
-    sget-object v5, Lokhttp3/f0/c;->i:Ljava/nio/charset/Charset;
+    sget-object v5, Lokhttp3/f0/Util;->i:Ljava/nio/charset/Charset;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
@@ -639,21 +639,21 @@
 
     .line 2
     :cond_0
-    new-instance v1, Lokio/i;
+    new-instance v1, Lokio/GzipSource;
 
-    invoke-static {v0}, Lokio/k;->a(Ljava/io/InputStream;)Lokio/r;
+    invoke-static {v0}, Lokio/Okio;->a(Ljava/io/InputStream;)Lokio/Source;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Lokio/i;-><init>(Lokio/r;)V
+    invoke-direct {v1, v0}, Lokio/GzipSource;-><init>(Lokio/Source;)V
 
-    invoke-static {v1}, Lokio/k;->a(Lokio/r;)Lokio/e;
+    invoke-static {v1}, Lokio/Okio;->a(Lokio/Source;)Lokio/BufferedSource;
 
     move-result-object v0
 
     .line 3
     :try_start_0
-    invoke-interface {v0}, Lokio/e;->readInt()I
+    invoke-interface {v0}, Lokio/BufferedSource;->readInt()I
 
     move-result v1
 
@@ -661,10 +661,10 @@
     new-array v1, v1, [B
 
     .line 5
-    invoke-interface {v0, v1}, Lokio/e;->readFully([B)V
+    invoke-interface {v0, v1}, Lokio/BufferedSource;->readFully([B)V
 
     .line 6
-    invoke-interface {v0}, Lokio/e;->readInt()I
+    invoke-interface {v0}, Lokio/BufferedSource;->readInt()I
 
     move-result v2
 
@@ -672,12 +672,12 @@
     new-array v2, v2, [B
 
     .line 8
-    invoke-interface {v0, v2}, Lokio/e;->readFully([B)V
+    invoke-interface {v0, v2}, Lokio/BufferedSource;->readFully([B)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 9
-    invoke-static {v0}, Lokhttp3/f0/c;->a(Ljava/io/Closeable;)V
+    invoke-static {v0}, Lokhttp3/f0/Util;->a(Ljava/io/Closeable;)V
 
     .line 10
     monitor-enter p0
@@ -716,7 +716,7 @@
     move-exception v1
 
     .line 16
-    invoke-static {v0}, Lokhttp3/f0/c;->a(Ljava/io/Closeable;)V
+    invoke-static {v0}, Lokhttp3/f0/Util;->a(Ljava/io/Closeable;)V
 
     throw v1
 .end method
@@ -757,7 +757,7 @@
 
     .line 3
     :try_start_1
-    invoke-static {}, Lokhttp3/f0/i/f;->d()Lokhttp3/f0/i/f;
+    invoke-static {}, Lokhttp3/f0/i/Platform;->d()Lokhttp3/f0/i/Platform;
 
     move-result-object v2
 
@@ -765,7 +765,7 @@
 
     const-string v4, "Failed to read public suffix list"
 
-    invoke-virtual {v2, v3, v4, v1}, Lokhttp3/f0/i/f;->a(ILjava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v3, v4, v1}, Lokhttp3/f0/i/Platform;->a(ILjava/lang/String;Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

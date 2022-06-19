@@ -3,7 +3,7 @@
 .source "DeliveryInfo.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/market/orders/checkout/l;",
-        "Lcom/vk/market/orders/checkout/l;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
+        "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
         ">;"
     }
 .end annotation
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/market/orders/checkout/l;)Lcom/vk/market/orders/checkout/l;
+.method public final a(Lcom/vk/market/orders/checkout/DeliveryInfo8;)Lcom/vk/market/orders/checkout/DeliveryInfo8;
     .locals 3
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/l;->j()Lcom/vk/market/orders/checkout/InputType;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo8;->j()Lcom/vk/market/orders/checkout/InputType;
 
     move-result-object v0
 
@@ -58,11 +58,11 @@
 
     if-ne v0, v1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/l;->a()Lcom/vk/market/orders/checkout/m;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo8;->a()Lcom/vk/market/orders/checkout/DeliveryInfo5;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/vk/market/orders/checkout/r;
+    instance-of v0, v0, Lcom/vk/market/orders/checkout/DeliveryInfo9;
 
     if-nez v0, :cond_0
 
@@ -70,11 +70,11 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/l;->a()Lcom/vk/market/orders/checkout/m;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo8;->a()Lcom/vk/market/orders/checkout/DeliveryInfo5;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/market/orders/checkout/r;
+    check-cast p1, Lcom/vk/market/orders/checkout/DeliveryInfo9;
 
     iget-object v0, p0, Lcom/vk/market/orders/checkout/DeliveryInfo$setPickupPointField$1;->$value:Ljava/lang/String;
 
@@ -82,7 +82,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/market/orders/checkout/r;->a(Lcom/vk/market/orders/checkout/r;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/market/orders/checkout/r;
+    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/market/orders/checkout/DeliveryInfo9;->a(Lcom/vk/market/orders/checkout/DeliveryInfo9;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/market/orders/checkout/DeliveryInfo9;
 
     throw v2
 
@@ -95,9 +95,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/market/orders/checkout/l;
+    check-cast p1, Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
-    invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/DeliveryInfo$setPickupPointField$1;->a(Lcom/vk/market/orders/checkout/l;)Lcom/vk/market/orders/checkout/l;
+    invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/DeliveryInfo$setPickupPointField$1;->a(Lcom/vk/market/orders/checkout/DeliveryInfo8;)Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
     move-result-object p1
 

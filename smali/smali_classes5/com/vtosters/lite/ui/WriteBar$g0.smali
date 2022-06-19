@@ -64,7 +64,7 @@
     if-eqz v1, :cond_0
 
     .line 3
-    invoke-static {p1}, Lcom/vk/audio/h;->a(F)V
+    invoke-static {p1}, Lcom/vk/audio/VoiceIntents;->a(F)V
 
     goto :goto_0
 

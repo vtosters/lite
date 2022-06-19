@@ -3,7 +3,7 @@
 .source "FlowableDoFinally.java"
 
 # interfaces
-.implements Lc/a/h;
+.implements Lio/reactivex/FlowableSubscriber;
 
 
 # annotations
@@ -23,7 +23,7 @@
         ">",
         "Lio/reactivex/internal/subscriptions/BasicIntQueueSubscription<",
         "TT;>;",
-        "Lc/a/h<",
+        "Lio/reactivex/FlowableSubscriber<",
         "TT;>;"
     }
 .end annotation
@@ -34,21 +34,21 @@
 
 
 # instance fields
-.field final downstream:Le/b/c;
+.field final downstream:Le/b/Subscriber;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-TT;>;"
         }
     .end annotation
 .end field
 
-.field final onFinally:Lc/a/z/a;
+.field final onFinally:Lio/reactivex/functions/Action;
 
-.field qs:Lc/a/a0/b/h;
+.field qs:Lc/a/a0/b/QueueSubscription;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/a0/b/h<",
+            "Lc/a/a0/b/QueueSubscription<",
             "TT;>;"
         }
     .end annotation
@@ -56,18 +56,18 @@
 
 .field syncFused:Z
 
-.field upstream:Le/b/d;
+.field upstream:Le/b/Subscription;
 
 
 # direct methods
-.method constructor <init>(Le/b/c;Lc/a/z/a;)V
+.method constructor <init>(Le/b/Subscriber;Lio/reactivex/functions/Action;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-TT;>;",
-            "Lc/a/z/a;",
+            "Lio/reactivex/functions/Action;",
             ")V"
         }
     .end annotation
@@ -76,10 +76,10 @@
     invoke-direct {p0}, Lio/reactivex/internal/subscriptions/BasicIntQueueSubscription;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->downstream:Le/b/c;
+    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->downstream:Le/b/Subscriber;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->onFinally:Lc/a/z/a;
+    iput-object p2, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->onFinally:Lio/reactivex/functions/Action;
 
     return-void
 .end method
@@ -90,7 +90,7 @@
     .locals 3
 
     .line 9
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->qs:Lc/a/a0/b/h;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->qs:Lc/a/a0/b/QueueSubscription;
 
     const/4 v1, 0x0
 
@@ -101,7 +101,7 @@
     if-nez v2, :cond_2
 
     .line 10
-    invoke-interface {v0, p1}, Lc/a/a0/b/g;->a(I)I
+    invoke-interface {v0, p1}, Lc/a/a0/b/QueueFuseable;->a(I)I
 
     move-result p1
 
@@ -131,43 +131,43 @@
     .locals 1
 
     .line 8
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->upstream:Le/b/d;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->upstream:Le/b/Subscription;
 
-    invoke-interface {v0, p1, p2}, Le/b/d;->a(J)V
+    invoke-interface {v0, p1, p2}, Le/b/Subscription;->a(J)V
 
     return-void
 .end method
 
-.method public a(Le/b/d;)V
+.method public a(Le/b/Subscription;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->upstream:Le/b/d;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->upstream:Le/b/Subscription;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Le/b/d;Le/b/d;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Le/b/Subscription;Le/b/Subscription;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->upstream:Le/b/d;
+    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->upstream:Le/b/Subscription;
 
     .line 3
-    instance-of v0, p1, Lc/a/a0/b/h;
+    instance-of v0, p1, Lc/a/a0/b/QueueSubscription;
 
     if-eqz v0, :cond_0
 
     .line 4
-    check-cast p1, Lc/a/a0/b/h;
+    check-cast p1, Lc/a/a0/b/QueueSubscription;
 
-    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->qs:Lc/a/a0/b/h;
+    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->qs:Lc/a/a0/b/QueueSubscription;
 
     .line 5
     :cond_0
-    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->downstream:Le/b/c;
+    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->downstream:Le/b/Subscriber;
 
-    invoke-interface {p1, p0}, Le/b/c;->a(Le/b/d;)V
+    invoke-interface {p1, p0}, Le/b/Subscriber;->a(Le/b/Subscription;)V
 
     :cond_1
     return-void
@@ -177,9 +177,9 @@
     .locals 1
 
     .line 6
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->downstream:Le/b/Subscriber;
 
-    invoke-interface {v0, p1}, Le/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
 
     .line 7
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->d()V
@@ -191,9 +191,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->downstream:Le/b/Subscriber;
 
-    invoke-interface {v0}, Le/b/c;->b()V
+    invoke-interface {v0}, Le/b/Subscriber;->b()V
 
     .line 3
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->d()V
@@ -210,9 +210,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->downstream:Le/b/Subscriber;
 
-    invoke-interface {v0, p1}, Le/b/c;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Le/b/Subscriber;->b(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -221,9 +221,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->upstream:Le/b/d;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->upstream:Le/b/Subscription;
 
-    invoke-interface {v0}, Le/b/d;->cancel()V
+    invoke-interface {v0}, Le/b/Subscription;->cancel()V
 
     .line 2
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->d()V
@@ -235,9 +235,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->qs:Lc/a/a0/b/h;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->qs:Lc/a/a0/b/QueueSubscription;
 
-    invoke-interface {v0}, Lc/a/a0/b/k;->clear()V
+    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->clear()V
 
     return-void
 .end method
@@ -258,9 +258,9 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->onFinally:Lc/a/z/a;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->onFinally:Lio/reactivex/functions/Action;
 
-    invoke-interface {v0}, Lc/a/z/a;->run()V
+    invoke-interface {v0}, Lio/reactivex/functions/Action;->run()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -270,10 +270,10 @@
     move-exception v0
 
     .line 3
-    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 4
-    invoke-static {v0}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :cond_0
     :goto_0
@@ -284,9 +284,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->qs:Lc/a/a0/b/h;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->qs:Lc/a/a0/b/QueueSubscription;
 
-    invoke-interface {v0}, Lc/a/a0/b/k;->isEmpty()Z
+    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->isEmpty()Z
 
     move-result v0
 
@@ -308,9 +308,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->qs:Lc/a/a0/b/h;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally$DoFinallySubscriber;->qs:Lc/a/a0/b/QueueSubscription;
 
-    invoke-interface {v0}, Lc/a/a0/b/k;->poll()Ljava/lang/Object;
+    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->poll()Ljava/lang/Object;
 
     move-result-object v0
 

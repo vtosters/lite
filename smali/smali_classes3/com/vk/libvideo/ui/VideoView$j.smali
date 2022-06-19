@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/ui/VideoView;->b(Lcom/vk/libvideo/autoplay/a;II)V
+    value = Lcom/vk/libvideo/ui/VideoView;->b(Lcom/vk/libvideo/autoplay/AutoPlay;II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

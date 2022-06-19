@@ -3,7 +3,7 @@
 .source "CommonStoriesBridge.kt"
 
 # interfaces
-.implements Lcom/vk/bridges/d0;
+.implements Lcom/vk/bridges/StoriesBridge;
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
 .field private static final b:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -32,13 +32,13 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/CopyOnWriteArraySet<",
-            "Lcom/vk/bridges/f0;",
+            "Lcom/vk/bridges/StoriesBridge2;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private static final d:Lkotlin/e;
+.field private static final d:Lkotlin/Lazy2;
 
 .field public static final e:Lcom/vtosters/lite/bridges/CommonStoriesBridge;
 
@@ -49,13 +49,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vtosters/lite/bridges/CommonStoriesBridge;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -63,15 +63,15 @@
 
     const-string v4, "getAvailableSections()Ljava/util/List;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vtosters/lite/bridges/CommonStoriesBridge;->a:[Lkotlin/u/j;
+    sput-object v0, Lcom/vtosters/lite/bridges/CommonStoriesBridge;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vtosters/lite/bridges/CommonStoriesBridge;
@@ -97,14 +97,14 @@
     .line 4
     sget-object v0, Lcom/vtosters/lite/bridges/CommonStoriesBridge$availableSections$2;->a:Lcom/vtosters/lite/bridges/CommonStoriesBridge$availableSections$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vtosters/lite/bridges/CommonStoriesBridge;->d:Lkotlin/e;
+    sput-object v0, Lcom/vtosters/lite/bridges/CommonStoriesBridge;->d:Lkotlin/Lazy2;
 
     .line 5
-    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
@@ -113,10 +113,10 @@
 
     const/16 v2, 0x65
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 7
-    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
@@ -125,7 +125,7 @@
 
     const/16 v2, 0x64
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     return-void
 .end method
@@ -182,15 +182,15 @@
 
     const-string v4, "it"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v3}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {v3}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    invoke-static {v3}, Lcom/vk/dto/stories/d/a;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {v3}, Lcom/vk/dto/stories/d/StoriesContainerExt;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v4
 
@@ -233,15 +233,15 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/vtosters/lite/bridges/CommonStoriesBridge;->d:Lkotlin/e;
+    sget-object v0, Lcom/vtosters/lite/bridges/CommonStoriesBridge;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vtosters/lite/bridges/CommonStoriesBridge;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vtosters/lite/bridges/CommonStoriesBridge;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -286,7 +286,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -589,7 +589,7 @@
 
     const-string p2, "story.ownerIdStoryId"
 
-    invoke-static {v1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v4, Lcom/vk/stories/LoadContext;->ALL_BY_SINGLE_STORY:Lcom/vk/stories/LoadContext;
 
@@ -608,7 +608,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/bridges/f0;)V
+.method public a(Lcom/vk/bridges/StoriesBridge2;)V
     .locals 1
 
     .line 33
@@ -658,7 +658,7 @@
     return p2
 .end method
 
-.method public b(Lcom/vk/bridges/f0;)V
+.method public b(Lcom/vk/bridges/StoriesBridge2;)V
     .locals 1
 
     .line 3

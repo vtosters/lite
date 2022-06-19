@@ -3,7 +3,7 @@
 .source "MsgPartStoryHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Landroid/graphics/PorterDuffColorFilter;",
         ">;"
     }
@@ -57,7 +57,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/im/ui/d;->black_alpha90:I
+    sget v2, Lcom/vk/im/ui/R10;->black_alpha90:I
 
     invoke-static {v1, v2}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;I)I
 

@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/vk/im/engine/models/chats/a;)V
+.method public abstract a(Lcom/vk/im/engine/models/chats/ChatInviteLink;)V
 .end method
 
 .method public abstract a(Lcom/vk/im/engine/models/dialogs/Dialog;)V
 .end method
 
-.method public abstract b(Lcom/vk/im/engine/models/chats/a;)V
+.method public abstract b(Lcom/vk/im/engine/models/chats/ChatInviteLink;)V
 .end method
