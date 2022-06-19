@@ -26,6 +26,7 @@ import com.vk.navigation.NavigatorKeys;
 import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
 import com.vk.notifications.NotificationsContainerFragment;
+import com.vk.search.fragment.GroupsSearchFragment;
 import com.vtosters.lite.fragments.GamesFragment;
 import com.vtosters.lite.fragments.PhotosFragment;
 import com.vtosters.lite.fragments.ProfileFragment;
@@ -34,7 +35,6 @@ import com.vtosters.lite.fragments.gifts.BirthdaysFragment;
 import com.vtosters.lite.fragments.lives.LivesTabsFragment;
 import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
 import com.vtosters.lite.fragments.p2.DocumentsViewFragment;
-import com.vtosters.lite.fragments.s2.AllGroupsFragment;
 import com.vtosters.lite.fragments.t2.c.DialogsFragment;
 import com.vtosters.lite.fragments.y2.VideosFragment;
 
@@ -199,7 +199,7 @@ public class Newsfeed {
             case "messenger":
                 return DialogsFragment.class;
             case "groups":
-                return AllGroupsFragment.class;
+                return GroupsSearchFragment.class;
             case "music":
                 return MusicFragment.class;
             case "friends":
