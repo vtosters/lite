@@ -6,14 +6,13 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import android.content.Context;
 import android.os.RemoteException;
 
-import com.vk.core.b.PackageManagerHelper;
 import com.vk.dto.music.MusicTrack;
-import com.vk.music.PlayerRefer;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import b.h.g.g.PackageManagerHelper;
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 
 public class LibVKXClient {

@@ -13,7 +13,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,9 +20,10 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.vk.audio.AudioMessageUtils;
 import com.vk.auth.api.VKAccount;
-import com.vk.core.f.FileUtils;
 import com.vk.core.util.AppContextHolder;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.imageloader.view.VKCircleImageView;

@@ -2,8 +2,9 @@ package ru.vtosters.lite.ui.fragments.dockbar;
 
 import static androidx.recyclerview.widget.ItemTouchHelper.Callback.makeMovementFlags;
 
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.a.ItemTouchHelper;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.RecyclerView;
+
 
 public class ItemTouchHelperCallback extends ItemTouchHelper.a {
 

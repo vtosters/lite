@@ -10,10 +10,8 @@ import static ru.vtosters.lite.utils.About.getCommitLink;
 import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
 import static ru.vtosters.lite.utils.Globals.drawableFromUrl;
 import static ru.vtosters.lite.utils.Globals.edit;
-import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.isGmsInstalled;
 import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
@@ -44,17 +42,14 @@ import com.vk.about.AboutAppFragment;
 import com.vk.identity.fragments.IdentityListFragment;
 import com.vk.navigation.Navigator;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
-import com.vk.webapp.Bugs;
-import com.vk.webapp.PrivacyFragment;
-import com.vk.webapp.SSFS;
-import com.vk.webapp.VKConnect;
+import com.vk.webapp.fragments.PrivacyFragment;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.fragments.SettingsAccountFragment;
-import com.vtosters.lite.fragments.SettingsDebugFragment;
 import com.vtosters.lite.fragments.SettingsGeneralFragment;
-import com.vtosters.lite.fragments.k.BlacklistFragment;
 import com.vtosters.lite.fragments.money.music.control.subscription.MusicSubscriptionControlFragment;
+import com.vtosters.lite.fragments.n2.SettingsDebugFragment;
+import com.vtosters.lite.fragments.w2.BlacklistFragment;
 
 import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
@@ -63,6 +58,7 @@ import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 import ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountFragment;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.CacheUtils;
+import ru.vtosters.lite.utils.SSFS;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment {
 

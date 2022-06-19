@@ -35,8 +35,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
+import com.vk.dto.user.UserProfile;
 import com.vk.navigation.Navigator;
-import com.vtosters.lite.UserProfile;
 import com.vtosters.lite.VKActivity;
 import com.vtosters.lite.api.ExtendedUserProfile;
 import com.vtosters.lite.auth.VKAccountManager;

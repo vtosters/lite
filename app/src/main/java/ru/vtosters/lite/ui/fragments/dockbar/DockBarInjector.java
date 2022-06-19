@@ -10,7 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.vk.apps.AppsFragment;
-import com.vk.core.d.RecoloredDrawable;
+import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.fragments.FragmentImpl;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationMenuView;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationView;

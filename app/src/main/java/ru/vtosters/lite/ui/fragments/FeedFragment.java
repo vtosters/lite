@@ -1,12 +1,10 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.Globals.getContext;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.preference.Preference;
 
+import com.vk.core.preference.Preference;
 import com.vk.navigation.Navigator;
 import com.vk.newsfeed.NewsfeedSettingsFragment;
 import com.vtosters.lite.R;
