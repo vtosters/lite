@@ -12,7 +12,7 @@ import static ru.vtosters.lite.utils.Themes.isDarkTheme;
 
 public class SSFS {
     public static String getSSFSLink() {
-        return SSFSDomain() + "?token=" + getUserToken() + "&vt_dark=" + getDarkVKUI() + "&vt_amoled=" + getAmoledVKUI() + "&secret=" + getUserSecret() + "&proxy=" + getUserProxy() + "&lang=" + getLocale() + "&vt=1&vtl=1&vksans=" + isVKSansEnabled() + "&vt_version=" + getBuildNumber() + "&vt_debug=" + isDEVModEnabled();
+        return SSFSDomain() + "?token=" + getUserToken() + "&vt_dark=" + getDarkVKUI() + "&vt_amoled=" + getAmoledVKUI() + "&secret=" + getUserSecret() + "&proxy=" + getUserProxy() + "&lang=" + getLocale() + "&vt=1&vksans=" + isVKSansEnabled() + "&vt_version=" + getBuildNumber() + "&vt_debug=" + isDEVModEnabled();
     }
 
     public static String SSFSDomain() {
