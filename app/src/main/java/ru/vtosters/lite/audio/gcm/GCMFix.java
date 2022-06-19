@@ -40,12 +40,12 @@ public class GCMFix {
     }
 
     public static String requestTokenV2(String orig){
-        if(musicFixNew()) return "null"; // TODO FIX TOKENMOD v2
+        if(musicFixNew()) return "null"; // TODO FIX TOKENMOD v2 cyz vk shit
         return orig;
     }
 
     public static String requestToken(String orig){
-        if(musicFixNew()) return "{null}"; // TODO FIX TOKENMOD v2
+        if(musicFixNew()) return "{null}"; // TODO FIX TOKENMOD v2 cyz vk shit
         if(orig.equals("")) return requestToken();
         return orig;
     }
