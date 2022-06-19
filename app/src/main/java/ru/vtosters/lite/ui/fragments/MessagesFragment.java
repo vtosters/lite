@@ -14,9 +14,9 @@ import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 
 public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     @Override
-    public void b(Bundle bundle) {
-        super.b(bundle);
-        a(R.xml.preferences_messages);
+    public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        addPreferencesFromResource(R.xml.preferences_messages);
         prefs();
     }
 
