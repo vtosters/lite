@@ -4,10 +4,9 @@ import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.text.TextUtils;
 
 import com.vk.im.engine.events.OnMsgUpdateEvent;
@@ -21,6 +20,8 @@ import com.vk.libsqliteext.CustomSqliteExtensionsKt;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.requery.android.database.sqlite.SQLiteDatabase;
+import io.requery.android.database.sqlite.SQLiteOpenHelper;
 import ru.vtosters.lite.encryption.EncryptProvider;
 
 public class DeletedMessagesHandler {
@@ -38,7 +39,7 @@ public class DeletedMessagesHandler {
     }
 
     public static void grabVKDatabase(StorageManager storageEnvironment) {
-        sVKSQLiteDatabase = storageEnvironment.j();
+        sVKSQLiteDatabase = storageEnvironment.D();
     }
 
     public static boolean hook() {
@@ -50,8 +51,8 @@ public class DeletedMessagesHandler {
 
         for (Integer integer : sDeletedMessagesList) {
             MsgFromUser msgFromUser = (MsgFromUser) msg;
-            checkForNestedMsg(msgFromUser.g);
-            if (integer == msg.d) {
+            checkForNestedMsg(msgFromUser.w0());
+            if (integer == msg.C1()) {
                 editTextOfMsg((MsgFromUser) msg);
                 break;
             }
@@ -60,20 +61,19 @@ public class DeletedMessagesHandler {
 
     private static void checkForNestedMsg(List<NestedMsg> nestedMsgs) {
         for (NestedMsg nestedMsg : nestedMsgs) {
-            if (!nestedMsg.i.isEmpty()) checkForNestedMsg(nestedMsg.i);
+            if (!nestedMsg.w0().isEmpty()) checkForNestedMsg(nestedMsg.w0());
 
-            nestedMsg.b(EncryptProvider.decryptMessage(nestedMsg.E(), nestedMsg.h().c));
-
+            nestedMsg.d(EncryptProvider.decryptMessage(nestedMsg.f(), nestedMsg.getFrom().getId()));
         }
     }
 
     private static void editTextOfMsg(MsgFromUser msgFromUser) {
-        if (!msgFromUser.e.startsWith(getPreifxUndelete())) {
-            msgFromUser.e = getPreifxUndelete() + EncryptProvider.decryptMessage(msgFromUser);
+        if (!msgFromUser.f().startsWith(getPrefixUndelete())) {
+            msgFromUser.d(getPrefixUndelete() + EncryptProvider.decryptMessage(msgFromUser));
         }
     }
 
-    private static String getPreifxUndelete() {
+    private static String getPrefixUndelete() {
         return getPrefsValue("undeletemsg_prefix_value") + " ";
     }
 
@@ -81,10 +81,11 @@ public class DeletedMessagesHandler {
         Cursor c = getMessageFromDatabaseById(msgDeleteLpTask.c);
         if (c == null) return;
 
+        @SuppressLint("Range")
         int localId = c.getInt(c.getColumnIndex("local_id"));
 
         String str = DeletedMessagesHandler.class.getSimpleName();
-        msgDeleteLpTask.a.a(str, new OnMsgUpdateEvent(str, msgDeleteLpTask.b, localId));
+        msgDeleteLpTask.b.a(str, new OnMsgUpdateEvent(str, msgDeleteLpTask.c, localId));
     }
 
     public static void hookDeletedMessageId(MsgDeleteLpTask msgDeleteLpTask) {
@@ -121,17 +122,17 @@ public class DeletedMessagesHandler {
         }
 
         @Override
-        public void onCreate(android.database.sqlite.SQLiteDatabase db) {
+        public void onCreate(SQLiteDatabase db) {
             db.execSQL("create table deleted_msgs (id integer primary key, msgId integer)");
         }
 
         @Override
-        public void onUpgrade(android.database.sqlite.SQLiteDatabase db, int oldVersion, int newVersion) {
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
         }
 
         public void saveDeletedMessage(int msgId) {
-            android.database.sqlite.SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+            SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
             ContentValues contentValues = new ContentValues();
             contentValues.put("msgId", msgId);
