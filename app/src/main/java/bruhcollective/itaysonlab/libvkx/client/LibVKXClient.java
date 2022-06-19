@@ -7,6 +7,7 @@ import android.content.Context;
 import android.os.RemoteException;
 
 import com.vk.dto.music.MusicTrack;
+import com.vk.music.common.MusicPlaybackLaunchContext;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -31,14 +32,14 @@ public class LibVKXClient {
     }
 
     public static boolean isVkxInstalled() {
-        return PackageManagerHelper.b(ClientConstants.PACKAGE, 128) != null;
+        return PackageManagerHelper.a(ClientConstants.PACKAGE, 128) != null;
     }
 
     public static boolean isIntegrationEnabled() {
         return getBoolValue("libvkx_integration", false) && isVkxInstalled();
     }
 
-    public static boolean play(MusicTrack musicTrack, List<MusicTrack> list, PlayerRefer playerRefer) {
+    public static boolean play(MusicTrack musicTrack, List<MusicTrack> list, MusicPlaybackLaunchContext playerRefer) {
         if (!isIntegrationEnabled()) {
             return false;
         }
@@ -48,7 +49,7 @@ public class LibVKXClient {
         return getInstance().runOnService(action);
     }
 
-    public static void lambdaplay(List list, MusicTrack musicTrack, PlayerRefer playerRefer, ILibVkxService iLibVkxService) {
+    public static void lambdaplay(List list, MusicTrack musicTrack, MusicPlaybackLaunchContext playerRefer, ILibVkxService iLibVkxService) {
         int indexOf = list.indexOf(musicTrack);
         ArrayList arrayList = new ArrayList();
         Iterator it = list.iterator();
@@ -66,10 +67,10 @@ public class LibVKXClient {
     }
 
     private static String asId(MusicTrack musicTrack) {
-        String str = musicTrack.c + "_" + musicTrack.b;
-        if (musicTrack.s == null || musicTrack.s.equals("")) {
+        String str = musicTrack.d + "_" + musicTrack.e;
+        if (musicTrack.O == null || musicTrack.O.equals("")) {
             return str;
         }
-        return str + "_" + musicTrack.s;
+        return str + "_" + musicTrack.O;
     }
 }
