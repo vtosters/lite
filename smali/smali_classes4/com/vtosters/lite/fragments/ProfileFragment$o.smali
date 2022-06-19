@@ -3,7 +3,7 @@
 .source "ProfileFragment.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -48,14 +48,14 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/ProfileFragment$o;->invoke()Lkotlin/m;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/ProfileFragment$o;->invoke()Lkotlin/Unit;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public invoke()Lkotlin/m;
+.method public invoke()Lkotlin/Unit;
     .locals 1
 
     .line 2
@@ -64,7 +64,7 @@
     invoke-static {v0}, Lcom/vtosters/lite/fragments/ProfileFragment;->x(Lcom/vtosters/lite/fragments/ProfileFragment;)V
 
     .line 3
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method

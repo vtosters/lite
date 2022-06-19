@@ -216,7 +216,7 @@
     const/4 v0, 0x0
 
     .line 4
-    iput-object v0, p1, Landroidx/core/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->service:Landroid/support/v4/app/a;
+    iput-object v0, p1, Landroidx/core/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->service:Landroid/support/v4/app/INotificationSideChannel;
 
     return-void
 .end method
@@ -301,11 +301,11 @@
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-static {p2}, Landroid/support/v4/app/a$a;->asInterface(Landroid/os/IBinder;)Landroid/support/v4/app/a;
+    invoke-static {p2}, Landroid/support/v4/app/INotificationSideChannel$a;->asInterface(Landroid/os/IBinder;)Landroid/support/v4/app/INotificationSideChannel;
 
     move-result-object p2
 
-    iput-object p2, p1, Landroidx/core/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->service:Landroid/support/v4/app/a;
+    iput-object p2, p1, Landroidx/core/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->service:Landroid/support/v4/app/INotificationSideChannel;
 
     const/4 p2, 0x0
 
@@ -406,7 +406,7 @@
 
     if-eqz v2, :cond_7
 
-    iget-object v2, p1, Landroidx/core/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->service:Landroid/support/v4/app/a;
+    iget-object v2, p1, Landroidx/core/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->service:Landroid/support/v4/app/INotificationSideChannel;
 
     if-nez v2, :cond_2
 
@@ -451,9 +451,9 @@
 
     .line 9
     :cond_4
-    iget-object v3, p1, Landroidx/core/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->service:Landroid/support/v4/app/a;
+    iget-object v3, p1, Landroidx/core/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->service:Landroid/support/v4/app/INotificationSideChannel;
 
-    invoke-interface {v2, v3}, Landroidx/core/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/a;)V
+    invoke-interface {v2, v3}, Landroidx/core/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V
 
     .line 10
     iget-object v2, p1, Landroidx/core/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->taskQueue:Ljava/util/ArrayDeque;

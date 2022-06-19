@@ -19,13 +19,13 @@
     .locals 1
 
     .line 1
-    new-instance p2, Lcom/vk/navigation/o;
+    new-instance p2, Lcom/vk/navigation/Navigator;
 
-    const-class v0, Lcom/vtosters/lite/fragments/n2/q0;
+    const-class v0, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;
 
-    invoke-direct {p2, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p2, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
-    invoke-virtual {p2, p1}, Lcom/vk/navigation/o;->b(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {p2, p1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object p2
 

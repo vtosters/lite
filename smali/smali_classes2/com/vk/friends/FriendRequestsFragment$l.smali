@@ -3,7 +3,7 @@
 .source "FriendRequestsFragment.kt"
 
 # interfaces
-.implements Lme/grishka/appkit/views/a$a;
+.implements Lme/grishka/appkit/views/DividerItemDecoration$a;
 
 
 # annotations
@@ -38,7 +38,7 @@
     .locals 6
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -54,13 +54,13 @@
     .line 2
     iget-object v2, p0, Lcom/vk/friends/FriendRequestsFragment$l;->a:Lcom/vk/friends/FriendRequestsFragment;
 
-    invoke-static {v2}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/a;
+    invoke-static {v2}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/FriendRequestsAdapter;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-virtual {v2}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result v2
 
@@ -78,14 +78,14 @@
 
     iget-object v2, p0, Lcom/vk/friends/FriendRequestsFragment$l;->a:Lcom/vk/friends/FriendRequestsFragment;
 
-    invoke-static {v2}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/a;
+    invoke-static {v2}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/FriendRequestsAdapter;
 
     move-result-object v2
 
     if-eqz v2, :cond_2
 
     .line 3
-    invoke-virtual {v2, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v2, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -101,20 +101,20 @@
 
     iget-object v2, p0, Lcom/vk/friends/FriendRequestsFragment$l;->a:Lcom/vk/friends/FriendRequestsFragment;
 
-    invoke-static {v2}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/a;
+    invoke-static {v2}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/FriendRequestsAdapter;
 
     move-result-object v2
 
     if-eqz v2, :cond_3
 
     .line 4
-    invoke-virtual {v2, v0}, Lcom/vk/lists/m;->getItemViewType(I)I
+    invoke-virtual {v2, v0}, Lcom/vk/lists/HeaderAdapter;->getItemViewType(I)I
 
     move-result v2
 
-    sget-object v5, Lcom/vk/friends/a;->M:Lcom/vk/friends/a$a;
+    sget-object v5, Lcom/vk/friends/FriendRequestsAdapter;->M:Lcom/vk/friends/FriendRequestsAdapter$a;
 
-    invoke-virtual {v5}, Lcom/vk/friends/a$a;->b()I
+    invoke-virtual {v5}, Lcom/vk/friends/FriendRequestsAdapter$a;->b()I
 
     move-result v5
 
@@ -145,14 +145,14 @@
     :cond_4
     iget-object v5, p0, Lcom/vk/friends/FriendRequestsFragment$l;->a:Lcom/vk/friends/FriendRequestsFragment;
 
-    invoke-static {v5}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/a;
+    invoke-static {v5}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/FriendRequestsAdapter;
 
     move-result-object v5
 
     if-eqz v5, :cond_5
 
     .line 7
-    invoke-virtual {v5, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v5, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -168,14 +168,14 @@
 
     iget-object p1, p0, Lcom/vk/friends/FriendRequestsFragment$l;->a:Lcom/vk/friends/FriendRequestsFragment;
 
-    invoke-static {p1}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/a;
+    invoke-static {p1}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/FriendRequestsAdapter;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
     .line 8
-    invoke-virtual {p1, v0}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 

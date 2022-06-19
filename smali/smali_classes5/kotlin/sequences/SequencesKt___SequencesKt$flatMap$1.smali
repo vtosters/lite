@@ -3,12 +3,12 @@
 .source "_Sequences.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkotlin/sequences/SequencesKt___SequencesKt;->d(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    value = Lkotlin/sequences/SequencesKt___SequencesKt;->d(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lkotlin/sequences/j<",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/sequences/Sequence<",
         "+TR;>;",
         "Ljava/util/Iterator<",
         "+TR;>;>;"
@@ -57,12 +57,12 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/sequences/j;)Ljava/util/Iterator;
+.method public final a(Lkotlin/sequences/Sequence;)Ljava/util/Iterator;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TR;>;)",
             "Ljava/util/Iterator<",
             "TR;>;"
@@ -70,7 +70,7 @@
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p1}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
@@ -80,9 +80,9 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lkotlin/sequences/j;
+    check-cast p1, Lkotlin/sequences/Sequence;
 
-    invoke-virtual {p0, p1}, Lkotlin/sequences/SequencesKt___SequencesKt$flatMap$1;->a(Lkotlin/sequences/j;)Ljava/util/Iterator;
+    invoke-virtual {p0, p1}, Lkotlin/sequences/SequencesKt___SequencesKt$flatMap$1;->a(Lkotlin/sequences/Sequence;)Ljava/util/Iterator;
 
     move-result-object p1
 

@@ -34,11 +34,11 @@
 
 .field private final c:Lcom/vk/navigation/NavigationDelegateBottom$d$b;
 
-.field private final d:Lcom/vk/attachpicker/util/c;
+.field private final d:Lcom/vk/attachpicker/util/OrientationLocker;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/navigation/NavigationDelegateBottom$d$a;Lcom/vk/navigation/NavigationDelegateBottom$d$b;Lcom/vk/attachpicker/util/c;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/navigation/NavigationDelegateBottom$d$a;Lcom/vk/navigation/NavigationDelegateBottom$d$b;Lcom/vk/attachpicker/util/OrientationLocker;)V
     .locals 3
 
     .line 1
@@ -48,7 +48,7 @@
 
     iput-object p3, p0, Lcom/vk/navigation/NavigationDelegateBottom$d;->c:Lcom/vk/navigation/NavigationDelegateBottom$d$b;
 
-    iput-object p4, p0, Lcom/vk/navigation/NavigationDelegateBottom$d;->d:Lcom/vk/attachpicker/util/c;
+    iput-object p4, p0, Lcom/vk/navigation/NavigationDelegateBottom$d;->d:Lcom/vk/attachpicker/util/OrientationLocker;
 
     .line 2
     new-instance p1, Landroid/os/Handler;
@@ -89,7 +89,7 @@
 
     const-string v0, "viewPagerClass.getDeclaredField(\"mScroller\")"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     invoke-virtual {p4, p2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -106,13 +106,13 @@
 
     const-string v0, "viewPagerClass.getDeclaredField(\"sInterpolator\")"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     invoke-virtual {p3, p2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     .line 10
-    new-instance v0, Lcom/vk/core/widget/g;
+    new-instance v0, Lcom/vk/core/widget/ScrollerCustomDuration;
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -126,7 +126,7 @@
 
     check-cast p3, Landroid/view/animation/Interpolator;
 
-    invoke-direct {v0, v1, p3}, Lcom/vk/core/widget/g;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
+    invoke-direct {v0, v1, p3}, Lcom/vk/core/widget/ScrollerCustomDuration;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
 
     invoke-virtual {p4, p0, v0}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_2
@@ -164,11 +164,11 @@
 
 
 # virtual methods
-.method public final b()Lcom/vk/attachpicker/util/c;
+.method public final b()Lcom/vk/attachpicker/util/OrientationLocker;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom$d;->d:Lcom/vk/attachpicker/util/c;
+    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom$d;->d:Lcom/vk/attachpicker/util/OrientationLocker;
 
     return-object v0
 .end method
@@ -275,7 +275,7 @@
     const-string v6, "child"
 
     .line 9
-    invoke-static {v7, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v7}, Landroid/view/View;->getVisibility()I
 

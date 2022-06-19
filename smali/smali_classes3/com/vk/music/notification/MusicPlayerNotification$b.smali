@@ -3,12 +3,12 @@
 .source "MusicPlayerNotification.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/notification/MusicPlayerNotification;->a(Landroid/net/Uri;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/music/notification/MusicPlayerNotification;->a(Landroid/net/Uri;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Landroid/graphics/Bitmap;",
         ">;"
     }
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/music/notification/MusicPlayerNotification;
 
-.field final synthetic b:Lkotlin/jvm/b/b;
+.field final synthetic b:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/music/notification/MusicPlayerNotification;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lcom/vk/music/notification/MusicPlayerNotification;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/music/notification/MusicPlayerNotification$b;->a:Lcom/vk/music/notification/MusicPlayerNotification;
 
-    iput-object p2, p0, Lcom/vk/music/notification/MusicPlayerNotification$b;->b:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/music/notification/MusicPlayerNotification$b;->b:Lkotlin/jvm/b/Functions2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,12 +58,12 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/music/notification/MusicPlayerNotification;->a(Lcom/vk/music/notification/MusicPlayerNotification;Lio/reactivex/disposables/b;)V
+    invoke-static {v0, v1}, Lcom/vk/music/notification/MusicPlayerNotification;->a(Lcom/vk/music/notification/MusicPlayerNotification;Lio/reactivex/disposables/Disposable;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification$b;->b:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification$b;->b:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

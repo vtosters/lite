@@ -3,12 +3,12 @@
 .source "PrefetchByNotListenedMsgPlugin.kt"
 
 # interfaces
-.implements Lc/a/z/l;
+.implements Lio/reactivex/functions/Predicate;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;->a(Lcom/vk/audiomsg/player/a;)V
+    value = Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;->a(Lcom/vk/audiomsg/player/AudioMsgPlayer;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/l<",
-        "Lcom/vk/im/engine/events/z;",
+        "Lio/reactivex/functions/Predicate<",
+        "Lcom/vk/im/engine/events/OnMsgAddEvent;",
         ">;"
     }
 .end annotation
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/events/z;)Z
+.method public final a(Lcom/vk/im/engine/events/OnMsgAddEvent;)Z
     .locals 0
 
     .line 2
     iget-object p1, p0, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$d;->a:Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;
 
-    invoke-static {p1}, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;->a(Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;)Lkotlin/jvm/b/a;
+    invoke-static {p1}, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;->a(Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin;)Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/z;
+    check-cast p1, Lcom/vk/im/engine/events/OnMsgAddEvent;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$d;->a(Lcom/vk/im/engine/events/z;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$d;->a(Lcom/vk/im/engine/events/OnMsgAddEvent;)Z
 
     move-result p1
 

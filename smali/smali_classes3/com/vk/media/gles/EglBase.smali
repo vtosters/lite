@@ -27,7 +27,7 @@
 
 .field private d:Landroid/opengl/EGLConfig;
 
-.field private final e:Lb/h/p/f/e;
+.field private final e:Lb/h/p/f/Logger;
 
 
 # direct methods
@@ -53,14 +53,14 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/opengl/EGLContext;ILb/h/p/f/e;)V
+.method public constructor <init>(Landroid/opengl/EGLContext;ILb/h/p/f/Logger;)V
     .locals 7
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    sget-object v0, Lcom/vk/media/gles/b;->a:Ljava/lang/String;
+    sget-object v0, Lcom/vk/media/gles/EglUtils;->a:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/vk/media/gles/EglBase;->a:Ljava/lang/String;
 
@@ -80,7 +80,7 @@
     iput-object v0, p0, Lcom/vk/media/gles/EglBase;->d:Landroid/opengl/EGLConfig;
 
     .line 6
-    iput-object p3, p0, Lcom/vk/media/gles/EglBase;->e:Lb/h/p/f/e;
+    iput-object p3, p0, Lcom/vk/media/gles/EglBase;->e:Lb/h/p/f/Logger;
 
     .line 7
     iget-object p3, p0, Lcom/vk/media/gles/EglBase;->b:Landroid/opengl/EGLDisplay;
@@ -739,7 +739,7 @@
     invoke-virtual {v0, v2}, Lcom/vk/media/gles/EglBase$b;->a(Z)V
 
     .line 12
-    iget-object v0, p0, Lcom/vk/media/gles/EglBase;->e:Lb/h/p/f/e;
+    iget-object v0, p0, Lcom/vk/media/gles/EglBase;->e:Lb/h/p/f/Logger;
 
     iget-object v1, p0, Lcom/vk/media/gles/EglBase;->a:Ljava/lang/String;
 
@@ -761,7 +761,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lb/h/p/f/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lb/h/p/f/Logger;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object p1
 
@@ -939,7 +939,7 @@
     if-eq p1, v0, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/media/gles/EglBase;->e:Lb/h/p/f/e;
+    iget-object v0, p0, Lcom/vk/media/gles/EglBase;->e:Lb/h/p/f/Logger;
 
     iget-object v1, p0, Lcom/vk/media/gles/EglBase;->a:Ljava/lang/String;
 
@@ -961,7 +961,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lb/h/p/f/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lb/h/p/f/Logger;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/media/gles/EglBase;->b:Landroid/opengl/EGLDisplay;

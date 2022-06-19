@@ -46,13 +46,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/EntriesListFragment$d;->a:Lcom/vk/newsfeed/EntriesListFragment;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/EntriesListFragment;->c(Lcom/vk/newsfeed/EntriesListFragment;)Lcom/vk/newsfeed/g;
+    invoke-static {v0}, Lcom/vk/newsfeed/EntriesListFragment;->c(Lcom/vk/newsfeed/EntriesListFragment;)Lcom/vk/newsfeed/InlineWriteBarHolderCallbackImpl;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/g;->e()V
+    invoke-virtual {v0}, Lcom/vk/newsfeed/InlineWriteBarHolderCallbackImpl;->e()V
 
     :cond_0
     return-void
@@ -64,13 +64,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/EntriesListFragment$d;->a:Lcom/vk/newsfeed/EntriesListFragment;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/EntriesListFragment;->c(Lcom/vk/newsfeed/EntriesListFragment;)Lcom/vk/newsfeed/g;
+    invoke-static {p1}, Lcom/vk/newsfeed/EntriesListFragment;->c(Lcom/vk/newsfeed/EntriesListFragment;)Lcom/vk/newsfeed/InlineWriteBarHolderCallbackImpl;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/g;->f()V
+    invoke-virtual {p1}, Lcom/vk/newsfeed/InlineWriteBarHolderCallbackImpl;->f()V
 
     :cond_0
     return-void

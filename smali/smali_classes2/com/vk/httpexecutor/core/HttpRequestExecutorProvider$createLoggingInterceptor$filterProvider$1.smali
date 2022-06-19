@@ -3,12 +3,12 @@
 .source "HttpRequestExecutorProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->c(Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;)Lcom/vk/httpexecutor/api/k/b;
+    value = Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->c(Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;)Lcom/vk/httpexecutor/api/k/LoggingInterceptor;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/String;",
         "Ljava/lang/String;",
         ">;"
@@ -60,11 +60,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$createLoggingInterceptor$filterProvider$1;->$config:Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;
 
-    invoke-virtual {v0}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->f()Lkotlin/jvm/b/a;
+    invoke-virtual {v0}, Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;->f()Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 

@@ -1,9 +1,9 @@
 .class public final Lcom/vk/components/ComponentsFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "ComponentsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/v;
+.implements Lcom/vk/navigation/ScrolledToTop;
 
 
 # annotations
@@ -27,7 +27,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/components/ComponentsAdapter;
@@ -43,11 +43,11 @@
     .locals 7
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -55,7 +55,7 @@
 
     const-string v1, "AppContextHolder.context.resources"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -82,21 +82,21 @@
     invoke-direct {v2, p0, v1}, Lcom/vk/components/ComponentsFragment$setupDecorators$decorator$1;-><init>(Lcom/vk/components/ComponentsFragment;Z)V
 
     .line 4
-    invoke-interface {v2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v2
 
     .line 5
-    check-cast v2, Lcom/vk/core/ui/d;
+    check-cast v2, Lcom/vk/core/ui/CardItemDecorator;
 
     const/high16 v3, 0x40c00000    # 6.0f
 
     .line 6
-    invoke-static {v3}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v3}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v4
 
-    invoke-static {v3}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v3}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v3
 
@@ -106,7 +106,7 @@
 
     const/high16 v6, 0x41000000    # 8.0f
 
-    invoke-static {v6}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v6}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v6
 
@@ -116,7 +116,7 @@
     const/4 v6, 0x0
 
     :goto_0
-    invoke-virtual {v2, v4, v3, v6, v5}, Lcom/vk/core/ui/d;->a(IIII)V
+    invoke-virtual {v2, v4, v3, v6, v5}, Lcom/vk/core/ui/CardItemDecorator;->a(IIII)V
 
     .line 7
     iget-object v3, p0, Lcom/vk/components/ComponentsFragment;->F:Landroidx/recyclerview/widget/RecyclerView;
@@ -141,7 +141,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v0
 
@@ -181,7 +181,7 @@
 
     .line 12
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -254,7 +254,7 @@
     .line 4
     iget-object v1, p0, Lcom/vk/components/ComponentsFragment;->G:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {p0, v1}, Lcom/vtosters/lite/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, v1}, Lcom/vtosters/lite/ViewUtils;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     .line 5
     new-instance v1, Lcom/vk/components/ComponentsFragment$b;
@@ -274,7 +274,7 @@
 
     .line 7
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 

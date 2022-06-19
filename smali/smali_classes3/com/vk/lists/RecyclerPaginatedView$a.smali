@@ -38,7 +38,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView$a;->a:Lcom/vk/lists/RecyclerPaginatedView;
 
-    invoke-static {v0}, Lcom/vk/lists/RecyclerPaginatedView;->d(Lcom/vk/lists/RecyclerPaginatedView;)Lkotlin/jvm/b/a;
+    invoke-static {v0}, Lcom/vk/lists/RecyclerPaginatedView;->d(Lcom/vk/lists/RecyclerPaginatedView;)Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
@@ -46,11 +46,11 @@
 
     iget-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView$a;->a:Lcom/vk/lists/RecyclerPaginatedView;
 
-    invoke-static {v0}, Lcom/vk/lists/RecyclerPaginatedView;->d(Lcom/vk/lists/RecyclerPaginatedView;)Lkotlin/jvm/b/a;
+    invoke-static {v0}, Lcom/vk/lists/RecyclerPaginatedView;->d(Lcom/vk/lists/RecyclerPaginatedView;)Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -62,7 +62,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView$a;->a:Lcom/vk/lists/RecyclerPaginatedView;
 
-    invoke-static {p1}, Lcom/vk/lists/RecyclerPaginatedView;->d(Lcom/vk/lists/RecyclerPaginatedView;)Lkotlin/jvm/b/a;
+    invoke-static {p1}, Lcom/vk/lists/RecyclerPaginatedView;->d(Lcom/vk/lists/RecyclerPaginatedView;)Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
@@ -70,11 +70,11 @@
 
     iget-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView$a;->a:Lcom/vk/lists/RecyclerPaginatedView;
 
-    invoke-static {p1}, Lcom/vk/lists/RecyclerPaginatedView;->d(Lcom/vk/lists/RecyclerPaginatedView;)Lkotlin/jvm/b/a;
+    invoke-static {p1}, Lcom/vk/lists/RecyclerPaginatedView;->d(Lcom/vk/lists/RecyclerPaginatedView;)Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -86,7 +86,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView$a;->a:Lcom/vk/lists/RecyclerPaginatedView;
 
-    invoke-static {p1}, Lcom/vk/lists/RecyclerPaginatedView;->d(Lcom/vk/lists/RecyclerPaginatedView;)Lkotlin/jvm/b/a;
+    invoke-static {p1}, Lcom/vk/lists/RecyclerPaginatedView;->d(Lcom/vk/lists/RecyclerPaginatedView;)Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
@@ -94,11 +94,11 @@
 
     iget-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView$a;->a:Lcom/vk/lists/RecyclerPaginatedView;
 
-    invoke-static {p1}, Lcom/vk/lists/RecyclerPaginatedView;->d(Lcom/vk/lists/RecyclerPaginatedView;)Lkotlin/jvm/b/a;
+    invoke-static {p1}, Lcom/vk/lists/RecyclerPaginatedView;->d(Lcom/vk/lists/RecyclerPaginatedView;)Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void

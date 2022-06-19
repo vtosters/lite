@@ -484,49 +484,49 @@
     move-object/from16 v40, v50
 
     .line 42
-    invoke-direct/range {v0 .. v44}, Lcom/vk/dto/stickers/StickerStockItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ZZZZZZILjava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/NotificationImage;Ljava/util/List;ZLjava/lang/String;JZIZLjava/lang/String;Lcom/vk/dto/common/NotificationImage;Ljava/lang/String;Lcom/vk/dto/stickers/Badge;Lcom/vk/dto/stickers/PurchaseDetails;ZLjava/lang/String;Ljava/lang/String;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v44}, Lcom/vk/dto/stickers/StickerStockItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ZZZZZZILjava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/NotificationImage;Ljava/util/List;ZLjava/lang/String;JZIZLjava/lang/String;Lcom/vk/dto/common/NotificationImage;Ljava/lang/String;Lcom/vk/dto/stickers/Badge;Lcom/vk/dto/stickers/PurchaseDetails;ZLjava/lang/String;Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v45
 
     .line 43
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 44
     :cond_a
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 45
     :cond_b
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 46
     :cond_c
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 47
     :cond_d
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 48
     :cond_e
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 49
     :cond_f
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 .end method

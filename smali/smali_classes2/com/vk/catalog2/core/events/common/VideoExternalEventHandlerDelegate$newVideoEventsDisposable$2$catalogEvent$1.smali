@@ -3,12 +3,12 @@
 .source "VideoExternalEventHandlerDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate$newVideoEventsDisposable$2;->a(Lcom/vk/libvideo/y/a;)V
+    value = Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate$newVideoEventsDisposable$2;->a(Lcom/vk/libvideo/y/VideoEvents1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/catalog2/core/blocks/UIBlockList;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -62,7 +62,7 @@
     .line 1
     sget-object v0, Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate$newVideoEventsDisposable$2$catalogEvent$1$1;->a:Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate$newVideoEventsDisposable$2$catalogEvent$1$1;
 
-    invoke-static {p1, v0}, Lcom/vk/catalog2/core/blocks/a;->a(Lcom/vk/catalog2/core/blocks/UIBlock;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/blocks/UIBlock;
+    invoke-static {p1, v0}, Lcom/vk/catalog2/core/blocks/UIBlock1;->a(Lcom/vk/catalog2/core/blocks/UIBlock;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/blocks/UIBlock;
 
     move-result-object p1
 

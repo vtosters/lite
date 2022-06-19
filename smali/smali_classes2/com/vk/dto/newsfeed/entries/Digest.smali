@@ -56,7 +56,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/Digest$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/Digest$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/newsfeed/entries/Digest;->B:Lcom/vk/dto/newsfeed/entries/Digest$b;
 
@@ -204,7 +204,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -227,7 +227,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/newsfeed/entries/Digest;->c:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -243,7 +243,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/newsfeed/entries/Digest;->d:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -271,7 +271,7 @@
 
     check-cast p1, Lcom/vk/dto/newsfeed/entries/Digest$DigestItem;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -466,7 +466,7 @@
     return-object v0
 .end method
 
-.method public final y1()Lcom/vk/libvideo/autoplay/a;
+.method public final y1()Lcom/vk/libvideo/autoplay/AutoPlay;
     .locals 4
 
     .line 1

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;-><init>(Lcom/facebook/x/g/a;)V
+    value = Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable;-><init>(Lcom/facebook/x/g/CloseableAnimatedImage;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

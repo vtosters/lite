@@ -32,7 +32,7 @@
     .end annotation
 .end field
 
-.field private static final c:Lcom/vk/core/util/h1;
+.field private static final c:Lcom/vk/core/util/TimeProvider;
 
 .field private static final d:Landroid/os/Handler;
 
@@ -88,11 +88,11 @@
     sput-object v0, Lcom/vk/im/engine/reporters/MsgSendReporter;->b:Ljava/util/List;
 
     .line 4
-    new-instance v0, Lcom/vk/core/util/h1;
+    new-instance v0, Lcom/vk/core/util/TimeProvider;
 
-    invoke-direct {v0}, Lcom/vk/core/util/h1;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/util/TimeProvider;-><init>()V
 
-    sput-object v0, Lcom/vk/im/engine/reporters/MsgSendReporter;->c:Lcom/vk/core/util/h1;
+    sput-object v0, Lcom/vk/im/engine/reporters/MsgSendReporter;->c:Lcom/vk/core/util/TimeProvider;
 
     .line 5
     new-instance v0, Landroid/os/Handler;
@@ -244,7 +244,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p1}, Lcom/vk/core/extensions/k;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/core/extensions/GeneralFunctions;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -368,7 +368,7 @@
 
     .line 43
     :cond_c
-    invoke-static {p1}, Lcom/vk/core/extensions/k;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/core/extensions/GeneralFunctions;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -401,11 +401,11 @@
     invoke-virtual {v1, v2}, Lcom/vk/metrics/eventtracking/Event$a;->a(Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Event$a;
 
     .line 25
-    sget-object v2, Lb/h/q/b;->a:Ljava/util/List;
+    sget-object v2, Lb/h/q/Trackers;->a:Ljava/util/List;
 
     const-string v3, "Trackers.STATLOG_FABRIC"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v2}, Lcom/vk/metrics/eventtracking/Event$a;->a(Ljava/util/List;)Lcom/vk/metrics/eventtracking/Event$a;
 
@@ -436,9 +436,9 @@
     invoke-direct {v1, p3, p1, p2}, Lcom/vk/im/engine/reporters/MsgSendReporter$b;-><init>(Lcom/vk/im/engine/reporters/MsgSendReporter$a;II)V
 
     .line 21
-    sget-object p1, Lcom/vk/im/engine/reporters/MsgSendReporter;->c:Lcom/vk/core/util/h1;
+    sget-object p1, Lcom/vk/im/engine/reporters/MsgSendReporter;->c:Lcom/vk/core/util/TimeProvider;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/h1;->b()J
+    invoke-virtual {p1}, Lcom/vk/core/util/TimeProvider;->b()J
 
     move-result-wide p1
 
@@ -450,15 +450,15 @@
     return-void
 .end method
 
-.method private final a(IILkotlin/jvm/b/b;)V
+.method private final a(IILkotlin/jvm/b/Functions2;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/reporters/MsgSendReporter$a;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -466,22 +466,22 @@
     .line 28
     sget-object v0, Lcom/vk/im/engine/reporters/MsgSendReporter$newParams$1;->a:Lcom/vk/im/engine/reporters/MsgSendReporter$newParams$1;
 
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(IILkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(IILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method private final declared-synchronized a(IILkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+.method private final declared-synchronized a(IILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/reporters/MsgSendReporter$a;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Lcom/vk/im/engine/reporters/MsgSendReporter$a;",
             ">;)V"
         }
@@ -539,7 +539,7 @@
     if-eqz p4, :cond_2
 
     .line 31
-    invoke-interface {p4}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p4}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p4
 
@@ -588,7 +588,7 @@
     invoke-virtual {p4, p1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 35
-    invoke-interface {p3, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -619,7 +619,7 @@
 
     invoke-direct {v0, p3, p1, p2}, Lcom/vk/im/engine/reporters/MsgSendReporter$onMsgDisplayedOnUI$1;-><init>(ZII)V
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->b(IILkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->b(IILkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -659,7 +659,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/im/engine/reporters/MsgSendReporter;IILkotlin/jvm/b/b;ILjava/lang/Object;)V
+.method static synthetic a(Lcom/vk/im/engine/reporters/MsgSendReporter;IILkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x2
@@ -670,7 +670,7 @@
 
     .line 29
     :cond_0
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(IILkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(IILkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -954,15 +954,15 @@
     return-object p1
 .end method
 
-.method private final b(IILkotlin/jvm/b/b;)V
+.method private final b(IILkotlin/jvm/b/Functions2;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/reporters/MsgSendReporter$a;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -970,7 +970,7 @@
     const/4 v0, 0x0
 
     .line 5
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(IILkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(IILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -1059,11 +1059,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/im/engine/reporters/MsgSendReporter;)Lcom/vk/core/util/h1;
+.method public static final synthetic e(Lcom/vk/im/engine/reporters/MsgSendReporter;)Lcom/vk/core/util/TimeProvider;
     .locals 0
 
     .line 1
-    sget-object p0, Lcom/vk/im/engine/reporters/MsgSendReporter;->c:Lcom/vk/core/util/h1;
+    sget-object p0, Lcom/vk/im/engine/reporters/MsgSendReporter;->c:Lcom/vk/core/util/TimeProvider;
 
     return-object p0
 .end method
@@ -1095,7 +1095,7 @@
 
     move v1, p1
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(Lcom/vk/im/engine/reporters/MsgSendReporter;IILkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(Lcom/vk/im/engine/reporters/MsgSendReporter;IILkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1108,7 +1108,7 @@
 
     invoke-direct {v0, p1, p2}, Lcom/vk/im/engine/reporters/MsgSendReporter$onMsgRequestDone$1;-><init>(II)V
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->b(IILkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->b(IILkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -1121,7 +1121,7 @@
 
     invoke-direct {v0, p3, p1, p2}, Lcom/vk/im/engine/reporters/MsgSendReporter$onMsgError$1;-><init>(Ljava/lang/Throwable;II)V
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->b(IILkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->b(IILkotlin/jvm/b/Functions2;)V
 
     .line 13
     invoke-direct {p0, p3}, Lcom/vk/im/engine/reporters/MsgSendReporter;->b(Ljava/lang/Throwable;)V
@@ -1146,7 +1146,7 @@
 
     invoke-direct {v0, p3}, Lcom/vk/im/engine/reporters/MsgSendReporter$onMsgsEditStart$1;-><init>(Ljava/util/List;)V
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(IILkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(IILkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -1177,7 +1177,7 @@
 
     invoke-direct {v0, p6, p3, p4, p5}, Lcom/vk/im/engine/reporters/MsgSendReporter$onMsgSendBgStart$1;-><init>(Ljava/lang/String;ZLjava/util/List;Lcom/vk/im/engine/models/ImBgSyncState;)V
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(IILkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(IILkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -1225,7 +1225,7 @@
 
     sget-object v3, Lcom/vk/im/engine/reporters/MsgSendReporter$onMsgStorageDone$1$1;->a:Lcom/vk/im/engine/reporters/MsgSendReporter$onMsgStorageDone$1$1;
 
-    invoke-direct {v1, v2, v0, v3}, Lcom/vk/im/engine/reporters/MsgSendReporter;->b(IILkotlin/jvm/b/b;)V
+    invoke-direct {v1, v2, v0, v3}, Lcom/vk/im/engine/reporters/MsgSendReporter;->b(IILkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 
@@ -1260,7 +1260,7 @@
 
     const-string v0, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -1295,7 +1295,7 @@
 
     invoke-direct {v4, v0, p2}, Lcom/vk/im/engine/reporters/MsgSendReporter$onMsgSendCancelled$$inlined$forEach$lambda$1;-><init>(Lcom/vk/im/engine/models/messages/Msg;Ljava/lang/String;)V
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/vk/im/engine/reporters/MsgSendReporter;->b(IILkotlin/jvm/b/b;)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/vk/im/engine/reporters/MsgSendReporter;->b(IILkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 
@@ -1365,7 +1365,7 @@
     .line 3
     sget-object v0, Lcom/vk/im/engine/reporters/MsgSendReporter$onMsgRequestStart$1;->a:Lcom/vk/im/engine/reporters/MsgSendReporter$onMsgRequestStart$1;
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(IILkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(IILkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

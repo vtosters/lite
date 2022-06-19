@@ -80,7 +80,7 @@
 
     iget-object v0, v0, Lcom/vtosters/lite/ui/WriteBar$f0;->c:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {v0}, Lcom/vtosters/lite/ui/WriteBar;->M(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/audio/a;
+    invoke-static {v0}, Lcom/vtosters/lite/ui/WriteBar;->M(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/audio/AudioMessageUtils;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {v0, v2, v1, v3}, Lcom/vk/audio/a;->a(Ljava/lang/String;ZZ)V
+    invoke-virtual {v0, v2, v1, v3}, Lcom/vk/audio/AudioMessageUtils;->a(Ljava/lang/String;ZZ)V
 
     .line 4
     :cond_0

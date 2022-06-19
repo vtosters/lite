@@ -3,7 +3,7 @@
 .source "GroupInviteVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/n;
+.implements Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 .implements Landroid/view/View$OnClickListener;
 
 
@@ -12,7 +12,7 @@
 
 .field private C:Lcom/vk/catalog2/core/blocks/UIBlockGroup;
 
-.field private D:Lio/reactivex/disposables/b;
+.field private D:Lio/reactivex/disposables/Disposable;
 
 .field private final E:I
 
@@ -45,11 +45,11 @@
     return-void
 .end method
 
-.method private final a(Lb/h/g/l/i;)V
+.method private final a(Lb/h/g/l/ProfleEvents3;)V
     .locals 2
 
     .line 50
-    invoke-virtual {p1}, Lb/h/g/l/i;->c()I
+    invoke-virtual {p1}, Lb/h/g/l/ProfleEvents3;->c()I
 
     move-result v0
 
@@ -66,7 +66,7 @@
     if-ne v0, v1, :cond_1
 
     .line 51
-    invoke-virtual {p1}, Lb/h/g/l/i;->b()Z
+    invoke-virtual {p1}, Lb/h/g/l/ProfleEvents3;->b()Z
 
     move-result p1
 
@@ -93,11 +93,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/holders/group/GroupInviteVh;Lb/h/g/l/i;)V
+.method public static final synthetic a(Lcom/vk/catalog2/core/holders/group/GroupInviteVh;Lb/h/g/l/ProfleEvents3;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->a(Lb/h/g/l/i;)V
+    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->a(Lb/h/g/l/ProfleEvents3;)V
 
     return-void
 .end method
@@ -132,7 +132,7 @@
     invoke-direct {p0}, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->o()V
 
     .line 4
-    new-instance v9, Lcom/vk/api/groups/s;
+    new-instance v9, Lcom/vk/api/groups/GroupsJoin;
 
     iget v2, v0, Lcom/vk/dto/group/Group;->b:I
 
@@ -152,11 +152,11 @@
 
     move-object v1, v9
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/api/groups/s;-><init>(IZLjava/lang/String;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/api/groups/GroupsJoin;-><init>(IZLjava/lang/String;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 p1, 0x0
 
-    invoke-static {v9, p1, v10, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v9, p1, v10, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -171,7 +171,7 @@
     invoke-direct {v2, p0, v0}, Lcom/vk/catalog2/core/holders/group/GroupInviteVh$b;-><init>(Lcom/vk/catalog2/core/holders/group/GroupInviteVh;Lcom/vk/dto/group/Group;)V
 
     .line 7
-    invoke-virtual {p1, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -198,17 +198,17 @@
     invoke-direct {p0}, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->p()V
 
     .line 3
-    new-instance v1, Lcom/vk/api/groups/t;
+    new-instance v1, Lcom/vk/api/groups/GroupsLeave;
 
     iget v2, v0, Lcom/vk/dto/group/Group;->b:I
 
-    invoke-direct {v1, v2}, Lcom/vk/api/groups/t;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/vk/api/groups/GroupsLeave;-><init>(I)V
 
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    invoke-static {v1, v3, v2, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v3, v2, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -223,7 +223,7 @@
     invoke-direct {v3, p0, v0}, Lcom/vk/catalog2/core/holders/group/GroupInviteVh$d;-><init>(Lcom/vk/catalog2/core/holders/group/GroupInviteVh;Lcom/vk/dto/group/Group;)V
 
     .line 6
-    invoke-virtual {v1, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -253,7 +253,7 @@
     :cond_0
     const-string v0, "postStatus"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -261,7 +261,7 @@
     const-string v0, "buttons"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -298,9 +298,9 @@
     invoke-direct {v3}, Landroid/text/SpannableStringBuilder;-><init>()V
 
     .line 5
-    new-instance v4, Lcom/vk/core/utils/c;
+    new-instance v4, Lcom/vk/core/utils/SpannableUtils;
 
-    sget v5, Lcom/vk/catalog2/core/p;->ic_done_16:I
+    sget v5, Lcom/vk/catalog2/core/R1;->ic_done_16:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -308,23 +308,23 @@
 
     const/4 v6, 0x2
 
-    invoke-direct {v4, v5, v1, v6, v1}, Lcom/vk/core/utils/c;-><init>(Ljava/lang/Integer;Landroid/graphics/drawable/Drawable;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v4, v5, v1, v6, v1}, Lcom/vk/core/utils/SpannableUtils;-><init>(Ljava/lang/Integer;Landroid/graphics/drawable/Drawable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 6
-    sget-object v5, Lcom/vk/core/utils/c;->n:Lcom/vk/core/utils/c$a;
+    sget-object v5, Lcom/vk/core/utils/SpannableUtils;->n:Lcom/vk/core/utils/SpannableUtils$a;
 
-    invoke-virtual {v5}, Lcom/vk/core/utils/c$a;->a()I
+    invoke-virtual {v5}, Lcom/vk/core/utils/SpannableUtils$a;->a()I
 
     move-result v5
 
-    invoke-virtual {v4, v5}, Lcom/vk/core/utils/c;->a(I)Lcom/vk/core/utils/c;
+    invoke-virtual {v4, v5}, Lcom/vk/core/utils/SpannableUtils;->a(I)Lcom/vk/core/utils/SpannableUtils;
 
     const/4 v5, 0x0
 
     const/4 v6, 0x1
 
     .line 7
-    invoke-static {v4, v5, v6, v1}, Lcom/vk/core/utils/c;->a(Lcom/vk/core/utils/c;FILjava/lang/Object;)Lcom/vk/core/utils/c;
+    invoke-static {v4, v5, v6, v1}, Lcom/vk/core/utils/SpannableUtils;->a(Lcom/vk/core/utils/SpannableUtils;FILjava/lang/Object;)Lcom/vk/core/utils/SpannableUtils;
 
     iget-object v5, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->e:Lcom/vk/core/view/links/LinkedTextView;
 
@@ -336,9 +336,9 @@
 
     const-string v6, "postStatus.context"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v4, v5}, Lcom/vk/core/utils/c;->a(Landroid/content/Context;)Landroid/text/Spannable;
+    invoke-virtual {v4, v5}, Lcom/vk/core/utils/SpannableUtils;->a(Landroid/content/Context;)Landroid/text/Spannable;
 
     move-result-object v4
 
@@ -350,7 +350,7 @@
     const/high16 v4, 0x41000000    # 8.0f
 
     .line 9
-    invoke-static {v4}, Lcom/vk/core/utils/f;->a(F)Landroid/text/Spannable;
+    invoke-static {v4}, Lcom/vk/core/utils/SpannableUtils1;->a(F)Landroid/text/Spannable;
 
     move-result-object v4
 
@@ -367,7 +367,7 @@
 
     move-result-object v2
 
-    sget v4, Lcom/vk/catalog2/core/u;->community_catalog_invite_accepted:I
+    sget v4, Lcom/vk/catalog2/core/R9;->community_catalog_invite_accepted:I
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -380,42 +380,42 @@
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 11
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->D:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->D:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     return-void
 
     :cond_0
     const-string v0, "observable"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 12
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 13
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 14
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 15
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -423,7 +423,7 @@
     const-string v0, "buttons"
 
     .line 16
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -468,7 +468,7 @@
 
     move-result-object v2
 
-    sget v4, Lcom/vk/catalog2/core/u;->community_catalog_invite_declined:I
+    sget v4, Lcom/vk/catalog2/core/R9;->community_catalog_invite_declined:I
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -481,35 +481,35 @@
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->D:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->D:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     return-void
 
     :cond_0
     const-string v0, "observable"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 7
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 8
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -517,7 +517,7 @@
     const-string v0, "buttons"
 
     .line 9
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -526,11 +526,11 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lb/h/g/l/h;->a()Lb/h/v/d;
+    invoke-static {}, Lb/h/g/l/ProfleEvents4;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -538,15 +538,15 @@
 
     invoke-direct {v1, p0}, Lcom/vk/catalog2/core/holders/group/GroupInviteVh$f;-><init>(Lcom/vk/catalog2/core/holders/group/GroupInviteVh;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "profileBus.events.subscr\u2026)\n            }\n        }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->D:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->D:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -566,15 +566,15 @@
 
     if-nez v1, :cond_0
 
-    invoke-static {}, Lb/h/g/l/h;->a()Lb/h/v/d;
+    invoke-static {}, Lb/h/g/l/ProfleEvents4;->a()Lb/h/v/RxBus;
 
     move-result-object v1
 
-    new-instance v2, Lb/h/g/l/a;
+    new-instance v2, Lb/h/g/l/ProfleEvents1;
 
-    invoke-direct {v2}, Lb/h/g/l/a;-><init>()V
+    invoke-direct {v2}, Lb/h/g/l/ProfleEvents1;-><init>()V
 
-    invoke-virtual {v1, v2}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     :cond_0
     const/4 v1, 0x1
@@ -601,7 +601,7 @@
     move-result-object p1
 
     .line 7
-    sget p2, Lcom/vk/catalog2/core/q;->group_photo:I
+    sget p2, Lcom/vk/catalog2/core/R10;->group_photo:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -609,14 +609,14 @@
 
     const-string p3, "v.findViewById(R.id.group_photo)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/imageloader/view/VKImageView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->a:Lcom/vk/imageloader/view/VKImageView;
 
     .line 8
-    sget p2, Lcom/vk/catalog2/core/q;->invited_photo:I
+    sget p2, Lcom/vk/catalog2/core/R10;->invited_photo:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -624,14 +624,14 @@
 
     const-string p3, "v.findViewById(R.id.invited_photo)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/imageloader/view/VKImageView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->b:Lcom/vk/imageloader/view/VKImageView;
 
     .line 9
-    sget p2, Lcom/vk/catalog2/core/q;->title:I
+    sget p2, Lcom/vk/catalog2/core/R10;->title:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -639,14 +639,14 @@
 
     const-string p3, "v.findViewById(R.id.title)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->c:Landroid/widget/TextView;
 
     .line 10
-    sget p2, Lcom/vk/catalog2/core/q;->info:I
+    sget p2, Lcom/vk/catalog2/core/R10;->info:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -654,14 +654,14 @@
 
     const-string p3, "v.findViewById(R.id.info)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->d:Landroid/widget/TextView;
 
     .line 11
-    sget p2, Lcom/vk/catalog2/core/q;->post_status:I
+    sget p2, Lcom/vk/catalog2/core/R10;->post_status:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -669,14 +669,14 @@
 
     const-string p3, "v.findViewById(R.id.post_status)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/core/view/links/LinkedTextView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->e:Lcom/vk/core/view/links/LinkedTextView;
 
     .line 12
-    sget p2, Lcom/vk/catalog2/core/q;->button_layout:I
+    sget p2, Lcom/vk/catalog2/core/R10;->button_layout:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -684,14 +684,14 @@
 
     const-string p3, "v.findViewById(R.id.button_layout)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/view/ViewGroup;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->f:Landroid/view/ViewGroup;
 
     .line 13
-    sget p2, Lcom/vk/catalog2/core/q;->positive_button:I
+    sget p2, Lcom/vk/catalog2/core/R10;->positive_button:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -699,12 +699,12 @@
 
     const-string p3, "v.findViewById(R.id.positive_button)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->g:Landroid/view/View;
 
     .line 14
-    sget p2, Lcom/vk/catalog2/core/q;->negative_button:I
+    sget p2, Lcom/vk/catalog2/core/R10;->negative_button:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -712,7 +712,7 @@
 
     const-string p3, "v.findViewById(R.id.negative_button)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->h:Landroid/view/View;
 
@@ -748,7 +748,7 @@
     const-string p2, "v"
 
     .line 20
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -756,7 +756,7 @@
     const-string p1, "invitedPhotoView"
 
     .line 21
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
@@ -764,7 +764,7 @@
     const-string p1, "declineInviteButton"
 
     .line 22
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
@@ -772,7 +772,7 @@
     const-string p1, "acceptInviteButton"
 
     .line 23
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 .end method
@@ -781,18 +781,18 @@
     .locals 1
 
     .line 52
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->D:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/group/GroupInviteVh;->D:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     return-void
 
     :cond_0
     const-string v0, "observable"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -852,13 +852,13 @@
 
     const-string v4, "info.context"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v4, Lcom/vk/catalog2/core/t;->community_members:I
+    sget v4, Lcom/vk/catalog2/core/R2;->community_members:I
 
     iget v5, v0, Lcom/vk/dto/group/Group;->K:I
 
@@ -880,7 +880,7 @@
 
     const-string v4, "info.context.resources.g\u2026unt, group.members_count)"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 30
     iget-object v4, v0, Lcom/vk/dto/group/Group;->X:Lcom/vk/dto/user/UserProfile;
@@ -909,7 +909,7 @@
     move-object v5, v2
 
     :goto_1
-    invoke-static {v4, v5}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v4, v5}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v4
 
@@ -943,7 +943,7 @@
     move-object v5, v2
 
     :goto_3
-    invoke-static {v4, v5}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v4, v5}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v4
 
@@ -951,7 +951,7 @@
 
     .line 32
     :cond_5
-    invoke-static {v2, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v2, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v4
 
@@ -990,7 +990,7 @@
     goto :goto_5
 
     :cond_6
-    invoke-static {v8}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1015,7 +1015,7 @@
     move-result-object v2
 
     .line 38
-    sget v3, Lcom/vk/catalog2/core/u;->community_catalog_invite_description:I
+    sget v3, Lcom/vk/catalog2/core/R9;->community_catalog_invite_description:I
 
     const/4 v7, 0x2
 
@@ -1072,24 +1072,24 @@
 
     .line 45
     :cond_b
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_c
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 46
     :cond_d
-    invoke-static {v8}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 47
     :cond_e
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1097,7 +1097,7 @@
     const-string p1, "title"
 
     .line 48
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1105,7 +1105,7 @@
     const-string p1, "groupPhotoView"
 
     .line 49
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1117,7 +1117,7 @@
     .locals 0
 
     .line 4
-    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
 
     return-void
 .end method
@@ -1126,7 +1126,7 @@
     .locals 0
 
     .line 5
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
 
     return-void
 .end method
@@ -1165,7 +1165,7 @@
     move-result v2
 
     .line 3
-    sget v3, Lcom/vk/catalog2/core/q;->positive_button:I
+    sget v3, Lcom/vk/catalog2/core/R10;->positive_button:I
 
     if-ne v2, v3, :cond_1
 
@@ -1177,7 +1177,7 @@
     if-ne v1, v2, :cond_0
 
     .line 5
-    new-instance v1, Lcom/vk/core/dialogs/actionspopup/a$b;
+    new-instance v1, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     const/4 v5, 0x1
 
@@ -1191,10 +1191,10 @@
 
     move-object/from16 v4, p1
 
-    invoke-direct/range {v3 .. v8}, Lcom/vk/core/dialogs/actionspopup/a$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v8}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 6
-    sget v4, Lcom/vk/catalog2/core/u;->group_event_join:I
+    sget v4, Lcom/vk/catalog2/core/R9;->group_event_join:I
 
     const/4 v5, 0x0
 
@@ -1206,25 +1206,25 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v3 .. v9}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v3 .. v9}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 7
-    sget v4, Lcom/vk/catalog2/core/u;->group_event_join_unsure:I
+    sget v4, Lcom/vk/catalog2/core/R9;->group_event_join_unsure:I
 
     new-instance v7, Lcom/vk/catalog2/core/holders/group/GroupInviteVh$onClick$2;
 
     invoke-direct {v7, v0}, Lcom/vk/catalog2/core/holders/group/GroupInviteVh$onClick$2;-><init>(Lcom/vk/catalog2/core/holders/group/GroupInviteVh;)V
 
-    invoke-static/range {v3 .. v9}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v3 .. v9}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 8
-    invoke-virtual {v1}, Lcom/vk/core/dialogs/actionspopup/a$b;->a()Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-virtual {v1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/vk/core/dialogs/actionspopup/a;->b(Z)Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-virtual {v1, v2}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b(Z)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     goto/16 :goto_2
 
@@ -1236,7 +1236,7 @@
 
     .line 10
     :cond_1
-    sget v3, Lcom/vk/catalog2/core/q;->negative_button:I
+    sget v3, Lcom/vk/catalog2/core/R10;->negative_button:I
 
     const-string v4, "v.context"
 
@@ -1272,12 +1272,12 @@
 
     move-result-object v3
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v2, v3}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 14
-    sget v3, Lcom/vk/catalog2/core/u;->leave_invited_group:I
+    sget v3, Lcom/vk/catalog2/core/R9;->leave_invited_group:I
 
     invoke-virtual {v2, v3}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setTitle(I)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
@@ -1288,18 +1288,18 @@
 
     if-eqz v1, :cond_4
 
-    sget v1, Lcom/vk/catalog2/core/u;->leave_invited_closed_group_confirm:I
+    sget v1, Lcom/vk/catalog2/core/R9;->leave_invited_closed_group_confirm:I
 
     goto :goto_1
 
     :cond_4
-    sget v1, Lcom/vk/catalog2/core/u;->leave_invited_private_group_confirm:I
+    sget v1, Lcom/vk/catalog2/core/R9;->leave_invited_private_group_confirm:I
 
     :goto_1
     invoke-virtual {v2, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setMessage(I)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
     .line 16
-    sget v1, Lcom/vk/catalog2/core/u;->yes:I
+    sget v1, Lcom/vk/catalog2/core/R9;->yes:I
 
     new-instance v3, Lcom/vk/catalog2/core/holders/group/GroupInviteVh$e;
 
@@ -1308,7 +1308,7 @@
     invoke-virtual {v2, v1, v3}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
     .line 17
-    sget v1, Lcom/vk/catalog2/core/u;->no:I
+    sget v1, Lcom/vk/catalog2/core/R9;->no:I
 
     const/4 v3, 0x0
 
@@ -1321,12 +1321,12 @@
 
     .line 19
     :cond_5
-    sget v3, Lcom/vk/catalog2/core/q;->invited_photo:I
+    sget v3, Lcom/vk/catalog2/core/R10;->invited_photo:I
 
     if-ne v2, v3, :cond_6
 
     .line 20
-    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
+    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v5
 
@@ -1334,7 +1334,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v7, v1, Lcom/vk/dto/group/Group;->W:I
 
@@ -1350,13 +1350,13 @@
 
     const/4 v13, 0x0
 
-    invoke-static/range {v5 .. v13}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v5 .. v13}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     goto :goto_2
 
     .line 21
     :cond_6
-    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
+    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v14
 
@@ -1364,7 +1364,7 @@
 
     move-result-object v15
 
-    invoke-static {v15, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v15, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v1, v1, Lcom/vk/dto/group/Group;->b:I
 
@@ -1384,7 +1384,7 @@
 
     move/from16 v16, v1
 
-    invoke-static/range {v14 .. v22}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v14 .. v22}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     :cond_7
     :goto_2

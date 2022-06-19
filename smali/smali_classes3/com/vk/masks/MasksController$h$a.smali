@@ -3,12 +3,12 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/masks/MasksController$h;->a(Lcom/vk/api/masks/MasksGetModel$MasksGetModelResponse;)Lc/a/p;
+    value = Lcom/vk/masks/MasksController$h;->a(Lcom/vk/api/masks/MasksGetModel$MasksGetModelResponse;)Lio/reactivex/ObservableSource;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/core/network/RxFileDownloader$c;",
         ">;"
     }
@@ -68,28 +68,28 @@
 
     iget-object p1, p1, Lcom/vk/masks/MasksController$h;->a:Lcom/vk/masks/MasksController;
 
-    invoke-static {p1}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/d;
+    invoke-static {p1}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/MasksStorage;
 
     move-result-object p1
 
     iget v0, p0, Lcom/vk/masks/MasksController$h$a;->a:I
 
-    invoke-virtual {p1, v0}, Lcom/vk/masks/d;->b(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/masks/MasksStorage;->b(I)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/masks/MasksController$h$a;->b:Lcom/vk/masks/MasksController$h;
 
     iget-object p1, p1, Lcom/vk/masks/MasksController$h;->a:Lcom/vk/masks/MasksController;
 
-    invoke-static {p1}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/d;
+    invoke-static {p1}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/MasksStorage;
 
     move-result-object p1
 
-    invoke-static {}, Lcom/vk/media/camera/l/a;->d()I
+    invoke-static {}, Lcom/vk/media/camera/l/CameraMasksUtils;->d()I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/masks/d;->a(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/masks/MasksStorage;->a(I)V
 
     :cond_0
     return-void

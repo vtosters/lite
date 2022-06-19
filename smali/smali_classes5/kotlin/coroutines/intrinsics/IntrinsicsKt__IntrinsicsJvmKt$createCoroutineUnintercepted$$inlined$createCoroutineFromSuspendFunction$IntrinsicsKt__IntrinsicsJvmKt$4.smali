@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt;->a(Lkotlin/jvm/b/c;Ljava/lang/Object;Lkotlin/coroutines/a;)Lkotlin/coroutines/a;
+    value = Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt;->a(Lkotlin/jvm/b/Functions1;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,31 +15,31 @@
 
 
 # instance fields
-.field final synthetic $completion:Lkotlin/coroutines/a;
+.field final synthetic $completion:Lkotlin/coroutines/Continuation;
 
-.field final synthetic $context:Lkotlin/coroutines/c;
+.field final synthetic $context:Lkotlin/coroutines/CoroutineContext;
 
 .field final synthetic $receiver$inlined:Ljava/lang/Object;
 
-.field final synthetic $this_createCoroutineUnintercepted$inlined:Lkotlin/jvm/b/c;
+.field final synthetic $this_createCoroutineUnintercepted$inlined:Lkotlin/jvm/b/Functions1;
 
 .field private label:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/a;Lkotlin/coroutines/c;Lkotlin/coroutines/a;Lkotlin/coroutines/c;Lkotlin/jvm/b/c;Ljava/lang/Object;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lkotlin/coroutines/CoroutineContext;Lkotlin/coroutines/Continuation;Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/b/Functions1;Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4;->$completion:Lkotlin/coroutines/a;
+    iput-object p1, p0, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4;->$completion:Lkotlin/coroutines/Continuation;
 
-    iput-object p2, p0, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4;->$context:Lkotlin/coroutines/c;
+    iput-object p2, p0, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4;->$context:Lkotlin/coroutines/CoroutineContext;
 
-    iput-object p5, p0, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4;->$this_createCoroutineUnintercepted$inlined:Lkotlin/jvm/b/c;
+    iput-object p5, p0, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4;->$this_createCoroutineUnintercepted$inlined:Lkotlin/jvm/b/Functions1;
 
     iput-object p6, p0, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4;->$receiver$inlined:Ljava/lang/Object;
 
     .line 1
-    invoke-direct {p0, p3, p4}, Lkotlin/coroutines/jvm/internal/ContinuationImpl;-><init>(Lkotlin/coroutines/a;Lkotlin/coroutines/c;)V
+    invoke-direct {p0, p3, p4}, Lkotlin/coroutines/jvm/internal/ContinuationImpl;-><init>(Lkotlin/coroutines/Continuation;Lkotlin/coroutines/CoroutineContext;)V
 
     return-void
 .end method
@@ -64,7 +64,7 @@
     iput v1, p0, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4;->label:I
 
     .line 3
-    invoke-static {p1}, Lkotlin/j;->a(Ljava/lang/Object;)V
+    invoke-static {p1}, Lkotlin/Result1;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -87,20 +87,20 @@
     iput v2, p0, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4;->label:I
 
     .line 6
-    invoke-static {p1}, Lkotlin/j;->a(Ljava/lang/Object;)V
+    invoke-static {p1}, Lkotlin/Result1;->a(Ljava/lang/Object;)V
 
     .line 7
-    iget-object p1, p0, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4;->$this_createCoroutineUnintercepted$inlined:Lkotlin/jvm/b/c;
+    iget-object p1, p0, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4;->$this_createCoroutineUnintercepted$inlined:Lkotlin/jvm/b/Functions1;
 
     if-eqz p1, :cond_2
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/s;->a(Ljava/lang/Object;I)Ljava/lang/Object;
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/TypeIntrinsics;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
-    check-cast p1, Lkotlin/jvm/b/c;
+    check-cast p1, Lkotlin/jvm/b/Functions1;
 
     iget-object v0, p0, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4;->$receiver$inlined:Ljava/lang/Object;
 
-    invoke-interface {p1, v0, p0}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0, p0}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

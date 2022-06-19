@@ -9,7 +9,7 @@
 
 
 # instance fields
-.field private final A:Lcom/vk/im/ui/formatters/b;
+.field private final A:Lcom/vk/im/ui/formatters/ComposingFormatter;
 
 .field private final B:Lcom/vk/im/ui/utils/TimeChangeReceiver;
 
@@ -17,15 +17,15 @@
 
 .field private D:Z
 
-.field private final E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;
+.field private final E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;
 
-.field private F:Lcom/vk/im/ui/components/common/b;
+.field private F:Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;
 
-.field private final G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+.field private final G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
 .field private final a:Landroid/view/View;
 
-.field private b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+.field private b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
 .field private final c:Lcom/vk/im/ui/themes/DialogThemeBinder;
 
@@ -59,21 +59,21 @@
 
 .field private final r:Landroid/widget/ImageView;
 
-.field private final s:Lcom/vk/im/ui/drawables/h;
+.field private final s:Lcom/vk/im/ui/drawables/TypingDrawable;
 
-.field private final t:Lcom/vk/im/ui/drawables/f;
+.field private final t:Lcom/vk/im/ui/drawables/RecordingDrawable;
 
 .field private final u:Landroid/os/Handler;
 
 .field private final v:Ljava/lang/Object;
 
-.field private final w:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/i;
+.field private final w:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/TitleFormatter;
 
 .field private final x:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/SubtitleFormatter;
 
-.field private final y:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/d;
+.field private final y:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/IconFormatter;
 
-.field private final z:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/f;
+.field private final z:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfoFormatter;
 
 
 # direct methods
@@ -88,7 +88,7 @@
     if-eqz p2, :cond_0
 
     .line 2
-    sget v1, Lcom/vk/im/ui/j;->vkim_dialog_header_info_v2:I
+    sget v1, Lcom/vk/im/ui/R13;->vkim_dialog_header_info_v2:I
 
     invoke-virtual {p2, v1}, Landroid/view/ViewStub;->setLayoutResource(I)V
 
@@ -98,7 +98,7 @@
 
     const-string v1, "stub!!.apply { layoutRes\u2026eader_info_v2 }.inflate()"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->a:Landroid/view/View;
 
@@ -115,7 +115,7 @@
     .line 5
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->a:Landroid/view/View;
 
-    sget p2, Lcom/vk/im/ui/h;->toolbar:I
+    sget p2, Lcom/vk/im/ui/R11;->toolbar:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -128,7 +128,7 @@
     .line 6
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->a:Landroid/view/View;
 
-    sget p2, Lcom/vk/im/ui/h;->content:I
+    sget p2, Lcom/vk/im/ui/R11;->content:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -141,7 +141,7 @@
     .line 7
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->a:Landroid/view/View;
 
-    sget p2, Lcom/vk/im/ui/h;->avatar_story:I
+    sget p2, Lcom/vk/im/ui/R11;->avatar_story:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -154,7 +154,7 @@
     .line 8
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    sget p2, Lcom/vk/im/ui/h;->avatar_wrapper:I
+    sget p2, Lcom/vk/im/ui/R11;->avatar_wrapper:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -165,7 +165,7 @@
     .line 9
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    sget p2, Lcom/vk/im/ui/h;->avatar_content:I
+    sget p2, Lcom/vk/im/ui/R11;->avatar_content:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -178,7 +178,7 @@
     .line 10
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    sget p2, Lcom/vk/im/ui/h;->loading:I
+    sget p2, Lcom/vk/im/ui/R11;->loading:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -189,7 +189,7 @@
     .line 11
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    sget p2, Lcom/vk/im/ui/h;->vkim_dialogs_refresh_status:I
+    sget p2, Lcom/vk/im/ui/R11;->vkim_dialogs_refresh_status:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -202,7 +202,7 @@
     .line 12
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    sget p2, Lcom/vk/im/ui/h;->avatar_verified:I
+    sget p2, Lcom/vk/im/ui/R11;->avatar_verified:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -215,7 +215,7 @@
     .line 13
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    sget p2, Lcom/vk/im/ui/h;->title_muted:I
+    sget p2, Lcom/vk/im/ui/R11;->title_muted:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -228,7 +228,7 @@
     .line 14
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    sget p2, Lcom/vk/im/ui/h;->title_casper:I
+    sget p2, Lcom/vk/im/ui/R11;->title_casper:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -241,7 +241,7 @@
     .line 15
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    sget p2, Lcom/vk/im/ui/h;->title_dropdown:I
+    sget p2, Lcom/vk/im/ui/R11;->title_dropdown:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -254,7 +254,7 @@
     .line 16
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    sget p2, Lcom/vk/im/ui/h;->subtitle_text:I
+    sget p2, Lcom/vk/im/ui/R11;->subtitle_text:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -267,7 +267,7 @@
     .line 17
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    sget p2, Lcom/vk/im/ui/h;->subtitle_online_mobile:I
+    sget p2, Lcom/vk/im/ui/R11;->subtitle_online_mobile:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -280,7 +280,7 @@
     .line 18
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    sget p2, Lcom/vk/im/ui/h;->typing_progress:I
+    sget p2, Lcom/vk/im/ui/R11;->typing_progress:I
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -291,40 +291,40 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->r:Landroid/widget/ImageView;
 
     .line 19
-    new-instance p1, Lcom/vk/im/ui/drawables/h;
+    new-instance p1, Lcom/vk/im/ui/drawables/TypingDrawable;
 
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->d:Landroid/content/Context;
 
     const-string v1, "context"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v2, Lcom/vk/im/ui/c;->header_text_secondary:I
+    sget v2, Lcom/vk/im/ui/R5;->header_text_secondary:I
 
     invoke-static {p2, v2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result p2
 
-    invoke-direct {p1, p2}, Lcom/vk/im/ui/drawables/h;-><init>(I)V
+    invoke-direct {p1, p2}, Lcom/vk/im/ui/drawables/TypingDrawable;-><init>(I)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->s:Lcom/vk/im/ui/drawables/h;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->s:Lcom/vk/im/ui/drawables/TypingDrawable;
 
     .line 20
-    new-instance p1, Lcom/vk/im/ui/drawables/f;
+    new-instance p1, Lcom/vk/im/ui/drawables/RecordingDrawable;
 
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->d:Landroid/content/Context;
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v2, Lcom/vk/im/ui/c;->header_text_secondary:I
+    sget v2, Lcom/vk/im/ui/R5;->header_text_secondary:I
 
     invoke-static {p2, v2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
     move-result p2
 
-    invoke-direct {p1, p2}, Lcom/vk/im/ui/drawables/f;-><init>(I)V
+    invoke-direct {p1, p2}, Lcom/vk/im/ui/drawables/RecordingDrawable;-><init>(I)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->t:Lcom/vk/im/ui/drawables/f;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->t:Lcom/vk/im/ui/drawables/RecordingDrawable;
 
     .line 21
     new-instance p1, Landroid/os/Handler;
@@ -341,68 +341,68 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->v:Ljava/lang/Object;
 
     .line 23
-    new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/i;
+    new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/TitleFormatter;
 
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->d:Landroid/content/Context;
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/i;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/TitleFormatter;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->w:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/i;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->w:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/TitleFormatter;
 
     .line 24
     new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/SubtitleFormatter;
 
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->d:Landroid/content/Context;
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/SubtitleFormatter;-><init>(Landroid/content/Context;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->x:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/SubtitleFormatter;
 
     .line 25
-    new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/d;
+    new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/IconFormatter;
 
-    invoke-direct {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/d;-><init>()V
+    invoke-direct {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/IconFormatter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->y:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/d;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->y:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/IconFormatter;
 
     .line 26
-    new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/f;
+    new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfoFormatter;
 
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->d:Landroid/content/Context;
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/f;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfoFormatter;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->z:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/f;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->z:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfoFormatter;
 
     .line 27
-    new-instance p1, Lcom/vk/im/ui/formatters/b;
+    new-instance p1, Lcom/vk/im/ui/formatters/ComposingFormatter;
 
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->d:Landroid/content/Context;
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p1, p2}, Lcom/vk/im/ui/formatters/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/ui/formatters/ComposingFormatter;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->A:Lcom/vk/im/ui/formatters/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->A:Lcom/vk/im/ui/formatters/ComposingFormatter;
 
     .line 28
     new-instance p1, Lcom/vk/im/ui/utils/TimeChangeReceiver;
 
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->d:Landroid/content/Context;
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc$timeChangeReceiver$1;
 
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc$timeChangeReceiver$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;)V
 
-    invoke-direct {p1, p2, v2}, Lcom/vk/im/ui/utils/TimeChangeReceiver;-><init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
+    invoke-direct {p1, p2, v2}, Lcom/vk/im/ui/utils/TimeChangeReceiver;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->B:Lcom/vk/im/ui/utils/TimeChangeReceiver;
 
@@ -411,31 +411,31 @@
 
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->d:Landroid/content/Context;
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;-><init>(Landroid/content/Context;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->C:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
 
     .line 30
-    new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;
+    new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;
 
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
     const-string v1, "toolbarView"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;-><init>(Landroid/view/View;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;-><init>(Landroid/view/View;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;
 
     .line 31
-    new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-direct {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;-><init>()V
+    invoke-direct {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
     .line 32
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
@@ -449,7 +449,7 @@
     .line 33
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    sget p2, Lcom/vk/im/ui/k;->vkim_dialog_header_info_v2:I
+    sget p2, Lcom/vk/im/ui/R1;->vkim_dialog_header_info_v2:I
 
     invoke-virtual {p1, p2}, Landroidx/appcompat/widget/Toolbar;->inflateMenu(I)V
 
@@ -467,13 +467,13 @@
 
     const-string p2, "contentView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc$3;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc$3;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;)V
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 36
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->h:Landroid/view/View;
@@ -494,23 +494,23 @@
     invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 38
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->s:Lcom/vk/im/ui/drawables/h;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->s:Lcom/vk/im/ui/drawables/TypingDrawable;
 
     const/high16 p2, 0x42ff0000    # 127.5f
 
     float-to-int p2, p2
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/drawables/h;->setAlpha(I)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/drawables/TypingDrawable;->setAlpha(I)V
 
     .line 39
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->t:Lcom/vk/im/ui/drawables/f;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->t:Lcom/vk/im/ui/drawables/RecordingDrawable;
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/drawables/f;->setAlpha(I)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/drawables/RecordingDrawable;->setAlpha(I)V
 
     .line 40
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->r:Landroid/widget/ImageView;
 
-    iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->s:Lcom/vk/im/ui/drawables/h;
+    iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->s:Lcom/vk/im/ui/drawables/TypingDrawable;
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -522,9 +522,9 @@
     .line 42
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget p2, Lcom/vk/im/ui/c;->header_tint:I
+    sget p2, Lcom/vk/im/ui/R5;->header_tint:I
 
     invoke-virtual {p3, p1, p2}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
@@ -533,9 +533,9 @@
 
     const-string p2, "titleTextView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget p2, Lcom/vk/im/ui/c;->toolbar_title_textColor:I
+    sget p2, Lcom/vk/im/ui/R5;->toolbar_title_textColor:I
 
     invoke-virtual {p3, p1, p2}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/widget/TextView;I)V
 
@@ -552,7 +552,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->a(Ljava/util/List;)V
 
     .line 46
-    invoke-virtual {p0, v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->a(Lcom/vk/im/ui/components/common/b;)V
+    invoke-virtual {p0, v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->a(Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;)V
 
     .line 47
     sget-object p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfo;->DISCONNECTED:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfo;
@@ -570,7 +570,7 @@
 
     .line 49
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -579,7 +579,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;
 
     if-nez v0, :cond_0
 
@@ -600,12 +600,12 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/im/ui/reporters/c;->b:Lcom/vk/im/ui/reporters/c;
+    sget-object v0, Lcom/vk/im/ui/reporters/DialogActionReporter;->INSTANCE:Lcom/vk/im/ui/reporters/DialogActionReporter;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/reporters/c;->b()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/reporters/DialogActionReporter;->b()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;
 
     if-eqz v0, :cond_0
 
@@ -617,7 +617,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc$showDialogActionsExternal$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;)V
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/components/common/b;->a(Ljava/util/List;Lkotlin/jvm/b/b;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
 
     :cond_0
     return-void
@@ -627,12 +627,12 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/im/ui/reporters/c;->b:Lcom/vk/im/ui/reporters/c;
+    sget-object v0, Lcom/vk/im/ui/reporters/DialogActionReporter;->INSTANCE:Lcom/vk/im/ui/reporters/DialogActionReporter;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/reporters/c;->b()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/reporters/DialogActionReporter;->b()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;
 
     invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->w()Ljava/util/List;
 
@@ -642,7 +642,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc$showDialogActionsInternal$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;->a(Ljava/util/List;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -651,7 +651,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;
 
     if-nez v0, :cond_0
 
@@ -672,12 +672,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;
 
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/im/ui/components/common/b;->isVisible()Z
+    invoke-interface {v0}, Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;->isVisible()Z
 
     move-result v0
 
@@ -701,9 +701,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;->isVisible()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;->isVisible()Z
 
     move-result v0
 
@@ -748,21 +748,21 @@
     move-result p1
 
     .line 53
-    sget v0, Lcom/vk/im/ui/h;->chat_settings:I
+    sget v0, Lcom/vk/im/ui/R11;->chat_settings:I
 
     if-ne p1, v0, :cond_0
 
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->m()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->m()V
 
     goto :goto_0
 
     .line 54
     :cond_0
-    sget v0, Lcom/vk/im/ui/h;->call:I
+    sget v0, Lcom/vk/im/ui/R11;->call:I
 
     if-ne p1, v0, :cond_1
 
@@ -772,7 +772,7 @@
 
     .line 55
     :cond_1
-    sget v0, Lcom/vk/im/ui/h;->call_video:I
+    sget v0, Lcom/vk/im/ui/R11;->call_video:I
 
     if-ne p1, v0, :cond_2
 
@@ -782,7 +782,7 @@
 
     .line 56
     :cond_2
-    sget v0, Lcom/vk/im/ui/h;->more:I
+    sget v0, Lcom/vk/im/ui/R11;->more:I
 
     if-ne p1, v0, :cond_3
 
@@ -1055,7 +1055,7 @@
 
     const-string v1, "avatarContentView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->k(Z)I
 
@@ -1066,7 +1066,7 @@
     .line 29
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->i:Lcom/vk/im/ui/views/avatars/AvatarView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->getVisibility()I
 
@@ -1091,7 +1091,7 @@
 
     const-string v1, "subtitleTextView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->k(Z)I
 
@@ -1102,7 +1102,7 @@
     .line 45
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->p:Landroid/widget/TextView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -1115,14 +1115,14 @@
     .line 46
     iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->r:Landroid/widget/ImageView;
 
-    invoke-static {p3, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p3}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
     .line 47
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->q:Landroid/widget/ImageView;
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p4}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->k(Z)I
 
@@ -1140,12 +1140,12 @@
 
     if-ne p3, v0, :cond_1
 
-    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->t:Lcom/vk/im/ui/drawables/f;
+    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->t:Lcom/vk/im/ui/drawables/RecordingDrawable;
 
     goto :goto_0
 
     :cond_1
-    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->s:Lcom/vk/im/ui/drawables/h;
+    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->s:Lcom/vk/im/ui/drawables/TypingDrawable;
 
     :goto_0
     invoke-virtual {p4, p3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -1153,14 +1153,14 @@
     .line 49
     iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->r:Landroid/widget/ImageView;
 
-    invoke-static {p3, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p3}, Lcom/vk/extensions/ViewExtKt;->r(Landroid/view/View;)V
 
     .line 50
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->q:Landroid/widget/ImageView;
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p2}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
@@ -1176,7 +1176,7 @@
 
     const-string v1, "titleTextView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->k(Z)I
 
@@ -1187,7 +1187,7 @@
     .line 33
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->k:Landroid/widget/TextView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -1196,7 +1196,7 @@
 
     const-string p2, "titleCasperView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p6}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->k(Z)I
 
@@ -1215,7 +1215,7 @@
 
     const-string p2, "titleMutedView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p4}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->k(Z)I
 
@@ -1228,7 +1228,7 @@
 
     const-string p2, "titleDropdownView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p5}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->k(Z)I
 
@@ -1241,7 +1241,7 @@
 
     const-string p2, "avatarVerifiedView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, p3}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -1255,13 +1255,13 @@
 
     if-eqz p2, :cond_1
 
-    sget p2, Lcom/vk/im/ui/f;->verified_badge_light_24:I
+    sget p2, Lcom/vk/im/ui/R12;->verified_badge_light_24:I
 
     goto :goto_0
 
     .line 41
     :cond_1
-    sget p2, Lcom/vk/im/ui/f;->verified_badge_dark_24:I
+    sget p2, Lcom/vk/im/ui/R12;->verified_badge_dark_24:I
 
     .line 42
     :goto_0
@@ -1274,11 +1274,11 @@
     .locals 3
 
     .line 15
-    sget-object v0, Lcom/vk/im/ui/reporters/c;->b:Lcom/vk/im/ui/reporters/c;
+    sget-object v0, Lcom/vk/im/ui/reporters/DialogActionReporter;->INSTANCE:Lcom/vk/im/ui/reporters/DialogActionReporter;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/im/ui/reporters/c;->a(Lcom/vk/im/ui/components/common/DialogAction;Z)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/im/ui/reporters/DialogActionReporter;->a(Lcom/vk/im/ui/components/common/DialogAction;Z)V
 
     .line 16
     sget-object v0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/a;->$EnumSwitchMapping$0:[I
@@ -1297,21 +1297,21 @@
 
     .line 17
     :pswitch_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->g()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->g()V
 
     goto/16 :goto_0
 
     .line 18
     :pswitch_1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->g()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->g()V
 
     goto/16 :goto_0
 
@@ -1335,61 +1335,61 @@
 
     .line 22
     :pswitch_5
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->b(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->b(Z)V
 
     goto/16 :goto_0
 
     .line 23
     :pswitch_6
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->b(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->b(Z)V
 
     goto/16 :goto_0
 
     .line 24
     :pswitch_7
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, v2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->b(Z)V
+    invoke-interface {v0, v2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->b(Z)V
 
     goto :goto_0
 
     .line 25
     :pswitch_8
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->c(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->c(Z)V
 
     goto :goto_0
 
     .line 26
     :pswitch_9
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, v2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->c(Z)V
+    invoke-interface {v0, v2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->c(Z)V
 
     goto :goto_0
 
     .line 27
     :pswitch_a
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->n()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->n()V
 
     goto :goto_0
 
@@ -1401,81 +1401,81 @@
 
     .line 29
     :pswitch_c
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->o()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->o()V
 
     goto :goto_0
 
     .line 30
     :pswitch_d
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->k()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->k()V
 
     goto :goto_0
 
     .line 31
     :pswitch_e
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->f()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->f()V
 
     goto :goto_0
 
     .line 32
     :pswitch_f
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->h()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->h()V
 
     goto :goto_0
 
     .line 33
     :pswitch_10
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->i()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->i()V
 
     goto :goto_0
 
     .line 34
     :pswitch_11
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->m()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->m()V
 
     goto :goto_0
 
     .line 35
     :pswitch_12
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->j()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->j()V
 
     goto :goto_0
 
     .line 36
     :pswitch_13
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->j()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->j()V
 
     .line 37
     :cond_0
@@ -1553,13 +1553,13 @@
 
     const-string v1, "toolbarView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
 
     move-result-object v0
 
-    sget v2, Lcom/vk/im/ui/h;->call:I
+    sget v2, Lcom/vk/im/ui/R11;->call:I
 
     invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -1568,13 +1568,13 @@
     .line 3
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
 
     move-result-object v1
 
-    sget v2, Lcom/vk/im/ui/h;->call_video:I
+    sget v2, Lcom/vk/im/ui/R11;->call_video:I
 
     invoke-interface {v1, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -1583,7 +1583,7 @@
     const-string v2, "itemCall"
 
     .line 4
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x1
 
@@ -1591,9 +1591,9 @@
 
     if-eqz p1, :cond_0
 
-    iget-object v4, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v4, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v4}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->l()Z
+    invoke-virtual {v4}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->l()Z
 
     move-result v4
 
@@ -1615,13 +1615,13 @@
     const-string v0, "itemVideo"
 
     .line 6
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->l()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->l()Z
 
     move-result p1
 
@@ -1684,7 +1684,7 @@
     .line 8
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->g:Lcom/vk/im/ui/views/avatars/StoryBorderView;
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p2, :cond_1
 
@@ -1749,7 +1749,7 @@
     :goto_3
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->g:Lcom/vk/im/ui/views/avatars/StoryBorderView;
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->k(Z)I
 
@@ -1762,7 +1762,7 @@
 
     const-string v0, "toolbarView"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     xor-int/lit8 v0, p1, 0x1
 
@@ -1773,7 +1773,7 @@
 
     const-string v0, "contentView"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     xor-int/lit8 p1, p1, 0x1
 
@@ -1799,7 +1799,7 @@
 
     const-string v1, "loadingView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->k(Z)I
 
@@ -1812,7 +1812,7 @@
 
     const-string v0, "titleDropdownView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
@@ -1827,13 +1827,13 @@
 
     const-string v1, "toolbarView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
 
     move-result-object v0
 
-    sget v1, Lcom/vk/im/ui/h;->chat_settings:I
+    sget v1, Lcom/vk/im/ui/R11;->chat_settings:I
 
     invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -1841,7 +1841,7 @@
 
     const-string v1, "toolbarView.menu.findItem(R.id.chat_settings)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0, p1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
@@ -1856,13 +1856,13 @@
 
     const-string v1, "toolbarView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
 
     move-result-object v0
 
-    sget v1, Lcom/vk/im/ui/h;->more:I
+    sget v1, Lcom/vk/im/ui/R11;->more:I
 
     invoke-interface {v0, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -1870,7 +1870,7 @@
 
     const-string v1, "toolbarView.menu.findItem(R.id.more)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0, p1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
@@ -1933,11 +1933,11 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/common/b;->isVisible()Z
+    invoke-interface {v0}, Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;->isVisible()Z
 
     move-result v0
 
@@ -1946,7 +1946,7 @@
     if-ne v0, v1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;
 
     if-eqz v0, :cond_0
 
@@ -1954,7 +1954,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v2, v1, v3}, Lcom/vk/im/ui/components/common/b$a;->a(Lcom/vk/im/ui/components/common/b;ZILjava/lang/Object;)Z
+    invoke-static {v0, v2, v1, v3}, Lcom/vk/im/ui/components/common/DialogActionsUiDelegate$a;->a(Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;ZILjava/lang/Object;)Z
 
     :cond_0
     return-void
@@ -1964,16 +1964,16 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;->isVisible()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;->isVisible()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;
 
     const/4 v1, 0x0
 
@@ -1981,7 +1981,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/im/ui/components/common/b$a;->a(Lcom/vk/im/ui/components/common/b;ZILjava/lang/Object;)Z
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/im/ui/components/common/DialogActionsUiDelegate$a;->a(Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;ZILjava/lang/Object;)Z
 
     :cond_0
     return-void
@@ -1991,9 +1991,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->o()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->o()Z
 
     move-result v0
 
@@ -2016,11 +2016,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->j()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->j()V
 
     :cond_0
     return-void
@@ -2034,7 +2034,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;
 
     if-eqz v0, :cond_0
 
@@ -2045,11 +2045,11 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->j()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->j()V
 
     :cond_1
     :goto_0
@@ -2060,9 +2060,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->j()Z
 
     move-result v0
 
@@ -2073,9 +2073,9 @@
     if-eqz v0, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->l()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->l()Z
 
     move-result v0
 
@@ -2117,25 +2117,25 @@
 
     .line 4
     :goto_0
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;
 
     new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc$onMenuCallClick$1;
 
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc$onMenuCallClick$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;)V
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;->a(Ljava/util/List;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v1, v0, v2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_1
 
     .line 5
     :cond_1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_2
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v2, v1, v3}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b$a;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;ZILjava/lang/Object;)V
+    invoke-static {v0, v2, v1, v3}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback$a;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;ZILjava/lang/Object;)V
 
     :cond_2
     :goto_1
@@ -2155,11 +2155,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->onClose()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->onClose()V
 
     :cond_0
     return-void
@@ -2169,7 +2169,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     if-eqz v0, :cond_0
 
@@ -2177,11 +2177,11 @@
 
     const-string v2, "avatarContentView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "im_dialog_header"
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;->a(Landroid/view/View;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;->a(Landroid/view/View;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -2199,7 +2199,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;
 
     if-nez v0, :cond_0
 
@@ -2212,9 +2212,9 @@
 
     .line 2
     :goto_0
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->b()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->b()Ljava/util/List;
 
     move-result-object v1
 
@@ -2225,17 +2225,17 @@
     .line 3
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->OPEN_USER_PROFILE:Lcom/vk/im/ui/components/common/DialogAction;
 
-    invoke-static {v1, v2, v0}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
+    invoke-static {v1, v2, v0}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
 
     .line 4
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->OPEN_GROUP_PROFILE:Lcom/vk/im/ui/components/common/DialogAction;
 
-    invoke-static {v1, v2, v0}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
+    invoke-static {v1, v2, v0}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
 
     .line 5
     sget-object v2, Lcom/vk/im/ui/components/common/DialogAction;->CHAT_SETTINGS:Lcom/vk/im/ui/components/common/DialogAction;
 
-    invoke-static {v1, v2, v0}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
+    invoke-static {v1, v2, v0}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
 
     return-object v1
 .end method
@@ -2244,9 +2244,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->e()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->e()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v0
 
@@ -2254,7 +2254,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/im/ui/themes/a;->a(Lcom/vk/im/engine/models/dialogs/DialogTheme;)I
+    invoke-static {v0}, Lcom/vk/im/ui/themes/DialogThemesExt;->a(Lcom/vk/im/engine/models/dialogs/DialogTheme;)I
 
     move-result v0
 
@@ -2263,7 +2263,7 @@
 
     const-string v2, "titleCasperView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroidx/appcompat/widget/AppCompatImageView;I)V
 
@@ -2342,35 +2342,35 @@
     .locals 14
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->e()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->e()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v7
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->h()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->h()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     move-result-object v8
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->i()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfo;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->i()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfo;
 
     move-result-object v9
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->d()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->d()Ljava/util/List;
 
     move-result-object v10
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;
 
     const/4 v11, 0x0
 
@@ -2387,15 +2387,15 @@
 
     .line 6
     :goto_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->g()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->g()Z
 
     move-result v0
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->f()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->f()Z
 
     move-result v1
 
@@ -2410,23 +2410,23 @@
     const/4 v1, 0x1
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->w:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/i;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->w:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/TitleFormatter;
 
-    invoke-virtual {v0, v7, v8}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/i;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v7, v8}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/TitleFormatter;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
     .line 10
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->y:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->y:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/IconFormatter;
 
-    invoke-virtual {v0, v7, v8}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/d;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Z
+    invoke-virtual {v0, v7, v8}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/IconFormatter;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Z
 
     move-result v3
 
     .line 11
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->y:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->y:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/IconFormatter;
 
-    invoke-virtual {v0, v7}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/d;->a(Lcom/vk/im/engine/models/dialogs/Dialog;)Z
+    invoke-virtual {v0, v7}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/IconFormatter;->a(Lcom/vk/im/engine/models/dialogs/Dialog;)Z
 
     move-result v4
 
@@ -2456,24 +2456,24 @@
     invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->a(ZLjava/lang/CharSequence;ZZZZ)V
 
     .line 15
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->k()Z
 
     move-result v0
 
     invoke-direct {p0, v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->i(Z)V
 
     .line 16
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->n()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->n()Z
 
     move-result v0
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->m()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->m()Z
 
     move-result v1
 
@@ -2504,9 +2504,9 @@
     if-eq v9, v0, :cond_3
 
     .line 19
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->z:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->z:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfoFormatter;
 
-    invoke-virtual {v0, v9}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/f;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfo;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v9}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfoFormatter;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfo;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -2526,16 +2526,16 @@
     if-eqz v0, :cond_4
 
     .line 22
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->A:Lcom/vk/im/ui/formatters/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->A:Lcom/vk/im/ui/formatters/ComposingFormatter;
 
-    invoke-virtual {v0, v10, v7, v8}, Lcom/vk/im/ui/formatters/b;->a(Ljava/util/List;Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v10, v7, v8}, Lcom/vk/im/ui/formatters/ComposingFormatter;->a(Ljava/util/List;Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     .line 23
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->c()Lcom/vk/im/engine/models/typing/ComposingType;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->c()Lcom/vk/im/engine/models/typing/ComposingType;
 
     move-result-object v1
 
@@ -2560,9 +2560,9 @@
     xor-int/2addr v2, v12
 
     .line 27
-    iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->y:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/d;
+    iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->y:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/IconFormatter;
 
-    invoke-virtual {v3, v7, v8}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/d;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Z
+    invoke-virtual {v3, v7, v8}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/IconFormatter;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Z
 
     move-result v3
 
@@ -2599,13 +2599,13 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/common/b;)V
+.method public final a(Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;)V
     .locals 4
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2616,16 +2616,16 @@
     if-eqz v0, :cond_0
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;
 
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v2, v1, v3}, Lcom/vk/im/ui/components/common/b$a;->a(Lcom/vk/im/ui/components/common/b;ZILjava/lang/Object;)Z
+    invoke-static {v0, v2, v1, v3}, Lcom/vk/im/ui/components/common/DialogActionsUiDelegate$a;->a(Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;ZILjava/lang/Object;)Z
 
     .line 10
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->F:Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;
 
     .line 11
     invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->p()V
@@ -2638,18 +2638,18 @@
     .locals 1
 
     .line 23
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->i()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfo;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->i()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfo;
 
     move-result-object v0
 
     if-eq v0, p1, :cond_0
 
     .line 24
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfo;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/RefreshInfo;)V
 
     .line 25
     invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->p()V
@@ -2658,29 +2658,29 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;)V
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/c;)V
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogInfo;)V
     .locals 2
 
     .line 19
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->e(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->e(Z)V
 
     .line 20
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/c;->a()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogInfo;->a()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v1
 
@@ -2694,16 +2694,16 @@
     invoke-direct {v1}, Lcom/vk/im/engine/models/dialogs/Dialog;-><init>()V
 
     :goto_0
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->a(Lcom/vk/im/engine/models/dialogs/Dialog;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->a(Lcom/vk/im/engine/models/dialogs/Dialog;)V
 
     .line 21
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/c;->b()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogInfo;->b()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->a(Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->a(Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
     .line 22
     invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->p()V
@@ -2715,7 +2715,7 @@
     .locals 0
 
     .line 26
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -2733,13 +2733,13 @@
     .end annotation
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->b()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->b()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2748,9 +2748,9 @@
     if-eqz v0, :cond_0
 
     .line 7
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->a(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->a(Ljava/util/List;)V
 
     :cond_0
     return-void
@@ -2760,18 +2760,18 @@
     .locals 1
 
     .line 12
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->k()Z
 
     move-result v0
 
     if-eq v0, p1, :cond_0
 
     .line 13
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->g(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->g(Z)V
 
     .line 14
     invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->p()V
@@ -2784,17 +2784,17 @@
     .locals 1
 
     .line 15
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->j()Z
 
     move-result v0
 
     if-ne v0, p1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->l()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->l()Z
 
     move-result v0
 
@@ -2804,14 +2804,14 @@
 
     .line 16
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->f(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->f(Z)V
 
     .line 17
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->h(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->h(Z)V
 
     .line 18
     invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->p()V
@@ -2840,19 +2840,19 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/typing/a;",
+            "Lcom/vk/im/engine/models/typing/MsgComposing;",
             ">;)V"
         }
     .end annotation
 
     .line 11
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->d()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->d()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2862,13 +2862,13 @@
 
     .line 12
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->b(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->b(Ljava/util/List;)V
 
     .line 13
     invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->p()V
@@ -2885,7 +2885,7 @@
     if-eq v0, p1, :cond_0
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->E:Lcom/vk/im/ui/components/viewcontrollers/dialog_actions_delegate/popup/DialogActionsVcByPopup;
 
     const/4 v1, 0x0
 
@@ -2893,7 +2893,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/im/ui/components/common/b$a;->a(Lcom/vk/im/ui/components/common/b;ZILjava/lang/Object;)Z
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/im/ui/components/common/DialogActionsUiDelegate$a;->a(Lcom/vk/im/ui/components/common/DialogActionsUiDelegate;ZILjava/lang/Object;)Z
 
     .line 5
     iput-boolean p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->D:Z
@@ -2909,17 +2909,17 @@
     .locals 1
 
     .line 7
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->n()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->n()Z
 
     move-result v0
 
     if-ne v0, p1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->m()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->m()Z
 
     move-result v0
 
@@ -2929,14 +2929,14 @@
 
     .line 8
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->b(Z)V
 
     .line 9
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->a(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->a(Z)V
 
     .line 10
     invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->p()V
@@ -2971,11 +2971,11 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v0, Lcom/vk/im/ui/c;->im_ic_back:I
+    sget v0, Lcom/vk/im/ui/R5;->im_ic_back:I
 
-    sget v2, Lcom/vk/im/ui/c;->header_tint:I
+    sget v2, Lcom/vk/im/ui/R5;->header_tint:I
 
     invoke-virtual {p1, v1, v0, v2}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroidx/appcompat/widget/Toolbar;II)V
 
@@ -2985,7 +2985,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -2996,7 +2996,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->e:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Lcom/vk/im/ui/themes/DialogThemeBinder;->a(Landroid/view/View;)V
 
@@ -3008,14 +3008,14 @@
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->d(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->d(Z)V
 
     .line 6
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->c(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->c(Z)V
 
     .line 7
     invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->p()V
@@ -3064,7 +3064,7 @@
     move v2, p1
 
     .line 10
-    invoke-static/range {v1 .. v7}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;ZZLjava/lang/CharSequence;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v7}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;ZZLjava/lang/CharSequence;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -3075,7 +3075,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->v:Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/vk/core/concurrent/a;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcom/vk/core/concurrent/ConcurrentExt;->a(Ljava/lang/Object;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->B:Lcom/vk/im/ui/utils/TimeChangeReceiver;
@@ -3119,16 +3119,16 @@
     move v2, p1
 
     .line 18
-    invoke-static/range {v1 .. v7}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;ZLjava/lang/CharSequence;Lkotlin/jvm/b/a;ZILjava/lang/Object;)V
+    invoke-static/range {v1 .. v7}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;ZLjava/lang/CharSequence;Lkotlin/jvm/b/Functions;ZILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final f()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+.method public final f()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->b:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVcCallback;
 
     return-object v0
 .end method
@@ -3149,7 +3149,7 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc$showPinnedMsgDetachProgressDialog$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;)V
 
     .line 5
-    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->b(Lkotlin/jvm/b/a;Z)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->b(Lkotlin/jvm/b/Functions;Z)V
 
     return-void
 .end method
@@ -3189,7 +3189,7 @@
     move v2, p1
 
     .line 4
-    invoke-static/range {v1 .. v7}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;ZLjava/lang/CharSequence;Lkotlin/jvm/b/a;ZILjava/lang/Object;)V
+    invoke-static/range {v1 .. v7}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;ZLjava/lang/CharSequence;Lkotlin/jvm/b/Functions;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -3198,25 +3198,25 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->o()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->o()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->e(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->e(Z)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->a()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->a()V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->p()V
@@ -3245,7 +3245,7 @@
     const/4 v3, 0x1
 
     .line 4
-    invoke-static {v0, v2, v1, v3, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static {v0, v2, v1, v3, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -3261,16 +3261,16 @@
     move-result-object v0
 
     .line 3
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->e()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->e()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v1
 
     .line 4
-    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;
+    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;->G:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/g;->h()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/State;->h()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     move-result-object v2
 
@@ -3280,7 +3280,7 @@
     invoke-direct {v3, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc$showClearDialogSubmitDialog$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/DialogHeaderInfoVc;)V
 
     .line 6
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -3305,7 +3305,7 @@
     const/4 v3, 0x2
 
     .line 3
-    invoke-static {v0, v1, v2, v3, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     return-void
 .end method

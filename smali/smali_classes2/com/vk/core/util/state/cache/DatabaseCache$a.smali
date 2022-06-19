@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -49,9 +49,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lb/h/g/g/b;->i:Lb/h/g/g/b;
+    sget-object v1, Lb/h/g/g/BuildInfo;->INSTANCE:Lb/h/g/g/BuildInfo;
 
-    invoke-virtual {v1}, Lb/h/g/g/b;->d()Ljava/lang/String;
+    invoke-virtual {v1}, Lb/h/g/g/BuildInfo;->d()Ljava/lang/String;
 
     move-result-object v1
 

@@ -3,7 +3,7 @@
 .source "BaseLinkGridAdapterFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/common/VideoFile;",
         "Lkotlin/Pair<",
         "+",
@@ -83,7 +83,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, p1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "ImagePickerActivity.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -48,14 +48,14 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/ImagePickerActivity$c;->invoke()Lkotlin/m;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ImagePickerActivity$c;->invoke()Lkotlin/Unit;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public invoke()Lkotlin/m;
+.method public invoke()Lkotlin/Unit;
     .locals 4
 
     .line 2
@@ -81,7 +81,7 @@
     const/4 v1, 0x0
 
     .line 4
-    invoke-static {v1}, Lb/h/g/m/a;->a(Z)Landroidx/core/util/Pair;
+    invoke-static {v1}, Lb/h/g/m/CameraUtils;->a(Z)Landroidx/core/util/Pair;
 
     move-result-object v1
 
@@ -90,7 +90,7 @@
 
     check-cast v2, Ljava/io/File;
 
-    invoke-static {v2}, Lb/h/g/m/d;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {v2}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v2
 
@@ -113,7 +113,7 @@
 
     .line 7
     :cond_0
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method

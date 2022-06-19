@@ -38,15 +38,15 @@
     .locals 1
 
     .line 1
-    new-instance p1, Lcom/vk/navigation/o;
+    new-instance p1, Lcom/vk/navigation/Navigator;
 
     const-class v0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
-    invoke-direct {p1, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p1, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     iget-object v0, p0, Lcom/vk/discover/DiscoverFragment$onStart$1$a;->a:Landroid/app/Activity;
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

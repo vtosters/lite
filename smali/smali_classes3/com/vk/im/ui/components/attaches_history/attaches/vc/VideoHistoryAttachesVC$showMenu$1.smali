@@ -3,7 +3,7 @@
 .source "VideoHistoryAttachesVC.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;)V
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;)V
     .locals 2
 
     .line 1
@@ -66,7 +66,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC$showMenu$1;->$menuItems:Ljava/util/List;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;->b()I
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;->b()I
 
     move-result p1
 
@@ -87,11 +87,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;
+    check-cast p1, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC$showMenu$1;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC$showMenu$1;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -1,5 +1,5 @@
 .class Landroid/support/v4/media/session/MediaControllerCompat$a$c;
-.super Landroid/support/v4/media/session/a$a;
+.super Landroid/support/v4/media/session/IMediaControllerCallback$a;
 .source "MediaControllerCompat.java"
 
 
@@ -31,7 +31,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Landroid/support/v4/media/session/a$a;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/media/session/IMediaControllerCallback$a;-><init>()V
 
     .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;

@@ -89,7 +89,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/dialogs/ChatSettings$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/dialogs/ChatSettings$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/dialogs/ChatSettings$a;
@@ -145,7 +145,7 @@
 
     const/16 v19, 0x0
 
-    invoke-direct/range {v0 .. v19}, Lcom/vk/im/engine/models/dialogs/ChatSettings;-><init>(Ljava/lang/String;Lcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/Member;Ljava/util/Set;ILjava/util/List;ZZZZZZZZZZLjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v19}, Lcom/vk/im/engine/models/dialogs/ChatSettings;-><init>(Ljava/lang/String;Lcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/Member;Ljava/util/Set;ILjava/util/List;ZZZZZZZZZZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -315,42 +315,42 @@
 
     .line 29
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 30
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 31
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 32
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 33
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 34
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -513,7 +513,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Lcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/Member;Ljava/util/Set;ILjava/util/List;ZZZZZZZZZZLjava/lang/String;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Lcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/Member;Ljava/util/Set;ILjava/util/List;ZZZZZZZZZZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 18
 
     move/from16 v0, p18
@@ -543,7 +543,7 @@
 
     const/4 v5, 0x1
 
-    invoke-direct {v3, v4, v5, v4}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v3, v4, v5, v4}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_1
 
@@ -1344,7 +1344,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/dialogs/ChatSettings;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1354,7 +1354,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/dialogs/ChatSettings;->e:Lcom/vk/im/engine/models/ImageList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1364,7 +1364,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/dialogs/ChatSettings;->f:Lcom/vk/im/engine/models/Member;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1374,7 +1374,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/dialogs/ChatSettings;->g:Ljava/util/Set;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1390,7 +1390,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/dialogs/ChatSettings;->B:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1460,7 +1460,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/models/dialogs/ChatSettings;->M:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -3,12 +3,12 @@
 .source "MsgListVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;Lcom/vk/im/ui/q/h/b;Lcom/vk/navigation/a;ZZZLcom/vk/im/engine/models/f;Lcom/vk/im/ui/ImUiModule;)V
+    value = Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;Lcom/vk/im/ui/q/h/VideoAutoPlayer;Lcom/vk/navigation/ActivityLauncher;ZZZLcom/vk/im/engine/models/ImExperimentsProvider;Lcom/vk/im/ui/ImUiModule;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/ui/components/viewcontrollers/msg_list/h$b;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/ui/components/viewcontrollers/msg_list/SwipeToReplyItemTouchCallback$b;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/h$b;)V
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/SwipeToReplyItemTouchCallback$b;)V
     .locals 3
 
     .line 1
@@ -59,7 +59,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$swipeToReplyCallback$1;->this$0:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->g()Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->g()Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;
 
     move-result-object v0
 
@@ -77,14 +77,14 @@
 
     const-string v2, "(it as VhMsg).msg!!"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;->a(Lcom/vk/im/ui/components/common/MsgAction;Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;->a(Lcom/vk/im/ui/components/common/MsgAction;Lcom/vk/im/engine/models/messages/Msg;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -99,11 +99,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/h$b;
+    check-cast p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/SwipeToReplyItemTouchCallback$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$swipeToReplyCallback$1;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/h$b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$swipeToReplyCallback$1;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/SwipeToReplyItemTouchCallback$b;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

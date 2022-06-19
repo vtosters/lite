@@ -28,7 +28,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhSwitchToFilterAll$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhSwitchToFilterAll$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhSwitchToFilterAll;->b:Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhSwitchToFilterAll$a;
 
@@ -42,7 +42,7 @@
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
     .line 2
-    sget v0, Lcom/vk/im/ui/h;->text:I
+    sget v0, Lcom/vk/im/ui/R11;->text:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -77,13 +77,13 @@
 
     const-string v1, "textView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhSwitchToFilterAll$setSwitchToFilterClickListener$1;
 
     invoke-direct {v1, p1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhSwitchToFilterAll$setSwitchToFilterClickListener$1;-><init>(Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhSwitchToFilterAll$b;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     :goto_0
     return-void

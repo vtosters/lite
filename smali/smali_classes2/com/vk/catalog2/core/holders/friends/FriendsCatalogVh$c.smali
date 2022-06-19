@@ -3,7 +3,7 @@
 .source "FriendsCatalogVh.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/catalog2/core/w/e/g;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent;",
         ">;"
     }
 .end annotation
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/w/e/g;)V
+.method public final a(Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent;)V
     .locals 0
 
     .line 1
     iget-object p1, p0, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh$c;->a:Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;
 
-    invoke-static {p1}, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;->b(Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;)Lcom/vk/catalog2/core/e;
+    invoke-static {p1}, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;->b(Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;)Lcom/vk/catalog2/core/CatalogEntryPointParams;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/e;->a()Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/CatalogEntryPointParams;->a()Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;
 
     move-result-object p1
 
@@ -72,9 +72,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/catalog2/core/w/e/g;
+    check-cast p1, Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh$c;->a(Lcom/vk/catalog2/core/w/e/g;)V
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh$c;->a(Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "SearchMenuFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -50,11 +50,11 @@
     .locals 1
 
     .line 1
-    new-instance p1, Lcom/vk/cameraui/builder/a;
+    new-instance p1, Lcom/vk/cameraui/builder/CameraBuilder;
 
     const-string v0, "discover"
 
-    invoke-direct {p1, v0, v0}, Lcom/vk/cameraui/builder/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v0}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-virtual {p1}, Lcom/vk/cameraui/builder/CameraParams$b;->e()Lcom/vk/cameraui/builder/CameraParams$b;
@@ -62,7 +62,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/menu/SearchMenuFragment$onCreateView$5;->this$0:Lcom/vk/menu/SearchMenuFragment;
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -88,7 +88,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/menu/SearchMenuFragment$onCreateView$5;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

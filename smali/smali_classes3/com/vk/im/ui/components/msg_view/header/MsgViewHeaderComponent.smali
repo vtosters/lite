@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;
-.super Lcom/vk/im/ui/q/c;
+.super Lcom/vk/im/ui/q/Component;
 .source "MsgViewHeaderComponent.kt"
 
 
@@ -16,17 +16,17 @@
 
 
 # static fields
-.field private static final G:Lcom/vk/im/log/a;
+.field private static final G:Lcom/vk/im/log/ImLogger;
 
 
 # instance fields
 .field private B:Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;
 
-.field private C:Lcom/vk/im/ui/components/msg_view/header/c;
+.field private C:Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponentCallback;
 
 .field private final D:Landroid/content/Context;
 
-.field private final E:Lcom/vk/im/engine/a;
+.field private final E:Lcom/vk/im/engine/ImEngine;
 
 .field private final F:Lcom/vk/im/engine/models/dialogs/DialogExt;
 
@@ -43,36 +43,36 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     const-class v0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;
 
-    invoke-static {v0}, Lcom/vk/im/log/b;->a(Ljava/lang/Class;)Lcom/vk/im/log/a;
+    invoke-static {v0}, Lcom/vk/im/log/ImLoggerFactory;->a(Ljava/lang/Class;)Lcom/vk/im/log/ImLogger;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    sput-object v0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->G:Lcom/vk/im/log/a;
+    sput-object v0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->G:Lcom/vk/im/log/ImLogger;
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/engine/models/dialogs/DialogExt;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/q/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/q/Component;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->D:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->E:Lcom/vk/im/engine/a;
+    iput-object p2, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->E:Lcom/vk/im/engine/ImEngine;
 
     iput-object p3, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->F:Lcom/vk/im/engine/models/dialogs/DialogExt;
 
@@ -124,12 +124,12 @@
     .locals 1
 
     .line 13
-    sget-object v0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->G:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->G:Lcom/vk/im/log/ImLogger;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
 
     .line 14
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -138,9 +138,9 @@
     .locals 8
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->E:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->E:Lcom/vk/im/engine/ImEngine;
 
-    new-instance v7, Lcom/vk/im/engine/commands/dialogs/e0;
+    new-instance v7, Lcom/vk/im/engine/commands/dialogs/DialogsPinnedMsgChangeVisibilityCmd;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->F:Lcom/vk/im/engine/models/dialogs/DialogExt;
 
@@ -162,9 +162,9 @@
 
     move v3, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/dialogs/e0;-><init>(IZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/dialogs/DialogsPinnedMsgChangeVisibilityCmd;-><init>(IZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v0, p0, v7}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v0, p0, v7}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -173,7 +173,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent$b;-><init>(Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -182,7 +182,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent$c;-><init>(Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -195,20 +195,20 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent$changeVisibility$4;-><init>(Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/msg_view/header/b;
+    new-instance v2, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent1;
 
-    invoke-direct {v2, p1}, Lcom/vk/im/ui/components/msg_view/header/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, p1}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "imEngine.submitSingle(th\u2026ibility) }, ::onCmdError)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
-    invoke-static {p1, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {p1, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     return-void
 .end method
@@ -246,7 +246,7 @@
     :cond_0
     const-string p1, "vc"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -257,11 +257,11 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->C:Lcom/vk/im/ui/components/msg_view/header/c;
+    iget-object p1, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->C:Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponentCallback;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/msg_view/header/c;->a()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponentCallback;->a()V
 
     :cond_0
     return-void
@@ -323,13 +323,13 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 4
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -345,7 +345,7 @@
     return-void
 
     :cond_4
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -370,11 +370,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/msg_view/header/c;)V
+.method public final a(Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponentCallback;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->C:Lcom/vk/im/ui/components/msg_view/header/c;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->C:Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponentCallback;
 
     return-void
 .end method
@@ -398,11 +398,11 @@
 
     if-eqz p1, :cond_1
 
-    new-instance p4, Lcom/vk/im/ui/components/msg_view/header/d;
+    new-instance p4, Lcom/vk/im/ui/components/msg_view/header/VcCallbackImpl;
 
-    invoke-direct {p4, p0}, Lcom/vk/im/ui/components/msg_view/header/d;-><init>(Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;)V
+    invoke-direct {p4, p0}, Lcom/vk/im/ui/components/msg_view/header/VcCallbackImpl;-><init>(Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;)V
 
-    invoke-virtual {p1, p4}, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/a;)V
+    invoke-virtual {p1, p4}, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVcCallback;)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->w()V
@@ -419,13 +419,13 @@
     return-object p1
 
     :cond_0
-    invoke-static {p3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 6
     :cond_1
-    invoke-static {p3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 .end method
@@ -434,7 +434,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/q/c;->n()V
+    invoke-super {p0}, Lcom/vk/im/ui/q/Component;->n()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;
@@ -448,7 +448,7 @@
     :cond_0
     const-string v0, "vc"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -470,11 +470,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->C:Lcom/vk/im/ui/components/msg_view/header/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->C:Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponentCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_view/header/c;->a()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponentCallback;->a()V
 
     :cond_0
     return-void
@@ -495,9 +495,9 @@
     .locals 8
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->E:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->E:Lcom/vk/im/engine/ImEngine;
 
-    new-instance v7, Lcom/vk/im/engine/commands/dialogs/f0;
+    new-instance v7, Lcom/vk/im/engine/commands/dialogs/DialogsPinnedMsgDetachCmd;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->F:Lcom/vk/im/engine/models/dialogs/DialogExt;
 
@@ -519,9 +519,9 @@
 
     move-object v1, v7
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/dialogs/f0;-><init>(IZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/dialogs/DialogsPinnedMsgDetachCmd;-><init>(IZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v0, p0, v7}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v0, p0, v7}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -530,7 +530,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent$e;-><init>(Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -539,7 +539,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent$f;-><init>(Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -548,28 +548,28 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent$unpinMsg$3;-><init>(Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/msg_view/header/b;
+    new-instance v2, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent1;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/msg_view/header/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     new-instance v1, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent$unpinMsg$4;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent$unpinMsg$4;-><init>(Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/msg_view/header/b;
+    new-instance v3, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent1;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/msg_view/header/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v0, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "imEngine.submitSingle(th\u2026MsgSuccess, ::onCmdError)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    invoke-static {v0, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {v0, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "CameraUIView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/cameraui/CameraUIView$initCamera$$inlined$let$lambda$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -147,11 +147,11 @@
     .line 11
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$initCamera$$inlined$let$lambda$1;->$it:Landroid/app/Activity;
 
-    invoke-virtual {v3, v0}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/w;
+    invoke-virtual {v3, v0}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/Dismissable;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/vk/cameraui/CameraUIView;->a(Lcom/vk/cameraui/CameraUIView;Lcom/vk/core/util/w;)V
+    invoke-static {v2, v0}, Lcom/vk/cameraui/CameraUIView;->a(Lcom/vk/cameraui/CameraUIView;Lcom/vk/core/util/Dismissable;)V
 
     .line 12
     :cond_3

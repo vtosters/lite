@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field private final B:Lcom/vk/catalog2/core/a;
+.field private final B:Lcom/vk/catalog2/core/CatalogConfiguration;
 
 .field private final C:Lcom/vk/catalog2/core/CatalogRouter;
 
 .field private final D:Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;
 
-.field private final E:Lcom/vk/catalog2/core/w/b;
+.field private final E:Lcom/vk/catalog2/core/w/CatalogEventsBus;
 
-.field private h:Lio/reactivex/disposables/b;
+.field private h:Lio/reactivex/disposables/Disposable;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/CatalogRouter;Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;Lcom/vk/catalog2/core/w/b;I)V
+.method public constructor <init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogRouter;Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;Lcom/vk/catalog2/core/w/CatalogEventsBus;I)V
     .locals 0
     .param p5    # I
         .annotation build Landroidx/annotation/LayoutRes;
@@ -26,18 +26,18 @@
     .line 1
     invoke-direct {p0, p5}, Lcom/vk/catalog2/core/holders/common/HeaderVh;-><init>(I)V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->B:Lcom/vk/catalog2/core/a;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->B:Lcom/vk/catalog2/core/CatalogConfiguration;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->C:Lcom/vk/catalog2/core/CatalogRouter;
 
     iput-object p3, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->D:Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;
 
-    iput-object p4, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->E:Lcom/vk/catalog2/core/w/b;
+    iput-object p4, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->E:Lcom/vk/catalog2/core/w/CatalogEventsBus;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/CatalogRouter;Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;Lcom/vk/catalog2/core/w/b;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogRouter;Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;Lcom/vk/catalog2/core/w/CatalogEventsBus;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x10
@@ -45,7 +45,7 @@
     if-eqz p6, :cond_0
 
     .line 2
-    sget p5, Lcom/vk/catalog2/core/r;->catalog_header_show_all:I
+    sget p5, Lcom/vk/catalog2/core/R7;->catalog_header_show_all:I
 
     :cond_0
     move v5, p5
@@ -60,7 +60,7 @@
 
     move-object v4, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/CatalogRouter;Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;Lcom/vk/catalog2/core/w/b;I)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogRouter;Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;Lcom/vk/catalog2/core/w/CatalogEventsBus;I)V
 
     return-void
 .end method
@@ -88,16 +88,16 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh$onFiltersClick$1;-><init>(Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;Landroid/content/Context;)V
 
-    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/catalog2/core/CatalogRouter;->a(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/catalog2/core/CatalogRouter;->a(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;Lio/reactivex/disposables/b;)V
+.method public static final synthetic a(Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->h:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->h:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -113,7 +113,7 @@
     move-result-object p1
 
     .line 4
-    sget p2, Lcom/vk/catalog2/core/q;->show_all_btn:I
+    sget p2, Lcom/vk/catalog2/core/R10;->show_all_btn:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -135,17 +135,17 @@
     .locals 1
 
     .line 6
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->h:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->h:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 7
-    iput-object v0, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->h:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->h:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -175,7 +175,7 @@
     move-result p1
 
     .line 4
-    sget v2, Lcom/vk/catalog2/core/q;->show_all_btn:I
+    sget v2, Lcom/vk/catalog2/core/R10;->show_all_btn:I
 
     if-ne p1, v2, :cond_4
 
@@ -190,7 +190,7 @@
     invoke-direct {p0, v0, p1}, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->a(Landroid/content/Context;Lcom/vk/catalog2/core/blocks/actions/UIBlockActionShowFilters;)V
 
     .line 7
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     goto :goto_0
 
@@ -213,7 +213,7 @@
     invoke-virtual {v2, v0, p1, v3}, Lcom/vk/catalog2/core/CatalogRouter;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     goto :goto_0
 
@@ -235,7 +235,7 @@
     .line 10
     iget-object v2, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->C:Lcom/vk/catalog2/core/CatalogRouter;
 
-    iget-object v3, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->B:Lcom/vk/catalog2/core/a;
+    iget-object v3, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->B:Lcom/vk/catalog2/core/CatalogConfiguration;
 
     invoke-virtual {p1}, Lcom/vk/catalog2/core/blocks/actions/UIBlockActionShowAll;->B1()Ljava/lang/String;
 
@@ -253,14 +253,14 @@
     const-string v5, ""
 
     :goto_1
-    invoke-virtual {v2, v0, v3, v4, v5}, Lcom/vk/catalog2/core/CatalogRouter;->a(Landroid/content/Context;Lcom/vk/catalog2/core/a;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v0, v3, v4, v5}, Lcom/vk/catalog2/core/CatalogRouter;->a(Landroid/content/Context;Lcom/vk/catalog2/core/CatalogConfiguration;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 11
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->E:Lcom/vk/catalog2/core/w/b;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->E:Lcom/vk/catalog2/core/w/CatalogEventsBus;
 
-    new-instance v2, Lcom/vk/catalog2/core/w/e/h;
+    new-instance v2, Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent3;
 
-    iget-object v3, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->B:Lcom/vk/catalog2/core/a;
+    iget-object v3, p0, Lcom/vk/catalog2/core/holders/common/HeaderShowAllVh;->B:Lcom/vk/catalog2/core/CatalogConfiguration;
 
     invoke-virtual {p1}, Lcom/vk/catalog2/core/blocks/actions/UIBlockActionShowAll;->B1()Ljava/lang/String;
 
@@ -270,12 +270,12 @@
 
     move-result-object v1
 
-    invoke-direct {v2, v3, p1, v1}, Lcom/vk/catalog2/core/w/e/h;-><init>(Lcom/vk/catalog2/core/a;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, p1, v1}, Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent3;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2}, Lcom/vk/catalog2/core/w/b;->a(Lcom/vk/catalog2/core/w/e/a;)V
+    invoke-virtual {v0, v2}, Lcom/vk/catalog2/core/w/CatalogEventsBus;->a(Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent1;)V
 
     .line 12
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_4
     :goto_2

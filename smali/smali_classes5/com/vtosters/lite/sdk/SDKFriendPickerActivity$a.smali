@@ -40,13 +40,13 @@
 
 
 # virtual methods
-.method protected d5()Lcom/vtosters/lite/fragments/friends/presenter/a;
+.method protected d5()Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter;
     .locals 1
 
     .line 1
     new-instance v0, Lcom/vtosters/lite/sdk/SDKFriendPickerActivity$a$a;
 
-    invoke-direct {v0, p0, p0}, Lcom/vtosters/lite/sdk/SDKFriendPickerActivity$a$a;-><init>(Lcom/vtosters/lite/sdk/SDKFriendPickerActivity$a;Lcom/vtosters/lite/fragments/friends/presenter/a$a;)V
+    invoke-direct {v0, p0, p0}, Lcom/vtosters/lite/sdk/SDKFriendPickerActivity$a$a;-><init>(Lcom/vtosters/lite/sdk/SDKFriendPickerActivity$a;Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter$a;)V
 
     return-object v0
 .end method

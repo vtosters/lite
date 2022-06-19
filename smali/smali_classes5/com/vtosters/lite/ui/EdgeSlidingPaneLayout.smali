@@ -3,7 +3,7 @@
 .source "EdgeSlidingPaneLayout.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # static fields
@@ -25,7 +25,7 @@
     const/high16 v0, 0x42200000    # 40.0f
 
     .line 1
-    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v0
 

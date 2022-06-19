@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -72,7 +72,7 @@
 
     const-string v5, "this.getString(i)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-virtual {v0, v4}, Lcom/vk/catalog2/core/api/dto/layout/GridCell$b;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/layout/GridCell;

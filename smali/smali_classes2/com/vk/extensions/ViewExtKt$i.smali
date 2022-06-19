@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/extensions/ViewExtKt;->c(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/extensions/ViewExtKt;->c(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,17 +20,17 @@
 # instance fields
 .field final synthetic a:Landroid/view/View;
 
-.field final synthetic b:Lkotlin/jvm/b/b;
+.field final synthetic b:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vk/extensions/ViewExtKt$i;->a:Landroid/view/View;
 
-    iput-object p2, p0, Lcom/vk/extensions/ViewExtKt$i;->b:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/extensions/ViewExtKt$i;->b:Lkotlin/jvm/b/Functions2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -52,11 +52,11 @@
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/extensions/ViewExtKt$i;->b:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/extensions/ViewExtKt$i;->b:Lkotlin/jvm/b/Functions2;
 
     iget-object v1, p0, Lcom/vk/extensions/ViewExtKt$i;->a:Landroid/view/View;
 
-    invoke-interface {v0, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 v0, 0x1
 

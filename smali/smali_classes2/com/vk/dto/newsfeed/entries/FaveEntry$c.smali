@@ -3,7 +3,7 @@
 .source "FaveEntry.kt"
 
 # interfaces
-.implements Lb/h/g/t/a$a;
+.implements Lb/h/g/t/DelegateMutableList$a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lb/h/g/t/a$a<",
+        "Lb/h/g/t/DelegateMutableList$a<",
         "Lcom/vk/dto/common/Attachment;",
         ">;"
     }
@@ -55,9 +55,9 @@
     if-nez p1, :cond_0
 
     .line 1
-    sget-object p1, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
+    sget-object p1, Lcom/vk/fave/FaveConverter;->INSTANCE:Lcom/vk/fave/FaveConverter;
 
-    invoke-virtual {p1, p2}, Lcom/vk/fave/d;->a(Lcom/vk/dto/common/Attachment;)Lb/h/h/f/a;
+    invoke-virtual {p1, p2}, Lcom/vk/fave/FaveConverter;->a(Lcom/vk/dto/common/Attachment;)Lb/h/h/f/Favable;
 
     move-result-object p1
 
@@ -70,7 +70,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lcom/vk/fave/entities/FaveItem;->b(Lb/h/h/f/a;)V
+    invoke-virtual {p2, p1}, Lcom/vk/fave/entities/FaveItem;->b(Lb/h/h/f/Favable;)V
 
     :cond_0
     return-void

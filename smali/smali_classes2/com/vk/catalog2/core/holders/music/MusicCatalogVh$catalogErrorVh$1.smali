@@ -3,12 +3,12 @@
 .source "MusicCatalogVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;Lcom/vk/music/k/a;Ljava/lang/String;)V
+    value = Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;Lcom/vk/music/k/MusicSuggestionModel;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh$catalogErrorVh$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -62,11 +62,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh$catalogErrorVh$1;->this$0:Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;
 
-    invoke-static {v0}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;)Lcom/vk/catalog2/core/presenters/b;
+    invoke-static {v0}, Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;->a(Lcom/vk/catalog2/core/holders/music/MusicCatalogVh;)Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/presenters/b;->b()V
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;->b()V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "FriendsRecommendationsFragment.kt"
 
 # interfaces
-.implements Lme/grishka/appkit/views/a$a;
+.implements Lme/grishka/appkit/views/DividerItemDecoration$a;
 
 
 # annotations
@@ -40,11 +40,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$q;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
-    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->b(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lcom/vk/friends/recommendations/c;
+    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->b(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->size()I
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->size()I
 
     move-result v0
 
@@ -56,11 +56,11 @@
 
     iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$q;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
-    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->b(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lcom/vk/friends/recommendations/c;
+    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->b(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/friends/recommendations/c;->k(I)Lcom/vk/friends/recommendations/Item;
+    invoke-virtual {v0, p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;->k(I)Lcom/vk/friends/recommendations/Item;
 
     move-result-object v0
 
@@ -71,7 +71,7 @@
 
     .line 2
     :goto_0
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v2
 
@@ -86,11 +86,11 @@
     .line 3
     iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$q;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
-    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->b(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lcom/vk/friends/recommendations/c;
+    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->b(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/friends/recommendations/c;->i(I)I
+    invoke-virtual {v0, p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;->i(I)I
 
     move-result p1
 
@@ -118,11 +118,11 @@
 
     iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$q;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
-    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->b(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lcom/vk/friends/recommendations/c;
+    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->b(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/friends/recommendations/c;->i(I)I
+    invoke-virtual {v0, p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;->i(I)I
 
     move-result p1
 

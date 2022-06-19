@@ -15,7 +15,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
-        "Lcom/vk/auth/enterphone/choosecountry/c<",
+        "Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter2<",
         "*>;>;"
     }
 .end annotation
@@ -26,7 +26,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/auth/enterphone/choosecountry/b;",
+            "Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter3;",
             ">;"
         }
     .end annotation
@@ -36,18 +36,18 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/auth/enterphone/choosecountry/b;",
+            "Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter3;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final c:Lkotlin/jvm/b/b;
+.field private final c:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/auth/enterphone/choosecountry/Country;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -62,24 +62,24 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/List;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/auth/enterphone/choosecountry/b;",
+            "Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter3;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/auth/enterphone/choosecountry/Country;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -89,7 +89,7 @@
 
     iput-object p1, p0, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter;->b:Ljava/util/List;
 
-    iput-object p2, p0, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter;->c:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter;->c:Lkotlin/jvm/b/Functions2;
 
     .line 2
     new-instance p1, Ljava/util/ArrayList;
@@ -107,7 +107,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/auth/enterphone/choosecountry/b;",
+            "Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter3;",
             ">;"
         }
     .end annotation
@@ -136,12 +136,12 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/auth/enterphone/choosecountry/c;I)V
+.method public a(Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter2;I)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/auth/enterphone/choosecountry/c<",
+            "Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter2<",
             "*>;I)V"
         }
     .end annotation
@@ -155,9 +155,9 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/auth/enterphone/choosecountry/b;
+    check-cast p2, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter3;
 
-    invoke-virtual {p1, p2}, Lcom/vk/auth/enterphone/choosecountry/c;->a(Lcom/vk/auth/enterphone/choosecountry/b;)V
+    invoke-virtual {p1, p2}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter2;->a(Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter3;)V
 
     return-void
 .end method
@@ -225,18 +225,18 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/auth/enterphone/choosecountry/b;
+    check-cast v3, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter3;
 
     .line 6
-    instance-of v4, v3, Lcom/vk/auth/enterphone/choosecountry/a;
+    instance-of v4, v3, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter1;
 
     if-eqz v4, :cond_4
 
     move-object v4, v3
 
-    check-cast v4, Lcom/vk/auth/enterphone/choosecountry/a;
+    check-cast v4, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter1;
 
-    invoke-virtual {v4}, Lcom/vk/auth/enterphone/choosecountry/a;->a()Lcom/vk/auth/enterphone/choosecountry/Country;
+    invoke-virtual {v4}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter1;->a()Lcom/vk/auth/enterphone/choosecountry/Country;
 
     move-result-object v4
 
@@ -257,7 +257,7 @@
 
     .line 8
     :cond_4
-    instance-of v4, v3, Lcom/vk/auth/enterphone/choosecountry/d;
+    instance-of v4, v3, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter4;
 
     if-eqz v4, :cond_3
 
@@ -330,10 +330,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/auth/enterphone/choosecountry/b;
+    check-cast v1, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter3;
 
     .line 3
-    instance-of v2, v1, Lcom/vk/auth/enterphone/choosecountry/d;
+    instance-of v2, v1, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter4;
 
     if-eqz v2, :cond_0
 
@@ -343,7 +343,7 @@
 
     .line 4
     :cond_0
-    instance-of v1, v1, Lcom/vk/auth/enterphone/choosecountry/a;
+    instance-of v1, v1, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter1;
 
     if-eqz v1, :cond_1
 
@@ -405,9 +405,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/auth/enterphone/choosecountry/c;
+    check-cast p1, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter2;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter;->a(Lcom/vk/auth/enterphone/choosecountry/c;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter;->a(Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter2;I)V
 
     return-void
 .end method
@@ -416,21 +416,21 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/auth/enterphone/choosecountry/c;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter2;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/auth/enterphone/choosecountry/c;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter2;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vk/auth/enterphone/choosecountry/c<",
+            "Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter2<",
             "*>;"
         }
     .end annotation
@@ -444,9 +444,9 @@
     .line 2
     new-instance p2, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter$CountryItemViewHolder;
 
-    iget-object v0, p0, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter;->c:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter;->c:Lkotlin/jvm/b/Functions2;
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter$CountryItemViewHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter$CountryItemViewHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 

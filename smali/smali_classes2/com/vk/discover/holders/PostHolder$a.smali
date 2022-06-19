@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
 
 # direct methods
@@ -24,13 +24,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/discover/holders/PostHolder$a;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -38,15 +38,15 @@
 
     const-string v4, "getMore()Ljava/lang/CharSequence;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/discover/holders/PostHolder$a;->a:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/discover/holders/PostHolder$a;->a:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -60,7 +60,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -72,19 +72,19 @@
 .method private final a()Ljava/lang/CharSequence;
     .locals 3
 
-    invoke-static {}, Lcom/vk/discover/holders/PostHolder;->k0()Lkotlin/e;
+    invoke-static {}, Lcom/vk/discover/holders/PostHolder;->k0()Lkotlin/Lazy2;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/discover/holders/PostHolder;->T:Lcom/vk/discover/holders/PostHolder$a;
 
-    sget-object v1, Lcom/vk/discover/holders/PostHolder$a;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/discover/holders/PostHolder$a;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -106,7 +106,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;Lcom/vk/discover/holders/e$a;Lcom/vk/discover/DiscoverUiConfig;)Lcom/vk/discover/holders/PostHolder;
+.method public final a(Landroid/view/ViewGroup;Lcom/vk/discover/holders/BasePostHolder$a;Lcom/vk/discover/DiscoverUiConfig;)Lcom/vk/discover/holders/PostHolder;
     .locals 12
 
     .line 3
@@ -134,12 +134,12 @@
 
     move-object v5, p3
 
-    invoke-direct/range {v0 .. v10}, Lcom/vk/discover/holders/PostHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/discover/holders/e$a;Lcom/vk/dto/discover/DiscoverItem$ContentType;ILcom/vk/discover/DiscoverUiConfig;ZZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v10}, Lcom/vk/discover/holders/PostHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/discover/holders/BasePostHolder$a;Lcom/vk/dto/discover/DiscoverItem$ContentType;ILcom/vk/discover/DiscoverUiConfig;ZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v11
 .end method
 
-.method public final a(Landroid/view/ViewGroup;Lcom/vk/discover/holders/e$a;Lcom/vk/dto/discover/DiscoverItem$ContentType;Lcom/vk/discover/DiscoverUiConfig;)Lcom/vk/discover/holders/PostHolder;
+.method public final a(Landroid/view/ViewGroup;Lcom/vk/discover/holders/BasePostHolder$a;Lcom/vk/dto/discover/DiscoverItem$ContentType;Lcom/vk/discover/DiscoverUiConfig;)Lcom/vk/discover/holders/PostHolder;
     .locals 12
 
     .line 2
@@ -169,12 +169,12 @@
 
     move-object/from16 v5, p4
 
-    invoke-direct/range {v0 .. v10}, Lcom/vk/discover/holders/PostHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/discover/holders/e$a;Lcom/vk/dto/discover/DiscoverItem$ContentType;ILcom/vk/discover/DiscoverUiConfig;ZZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v10}, Lcom/vk/discover/holders/PostHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/discover/holders/BasePostHolder$a;Lcom/vk/dto/discover/DiscoverItem$ContentType;ILcom/vk/discover/DiscoverUiConfig;ZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v11
 .end method
 
-.method public final b(Landroid/view/ViewGroup;Lcom/vk/discover/holders/e$a;Lcom/vk/dto/discover/DiscoverItem$ContentType;Lcom/vk/discover/DiscoverUiConfig;)Lcom/vk/discover/holders/PostHolder;
+.method public final b(Landroid/view/ViewGroup;Lcom/vk/discover/holders/BasePostHolder$a;Lcom/vk/dto/discover/DiscoverItem$ContentType;Lcom/vk/discover/DiscoverUiConfig;)Lcom/vk/discover/holders/PostHolder;
     .locals 12
 
     .line 1
@@ -204,7 +204,7 @@
 
     move-object/from16 v5, p4
 
-    invoke-direct/range {v0 .. v10}, Lcom/vk/discover/holders/PostHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/discover/holders/e$a;Lcom/vk/dto/discover/DiscoverItem$ContentType;ILcom/vk/discover/DiscoverUiConfig;ZZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v10}, Lcom/vk/discover/holders/PostHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/discover/holders/BasePostHolder$a;Lcom/vk/dto/discover/DiscoverItem$ContentType;ILcom/vk/discover/DiscoverUiConfig;ZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v11
 .end method

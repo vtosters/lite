@@ -1,5 +1,5 @@
 .class public Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;
-.super Lcom/twitter/sdk/android/core/internal/oauth/d;
+.super Lcom/twitter/sdk/android/core/internal/oauth/OAuthService;
 .source "OAuth1aService.java"
 
 
@@ -16,20 +16,20 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/twitter/sdk/android/core/r;Lcom/twitter/sdk/android/core/u/n;)V
+.method public constructor <init>(Lcom/twitter/sdk/android/core/TwitterCore;Lcom/twitter/sdk/android/core/u/TwitterApi;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/twitter/sdk/android/core/internal/oauth/d;-><init>(Lcom/twitter/sdk/android/core/r;Lcom/twitter/sdk/android/core/u/n;)V
+    invoke-direct {p0, p1, p2}, Lcom/twitter/sdk/android/core/internal/oauth/OAuthService;-><init>(Lcom/twitter/sdk/android/core/TwitterCore;Lcom/twitter/sdk/android/core/u/TwitterApi;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/d;->b()Lf/m;
+    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/OAuthService;->b()Lretrofit2/Retrofit;
 
     move-result-object p1
 
     const-class p2, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService$OAuthApi;
 
-    invoke-virtual {p1, p2}, Lf/m;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lretrofit2/Retrofit;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -46,7 +46,7 @@
     const/4 v0, 0x0
 
     .line 15
-    invoke-static {p0, v0}, Lcom/twitter/sdk/android/core/u/p/d;->a(Ljava/lang/String;Z)Ljava/util/TreeMap;
+    invoke-static {p0, v0}, Lcom/twitter/sdk/android/core/u/p/UrlUtils;->a(Ljava/lang/String;Z)Ljava/util/TreeMap;
 
     move-result-object p0
 
@@ -130,16 +130,16 @@
 
 
 # virtual methods
-.method a(Lcom/twitter/sdk/android/core/b;)Lcom/twitter/sdk/android/core/b;
+.method a(Lcom/twitter/sdk/android/core/Callback;)Lcom/twitter/sdk/android/core/Callback;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/twitter/sdk/android/core/b<",
+            "Lcom/twitter/sdk/android/core/Callback<",
             "Lcom/twitter/sdk/android/core/internal/oauth/OAuthResponse;",
             ">;)",
-            "Lcom/twitter/sdk/android/core/b<",
-            "Lokhttp3/c0;",
+            "Lcom/twitter/sdk/android/core/Callback<",
+            "Lokhttp3/ResponseBody;",
             ">;"
         }
     .end annotation
@@ -147,7 +147,7 @@
     .line 22
     new-instance v0, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService$a;
 
-    invoke-direct {v0, p0, p1}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService$a;-><init>(Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;Lcom/twitter/sdk/android/core/b;)V
+    invoke-direct {v0, p0, p1}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService$a;-><init>(Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;Lcom/twitter/sdk/android/core/Callback;)V
 
     return-object v0
 .end method
@@ -167,11 +167,11 @@
     move-result-object v0
 
     .line 2
-    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/d;->c()Lcom/twitter/sdk/android/core/r;
+    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/OAuthService;->c()Lcom/twitter/sdk/android/core/TwitterCore;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/twitter/sdk/android/core/r;->f()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/twitter/sdk/android/core/TwitterCore;->f()Ljava/lang/String;
 
     move-result-object v1
 
@@ -209,7 +209,7 @@
     .locals 3
 
     .line 11
-    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/d;->a()Lcom/twitter/sdk/android/core/u/n;
+    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/OAuthService;->a()Lcom/twitter/sdk/android/core/u/TwitterApi;
 
     move-result-object v0
 
@@ -221,7 +221,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/twitter/sdk/android/core/u/n;->a([Ljava/lang/String;)Landroid/net/Uri$Builder;
+    invoke-virtual {v0, v1}, Lcom/twitter/sdk/android/core/u/TwitterApi;->a([Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
@@ -247,12 +247,12 @@
     return-object p1
 .end method
 
-.method public a(Lcom/twitter/sdk/android/core/b;Lcom/twitter/sdk/android/core/TwitterAuthToken;Ljava/lang/String;)V
+.method public a(Lcom/twitter/sdk/android/core/Callback;Lcom/twitter/sdk/android/core/TwitterAuthToken;Ljava/lang/String;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/twitter/sdk/android/core/b<",
+            "Lcom/twitter/sdk/android/core/Callback<",
             "Lcom/twitter/sdk/android/core/internal/oauth/OAuthResponse;",
             ">;",
             "Lcom/twitter/sdk/android/core/TwitterAuthToken;",
@@ -267,16 +267,16 @@
     move-result-object v5
 
     .line 7
-    new-instance v0, Lcom/twitter/sdk/android/core/internal/oauth/b;
+    new-instance v0, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aHeaders;
 
-    invoke-direct {v0}, Lcom/twitter/sdk/android/core/internal/oauth/b;-><init>()V
+    invoke-direct {v0}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aHeaders;-><init>()V
 
-    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/d;->c()Lcom/twitter/sdk/android/core/r;
+    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/OAuthService;->c()Lcom/twitter/sdk/android/core/TwitterCore;
 
     move-result-object v1
 
     .line 8
-    invoke-virtual {v1}, Lcom/twitter/sdk/android/core/r;->b()Lcom/twitter/sdk/android/core/TwitterAuthConfig;
+    invoke-virtual {v1}, Lcom/twitter/sdk/android/core/TwitterCore;->b()Lcom/twitter/sdk/android/core/TwitterAuthConfig;
 
     move-result-object v1
 
@@ -289,43 +289,43 @@
     move-object v2, p2
 
     .line 9
-    invoke-virtual/range {v0 .. v6}, Lcom/twitter/sdk/android/core/internal/oauth/b;->a(Lcom/twitter/sdk/android/core/TwitterAuthConfig;Lcom/twitter/sdk/android/core/TwitterAuthToken;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+    invoke-virtual/range {v0 .. v6}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aHeaders;->a(Lcom/twitter/sdk/android/core/TwitterAuthConfig;Lcom/twitter/sdk/android/core/TwitterAuthToken;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object p2
 
     .line 10
     iget-object v0, p0, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;->e:Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService$OAuthApi;
 
-    invoke-interface {v0, p2, p3}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService$OAuthApi;->getAccessToken(Ljava/lang/String;Ljava/lang/String;)Lf/b;
+    invoke-interface {v0, p2, p3}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService$OAuthApi;->getAccessToken(Ljava/lang/String;Ljava/lang/String;)Lretrofit2/Call;
 
     move-result-object p2
 
-    invoke-virtual {p0, p1}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;->a(Lcom/twitter/sdk/android/core/b;)Lcom/twitter/sdk/android/core/b;
+    invoke-virtual {p0, p1}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;->a(Lcom/twitter/sdk/android/core/Callback;)Lcom/twitter/sdk/android/core/Callback;
 
     move-result-object p1
 
-    invoke-interface {p2, p1}, Lf/b;->a(Lf/d;)V
+    invoke-interface {p2, p1}, Lretrofit2/Call;->a(Lretrofit2/Callback;)V
 
     return-void
 .end method
 
-.method public b(Lcom/twitter/sdk/android/core/b;)V
+.method public b(Lcom/twitter/sdk/android/core/Callback;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/twitter/sdk/android/core/b<",
+            "Lcom/twitter/sdk/android/core/Callback<",
             "Lcom/twitter/sdk/android/core/internal/oauth/OAuthResponse;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/d;->c()Lcom/twitter/sdk/android/core/r;
+    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/OAuthService;->c()Lcom/twitter/sdk/android/core/TwitterCore;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/r;->b()Lcom/twitter/sdk/android/core/TwitterAuthConfig;
+    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/TwitterCore;->b()Lcom/twitter/sdk/android/core/TwitterAuthConfig;
 
     move-result-object v2
 
@@ -337,9 +337,9 @@
     .line 3
     iget-object v0, p0, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;->e:Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService$OAuthApi;
 
-    new-instance v1, Lcom/twitter/sdk/android/core/internal/oauth/b;
+    new-instance v1, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aHeaders;
 
-    invoke-direct {v1}, Lcom/twitter/sdk/android/core/internal/oauth/b;-><init>()V
+    invoke-direct {v1}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aHeaders;-><init>()V
 
     .line 4
     invoke-virtual {p0, v2}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;->a(Lcom/twitter/sdk/android/core/TwitterAuthConfig;)Ljava/lang/String;
@@ -353,20 +353,20 @@
     const/4 v7, 0x0
 
     .line 5
-    invoke-virtual/range {v1 .. v7}, Lcom/twitter/sdk/android/core/internal/oauth/b;->a(Lcom/twitter/sdk/android/core/TwitterAuthConfig;Lcom/twitter/sdk/android/core/TwitterAuthToken;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+    invoke-virtual/range {v1 .. v7}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aHeaders;->a(Lcom/twitter/sdk/android/core/TwitterAuthConfig;Lcom/twitter/sdk/android/core/TwitterAuthToken;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService$OAuthApi;->getTempToken(Ljava/lang/String;)Lf/b;
+    invoke-interface {v0, v1}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService$OAuthApi;->getTempToken(Ljava/lang/String;)Lretrofit2/Call;
 
     move-result-object v0
 
     .line 6
-    invoke-virtual {p0, p1}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;->a(Lcom/twitter/sdk/android/core/b;)Lcom/twitter/sdk/android/core/b;
+    invoke-virtual {p0, p1}, Lcom/twitter/sdk/android/core/internal/oauth/OAuth1aService;->a(Lcom/twitter/sdk/android/core/Callback;)Lcom/twitter/sdk/android/core/Callback;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lf/b;->a(Lf/d;)V
+    invoke-interface {v0, p1}, Lretrofit2/Call;->a(Lretrofit2/Callback;)V
 
     return-void
 .end method
@@ -379,11 +379,11 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/d;->a()Lcom/twitter/sdk/android/core/u/n;
+    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/OAuthService;->a()Lcom/twitter/sdk/android/core/u/TwitterApi;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/twitter/sdk/android/core/u/n;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/twitter/sdk/android/core/u/TwitterApi;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -408,11 +408,11 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/d;->a()Lcom/twitter/sdk/android/core/u/n;
+    invoke-virtual {p0}, Lcom/twitter/sdk/android/core/internal/oauth/OAuthService;->a()Lcom/twitter/sdk/android/core/u/TwitterApi;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/twitter/sdk/android/core/u/n;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/twitter/sdk/android/core/u/TwitterApi;->a()Ljava/lang/String;
 
     move-result-object v1
 

@@ -60,7 +60,7 @@
 
     const-string v2, "currencyName"
 
-    invoke-static {v2, p1}, Lcom/vk/dto/common/g;->a(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2, p1}, Lcom/vk/dto/common/Price1;->a(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/String;
 

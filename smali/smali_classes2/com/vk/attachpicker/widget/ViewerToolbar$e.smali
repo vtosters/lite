@@ -3,7 +3,7 @@
 .source "ViewerToolbar.java"
 
 # interfaces
-.implements Lb/h/g/l/e;
+.implements Lb/h/g/l/NotificationListener;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lb/h/g/l/e<",
-        "Lcom/vk/attachpicker/widget/m$i;",
+        "Lb/h/g/l/NotificationListener<",
+        "Lcom/vk/attachpicker/widget/PagerVideoPlayer$i;",
         ">;"
     }
 .end annotation
@@ -44,11 +44,11 @@
 
 
 # virtual methods
-.method public a(IILcom/vk/attachpicker/widget/m$i;)V
+.method public a(IILcom/vk/attachpicker/widget/PagerVideoPlayer$i;)V
     .locals 1
 
     .line 2
-    iget p1, p3, Lcom/vk/attachpicker/widget/m$i;->d:I
+    iget p1, p3, Lcom/vk/attachpicker/widget/PagerVideoPlayer$i;->d:I
 
     iget-object p2, p0, Lcom/vk/attachpicker/widget/ViewerToolbar$e;->a:Lcom/vk/attachpicker/widget/ViewerToolbar;
 
@@ -61,12 +61,12 @@
     .line 3
     iget-object p1, p0, Lcom/vk/attachpicker/widget/ViewerToolbar$e;->a:Lcom/vk/attachpicker/widget/ViewerToolbar;
 
-    iget p2, p3, Lcom/vk/attachpicker/widget/m$i;->b:I
+    iget p2, p3, Lcom/vk/attachpicker/widget/PagerVideoPlayer$i;->b:I
 
     invoke-static {p1, p2}, Lcom/vk/attachpicker/widget/ViewerToolbar;->a(Lcom/vk/attachpicker/widget/ViewerToolbar;I)I
 
     .line 4
-    iget p1, p3, Lcom/vk/attachpicker/widget/m$i;->c:F
+    iget p1, p3, Lcom/vk/attachpicker/widget/PagerVideoPlayer$i;->c:F
 
     iget-object p2, p0, Lcom/vk/attachpicker/widget/ViewerToolbar$e;->a:Lcom/vk/attachpicker/widget/ViewerToolbar;
 
@@ -85,7 +85,7 @@
 
     move-result-object p1
 
-    iget p2, p3, Lcom/vk/attachpicker/widget/m$i;->c:F
+    iget p2, p3, Lcom/vk/attachpicker/widget/PagerVideoPlayer$i;->c:F
 
     invoke-virtual {p1, p2}, Lcom/vk/attachpicker/widget/VkSeekBar;->setValue(F)V
 
@@ -98,7 +98,7 @@
 
     iget-object p2, p0, Lcom/vk/attachpicker/widget/ViewerToolbar$e;->a:Lcom/vk/attachpicker/widget/ViewerToolbar;
 
-    iget v0, p3, Lcom/vk/attachpicker/widget/m$i;->a:I
+    iget v0, p3, Lcom/vk/attachpicker/widget/PagerVideoPlayer$i;->a:I
 
     invoke-static {p2, v0}, Lcom/vk/attachpicker/widget/ViewerToolbar;->b(Lcom/vk/attachpicker/widget/ViewerToolbar;I)Ljava/lang/String;
 
@@ -115,7 +115,7 @@
 
     iget-object p2, p0, Lcom/vk/attachpicker/widget/ViewerToolbar$e;->a:Lcom/vk/attachpicker/widget/ViewerToolbar;
 
-    iget v0, p3, Lcom/vk/attachpicker/widget/m$i;->b:I
+    iget v0, p3, Lcom/vk/attachpicker/widget/PagerVideoPlayer$i;->b:I
 
     invoke-static {p2, v0}, Lcom/vk/attachpicker/widget/ViewerToolbar;->b(Lcom/vk/attachpicker/widget/ViewerToolbar;I)Ljava/lang/String;
 
@@ -125,7 +125,7 @@
 
     .line 8
     :cond_0
-    iget p1, p3, Lcom/vk/attachpicker/widget/m$i;->d:I
+    iget p1, p3, Lcom/vk/attachpicker/widget/PagerVideoPlayer$i;->d:I
 
     int-to-float p1, p1
 
@@ -150,9 +150,9 @@
     .locals 0
 
     .line 1
-    check-cast p3, Lcom/vk/attachpicker/widget/m$i;
+    check-cast p3, Lcom/vk/attachpicker/widget/PagerVideoPlayer$i;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/attachpicker/widget/ViewerToolbar$e;->a(IILcom/vk/attachpicker/widget/m$i;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/attachpicker/widget/ViewerToolbar$e;->a(IILcom/vk/attachpicker/widget/PagerVideoPlayer$i;)V
 
     return-void
 .end method

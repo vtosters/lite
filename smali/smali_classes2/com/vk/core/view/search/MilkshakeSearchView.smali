@@ -14,7 +14,7 @@
 
 
 # static fields
-.field static final synthetic I:[Lkotlin/u/j;
+.field static final synthetic I:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -24,17 +24,17 @@
 
 .field private final D:I
 
-.field private final E:Lkotlin/e;
+.field private final E:Lkotlin/Lazy2;
 
 .field private F:Z
 
-.field private G:Lkotlin/jvm/b/b;
+.field private G:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -65,13 +65,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/core/view/search/MilkshakeSearchView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -79,21 +79,21 @@
 
     const-string v4, "isVoiceSearchSupportedByDevice()Z"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/core/view/search/MilkshakeSearchView;->I:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/core/view/search/MilkshakeSearchView;->I:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/core/view/search/MilkshakeSearchView$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/view/search/MilkshakeSearchView$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/view/search/MilkshakeSearchView$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -113,7 +113,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -133,7 +133,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -156,7 +156,7 @@
 
     move-result-object p2
 
-    sget p3, Lb/h/z/d;->post_side_padding:I
+    sget p3, Lb/h/z/R9;->post_side_padding:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -176,11 +176,11 @@
     .line 6
     sget-object p2, Lcom/vk/core/view/search/MilkshakeSearchView$isVoiceSearchSupportedByDevice$2;->a:Lcom/vk/core/view/search/MilkshakeSearchView$isVoiceSearchSupportedByDevice$2;
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->E:Lkotlin/e;
+    iput-object p2, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->E:Lkotlin/Lazy2;
 
     const/4 p2, 0x1
 
@@ -195,12 +195,12 @@
 
     move-result-object p1
 
-    sget p3, Lb/h/z/h;->milkshake_search_view:I
+    sget p3, Lb/h/z/R10;->milkshake_search_view:I
 
     invoke-virtual {p1, p3, p0, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 10
-    sget p1, Lb/h/z/g;->msv_back_btn:I
+    sget p1, Lb/h/z/R;->msv_back_btn:I
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -208,12 +208,12 @@
 
     const-string p3, "findViewById(R.id.msv_back_btn)"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->h:Landroid/view/View;
 
     .line 11
-    sget p1, Lb/h/z/g;->msv_close:I
+    sget p1, Lb/h/z/R;->msv_close:I
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -221,14 +221,14 @@
 
     const-string p3, "findViewById(R.id.msv_close)"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
     iput-object p1, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->a:Landroid/widget/ImageView;
 
     .line 12
-    sget p1, Lb/h/z/g;->msv_query:I
+    sget p1, Lb/h/z/R;->msv_query:I
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -236,7 +236,7 @@
 
     const-string p3, "findViewById(R.id.msv_query)"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/EditText;
 
@@ -261,7 +261,7 @@
     invoke-virtual {p1, p3}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
     .line 15
-    sget p1, Lb/h/z/g;->msv_action:I
+    sget p1, Lb/h/z/R;->msv_action:I
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -269,14 +269,14 @@
 
     const-string p3, "findViewById(R.id.msv_action)"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
     iput-object p1, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->b:Landroid/widget/ImageView;
 
     .line 16
-    sget p1, Lb/h/z/g;->msv_secondary_action:I
+    sget p1, Lb/h/z/R;->msv_secondary_action:I
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -284,14 +284,14 @@
 
     const-string p3, "findViewById(R.id.msv_secondary_action)"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
     iput-object p1, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->c:Landroid/widget/ImageView;
 
     .line 17
-    sget p1, Lb/h/z/g;->msv_bg_left_part:I
+    sget p1, Lb/h/z/R;->msv_bg_left_part:I
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -299,12 +299,12 @@
 
     const-string p3, "findViewById(R.id.msv_bg_left_part)"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->f:Landroid/view/View;
 
     .line 18
-    sget p1, Lb/h/z/g;->msv_bg_right_part:I
+    sget p1, Lb/h/z/R;->msv_bg_right_part:I
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -312,12 +312,12 @@
 
     const-string p3, "findViewById(R.id.msv_bg_right_part)"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->g:Landroid/view/View;
 
     .line 19
-    sget p1, Lb/h/z/g;->msv_actions_container:I
+    sget p1, Lb/h/z/R;->msv_actions_container:I
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -325,10 +325,10 @@
 
     const-string p3, "findViewById(R.id.msv_actions_container)"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
-    sget p1, Lb/h/z/g;->msv_inner_container:I
+    sget p1, Lb/h/z/R;->msv_inner_container:I
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -336,7 +336,7 @@
 
     const-string p3, "findViewById(R.id.msv_inner_container)"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->B:Landroid/view/View;
 
@@ -371,7 +371,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -403,7 +403,7 @@
     return-object p0
 .end method
 
-.method public static synthetic a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lc/a/m;
+.method public static synthetic a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lio/reactivex/Observable;
     .locals 0
 
     and-int/lit8 p5, p4, 0x1
@@ -421,7 +421,7 @@
 
     .line 3
     :cond_1
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(JZ)Lc/a/m;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(JZ)Lio/reactivex/Observable;
 
     move-result-object p0
 
@@ -492,7 +492,7 @@
 
     const-string v1, "editView.text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
@@ -557,7 +557,7 @@
     .line 9
     iget-object p1, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->b:Landroid/widget/ImageView;
 
-    sget v0, Lb/h/z/e;->ic_cancel_24:I
+    sget v0, Lb/h/z/R8;->ic_cancel_24:I
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -568,7 +568,7 @@
 
     move-result-object v0
 
-    sget v1, Lb/h/z/k;->clear_input:I
+    sget v1, Lb/h/z/R2;->clear_input:I
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -583,7 +583,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/core/view/search/MilkshakeSearchView$updateActionMode$1;-><init>(Lcom/vk/core/view/search/MilkshakeSearchView;)V
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 12
     :cond_4
@@ -594,7 +594,7 @@
     .line 13
     iget-object p1, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->b:Landroid/widget/ImageView;
 
-    sget v0, Lb/h/z/e;->ic_voice_outline_24:I
+    sget v0, Lb/h/z/R8;->ic_voice_outline_24:I
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -605,7 +605,7 @@
 
     move-result-object v0
 
-    sget v1, Lb/h/z/k;->search_voice:I
+    sget v1, Lb/h/z/R2;->search_voice:I
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -620,7 +620,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/core/view/search/MilkshakeSearchView$updateActionMode$2;-><init>(Lcom/vk/core/view/search/MilkshakeSearchView;)V
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     :cond_5
     return-void
@@ -635,11 +635,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/core/view/search/MilkshakeSearchView;)Lkotlin/jvm/b/b;
+.method public static final synthetic e(Lcom/vk/core/view/search/MilkshakeSearchView;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->G:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->G:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -656,15 +656,15 @@
 .method private final i()Z
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->E:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->E:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/view/search/MilkshakeSearchView;->I:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/view/search/MilkshakeSearchView;->I:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -687,7 +687,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -696,7 +696,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {v0}, Lcom/vk/core/utils/i;->a(Landroid/app/Activity;)Z
+    invoke-static {v0}, Lcom/vk/core/utils/VoiceUtils;->a(Landroid/app/Activity;)Z
 
     :cond_0
     return-void
@@ -735,13 +735,13 @@
 
 
 # virtual methods
-.method public final a(JZ)Lc/a/m;
+.method public final a(JZ)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(JZ)",
-            "Lc/a/m<",
-            "Lb/h/v/e;",
+            "Lio/reactivex/Observable<",
+            "Lb/h/v/TextViewTextChangeEvent;",
             ">;"
         }
     .end annotation
@@ -749,7 +749,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->d:Landroid/widget/EditText;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/a0;->c(Landroid/widget/TextView;)Lb/h/v/c;
+    invoke-static {v0}, Lcom/vk/core/extensions/TextViewExt;->c(Landroid/widget/TextView;)Lb/h/v/InitialValueObservable;
 
     move-result-object v0
 
@@ -758,7 +758,7 @@
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-virtual {v0}, Lb/h/v/c;->p()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/InitialValueObservable;->p()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -778,22 +778,22 @@
     :goto_0
     sget-object p3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, p1, p2, p3}, Lc/a/m;->b(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v0, p1, p2, p3}, Lio/reactivex/Observable;->b(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 7
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "observable\n             \u2026dSchedulers.mainThread())"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -821,7 +821,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/ui/s;)V
+.method public final a(Lcom/vk/core/ui/TalkBackDrawable;)V
     .locals 10
 
     if-nez p1, :cond_0
@@ -856,7 +856,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->c:Landroid/widget/ImageView;
 
-    invoke-static {v0, p1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/s;)V
+    invoke-static {v0, p1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/TalkBackDrawable;)V
 
     .line 11
     iget-object v1, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->c:Landroid/widget/ImageView;
@@ -1017,13 +1017,13 @@
     if-eqz p2, :cond_1
 
     .line 16
-    sget v2, Lb/h/z/b;->accent:I
+    sget v2, Lb/h/z/R5;->accent:I
 
     goto :goto_1
 
     .line 17
     :cond_1
-    sget v2, Lb/h/z/b;->search_bar_field_tint:I
+    sget v2, Lb/h/z/R5;->search_bar_field_tint:I
 
     :goto_1
     const/4 v3, 0x2
@@ -1031,7 +1031,7 @@
     const/4 v4, 0x0
 
     .line 18
-    invoke-static {v1, v2, v4, v3, v4}, Lcom/vk/extensions/e;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
+    invoke-static {v1, v2, v4, v3, v4}, Lcom/vk/extensions/ImageViewExt;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1122,7 +1122,7 @@
     const-string v4, "animator"
 
     .line 7
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v6, 0xc8
 
@@ -1140,7 +1140,7 @@
 
     invoke-direct {v8, p0, v0, p1}, Lcom/vk/core/view/search/MilkshakeSearchView$showAndHideBackWithAnim$$inlined$also$lambda$2;-><init>(Lcom/vk/core/view/search/MilkshakeSearchView;FZ)V
 
-    invoke-static {v3, v8}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/a;)Landroid/animation/ValueAnimator;
+    invoke-static {v3, v8}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/Functions;)Landroid/animation/ValueAnimator;
 
     if-eqz p1, :cond_4
 
@@ -1191,7 +1191,7 @@
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 14
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v6, v7}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
@@ -1228,7 +1228,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->d:Landroid/widget/EditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/View;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->d:Landroid/widget/EditText;
@@ -1264,7 +1264,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->d:Landroid/widget/EditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     return-void
 .end method
@@ -1350,26 +1350,26 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/navigation/u;
+    instance-of v1, v0, Lcom/vk/navigation/ResulterProvider;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vk/navigation/u;
+    check-cast v0, Lcom/vk/navigation/ResulterProvider;
 
     if-eqz v0, :cond_1
 
     iget-object v1, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->e:Lcom/vk/core/view/search/MilkshakeSearchView$c;
 
-    invoke-interface {v0, v1}, Lcom/vk/navigation/u;->b(Lcom/vk/navigation/c;)V
+    invoke-interface {v0, v1}, Lcom/vk/navigation/ResulterProvider;->b(Lcom/vk/navigation/ActivityResulter;)V
 
     :cond_1
     return-void
@@ -1388,26 +1388,26 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/navigation/u;
+    instance-of v1, v0, Lcom/vk/navigation/ResulterProvider;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vk/navigation/u;
+    check-cast v0, Lcom/vk/navigation/ResulterProvider;
 
     if-eqz v0, :cond_1
 
     iget-object v1, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->e:Lcom/vk/core/view/search/MilkshakeSearchView$c;
 
-    invoke-interface {v0, v1}, Lcom/vk/navigation/u;->a(Lcom/vk/navigation/c;)V
+    invoke-interface {v0, v1}, Lcom/vk/navigation/ResulterProvider;->a(Lcom/vk/navigation/ActivityResulter;)V
 
     :cond_1
     return-void
@@ -1450,13 +1450,13 @@
     return-void
 .end method
 
-.method public final setOnBackClickListener(Lkotlin/jvm/b/a;)V
+.method public final setOnBackClickListener(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -1478,29 +1478,29 @@
 
     new-instance v1, Lcom/vk/core/view/search/MilkshakeSearchView$setOnBackClickListener$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/core/view/search/MilkshakeSearchView$setOnBackClickListener$1;-><init>(Lcom/vk/core/view/search/MilkshakeSearchView;Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/core/view/search/MilkshakeSearchView$setOnBackClickListener$1;-><init>(Lcom/vk/core/view/search/MilkshakeSearchView;Lkotlin/jvm/b/Functions;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     :goto_0
     return-void
 .end method
 
-.method public final setOnVoiceInputListener(Lkotlin/jvm/b/b;)V
+.method public final setOnVoiceInputListener(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->G:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->G:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
@@ -1539,7 +1539,7 @@
 
     const-string v0, "ColorStateList.valueOf(color)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/core/view/search/MilkshakeSearchView;->f:Landroid/view/View;
@@ -1554,13 +1554,13 @@
     return-void
 .end method
 
-.method public final setSecondaryActionListener(Lkotlin/jvm/b/a;)V
+.method public final setSecondaryActionListener(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -1570,7 +1570,7 @@
 
     new-instance v1, Lcom/vk/core/view/search/MilkshakeSearchView$e;
 
-    invoke-direct {v1, p1}, Lcom/vk/core/view/search/MilkshakeSearchView$e;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/core/view/search/MilkshakeSearchView$e;-><init>(Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

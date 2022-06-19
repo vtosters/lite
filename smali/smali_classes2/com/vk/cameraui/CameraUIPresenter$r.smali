@@ -3,7 +3,7 @@
 .source "CameraUIPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Landroid/location/Location;",
         ">;"
     }
@@ -54,7 +54,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/cameraui/CameraUIPresenter;->c(Lcom/vk/cameraui/CameraUIPresenter;Lio/reactivex/disposables/b;)V
+    invoke-static {v0, v1}, Lcom/vk/cameraui/CameraUIPresenter;->c(Lcom/vk/cameraui/CameraUIPresenter;Lio/reactivex/disposables/Disposable;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIPresenter$r;->a:Lcom/vk/cameraui/CameraUIPresenter;

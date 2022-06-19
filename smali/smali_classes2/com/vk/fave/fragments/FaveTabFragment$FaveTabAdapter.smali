@@ -1,5 +1,5 @@
 .class final Lcom/vk/fave/fragments/FaveTabFragment$FaveTabAdapter;
-.super Lcom/vk/core/fragments/h;
+.super Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;
 .source "FaveTabFragment.kt"
 
 
@@ -36,7 +36,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/fave/fragments/FaveTabFragment$FaveTabAdapter;->j:Lcom/vk/fave/fragments/FaveTabFragment;
 
-    invoke-direct {p0, p2}, Lcom/vk/core/fragments/h;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;)V
+    invoke-direct {p0, p2}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;)V
 
     const/4 p1, -0x1
 
@@ -103,7 +103,7 @@
     aget-object p1, v0, p1
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveCategory;->b()Lcom/vk/fave/entities/g;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveCategory;->b()Lcom/vk/fave/entities/FaveType1;
 
     move-result-object v0
 
@@ -136,7 +136,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/fave/fragments/FaveAllFragment$a;->a(Lcom/vk/fave/entities/FaveSource;)Lcom/vk/fave/fragments/FaveAllFragment$a;
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {p1}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object p1
 
@@ -177,7 +177,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/fave/fragments/FaveNewFragment$a;->a(Lcom/vk/fave/entities/FaveSource;)Lcom/vk/fave/fragments/FaveNewFragment$a;
 
     .line 13
-    invoke-virtual {p1}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {p1}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object p1
 
@@ -218,7 +218,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/fave/fragments/FaveSearchFragment$a;->a(Lcom/vk/fave/entities/FaveSource;)Lcom/vk/fave/fragments/FaveSearchFragment$a;
 
     .line 19
-    invoke-virtual {p1}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {p1}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object p1
 
@@ -255,7 +255,7 @@
 
     invoke-direct {p1}, Lcom/vk/fave/fragments/FaveAllFragment$a;-><init>()V
 
-    invoke-virtual {p1}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {p1}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object p1
 
@@ -323,31 +323,31 @@
     if-eq v0, p2, :cond_5
 
     .line 6
-    instance-of v0, v1, Lcom/vk/navigation/b0/c;
+    instance-of v0, v1, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
     if-eqz v0, :cond_1
 
     .line 7
-    check-cast v1, Lcom/vk/navigation/b0/c;
+    check-cast v1, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
-    invoke-interface {v1}, Lcom/vk/navigation/b0/c;->q()V
+    invoke-interface {v1}, Lcom/vk/navigation/b0/FragmentWithAutoPlay;->q()V
 
     .line 8
     :cond_1
-    instance-of v0, v2, Lcom/vk/navigation/b0/c;
+    instance-of v0, v2, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
     if-eqz v0, :cond_2
 
     .line 9
     move-object v0, v2
 
-    check-cast v0, Lcom/vk/navigation/b0/c;
+    check-cast v0, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
     new-instance v1, Lcom/vk/fave/fragments/FaveTabFragment$FaveTabAdapter$setPrimaryItem$1;
 
     invoke-direct {v1, v2}, Lcom/vk/fave/fragments/FaveTabFragment$FaveTabAdapter$setPrimaryItem$1;-><init>(Landroidx/fragment/app/Fragment;)V
 
-    invoke-interface {v0, v1}, Lcom/vk/navigation/b0/c;->d(Lkotlin/jvm/b/a;)V
+    invoke-interface {v0, v1}, Lcom/vk/navigation/b0/FragmentWithAutoPlay;->d(Lkotlin/jvm/b/Functions;)V
 
     .line 10
     :cond_2
@@ -364,7 +364,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/fave/FaveController;->a(Lcom/vk/fave/entities/FaveCategory;)V
 
     .line 11
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -411,7 +411,7 @@
 
     .line 14
     :cond_5
-    invoke-super {p0, p1, p2, p3}, Lcom/vk/core/fragments/h;->setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
 
     return-void
 .end method

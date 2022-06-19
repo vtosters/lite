@@ -1,9 +1,9 @@
 .class public abstract Lcom/vk/core/fragments/FragmentImpl;
-.super Lcom/vk/core/fragments/j/b/a;
+.super Lcom/vk/core/fragments/j/b/ParentSupportFragment;
 .source "FragmentImpl.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/v/j/c;
+.implements Lcom/vk/core/ui/v/j/UiTracking;
 
 
 # annotations
@@ -16,7 +16,7 @@
 
 
 # static fields
-.field static final synthetic B:[Lkotlin/u/j;
+.field static final synthetic B:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -32,7 +32,7 @@
 
 .field private f:Lcom/vk/core/fragments/FragmentImpl$b;
 
-.field private final g:Lkotlin/e;
+.field private final g:Lkotlin/Lazy2;
 
 .field private h:Lcom/vk/core/fragments/FragmentManagerImpl;
 
@@ -43,13 +43,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/core/fragments/FragmentImpl;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -57,21 +57,21 @@
 
     const-string v4, "getHandler()Landroid/os/Handler;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/core/fragments/FragmentImpl;->B:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/core/fragments/FragmentImpl;->B:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/core/fragments/FragmentImpl$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/fragments/FragmentImpl$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/fragments/FragmentImpl$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -80,7 +80,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/j/b/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/j/b/ParentSupportFragment;-><init>()V
 
     const/4 v0, 0x1
 
@@ -93,11 +93,11 @@
     .line 4
     sget-object v0, Lcom/vk/core/fragments/FragmentImpl$handler$2;->a:Lcom/vk/core/fragments/FragmentImpl$handler$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/core/fragments/FragmentImpl;->g:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/core/fragments/FragmentImpl;->g:Lkotlin/Lazy2;
 
     .line 5
     new-instance v0, Landroidx/interpolator/view/animation/FastOutSlowInInterpolator;
@@ -110,15 +110,15 @@
 .method private final P4()Landroid/os/Handler;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/fragments/FragmentImpl;->g:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/core/fragments/FragmentImpl;->g:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/fragments/FragmentImpl;->B:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/fragments/FragmentImpl;->B:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -197,7 +197,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/j/b/b;->d()V
+    invoke-virtual {v0}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->d()V
 
     :cond_0
     return-void
@@ -249,7 +249,7 @@
     return-object v0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -285,7 +285,7 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/core/fragments/e;
+    instance-of v1, v0, Lcom/vk/core/fragments/FragmentManagerImplProvider;
 
     const/4 v2, 0x0
 
@@ -294,11 +294,11 @@
     move-object v0, v2
 
     :cond_0
-    check-cast v0, Lcom/vk/core/fragments/e;
+    check-cast v0, Lcom/vk/core/fragments/FragmentManagerImplProvider;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/core/fragments/e;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
+    invoke-interface {v0}, Lcom/vk/core/fragments/FragmentManagerImplProvider;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
 
     move-result-object v2
 
@@ -433,7 +433,7 @@
 
     const-string v1, "javaClass.simpleName"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -458,13 +458,13 @@
 
     const-string v2, "Looper.getMainLooper()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -511,7 +511,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/core/ui/v/g;)V
+.method public a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
     .locals 0
 
     return-void
@@ -563,7 +563,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -592,7 +592,7 @@
     invoke-direct {v3, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     .line 5
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-super {p0, v0, p2, p3}, Landroidx/fragment/app/HackSupportFragment;->createView$libfragments_release(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
@@ -607,7 +607,7 @@
 
     .line 7
     :cond_2
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-super {p0, v0, p2, p3}, Landroidx/fragment/app/HackSupportFragment;->createView$libfragments_release(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
@@ -803,7 +803,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/fragments/j/b/b;->a(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->a(Z)V
 
     .line 3
     :cond_0
@@ -820,7 +820,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/fragments/j/b/b;->a(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->a(Z)V
 
     :cond_2
     :goto_0
@@ -853,7 +853,7 @@
 
     const-string v1, "activity!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
@@ -868,7 +868,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -1044,7 +1044,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -1068,7 +1068,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

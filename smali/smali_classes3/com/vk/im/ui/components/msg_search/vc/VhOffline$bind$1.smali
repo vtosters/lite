@@ -3,12 +3,12 @@
 .source "VhOffline.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_search/vc/VhOffline;->a(Ljava/lang/String;Lcom/vk/im/engine/models/SearchMode;Lcom/vk/im/ui/components/msg_search/vc/p;)V
+    value = Lcom/vk/im/ui/components/msg_search/vc/VhOffline;->a(Ljava/lang/String;Lcom/vk/im/engine/models/SearchMode;Lcom/vk/im/ui/components/msg_search/vc/VcCallback;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,16 +19,16 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $callback:Lcom/vk/im/ui/components/msg_search/vc/p;
+.field final synthetic $callback:Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
 .field final synthetic $query:Ljava/lang/String;
 
@@ -36,10 +36,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/msg_search/vc/p;Ljava/lang/String;Lcom/vk/im/engine/models/SearchMode;)V
+.method constructor <init>(Lcom/vk/im/ui/components/msg_search/vc/VcCallback;Ljava/lang/String;Lcom/vk/im/engine/models/SearchMode;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/VhOffline$bind$1;->$callback:Lcom/vk/im/ui/components/msg_search/vc/p;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/VhOffline$bind$1;->$callback:Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/vc/VhOffline$bind$1;->$query:Ljava/lang/String;
 
@@ -58,7 +58,7 @@
     .locals 2
 
     .line 1
-    iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/VhOffline$bind$1;->$callback:Lcom/vk/im/ui/components/msg_search/vc/p;
+    iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/VhOffline$bind$1;->$callback:Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     if-eqz p1, :cond_0
 
@@ -66,7 +66,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_search/vc/VhOffline$bind$1;->$searchMode:Lcom/vk/im/engine/models/SearchMode;
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/p;->a(Ljava/lang/CharSequence;Lcom/vk/im/engine/models/SearchMode;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/VcCallback;->a(Ljava/lang/CharSequence;Lcom/vk/im/engine/models/SearchMode;)V
 
     :cond_0
     return-void
@@ -80,7 +80,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/VhOffline$bind$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

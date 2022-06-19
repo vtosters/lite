@@ -3,7 +3,7 @@
 .source "ViewerToolbar.java"
 
 # interfaces
-.implements Lb/h/g/l/e;
+.implements Lb/h/g/l/NotificationListener;
 
 
 # annotations

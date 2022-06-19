@@ -3,7 +3,7 @@
 .source "ImEngineProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vtosters/lite/im/ImEngineProvider$subscribe$$inlined$forEach$lambda$1$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -88,9 +88,9 @@
     .line 3
     iget-object v1, p0, Lcom/vtosters/lite/im/ImEngineProvider$subscribe$$inlined$forEach$lambda$1$1;->this$0:Lcom/vtosters/lite/im/ImEngineProvider$subscribe$$inlined$forEach$lambda$1;
 
-    iget-object v1, v1, Lcom/vtosters/lite/im/ImEngineProvider$subscribe$$inlined$forEach$lambda$1;->a:Lkotlin/jvm/b/b;
+    iget-object v1, v1, Lcom/vtosters/lite/im/ImEngineProvider$subscribe$$inlined$forEach$lambda$1;->a:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {v1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     return-void

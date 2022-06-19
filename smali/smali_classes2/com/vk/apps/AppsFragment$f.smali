@@ -1,5 +1,5 @@
 .class public final Lcom/vk/apps/AppsFragment$f;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "AppsFragment.kt"
 
 
@@ -21,7 +21,7 @@
     .line 1
     const-class v0, Lcom/vk/apps/AppsFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     return-void
 .end method
@@ -32,7 +32,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     invoke-static {}, Lcom/vk/apps/AppsFragment;->P4()Lcom/vk/apps/AppsFragment$i;
 
@@ -47,7 +47,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     invoke-static {}, Lcom/vk/apps/AppsFragment;->P4()Lcom/vk/apps/AppsFragment$i;
 

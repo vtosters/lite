@@ -3,7 +3,7 @@
 .source "VkTracker.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/metrics/eventtracking/VkTracker$logEvent$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -132,7 +132,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/metrics/eventtracking/VkTracker$logEvent$1$4;-><init>(Lcom/vk/metrics/eventtracking/VkTracker$logEvent$1;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/metrics/eventtracking/EventsStorage;->b(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/metrics/eventtracking/EventsStorage;->b(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
@@ -150,7 +150,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/metrics/eventtracking/VkTracker$logEvent$1$3;-><init>(Lcom/vk/metrics/eventtracking/VkTracker$logEvent$1;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/metrics/eventtracking/EventsStorage;->d(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/metrics/eventtracking/EventsStorage;->d(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
@@ -168,7 +168,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/metrics/eventtracking/VkTracker$logEvent$1$2;-><init>(Lcom/vk/metrics/eventtracking/VkTracker$logEvent$1;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/metrics/eventtracking/EventsStorage;->c(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/metrics/eventtracking/EventsStorage;->c(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
@@ -186,7 +186,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/metrics/eventtracking/VkTracker$logEvent$1$1;-><init>(Lcom/vk/metrics/eventtracking/VkTracker$logEvent$1;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/metrics/eventtracking/EventsStorage;->a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/metrics/eventtracking/EventsStorage;->a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;)V
 
     :goto_0
     return-void

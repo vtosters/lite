@@ -3,7 +3,7 @@
 .source "ObservableDoFinally.java"
 
 # interfaces
-.implements Lc/a/r;
+.implements Lio/reactivex/Observer;
 
 
 # annotations
@@ -23,7 +23,7 @@
         ">",
         "Lio/reactivex/internal/observers/BasicIntQueueDisposable<",
         "TT;>;",
-        "Lc/a/r<",
+        "Lio/reactivex/Observer<",
         "TT;>;"
     }
 .end annotation
@@ -34,21 +34,21 @@
 
 
 # instance fields
-.field final downstream:Lc/a/r;
+.field final downstream:Lio/reactivex/Observer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;"
         }
     .end annotation
 .end field
 
-.field final onFinally:Lc/a/z/a;
+.field final onFinally:Lio/reactivex/functions/Action;
 
-.field qd:Lc/a/a0/b/f;
+.field qd:Lc/a/a0/b/QueueDisposable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/a0/b/f<",
+            "Lc/a/a0/b/QueueDisposable<",
             "TT;>;"
         }
     .end annotation
@@ -56,18 +56,18 @@
 
 .field syncFused:Z
 
-.field upstream:Lio/reactivex/disposables/b;
+.field upstream:Lio/reactivex/disposables/Disposable;
 
 
 # direct methods
-.method constructor <init>(Lc/a/r;Lc/a/z/a;)V
+.method constructor <init>(Lio/reactivex/Observer;Lio/reactivex/functions/Action;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;",
-            "Lc/a/z/a;",
+            "Lio/reactivex/functions/Action;",
             ")V"
         }
     .end annotation
@@ -76,10 +76,10 @@
     invoke-direct {p0}, Lio/reactivex/internal/observers/BasicIntQueueDisposable;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Lc/a/r;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Lio/reactivex/Observer;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->onFinally:Lc/a/z/a;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->onFinally:Lio/reactivex/functions/Action;
 
     return-void
 .end method
@@ -90,7 +90,7 @@
     .locals 3
 
     .line 8
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lc/a/a0/b/f;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lc/a/a0/b/QueueDisposable;
 
     const/4 v1, 0x0
 
@@ -101,7 +101,7 @@
     if-nez v2, :cond_2
 
     .line 9
-    invoke-interface {v0, p1}, Lc/a/a0/b/g;->a(I)I
+    invoke-interface {v0, p1}, Lc/a/a0/b/QueueFuseable;->a(I)I
 
     move-result p1
 
@@ -127,36 +127,36 @@
     return v1
 .end method
 
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/b;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->upstream:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
     .line 3
-    instance-of v0, p1, Lc/a/a0/b/f;
+    instance-of v0, p1, Lc/a/a0/b/QueueDisposable;
 
     if-eqz v0, :cond_0
 
     .line 4
-    check-cast p1, Lc/a/a0/b/f;
+    check-cast p1, Lc/a/a0/b/QueueDisposable;
 
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lc/a/a0/b/f;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lc/a/a0/b/QueueDisposable;
 
     .line 5
     :cond_0
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Lc/a/r;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {p1, p0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p1, p0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
 
     :cond_1
     return-void
@@ -166,9 +166,9 @@
     .locals 1
 
     .line 6
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Lc/a/r;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {v0, p1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
 
     .line 7
     invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->d()V
@@ -180,9 +180,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Lc/a/r;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {v0}, Lc/a/r;->b()V
+    invoke-interface {v0}, Lio/reactivex/Observer;->b()V
 
     .line 3
     invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->d()V
@@ -199,9 +199,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Lc/a/r;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {v0, p1}, Lc/a/r;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -210,9 +210,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lc/a/a0/b/f;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lc/a/a0/b/QueueDisposable;
 
-    invoke-interface {v0}, Lc/a/a0/b/k;->clear()V
+    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->clear()V
 
     return-void
 .end method
@@ -233,9 +233,9 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->onFinally:Lc/a/z/a;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->onFinally:Lio/reactivex/functions/Action;
 
-    invoke-interface {v0}, Lc/a/z/a;->run()V
+    invoke-interface {v0}, Lio/reactivex/functions/Action;->run()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -245,10 +245,10 @@
     move-exception v0
 
     .line 3
-    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 4
-    invoke-static {v0}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :cond_0
     :goto_0
@@ -259,9 +259,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->e()Z
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->e()Z
 
     move-result v0
 
@@ -272,9 +272,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lc/a/a0/b/f;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lc/a/a0/b/QueueDisposable;
 
-    invoke-interface {v0}, Lc/a/a0/b/k;->isEmpty()Z
+    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->isEmpty()Z
 
     move-result v0
 
@@ -285,9 +285,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 2
     invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->d()V
@@ -310,9 +310,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lc/a/a0/b/f;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableDoFinally$DoFinallyObserver;->qd:Lc/a/a0/b/QueueDisposable;
 
-    invoke-interface {v0}, Lc/a/a0/b/k;->poll()Ljava/lang/Object;
+    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->poll()Ljava/lang/Object;
 
     move-result-object v0
 

@@ -3,20 +3,20 @@
 .source "lambda"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/fragments/j2;
+.field private final synthetic a:Lcom/vtosters/lite/fragments/WebViewFragment;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/j2;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/WebViewFragment;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/w0;->a:Lcom/vtosters/lite/fragments/j2;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/w0;->a:Lcom/vtosters/lite/fragments/WebViewFragment;
 
     return-void
 .end method
@@ -26,11 +26,11 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/w0;->a:Lcom/vtosters/lite/fragments/j2;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/w0;->a:Lcom/vtosters/lite/fragments/WebViewFragment;
 
-    check-cast p1, Lcom/vk/auth/api/models/e;
+    check-cast p1, Lcom/vk/auth/api/models/WebAuthAnswer;
 
-    invoke-static {v0, p1}, Lcom/vtosters/lite/fragments/j2;->a(Lcom/vtosters/lite/fragments/j2;Lcom/vk/auth/api/models/e;)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/fragments/WebViewFragment;->a(Lcom/vtosters/lite/fragments/WebViewFragment;Lcom/vk/auth/api/models/WebAuthAnswer;)V
 
     return-void
 .end method

@@ -49,14 +49,14 @@
     iput-object v0, p0, Lcom/vk/core/widget/PageIndicator$f;->f:Landroid/graphics/Paint;
 
     .line 3
-    sget-object v0, Lb/h/z/m;->PageIndicator:[I
+    sget-object v0, Lb/h/z/R3;->PageIndicator:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 4
-    sget p2, Lb/h/z/m;->PageIndicator_PINormalDot:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PINormalDot:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -65,7 +65,7 @@
     iput-object p2, p0, Lcom/vk/core/widget/PageIndicator$f;->h:Landroid/graphics/drawable/Drawable;
 
     .line 5
-    sget p2, Lb/h/z/m;->PageIndicator_PISelectedDot:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PISelectedDot:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -74,7 +74,7 @@
     iput-object p2, p0, Lcom/vk/core/widget/PageIndicator$f;->i:Landroid/graphics/drawable/Drawable;
 
     .line 6
-    sget p2, Lb/h/z/m;->PageIndicator_PIVerticalPadding:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIVerticalPadding:I
 
     const/4 v0, 0x0
 

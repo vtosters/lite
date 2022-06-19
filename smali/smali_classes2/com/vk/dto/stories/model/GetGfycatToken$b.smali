@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -82,7 +82,7 @@
     new-instance p1, Lcom/vk/dto/stories/model/GetGfycatToken;
 
     .line 6
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v5, 0x0
 
@@ -93,7 +93,7 @@
     move-object v1, p1
 
     .line 7
-    invoke-direct/range {v1 .. v8}, Lcom/vk/dto/stories/model/GetGfycatToken;-><init>(Ljava/lang/String;JJILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/dto/stories/model/GetGfycatToken;-><init>(Ljava/lang/String;JJILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object p1
 .end method

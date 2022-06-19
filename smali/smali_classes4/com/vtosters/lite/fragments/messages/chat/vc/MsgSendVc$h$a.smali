@@ -42,11 +42,11 @@
 
     iget-object v0, v0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$h;->b:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->n(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/a;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->n(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/KeyboardPopup;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/stickers/f0/a;)Z
+    invoke-static {v0, v1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/stickers/f0/KeyboardPopup;)Z
 
     return-void
 .end method

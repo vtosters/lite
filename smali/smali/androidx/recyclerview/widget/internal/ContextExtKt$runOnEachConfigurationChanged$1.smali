@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/recyclerview/widget/internal/ContextExtKt;->runOnEachConfigurationChanged(Landroid/content/Context;Lkotlin/jvm/b/b;)V
+    value = Landroidx/recyclerview/widget/internal/ContextExtKt;->runOnEachConfigurationChanged(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field final synthetic $action:Lkotlin/jvm/b/b;
+.field final synthetic $action:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/recyclerview/widget/internal/ContextExtKt$runOnEachConfigurationChanged$1;->$action:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Landroidx/recyclerview/widget/internal/ContextExtKt$runOnEachConfigurationChanged$1;->$action:Lkotlin/jvm/b/Functions2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,9 +39,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/internal/ContextExtKt$runOnEachConfigurationChanged$1;->$action:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Landroidx/recyclerview/widget/internal/ContextExtKt$runOnEachConfigurationChanged$1;->$action:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

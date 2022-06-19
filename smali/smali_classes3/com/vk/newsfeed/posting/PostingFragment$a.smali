@@ -43,7 +43,7 @@
 
     const-string v1, "editText"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -54,7 +54,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment$a;->a:Landroid/widget/EditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     const/4 v0, 0x1
 

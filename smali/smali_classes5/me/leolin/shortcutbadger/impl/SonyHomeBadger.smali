@@ -3,7 +3,7 @@
 .source "SonyHomeBadger.java"
 
 # interfaces
-.implements Lme/leolin/shortcutbadger/a;
+.implements Lme/leolin/shortcutbadger/Badger;
 
 
 # instance fields

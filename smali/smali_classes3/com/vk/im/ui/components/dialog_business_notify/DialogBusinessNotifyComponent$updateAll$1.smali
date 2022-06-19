@@ -3,7 +3,7 @@
 .source "DialogBusinessNotifyComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/models/b<",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/models/EntityValue<",
         "Lcom/vk/im/engine/models/dialogs/Dialog;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -48,12 +48,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/b;)V
+.method public final a(Lcom/vk/im/engine/models/EntityValue;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/b<",
+            "Lcom/vk/im/engine/models/EntityValue<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;)V"
         }
@@ -62,11 +62,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent$updateAll$1;->this$0:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;->a(Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;)Lcom/vk/im/ui/components/dialog_business_notify/c;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;->a(Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;)Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponentState;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_business_notify/c;->a(Lcom/vk/im/engine/models/b;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponentState;->a(Lcom/vk/im/engine/models/EntityValue;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent$updateAll$1;->this$0:Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;
@@ -80,11 +80,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/b;
+    check-cast p1, Lcom/vk/im/engine/models/EntityValue;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent$updateAll$1;->a(Lcom/vk/im/engine/models/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent$updateAll$1;->a(Lcom/vk/im/engine/models/EntityValue;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vk/music/view/s;
+.field private final synthetic a:Lcom/vk/music/view/MusicTabbedContainer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vk/music/view/s;)V
+.method public synthetic constructor <init>(Lcom/vk/music/view/MusicTabbedContainer;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/music/view/i;->a:Lcom/vk/music/view/s;
+    iput-object p1, p0, Lcom/vk/music/view/i;->a:Lcom/vk/music/view/MusicTabbedContainer;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/music/view/i;->a:Lcom/vk/music/view/s;
+    iget-object v0, p0, Lcom/vk/music/view/i;->a:Lcom/vk/music/view/MusicTabbedContainer;
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/view/s;->a(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/view/MusicTabbedContainer;->a(Landroid/view/View;)V
 
     return-void
 .end method

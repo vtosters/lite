@@ -53,32 +53,32 @@
     invoke-virtual {v0}, Lcom/vk/voip/VoipWrapper;->a()Z
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/a;->j()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->j()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
-    const-class v1, Lcom/vk/im/engine/events/b;
+    const-class v1, Lcom/vk/im/engine/events/LongPollEvent;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Ljava/lang/Class;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Ljava/lang/Class;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Lcom/vtosters/lite/VKApplication$h$a;->a:Lcom/vtosters/lite/VKApplication$h$a;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
     sget-object v1, Lcom/vtosters/lite/VKApplication$h$b;->a:Lcom/vtosters/lite/VKApplication$h$b;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

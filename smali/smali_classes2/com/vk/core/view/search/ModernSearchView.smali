@@ -12,15 +12,15 @@
 
 
 # static fields
-.field private static final I:Lcom/vk/core/ui/s;
+.field private static final I:Lcom/vk/core/ui/TalkBackDrawable;
 
-.field private static final J:Lcom/vk/core/ui/s;
+.field private static final J:Lcom/vk/core/ui/TalkBackDrawable;
 
-.field private static final K:Lcom/vk/core/ui/s;
+.field private static final K:Lcom/vk/core/ui/TalkBackDrawable;
 
-.field private static final L:Lcom/vk/core/ui/s;
+.field private static final L:Lcom/vk/core/ui/TalkBackDrawable;
 
-.field private static final M:Lcom/vk/core/ui/s;
+.field private static final M:Lcom/vk/core/ui/TalkBackDrawable;
 
 
 # instance fields
@@ -28,22 +28,22 @@
 
 .field private C:Landroid/view/View$OnClickListener;
 
-.field private D:Lkotlin/jvm/b/b;
+.field private D:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private E:Lkotlin/jvm/b/a;
+.field private E:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -70,7 +70,7 @@
 
 .field private g:Landroid/widget/TextView;
 
-.field private h:Lcom/vk/core/widget/h;
+.field private h:Lcom/vk/core/widget/ViewDisplayer;
 
 
 # direct methods
@@ -81,14 +81,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/view/search/ModernSearchView$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/view/search/ModernSearchView$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
-    sget-object v2, Lcom/vk/core/ui/s;->a:Lcom/vk/core/ui/s$a;
+    sget-object v2, Lcom/vk/core/ui/TalkBackDrawable;->a:Lcom/vk/core/ui/TalkBackDrawable$a;
 
-    sget v3, Lb/h/z/e;->ic_back_outline_28:I
+    sget v3, Lb/h/z/R8;->ic_back_outline_28:I
 
-    sget v4, Lb/h/z/k;->talkback_ic_back:I
+    sget v4, Lb/h/z/R2;->talkback_ic_back:I
 
     const/4 v5, 0x0
 
@@ -96,32 +96,32 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/core/ui/s$a;->a(Lcom/vk/core/ui/s$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/s;
+    invoke-static/range {v2 .. v7}, Lcom/vk/core/ui/TalkBackDrawable$a;->a(Lcom/vk/core/ui/TalkBackDrawable$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/view/search/ModernSearchView;->I:Lcom/vk/core/ui/s;
+    sput-object v0, Lcom/vk/core/view/search/ModernSearchView;->I:Lcom/vk/core/ui/TalkBackDrawable;
 
     .line 2
-    sget-object v1, Lcom/vk/core/ui/s;->a:Lcom/vk/core/ui/s$a;
+    sget-object v1, Lcom/vk/core/ui/TalkBackDrawable;->a:Lcom/vk/core/ui/TalkBackDrawable$a;
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    sget v0, Lb/h/z/e;->ic_voice_outline_24:I
+    sget v0, Lb/h/z/R8;->ic_voice_outline_24:I
 
     goto :goto_0
 
     :cond_0
-    sget v0, Lb/h/z/e;->ic_voice_24:I
+    sget v0, Lb/h/z/R8;->ic_voice_24:I
 
     :goto_0
     move v2, v0
 
-    sget v3, Lb/h/z/k;->talkback_ic_voice:I
+    sget v3, Lb/h/z/R2;->talkback_ic_voice:I
 
     const/4 v4, 0x0
 
@@ -129,45 +129,45 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/ui/s$a;->a(Lcom/vk/core/ui/s$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/s;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/ui/TalkBackDrawable$a;->a(Lcom/vk/core/ui/TalkBackDrawable$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/view/search/ModernSearchView;->J:Lcom/vk/core/ui/s;
+    sput-object v0, Lcom/vk/core/view/search/ModernSearchView;->J:Lcom/vk/core/ui/TalkBackDrawable;
 
     .line 3
-    sget-object v1, Lcom/vk/core/ui/s;->a:Lcom/vk/core/ui/s$a;
+    sget-object v1, Lcom/vk/core/ui/TalkBackDrawable;->a:Lcom/vk/core/ui/TalkBackDrawable$a;
 
-    sget v2, Lb/h/z/e;->ic_cancel_24:I
+    sget v2, Lb/h/z/R8;->ic_cancel_24:I
 
-    sget v3, Lb/h/z/k;->talkback_ic_cancel:I
+    sget v3, Lb/h/z/R2;->talkback_ic_cancel:I
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/ui/s$a;->a(Lcom/vk/core/ui/s$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/s;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/ui/TalkBackDrawable$a;->a(Lcom/vk/core/ui/TalkBackDrawable$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/view/search/ModernSearchView;->K:Lcom/vk/core/ui/s;
+    sput-object v0, Lcom/vk/core/view/search/ModernSearchView;->K:Lcom/vk/core/ui/TalkBackDrawable;
 
     .line 4
-    sget-object v1, Lcom/vk/core/ui/s;->a:Lcom/vk/core/ui/s$a;
+    sget-object v1, Lcom/vk/core/ui/TalkBackDrawable;->a:Lcom/vk/core/ui/TalkBackDrawable$a;
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    sget v0, Lb/h/z/e;->ic_search_outline_16:I
+    sget v0, Lb/h/z/R8;->ic_search_outline_16:I
 
     goto :goto_1
 
     :cond_1
-    sget v0, Lb/h/z/e;->ic_search_24:I
+    sget v0, Lb/h/z/R8;->ic_search_24:I
 
     :goto_1
     move v2, v0
 
-    sget v3, Lb/h/z/k;->talkback_ic_search:I
+    sget v3, Lb/h/z/R2;->talkback_ic_search:I
 
     const/4 v4, 0x0
 
@@ -175,24 +175,24 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/ui/s$a;->a(Lcom/vk/core/ui/s$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/s;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/ui/TalkBackDrawable$a;->a(Lcom/vk/core/ui/TalkBackDrawable$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/view/search/ModernSearchView;->L:Lcom/vk/core/ui/s;
+    sput-object v0, Lcom/vk/core/view/search/ModernSearchView;->L:Lcom/vk/core/ui/TalkBackDrawable;
 
     .line 5
-    sget-object v1, Lcom/vk/core/ui/s;->a:Lcom/vk/core/ui/s$a;
+    sget-object v1, Lcom/vk/core/ui/TalkBackDrawable;->a:Lcom/vk/core/ui/TalkBackDrawable$a;
 
-    sget v2, Lb/h/z/e;->ic_search_params_24:I
+    sget v2, Lb/h/z/R8;->ic_search_params_24:I
 
-    sget v3, Lb/h/z/k;->talkback_ic_search_params:I
+    sget v3, Lb/h/z/R2;->talkback_ic_search_params:I
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/ui/s$a;->a(Lcom/vk/core/ui/s$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/s;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/ui/TalkBackDrawable$a;->a(Lcom/vk/core/ui/TalkBackDrawable$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/view/search/ModernSearchView;->M:Lcom/vk/core/ui/s;
+    sput-object v0, Lcom/vk/core/view/search/ModernSearchView;->M:Lcom/vk/core/ui/TalkBackDrawable;
 
     return-void
 .end method
@@ -212,7 +212,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/search/ModernSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/search/ModernSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -232,7 +232,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/search/ModernSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/search/ModernSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -272,12 +272,12 @@
 
     move-result-object p3
 
-    sget v0, Lb/h/z/h;->view_modern_search:I
+    sget v0, Lb/h/z/R10;->view_modern_search:I
 
     invoke-virtual {p3, v0, p0, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 8
-    sget v3, Lb/h/z/g;->search_box:I
+    sget v3, Lb/h/z/R;->search_box:I
 
     const/4 v4, 0x0
 
@@ -289,14 +289,14 @@
 
     move-object v2, p0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
     iput-object p3, p0, Lcom/vk/core/view/search/ModernSearchView;->b:Landroid/view/View;
 
     .line 9
-    sget v2, Lb/h/z/g;->iv_icon_left:I
+    sget v2, Lb/h/z/R;->iv_icon_left:I
 
     const/4 v3, 0x0
 
@@ -306,7 +306,7 @@
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -315,7 +315,7 @@
     iput-object p3, p0, Lcom/vk/core/view/search/ModernSearchView;->a:Landroid/widget/ImageView;
 
     .line 10
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p3
 
@@ -336,7 +336,7 @@
 
     .line 12
     :cond_0
-    sget v3, Lb/h/z/g;->iv_icon_right:I
+    sget v3, Lb/h/z/R;->iv_icon_right:I
 
     const/4 v4, 0x0
 
@@ -348,7 +348,7 @@
 
     move-object v2, p0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -357,7 +357,7 @@
     iput-object p3, p0, Lcom/vk/core/view/search/ModernSearchView;->c:Landroid/widget/ImageView;
 
     .line 13
-    sget v2, Lb/h/z/g;->iv_icon_params:I
+    sget v2, Lb/h/z/R;->iv_icon_params:I
 
     const/4 v3, 0x0
 
@@ -367,7 +367,7 @@
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -376,9 +376,9 @@
     iput-object p3, p0, Lcom/vk/core/view/search/ModernSearchView;->d:Landroid/widget/ImageView;
 
     .line 14
-    sget v2, Lb/h/z/g;->iv_icon_third:I
+    sget v2, Lb/h/z/R;->iv_icon_third:I
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -387,16 +387,16 @@
     iput-object p3, p0, Lcom/vk/core/view/search/ModernSearchView;->e:Landroid/widget/ImageView;
 
     .line 15
-    new-instance p3, Lcom/vk/core/widget/h;
+    new-instance p3, Lcom/vk/core/widget/ViewDisplayer;
 
     iget-object v0, p0, Lcom/vk/core/view/search/ModernSearchView;->d:Landroid/widget/ImageView;
 
-    invoke-direct {p3, v0}, Lcom/vk/core/widget/h;-><init>(Landroid/view/View;)V
+    invoke-direct {p3, v0}, Lcom/vk/core/widget/ViewDisplayer;-><init>(Landroid/view/View;)V
 
-    iput-object p3, p0, Lcom/vk/core/view/search/ModernSearchView;->h:Lcom/vk/core/widget/h;
+    iput-object p3, p0, Lcom/vk/core/view/search/ModernSearchView;->h:Lcom/vk/core/widget/ViewDisplayer;
 
     .line 16
-    sget v3, Lb/h/z/g;->query_static:I
+    sget v3, Lb/h/z/R;->query_static:I
 
     const/4 v4, 0x0
 
@@ -404,7 +404,7 @@
 
     move-object v2, p0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -413,7 +413,7 @@
     iput-object p3, p0, Lcom/vk/core/view/search/ModernSearchView;->g:Landroid/widget/TextView;
 
     .line 17
-    sget v2, Lb/h/z/g;->query:I
+    sget v2, Lb/h/z/R;->query:I
 
     const/4 v3, 0x0
 
@@ -423,7 +423,7 @@
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -441,7 +441,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/core/view/search/ModernSearchView$$special$$inlined$apply$lambda$2;-><init>(Lcom/vk/core/view/search/ModernSearchView;)V
 
-    invoke-static {p3, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p3, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 20
     iget-object v0, p0, Lcom/vk/core/view/search/ModernSearchView;->H:Lcom/vk/core/view/search/ModernSearchView$e;
@@ -453,7 +453,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/core/view/search/ModernSearchView$$special$$inlined$apply$lambda$3;-><init>(Lcom/vk/core/view/search/ModernSearchView;)V
 
-    invoke-static {p3, v0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {p3, v0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     .line 22
     new-instance v0, Lcom/vk/core/view/search/ModernSearchView$b;
@@ -466,7 +466,7 @@
     iput-object p3, p0, Lcom/vk/core/view/search/ModernSearchView;->f:Landroid/widget/EditText;
 
     .line 24
-    sget v3, Lb/h/z/g;->search_box:I
+    sget v3, Lb/h/z/R;->search_box:I
 
     const/4 v4, 0x0
 
@@ -474,7 +474,7 @@
 
     move-object v2, p0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -485,7 +485,7 @@
     const/4 p3, 0x0
 
     .line 25
-    invoke-virtual {p0, p3}, Lcom/vk/core/view/search/ModernSearchView;->setStaticMode(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p0, p3}, Lcom/vk/core/view/search/ModernSearchView;->setStaticMode(Lkotlin/jvm/b/Functions;)V
 
     .line 26
     invoke-static {p1}, Lcom/vk/core/util/Screen;->l(Landroid/content/Context;)Z
@@ -499,7 +499,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -522,7 +522,7 @@
     return-void
 .end method
 
-.method private final a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
+.method private final a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -531,10 +531,10 @@
             ">(",
             "Landroid/view/View;",
             "I",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)TT;"
         }
     .end annotation
@@ -549,13 +549,13 @@
     if-eqz p1, :cond_0
 
     .line 33
-    invoke-static {p1, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     :cond_0
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+.method static synthetic a(Lcom/vk/core/view/search/ModernSearchView;Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
     .locals 0
 
     and-int/lit8 p4, p4, 0x2
@@ -566,18 +566,18 @@
 
     .line 31
     :cond_0
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/core/view/search/ModernSearchView;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/core/view/search/ModernSearchView;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/core/view/search/ModernSearchView;)Lcom/vk/core/ui/s;
+.method public static final synthetic a(Lcom/vk/core/view/search/ModernSearchView;)Lcom/vk/core/ui/TalkBackDrawable;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/view/search/ModernSearchView;->getRightDrawable()Lcom/vk/core/ui/s;
+    invoke-direct {p0}, Lcom/vk/core/view/search/ModernSearchView;->getRightDrawable()Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object p0
 
@@ -600,7 +600,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/core/view/search/ModernSearchView;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/core/view/search/ModernSearchView;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -611,7 +611,7 @@
 
     .line 7
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/vk/core/view/search/ModernSearchView;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/core/view/search/ModernSearchView;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -634,7 +634,7 @@
     return-object p0
 .end method
 
-.method private final getRightDrawable()Lcom/vk/core/ui/s;
+.method private final getRightDrawable()Lcom/vk/core/ui/TalkBackDrawable;
     .locals 2
 
     .line 1
@@ -666,12 +666,12 @@
     :goto_0
     if-ne v0, v1, :cond_1
 
-    sget-object v0, Lcom/vk/core/view/search/ModernSearchView;->J:Lcom/vk/core/ui/s;
+    sget-object v0, Lcom/vk/core/view/search/ModernSearchView;->J:Lcom/vk/core/ui/TalkBackDrawable;
 
     goto :goto_1
 
     :cond_1
-    sget-object v0, Lcom/vk/core/view/search/ModernSearchView;->K:Lcom/vk/core/ui/s;
+    sget-object v0, Lcom/vk/core/view/search/ModernSearchView;->K:Lcom/vk/core/ui/TalkBackDrawable;
 
     :goto_1
     return-object v0
@@ -751,7 +751,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/core/view/search/ModernSearchView;->f:Landroid/widget/EditText;
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/view/View;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/View;)V
 
     .line 27
     :goto_0
@@ -779,7 +779,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/ui/s;)V
+.method public final a(Lcom/vk/core/ui/TalkBackDrawable;)V
     .locals 1
 
     .line 29
@@ -787,22 +787,22 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0, p1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/s;)V
+    invoke-static {v0, p1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/TalkBackDrawable;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Boolean;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -844,16 +844,16 @@
     if-eqz v1, :cond_2
 
     .line 14
-    sget-object v1, Lcom/vk/core/view/search/ModernSearchView;->I:Lcom/vk/core/ui/s;
+    sget-object v1, Lcom/vk/core/view/search/ModernSearchView;->I:Lcom/vk/core/ui/TalkBackDrawable;
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/s;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/TalkBackDrawable;)V
 
     .line 15
     new-instance v1, Lcom/vk/core/view/search/ModernSearchView$setEditMode$$inlined$apply$lambda$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/core/view/search/ModernSearchView$setEditMode$$inlined$apply$lambda$1;-><init>(Lcom/vk/core/view/search/ModernSearchView;Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/core/view/search/ModernSearchView$setEditMode$$inlined$apply$lambda$1;-><init>(Lcom/vk/core/view/search/ModernSearchView;Lkotlin/jvm/b/Functions;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 16
     :cond_2
@@ -862,18 +862,18 @@
     if-eqz p1, :cond_3
 
     .line 17
-    invoke-direct {p0}, Lcom/vk/core/view/search/ModernSearchView;->getRightDrawable()Lcom/vk/core/ui/s;
+    invoke-direct {p0}, Lcom/vk/core/view/search/ModernSearchView;->getRightDrawable()Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/s;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/TalkBackDrawable;)V
 
     .line 18
     new-instance v0, Lcom/vk/core/view/search/ModernSearchView$setEditMode$$inlined$apply$lambda$2;
 
-    invoke-direct {v0, p0, p2}, Lcom/vk/core/view/search/ModernSearchView$setEditMode$$inlined$apply$lambda$2;-><init>(Lcom/vk/core/view/search/ModernSearchView;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p0, p2}, Lcom/vk/core/view/search/ModernSearchView$setEditMode$$inlined$apply$lambda$2;-><init>(Lcom/vk/core/view/search/ModernSearchView;Lkotlin/jvm/b/Functions;)V
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     :cond_3
     return-void
@@ -885,23 +885,23 @@
     if-eqz p1, :cond_0
 
     .line 19
-    iget-object p1, p0, Lcom/vk/core/view/search/ModernSearchView;->h:Lcom/vk/core/widget/h;
+    iget-object p1, p0, Lcom/vk/core/view/search/ModernSearchView;->h:Lcom/vk/core/widget/ViewDisplayer;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/core/widget/h;->a()V
+    invoke-virtual {p1}, Lcom/vk/core/widget/ViewDisplayer;->a()V
 
     goto :goto_0
 
     .line 20
     :cond_0
-    iget-object p1, p0, Lcom/vk/core/view/search/ModernSearchView;->h:Lcom/vk/core/widget/h;
+    iget-object p1, p0, Lcom/vk/core/view/search/ModernSearchView;->h:Lcom/vk/core/widget/ViewDisplayer;
 
     if-eqz p1, :cond_1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/widget/h;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/widget/ViewDisplayer;->a(Z)V
 
     .line 21
     :cond_1
@@ -938,18 +938,18 @@
     .line 2
     iget-object v0, p0, Lcom/vk/core/view/search/ModernSearchView;->f:Landroid/widget/EditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public final c()Lb/h/v/c;
+.method public final c()Lb/h/v/InitialValueObservable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lb/h/v/c<",
-            "Lb/h/v/e;",
+            "Lb/h/v/InitialValueObservable<",
+            "Lb/h/v/TextViewTextChangeEvent;",
             ">;"
         }
     .end annotation
@@ -959,14 +959,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/a0;->c(Landroid/widget/TextView;)Lb/h/v/c;
+    invoke-static {v0}, Lcom/vk/core/extensions/TextViewExt;->c(Landroid/widget/TextView;)Lb/h/v/InitialValueObservable;
 
     move-result-object v0
 
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -1011,9 +1011,9 @@
 
     if-eqz v0, :cond_1
 
-    sget-object v1, Lcom/vk/core/view/search/ModernSearchView;->I:Lcom/vk/core/ui/s;
+    sget-object v1, Lcom/vk/core/view/search/ModernSearchView;->I:Lcom/vk/core/ui/TalkBackDrawable;
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/s;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/TalkBackDrawable;)V
 
     :cond_1
     return-void
@@ -1043,9 +1043,9 @@
 
     if-eqz v0, :cond_1
 
-    sget-object v1, Lcom/vk/core/view/search/ModernSearchView;->L:Lcom/vk/core/ui/s;
+    sget-object v1, Lcom/vk/core/view/search/ModernSearchView;->L:Lcom/vk/core/ui/TalkBackDrawable;
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/s;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/TalkBackDrawable;)V
 
     :cond_1
     return-void
@@ -1059,45 +1059,45 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lcom/vk/core/view/search/ModernSearchView;->M:Lcom/vk/core/ui/s;
+    sget-object v1, Lcom/vk/core/view/search/ModernSearchView;->M:Lcom/vk/core/ui/TalkBackDrawable;
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/s;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/TalkBackDrawable;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final getOnActionBackListener()Lkotlin/jvm/b/a;
+.method public final getOnActionBackListener()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/search/ModernSearchView;->E:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/core/view/search/ModernSearchView;->E:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
 
-.method public final getOnActionSearchListener()Lkotlin/jvm/b/b;
+.method public final getOnActionSearchListener()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/search/ModernSearchView;->D:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/core/view/search/ModernSearchView;->D:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
@@ -1280,38 +1280,38 @@
     return-void
 .end method
 
-.method public final setOnActionBackListener(Lkotlin/jvm/b/a;)V
+.method public final setOnActionBackListener(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Boolean;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/core/view/search/ModernSearchView;->E:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/core/view/search/ModernSearchView;->E:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public final setOnActionSearchListener(Lkotlin/jvm/b/b;)V
+.method public final setOnActionSearchListener(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/core/view/search/ModernSearchView;->D:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/core/view/search/ModernSearchView;->D:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
@@ -1325,13 +1325,13 @@
     return-void
 .end method
 
-.method public final setParamsClickListener(Lkotlin/jvm/b/a;)V
+.method public final setParamsClickListener(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -1343,7 +1343,7 @@
 
     new-instance v1, Lcom/vk/core/view/search/ModernSearchView$f;
 
-    invoke-direct {v1, p1}, Lcom/vk/core/view/search/ModernSearchView$f;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/core/view/search/ModernSearchView$f;-><init>(Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -1351,7 +1351,7 @@
     return-void
 .end method
 
-.method public final setParamsDrawable(Lcom/vk/core/ui/s;)V
+.method public final setParamsDrawable(Lcom/vk/core/ui/TalkBackDrawable;)V
     .locals 1
 
     .line 1
@@ -1359,7 +1359,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0, p1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/s;)V
+    invoke-static {v0, p1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/TalkBackDrawable;)V
 
     :cond_0
     return-void
@@ -1472,7 +1472,7 @@
 
     .line 9
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -1482,11 +1482,11 @@
 
     if-eqz p1, :cond_3
 
-    invoke-direct {p0}, Lcom/vk/core/view/search/ModernSearchView;->getRightDrawable()Lcom/vk/core/ui/s;
+    invoke-direct {p0}, Lcom/vk/core/view/search/ModernSearchView;->getRightDrawable()Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/s;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/TalkBackDrawable;)V
 
     :cond_3
     :goto_0
@@ -1516,13 +1516,13 @@
     return-void
 .end method
 
-.method public final setStaticMode(Lkotlin/jvm/b/a;)V
+.method public final setStaticMode(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -1552,9 +1552,9 @@
 
     if-eqz v0, :cond_2
 
-    sget-object v1, Lcom/vk/core/view/search/ModernSearchView;->L:Lcom/vk/core/ui/s;
+    sget-object v1, Lcom/vk/core/view/search/ModernSearchView;->L:Lcom/vk/core/ui/TalkBackDrawable;
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/s;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/TalkBackDrawable;)V
 
     .line 4
     :cond_2
@@ -1562,11 +1562,11 @@
 
     if-eqz v0, :cond_3
 
-    invoke-direct {p0}, Lcom/vk/core/view/search/ModernSearchView;->getRightDrawable()Lcom/vk/core/ui/s;
+    invoke-direct {p0}, Lcom/vk/core/view/search/ModernSearchView;->getRightDrawable()Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/s;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/TalkBackDrawable;)V
 
     .line 5
     :cond_3
@@ -1576,15 +1576,15 @@
 
     new-instance v1, Lcom/vk/core/view/search/ModernSearchView$setStaticMode$1;
 
-    invoke-direct {v1, p1}, Lcom/vk/core/view/search/ModernSearchView$setStaticMode$1;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/core/view/search/ModernSearchView$setStaticMode$1;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     :cond_4
     return-void
 .end method
 
-.method public final setStaticModeRightIcon(Lcom/vk/core/ui/s;)V
+.method public final setStaticModeRightIcon(Lcom/vk/core/ui/TalkBackDrawable;)V
     .locals 1
 
     .line 1
@@ -1592,19 +1592,19 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0, p1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/s;)V
+    invoke-static {v0, p1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Lcom/vk/core/ui/TalkBackDrawable;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final setThirdIconClickListener(Lkotlin/jvm/b/a;)V
+.method public final setThirdIconClickListener(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -1616,7 +1616,7 @@
 
     new-instance v1, Lcom/vk/core/view/search/ModernSearchView$h;
 
-    invoke-direct {v1, p1}, Lcom/vk/core/view/search/ModernSearchView$h;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/core/view/search/ModernSearchView$h;-><init>(Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

@@ -76,9 +76,9 @@
     .locals 4
 
     .line 7
-    sget-object v0, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v0, Lcom/vk/core/util/DeviceState;->INSTANCE:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/v;->x()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/DeviceState;->x()Z
 
     move-result v0
 
@@ -93,7 +93,7 @@
     const/4 v3, 0x0
 
     .line 8
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -121,15 +121,15 @@
     .locals 2
 
     .line 40
-    new-instance v0, Lcom/vk/navigation/o;
+    new-instance v0, Lcom/vk/navigation/Navigator;
 
-    const-class v1, Lcom/vtosters/lite/fragments/gifts/j;
+    const-class v1, Lcom/vtosters/lite/fragments/gifts/ProfileGiftsFragment;
 
-    invoke-direct {v0, v1}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {v0, v1}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     iget-object v1, p0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -138,9 +138,9 @@
     .locals 4
 
     .line 78
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->INSTANCE:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stickers/t;->a(I)Lcom/vk/dto/stickers/StickerStockItem;
+    invoke-virtual {v0, p1}, Lcom/vk/stickers/Stickers;->a(I)Lcom/vk/dto/stickers/StickerStockItem;
 
     move-result-object v0
 
@@ -152,11 +152,11 @@
     invoke-virtual {v0, v1}, Lcom/vk/dto/stickers/StickerStockItem;->d(Ljava/lang/String;)V
 
     .line 80
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stickers/bridge/k;->c()Lcom/vk/stickers/bridge/m;
+    invoke-interface {p1}, Lcom/vk/stickers/bridge/StickersBridge;->c()Lcom/vk/stickers/bridge/StickersBridge3;
 
     move-result-object p1
 
@@ -165,17 +165,17 @@
 
     sget-object v2, Lcom/vk/stickers/bridge/GiftData;->c:Lcom/vk/stickers/bridge/GiftData;
 
-    invoke-interface {p1, v1, v0, v2}, Lcom/vk/stickers/bridge/m;->a(Landroid/content/Context;Lcom/vk/dto/stickers/StickerStockItem;Lcom/vk/stickers/bridge/GiftData;)V
+    invoke-interface {p1, v1, v0, v2}, Lcom/vk/stickers/bridge/StickersBridge3;->a(Landroid/content/Context;Lcom/vk/dto/stickers/StickerStockItem;Lcom/vk/stickers/bridge/GiftData;)V
 
     goto :goto_0
 
     .line 82
     :cond_0
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stickers/bridge/k;->c()Lcom/vk/stickers/bridge/m;
+    invoke-interface {v0}, Lcom/vk/stickers/bridge/StickersBridge;->c()Lcom/vk/stickers/bridge/StickersBridge3;
 
     move-result-object v0
 
@@ -184,7 +184,7 @@
 
     sget-object v3, Lcom/vk/stickers/bridge/GiftData;->c:Lcom/vk/stickers/bridge/GiftData;
 
-    invoke-interface {v0, v2, p1, v3, v1}, Lcom/vk/stickers/bridge/m;->a(Landroid/content/Context;ILcom/vk/stickers/bridge/GiftData;Ljava/lang/String;)V
+    invoke-interface {v0, v2, p1, v3, v1}, Lcom/vk/stickers/bridge/StickersBridge3;->a(Landroid/content/Context;ILcom/vk/stickers/bridge/GiftData;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -200,7 +200,7 @@
 
     const-string v0, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 63
     invoke-static {}, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;->values()[Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;
@@ -227,9 +227,9 @@
 
     move-result-object v5
 
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v5, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -272,7 +272,7 @@
     .line 67
     iget-object p1, p0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
-    invoke-virtual {p3, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p3, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -302,7 +302,7 @@
 
     move v3, p3
 
-    invoke-static/range {v0 .. v8}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;ILjava/lang/String;ZLjava/lang/Integer;Ljava/lang/String;Lcom/vk/common/links/f;ILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v8}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;ILjava/lang/String;ZLjava/lang/Integer;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;ILjava/lang/Object;)Z
 
     return-void
 .end method
@@ -324,7 +324,7 @@
     if-eqz v0, :cond_0
 
     .line 48
-    invoke-static {p1}, Lcom/vtosters/lite/im/b;->a(Lcom/vk/im/engine/models/attaches/AttachArticle;)Lcom/vk/dto/articles/Article;
+    invoke-static {p1}, Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;->a(Lcom/vk/im/engine/models/attaches/AttachArticle;)Lcom/vk/dto/articles/Article;
 
     move-result-object v3
 
@@ -389,21 +389,21 @@
     .locals 1
 
     .line 111
-    new-instance v0, Lcom/vk/music/fragment/k$g;
+    new-instance v0, Lcom/vk/music/fragment/MusicFragment$g;
 
-    invoke-direct {v0}, Lcom/vk/music/fragment/k$g;-><init>()V
+    invoke-direct {v0}, Lcom/vk/music/fragment/MusicFragment$g;-><init>()V
 
     .line 112
     invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/AttachArtist;->j()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/fragment/k$g;->a(Ljava/lang/String;)Lcom/vk/music/fragment/k$g;
+    invoke-virtual {v0, p1}, Lcom/vk/music/fragment/MusicFragment$g;->a(Ljava/lang/String;)Lcom/vk/music/fragment/MusicFragment$g;
 
     .line 113
     iget-object p1, p0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -412,11 +412,11 @@
     .locals 10
 
     .line 114
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->e()Lcom/vk/bridges/i0;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->e()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v1
 
@@ -438,7 +438,7 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -454,7 +454,7 @@
     move-result-object v1
 
     .line 43
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/models/attaches/AttachLink;->j()Lcom/vk/im/engine/models/attaches/AMP;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/models/attaches/AttachLink;->j()Lcom/vk/im/engine/models/attaches/AttachLink1;
 
     move-result-object v2
 
@@ -481,7 +481,7 @@
 
     move-result v9
 
-    invoke-static {v9}, Lcom/vtosters/lite/im/b;->a(I)Lcom/vk/dto/newsfeed/Owner;
+    invoke-static {v9}, Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;->a(I)Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v9
 
@@ -533,7 +533,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-static {v1, v2}, Lcom/vtosters/lite/im/b;->a(Lcom/vk/im/engine/models/attaches/AttachLink;Lcom/vk/im/engine/models/attaches/AMP;)Lcom/vk/dto/articles/Article;
+    invoke-static {v1, v2}, Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;->a(Lcom/vk/im/engine/models/attaches/AttachLink;Lcom/vk/im/engine/models/attaches/AttachLink1;)Lcom/vk/dto/articles/Article;
 
     move-result-object v13
 
@@ -600,12 +600,12 @@
     if-eqz v0, :cond_0
 
     .line 27
-    sget-object v0, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
+    sget-object v0, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->INSTANCE:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
 
     .line 28
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    invoke-static {v0, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -645,18 +645,18 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 31
     :cond_0
-    sget-object v0, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
+    sget-object v0, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->INSTANCE:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
 
     .line 32
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    invoke-static {v0, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v6, 0x4
 
@@ -705,7 +705,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 36
     :goto_0
@@ -742,7 +742,7 @@
     .line 39
     check-cast p1, Landroid/app/Activity;
 
-    invoke-static {p1, v7}, Lcom/vtosters/lite/n;->a(Landroid/app/Activity;Z)Z
+    invoke-static {p1, v7}, Lcom/vtosters/lite/ActivityUtils;->a(Landroid/app/Activity;Z)Z
 
     :cond_1
     :goto_1
@@ -774,7 +774,7 @@
     .line 61
     iget-object p1, p0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -805,7 +805,7 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v0 .. v9}, Lcom/vk/webapp/helpers/a;->a(Landroid/content/Context;Lcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lio/reactivex/disposables/b;
+    invoke-static/range {v0 .. v9}, Lcom/vk/webapp/helpers/AppsHelper;->a(Landroid/content/Context;Lcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -819,7 +819,7 @@
     move-result-object p1
 
     .line 74
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
@@ -827,7 +827,7 @@
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/bridges/f;->b(I)Z
+    invoke-interface {v0, v1}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
 
     move-result v0
 
@@ -842,7 +842,7 @@
 
     iget-object p1, p0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
-    invoke-static {}, Lcom/vk/core/util/m0;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/core/util/LangUtils;->a()Ljava/lang/String;
 
     move-result-object p2
 
@@ -850,17 +850,17 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/vtosters/lite/fragments/money/p;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lcom/vtosters/lite/fragments/money/MoneyWebViewFragment;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 76
     :cond_0
-    sget-object v0, Lcom/vtosters/lite/fragments/money/l;->c:Lcom/vtosters/lite/fragments/money/l$a;
+    sget-object v0, Lcom/vtosters/lite/fragments/money/MoneyInfoBottomSheetDialog;->c:Lcom/vtosters/lite/fragments/money/MoneyInfoBottomSheetDialog$a;
 
     iget-object v1, p0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, p1, p2, v1}, Lcom/vtosters/lite/fragments/money/l$a;->a(Lcom/vk/im/engine/models/content/MoneyRequest;Lcom/vk/im/engine/models/messages/WithUserContent;Landroid/content/Context;)V
+    invoke-virtual {v0, p1, p2, v1}, Lcom/vtosters/lite/fragments/money/MoneyInfoBottomSheetDialog$a;->a(Lcom/vk/im/engine/models/content/MoneyRequest;Lcom/vk/im/engine/models/messages/WithUserContent;Landroid/content/Context;)V
 
     :goto_0
     return-void
@@ -870,7 +870,7 @@
     .locals 11
 
     .line 69
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
@@ -878,12 +878,12 @@
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/bridges/f;->b(I)Z
+    invoke-interface {v0, v1}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
 
     move-result v0
 
     .line 70
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
@@ -891,7 +891,7 @@
 
     move-result v2
 
-    invoke-interface {v1, v2}, Lcom/vk/bridges/f;->b(I)Z
+    invoke-interface {v1, v2}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
 
     move-result v1
 
@@ -905,7 +905,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
-    invoke-static {}, Lcom/vk/core/util/m0;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/core/util/LangUtils;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -913,14 +913,14 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vtosters/lite/fragments/money/p;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/fragments/money/MoneyWebViewFragment;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 72
     :cond_1
     :goto_0
-    sget-object v1, Lcom/vtosters/lite/fragments/money/l;->c:Lcom/vtosters/lite/fragments/money/l$a;
+    sget-object v1, Lcom/vtosters/lite/fragments/money/MoneyInfoBottomSheetDialog;->c:Lcom/vtosters/lite/fragments/money/MoneyInfoBottomSheetDialog$a;
 
     iget-object v2, p0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
@@ -946,7 +946,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v1 .. v10}, Lcom/vtosters/lite/fragments/money/l$a;->a(Lcom/vtosters/lite/fragments/money/l$a;Landroid/content/Context;IIILjava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)V
+    invoke-static/range {v1 .. v10}, Lcom/vtosters/lite/fragments/money/MoneyInfoBottomSheetDialog$a;->a(Lcom/vtosters/lite/fragments/money/MoneyInfoBottomSheetDialog$a;Landroid/content/Context;IIILjava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)V
 
     :goto_1
     return-void
@@ -966,7 +966,7 @@
 
     iget-object p1, p0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -975,11 +975,11 @@
     .locals 2
 
     .line 110
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->k()Lcom/vk/im/ui/p/h;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->k()Lcom/vk/im/ui/p/ImBridge13;
 
     move-result-object v0
 
@@ -989,7 +989,7 @@
 
     move-result-object p1
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/im/ui/p/h;->a(Landroid/content/Context;Lcom/vk/im/engine/models/content/PodcastEpisode;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/im/ui/p/ImBridge13;->a(Landroid/content/Context;Lcom/vk/im/engine/models/content/PodcastEpisode;)V
 
     return-void
 .end method
@@ -1000,11 +1000,11 @@
     if-nez p2, :cond_0
 
     .line 104
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lcom/vk/im/ui/p/b;->m()Lcom/vk/im/ui/p/i;
+    invoke-interface {p2}, Lcom/vk/im/ui/p/ImBridge8;->m()Lcom/vk/im/ui/p/ImBridge10;
 
     move-result-object p2
 
@@ -1014,7 +1014,7 @@
 
     move-result-object p1
 
-    invoke-interface {p2, v0, p1}, Lcom/vk/im/ui/p/i;->b(Landroid/content/Context;Lcom/vk/dto/polls/Poll;)V
+    invoke-interface {p2, v0, p1}, Lcom/vk/im/ui/p/ImBridge10;->b(Landroid/content/Context;Lcom/vk/dto/polls/Poll;)V
 
     return-void
 
@@ -1044,11 +1044,11 @@
     if-le p2, v0, :cond_1
 
     .line 107
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lcom/vk/im/ui/p/b;->m()Lcom/vk/im/ui/p/i;
+    invoke-interface {p2}, Lcom/vk/im/ui/p/ImBridge8;->m()Lcom/vk/im/ui/p/ImBridge10;
 
     move-result-object p2
 
@@ -1058,7 +1058,7 @@
 
     move-result-object p1
 
-    invoke-interface {p2, v0, p1}, Lcom/vk/im/ui/p/i;->a(Landroid/content/Context;Lcom/vk/dto/polls/Poll;)V
+    invoke-interface {p2, v0, p1}, Lcom/vk/im/ui/p/ImBridge10;->a(Landroid/content/Context;Lcom/vk/dto/polls/Poll;)V
 
     goto :goto_0
 
@@ -1075,11 +1075,11 @@
     if-nez p2, :cond_2
 
     .line 109
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lcom/vk/im/ui/p/b;->m()Lcom/vk/im/ui/p/i;
+    invoke-interface {p2}, Lcom/vk/im/ui/p/ImBridge8;->m()Lcom/vk/im/ui/p/ImBridge10;
 
     move-result-object p2
 
@@ -1089,7 +1089,7 @@
 
     move-result-object p1
 
-    invoke-interface {p2, v0, p1}, Lcom/vk/im/ui/p/i;->b(Landroid/content/Context;Lcom/vk/dto/polls/Poll;)V
+    invoke-interface {p2, v0, p1}, Lcom/vk/im/ui/p/ImBridge10;->b(Landroid/content/Context;Lcom/vk/dto/polls/Poll;)V
 
     :cond_2
     :goto_0
@@ -1109,7 +1109,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/attaches/AttachStory;Lcom/vk/im/engine/models/j;Landroid/view/View;)V
+.method public final a(Lcom/vk/im/engine/models/attaches/AttachStory;Lcom/vk/im/engine/models/Profile;Landroid/view/View;)V
     .locals 15
 
     move-object v0, p0
@@ -1138,7 +1138,7 @@
     if-eqz v1, :cond_1
 
     .line 86
-    invoke-static {}, Lcom/vk/bridges/e0;->a()Lcom/vk/bridges/d0;
+    invoke-static {}, Lcom/vk/bridges/StoriesBridge1;->a()Lcom/vk/bridges/StoriesBridge;
 
     move-result-object v1
 
@@ -1148,7 +1148,7 @@
 
     move-result-object v3
 
-    invoke-interface {v1, v2, v3}, Lcom/vk/bridges/d0;->a(Landroid/content/Context;Lcom/vk/dto/stories/model/StoryEntry;)V
+    invoke-interface {v1, v2, v3}, Lcom/vk/bridges/StoriesBridge;->a(Landroid/content/Context;Lcom/vk/dto/stories/model/StoryEntry;)V
 
     goto :goto_2
 
@@ -1158,7 +1158,7 @@
     if-eqz p2, :cond_2
 
     .line 87
-    invoke-interface/range {p2 .. p2}, Lcom/vk/im/engine/models/j;->name()Ljava/lang/String;
+    invoke-interface/range {p2 .. p2}, Lcom/vk/im/engine/models/Profile;->name()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1182,7 +1182,7 @@
     if-eqz p2, :cond_3
 
     .line 89
-    invoke-interface/range {p2 .. p2}, Lcom/vk/im/engine/models/j;->g0()Lcom/vk/im/engine/models/ImageList;
+    invoke-interface/range {p2 .. p2}, Lcom/vk/im/engine/models/Profile;->g0()Lcom/vk/im/engine/models/ImageList;
 
     move-result-object v3
 
@@ -1209,7 +1209,7 @@
 
     .line 90
     :goto_1
-    invoke-static {}, Lcom/vk/bridges/e0;->a()Lcom/vk/bridges/d0;
+    invoke-static {}, Lcom/vk/bridges/StoriesBridge1;->a()Lcom/vk/bridges/StoriesBridge;
 
     move-result-object v1
 
@@ -1242,7 +1242,7 @@
 
     move-object v3, v14
 
-    invoke-direct/range {v3 .. v11}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v11}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-direct {v13, v14}, Lcom/vk/dto/stories/model/StoryOwner;-><init>(Lcom/vk/dto/newsfeed/Owner;)V
 
@@ -1268,7 +1268,7 @@
     move-object v13, v4
 
     .line 95
-    invoke-interface/range {v7 .. v13}, Lcom/vk/bridges/d0;->a(Landroid/content/Context;Landroid/view/View;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoryOwner;ILjava/lang/String;)V
+    invoke-interface/range {v7 .. v13}, Lcom/vk/bridges/StoriesBridge;->a(Landroid/content/Context;Landroid/view/View;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoryOwner;ILjava/lang/String;)V
 
     :cond_4
     :goto_2
@@ -1319,7 +1319,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static/range {v0 .. v10}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;ZLcom/vk/common/links/f;Ljava/lang/Integer;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v10}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;ZLcom/vk/common/links/OpenCallback;Ljava/lang/Integer;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1333,7 +1333,7 @@
     .line 53
     iget-object v0, p0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/vk/common/links/d;->a(Landroid/content/Context;)Lcom/vk/common/links/f;
+    invoke-static {v0}, Lcom/vk/common/links/LinkProcessorCallbackFactory;->a(Landroid/content/Context;)Lcom/vk/common/links/OpenCallback;
 
     move-result-object v6
 
@@ -1354,7 +1354,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IILjava/lang/String;Ljava/lang/Integer;Lcom/vk/common/links/f;)Z
+    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IILjava/lang/String;Ljava/lang/Integer;Lcom/vk/common/links/OpenCallback;)Z
 
     return-void
 .end method
@@ -1368,7 +1368,7 @@
     .line 56
     iget-object v0, p0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/vk/common/links/d;->a(Landroid/content/Context;)Lcom/vk/common/links/f;
+    invoke-static {v0}, Lcom/vk/common/links/LinkProcessorCallbackFactory;->a(Landroid/content/Context;)Lcom/vk/common/links/OpenCallback;
 
     move-result-object v6
 
@@ -1402,7 +1402,7 @@
 
     move-result-object v5
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IILjava/lang/String;Ljava/lang/Integer;Lcom/vk/common/links/f;)Z
+    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IILjava/lang/String;Ljava/lang/Integer;Lcom/vk/common/links/OpenCallback;)Z
 
     goto :goto_0
 
@@ -1426,13 +1426,13 @@
 
     move-result v5
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IIIILcom/vk/common/links/f;)Z
+    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IIIILcom/vk/common/links/OpenCallback;)Z
 
     :goto_0
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/attaches/Attach;Lcom/vk/im/engine/models/j;Ljava/lang/Integer;Landroid/view/View;)V
+.method public final a(Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/attaches/Attach;Lcom/vk/im/engine/models/Profile;Ljava/lang/Integer;Landroid/view/View;)V
     .locals 6
 
     if-nez p2, :cond_0
@@ -1471,7 +1471,7 @@
 
     check-cast p2, Lcom/vk/im/engine/models/attaches/AttachStory;
 
-    invoke-virtual {p0, p2, p3, p5}, Lcom/vtosters/lite/im/ImContentOpenHelper;->a(Lcom/vk/im/engine/models/attaches/AttachStory;Lcom/vk/im/engine/models/j;Landroid/view/View;)V
+    invoke-virtual {p0, p2, p3, p5}, Lcom/vtosters/lite/im/ImContentOpenHelper;->a(Lcom/vk/im/engine/models/attaches/AttachStory;Lcom/vk/im/engine/models/Profile;Landroid/view/View;)V
 
     goto/16 :goto_1
 
@@ -1647,7 +1647,7 @@
 
     if-eqz p1, :cond_13
 
-    sget-object v0, Lcom/vk/core/util/h0;->a:Lcom/vk/core/util/h0;
+    sget-object v0, Lcom/vk/core/util/GooglePlayUtils;->INSTANCE:Lcom/vk/core/util/GooglePlayUtils;
 
     iget-object v1, p0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
@@ -1659,7 +1659,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/util/h0;->a(Lcom/vk/core/util/h0;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/util/GooglePlayUtils;->a(Lcom/vk/core/util/GooglePlayUtils;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
 
     goto :goto_1
 
@@ -1790,7 +1790,7 @@
     const-string v1, "uri"
 
     .line 118
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
@@ -1801,7 +1801,7 @@
     const-string v2, "http"
 
     .line 119
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -1811,7 +1811,7 @@
 
     const-string v2, "https"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1825,7 +1825,7 @@
     :cond_0
     iget-object v1, p0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
-    invoke-static {v1, v0}, Lcom/vk/core/util/y;->a(Landroid/content/Context;Landroid/net/Uri;)Z
+    invoke-static {v1, v0}, Lcom/vk/core/util/DownloadUtils;->a(Landroid/content/Context;Landroid/net/Uri;)Z
 
     move-result v0
 
@@ -1854,7 +1854,7 @@
     const/4 v7, 0x0
 
     .line 125
-    invoke-virtual/range {v1 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v1 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     goto :goto_1
 
@@ -1863,7 +1863,7 @@
     :goto_0
     iget-object p2, p0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
-    invoke-static {p2, p1}, Lcom/vk/core/util/y;->a(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p2, p1}, Lcom/vk/core/util/DownloadUtils;->a(Landroid/content/Context;Ljava/lang/String;)Z
 
     :cond_2
     :goto_1
@@ -1920,12 +1920,12 @@
 
     move-object/from16 v4, p1
 
-    invoke-static {v1, v4}, Lcom/vk/common/links/d;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/vk/common/links/f;
+    invoke-static {v1, v4}, Lcom/vk/common/links/LinkProcessorCallbackFactory;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/vk/common/links/OpenCallback;
 
     move-result-object v7
 
     .line 3
-    new-instance v1, Lcom/vk/common/links/c$b;
+    new-instance v1, Lcom/vk/common/links/LinkProcessor$b;
 
     const/4 v9, 0x0
 
@@ -1949,10 +1949,10 @@
 
     move-object/from16 v12, p2
 
-    invoke-direct/range {v8 .. v18}, Lcom/vk/common/links/c$b;-><init>(ZZZLjava/lang/String;Ljava/lang/String;Lcom/vk/api/base/Document;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v8 .. v18}, Lcom/vk/common/links/LinkProcessor$b;-><init>(ZZZLjava/lang/String;Ljava/lang/String;Lcom/vk/api/base/Document;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 4
-    sget-object v2, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v2, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     iget-object v3, v0, Lcom/vtosters/lite/im/ImContentOpenHelper;->a:Landroid/content/Context;
 
@@ -1960,7 +1960,7 @@
 
     move-object v5, v1
 
-    invoke-virtual/range {v2 .. v7}, Lcom/vk/common/links/c$a;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/c$b;Landroid/os/Bundle;Lcom/vk/common/links/f;)Z
+    invoke-virtual/range {v2 .. v7}, Lcom/vk/common/links/LinkProcessor$a;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;Landroid/os/Bundle;Lcom/vk/common/links/OpenCallback;)Z
 
     return-void
 .end method

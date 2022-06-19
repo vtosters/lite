@@ -3,7 +3,7 @@
 .source "HeaderVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/core/drawable/i;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/core/drawable/RecoloredDrawable;",
         ">;"
     }
 .end annotation
@@ -55,15 +55,15 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/core/drawable/i;
+.method public final invoke()Lcom/vk/core/drawable/RecoloredDrawable;
     .locals 2
 
     .line 2
-    sget v0, Lcom/vk/catalog2/core/p;->ic_dropdown_16:I
+    sget v0, Lcom/vk/catalog2/core/R1;->ic_dropdown_16:I
 
-    sget v1, Lcom/vk/catalog2/core/l;->accent:I
+    sget v1, Lcom/vk/catalog2/core/R6;->accent:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v0, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v0
 
@@ -74,7 +74,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/holders/common/HeaderVh$expandBadge$2;->invoke()Lcom/vk/core/drawable/i;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/holders/common/HeaderVh$expandBadge$2;->invoke()Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v0
 

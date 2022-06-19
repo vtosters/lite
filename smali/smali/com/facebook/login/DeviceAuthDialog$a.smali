@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public a(Lcom/facebook/i;)V
+.method public a(Lcom/facebook/GraphResponse;)V
     .locals 3
 
     .line 1
@@ -51,7 +51,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p1}, Lcom/facebook/i;->a()Lcom/facebook/FacebookRequestError;
+    invoke-virtual {p1}, Lcom/facebook/GraphResponse;->a()Lcom/facebook/FacebookRequestError;
 
     move-result-object v0
 
@@ -60,7 +60,7 @@
     .line 3
     iget-object v0, p0, Lcom/facebook/login/DeviceAuthDialog$a;->a:Lcom/facebook/login/DeviceAuthDialog;
 
-    invoke-virtual {p1}, Lcom/facebook/i;->a()Lcom/facebook/FacebookRequestError;
+    invoke-virtual {p1}, Lcom/facebook/GraphResponse;->a()Lcom/facebook/FacebookRequestError;
 
     move-result-object p1
 
@@ -74,7 +74,7 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Lcom/facebook/i;->b()Lorg/json/JSONObject;
+    invoke-virtual {p1}, Lcom/facebook/GraphResponse;->b()Lorg/json/JSONObject;
 
     move-result-object p1
 

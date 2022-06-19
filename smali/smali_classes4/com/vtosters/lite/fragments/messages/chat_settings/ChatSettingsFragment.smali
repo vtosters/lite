@@ -14,9 +14,9 @@
 
 
 # instance fields
-.field private final C:Lcom/vk/im/engine/a;
+.field private final C:Lcom/vk/im/engine/ImEngine;
 
-.field private final D:Lcom/vk/im/ui/p/b;
+.field private final D:Lcom/vk/im/ui/p/ImBridge8;
 
 .field private final E:Lcom/vk/im/ui/ImUiModule;
 
@@ -41,7 +41,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -53,21 +53,21 @@
     invoke-direct {p0}, Lcom/vk/core/fragments/FragmentImpl;-><init>()V
 
     .line 2
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->C:Lcom/vk/im/engine/a;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->C:Lcom/vk/im/engine/ImEngine;
 
     .line 3
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->D:Lcom/vk/im/ui/p/b;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->D:Lcom/vk/im/ui/p/ImBridge8;
 
     .line 4
-    invoke-static {}, Lcom/vk/im/ui/a;->a()Lcom/vk/im/ui/ImUiModule;
+    invoke-static {}, Lcom/vk/im/ui/ImUiModule1;->a()Lcom/vk/im/ui/ImUiModule;
 
     move-result-object v0
 
@@ -94,18 +94,18 @@
     :cond_0
     const-string p0, "argsDialog"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic b(Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;)Lcom/vk/im/ui/p/b;
+.method public static final synthetic b(Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;)Lcom/vk/im/ui/p/ImBridge8;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->D:Lcom/vk/im/ui/p/b;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->D:Lcom/vk/im/ui/p/ImBridge8;
 
     return-object p0
 .end method
@@ -123,7 +123,7 @@
     :cond_0
     const-string p0, "chatSettingsComponent"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -164,7 +164,7 @@
     :cond_0
     const-string p1, "chatSettingsComponent"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -292,7 +292,7 @@
     :cond_1
     const-string v1, "chatSettingsComponent"
 
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -341,7 +341,7 @@
 
     const-string v3, "requireContext().getStri\u2026_msgs_description, limit)"
 
-    invoke-static {v9, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v10, 0x7f12129c
 
@@ -374,7 +374,7 @@
     move-object/from16 v16, v2
 
     .line 17
-    invoke-static/range {v5 .. v20}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static/range {v5 .. v20}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     :cond_3
     return-void
@@ -400,7 +400,7 @@
     if-eqz p3, :cond_1
 
     .line 1
-    sget-object p1, Lcom/vk/navigation/q;->C:Ljava/lang/String;
+    sget-object p1, Lcom/vk/navigation/NavigatorKeys;->C:Ljava/lang/String;
 
     invoke-virtual {p3, p1}, Landroid/content/Intent;->getIntArrayExtra(Ljava/lang/String;)[I
 
@@ -552,7 +552,7 @@
 
     const-string p2, "resultUri.toString()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->M(Ljava/lang/String;)V
 
@@ -585,7 +585,7 @@
     :cond_0
     const-string p1, "chatSettingsComponent"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -605,7 +605,7 @@
 
     if-eqz p1, :cond_0
 
-    sget-object v0, Lcom/vk/navigation/q;->f0:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->f0:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -650,11 +650,11 @@
 
     const-string v1, "inflater.context"
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->C:Lcom/vk/im/engine/a;
+    iget-object v3, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->C:Lcom/vk/im/engine/ImEngine;
 
-    iget-object v4, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->D:Lcom/vk/im/ui/p/b;
+    iget-object v4, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->D:Lcom/vk/im/ui/p/ImBridge8;
 
     iget-object v5, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->E:Lcom/vk/im/ui/ImUiModule;
 
@@ -675,27 +675,27 @@
 
     move-result v6
 
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->C:Lcom/vk/im/engine/a;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->C:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/a;->c()Lcom/vk/im/engine/models/Member;
+    invoke-virtual {v1}, Lcom/vk/im/engine/ImEngine;->c()Lcom/vk/im/engine/models/Member;
 
     move-result-object v7
 
     const-string v1, "engine.currentMember"
 
-    invoke-static {v7, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v1, v8
 
     .line 4
-    invoke-direct/range {v1 .. v7}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/im/ui/ImUiModule;ILcom/vk/im/engine/models/Member;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/ui/ImUiModule;ILcom/vk/im/engine/models/Member;)V
 
     .line 5
     new-instance v1, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment$ChatSettingsComponentCallbackImpl;
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment$ChatSettingsComponentCallbackImpl;-><init>(Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;)V
 
-    invoke-virtual {v8, v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->a(Lcom/vk/im/ui/components/chat_settings/c;)V
+    invoke-virtual {v8, v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;)V
 
     .line 6
     iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->F:Lcom/vk/im/engine/models/dialogs/DialogExt;
@@ -720,7 +720,7 @@
 
     if-eqz p2, :cond_3
 
-    invoke-virtual {v1, p1, p2, p3}, Lcom/vk/im/ui/q/c;->a(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v1, p1, p2, p3}, Lcom/vk/im/ui/q/Component;->a(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object p1
 
@@ -747,7 +747,7 @@
 
     const-string p3, "resources"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -755,7 +755,7 @@
 
     const-string p3, "resources.configuration"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->a(Landroid/content/res/Configuration;)V
 
@@ -818,7 +818,7 @@
 
     const-string p3, "requireContext()"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;-><init>(Landroid/content/Context;)V
 
@@ -828,36 +828,36 @@
 
     .line 19
     :cond_1
-    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v10
 
     .line 20
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v10
 
     .line 21
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v10
 
     .line 22
     :cond_5
-    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v10
 
     .line 23
     :cond_6
-    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v10
 .end method
@@ -877,25 +877,25 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->a(Lcom/vk/im/ui/components/chat_settings/c;)V
+    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;)V
 
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->G:Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->g()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->g()V
 
     return-void
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 4
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -913,7 +913,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->h()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->h()V
 
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->K:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
@@ -932,7 +932,7 @@
     const-string v0, "chatSettingsComponent"
 
     .line 5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -948,14 +948,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/q/c;->d(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/q/Component;->d(Landroid/os/Bundle;)V
 
     return-void
 
     :cond_0
     const-string p1, "chatSettingsComponent"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -973,14 +973,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
 
     return-void
 
     :cond_0
     const-string v0, "chatSettingsComponent"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -998,14 +998,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->r()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->r()V
 
     return-void
 
     :cond_0
     const-string v0, "chatSettingsComponent"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1023,14 +1023,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/q/c;->c(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/q/Component;->c(Landroid/os/Bundle;)V
 
     return-void
 
     :cond_0
     const-string p1, "chatSettingsComponent"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1051,14 +1051,14 @@
     move-object/from16 v0, p0
 
     .line 1
-    iget-object v1, v0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->D:Lcom/vk/im/ui/p/b;
+    iget-object v1, v0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->D:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v1}, Lcom/vk/im/ui/p/b;->e()Lcom/vk/bridges/i0;
+    invoke-interface {v1}, Lcom/vk/im/ui/p/ImBridge8;->e()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v2
 
     .line 2
-    invoke-static/range {p0 .. p0}, Lcom/vk/navigation/b;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/a;
+    invoke-static/range {p0 .. p0}, Lcom/vk/navigation/ActivityLauncher1;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/ActivityLauncher;
 
     move-result-object v3
 
@@ -1111,7 +1111,7 @@
     move-object/from16 v12, p1
 
     .line 7
-    invoke-static/range {v2 .. v16}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Lcom/vk/navigation/a;ZZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Lcom/vk/stat/scheme/SchemeStat$EventScreen;ILjava/lang/Object;)V
+    invoke-static/range {v2 .. v16}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Lcom/vk/navigation/ActivityLauncher;ZZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Lcom/vk/stat/scheme/SchemeStat$EventScreen;ILjava/lang/Object;)V
 
     return-void
 .end method

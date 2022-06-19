@@ -59,7 +59,7 @@
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
     .line 6
-    invoke-static {v1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void

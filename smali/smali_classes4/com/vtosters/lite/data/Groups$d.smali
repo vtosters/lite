@@ -67,7 +67,7 @@
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/data/Groups$d$a;-><init>(Lcom/vtosters/lite/data/Groups$d;)V
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/data/Groups;->a(Ljava/util/ArrayList;Lcom/vk/common/g/e;)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/data/Groups;->a(Ljava/util/ArrayList;Lcom/vk/common/g/Predicate;)V
 
     .line 4
     iget-object v1, p0, Lcom/vtosters/lite/data/Groups$d;->a:Lcom/vtosters/lite/data/Groups$f;

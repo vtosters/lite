@@ -38,7 +38,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/msg_send/MsgSendState$c;-><init>(Lcom/vk/im/ui/components/msg_send/MsgDraft;Lcom/vk/im/ui/components/msg_send/MsgShare;Lcom/vk/im/ui/components/msg_send/MsgEdit;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/msg_send/MsgSendState$c;-><init>(Lcom/vk/im/ui/components/msg_send/MsgDraft;Lcom/vk/im/ui/components/msg_send/MsgShare;Lcom/vk/im/ui/components/msg_send/MsgEdit;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -58,7 +58,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/im/ui/components/msg_send/MsgDraft;Lcom/vk/im/ui/components/msg_send/MsgShare;Lcom/vk/im/ui/components/msg_send/MsgEdit;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/im/ui/components/msg_send/MsgDraft;Lcom/vk/im/ui/components/msg_send/MsgShare;Lcom/vk/im/ui/components/msg_send/MsgEdit;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 10
 
     and-int/lit8 p5, p4, 0x1
@@ -86,7 +86,7 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v9}, Lcom/vk/im/ui/components/msg_send/MsgDraft;-><init>(Ljava/lang/Integer;Ljava/util/List;Ljava/lang/CharSequence;Ljava/util/List;JIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/im/ui/components/msg_send/MsgDraft;-><init>(Ljava/lang/Integer;Ljava/util/List;Ljava/lang/CharSequence;Ljava/util/List;JIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     :cond_0
     and-int/lit8 p5, p4, 0x2
@@ -182,7 +182,7 @@
 
     iget-object v1, p1, Lcom/vk/im/ui/components/msg_send/MsgSendState$c;->a:Lcom/vk/im/ui/components/msg_send/MsgDraft;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -192,7 +192,7 @@
 
     iget-object v1, p1, Lcom/vk/im/ui/components/msg_send/MsgSendState$c;->b:Lcom/vk/im/ui/components/msg_send/MsgShare;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -202,7 +202,7 @@
 
     iget-object p1, p1, Lcom/vk/im/ui/components/msg_send/MsgSendState$c;->c:Lcom/vk/im/ui/components/msg_send/MsgEdit;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

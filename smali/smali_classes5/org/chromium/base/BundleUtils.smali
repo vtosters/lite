@@ -48,13 +48,13 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lorg/chromium/base/g;->b()Lorg/chromium/base/g;
+    invoke-static {}, Lorg/chromium/base/StrictModeContext;->b()Lorg/chromium/base/StrictModeContext;
 
     move-result-object v0
 
     .line 2
     :try_start_0
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v1
 
@@ -74,7 +74,7 @@
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-virtual {v0}, Lorg/chromium/base/g;->close()V
+    invoke-virtual {v0}, Lorg/chromium/base/StrictModeContext;->close()V
 
     :cond_0
     return-object p0
@@ -95,7 +95,7 @@
 
     .line 6
     :try_start_2
-    invoke-virtual {v0}, Lorg/chromium/base/g;->close()V
+    invoke-virtual {v0}, Lorg/chromium/base/StrictModeContext;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 

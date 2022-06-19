@@ -3,12 +3,12 @@
 .source "ProductPropertyVariantsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter;->c(Lcom/vtosters/lite/ui/holder/market/properties/e;)V
+    value = Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter;->c(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/ui/holder/market/properties/e;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -28,14 +28,14 @@
 
 
 # instance fields
-.field final synthetic $productPropertyVariant:Lcom/vtosters/lite/ui/holder/market/properties/e;
+.field final synthetic $productPropertyVariant:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/ui/holder/market/properties/e;)V
+.method constructor <init>(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$notifySelectionChanged$1;->$productPropertyVariant:Lcom/vtosters/lite/ui/holder/market/properties/e;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$notifySelectionChanged$1;->$productPropertyVariant:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
     const/4 p1, 0x1
 
@@ -46,19 +46,19 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/ui/holder/market/properties/e;)Z
+.method public final a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)Z
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/market/properties/e;->a()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;->a()I
 
     move-result p1
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$notifySelectionChanged$1;->$productPropertyVariant:Lcom/vtosters/lite/ui/holder/market/properties/e;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$notifySelectionChanged$1;->$productPropertyVariant:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/holder/market/properties/e;->a()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;->a()I
 
     move-result v0
 
@@ -79,9 +79,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/holder/market/properties/e;
+    check-cast p1, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$notifySelectionChanged$1;->a(Lcom/vtosters/lite/ui/holder/market/properties/e;)Z
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$notifySelectionChanged$1;->a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)Z
 
     move-result p1
 

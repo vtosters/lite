@@ -19,10 +19,10 @@
 
 
 # instance fields
-.field final downstream:Lc/a/a0/b/a;
+.field final downstream:Lc/a/a0/b/ConditionalSubscriber;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/a0/b/a<",
+            "Lc/a/a0/b/ConditionalSubscriber<",
             "-",
             "Ljava/lang/Integer;",
             ">;"
@@ -32,12 +32,12 @@
 
 
 # direct methods
-.method constructor <init>(Lc/a/a0/b/a;II)V
+.method constructor <init>(Lc/a/a0/b/ConditionalSubscriber;II)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/a0/b/a<",
+            "Lc/a/a0/b/ConditionalSubscriber<",
             "-",
             "Ljava/lang/Integer;",
             ">;II)V"
@@ -48,7 +48,7 @@
     invoke-direct {p0, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableRange$BaseRangeSubscription;-><init>(II)V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableRange$RangeConditionalSubscription;->downstream:Lc/a/a0/b/a;
+    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableRange$RangeConditionalSubscription;->downstream:Lc/a/a0/b/ConditionalSubscriber;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
     iget v0, p0, Lio/reactivex/internal/operators/flowable/FlowableRange$BaseRangeSubscription;->end:I
 
     .line 2
-    iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableRange$RangeConditionalSubscription;->downstream:Lc/a/a0/b/a;
+    iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableRange$RangeConditionalSubscription;->downstream:Lc/a/a0/b/ConditionalSubscriber;
 
     .line 3
     iget v2, p0, Lio/reactivex/internal/operators/flowable/FlowableRange$BaseRangeSubscription;->index:I
@@ -83,7 +83,7 @@
 
     move-result-object v3
 
-    invoke-interface {v1, v3}, Lc/a/a0/b/a;->c(Ljava/lang/Object;)Z
+    invoke-interface {v1, v3}, Lc/a/a0/b/ConditionalSubscriber;->c(Ljava/lang/Object;)Z
 
     add-int/lit8 v2, v2, 0x1
 
@@ -99,7 +99,7 @@
 
     .line 7
     :cond_2
-    invoke-interface {v1}, Le/b/c;->b()V
+    invoke-interface {v1}, Le/b/Subscriber;->b()V
 
     return-void
 .end method
@@ -114,7 +114,7 @@
     iget v1, p0, Lio/reactivex/internal/operators/flowable/FlowableRange$BaseRangeSubscription;->index:I
 
     .line 3
-    iget-object v2, p0, Lio/reactivex/internal/operators/flowable/FlowableRange$RangeConditionalSubscription;->downstream:Lc/a/a0/b/a;
+    iget-object v2, p0, Lio/reactivex/internal/operators/flowable/FlowableRange$RangeConditionalSubscription;->downstream:Lc/a/a0/b/ConditionalSubscriber;
 
     const-wide/16 v3, 0x0
 
@@ -144,7 +144,7 @@
 
     move-result-object v7
 
-    invoke-interface {v2, v7}, Lc/a/a0/b/a;->c(Ljava/lang/Object;)Z
+    invoke-interface {v2, v7}, Lc/a/a0/b/ConditionalSubscriber;->c(Ljava/lang/Object;)Z
 
     move-result v7
 
@@ -168,7 +168,7 @@
     if-nez p1, :cond_5
 
     .line 7
-    invoke-interface {v2}, Le/b/c;->b()V
+    invoke-interface {v2}, Le/b/Subscriber;->b()V
 
     :cond_5
     return-void

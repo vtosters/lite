@@ -24,15 +24,15 @@
 
 .field private j:Landroid/view/View;
 
-.field private k:Lcom/vk/im/ui/components/chat_invite/accept/vc/a;
+.field private k:Lcom/vk/im/ui/components/chat_invite/accept/vc/VcCallback;
 
 .field private final l:Landroid/content/Context;
 
-.field private m:Lcom/vk/im/ui/components/chat_invite/accept/a;
+.field private m:Lcom/vk/im/ui/components/chat_invite/accept/Model;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/components/chat_invite/accept/a;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/components/chat_invite/accept/Model;)V
     .locals 0
 
     .line 1
@@ -40,7 +40,7 @@
 
     iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->l:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->m:Lcom/vk/im/ui/components/chat_invite/accept/a;
+    iput-object p2, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->m:Lcom/vk/im/ui/components/chat_invite/accept/Model;
 
     const-wide/16 p1, 0xc8
 
@@ -50,14 +50,14 @@
     return-void
 .end method
 
-.method private final a(FFFFLandroid/view/animation/Interpolator;Lkotlin/jvm/b/a;)V
+.method private final a(FFFFLandroid/view/animation/Interpolator;Lkotlin/jvm/b/Functions;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(FFFF",
             "Landroid/view/animation/Interpolator;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -114,7 +114,7 @@
     .line 54
     new-instance p2, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC$a;
 
-    invoke-direct {p2, p6}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC$a;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {p2, p6}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC$a;-><init>(Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
@@ -127,24 +127,24 @@
 
     .line 56
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 57
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 58
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
-.method static synthetic a(Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;FFFFLandroid/view/animation/Interpolator;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+.method static synthetic a(Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;FFFFLandroid/view/animation/Interpolator;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
     .locals 7
 
     and-int/lit8 p7, p7, 0x20
@@ -169,7 +169,7 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(FFFFLandroid/view/animation/Interpolator;Lkotlin/jvm/b/a;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(FFFFLandroid/view/animation/Interpolator;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -245,7 +245,7 @@
     const-string v0, "view"
 
     .line 9
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -323,7 +323,7 @@
     const-string v0, "view"
 
     .line 9
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -336,16 +336,16 @@
     move-object/from16 v0, p0
 
     .line 1
-    iget-object v1, v0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->m:Lcom/vk/im/ui/components/chat_invite/accept/a;
+    iget-object v1, v0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->m:Lcom/vk/im/ui/components/chat_invite/accept/Model;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_invite/accept/a;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
 
     move-result-object v1
 
     .line 2
-    iget-object v2, v0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->m:Lcom/vk/im/ui/components/chat_invite/accept/a;
+    iget-object v2, v0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->m:Lcom/vk/im/ui/components/chat_invite/accept/Model;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_invite/accept/a;->c()Z
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->c()Z
 
     move-result v2
 
@@ -358,7 +358,7 @@
 
     if-eqz v3, :cond_e
 
-    sget v6, Lcom/vk/im/ui/h;->vkim_avatar:I
+    sget v6, Lcom/vk/im/ui/R11;->vkim_avatar:I
 
     invoke-virtual {v3, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -374,7 +374,7 @@
 
     if-eqz v3, :cond_d
 
-    sget v6, Lcom/vk/im/ui/h;->vkim_title:I
+    sget v6, Lcom/vk/im/ui/R11;->vkim_title:I
 
     invoke-virtual {v3, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -385,7 +385,7 @@
     const-string v6, "title"
 
     .line 6
-    invoke-static {v3, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lcom/vk/im/engine/models/chats/ChatPreview;->getTitle()Ljava/lang/String;
 
@@ -409,7 +409,7 @@
 
     if-eqz v3, :cond_3
 
-    sget v7, Lcom/vk/im/ui/m;->vkim_channel_invite_title:I
+    sget v7, Lcom/vk/im/ui/R4;->vkim_channel_invite_title:I
 
     invoke-virtual {v3, v7}, Landroid/widget/TextView;->setText(I)V
 
@@ -420,12 +420,12 @@
 
     if-eqz v2, :cond_0
 
-    sget v2, Lcom/vk/im/ui/m;->vkim_open_channel_by_link_btn:I
+    sget v2, Lcom/vk/im/ui/R4;->vkim_open_channel_by_link_btn:I
 
     goto :goto_0
 
     :cond_0
-    sget v2, Lcom/vk/im/ui/m;->vkim_join_channel_by_link_btn:I
+    sget v2, Lcom/vk/im/ui/R4;->vkim_join_channel_by_link_btn:I
 
     :goto_0
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(I)V
@@ -444,19 +444,19 @@
     :cond_1
     const-string v1, "avatars"
 
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 11
     :cond_2
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 12
     :cond_3
-    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -466,7 +466,7 @@
 
     if-eqz v3, :cond_c
 
-    sget v7, Lcom/vk/im/ui/m;->vkim_chat_invite_title:I
+    sget v7, Lcom/vk/im/ui/R4;->vkim_chat_invite_title:I
 
     invoke-virtual {v3, v7}, Landroid/widget/TextView;->setText(I)V
 
@@ -477,12 +477,12 @@
 
     if-eqz v2, :cond_5
 
-    sget v2, Lcom/vk/im/ui/m;->vkim_open_by_link_btn:I
+    sget v2, Lcom/vk/im/ui/R4;->vkim_open_by_link_btn:I
 
     goto :goto_1
 
     :cond_5
-    sget v2, Lcom/vk/im/ui/m;->vkim_join_by_link_btn:I
+    sget v2, Lcom/vk/im/ui/R4;->vkim_join_by_link_btn:I
 
     :goto_1
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(I)V
@@ -511,7 +511,7 @@
 
     if-eqz v6, :cond_a
 
-    sget v7, Lcom/vk/im/ui/h;->vkim_subtitle:I
+    sget v7, Lcom/vk/im/ui/R11;->vkim_subtitle:I
 
     invoke-virtual {v6, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -522,7 +522,7 @@
     const-string v7, "subtitle"
 
     .line 18
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 19
     invoke-virtual {v1}, Lcom/vk/im/engine/models/chats/ChatPreview;->A1()Z
@@ -544,7 +544,7 @@
     move-result-object v2
 
     .line 20
-    sget v3, Lcom/vk/im/ui/l;->vkim_msg_header_channel_count:I
+    sget v3, Lcom/vk/im/ui/R7;->vkim_msg_header_channel_count:I
 
     .line 21
     invoke-virtual {v1}, Lcom/vk/im/engine/models/chats/ChatPreview;->w1()I
@@ -571,7 +571,7 @@
     goto :goto_3
 
     :cond_6
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -583,19 +583,19 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
     .line 24
     sget-object v4, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC$updateView$names$1;->a:Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC$updateView$names$1;
 
-    invoke-static {v1, v4}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v1, v4}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
     .line 25
-    invoke-static {v1, v2}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;I)Lkotlin/sequences/j;
+    invoke-static {v1, v2}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;I)Lkotlin/sequences/Sequence;
 
     move-result-object v10
 
@@ -616,7 +616,7 @@
     const/16 v18, 0x0
 
     .line 26
-    invoke-static/range {v10 .. v18}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v10 .. v18}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -628,7 +628,7 @@
     move-result-object v2
 
     .line 28
-    sget v4, Lcom/vk/im/ui/l;->vkim_chat_invite_members_count:I
+    sget v4, Lcom/vk/im/ui/R7;->vkim_chat_invite_members_count:I
 
     const/4 v7, 0x2
 
@@ -656,19 +656,19 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
     .line 32
     sget-object v3, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC$updateView$1;->a:Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC$updateView$1;
 
-    invoke-static {v1, v3}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v1, v3}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
     .line 33
-    invoke-static {v1, v2}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;I)Lkotlin/sequences/j;
+    invoke-static {v1, v2}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;I)Lkotlin/sequences/Sequence;
 
     move-result-object v7
 
@@ -689,7 +689,7 @@
     const/4 v15, 0x0
 
     .line 34
-    invoke-static/range {v7 .. v15}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v7 .. v15}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -702,9 +702,9 @@
 
     if-eqz v1, :cond_9
 
-    iget-object v2, v0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->m:Lcom/vk/im/ui/components/chat_invite/accept/a;
+    iget-object v2, v0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->m:Lcom/vk/im/ui/components/chat_invite/accept/Model;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_invite/accept/a;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
 
     move-result-object v2
 
@@ -719,37 +719,37 @@
     :cond_9
     const-string v1, "casperChatIcon"
 
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 37
     :cond_a
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 38
     :cond_b
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 39
     :cond_c
-    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 40
     :cond_d
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 41
     :cond_e
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 .end method
@@ -760,7 +760,7 @@
     .locals 2
 
     .line 2
-    sget v0, Lcom/vk/im/ui/j;->vkim_chat_invite:I
+    sget v0, Lcom/vk/im/ui/R13;->vkim_chat_invite:I
 
     const/4 v1, 0x0
 
@@ -770,7 +770,7 @@
 
     const-string p2, "inflater.inflate(R.layou\u2026at_invite, parent, false)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->b:Landroid/view/View;
 
@@ -783,7 +783,7 @@
 
     if-eqz p1, :cond_c
 
-    sget v1, Lcom/vk/im/ui/h;->vkim_animated_view:I
+    sget v1, Lcom/vk/im/ui/R11;->vkim_animated_view:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -791,7 +791,7 @@
 
     const-string v1, "view.findViewById(R.id.vkim_animated_view)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->c:Landroid/view/View;
 
@@ -800,7 +800,7 @@
 
     if-eqz p1, :cond_b
 
-    sget v1, Lcom/vk/im/ui/h;->vkim_content:I
+    sget v1, Lcom/vk/im/ui/R11;->vkim_content:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -808,7 +808,7 @@
 
     const-string v1, "view.findViewById(R.id.vkim_content)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->d:Landroid/view/View;
 
@@ -817,7 +817,7 @@
 
     if-eqz p1, :cond_a
 
-    sget v1, Lcom/vk/im/ui/h;->vkim_avatars:I
+    sget v1, Lcom/vk/im/ui/R11;->vkim_avatars:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -825,7 +825,7 @@
 
     const-string v1, "view.findViewById(R.id.vkim_avatars)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/avatars/StackAvatarView;
 
@@ -836,7 +836,7 @@
 
     if-eqz p1, :cond_9
 
-    sget v1, Lcom/vk/im/ui/h;->vkim_progress:I
+    sget v1, Lcom/vk/im/ui/R11;->vkim_progress:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -844,7 +844,7 @@
 
     const-string v1, "view.findViewById(R.id.vkim_progress)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->e:Landroid/view/View;
 
@@ -853,7 +853,7 @@
 
     if-eqz p1, :cond_8
 
-    sget v1, Lcom/vk/im/ui/h;->vkim_join_progress:I
+    sget v1, Lcom/vk/im/ui/R11;->vkim_join_progress:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -861,7 +861,7 @@
 
     const-string v1, "view.findViewById(R.id.vkim_join_progress)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->h:Landroid/view/View;
 
@@ -870,7 +870,7 @@
 
     if-eqz p1, :cond_7
 
-    sget v1, Lcom/vk/im/ui/h;->vkim_hint:I
+    sget v1, Lcom/vk/im/ui/R11;->vkim_hint:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -878,7 +878,7 @@
 
     const-string v1, "view.findViewById(R.id.vkim_hint)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -889,7 +889,7 @@
 
     if-eqz p1, :cond_6
 
-    sget v1, Lcom/vk/im/ui/h;->vkim_chat_avatar_casper:I
+    sget v1, Lcom/vk/im/ui/R11;->vkim_chat_avatar_casper:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -897,7 +897,7 @@
 
     const-string v1, "view.findViewById(R.id.vkim_chat_avatar_casper)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->j:Landroid/view/View;
 
@@ -906,7 +906,7 @@
 
     if-eqz p1, :cond_5
 
-    sget v1, Lcom/vk/im/ui/h;->vkim_join_btn:I
+    sget v1, Lcom/vk/im/ui/R11;->vkim_join_btn:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -914,7 +914,7 @@
 
     const-string v1, "view.findViewById(R.id.vkim_join_btn)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -929,7 +929,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC$createView$1;-><init>(Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;)V
 
-    invoke-static {p1, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 12
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->b:Landroid/view/View;
@@ -966,7 +966,7 @@
     return-object p1
 
     :cond_0
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -974,7 +974,7 @@
     const-string p1, "content"
 
     .line 16
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -982,13 +982,13 @@
     const-string p1, "progress"
 
     .line 17
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 18
     :cond_3
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -996,55 +996,55 @@
     const-string p1, "joinBtn"
 
     .line 19
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 20
     :cond_5
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 21
     :cond_6
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 22
     :cond_7
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 23
     :cond_8
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 24
     :cond_9
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 25
     :cond_a
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 26
     :cond_b
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 27
     :cond_c
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -1084,16 +1084,16 @@
     move-object v1, p0
 
     .line 45
-    invoke-static/range {v1 .. v9}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;FFFFLandroid/view/animation/Interpolator;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v9}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;FFFFLandroid/view/animation/Interpolator;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/chat_invite/accept/a;)V
+.method public final a(Lcom/vk/im/ui/components/chat_invite/accept/Model;)V
     .locals 10
 
     .line 28
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->m:Lcom/vk/im/ui/components/chat_invite/accept/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->m:Lcom/vk/im/ui/components/chat_invite/accept/Model;
 
     .line 29
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->i:Lcom/vk/im/ui/views/avatars/StackAvatarView;
@@ -1102,7 +1102,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_invite/accept/a;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
 
     move-result-object v2
 
@@ -1112,7 +1112,7 @@
 
     new-instance v9, Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_invite/accept/a;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
 
     move-result-object v3
 
@@ -1122,7 +1122,7 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_invite/accept/a;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_invite/accept/Model;->a()Lcom/vk/im/engine/models/chats/ChatPreview;
 
     move-result-object p1
 
@@ -1136,7 +1136,7 @@
 
     move-object v3, v9
 
-    invoke-direct/range {v3 .. v8}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v8}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v0, v2, v9}, Lcom/vk/im/ui/views/avatars/StackAvatarView;->a(Ljava/util/List;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
@@ -1167,7 +1167,7 @@
     const-string p1, "progress"
 
     .line 33
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1175,7 +1175,7 @@
     const-string p1, "content"
 
     .line 34
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1183,16 +1183,16 @@
     const-string p1, "avatars"
 
     .line 35
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/chat_invite/accept/vc/a;)V
+.method public final a(Lcom/vk/im/ui/components/chat_invite/accept/vc/VcCallback;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->k:Lcom/vk/im/ui/components/chat_invite/accept/vc/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->k:Lcom/vk/im/ui/components/chat_invite/accept/vc/VcCallback;
 
     return-void
 .end method
@@ -1204,18 +1204,18 @@
     invoke-virtual {p0}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->e()V
 
     .line 41
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -1248,16 +1248,16 @@
     move-object v7, p1
 
     .line 39
-    invoke-direct/range {v1 .. v7}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(FFFFLandroid/view/animation/Interpolator;Lkotlin/jvm/b/a;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(FFFFLandroid/view/animation/Interpolator;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method public final b()Lcom/vk/im/ui/components/chat_invite/accept/vc/a;
+.method public final b()Lcom/vk/im/ui/components/chat_invite/accept/vc/VcCallback;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->k:Lcom/vk/im/ui/components/chat_invite/accept/vc/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->k:Lcom/vk/im/ui/components/chat_invite/accept/vc/VcCallback;
 
     return-object v0
 .end method
@@ -1286,7 +1286,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 4
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->c(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -1294,7 +1294,7 @@
     const-string p1, "joinBtn"
 
     .line 5
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1302,7 +1302,7 @@
     const-string p1, "joinProgress"
 
     .line 6
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1320,7 +1320,7 @@
     :cond_0
     const-string v0, "view"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1355,7 +1355,7 @@
     :cond_0
     const-string v0, "joinBtn"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1363,7 +1363,7 @@
     const-string v0, "joinProgress"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1396,7 +1396,7 @@
     :cond_0
     const-string v0, "progress"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1404,7 +1404,7 @@
     const-string v0, "content"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method

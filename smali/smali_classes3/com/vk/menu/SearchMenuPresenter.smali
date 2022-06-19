@@ -3,7 +3,7 @@
 .source "SearchMenuPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/menu/e;
+.implements Lcom/vk/menu/SearchMenuContract;
 
 
 # instance fields
@@ -11,7 +11,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;"
         }
     .end annotation
@@ -21,21 +21,21 @@
 
 .field private c:I
 
-.field private d:Lio/reactivex/disposables/b;
+.field private d:Lio/reactivex/disposables/Disposable;
 
 .field private final e:Landroid/content/BroadcastReceiver;
 
-.field private final f:Lcom/vk/menu/f;
+.field private final f:Lcom/vk/menu/SearchMenuContract1;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/menu/f;)V
+.method public constructor <init>(Lcom/vk/menu/SearchMenuContract1;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iput-object p1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
     .line 2
     new-instance p1, Lcom/vk/menu/SearchMenuPresenter$receiver$1;
@@ -66,7 +66,7 @@
         value = {
             "(I)",
             "Ljava/util/List<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;"
         }
     .end annotation
@@ -98,21 +98,21 @@
     const-string v4, "it"
 
     .line 17
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v3}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v4
 
-    iget-object v5, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v5, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
-    invoke-interface {v5}, Lb/h/r/d;->getContext()Landroid/app/Activity;
+    invoke-interface {v5}, Lb/h/r/BaseScreenContract1;->getContext()Landroid/app/Activity;
 
     move-result-object v5
 
     if-eqz v5, :cond_1
 
-    invoke-static {v4, v5}, Lcom/vk/menu/c;->a(ILandroid/content/Context;)Z
+    invoke-static {v4, v5}, Lcom/vk/menu/MenuUtils;->a(ILandroid/content/Context;)Z
 
     move-result v4
 
@@ -125,9 +125,9 @@
     if-eqz v4, :cond_0
 
     .line 18
-    new-instance v4, Lcom/vk/menu/g/c;
+    new-instance v4, Lcom/vk/menu/g/SearchMenuItem;
 
-    invoke-direct {v4, v3}, Lcom/vk/menu/g/c;-><init>(Landroid/view/MenuItem;)V
+    invoke-direct {v4, v3}, Lcom/vk/menu/g/SearchMenuItem;-><init>(Landroid/view/MenuItem;)V
 
     invoke-interface {v0, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -138,7 +138,7 @@
 
     .line 19
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -169,7 +169,7 @@
     .line 5
     iget-object v1, p0, Lcom/vk/menu/SearchMenuPresenter;->b:Lcom/vk/dto/menu/MenuResponse;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -201,28 +201,28 @@
 
     .line 7
     :goto_0
-    iget-object p1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object p1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
-    invoke-interface {p1, v1}, Lcom/vk/menu/f;->x(I)V
+    invoke-interface {p1, v1}, Lcom/vk/menu/SearchMenuContract1;->x(I)V
 
     .line 8
-    iget-object p1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object p1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
     invoke-direct {p0}, Lcom/vk/menu/SearchMenuPresenter;->b()Ljava/util/List;
 
     move-result-object v2
 
-    invoke-interface {p1, v1, v2}, Lcom/vk/menu/f;->d(ILjava/util/List;)V
+    invoke-interface {p1, v1, v2}, Lcom/vk/menu/SearchMenuContract1;->d(ILjava/util/List;)V
 
     .line 9
-    iget-object p1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object p1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
     const/4 v1, 0x2
 
-    invoke-interface {p1, v1}, Lcom/vk/menu/f;->x(I)V
+    invoke-interface {p1, v1}, Lcom/vk/menu/SearchMenuContract1;->x(I)V
 
     .line 10
-    iget-object p1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object p1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
     const v2, 0x7f0e0030
 
@@ -230,12 +230,12 @@
 
     move-result-object v2
 
-    invoke-interface {p1, v1, v2}, Lcom/vk/menu/f;->d(ILjava/util/List;)V
+    invoke-interface {p1, v1, v2}, Lcom/vk/menu/SearchMenuContract1;->d(ILjava/util/List;)V
 
     .line 11
-    iget-object p1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object p1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
-    invoke-interface {p1}, Lcom/vk/navigation/v;->F()Z
+    invoke-interface {p1}, Lcom/vk/navigation/ScrolledToTop;->F()Z
 
     .line 12
     invoke-static {}, Lcom/vk/core/ui/themes/VKThemeHelper;->n()I
@@ -271,13 +271,13 @@
     return-void
 .end method
 
-.method private final a(Lio/reactivex/disposables/b;)V
+.method private final a(Lio/reactivex/disposables/Disposable;)V
     .locals 2
 
     .line 20
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
-    invoke-interface {v0}, Lb/h/r/d;->getContext()Landroid/app/Activity;
+    invoke-interface {v0}, Lb/h/r/BaseScreenContract1;->getContext()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -292,7 +292,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/Disposable;
 
     :cond_1
     return-void
@@ -311,9 +311,9 @@
     .end annotation
 
     .line 33
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
-    invoke-interface {v0}, Lb/h/r/d;->getContext()Landroid/app/Activity;
+    invoke-interface {v0}, Lb/h/r/BaseScreenContract1;->getContext()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -335,7 +335,7 @@
 
     .line 36
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -354,7 +354,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;"
         }
     .end annotation
@@ -397,21 +397,21 @@
     const-string v8, "it"
 
     .line 5
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v7}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v8
 
-    iget-object v9, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v9, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
-    invoke-interface {v9}, Lb/h/r/d;->getContext()Landroid/app/Activity;
+    invoke-interface {v9}, Lb/h/r/BaseScreenContract1;->getContext()Landroid/app/Activity;
 
     move-result-object v9
 
     if-eqz v9, :cond_1
 
-    invoke-static {v8, v9}, Lcom/vk/menu/c;->a(ILandroid/content/Context;)Z
+    invoke-static {v8, v9}, Lcom/vk/menu/MenuUtils;->a(ILandroid/content/Context;)Z
 
     move-result v6
 
@@ -424,9 +424,9 @@
     if-eqz v6, :cond_0
 
     .line 6
-    new-instance v6, Lcom/vk/menu/g/c;
+    new-instance v6, Lcom/vk/menu/g/SearchMenuItem;
 
-    invoke-direct {v6, v7}, Lcom/vk/menu/g/c;-><init>(Landroid/view/MenuItem;)V
+    invoke-direct {v6, v7}, Lcom/vk/menu/g/SearchMenuItem;-><init>(Landroid/view/MenuItem;)V
 
     invoke-interface {v2, v6}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -437,7 +437,7 @@
 
     .line 7
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v6
 
@@ -508,15 +508,15 @@
 
     move-object v9, v8
 
-    check-cast v9, Lcom/vk/common/i/b;
+    check-cast v9, Lcom/vk/common/i/RecyclerItem;
 
-    instance-of v10, v9, Lcom/vk/menu/g/c;
+    instance-of v10, v9, Lcom/vk/menu/g/SearchMenuItem;
 
     if-eqz v10, :cond_4
 
-    check-cast v9, Lcom/vk/menu/g/c;
+    check-cast v9, Lcom/vk/menu/g/SearchMenuItem;
 
-    invoke-virtual {v9}, Lcom/vk/menu/g/c;->c()Landroid/view/MenuItem;
+    invoke-virtual {v9}, Lcom/vk/menu/g/SearchMenuItem;->c()Landroid/view/MenuItem;
 
     move-result-object v9
 
@@ -544,7 +544,7 @@
     move-object v8, v6
 
     :goto_2
-    check-cast v8, Lcom/vk/common/i/b;
+    check-cast v8, Lcom/vk/common/i/RecyclerItem;
 
     if-eqz v8, :cond_6
 
@@ -553,7 +553,7 @@
 
     .line 14
     :cond_6
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->g()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->g()Z
 
     move-result v5
 
@@ -577,15 +577,15 @@
 
     move-object v9, v8
 
-    check-cast v9, Lcom/vk/common/i/b;
+    check-cast v9, Lcom/vk/common/i/RecyclerItem;
 
-    instance-of v10, v9, Lcom/vk/menu/g/c;
+    instance-of v10, v9, Lcom/vk/menu/g/SearchMenuItem;
 
     if-eqz v10, :cond_8
 
-    check-cast v9, Lcom/vk/menu/g/c;
+    check-cast v9, Lcom/vk/menu/g/SearchMenuItem;
 
-    invoke-virtual {v9}, Lcom/vk/menu/g/c;->c()Landroid/view/MenuItem;
+    invoke-virtual {v9}, Lcom/vk/menu/g/SearchMenuItem;->c()Landroid/view/MenuItem;
 
     move-result-object v9
 
@@ -613,7 +613,7 @@
     move-object v8, v6
 
     :goto_4
-    check-cast v8, Lcom/vk/common/i/b;
+    check-cast v8, Lcom/vk/common/i/RecyclerItem;
 
     if-eqz v8, :cond_a
 
@@ -650,7 +650,7 @@
 
     move-result-object v8
 
-    invoke-static {v8}, Lcom/vk/menu/c;->a(Ljava/lang/String;)I
+    invoke-static {v8}, Lcom/vk/menu/MenuUtils;->a(Ljava/lang/String;)I
 
     move-result v8
 
@@ -672,15 +672,15 @@
 
     move-object v11, v10
 
-    check-cast v11, Lcom/vk/common/i/b;
+    check-cast v11, Lcom/vk/common/i/RecyclerItem;
 
-    instance-of v12, v11, Lcom/vk/menu/g/c;
+    instance-of v12, v11, Lcom/vk/menu/g/SearchMenuItem;
 
     if-eqz v12, :cond_d
 
-    check-cast v11, Lcom/vk/menu/g/c;
+    check-cast v11, Lcom/vk/menu/g/SearchMenuItem;
 
-    invoke-virtual {v11}, Lcom/vk/menu/g/c;->c()Landroid/view/MenuItem;
+    invoke-virtual {v11}, Lcom/vk/menu/g/SearchMenuItem;->c()Landroid/view/MenuItem;
 
     move-result-object v11
 
@@ -706,7 +706,7 @@
     move-object v10, v6
 
     :goto_7
-    check-cast v10, Lcom/vk/common/i/b;
+    check-cast v10, Lcom/vk/common/i/RecyclerItem;
 
     if-eqz v10, :cond_b
 
@@ -731,13 +731,13 @@
     move-result-object v1
 
     .line 24
-    new-instance v5, Lcom/vk/menu/g/c;
+    new-instance v5, Lcom/vk/menu/g/SearchMenuItem;
 
     const-string v8, "menuShowMore"
 
-    invoke-static {v1, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v5, v1}, Lcom/vk/menu/g/c;-><init>(Landroid/view/MenuItem;)V
+    invoke-direct {v5, v1}, Lcom/vk/menu/g/SearchMenuItem;-><init>(Landroid/view/MenuItem;)V
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -777,7 +777,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/vk/menu/c;->a(Ljava/lang/String;)I
+    invoke-static {v3}, Lcom/vk/menu/MenuUtils;->a(Ljava/lang/String;)I
 
     move-result v3
 
@@ -799,15 +799,15 @@
 
     move-object v9, v8
 
-    check-cast v9, Lcom/vk/common/i/b;
+    check-cast v9, Lcom/vk/common/i/RecyclerItem;
 
-    instance-of v10, v9, Lcom/vk/menu/g/c;
+    instance-of v10, v9, Lcom/vk/menu/g/SearchMenuItem;
 
     if-eqz v10, :cond_12
 
-    check-cast v9, Lcom/vk/menu/g/c;
+    check-cast v9, Lcom/vk/menu/g/SearchMenuItem;
 
-    invoke-virtual {v9}, Lcom/vk/menu/g/c;->c()Landroid/view/MenuItem;
+    invoke-virtual {v9}, Lcom/vk/menu/g/SearchMenuItem;->c()Landroid/view/MenuItem;
 
     move-result-object v9
 
@@ -833,7 +833,7 @@
     move-object v8, v6
 
     :goto_a
-    check-cast v8, Lcom/vk/common/i/b;
+    check-cast v8, Lcom/vk/common/i/RecyclerItem;
 
     if-eqz v8, :cond_10
 
@@ -848,7 +848,7 @@
 
     .line 31
     :cond_14
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v6
 
@@ -868,9 +868,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
-    invoke-interface {v1, v0}, Lcom/vk/menu/f;->f(Ljava/util/List;)V
+    invoke-interface {v1, v0}, Lcom/vk/menu/SearchMenuContract1;->f(Ljava/util/List;)V
 
     :cond_0
     const/4 v0, 0x0
@@ -895,9 +895,9 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 3
-    iget-object v1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v1, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
-    invoke-interface {v1}, Lb/h/r/d;->getContext()Landroid/app/Activity;
+    invoke-interface {v1}, Lb/h/r/BaseScreenContract1;->getContext()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -931,21 +931,21 @@
     invoke-direct {v1, p0}, Lcom/vk/menu/SearchMenuPresenter$a;-><init>(Lcom/vk/menu/SearchMenuPresenter;)V
 
     .line 3
-    invoke-static {}, Lcom/vk/core/util/z0;->c()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->c()Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
     .line 4
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "MenuApiApplicationsCache\u2026RxUtil.loggingConsumer())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    invoke-direct {p0, v0}, Lcom/vk/menu/SearchMenuPresenter;->a(Lio/reactivex/disposables/b;)V
+    invoke-direct {p0, v0}, Lcom/vk/menu/SearchMenuPresenter;->a(Lio/reactivex/disposables/Disposable;)V
 
     .line 6
     sget-object v0, Lcom/vk/menu/MenuApiApplicationsCache;->g:Lcom/vk/menu/MenuApiApplicationsCache;
@@ -970,7 +970,7 @@
     .line 2
     sget-object v0, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;
 
-    invoke-virtual {v0}, Lcom/vk/menu/MenuCache;->f()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/menu/MenuCache;->f()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -980,30 +980,30 @@
     invoke-direct {v1, p0}, Lcom/vk/menu/SearchMenuPresenter$b;-><init>(Lcom/vk/menu/SearchMenuPresenter;)V
 
     .line 4
-    invoke-static {}, Lcom/vk/core/util/z0;->c()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->c()Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
     .line 5
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "MenuCache.menuGames\n    \u2026RxUtil.loggingConsumer())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-direct {p0, v0}, Lcom/vk/menu/SearchMenuPresenter;->a(Lio/reactivex/disposables/b;)V
+    invoke-direct {p0, v0}, Lcom/vk/menu/SearchMenuPresenter;->a(Lio/reactivex/disposables/Disposable;)V
 
     .line 7
     sget-object v0, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;
 
-    invoke-virtual {v0}, Lcom/vk/menu/MenuCache;->k()Lio/reactivex/disposables/b;
+    invoke-virtual {v0}, Lcom/vk/menu/MenuCache;->k()Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/vk/menu/SearchMenuPresenter;->a(Lio/reactivex/disposables/b;)V
+    invoke-direct {p0, v0}, Lcom/vk/menu/SearchMenuPresenter;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 
@@ -1021,21 +1021,21 @@
     invoke-direct {v1, p0}, Lcom/vk/menu/SearchMenuPresenter$c;-><init>(Lcom/vk/menu/SearchMenuPresenter;)V
 
     .line 10
-    invoke-static {}, Lcom/vk/core/util/z0;->c()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->c()Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
     .line 11
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "MenuApiApplicationsCache\u2026RxUtil.loggingConsumer())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
-    invoke-direct {p0, v0}, Lcom/vk/menu/SearchMenuPresenter;->a(Lio/reactivex/disposables/b;)V
+    invoke-direct {p0, v0}, Lcom/vk/menu/SearchMenuPresenter;->a(Lio/reactivex/disposables/Disposable;)V
 
     .line 13
     sget-object v0, Lcom/vk/menu/MenuApiApplicationsCache;->g:Lcom/vk/menu/MenuApiApplicationsCache;
@@ -1049,7 +1049,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
     const v1, 0x7f0e0030
 
@@ -1059,17 +1059,17 @@
 
     const/4 v2, 0x2
 
-    invoke-interface {v0, v2, v1}, Lcom/vk/menu/f;->d(ILjava/util/List;)V
+    invoke-interface {v0, v2, v1}, Lcom/vk/menu/SearchMenuContract1;->d(ILjava/util/List;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
     const/4 v1, 0x3
 
-    invoke-interface {v0, v1}, Lcom/vk/menu/f;->x(I)V
+    invoke-interface {v0, v1}, Lcom/vk/menu/SearchMenuContract1;->x(I)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
     const v1, 0x7f0e0032
 
@@ -1079,7 +1079,7 @@
 
     const/4 v2, 0x1
 
-    invoke-interface {v0, v2, v1}, Lcom/vk/menu/f;->d(ILjava/util/List;)V
+    invoke-interface {v0, v2, v1}, Lcom/vk/menu/SearchMenuContract1;->d(ILjava/util/List;)V
 
     .line 4
     sget-object v0, Lcom/vk/toggle/Features$Type;->FEATURE_VKPAY_WIDGET:Lcom/vk/toggle/Features$Type;
@@ -1094,20 +1094,20 @@
 
     .line 5
     :cond_0
-    new-instance v0, Lb/h/c/p/h;
+    new-instance v0, Lcom/vk/api/money/MoneyGetWalletStatus1;
 
-    invoke-direct {v0}, Lb/h/c/p/h;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/money/MoneyGetWalletStatus1;-><init>()V
 
     new-instance v1, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;
 
     invoke-direct {v1, p0}, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;-><init>(Lcom/vk/menu/SearchMenuPresenter;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, v1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object v0
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1116,20 +1116,20 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
-    invoke-interface {v0}, Lcom/vk/menu/f;->C()V
+    invoke-interface {v0}, Lcom/vk/menu/SearchMenuContract1;->C()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/vk/menu/f;
+.method public final a()Lcom/vk/menu/SearchMenuContract1;
     .locals 1
 
     .line 4
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
     return-object v0
 .end method
@@ -1138,15 +1138,15 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
-    invoke-interface {v0}, Lb/h/r/d;->getContext()Landroid/app/Activity;
+    invoke-interface {v0}, Lb/h/r/BaseScreenContract1;->getContext()Landroid/app/Activity;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {v0}, Lcom/vk/extensions/c;->a(Landroid/content/Context;)Lcom/vk/navigation/NavigationDelegate;
+    invoke-static {v0}, Lcom/vk/extensions/ContextExt;->a(Landroid/content/Context;)Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object v0
 
@@ -1163,7 +1163,7 @@
 
     .line 3
     :cond_0
-    invoke-static {v0, p1}, Lcom/vk/menu/c;->a(Lcom/vk/navigation/NavigationDelegate;I)V
+    invoke-static {v0, p1}, Lcom/vk/menu/MenuUtils;->a(Lcom/vk/navigation/NavigationDelegate;I)V
 
     :cond_1
     :goto_0
@@ -1174,7 +1174,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/menu/e$a;->a(Lcom/vk/menu/e;)Z
+    invoke-static {p0}, Lcom/vk/menu/SearchMenuContract$a;->a(Lcom/vk/menu/SearchMenuContract;)Z
 
     move-result v0
 
@@ -1186,9 +1186,9 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
-    invoke-interface {v0}, Lb/h/r/d;->getContext()Landroid/app/Activity;
+    invoke-interface {v0}, Lb/h/r/BaseScreenContract1;->getContext()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1209,7 +1209,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/menu/e$a;->b(Lcom/vk/menu/e;)V
+    invoke-static {p0}, Lcom/vk/menu/SearchMenuContract$a;->b(Lcom/vk/menu/SearchMenuContract;)V
 
     return-void
 .end method
@@ -1218,20 +1218,20 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/menu/e$a;->c(Lcom/vk/menu/e;)V
+    invoke-static {p0}, Lcom/vk/menu/SearchMenuContract$a;->c(Lcom/vk/menu/SearchMenuContract;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->d:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->d:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->d:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->d:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1240,7 +1240,7 @@
     .locals 3
 
     .line 1
-    invoke-static {p0}, Lcom/vk/menu/e$a;->d(Lcom/vk/menu/e;)V
+    invoke-static {p0}, Lcom/vk/menu/SearchMenuContract$a;->d(Lcom/vk/menu/SearchMenuContract;)V
 
     .line 2
     sget-object v0, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;
@@ -1252,7 +1252,7 @@
     .line 3
     sget-object v0, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;
 
-    invoke-virtual {v0}, Lcom/vk/menu/MenuCache;->e()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/menu/MenuCache;->e()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1261,16 +1261,16 @@
     invoke-direct {v1, p0}, Lcom/vk/menu/SearchMenuPresenter$d;-><init>(Lcom/vk/menu/SearchMenuPresenter;)V
 
     .line 4
-    invoke-static {}, Lcom/vk/core/util/z0;->c()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->c()Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
     .line 5
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->d:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->d:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1279,18 +1279,18 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
-    invoke-interface {v0}, Lb/h/r/d;->getContext()Landroid/app/Activity;
+    invoke-interface {v0}, Lb/h/r/BaseScreenContract1;->getContext()Landroid/app/Activity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
+    sget-object v0, Lcom/vk/menu/MenuUtils;->INSTANCE:Lcom/vk/menu/MenuUtils;
 
-    invoke-virtual {v0}, Lcom/vk/menu/c;->b()V
+    invoke-virtual {v0}, Lcom/vk/menu/MenuUtils;->b()V
 
     :cond_0
     return-void
@@ -1300,7 +1300,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/menu/e$a;->e(Lcom/vk/menu/e;)V
+    invoke-static {p0}, Lcom/vk/menu/SearchMenuContract$a;->e(Lcom/vk/menu/SearchMenuContract;)V
 
     return-void
 .end method
@@ -1309,7 +1309,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/f;
+    iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter;->f:Lcom/vk/menu/SearchMenuContract1;
 
     invoke-direct {p0}, Lcom/vk/menu/SearchMenuPresenter;->b()Ljava/util/List;
 
@@ -1317,7 +1317,7 @@
 
     const/4 v2, 0x0
 
-    invoke-interface {v0, v2, v1}, Lcom/vk/menu/f;->d(ILjava/util/List;)V
+    invoke-interface {v0, v2, v1}, Lcom/vk/menu/SearchMenuContract1;->d(ILjava/util/List;)V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/menu/SearchMenuPresenter;->g()V

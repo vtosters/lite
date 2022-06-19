@@ -3,7 +3,7 @@
 .source "EnterNamePresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -64,7 +64,7 @@
 
     const-string v2, "it"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0, v1, p1}, Lcom/vk/auth/main/AuthStatSender;->c(Lcom/vk/auth/main/AuthStatSender$Screen;Ljava/lang/Throwable;)V
 

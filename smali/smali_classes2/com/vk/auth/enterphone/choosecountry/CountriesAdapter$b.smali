@@ -1,5 +1,5 @@
 .class final Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter$b;
-.super Lcom/vk/auth/enterphone/choosecountry/c;
+.super Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter2;
 .source "CountriesAdapter.kt"
 
 
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/auth/enterphone/choosecountry/c<",
-        "Lcom/vk/auth/enterphone/choosecountry/d;",
+        "Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter2<",
+        "Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter4;",
         ">;"
     }
 .end annotation
@@ -27,33 +27,33 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/auth/enterphone/choosecountry/c;->a:Lcom/vk/auth/enterphone/choosecountry/c$a;
+    sget-object v0, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter2;->a:Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter$a1;
 
-    sget v1, Lcom/vk/auth/r/f;->vk_auth_country_first_letter_item:I
+    sget v1, Lcom/vk/auth/r/R8;->vk_auth_country_first_letter_item:I
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/auth/enterphone/choosecountry/c$a;->a(Landroid/view/ViewGroup;I)Landroid/view/View;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter$a1;->a(Landroid/view/ViewGroup;I)Landroid/view/View;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/vk/auth/enterphone/choosecountry/c;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter2;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic a(Lcom/vk/auth/enterphone/choosecountry/b;)V
+.method public bridge synthetic a(Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter3;)V
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/auth/enterphone/choosecountry/d;
+    check-cast p1, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter4;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter$b;->a(Lcom/vk/auth/enterphone/choosecountry/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter$b;->a(Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter4;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/auth/enterphone/choosecountry/d;)V
+.method public a(Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter4;)V
     .locals 1
 
     .line 2
@@ -63,7 +63,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/auth/enterphone/choosecountry/d;->a()C
+    invoke-virtual {p1}, Lcom/vk/auth/enterphone/choosecountry/CountriesAdapter4;->a()C
 
     move-result p1
 

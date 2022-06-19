@@ -231,11 +231,11 @@
     const-string v4, "account_name"
 
     .line 132
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lb/h/h/d/c;->Z()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/vk/auth/api/VKAccount;->Z()Ljava/lang/String;
 
     move-result-object v5
 
@@ -1753,11 +1753,11 @@
     if-nez v25, :cond_1e
 
     .line 107
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/d/c;->k()Z
+    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->k()Z
 
     move-result v1
 
@@ -2882,34 +2882,34 @@
     .line 48
     :cond_0
     :try_start_1
-    sget-object v0, Lcom/vk/utils/b;->a:Lcom/vk/utils/b;
+    sget-object v0, Lcom/vk/utils/ContactImportUtils;->INSTANCE:Lcom/vk/utils/ContactImportUtils;
 
-    invoke-virtual {v0}, Lcom/vk/utils/b;->a()Lcom/vk/utils/b$a;
+    invoke-virtual {v0}, Lcom/vk/utils/ContactImportUtils;->a()Lcom/vk/utils/ContactImportUtils$a;
 
     move-result-object v0
 
     .line 49
-    new-instance v6, Lcom/vk/api/account/r;
+    new-instance v6, Lcom/vk/api/account/AccountImportContacts;
 
-    invoke-virtual {v0}, Lcom/vk/utils/b$a;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/utils/ContactImportUtils$a;->c()Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-virtual {v0}, Lcom/vk/utils/b$a;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/utils/ContactImportUtils$a;->a()Ljava/util/List;
 
     move-result-object v8
 
-    invoke-virtual {v0}, Lcom/vk/utils/b$a;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/utils/ContactImportUtils$a;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v6, v7, v8, v0}, Lcom/vk/api/account/r;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;)V
+    invoke-direct {v6, v7, v8, v0}, Lcom/vk/api/account/AccountImportContacts;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;)V
 
     .line 50
-    invoke-virtual {v6, v3}, Lcom/vk/api/base/d;->a(Z)Lcom/vk/api/base/d;
+    invoke-virtual {v6, v3}, Lcom/vk/api/base/ApiRequest;->a(Z)Lcom/vk/api/base/ApiRequest;
 
     .line 51
-    invoke-virtual {v6}, Lcom/vk/api/base/d;->d()Ljava/lang/Object;
+    invoke-virtual {v6}, Lcom/vk/api/base/ApiRequest;->d()Ljava/lang/Object;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -2998,14 +2998,14 @@
     move-result-object v8
 
     .line 59
-    new-instance v13, Lcom/vk/api/base/d;
+    new-instance v13, Lcom/vk/api/base/ApiRequest;
 
     const-string v14, "friends.getByPhones"
 
-    invoke-direct {v13, v14}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {v13, v14}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     .line 60
-    invoke-virtual {v13, v3}, Lcom/vk/api/base/d;->a(Z)Lcom/vk/api/base/d;
+    invoke-virtual {v13, v3}, Lcom/vk/api/base/ApiRequest;->a(Z)Lcom/vk/api/base/ApiRequest;
 
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -3020,27 +3020,27 @@
     move-result-object v14
 
     .line 61
-    invoke-virtual {v13, v11, v14}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {v13, v11, v14}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     const-string v14, "phones"
 
     .line 62
-    invoke-virtual {v13, v14, v8}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {v13, v14, v8}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 63
-    invoke-virtual {v13, v9, v3}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {v13, v9, v3}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     new-instance v8, Lcom/vk/contacts/ContactsSyncAdapterService$a;
 
     invoke-direct {v8, v6, v0, v1}, Lcom/vk/contacts/ContactsSyncAdapterService$a;-><init>(Ljava/util/Vector;ZLandroid/content/SyncResult;)V
 
     .line 64
-    invoke-virtual {v13, v8}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v13, v8}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object v8
 
     .line 65
-    invoke-virtual {v8}, Lcom/vk/api/base/b;->b()Z
+    invoke-virtual {v8}, Lcom/vk/api/base/ApiCallbackDisposable;->b()Z
 
     goto :goto_5
 
@@ -3074,14 +3074,14 @@
     if-eqz v0, :cond_7
 
     .line 68
-    new-instance v0, Lcom/vk/api/base/d;
+    new-instance v0, Lcom/vk/api/base/ApiRequest;
 
     const-string v8, "friends.get"
 
-    invoke-direct {v0, v8}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v8}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     .line 69
-    invoke-virtual {v0, v3}, Lcom/vk/api/base/d;->a(Z)Lcom/vk/api/base/d;
+    invoke-virtual {v0, v3}, Lcom/vk/api/base/ApiRequest;->a(Z)Lcom/vk/api/base/ApiRequest;
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -3096,22 +3096,22 @@
     move-result-object v7
 
     .line 70
-    invoke-virtual {v0, v11, v7}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {v0, v11, v7}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 71
-    invoke-virtual {v0, v9, v3}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {v0, v9, v3}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     new-instance v7, Lcom/vk/contacts/ContactsSyncAdapterService$b;
 
     invoke-direct {v7, v6}, Lcom/vk/contacts/ContactsSyncAdapterService$b;-><init>(Ljava/util/Vector;)V
 
     .line 72
-    invoke-virtual {v0, v7}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, v7}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object v0
 
     .line 73
-    invoke-virtual {v0}, Lcom/vk/api/base/b;->b()Z
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiCallbackDisposable;->b()Z
 
     .line 74
     :cond_7

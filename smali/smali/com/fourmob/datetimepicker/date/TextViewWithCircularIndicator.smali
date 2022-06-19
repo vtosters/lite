@@ -33,7 +33,7 @@
     move-result-object p2
 
     .line 4
-    sget v0, Lcom/fourmob/datetimepicker/a;->blue:I
+    sget v0, Lcom/fourmob/datetimepicker/R;->blue:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -46,7 +46,7 @@
 
     move-result-object p1
 
-    sget p2, Lcom/fourmob/datetimepicker/e;->item_is_selected:I
+    sget p2, Lcom/fourmob/datetimepicker/R3;->item_is_selected:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

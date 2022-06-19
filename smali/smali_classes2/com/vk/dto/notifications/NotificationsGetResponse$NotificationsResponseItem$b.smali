@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -49,7 +49,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, v2, v1, v2}, Lcom/vk/dto/notifications/NotificationsGetResponse$NotificationsResponseItem;-><init>(Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/FriendRequestsItem;Ljava/lang/Boolean;Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v2, v2, v1, v2}, Lcom/vk/dto/notifications/NotificationsGetResponse$NotificationsResponseItem;-><init>(Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/FriendRequestsItem;Ljava/lang/Boolean;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method
@@ -62,7 +62,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p1, v1, v1}, Lcom/vk/dto/notifications/NotificationsGetResponse$NotificationsResponseItem;-><init>(Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/FriendRequestsItem;Ljava/lang/Boolean;Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, p1, v1, v1}, Lcom/vk/dto/notifications/NotificationsGetResponse$NotificationsResponseItem;-><init>(Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/FriendRequestsItem;Ljava/lang/Boolean;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method
@@ -75,7 +75,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1, v1, v1}, Lcom/vk/dto/notifications/NotificationsGetResponse$NotificationsResponseItem;-><init>(Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/FriendRequestsItem;Ljava/lang/Boolean;Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, p1, v1, v1, v1}, Lcom/vk/dto/notifications/NotificationsGetResponse$NotificationsResponseItem;-><init>(Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/FriendRequestsItem;Ljava/lang/Boolean;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method

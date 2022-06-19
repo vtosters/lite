@@ -23,19 +23,19 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/contacts/Contact;",
             "Ljava/lang/Integer;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lcom/vk/im/engine/utils/collection/d;",
+            "Lcom/vk/im/engine/utils/collection/IntCollection;",
             "+",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/models/contacts/Contact;",
@@ -44,13 +44,13 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;)Lcom/vk/im/engine/internal/storage/b;
+    invoke-static {p1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;)Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
     move-result-object v0
 
     const-class v1, Lcom/vk/im/engine/models/contacts/Contact;
 
-    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/b;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/d;
+    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/StorageTrigger;
 
     move-result-object v4
 
@@ -68,7 +68,7 @@
     move-object v6, p3
 
     .line 3
-    invoke-direct/range {v2 .. v7}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;-><init>(ILcom/vk/im/engine/internal/storage/d;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;-><init>(ILcom/vk/im/engine/internal/storage/StorageTrigger;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

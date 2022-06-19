@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # static fields
@@ -38,7 +38,7 @@
 
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {p1}, Lcom/vtosters/lite/audio/player/u;->a(Ljava/lang/Throwable;)Lkotlin/m;
+    invoke-static {p1}, Lcom/vtosters/lite/audio/player/Player;->a(Ljava/lang/Throwable;)Lkotlin/Unit;
 
     move-result-object p1
 

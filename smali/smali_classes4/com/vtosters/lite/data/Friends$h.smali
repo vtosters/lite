@@ -45,10 +45,10 @@
     .end annotation
 .end field
 
-.field private final d:Lcom/vtosters/lite/b0;
+.field private final d:Lcom/vtosters/lite/SearchIndexer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vtosters/lite/b0<",
+            "Lcom/vtosters/lite/SearchIndexer<",
             "Lcom/vk/dto/user/UserProfile;",
             ">;"
         }
@@ -85,11 +85,11 @@
     iput-object v0, p0, Lcom/vtosters/lite/data/Friends$h;->c:Ljava/util/List;
 
     .line 5
-    new-instance v0, Lcom/vtosters/lite/b0;
+    new-instance v0, Lcom/vtosters/lite/SearchIndexer;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/b0;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/SearchIndexer;-><init>()V
 
-    iput-object v0, p0, Lcom/vtosters/lite/data/Friends$h;->d:Lcom/vtosters/lite/b0;
+    iput-object v0, p0, Lcom/vtosters/lite/data/Friends$h;->d:Lcom/vtosters/lite/SearchIndexer;
 
     return-void
 .end method
@@ -146,7 +146,7 @@
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/vtosters/lite/data/Friends$h;->d:Lcom/vtosters/lite/b0;
+    iget-object v0, v0, Lcom/vtosters/lite/data/Friends$h;->d:Lcom/vtosters/lite/SearchIndexer;
 
     invoke-static {}, Lcom/vtosters/lite/data/Friends;->b()Lcom/vtosters/lite/data/Friends$h;
 
@@ -154,7 +154,7 @@
 
     iget-object v1, v1, Lcom/vtosters/lite/data/Friends$h;->a:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/b0;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/SearchIndexer;->a(Ljava/util/List;)V
 
     return-void
 .end method
@@ -419,7 +419,7 @@
     .line 19
     iget-object v2, v1, Lcom/vk/dto/user/UserProfile;->d:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/vtosters/lite/utils/l;->a(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/vtosters/lite/utils/Utils;->a(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -532,7 +532,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vtosters/lite/j0/b;->b(Ljava/util/List;Z)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/j0/Cache;->b(Ljava/util/List;Z)V
 
     .line 36
     invoke-static {}, Lcom/vtosters/lite/data/Friends$h;->d()V
@@ -689,7 +689,7 @@
     const/4 v0, 0x1
 
     .line 3
-    invoke-static {p1, v0}, Lcom/vtosters/lite/j0/b;->b(Ljava/util/List;Z)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/j0/Cache;->b(Ljava/util/List;Z)V
 
     .line 4
     iget-object v1, p0, Lcom/vtosters/lite/data/Friends$h;->c:Ljava/util/List;
@@ -704,7 +704,7 @@
     .line 6
     iget-object p2, p0, Lcom/vtosters/lite/data/Friends$h;->c:Ljava/util/List;
 
-    invoke-static {p2, v0}, Lcom/vtosters/lite/j0/b;->a(Ljava/util/List;Z)V
+    invoke-static {p2, v0}, Lcom/vtosters/lite/j0/Cache;->a(Ljava/util/List;Z)V
 
     .line 7
     iget-object p2, p0, Lcom/vtosters/lite/data/Friends$h;->b:Ljava/util/List;
@@ -820,7 +820,7 @@
     invoke-static {}, Lcom/vtosters/lite/data/Friends$h;->d()V
 
     .line 8
-    invoke-static {p1}, Lcom/vtosters/lite/j0/b;->a(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/j0/Cache;->a(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

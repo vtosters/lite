@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -93,14 +93,14 @@
 
     const-string v5, "getJSONObject(\"button\")"
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v3}, Lcom/vk/dto/discover/carousel/CarouselButton$b;->a(Lorg/json/JSONObject;)Lcom/vk/dto/discover/carousel/CarouselButton;
 
     move-result-object v7
 
     .line 6
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v0, Lcom/vk/dto/discover/carousel/CarouselItem;->f:Lcom/vk/dto/discover/carousel/CarouselItem$b;
 
@@ -128,7 +128,7 @@
 
     const-string v5, "this.getJSONObject(i)"
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     invoke-virtual {v0, v3}, Lcom/vk/dto/discover/carousel/CarouselItem$b;->a(Lorg/json/JSONObject;)Lcom/vk/dto/discover/carousel/CarouselItem;

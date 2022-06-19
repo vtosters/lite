@@ -3,7 +3,7 @@
 .source "ArticleFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/r;
+.implements Lcom/vk/lists/OnRetryClickListener;
 
 
 # annotations

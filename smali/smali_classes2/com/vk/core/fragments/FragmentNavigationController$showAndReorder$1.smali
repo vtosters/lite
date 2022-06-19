@@ -3,12 +3,12 @@
 .source "FragmentNavigationController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/fragments/FragmentNavigationController;->a(Lcom/vk/core/fragments/FragmentEntry;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/core/fragments/FragmentNavigationController;->a(Lcom/vk/core/fragments/FragmentEntry;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -31,26 +31,26 @@
 
 .field final synthetic $entry:Lcom/vk/core/fragments/FragmentEntry;
 
-.field final synthetic $onNewIntent:Lkotlin/jvm/b/b;
+.field final synthetic $onNewIntent:Lkotlin/jvm/b/Functions2;
 
-.field final synthetic $predicate:Lkotlin/jvm/b/b;
+.field final synthetic $predicate:Lkotlin/jvm/b/Functions2;
 
 .field final synthetic this$0:Lcom/vk/core/fragments/FragmentNavigationController;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/fragments/FragmentNavigationController;Lkotlin/jvm/b/b;Lcom/vk/core/fragments/FragmentEntry;ZLkotlin/jvm/b/b;)V
+.method constructor <init>(Lcom/vk/core/fragments/FragmentNavigationController;Lkotlin/jvm/b/Functions2;Lcom/vk/core/fragments/FragmentEntry;ZLkotlin/jvm/b/Functions2;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->this$0:Lcom/vk/core/fragments/FragmentNavigationController;
 
-    iput-object p2, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->$predicate:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->$predicate:Lkotlin/jvm/b/Functions2;
 
     iput-object p3, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->$entry:Lcom/vk/core/fragments/FragmentEntry;
 
     iput-boolean p4, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->$clearTop:Z
 
-    iput-object p5, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->$onNewIntent:Lkotlin/jvm/b/b;
+    iput-object p5, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->$onNewIntent:Lkotlin/jvm/b/Functions2;
 
     const/4 p1, 0x0
 
@@ -67,7 +67,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -98,9 +98,9 @@
     .line 4
     iget-object v2, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->this$0:Lcom/vk/core/fragments/FragmentNavigationController;
 
-    iget-object v3, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->$predicate:Lkotlin/jvm/b/b;
+    iget-object v3, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->$predicate:Lkotlin/jvm/b/Functions2;
 
-    invoke-static {v2, v3}, Lcom/vk/core/fragments/FragmentNavigationController;->a(Lcom/vk/core/fragments/FragmentNavigationController;Lkotlin/jvm/b/b;)Lcom/vk/core/fragments/FragmentImpl;
+    invoke-static {v2, v3}, Lcom/vk/core/fragments/FragmentNavigationController;->a(Lcom/vk/core/fragments/FragmentNavigationController;Lkotlin/jvm/b/Functions2;)Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v2
 
@@ -184,7 +184,7 @@
 
     sget-object v7, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1$1;->a:Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1$1;
 
-    invoke-virtual {v5, v6, v7}, Lcom/vk/core/fragments/stack/FStackGroup;->a(Lcom/vk/core/fragments/FragmentEntry;Lkotlin/jvm/b/c;)V
+    invoke-virtual {v5, v6, v7}, Lcom/vk/core/fragments/stack/FStackGroup;->a(Lcom/vk/core/fragments/FragmentEntry;Lkotlin/jvm/b/Functions1;)V
 
     .line 10
     iget-boolean v5, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->$clearTop:Z
@@ -237,7 +237,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/vk/core/fragments/j/b/b;->b()V
+    invoke-virtual {v5}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->b()V
 
     .line 13
     iget-object v5, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->this$0:Lcom/vk/core/fragments/FragmentNavigationController;
@@ -258,9 +258,9 @@
     invoke-static {v6, v7}, Lcom/vk/core/fragments/FragmentNavigationController;->a(Lcom/vk/core/fragments/FragmentNavigationController;Lcom/vk/core/fragments/FragmentManagerImpl;)V
 
     .line 15
-    iget-object v6, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->$onNewIntent:Lkotlin/jvm/b/b;
+    iget-object v6, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->$onNewIntent:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {v6, v5}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v6, v5}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 16
     iget-object v5, p0, Lcom/vk/core/fragments/FragmentNavigationController$showAndReorder$1;->this$0:Lcom/vk/core/fragments/FragmentNavigationController;
@@ -294,7 +294,7 @@
     move-object v2, v3
 
     :goto_3
-    invoke-static {v4, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 

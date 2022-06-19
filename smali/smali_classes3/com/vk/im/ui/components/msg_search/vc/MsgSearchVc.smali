@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static final synthetic r:[Lkotlin/u/j;
+.field static final synthetic r:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -40,13 +40,13 @@
 
 .field private final l:Landroid/os/Handler;
 
-.field private m:Lio/reactivex/disposables/b;
+.field private m:Lio/reactivex/disposables/Disposable;
 
-.field private final n:Lkotlin/e;
+.field private final n:Lkotlin/Lazy2;
 
-.field private final o:Lcom/vk/im/ui/components/msg_search/vc/p;
+.field private final o:Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
-.field private final p:Lcom/vk/im/ui/components/msg_search/a;
+.field private final p:Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;
 
 .field private final q:Landroid/content/Context;
 
@@ -57,13 +57,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -71,28 +71,28 @@
 
     const-string v4, "getPagerAdapter()Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->r:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->r:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/ui/components/msg_search/vc/p;Lcom/vk/im/ui/components/msg_search/a;Landroid/content/Context;)V
+.method public constructor <init>(Lcom/vk/im/ui/components/msg_search/vc/VcCallback;Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;Landroid/content/Context;)V
     .locals 2
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->o:Lcom/vk/im/ui/components/msg_search/vc/p;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->o:Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->p:Lcom/vk/im/ui/components/msg_search/a;
+    iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->p:Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;
 
     iput-object p3, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->q:Landroid/content/Context;
 
@@ -110,15 +110,15 @@
 
     iget-object p2, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->q:Landroid/content/Context;
 
-    iget-object p3, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->o:Lcom/vk/im/ui/components/msg_search/vc/p;
+    iget-object p3, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->o:Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->a:Landroid/view/LayoutInflater;
 
     const-string v1, "inflater"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p1, p2, p3, v0}, Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/msg_search/vc/p;Landroid/view/LayoutInflater;)V
+    invoke-direct {p1, p2, p3, v0}, Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/msg_search/vc/VcCallback;Landroid/view/LayoutInflater;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->b:Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;
 
@@ -155,11 +155,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$pagerAdapter$2;-><init>(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->n:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->n:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -177,7 +177,7 @@
     :cond_0
     const-string p0, "animationHelper"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -188,11 +188,11 @@
     .locals 7
 
     .line 35
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->m:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->m:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 36
     :cond_0
@@ -208,7 +208,7 @@
 
     move-wide v2, p1
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -220,16 +220,16 @@
     const-string v0, "ImMsgSearch"
 
     .line 38
-    invoke-static {v0}, Lcom/vk/core/util/z0;->a(Ljava/lang/String;)Lc/a/z/g;
+    invoke-static {v0}, Lcom/vk/core/util/RxUtil;->a(Ljava/lang/String;)Lio/reactivex/functions/Consumer;
 
     move-result-object v0
 
     .line 39
-    invoke-virtual {p1, p2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->m:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->m:Lio/reactivex/disposables/Disposable;
 
     return-void
 
@@ -237,7 +237,7 @@
     const-string p1, "searchView"
 
     .line 40
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -298,38 +298,38 @@
     .locals 1
 
     .line 41
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->o:Lcom/vk/im/ui/components/msg_search/vc/p;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->o:Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/vk/im/ui/components/msg_search/vc/p;->a(Ljava/lang/CharSequence;Lcom/vk/im/engine/models/SearchMode;Z)V
+    invoke-interface {v0, p1, p2, p3}, Lcom/vk/im/ui/components/msg_search/vc/VcCallback;->a(Ljava/lang/CharSequence;Lcom/vk/im/engine/models/SearchMode;Z)V
 
     return-void
 .end method
 
-.method private final b()Lcom/vk/im/ui/components/msg_search/vc/f;
+.method private final b()Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->n:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->n:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->r:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->r:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/components/msg_search/vc/f;
+    check-cast v0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
 
     return-object v0
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/p;
+.method public static final synthetic b(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->o:Lcom/vk/im/ui/components/msg_search/vc/p;
+    iget-object p0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->o:Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     return-object p0
 .end method
@@ -347,7 +347,7 @@
     :cond_0
     const-string p0, "container"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -370,7 +370,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$setupListeners$1;-><init>(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)V
 
-    invoke-virtual {v0, v3}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v3}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/Functions;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->e:Lcom/vk/core/view/search/MilkshakeSearchView;
@@ -381,7 +381,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$setupListeners$2;-><init>(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnVoiceInputListener(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnVoiceInputListener(Lkotlin/jvm/b/Functions2;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->f:Lcom/vk/core/view/VKTabLayout;
@@ -399,28 +399,28 @@
     :cond_0
     const-string v0, "tabs"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 5
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 6
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
 
-.method public static final synthetic d(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/a;
+.method public static final synthetic d(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->p:Lcom/vk/im/ui/components/msg_search/a;
+    iget-object p0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->p:Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;
 
     return-object p0
 .end method
@@ -453,22 +453,22 @@
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 4
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
-.method public static final synthetic e(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/f;
+.method public static final synthetic e(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->b()Lcom/vk/im/ui/components/msg_search/vc/f;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->b()Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
 
     move-result-object p0
 
@@ -497,7 +497,7 @@
     :cond_0
     const-string p0, "searchView"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -517,7 +517,7 @@
     :cond_0
     const-string p0, "viewPager"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -539,7 +539,7 @@
     .locals 6
 
     .line 4
-    sget v0, Lcom/vk/im/ui/j;->vkim_msg_search_content_view:I
+    sget v0, Lcom/vk/im/ui/R13;->vkim_msg_search_content_view:I
 
     invoke-virtual {p1, v0}, Landroid/view/ViewStub;->setLayoutResource(I)V
 
@@ -550,7 +550,7 @@
 
     const-string v0, "viewStub.inflate()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->c:Landroid/view/View;
 
@@ -563,7 +563,7 @@
 
     if-eqz p1, :cond_f
 
-    sget v2, Lcom/vk/im/ui/h;->vkim_search_app_bar:I
+    sget v2, Lcom/vk/im/ui/R11;->vkim_search_app_bar:I
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -571,7 +571,7 @@
 
     const-string v2, "container.findViewById(R.id.vkim_search_app_bar)"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/ui/AppBarLayoutWithDrawingOrderCallback;
 
@@ -597,7 +597,7 @@
 
     if-eqz p1, :cond_d
 
-    sget v3, Lcom/vk/im/ui/h;->vkim_search_box:I
+    sget v3, Lcom/vk/im/ui/R11;->vkim_search_box:I
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -605,7 +605,7 @@
 
     const-string v3, "container.findViewById(R.id.vkim_search_box)"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/ViewGroup;
 
@@ -614,7 +614,7 @@
 
     if-eqz p1, :cond_c
 
-    sget v3, Lcom/vk/im/ui/h;->vkim_search_view:I
+    sget v3, Lcom/vk/im/ui/R11;->vkim_search_view:I
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -622,7 +622,7 @@
 
     const-string v3, "container.findViewById(R.id.vkim_search_view)"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/view/search/MilkshakeSearchView;
 
@@ -633,7 +633,7 @@
 
     if-eqz p1, :cond_b
 
-    sget v3, Lcom/vk/im/ui/m;->vkim_search_messages:I
+    sget v3, Lcom/vk/im/ui/R4;->vkim_search_messages:I
 
     invoke-virtual {p1, v3}, Lcom/vk/core/view/search/MilkshakeSearchView;->setHint(I)V
 
@@ -642,7 +642,7 @@
 
     if-eqz p1, :cond_a
 
-    sget v3, Lcom/vk/im/ui/h;->shadow:I
+    sget v3, Lcom/vk/im/ui/R11;->shadow:I
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -650,14 +650,14 @@
 
     const-string v3, "container.findViewById(R.id.shadow)"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->c:Landroid/view/View;
 
     if-eqz p1, :cond_9
 
-    sget v3, Lcom/vk/im/ui/h;->vkim_viewpager:I
+    sget v3, Lcom/vk/im/ui/R11;->vkim_viewpager:I
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -665,7 +665,7 @@
 
     const-string v3, "container.findViewById(R.id.vkim_viewpager)"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/viewpager/widget/ViewPager;
 
@@ -676,7 +676,7 @@
 
     if-eqz p1, :cond_8
 
-    sget v3, Lcom/vk/im/ui/h;->vkim_tabs:I
+    sget v3, Lcom/vk/im/ui/R11;->vkim_tabs:I
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -684,18 +684,18 @@
 
     const-string v3, "container.findViewById(R.id.vkim_tabs)"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/view/VKTabLayout;
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->f:Lcom/vk/core/view/VKTabLayout;
 
     .line 14
-    iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->p:Lcom/vk/im/ui/components/msg_search/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->p:Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;
 
-    sget-object v3, Lcom/vk/im/ui/components/msg_search/a$a;->b:Lcom/vk/im/ui/components/msg_search/a$a;
+    sget-object v3, Lcom/vk/im/ui/components/msg_search/MsgSearchLayout$a;->INSTANCE:Lcom/vk/im/ui/components/msg_search/MsgSearchLayout$a;
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -719,12 +719,12 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_1
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -764,7 +764,7 @@
 
     if-eqz p1, :cond_4
 
-    invoke-direct {p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->b()Lcom/vk/im/ui/components/msg_search/vc/f;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->b()Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
 
     move-result-object v2
 
@@ -781,49 +781,49 @@
     return-object p1
 
     :cond_3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 22
     :cond_4
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 23
     :cond_5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 24
     :cond_6
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 25
     :cond_7
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 26
     :cond_8
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 27
     :cond_9
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 28
     :cond_a
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -831,31 +831,31 @@
     const-string p1, "searchView"
 
     .line 29
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 30
     :cond_c
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 31
     :cond_d
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 32
     :cond_e
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 33
     :cond_f
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -875,7 +875,7 @@
     :cond_0
     const-string v0, "animationHelper"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -886,11 +886,11 @@
     .locals 4
 
     .line 76
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->p:Lcom/vk/im/ui/components/msg_search/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->p:Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;
 
-    sget-object v1, Lcom/vk/im/ui/components/msg_search/a$a;->b:Lcom/vk/im/ui/components/msg_search/a$a;
+    sget-object v1, Lcom/vk/im/ui/components/msg_search/MsgSearchLayout$a;->INSTANCE:Lcom/vk/im/ui/components/msg_search/MsgSearchLayout$a;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -924,7 +924,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -940,7 +940,7 @@
     return-void
 
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -949,7 +949,7 @@
     .locals 6
 
     .line 49
-    invoke-direct {p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->b()Lcom/vk/im/ui/components/msg_search/vc/f;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->b()Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
 
     move-result-object v0
 
@@ -961,7 +961,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/f;->c(I)Z
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;->c(I)Z
 
     move-result v0
 
@@ -1007,7 +1007,7 @@
     const-string p1, "viewPager"
 
     .line 54
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1029,20 +1029,20 @@
     :cond_0
     const-string p1, "searchView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -1097,9 +1097,9 @@
 
     new-instance v2, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$showAnimated$1;
 
-    invoke-direct {v2, p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$showAnimated$1;-><init>(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$showAnimated$1;-><init>(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;Lkotlin/jvm/b/Functions;)V
 
-    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper;->b(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper;->b(Lkotlin/jvm/b/Functions;)V
 
     const-wide/16 v4, 0x0
 
@@ -1112,13 +1112,13 @@
     const-string p1, "animationHelper"
 
     .line 62
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 63
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1126,13 +1126,13 @@
     const-string p1, "viewPager"
 
     .line 64
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 65
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1140,7 +1140,7 @@
     const-string p1, "container"
 
     .line 66
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1149,7 +1149,7 @@
     .locals 6
 
     .line 43
-    invoke-direct {p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->b()Lcom/vk/im/ui/components/msg_search/vc/f;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->b()Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
 
     move-result-object v0
 
@@ -1161,7 +1161,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/f;->c(I)Z
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;->c(I)Z
 
     move-result v0
 
@@ -1178,7 +1178,7 @@
     if-eqz p1, :cond_1
 
     .line 45
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 
@@ -1193,9 +1193,9 @@
     .line 47
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->l:Landroid/os/Handler;
 
-    new-instance v1, Lcom/vk/im/ui/components/msg_search/vc/g;
+    new-instance v1, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc1;
 
-    invoke-direct {v1, v0}, Lcom/vk/im/ui/components/msg_search/vc/g;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, v0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->k:Ljava/lang/Object;
 
@@ -1215,7 +1215,7 @@
     const-string p1, "viewPager"
 
     .line 48
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1251,15 +1251,15 @@
     invoke-virtual {v0, v3}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     .line 69
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->m:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->m:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 70
     :cond_1
-    iput-object v1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->m:Lio/reactivex/disposables/b;
+    iput-object v1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->m:Lio/reactivex/disposables/Disposable;
 
     .line 71
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->d:Lcom/vk/core/ui/AppBarLayoutWithDrawingOrderCallback;
@@ -1279,14 +1279,14 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$hideAnimated$1;-><init>(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;Lcom/vk/im/ui/components/msg_search/vc/HideReason;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAnimationHelper;->a(Lkotlin/jvm/b/Functions;)V
 
     return v3
 
     :cond_2
     const-string p1, "animationHelper"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1294,7 +1294,7 @@
     const-string p1, "searchAppBar"
 
     .line 73
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1302,7 +1302,7 @@
     const-string p1, "container"
 
     .line 74
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1322,7 +1322,7 @@
     :cond_0
     const-string p1, "searchView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

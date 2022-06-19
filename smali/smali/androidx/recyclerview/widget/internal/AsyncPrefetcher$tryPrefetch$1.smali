@@ -3,7 +3,7 @@
 .source "Prefetchers.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -59,7 +59,7 @@
     .line 1
     invoke-virtual {p0}, Landroidx/recyclerview/widget/internal/AsyncPrefetcher$tryPrefetch$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -86,7 +86,7 @@
 
     const-string v2, "task"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0, v1}, Landroidx/recyclerview/widget/internal/Prefetcher$Callback;->needToPrefetch(Landroidx/recyclerview/widget/internal/PrefetchTask;)Z
 
@@ -126,7 +126,7 @@
 
     check-cast v1, Landroidx/recyclerview/widget/internal/PrefetchTask;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "create"
 

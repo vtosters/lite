@@ -3,12 +3,12 @@
 .source "VkAuthModel.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/auth/api/models/AuthResult;Lcom/vk/auth/api/commands/g;)Lc/a/m;
+    value = Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/auth/api/models/AuthResult;Lcom/vk/auth/api/commands/GetExchangeLoginDataCommand;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,11 +24,11 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "Ljava/lang/Throwable;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+",
-        "Lcom/vk/auth/api/models/b;",
+        "Lcom/vk/auth/api/models/ExchangeLoginData;",
         ">;>;"
     }
 .end annotation
@@ -61,15 +61,15 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Throwable;)Lc/a/m;
+.method public final a(Ljava/lang/Throwable;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Throwable;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/auth/api/models/b;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/auth/api/models/ExchangeLoginData;",
             ">;"
         }
     .end annotation
@@ -126,7 +126,7 @@
 
     .line 5
     :goto_1
-    invoke-static {p1}, Lc/a/m;->b(Ljava/lang/Throwable;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->b(Ljava/lang/Throwable;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -139,7 +139,7 @@
     .line 1
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/VkAuthModel$c;->a(Ljava/lang/Throwable;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/auth/VkAuthModel$c;->a(Ljava/lang/Throwable;)Lio/reactivex/Observable;
 
     move-result-object p1
 

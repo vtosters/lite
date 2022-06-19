@@ -3,25 +3,25 @@
 .source "MusicNotificationManagerProvider.kt"
 
 # interfaces
-.implements Lcom/vk/music/notification/c;
+.implements Lcom/vk/music/notification/MusicNotificationManager;
 
 
 # instance fields
 .field private a:Lcom/vk/music/notification/MusicPlayerNotification;
 
-.field private b:Lio/reactivex/disposables/b;
+.field private b:Lio/reactivex/disposables/Disposable;
 
 .field private final c:I
 
 .field private final d:Ljava/lang/String;
 
-.field private final e:Lcom/vk/music/n/e;
+.field private final e:Lcom/vk/music/n/IntentPlayerHelper;
 
-.field private final f:Lcom/vk/music/l/a;
+.field private final f:Lcom/vk/music/l/ModernMusicTrackModel;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Lcom/vk/music/n/e;Lcom/vk/music/l/a;)V
+.method public constructor <init>(ILjava/lang/String;Lcom/vk/music/n/IntentPlayerHelper;Lcom/vk/music/l/ModernMusicTrackModel;)V
     .locals 0
 
     .line 1
@@ -31,18 +31,18 @@
 
     iput-object p2, p0, Lcom/vk/music/notification/MusicNotificationManagerProvider;->d:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/vk/music/notification/MusicNotificationManagerProvider;->e:Lcom/vk/music/n/e;
+    iput-object p3, p0, Lcom/vk/music/notification/MusicNotificationManagerProvider;->e:Lcom/vk/music/n/IntentPlayerHelper;
 
-    iput-object p4, p0, Lcom/vk/music/notification/MusicNotificationManagerProvider;->f:Lcom/vk/music/l/a;
+    iput-object p4, p0, Lcom/vk/music/notification/MusicNotificationManagerProvider;->f:Lcom/vk/music/l/ModernMusicTrackModel;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/notification/MusicNotificationManagerProvider;)Lcom/vk/music/n/e;
+.method public static final synthetic a(Lcom/vk/music/notification/MusicNotificationManagerProvider;)Lcom/vk/music/n/IntentPlayerHelper;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/notification/MusicNotificationManagerProvider;->e:Lcom/vk/music/n/e;
+    iget-object p0, p0, Lcom/vk/music/notification/MusicNotificationManagerProvider;->e:Lcom/vk/music/n/IntentPlayerHelper;
 
     return-object p0
 .end method
@@ -56,11 +56,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/music/notification/MusicNotificationManagerProvider;)Lcom/vk/music/l/a;
+.method public static final synthetic b(Lcom/vk/music/notification/MusicNotificationManagerProvider;)Lcom/vk/music/l/ModernMusicTrackModel;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/notification/MusicNotificationManagerProvider;->f:Lcom/vk/music/l/a;
+    iget-object p0, p0, Lcom/vk/music/notification/MusicNotificationManagerProvider;->f:Lcom/vk/music/l/ModernMusicTrackModel;
 
     return-object p0
 .end method
@@ -80,7 +80,7 @@
     .locals 2
 
     .line 7
-    invoke-static {}, Lcom/vk/bridges/e;->a()Lcom/vk/bridges/d;
+    invoke-static {}, Lcom/vk/bridges/AudioBridge;->a()Lcom/vk/bridges/AudioBridge1;
 
     move-result-object v0
 
@@ -90,12 +90,12 @@
 
     const-string p1, "subscription_push_channel"
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/bridges/d;->a(Ljava/lang/String;Lkotlin/jvm/b/a;)Lio/reactivex/disposables/b;
+    invoke-interface {v0, p1, v1}, Lcom/vk/bridges/AudioBridge1;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public a(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Lcom/vk/dto/music/MusicTrack;ZZLkotlin/jvm/b/b;)V
+.method public a(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Lcom/vk/dto/music/MusicTrack;ZZLkotlin/jvm/b/Functions2;)V
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -104,10 +104,10 @@
             "Landroid/support/v4/media/session/MediaSessionCompat;",
             "Lcom/vk/dto/music/MusicTrack;",
             "ZZ",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/app/Notification;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -123,15 +123,15 @@
 
     .line 5
     :cond_0
-    iget-object v0, v8, Lcom/vk/music/notification/MusicNotificationManagerProvider;->b:Lio/reactivex/disposables/b;
+    iget-object v0, v8, Lcom/vk/music/notification/MusicNotificationManagerProvider;->b:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 6
     :cond_1
-    invoke-static {}, Lcom/vk/bridges/e;->a()Lcom/vk/bridges/d;
+    invoke-static {}, Lcom/vk/bridges/AudioBridge;->a()Lcom/vk/bridges/AudioBridge1;
 
     move-result-object v9
 
@@ -153,15 +153,15 @@
 
     move-object/from16 v7, p6
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/music/notification/MusicNotificationManagerProvider$createMusicPlayerNotification$1;-><init>(Lcom/vk/music/notification/MusicNotificationManagerProvider;Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Lcom/vk/dto/music/MusicTrack;ZZLkotlin/jvm/b/b;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/music/notification/MusicNotificationManagerProvider$createMusicPlayerNotification$1;-><init>(Lcom/vk/music/notification/MusicNotificationManagerProvider;Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Lcom/vk/dto/music/MusicTrack;ZZLkotlin/jvm/b/Functions2;)V
 
     const-string v0, "audio_playback_channel"
 
-    invoke-interface {v9, v0, v10}, Lcom/vk/bridges/d;->a(Ljava/lang/String;Lkotlin/jvm/b/a;)Lio/reactivex/disposables/b;
+    invoke-interface {v9, v0, v10}, Lcom/vk/bridges/AudioBridge1;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, v8, Lcom/vk/music/notification/MusicNotificationManagerProvider;->b:Lio/reactivex/disposables/b;
+    iput-object v0, v8, Lcom/vk/music/notification/MusicNotificationManagerProvider;->b:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

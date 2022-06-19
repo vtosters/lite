@@ -3,7 +3,7 @@
 .source "ModernAdPlayer.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/audio/player/ads/b$c;
+.implements Lcom/vtosters/lite/audio/player/ads/AudioAd$c;
 
 
 # annotations

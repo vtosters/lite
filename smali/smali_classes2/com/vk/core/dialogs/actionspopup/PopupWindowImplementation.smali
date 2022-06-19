@@ -14,7 +14,7 @@
 # instance fields
 .field private final a:Landroid/os/Handler;
 
-.field private b:Lcom/vk/core/dialogs/actionspopup/b;
+.field private b:Lcom/vk/core/dialogs/actionspopup/PopupAnimator;
 
 .field private c:I
 
@@ -60,7 +60,7 @@
 
     const-string p2, "anchorView.context"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -68,7 +68,7 @@
 
     const-string p2, "anchorView.context.resources"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -155,28 +155,28 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;Lcom/vk/core/dialogs/actionspopup/b;)V
+.method public static final synthetic a(Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;Lcom/vk/core/dialogs/actionspopup/PopupAnimator;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->b:Lcom/vk/core/dialogs/actionspopup/b;
+    iput-object p1, p0, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->b:Lcom/vk/core/dialogs/actionspopup/PopupAnimator;
 
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/a;)V
+.method private final a(Lkotlin/jvm/b/Functions;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 11
-    new-instance v0, Lcom/vk/core/dialogs/actionspopup/b;
+    new-instance v0, Lcom/vk/core/dialogs/actionspopup/PopupAnimator;
 
     iget-object v1, p0, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->e:Landroid/view/View;
 
@@ -184,18 +184,18 @@
 
     iget-object v3, p0, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->g:Landroid/view/View;
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/core/dialogs/actionspopup/b;-><init>(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/core/dialogs/actionspopup/PopupAnimator;-><init>(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
-    iput-object v0, p0, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->b:Lcom/vk/core/dialogs/actionspopup/b;
+    iput-object v0, p0, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->b:Lcom/vk/core/dialogs/actionspopup/PopupAnimator;
 
     .line 12
-    iget-object v0, p0, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->b:Lcom/vk/core/dialogs/actionspopup/b;
+    iget-object v0, p0, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->b:Lcom/vk/core/dialogs/actionspopup/PopupAnimator;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/actionspopup/b;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/actionspopup/PopupAnimator;->a(Z)V
 
     .line 13
     :cond_0
@@ -224,7 +224,7 @@
 
     const-string v1, "anchorView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -254,7 +254,7 @@
 
     .line 17
     :cond_1
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     .line 18
     iget-object p1, p0, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->a:Landroid/os/Handler;
@@ -290,7 +290,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p1, p2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p1
 
@@ -310,7 +310,7 @@
 
     const-string v0, "anchor.rootView"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->b(Landroid/view/View;)Landroid/graphics/Rect;
 
@@ -336,7 +336,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p1, p2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p1
 
@@ -389,11 +389,11 @@
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;)Lcom/vk/core/dialogs/actionspopup/b;
+.method public static final synthetic c(Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;)Lcom/vk/core/dialogs/actionspopup/PopupAnimator;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->b:Lcom/vk/core/dialogs/actionspopup/b;
+    iget-object p0, p0, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->b:Lcom/vk/core/dialogs/actionspopup/PopupAnimator;
 
     return-object p0
 .end method
@@ -436,7 +436,7 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->b:Lcom/vk/core/dialogs/actionspopup/b;
+    iget-object v0, p0, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->b:Lcom/vk/core/dialogs/actionspopup/PopupAnimator;
 
     if-eqz v0, :cond_0
 
@@ -445,12 +445,12 @@
 
     invoke-direct {v1, p0}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation$dismiss$$inlined$let$lambda$1;-><init>(Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/actionspopup/b;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/actionspopup/PopupAnimator;->a(Lkotlin/jvm/b/Functions;)V
 
     const/4 v1, 0x1
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/actionspopup/b;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/actionspopup/PopupAnimator;->a(Z)V
 
     :cond_0
     return-void
@@ -464,7 +464,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation$showAsDropDown$1;-><init>(Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;Landroid/view/View;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -477,7 +477,7 @@
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation$showAsDropDown$2;-><init>(Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;Landroid/view/View;II)V
 
-    invoke-direct {p0, v0}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -502,7 +502,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation$showAsDropDown$3;-><init>(Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;Landroid/view/View;III)V
 
-    invoke-direct {p0, v6}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v6}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -527,7 +527,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation$showAtLocation$1;-><init>(Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;Landroid/view/View;III)V
 
-    invoke-direct {p0, v6}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v6}, Lcom/vk/core/dialogs/actionspopup/PopupWindowImplementation;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method

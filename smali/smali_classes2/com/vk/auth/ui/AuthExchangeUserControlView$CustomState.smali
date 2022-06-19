@@ -44,7 +44,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/ui/AuthExchangeUserControlView$CustomState$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/ui/AuthExchangeUserControlView$CustomState$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/auth/ui/AuthExchangeUserControlView$CustomState$a;

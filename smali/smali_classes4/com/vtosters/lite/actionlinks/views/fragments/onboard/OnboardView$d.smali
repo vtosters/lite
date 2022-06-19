@@ -75,11 +75,11 @@
 
     iget-object v2, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView$d;->a:Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;
 
-    invoke-virtual {v2}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->T4()Lcom/vk/api/video/m$c;
+    invoke-virtual {v2}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->T4()Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/api/video/m$c;->a()Ljava/util/List;
+    invoke-virtual {v2}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;->a()Ljava/util/List;
 
     move-result-object v2
 
@@ -87,9 +87,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/api/video/m$b;
+    check-cast v2, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;
 
-    invoke-virtual {v2}, Lcom/vk/api/video/m$b;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -104,11 +104,11 @@
 
     iget-object v2, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView$d;->a:Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;
 
-    invoke-virtual {v2}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->T4()Lcom/vk/api/video/m$c;
+    invoke-virtual {v2}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->T4()Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/api/video/m$c;->a()Ljava/util/List;
+    invoke-virtual {v2}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;->a()Ljava/util/List;
 
     move-result-object v2
 
@@ -116,19 +116,19 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/api/video/m$b;
+    check-cast p1, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;
 
-    invoke-virtual {p1}, Lcom/vk/api/video/m$b;->b()I
+    invoke-virtual {p1}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$b;->b()I
 
     move-result p1
 
     iget-object v2, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView$d;->a:Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;
 
-    invoke-virtual {v2}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->T4()Lcom/vk/api/video/m$c;
+    invoke-virtual {v2}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->T4()Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/api/video/m$c;->b()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/api/video/VideoGetActionButtonsOnboarding$c;->b()Ljava/lang/String;
 
     move-result-object v2
 

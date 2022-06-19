@@ -76,15 +76,15 @@
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 5
-    new-instance v1, Lcom/vk/navigation/o;
+    new-instance v1, Lcom/vk/navigation/Navigator;
 
-    const-class v2, Lcom/vtosters/lite/fragments/photos/e;
+    const-class v2, Lcom/vtosters/lite/fragments/photos/PhotoAlbumListFragment;
 
-    invoke-direct {v1, v2, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
+    invoke-direct {v1, v2, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
     const/16 v0, 0x67
 
-    invoke-virtual {v1, p0, v0}, Lcom/vk/navigation/o;->a(Landroid/app/Activity;I)V
+    invoke-virtual {v1, p0, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/app/Activity;I)V
 
     goto :goto_1
 
@@ -356,15 +356,15 @@
 
     check-cast p1, Ljava/lang/String;
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object p3
 
-    invoke-virtual {p3}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {p3}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result p3
 
-    invoke-static {p0, p1, p3, p2}, Lcom/vk/profile/ui/c;->a(Landroid/content/Context;Ljava/lang/String;IZ)V
+    invoke-static {p0, p1, p3, p2}, Lcom/vk/profile/ui/BaseProfileFragment;->a(Landroid/content/Context;Ljava/lang/String;IZ)V
 
     .line 11
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
@@ -388,23 +388,23 @@
     invoke-virtual {p1, p3, p2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 15
-    new-instance p2, Lcom/vk/navigation/o;
+    new-instance p2, Lcom/vk/navigation/Navigator;
 
-    const-class p3, Lcom/vtosters/lite/fragments/photos/e;
+    const-class p3, Lcom/vtosters/lite/fragments/photos/PhotoAlbumListFragment;
 
-    invoke-direct {p2, p3, p1}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
+    invoke-direct {p2, p3, p1}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
-    invoke-virtual {p2, p0, v0}, Lcom/vk/navigation/o;->a(Landroid/app/Activity;I)V
+    invoke-virtual {p2, p0, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/app/Activity;I)V
 
     goto/16 :goto_3
 
     .line 16
     :cond_6
-    new-instance p1, Lcom/vtosters/lite/fragments/t2/c/c$a;
+    new-instance p1, Lcom/vtosters/lite/fragments/t2/c/DialogsSelectionFragment$a;
 
-    invoke-direct {p1}, Lcom/vtosters/lite/fragments/t2/c/c$a;-><init>()V
+    invoke-direct {p1}, Lcom/vtosters/lite/fragments/t2/c/DialogsSelectionFragment$a;-><init>()V
 
-    invoke-virtual {p1, p0, v1}, Lcom/vk/navigation/o;->a(Landroid/app/Activity;I)V
+    invoke-virtual {p1, p0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/app/Activity;I)V
 
     goto/16 :goto_3
 
@@ -465,11 +465,11 @@
 
     .line 22
     :cond_8
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v3
 
@@ -481,7 +481,7 @@
 
     move-object v4, p0
 
-    invoke-interface/range {v3 .. v9}, Lcom/vk/im/ui/p/e;->a(Landroid/content/Context;ILjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface/range {v3 .. v9}, Lcom/vk/im/ui/p/ImBridge11;->a(Landroid/content/Context;ILjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 23
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
@@ -530,7 +530,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 27
-    new-instance v0, Lcom/vtosters/lite/upload/l/c;
+    new-instance v0, Lcom/vtosters/lite/upload/l/AlbumPhotoUploadTask;
 
     iget v5, p1, Lcom/vk/dto/photo/PhotoAlbum;->a:I
 
@@ -542,7 +542,7 @@
 
     move-object v3, v0
 
-    invoke-direct/range {v3 .. v8}, Lcom/vtosters/lite/upload/l/c;-><init>(Ljava/lang/String;IILjava/lang/String;Z)V
+    invoke-direct/range {v3 .. v8}, Lcom/vtosters/lite/upload/l/AlbumPhotoUploadTask;-><init>(Ljava/lang/String;IILjava/lang/String;Z)V
 
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -550,7 +550,7 @@
 
     .line 28
     :cond_a
-    new-instance p3, Lcom/vtosters/lite/upload/l/f;
+    new-instance p3, Lcom/vtosters/lite/upload/l/BatchUploadTask;
 
     const v0, 0x7f121017
 
@@ -558,7 +558,7 @@
 
     move-result-object v0
 
-    invoke-direct {p3, p2, v0}, Lcom/vtosters/lite/upload/l/f;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    invoke-direct {p3, p2, v0}, Lcom/vtosters/lite/upload/l/BatchUploadTask;-><init>(Ljava/util/List;Ljava/lang/String;)V
 
     .line 29
     new-instance p2, Landroid/content/Intent;
@@ -616,10 +616,10 @@
 
     invoke-direct {v0, v1, v2, p2}, Lcom/vtosters/lite/upload/UploadNotification$a;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
 
-    invoke-static {p3, v0}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/j;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
+    invoke-static {p3, v0}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/UploadTask;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
 
     .line 31
-    invoke-static {p3}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
+    invoke-static {p3}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/UploadTask;)I
 
     .line 32
     iget p1, p1, Lcom/vk/dto/photo/PhotoAlbum;->a:I

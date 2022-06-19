@@ -55,14 +55,14 @@
     return-void
 .end method
 
-.method public a(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+.method public a(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
             "Ljava/util/concurrent/TimeUnit;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -75,16 +75,16 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/audio/AudioRecorder;->a(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/audio/AudioRecorder;->a(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 2
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -93,13 +93,13 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$c$a;-><init>(Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$c;)V
 
-    invoke-virtual {p1, p2}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "recorder.observeAmplitud\u2026sendRecordingProgress() }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -238,11 +238,11 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$c;->a:Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->a(Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;)Lcom/vk/im/ui/r/a/a;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->a(Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;)Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/r/a/a;->u0()Lcom/vk/audio/AudioMsgTrackByRecord;
+    invoke-interface {v0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->u0()Lcom/vk/audio/AudioMsgTrackByRecord;
 
     move-result-object v0
 
@@ -332,11 +332,11 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$c;->a:Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->a(Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;)Lcom/vk/im/ui/r/a/a;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->a(Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;)Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/r/a/a;->u0()Lcom/vk/audio/AudioMsgTrackByRecord;
+    invoke-interface {v0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->u0()Lcom/vk/audio/AudioMsgTrackByRecord;
 
     move-result-object v0
 

@@ -3,32 +3,32 @@
 .source "lambda"
 
 # interfaces
-.implements Lcom/vk/camera/c$m$a;
+.implements Lcom/vk/camera/Camera1View$m$a;
 
 
 # instance fields
-.field private final synthetic a:Lcom/vk/camera/c;
+.field private final synthetic a:Lcom/vk/camera/Camera1View;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vk/camera/c;)V
+.method public synthetic constructor <init>(Lcom/vk/camera/Camera1View;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/camera/a;->a:Lcom/vk/camera/c;
+    iput-object p1, p0, Lcom/vk/camera/a;->a:Lcom/vk/camera/Camera1View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/vk/media/camera/d$c;
+.method public final a()Lcom/vk/media/camera/CameraManager$c;
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/camera/a;->a:Lcom/vk/camera/c;
+    iget-object v0, p0, Lcom/vk/camera/a;->a:Lcom/vk/camera/Camera1View;
 
-    invoke-virtual {v0}, Lcom/vk/camera/c;->p()Lcom/vk/media/camera/d$c;
+    invoke-virtual {v0}, Lcom/vk/camera/Camera1View;->p()Lcom/vk/media/camera/CameraManager$c;
 
     move-result-object v0
 

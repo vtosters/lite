@@ -3,7 +3,7 @@
 .source "Artist.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/dto/common/data/a;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/dto/common/data/JsonObj;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/common/data/a;)V
+.method public final a(Lcom/vk/dto/common/data/JsonObj;)V
     .locals 2
 
     .line 1
@@ -58,7 +58,7 @@
 
     const-string v1, "id"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/dto/music/Artist$toJSONObject$1;->this$0:Lcom/vk/dto/music/Artist;
@@ -69,7 +69,7 @@
 
     const-string v1, "bio"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/dto/music/Artist$toJSONObject$1;->this$0:Lcom/vk/dto/music/Artist;
@@ -80,7 +80,7 @@
 
     const-string v1, "genres"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/dto/music/Artist$toJSONObject$1;->this$0:Lcom/vk/dto/music/Artist;
@@ -95,7 +95,7 @@
 
     const-string v1, "is_album_cover"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/dto/music/Artist$toJSONObject$1;->this$0:Lcom/vk/dto/music/Artist;
@@ -118,7 +118,7 @@
     :goto_0
     const-string v1, "photo"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/dto/music/Artist$toJSONObject$1;->this$0:Lcom/vk/dto/music/Artist;
@@ -129,7 +129,7 @@
 
     const-string v1, "name"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/dto/music/Artist$toJSONObject$1;->this$0:Lcom/vk/dto/music/Artist;
@@ -144,7 +144,7 @@
 
     const-string v1, "can_follow"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     .line 8
     iget-object v0, p0, Lcom/vk/dto/music/Artist$toJSONObject$1;->this$0:Lcom/vk/dto/music/Artist;
@@ -159,7 +159,7 @@
 
     const-string v1, "is_followed"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     return-void
 .end method
@@ -168,11 +168,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/common/data/a;
+    check-cast p1, Lcom/vk/dto/common/data/JsonObj;
 
-    invoke-virtual {p0, p1}, Lcom/vk/dto/music/Artist$toJSONObject$1;->a(Lcom/vk/dto/common/data/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/dto/music/Artist$toJSONObject$1;->a(Lcom/vk/dto/common/data/JsonObj;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -3,12 +3,12 @@
 .source "MsgSearchLoadCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd;->a(Lcom/vk/im/engine/d;)Lcom/vk/im/ui/components/msg_search/MsgSearchState;
+    value = Lcom/vk/im/ui/components/msg_search/MsgSearchLoadCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/ui/components/msg_search/MsgSearchState;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/models/messages/Msg;",
         "Ljava/lang/Integer;",
         ">;"

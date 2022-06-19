@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/web/SendStoryInteraction$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/web/SendStoryInteraction$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/stories/model/web/SendStoryInteraction$a;
@@ -79,7 +79,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILjava/lang/String;Ljava/lang/String;ZZILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IILjava/lang/String;Ljava/lang/String;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 7
 
     and-int/lit8 p8, p7, 0x8
@@ -170,13 +170,13 @@
     move-object v0, p0
 
     .line 8
-    invoke-direct/range {v0 .. v8}, Lcom/vk/dto/stories/model/web/SendStoryInteraction;-><init>(IILjava/lang/String;Ljava/lang/String;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/dto/stories/model/web/SendStoryInteraction;-><init>(IILjava/lang/String;Ljava/lang/String;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 
     .line 9
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -248,7 +248,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/stories/model/web/SendStoryInteraction;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -258,7 +258,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/stories/model/web/SendStoryInteraction;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

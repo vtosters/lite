@@ -17,11 +17,11 @@
 # instance fields
 .field private final a:I
 
-.field private b:Lkotlin/jvm/b/a;
+.field private b:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -29,14 +29,14 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -44,10 +44,10 @@
     .line 1
     invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/auth/terms/TermsController$b;->b:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/auth/terms/TermsController$b;->b:Lkotlin/jvm/b/Functions;
 
     .line 2
-    sget p2, Lcom/vk/auth/r/c;->vk_terms_link:I
+    sget p2, Lcom/vk/auth/r/R2;->vk_terms_link:I
 
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -60,19 +60,19 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/auth/terms/TermsController$b;->b:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/auth/terms/TermsController$b;->b:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -81,15 +81,15 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/auth/terms/TermsController$b;->b:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/auth/terms/TermsController$b;->b:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void

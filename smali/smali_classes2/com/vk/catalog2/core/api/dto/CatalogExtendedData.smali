@@ -198,7 +198,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$a;
@@ -250,7 +250,7 @@
 
     const/16 v17, 0x0
 
-    invoke-direct/range {v0 .. v17}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;-><init>(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v17}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;-><init>(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -359,7 +359,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 15
 
     move/from16 v0, p16
@@ -672,25 +672,25 @@
     const/16 v17, 0x0
 
     .line 17
-    invoke-direct/range {v0 .. v17}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;-><init>(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v17}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;-><init>(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 18
-    sget-object v0, Lcom/vk/dto/user/UserProfile;->g0:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/user/UserProfile;->g0:Lcom/vk/dto/common/data/JsonParser;
 
     const-string v1, "UserProfile.PARSER"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object/from16 v1, p1
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v2, "profiles"
 
     .line 19
-    invoke-virtual {v0, v2}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v2}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-object/from16 v2, p0
 
@@ -699,285 +699,285 @@
 
     sget-object v4, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$1;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$1;
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 21
-    sget-object v0, Lcom/vk/dto/group/Group;->Z:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/group/Group;->Z:Lcom/vk/dto/common/data/JsonParser;
 
     const-string v3, "Group.PARSER"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v3, "groups"
 
     .line 22
-    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 23
     iget-object v3, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->b:Ljava/util/Map;
 
     sget-object v4, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$2;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$2;
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 24
-    sget-object v0, Lcom/vk/dto/common/VideoFile;->Q0:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/common/VideoFile;->Q0:Lcom/vk/dto/common/data/JsonParser;
 
     const-string v3, "VideoFile.PARSER"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v4, "videos"
 
     .line 25
-    invoke-virtual {v0, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 26
     iget-object v4, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->c:Ljava/util/Map;
 
     sget-object v5, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$3;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$3;
 
-    invoke-virtual {v0, v4, v5}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v4, v5}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 27
-    sget-object v0, Lcom/vk/dto/common/VideoFile;->Q0:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/common/VideoFile;->Q0:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v4, "artist_videos"
 
     .line 28
-    invoke-virtual {v0, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 29
     iget-object v4, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->c:Ljava/util/Map;
 
     sget-object v5, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$4;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$4;
 
-    invoke-virtual {v0, v4, v5}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v4, v5}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 30
-    sget-object v0, Lcom/vk/dto/common/VideoFile;->Q0:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/common/VideoFile;->Q0:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v3, "shopping_videos"
 
     .line 31
-    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 32
     iget-object v3, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->c:Ljava/util/Map;
 
     sget-object v4, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$5;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$5;
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 33
-    sget-object v0, Lcom/vk/dto/video/VideoAlbum;->B:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/video/VideoAlbum;->B:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v3, "albums"
 
     .line 34
-    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 35
     iget-object v3, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->d:Ljava/util/Map;
 
     sget-object v4, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$6;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$6;
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 36
     sget-object v0, Lcom/vk/dto/music/Playlist;->U:Lcom/vk/dto/music/Playlist$c;
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v3, "playlists"
 
     .line 37
-    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 38
     iget-object v3, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->e:Ljava/util/Map;
 
     sget-object v4, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$7;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$7;
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 39
-    sget-object v0, Lcom/vk/dto/music/MusicTrack;->W:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/music/MusicTrack;->W:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v3, "audios"
 
     .line 40
-    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 41
     iget-object v3, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->f:Ljava/util/Map;
 
     sget-object v4, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$8;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$8;
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 42
-    sget-object v0, Lcom/vk/dto/music/SearchSuggestion;->f:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/music/SearchSuggestion;->f:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v3, "suggestions"
 
     .line 43
-    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 44
     iget-object v3, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->g:Ljava/util/Map;
 
     sget-object v4, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$9;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$9;
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 45
-    sget-object v0, Lcom/vk/catalog2/core/api/dto/CatalogLink;->g:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/catalog2/core/api/dto/CatalogLink;->g:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v3, "links"
 
     .line 46
-    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 47
     iget-object v3, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->h:Ljava/util/Map;
 
     sget-object v4, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$10;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$10;
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 48
-    sget-object v0, Lcom/vk/dto/tags/TagLink;->B:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/tags/TagLink;->B:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v3, "base_links"
 
     .line 49
-    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 50
     iget-object v3, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->B:Ljava/util/Map;
 
     sget-object v4, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$11;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$11;
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 51
-    sget-object v0, Lcom/vk/catalog2/core/api/dto/CatalogUserMeta;->F:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/catalog2/core/api/dto/CatalogUserMeta;->F:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v3, "catalog_users"
 
     .line 52
-    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 53
     iget-object v3, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->C:Ljava/util/Map;
 
     sget-object v4, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$12;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$12;
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 54
-    sget-object v0, Lcom/vk/dto/music/Artist;->B:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/music/Artist;->B:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v3, "artists"
 
     .line 55
-    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 56
     iget-object v3, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->D:Ljava/util/Map;
 
     sget-object v4, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$13;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$13;
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 57
-    sget-object v0, Lcom/vk/catalog2/core/api/dto/Banner;->d:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/catalog2/core/api/dto/Banner;->d:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v3, "stickers_banners"
 
     .line 58
-    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 59
     iget-object v3, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->F:Ljava/util/Map;
 
     sget-object v4, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$14;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$14;
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 60
-    sget-object v0, Lcom/vk/catalog2/core/api/dto/CatalogStateInfo;->g:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/catalog2/core/api/dto/CatalogStateInfo;->g:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v3, "placeholders"
 
     .line 61
-    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 62
     iget-object v3, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->H:Ljava/util/Map;
 
     sget-object v4, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$15;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$15;
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v3, v4}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     const-string v0, "stickers_packs"
 
@@ -995,7 +995,7 @@
 
     const-string v4, "packs.keys()"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 65
     :cond_0
@@ -1037,7 +1037,7 @@
 
     const-string v7, "key"
 
-    invoke-static {v4, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v6, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1045,23 +1045,23 @@
 
     .line 69
     :cond_1
-    sget-object v0, Lcom/vk/dto/music/Thumb;->e:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/music/Thumb;->e:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/c;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-static {v1, v0}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData1;->a(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     move-result-object v0
 
     const-string v1, "thumbs"
 
     .line 70
-    invoke-virtual {v0, v1}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v1}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/lang/String;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     .line 71
     iget-object v1, v2, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->G:Ljava/util/Map;
 
     sget-object v3, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$17;->a:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData$17;
 
-    invoke-virtual {v0, v1, v3}, Lcom/vk/catalog2/core/api/dto/f;->a(Ljava/util/Map;Lkotlin/jvm/b/b;)Lcom/vk/catalog2/core/api/dto/f;
+    invoke-virtual {v0, v1, v3}, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;->a(Ljava/util/Map;Lkotlin/jvm/b/Functions2;)Lcom/vk/catalog2/core/api/dto/CatalogExtendedData2;
 
     return-void
 .end method
@@ -2446,7 +2446,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->a:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2456,7 +2456,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->b:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2466,7 +2466,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->c:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2476,7 +2476,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->d:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2486,7 +2486,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->e:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2496,7 +2496,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->f:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2506,7 +2506,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->g:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2516,7 +2516,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->h:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2526,7 +2526,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->B:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2536,7 +2536,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->C:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2546,7 +2546,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->D:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2556,7 +2556,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->E:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2566,7 +2566,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->F:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2576,7 +2576,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->G:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2586,7 +2586,7 @@
 
     iget-object p1, p1, Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;->H:Ljava/util/Map;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

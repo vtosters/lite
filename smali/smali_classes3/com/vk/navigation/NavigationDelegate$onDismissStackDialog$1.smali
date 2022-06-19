@@ -3,12 +3,12 @@
 .source "NavigationDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/navigation/NavigationDelegate;->a(Lcom/vk/navigation/g;)V
+    value = Lcom/vk/navigation/NavigationDelegate;->a(Lcom/vk/navigation/Dismissed;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/ref/WeakReference<",
-        "Lcom/vk/navigation/g;",
+        "Lcom/vk/navigation/Dismissed;",
         ">;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -30,14 +30,14 @@
 
 
 # instance fields
-.field final synthetic $dialog:Lcom/vk/navigation/g;
+.field final synthetic $dialog:Lcom/vk/navigation/Dismissed;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/navigation/g;)V
+.method constructor <init>(Lcom/vk/navigation/Dismissed;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/navigation/NavigationDelegate$onDismissStackDialog$1;->$dialog:Lcom/vk/navigation/g;
+    iput-object p1, p0, Lcom/vk/navigation/NavigationDelegate$onDismissStackDialog$1;->$dialog:Lcom/vk/navigation/Dismissed;
 
     const/4 p1, 0x1
 
@@ -54,7 +54,7 @@
         value = {
             "(",
             "Ljava/lang/ref/WeakReference<",
-            "Lcom/vk/navigation/g;",
+            "Lcom/vk/navigation/Dismissed;",
             ">;)Z"
         }
     .end annotation
@@ -64,11 +64,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/navigation/g;
+    check-cast v0, Lcom/vk/navigation/Dismissed;
 
-    iget-object v1, p0, Lcom/vk/navigation/NavigationDelegate$onDismissStackDialog$1;->$dialog:Lcom/vk/navigation/g;
+    iget-object v1, p0, Lcom/vk/navigation/NavigationDelegate$onDismissStackDialog$1;->$dialog:Lcom/vk/navigation/Dismissed;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

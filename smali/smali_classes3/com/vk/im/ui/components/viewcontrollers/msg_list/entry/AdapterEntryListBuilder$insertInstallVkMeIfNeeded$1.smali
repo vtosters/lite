@@ -3,7 +3,7 @@
 .source "AdapterEntryListBuilder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
     .locals 1
 
     .line 1
-    iget p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
+    iget p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
 
     const/16 v0, 0x67
 
@@ -81,9 +81,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    check-cast p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder$insertInstallVkMeIfNeeded$1;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryListBuilder$insertInstallVkMeIfNeeded$1;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Z
 
     move-result p1
 

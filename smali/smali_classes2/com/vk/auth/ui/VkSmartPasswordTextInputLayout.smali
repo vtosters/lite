@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/ui/VkSmartPasswordTextInputLayout$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/ui/VkSmartPasswordTextInputLayout$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     sget-object v0, Lcom/vk/api/sdk/utils/VKUtils;->a:Lcom/vk/api/sdk/utils/VKUtils;
@@ -76,7 +76,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkSmartPasswordTextInputLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkSmartPasswordTextInputLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -96,7 +96,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkSmartPasswordTextInputLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkSmartPasswordTextInputLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -107,7 +107,7 @@
     .line 2
     new-instance v0, Landroidx/appcompat/view/ContextThemeWrapper;
 
-    sget v1, Lcom/vk/auth/r/h;->TextInputLayoutWithoutSelectableItemBG:I
+    sget v1, Lcom/vk/auth/r/R7;->TextInputLayoutWithoutSelectableItemBG:I
 
     invoke-direct {v0, p1, v1}, Landroidx/appcompat/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
@@ -116,7 +116,7 @@
     .line 3
     sget-object v0, Lcom/vk/auth/utils/AuthUtils;->d:Lcom/vk/auth/utils/AuthUtils;
 
-    sget v1, Lcom/vk/auth/r/b;->vk_icon_outline_secondary:I
+    sget v1, Lcom/vk/auth/r/R3;->vk_icon_outline_secondary:I
 
     invoke-virtual {v0, p1, v1}, Lcom/vk/auth/utils/AuthUtils;->a(Landroid/content/Context;I)I
 
@@ -128,7 +128,7 @@
 
     const-string v1, "ColorStateList.valueOf(A\u2026_icon_outline_secondary))"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/auth/ui/VkSmartPasswordTextInputLayout;->z0:Landroid/content/res/ColorStateList;
 
@@ -153,7 +153,7 @@
     iput-object v0, p0, Lcom/vk/auth/ui/VkSmartPasswordTextInputLayout;->C0:Landroid/widget/LinearLayout;
 
     .line 8
-    sget-object v0, Lcom/vk/auth/r/i;->VkSmartPasswordTextInputLayout:[I
+    sget-object v0, Lcom/vk/auth/r/R4;->VkSmartPasswordTextInputLayout:[I
 
     invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -161,62 +161,62 @@
 
     .line 9
     :try_start_0
-    sget p3, Lcom/vk/auth/r/i;->VkSmartPasswordTextInputLayout_vk_edit_text_id:I
+    sget p3, Lcom/vk/auth/r/R4;->VkSmartPasswordTextInputLayout_vk_edit_text_id:I
 
-    sget v0, Lcom/vk/auth/r/e;->password:I
+    sget v0, Lcom/vk/auth/r/R5;->password:I
 
     invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result p3
 
     .line 10
-    sget v0, Lcom/vk/auth/r/i;->VkSmartPasswordTextInputLayout_vk_edit_text_hint:I
+    sget v0, Lcom/vk/auth/r/R4;->VkSmartPasswordTextInputLayout_vk_edit_text_hint:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     .line 11
-    sget v2, Lcom/vk/auth/r/i;->VkSmartPasswordTextInputLayout_vk_edit_text_background:I
+    sget v2, Lcom/vk/auth/r/R4;->VkSmartPasswordTextInputLayout_vk_edit_text_background:I
 
     invoke-virtual {p2, v2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
     .line 12
-    sget v3, Lcom/vk/auth/r/i;->VkSmartPasswordTextInputLayout_vk_edit_text_layout:I
+    sget v3, Lcom/vk/auth/r/R4;->VkSmartPasswordTextInputLayout_vk_edit_text_layout:I
 
-    sget v4, Lcom/vk/auth/r/f;->vk_auth_password_edittext:I
+    sget v4, Lcom/vk/auth/r/R8;->vk_auth_password_edittext:I
 
     invoke-virtual {p2, v3, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v3
 
     .line 13
-    sget v4, Lcom/vk/auth/r/i;->VkSmartPasswordTextInputLayout_vk_action_button_id:I
+    sget v4, Lcom/vk/auth/r/R4;->VkSmartPasswordTextInputLayout_vk_action_button_id:I
 
-    sget v5, Lcom/vk/auth/r/e;->action_button:I
+    sget v5, Lcom/vk/auth/r/R5;->action_button:I
 
     invoke-virtual {p2, v4, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v4
 
     .line 14
-    sget v5, Lcom/vk/auth/r/i;->VkSmartPasswordTextInputLayout_vk_action_button_src:I
+    sget v5, Lcom/vk/auth/r/R4;->VkSmartPasswordTextInputLayout_vk_action_button_src:I
 
     invoke-virtual {p2, v5}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
     .line 15
-    sget v6, Lcom/vk/auth/r/i;->VkSmartPasswordTextInputLayout_vk_action_button_content_description:I
+    sget v6, Lcom/vk/auth/r/R4;->VkSmartPasswordTextInputLayout_vk_action_button_content_description:I
 
     invoke-virtual {p2, v6}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
     .line 16
-    sget v7, Lcom/vk/auth/r/i;->VkSmartPasswordTextInputLayout_vk_inner_buttons_size:I
+    sget v7, Lcom/vk/auth/r/R4;->VkSmartPasswordTextInputLayout_vk_inner_buttons_size:I
 
     sget v8, Lcom/vk/auth/ui/VkSmartPasswordTextInputLayout;->E0:I
 
@@ -288,7 +288,7 @@
     move-result-object p1
 
     .line 29
-    sget p2, Lcom/vk/auth/r/f;->vk_auth_password_text_input_action_button:I
+    sget p2, Lcom/vk/auth/r/R8;->vk_auth_password_text_input_action_button:I
 
     iget-object p3, p0, Lcom/vk/auth/ui/VkSmartPasswordTextInputLayout;->C0:Landroid/widget/LinearLayout;
 
@@ -297,7 +297,7 @@
     move-result-object p1
 
     .line 30
-    sget p2, Lcom/vk/auth/r/e;->action_button:I
+    sget p2, Lcom/vk/auth/r/R5;->action_button:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -305,7 +305,7 @@
 
     const-string p2, "LayoutInflater.from(cont\u2026wById(R.id.action_button)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageButton;
 
@@ -388,7 +388,7 @@
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -455,7 +455,7 @@
 
     const-string v0, "javaClass.superclass!!.getDeclaredField(fieldName)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -486,7 +486,7 @@
 
     .line 13
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -694,7 +694,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/auth/ui/VkSmartPasswordTextInputLayout$setActionButtonClickListener$1;-><init>(Landroid/view/View$OnClickListener;)V
 
-    invoke-static {p2, v0}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, v0}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 

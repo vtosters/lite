@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # instance fields
@@ -11,11 +11,11 @@
 
 .field private final synthetic b:Ljava/lang/String;
 
-.field private final synthetic c:Lkotlin/jvm/b/a;
+.field private final synthetic c:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,7 +24,7 @@
 
     iput-object p2, p0, Lcom/vtosters/lite/i0/a;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/vtosters/lite/i0/a;->c:Lkotlin/jvm/b/a;
+    iput-object p3, p0, Lcom/vtosters/lite/i0/a;->c:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -38,9 +38,9 @@
 
     iget-object v1, p0, Lcom/vtosters/lite/i0/a;->b:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/vtosters/lite/i0/a;->c:Lkotlin/jvm/b/a;
+    iget-object v2, p0, Lcom/vtosters/lite/i0/a;->c:Lkotlin/jvm/b/Functions;
 
-    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/i0/e;->a(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;)Lkotlin/m;
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/auth/VKSession;->a(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;)Lkotlin/Unit;
 
     move-result-object v0
 

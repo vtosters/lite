@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView$d;->call()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -66,7 +66,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView$d;->a:Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;
 
-    invoke-static {v0}, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->c(Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;)Lcom/vk/music/player/d;
+    invoke-static {v0}, Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;->c(Lcom/vk/music/view/PodcastPlaybackSpeedBottomSheetContentView;)Lcom/vk/music/player/PlayerModel;
 
     move-result-object v0
 
@@ -80,7 +80,7 @@
 
     double-to-float v1, v1
 
-    invoke-interface {v0, v1}, Lcom/vk/music/player/d;->a(F)V
+    invoke-interface {v0, v1}, Lcom/vk/music/player/PlayerModel;->a(F)V
 
     return-void
 .end method

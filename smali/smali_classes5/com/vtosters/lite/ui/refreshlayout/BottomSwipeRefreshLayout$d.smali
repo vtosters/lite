@@ -46,7 +46,7 @@
     .line 1
     iget-object p2, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout$d;->c:Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
-    invoke-static {p2}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->b(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/b;
+    invoke-static {p2}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->b(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
 
     move-result-object p2
 
@@ -67,7 +67,7 @@
     float-to-int p1, v1
 
     .line 2
-    invoke-virtual {p2, p1}, Lcom/vtosters/lite/ui/refreshlayout/b;->setAlpha(I)V
+    invoke-virtual {p2, p1}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->setAlpha(I)V
 
     return-void
 .end method

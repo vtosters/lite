@@ -3,12 +3,12 @@
 .source "StickersCatalogConfiguration.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/fragment/StickersCatalogConfiguration;->a(Lc/a/m;)Lc/a/m;
+    value = Lcom/vk/music/fragment/StickersCatalogConfiguration;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation

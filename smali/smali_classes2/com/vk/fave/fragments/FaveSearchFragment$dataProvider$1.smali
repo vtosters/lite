@@ -3,7 +3,7 @@
 .source "FaveSearchFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$p;
+.implements Lcom/vk/lists/PaginationHelper$p;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/lists/t$p<",
+        "Lcom/vk/lists/PaginationHelper$p<",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/fave/entities/j;",
+        "Lcom/vk/fave/entities/FaveEntries3;",
         ">;>;"
     }
 .end annotation
@@ -71,7 +71,7 @@
             "Ljava/lang/String;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/fave/entities/j;",
+            "Lcom/vk/fave/entities/FaveEntries3;",
             ">;"
         }
     .end annotation
@@ -152,9 +152,9 @@
     if-eqz v3, :cond_2
 
     .line 18
-    new-instance v5, Lcom/vk/fave/entities/j;
+    new-instance v5, Lcom/vk/fave/entities/FaveEntries3;
 
-    invoke-direct {v5, v2, v3, v4}, Lcom/vk/fave/entities/j;-><init>(Lcom/vk/fave/entities/FavePage;Lkotlin/Pair;Lkotlin/Pair;)V
+    invoke-direct {v5, v2, v3, v4}, Lcom/vk/fave/entities/FaveEntries3;-><init>(Lcom/vk/fave/entities/FavePage;Lkotlin/Pair;Lkotlin/Pair;)V
 
     move-object v4, v5
 
@@ -172,16 +172,16 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
-            "Lcom/vk/fave/entities/j;",
+            "Lcom/vk/fave/entities/FaveEntries3;",
             ">;>;"
         }
     .end annotation
@@ -193,28 +193,28 @@
     .line 2
     iget-object p2, p0, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;->a:Lcom/vk/fave/fragments/FaveSearchFragment;
 
-    invoke-static {p2, v0}, Lcom/vk/fave/fragments/FaveSearchFragment;->a(Lcom/vk/fave/fragments/FaveSearchFragment;Lcom/vk/fave/entities/k;)V
+    invoke-static {p2, v0}, Lcom/vk/fave/fragments/FaveSearchFragment;->a(Lcom/vk/fave/fragments/FaveSearchFragment;Lcom/vk/fave/entities/FaveResponseEntries;)V
 
     .line 3
     :cond_0
-    invoke-virtual {p0, v0, p1}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;->a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;->a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+.method public a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
-            "Lcom/vk/fave/entities/j;",
+            "Lcom/vk/fave/entities/FaveEntries3;",
             ">;>;"
         }
     .end annotation
@@ -254,7 +254,7 @@
 
     .line 7
     :cond_1
-    invoke-virtual {p1}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$loadNext$1;->invoke()Lc/a/m;
+    invoke-virtual {p1}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$loadNext$1;->invoke()Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -262,47 +262,47 @@
 
     invoke-direct {v0, p0, p2}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$b;-><init>(Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "getAll().map { pageRes -\u2026eQuery)\n                }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
     .line 8
     :cond_2
     :goto_1
-    invoke-virtual {p1}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$loadNext$1;->invoke()Lc/a/m;
+    invoke-virtual {p1}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$loadNext$1;->invoke()Lio/reactivex/Observable;
 
     move-result-object p1
 
     sget-object p2, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$a;->a:Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$a;
 
-    invoke-virtual {p1, p2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "getAll().map { pageRes -\u2026null) }\n                }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_2
     return-object p1
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
-            "Lcom/vk/fave/entities/j;",
+            "Lcom/vk/fave/entities/FaveEntries3;",
             ">;>;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -312,24 +312,24 @@
     .line 9
     new-instance p2, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$c;
 
-    invoke-direct {p2, p0, p3}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$c;-><init>(Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;Lcom/vk/lists/t;)V
+    invoke-direct {p2, p0, p3}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$c;-><init>(Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;Lcom/vk/lists/PaginationHelper;)V
 
     .line 10
     sget-object p3, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$onNewData$2;->c:Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$onNewData$2;
 
     if-eqz p3, :cond_0
 
-    new-instance v0, Lcom/vk/fave/fragments/a;
+    new-instance v0, Lcom/vk/fave/fragments/FaveSearchFragment1;
 
-    invoke-direct {v0, p3}, Lcom/vk/fave/fragments/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p3}, Lcom/vk/fave/fragments/FaveSearchFragment1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     move-object p3, v0
 
     :cond_0
-    check-cast p3, Lc/a/z/g;
+    check-cast p3, Lio/reactivex/functions/Consumer;
 
     .line 11
-    invoke-virtual {p1, p2, p3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
@@ -338,7 +338,7 @@
     .line 12
     iget-object p2, p0, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;->a:Lcom/vk/fave/fragments/FaveSearchFragment;
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     :cond_1
     return-void

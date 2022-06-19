@@ -15,14 +15,14 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
+.method public abstract a(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/net/Uri;",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation

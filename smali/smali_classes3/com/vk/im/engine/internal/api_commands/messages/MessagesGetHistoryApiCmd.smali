@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;
-.super Lcom/vk/api/sdk/internal/a;
+.super Lcom/vk/api/sdk/internal/ApiCommand;
 .source "MessagesGetHistoryApiCmd.kt"
 
 
@@ -17,7 +17,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/sdk/internal/a<",
+        "Lcom/vk/api/sdk/internal/ApiCommand<",
         "Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;",
         ">;"
     }
@@ -46,7 +46,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$d;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$d;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -55,10 +55,10 @@
     .locals 4
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/api/sdk/internal/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/api/sdk/internal/ApiCommand;-><init>()V
 
     .line 2
-    sget-object v0, Lcom/vk/im/engine/internal/f/b;->a:Lcom/vk/im/engine/internal/f/b;
+    sget-object v0, Lcom/vk/im/engine/internal/f/AssertUtils;->INSTANCE:Lcom/vk/im/engine/internal/f/AssertUtils;
 
     invoke-virtual {p1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$c;->g()I
 
@@ -72,16 +72,16 @@
 
     move-result v2
 
-    invoke-static {v2}, Lcom/vk/im/engine/internal/e;->g(I)Z
+    invoke-static {v2}, Lcom/vk/im/engine/internal/Validation;->g(I)Z
 
     move-result v2
 
     const-string v3, "peerId"
 
-    invoke-virtual {v0, v3, v1, v2}, Lcom/vk/im/engine/internal/f/b;->a(Ljava/lang/String;Ljava/lang/Object;Z)V
+    invoke-virtual {v0, v3, v1, v2}, Lcom/vk/im/engine/internal/f/AssertUtils;->a(Ljava/lang/String;Ljava/lang/Object;Z)V
 
     .line 3
-    sget-object v0, Lcom/vk/im/engine/internal/f/b;->a:Lcom/vk/im/engine/internal/f/b;
+    sget-object v0, Lcom/vk/im/engine/internal/f/AssertUtils;->INSTANCE:Lcom/vk/im/engine/internal/f/AssertUtils;
 
     invoke-virtual {p1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$c;->f()I
 
@@ -95,16 +95,16 @@
 
     move-result v2
 
-    invoke-static {v2}, Lcom/vk/im/engine/internal/e;->e(I)Z
+    invoke-static {v2}, Lcom/vk/im/engine/internal/Validation;->e(I)Z
 
     move-result v2
 
     const-string v3, "msgId"
 
-    invoke-virtual {v0, v3, v1, v2}, Lcom/vk/im/engine/internal/f/b;->a(Ljava/lang/String;Ljava/lang/Object;Z)V
+    invoke-virtual {v0, v3, v1, v2}, Lcom/vk/im/engine/internal/f/AssertUtils;->a(Ljava/lang/String;Ljava/lang/Object;Z)V
 
     .line 4
-    sget-object v0, Lcom/vk/im/engine/internal/f/b;->a:Lcom/vk/im/engine/internal/f/b;
+    sget-object v0, Lcom/vk/im/engine/internal/f/AssertUtils;->INSTANCE:Lcom/vk/im/engine/internal/f/AssertUtils;
 
     invoke-virtual {p1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$c;->d()I
 
@@ -130,7 +130,7 @@
     :goto_0
     const-string v3, "limit"
 
-    invoke-virtual {v0, v3, v1, v2}, Lcom/vk/im/engine/internal/f/b;->a(Ljava/lang/String;Ljava/lang/Object;Z)V
+    invoke-virtual {v0, v3, v1, v2}, Lcom/vk/im/engine/internal/f/AssertUtils;->a(Ljava/lang/String;Ljava/lang/Object;Z)V
 
     .line 5
     invoke-virtual {p1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$c;->g()I
@@ -181,14 +181,14 @@
     .locals 10
 
     .line 1
-    new-instance v0, Lcom/vk/api/internal/k$a;
+    new-instance v0, Lcom/vk/api/internal/MethodCall$a;
 
-    invoke-direct {v0}, Lcom/vk/api/internal/k$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/internal/MethodCall$a;-><init>()V
 
     const-string v1, "messages.getHistory"
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 3
     iget v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->a:I
@@ -199,7 +199,7 @@
 
     const-string v2, "peer_id"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 4
     iget v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->c:I
@@ -220,7 +220,7 @@
 
     const-string v4, "start_message_id"
 
-    invoke-virtual {v0, v4, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v4, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 5
     iget v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->d:I
@@ -233,7 +233,7 @@
 
     const-string v4, "offset"
 
-    invoke-virtual {v0, v4, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v4, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 6
     iget v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->d:I
@@ -244,45 +244,45 @@
 
     const-string v4, "count"
 
-    invoke-virtual {v0, v4, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v4, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
     const-string v1, "extended"
 
     const-string v4, "1"
 
     .line 7
-    invoke-virtual {v0, v1, v4}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1, v4}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 8
-    sget-object v1, Lcom/vk/im/engine/internal/f/a;->c:Lcom/vk/im/engine/internal/f/a$a;
+    sget-object v1, Lcom/vk/im/engine/internal/f/ApiFields;->c:Lcom/vk/im/engine/internal/f/ApiFields$a;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/f/a$a;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/f/ApiFields$a;->b()Ljava/lang/String;
 
     move-result-object v1
 
     const-string v4, "fields"
 
-    invoke-virtual {v0, v4, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v4, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 9
     iget-object v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->e:Ljava/lang/String;
 
     const-string v4, "lang"
 
-    invoke-virtual {v0, v4, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v4, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 10
     iget-boolean v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->f:Z
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->b(Z)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->b(Z)Lcom/vk/api/internal/MethodCall$a;
 
     const-string v1, "5.119"
 
     .line 11
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->b(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->b(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 12
-    invoke-virtual {v0}, Lcom/vk/api/internal/k$a;->a()Lcom/vk/api/internal/k;
+    invoke-virtual {v0}, Lcom/vk/api/internal/MethodCall$a;->a()Lcom/vk/api/internal/MethodCall;
 
     move-result-object v0
 
@@ -291,7 +291,7 @@
 
     invoke-direct {v1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$a;-><init>()V
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/l;Lcom/vk/api/sdk/h;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/VKMethodCall;Lcom/vk/api/sdk/VKApiResponseParser;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -335,7 +335,7 @@
     new-instance v0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;
 
     .line 17
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$b;->a()Lcom/vk/im/engine/models/dialogs/c;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$b;->a()Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     move-result-object v5
 
@@ -352,7 +352,7 @@
     move-object v4, v0
 
     .line 20
-    invoke-direct/range {v4 .. v9}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;-><init>(Lcom/vk/im/engine/models/dialogs/c;Ljava/util/List;ZZLcom/vk/im/engine/models/ProfilesSimpleInfo;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;-><init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;Ljava/util/List;ZZLcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
     return-object v0
 .end method
@@ -361,14 +361,14 @@
     .locals 7
 
     .line 1
-    new-instance v0, Lcom/vk/api/internal/k$a;
+    new-instance v0, Lcom/vk/api/internal/MethodCall$a;
 
-    invoke-direct {v0}, Lcom/vk/api/internal/k$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/internal/MethodCall$a;-><init>()V
 
     const-string v1, "messages.getHistory"
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 3
     iget v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->a:I
@@ -379,7 +379,7 @@
 
     const-string v2, "peer_id"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 4
     iget v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->c:I
@@ -390,7 +390,7 @@
 
     const-string v2, "start_message_id"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 5
     iget v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->d:I
@@ -405,7 +405,7 @@
 
     const-string v2, "offset"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 6
     iget v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->d:I
@@ -416,45 +416,45 @@
 
     const-string v2, "count"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
     const-string v1, "extended"
 
     const-string v2, "1"
 
     .line 7
-    invoke-virtual {v0, v1, v2}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 8
-    sget-object v1, Lcom/vk/im/engine/internal/f/a;->c:Lcom/vk/im/engine/internal/f/a$a;
+    sget-object v1, Lcom/vk/im/engine/internal/f/ApiFields;->c:Lcom/vk/im/engine/internal/f/ApiFields$a;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/f/a$a;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/f/ApiFields$a;->b()Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "fields"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 9
     iget-object v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->e:Ljava/lang/String;
 
     const-string v2, "lang"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 10
     iget-boolean v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->f:Z
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->b(Z)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->b(Z)Lcom/vk/api/internal/MethodCall$a;
 
     const-string v1, "5.119"
 
     .line 11
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->b(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->b(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 12
-    invoke-virtual {v0}, Lcom/vk/api/internal/k$a;->a()Lcom/vk/api/internal/k;
+    invoke-virtual {v0}, Lcom/vk/api/internal/MethodCall$a;->a()Lcom/vk/api/internal/MethodCall;
 
     move-result-object v0
 
@@ -463,7 +463,7 @@
 
     invoke-direct {v1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$a;-><init>()V
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/l;Lcom/vk/api/sdk/h;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/VKMethodCall;Lcom/vk/api/sdk/VKApiResponseParser;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -473,7 +473,7 @@
     new-instance v6, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;
 
     .line 15
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$b;->a()Lcom/vk/im/engine/models/dialogs/c;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$b;->a()Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     move-result-object v1
 
@@ -494,7 +494,7 @@
     move-object v0, v6
 
     .line 18
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;-><init>(Lcom/vk/im/engine/models/dialogs/c;Ljava/util/List;ZZLcom/vk/im/engine/models/ProfilesSimpleInfo;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;-><init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;Ljava/util/List;ZZLcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
     return-object v6
 .end method
@@ -503,14 +503,14 @@
     .locals 10
 
     .line 1
-    new-instance v0, Lcom/vk/api/internal/k$a;
+    new-instance v0, Lcom/vk/api/internal/MethodCall$a;
 
-    invoke-direct {v0}, Lcom/vk/api/internal/k$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/internal/MethodCall$a;-><init>()V
 
     const-string v1, "messages.getHistory"
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 3
     iget v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->a:I
@@ -521,7 +521,7 @@
 
     const-string v2, "peer_id"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 4
     iget v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->c:I
@@ -532,7 +532,7 @@
 
     const-string v2, "start_message_id"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 5
     iget v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->d:I
@@ -543,45 +543,45 @@
 
     const-string v2, "count"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
     const-string v1, "extended"
 
     const-string v2, "1"
 
     .line 6
-    invoke-virtual {v0, v1, v2}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 7
-    sget-object v1, Lcom/vk/im/engine/internal/f/a;->c:Lcom/vk/im/engine/internal/f/a$a;
+    sget-object v1, Lcom/vk/im/engine/internal/f/ApiFields;->c:Lcom/vk/im/engine/internal/f/ApiFields$a;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/f/a$a;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/f/ApiFields$a;->b()Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "fields"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 8
     iget-object v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->e:Ljava/lang/String;
 
     const-string v2, "lang"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 9
     iget-boolean v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->f:Z
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->b(Z)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->b(Z)Lcom/vk/api/internal/MethodCall$a;
 
     const-string v1, "5.119"
 
     .line 10
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->b(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->b(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 11
-    invoke-virtual {v0}, Lcom/vk/api/internal/k$a;->a()Lcom/vk/api/internal/k;
+    invoke-virtual {v0}, Lcom/vk/api/internal/MethodCall$a;->a()Lcom/vk/api/internal/MethodCall;
 
     move-result-object v0
 
@@ -590,7 +590,7 @@
 
     invoke-direct {v1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$a;-><init>()V
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/l;Lcom/vk/api/sdk/h;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/VKMethodCall;Lcom/vk/api/sdk/VKApiResponseParser;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -640,7 +640,7 @@
     new-instance v0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;
 
     .line 16
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$b;->a()Lcom/vk/im/engine/models/dialogs/c;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$b;->a()Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     move-result-object v5
 
@@ -657,7 +657,7 @@
     move-object v4, v0
 
     .line 19
-    invoke-direct/range {v4 .. v9}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;-><init>(Lcom/vk/im/engine/models/dialogs/c;Ljava/util/List;ZZLcom/vk/im/engine/models/ProfilesSimpleInfo;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;-><init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;Ljava/util/List;ZZLcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
     return-object v0
 .end method
@@ -761,7 +761,7 @@
     iget v5, v1, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd;->a:I
 
     .line 9
-    new-instance v0, Lcom/vk/im/engine/models/dialogs/c;
+    new-instance v0, Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     move-object v4, v0
 
@@ -811,7 +811,7 @@
     const/16 v28, 0x0
 
     .line 11
-    invoke-direct/range {v4 .. v28}, Lcom/vk/im/engine/models/dialogs/c;-><init>(IIIIIILcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/WritePermission;ZZLcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/dialogs/ConversationBar;Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/dialogs/f;Lcom/vk/im/engine/models/conversations/BotKeyboard;Lcom/vk/im/engine/models/MsgRequestStatus;Lcom/vk/im/engine/models/Member;JLjava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v4 .. v28}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;-><init>(IIIIIILcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/WritePermission;ZZLcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/dialogs/ConversationBar;Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/dialogs/DialogThemeName;Lcom/vk/im/engine/models/conversations/BotKeyboard;Lcom/vk/im/engine/models/MsgRequestStatus;Lcom/vk/im/engine/models/Member;JLjava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 12
     new-instance v2, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;
@@ -828,7 +828,7 @@
 
     move-object v7, v0
 
-    invoke-direct/range {v6 .. v11}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;-><init>(Lcom/vk/im/engine/models/dialogs/c;Ljava/util/List;ZZLcom/vk/im/engine/models/ProfilesSimpleInfo;)V
+    invoke-direct/range {v6 .. v11}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;-><init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;Ljava/util/List;ZZLcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
     move-object v0, v2
 

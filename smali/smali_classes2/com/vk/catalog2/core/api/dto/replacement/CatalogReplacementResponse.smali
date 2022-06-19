@@ -47,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/replacement/CatalogReplacementResponse$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/replacement/CatalogReplacementResponse$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/catalog2/core/api/dto/replacement/CatalogReplacementResponse$a;
@@ -124,7 +124,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/replacement/CatalogReplacementResponse;->a:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -134,7 +134,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/replacement/CatalogReplacementResponse;->b:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -144,7 +144,7 @@
 
     iget-object p1, p1, Lcom/vk/catalog2/core/api/dto/replacement/CatalogReplacementResponse;->c:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

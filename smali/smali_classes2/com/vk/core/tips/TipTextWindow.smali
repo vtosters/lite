@@ -47,17 +47,17 @@
 
 .field private final n:Z
 
-.field private final o:Lkotlin/jvm/b/a;
+.field private final o:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Landroid/view/View;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final p:Lcom/vk/core/tips/b$a;
+.field private final p:Lcom/vk/core/tips/WindowBackground$a;
 
 .field private final q:Landroid/view/View$OnClickListener;
 
@@ -76,14 +76,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/tips/TipTextWindow$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/tips/TipTextWindow$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/tips/TipTextWindow;->u:Lcom/vk/core/tips/TipTextWindow$a;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;)V
+.method public constructor <init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;)V
     .locals 2
     .param p5    # I
         .annotation build Landroidx/annotation/ColorInt;
@@ -103,11 +103,11 @@
             "II",
             "Landroid/graphics/drawable/Drawable;",
             "FZZZIZ",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Landroid/view/View;",
             ">;",
-            "Lcom/vk/core/tips/b$a;",
+            "Lcom/vk/core/tips/WindowBackground$a;",
             "Landroid/view/View$OnClickListener;",
             "Landroid/view/View$OnClickListener;",
             "Landroid/view/View$OnClickListener;",
@@ -175,11 +175,11 @@
 
     move-object/from16 v1, p14
 
-    iput-object v1, v0, Lcom/vk/core/tips/TipTextWindow;->o:Lkotlin/jvm/b/a;
+    iput-object v1, v0, Lcom/vk/core/tips/TipTextWindow;->o:Lkotlin/jvm/b/Functions;
 
     move-object/from16 v1, p15
 
-    iput-object v1, v0, Lcom/vk/core/tips/TipTextWindow;->p:Lcom/vk/core/tips/b$a;
+    iput-object v1, v0, Lcom/vk/core/tips/TipTextWindow;->p:Lcom/vk/core/tips/WindowBackground$a;
 
     move-object/from16 v1, p16
 
@@ -200,7 +200,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 23
 
     move/from16 v0, p20
@@ -238,13 +238,13 @@
     if-eqz v1, :cond_2
 
     .line 2
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v4, "AppContextHolder.context"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v4, Lb/h/z/c;->tip_background:I
+    sget v4, Lb/h/z/R4;->tip_background:I
 
     invoke-static {v1, v4}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;I)I
 
@@ -263,7 +263,7 @@
     if-eqz v1, :cond_3
 
     .line 3
-    sget v1, Lb/h/z/c;->white:I
+    sget v1, Lb/h/z/R4;->white:I
 
     move v9, v1
 
@@ -378,9 +378,9 @@
     if-eqz v1, :cond_c
 
     .line 4
-    new-instance v1, Lcom/vk/core/tips/b$c;
+    new-instance v1, Lcom/vk/core/tips/WindowBackground$c;
 
-    invoke-direct {v1}, Lcom/vk/core/tips/b$c;-><init>()V
+    invoke-direct {v1}, Lcom/vk/core/tips/WindowBackground$c;-><init>()V
 
     move-object/from16 v18, v1
 
@@ -453,7 +453,7 @@
     move-object/from16 v5, p2
 
     .line 5
-    invoke-direct/range {v3 .. v22}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;)V
+    invoke-direct/range {v3 .. v22}, Lcom/vk/core/tips/TipTextWindow;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZIZLkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;Lcom/vk/core/tips/TipTextWindow$b;)V
 
     return-void
 .end method
@@ -501,7 +501,7 @@
     return-object p1
 .end method
 
-.method public static final a(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/a;)Landroidx/appcompat/app/AlertDialog;
+.method public static final a(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/Functions;)Landroidx/appcompat/app/AlertDialog;
     .locals 20
     .param p6    # I
         .annotation build Landroidx/annotation/ColorRes;
@@ -523,7 +523,7 @@
             "II",
             "Landroid/graphics/drawable/Drawable;",
             "FZZZZI",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Landroid/view/View;",
             ">;)",
@@ -571,7 +571,7 @@
 
     const/16 v19, 0x0
 
-    invoke-static/range {v0 .. v19}, Lcom/vk/core/tips/TipTextWindow$a;->a(Lcom/vk/core/tips/TipTextWindow$a;Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog;
+    invoke-static/range {v0 .. v19}, Lcom/vk/core/tips/TipTextWindow$a;->a(Lcom/vk/core/tips/TipTextWindow$a;Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog;
 
     move-result-object v0
 
@@ -582,9 +582,9 @@
     .locals 2
 
     .line 25
-    iget-object v0, p0, Lcom/vk/core/tips/TipTextWindow;->p:Lcom/vk/core/tips/b$a;
+    iget-object v0, p0, Lcom/vk/core/tips/TipTextWindow;->p:Lcom/vk/core/tips/WindowBackground$a;
 
-    instance-of v0, v0, Lcom/vk/core/tips/b$c;
+    instance-of v0, v0, Lcom/vk/core/tips/WindowBackground$c;
 
     if-nez v0, :cond_0
 
@@ -756,14 +756,14 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/core/tips/TipTextWindow$d;Landroid/graphics/RectF;Lkotlin/jvm/b/b;)V
+.method private final a(Lcom/vk/core/tips/TipTextWindow$d;Landroid/graphics/RectF;Lkotlin/jvm/b/Functions2;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/core/tips/TipTextWindow$d;",
             "Landroid/graphics/RectF;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Integer;",
             "+",
@@ -790,16 +790,16 @@
     .line 45
     new-instance v2, Lcom/vk/core/tips/TipTextWindow$e;
 
-    invoke-direct {v2, p0, p3}, Lcom/vk/core/tips/TipTextWindow$e;-><init>(Lcom/vk/core/tips/TipTextWindow;Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, p0, p3}, Lcom/vk/core/tips/TipTextWindow$e;-><init>(Lcom/vk/core/tips/TipTextWindow;Lkotlin/jvm/b/Functions2;)V
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 46
     new-instance v1, Lcom/vk/core/tips/TipTextWindow$setClickListeners$2;
 
-    invoke-direct {v1, p1, p2, p3}, Lcom/vk/core/tips/TipTextWindow$setClickListeners$2;-><init>(Landroid/view/View;Landroid/graphics/RectF;Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p1, p2, p3}, Lcom/vk/core/tips/TipTextWindow$setClickListeners$2;-><init>(Landroid/view/View;Landroid/graphics/RectF;Lkotlin/jvm/b/Functions2;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -822,25 +822,25 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/core/tips/TipTextWindow;Lcom/vk/core/tips/b;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/a;Lkotlin/jvm/b/a;)V
+.method public static final synthetic a(Lcom/vk/core/tips/TipTextWindow;Lcom/vk/core/tips/WindowBackground;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/AnimationProperties;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/core/tips/TipTextWindow;->a(Lcom/vk/core/tips/b;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/a;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/core/tips/TipTextWindow;->a(Lcom/vk/core/tips/WindowBackground;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/AnimationProperties;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/core/tips/b;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/a;Lkotlin/jvm/b/a;)V
+.method private final a(Lcom/vk/core/tips/WindowBackground;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/AnimationProperties;Lkotlin/jvm/b/Functions;)V
     .locals 15
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/core/tips/b;",
+            "Lcom/vk/core/tips/WindowBackground;",
             "Lcom/vk/core/tips/TipTextWindow$d;",
-            "Lcom/vk/core/tips/a;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lcom/vk/core/tips/AnimationProperties;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -850,14 +850,14 @@
     move-object v1, p0
 
     .line 47
-    iget-object v2, v1, Lcom/vk/core/tips/TipTextWindow;->p:Lcom/vk/core/tips/b$a;
+    iget-object v2, v1, Lcom/vk/core/tips/TipTextWindow;->p:Lcom/vk/core/tips/WindowBackground$a;
 
-    instance-of v2, v2, Lcom/vk/core/tips/b$c;
+    instance-of v2, v2, Lcom/vk/core/tips/WindowBackground$c;
 
     if-eqz v2, :cond_0
 
     .line 48
-    invoke-interface/range {p4 .. p4}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface/range {p4 .. p4}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 
@@ -877,7 +877,7 @@
     new-array v5, v4, [F
 
     .line 51
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/a;->j()F
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/AnimationProperties;->j()F
 
     move-result v6
 
@@ -885,7 +885,7 @@
 
     aput v6, v5, v7
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/a;->k()F
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/AnimationProperties;->k()F
 
     move-result v6
 
@@ -900,20 +900,20 @@
     .line 52
     new-instance v5, Lcom/vk/core/tips/TipTextWindow$k;
 
-    invoke-direct {v5, v0, v2}, Lcom/vk/core/tips/TipTextWindow$k;-><init>(Lcom/vk/core/tips/b;Lcom/vk/core/tips/TipAnchorView;)V
+    invoke-direct {v5, v0, v2}, Lcom/vk/core/tips/TipTextWindow$k;-><init>(Lcom/vk/core/tips/WindowBackground;Lcom/vk/core/tips/TipAnchorView;)V
 
     invoke-virtual {v10, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     new-array v2, v4, [I
 
     .line 53
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/a;->b()I
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/AnimationProperties;->b()I
 
     move-result v5
 
     aput v5, v2, v7
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/a;->c()I
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/AnimationProperties;->c()I
 
     move-result v5
 
@@ -926,20 +926,20 @@
     .line 54
     new-instance v2, Lcom/vk/core/tips/TipTextWindow$l;
 
-    invoke-direct {v2, v0}, Lcom/vk/core/tips/TipTextWindow$l;-><init>(Lcom/vk/core/tips/b;)V
+    invoke-direct {v2, v0}, Lcom/vk/core/tips/TipTextWindow$l;-><init>(Lcom/vk/core/tips/WindowBackground;)V
 
     invoke-virtual {v11, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     new-array v0, v4, [F
 
     .line 55
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/a;->e()F
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/AnimationProperties;->e()F
 
     move-result v2
 
     aput v2, v0, v7
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/a;->g()F
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/AnimationProperties;->g()F
 
     move-result v2
 
@@ -990,10 +990,10 @@
 
     const-string v6, "getChildAt(i)"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 60
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/a;->h()I
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/AnimationProperties;->h()I
 
     move-result v6
 
@@ -1023,14 +1023,14 @@
     invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
     .line 63
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/a;->a()J
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/AnimationProperties;->a()J
 
     move-result-wide v5
 
     invoke-virtual {v0, v5, v6}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
     .line 64
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/a;->i()Landroid/view/animation/Interpolator;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/AnimationProperties;->i()Landroid/view/animation/Interpolator;
 
     move-result-object v2
 
@@ -1045,7 +1045,7 @@
 
     move-object/from16 v14, p4
 
-    invoke-direct/range {v9 .. v14}, Lcom/vk/core/tips/TipTextWindow$i;-><init>(Landroid/animation/ValueAnimator;Landroid/animation/ValueAnimator;Landroid/animation/ValueAnimator;Lcom/vk/core/tips/a;Lkotlin/jvm/b/a;)V
+    invoke-direct/range {v9 .. v14}, Lcom/vk/core/tips/TipTextWindow$i;-><init>(Landroid/animation/ValueAnimator;Landroid/animation/ValueAnimator;Landroid/animation/ValueAnimator;Lcom/vk/core/tips/AnimationProperties;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -1058,13 +1058,13 @@
     new-array v0, v4, [F
 
     .line 68
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/a;->e()F
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/AnimationProperties;->e()F
 
     move-result v2
 
     aput v2, v0, v7
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/a;->g()F
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/AnimationProperties;->g()F
 
     move-result v2
 
@@ -1075,21 +1075,21 @@
     move-result-object v0
 
     .line 69
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/a;->f()J
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/AnimationProperties;->f()J
 
     move-result-wide v4
 
     invoke-virtual {v0, v4, v5}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
 
     .line 70
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/a;->d()J
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/AnimationProperties;->d()J
 
     move-result-wide v4
 
     invoke-virtual {v0, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     .line 71
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/a;->i()Landroid/view/animation/Interpolator;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/core/tips/AnimationProperties;->i()Landroid/view/animation/Interpolator;
 
     move-result-object v2
 
@@ -1100,7 +1100,7 @@
 
     move-object/from16 v4, p3
 
-    invoke-direct {v2, v4, v3}, Lcom/vk/core/tips/TipTextWindow$j;-><init>(Lcom/vk/core/tips/a;Landroid/view/View;)V
+    invoke-direct {v2, v4, v3}, Lcom/vk/core/tips/TipTextWindow$j;-><init>(Lcom/vk/core/tips/AnimationProperties;Landroid/view/View;)V
 
     invoke-virtual {v0, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -1142,11 +1142,11 @@
     return v1
 .end method
 
-.method public static final synthetic b(Lcom/vk/core/tips/TipTextWindow;)Lcom/vk/core/tips/a;
+.method public static final synthetic b(Lcom/vk/core/tips/TipTextWindow;)Lcom/vk/core/tips/AnimationProperties;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/tips/TipTextWindow;->c()Lcom/vk/core/tips/a;
+    invoke-direct {p0}, Lcom/vk/core/tips/TipTextWindow;->c()Lcom/vk/core/tips/AnimationProperties;
 
     move-result-object p0
 
@@ -1162,7 +1162,7 @@
     move-result-object v0
 
     .line 7
-    sget v1, Lb/h/z/g;->title:I
+    sget v1, Lb/h/z/R;->title:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1234,7 +1234,7 @@
     .line 14
     :cond_3
     :goto_2
-    sget v1, Lb/h/z/g;->description:I
+    sget v1, Lb/h/z/R;->description:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1289,11 +1289,11 @@
     return-void
 .end method
 
-.method private final c()Lcom/vk/core/tips/a;
+.method private final c()Lcom/vk/core/tips/AnimationProperties;
     .locals 16
 
     .line 33
-    new-instance v15, Lcom/vk/core/tips/a;
+    new-instance v15, Lcom/vk/core/tips/AnimationProperties;
 
     .line 34
     new-instance v14, Landroidx/interpolator/view/animation/FastOutSlowInInterpolator;
@@ -1323,12 +1323,12 @@
     move-object v0, v15
 
     .line 35
-    invoke-direct/range {v0 .. v14}, Lcom/vk/core/tips/a;-><init>(FFIIFFJIJJLandroid/view/animation/Interpolator;)V
+    invoke-direct/range {v0 .. v14}, Lcom/vk/core/tips/AnimationProperties;-><init>(FFIIFFJIJJLandroid/view/animation/Interpolator;)V
 
     return-object v15
 .end method
 
-.method private final d(Landroid/content/Context;Landroid/graphics/RectF;)Lcom/vk/core/drawable/j;
+.method private final d(Landroid/content/Context;Landroid/graphics/RectF;)Lcom/vk/core/drawable/SectionBackground;
     .locals 10
 
     .line 1
@@ -1338,7 +1338,7 @@
 
     const-string v1, "context.resources"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -1374,7 +1374,7 @@
 
     if-eqz v2, :cond_1
 
-    sget v2, Lb/h/z/e;->bg_tip_no_tail_center:I
+    sget v2, Lb/h/z/R8;->bg_tip_no_tail_center:I
 
     :goto_1
     move v7, v2
@@ -1385,19 +1385,19 @@
     if-eqz v1, :cond_2
 
     .line 6
-    sget v2, Lb/h/z/e;->bg_tip_tail_top_center_compact:I
+    sget v2, Lb/h/z/R8;->bg_tip_tail_top_center_compact:I
 
     goto :goto_1
 
     .line 7
     :cond_2
-    sget v2, Lb/h/z/e;->bg_tip_tail_top_center:I
+    sget v2, Lb/h/z/R8;->bg_tip_tail_top_center:I
 
     goto :goto_1
 
     .line 8
     :goto_2
-    sget v6, Lb/h/z/e;->bg_tip_tail_left:I
+    sget v6, Lb/h/z/R8;->bg_tip_tail_left:I
 
     .line 9
     iget-boolean v2, p0, Lcom/vk/core/tips/TipTextWindow;->k:Z
@@ -1405,13 +1405,13 @@
     if-eqz v2, :cond_3
 
     .line 10
-    sget v2, Lb/h/z/e;->bg_tip_no_tail_center:I
+    sget v2, Lb/h/z/R8;->bg_tip_no_tail_center:I
 
     goto :goto_3
 
     .line 11
     :cond_3
-    sget v2, Lb/h/z/e;->bg_tip_tail_bottom_center:I
+    sget v2, Lb/h/z/R8;->bg_tip_tail_bottom_center:I
 
     :goto_3
     move v8, v2
@@ -1419,25 +1419,25 @@
     if-eqz v1, :cond_4
 
     .line 12
-    sget v1, Lb/h/z/e;->bg_tip_tail_right_compact:I
+    sget v1, Lb/h/z/R8;->bg_tip_tail_right_compact:I
 
     goto :goto_4
 
     .line 13
     :cond_4
-    sget v1, Lb/h/z/e;->bg_tip_tail_right:I
+    sget v1, Lb/h/z/R8;->bg_tip_tail_right:I
 
     :goto_4
     move v9, v1
 
     .line 14
-    new-instance v1, Lcom/vk/core/drawable/j;
+    new-instance v1, Lcom/vk/core/drawable/SectionBackground;
 
     move-object v4, v1
 
     move-object v5, p1
 
-    invoke-direct/range {v4 .. v9}, Lcom/vk/core/drawable/j;-><init>(Landroid/content/Context;IIII)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/core/drawable/SectionBackground;-><init>(Landroid/content/Context;IIII)V
 
     .line 15
     iget p1, p0, Lcom/vk/core/tips/TipTextWindow;->f:I
@@ -1447,7 +1447,7 @@
     invoke-virtual {v1, p1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
     .line 16
-    invoke-virtual {v1, v3}, Lcom/vk/core/drawable/j;->a(Z)V
+    invoke-virtual {v1, v3}, Lcom/vk/core/drawable/SectionBackground;->a(Z)V
 
     .line 17
     iget-boolean p1, p0, Lcom/vk/core/tips/TipTextWindow;->j:Z
@@ -1470,14 +1470,14 @@
 
     .line 18
     :cond_5
-    invoke-virtual {v1}, Lcom/vk/core/drawable/j;->c()V
+    invoke-virtual {v1}, Lcom/vk/core/drawable/SectionBackground;->c()V
 
     goto :goto_6
 
     .line 19
     :cond_6
     :goto_5
-    invoke-virtual {v1}, Lcom/vk/core/drawable/j;->b()V
+    invoke-virtual {v1}, Lcom/vk/core/drawable/SectionBackground;->b()V
 
     :goto_6
     return-object v1
@@ -1487,18 +1487,18 @@
     .locals 10
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/tips/TipTextWindow;->o:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/core/tips/TipTextWindow;->o:Lkotlin/jvm/b/Functions;
 
     if-nez v0, :cond_0
 
     .line 2
-    sget v0, Lb/h/z/h;->tip_bubble:I
+    sget v0, Lb/h/z/R10;->tip_bubble:I
 
     goto :goto_0
 
     .line 3
     :cond_0
-    sget v0, Lb/h/z/h;->tip_container:I
+    sget v0, Lb/h/z/R10;->tip_container:I
 
     .line 4
     :goto_0
@@ -1519,12 +1519,12 @@
     check-cast v0, Lcom/vk/core/tips/TipAnchorView;
 
     .line 5
-    iget-object v1, p0, Lcom/vk/core/tips/TipTextWindow;->o:Lkotlin/jvm/b/a;
+    iget-object v1, p0, Lcom/vk/core/tips/TipTextWindow;->o:Lkotlin/jvm/b/Functions;
 
     if-eqz v1, :cond_1
 
     .line 6
-    sget v1, Lb/h/z/g;->fl_custom_tip_container:I
+    sget v1, Lb/h/z/R;->fl_custom_tip_container:I
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -1533,9 +1533,9 @@
     check-cast v1, Landroid/view/ViewGroup;
 
     .line 7
-    iget-object v2, p0, Lcom/vk/core/tips/TipTextWindow;->o:Lkotlin/jvm/b/a;
+    iget-object v2, p0, Lcom/vk/core/tips/TipTextWindow;->o:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1545,12 +1545,12 @@
 
     .line 8
     :cond_1
-    invoke-direct {p0, p1, p2}, Lcom/vk/core/tips/TipTextWindow;->d(Landroid/content/Context;Landroid/graphics/RectF;)Lcom/vk/core/drawable/j;
+    invoke-direct {p0, p1, p2}, Lcom/vk/core/tips/TipTextWindow;->d(Landroid/content/Context;Landroid/graphics/RectF;)Lcom/vk/core/drawable/SectionBackground;
 
     move-result-object v7
 
     .line 9
-    sget p1, Lb/h/z/g;->bg:I
+    sget p1, Lb/h/z/R;->bg:I
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -1559,7 +1559,7 @@
     const-string v1, "bubbleView"
 
     .line 10
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v7}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -1576,7 +1576,7 @@
     neg-int v1, v1
 
     .line 13
-    sget v2, Lb/h/z/g;->anchor:I
+    sget v2, Lb/h/z/R;->anchor:I
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -1606,7 +1606,7 @@
     invoke-direct {v5, v2, v3, v6, p2}, Landroid/graphics/RectF;-><init>(FFFF)V
 
     .line 15
-    invoke-virtual {v7}, Lcom/vk/core/drawable/j;->a()Z
+    invoke-virtual {v7}, Lcom/vk/core/drawable/SectionBackground;->a()Z
 
     move-result p2
 
@@ -1623,7 +1623,7 @@
     move-result v9
 
     .line 18
-    invoke-virtual/range {v4 .. v9}, Lcom/vk/core/tips/TipAnchorView;->a(Landroid/graphics/RectF;ZLcom/vk/core/drawable/j;FI)V
+    invoke-virtual/range {v4 .. v9}, Lcom/vk/core/tips/TipAnchorView;->a(Landroid/graphics/RectF;ZLcom/vk/core/drawable/SectionBackground;FI)V
 
     .line 19
     invoke-direct {p0, v0}, Lcom/vk/core/tips/TipTextWindow;->b(Landroid/view/View;)V
@@ -1684,9 +1684,9 @@
 
     if-nez v2, :cond_2
 
-    iget-object v2, p0, Lcom/vk/core/tips/TipTextWindow;->p:Lcom/vk/core/tips/b$a;
+    iget-object v2, p0, Lcom/vk/core/tips/TipTextWindow;->p:Lcom/vk/core/tips/WindowBackground$a;
 
-    instance-of v2, v2, Lcom/vk/core/tips/b$c;
+    instance-of v2, v2, Lcom/vk/core/tips/WindowBackground$c;
 
     if-nez v2, :cond_0
 
@@ -1702,7 +1702,7 @@
 
     new-instance v2, Landroidx/appcompat/app/AlertDialog$Builder;
 
-    sget v3, Lb/h/z/l;->TooltipDialogStyle:I
+    sget v3, Lb/h/z/R6;->TooltipDialogStyle:I
 
     invoke-direct {v2, p1, v3}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
@@ -1721,7 +1721,7 @@
     :goto_0
     new-instance v2, Landroidx/appcompat/app/AlertDialog$Builder;
 
-    sget v3, Lb/h/z/l;->TooltipFullScreenDialog:I
+    sget v3, Lb/h/z/R6;->TooltipFullScreenDialog:I
 
     invoke-direct {v2, p1, v3}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
@@ -1738,7 +1738,7 @@
     const-string v3, "dialog"
 
     .line 14
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
@@ -1749,7 +1749,7 @@
     const-string v4, "it"
 
     .line 15
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v3}, Lcom/vk/core/tips/TipTextWindow;->a(Landroid/view/Window;)V
 
@@ -1769,21 +1769,21 @@
 
     invoke-direct {v3, p0, v2, v0}, Lcom/vk/core/tips/TipTextWindow$show$2;-><init>(Lcom/vk/core/tips/TipTextWindow;Landroidx/appcompat/app/AlertDialog;Lcom/vk/core/tips/TipTextWindow$d;)V
 
-    invoke-direct {p0, v0, p2, v3}, Lcom/vk/core/tips/TipTextWindow;->a(Lcom/vk/core/tips/TipTextWindow$d;Landroid/graphics/RectF;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, v0, p2, v3}, Lcom/vk/core/tips/TipTextWindow;->a(Lcom/vk/core/tips/TipTextWindow$d;Landroid/graphics/RectF;Lkotlin/jvm/b/Functions2;)V
 
     .line 19
-    new-instance v3, Lcom/vk/core/tips/b;
+    new-instance v3, Lcom/vk/core/tips/WindowBackground;
 
-    iget-object v4, p0, Lcom/vk/core/tips/TipTextWindow;->p:Lcom/vk/core/tips/b$a;
+    iget-object v4, p0, Lcom/vk/core/tips/TipTextWindow;->p:Lcom/vk/core/tips/WindowBackground$a;
 
-    invoke-direct {v3, p2, v4}, Lcom/vk/core/tips/b;-><init>(Landroid/graphics/RectF;Lcom/vk/core/tips/b$a;)V
+    invoke-direct {v3, p2, v4}, Lcom/vk/core/tips/WindowBackground;-><init>(Landroid/graphics/RectF;Lcom/vk/core/tips/WindowBackground$a;)V
 
     .line 20
     new-instance p2, Lcom/vk/core/tips/TipTextWindow$show$3;
 
-    invoke-direct {p2, p0, v2, v3, v0}, Lcom/vk/core/tips/TipTextWindow$show$3;-><init>(Lcom/vk/core/tips/TipTextWindow;Landroidx/appcompat/app/AlertDialog;Lcom/vk/core/tips/b;Lcom/vk/core/tips/TipTextWindow$d;)V
+    invoke-direct {p2, p0, v2, v3, v0}, Lcom/vk/core/tips/TipTextWindow$show$3;-><init>(Lcom/vk/core/tips/TipTextWindow;Landroidx/appcompat/app/AlertDialog;Lcom/vk/core/tips/WindowBackground;Lcom/vk/core/tips/TipTextWindow$d;)V
 
-    invoke-static {v1, p2}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
+    invoke-static {v1, p2}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
 
     .line 21
     invoke-static {p1}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
@@ -1792,7 +1792,7 @@
 
     if-eqz p1, :cond_4
 
-    invoke-static {p1}, Lcom/vk/core/extensions/a;->c(Landroid/app/Activity;)Z
+    invoke-static {p1}, Lcom/vk/core/extensions/ActivityExt;->c(Landroid/app/Activity;)Z
 
     move-result p1
 
@@ -1904,9 +1904,9 @@
     move-result-object v7
 
     .line 6
-    iget-object v0, v8, Lcom/vk/core/tips/TipTextWindow;->p:Lcom/vk/core/tips/b$a;
+    iget-object v0, v8, Lcom/vk/core/tips/TipTextWindow;->p:Lcom/vk/core/tips/WindowBackground$a;
 
-    instance-of v0, v0, Lcom/vk/core/tips/b$c;
+    instance-of v0, v0, Lcom/vk/core/tips/WindowBackground$c;
 
     const/4 v13, 0x1
 
@@ -2024,7 +2024,7 @@
     :try_start_0
     invoke-interface {v6, v11, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -2037,16 +2037,16 @@
     if-eqz v0, :cond_7
 
     .line 17
-    invoke-direct/range {p0 .. p0}, Lcom/vk/core/tips/TipTextWindow;->c()Lcom/vk/core/tips/a;
+    invoke-direct/range {p0 .. p0}, Lcom/vk/core/tips/TipTextWindow;->c()Lcom/vk/core/tips/AnimationProperties;
 
     move-result-object v16
 
     .line 18
-    new-instance v5, Lcom/vk/core/tips/b;
+    new-instance v5, Lcom/vk/core/tips/WindowBackground;
 
-    iget-object v0, v8, Lcom/vk/core/tips/TipTextWindow;->p:Lcom/vk/core/tips/b$a;
+    iget-object v0, v8, Lcom/vk/core/tips/TipTextWindow;->p:Lcom/vk/core/tips/WindowBackground$a;
 
-    invoke-direct {v5, v9, v0}, Lcom/vk/core/tips/b;-><init>(Landroid/graphics/RectF;Lcom/vk/core/tips/b$a;)V
+    invoke-direct {v5, v9, v0}, Lcom/vk/core/tips/WindowBackground;-><init>(Landroid/graphics/RectF;Lcom/vk/core/tips/WindowBackground$a;)V
 
     .line 19
     new-instance v4, Lcom/vk/core/tips/TipTextWindow$showAsView$2;
@@ -2067,9 +2067,9 @@
 
     move-object/from16 v5, v16
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/tips/TipTextWindow$showAsView$2;-><init>(Lcom/vk/core/tips/TipTextWindow;Lcom/vk/core/tips/TipAnchorView;Lcom/vk/core/tips/b;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/a;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/tips/TipTextWindow$showAsView$2;-><init>(Lcom/vk/core/tips/TipTextWindow;Lcom/vk/core/tips/TipAnchorView;Lcom/vk/core/tips/WindowBackground;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/AnimationProperties;)V
 
-    invoke-static {v11, v13}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
+    invoke-static {v11, v13}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
 
     .line 20
     new-instance v13, Lcom/vk/core/tips/TipTextWindow$showAsView$immediateDismissAction$1;
@@ -2101,19 +2101,19 @@
 
     move-object v5, v13
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;-><init>(Lcom/vk/core/tips/TipTextWindow;Lcom/vk/core/tips/b;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/a;Lkotlin/jvm/b/b;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;-><init>(Lcom/vk/core/tips/TipTextWindow;Lcom/vk/core/tips/WindowBackground;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/AnimationProperties;Lkotlin/jvm/b/Functions2;)V
 
     .line 22
-    invoke-direct {v8, v10, v9, v6}, Lcom/vk/core/tips/TipTextWindow;->a(Lcom/vk/core/tips/TipTextWindow$d;Landroid/graphics/RectF;Lkotlin/jvm/b/b;)V
+    invoke-direct {v8, v10, v9, v6}, Lcom/vk/core/tips/TipTextWindow;->a(Lcom/vk/core/tips/TipTextWindow$d;Landroid/graphics/RectF;Lkotlin/jvm/b/Functions2;)V
 
     .line 23
     new-instance v0, Lcom/vk/core/tips/TipTextWindow$showAsView$3;
 
-    invoke-direct {v0, v6}, Lcom/vk/core/tips/TipTextWindow$showAsView$3;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, v6}, Lcom/vk/core/tips/TipTextWindow$showAsView$3;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     const/4 v1, 0x1
 
-    invoke-static {v11, v1, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ZLkotlin/jvm/b/a;)V
+    invoke-static {v11, v1, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ZLkotlin/jvm/b/Functions;)V
 
     .line 24
     invoke-virtual {v11, v1}, Landroid/widget/FrameLayout;->setFocusable(Z)V
@@ -2153,7 +2153,7 @@
     const-string v1, "it"
 
     .line 29
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getSystemUiVisibility()I
 
@@ -2165,7 +2165,7 @@
     :cond_6
     new-instance v0, Lcom/vk/core/tips/TipTextWindow$h;
 
-    invoke-direct {v0, v6, v13}, Lcom/vk/core/tips/TipTextWindow$h;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, v6, v13}, Lcom/vk/core/tips/TipTextWindow$h;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     return-object v0
 

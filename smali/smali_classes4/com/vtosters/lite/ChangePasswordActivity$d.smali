@@ -119,7 +119,7 @@
     const p1, 0x7f1209bb
 
     .line 5
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 
@@ -134,7 +134,7 @@
     const p1, 0x7f120a02
 
     .line 7
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 
@@ -151,7 +151,7 @@
     const p1, 0x7f120dd2
 
     .line 9
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 

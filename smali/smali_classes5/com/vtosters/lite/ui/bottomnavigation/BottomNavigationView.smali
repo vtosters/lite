@@ -3,7 +3,7 @@
 .source "BottomNavigationView.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -23,9 +23,9 @@
 # instance fields
 .field private final a:Landroidx/appcompat/view/menu/MenuBuilder;
 
-.field private final b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+.field private final b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-.field private final c:Lcom/vtosters/lite/ui/bottomnavigation/g;
+.field private final c:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;
 
 .field private d:Landroid/view/MenuInflater;
 
@@ -90,25 +90,25 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 4
-    new-instance v0, Lcom/vtosters/lite/ui/bottomnavigation/g;
+    new-instance v0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/ui/bottomnavigation/g;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;-><init>()V
 
-    iput-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/g;
+    iput-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;
 
     .line 5
-    new-instance v0, Lcom/vtosters/lite/ui/bottomnavigation/e;
+    new-instance v0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenu;
 
-    invoke-direct {v0, p1}, Lcom/vtosters/lite/ui/bottomnavigation/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenu;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->a:Landroidx/appcompat/view/menu/MenuBuilder;
 
     .line 6
-    new-instance v0, Lcom/vtosters/lite/ui/bottomnavigation/f;
+    new-instance v0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-direct {v0, p1}, Lcom/vtosters/lite/ui/bottomnavigation/f;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iput-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
     .line 7
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
@@ -123,33 +123,33 @@
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     .line 9
-    iget-object v1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 10
-    iget-object v1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/g;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;
 
-    iget-object v2, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v1, v2}, Lcom/vtosters/lite/ui/bottomnavigation/g;->a(Lcom/vtosters/lite/ui/bottomnavigation/f;)V
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;->a(Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;)V
 
     .line 11
-    iget-object v1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    iget-object v2, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/g;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;
 
-    invoke-virtual {v1, v2}, Lcom/vtosters/lite/ui/bottomnavigation/f;->setPresenter(Lcom/vtosters/lite/ui/bottomnavigation/g;)V
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->setPresenter(Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;)V
 
     .line 12
     iget-object v1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->a:Landroidx/appcompat/view/menu/MenuBuilder;
 
-    iget-object v2, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/g;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;
 
     invoke-virtual {v1, v2}, Landroidx/appcompat/view/menu/MenuBuilder;->addMenuPresenter(Landroidx/appcompat/view/menu/MenuPresenter;)V
 
     .line 13
-    iget-object v1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/g;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
@@ -157,10 +157,10 @@
 
     iget-object v3, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->a:Landroidx/appcompat/view/menu/MenuBuilder;
 
-    invoke-virtual {v1, v2, v3}, Lcom/vtosters/lite/ui/bottomnavigation/g;->initForMenu(Landroid/content/Context;Landroidx/appcompat/view/menu/MenuBuilder;)V
+    invoke-virtual {v1, v2, v3}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;->initForMenu(Landroid/content/Context;Landroidx/appcompat/view/menu/MenuBuilder;)V
 
     .line 14
-    sget-object v1, Lcom/vtosters/lite/a0;->BottomNavigationView:[I
+    sget-object v1, Lcom/vtosters/lite/R;->BottomNavigationView:[I
 
     const v2, 0x7f13041d
 
@@ -178,7 +178,7 @@
     if-eqz p3, :cond_0
 
     .line 16
-    iget-object p3, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object p3, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
     .line 17
     invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
@@ -186,7 +186,7 @@
     move-result-object p2
 
     .line 18
-    invoke-virtual {p3, p2}, Lcom/vtosters/lite/ui/bottomnavigation/f;->setIconTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p3, p2}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->setIconTintList(Landroid/content/res/ColorStateList;)V
 
     :cond_0
     const/16 p2, 0x8
@@ -199,7 +199,7 @@
     if-eqz p3, :cond_1
 
     .line 20
-    iget-object p3, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object p3, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
     .line 21
     invoke-virtual {p1, p2}, Landroidx/appcompat/widget/TintTypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
@@ -207,13 +207,13 @@
     move-result-object p2
 
     .line 22
-    invoke-virtual {p3, p2}, Lcom/vtosters/lite/ui/bottomnavigation/f;->setItemTextColor(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p3, p2}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->setItemTextColor(Landroid/content/res/ColorStateList;)V
 
     goto :goto_0
 
     .line 23
     :cond_1
-    iget-object p2, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object p2, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
     const p3, 0x1010038
 
@@ -223,7 +223,7 @@
     move-result-object p3
 
     .line 25
-    invoke-virtual {p2, p3}, Lcom/vtosters/lite/ui/bottomnavigation/f;->setItemTextColor(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p2, p3}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->setItemTextColor(Landroid/content/res/ColorStateList;)V
 
     :goto_0
     const/4 p2, 0x2
@@ -236,9 +236,9 @@
     move-result p2
 
     .line 27
-    iget-object v1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v1, p2}, Lcom/vtosters/lite/ui/bottomnavigation/f;->setItemBackgroundRes(I)V
+    invoke-virtual {v1, p2}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->setItemBackgroundRes(I)V
 
     const/16 p2, 0xa
 
@@ -250,13 +250,13 @@
     if-eqz v1, :cond_3
 
     .line 29
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->g()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->g()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
@@ -281,7 +281,7 @@
     invoke-virtual {p1}, Landroidx/appcompat/widget/TintTypedArray;->recycle()V
 
     .line 33
-    iget-object p1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
     invoke-virtual {p0, p1, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -458,9 +458,9 @@
     .end param
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/bottomnavigation/f;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->a(I)V
 
     return-void
 .end method
@@ -477,9 +477,9 @@
     .end param
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/ui/bottomnavigation/f;->a(II)V
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->a(II)V
 
     return-void
 .end method
@@ -496,9 +496,9 @@
     .end param
 
     .line 4
-    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/ui/bottomnavigation/f;->a(ILjava/lang/CharSequence;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->a(ILjava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -536,9 +536,9 @@
     if-ne v1, p1, :cond_0
 
     .line 7
-    iget-object v1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v1, v0, p2}, Lcom/vtosters/lite/ui/bottomnavigation/f;->a(IZ)V
+    invoke-virtual {v1, v0, p2}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->a(IZ)V
 
     :cond_0
     add-int/lit8 v0, v0, 0x1
@@ -553,11 +553,11 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/g;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/bottomnavigation/g;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;->a(Z)V
 
     .line 2
     invoke-direct {p0}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->getMenuInflater()Landroid/view/MenuInflater;
@@ -569,16 +569,16 @@
     invoke-virtual {v0, p1, v2}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
     .line 3
-    iget-object p1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/g;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/bottomnavigation/g;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;->a(Z)V
 
     .line 4
-    iget-object p1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/g;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;
 
-    invoke-virtual {p1, v1}, Lcom/vtosters/lite/ui/bottomnavigation/g;->updateMenuView(Z)V
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationPresenter;->updateMenuView(Z)V
 
     return-void
 .end method
@@ -591,9 +591,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/bottomnavigation/f;->b(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->b(I)V
 
     return-void
 .end method
@@ -602,9 +602,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/bottomnavigation/f;->getActiveButton()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->getActiveButton()I
 
     move-result v0
 
@@ -644,9 +644,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/bottomnavigation/f;->getItemBackgroundRes()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->getItemBackgroundRes()I
 
     move-result v0
 
@@ -659,9 +659,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/bottomnavigation/f;->getIconTintList()Landroid/content/res/ColorStateList;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->getIconTintList()Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -674,9 +674,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/bottomnavigation/f;->getItemTextColor()Landroid/content/res/ColorStateList;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->getItemTextColor()Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -710,9 +710,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/bottomnavigation/f;->setItemBackgroundRes(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->setItemBackgroundRes(I)V
 
     return-void
 .end method
@@ -725,9 +725,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/bottomnavigation/f;->setIconTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->setIconTintList(Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
@@ -740,9 +740,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/bottomnavigation/f;->setItemTextColor(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->setItemTextColor(Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
@@ -813,9 +813,9 @@
     invoke-direct {v2, v1, v0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
 
     .line 4
-    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->b:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;
 
-    invoke-virtual {v0, v2}, Lcom/vtosters/lite/ui/bottomnavigation/f;->setIconTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->setIconTintList(Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method

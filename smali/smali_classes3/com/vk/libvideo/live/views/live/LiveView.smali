@@ -3,8 +3,8 @@
 .source "LiveView.java"
 
 # interfaces
-.implements Lcom/vk/libvideo/live/views/live/b;
-.implements Lcom/vk/navigation/d;
+.implements Lcom/vk/libvideo/live/views/live/LiveContract1;
+.implements Lcom/vk/navigation/BackListener;
 
 
 # instance fields
@@ -16,27 +16,27 @@
 
 .field E:F
 
-.field private F:Lcom/vk/libvideo/a0/i/g/f;
+.field private F:Lcom/vk/libvideo/a0/i/g/NowView;
 
-.field private G:Lcom/vk/libvideo/a0/i/h/d;
+.field private G:Lcom/vk/libvideo/a0/i/h/UpcomingView;
 
-.field private H:Lcom/vk/libvideo/live/views/write/d;
+.field private H:Lcom/vk/libvideo/live/views/write/WriteView;
 
-.field private I:Lcom/vk/libvideo/a0/i/f/e;
+.field private I:Lcom/vk/libvideo/a0/i/f/LiveVideoFlyView;
 
-.field private J:Lcom/vk/libvideo/live/views/chat/f;
+.field private J:Lcom/vk/libvideo/live/views/chat/ChatView;
 
-.field private K:Lcom/vk/libvideo/live/views/gifts/e;
+.field private K:Lcom/vk/libvideo/live/views/gifts/GiftsView;
 
-.field private L:Lcom/vk/libvideo/live/views/spectators/e;
+.field private L:Lcom/vk/libvideo/live/views/spectators/SpectatorsView;
 
-.field private M:Lcom/vk/libvideo/a0/i/c/e;
+.field private M:Lcom/vk/libvideo/a0/i/c/DonationView;
 
 .field private N:Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;
 
-.field private O:Lcom/vk/libvideo/a0/i/d/d;
+.field private O:Lcom/vk/libvideo/a0/i/d/EndView;
 
-.field private P:Lcom/vk/libvideo/a0/i/d/e;
+.field private P:Lcom/vk/libvideo/a0/i/d/EndViewStory;
 
 .field private Q:Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;
 
@@ -46,15 +46,15 @@
 
 .field private T:Z
 
-.field private U:Lcom/vk/libvideo/live/views/live/a;
+.field private U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
 .field private V:Z
 
-.field private W:Lio/reactivex/disposables/b;
+.field private W:Lio/reactivex/disposables/Disposable;
 
 .field private final a:Lcom/vk/libvideo/live/views/error/ErrorView;
 
-.field private a0:Lio/reactivex/disposables/b;
+.field private a0:Lio/reactivex/disposables/Disposable;
 
 .field private final b:Landroid/widget/ImageView;
 
@@ -66,7 +66,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lcom/vk/libvideo/live/base/b;",
+            "Lcom/vk/libvideo/live/base/BaseView;",
             ">;"
         }
     .end annotation
@@ -190,14 +190,14 @@
     check-cast p1, Landroid/view/LayoutInflater;
 
     .line 13
-    sget p3, Lcom/vk/libvideo/h;->live_view:I
+    sget p3, Lcom/vk/libvideo/R9;->live_view:I
 
     invoke-virtual {p1, p3, p0, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
     .line 14
-    sget p2, Lcom/vk/libvideo/g;->liveViewBack:I
+    sget p2, Lcom/vk/libvideo/R;->liveViewBack:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -208,7 +208,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/live/views/live/LiveView;->f:Lcom/vk/media/player/video/view/PreviewImageView;
 
     .line 15
-    sget p2, Lcom/vk/libvideo/g;->liveViewMainHolder:I
+    sget p2, Lcom/vk/libvideo/R;->liveViewMainHolder:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -219,7 +219,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/live/views/live/LiveView;->d:Landroid/widget/FrameLayout;
 
     .line 16
-    sget p2, Lcom/vk/libvideo/g;->liveViewClose:I
+    sget p2, Lcom/vk/libvideo/R;->liveViewClose:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -230,7 +230,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/live/views/live/LiveView;->b:Landroid/widget/ImageView;
 
     .line 17
-    sget p2, Lcom/vk/libvideo/g;->liveViewTopHolder:I
+    sget p2, Lcom/vk/libvideo/R;->liveViewTopHolder:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -241,7 +241,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/live/views/live/LiveView;->c:Landroid/widget/LinearLayout;
 
     .line 18
-    sget p2, Lcom/vk/libvideo/g;->liveViewProgress:I
+    sget p2, Lcom/vk/libvideo/R;->liveViewProgress:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -252,7 +252,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/live/views/live/LiveView;->e:Lme/zhanghai/android/materialprogressbar/MaterialProgressBar;
 
     .line 19
-    sget p2, Lcom/vk/libvideo/g;->liveViewError:I
+    sget p2, Lcom/vk/libvideo/R;->liveViewError:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -263,7 +263,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a:Lcom/vk/libvideo/live/views/error/ErrorView;
 
     .line 20
-    sget p2, Lcom/vk/libvideo/g;->liveViewFadeUp:I
+    sget p2, Lcom/vk/libvideo/R;->liveViewFadeUp:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -272,7 +272,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/live/views/live/LiveView;->h:Landroid/view/View;
 
     .line 21
-    sget p2, Lcom/vk/libvideo/g;->liveViewFadeBottom:I
+    sget p2, Lcom/vk/libvideo/R;->liveViewFadeBottom:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -281,7 +281,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/live/views/live/LiveView;->B:Landroid/view/View;
 
     .line 22
-    sget p2, Lcom/vk/libvideo/g;->liveTexture:I
+    sget p2, Lcom/vk/libvideo/R;->liveTexture:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -292,7 +292,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/live/views/live/LiveView;->R:Lcom/vk/media/player/video/view/VideoTextureView;
 
     .line 23
-    sget p2, Lcom/vk/libvideo/g;->liveTextureHolder:I
+    sget p2, Lcom/vk/libvideo/R;->liveTextureHolder:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -303,7 +303,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/live/views/live/LiveView;->S:Landroid/widget/FrameLayout;
 
     .line 24
-    sget p2, Lcom/vk/libvideo/g;->liveRestriction:I
+    sget p2, Lcom/vk/libvideo/R;->liveRestriction:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -358,20 +358,20 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/libvideo/live/views/live/LiveView;)Lcom/vk/libvideo/live/views/live/a;
+.method static synthetic a(Lcom/vk/libvideo/live/views/live/LiveView;)Lcom/vk/libvideo/live/views/live/LiveContract;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/a;
+    iget-object p0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
     return-object p0
 .end method
 
-.method static synthetic a(Lcom/vk/libvideo/live/views/live/LiveView;Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+.method static synthetic a(Lcom/vk/libvideo/live/views/live/LiveView;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->W:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->W:Lio/reactivex/disposables/Disposable;
 
     return-object p1
 .end method
@@ -443,7 +443,7 @@
 
     move-result p1
 
-    invoke-static {v0, p1, p0}, Lcom/vk/libvideo/live/base/h;->a(FFLandroid/view/View;)Z
+    invoke-static {v0, p1, p0}, Lcom/vk/libvideo/live/base/TouchHelper;->a(FFLandroid/view/View;)Z
 
     move-result p1
 
@@ -532,7 +532,7 @@
     invoke-direct {v0}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
 
     .line 49
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/d;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/WriteView;
 
     const/high16 v2, 0x42a00000    # 80.0f
 
@@ -574,7 +574,7 @@
     if-eqz p4, :cond_2
 
     .line 51
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/d;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/WriteView;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -754,7 +754,7 @@
 
     .line 59
     :cond_9
-    iget-object p4, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/e;
+    iget-object p4, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/LiveVideoFlyView;
 
     if-eqz p4, :cond_b
 
@@ -789,7 +789,7 @@
 
     .line 61
     :cond_b
-    iget-object p4, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/e;
+    iget-object p4, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/DonationView;
 
     if-eqz p4, :cond_d
 
@@ -824,7 +824,7 @@
 
     .line 63
     :cond_d
-    iget-object p4, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/f;
+    iget-object p4, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/ChatView;
 
     if-eqz p4, :cond_f
 
@@ -964,7 +964,7 @@
 
     .line 71
     :cond_15
-    iget-object p4, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/d;
+    iget-object p4, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/EndView;
 
     if-eqz p4, :cond_17
 
@@ -999,7 +999,7 @@
 
     .line 73
     :cond_17
-    iget-object p4, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/d;
+    iget-object p4, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/UpcomingView;
 
     if-eqz p4, :cond_19
 
@@ -1034,7 +1034,7 @@
 
     .line 75
     :cond_19
-    iget-object p4, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/e;
+    iget-object p4, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/GiftsView;
 
     if-eqz p4, :cond_1b
 
@@ -1078,11 +1078,11 @@
     return-object p0
 .end method
 
-.method static synthetic b(Lcom/vk/libvideo/live/views/live/LiveView;Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+.method static synthetic b(Lcom/vk/libvideo/live/views/live/LiveView;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a0:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a0:Lio/reactivex/disposables/Disposable;
 
     return-object p1
 .end method
@@ -1116,19 +1116,19 @@
 
 
 # virtual methods
-.method public a(Z)Lcom/vk/libvideo/live/views/chat/c;
+.method public a(Z)Lcom/vk/libvideo/live/views/chat/ChatContract1;
     .locals 3
 
     .line 29
-    new-instance v0, Lcom/vk/libvideo/live/views/chat/f;
+    new-instance v0, Lcom/vk/libvideo/live/views/chat/ChatView;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/views/chat/f;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/views/chat/ChatView;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/f;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/ChatView;
 
     .line 30
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
@@ -1152,14 +1152,14 @@
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
     .line 33
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/f;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/ChatView;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 34
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->d:Landroid/widget/FrameLayout;
 
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/f;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/ChatView;
 
     const/4 v2, 0x0
 
@@ -1168,14 +1168,14 @@
     if-eqz p1, :cond_0
 
     .line 35
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/f;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/ChatView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->setAlpha(F)V
 
     .line 36
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/f;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/ChatView;
 
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -1199,12 +1199,12 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->c0:Ljava/util/Set;
 
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/f;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/ChatView;
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 38
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/f;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->J:Lcom/vk/libvideo/live/views/chat/ChatView;
 
     return-object p1
 .end method
@@ -1213,12 +1213,12 @@
     .locals 2
 
     .line 4
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->a()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->a()V
 
     .line 6
     :cond_0
@@ -1239,26 +1239,26 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/live/base/b;
+    check-cast v1, Lcom/vk/libvideo/live/base/BaseView;
 
     .line 7
-    invoke-interface {v1}, Lcom/vk/libvideo/live/base/b;->a()V
+    invoke-interface {v1}, Lcom/vk/libvideo/live/base/BaseView;->a()V
 
     goto :goto_0
 
     .line 8
     :cond_1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a0:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a0:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_2
 
     .line 9
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     const/4 v0, 0x0
 
     .line 10
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a0:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a0:Lio/reactivex/disposables/Disposable;
 
     .line 11
     :cond_2
@@ -1328,7 +1328,7 @@
     if-eqz v0, :cond_2
 
     .line 21
-    invoke-static {v0}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1340,17 +1340,17 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lc/a/m;
+    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 23
     :goto_2
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1359,16 +1359,16 @@
     invoke-direct {v0, p0, p2, p3}, Lcom/vk/libvideo/live/views/live/LiveView$g;-><init>(Lcom/vk/libvideo/live/views/live/LiveView;ZZ)V
 
     .line 24
-    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 25
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1377,7 +1377,7 @@
     invoke-direct {v0, p0}, Lcom/vk/libvideo/live/views/live/LiveView$f;-><init>(Lcom/vk/libvideo/live/views/live/LiveView;)V
 
     .line 26
-    invoke-virtual {p1, v0}, Lc/a/m;->b(Lc/a/z/a;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1390,11 +1390,11 @@
     invoke-direct {p2, p0}, Lcom/vk/libvideo/live/views/live/LiveView$e;-><init>(Lcom/vk/libvideo/live/views/live/LiveView;)V
 
     .line 27
-    invoke-virtual {p1, v0, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a0:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a0:Lio/reactivex/disposables/Disposable;
 
     :cond_3
     return-void
@@ -1419,7 +1419,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/libvideo/ui/VideoRestrictionView;->a(Lcom/vk/dto/common/Restriction;Lcom/vk/dto/common/Image;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/libvideo/ui/VideoRestrictionView;->a(Lcom/vk/dto/common/Restriction;Lcom/vk/dto/common/Image;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -1428,7 +1428,7 @@
     .locals 2
 
     .line 43
-    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
@@ -1438,34 +1438,34 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 44
-    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 45
-    invoke-virtual {v0, p2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v0, p2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/j;
+    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy4;
 
-    invoke-direct {p1}, Lcom/vk/core/dialogs/bottomsheet/j;-><init>()V
+    invoke-direct {p1}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy4;-><init>()V
 
     .line 46
-    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 47
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d()Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method
 
-.method public a(Ljava/lang/String;Ljava/lang/String;Lcom/vk/libvideo/live/views/error/a;)V
+.method public a(Ljava/lang/String;Ljava/lang/String;Lcom/vk/libvideo/live/views/error/ErrorContract;)V
     .locals 1
 
     .line 12
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a:Lcom/vk/libvideo/live/views/error/ErrorView;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/libvideo/live/views/error/ErrorView;->a(Ljava/lang/String;Ljava/lang/String;Lcom/vk/libvideo/live/views/error/a;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/libvideo/live/views/error/ErrorView;->a(Ljava/lang/String;Ljava/lang/String;Lcom/vk/libvideo/live/views/error/ErrorContract;)V
 
     .line 13
     iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a:Lcom/vk/libvideo/live/views/error/ErrorView;
@@ -1477,31 +1477,31 @@
     return-void
 .end method
 
-.method public b(Z)Lcom/vk/libvideo/live/views/write/b;
+.method public b(Z)Lcom/vk/libvideo/live/views/write/WriteContract1;
     .locals 3
 
     .line 7
-    new-instance v0, Lcom/vk/libvideo/live/views/write/d;
+    new-instance v0, Lcom/vk/libvideo/live/views/write/WriteView;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/views/write/d;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/views/write/WriteView;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/d;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/WriteView;
 
     .line 8
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/d;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/WriteView;
 
     iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->d0:Landroid/view/Window;
 
-    invoke-virtual {v0, v1}, Lcom/vk/libvideo/live/views/write/d;->setWindow(Landroid/view/Window;)V
+    invoke-virtual {v0, v1}, Lcom/vk/libvideo/live/views/write/WriteView;->setWindow(Landroid/view/Window;)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/d;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/WriteView;
 
-    invoke-virtual {v0, p0}, Lcom/vk/libvideo/live/views/write/d;->setWrapperForKeyboardPopup(Landroid/view/ViewGroup;)V
+    invoke-virtual {v0, p0}, Lcom/vk/libvideo/live/views/write/WriteView;->setWrapperForKeyboardPopup(Landroid/view/ViewGroup;)V
 
     .line 10
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
@@ -1522,14 +1522,14 @@
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     .line 12
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/d;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/WriteView;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 13
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->d:Landroid/widget/FrameLayout;
 
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/d;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/WriteView;
 
     const/4 v2, 0x0
 
@@ -1538,14 +1538,14 @@
     if-eqz p1, :cond_0
 
     .line 14
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/d;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/WriteView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->setAlpha(F)V
 
     .line 15
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/d;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/WriteView;
 
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -1569,12 +1569,12 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->c0:Ljava/util/Set;
 
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/d;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/WriteView;
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 17
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/d;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/WriteView;
 
     return-object p1
 .end method
@@ -1583,17 +1583,17 @@
     .locals 2
 
     .line 3
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->W:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->W:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     const/4 v0, 0x0
 
     .line 5
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->W:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->W:Lio/reactivex/disposables/Disposable;
 
     .line 6
     :cond_0
@@ -1606,19 +1606,19 @@
     return-void
 .end method
 
-.method public c(Z)Lcom/vk/libvideo/a0/i/f/c;
+.method public c(Z)Lcom/vk/libvideo/a0/i/f/FlyContract1;
     .locals 3
 
     .line 20
-    new-instance v0, Lcom/vk/libvideo/a0/i/f/e;
+    new-instance v0, Lcom/vk/libvideo/a0/i/f/LiveVideoFlyView;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/a0/i/f/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/a0/i/f/LiveVideoFlyView;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/e;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/LiveVideoFlyView;
 
     .line 21
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
@@ -1661,14 +1661,14 @@
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
 
     .line 25
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/e;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/LiveVideoFlyView;
 
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 26
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->d:Landroid/widget/FrameLayout;
 
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/e;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/LiveVideoFlyView;
 
     const/4 v2, 0x0
 
@@ -1677,14 +1677,14 @@
     if-eqz p1, :cond_0
 
     .line 27
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/LiveVideoFlyView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     .line 28
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/LiveVideoFlyView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -1708,12 +1708,12 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->c0:Ljava/util/Set;
 
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/e;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/LiveVideoFlyView;
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 30
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->I:Lcom/vk/libvideo/a0/i/f/LiveVideoFlyView;
 
     return-object p1
 .end method
@@ -1747,10 +1747,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/live/base/b;
+    check-cast v1, Lcom/vk/libvideo/live/base/BaseView;
 
     .line 5
-    invoke-interface {v1}, Lcom/vk/libvideo/live/base/b;->a()V
+    invoke-interface {v1}, Lcom/vk/libvideo/live/base/BaseView;->a()V
 
     .line 6
     check-cast v1, Landroid/view/View;
@@ -1848,19 +1848,19 @@
     return-void
 .end method
 
-.method public d(Z)Lcom/vk/libvideo/live/views/spectators/c;
+.method public d(Z)Lcom/vk/libvideo/live/views/spectators/SpectatorsContract;
     .locals 4
 
     .line 2
-    new-instance v0, Lcom/vk/libvideo/live/views/spectators/e;
+    new-instance v0, Lcom/vk/libvideo/live/views/spectators/SpectatorsView;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/views/spectators/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/views/spectators/SpectatorsView;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->L:Lcom/vk/libvideo/live/views/spectators/e;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->L:Lcom/vk/libvideo/live/views/spectators/SpectatorsView;
 
     .line 3
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
@@ -1877,28 +1877,28 @@
     iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
     .line 5
-    iget-object v3, p0, Lcom/vk/libvideo/live/views/live/LiveView;->L:Lcom/vk/libvideo/live/views/spectators/e;
+    iget-object v3, p0, Lcom/vk/libvideo/live/views/live/LiveView;->L:Lcom/vk/libvideo/live/views/spectators/SpectatorsView;
 
     invoke-virtual {v3, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->c:Landroid/widget/LinearLayout;
 
-    iget-object v3, p0, Lcom/vk/libvideo/live/views/live/LiveView;->L:Lcom/vk/libvideo/live/views/spectators/e;
+    iget-object v3, p0, Lcom/vk/libvideo/live/views/live/LiveView;->L:Lcom/vk/libvideo/live/views/spectators/SpectatorsView;
 
     invoke-virtual {v0, v3, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;I)V
 
     if-eqz p1, :cond_0
 
     .line 7
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->L:Lcom/vk/libvideo/live/views/spectators/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->L:Lcom/vk/libvideo/live/views/spectators/SpectatorsView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     .line 8
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->L:Lcom/vk/libvideo/live/views/spectators/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->L:Lcom/vk/libvideo/live/views/spectators/SpectatorsView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -1920,12 +1920,12 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->c0:Ljava/util/Set;
 
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->L:Lcom/vk/libvideo/live/views/spectators/e;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->L:Lcom/vk/libvideo/live/views/spectators/SpectatorsView;
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 10
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->L:Lcom/vk/libvideo/live/views/spectators/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->L:Lcom/vk/libvideo/live/views/spectators/SpectatorsView;
 
     return-object p1
 .end method
@@ -1934,13 +1934,13 @@
     .locals 3
 
     .line 11
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/e;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/GiftsView;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/gifts/e;->p()Z
+    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/gifts/GiftsView;->p()Z
 
     move-result v0
 
@@ -1955,11 +1955,11 @@
 
     .line 12
     :goto_0
-    iget-object v2, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/d;
+    iget-object v2, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/WriteView;
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Lcom/vk/libvideo/live/views/write/d;->i()Z
+    invoke-virtual {v2}, Lcom/vk/libvideo/live/views/write/WriteView;->i()Z
 
     move-result v2
 
@@ -1971,17 +1971,17 @@
     return v0
 .end method
 
-.method public e(Z)Lcom/vk/libvideo/live/views/stat/c;
+.method public e(Z)Lcom/vk/libvideo/live/views/stat/StatContract;
     .locals 1
 
     .line 10
-    new-instance p1, Lcom/vk/libvideo/live/views/stat/e;
+    new-instance p1, Lcom/vk/libvideo/live/views/stat/StatView;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vk/libvideo/live/views/stat/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v0}, Lcom/vk/libvideo/live/views/stat/StatView;-><init>(Landroid/content/Context;)V
 
     return-object p1
 .end method
@@ -1990,12 +1990,12 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->e()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->e()V
 
     .line 4
     :cond_0
@@ -2016,26 +2016,26 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/live/base/b;
+    check-cast v1, Lcom/vk/libvideo/live/base/BaseView;
 
     .line 5
-    invoke-interface {v1}, Lcom/vk/libvideo/live/base/b;->e()V
+    invoke-interface {v1}, Lcom/vk/libvideo/live/base/BaseView;->e()V
 
     goto :goto_0
 
     .line 6
     :cond_1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a0:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a0:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_2
 
     .line 7
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     const/4 v0, 0x0
 
     .line 8
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a0:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->a0:Lio/reactivex/disposables/Disposable;
 
     :cond_2
     const/4 v0, 0x1
@@ -2046,19 +2046,19 @@
     return-void
 .end method
 
-.method public f(Z)Lcom/vk/libvideo/a0/i/g/c;
+.method public f(Z)Lcom/vk/libvideo/a0/i/g/NowContract;
     .locals 4
 
     .line 3
-    new-instance v0, Lcom/vk/libvideo/a0/i/g/f;
+    new-instance v0, Lcom/vk/libvideo/a0/i/g/NowView;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/a0/i/g/f;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/a0/i/g/NowView;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->F:Lcom/vk/libvideo/a0/i/g/f;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->F:Lcom/vk/libvideo/a0/i/g/NowView;
 
     .line 4
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
@@ -2095,28 +2095,28 @@
     invoke-virtual {v0, v1, v2, v3, v3}, Landroid/widget/FrameLayout$LayoutParams;->setMargins(IIII)V
 
     .line 6
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->F:Lcom/vk/libvideo/a0/i/g/f;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->F:Lcom/vk/libvideo/a0/i/g/NowView;
 
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->d:Landroid/widget/FrameLayout;
 
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->F:Lcom/vk/libvideo/a0/i/g/f;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->F:Lcom/vk/libvideo/a0/i/g/NowView;
 
     invoke-virtual {v0, v1, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;I)V
 
     if-eqz p1, :cond_0
 
     .line 8
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->F:Lcom/vk/libvideo/a0/i/g/f;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->F:Lcom/vk/libvideo/a0/i/g/NowView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     .line 9
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->F:Lcom/vk/libvideo/a0/i/g/f;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->F:Lcom/vk/libvideo/a0/i/g/NowView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -2140,12 +2140,12 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->c0:Ljava/util/Set;
 
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->F:Lcom/vk/libvideo/a0/i/g/f;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->F:Lcom/vk/libvideo/a0/i/g/NowView;
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 11
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->F:Lcom/vk/libvideo/a0/i/g/f;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->F:Lcom/vk/libvideo/a0/i/g/NowView;
 
     return-object p1
 .end method
@@ -2165,19 +2165,19 @@
     return-void
 .end method
 
-.method public g(Z)Lcom/vk/libvideo/live/views/gifts/b;
+.method public g(Z)Lcom/vk/libvideo/live/views/gifts/GiftsContract1;
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/libvideo/live/views/gifts/e;
+    new-instance v0, Lcom/vk/libvideo/live/views/gifts/GiftsView;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/views/gifts/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/views/gifts/GiftsView;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/e;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/GiftsView;
 
     .line 2
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
@@ -2192,28 +2192,28 @@
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     .line 4
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/e;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/GiftsView;
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->d:Landroid/widget/FrameLayout;
 
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/e;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/GiftsView;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     if-eqz p1, :cond_0
 
     .line 6
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/GiftsView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setAlpha(F)V
 
     .line 7
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/GiftsView;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -2237,12 +2237,12 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->c0:Ljava/util/Set;
 
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/e;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/GiftsView;
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 9
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/GiftsView;
 
     return-object p1
 .end method
@@ -2251,9 +2251,9 @@
     .locals 1
 
     .line 10
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/a;->u()Lcom/vk/libvideo/live/base/LiveStatNew;
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract;->u()Lcom/vk/libvideo/live/base/LiveStatNew;
 
     move-result-object v0
 
@@ -2265,9 +2265,9 @@
     if-eqz v0, :cond_0
 
     .line 12
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/a;->u()Lcom/vk/libvideo/live/base/LiveStatNew;
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract;->u()Lcom/vk/libvideo/live/base/LiveStatNew;
 
     move-result-object v0
 
@@ -2277,9 +2277,9 @@
 
     .line 13
     :cond_0
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/a;->u()Lcom/vk/libvideo/live/base/LiveStatNew;
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract;->u()Lcom/vk/libvideo/live/base/LiveStatNew;
 
     move-result-object v0
 
@@ -2313,11 +2313,11 @@
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vk/libvideo/live/views/live/a;
+.method public getPresenter()Lcom/vk/libvideo/live/views/live/LiveContract;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
     return-object v0
 .end method
@@ -2326,7 +2326,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/live/LiveView;->getPresenter()Lcom/vk/libvideo/live/views/live/a;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/live/LiveView;->getPresenter()Lcom/vk/libvideo/live/views/live/LiveContract;
 
     move-result-object v0
 
@@ -2369,19 +2369,19 @@
     return-object v0
 .end method
 
-.method public h(Z)Lcom/vk/libvideo/a0/i/h/b;
+.method public h(Z)Lcom/vk/libvideo/a0/i/h/UpcomigContract1;
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/libvideo/a0/i/h/d;
+    new-instance v0, Lcom/vk/libvideo/a0/i/h/UpcomingView;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/a0/i/h/d;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/a0/i/h/UpcomingView;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/d;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/UpcomingView;
 
     .line 2
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
@@ -2391,14 +2391,14 @@
     invoke-direct {v0, v1, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     .line 3
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/d;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/UpcomingView;
 
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->d:Landroid/widget/FrameLayout;
 
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/d;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/UpcomingView;
 
     const/4 v2, 0x0
 
@@ -2407,14 +2407,14 @@
     if-eqz p1, :cond_0
 
     .line 5
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/d;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/UpcomingView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     .line 6
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/d;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/UpcomingView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -2438,12 +2438,12 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->c0:Ljava/util/Set;
 
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/d;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/UpcomingView;
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 8
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/d;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->G:Lcom/vk/libvideo/a0/i/h/UpcomingView;
 
     return-object p1
 .end method
@@ -2452,20 +2452,20 @@
     .locals 1
 
     .line 9
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/a;->u()Lcom/vk/libvideo/live/base/LiveStatNew;
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract;->u()Lcom/vk/libvideo/live/base/LiveStatNew;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 10
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/a;->u()Lcom/vk/libvideo/live/base/LiveStatNew;
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract;->u()Lcom/vk/libvideo/live/base/LiveStatNew;
 
     move-result-object v0
 
@@ -2480,7 +2480,7 @@
     return-void
 .end method
 
-.method public i(Z)Lcom/vk/libvideo/live/views/menubutton/b;
+.method public i(Z)Lcom/vk/libvideo/live/views/menubutton/MenuButtonContract1;
     .locals 5
 
     .line 1
@@ -2497,7 +2497,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->N:Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;
 
-    sget v1, Lcom/vk/libvideo/g;->live_view_menu_button:I
+    sget v1, Lcom/vk/libvideo/R;->live_view_menu_button:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setId(I)V
 
@@ -2528,7 +2528,7 @@
 
     move-result-object v3
 
-    sget v4, Lcom/vk/libvideo/e;->vkim_ripple_light_borderless:I
+    sget v4, Lcom/vk/libvideo/R7;->vkim_ripple_light_borderless:I
 
     invoke-static {v3, v4}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -2592,7 +2592,7 @@
     return-object p1
 .end method
 
-.method public j(Z)Lcom/vk/libvideo/a0/i/d/b;
+.method public j(Z)Lcom/vk/libvideo/a0/i/d/EndContract1;
     .locals 0
 
     const/4 p1, 0x0
@@ -2600,13 +2600,13 @@
     return-object p1
 .end method
 
-.method public l(Z)Lcom/vk/libvideo/a0/i/d/b;
+.method public l(Z)Lcom/vk/libvideo/a0/i/d/EndContract1;
     .locals 9
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/a;->E()Z
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract;->E()Z
 
     move-result v0
 
@@ -2625,20 +2625,20 @@
     if-eqz v0, :cond_1
 
     .line 2
-    new-instance v0, Lcom/vk/libvideo/a0/i/d/e;
+    new-instance v0, Lcom/vk/libvideo/a0/i/d/EndViewStory;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v8
 
-    invoke-direct {v0, v8}, Lcom/vk/libvideo/a0/i/d/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v8}, Lcom/vk/libvideo/a0/i/d/EndViewStory;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/e;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/EndViewStory;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/e;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/EndViewStory;
 
-    invoke-virtual {v0, v6}, Lcom/vk/libvideo/a0/i/d/e;->setAllowAddButton(Z)V
+    invoke-virtual {v0, v6}, Lcom/vk/libvideo/a0/i/d/EndViewStory;->setAllowAddButton(Z)V
 
     .line 4
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
@@ -2649,26 +2649,26 @@
     iput v5, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     .line 6
-    iget-object v5, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/e;
+    iget-object v5, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/EndViewStory;
 
     invoke-virtual {v5, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->d:Landroid/widget/FrameLayout;
 
-    iget-object v5, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/e;
+    iget-object v5, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/EndViewStory;
 
     invoke-virtual {v0, v5, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;I)V
 
     if-eqz p1, :cond_0
 
     .line 8
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/EndViewStory;
 
     invoke-virtual {p1, v4}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     .line 9
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/EndViewStory;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -2688,26 +2688,26 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->c0:Ljava/util/Set;
 
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/e;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/EndViewStory;
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 11
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->P:Lcom/vk/libvideo/a0/i/d/EndViewStory;
 
     return-object p1
 
     .line 12
     :cond_1
-    new-instance v0, Lcom/vk/libvideo/a0/i/d/d;
+    new-instance v0, Lcom/vk/libvideo/a0/i/d/EndView;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v8
 
-    invoke-direct {v0, v8}, Lcom/vk/libvideo/a0/i/d/d;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v8}, Lcom/vk/libvideo/a0/i/d/EndView;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/d;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/EndView;
 
     .line 13
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
@@ -2718,26 +2718,26 @@
     iput v5, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     .line 15
-    iget-object v5, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/d;
+    iget-object v5, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/EndView;
 
     invoke-virtual {v5, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 16
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->d:Landroid/widget/FrameLayout;
 
-    iget-object v5, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/d;
+    iget-object v5, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/EndView;
 
     invoke-virtual {v0, v5, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;I)V
 
     if-eqz p1, :cond_2
 
     .line 17
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/d;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/EndView;
 
     invoke-virtual {p1, v4}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     .line 18
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/d;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/EndView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -2757,12 +2757,12 @@
     :cond_2
     iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->c0:Ljava/util/Set;
 
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/d;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/EndView;
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 20
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/d;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->O:Lcom/vk/libvideo/a0/i/d/EndView;
 
     return-object p1
 .end method
@@ -2771,23 +2771,23 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->W:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->W:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->W:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->W:Lio/reactivex/disposables/Disposable;
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/a;->a0()Z
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract;->a0()Z
 
     move-result v0
 
@@ -2798,25 +2798,25 @@
     .line 5
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {v0, v1, v2}, Lc/a/m;->j(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-static {v0, v1, v2}, Lio/reactivex/Observable;->j(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 6
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 7
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -2825,11 +2825,11 @@
     invoke-direct {v1, p0}, Lcom/vk/libvideo/live/views/live/LiveView$c;-><init>(Lcom/vk/libvideo/live/views/live/LiveView;)V
 
     .line 8
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->W:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->W:Lio/reactivex/disposables/Disposable;
 
     goto :goto_0
 
@@ -2845,19 +2845,19 @@
     return-void
 .end method
 
-.method public m(Z)Lcom/vk/libvideo/a0/i/c/c;
+.method public m(Z)Lcom/vk/libvideo/a0/i/c/DonationContract1;
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/libvideo/a0/i/c/e;
+    new-instance v0, Lcom/vk/libvideo/a0/i/c/DonationView;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/a0/i/c/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/a0/i/c/DonationView;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/e;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/DonationView;
 
     .line 2
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
@@ -2881,14 +2881,14 @@
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     .line 5
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/e;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/DonationView;
 
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->d:Landroid/widget/FrameLayout;
 
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/e;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/DonationView;
 
     const/4 v2, 0x0
 
@@ -2897,14 +2897,14 @@
     if-eqz p1, :cond_0
 
     .line 7
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/DonationView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     .line 8
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/DonationView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -2928,12 +2928,12 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->c0:Ljava/util/Set;
 
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/e;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/DonationView;
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 10
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/e;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->M:Lcom/vk/libvideo/a0/i/c/DonationView;
 
     return-object p1
 .end method
@@ -2947,7 +2947,7 @@
     return-object v0
 .end method
 
-.method public n(Z)Lcom/vk/libvideo/live/views/addbutton/b;
+.method public n(Z)Lcom/vk/libvideo/live/views/addbutton/AddButtonContract1;
     .locals 4
 
     .line 1
@@ -2964,7 +2964,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->Q:Lcom/vk/libvideo/live/views/addbutton/AddImgButtonView;
 
-    sget v1, Lcom/vk/libvideo/g;->live_view_add_button:I
+    sget v1, Lcom/vk/libvideo/R;->live_view_add_button:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setId(I)V
 
@@ -3070,12 +3070,12 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/d;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/WriteView;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/write/d;->o()Z
+    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/write/WriteView;->o()Z
 
     move-result v0
 
@@ -3088,12 +3088,12 @@
     if-nez v0, :cond_1
 
     .line 3
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/e;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->K:Lcom/vk/libvideo/live/views/gifts/GiftsView;
 
     if-eqz v1, :cond_1
 
     .line 4
-    invoke-virtual {v1}, Lcom/vk/libvideo/live/views/gifts/e;->o()Z
+    invoke-virtual {v1}, Lcom/vk/libvideo/live/views/gifts/GiftsView;->o()Z
 
     move-result v0
 
@@ -3242,23 +3242,23 @@
 
     .line 2
     :cond_0
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/a;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/libvideo/live/views/live/a;->d()Z
+    invoke-interface {p1}, Lcom/vk/libvideo/live/views/live/LiveContract;->d()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
     .line 3
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/d;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->H:Lcom/vk/libvideo/live/views/write/WriteView;
 
     if-eqz p1, :cond_1
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/write/d;->N1()V
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/write/WriteView;->N1()V
 
     .line 5
     :cond_1
@@ -3450,11 +3450,11 @@
     return-void
 .end method
 
-.method public setPresenter(Lcom/vk/libvideo/live/views/live/a;)V
+.method public setPresenter(Lcom/vk/libvideo/live/views/live/LiveContract;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/a;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
     return-void
 .end method
@@ -3463,9 +3463,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/live/views/live/a;
+    check-cast p1, Lcom/vk/libvideo/live/views/live/LiveContract;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/live/LiveView;->setPresenter(Lcom/vk/libvideo/live/views/live/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/live/LiveView;->setPresenter(Lcom/vk/libvideo/live/views/live/LiveContract;)V
 
     return-void
 .end method
@@ -3556,12 +3556,12 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView;->U:Lcom/vk/libvideo/live/views/live/LiveContract;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->t()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->t()V
 
     .line 3
     :cond_0
@@ -3582,10 +3582,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/live/base/b;
+    check-cast v1, Lcom/vk/libvideo/live/base/BaseView;
 
     .line 4
-    invoke-interface {v1}, Lcom/vk/libvideo/live/base/b;->t()V
+    invoke-interface {v1}, Lcom/vk/libvideo/live/base/BaseView;->t()V
 
     goto :goto_0
 

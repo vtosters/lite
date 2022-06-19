@@ -3,12 +3,12 @@
 .source "MsgStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/b;)V
+    value = Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/models/messages/d;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/messages/d;)I
+.method public final a(Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;)I
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/d;->a()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;->a()I
 
     move-result p1
 
@@ -71,9 +71,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/messages/d;
+    check-cast p1, Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$historyOnServerEmptyMemCache$1;->a(Lcom/vk/im/engine/models/messages/d;)I
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$historyOnServerEmptyMemCache$1;->a(Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;)I
 
     move-result p1
 

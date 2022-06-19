@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/facebook/x/g/e;I)V
+.method public abstract a(Lcom/facebook/x/g/EncodedImage;I)V
 .end method

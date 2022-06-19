@@ -58,7 +58,7 @@
     const p1, 0x7f120af9
 
     .line 2
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     goto :goto_0
 
@@ -103,7 +103,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     goto :goto_0
 
@@ -124,11 +124,11 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vtosters/lite/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
+    invoke-static {v1}, Lcom/vtosters/lite/utils/Utils;->a(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/navigation/o;->a(Landroid/app/Activity;I)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/app/Activity;I)V
 
     :cond_2
     :goto_0

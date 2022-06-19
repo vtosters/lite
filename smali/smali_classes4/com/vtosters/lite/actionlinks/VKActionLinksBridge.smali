@@ -3,7 +3,7 @@
 .source "VKActionLinksBridge.kt"
 
 # interfaces
-.implements Lcom/vk/bridges/b;
+.implements Lcom/vk/bridges/ActionLinksBridge1;
 
 
 # static fields
@@ -39,12 +39,12 @@
     .locals 8
 
     .line 6
-    new-instance v0, Lcom/vtosters/lite/actionlinks/c/b/c/d;
+    new-instance v0, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkPresenter;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/actionlinks/c/b/c/d;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkPresenter;-><init>()V
 
     .line 7
-    new-instance v7, Lcom/vtosters/lite/actionlinks/c/b/c/f;
+    new-instance v7, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkStatView;
 
     const/4 v3, 0x0
 
@@ -58,34 +58,34 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vtosters/lite/actionlinks/c/b/c/f;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkStatView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 8
-    invoke-virtual {v0, v7}, Lcom/vtosters/lite/actionlinks/c/b/c/d;->a(Lcom/vtosters/lite/actionlinks/c/b/c/b;)V
+    invoke-virtual {v0, v7}, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkPresenter;->a(Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLink1;)V
 
     .line 9
-    invoke-virtual {v7, v0}, Lcom/vtosters/lite/actionlinks/c/b/c/f;->setPresenter(Lcom/vtosters/lite/actionlinks/c/b/c/a;)V
+    invoke-virtual {v7, v0}, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkStatView;->setPresenter(Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLink;)V
 
     return-object v7
 .end method
 
-.method public a(ILjava/lang/String;)Lc/a/m;
+.method public a(ILjava/lang/String;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/actionlinks/ActionLinks;",
             ">;"
         }
     .end annotation
 
     .line 22
-    sget-object v0, Lcom/vtosters/lite/actionlinks/b/b;->a:Lcom/vtosters/lite/actionlinks/b/b;
+    sget-object v0, Lcom/vtosters/lite/actionlinks/b/ActionLinksController;->INSTANCE:Lcom/vtosters/lite/actionlinks/b/ActionLinksController;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/actionlinks/b/b;->a(ILjava/lang/String;)Lc/a/m;
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/actionlinks/b/ActionLinksController;->a(ILjava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -96,14 +96,14 @@
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/live/a;
+    new-instance v0, Lcom/vtosters/lite/live/LiveUserHolder;
 
-    invoke-direct {v0, p1}, Lcom/vtosters/lite/live/a;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/live/LiveUserHolder;-><init>(Landroid/view/ViewGroup;)V
 
     return-object v0
 .end method
 
-.method public a(Landroid/content/Context;Landroid/view/ViewGroup;ZLcom/vk/dto/actionlinks/ActionLink;IILkotlin/jvm/b/a;Lkotlin/jvm/b/a;ZZZLjava/lang/Integer;)Lkotlin/jvm/b/b;
+.method public a(Landroid/content/Context;Landroid/view/ViewGroup;ZLcom/vk/dto/actionlinks/ActionLink;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ZZZLjava/lang/Integer;)Lkotlin/jvm/b/Functions2;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -113,28 +113,28 @@
             "Z",
             "Lcom/vk/dto/actionlinks/ActionLink;",
             "II",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;ZZZ",
             "Ljava/lang/Integer;",
             ")",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 12
-    new-instance v9, Lcom/vtosters/lite/actionlinks/c/b/c/d;
+    new-instance v9, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkPresenter;
 
-    invoke-direct {v9}, Lcom/vtosters/lite/actionlinks/c/b/c/d;-><init>()V
+    invoke-direct {v9}, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkPresenter;-><init>()V
 
     .line 13
-    new-instance v6, Lcom/vtosters/lite/actionlinks/c/b/c/c;
+    new-instance v6, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkChatView;
 
     const/4 v2, 0x0
 
@@ -148,23 +148,23 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/c/b/c/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkChatView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object/from16 v0, p12
 
     .line 14
-    invoke-virtual {v6, v0}, Lcom/vtosters/lite/actionlinks/c/b/c/c;->setMaxWidth(Ljava/lang/Integer;)V
+    invoke-virtual {v6, v0}, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkChatView;->setMaxWidth(Ljava/lang/Integer;)V
 
     move v0, p3
 
     .line 15
-    invoke-virtual {v6, p3}, Lcom/vtosters/lite/actionlinks/c/b/c/c;->setShowClicks(Z)V
+    invoke-virtual {v6, p3}, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkChatView;->setShowClicks(Z)V
 
     .line 16
-    invoke-virtual {v6, v9}, Lcom/vtosters/lite/actionlinks/c/b/c/c;->setPresenter(Lcom/vtosters/lite/actionlinks/c/b/c/a;)V
+    invoke-virtual {v6, v9}, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkChatView;->setPresenter(Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLink;)V
 
     .line 17
-    invoke-virtual {v9, v6}, Lcom/vtosters/lite/actionlinks/c/b/c/d;->a(Lcom/vtosters/lite/actionlinks/c/b/c/b;)V
+    invoke-virtual {v9, v6}, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkPresenter;->a(Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLink1;)V
 
     move-object v0, p2
 
@@ -190,12 +190,12 @@
     move/from16 v8, p11
 
     .line 19
-    invoke-virtual/range {v0 .. v8}, Lcom/vtosters/lite/actionlinks/c/b/c/d;->a(Lcom/vk/dto/actionlinks/ActionLink;IILkotlin/jvm/b/a;Lkotlin/jvm/b/a;ZZZ)V
+    invoke-virtual/range {v0 .. v8}, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkPresenter;->a(Lcom/vk/dto/actionlinks/ActionLink;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ZZZ)V
 
     .line 20
     new-instance v0, Lcom/vtosters/lite/actionlinks/VKActionLinksBridge$populateChatActionLink$1;
 
-    invoke-direct {v0, v9}, Lcom/vtosters/lite/actionlinks/VKActionLinksBridge$populateChatActionLink$1;-><init>(Lcom/vtosters/lite/actionlinks/c/b/c/d;)V
+    invoke-direct {v0, v9}, Lcom/vtosters/lite/actionlinks/VKActionLinksBridge$populateChatActionLink$1;-><init>(Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkPresenter;)V
 
     return-object v0
 .end method
@@ -204,7 +204,7 @@
     .locals 1
 
     .line 23
-    new-instance v0, Lcom/vk/api/video/r0;
+    new-instance v0, Lcom/vk/api/video/VideoTrackActionButtonClick;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -214,9 +214,9 @@
 
     move-result-object p1
 
-    invoke-direct {v0, p2, p1}, Lcom/vk/api/video/r0;-><init>(Ljava/lang/Integer;Ljava/lang/Integer;)V
+    invoke-direct {v0, p2, p1}, Lcom/vk/api/video/VideoTrackActionButtonClick;-><init>(Ljava/lang/Integer;Ljava/lang/Integer;)V
 
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->c()Lio/reactivex/disposables/b;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->c()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -232,7 +232,7 @@
     return-void
 .end method
 
-.method public a(Landroid/content/Context;Lcom/vk/dto/actionlinks/ActionLink;ILjava/lang/String;ZZZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;Landroid/content/DialogInterface$OnDismissListener;)V
+.method public a(Landroid/content/Context;Lcom/vk/dto/actionlinks/ActionLink;ILjava/lang/String;ZZZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Landroid/content/DialogInterface$OnDismissListener;)V
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -242,15 +242,15 @@
             "I",
             "Ljava/lang/String;",
             "ZZZ",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/actionlinks/ActionLink;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
             "Landroid/content/DialogInterface$OnDismissListener;",
             ")V"
@@ -280,7 +280,7 @@
 
     move-object/from16 v10, p10
 
-    invoke-virtual/range {v0 .. v10}, Lcom/vtosters/lite/actionlinks/AL$Companion;->a(Landroid/content/Context;Lcom/vk/dto/actionlinks/ActionLink;ILjava/lang/String;ZZZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;Landroid/content/DialogInterface$OnDismissListener;)Lcom/vtosters/lite/actionlinks/views/fragments/show/a;
+    invoke-virtual/range {v0 .. v10}, Lcom/vtosters/lite/actionlinks/AL$Companion;->a(Landroid/content/Context;Lcom/vk/dto/actionlinks/ActionLink;ILjava/lang/String;ZZZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Landroid/content/DialogInterface$OnDismissListener;)Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection;
 
     return-void
 .end method
@@ -289,7 +289,7 @@
     .locals 6
 
     .line 10
-    sget-object v0, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v0, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     const/4 v3, 0x0
 
@@ -301,7 +301,7 @@
 
     move-object v2, p2
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -310,10 +310,10 @@
     .locals 11
 
     .line 4
-    check-cast p1, Lcom/vtosters/lite/actionlinks/c/b/c/f;
+    check-cast p1, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkStatView;
 
     .line 5
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/c/b/c/f;->getPresenter()Lcom/vtosters/lite/actionlinks/c/b/c/a;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLinkStatView;->getPresenter()Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLink;
 
     move-result-object v0
 
@@ -339,13 +339,13 @@
 
     move v3, p4
 
-    invoke-static/range {v0 .. v10}, Lcom/vtosters/lite/actionlinks/c/b/c/a$a;->a(Lcom/vtosters/lite/actionlinks/c/b/c/a;Lcom/vk/dto/actionlinks/ActionLink;IILkotlin/jvm/b/a;Lkotlin/jvm/b/a;ZZZILjava/lang/Object;)V
+    invoke-static/range {v0 .. v10}, Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLink$a;->a(Lcom/vtosters/lite/actionlinks/c/b/c/ItemActionLink;Lcom/vk/dto/actionlinks/ActionLink;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ZZZILjava/lang/Object;)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Ljava/lang/Object;Lcom/vk/dto/user/UserProfile;ZLkotlin/jvm/b/c;)V
+.method public a(Ljava/lang/Object;Lcom/vk/dto/user/UserProfile;ZLkotlin/jvm/b/Functions1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -353,21 +353,21 @@
             "Ljava/lang/Object;",
             "Lcom/vk/dto/user/UserProfile;",
             "Z",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Lcom/vk/dto/user/UserProfile;",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 2
-    check-cast p1, Lcom/vtosters/lite/live/a;
+    check-cast p1, Lcom/vtosters/lite/live/LiveUserHolder;
 
     .line 3
-    invoke-virtual {p1, p2, p3, p4}, Lcom/vtosters/lite/live/a;->a(Lcom/vk/dto/user/UserProfile;ZLkotlin/jvm/b/c;)V
+    invoke-virtual {p1, p2, p3, p4}, Lcom/vtosters/lite/live/LiveUserHolder;->a(Lcom/vk/dto/user/UserProfile;ZLkotlin/jvm/b/Functions1;)V
 
     return-void
 .end method

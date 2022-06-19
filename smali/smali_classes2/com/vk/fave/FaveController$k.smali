@@ -40,13 +40,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/fave/FaveController$k;->a:Lcom/vk/fave/entities/FaveCategory;
 
-    invoke-virtual {v0}, Lcom/vk/fave/entities/FaveCategory;->b()Lcom/vk/fave/entities/g;
+    invoke-virtual {v0}, Lcom/vk/fave/entities/FaveCategory;->b()Lcom/vk/fave/entities/FaveType1;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/fave/entities/g;->a()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/vk/fave/entities/FaveType1;->a()Ljava/lang/String;
 
     move-result-object v0
 

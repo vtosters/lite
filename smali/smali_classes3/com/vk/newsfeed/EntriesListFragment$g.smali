@@ -40,13 +40,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/EntriesListFragment$g;->a:Lcom/vk/newsfeed/EntriesListFragment;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/EntriesListFragment;->e(Lcom/vk/newsfeed/EntriesListFragment;)Lcom/vk/newsfeed/z;
+    invoke-static {p1}, Lcom/vk/newsfeed/EntriesListFragment;->e(Lcom/vk/newsfeed/EntriesListFragment;)Lcom/vk/newsfeed/PostTimeChecker;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/z;->a()V
+    invoke-virtual {p1}, Lcom/vk/newsfeed/PostTimeChecker;->a()V
 
     :cond_0
     return-void

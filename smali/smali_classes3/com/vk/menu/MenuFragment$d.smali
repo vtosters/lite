@@ -42,7 +42,7 @@
 
     const p2, 0x7f040022
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 4
     invoke-virtual {p0}, Lcom/vk/menu/MenuFragment$k;->h0()Landroid/widget/ImageView;
@@ -51,7 +51,7 @@
 
     const v0, 0x7f080758
 
-    invoke-static {p1, v0, p2}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;II)V
+    invoke-static {p1, v0, p2}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;II)V
 
     .line 5
     invoke-virtual {p0}, Lcom/vk/menu/MenuFragment$k;->g0()Landroid/widget/TextView;
@@ -72,7 +72,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/menu/d;)V
+.method public a(Lcom/vk/menu/MenuViewItem;)V
     .locals 1
 
     .line 1
@@ -80,7 +80,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/menu/d;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/menu/MenuViewItem;->a()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -110,9 +110,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/menu/d;
+    check-cast p1, Lcom/vk/menu/MenuViewItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuFragment$d;->a(Lcom/vk/menu/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuFragment$d;->a(Lcom/vk/menu/MenuViewItem;)V
 
     return-void
 .end method
@@ -131,7 +131,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

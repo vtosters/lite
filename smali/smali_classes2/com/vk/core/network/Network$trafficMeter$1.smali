@@ -3,7 +3,7 @@
 .source "Network.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/core/network/b/a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/core/network/b/NetworkTrafficMeter;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/core/network/b/a;
+.method public final invoke()Lcom/vk/core/network/b/NetworkTrafficMeter;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/core/network/b/a;
+    new-instance v0, Lcom/vk/core/network/b/NetworkTrafficMeter;
 
-    invoke-direct {v0}, Lcom/vk/core/network/b/a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/network/b/NetworkTrafficMeter;-><init>()V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/network/Network$trafficMeter$1;->invoke()Lcom/vk/core/network/b/a;
+    invoke-virtual {p0}, Lcom/vk/core/network/Network$trafficMeter$1;->invoke()Lcom/vk/core/network/b/NetworkTrafficMeter;
 
     move-result-object v0
 

@@ -3,7 +3,7 @@
 .source "CreateChatTransferPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/money/MoneyReceiverInfo;",
         ">;"
     }
@@ -52,7 +52,7 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter$c;->a:Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/money/q/b;->b()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->b()V
 
     return-void
 .end method

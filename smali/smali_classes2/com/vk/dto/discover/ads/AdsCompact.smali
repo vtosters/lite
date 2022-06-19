@@ -55,7 +55,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/discover/ads/AdsCompact$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/discover/ads/AdsCompact$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/discover/ads/AdsCompact;->F:Lcom/vk/dto/discover/ads/AdsCompact$b;
 
@@ -117,7 +117,7 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-static {p1, v0, v1, v2}, Lb/h/g/g/c;->b(Ljava/lang/String;IILjava/lang/Object;)Z
+    invoke-static {p1, v0, v1, v2}, Lb/h/g/g/PackageManagerHelper;->b(Ljava/lang/String;IILjava/lang/Object;)Z
 
     move-result p1
 
@@ -252,7 +252,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/ads/AdsCompact;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -262,7 +262,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/ads/AdsCompact;->e:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -272,7 +272,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/ads/AdsCompact;->f:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -282,7 +282,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/ads/AdsCompact;->g:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -292,7 +292,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/ads/AdsCompact;->h:Lcom/vk/dto/common/Image;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -302,7 +302,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/ads/AdsCompact;->B:Lcom/vk/dto/common/Image;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -312,7 +312,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/ads/AdsCompact;->C:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -322,7 +322,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/ads/AdsCompact;->D:Lcom/vk/dto/common/LinkButton;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -332,7 +332,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/discover/ads/AdsCompact;->E:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

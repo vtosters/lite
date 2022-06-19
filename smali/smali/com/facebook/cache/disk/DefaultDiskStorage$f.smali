@@ -3,7 +3,7 @@
 .source "DefaultDiskStorage.java"
 
 # interfaces
-.implements Lcom/facebook/common/file/b;
+.implements Lcom/facebook/common/file/FileTreeVisitor;
 
 
 # annotations
@@ -86,7 +86,7 @@
 
     .line 4
     :cond_2
-    invoke-static {v1}, Lcom/facebook/common/internal/g;->b(Z)V
+    invoke-static {v1}, Lcom/facebook/common/internal/Preconditions;->b(Z)V
 
     return p1
 .end method
@@ -101,11 +101,11 @@
 
     iget-object p1, p0, Lcom/facebook/cache/disk/DefaultDiskStorage$f;->b:Lcom/facebook/cache/disk/DefaultDiskStorage;
 
-    invoke-static {p1}, Lcom/facebook/cache/disk/DefaultDiskStorage;->d(Lcom/facebook/cache/disk/DefaultDiskStorage;)Lcom/facebook/common/time/a;
+    invoke-static {p1}, Lcom/facebook/cache/disk/DefaultDiskStorage;->d(Lcom/facebook/cache/disk/DefaultDiskStorage;)Lcom/facebook/common/time/Clock;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/facebook/common/time/a;->now()J
+    invoke-interface {p1}, Lcom/facebook/common/time/Clock;->now()J
 
     move-result-wide v2
 

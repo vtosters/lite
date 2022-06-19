@@ -3,7 +3,7 @@
 .source "DeliveryInfo.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/market/orders/checkout/l;",
-        "Lcom/vk/market/orders/checkout/d;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
+        "Lcom/vk/market/orders/checkout/DeliveryInfo13;",
         ">;"
     }
 .end annotation
@@ -56,22 +56,22 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/market/orders/checkout/l;)Lcom/vk/market/orders/checkout/d;
+.method public final a(Lcom/vk/market/orders/checkout/DeliveryInfo8;)Lcom/vk/market/orders/checkout/DeliveryInfo13;
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/l;->a()Lcom/vk/market/orders/checkout/m;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo8;->a()Lcom/vk/market/orders/checkout/DeliveryInfo5;
 
     move-result-object p1
 
-    instance-of v0, p1, Lcom/vk/market/orders/checkout/d;
+    instance-of v0, p1, Lcom/vk/market/orders/checkout/DeliveryInfo13;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vk/market/orders/checkout/d;
+    check-cast p1, Lcom/vk/market/orders/checkout/DeliveryInfo13;
 
     return-object p1
 .end method
@@ -80,9 +80,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/market/orders/checkout/l;
+    check-cast p1, Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
-    invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/DeliveryInfo$Companion$fromMarketSettingsDto$selectedCountryId$2;->a(Lcom/vk/market/orders/checkout/l;)Lcom/vk/market/orders/checkout/d;
+    invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/DeliveryInfo$Companion$fromMarketSettingsDto$selectedCountryId$2;->a(Lcom/vk/market/orders/checkout/DeliveryInfo8;)Lcom/vk/market/orders/checkout/DeliveryInfo13;
 
     move-result-object p1
 

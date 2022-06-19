@@ -180,7 +180,7 @@
     return-object p0
 .end method
 
-.method protected b(Landroid/app/Activity;Lcom/vk/dto/hints/Hint;)Lcom/vk/core/util/w;
+.method protected b(Landroid/app/Activity;Lcom/vk/dto/hints/Hint;)Lcom/vk/core/util/Dismissable;
     .locals 23
 
     move-object/from16 v0, p0
@@ -344,7 +344,7 @@
     move/from16 v18, v2
 
     .line 15
-    invoke-static/range {v3 .. v22}, Lcom/vk/core/tips/TipTextWindow$a;->a(Lcom/vk/core/tips/TipTextWindow$a;Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog;
+    invoke-static/range {v3 .. v22}, Lcom/vk/core/tips/TipTextWindow$a;->a(Lcom/vk/core/tips/TipTextWindow$a;Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog;
 
     move-result-object v1
 

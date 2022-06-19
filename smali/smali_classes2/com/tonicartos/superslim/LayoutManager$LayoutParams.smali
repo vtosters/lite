@@ -76,14 +76,14 @@
     iput v0, p0, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->h:I
 
     .line 6
-    sget-object v1, Lb/h/y/g;->superslim_LayoutManager:[I
+    sget-object v1, Lb/h/y/R;->superslim_LayoutManager:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 7
-    sget p2, Lb/h/y/g;->superslim_LayoutManager_slm_isHeader:I
+    sget p2, Lb/h/y/R;->superslim_LayoutManager_slm_isHeader:I
 
     const/4 v1, 0x0
 
@@ -94,7 +94,7 @@
     iput-boolean p2, p0, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->a:Z
 
     .line 8
-    sget p2, Lb/h/y/g;->superslim_LayoutManager_slm_headerDisplay:I
+    sget p2, Lb/h/y/R;->superslim_LayoutManager_slm_headerDisplay:I
 
     const/16 v2, 0x11
 
@@ -105,7 +105,7 @@
     iput p2, p0, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->b:I
 
     .line 9
-    sget p2, Lb/h/y/g;->superslim_LayoutManager_slm_section_firstPosition:I
+    sget p2, Lb/h/y/R;->superslim_LayoutManager_slm_section_firstPosition:I
 
     const/4 v2, -0x1
 
@@ -116,7 +116,7 @@
     iput p2, p0, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->i:I
 
     .line 10
-    sget p2, Lb/h/y/g;->superslim_LayoutManager_slm_section_headerMarginStart:I
+    sget p2, Lb/h/y/R;->superslim_LayoutManager_slm_section_headerMarginStart:I
 
     .line 11
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getType(I)I
@@ -139,7 +139,7 @@
     invoke-direct {p0, p1, p2}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->b(Landroid/content/res/TypedArray;Z)V
 
     .line 13
-    sget p2, Lb/h/y/g;->superslim_LayoutManager_slm_section_headerMarginEnd:I
+    sget p2, Lb/h/y/R;->superslim_LayoutManager_slm_section_headerMarginEnd:I
 
     .line 14
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getType(I)I
@@ -160,7 +160,7 @@
     invoke-direct {p0, p1, p2}, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->a(Landroid/content/res/TypedArray;Z)V
 
     .line 16
-    sget p2, Lb/h/y/g;->superslim_LayoutManager_slm_section_sectionManager:I
+    sget p2, Lb/h/y/R;->superslim_LayoutManager_slm_section_sectionManager:I
 
     .line 17
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getType(I)I
@@ -273,7 +273,7 @@
     iput-boolean p2, p0, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->f:Z
 
     .line 9
-    sget v0, Lb/h/y/g;->superslim_LayoutManager_slm_section_headerMarginEnd:I
+    sget v0, Lb/h/y/R;->superslim_LayoutManager_slm_section_headerMarginEnd:I
 
     invoke-virtual {p1, v0, p2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -304,7 +304,7 @@
     iput-boolean p2, p0, Lcom/tonicartos/superslim/LayoutManager$LayoutParams;->e:Z
 
     .line 23
-    sget v0, Lb/h/y/g;->superslim_LayoutManager_slm_section_headerMarginStart:I
+    sget v0, Lb/h/y/R;->superslim_LayoutManager_slm_section_headerMarginStart:I
 
     invoke-virtual {p1, v0, p2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -424,7 +424,7 @@
     if-eqz p2, :cond_1
 
     .line 2
-    sget p2, Lb/h/y/g;->superslim_LayoutManager_slm_section_sectionManager:I
+    sget p2, Lb/h/y/R;->superslim_LayoutManager_slm_section_sectionManager:I
 
     .line 3
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -457,7 +457,7 @@
 
     .line 7
     :cond_1
-    sget p2, Lb/h/y/g;->superslim_LayoutManager_slm_section_sectionManager:I
+    sget p2, Lb/h/y/R;->superslim_LayoutManager_slm_section_sectionManager:I
 
     .line 8
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getInt(II)I

@@ -1,5 +1,5 @@
 .class final Lcom/vk/audioipc/player/AudioPlayerIpcClient$b;
-.super Lcom/vk/audioipc/core/q/a;
+.super Lcom/vk/audioipc/core/q/BaseAudioPlayerListener;
 .source "AudioPlayerIpcClient.kt"
 
 
@@ -30,14 +30,14 @@
     .line 1
     iput-object p1, p0, Lcom/vk/audioipc/player/AudioPlayerIpcClient$b;->a:Lcom/vk/audioipc/player/AudioPlayerIpcClient;
 
-    invoke-direct {p0}, Lcom/vk/audioipc/core/q/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/audioipc/core/q/BaseAudioPlayerListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/audioipc/core/d;Ljava/lang/Throwable;)V
+.method public a(Lcom/vk/audioipc/core/AudioPlayer;Ljava/lang/Throwable;)V
     .locals 0
 
     .line 1
@@ -48,12 +48,12 @@
     .line 2
     iget-object p1, p0, Lcom/vk/audioipc/player/AudioPlayerIpcClient$b;->a:Lcom/vk/audioipc/player/AudioPlayerIpcClient;
 
-    invoke-static {p1}, Lcom/vk/audioipc/player/AudioPlayerIpcClient;->i(Lcom/vk/audioipc/player/AudioPlayerIpcClient;)Lcom/vk/audioipc/core/n;
+    invoke-static {p1}, Lcom/vk/audioipc/player/AudioPlayerIpcClient;->i(Lcom/vk/audioipc/player/AudioPlayerIpcClient;)Lcom/vk/audioipc/core/ThreadSafeField;
 
     move-result-object p1
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/audioipc/core/n;->b()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/audioipc/core/ThreadSafeField;->b()Ljava/lang/Object;
 
     move-result-object p2
 
@@ -61,7 +61,7 @@
 
     .line 4
     :try_start_0
-    invoke-virtual {p1}, Lcom/vk/audioipc/core/n;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/audioipc/core/ThreadSafeField;->a()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -71,7 +71,7 @@
     invoke-virtual {p1}, Lcom/vk/audioipc/core/PlayerState;->clear()V
 
     .line 6
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -81,13 +81,13 @@
     .line 8
     iget-object p1, p0, Lcom/vk/audioipc/player/AudioPlayerIpcClient$b;->a:Lcom/vk/audioipc/player/AudioPlayerIpcClient;
 
-    invoke-static {p1}, Lcom/vk/audioipc/player/AudioPlayerIpcClient;->c(Lcom/vk/audioipc/player/AudioPlayerIpcClient;)Lcom/vk/audioipc/communication/y/b;
+    invoke-static {p1}, Lcom/vk/audioipc/player/AudioPlayerIpcClient;->c(Lcom/vk/audioipc/player/AudioPlayerIpcClient;)Lcom/vk/audioipc/communication/y/ServiceConnectedHelper;
 
     move-result-object p1
 
     const/4 p2, 0x1
 
-    invoke-virtual {p1, p2}, Lcom/vk/audioipc/communication/y/b;->a(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/audioipc/communication/y/ServiceConnectedHelper;->a(Z)V
 
     goto :goto_0
 
@@ -104,7 +104,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/audioipc/core/d;)V
+.method public b(Lcom/vk/audioipc/core/AudioPlayer;)V
     .locals 4
 
     .line 1
@@ -135,7 +135,7 @@
 
     const-string v1, "componentNameManager.cur\u2026ComponentName.packageName"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     sget-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MUS_PUSH_RES_COUNT:Lcom/vk/toggle/Features$Type;
@@ -145,7 +145,7 @@
     move-result-object v1
 
     .line 4
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -164,18 +164,18 @@
     const/4 p1, 0x3
 
     .line 5
-    invoke-static {v1, p1}, Lcom/vk/music/common/c;->a(Lcom/vk/toggle/FeatureManager$b;I)I
+    invoke-static {v1, p1}, Lcom/vk/music/common/Music;->a(Lcom/vk/toggle/FeatureManager$b;I)I
 
     move-result p1
 
     .line 6
     iget-object v1, p0, Lcom/vk/audioipc/player/AudioPlayerIpcClient$b;->a:Lcom/vk/audioipc/player/AudioPlayerIpcClient;
 
-    invoke-static {v1}, Lcom/vk/audioipc/player/AudioPlayerIpcClient;->h(Lcom/vk/audioipc/player/AudioPlayerIpcClient;)Lcom/vk/music/restriction/i/a;
+    invoke-static {v1}, Lcom/vk/audioipc/player/AudioPlayerIpcClient;->h(Lcom/vk/audioipc/player/AudioPlayerIpcClient;)Lcom/vk/music/restriction/i/MusicRestrictionModel;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/music/restriction/i/a;->b()Z
+    invoke-interface {v1}, Lcom/vk/music/restriction/i/MusicRestrictionModel;->b()Z
 
     move-result v1
 
@@ -214,28 +214,28 @@
     invoke-static {p1, v0}, Lcom/vk/audioipc/player/AudioPlayerIpcClient;->a(Lcom/vk/audioipc/player/AudioPlayerIpcClient;I)V
 
     .line 10
-    sget-object p1, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object p1, Lcom/vk/music/common/Music$a;->INSTANCE:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {p1}, Lcom/vk/music/common/c$a;->h()Lcom/vk/music/stats/d;
+    invoke-virtual {p1}, Lcom/vk/music/common/Music$a;->h()Lcom/vk/music/stats/MusicStatsTracker;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/music/stats/d;->b()V
+    invoke-interface {p1}, Lcom/vk/music/stats/MusicStatsTracker;->b()V
 
     .line 11
     iget-object p1, p0, Lcom/vk/audioipc/player/AudioPlayerIpcClient$b;->a:Lcom/vk/audioipc/player/AudioPlayerIpcClient;
 
-    invoke-static {p1}, Lcom/vk/audioipc/player/AudioPlayerIpcClient;->g(Lcom/vk/audioipc/player/AudioPlayerIpcClient;)Lcom/vk/music/notification/c;
+    invoke-static {p1}, Lcom/vk/audioipc/player/AudioPlayerIpcClient;->g(Lcom/vk/audioipc/player/AudioPlayerIpcClient;)Lcom/vk/music/notification/MusicNotificationManager;
 
     move-result-object p1
 
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Lcom/vk/music/notification/c;->a(Landroid/content/Context;)V
+    invoke-interface {p1, v0}, Lcom/vk/music/notification/MusicNotificationManager;->a(Landroid/content/Context;)V
 
     :cond_1
     return-void

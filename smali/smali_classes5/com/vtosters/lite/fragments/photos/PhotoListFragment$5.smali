@@ -185,7 +185,7 @@
 
     const/high16 v3, -0x3db80000    # -50.0f
 
-    invoke-static {v3}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v3}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v3
 
@@ -263,7 +263,7 @@
     iget-object v3, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$5;->e:Lcom/vtosters/lite/fragments/photos/PhotoListFragment;
 
     .line 15
-    invoke-virtual {v3}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {v3}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object v3
 
@@ -275,7 +275,7 @@
 
     const/high16 v6, 0x40400000    # 3.0f
 
-    invoke-static {v6}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v6}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v6
 
@@ -330,7 +330,7 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$5;->e:Lcom/vtosters/lite/fragments/photos/PhotoListFragment;
 
-    invoke-virtual {v0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {v0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object v0
 
@@ -339,7 +339,7 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$5;->e:Lcom/vtosters/lite/fragments/photos/PhotoListFragment;
 
-    invoke-virtual {v0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {v0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object v0
 

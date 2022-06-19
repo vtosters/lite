@@ -3,12 +3,12 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/masks/MasksController;->c()Lc/a/m;
+    value = Lcom/vk/masks/MasksController;->c()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lio/reactivex/disposables/Disposable;",
         ">;"
     }
 .end annotation
@@ -44,7 +44,7 @@
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -55,7 +55,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/masks/MasksController$e;->a:Lcom/vk/masks/MasksController;
 
-    invoke-static {v0, p1}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;Lio/reactivex/disposables/b;)V
+    invoke-static {v0, p1}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -69,9 +69,9 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lio/reactivex/disposables/b;
+    check-cast p1, Lio/reactivex/disposables/Disposable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/masks/MasksController$e;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/masks/MasksController$e;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

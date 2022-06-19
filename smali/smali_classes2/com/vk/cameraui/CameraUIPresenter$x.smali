@@ -45,25 +45,25 @@
 
     const-wide/16 v1, 0x12c
 
-    invoke-static {v1, v2, v0}, Lc/a/m;->j(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-static {v1, v2, v0}, Lio/reactivex/Observable;->j(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -72,11 +72,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/cameraui/CameraUIPresenter$x$a;-><init>(Lcom/vk/cameraui/CameraUIPresenter$x;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/cameraui/CameraUIPresenter;->b(Lcom/vk/cameraui/CameraUIPresenter;Lio/reactivex/disposables/b;)V
+    invoke-static {p1, v0}, Lcom/vk/cameraui/CameraUIPresenter;->b(Lcom/vk/cameraui/CameraUIPresenter;Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

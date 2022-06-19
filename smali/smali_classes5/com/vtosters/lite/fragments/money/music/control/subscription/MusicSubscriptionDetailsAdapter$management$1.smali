@@ -3,12 +3,12 @@
 .source "MusicSubscriptionDetailsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;-><init>(ZLkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    value = Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;-><init>(ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/ViewGroup;",
-        "Lcom/vtosters/lite/fragments/money/music/control/subscription/f;",
+        "Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter6;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/fragments/money/music/control/subscription/f;
+.method public final a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter6;
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/fragments/money/music/control/subscription/f;
+    new-instance v0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter6;
 
-    invoke-direct {v0, p1}, Lcom/vtosters/lite/fragments/money/music/control/subscription/f;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter6;-><init>(Landroid/view/ViewGroup;)V
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
     .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter$management$1;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/fragments/money/music/control/subscription/f;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter$management$1;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter6;
 
     move-result-object p1
 

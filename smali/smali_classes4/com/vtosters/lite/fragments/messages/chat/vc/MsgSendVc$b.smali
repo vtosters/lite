@@ -3,7 +3,7 @@
 .source "MsgSendVc.kt"
 
 # interfaces
-.implements Lcom/vk/stickers/f0/a$l;
+.implements Lcom/vk/stickers/f0/KeyboardPopup$l;
 
 
 # annotations
@@ -40,17 +40,17 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/stickers/f0/a;)V
+.method public a(Lcom/vk/stickers/f0/KeyboardPopup;)V
     .locals 4
 
     .line 7
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$b;->a:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->n(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/a;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->n(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/KeyboardPopup;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -79,11 +79,11 @@
     :cond_0
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$b;->a:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->e(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/a;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->e(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/KeyboardPopup;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -121,17 +121,17 @@
     return-void
 .end method
 
-.method public a(ZLcom/vk/stickers/f0/a;)V
+.method public a(ZLcom/vk/stickers/f0/KeyboardPopup;)V
     .locals 4
 
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$b;->a:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->n(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/a;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->n(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/KeyboardPopup;
 
     move-result-object p1
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -181,11 +181,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$b;->a:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->e(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/a;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->e(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/KeyboardPopup;
 
     move-result-object p1
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

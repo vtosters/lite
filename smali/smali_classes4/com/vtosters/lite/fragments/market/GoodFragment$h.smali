@@ -97,7 +97,7 @@
     :cond_4
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$h;->a:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-virtual {p1}, Ld/a/a/a/i;->K()V
+    invoke-virtual {p1}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->K()V
 
     :goto_2
     return-void

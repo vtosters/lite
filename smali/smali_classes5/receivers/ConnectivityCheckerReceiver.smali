@@ -47,9 +47,9 @@
 
     if-eqz p2, :cond_0
 
-    sget-object p2, Lcom/vk/utils/g/a;->l:Lcom/vk/utils/g/a;
+    sget-object p2, Lcom/vk/utils/g/ServerClock;->INSTANCE:Lcom/vk/utils/g/ServerClock;
 
-    invoke-virtual {p2, p1}, Lcom/vk/utils/g/a;->a(Landroid/content/Context;)V
+    invoke-virtual {p2, p1}, Lcom/vk/utils/g/ServerClock;->a(Landroid/content/Context;)V
 
     :cond_0
     return-void

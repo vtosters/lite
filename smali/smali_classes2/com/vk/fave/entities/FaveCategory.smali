@@ -48,7 +48,7 @@
 # instance fields
 .field private final titleId:I
 
-.field private final type:Lcom/vk/fave/entities/g;
+.field private final type:Lcom/vk/fave/entities/FaveType1;
 
 
 # direct methods
@@ -70,7 +70,7 @@
     const v5, 0x7f1203d7
 
     .line 1
-    invoke-direct {v1, v4, v3, v2, v5}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/g;I)V
+    invoke-direct {v1, v4, v3, v2, v5}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/FaveType1;I)V
 
     sput-object v1, Lcom/vk/fave/entities/FaveCategory;->ALL:Lcom/vk/fave/entities/FaveCategory;
 
@@ -87,7 +87,7 @@
 
     const v6, 0x7f1203c4
 
-    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/g;I)V
+    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/FaveType1;I)V
 
     sput-object v1, Lcom/vk/fave/entities/FaveCategory;->PEOPLE:Lcom/vk/fave/entities/FaveCategory;
 
@@ -104,7 +104,7 @@
 
     const v6, 0x7f1203a8
 
-    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/g;I)V
+    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/FaveType1;I)V
 
     sput-object v1, Lcom/vk/fave/entities/FaveCategory;->COMMUNITY:Lcom/vk/fave/entities/FaveCategory;
 
@@ -121,7 +121,7 @@
 
     const v6, 0x7f1203db
 
-    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/g;I)V
+    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/FaveType1;I)V
 
     sput-object v1, Lcom/vk/fave/entities/FaveCategory;->POST:Lcom/vk/fave/entities/FaveCategory;
 
@@ -138,7 +138,7 @@
 
     const v6, 0x7f1203d8
 
-    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/g;I)V
+    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/FaveType1;I)V
 
     sput-object v1, Lcom/vk/fave/entities/FaveCategory;->ARTICLE:Lcom/vk/fave/entities/FaveCategory;
 
@@ -155,7 +155,7 @@
 
     const v6, 0x7f1203d9
 
-    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/g;I)V
+    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/FaveType1;I)V
 
     sput-object v1, Lcom/vk/fave/entities/FaveCategory;->LINK:Lcom/vk/fave/entities/FaveCategory;
 
@@ -172,7 +172,7 @@
 
     const v6, 0x7f1203ea
 
-    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/g;I)V
+    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/FaveType1;I)V
 
     sput-object v1, Lcom/vk/fave/entities/FaveCategory;->PODCAST:Lcom/vk/fave/entities/FaveCategory;
 
@@ -189,7 +189,7 @@
 
     const v6, 0x7f120397
 
-    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/g;I)V
+    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/FaveType1;I)V
 
     sput-object v1, Lcom/vk/fave/entities/FaveCategory;->VIDEO:Lcom/vk/fave/entities/FaveCategory;
 
@@ -206,7 +206,7 @@
 
     const v6, 0x7f1203da
 
-    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/g;I)V
+    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/FaveType1;I)V
 
     sput-object v1, Lcom/vk/fave/entities/FaveCategory;->NARRATIVE:Lcom/vk/fave/entities/FaveCategory;
 
@@ -223,7 +223,7 @@
 
     const v6, 0x7f1203dc
 
-    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/g;I)V
+    invoke-direct {v1, v5, v4, v3, v6}, Lcom/vk/fave/entities/FaveCategory;-><init>(Ljava/lang/String;ILcom/vk/fave/entities/FaveType1;I)V
 
     sput-object v1, Lcom/vk/fave/entities/FaveCategory;->PRODUCT:Lcom/vk/fave/entities/FaveCategory;
 
@@ -233,14 +233,14 @@
 
     new-instance v0, Lcom/vk/fave/entities/FaveCategory$a;
 
-    invoke-direct {v0, v2}, Lcom/vk/fave/entities/FaveCategory$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v2}, Lcom/vk/fave/entities/FaveCategory$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/fave/entities/FaveCategory;->Companion:Lcom/vk/fave/entities/FaveCategory$a;
 
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;ILcom/vk/fave/entities/g;I)V
+.method private constructor <init>(Ljava/lang/String;ILcom/vk/fave/entities/FaveType1;I)V
     .locals 0
     .param p2    # I
         .annotation build Landroidx/annotation/StringRes;
@@ -249,7 +249,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/fave/entities/g;",
+            "Lcom/vk/fave/entities/FaveType1;",
             "I)V"
         }
     .end annotation
@@ -257,7 +257,7 @@
     .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p3, p0, Lcom/vk/fave/entities/FaveCategory;->type:Lcom/vk/fave/entities/g;
+    iput-object p3, p0, Lcom/vk/fave/entities/FaveCategory;->type:Lcom/vk/fave/entities/FaveType1;
 
     iput p4, p0, Lcom/vk/fave/entities/FaveCategory;->titleId:I
 
@@ -303,11 +303,11 @@
     return v0
 .end method
 
-.method public final b()Lcom/vk/fave/entities/g;
+.method public final b()Lcom/vk/fave/entities/FaveType1;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/fave/entities/FaveCategory;->type:Lcom/vk/fave/entities/g;
+    iget-object v0, p0, Lcom/vk/fave/entities/FaveCategory;->type:Lcom/vk/fave/entities/FaveType1;
 
     return-object v0
 .end method

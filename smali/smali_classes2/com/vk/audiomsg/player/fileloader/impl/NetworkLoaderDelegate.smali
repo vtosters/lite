@@ -32,7 +32,7 @@
 
     const-string v1, "http"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -46,7 +46,7 @@
 
     const-string v1, "https"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -81,40 +81,40 @@
     .line 15
     :cond_1
     :goto_0
-    new-instance v0, Lokhttp3/z$a;
+    new-instance v0, Lokhttp3/Request$a;
 
-    invoke-direct {v0}, Lokhttp3/z$a;-><init>()V
+    invoke-direct {v0}, Lokhttp3/Request$a;-><init>()V
 
     .line 16
-    invoke-virtual {v0}, Lokhttp3/z$a;->b()Lokhttp3/z$a;
+    invoke-virtual {v0}, Lokhttp3/Request$a;->b()Lokhttp3/Request$a;
 
     .line 17
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lokhttp3/z$a;->b(Ljava/lang/String;)Lokhttp3/z$a;
+    invoke-virtual {v0, p1}, Lokhttp3/Request$a;->b(Ljava/lang/String;)Lokhttp3/Request$a;
 
     .line 18
-    invoke-virtual {v0}, Lokhttp3/z$a;->a()Lokhttp3/z;
+    invoke-virtual {v0}, Lokhttp3/Request$a;->a()Lokhttp3/Request;
 
     move-result-object p1
 
     .line 19
-    invoke-static {}, Lcom/vk/core/network/Network;->j()Lokhttp3/x;
+    invoke-static {}, Lcom/vk/core/network/Network;->j()Lokhttp3/OkHttpClient;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lokhttp3/x;->a(Lokhttp3/z;)Lokhttp3/e;
+    invoke-virtual {v0, p1}, Lokhttp3/OkHttpClient;->a(Lokhttp3/Request;)Lokhttp3/Call;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lokhttp3/e;->execute()Lokhttp3/b0;
+    invoke-interface {p1}, Lokhttp3/Call;->execute()Lokhttp3/Response;
 
     move-result-object p1
 
     .line 20
-    invoke-virtual {p1}, Lokhttp3/b0;->a()Lokhttp3/c0;
+    invoke-virtual {p1}, Lokhttp3/Response;->a()Lokhttp3/ResponseBody;
 
     move-result-object v0
 
@@ -127,31 +127,31 @@
     new-instance v2, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$b;
 
     .line 23
-    invoke-virtual {v0}, Lokhttp3/c0;->a()Ljava/io/InputStream;
+    invoke-virtual {v0}, Lokhttp3/ResponseBody;->a()Ljava/io/InputStream;
 
     move-result-object v0
 
     const-string v3, "responseBody.byteStream()"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 24
     new-instance v3, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$createInputStream$1;
 
-    invoke-direct {v3, p1}, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$createInputStream$1;-><init>(Lokhttp3/b0;)V
+    invoke-direct {v3, p1}, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$createInputStream$1;-><init>(Lokhttp3/Response;)V
 
     .line 25
-    invoke-direct {v2, v0, v3}, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$b;-><init>(Ljava/io/InputStream;Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, v0, v3}, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$b;-><init>(Ljava/io/InputStream;Lkotlin/jvm/b/Functions;)V
 
     .line 26
-    invoke-virtual {p1}, Lokhttp3/b0;->d()I
+    invoke-virtual {p1}, Lokhttp3/Response;->d()I
 
     move-result v0
 
     const-string v3, "X-Frontend"
 
     .line 27
-    invoke-virtual {p1, v3}, Lokhttp3/b0;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v3}, Lokhttp3/Response;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -186,7 +186,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/net/Uri;Lb/h/j/a/b;)Lcom/vk/audiomsg/player/fileloader/impl/c;
+.method public final a(Landroid/net/Uri;Lb/h/j/a/FileWriter;)Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;
     .locals 6
 
     const/4 v0, 0x0
@@ -206,7 +206,7 @@
 
     .line 3
     :try_start_1
-    invoke-interface {p2}, Lb/h/j/a/b;->getOutputStream()Ljava/io/OutputStream;
+    invoke-interface {p2}, Lb/h/j/a/FileWriter;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object p2
     :try_end_1
@@ -223,7 +223,7 @@
     const/4 v5, 0x2
 
     .line 5
-    invoke-static {v1, p2, v4, v5, v0}, Lkotlin/io/a;->a(Ljava/io/InputStream;Ljava/io/OutputStream;IILjava/lang/Object;)J
+    invoke-static {v1, p2, v4, v5, v0}, Lkotlin/io/IOStreams;->a(Ljava/io/InputStream;Ljava/io/OutputStream;IILjava/lang/Object;)J
 
     .line 6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -236,7 +236,7 @@
     invoke-virtual {p2}, Ljava/io/OutputStream;->flush()V
 
     .line 8
-    new-instance v0, Lcom/vk/audiomsg/player/fileloader/impl/c;
+    new-instance v0, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;
 
     invoke-virtual {p1}, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderDelegate$a;->b()I
 
@@ -246,7 +246,7 @@
 
     move-result-object p1
 
-    invoke-direct {v0, v4, v5, v2, p1}, Lcom/vk/audiomsg/player/fileloader/impl/c;-><init>(JILjava/lang/String;)V
+    invoke-direct {v0, v4, v5, v2, p1}, Lcom/vk/audiomsg/player/fileloader/impl/NetworkLoaderResult;-><init>(JILjava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 

@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Lcom/vk/im/engine/models/attaches/Attach;
-.implements Lcom/vk/im/engine/models/attaches/c;
-.implements Lcom/vk/im/engine/models/attaches/g;
+.implements Lcom/vk/im/engine/models/attaches/WithCacheUrl;
+.implements Lcom/vk/im/engine/models/attaches/WithPreview;
 
 
 # annotations
@@ -41,7 +41,7 @@
 
 .field private G:Lcom/vk/im/engine/models/LinkTarget;
 
-.field private H:Lcom/vk/im/engine/models/attaches/AMP;
+.field private H:Lcom/vk/im/engine/models/attaches/AttachLink1;
 
 .field private I:Lcom/vk/dto/articles/Article;
 
@@ -72,7 +72,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachLink$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachLink$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/attaches/AttachLink$a;
@@ -117,7 +117,7 @@
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, v2, v3, v2}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v2, v3, v2}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v1, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->h:Lcom/vk/im/engine/models/ImageList;
 
@@ -172,7 +172,7 @@
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, v2, v3, v2}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v2, v3, v2}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v1, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->h:Lcom/vk/im/engine/models/ImageList;
 
@@ -198,7 +198,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -239,7 +239,7 @@
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, v2, v3, v2}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v2, v3, v2}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v1, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->h:Lcom/vk/im/engine/models/ImageList;
 
@@ -297,7 +297,7 @@
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, v2, v3, v2}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v2, v3, v2}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v1, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->h:Lcom/vk/im/engine/models/ImageList;
 
@@ -344,7 +344,7 @@
 
     const-string v1, "AttachSyncState.fromInt(s.readInt())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Lcom/vk/im/engine/models/attaches/AttachLink;->a(Lcom/vk/im/engine/models/attaches/AttachSyncState;)V
 
@@ -430,7 +430,7 @@
 
     const-string v2, "ButtonActionType.fromInt(s.readInt())"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->D:Lcom/vk/im/engine/models/ButtonActionType;
 
@@ -461,12 +461,12 @@
 
     const-string v1, "LinkTarget.fromInt(s.readInt())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->G:Lcom/vk/im/engine/models/LinkTarget;
 
     .line 17
-    const-class v0, Lcom/vk/im/engine/models/attaches/AMP;
+    const-class v0, Lcom/vk/im/engine/models/attaches/AttachLink1;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -476,9 +476,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/models/attaches/AMP;
+    check-cast v0, Lcom/vk/im/engine/models/attaches/AttachLink1;
 
-    iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AMP;
+    iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AttachLink1;
 
     .line 18
     const-class v0, Lcom/vk/dto/articles/Article;
@@ -514,43 +514,43 @@
 
     .line 20
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 21
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 22
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 23
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 24
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 25
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 26
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -660,7 +660,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(I)V
 
     .line 40
-    iget-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AMP;
+    iget-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AttachLink1;
 
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
@@ -713,11 +713,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/attaches/AMP;)V
+.method public final a(Lcom/vk/im/engine/models/attaches/AttachLink1;)V
     .locals 0
 
     .line 8
-    iput-object p1, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AMP;
+    iput-object p1, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AttachLink1;
 
     return-void
 .end method
@@ -795,9 +795,9 @@
     iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->G:Lcom/vk/im/engine/models/LinkTarget;
 
     .line 24
-    iget-object v0, p1, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AMP;
+    iget-object v0, p1, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AttachLink1;
 
-    iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AMP;
+    iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AttachLink1;
 
     .line 25
     iget-object v0, p1, Lcom/vk/im/engine/models/attaches/AttachLink;->I:Lcom/vk/dto/articles/Article;
@@ -980,7 +980,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1031,7 +1031,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/attaches/AttachLink;->d:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1047,7 +1047,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/attaches/AttachLink;->e:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1063,7 +1063,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/attaches/AttachLink;->f:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1079,7 +1079,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/attaches/AttachLink;->g:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1095,7 +1095,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/attaches/AttachLink;->h:Lcom/vk/im/engine/models/ImageList;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1123,7 +1123,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/attaches/AttachLink;->C:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1149,7 +1149,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/attaches/AttachLink;->E:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1181,11 +1181,11 @@
 
     .line 16
     :cond_f
-    iget-object v1, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AMP;
+    iget-object v1, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AttachLink1;
 
-    iget-object v3, p1, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AMP;
+    iget-object v3, p1, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AttachLink1;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1201,7 +1201,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/attaches/AttachLink;->I:Lcom/vk/dto/articles/Article;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1217,7 +1217,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/models/attaches/AttachLink;->J:Lcom/vk/im/engine/models/attaches/Product;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1251,7 +1251,7 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2, v1}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v1}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method
@@ -1291,7 +1291,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/attaches/g$a;->a(Lcom/vk/im/engine/models/attaches/g;)Lcom/vk/im/engine/models/ImageList;
+    invoke-static {p0}, Lcom/vk/im/engine/models/attaches/WithPreview$a;->a(Lcom/vk/im/engine/models/attaches/WithPreview;)Lcom/vk/im/engine/models/ImageList;
 
     move-result-object v0
 
@@ -1443,13 +1443,13 @@
     mul-int/lit8 v0, v0, 0x1f
 
     .line 14
-    iget-object v1, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AMP;
+    iget-object v1, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AttachLink1;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/attaches/AMP;->hashCode()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/attaches/AttachLink1;->hashCode()I
 
     move-result v1
 
@@ -1529,13 +1529,13 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AMP;
+    iget-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AttachLink1;
 
     if-eqz v0, :cond_1
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/attaches/AMP;->t1()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/attaches/AttachLink1;->t1()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1544,11 +1544,11 @@
     return-object v1
 .end method
 
-.method public final j()Lcom/vk/im/engine/models/attaches/AMP;
+.method public final j()Lcom/vk/im/engine/models/attaches/AttachLink1;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AMP;
+    iget-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AttachLink1;
 
     return-object v0
 .end method
@@ -1732,7 +1732,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AMP;
+    iget-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachLink;->H:Lcom/vk/im/engine/models/attaches/AttachLink1;
 
     if-eqz v0, :cond_0
 

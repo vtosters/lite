@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/identity/b/a;)V
+.method public final a(Lcom/vk/identity/b/IdentityAdapterItem1;)V
     .locals 1
 
     .line 1
@@ -47,14 +47,14 @@
 
     if-eqz v0, :cond_1
 
-    check-cast v0, Lcom/vk/identity/c/b;
+    check-cast v0, Lcom/vk/identity/c/IdentityHeaderView;
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/identity/b/a;->b()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem1;->b()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/identity/c/b;->a(Lcom/vk/dto/common/data/ApiApplication;)V
+    invoke-virtual {v0, p1}, Lcom/vk/identity/c/IdentityHeaderView;->a(Lcom/vk/dto/common/data/ApiApplication;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityContextAdapter$a;->a:Lcom/vk/identity/adapters/IdentityContextAdapter;
@@ -72,7 +72,7 @@
     const p1, 0x7f120588
 
     .line 4
-    invoke-virtual {v0, p1}, Lcom/vk/identity/c/b;->setMessage(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/identity/c/IdentityHeaderView;->setMessage(I)V
 
     goto :goto_0
 
@@ -80,7 +80,7 @@
     const p1, 0x7f1210eb
 
     .line 5
-    invoke-virtual {v0, p1}, Lcom/vk/identity/c/b;->setMessage(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/identity/c/IdentityHeaderView;->setMessage(I)V
 
     :goto_0
     return-void

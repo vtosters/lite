@@ -3,9 +3,9 @@
 .source "BlockingObservableIterable.java"
 
 # interfaces
-.implements Lc/a/r;
+.implements Lio/reactivex/Observer;
 .implements Ljava/util/Iterator;
-.implements Lio/reactivex/disposables/b;
+.implements Lio/reactivex/disposables/Disposable;
 
 
 # annotations
@@ -24,13 +24,13 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/disposables/Disposable;",
         ">;",
-        "Lc/a/r<",
+        "Lio/reactivex/Observer<",
         "TT;>;",
         "Ljava/util/Iterator<",
         "TT;>;",
-        "Lio/reactivex/disposables/b;"
+        "Lio/reactivex/disposables/Disposable;"
     }
 .end annotation
 
@@ -48,10 +48,10 @@
 
 .field final lock:Ljava/util/concurrent/locks/Lock;
 
-.field final queue:Lio/reactivex/internal/queue/a;
+.field final queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/internal/queue/a<",
+            "Lio/reactivex/internal/queue/SpscLinkedArrayQueue<",
             "TT;>;"
         }
     .end annotation
@@ -66,11 +66,11 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 2
-    new-instance v0, Lio/reactivex/internal/queue/a;
+    new-instance v0, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
-    invoke-direct {v0, p1}, Lio/reactivex/internal/queue/a;-><init>(I)V
+    invoke-direct {v0, p1}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;-><init>(I)V
 
-    iput-object v0, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable$BlockingObservableIterator;->queue:Lio/reactivex/internal/queue/a;
+    iput-object v0, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable$BlockingObservableIterator;->queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
     .line 3
     new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
@@ -126,11 +126,11 @@
     throw v0
 .end method
 
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -175,9 +175,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable$BlockingObservableIterator;->queue:Lio/reactivex/internal/queue/a;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable$BlockingObservableIterator;->queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
-    invoke-virtual {v0, p1}, Lio/reactivex/internal/queue/a;->offer(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->offer(Ljava/lang/Object;)Z
 
     .line 2
     invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/BlockingObservableIterable$BlockingObservableIterator;->a()V
@@ -193,9 +193,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/disposables/b;
+    check-cast v0, Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;)Z
+    invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
@@ -210,9 +210,9 @@
     iget-boolean v0, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable$BlockingObservableIterator;->done:Z
 
     .line 2
-    iget-object v1, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable$BlockingObservableIterator;->queue:Lio/reactivex/internal/queue/a;
+    iget-object v1, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable$BlockingObservableIterator;->queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
-    invoke-virtual {v1}, Lio/reactivex/internal/queue/a;->isEmpty()Z
+    invoke-virtual {v1}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->isEmpty()Z
 
     move-result v1
 
@@ -242,7 +242,7 @@
 
     .line 5
     :try_start_0
-    invoke-static {}, Lio/reactivex/internal/util/c;->a()V
+    invoke-static {}, Lio/reactivex/internal/util/BlockingHelper;->a()V
 
     .line 6
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable$BlockingObservableIterator;->lock:Ljava/util/concurrent/locks/Lock;
@@ -258,9 +258,9 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable$BlockingObservableIterator;->queue:Lio/reactivex/internal/queue/a;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable$BlockingObservableIterator;->queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
-    invoke-virtual {v0}, Lio/reactivex/internal/queue/a;->isEmpty()Z
+    invoke-virtual {v0}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->isEmpty()Z
 
     move-result v0
 
@@ -333,9 +333,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable$BlockingObservableIterator;->queue:Lio/reactivex/internal/queue/a;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/BlockingObservableIterable$BlockingObservableIterator;->queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
-    invoke-virtual {v0}, Lio/reactivex/internal/queue/a;->poll()Ljava/lang/Object;
+    invoke-virtual {v0}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->poll()Ljava/lang/Object;
 
     move-result-object v0
 

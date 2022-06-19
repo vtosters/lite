@@ -56,15 +56,15 @@
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/jvm/b/a;
+    check-cast p1, Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void

@@ -3,7 +3,7 @@
 .source "CommentsOrderMenuItemsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/adapters/CommentsOrderMenuItemsAdapter$onCreateViewHolder$$inlined$apply$lambda$1;->$this_apply:Lcom/vk/newsfeed/adapters/CommentsOrderMenuItemsAdapter$b;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -86,7 +86,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/adapters/CommentsOrderMenuItemsAdapter$onCreateViewHolder$$inlined$apply$lambda$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

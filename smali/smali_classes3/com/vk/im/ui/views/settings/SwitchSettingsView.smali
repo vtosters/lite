@@ -3,7 +3,7 @@
 .source "SwitchSettingsView.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/settings/SwitchSettingsView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/settings/SwitchSettingsView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -240,7 +240,7 @@
     :cond_0
     const-string p0, "switchView"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -412,14 +412,14 @@
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 33
-    sget-object v1, Lcom/vk/im/ui/o;->SwitchSettingsView:[I
+    sget-object v1, Lcom/vk/im/ui/R2;->SwitchSettingsView:[I
 
     invoke-virtual {p1, p2, v1, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 34
-    sget p2, Lcom/vk/im/ui/o;->SwitchSettingsView_vkim_icon:I
+    sget p2, Lcom/vk/im/ui/R2;->SwitchSettingsView_vkim_icon:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -428,7 +428,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/settings/SwitchSettingsView;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 35
-    sget p2, Lcom/vk/im/ui/o;->SwitchSettingsView_vkim_iconSize:I
+    sget p2, Lcom/vk/im/ui/R2;->SwitchSettingsView_vkim_iconSize:I
 
     invoke-direct {p0, v3}, Lcom/vk/im/ui/views/settings/SwitchSettingsView;->a(I)I
 
@@ -441,7 +441,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/settings/SwitchSettingsView;->setIconSize(I)V
 
     .line 36
-    sget p2, Lcom/vk/im/ui/o;->SwitchSettingsView_vkim_iconTint:I
+    sget p2, Lcom/vk/im/ui/R2;->SwitchSettingsView_vkim_iconTint:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -454,7 +454,7 @@
 
     if-eqz p2, :cond_0
 
-    sget p3, Lcom/vk/im/ui/o;->SwitchSettingsView_vkim_iconTint:I
+    sget p3, Lcom/vk/im/ui/R2;->SwitchSettingsView_vkim_iconTint:I
 
     const/high16 p4, -0x1000000
 
@@ -467,14 +467,14 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 38
     :cond_1
     :goto_0
-    sget p2, Lcom/vk/im/ui/o;->SwitchSettingsView_vkim_titleText:I
+    sget p2, Lcom/vk/im/ui/R2;->SwitchSettingsView_vkim_titleText:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -495,7 +495,7 @@
 
     if-eqz p2, :cond_4
 
-    sget p3, Lcom/vk/im/ui/o;->SwitchSettingsView_vkim_titleTextAppearance:I
+    sget p3, Lcom/vk/im/ui/R2;->SwitchSettingsView_vkim_titleTextAppearance:I
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -504,7 +504,7 @@
     invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/widget/TextView;I)V
 
     .line 40
-    sget p2, Lcom/vk/im/ui/o;->SwitchSettingsView_vkim_checked:I
+    sget p2, Lcom/vk/im/ui/R2;->SwitchSettingsView_vkim_checked:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -529,37 +529,37 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/views/settings/SwitchSettingsView$init$4;-><init>(Lcom/vk/im/ui/views/settings/SwitchSettingsView;)V
 
-    invoke-static {p0, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p0, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 
     .line 44
     :cond_3
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 45
     :cond_4
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 46
     :cond_5
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 47
     :cond_6
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 48
     :cond_7
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -583,7 +583,7 @@
     :cond_0
     const-string v0, "switchView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -607,7 +607,7 @@
     :cond_0
     const-string v0, "iconView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -633,7 +633,7 @@
     :cond_0
     const-string v0, "iconView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -672,14 +672,14 @@
 
     const-string v1, "titleView.text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
     :cond_0
     const-string v0, "titleView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -766,19 +766,19 @@
     return-void
 
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 5
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 6
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -817,13 +817,13 @@
     return-void
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 3
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -843,7 +843,7 @@
     :cond_0
     const-string p1, "iconView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -874,7 +874,7 @@
     :cond_0
     const-string p1, "titleView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -891,7 +891,7 @@
 
     if-eqz v0, :cond_2
 
-    sget v2, Lcom/vk/im/ui/c;->text_primary:I
+    sget v2, Lcom/vk/im/ui/R5;->text_primary:I
 
     invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -906,7 +906,7 @@
 
     if-eqz v0, :cond_0
 
-    sget v2, Lcom/vk/im/ui/c;->accent:I
+    sget v2, Lcom/vk/im/ui/R5;->accent:I
 
     invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -929,7 +929,7 @@
     :cond_1
     const-string v0, "switchView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -937,7 +937,7 @@
     const-string v0, "titleView"
 
     .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method

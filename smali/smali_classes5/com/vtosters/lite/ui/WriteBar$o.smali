@@ -3,12 +3,12 @@
 .source "WriteBar.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
+    value = Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/io/File;",
         ">;"
     }
@@ -67,7 +67,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lb/h/g/m/d;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -103,7 +103,7 @@
     move-object v2, v1
 
     .line 5
-    invoke-static {p1}, Lb/h/g/m/d;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {p1}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v1
 
@@ -139,7 +139,7 @@
 
     new-instance v1, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
-    invoke-static {p1}, Lb/h/g/m/d;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {p1}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object p1
 

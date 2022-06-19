@@ -1,12 +1,12 @@
 .class public final Lcom/vk/api/narratives/NarrativeGetFromOwner;
-.super Lcom/vk/api/base/d;
+.super Lcom/vk/api/base/ApiRequest;
 .source "NarrativeGetFromOwner.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/d<",
+        "Lcom/vk/api/base/ApiRequest<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/narratives/Narrative;",
         ">;>;"
@@ -29,7 +29,7 @@
     const-string v0, "narratives.getFromOwner"
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     iput p1, p0, Lcom/vk/api/narratives/NarrativeGetFromOwner;->F:I
 
@@ -42,28 +42,28 @@
 
     const-string p2, "owner_id"
 
-    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     .line 3
     iget p1, p0, Lcom/vk/api/narratives/NarrativeGetFromOwner;->G:I
 
     const-string p2, "offset"
 
-    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     .line 4
     iget p1, p0, Lcom/vk/api/narratives/NarrativeGetFromOwner;->H:I
 
     const-string p2, "limit"
 
-    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     const-string p1, "extended"
 
     const/4 p2, 0x1
 
     .line 5
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -196,7 +196,7 @@
 
     invoke-direct {v2, v0}, Lcom/vk/api/narratives/NarrativeGetFromOwner$parse$5;-><init>(Landroid/util/SparseArray;)V
 
-    invoke-direct {v1, p1, v2}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p1, v2}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)V
 
     return-object v1
 .end method

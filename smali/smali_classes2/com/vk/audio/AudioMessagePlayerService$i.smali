@@ -62,11 +62,11 @@
 
     .line 3
     :try_start_0
-    sget-object v3, Lcom/vk/audio/b;->a:Lcom/vk/audio/b;
+    sget-object v3, Lcom/vk/audio/AudioMsgLoader;->INSTANCE:Lcom/vk/audio/AudioMsgLoader;
 
     iget-object v4, p0, Lcom/vk/audio/AudioMessagePlayerService$i;->b:Ljava/io/File;
 
-    invoke-virtual {v3, v2, v4}, Lcom/vk/audio/b;->a(Ljava/lang/String;Ljava/io/File;)Lcom/vk/audio/b$b;
+    invoke-virtual {v3, v2, v4}, Lcom/vk/audio/AudioMsgLoader;->a(Ljava/lang/String;Ljava/io/File;)Lcom/vk/audio/AudioMsgLoader$b;
 
     move-result-object v3
 
@@ -78,7 +78,7 @@
     .line 5
     iget-object v6, p0, Lcom/vk/audio/AudioMessagePlayerService$i;->c:Lcom/vk/audio/AudioMessagePlayerService;
 
-    invoke-static {v6}, Lcom/vk/audio/AudioMessagePlayerService;->l(Lcom/vk/audio/AudioMessagePlayerService;)Lcom/vk/bridges/h;
+    invoke-static {v6}, Lcom/vk/audio/AudioMessagePlayerService;->l(Lcom/vk/audio/AudioMessagePlayerService;)Lcom/vk/bridges/BenchmarkBridge1;
 
     move-result-object v6
 
@@ -92,11 +92,11 @@
     sub-long v9, v4, v0
 
     .line 7
-    invoke-virtual {v3}, Lcom/vk/audio/b$b;->a()I
+    invoke-virtual {v3}, Lcom/vk/audio/AudioMsgLoader$b;->a()I
 
     move-result v11
 
-    invoke-virtual {v3}, Lcom/vk/audio/b$b;->b()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/vk/audio/AudioMsgLoader$b;->b()Ljava/lang/String;
 
     move-result-object v12
 
@@ -117,7 +117,7 @@
     move-object v11, v13
 
     .line 8
-    invoke-interface/range {v3 .. v11}, Lcom/vk/bridges/h;->a(Ljava/lang/String;JJILjava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface/range {v3 .. v11}, Lcom/vk/bridges/BenchmarkBridge1;->a(Ljava/lang/String;JJILjava/lang/String;Ljava/lang/Throwable;)V
 
     .line 9
     iget-object v3, p0, Lcom/vk/audio/AudioMessagePlayerService$i;->a:Lcom/vk/audio/AudioMsgTrackByRecord;
@@ -181,7 +181,7 @@
     .line 13
     iget-object v5, p0, Lcom/vk/audio/AudioMessagePlayerService$i;->c:Lcom/vk/audio/AudioMessagePlayerService;
 
-    invoke-static {v5}, Lcom/vk/audio/AudioMessagePlayerService;->l(Lcom/vk/audio/AudioMessagePlayerService;)Lcom/vk/bridges/h;
+    invoke-static {v5}, Lcom/vk/audio/AudioMessagePlayerService;->l(Lcom/vk/audio/AudioMessagePlayerService;)Lcom/vk/bridges/BenchmarkBridge1;
 
     move-result-object v5
 
@@ -205,7 +205,7 @@
 
     move-wide v7, v0
 
-    invoke-interface/range {v3 .. v11}, Lcom/vk/bridges/h;->a(Ljava/lang/String;JJILjava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface/range {v3 .. v11}, Lcom/vk/bridges/BenchmarkBridge1;->a(Ljava/lang/String;JJILjava/lang/String;Ljava/lang/Throwable;)V
 
     .line 14
     iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService$i;->b:Ljava/io/File;

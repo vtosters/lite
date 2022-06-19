@@ -40,13 +40,13 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView$c;->a:Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardView;->getPresenter()Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;->H0()V
+    invoke-interface {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/Onboard;->H0()V
 
     :cond_0
     return-void

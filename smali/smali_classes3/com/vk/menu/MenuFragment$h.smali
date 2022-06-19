@@ -1,5 +1,5 @@
 .class public abstract Lcom/vk/menu/MenuFragment$h;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "MenuFragment.kt"
 
 # interfaces
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
-        "Lcom/vk/menu/d;",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+        "Lcom/vk/menu/MenuViewItem;",
         ">;",
         "Landroid/view/View$OnClickListener;"
     }
@@ -46,14 +46,14 @@
     const p1, 0x7f0d0323
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x2
 
@@ -61,7 +61,7 @@
 
     const v2, 0x7f0a01e4
 
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -70,11 +70,11 @@
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f0a0d80
 
-    invoke-static {p1, p2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -115,7 +115,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/menu/d;)V
+.method public a(Lcom/vk/menu/MenuViewItem;)V
     .locals 0
 
     return-void
@@ -125,9 +125,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/menu/d;
+    check-cast p1, Lcom/vk/menu/MenuViewItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuFragment$h;->a(Lcom/vk/menu/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuFragment$h;->a(Lcom/vk/menu/MenuViewItem;)V
 
     return-void
 .end method

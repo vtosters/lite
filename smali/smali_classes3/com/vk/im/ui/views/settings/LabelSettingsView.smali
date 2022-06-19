@@ -3,7 +3,7 @@
 .source "LabelSettingsView.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -34,7 +34,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/settings/LabelSettingsView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/settings/LabelSettingsView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -353,14 +353,14 @@
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 31
-    sget-object v1, Lcom/vk/im/ui/o;->LabelSettingsView:[I
+    sget-object v1, Lcom/vk/im/ui/R2;->LabelSettingsView:[I
 
     invoke-virtual {p1, p2, v1, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 32
-    sget p2, Lcom/vk/im/ui/o;->LabelSettingsView_vkim_titleText:I
+    sget p2, Lcom/vk/im/ui/R2;->LabelSettingsView_vkim_titleText:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -383,7 +383,7 @@
 
     if-eqz p2, :cond_7
 
-    sget p4, Lcom/vk/im/ui/o;->LabelSettingsView_vkim_titleTextAppearance:I
+    sget p4, Lcom/vk/im/ui/R2;->LabelSettingsView_vkim_titleTextAppearance:I
 
     invoke-virtual {p1, p4, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -392,7 +392,7 @@
     invoke-static {p2, p4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/widget/TextView;I)V
 
     .line 34
-    sget p2, Lcom/vk/im/ui/o;->LabelSettingsView_vkim_subtitleText:I
+    sget p2, Lcom/vk/im/ui/R2;->LabelSettingsView_vkim_subtitleText:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -413,7 +413,7 @@
 
     if-eqz p2, :cond_6
 
-    sget p3, Lcom/vk/im/ui/o;->LabelSettingsView_vkim_subtitleTextAppearance:I
+    sget p3, Lcom/vk/im/ui/R2;->LabelSettingsView_vkim_subtitleTextAppearance:I
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -422,7 +422,7 @@
     invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/widget/TextView;I)V
 
     .line 36
-    sget p2, Lcom/vk/im/ui/o;->LabelSettingsView_vkim_icon:I
+    sget p2, Lcom/vk/im/ui/R2;->LabelSettingsView_vkim_icon:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -431,7 +431,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/settings/LabelSettingsView;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 37
-    sget p2, Lcom/vk/im/ui/o;->LabelSettingsView_vkim_iconSize:I
+    sget p2, Lcom/vk/im/ui/R2;->LabelSettingsView_vkim_iconSize:I
 
     invoke-direct {p0, v3}, Lcom/vk/im/ui/views/settings/LabelSettingsView;->a(I)I
 
@@ -444,7 +444,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/im/ui/views/settings/LabelSettingsView;->setIconSize(I)V
 
     .line 38
-    sget p2, Lcom/vk/im/ui/o;->LabelSettingsView_vkim_iconTint:I
+    sget p2, Lcom/vk/im/ui/R2;->LabelSettingsView_vkim_iconTint:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -457,7 +457,7 @@
 
     if-eqz p2, :cond_2
 
-    sget p3, Lcom/vk/im/ui/o;->LabelSettingsView_vkim_iconTint:I
+    sget p3, Lcom/vk/im/ui/R2;->LabelSettingsView_vkim_iconTint:I
 
     const/high16 p4, -0x1000000
 
@@ -470,14 +470,14 @@
     goto :goto_2
 
     :cond_2
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 40
     :cond_3
     :goto_2
-    sget p2, Lcom/vk/im/ui/o;->LabelSettingsView_vkim_titleMaxLines:I
+    sget p2, Lcom/vk/im/ui/R2;->LabelSettingsView_vkim_titleMaxLines:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -490,7 +490,7 @@
 
     if-eqz p2, :cond_4
 
-    sget p3, Lcom/vk/im/ui/o;->LabelSettingsView_vkim_titleMaxLines:I
+    sget p3, Lcom/vk/im/ui/R2;->LabelSettingsView_vkim_titleMaxLines:I
 
     invoke-virtual {p1, p3, v7}, Landroid/content/res/TypedArray;->getInteger(II)I
 
@@ -501,7 +501,7 @@
     goto :goto_3
 
     :cond_4
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -514,31 +514,31 @@
 
     .line 43
     :cond_6
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 44
     :cond_7
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 45
     :cond_8
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 46
     :cond_9
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 47
     :cond_a
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -562,7 +562,7 @@
     :cond_0
     const-string v0, "iconView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -588,7 +588,7 @@
     :cond_0
     const-string v0, "iconView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -618,14 +618,14 @@
 
     const-string v1, "subtitleView.text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
     :cond_0
     const-string v0, "subtitleView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -646,14 +646,14 @@
 
     const-string v1, "titleView.text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
     :cond_0
     const-string v0, "titleView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -727,13 +727,13 @@
     return-void
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 3
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -753,7 +753,7 @@
     :cond_0
     const-string p1, "iconView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -805,13 +805,13 @@
     return-void
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 3
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -831,7 +831,7 @@
     :cond_0
     const-string p1, "titleView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -848,7 +848,7 @@
 
     if-eqz v0, :cond_2
 
-    sget v2, Lcom/vk/im/ui/c;->text_primary:I
+    sget v2, Lcom/vk/im/ui/R5;->text_primary:I
 
     invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -861,7 +861,7 @@
 
     if-eqz v0, :cond_1
 
-    sget v1, Lcom/vk/im/ui/c;->text_secondary:I
+    sget v1, Lcom/vk/im/ui/R5;->text_secondary:I
 
     invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -876,7 +876,7 @@
 
     if-eqz v0, :cond_0
 
-    sget v1, Lcom/vk/im/ui/c;->accent:I
+    sget v1, Lcom/vk/im/ui/R5;->accent:I
 
     invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -891,7 +891,7 @@
     const-string v0, "subtitleView"
 
     .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -899,7 +899,7 @@
     const-string v0, "titleView"
 
     .line 5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method

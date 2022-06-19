@@ -3,7 +3,7 @@
 .source "ParallelJoin.java"
 
 # interfaces
-.implements Lc/a/h;
+.implements Lio/reactivex/FlowableSubscriber;
 
 
 # annotations
@@ -22,9 +22,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Le/b/d;",
+        "Le/b/Subscription;",
         ">;",
-        "Lc/a/h<",
+        "Lio/reactivex/FlowableSubscriber<",
         "TT;>;"
     }
 .end annotation
@@ -50,10 +50,10 @@
 
 .field produced:J
 
-.field volatile queue:Lc/a/a0/b/j;
+.field volatile queue:Lc/a/a0/b/SimplePlainQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/a0/b/j<",
+            "Lc/a/a0/b/SimplePlainQueue<",
             "TT;>;"
         }
     .end annotation
@@ -119,9 +119,9 @@
 
     move-result-object p1
 
-    check-cast p1, Le/b/d;
+    check-cast p1, Le/b/Subscription;
 
-    invoke-interface {p1, v0, v1}, Le/b/d;->a(J)V
+    invoke-interface {p1, v0, v1}, Le/b/Subscription;->a(J)V
 
     goto :goto_0
 
@@ -133,7 +133,7 @@
     return-void
 .end method
 
-.method public a(Le/b/d;)V
+.method public a(Le/b/Subscription;)V
     .locals 2
 
     .line 1
@@ -141,7 +141,7 @@
 
     int-to-long v0, v0
 
-    invoke-static {p0, p1, v0, v1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Le/b/d;J)Z
+    invoke-static {p0, p1, v0, v1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Le/b/Subscription;J)Z
 
     return-void
 .end method
@@ -195,18 +195,18 @@
     return-void
 .end method
 
-.method c()Lc/a/a0/b/j;
+.method c()Lc/a/a0/b/SimplePlainQueue;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/a0/b/j<",
+            "Lc/a/a0/b/SimplePlainQueue<",
             "TT;>;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->queue:Lc/a/a0/b/j;
+    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->queue:Lc/a/a0/b/SimplePlainQueue;
 
     if-nez v0, :cond_0
 
@@ -218,7 +218,7 @@
     invoke-direct {v0, v1}, Lio/reactivex/internal/queue/SpscArrayQueue;-><init>(I)V
 
     .line 3
-    iput-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->queue:Lc/a/a0/b/j;
+    iput-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelJoin$JoinInnerSubscriber;->queue:Lc/a/a0/b/SimplePlainQueue;
 
     :cond_0
     return-object v0
@@ -253,9 +253,9 @@
 
     move-result-object v2
 
-    check-cast v2, Le/b/d;
+    check-cast v2, Le/b/Subscription;
 
-    invoke-interface {v2, v0, v1}, Le/b/d;->a(J)V
+    invoke-interface {v2, v0, v1}, Le/b/Subscription;->a(J)V
 
     goto :goto_0
 

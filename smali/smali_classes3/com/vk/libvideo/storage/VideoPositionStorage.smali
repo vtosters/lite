@@ -13,7 +13,7 @@
 
 
 # static fields
-.field private static final c:Lkotlin/e;
+.field private static final c:Lkotlin/Lazy2;
 
 .field private static final d:J
 
@@ -45,18 +45,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/storage/VideoPositionStorage$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/storage/VideoPositionStorage$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/libvideo/storage/VideoPositionStorage;->e:Lcom/vk/libvideo/storage/VideoPositionStorage$c;
 
     .line 1
     sget-object v0, Lcom/vk/libvideo/storage/VideoPositionStorage$Companion$instance$2;->a:Lcom/vk/libvideo/storage/VideoPositionStorage$Companion$instance$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/libvideo/storage/VideoPositionStorage;->c:Lkotlin/e;
+    sput-object v0, Lcom/vk/libvideo/storage/VideoPositionStorage;->c:Lkotlin/Lazy2;
 
     .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -93,11 +93,11 @@
     iput-object v0, p0, Lcom/vk/libvideo/storage/VideoPositionStorage;->b:Ljava/util/concurrent/ConcurrentHashMap;
 
     .line 4
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "video_position"
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -109,12 +109,12 @@
     sget-object v2, Lcom/vk/libvideo/storage/VideoPositionStorage$b;->a:Lcom/vk/libvideo/storage/VideoPositionStorage$b;
 
     .line 6
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 7
@@ -123,11 +123,11 @@
     return-void
 .end method
 
-.method public static final synthetic a()Lkotlin/e;
+.method public static final synthetic a()Lkotlin/Lazy2;
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vk/libvideo/storage/VideoPositionStorage;->c:Lkotlin/e;
+    sget-object v0, Lcom/vk/libvideo/storage/VideoPositionStorage;->c:Lkotlin/Lazy2;
 
     return-object v0
 .end method
@@ -274,11 +274,11 @@
 
     .line 4
     :cond_0
-    sget-object v1, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v1, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v2, "video_position"
 
-    invoke-virtual {v1, v2, v0}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v1, v2, v0}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Ljava/util/List;)V
 
     return-void
 .end method

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -65,13 +65,13 @@
     aget-object v4, v0, v2
 
     .line 7
-    invoke-virtual {v4}, Lcom/vk/fave/entities/FaveCategory;->b()Lcom/vk/fave/entities/g;
+    invoke-virtual {v4}, Lcom/vk/fave/entities/FaveCategory;->b()Lcom/vk/fave/entities/FaveType1;
 
     move-result-object v5
 
     if-eqz v5, :cond_0
 
-    invoke-interface {v5}, Lcom/vk/fave/entities/g;->a()Ljava/lang/String;
+    invoke-interface {v5}, Lcom/vk/fave/entities/FaveType1;->a()Ljava/lang/String;
 
     move-result-object v5
 
@@ -91,7 +91,7 @@
 
     const-string v6, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {v3, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -106,7 +106,7 @@
 
     :cond_2
     :goto_2
-    invoke-static {v5, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 

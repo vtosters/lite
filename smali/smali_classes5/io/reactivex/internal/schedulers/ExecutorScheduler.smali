@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/schedulers/ExecutorScheduler;
-.super Lc/a/s;
+.super Lio/reactivex/Scheduler;
 .source "ExecutorScheduler.java"
 
 
@@ -14,7 +14,7 @@
 
 
 # static fields
-.field static final d:Lc/a/s;
+.field static final d:Lio/reactivex/Scheduler;
 
 
 # instance fields
@@ -28,11 +28,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lc/a/f0/b;->c()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->c()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    sput-object v0, Lio/reactivex/internal/schedulers/ExecutorScheduler;->d:Lc/a/s;
+    sput-object v0, Lio/reactivex/internal/schedulers/ExecutorScheduler;->d:Lio/reactivex/Scheduler;
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lc/a/s;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/Scheduler;-><init>()V
 
     .line 2
     iput-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler;->c:Ljava/util/concurrent/Executor;
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method public a()Lc/a/s$c;
+.method public a()Lio/reactivex/Scheduler$c;
     .locals 3
 
     .line 1
@@ -69,11 +69,11 @@
     return-object v0
 .end method
 
-.method public a(Ljava/lang/Runnable;)Lio/reactivex/disposables/b;
+.method public a(Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
     .locals 2
 
     .line 2
-    invoke-static {p1}, Lc/a/e0/a;->a(Ljava/lang/Runnable;)Ljava/lang/Runnable;
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->a(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object p1
 
@@ -115,7 +115,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker$InterruptibleRunnable;-><init>(Ljava/lang/Runnable;Lio/reactivex/internal/disposables/a;)V
+    invoke-direct {v0, p1, v1}, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker$InterruptibleRunnable;-><init>(Ljava/lang/Runnable;Lio/reactivex/internal/disposables/DisposableContainer;)V
 
     .line 9
     iget-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler;->c:Ljava/util/concurrent/Executor;
@@ -143,7 +143,7 @@
     move-exception p1
 
     .line 12
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     .line 13
     sget-object p1, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
@@ -151,7 +151,7 @@
     return-object p1
 .end method
 
-.method public a(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/b;
+.method public a(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
     .locals 8
 
     .line 24
@@ -162,7 +162,7 @@
     if-eqz v0, :cond_0
 
     .line 25
-    invoke-static {p1}, Lc/a/e0/a;->a(Ljava/lang/Runnable;)Ljava/lang/Runnable;
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->a(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object p1
 
@@ -202,7 +202,7 @@
     move-exception p1
 
     .line 29
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     .line 30
     sget-object p1, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
@@ -211,18 +211,18 @@
 
     .line 31
     :cond_0
-    invoke-super/range {p0 .. p6}, Lc/a/s;->a(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/b;
+    invoke-super/range {p0 .. p6}, Lio/reactivex/Scheduler;->a(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/b;
+.method public a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
     .locals 2
 
     .line 14
-    invoke-static {p1}, Lc/a/e0/a;->a(Ljava/lang/Runnable;)Ljava/lang/Runnable;
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->a(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object p1
 
@@ -259,7 +259,7 @@
     move-exception p1
 
     .line 19
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     .line 20
     sget-object p1, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
@@ -273,20 +273,20 @@
     invoke-direct {v0, p1}, Lio/reactivex/internal/schedulers/ExecutorScheduler$DelayedRunnable;-><init>(Ljava/lang/Runnable;)V
 
     .line 22
-    sget-object p1, Lio/reactivex/internal/schedulers/ExecutorScheduler;->d:Lc/a/s;
+    sget-object p1, Lio/reactivex/internal/schedulers/ExecutorScheduler;->d:Lio/reactivex/Scheduler;
 
     new-instance v1, Lio/reactivex/internal/schedulers/ExecutorScheduler$a;
 
     invoke-direct {v1, p0, v0}, Lio/reactivex/internal/schedulers/ExecutorScheduler$a;-><init>(Lio/reactivex/internal/schedulers/ExecutorScheduler;Lio/reactivex/internal/schedulers/ExecutorScheduler$DelayedRunnable;)V
 
-    invoke-virtual {p1, v1, p2, p3, p4}, Lc/a/s;->a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v1, p2, p3, p4}, Lio/reactivex/Scheduler;->a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 23
     iget-object p2, v0, Lio/reactivex/internal/schedulers/ExecutorScheduler$DelayedRunnable;->timed:Lio/reactivex/internal/disposables/SequentialDisposable;
 
-    invoke-virtual {p2, p1}, Lio/reactivex/internal/disposables/SequentialDisposable;->a(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {p2, p1}, Lio/reactivex/internal/disposables/SequentialDisposable;->a(Lio/reactivex/disposables/Disposable;)Z
 
     return-object v0
 .end method

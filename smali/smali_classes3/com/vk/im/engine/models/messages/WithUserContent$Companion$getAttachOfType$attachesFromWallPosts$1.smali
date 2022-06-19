@@ -3,7 +3,7 @@
 .source "WithUserContent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/models/attaches/AttachWall;",
-        "Lkotlin/sequences/j<",
+        "Lkotlin/sequences/Sequence<",
         "+",
         "Lcom/vk/im/engine/models/attaches/Attach;",
         ">;>;"
@@ -58,14 +58,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/attaches/AttachWall;)Lkotlin/sequences/j;
+.method public final a(Lcom/vk/im/engine/models/attaches/AttachWall;)Lkotlin/sequences/Sequence;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/im/engine/models/attaches/AttachWall;",
             ")",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;"
         }
@@ -76,7 +76,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
@@ -89,7 +89,7 @@
     .line 1
     check-cast p1, Lcom/vk/im/engine/models/attaches/AttachWall;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/models/messages/WithUserContent$Companion$getAttachOfType$attachesFromWallPosts$1;->a(Lcom/vk/im/engine/models/attaches/AttachWall;)Lkotlin/sequences/j;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/models/messages/WithUserContent$Companion$getAttachOfType$attachesFromWallPosts$1;->a(Lcom/vk/im/engine/models/attaches/AttachWall;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 

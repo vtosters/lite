@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroidx/recyclerview/widget/internal/Prefetcher;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroidx/recyclerview/widget/internal/Prefetcher;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2

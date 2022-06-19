@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/tips/TipTextWindow;->a(Lcom/vk/core/tips/b;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/a;Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/core/tips/TipTextWindow;->a(Lcom/vk/core/tips/WindowBackground;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/AnimationProperties;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/tips/a;Landroid/view/View;)V
+.method constructor <init>(Lcom/vk/core/tips/AnimationProperties;Landroid/view/View;)V
     .locals 0
 
     iput-object p2, p0, Lcom/vk/core/tips/TipTextWindow$j;->a:Landroid/view/View;
@@ -68,12 +68,12 @@
 
     const-string v3, "getChildAt(i)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v3, "it"
 
     .line 4
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 

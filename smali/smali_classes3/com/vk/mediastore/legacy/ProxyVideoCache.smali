@@ -3,27 +3,27 @@
 .source "ProxyVideoCache.kt"
 
 # interfaces
-.implements Lcom/vk/mediastore/a/c;
+.implements Lcom/vk/mediastore/a/VideoCache;
 
 
 # static fields
-.field static final synthetic h:[Lkotlin/u/j;
+.field static final synthetic h:[Lkotlin/u/KProperty5;
 
 
 # instance fields
 .field private final a:Ljava/lang/String;
 
-.field private final b:Lcom/vk/core/util/u0;
+.field private final b:Lcom/vk/core/util/Provider2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/util/u0<",
-            "Lcom/danikula/videocache/f;",
+            "Lcom/vk/core/util/Provider2<",
+            "Lcom/danikula/videocache/HttpProxyCacheServer;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final c:Lcom/vk/core/util/u0;
+.field private final c:Lcom/vk/core/util/Provider2;
 
 .field private final d:Ljava/util/concurrent/ExecutorService;
 
@@ -48,13 +48,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/mediastore/legacy/ProxyVideoCache;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -62,15 +62,15 @@
 
     const-string v4, "getVideoCache()Lcom/danikula/videocache/HttpProxyCacheServer;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/mediastore/legacy/ProxyVideoCache;->h:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/mediastore/legacy/ProxyVideoCache;->h:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -92,7 +92,7 @@
 
     const-string v0, "ProxyVideoCache::class.java.simpleName"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache;->a:Ljava/lang/String;
 
@@ -101,16 +101,16 @@
 
     invoke-direct {p1, p0, p2, p3, p4}, Lcom/vk/mediastore/legacy/ProxyVideoCache$cacheProvider$1;-><init>(Lcom/vk/mediastore/legacy/ProxyVideoCache;IJ)V
 
-    invoke-static {p1}, Lcom/vk/core/util/w0;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/u0;
+    invoke-static {p1}, Lcom/vk/core/util/Provider1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/Provider2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b:Lcom/vk/core/util/u0;
+    iput-object p1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b:Lcom/vk/core/util/Provider2;
 
     .line 4
-    iget-object p1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b:Lcom/vk/core/util/u0;
+    iget-object p1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b:Lcom/vk/core/util/Provider2;
 
-    iput-object p1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache;->c:Lcom/vk/core/util/u0;
+    iput-object p1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache;->c:Lcom/vk/core/util/Provider2;
 
     .line 5
     sget-object p1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
@@ -178,33 +178,33 @@
 
     .line 13
     :try_start_0
-    new-instance v1, Lokhttp3/z$a;
+    new-instance v1, Lokhttp3/Request$a;
 
-    invoke-direct {v1}, Lokhttp3/z$a;-><init>()V
+    invoke-direct {v1}, Lokhttp3/Request$a;-><init>()V
 
-    invoke-direct {p0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b()Lcom/danikula/videocache/f;
+    invoke-direct {p0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b()Lcom/danikula/videocache/HttpProxyCacheServer;
 
     move-result-object v2
 
-    invoke-virtual {v2, p1}, Lcom/danikula/videocache/f;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, p1}, Lcom/danikula/videocache/HttpProxyCacheServer;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lokhttp3/z$a;->b(Ljava/lang/String;)Lokhttp3/z$a;
+    invoke-virtual {v1, p1}, Lokhttp3/Request$a;->b(Ljava/lang/String;)Lokhttp3/Request$a;
 
-    invoke-virtual {v1}, Lokhttp3/z$a;->a()Lokhttp3/z;
+    invoke-virtual {v1}, Lokhttp3/Request$a;->a()Lokhttp3/Request;
 
     move-result-object p1
 
     .line 14
-    invoke-static {}, Lcom/vk/core/network/Network;->j()Lokhttp3/x;
+    invoke-static {}, Lcom/vk/core/network/Network;->j()Lokhttp3/OkHttpClient;
 
     move-result-object v1
 
     if-eqz p2, :cond_0
 
     .line 15
-    invoke-virtual {v1}, Lokhttp3/x;->r()Lokhttp3/x$b;
+    invoke-virtual {v1}, Lokhttp3/OkHttpClient;->r()Lokhttp3/OkHttpClient$b;
 
     move-result-object v1
 
@@ -213,24 +213,24 @@
 
     invoke-direct {v2, p2}, Lcom/vk/mediastore/legacy/ProxyVideoCache$c;-><init>(Lcom/vk/mediastore/legacy/ProgressResponseBody$a;)V
 
-    invoke-virtual {v1, v2}, Lokhttp3/x$b;->a(Lokhttp3/u;)Lokhttp3/x$b;
+    invoke-virtual {v1, v2}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
 
     .line 17
-    invoke-virtual {v1}, Lokhttp3/x$b;->a()Lokhttp3/x;
+    invoke-virtual {v1}, Lokhttp3/OkHttpClient$b;->a()Lokhttp3/OkHttpClient;
 
     move-result-object v1
 
     const-string p2, "client.newBuilder()\n    \u2026                 .build()"
 
-    invoke-static {v1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 18
     :cond_0
-    invoke-virtual {v1, p1}, Lokhttp3/x;->a(Lokhttp3/z;)Lokhttp3/e;
+    invoke-virtual {v1, p1}, Lokhttp3/OkHttpClient;->a(Lokhttp3/Request;)Lokhttp3/Call;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lokhttp3/e;->execute()Lokhttp3/b0;
+    invoke-interface {p1}, Lokhttp3/Call;->execute()Lokhttp3/Response;
 
     move-result-object p1
     :try_end_0
@@ -241,34 +241,34 @@
 
     .line 19
     :try_start_1
-    invoke-virtual {p1}, Lokhttp3/b0;->a()Lokhttp3/c0;
+    invoke-virtual {p1}, Lokhttp3/Response;->a()Lokhttp3/ResponseBody;
 
     move-result-object p2
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p2}, Lokhttp3/c0;->f()Lokio/e;
+    invoke-virtual {p2}, Lokhttp3/ResponseBody;->f()Lokio/BufferedSource;
 
     move-result-object p2
 
-    invoke-static {}, Lokio/k;->a()Lokio/q;
+    invoke-static {}, Lokio/Okio;->a()Lokio/Sink;
 
     move-result-object v0
 
-    invoke-interface {p2, v0}, Lokio/e;->a(Lokio/q;)J
+    invoke-interface {p2, v0}, Lokio/BufferedSource;->a(Lokio/Sink;)J
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 20
-    invoke-virtual {p1}, Lokhttp3/b0;->close()V
+    invoke-virtual {p1}, Lokhttp3/Response;->close()V
 
     goto :goto_1
 
     .line 21
     :cond_1
     :try_start_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -295,7 +295,7 @@
 
     :cond_2
     :try_start_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -330,7 +330,7 @@
     if-eqz v0, :cond_3
 
     .line 23
-    invoke-virtual {v0}, Lokhttp3/b0;->close()V
+    invoke-virtual {v0}, Lokhttp3/Response;->close()V
 
     :cond_3
     :goto_1
@@ -339,37 +339,37 @@
     :goto_2
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Lokhttp3/b0;->close()V
+    invoke-virtual {v0}, Lokhttp3/Response;->close()V
 
     :cond_4
     throw p1
 .end method
 
-.method private final b()Lcom/danikula/videocache/f;
+.method private final b()Lcom/danikula/videocache/HttpProxyCacheServer;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache;->c:Lcom/vk/core/util/u0;
+    iget-object v0, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache;->c:Lcom/vk/core/util/Provider2;
 
-    sget-object v1, Lcom/vk/mediastore/legacy/ProxyVideoCache;->h:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/mediastore/legacy/ProxyVideoCache;->h:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/w0;->a(Lcom/vk/core/util/u0;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/Provider1;->a(Lcom/vk/core/util/Provider2;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/danikula/videocache/f;
+    check-cast v0, Lcom/danikula/videocache/HttpProxyCacheServer;
 
     return-object v0
 .end method
 
-.method public static final synthetic b(Lcom/vk/mediastore/legacy/ProxyVideoCache;)Lcom/vk/core/util/u0;
+.method public static final synthetic b(Lcom/vk/mediastore/legacy/ProxyVideoCache;)Lcom/vk/core/util/Provider2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b:Lcom/vk/core/util/u0;
+    iget-object p0, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b:Lcom/vk/core/util/Provider2;
 
     return-object p0
 .end method
@@ -381,34 +381,34 @@
 
     .line 2
     :try_start_0
-    new-instance v1, Lokhttp3/z$a;
+    new-instance v1, Lokhttp3/Request$a;
 
-    invoke-direct {v1}, Lokhttp3/z$a;-><init>()V
+    invoke-direct {v1}, Lokhttp3/Request$a;-><init>()V
 
-    invoke-direct {p0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b()Lcom/danikula/videocache/f;
+    invoke-direct {p0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b()Lcom/danikula/videocache/HttpProxyCacheServer;
 
     move-result-object v2
 
-    invoke-virtual {v2, p1}, Lcom/danikula/videocache/f;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, p1}, Lcom/danikula/videocache/HttpProxyCacheServer;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lokhttp3/z$a;->b(Ljava/lang/String;)Lokhttp3/z$a;
+    invoke-virtual {v1, p1}, Lokhttp3/Request$a;->b(Ljava/lang/String;)Lokhttp3/Request$a;
 
-    invoke-virtual {v1}, Lokhttp3/z$a;->a()Lokhttp3/z;
+    invoke-virtual {v1}, Lokhttp3/Request$a;->a()Lokhttp3/Request;
 
     move-result-object p1
 
     .line 3
-    invoke-static {}, Lcom/vk/core/network/Network;->j()Lokhttp3/x;
+    invoke-static {}, Lcom/vk/core/network/Network;->j()Lokhttp3/OkHttpClient;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lokhttp3/x;->a(Lokhttp3/z;)Lokhttp3/e;
+    invoke-virtual {v1, p1}, Lokhttp3/OkHttpClient;->a(Lokhttp3/Request;)Lokhttp3/Call;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lokhttp3/e;->execute()Lokhttp3/b0;
+    invoke-interface {p1}, Lokhttp3/Call;->execute()Lokhttp3/Response;
 
     move-result-object p1
     :try_end_0
@@ -419,30 +419,30 @@
 
     .line 4
     :try_start_1
-    invoke-virtual {p1}, Lokhttp3/b0;->a()Lokhttp3/c0;
+    invoke-virtual {p1}, Lokhttp3/Response;->a()Lokhttp3/ResponseBody;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lokhttp3/c0;->f()Lokio/e;
+    invoke-virtual {v1}, Lokhttp3/ResponseBody;->f()Lokio/BufferedSource;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lokio/e;->readByte()B
+    invoke-interface {v0}, Lokio/BufferedSource;->readByte()B
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 5
-    invoke-virtual {p1}, Lokhttp3/b0;->close()V
+    invoke-virtual {p1}, Lokhttp3/Response;->close()V
 
     goto :goto_1
 
     .line 6
     :cond_0
     :try_start_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -473,7 +473,7 @@
 
     :cond_1
     :try_start_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -508,7 +508,7 @@
     if-eqz v0, :cond_2
 
     .line 8
-    invoke-virtual {v0}, Lokhttp3/b0;->close()V
+    invoke-virtual {v0}, Lokhttp3/Response;->close()V
 
     :cond_2
     :goto_1
@@ -517,7 +517,7 @@
     :goto_2
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lokhttp3/b0;->close()V
+    invoke-virtual {v0}, Lokhttp3/Response;->close()V
 
     :cond_3
     throw p1
@@ -536,7 +536,7 @@
     .locals 2
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "android.permission.WRITE_EXTERNAL_STORAGE"
 
@@ -557,11 +557,11 @@
     return v0
 .end method
 
-.method public static final synthetic d(Lcom/vk/mediastore/legacy/ProxyVideoCache;)Lcom/danikula/videocache/f;
+.method public static final synthetic d(Lcom/vk/mediastore/legacy/ProxyVideoCache;)Lcom/danikula/videocache/HttpProxyCacheServer;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b()Lcom/danikula/videocache/f;
+    invoke-direct {p0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b()Lcom/danikula/videocache/HttpProxyCacheServer;
 
     move-result-object p0
 
@@ -602,35 +602,35 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/mediastore/a/c$c;Ljava/lang/String;)V
+.method public a(Lcom/vk/mediastore/a/VideoCache$c;Ljava/lang/String;)V
     .locals 2
 
     .line 12
-    invoke-direct {p0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b()Lcom/danikula/videocache/f;
+    invoke-direct {p0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b()Lcom/danikula/videocache/HttpProxyCacheServer;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/mediastore/legacy/ProxyVideoCache$a;
 
-    invoke-direct {v1, p1}, Lcom/vk/mediastore/legacy/ProxyVideoCache$a;-><init>(Lcom/vk/mediastore/a/c$c;)V
+    invoke-direct {v1, p1}, Lcom/vk/mediastore/legacy/ProxyVideoCache$a;-><init>(Lcom/vk/mediastore/a/VideoCache$c;)V
 
-    invoke-virtual {v0, v1, p2}, Lcom/danikula/videocache/f;->a(Lcom/danikula/videocache/b;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p2}, Lcom/danikula/videocache/HttpProxyCacheServer;->a(Lcom/danikula/videocache/CacheListener;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public a(Ljava/lang/String;Lkotlin/jvm/b/c;)V
+.method public a(Ljava/lang/String;Lkotlin/jvm/b/Functions1;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/String;",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -640,14 +640,14 @@
 
     new-instance v1, Lcom/vk/mediastore/legacy/ProxyVideoCache$d;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/vk/mediastore/legacy/ProxyVideoCache$d;-><init>(Lcom/vk/mediastore/legacy/ProxyVideoCache;Ljava/lang/String;Lkotlin/jvm/b/c;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/vk/mediastore/legacy/ProxyVideoCache$d;-><init>(Lcom/vk/mediastore/legacy/ProxyVideoCache;Ljava/lang/String;Lkotlin/jvm/b/Functions1;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method public a(Ljava/lang/String;ZLcom/vk/mediastore/a/c$b;)V
+.method public a(Ljava/lang/String;ZLcom/vk/mediastore/a/VideoCache$b;)V
     .locals 8
 
     .line 5
@@ -680,7 +680,7 @@
     .line 8
     new-instance v6, Lcom/vk/mediastore/legacy/ProxyVideoCache$f;
 
-    invoke-direct {v6, p0, p3, p1}, Lcom/vk/mediastore/legacy/ProxyVideoCache$f;-><init>(Lcom/vk/mediastore/legacy/ProxyVideoCache;Lcom/vk/mediastore/a/c$b;Ljava/lang/String;)V
+    invoke-direct {v6, p0, p3, p1}, Lcom/vk/mediastore/legacy/ProxyVideoCache$f;-><init>(Lcom/vk/mediastore/legacy/ProxyVideoCache;Lcom/vk/mediastore/a/VideoCache$b;Ljava/lang/String;)V
 
     .line 9
     iget-object v0, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache;->d:Ljava/util/concurrent/ExecutorService;
@@ -697,7 +697,7 @@
 
     move v5, p2
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/mediastore/legacy/ProxyVideoCache$e;-><init>(Lcom/vk/mediastore/legacy/ProxyVideoCache;Ljava/lang/String;Lcom/vk/mediastore/a/c$b;ZLcom/vk/mediastore/legacy/ProxyVideoCache$f;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/mediastore/legacy/ProxyVideoCache$e;-><init>(Lcom/vk/mediastore/legacy/ProxyVideoCache;Ljava/lang/String;Lcom/vk/mediastore/a/VideoCache$b;ZLcom/vk/mediastore/legacy/ProxyVideoCache$f;)V
 
     invoke-interface {v0, v7}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
@@ -708,18 +708,18 @@
     .locals 1
 
     .line 10
-    invoke-direct {p0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b()Lcom/danikula/videocache/f;
+    invoke-direct {p0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b()Lcom/danikula/videocache/HttpProxyCacheServer;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/danikula/videocache/f;->b(Ljava/lang/String;)Z
+    invoke-virtual {v0, p1}, Lcom/danikula/videocache/HttpProxyCacheServer;->b(Ljava/lang/String;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public b(Lcom/vk/mediastore/a/c$c;Ljava/lang/String;)V
+.method public b(Lcom/vk/mediastore/a/VideoCache$c;Ljava/lang/String;)V
     .locals 0
 
     return-void

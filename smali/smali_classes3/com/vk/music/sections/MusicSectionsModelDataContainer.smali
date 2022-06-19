@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/sections/MusicSectionsModelDataContainer$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/sections/MusicSectionsModelDataContainer$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/music/sections/MusicSectionsModelDataContainer$a;
@@ -65,7 +65,7 @@
 
     const/4 v1, 0x3
 
-    invoke-direct {p0, v0, v0, v1, v0}, Lcom/vk/music/sections/MusicSectionsModelDataContainer;-><init>(Ljava/util/ArrayList;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v0, v1, v0}, Lcom/vk/music/sections/MusicSectionsModelDataContainer;-><init>(Ljava/util/ArrayList;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -118,7 +118,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/ArrayList;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/util/ArrayList;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p4, p3, 0x1

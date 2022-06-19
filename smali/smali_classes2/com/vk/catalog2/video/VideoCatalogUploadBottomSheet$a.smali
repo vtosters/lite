@@ -1,5 +1,5 @@
 .class public final Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$a;
-.super Lcom/vk/core/dialogs/adapter/a;
+.super Lcom/vk/core/dialogs/adapter/ModalAdapter1;
 .source "VideoCatalogUploadBottomSheet.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/dialogs/adapter/a<",
+        "Lcom/vk/core/dialogs/adapter/ModalAdapter1<",
         "Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$Options;",
         ">;"
     }
@@ -27,23 +27,23 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/dialogs/adapter/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/dialogs/adapter/ModalAdapter1;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;)Lcom/vk/core/dialogs/adapter/b;
+.method public a(Landroid/view/View;)Lcom/vk/core/dialogs/adapter/ViewReferrer;
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/core/dialogs/adapter/b;
+    new-instance v0, Lcom/vk/core/dialogs/adapter/ViewReferrer;
 
-    invoke-direct {v0}, Lcom/vk/core/dialogs/adapter/b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/dialogs/adapter/ViewReferrer;-><init>()V
 
     .line 3
-    sget v1, Lcom/vk/catalog2/core/q;->title:I
+    sget v1, Lcom/vk/catalog2/core/R10;->title:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -51,20 +51,20 @@
 
     const-string v1, "itemView.findViewById(R.id.title)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/b;->a(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(Landroid/view/View;)V
 
     return-object v0
 .end method
 
-.method public a(Lcom/vk/core/dialogs/adapter/b;Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$Options;I)V
+.method public a(Lcom/vk/core/dialogs/adapter/ViewReferrer;Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$Options;I)V
     .locals 1
 
     .line 4
-    sget p3, Lcom/vk/catalog2/core/q;->title:I
+    sget p3, Lcom/vk/catalog2/core/R10;->title:I
 
-    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/b;->a(I)Landroid/view/View;
+    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -75,9 +75,9 @@
 
     move-result p3
 
-    sget v0, Lcom/vk/catalog2/core/l;->action_sheet_action_foreground:I
+    sget v0, Lcom/vk/catalog2/core/R6;->action_sheet_action_foreground:I
 
-    invoke-static {p1, p3, v0}, Lcom/vk/core/extensions/a0;->d(Landroid/widget/TextView;II)V
+    invoke-static {p1, p3, v0}, Lcom/vk/core/extensions/TextViewExt;->d(Landroid/widget/TextView;II)V
 
     .line 6
     invoke-virtual {p2}, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$Options;->b()I
@@ -89,13 +89,13 @@
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/core/dialogs/adapter/b;Ljava/lang/Object;I)V
+.method public bridge synthetic a(Lcom/vk/core/dialogs/adapter/ViewReferrer;Ljava/lang/Object;I)V
     .locals 0
 
     .line 1
     check-cast p2, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$Options;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$a;->a(Lcom/vk/core/dialogs/adapter/b;Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$Options;I)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$a;->a(Lcom/vk/core/dialogs/adapter/ViewReferrer;Lcom/vk/catalog2/video/VideoCatalogUploadBottomSheet$Options;I)V
 
     return-void
 .end method

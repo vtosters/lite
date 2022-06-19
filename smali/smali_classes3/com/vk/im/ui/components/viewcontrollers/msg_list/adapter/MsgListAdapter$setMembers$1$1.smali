@@ -3,7 +3,7 @@
 .source "MsgListAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/models/j;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/models/Profile;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $vh:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;
+.field final synthetic $vh:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;)V
+.method constructor <init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter$setMembers$1$1;->$vh:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter$setMembers$1$1;->$vh:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;
 
     const/4 p1, 0x1
 
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/j;)V
+.method public final a(Lcom/vk/im/engine/models/Profile;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter$setMembers$1$1;->$vh:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter$setMembers$1$1;->$vh:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;->a(Lcom/vk/im/engine/models/Profile;)V
 
     return-void
 .end method
@@ -61,11 +61,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/j;
+    check-cast p1, Lcom/vk/im/engine/models/Profile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter$setMembers$1$1;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter$setMembers$1$1;->a(Lcom/vk/im/engine/models/Profile;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

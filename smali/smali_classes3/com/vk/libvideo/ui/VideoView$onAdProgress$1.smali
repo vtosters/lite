@@ -3,12 +3,12 @@
 .source "VideoView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/ui/VideoView;->a(Lcom/vk/libvideo/ad/b;FFZLjava/lang/Integer;)V
+    value = Lcom/vk/libvideo/ui/VideoView;->a(Lcom/vk/libvideo/ad/AdBannerData;FFZLjava/lang/Integer;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/libvideo/ui/VideoView$onAdProgress$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -62,13 +62,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/libvideo/ui/VideoView$onAdProgress$1;->this$0:Lcom/vk/libvideo/ui/VideoView;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/a;
+    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoView;->getAutoPlay()Lcom/vk/libvideo/autoplay/AutoPlay;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->D()V
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->D()V
 
     :cond_0
     return-void

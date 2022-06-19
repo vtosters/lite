@@ -3,7 +3,7 @@
 .source "HeadsetNotificationManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Landroid/content/SharedPreferences;",
         ">;"
     }
@@ -59,7 +59,7 @@
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 

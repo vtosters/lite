@@ -3,7 +3,7 @@
 .source "NewsListsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/newsfeed/r;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/newsfeed/NewsListsAdapter2;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/newsfeed/r;)Z
+.method public final a(Lcom/vk/newsfeed/NewsListsAdapter2;)Z
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/newsfeed/r;->b()Lcom/vtosters/lite/NewsfeedList;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/NewsListsAdapter2;->b()Lcom/vtosters/lite/NewsfeedList;
 
     move-result-object p1
 
@@ -85,9 +85,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/newsfeed/r;
+    check-cast p1, Lcom/vk/newsfeed/NewsListsAdapter2;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/NewsListsAdapter$selectDefaultList$1;->a(Lcom/vk/newsfeed/r;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/NewsListsAdapter$selectDefaultList$1;->a(Lcom/vk/newsfeed/NewsListsAdapter2;)Z
 
     move-result p1
 

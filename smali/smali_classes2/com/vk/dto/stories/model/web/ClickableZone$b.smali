@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -50,7 +50,7 @@
 
     const-string v2, "actionType"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/dto/stories/model/StickerType$a;->a(Ljava/lang/String;)Lcom/vk/dto/stories/model/StickerType;
 
@@ -68,9 +68,9 @@
     if-ne v1, v2, :cond_2
 
     .line 4
-    sget-object v1, Lcom/vk/dto/stories/model/actions/b;->a:Lcom/vk/dto/stories/model/actions/b;
+    sget-object v1, Lcom/vk/dto/stories/model/actions/StickerAction1;->INSTANCE:Lcom/vk/dto/stories/model/actions/StickerAction1;
 
-    invoke-virtual {v1, p1}, Lcom/vk/dto/stories/model/actions/b;->a(Lorg/json/JSONObject;)Lcom/vk/dto/stories/model/actions/StickerAction;
+    invoke-virtual {v1, p1}, Lcom/vk/dto/stories/model/actions/StickerAction1;->a(Lorg/json/JSONObject;)Lcom/vk/dto/stories/model/actions/StickerAction;
 
     move-result-object v1
 

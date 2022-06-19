@@ -3,7 +3,7 @@
 .source "AudioPlayerListenersNotifyManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/audioipc/core/e;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/audioipc/core/AudioPlayerListener;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -50,19 +50,19 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/audioipc/core/e;)V
+.method public final a(Lcom/vk/audioipc/core/AudioPlayerListener;)V
     .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnBackgroundTimePlayedMs$1;->this$0:Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;
 
-    invoke-static {v0}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->a(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;)Lcom/vk/audioipc/core/d;
+    invoke-static {v0}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->a(Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;)Lcom/vk/audioipc/core/AudioPlayer;
 
     move-result-object v0
 
     iget-wide v1, p0, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnBackgroundTimePlayedMs$1;->$timePlayedInBackgroundMs:J
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/vk/audioipc/core/e;->a(Lcom/vk/audioipc/core/d;J)V
+    invoke-interface {p1, v0, v1, v2}, Lcom/vk/audioipc/core/AudioPlayerListener;->a(Lcom/vk/audioipc/core/AudioPlayer;J)V
 
     return-void
 .end method
@@ -71,11 +71,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/audioipc/core/e;
+    check-cast p1, Lcom/vk/audioipc/core/AudioPlayerListener;
 
-    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnBackgroundTimePlayedMs$1;->a(Lcom/vk/audioipc/core/e;)V
+    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager$notifyOnBackgroundTimePlayedMs$1;->a(Lcom/vk/audioipc/core/AudioPlayerListener;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

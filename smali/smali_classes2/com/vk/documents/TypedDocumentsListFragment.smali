@@ -3,7 +3,7 @@
 .source "TypedDocumentsListFragment.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/fragments/p2/d;
+.implements Lcom/vtosters/lite/fragments/p2/DocumentStatListener;
 
 
 # annotations
@@ -16,7 +16,7 @@
 
 
 # static fields
-.field static final synthetic P:[Lkotlin/u/j;
+.field static final synthetic P:[Lkotlin/u/KProperty5;
 
 .field public static final Q:Lcom/vk/documents/TypedDocumentsListFragment$b;
     .annotation runtime Ljava/lang/Deprecated;
@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field private final I:Lkotlin/e;
+.field private final I:Lkotlin/Lazy2;
 
 .field private J:Z
 
@@ -39,13 +39,13 @@
     .end annotation
 .end field
 
-.field private L:Lcom/vk/lists/t;
+.field private L:Lcom/vk/lists/PaginationHelper;
 
 .field private M:Z
 
-.field private final N:Lkotlin/e;
+.field private final N:Lkotlin/Lazy2;
 
-.field private final O:Lkotlin/e;
+.field private final O:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -54,13 +54,13 @@
 
     const/4 v0, 0x3
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/documents/TypedDocumentsListFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -68,9 +68,9 @@
 
     const-string v4, "getOwnerId()I"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
@@ -80,7 +80,7 @@
 
     const-class v2, Lcom/vk/documents/TypedDocumentsListFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -88,9 +88,9 @@
 
     const-string v4, "getTypeId()I"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x1
 
@@ -100,7 +100,7 @@
 
     const-class v2, Lcom/vk/documents/TypedDocumentsListFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -108,21 +108,21 @@
 
     const-string v4, "getDataProvider()Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$1;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/documents/TypedDocumentsListFragment;->P:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/documents/TypedDocumentsListFragment;->P:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/documents/TypedDocumentsListFragment$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/documents/TypedDocumentsListFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/documents/TypedDocumentsListFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/documents/TypedDocumentsListFragment;->Q:Lcom/vk/documents/TypedDocumentsListFragment$b;
 
@@ -140,33 +140,33 @@
 
     invoke-direct {v0, p0}, Lcom/vk/documents/TypedDocumentsListFragment$ownerId$2;-><init>(Lcom/vk/documents/TypedDocumentsListFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->I:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->I:Lkotlin/Lazy2;
 
     .line 3
     new-instance v0, Lcom/vk/documents/TypedDocumentsListFragment$typeId$2;
 
     invoke-direct {v0, p0}, Lcom/vk/documents/TypedDocumentsListFragment$typeId$2;-><init>(Lcom/vk/documents/TypedDocumentsListFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->N:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->N:Lkotlin/Lazy2;
 
     .line 4
     new-instance v0, Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2;
 
     invoke-direct {v0, p0}, Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2;-><init>(Lcom/vk/documents/TypedDocumentsListFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->O:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->O:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -182,15 +182,15 @@
 .method private final V4()Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->O:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->O:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/documents/TypedDocumentsListFragment;->P:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/documents/TypedDocumentsListFragment;->P:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -240,15 +240,15 @@
 .method private final b()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->I:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->I:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/documents/TypedDocumentsListFragment;->P:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/documents/TypedDocumentsListFragment;->P:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -281,11 +281,11 @@
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/documents/TypedDocumentsListFragment;)Lcom/vk/lists/t;
+.method public static final synthetic c(Lcom/vk/documents/TypedDocumentsListFragment;)Lcom/vk/lists/PaginationHelper;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->L:Lcom/vk/lists/t;
+    iget-object p0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->L:Lcom/vk/lists/PaginationHelper;
 
     return-object p0
 .end method
@@ -326,11 +326,11 @@
     if-eqz v1, :cond_0
 
     .line 3
-    iget-object v1, p0, Lcom/vk/documents/TypedDocumentsListFragment;->L:Lcom/vk/lists/t;
+    iget-object v1, p0, Lcom/vk/documents/TypedDocumentsListFragment;->L:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1, v0}, Lcom/vk/lists/t;->a(Z)V
+    invoke-virtual {v1, v0}, Lcom/vk/lists/PaginationHelper;->a(Z)V
 
     :cond_0
     return-void
@@ -339,15 +339,15 @@
 .method public final S4()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->N:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->N:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/documents/TypedDocumentsListFragment;->P:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/documents/TypedDocumentsListFragment;->P:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -375,7 +375,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/core/ui/v/g;)V
+.method public a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
     .locals 2
 
     .line 5
@@ -514,7 +514,7 @@
 
     .line 16
     :goto_0
-    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/g;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     return-void
 .end method
@@ -550,7 +550,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -565,17 +565,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->L:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->L:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/t;->j()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->j()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->L:Lcom/vk/lists/t;
+    iput-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment;->L:Lcom/vk/lists/PaginationHelper;
 
     .line 3
     invoke-super {p0}, Lcom/vk/documents/list/DocumentsListFragment;->onDestroyView()V
@@ -636,24 +636,24 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$o;)Lcom/vk/lists/t$k;
+    invoke-static {p1}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$o;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object p1
 
     const/16 v1, 0xa
 
     .line 7
-    invoke-virtual {p1, v1}, Lcom/vk/lists/t$k;->b(I)Lcom/vk/lists/t$k;
+    invoke-virtual {p1, v1}, Lcom/vk/lists/PaginationHelper$k;->b(I)Lcom/vk/lists/PaginationHelper$k;
 
     const/16 v1, 0x32
 
     .line 8
-    invoke-virtual {p1, v1}, Lcom/vk/lists/t$k;->c(I)Lcom/vk/lists/t$k;
+    invoke-virtual {p1, v1}, Lcom/vk/lists/PaginationHelper$k;->c(I)Lcom/vk/lists/PaginationHelper$k;
 
     .line 9
     iget-boolean v1, p0, Lcom/vk/documents/TypedDocumentsListFragment;->J:Z
 
-    invoke-virtual {p1, v1}, Lcom/vk/lists/t$k;->c(Z)Lcom/vk/lists/t$k;
+    invoke-virtual {p1, v1}, Lcom/vk/lists/PaginationHelper$k;->c(Z)Lcom/vk/lists/PaginationHelper$k;
 
     .line 10
     iget-object v1, p0, Lcom/vk/documents/TypedDocumentsListFragment;->K:Lcom/vk/api/base/VkPaginationList;
@@ -689,13 +689,13 @@
     const/4 p2, 0x0
 
     :goto_1
-    invoke-virtual {p1, p2}, Lcom/vk/lists/t$k;->a(I)Lcom/vk/lists/t$k;
+    invoke-virtual {p1, p2}, Lcom/vk/lists/PaginationHelper$k;->a(I)Lcom/vk/lists/PaginationHelper$k;
 
     :cond_4
     const-string p2, "PaginationHelper.createW\u2026)\n            }\n        }"
 
     .line 12
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
     invoke-virtual {p0}, Lcom/vk/documents/list/DocumentsListFragment;->R4()Lcom/vk/lists/RecyclerPaginatedView;
@@ -704,11 +704,11 @@
 
     if-eqz p2, :cond_6
 
-    invoke-static {p1, p2}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {p1, p2}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/documents/TypedDocumentsListFragment;->L:Lcom/vk/lists/t;
+    iput-object p1, p0, Lcom/vk/documents/TypedDocumentsListFragment;->L:Lcom/vk/lists/PaginationHelper;
 
     .line 14
     iget-object p1, p0, Lcom/vk/documents/TypedDocumentsListFragment;->K:Lcom/vk/api/base/VkPaginationList;
@@ -722,18 +722,18 @@
     if-nez p1, :cond_5
 
     .line 15
-    iget-object p1, p0, Lcom/vk/documents/TypedDocumentsListFragment;->L:Lcom/vk/lists/t;
+    iget-object p1, p0, Lcom/vk/documents/TypedDocumentsListFragment;->L:Lcom/vk/lists/PaginationHelper;
 
     if-eqz p1, :cond_5
 
-    invoke-virtual {p1, v2}, Lcom/vk/lists/t;->b(Z)V
+    invoke-virtual {p1, v2}, Lcom/vk/lists/PaginationHelper;->b(Z)V
 
     :cond_5
     return-void
 
     .line 16
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method

@@ -3,7 +3,7 @@
 .source "FavePage.kt"
 
 # interfaces
-.implements Lcom/vk/fave/entities/l;
+.implements Lcom/vk/fave/entities/WithTags;
 
 
 # annotations
@@ -62,7 +62,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/fave/entities/FavePage$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/fave/entities/FavePage$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/fave/entities/FavePage;->B:Lcom/vk/fave/entities/FavePage$b;
 
@@ -191,7 +191,7 @@
 
     .line 11
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -447,7 +447,7 @@
     return-object v10
 .end method
 
-.method public a(Ljava/util/List;)Lcom/vk/fave/entities/l;
+.method public a(Ljava/util/List;)Lcom/vk/fave/entities/WithTags;
     .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -455,7 +455,7 @@
             "Ljava/util/List<",
             "Lcom/vk/fave/entities/FaveTag;",
             ">;)",
-            "Lcom/vk/fave/entities/l;"
+            "Lcom/vk/fave/entities/WithTags;"
         }
     .end annotation
 
@@ -564,7 +564,7 @@
     move-object v3, v2
 
     :goto_0
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -587,7 +587,7 @@
 
     iget-object v4, p1, Lcom/vk/fave/entities/FavePage;->a:Ljava/lang/String;
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -630,7 +630,7 @@
     move-result-object v2
 
     :cond_5
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -814,7 +814,7 @@
 
     const-string v1, "group"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

@@ -94,7 +94,7 @@
 
     move-result-object p1
 
-    sget-object v0, Lcom/vtosters/lite/a0;->EditorActionView:[I
+    sget-object v0, Lcom/vtosters/lite/R;->EditorActionView:[I
 
     const/4 v1, 0x0
 

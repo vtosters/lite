@@ -3,7 +3,7 @@
 .source "DeliveryInfo.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/market/orders/checkout/l;",
-        "Lcom/vk/market/orders/checkout/l;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
+        "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/market/orders/checkout/l;)Lcom/vk/market/orders/checkout/l;
+.method public final a(Lcom/vk/market/orders/checkout/DeliveryInfo8;)Lcom/vk/market/orders/checkout/DeliveryInfo8;
     .locals 17
 
     move-object/from16 v0, p0
@@ -92,7 +92,7 @@
 
     move-object/from16 v2, p1
 
-    invoke-static/range {v2 .. v16}, Lcom/vk/market/orders/checkout/l;->a(Lcom/vk/market/orders/checkout/l;Ljava/lang/String;Lcom/vk/market/orders/checkout/InputType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/market/orders/checkout/j;Ljava/lang/String;ZLcom/vk/market/orders/checkout/ValidationState;ZLcom/vk/market/orders/checkout/m;ILjava/lang/Object;)Lcom/vk/market/orders/checkout/l;
+    invoke-static/range {v2 .. v16}, Lcom/vk/market/orders/checkout/DeliveryInfo8;->a(Lcom/vk/market/orders/checkout/DeliveryInfo8;Ljava/lang/String;Lcom/vk/market/orders/checkout/InputType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/market/orders/checkout/DeliveryInfo17;Ljava/lang/String;ZLcom/vk/market/orders/checkout/ValidationState;ZLcom/vk/market/orders/checkout/DeliveryInfo5;ILjava/lang/Object;)Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
     move-result-object v1
 
@@ -103,9 +103,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/market/orders/checkout/l;
+    check-cast p1, Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
-    invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/DeliveryInfo$validateFields$1$1;->a(Lcom/vk/market/orders/checkout/l;)Lcom/vk/market/orders/checkout/l;
+    invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/DeliveryInfo$validateFields$1$1;->a(Lcom/vk/market/orders/checkout/DeliveryInfo8;)Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
     move-result-object p1
 

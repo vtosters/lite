@@ -3,13 +3,13 @@
 .source "LinkedTextView.java"
 
 # interfaces
-.implements Lcom/vk/core/view/links/b$b;
+.implements Lcom/vk/core/view/links/ClickableLinksDelegate$b;
 
 
 # instance fields
-.field private a:Lcom/vk/core/view/links/b;
+.field private a:Lcom/vk/core/view/links/ClickableLinksDelegate;
 
-.field private final b:Lcom/vk/core/view/links/c;
+.field private final b:Lcom/vk/core/view/links/LinkAccessibilityHelper;
 
 
 # direct methods
@@ -20,18 +20,18 @@
     invoke-direct {p0, p1}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;)V
 
     .line 2
-    new-instance p1, Lcom/vk/core/view/links/b;
+    new-instance p1, Lcom/vk/core/view/links/ClickableLinksDelegate;
 
-    invoke-direct {p1, p0}, Lcom/vk/core/view/links/b;-><init>(Lcom/vk/core/view/links/b$b;)V
+    invoke-direct {p1, p0}, Lcom/vk/core/view/links/ClickableLinksDelegate;-><init>(Lcom/vk/core/view/links/ClickableLinksDelegate$b;)V
 
-    iput-object p1, p0, Lcom/vk/core/view/links/LinkedTextView;->a:Lcom/vk/core/view/links/b;
+    iput-object p1, p0, Lcom/vk/core/view/links/LinkedTextView;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
 
     .line 3
-    new-instance p1, Lcom/vk/core/view/links/c;
+    new-instance p1, Lcom/vk/core/view/links/LinkAccessibilityHelper;
 
-    invoke-direct {p1, p0}, Lcom/vk/core/view/links/c;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {p1, p0}, Lcom/vk/core/view/links/LinkAccessibilityHelper;-><init>(Landroid/widget/TextView;)V
 
-    iput-object p1, p0, Lcom/vk/core/view/links/LinkedTextView;->b:Lcom/vk/core/view/links/c;
+    iput-object p1, p0, Lcom/vk/core/view/links/LinkedTextView;->b:Lcom/vk/core/view/links/LinkAccessibilityHelper;
 
     .line 4
     invoke-direct {p0}, Lcom/vk/core/view/links/LinkedTextView;->a()V
@@ -46,18 +46,18 @@
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 6
-    new-instance p1, Lcom/vk/core/view/links/b;
+    new-instance p1, Lcom/vk/core/view/links/ClickableLinksDelegate;
 
-    invoke-direct {p1, p0}, Lcom/vk/core/view/links/b;-><init>(Lcom/vk/core/view/links/b$b;)V
+    invoke-direct {p1, p0}, Lcom/vk/core/view/links/ClickableLinksDelegate;-><init>(Lcom/vk/core/view/links/ClickableLinksDelegate$b;)V
 
-    iput-object p1, p0, Lcom/vk/core/view/links/LinkedTextView;->a:Lcom/vk/core/view/links/b;
+    iput-object p1, p0, Lcom/vk/core/view/links/LinkedTextView;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
 
     .line 7
-    new-instance p1, Lcom/vk/core/view/links/c;
+    new-instance p1, Lcom/vk/core/view/links/LinkAccessibilityHelper;
 
-    invoke-direct {p1, p0}, Lcom/vk/core/view/links/c;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {p1, p0}, Lcom/vk/core/view/links/LinkAccessibilityHelper;-><init>(Landroid/widget/TextView;)V
 
-    iput-object p1, p0, Lcom/vk/core/view/links/LinkedTextView;->b:Lcom/vk/core/view/links/c;
+    iput-object p1, p0, Lcom/vk/core/view/links/LinkedTextView;->b:Lcom/vk/core/view/links/LinkAccessibilityHelper;
 
     .line 8
     invoke-direct {p0}, Lcom/vk/core/view/links/LinkedTextView;->a()V
@@ -72,18 +72,18 @@
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 10
-    new-instance p1, Lcom/vk/core/view/links/b;
+    new-instance p1, Lcom/vk/core/view/links/ClickableLinksDelegate;
 
-    invoke-direct {p1, p0}, Lcom/vk/core/view/links/b;-><init>(Lcom/vk/core/view/links/b$b;)V
+    invoke-direct {p1, p0}, Lcom/vk/core/view/links/ClickableLinksDelegate;-><init>(Lcom/vk/core/view/links/ClickableLinksDelegate$b;)V
 
-    iput-object p1, p0, Lcom/vk/core/view/links/LinkedTextView;->a:Lcom/vk/core/view/links/b;
+    iput-object p1, p0, Lcom/vk/core/view/links/LinkedTextView;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
 
     .line 11
-    new-instance p1, Lcom/vk/core/view/links/c;
+    new-instance p1, Lcom/vk/core/view/links/LinkAccessibilityHelper;
 
-    invoke-direct {p1, p0}, Lcom/vk/core/view/links/c;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {p1, p0}, Lcom/vk/core/view/links/LinkAccessibilityHelper;-><init>(Landroid/widget/TextView;)V
 
-    iput-object p1, p0, Lcom/vk/core/view/links/LinkedTextView;->b:Lcom/vk/core/view/links/c;
+    iput-object p1, p0, Lcom/vk/core/view/links/LinkedTextView;->b:Lcom/vk/core/view/links/LinkAccessibilityHelper;
 
     .line 12
     invoke-direct {p0}, Lcom/vk/core/view/links/LinkedTextView;->a()V
@@ -144,7 +144,7 @@
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setDrawingCacheEnabled(Z)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/core/view/links/LinkedTextView;->b:Lcom/vk/core/view/links/c;
+    iget-object v0, p0, Lcom/vk/core/view/links/LinkedTextView;->b:Lcom/vk/core/view/links/LinkAccessibilityHelper;
 
     invoke-static {p0, v0}, Landroidx/core/view/ViewCompat;->setAccessibilityDelegate(Landroid/view/View;Landroidx/core/view/AccessibilityDelegateCompat;)V
 
@@ -157,9 +157,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/links/LinkedTextView;->b:Lcom/vk/core/view/links/c;
+    iget-object v0, p0, Lcom/vk/core/view/links/LinkedTextView;->b:Lcom/vk/core/view/links/LinkAccessibilityHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/c;->dispatchHoverEvent(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/LinkAccessibilityHelper;->dispatchHoverEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -197,9 +197,9 @@
     invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/core/view/links/LinkedTextView;->a:Lcom/vk/core/view/links/b;
+    iget-object v0, p0, Lcom/vk/core/view/links/LinkedTextView;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/b;->a(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/ClickableLinksDelegate;->a(Landroid/graphics/Canvas;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -278,9 +278,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/links/LinkedTextView;->a:Lcom/vk/core/view/links/b;
+    iget-object v0, p0, Lcom/vk/core/view/links/LinkedTextView;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/b;->a(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/ClickableLinksDelegate;->a(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -311,9 +311,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/links/LinkedTextView;->a:Lcom/vk/core/view/links/b;
+    iget-object v0, p0, Lcom/vk/core/view/links/LinkedTextView;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/b;->a(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/ClickableLinksDelegate;->a(Z)V
 
     return-void
 .end method
@@ -322,13 +322,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/links/LinkedTextView;->a:Lcom/vk/core/view/links/b;
+    iget-object v0, p0, Lcom/vk/core/view/links/LinkedTextView;->a:Lcom/vk/core/view/links/ClickableLinksDelegate;
 
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/b;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/view/links/ClickableLinksDelegate;->a(Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method

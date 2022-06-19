@@ -306,17 +306,17 @@
     const-string v0, "accessToken"
 
     .line 2
-    invoke-static {p1, v0}, Lcom/facebook/internal/s;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/facebook/internal/Validate;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "applicationId"
 
     .line 3
-    invoke-static {p2, v0}, Lcom/facebook/internal/s;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lcom/facebook/internal/Validate;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "userId"
 
     .line 4
-    invoke-static {p3, v0}, Lcom/facebook/internal/s;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lcom/facebook/internal/Validate;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p8, :cond_0
 
@@ -445,11 +445,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/facebook/b;->e()Lcom/facebook/b;
+    invoke-static {}, Lcom/facebook/AccessTokenManager;->e()Lcom/facebook/AccessTokenManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/facebook/b;->c()Lcom/facebook/AccessToken;
+    invoke-virtual {v0}, Lcom/facebook/AccessTokenManager;->c()Lcom/facebook/AccessToken;
 
     move-result-object v0
 
@@ -470,11 +470,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/facebook/b;->e()Lcom/facebook/b;
+    invoke-static {}, Lcom/facebook/AccessTokenManager;->e()Lcom/facebook/AccessTokenManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/facebook/b;->c()Lcom/facebook/AccessToken;
+    invoke-virtual {v0}, Lcom/facebook/AccessTokenManager;->c()Lcom/facebook/AccessToken;
 
     move-result-object v0
 
@@ -485,11 +485,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/facebook/b;->e()Lcom/facebook/b;
+    invoke-static {}, Lcom/facebook/AccessTokenManager;->e()Lcom/facebook/AccessTokenManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/facebook/b;->c()Lcom/facebook/AccessToken;
+    invoke-virtual {v0}, Lcom/facebook/AccessTokenManager;->c()Lcom/facebook/AccessToken;
 
     move-result-object v0
 
@@ -529,7 +529,7 @@
     :cond_0
     sget-object v0, Lcom/facebook/LoggingBehavior;->INCLUDE_ACCESS_TOKENS:Lcom/facebook/LoggingBehavior;
 
-    invoke-static {v0}, Lcom/facebook/e;->a(Lcom/facebook/LoggingBehavior;)Z
+    invoke-static {v0}, Lcom/facebook/FacebookSdk;->a(Lcom/facebook/LoggingBehavior;)Z
 
     move-result v0
 
@@ -571,19 +571,19 @@
     move-result-object v7
 
     .line 9
-    invoke-static {p0}, Lcom/facebook/j;->a(Landroid/os/Bundle;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/facebook/LegacyTokenHelper;->a(Landroid/os/Bundle;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 10
-    invoke-static {v0}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 11
-    invoke-static {}, Lcom/facebook/e;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->f()Ljava/lang/String;
 
     move-result-object v0
 
@@ -591,12 +591,12 @@
     move-object v3, v0
 
     .line 12
-    invoke-static {p0}, Lcom/facebook/j;->c(Landroid/os/Bundle;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/facebook/LegacyTokenHelper;->c(Landroid/os/Bundle;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 13
-    invoke-static {v2}, Lcom/facebook/internal/r;->b(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-static {v2}, Lcom/facebook/internal/Utility;->b(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -614,21 +614,21 @@
     new-instance v0, Lcom/facebook/AccessToken;
 
     .line 16
-    invoke-static {p0}, Lcom/facebook/j;->b(Landroid/os/Bundle;)Lcom/facebook/AccessTokenSource;
+    invoke-static {p0}, Lcom/facebook/LegacyTokenHelper;->b(Landroid/os/Bundle;)Lcom/facebook/AccessTokenSource;
 
     move-result-object v8
 
     const-string v1, "com.facebook.TokenCachingStrategy.ExpirationDate"
 
     .line 17
-    invoke-static {p0, v1}, Lcom/facebook/j;->a(Landroid/os/Bundle;Ljava/lang/String;)Ljava/util/Date;
+    invoke-static {p0, v1}, Lcom/facebook/LegacyTokenHelper;->a(Landroid/os/Bundle;Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object v9
 
     const-string v1, "com.facebook.TokenCachingStrategy.LastRefreshDate"
 
     .line 18
-    invoke-static {p0, v1}, Lcom/facebook/j;->a(Landroid/os/Bundle;Ljava/lang/String;)Ljava/util/Date;
+    invoke-static {p0, v1}, Lcom/facebook/LegacyTokenHelper;->a(Landroid/os/Bundle;Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object v10
 
@@ -807,12 +807,12 @@
     new-instance p0, Lcom/facebook/AccessToken;
 
     .line 35
-    invoke-static {v0}, Lcom/facebook/internal/r;->b(Lorg/json/JSONArray;)Ljava/util/List;
+    invoke-static {v0}, Lcom/facebook/internal/Utility;->b(Lorg/json/JSONArray;)Ljava/util/List;
 
     move-result-object v0
 
     .line 36
-    invoke-static {v1}, Lcom/facebook/internal/r;->b(Lorg/json/JSONArray;)Ljava/util/List;
+    invoke-static {v1}, Lcom/facebook/internal/Utility;->b(Lorg/json/JSONArray;)Ljava/util/List;
 
     move-result-object v6
 
@@ -826,7 +826,7 @@
 
     .line 37
     :cond_0
-    invoke-static {v3}, Lcom/facebook/internal/r;->b(Lorg/json/JSONArray;)Ljava/util/List;
+    invoke-static {v3}, Lcom/facebook/internal/Utility;->b(Lorg/json/JSONArray;)Ljava/util/List;
 
     move-result-object v1
 
@@ -948,11 +948,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/facebook/b;->e()Lcom/facebook/b;
+    invoke-static {}, Lcom/facebook/AccessTokenManager;->e()Lcom/facebook/AccessTokenManager;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/facebook/b;->a(Lcom/facebook/AccessToken;)V
+    invoke-virtual {v0, p0}, Lcom/facebook/AccessTokenManager;->a(Lcom/facebook/AccessToken;)V
 
     return-void
 .end method

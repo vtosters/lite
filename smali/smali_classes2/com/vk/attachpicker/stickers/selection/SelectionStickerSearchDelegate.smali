@@ -18,13 +18,13 @@
 
 .field private c:Landroid/view/View;
 
-.field private d:Lio/reactivex/disposables/a;
+.field private d:Lio/reactivex/disposables/CompositeDisposable;
 
-.field private e:Lio/reactivex/disposables/b;
+.field private e:Lio/reactivex/disposables/Disposable;
 
 .field private f:Lcom/vk/stickers/StickerSearcher;
 
-.field private g:Lcom/vk/attachpicker/stickers/selection/f/f;
+.field private g:Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;
 
 .field private h:Z
 
@@ -66,7 +66,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -80,11 +80,11 @@
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->r:Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;
 
     .line 2
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->d:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->d:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 3
     new-instance p1, Landroid/os/Handler;
@@ -114,15 +114,15 @@
     return-void
 .end method
 
-.method private final a(Lc/a/m;)Lc/a/m;
+.method private final a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/String;",
             ">;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/stickers/StickerSearcher$a;",
             ">;"
         }
@@ -133,7 +133,7 @@
 
     const-wide/16 v1, 0xc8
 
-    invoke-virtual {p1, v1, v2, v0}, Lc/a/m;->g(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {p1, v1, v2, v0}, Lio/reactivex/Observable;->g(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -142,13 +142,13 @@
 
     invoke-direct {v0, p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$d;-><init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->j(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->j(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "this\n                .th\u2026(query)\n                }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -263,7 +263,7 @@
 
     iget-object v1, v1, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->K:Landroid/widget/FrameLayout;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getVisibility()I
 
@@ -345,7 +345,7 @@
 
     iget-object v3, v3, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->K:Landroid/widget/FrameLayout;
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
@@ -383,15 +383,15 @@
     return-void
 .end method
 
-.method private final b(Z)Lcom/vk/attachpicker/stickers/selection/h/f;
+.method private final b(Z)Lcom/vk/attachpicker/stickers/selection/h/ClickableItem3;
     .locals 2
 
     .line 12
-    new-instance v0, Lcom/vk/attachpicker/stickers/selection/h/f;
+    new-instance v0, Lcom/vk/attachpicker/stickers/selection/h/ClickableItem3;
 
     const v1, 0x7f120ed1
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/attachpicker/stickers/selection/h/f;-><init>(IZ)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/attachpicker/stickers/selection/h/ClickableItem3;-><init>(IZ)V
 
     return-object v0
 .end method
@@ -479,15 +479,15 @@
     return-void
 .end method
 
-.method private final c(Z)Lcom/vk/attachpicker/stickers/selection/h/f;
+.method private final c(Z)Lcom/vk/attachpicker/stickers/selection/h/ClickableItem3;
     .locals 2
 
     .line 3
-    new-instance v0, Lcom/vk/attachpicker/stickers/selection/h/f;
+    new-instance v0, Lcom/vk/attachpicker/stickers/selection/h/ClickableItem3;
 
     const v1, 0x7f120ed0
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/attachpicker/stickers/selection/h/f;-><init>(IZ)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/attachpicker/stickers/selection/h/ClickableItem3;-><init>(IZ)V
 
     return-object v0
 .end method
@@ -510,20 +510,20 @@
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)Lio/reactivex/disposables/b;
+.method public static final synthetic e(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->e:Lio/reactivex/disposables/b;
+    iget-object p0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->e:Lio/reactivex/disposables/Disposable;
 
     return-object p0
 .end method
 
-.method public static final synthetic f(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)Lcom/vk/attachpicker/stickers/selection/f/f;
+.method public static final synthetic f(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->g:Lcom/vk/attachpicker/stickers/selection/f/f;
+    iget-object p0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->g:Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;
 
     return-object p0
 .end method
@@ -644,65 +644,65 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/attachpicker/stickers/selection/gfycat/b;->a:Lcom/vk/attachpicker/stickers/selection/gfycat/b;
+    sget-object v0, Lcom/vk/attachpicker/stickers/selection/gfycat/GfycatUtils1;->INSTANCE:Lcom/vk/attachpicker/stickers/selection/gfycat/GfycatUtils1;
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/selection/gfycat/b;->a()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/selection/gfycat/GfycatUtils1;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
     sget-object v1, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$g;->a:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$g;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$h;->a:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$h;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "GfycatUtils\n            \u2026scribeOn(Schedulers.io())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lc/a/m;)Lio/reactivex/disposables/b;
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/Observable;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->e:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->e:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method private final q()Lcom/vk/attachpicker/stickers/selection/h/e;
+.method private final q()Lcom/vk/attachpicker/stickers/selection/h/MergeList;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/attachpicker/stickers/selection/h/e<",
+            "Lcom/vk/attachpicker/stickers/selection/h/MergeList<",
             "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vk/attachpicker/stickers/selection/h/e;
+    new-instance v0, Lcom/vk/attachpicker/stickers/selection/h/MergeList;
 
-    invoke-direct {v0}, Lcom/vk/attachpicker/stickers/selection/h/e;-><init>()V
+    invoke-direct {v0}, Lcom/vk/attachpicker/stickers/selection/h/MergeList;-><init>()V
 
     .line 2
     iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->n:Lcom/vk/stickers/StickerSearcher$a;
@@ -751,20 +751,20 @@
     if-nez v5, :cond_4
 
     .line 4
-    invoke-direct {p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->r()Lcom/vk/attachpicker/stickers/selection/h/f;
+    invoke-direct {p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->r()Lcom/vk/attachpicker/stickers/selection/h/ClickableItem3;
 
     move-result-object v5
 
-    invoke-virtual {v0, v5}, Lcom/vk/attachpicker/stickers/selection/h/e;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v5}, Lcom/vk/attachpicker/stickers/selection/h/MergeList;->a(Ljava/lang/Object;)V
 
     if-eqz v1, :cond_3
 
     .line 5
-    invoke-static {v1}, Lkotlin/jvm/internal/s;->c(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v1}, Lkotlin/jvm/internal/TypeIntrinsics;->c(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/selection/h/e;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/selection/h/MergeList;->a(Ljava/util/List;)V
 
     goto :goto_3
 
@@ -862,7 +862,7 @@
     .line 10
     iget-boolean v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->p:Z
 
-    invoke-direct {p0, v1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->c(Z)Lcom/vk/attachpicker/stickers/selection/h/f;
+    invoke-direct {p0, v1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->c(Z)Lcom/vk/attachpicker/stickers/selection/h/ClickableItem3;
 
     move-result-object v1
 
@@ -872,13 +872,13 @@
     :cond_b
     iget-boolean v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->p:Z
 
-    invoke-direct {p0, v1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->b(Z)Lcom/vk/attachpicker/stickers/selection/h/f;
+    invoke-direct {p0, v1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->b(Z)Lcom/vk/attachpicker/stickers/selection/h/ClickableItem3;
 
     move-result-object v1
 
     .line 12
     :goto_8
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/selection/h/e;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/selection/h/MergeList;->a(Ljava/lang/Object;)V
 
     :cond_c
     if-eqz v2, :cond_d
@@ -899,11 +899,11 @@
     if-eqz v2, :cond_f
 
     .line 14
-    invoke-static {v2}, Lkotlin/jvm/internal/s;->c(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v2}, Lkotlin/jvm/internal/TypeIntrinsics;->c(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/selection/h/e;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/selection/h/MergeList;->a(Ljava/util/List;)V
 
     goto :goto_9
 
@@ -919,17 +919,17 @@
     return-object v0
 .end method
 
-.method private final r()Lcom/vk/attachpicker/stickers/selection/h/f;
+.method private final r()Lcom/vk/attachpicker/stickers/selection/h/ClickableItem3;
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/attachpicker/stickers/selection/h/f;
+    new-instance v0, Lcom/vk/attachpicker/stickers/selection/h/ClickableItem3;
 
     const v1, 0x7f120f95
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/attachpicker/stickers/selection/h/f;-><init>(IZ)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/attachpicker/stickers/selection/h/ClickableItem3;-><init>(IZ)V
 
     return-object v0
 .end method
@@ -1018,7 +1018,7 @@
 
     if-nez v5, :cond_4
 
-    invoke-static {v0}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
@@ -1051,7 +1051,7 @@
     .locals 4
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->q()Lcom/vk/attachpicker/stickers/selection/h/e;
+    invoke-direct {p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->q()Lcom/vk/attachpicker/stickers/selection/h/MergeList;
 
     move-result-object v0
 
@@ -1059,7 +1059,7 @@
     iput-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->q:Ljava/util/List;
 
     .line 3
-    iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->g:Lcom/vk/attachpicker/stickers/selection/f/f;
+    iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->g:Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;
 
     if-eqz v1, :cond_1
 
@@ -1081,7 +1081,7 @@
 
     .line 5
     :goto_0
-    invoke-virtual {v1, v2, v0}, Lcom/vk/attachpicker/stickers/selection/f/f;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v1, v2, v0}, Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;->a(Ljava/lang/String;Ljava/util/List;)V
 
     .line 6
     :cond_1
@@ -1124,11 +1124,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->g:Lcom/vk/attachpicker/stickers/selection/f/f;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->g:Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/selection/f/f;->k()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;->k()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1183,7 +1183,7 @@
 
     const-string v1, "baseView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -1203,7 +1203,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-static {}, Lcom/vk/core/utils/i;->b()Z
+    invoke-static {}, Lcom/vk/core/utils/VoiceUtils;->b()Z
 
     move-result v2
 
@@ -1212,10 +1212,10 @@
     .line 3
     iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->m:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$a0;
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->b(Lcom/vk/navigation/c;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->b(Lcom/vk/navigation/ActivityResulter;)V
 
     .line 4
-    invoke-static {v0}, Lcom/vk/core/utils/i;->a(Landroid/app/Activity;)Z
+    invoke-static {v0}, Lcom/vk/core/utils/VoiceUtils;->a(Landroid/app/Activity;)Z
 
     goto :goto_0
 
@@ -1229,13 +1229,13 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
     const/4 v4, 0x2
 
-    invoke-direct {v0, v2, v1, v4, v3}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v2, v1, v4, v3}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const v1, 0x7f121477
 
@@ -1309,7 +1309,7 @@
 
     const-string v1, "baseView.behavior"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x3
 
@@ -1367,11 +1367,11 @@
     iput v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->l:I
 
     .line 3
-    iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->g:Lcom/vk/attachpicker/stickers/selection/f/f;
+    iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->g:Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/attachpicker/stickers/selection/f/f;->getItemCount()I
+    invoke-virtual {v1}, Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;->getItemCount()I
 
     move-result v1
 
@@ -1466,7 +1466,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$initSearchViews$1;-><init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/AnimStartSearchView;->setBackButtonAction(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/AnimStartSearchView;->setBackButtonAction(Lkotlin/jvm/b/Functions;)V
 
     .line 6
     :cond_0
@@ -1478,7 +1478,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$initSearchViews$2;-><init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/AnimStartSearchView;->setVoiceButtonAction(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/AnimStartSearchView;->setVoiceButtonAction(Lkotlin/jvm/b/Functions;)V
 
     .line 7
     :cond_1
@@ -1490,7 +1490,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$initSearchViews$3;-><init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/AnimStartSearchView;->setCancelButtonAction(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/AnimStartSearchView;->setCancelButtonAction(Lkotlin/jvm/b/Functions;)V
 
     .line 8
     :cond_2
@@ -1499,15 +1499,15 @@
     if-eqz v0, :cond_3
 
     .line 9
-    new-instance v1, Lcom/vk/attachpicker/stickers/selection/f/f;
+    new-instance v1, Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;
 
     iget-object v2, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->r:Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;
 
-    iget-object v2, v2, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->M:Lcom/vk/attachpicker/stickers/selection/d;
+    iget-object v2, v2, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->M:Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;
 
     const-string v3, "baseView.listener"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->r:Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;
 
@@ -1515,9 +1515,9 @@
 
     const-string v4, "baseView.openFrom"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, v2, v3, v0}, Lcom/vk/attachpicker/stickers/selection/f/f;-><init>(Lcom/vk/attachpicker/stickers/selection/d;Lcom/vk/attachpicker/stickers/selection/SelectionStickerView$OpenFrom;Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-direct {v1, v2, v3, v0}, Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;-><init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;Lcom/vk/attachpicker/stickers/selection/SelectionStickerView$OpenFrom;Landroidx/recyclerview/widget/RecyclerView;)V
 
     goto :goto_0
 
@@ -1526,7 +1526,7 @@
 
     .line 10
     :goto_0
-    iput-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->g:Lcom/vk/attachpicker/stickers/selection/f/f;
+    iput-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->g:Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;
 
     .line 11
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->r:Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;
@@ -1552,7 +1552,7 @@
     const-string v1, "lm"
 
     .line 15
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$b;
 
@@ -1565,15 +1565,15 @@
 
     if-eqz v0, :cond_5
 
-    iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->g:Lcom/vk/attachpicker/stickers/selection/f/f;
+    iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->g:Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 17
     :cond_5
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->INSTANCE:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/t;->m()Lcom/vk/stickers/StickerSearcher;
+    invoke-virtual {v0}, Lcom/vk/stickers/Stickers;->m()Lcom/vk/stickers/StickerSearcher;
 
     move-result-object v0
 
@@ -1754,7 +1754,7 @@
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->g:Lcom/vk/attachpicker/stickers/selection/f/f;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->g:Lcom/vk/attachpicker/stickers/selection/f/SearchAdapter;
 
     if-nez v0, :cond_0
 
@@ -1766,13 +1766,13 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lcom/vk/core/view/search/AnimStartSearchView;->e()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/core/view/search/AnimStartSearchView;->e()Lio/reactivex/Observable;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lc/a/m;->i()Lc/a/b0/a;
+    invoke-virtual {v0}, Lio/reactivex/Observable;->i()Lio/reactivex/observables/ConnectableObservable;
 
     move-result-object v0
 
@@ -1785,7 +1785,7 @@
 
     sget-object v3, Lcom/vk/dto/stories/model/StickerType;->GIF:Lcom/vk/dto/stories/model/StickerType;
 
-    invoke-static {v3}, Lcom/vk/stories/clickable/e;->b(Lcom/vk/dto/stories/model/StickerType;)Z
+    invoke-static {v3}, Lcom/vk/stories/clickable/StoryClickableController;->b(Lcom/vk/dto/stories/model/StickerType;)Z
 
     move-result v3
 
@@ -1798,32 +1798,32 @@
 
     .line 5
     :goto_0
-    iget-object v2, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->d:Lio/reactivex/disposables/a;
+    iget-object v2, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->d:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 6
     new-instance v3, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$n;
 
     invoke-direct {v3, p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$n;-><init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)V
 
-    invoke-virtual {v0, v3}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v3
 
     const-string v4, "queryObs\n               \u2026ode == MODE_SEARCH_FULL }"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    invoke-direct {p0, v3}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->a(Lc/a/m;)Lc/a/m;
+    invoke-direct {p0, v3}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object v3
 
     .line 8
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v3, v4}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -1836,20 +1836,20 @@
     sget-object v5, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$p;->a:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$p;
 
     .line 11
-    invoke-virtual {v3, v4, v5}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v3, v4, v5}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v3
 
     .line 12
-    invoke-static {v2, v3}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/a;Lio/reactivex/disposables/b;)V
+    invoke-static {v2, v3}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/CompositeDisposable;Lio/reactivex/disposables/Disposable;)V
 
     .line 13
-    iget-object v2, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->d:Lio/reactivex/disposables/a;
+    iget-object v2, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->d:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 14
     sget-object v3, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$q;->a:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$q;
 
-    invoke-virtual {v0, v3}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -1858,16 +1858,16 @@
 
     invoke-direct {v4, p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$r;-><init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)V
 
-    invoke-virtual {v3, v4}, Lc/a/m;->j(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v3, v4}, Lio/reactivex/Observable;->j(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v3
 
     .line 16
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v3, v4}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -1880,22 +1880,22 @@
     sget-object v5, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$t;->a:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$t;
 
     .line 19
-    invoke-virtual {v3, v4, v5}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v3, v4, v5}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v3
 
     .line 20
-    invoke-static {v2, v3}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/a;Lio/reactivex/disposables/b;)V
+    invoke-static {v2, v3}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/CompositeDisposable;Lio/reactivex/disposables/Disposable;)V
 
     if-eqz v1, :cond_2
 
     .line 21
-    iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->d:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->d:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 22
     sget-object v2, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$u;->a:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$u;
 
-    invoke-virtual {v0, v2}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -1904,7 +1904,7 @@
     .line 23
     sget-object v5, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v2, v3, v4, v5}, Lc/a/m;->b(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v2, v3, v4, v5}, Lio/reactivex/Observable;->b(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -1913,16 +1913,16 @@
 
     invoke-direct {v3, p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$v;-><init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)V
 
-    invoke-virtual {v2, v3}, Lc/a/m;->j(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v2, v3}, Lio/reactivex/Observable;->j(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v2
 
     .line 25
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -1935,29 +1935,29 @@
     sget-object v4, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$j;->a:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$j;
 
     .line 28
-    invoke-virtual {v2, v3, v4}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v2, v3, v4}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v2
 
     .line 29
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/a;Lio/reactivex/disposables/b;)V
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/CompositeDisposable;Lio/reactivex/disposables/Disposable;)V
 
     .line 30
-    iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->d:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->d:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 31
     sget-object v2, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$k;->a:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$k;
 
-    invoke-virtual {v0, v2}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v2
 
     .line 32
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -1970,22 +1970,22 @@
     sget-object v4, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$m;->a:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$m;
 
     .line 35
-    invoke-virtual {v2, v3, v4}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v2, v3, v4}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v2
 
     .line 36
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/a;Lio/reactivex/disposables/b;)V
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/CompositeDisposable;Lio/reactivex/disposables/Disposable;)V
 
     .line 37
     :cond_2
-    iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->d:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->d:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lc/a/b0/a;->p()Lio/reactivex/disposables/b;
+    invoke-virtual {v0}, Lio/reactivex/observables/ConnectableObservable;->p()Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/a;Lio/reactivex/disposables/b;)V
+    invoke-static {v1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/CompositeDisposable;Lio/reactivex/disposables/Disposable;)V
 
     :cond_3
     return-void
@@ -2018,9 +2018,9 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->d:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->d:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/b;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/Disposable;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->r:Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;
@@ -2031,7 +2031,7 @@
 
     const-string v1, "baseView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -2050,7 +2050,7 @@
 
     iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->m:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$a0;
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->a(Lcom/vk/navigation/c;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->a(Lcom/vk/navigation/ActivityResulter;)V
 
     :cond_1
     return-void

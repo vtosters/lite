@@ -3,12 +3,12 @@
 .source "MsgListComponent.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/media/audio/b;
+.implements Lcom/vk/im/ui/media/audio/AudioPlayerListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_list/MsgListComponent;-><init>(Lcom/vk/im/ui/components/msg_list/d;)V
+    value = Lcom/vk/im/ui/components/msg_list/MsgListComponent;-><init>(Lcom/vk/im/ui/components/msg_list/MsgListComponentConfig;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/ui/media/audio/a;)V
+.method public a(Lcom/vk/im/ui/media/audio/AudioPlayer;)V
     .locals 0
 
     .line 1

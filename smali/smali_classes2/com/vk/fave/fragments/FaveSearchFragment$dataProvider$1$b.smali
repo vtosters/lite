@@ -3,12 +3,12 @@
 .source "FaveSearchFragment.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;->a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+    value = Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;->a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -51,15 +51,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/fave/entities/k;)Ljava/util/List;
+.method public final a(Lcom/vk/fave/entities/FaveResponseEntries;)Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/fave/entities/k;",
+            "Lcom/vk/fave/entities/FaveResponseEntries;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/fave/entities/j;",
+            "Lcom/vk/fave/entities/FaveEntries3;",
             ">;"
         }
     .end annotation
@@ -67,7 +67,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$b;->a:Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;
 
-    invoke-virtual {p1}, Lcom/vk/fave/entities/k;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveResponseEntries;->a()Ljava/util/List;
 
     move-result-object p1
 
@@ -84,9 +84,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/fave/entities/k;
+    check-cast p1, Lcom/vk/fave/entities/FaveResponseEntries;
 
-    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$b;->a(Lcom/vk/fave/entities/k;)Ljava/util/List;
+    invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$b;->a(Lcom/vk/fave/entities/FaveResponseEntries;)Ljava/util/List;
 
     move-result-object p1
 

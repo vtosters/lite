@@ -57,7 +57,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/w;->b()I
+    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->b()I
 
     move-result v0
 
@@ -74,7 +74,7 @@
     :goto_0
     iget v2, p0, Lcom/vk/newsfeed/HomeFragment$TabAdapter$b;->b:I
 
-    invoke-static {v2}, Lcom/vk/newsfeed/b0;->b(I)Z
+    invoke-static {v2}, Lcom/vk/newsfeed/PostsAnalytics;->b(I)Z
 
     move-result v2
 
@@ -83,7 +83,7 @@
     .line 4
     iget v2, p0, Lcom/vk/newsfeed/HomeFragment$TabAdapter$b;->b:I
 
-    invoke-static {v2}, Lcom/vk/newsfeed/b0;->a(I)V
+    invoke-static {v2}, Lcom/vk/newsfeed/PostsAnalytics;->a(I)V
 
     .line 5
     iget v2, p0, Lcom/vk/newsfeed/HomeFragment$TabAdapter$b;->b:I
@@ -97,7 +97,7 @@
     const-string v4, "discover"
 
     .line 6
-    invoke-static {v2, v0, v3, v4}, Lcom/vk/newsfeed/b0;->a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0, v3, v4}, Lcom/vk/newsfeed/PostsAnalytics;->a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V
 
     .line 7
     sget-object v0, Lcom/vk/discover/DiscoverFragment;->h0:Lcom/vk/discover/DiscoverFragment$b;
@@ -108,7 +108,7 @@
     const-string v0, "v"
 
     .line 8
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 

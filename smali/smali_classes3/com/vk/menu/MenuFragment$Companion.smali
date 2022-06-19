@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -75,7 +75,7 @@
     .line 2
     sget-object v0, Lcom/vk/menu/MenuFragment$Companion$getAvailableMenuItemsCount$availableCount$1;->a:Lcom/vk/menu/MenuFragment$Companion$getAvailableMenuItemsCount$availableCount$1;
 
-    invoke-static {v0}, Lcom/vk/menu/c;->a(Lkotlin/jvm/b/b;)I
+    invoke-static {v0}, Lcom/vk/menu/MenuUtils;->a(Lkotlin/jvm/b/Functions2;)I
 
     move-result v0
 

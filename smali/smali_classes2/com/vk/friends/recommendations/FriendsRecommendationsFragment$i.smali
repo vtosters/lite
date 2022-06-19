@@ -44,7 +44,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$i;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
-    invoke-static {p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->e(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lb/h/g/k/a;
+    invoke-static {p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->e(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lb/h/g/k/VKProgressDialog;
 
     move-result-object p1
 
@@ -59,7 +59,7 @@
 
     const-string v0, "accounts[which]"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$i;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
@@ -71,14 +71,14 @@
 
     const-string v2, "activity!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, p2, v0, v1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;Landroid/accounts/Account;Lcom/vk/core/fragments/b;Landroid/app/Activity;)V
+    invoke-static {p1, p2, v0, v1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;Landroid/accounts/Account;Lcom/vk/core/fragments/BaseFragment1;Landroid/app/Activity;)V
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

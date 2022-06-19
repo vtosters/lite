@@ -3,12 +3,12 @@
 .source "LocationComponent.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->a(Lcom/vk/dto/geo/GeoLocation;Ljava/lang/CharSequence;)Lc/a/m;
+    value = Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->a(Lcom/vk/dto/geo/GeoLocation;Ljava/lang/CharSequence;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -133,7 +133,7 @@
     const/4 v3, 0x0
 
     :goto_1
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 

@@ -60,7 +60,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/NewsfeedData$Info$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/NewsfeedData$Info$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/newsfeed/NewsfeedData$Info$a;
@@ -102,7 +102,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;IZLjava/util/List;JILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/String;IZLjava/util/List;JILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 7
 
     and-int/lit8 p7, p7, 0x10
@@ -180,7 +180,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/newsfeed/NewsfeedData$Info;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -202,7 +202,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/newsfeed/NewsfeedData$Info;->d:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

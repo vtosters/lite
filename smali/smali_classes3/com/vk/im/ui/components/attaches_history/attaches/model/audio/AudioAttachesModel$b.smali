@@ -3,12 +3,12 @@
 .source "AudioAttachesModel.kt"
 
 # interfaces
-.implements Lc/a/z/c;
+.implements Lio/reactivex/functions/BiFunction;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->a()Lc/a/m;
+    value = Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->a()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,12 +26,12 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/c<",
+        "Lio/reactivex/functions/BiFunction<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;",
         ">;",
-        "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/b;",
+        "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioTrackState;",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;",
@@ -73,16 +73,16 @@
     .line 1
     check-cast p1, Ljava/util/List;
 
-    check-cast p2, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/b;
+    check-cast p2, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioTrackState;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel$b;->a(Ljava/util/List;Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/b;)Ljava/util/List;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel$b;->a(Ljava/util/List;Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioTrackState;)Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final a(Ljava/util/List;Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/b;)Ljava/util/List;
+.method public final a(Ljava/util/List;Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioTrackState;)Ljava/util/List;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -90,7 +90,7 @@
             "Ljava/util/List<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;",
             ">;",
-            "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/b;",
+            "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioTrackState;",
             ")",
             "Ljava/util/List<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;",
@@ -139,14 +139,14 @@
 
     move-result v1
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/b;->a()I
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioTrackState;->a()I
 
     move-result v3
 
     if-ne v1, v3, :cond_3
 
     .line 6
-    instance-of v1, p2, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/b$a;
+    instance-of v1, p2, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioTrackState$a;
 
     if-eqz v1, :cond_0
 
@@ -169,7 +169,7 @@
 
     .line 8
     :cond_0
-    instance-of v1, p2, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/b$c;
+    instance-of v1, p2, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioTrackState$c;
 
     if-eqz v1, :cond_1
 
@@ -192,7 +192,7 @@
 
     .line 10
     :cond_1
-    instance-of v1, p2, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/b$b;
+    instance-of v1, p2, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioTrackState$b;
 
     if-eqz v1, :cond_2
 

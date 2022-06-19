@@ -3,12 +3,12 @@
 .source "PostingInteractor.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/PostingInteractor;->a(Lb/h/c/w/f;Lcom/vk/newsfeed/posting/dto/d;)Lc/a/m;
+    value = Lcom/vk/newsfeed/posting/PostingInteractor;->a(Lb/h/c/w/NewPostRequest;Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -59,16 +59,16 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/Pair;)Lc/a/m;
+.method public final a(Lkotlin/Pair;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lkotlin/Pair<",
-            "Lb/h/c/w/f;",
-            "Lcom/vk/newsfeed/posting/dto/d;",
+            "Lb/h/c/w/NewPostRequest;",
+            "Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;",
             ">;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
             ">;"
         }
@@ -79,13 +79,13 @@
 
     move-result-object p1
 
-    check-cast p1, Lb/h/c/w/f;
+    check-cast p1, Lb/h/c/w/NewPostRequest;
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    invoke-static {p1, v0, v1, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, v0, v1, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -98,7 +98,7 @@
     .line 1
     check-cast p1, Lkotlin/Pair;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingInteractor$d;->a(Lkotlin/Pair;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingInteractor$d;->a(Lkotlin/Pair;)Lio/reactivex/Observable;
 
     move-result-object p1
 

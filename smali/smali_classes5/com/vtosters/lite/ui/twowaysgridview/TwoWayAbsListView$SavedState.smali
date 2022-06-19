@@ -85,7 +85,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/vtosters/lite/ui/twowaysgridview/a;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/vtosters/lite/ui/twowaysgridview/TwoWayAbsListView;)V
     .locals 0
 
     .line 1

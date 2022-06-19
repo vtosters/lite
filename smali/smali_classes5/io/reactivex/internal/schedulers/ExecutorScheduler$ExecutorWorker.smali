@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;
-.super Lc/a/s$c;
+.super Lio/reactivex/Scheduler$c;
 .source "ExecutorScheduler.java"
 
 # interfaces
@@ -44,7 +44,7 @@
 
 .field final e:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field final f:Lio/reactivex/disposables/a;
+.field final f:Lio/reactivex/disposables/CompositeDisposable;
 
 
 # direct methods
@@ -52,7 +52,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lc/a/s$c;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/Scheduler$c;-><init>()V
 
     .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
@@ -62,11 +62,11 @@
     iput-object v0, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->e:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 3
-    new-instance v0, Lio/reactivex/disposables/a;
+    new-instance v0, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {v0}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {v0}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object v0, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->f:Lio/reactivex/disposables/a;
+    iput-object v0, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->f:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 4
     iput-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->b:Ljava/util/concurrent/Executor;
@@ -86,7 +86,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Runnable;)Lio/reactivex/disposables/b;
+.method public a(Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
     .locals 2
 
     .line 1
@@ -101,7 +101,7 @@
 
     .line 3
     :cond_0
-    invoke-static {p1}, Lc/a/e0/a;->a(Ljava/lang/Runnable;)Ljava/lang/Runnable;
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->a(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object p1
 
@@ -113,14 +113,14 @@
     .line 5
     new-instance v0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker$InterruptibleRunnable;
 
-    iget-object v1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->f:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->f:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {v0, p1, v1}, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker$InterruptibleRunnable;-><init>(Ljava/lang/Runnable;Lio/reactivex/internal/disposables/a;)V
+    invoke-direct {v0, p1, v1}, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker$InterruptibleRunnable;-><init>(Ljava/lang/Runnable;Lio/reactivex/internal/disposables/DisposableContainer;)V
 
     .line 6
-    iget-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->f:Lio/reactivex/disposables/a;
+    iget-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->f:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {p1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {p1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     goto :goto_0
 
@@ -169,7 +169,7 @@
     invoke-virtual {v0}, Lio/reactivex/internal/queue/MpscLinkedQueue;->clear()V
 
     .line 13
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     .line 14
     sget-object p1, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
@@ -181,7 +181,7 @@
     return-object v0
 .end method
 
-.method public a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/b;
+.method public a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
     .locals 4
 
     const-wide/16 v0, 0x0
@@ -191,7 +191,7 @@
     if-gtz v2, :cond_0
 
     .line 15
-    invoke-virtual {p0, p1}, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->a(Ljava/lang/Runnable;)Lio/reactivex/disposables/b;
+    invoke-virtual {p0, p1}, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->a(Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
@@ -217,10 +217,10 @@
     .line 19
     new-instance v1, Lio/reactivex/internal/disposables/SequentialDisposable;
 
-    invoke-direct {v1, v0}, Lio/reactivex/internal/disposables/SequentialDisposable;-><init>(Lio/reactivex/disposables/b;)V
+    invoke-direct {v1, v0}, Lio/reactivex/internal/disposables/SequentialDisposable;-><init>(Lio/reactivex/disposables/Disposable;)V
 
     .line 20
-    invoke-static {p1}, Lc/a/e0/a;->a(Ljava/lang/Runnable;)Ljava/lang/Runnable;
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->a(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object p1
 
@@ -231,14 +231,14 @@
 
     invoke-direct {v3, p0, v1, p1}, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker$a;-><init>(Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;Lio/reactivex/internal/disposables/SequentialDisposable;Ljava/lang/Runnable;)V
 
-    iget-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->f:Lio/reactivex/disposables/a;
+    iget-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->f:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {v2, v3, p1}, Lio/reactivex/internal/schedulers/ScheduledRunnable;-><init>(Ljava/lang/Runnable;Lio/reactivex/internal/disposables/a;)V
+    invoke-direct {v2, v3, p1}, Lio/reactivex/internal/schedulers/ScheduledRunnable;-><init>(Ljava/lang/Runnable;Lio/reactivex/internal/disposables/DisposableContainer;)V
 
     .line 22
-    iget-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->f:Lio/reactivex/disposables/a;
+    iget-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->f:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {p1, v2}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {p1, v2}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     .line 23
     iget-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->b:Ljava/util/concurrent/Executor;
@@ -271,7 +271,7 @@
     iput-boolean p2, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->d:Z
 
     .line 27
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     .line 28
     sget-object p1, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
@@ -280,22 +280,22 @@
 
     .line 29
     :cond_2
-    sget-object p1, Lio/reactivex/internal/schedulers/ExecutorScheduler;->d:Lc/a/s;
+    sget-object p1, Lio/reactivex/internal/schedulers/ExecutorScheduler;->d:Lio/reactivex/Scheduler;
 
-    invoke-virtual {p1, v2, p2, p3, p4}, Lc/a/s;->a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v2, p2, p3, p4}, Lio/reactivex/Scheduler;->a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 30
-    new-instance p2, Lio/reactivex/internal/schedulers/b;
+    new-instance p2, Lio/reactivex/internal/schedulers/DisposeOnCancel;
 
-    invoke-direct {p2, p1}, Lio/reactivex/internal/schedulers/b;-><init>(Lio/reactivex/disposables/b;)V
+    invoke-direct {p2, p1}, Lio/reactivex/internal/schedulers/DisposeOnCancel;-><init>(Lio/reactivex/disposables/Disposable;)V
 
     invoke-virtual {v2, p2}, Lio/reactivex/internal/schedulers/ScheduledRunnable;->a(Ljava/util/concurrent/Future;)V
 
     .line 31
     :goto_0
-    invoke-virtual {v0, v2}, Lio/reactivex/internal/disposables/SequentialDisposable;->a(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, v2}, Lio/reactivex/internal/disposables/SequentialDisposable;->a(Lio/reactivex/disposables/Disposable;)Z
 
     return-object v1
 .end method
@@ -323,9 +323,9 @@
     iput-boolean v0, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->d:Z
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->f:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->f:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     .line 4
     iget-object v0, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;->e:Ljava/util/concurrent/atomic/AtomicInteger;

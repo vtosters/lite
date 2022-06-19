@@ -3,12 +3,12 @@
 .source "SubscribeHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/subscribe/SubscribeHelper;->b(Landroid/view/View;IIZLjava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/common/subscribe/SubscribeHelper;->b(Landroid/view/View;IIZLjava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -31,18 +31,18 @@
 
 .field final synthetic $id:I
 
-.field final synthetic $onUnsubscribed:Lkotlin/jvm/b/b;
+.field final synthetic $onUnsubscribed:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;ILkotlin/jvm/b/b;)V
+.method constructor <init>(Landroid/view/View;ILkotlin/jvm/b/Functions2;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/common/subscribe/SubscribeHelper$showEventDecisionsMenu$2;->$anchorView:Landroid/view/View;
 
     iput p2, p0, Lcom/vk/common/subscribe/SubscribeHelper$showEventDecisionsMenu$2;->$id:I
 
-    iput-object p3, p0, Lcom/vk/common/subscribe/SubscribeHelper$showEventDecisionsMenu$2;->$onUnsubscribed:Lkotlin/jvm/b/b;
+    iput-object p3, p0, Lcom/vk/common/subscribe/SubscribeHelper$showEventDecisionsMenu$2;->$onUnsubscribed:Lkotlin/jvm/b/Functions2;
 
     const/4 p1, 0x0
 
@@ -59,7 +59,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/common/subscribe/SubscribeHelper$showEventDecisionsMenu$2;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -80,9 +80,9 @@
 
     neg-int v2, v2
 
-    iget-object v3, p0, Lcom/vk/common/subscribe/SubscribeHelper$showEventDecisionsMenu$2;->$onUnsubscribed:Lkotlin/jvm/b/b;
+    iget-object v3, p0, Lcom/vk/common/subscribe/SubscribeHelper$showEventDecisionsMenu$2;->$onUnsubscribed:Lkotlin/jvm/b/Functions2;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/common/subscribe/SubscribeHelper;->a(Lcom/vk/common/subscribe/SubscribeHelper;Landroid/content/Context;ILkotlin/jvm/b/b;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/common/subscribe/SubscribeHelper;->a(Lcom/vk/common/subscribe/SubscribeHelper;Landroid/content/Context;ILkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

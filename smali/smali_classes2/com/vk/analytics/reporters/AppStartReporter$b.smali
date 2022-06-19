@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/analytics/reporters/AppStartReporter$b;->call()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method

@@ -3,20 +3,20 @@
 .source "FriendsItemListVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/n;
+.implements Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 .implements Landroid/view/View$OnClickListener;
 
 
 # static fields
-.field static final synthetic I:[Lkotlin/u/j;
+.field static final synthetic I:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private B:Lio/reactivex/disposables/b;
+.field private B:Lio/reactivex/disposables/Disposable;
 
 .field private C:I
 
-.field private final D:Lkotlin/e;
+.field private final D:Lkotlin/Lazy2;
 
 .field private final E:Ljava/lang/String;
 
@@ -30,7 +30,7 @@
     .end annotation
 .end field
 
-.field private final G:Lcom/vk/catalog2/core/w/a;
+.field private final G:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
 
 .field private final H:Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;
 
@@ -57,13 +57,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -71,37 +71,37 @@
 
     const-string v4, "getNewBadge()Landroid/graphics/drawable/Drawable;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->I:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->I:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/catalog2/core/w/a;Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;)V
+.method public constructor <init>(Lcom/vk/catalog2/core/w/CatalogCommandsBus;Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->G:Lcom/vk/catalog2/core/w/a;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->G:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->H:Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;
 
     .line 2
     sget-object p1, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh$newBadge$2;->a:Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh$newBadge$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->D:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->D:Lkotlin/Lazy2;
 
     const-string p1, "user"
 
@@ -140,7 +140,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v1, v2}, Lcom/vk/api/execute/f;->a(IZ)Lcom/vk/api/execute/f;
+    invoke-static {v1, v2}, Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;->a(IZ)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
 
     move-result-object v1
 
@@ -151,7 +151,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lcom/vk/api/execute/f;->d(Ljava/lang/String;)Lcom/vk/api/execute/f;
+    invoke-virtual {v1, v3}, Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;->d(Ljava/lang/String;)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
 
     .line 64
     invoke-virtual {p2}, Lcom/vk/catalog2/core/blocks/UIBlockProfile;->E1()Lcom/vk/catalog2/core/api/dto/CatalogUserMeta;
@@ -162,12 +162,12 @@
 
     move-result-object p2
 
-    invoke-virtual {v1, p2}, Lcom/vk/api/execute/f;->e(Ljava/lang/String;)Lcom/vk/api/execute/f;
+    invoke-virtual {v1, p2}, Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;->e(Ljava/lang/String;)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
 
     const/4 p2, 0x0
 
     .line 65
-    invoke-static {v1, p2, v2, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, p2, v2, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -186,7 +186,7 @@
     move-object v4, p1
 
     .line 66
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -200,21 +200,21 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/vk/catalog2/core/holders/friends/d;
+    new-instance v1, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh1;
 
-    invoke-direct {v1, v0}, Lcom/vk/catalog2/core/holders/friends/d;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, v0}, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     move-object v0, v1
 
     :cond_0
-    check-cast v0, Lc/a/z/g;
+    check-cast v0, Lio/reactivex/functions/Consumer;
 
     .line 69
-    invoke-virtual {p1, p2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->B:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->B:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -262,7 +262,7 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/api/friends/m;
+    new-instance v0, Lcom/vk/api/friends/FriendsHideSuggestion;
 
     invoke-virtual {p1}, Lcom/vk/catalog2/core/blocks/UIBlockProfile;->F1()Lcom/vk/dto/user/UserProfile;
 
@@ -270,16 +270,16 @@
 
     iget v1, v1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v0, v1}, Lcom/vk/api/friends/m;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/api/friends/FriendsHideSuggestion;-><init>(I)V
 
     .line 2
     sget-object v1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/friends/m;->d(Ljava/lang/String;)Lcom/vk/api/friends/m;
+    invoke-virtual {v0, v1}, Lcom/vk/api/friends/FriendsHideSuggestion;->d(Ljava/lang/String;)Lcom/vk/api/friends/FriendsHideSuggestion;
 
     .line 3
     invoke-virtual {p1}, Lcom/vk/catalog2/core/blocks/UIBlockProfile;->E1()Lcom/vk/catalog2/core/api/dto/CatalogUserMeta;
@@ -290,14 +290,14 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/api/friends/m;->e(Ljava/lang/String;)Lcom/vk/api/friends/m;
+    invoke-virtual {v0, p1}, Lcom/vk/api/friends/FriendsHideSuggestion;->e(Ljava/lang/String;)Lcom/vk/api/friends/FriendsHideSuggestion;
 
     const/4 p1, 0x0
 
     const/4 v1, 0x1
 
     .line 4
-    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -306,11 +306,11 @@
 
     sget-object v1, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh$c;->a:Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh$c;
 
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->B:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->B:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -392,15 +392,15 @@
 .method private final k()Landroid/graphics/drawable/Drawable;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->D:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->D:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->I:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->I:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -421,7 +421,7 @@
 
     if-eqz v0, :cond_5
 
-    sget v3, Lcom/vk/catalog2/core/p;->ic_gift_outline_28:I
+    sget v3, Lcom/vk/catalog2/core/R1;->ic_gift_outline_28:I
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -436,7 +436,7 @@
 
     move-result-object v3
 
-    sget v4, Lcom/vk/catalog2/core/u;->friends_catalog_accessibility_send_gift:I
+    sget v4, Lcom/vk/catalog2/core/R9;->friends_catalog_accessibility_send_gift:I
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -474,7 +474,7 @@
     :cond_0
     const-string v0, "label"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -482,30 +482,30 @@
     const-string v0, "closeButton"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 7
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 8
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 9
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -545,7 +545,7 @@
     :cond_0
     const-string v0, "label"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -553,7 +553,7 @@
     const-string v0, "closeButton"
 
     .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -561,7 +561,7 @@
     const-string v0, "button"
 
     .line 5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -578,7 +578,7 @@
 
     if-eqz v0, :cond_5
 
-    sget v3, Lcom/vk/catalog2/core/p;->ic_message_outline_28:I
+    sget v3, Lcom/vk/catalog2/core/R1;->ic_message_outline_28:I
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -593,7 +593,7 @@
 
     move-result-object v3
 
-    sget v4, Lcom/vk/catalog2/core/u;->friends_catalog_accessibility_send_message:I
+    sget v4, Lcom/vk/catalog2/core/R9;->friends_catalog_accessibility_send_message:I
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -631,7 +631,7 @@
     :cond_0
     const-string v0, "label"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -639,30 +639,30 @@
     const-string v0, "closeButton"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 7
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 8
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 9
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -679,7 +679,7 @@
 
     if-eqz v0, :cond_5
 
-    sget v3, Lcom/vk/catalog2/core/p;->ic_user_add_outline_28:I
+    sget v3, Lcom/vk/catalog2/core/R1;->ic_user_add_outline_28:I
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -694,7 +694,7 @@
 
     move-result-object v3
 
-    sget v4, Lcom/vk/catalog2/core/u;->friends_catalog_accessibility_add_friend:I
+    sget v4, Lcom/vk/catalog2/core/R9;->friends_catalog_accessibility_add_friend:I
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -732,7 +732,7 @@
     :cond_0
     const-string v0, "label"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -740,30 +740,30 @@
     const-string v0, "closeButton"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 7
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 8
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 9
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -780,7 +780,7 @@
 
     if-eqz v0, :cond_5
 
-    sget v3, Lcom/vk/catalog2/core/p;->ic_user_add_outline_28:I
+    sget v3, Lcom/vk/catalog2/core/R1;->ic_user_add_outline_28:I
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -795,7 +795,7 @@
 
     move-result-object v3
 
-    sget v4, Lcom/vk/catalog2/core/u;->friends_catalog_accessibility_add_friend:I
+    sget v4, Lcom/vk/catalog2/core/R9;->friends_catalog_accessibility_add_friend:I
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -833,7 +833,7 @@
     :cond_0
     const-string v0, "label"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -841,30 +841,30 @@
     const-string v0, "closeButton"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 7
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 8
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 9
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -875,7 +875,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
+    invoke-static {p0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
 
     move-result-object p1
 
@@ -886,7 +886,7 @@
     .locals 1
 
     .line 4
-    sget p3, Lcom/vk/catalog2/core/r;->catalog_friends_user_item:I
+    sget p3, Lcom/vk/catalog2/core/R7;->catalog_friends_user_item:I
 
     const/4 v0, 0x0
 
@@ -895,7 +895,7 @@
     move-result-object p1
 
     .line 5
-    sget p2, Lcom/vk/catalog2/core/q;->title:I
+    sget p2, Lcom/vk/catalog2/core/R10;->title:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -903,14 +903,14 @@
 
     const-string p3, "itemView.findViewById(R.id.title)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->a:Landroid/widget/TextView;
 
     .line 6
-    sget p2, Lcom/vk/catalog2/core/q;->subtitle:I
+    sget p2, Lcom/vk/catalog2/core/R10;->subtitle:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -918,14 +918,14 @@
 
     const-string p3, "itemView.findViewById(R.id.subtitle)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->b:Landroid/widget/TextView;
 
     .line 7
-    sget p2, Lcom/vk/catalog2/core/q;->label:I
+    sget p2, Lcom/vk/catalog2/core/R10;->label:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -933,14 +933,14 @@
 
     const-string p3, "itemView.findViewById(R.id.label)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->c:Landroid/widget/TextView;
 
     .line 8
-    sget p2, Lcom/vk/catalog2/core/q;->photo:I
+    sget p2, Lcom/vk/catalog2/core/R10;->photo:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -948,14 +948,14 @@
 
     const-string p3, "itemView.findViewById(R.id.photo)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/imageloader/view/VKImageView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->d:Lcom/vk/imageloader/view/VKImageView;
 
     .line 9
-    sget p2, Lcom/vk/catalog2/core/q;->online:I
+    sget p2, Lcom/vk/catalog2/core/R10;->online:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -963,14 +963,14 @@
 
     const-string p3, "itemView.findViewById(R.id.online)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/ImageView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->e:Landroid/widget/ImageView;
 
     .line 10
-    sget p2, Lcom/vk/catalog2/core/q;->button:I
+    sget p2, Lcom/vk/catalog2/core/R10;->button:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -978,14 +978,14 @@
 
     const-string p3, "itemView.findViewById(R.id.button)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/ImageView;
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->f:Landroid/widget/ImageView;
 
     .line 11
-    sget p2, Lcom/vk/catalog2/core/q;->close_button:I
+    sget p2, Lcom/vk/catalog2/core/R10;->close_button:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -993,7 +993,7 @@
 
     const-string p3, "itemView.findViewById(R.id.close_button)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->g:Landroid/view/View;
 
@@ -1031,7 +1031,7 @@
     const-string p2, "inflater.inflate(R.layou\u2026alogLock(this))\n        }"
 
     .line 15
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -1039,7 +1039,7 @@
     const-string p1, "closeButton"
 
     .line 16
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
@@ -1047,7 +1047,7 @@
     const-string p1, "button"
 
     .line 17
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 .end method
@@ -1069,17 +1069,17 @@
 
     .line 20
     :cond_0
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->B:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->B:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_1
     const/4 v0, 0x0
 
     .line 21
-    iput-object v0, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->B:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->B:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1149,15 +1149,15 @@
 
     if-eqz v5, :cond_1
 
-    sget v5, Lcom/vk/catalog2/core/l;->accent:I
+    sget v5, Lcom/vk/catalog2/core/R6;->accent:I
 
     goto :goto_0
 
     :cond_1
-    sget v5, Lcom/vk/catalog2/core/l;->text_secondary:I
+    sget v5, Lcom/vk/catalog2/core/R6;->text_secondary:I
 
     :goto_0
-    invoke-static {v2, v5}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v2, v5}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 27
     iget-object v2, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->b:Landroid/widget/TextView;
@@ -1216,9 +1216,9 @@
 
     const-string v4, "profile.online"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lb/h/f/b/b;->a(Lcom/vk/dto/user/OnlineInfo;)Ljava/lang/Integer;
+    invoke-static {v2}, Lb/h/f/b/FriendsUtils;->a(Lcom/vk/dto/user/OnlineInfo;)Ljava/lang/Integer;
 
     move-result-object v2
 
@@ -1247,13 +1247,13 @@
     goto :goto_3
 
     :cond_4
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 32
     :cond_5
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1299,7 +1299,7 @@
 
     const-string v0, "profile.verifyInfo"
 
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->a:Landroid/widget/TextView;
 
@@ -1311,7 +1311,7 @@
 
     const-string v0, "title.context"
 
-    invoke-static {v6, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v7, 0x0
 
@@ -1326,7 +1326,7 @@
     goto :goto_4
 
     :cond_8
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1442,19 +1442,19 @@
 
     .line 50
     :cond_11
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 51
     :cond_12
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 52
     :cond_13
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1462,31 +1462,31 @@
     const-string p1, "photo"
 
     .line 53
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 54
     :cond_15
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 55
     :cond_16
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 56
     :cond_17
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 57
     :cond_18
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1498,7 +1498,7 @@
     .locals 0
 
     .line 58
-    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
 
     .line 59
     iput p2, p0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->C:I
@@ -1510,7 +1510,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
 
     return-void
 .end method
@@ -1552,7 +1552,7 @@
     move-result v5
 
     .line 6
-    sget v6, Lcom/vk/catalog2/core/q;->button:I
+    sget v6, Lcom/vk/catalog2/core/R10;->button:I
 
     const-string v11, "v.context"
 
@@ -1568,7 +1568,7 @@
     if-eqz v2, :cond_0
 
     .line 8
-    invoke-static {}, Lcom/vk/bridges/m;->a()Lcom/vk/bridges/l;
+    invoke-static {}, Lcom/vk/bridges/FriendsBridge;->a()Lcom/vk/bridges/FriendsBridge1;
 
     move-result-object v1
 
@@ -1576,9 +1576,9 @@
 
     move-result-object v2
 
-    invoke-static {v2, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1, v2, v3, v4}, Lcom/vk/bridges/l;->a(Landroid/content/Context;Lcom/vk/dto/user/UserProfile;Ljava/lang/String;)V
+    invoke-interface {v1, v2, v3, v4}, Lcom/vk/bridges/FriendsBridge1;->a(Landroid/content/Context;Lcom/vk/dto/user/UserProfile;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -1616,7 +1616,7 @@
 
     .line 11
     :cond_2
-    invoke-static {}, Lcom/vk/bridges/m;->a()Lcom/vk/bridges/l;
+    invoke-static {}, Lcom/vk/bridges/FriendsBridge;->a()Lcom/vk/bridges/FriendsBridge1;
 
     move-result-object v1
 
@@ -1624,11 +1624,11 @@
 
     move-result-object v2
 
-    invoke-static {v2, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v3, v3, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-interface {v1, v2, v3, v4}, Lcom/vk/bridges/l;->a(Landroid/content/Context;ILjava/lang/String;)V
+    invoke-interface {v1, v2, v3, v4}, Lcom/vk/bridges/FriendsBridge1;->a(Landroid/content/Context;ILjava/lang/String;)V
 
     goto :goto_1
 
@@ -1655,7 +1655,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v2, v1}, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->a(Landroid/content/Context;Lcom/vk/catalog2/core/blocks/UIBlockProfile;)V
 
@@ -1663,26 +1663,26 @@
 
     .line 14
     :cond_5
-    sget v6, Lcom/vk/catalog2/core/q;->close_button:I
+    sget v6, Lcom/vk/catalog2/core/R10;->close_button:I
 
     if-ne v5, v6, :cond_6
 
     .line 15
-    iget-object v3, v0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->G:Lcom/vk/catalog2/core/w/a;
+    iget-object v3, v0, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->G:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
 
-    new-instance v4, Lcom/vk/catalog2/core/w/e/l;
+    new-instance v4, Lcom/vk/catalog2/core/w/e/CatalogCommand7;
 
     invoke-virtual {v1}, Lcom/vk/catalog2/core/blocks/UIBlockProfile;->v1()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-direct {v4, v5}, Lcom/vk/catalog2/core/w/e/l;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v5}, Lcom/vk/catalog2/core/w/e/CatalogCommand7;-><init>(Ljava/lang/String;)V
 
     const/4 v5, 0x0
 
     const/4 v6, 0x2
 
-    invoke-static {v3, v4, v5, v6, v2}, Lcom/vk/catalog2/core/w/a;->a(Lcom/vk/catalog2/core/w/a;Lcom/vk/catalog2/core/w/e/b;ZILjava/lang/Object;)V
+    invoke-static {v3, v4, v5, v6, v2}, Lcom/vk/catalog2/core/w/CatalogCommandsBus;->a(Lcom/vk/catalog2/core/w/CatalogCommandsBus;Lcom/vk/catalog2/core/w/e/CatalogCommand6;ZILjava/lang/Object;)V
 
     .line 16
     invoke-direct {v0, v1}, Lcom/vk/catalog2/core/holders/friends/FriendsItemListVh;->c(Lcom/vk/catalog2/core/blocks/UIBlockProfile;)V
@@ -1715,7 +1715,7 @@
 
     .line 19
     :cond_8
-    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
+    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v12
 
@@ -1723,7 +1723,7 @@
 
     move-result-object v13
 
-    invoke-static {v13, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v13, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v14, v3, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -1741,14 +1741,14 @@
 
     const-string v16, "friends"
 
-    invoke-static/range {v12 .. v20}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v12 .. v20}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     :goto_1
     return-void
 
     .line 20
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 

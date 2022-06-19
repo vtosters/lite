@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -143,7 +143,7 @@
 
     const-string v8, "this.getJSONObject(i)"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     sget-object v8, Lcom/vk/dto/newsfeed/SituationalSuggest$Profile;->e:Lcom/vk/dto/newsfeed/SituationalSuggest$Profile$b;
@@ -190,7 +190,7 @@
     if-eqz v16, :cond_4
 
     .line 12
-    invoke-static/range {v16 .. v16}, Lkotlin/collections/f;->c([Ljava/lang/Object;)Lkotlin/sequences/j;
+    invoke-static/range {v16 .. v16}, Lkotlin/collections/f;->c([Ljava/lang/Object;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
@@ -199,7 +199,7 @@
     const/4 v4, 0x3
 
     .line 13
-    invoke-static {v1, v4}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;I)Lkotlin/sequences/j;
+    invoke-static {v1, v4}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;I)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
@@ -208,14 +208,14 @@
     .line 14
     sget-object v4, Lcom/vk/dto/newsfeed/SituationalSuggest$Companion$fromResponseJsonObject$friendsPostedAvatars$1;->a:Lcom/vk/dto/newsfeed/SituationalSuggest$Companion$fromResponseJsonObject$friendsPostedAvatars$1;
 
-    invoke-static {v1, v4}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v1, v4}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
     if-eqz v1, :cond_4
 
     .line 15
-    invoke-static {v1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {v1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object v1
 

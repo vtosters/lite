@@ -64,7 +64,7 @@
 
     const-string v3, "AttachSyncState.fromInt(it.readInt())"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     const-class v3, Lcom/vk/im/engine/models/content/PodcastEpisode;
@@ -88,7 +88,7 @@
 
     .line 7
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

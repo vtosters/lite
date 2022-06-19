@@ -26,7 +26,7 @@
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/dto/articles/a;
+.field private final b:Lcom/vk/dto/articles/ArticleAuthor;
 
 
 # direct methods
@@ -37,14 +37,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/articles/ArticleListContainer$Companion;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/articles/ArticleListContainer$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/articles/ArticleListContainer;->c:Lcom/vk/dto/articles/ArticleListContainer$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/articles/a;)V
+.method public constructor <init>(Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/articles/ArticleAuthor;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -52,7 +52,7 @@
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/articles/Article;",
             ">;",
-            "Lcom/vk/dto/articles/a;",
+            "Lcom/vk/dto/articles/ArticleAuthor;",
             ")V"
         }
     .end annotation
@@ -62,18 +62,18 @@
 
     iput-object p1, p0, Lcom/vk/dto/articles/ArticleListContainer;->a:Lcom/vk/dto/common/data/VKList;
 
-    iput-object p2, p0, Lcom/vk/dto/articles/ArticleListContainer;->b:Lcom/vk/dto/articles/a;
+    iput-object p2, p0, Lcom/vk/dto/articles/ArticleListContainer;->b:Lcom/vk/dto/articles/ArticleAuthor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/vk/dto/articles/a;
+.method public final a()Lcom/vk/dto/articles/ArticleAuthor;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/dto/articles/ArticleListContainer;->b:Lcom/vk/dto/articles/a;
+    iget-object v0, p0, Lcom/vk/dto/articles/ArticleListContainer;->b:Lcom/vk/dto/articles/ArticleAuthor;
 
     return-object v0
 .end method
@@ -110,17 +110,17 @@
 
     iget-object v1, p1, Lcom/vk/dto/articles/ArticleListContainer;->a:Lcom/vk/dto/common/data/VKList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/dto/articles/ArticleListContainer;->b:Lcom/vk/dto/articles/a;
+    iget-object v0, p0, Lcom/vk/dto/articles/ArticleListContainer;->b:Lcom/vk/dto/articles/ArticleAuthor;
 
-    iget-object p1, p1, Lcom/vk/dto/articles/ArticleListContainer;->b:Lcom/vk/dto/articles/a;
+    iget-object p1, p1, Lcom/vk/dto/articles/ArticleListContainer;->b:Lcom/vk/dto/articles/ArticleAuthor;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -161,11 +161,11 @@
     :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/dto/articles/ArticleListContainer;->b:Lcom/vk/dto/articles/a;
+    iget-object v2, p0, Lcom/vk/dto/articles/ArticleListContainer;->b:Lcom/vk/dto/articles/ArticleAuthor;
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Lcom/vk/dto/articles/a;->hashCode()I
+    invoke-virtual {v2}, Lcom/vk/dto/articles/ArticleAuthor;->hashCode()I
 
     move-result v1
 
@@ -194,7 +194,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/dto/articles/ArticleListContainer;->b:Lcom/vk/dto/articles/a;
+    iget-object v1, p0, Lcom/vk/dto/articles/ArticleListContainer;->b:Lcom/vk/dto/articles/ArticleAuthor;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -3,7 +3,7 @@
 .source "PostingAttachGalleryPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/mediastore/system/MediaStoreEntry;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -72,11 +72,11 @@
 
     .line 2
     :try_start_0
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     iget-object p1, p1, Lcom/vk/mediastore/system/MediaStoreEntry;->b:Landroid/net/Uri;
 
-    invoke-static {v0, p1}, Lb/h/g/m/d;->a(Landroid/content/Context;Landroid/net/Uri;)Ljava/io/File;
+    invoke-static {v0, p1}, Lb/h/g/m/FileUtils;->a(Landroid/content/Context;Landroid/net/Uri;)Ljava/io/File;
 
     move-result-object p1
 

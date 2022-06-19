@@ -3,7 +3,7 @@
 .source "DialogBarComponent.kt"
 
 # interfaces
-.implements Lc/a/z/a;
+.implements Lio/reactivex/functions/Action;
 
 
 # annotations
@@ -42,7 +42,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->b(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lio/reactivex/disposables/b;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->b(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

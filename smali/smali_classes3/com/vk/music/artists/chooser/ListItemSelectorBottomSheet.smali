@@ -35,12 +35,12 @@
     .end annotation
 .end field
 
-.field private b:Lkotlin/jvm/b/b;
+.field private b:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -55,7 +55,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet;->c:Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$a;
 
@@ -89,38 +89,38 @@
     return-object v0
 .end method
 
-.method protected final D4()Lkotlin/jvm/b/b;
+.method protected final D4()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "TT;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet;->b:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet;->b:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
 
-.method protected final a(Lkotlin/jvm/b/b;)V
+.method protected final a(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet;->b:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet;->b:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
@@ -133,11 +133,11 @@
     return v0
 .end method
 
-.method protected abstract n0(I)Lcom/vk/music/view/v/c;
+.method protected abstract n0(I)Lcom/vk/music/view/v/ItemAdapter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lcom/vk/music/view/v/c<",
+            "Lcom/vk/music/view/v/ItemAdapter<",
             "TT;>;"
         }
     .end annotation
@@ -215,12 +215,12 @@
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
 
     .line 7
-    new-instance p1, Ld/a/a/c/b;
+    new-instance p1, Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
-    invoke-direct {p1}, Ld/a/a/c/b;-><init>()V
+    invoke-direct {p1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;-><init>()V
 
     .line 8
-    invoke-virtual {p0, v0}, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet;->n0(I)Lcom/vk/music/view/v/c;
+    invoke-virtual {p0, v0}, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet;->n0(I)Lcom/vk/music/view/v/ItemAdapter;
 
     move-result-object p3
 
@@ -237,13 +237,13 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-virtual {p3, v1}, Lcom/vk/music/view/v/c;->a(Ljava/util/Collection;)V
+    invoke-virtual {p3, v1}, Lcom/vk/music/view/v/ItemAdapter;->a(Ljava/util/Collection;)V
 
     .line 10
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->setHasStableIds(Z)V
 
     .line 11
-    invoke-virtual {p1, p3}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p1, p3}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 12
     invoke-virtual {p2, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V

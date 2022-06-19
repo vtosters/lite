@@ -36,11 +36,11 @@
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    check-cast p1, Lcom/vk/mediastore/a/e/e;
+    check-cast p1, Lcom/vk/mediastore/a/e/Download;
 
-    check-cast p2, Lcom/vk/mediastore/a/e/e;
+    check-cast p2, Lcom/vk/mediastore/a/e/Download;
 
-    invoke-static {p1, p2}, Lcom/vk/mediastore/a/e/f$c;->b(Lcom/vk/mediastore/a/e/e;Lcom/vk/mediastore/a/e/e;)I
+    invoke-static {p1, p2}, Lcom/vk/mediastore/a/e/DownloadManager$c;->b(Lcom/vk/mediastore/a/e/Download;Lcom/vk/mediastore/a/e/Download;)I
 
     move-result p1
 

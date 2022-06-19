@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lkotlin/jvm/internal/Ref$ObjectRef;
 
-.field final synthetic b:Lcom/vk/core/dialogs/alert/a;
+.field final synthetic b:Lcom/vk/core/dialogs/alert/InputView;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/internal/Ref$ObjectRef;Lcom/vk/core/dialogs/alert/a;)V
+.method constructor <init>(Lkotlin/jvm/internal/Ref$ObjectRef;Lcom/vk/core/dialogs/alert/InputView;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$b;->a:Lkotlin/jvm/internal/Ref$ObjectRef;
 
-    iput-object p2, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$b;->b:Lcom/vk/core/dialogs/alert/a;
+    iput-object p2, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$b;->b:Lcom/vk/core/dialogs/alert/InputView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,7 +42,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->f()Lkotlin/jvm/b/c;
+    invoke-static {}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->f()Lkotlin/jvm/b/Functions1;
 
     move-result-object p1
 
@@ -54,9 +54,9 @@
 
     check-cast v0, Landroidx/appcompat/app/AlertDialog;
 
-    iget-object v1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$b;->b:Lcom/vk/core/dialogs/alert/a;
+    iget-object v1, p0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder$b;->b:Lcom/vk/core/dialogs/alert/InputView;
 
-    invoke-virtual {v1}, Lcom/vk/core/dialogs/alert/a;->getEtInput()Landroid/widget/EditText;
+    invoke-virtual {v1}, Lcom/vk/core/dialogs/alert/InputView;->getEtInput()Landroid/widget/EditText;
 
     move-result-object v1
 
@@ -78,11 +78,11 @@
     const-string v1, ""
 
     :goto_0
-    invoke-interface {p1, v0, v1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0, v1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     .line 2
     :cond_1

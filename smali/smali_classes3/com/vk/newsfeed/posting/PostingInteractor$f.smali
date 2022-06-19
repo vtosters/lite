@@ -3,12 +3,12 @@
 .source "PostingInteractor.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/PostingInteractor;->a(II)Lc/a/m;
+    value = Lcom/vk/newsfeed/posting/PostingInteractor;->a(II)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -72,7 +72,7 @@
 
     move-result v2
 
-    invoke-static {v2}, Lcom/vk/core/extensions/k;->a(Z)I
+    invoke-static {v2}, Lcom/vk/core/extensions/GeneralFunctions;->a(Z)I
 
     invoke-direct {v0, v1, v2}, Lcom/vk/dto/common/data/VKList;-><init>(II)V
 
@@ -102,7 +102,7 @@
     const-string v2, "group"
 
     .line 3
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lcom/vk/dto/group/Group;->I()Z
 

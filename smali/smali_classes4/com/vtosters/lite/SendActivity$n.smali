@@ -291,11 +291,11 @@
 
     .line 8
     :goto_1
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v5}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v5
 

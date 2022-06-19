@@ -3,7 +3,7 @@
 .source "MediaSessionCompat.java"
 
 # interfaces
-.implements Landroid/support/v4/media/session/e$a;
+.implements Landroid/support/v4/media/session/MediaSessionCompatApi23$a;
 
 
 # annotations

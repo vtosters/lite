@@ -3,7 +3,7 @@
 .source "NovaHomeBadger.java"
 
 # interfaces
-.implements Lme/leolin/shortcutbadger/a;
+.implements Lme/leolin/shortcutbadger/Badger;
 
 
 # direct methods

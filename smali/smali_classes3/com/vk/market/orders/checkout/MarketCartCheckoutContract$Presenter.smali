@@ -3,7 +3,7 @@
 .source "MarketCartCheckoutContract.kt"
 
 # interfaces
-.implements Lb/h/r/c;
+.implements Lb/h/r/BaseScreenContract;
 
 
 # annotations
@@ -21,7 +21,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lio/reactivex/subjects/PublishSubject<",
-            "Lcom/vk/market/orders/checkout/e;",
+            "Lcom/vk/market/orders/checkout/DeliveryInfo12;",
             ">;"
         }
     .end annotation
@@ -29,7 +29,7 @@
 
 .field private final c:Landroid/content/Context;
 
-.field private final d:Lcom/vk/market/orders/checkout/n;
+.field private final d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
 .field private final e:I
 
@@ -42,12 +42,12 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/market/orders/checkout/n;I)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;I)V
     .locals 2
 
     .line 1
@@ -55,7 +55,7 @@
 
     iput-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->c:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/n;
+    iput-object p2, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
     iput p3, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->e:I
 
@@ -66,12 +66,12 @@
 
     const-string p2, "PublishSubject.create()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->b:Lio/reactivex/subjects/PublishSubject;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/n;
+    iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
     .line 4
     iget-object p2, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->b:Lio/reactivex/subjects/PublishSubject;
@@ -80,16 +80,16 @@
 
     const-wide/16 v0, 0x2
 
-    invoke-virtual {p2, v0, v1, p3}, Lc/a/m;->b(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {p2, v0, v1, p3}, Lio/reactivex/Observable;->b(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 5
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object p3
 
-    invoke-virtual {p2, p3}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -98,12 +98,12 @@
 
     invoke-direct {p3, p0}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$a;-><init>(Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;)V
 
-    invoke-virtual {p2, p3}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, p3}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     .line 7
-    invoke-interface {p1, p2}, Lcom/vk/market/orders/checkout/n;->b(Lio/reactivex/disposables/b;)V
+    invoke-interface {p1, p2}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->b(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -121,26 +121,26 @@
     :cond_0
     const-string p0, "currentDeliveryInfo"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method private final a(Lcom/vk/market/orders/checkout/m;)Ljava/lang/String;
+.method private final a(Lcom/vk/market/orders/checkout/DeliveryInfo5;)Ljava/lang/String;
     .locals 2
 
     .line 61
-    instance-of v0, p1, Lcom/vk/market/orders/checkout/u;
+    instance-of v0, p1, Lcom/vk/market/orders/checkout/DeliveryInfo15;
 
     const-string v1, ""
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lcom/vk/market/orders/checkout/u;
+    check-cast p1, Lcom/vk/market/orders/checkout/DeliveryInfo15;
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/u;->b()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo15;->b()Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -161,19 +161,19 @@
 
     .line 62
     :cond_1
-    instance-of v0, p1, Lcom/vk/market/orders/checkout/d;
+    instance-of v0, p1, Lcom/vk/market/orders/checkout/DeliveryInfo13;
 
     if-eqz v0, :cond_2
 
-    check-cast p1, Lcom/vk/market/orders/checkout/d;
+    check-cast p1, Lcom/vk/market/orders/checkout/DeliveryInfo13;
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/d;->b()Lcom/vk/market/orders/checkout/c;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo13;->b()Lcom/vk/market/orders/checkout/DeliveryInfo6;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/c;->a()I
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo6;->a()I
 
     move-result p1
 
@@ -187,19 +187,19 @@
 
     .line 63
     :cond_2
-    instance-of v0, p1, Lcom/vk/market/orders/checkout/b;
+    instance-of v0, p1, Lcom/vk/market/orders/checkout/DeliveryInfo7;
 
     if-eqz v0, :cond_3
 
-    check-cast p1, Lcom/vk/market/orders/checkout/b;
+    check-cast p1, Lcom/vk/market/orders/checkout/DeliveryInfo7;
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/b;->c()Lcom/vk/market/orders/checkout/a;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo7;->c()Lcom/vk/market/orders/checkout/DeliveryInfo1;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/a;->a()I
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo1;->a()I
 
     move-result p1
 
@@ -214,7 +214,7 @@
 
     .line 64
     :cond_3
-    instance-of p1, p1, Lcom/vk/market/orders/checkout/r;
+    instance-of p1, p1, Lcom/vk/market/orders/checkout/DeliveryInfo9;
 
     if-eqz p1, :cond_4
 
@@ -224,7 +224,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, v1, v0, v1}, Lkotlin/NotImplementedError;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p1, v1, v0, v1}, Lkotlin/NotImplementedError;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     throw p1
 
@@ -245,7 +245,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;Lcom/vk/market/orders/checkout/e;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+.method static synthetic a(Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;Lcom/vk/market/orders/checkout/DeliveryInfo12;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x4
@@ -265,12 +265,12 @@
 
     .line 43
     :cond_1
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/e;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/market/orders/checkout/e;)V
+.method private final a(Lcom/vk/market/orders/checkout/DeliveryInfo12;)V
     .locals 1
 
     .line 42
@@ -281,20 +281,20 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/market/orders/checkout/e;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+.method private final a(Lcom/vk/market/orders/checkout/DeliveryInfo12;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
     .locals 15
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/market/orders/checkout/e;",
+            "Lcom/vk/market/orders/checkout/DeliveryInfo12;",
             "Z",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/market/orders/checkout/DeliveryInfo;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -302,16 +302,16 @@
     move-object v0, p0
 
     .line 44
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/market/orders/checkout/e;->a()Lcom/vk/market/orders/checkout/i;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/market/orders/checkout/DeliveryInfo12;->a()Lcom/vk/market/orders/checkout/DeliveryInfo11;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/market/orders/checkout/i;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/market/orders/checkout/DeliveryInfo11;->c()Ljava/lang/String;
 
     move-result-object v1
 
     .line 45
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/market/orders/checkout/e;->b()Ljava/util/List;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/market/orders/checkout/DeliveryInfo12;->b()Ljava/util/List;
 
     move-result-object v2
 
@@ -341,10 +341,10 @@
 
     move-object v6, v4
 
-    check-cast v6, Lcom/vk/market/orders/checkout/l;
+    check-cast v6, Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
     .line 48
-    invoke-virtual {v6}, Lcom/vk/market/orders/checkout/l;->g()Ljava/lang/String;
+    invoke-virtual {v6}, Lcom/vk/market/orders/checkout/DeliveryInfo8;->g()Ljava/lang/String;
 
     move-result-object v6
 
@@ -395,22 +395,22 @@
     move-result-object v4
 
     .line 51
-    check-cast v4, Lcom/vk/market/orders/checkout/l;
+    check-cast v4, Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
     .line 52
-    invoke-virtual {v4}, Lcom/vk/market/orders/checkout/l;->g()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/vk/market/orders/checkout/DeliveryInfo8;->g()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-virtual {v4}, Lcom/vk/market/orders/checkout/l;->a()Lcom/vk/market/orders/checkout/m;
+    invoke-virtual {v4}, Lcom/vk/market/orders/checkout/DeliveryInfo8;->a()Lcom/vk/market/orders/checkout/DeliveryInfo5;
 
     move-result-object v4
 
-    invoke-direct {p0, v4}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/m;)Ljava/lang/String;
+    invoke-direct {p0, v4}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/DeliveryInfo5;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {v6, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v6, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v4
 
@@ -425,18 +425,18 @@
     move-result-object v2
 
     .line 54
-    iget-object v3, v0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/n;
+    iget-object v3, v0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
-    new-instance v4, Lcom/vk/api/market/n;
+    new-instance v4, Lcom/vk/api/market/MarketSetOrderSettings;
 
     iget v6, v0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->e:I
 
-    invoke-direct {v4, v6, v1, v2}, Lcom/vk/api/market/n;-><init>(ILjava/lang/String;Ljava/util/Map;)V
+    invoke-direct {v4, v6, v1, v2}, Lcom/vk/api/market/MarketSetOrderSettings;-><init>(ILjava/lang/String;Ljava/util/Map;)V
 
     const/4 v1, 0x0
 
     .line 55
-    invoke-static {v4, v1, v5, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v4, v1, v5, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v6
 
@@ -459,7 +459,7 @@
 
     const/4 v14, 0x0
 
-    invoke-static/range {v6 .. v14}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v6 .. v14}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v6
 
@@ -469,22 +469,22 @@
 
     move-object/from16 v2, p3
 
-    invoke-direct {v1, v2}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$g;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, v2}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$g;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     .line 58
     new-instance v2, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$h;
 
     move-object/from16 v4, p4
 
-    invoke-direct {v2, v4}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$h;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, v4}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$h;-><init>(Lkotlin/jvm/b/Functions;)V
 
     .line 59
-    invoke-virtual {v6, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v6, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
     .line 60
-    invoke-interface {v3, v1}, Lcom/vk/market/orders/checkout/n;->b(Lio/reactivex/disposables/b;)V
+    invoke-interface {v3, v1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->b(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -502,20 +502,20 @@
     .locals 13
 
     .line 1
-    iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/n;
+    iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
-    new-instance v1, Lcom/vk/api/market/c;
+    new-instance v1, Lcom/vk/api/market/MarketCreateOrder;
 
     iget v2, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->e:I
 
-    invoke-direct {v1, v2}, Lcom/vk/api/market/c;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/vk/api/market/MarketCreateOrder;-><init>(I)V
 
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
     .line 2
-    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v4
 
@@ -534,7 +534,7 @@
 
     const/4 v12, 0x0
 
-    invoke-static/range {v4 .. v12}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v4 .. v12}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -549,12 +549,12 @@
     invoke-direct {v3, p0}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$f;-><init>(Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;)V
 
     .line 6
-    invoke-virtual {v1, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
     .line 7
-    invoke-interface {v0, v1}, Lcom/vk/market/orders/checkout/n;->b(Lio/reactivex/disposables/b;)V
+    invoke-interface {v0, v1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->b(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -594,24 +594,24 @@
     invoke-virtual {v3, p1}, Lcom/vk/market/orders/checkout/DeliveryInfo;->a(Ljava/lang/String;)V
 
     .line 6
-    iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/n;
+    iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
     iget-object v3, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a:Lcom/vk/market/orders/checkout/DeliveryInfo;
 
     if-eqz v3, :cond_1
 
-    invoke-virtual {v3}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {v3}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object v3
 
-    invoke-interface {p1, v3}, Lcom/vk/market/orders/checkout/n;->a(Lcom/vk/market/orders/checkout/e;)V
+    invoke-interface {p1, v3}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a:Lcom/vk/market/orders/checkout/DeliveryInfo;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object p1
 
@@ -628,35 +628,35 @@
     invoke-direct {v3, p0, v0}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$onDeliveryOptionSelected$2;-><init>(Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;Lcom/vk/market/orders/checkout/DeliveryInfo;)V
 
     .line 10
-    invoke-direct {p0, p1, v1, v2, v3}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/e;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1, v1, v2, v3}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 11
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 12
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 13
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
-.method public final a(Ljava/lang/String;Lcom/vk/market/orders/checkout/a;)V
+.method public final a(Ljava/lang/String;Lcom/vk/market/orders/checkout/DeliveryInfo1;)V
     .locals 4
 
     .line 27
@@ -677,27 +677,27 @@
 
     if-eqz v3, :cond_2
 
-    invoke-virtual {v3, p1, p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->a(Ljava/lang/String;Lcom/vk/market/orders/checkout/a;)V
+    invoke-virtual {v3, p1, p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->a(Ljava/lang/String;Lcom/vk/market/orders/checkout/DeliveryInfo1;)V
 
     .line 29
-    iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/n;
+    iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
     iget-object p2, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a:Lcom/vk/market/orders/checkout/DeliveryInfo;
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lcom/vk/market/orders/checkout/n;->a(Lcom/vk/market/orders/checkout/e;)V
+    invoke-interface {p1, p2}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;)V
 
     .line 30
     iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a:Lcom/vk/market/orders/checkout/DeliveryInfo;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object p1
 
@@ -714,35 +714,35 @@
     invoke-direct {v2, p0, v0}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$onCityInputFieldChanged$2;-><init>(Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;Lcom/vk/market/orders/checkout/DeliveryInfo;)V
 
     .line 33
-    invoke-direct {p0, p1, p2, v1, v2}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/e;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1, p2, v1, v2}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 34
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 35
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 36
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
-.method public final a(Ljava/lang/String;Lcom/vk/market/orders/checkout/c;)V
+.method public final a(Ljava/lang/String;Lcom/vk/market/orders/checkout/DeliveryInfo6;)V
     .locals 3
 
     .line 22
@@ -754,48 +754,48 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->a(Ljava/lang/String;Lcom/vk/market/orders/checkout/c;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->a(Ljava/lang/String;Lcom/vk/market/orders/checkout/DeliveryInfo6;)V
 
     .line 23
-    iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/n;
+    iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
     iget-object p2, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a:Lcom/vk/market/orders/checkout/DeliveryInfo;
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lcom/vk/market/orders/checkout/n;->a(Lcom/vk/market/orders/checkout/e;)V
+    invoke-interface {p1, p2}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;)V
 
     .line 24
     iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a:Lcom/vk/market/orders/checkout/DeliveryInfo;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/e;)V
+    invoke-direct {p0, p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;)V
 
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 25
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 26
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -819,28 +819,28 @@
     invoke-virtual {v0, p1, p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 20
-    iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/n;
+    iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
     iget-object p2, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a:Lcom/vk/market/orders/checkout/DeliveryInfo;
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lcom/vk/market/orders/checkout/n;->a(Lcom/vk/market/orders/checkout/e;)V
+    invoke-interface {p1, p2}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;)V
 
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 21
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -860,45 +860,45 @@
     invoke-virtual {v0, p1, p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 38
-    iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/n;
+    iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
     iget-object p2, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a:Lcom/vk/market/orders/checkout/DeliveryInfo;
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lcom/vk/market/orders/checkout/n;->a(Lcom/vk/market/orders/checkout/e;)V
+    invoke-interface {p1, p2}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;)V
 
     .line 39
     iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a:Lcom/vk/market/orders/checkout/DeliveryInfo;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/e;)V
+    invoke-direct {p0, p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;)V
 
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 40
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 41
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -928,45 +928,45 @@
     invoke-virtual {p2, v2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->a([Ljava/lang/String;)Z
 
     .line 15
-    iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/n;
+    iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
     iget-object p2, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a:Lcom/vk/market/orders/checkout/DeliveryInfo;
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {p2}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lcom/vk/market/orders/checkout/n;->a(Lcom/vk/market/orders/checkout/e;)V
+    invoke-interface {p1, p2}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;)V
 
     .line 16
     iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a:Lcom/vk/market/orders/checkout/DeliveryInfo;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/e;)V
+    invoke-direct {p0, p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 17
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 18
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -975,11 +975,11 @@
     return-void
 .end method
 
-.method public final c()Lcom/vk/market/orders/checkout/n;
+.method public final c()Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/n;
+    iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
     return-object v0
 .end method
@@ -988,20 +988,20 @@
     .locals 13
 
     .line 1
-    iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/n;
+    iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
-    new-instance v1, Lcom/vk/api/market/i;
+    new-instance v1, Lcom/vk/api/market/MarketGetOrderSettings;
 
     iget v2, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->e:I
 
-    invoke-direct {v1, v2}, Lcom/vk/api/market/i;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/vk/api/market/MarketGetOrderSettings;-><init>(I)V
 
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
     .line 2
-    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v4
 
@@ -1020,7 +1020,7 @@
 
     const/4 v12, 0x0
 
-    invoke-static/range {v4 .. v12}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v4 .. v12}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -1035,12 +1035,12 @@
     invoke-direct {v3, p0}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$d;-><init>(Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;)V
 
     .line 6
-    invoke-virtual {v1, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
     .line 7
-    invoke-interface {v0, v1}, Lcom/vk/market/orders/checkout/n;->b(Lio/reactivex/disposables/b;)V
+    invoke-interface {v0, v1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->b(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -1074,7 +1074,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {v0}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object v0
 
@@ -1088,39 +1088,39 @@
     invoke-direct {v2, p0}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$tryPlaceOrder$2;-><init>(Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;)V
 
     .line 4
-    invoke-direct {p0, v0, v4, v1, v2}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/e;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0, v4, v1, v2}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     goto :goto_3
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 5
     :cond_1
-    iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/n;
+    iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
     iget-object v5, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a:Lcom/vk/market/orders/checkout/DeliveryInfo;
 
     if-eqz v5, :cond_8
 
-    invoke-virtual {v5}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {v5}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object v5
 
-    invoke-interface {v0, v5}, Lcom/vk/market/orders/checkout/n;->a(Lcom/vk/market/orders/checkout/e;)V
+    invoke-interface {v0, v5}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a:Lcom/vk/market/orders/checkout/DeliveryInfo;
 
     if-eqz v0, :cond_7
 
-    invoke-virtual {v0}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {v0}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/market/orders/checkout/e;->b()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/market/orders/checkout/DeliveryInfo12;->b()Ljava/util/List;
 
     move-result-object v0
 
@@ -1141,9 +1141,9 @@
 
     move-object v5, v1
 
-    check-cast v5, Lcom/vk/market/orders/checkout/l;
+    check-cast v5, Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
-    invoke-virtual {v5}, Lcom/vk/market/orders/checkout/l;->d()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/vk/market/orders/checkout/DeliveryInfo8;->d()Ljava/lang/String;
 
     move-result-object v5
 
@@ -1177,18 +1177,18 @@
     move-object v1, v2
 
     :goto_2
-    check-cast v1, Lcom/vk/market/orders/checkout/l;
+    check-cast v1, Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
     if-eqz v1, :cond_6
 
     .line 7
-    iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/n;
+    iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->d:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
-    invoke-virtual {v1}, Lcom/vk/market/orders/checkout/l;->g()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/market/orders/checkout/DeliveryInfo8;->g()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/market/orders/checkout/n;->H(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->H(Ljava/lang/String;)V
 
     :cond_6
     :goto_3
@@ -1196,19 +1196,19 @@
 
     .line 8
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 9
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 10
     :cond_9
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -1217,7 +1217,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->a(Lb/h/r/c;)Z
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->a(Lb/h/r/BaseScreenContract;)Z
 
     move-result v0
 
@@ -1228,7 +1228,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->b(Lb/h/r/c;)V
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->b(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method
@@ -1237,7 +1237,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->c(Lb/h/r/c;)V
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->c(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method
@@ -1246,7 +1246,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->d(Lb/h/r/c;)V
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->d(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method
@@ -1255,7 +1255,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->e(Lb/h/r/c;)V
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->e(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method
@@ -1264,7 +1264,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->f(Lb/h/r/c;)V
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->f(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method
@@ -1273,7 +1273,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->g(Lb/h/r/c;)V
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->g(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method
@@ -1282,7 +1282,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->h(Lb/h/r/c;)V
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->h(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method

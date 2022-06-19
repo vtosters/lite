@@ -6,17 +6,17 @@
 # instance fields
 .field private a:Z
 
-.field private b:Lcom/vtosters/lite/sync/online/e;
+.field private b:Lcom/vtosters/lite/sync/online/MarkUserAsOnlineDaemon;
 
-.field private c:Lcom/vtosters/lite/sync/online/g;
+.field private c:Lcom/vtosters/lite/sync/online/StatsDispatchDaemon;
 
-.field private d:Lcom/vtosters/lite/sync/online/a;
+.field private d:Lcom/vtosters/lite/sync/online/BenchmarkDispatchDaemon;
 
-.field private e:Lcom/vtosters/lite/sync/online/f;
+.field private e:Lcom/vtosters/lite/sync/online/RequestAwayTokenDaemon;
 
-.field private f:Lcom/vtosters/lite/sync/online/b;
+.field private f:Lcom/vtosters/lite/sync/online/GetPingUrlDaemon;
 
-.field private g:Lcom/vtosters/lite/sync/online/d;
+.field private g:Lcom/vtosters/lite/sync/online/LocationTrackerDaemon;
 
 
 # direct methods
@@ -33,88 +33,88 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/sync/online/e;
+    new-instance v0, Lcom/vtosters/lite/sync/online/MarkUserAsOnlineDaemon;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/sync/online/e;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/sync/online/MarkUserAsOnlineDaemon;-><init>()V
 
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->b:Lcom/vtosters/lite/sync/online/e;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->b:Lcom/vtosters/lite/sync/online/MarkUserAsOnlineDaemon;
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->b:Lcom/vtosters/lite/sync/online/e;
+    iget-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->b:Lcom/vtosters/lite/sync/online/MarkUserAsOnlineDaemon;
 
     const/16 v1, 0x3e8
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/sync/online/e;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/sync/online/MarkUserAsOnlineDaemon;->a(I)V
 
     .line 3
-    new-instance v0, Lcom/vtosters/lite/sync/online/g;
+    new-instance v0, Lcom/vtosters/lite/sync/online/StatsDispatchDaemon;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/sync/online/g;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/sync/online/StatsDispatchDaemon;-><init>()V
 
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->c:Lcom/vtosters/lite/sync/online/g;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->c:Lcom/vtosters/lite/sync/online/StatsDispatchDaemon;
 
     .line 4
-    iget-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->c:Lcom/vtosters/lite/sync/online/g;
+    iget-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->c:Lcom/vtosters/lite/sync/online/StatsDispatchDaemon;
 
     const/16 v1, 0x1b58
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/sync/online/g;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/sync/online/StatsDispatchDaemon;->a(I)V
 
     .line 5
-    new-instance v0, Lcom/vtosters/lite/sync/online/a;
+    new-instance v0, Lcom/vtosters/lite/sync/online/BenchmarkDispatchDaemon;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/sync/online/a;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/sync/online/BenchmarkDispatchDaemon;-><init>()V
 
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->d:Lcom/vtosters/lite/sync/online/a;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->d:Lcom/vtosters/lite/sync/online/BenchmarkDispatchDaemon;
 
     .line 6
-    iget-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->d:Lcom/vtosters/lite/sync/online/a;
+    iget-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->d:Lcom/vtosters/lite/sync/online/BenchmarkDispatchDaemon;
 
     const/16 v1, 0x1770
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/sync/online/a;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/sync/online/BenchmarkDispatchDaemon;->a(I)V
 
     .line 7
-    new-instance v0, Lcom/vtosters/lite/sync/online/f;
+    new-instance v0, Lcom/vtosters/lite/sync/online/RequestAwayTokenDaemon;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/sync/online/f;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/sync/online/RequestAwayTokenDaemon;-><init>()V
 
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->e:Lcom/vtosters/lite/sync/online/f;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->e:Lcom/vtosters/lite/sync/online/RequestAwayTokenDaemon;
 
     .line 8
-    iget-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->e:Lcom/vtosters/lite/sync/online/f;
+    iget-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->e:Lcom/vtosters/lite/sync/online/RequestAwayTokenDaemon;
 
     const/16 v1, 0xbb8
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/sync/online/f;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/sync/online/RequestAwayTokenDaemon;->a(I)V
 
     .line 9
-    new-instance v0, Lcom/vtosters/lite/sync/online/b;
+    new-instance v0, Lcom/vtosters/lite/sync/online/GetPingUrlDaemon;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/sync/online/b;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/sync/online/GetPingUrlDaemon;-><init>()V
 
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->f:Lcom/vtosters/lite/sync/online/b;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->f:Lcom/vtosters/lite/sync/online/GetPingUrlDaemon;
 
     .line 10
-    iget-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->f:Lcom/vtosters/lite/sync/online/b;
+    iget-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->f:Lcom/vtosters/lite/sync/online/GetPingUrlDaemon;
 
     const/16 v1, 0xfa0
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/sync/online/b;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/sync/online/GetPingUrlDaemon;->a(I)V
 
     .line 11
-    new-instance v0, Lcom/vtosters/lite/sync/online/d;
+    new-instance v0, Lcom/vtosters/lite/sync/online/LocationTrackerDaemon;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/sync/online/d;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/sync/online/LocationTrackerDaemon;-><init>()V
 
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->g:Lcom/vtosters/lite/sync/online/d;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->g:Lcom/vtosters/lite/sync/online/LocationTrackerDaemon;
 
     .line 12
-    iget-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->g:Lcom/vtosters/lite/sync/online/d;
+    iget-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->g:Lcom/vtosters/lite/sync/online/LocationTrackerDaemon;
 
     const/16 v1, 0x1388
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/sync/online/d;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/sync/online/LocationTrackerDaemon;->a(I)V
 
     .line 13
     invoke-static {}, Lcom/vk/stat/Stat;->k()V
@@ -126,54 +126,54 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->b:Lcom/vtosters/lite/sync/online/e;
+    iget-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->b:Lcom/vtosters/lite/sync/online/MarkUserAsOnlineDaemon;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/sync/online/e;->b()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/sync/online/MarkUserAsOnlineDaemon;->b()V
 
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->b:Lcom/vtosters/lite/sync/online/e;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->b:Lcom/vtosters/lite/sync/online/MarkUserAsOnlineDaemon;
 
     .line 3
-    iget-object v1, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->c:Lcom/vtosters/lite/sync/online/g;
+    iget-object v1, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->c:Lcom/vtosters/lite/sync/online/StatsDispatchDaemon;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/sync/online/g;->b()V
+    invoke-virtual {v1}, Lcom/vtosters/lite/sync/online/StatsDispatchDaemon;->b()V
 
     .line 4
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->c:Lcom/vtosters/lite/sync/online/g;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->c:Lcom/vtosters/lite/sync/online/StatsDispatchDaemon;
 
     .line 5
-    iget-object v1, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->d:Lcom/vtosters/lite/sync/online/a;
+    iget-object v1, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->d:Lcom/vtosters/lite/sync/online/BenchmarkDispatchDaemon;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/sync/online/a;->b()V
+    invoke-virtual {v1}, Lcom/vtosters/lite/sync/online/BenchmarkDispatchDaemon;->b()V
 
     .line 6
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->d:Lcom/vtosters/lite/sync/online/a;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->d:Lcom/vtosters/lite/sync/online/BenchmarkDispatchDaemon;
 
     .line 7
-    iget-object v1, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->e:Lcom/vtosters/lite/sync/online/f;
+    iget-object v1, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->e:Lcom/vtosters/lite/sync/online/RequestAwayTokenDaemon;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/sync/online/f;->b()V
+    invoke-virtual {v1}, Lcom/vtosters/lite/sync/online/RequestAwayTokenDaemon;->b()V
 
     .line 8
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->e:Lcom/vtosters/lite/sync/online/f;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->e:Lcom/vtosters/lite/sync/online/RequestAwayTokenDaemon;
 
     .line 9
-    iget-object v1, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->f:Lcom/vtosters/lite/sync/online/b;
+    iget-object v1, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->f:Lcom/vtosters/lite/sync/online/GetPingUrlDaemon;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/sync/online/b;->b()V
+    invoke-virtual {v1}, Lcom/vtosters/lite/sync/online/GetPingUrlDaemon;->b()V
 
     .line 10
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->f:Lcom/vtosters/lite/sync/online/b;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->f:Lcom/vtosters/lite/sync/online/GetPingUrlDaemon;
 
     .line 11
-    iget-object v1, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->g:Lcom/vtosters/lite/sync/online/d;
+    iget-object v1, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->g:Lcom/vtosters/lite/sync/online/LocationTrackerDaemon;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/sync/online/d;->b()V
+    invoke-virtual {v1}, Lcom/vtosters/lite/sync/online/LocationTrackerDaemon;->b()V
 
     .line 12
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->g:Lcom/vtosters/lite/sync/online/d;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->g:Lcom/vtosters/lite/sync/online/LocationTrackerDaemon;
 
     .line 13
     invoke-static {}, Lcom/vk/stat/Stat;->l()V
@@ -207,22 +207,22 @@
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->b:Lcom/vtosters/lite/sync/online/e;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->b:Lcom/vtosters/lite/sync/online/MarkUserAsOnlineDaemon;
 
     .line 4
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->c:Lcom/vtosters/lite/sync/online/g;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->c:Lcom/vtosters/lite/sync/online/StatsDispatchDaemon;
 
     .line 5
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->d:Lcom/vtosters/lite/sync/online/a;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->d:Lcom/vtosters/lite/sync/online/BenchmarkDispatchDaemon;
 
     .line 6
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->e:Lcom/vtosters/lite/sync/online/f;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->e:Lcom/vtosters/lite/sync/online/RequestAwayTokenDaemon;
 
     .line 7
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->f:Lcom/vtosters/lite/sync/online/b;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->f:Lcom/vtosters/lite/sync/online/GetPingUrlDaemon;
 
     .line 8
-    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->g:Lcom/vtosters/lite/sync/online/d;
+    iput-object v0, p0, Lcom/vtosters/lite/sync/online/VkOnlineService;->g:Lcom/vtosters/lite/sync/online/LocationTrackerDaemon;
 
     return-void
 .end method

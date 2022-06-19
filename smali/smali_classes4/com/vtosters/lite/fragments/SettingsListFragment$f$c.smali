@@ -3,7 +3,7 @@
 .source "SettingsListFragment.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -48,18 +48,18 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/SettingsListFragment$f$c;->invoke()Lkotlin/m;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/SettingsListFragment$f$c;->invoke()Lkotlin/Unit;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public invoke()Lkotlin/m;
+.method public invoke()Lkotlin/Unit;
     .locals 7
 
     .line 2
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -90,14 +90,14 @@
 
     invoke-direct {v3, v0, v4, v6, v5}, Lcom/vtosters/lite/fragments/SettingsListFragment$c;-><init>(IILjava/lang/Object;Ljava/lang/Runnable;)V
 
-    invoke-static {v2, v3}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v2, v3}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 4
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method

@@ -23,13 +23,13 @@
 
 
 # instance fields
-.field private a:Lcom/vk/core/dialogs/bottomsheet/e;
+.field private a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
-.field private final b:Lcom/vk/core/dialogs/bottomsheet/h$c;
+.field private final b:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;
 
 .field private c:Z
 
-.field private final d:Lcom/vk/account/verify/g$b;
+.field private final d:Lcom/vk/account/verify/PhoneVerifyManager$b;
 
 
 # direct methods
@@ -40,27 +40,27 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/account/verify/views/PhoneVerifyView$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/account/verify/views/PhoneVerifyView$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/account/verify/views/PhoneVerifyView;->e:Lcom/vk/account/verify/views/PhoneVerifyView$b;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/account/verify/g$b;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/account/verify/PhoneVerifyManager$b;)V
     .locals 1
 
     .line 1
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->d:Lcom/vk/account/verify/g$b;
+    iput-object p2, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->d:Lcom/vk/account/verify/PhoneVerifyManager$b;
 
     .line 2
     new-instance p2, Lcom/vk/account/verify/views/PhoneVerifyView$ModalDialogListenerImpl;
 
     invoke-direct {p2, p0}, Lcom/vk/account/verify/views/PhoneVerifyView$ModalDialogListenerImpl;-><init>(Lcom/vk/account/verify/views/PhoneVerifyView;)V
 
-    iput-object p2, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->b:Lcom/vk/core/dialogs/bottomsheet/h$c;
+    iput-object p2, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->b:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;
 
     const/4 p2, 0x1
 
@@ -112,13 +112,13 @@
 
     const-string p2, "findViewById<TextView>(R.id.phone)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
-    iget-object p2, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->d:Lcom/vk/account/verify/g$b;
+    iget-object p2, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->d:Lcom/vk/account/verify/PhoneVerifyManager$b;
 
-    invoke-virtual {p2}, Lcom/vk/account/verify/g$b;->d()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/account/verify/PhoneVerifyManager$b;->d()Ljava/lang/String;
 
     move-result-object p2
 
@@ -181,7 +181,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v2, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
 
@@ -243,7 +243,7 @@
     invoke-direct {v6, p0}, Lcom/vk/account/verify/views/PhoneVerifyView$askAutoValidationPermissions$2;-><init>(Lcom/vk/account/verify/views/PhoneVerifyView;)V
 
     .line 9
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method
@@ -266,17 +266,17 @@
     iput-boolean v0, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->c:Z
 
     .line 3
-    sget-object v0, Lcom/vk/account/verify/g;->e:Lcom/vk/account/verify/g;
+    sget-object v0, Lcom/vk/account/verify/PhoneVerifyManager;->INSTANCE:Lcom/vk/account/verify/PhoneVerifyManager;
 
-    invoke-virtual {v0}, Lcom/vk/account/verify/g;->b()Lcom/vk/account/verify/h/e;
+    invoke-virtual {v0}, Lcom/vk/account/verify/PhoneVerifyManager;->b()Lcom/vk/account/verify/h/PhoneValidationPresenter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->d:Lcom/vk/account/verify/g$b;
+    iget-object v1, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->d:Lcom/vk/account/verify/PhoneVerifyManager$b;
 
     sget-object v2, Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand$Reason;->CANCEL_BUTTON:Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand$Reason;
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/account/verify/h/e;->a(Lcom/vk/account/verify/g$b;Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand$Reason;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/account/verify/h/PhoneValidationPresenter;->a(Lcom/vk/account/verify/PhoneVerifyManager$b;Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand$Reason;)V
 
     return-void
 .end method
@@ -317,37 +317,37 @@
     iput-boolean v0, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->c:Z
 
     .line 3
-    sget-object v0, Lcom/vk/account/verify/g;->e:Lcom/vk/account/verify/g;
+    sget-object v0, Lcom/vk/account/verify/PhoneVerifyManager;->INSTANCE:Lcom/vk/account/verify/PhoneVerifyManager;
 
-    invoke-virtual {v0}, Lcom/vk/account/verify/g;->b()Lcom/vk/account/verify/h/e;
+    invoke-virtual {v0}, Lcom/vk/account/verify/PhoneVerifyManager;->b()Lcom/vk/account/verify/h/PhoneValidationPresenter;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/account/verify/views/c;
+    new-instance v1, Lcom/vk/account/verify/views/PhoneConfirmView;
 
-    invoke-direct {v1}, Lcom/vk/account/verify/views/c;-><init>()V
+    invoke-direct {v1}, Lcom/vk/account/verify/views/PhoneConfirmView;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/account/verify/h/e;->b(Lcom/vk/account/verify/d;)V
+    invoke-virtual {v0, v1}, Lcom/vk/account/verify/h/PhoneValidationPresenter;->b(Lcom/vk/account/verify/PhoneVerifyContracts4;)V
 
     .line 4
-    sget-object v0, Lcom/vk/account/verify/g;->e:Lcom/vk/account/verify/g;
+    sget-object v0, Lcom/vk/account/verify/PhoneVerifyManager;->INSTANCE:Lcom/vk/account/verify/PhoneVerifyManager;
 
-    invoke-virtual {v0}, Lcom/vk/account/verify/g;->b()Lcom/vk/account/verify/h/e;
+    invoke-virtual {v0}, Lcom/vk/account/verify/PhoneVerifyManager;->b()Lcom/vk/account/verify/h/PhoneValidationPresenter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->d:Lcom/vk/account/verify/g$b;
+    iget-object v1, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->d:Lcom/vk/account/verify/PhoneVerifyManager$b;
 
-    invoke-virtual {v0, v1}, Lcom/vk/account/verify/h/e;->a(Lcom/vk/account/verify/g$b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/account/verify/h/PhoneValidationPresenter;->a(Lcom/vk/account/verify/PhoneVerifyManager$b;)V
 
     .line 5
-    sget-object v0, Lcom/vk/account/verify/g;->e:Lcom/vk/account/verify/g;
+    sget-object v0, Lcom/vk/account/verify/PhoneVerifyManager;->INSTANCE:Lcom/vk/account/verify/PhoneVerifyManager;
 
-    invoke-virtual {v0}, Lcom/vk/account/verify/g;->b()Lcom/vk/account/verify/h/e;
+    invoke-virtual {v0}, Lcom/vk/account/verify/PhoneVerifyManager;->b()Lcom/vk/account/verify/h/PhoneValidationPresenter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/account/verify/h/e;->c()V
+    invoke-virtual {v0}, Lcom/vk/account/verify/h/PhoneValidationPresenter;->c()V
 
     return-void
 .end method
@@ -373,7 +373,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v3, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
 
@@ -399,7 +399,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v0}, Lcom/vk/account/verify/views/PhoneVerifyView;->a(Landroid/content/Context;)Landroidx/appcompat/app/AppCompatActivity;
 
@@ -408,34 +408,34 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 4
-    sget-object v1, Lcom/vk/webapp/r/b;->d:Lcom/vk/webapp/r/b$a;
+    sget-object v1, Lcom/vk/webapp/r/PermissionBottomSheetDialog;->d:Lcom/vk/webapp/r/PermissionBottomSheetDialog$a;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v3}, Lcom/vk/webapp/r/b$a;->e(Landroid/content/Context;)Lcom/vk/webapp/r/b;
+    invoke-virtual {v1, v3}, Lcom/vk/webapp/r/PermissionBottomSheetDialog$a;->e(Landroid/content/Context;)Lcom/vk/webapp/r/PermissionBottomSheetDialog;
 
     move-result-object v1
 
     const v2, 0x7f120a3d
 
     .line 5
-    invoke-virtual {v1, v2}, Lcom/vk/webapp/r/b;->o0(I)V
+    invoke-virtual {v1, v2}, Lcom/vk/webapp/r/PermissionBottomSheetDialog;->o0(I)V
 
     const v2, 0x7f120a3c
 
     .line 6
-    invoke-virtual {v1, v2}, Lcom/vk/webapp/r/b;->n0(I)V
+    invoke-virtual {v1, v2}, Lcom/vk/webapp/r/PermissionBottomSheetDialog;->n0(I)V
 
     .line 7
     new-instance v2, Lcom/vk/account/verify/views/PhoneVerifyView$c;
 
     invoke-direct {v2, p0}, Lcom/vk/account/verify/views/PhoneVerifyView$c;-><init>(Lcom/vk/account/verify/views/PhoneVerifyView;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/common/view/j/c;->a(Lcom/vk/common/view/j/c$a;)V
+    invoke-virtual {v1, v2}, Lcom/vk/common/view/j/ConfirmationBottomSheetDialog;->a(Lcom/vk/common/view/j/ConfirmationBottomSheetDialog$a;)V
 
     .line 8
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -459,17 +459,17 @@
 
 
 # virtual methods
-.method public final a()Lkotlin/m;
+.method public final a()Lkotlin/Unit;
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->a:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object v0, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e;->dismiss()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismiss()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     goto :goto_0
 
@@ -480,38 +480,38 @@
     return-object v0
 .end method
 
-.method public final getDialog()Lcom/vk/core/dialogs/bottomsheet/e;
+.method public final getDialog()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->a:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object v0, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-object v0
 .end method
 
-.method public final getInfo()Lcom/vk/account/verify/g$b;
+.method public final getInfo()Lcom/vk/account/verify/PhoneVerifyManager$b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->d:Lcom/vk/account/verify/g$b;
+    iget-object v0, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->d:Lcom/vk/account/verify/PhoneVerifyManager$b;
 
     return-object v0
 .end method
 
-.method public final getListener()Lcom/vk/core/dialogs/bottomsheet/h$c;
+.method public final getListener()Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->b:Lcom/vk/core/dialogs/bottomsheet/h$c;
+    iget-object v0, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->b:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;
 
     return-object v0
 .end method
 
-.method public final setDialog(Lcom/vk/core/dialogs/bottomsheet/e;)V
+.method public final setDialog(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->a:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object p1, p0, Lcom/vk/account/verify/views/PhoneVerifyView;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method

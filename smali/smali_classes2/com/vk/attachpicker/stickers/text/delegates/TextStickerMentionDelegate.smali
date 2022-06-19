@@ -8,8 +8,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/stories/clickable/c<",
-            "Lcom/vk/stories/clickable/f;",
+            "Lcom/vk/stories/clickable/SpannableMeasureHelper1<",
+            "Lcom/vk/stories/clickable/StoryMentionSpan1;",
             ">;>;"
         }
     .end annotation
@@ -30,7 +30,7 @@
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextStickerMentionDelegate;->c:Landroid/text/StaticLayout;
 
     .line 2
-    invoke-static {}, Lcom/vk/stories/clickable/e;->p()Z
+    invoke-static {}, Lcom/vk/stories/clickable/StoryClickableController;->p()Z
 
     move-result p1
 
@@ -39,7 +39,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextStickerMentionDelegate;->c:Landroid/text/StaticLayout;
 
-    const-class v0, Lcom/vk/stories/clickable/f;
+    const-class v0, Lcom/vk/stories/clickable/StoryMentionSpan1;
 
     invoke-static {p1, v0}, Lcom/vk/stories/clickable/SpannableMeasureHelper;->a(Landroid/text/Layout;Ljava/lang/Class;)Ljava/util/List;
 
@@ -224,11 +224,11 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
+    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -236,12 +236,12 @@
 
     invoke-direct {v1, p0}, Lcom/vk/attachpicker/stickers/text/delegates/TextStickerMentionDelegate$calculateOffsetX$1;-><init>(Lcom/vk/attachpicker/stickers/text/delegates/TextStickerMentionDelegate;)V
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 2
-    invoke-static {v0}, Lkotlin/sequences/m;->k(Lkotlin/sequences/j;)Ljava/lang/Float;
+    invoke-static {v0}, Lkotlin/sequences/m;->k(Lkotlin/sequences/Sequence;)Ljava/lang/Float;
 
     move-result-object v0
 
@@ -271,12 +271,12 @@
     return-object v0
 .end method
 
-.method public final a(Lcom/vk/attachpicker/stickers/text/h;)Ljava/util/ArrayList;
+.method public final a(Lcom/vk/attachpicker/stickers/text/TextSticker;)Ljava/util/ArrayList;
     .locals 14
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/attachpicker/stickers/text/h;",
+            "Lcom/vk/attachpicker/stickers/text/TextSticker;",
             ")",
             "Ljava/util/ArrayList<",
             "Lcom/vk/dto/stories/model/clickable/ClickableSticker;",
@@ -288,7 +288,7 @@
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextStickerMentionDelegate;->c:Landroid/text/StaticLayout;
 
     .line 8
-    const-class v1, Lcom/vk/stories/clickable/f;
+    const-class v1, Lcom/vk/stories/clickable/StoryMentionSpan1;
 
     .line 9
     invoke-static {v0, v1}, Lcom/vk/stories/clickable/SpannableMeasureHelper;->a(Landroid/text/Layout;Ljava/lang/Class;)Ljava/util/List;
@@ -333,10 +333,10 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/stories/clickable/c;
+    check-cast v4, Lcom/vk/stories/clickable/SpannableMeasureHelper1;
 
     .line 14
-    invoke-virtual {v4}, Lcom/vk/stories/clickable/c;->a()Landroid/graphics/RectF;
+    invoke-virtual {v4}, Lcom/vk/stories/clickable/SpannableMeasureHelper1;->a()Landroid/graphics/RectF;
 
     move-result-object v5
 
@@ -348,7 +348,7 @@
     invoke-direct {p0, v5, v1}, Lcom/vk/attachpicker/stickers/text/delegates/TextStickerMentionDelegate;->a([FF)V
 
     .line 16
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/y;->getStickerMatrix()Landroid/graphics/Matrix;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/CanvasSticker;->getStickerMatrix()Landroid/graphics/Matrix;
 
     move-result-object v6
 
@@ -362,11 +362,11 @@
     move-result-object v13
 
     .line 18
-    invoke-virtual {v4}, Lcom/vk/stories/clickable/c;->b()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/vk/stories/clickable/SpannableMeasureHelper1;->b()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/vk/stories/clickable/f;
+    check-cast v5, Lcom/vk/stories/clickable/StoryMentionSpan1;
 
     .line 19
     instance-of v6, v5, Lcom/vk/stories/clickable/StoryMentionSpan;
@@ -377,7 +377,7 @@
     new-instance v5, Lcom/vk/dto/stories/model/clickable/ClickableMention;
 
     .line 21
-    invoke-virtual {v4}, Lcom/vk/stories/clickable/c;->b()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/vk/stories/clickable/SpannableMeasureHelper1;->b()Ljava/lang/Object;
 
     move-result-object v6
 
@@ -392,7 +392,7 @@
     move-result-object v8
 
     .line 22
-    invoke-virtual {v4}, Lcom/vk/stories/clickable/c;->c()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/vk/stories/clickable/SpannableMeasureHelper1;->c()Ljava/lang/String;
 
     move-result-object v9
 
@@ -424,7 +424,7 @@
     new-instance v5, Lcom/vk/dto/stories/model/clickable/ClickableHashtag;
 
     .line 27
-    invoke-virtual {v4}, Lcom/vk/stories/clickable/c;->b()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/vk/stories/clickable/SpannableMeasureHelper1;->b()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -496,10 +496,10 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/stories/clickable/c;
+    check-cast v2, Lcom/vk/stories/clickable/SpannableMeasureHelper1;
 
     .line 4
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/c;->a()Landroid/graphics/RectF;
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/SpannableMeasureHelper1;->a()Landroid/graphics/RectF;
 
     move-result-object v2
 
@@ -512,7 +512,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -531,13 +531,13 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 6
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 

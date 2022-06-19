@@ -1,12 +1,12 @@
 .class public final Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;
-.super Lcom/vk/im/engine/i/a;
+.super Lcom/vk/im/engine/i/BaseImEngineCmd;
 .source "TrimDialogsByPriorityCmd.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/a<",
+        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -20,7 +20,7 @@
 
 .field private final d:I
 
-.field private final e:Lcom/vk/im/engine/utils/collection/d;
+.field private final e:Lcom/vk/im/engine/utils/collection/IntCollection;
 
 .field private final f:Z
 
@@ -45,16 +45,16 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;-><init>(IIILcom/vk/im/engine/utils/collection/d;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;-><init>(IIILcom/vk/im/engine/utils/collection/IntCollection;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(IIILcom/vk/im/engine/utils/collection/d;Z)V
+.method public constructor <init>(IIILcom/vk/im/engine/utils/collection/IntCollection;Z)V
     .locals 0
 
     .line 3
-    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->b:I
 
@@ -62,14 +62,14 @@
 
     iput p3, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->d:I
 
-    iput-object p4, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->e:Lcom/vk/im/engine/utils/collection/d;
+    iput-object p4, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->e:Lcom/vk/im/engine/utils/collection/IntCollection;
 
     iput-boolean p5, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->f:Z
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIILcom/vk/im/engine/utils/collection/d;ZILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IIILcom/vk/im/engine/utils/collection/IntCollection;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 3
 
     and-int/lit8 p7, p6, 0x1
@@ -115,7 +115,7 @@
     if-eqz p1, :cond_3
 
     .line 1
-    invoke-static {}, Lcom/vk/im/engine/utils/collection/e;->a()Lcom/vk/im/engine/utils/collection/d;
+    invoke-static {}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a()Lcom/vk/im/engine/utils/collection/IntCollection;
 
     move-result-object p4
 
@@ -147,7 +147,7 @@
     move-object p5, v2
 
     .line 2
-    invoke-direct/range {p1 .. p6}, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;-><init>(IIILcom/vk/im/engine/utils/collection/d;Z)V
+    invoke-direct/range {p1 .. p6}, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;-><init>(IIILcom/vk/im/engine/utils/collection/IntCollection;Z)V
 
     return-void
 .end method
@@ -161,11 +161,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;)Lcom/vk/im/engine/utils/collection/d;
+.method public static final synthetic b(Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;)Lcom/vk/im/engine/utils/collection/IntCollection;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->e:Lcom/vk/im/engine/utils/collection/d;
+    iget-object p0, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->e:Lcom/vk/im/engine/utils/collection/IntCollection;
 
     return-object p0
 .end method
@@ -189,7 +189,7 @@
 
     const-string v1, "Thread.currentThread()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/lang/Thread;->isInterrupted()Z
 
@@ -219,39 +219,39 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
+.method public a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
     .locals 7
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
 
     move-result-object v1
 
     .line 4
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object v0
 
     .line 5
-    sget-object v2, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v2, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/models/q$a;->a()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v2}, Lcom/vk/im/engine/models/Weight$a;->a()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v2
 
@@ -262,9 +262,9 @@
     sget-object v4, Lcom/vk/im/engine/models/Direction;->BEFORE:Lcom/vk/im/engine/models/Direction;
 
     .line 8
-    sget-object v5, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v5, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v5}, Lcom/vk/im/engine/models/q$a;->b()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v5}, Lcom/vk/im/engine/models/Weight$a;->b()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v5
 
@@ -272,14 +272,14 @@
     iget v6, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->b:I
 
     .line 10
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Direction;Lcom/vk/im/engine/models/q;I)Ljava/util/List;
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Direction;Lcom/vk/im/engine/models/Weight;I)Ljava/util/List;
 
     move-result-object v1
 
     .line 11
     sget-object v2, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd$onExecute$majorDialogsIds$1;->a:Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd$onExecute$majorDialogsIds$1;
 
-    invoke-static {v1, v2}, Lcom/vk/im/engine/utils/collection/e;->a(Ljava/util/Collection;Lkotlin/jvm/b/b;)Lcom/vk/im/engine/utils/collection/d;
+    invoke-static {v1, v2}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Lcom/vk/im/engine/utils/collection/IntCollection;
 
     move-result-object v1
 
@@ -302,16 +302,16 @@
     move-result v3
 
     .line 14
-    invoke-virtual {v0, v3}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->b(I)Lcom/vk/im/engine/utils/collection/d;
+    invoke-virtual {v0, v3}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->b(I)Lcom/vk/im/engine/utils/collection/IntCollection;
 
     move-result-object v0
 
     .line 15
     new-instance v3, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd$a;
 
-    invoke-direct {v3, p0, v1, p1, v2}, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd$a;-><init>(Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;Lcom/vk/im/engine/utils/collection/d;Lcom/vk/im/engine/d;Lkotlin/jvm/internal/Ref$BooleanRef;)V
+    invoke-direct {v3, p0, v1, p1, v2}, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd$a;-><init>(Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;Lcom/vk/im/engine/utils/collection/IntCollection;Lcom/vk/im/engine/ImEnvironment;Lkotlin/jvm/internal/Ref$BooleanRef;)V
 
-    invoke-interface {v0, v3}, Lcom/vk/im/engine/utils/collection/d;->a(Lcom/vk/im/engine/utils/collection/d$a;)V
+    invoke-interface {v0, v3}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Lcom/vk/im/engine/utils/collection/IntCollection$a;)V
 
     .line 16
     iget-boolean v0, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->f:Z
@@ -331,7 +331,7 @@
 
     invoke-direct {v0, v1, v3}, Lcom/vk/im/engine/events/OnCacheInvalidateEvent;-><init>(Ljava/lang/Object;Lcom/vk/im/engine/events/OnCacheInvalidateEvent$Reason;)V
 
-    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/a;)V
+    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/Event;)V
 
     .line 18
     :cond_0
@@ -344,11 +344,11 @@
     return-object p1
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->a(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
 
     move-result-object p1
 
@@ -384,11 +384,11 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->e:Lcom/vk/im/engine/utils/collection/d;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->e:Lcom/vk/im/engine/utils/collection/IntCollection;
 
-    iget-object v1, p1, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->e:Lcom/vk/im/engine/utils/collection/d;
+    iget-object v1, p1, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->e:Lcom/vk/im/engine/utils/collection/IntCollection;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -433,7 +433,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->e:Lcom/vk/im/engine/utils/collection/d;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->e:Lcom/vk/im/engine/utils/collection/IntCollection;
 
     if-eqz v1, :cond_0
 
@@ -498,7 +498,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->e:Lcom/vk/im/engine/utils/collection/d;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/storage/TrimDialogsByPriorityCmd;->e:Lcom/vk/im/engine/utils/collection/IntCollection;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

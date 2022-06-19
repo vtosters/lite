@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/vk/im/engine/models/attaches/AttachWithId;
-.implements Lcom/vk/im/engine/models/attaches/g;
+.implements Lcom/vk/im/engine/models/attaches/WithPreview;
 
 
 # annotations
@@ -51,7 +51,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachSticker$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachSticker$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/attaches/AttachSticker$a;
@@ -92,18 +92,18 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/im/engine/models/Sticker;-><init>(ILcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/ImageList;Lcom/vk/dto/stickers/StickerAnimation;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/im/engine/models/Sticker;-><init>(ILcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/ImageList;Lcom/vk/dto/stickers/StickerAnimation;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachSticker;->f:Lcom/vk/im/engine/models/Sticker;
 
     .line 5
-    invoke-static {}, Lcom/vk/im/engine/models/y/a;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/im/engine/models/y/StickerReferrer;->a()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "StickerReferrer.none()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachSticker;->g:Ljava/lang/String;
 
@@ -138,18 +138,18 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/im/engine/models/Sticker;-><init>(ILcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/ImageList;Lcom/vk/dto/stickers/StickerAnimation;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/im/engine/models/Sticker;-><init>(ILcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/ImageList;Lcom/vk/dto/stickers/StickerAnimation;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachSticker;->f:Lcom/vk/im/engine/models/Sticker;
 
     .line 9
-    invoke-static {}, Lcom/vk/im/engine/models/y/a;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/im/engine/models/y/StickerReferrer;->a()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "StickerReferrer.none()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachSticker;->g:Ljava/lang/String;
 
@@ -196,18 +196,18 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/im/engine/models/Sticker;-><init>(ILcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/ImageList;Lcom/vk/dto/stickers/StickerAnimation;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/im/engine/models/Sticker;-><init>(ILcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/ImageList;Lcom/vk/dto/stickers/StickerAnimation;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachSticker;->f:Lcom/vk/im/engine/models/Sticker;
 
     .line 22
-    invoke-static {}, Lcom/vk/im/engine/models/y/a;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/im/engine/models/y/StickerReferrer;->a()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "StickerReferrer.none()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachSticker;->g:Ljava/lang/String;
 
@@ -217,7 +217,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -254,18 +254,18 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/im/engine/models/Sticker;-><init>(ILcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/ImageList;Lcom/vk/dto/stickers/StickerAnimation;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/im/engine/models/Sticker;-><init>(ILcom/vk/im/engine/models/ImageList;Lcom/vk/im/engine/models/ImageList;Lcom/vk/dto/stickers/StickerAnimation;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachSticker;->f:Lcom/vk/im/engine/models/Sticker;
 
     .line 17
-    invoke-static {}, Lcom/vk/im/engine/models/y/a;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/im/engine/models/y/StickerReferrer;->a()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "StickerReferrer.none()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/im/engine/models/attaches/AttachSticker;->g:Ljava/lang/String;
 
@@ -296,7 +296,7 @@
 
     const-string v1, "AttachSyncState.fromInt(s.readInt())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Lcom/vk/im/engine/models/attaches/AttachSticker;->a(Lcom/vk/im/engine/models/attaches/AttachSyncState;)V
 
@@ -345,13 +345,13 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 9
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -676,7 +676,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/attaches/AttachSticker;->f:Lcom/vk/im/engine/models/Sticker;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -692,7 +692,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/models/attaches/AttachSticker;->g:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -716,7 +716,7 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2, v1}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v1}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method
@@ -756,7 +756,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/attaches/g$a;->a(Lcom/vk/im/engine/models/attaches/g;)Lcom/vk/im/engine/models/ImageList;
+    invoke-static {p0}, Lcom/vk/im/engine/models/attaches/WithPreview$a;->a(Lcom/vk/im/engine/models/attaches/WithPreview;)Lcom/vk/im/engine/models/ImageList;
 
     move-result-object v0
 

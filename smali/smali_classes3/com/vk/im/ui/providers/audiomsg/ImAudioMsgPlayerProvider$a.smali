@@ -1,5 +1,5 @@
 .class final Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider$a;
-.super Lb/h/n/c$a;
+.super Lb/h/n/AppLifecycleDispatcher$a;
 .source "ImAudioMsgPlayerProvider.kt"
 
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lb/h/n/c$a;-><init>()V
+    invoke-direct {p0}, Lb/h/n/AppLifecycleDispatcher$a;-><init>()V
 
     return-void
 .end method

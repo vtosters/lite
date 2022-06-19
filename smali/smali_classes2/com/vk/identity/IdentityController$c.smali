@@ -3,7 +3,7 @@
 .source "IdentityController.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/h$d;
+.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
 
 
 # annotations
@@ -69,7 +69,7 @@
     invoke-virtual {v0, v1, v2, v3}, Landroidx/fragment/app/Fragment;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 2
-    sget-object v0, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
+    sget-object v0, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
 
     iget-object v1, p0, Lcom/vk/identity/IdentityController$c;->b:Lcom/vk/identity/IdentityContext;
 
@@ -83,7 +83,7 @@
 
     move-result v3
 
-    invoke-virtual {v0, v2, v1, v3}, Lcom/vk/identity/a;->a(ZLjava/util/List;I)V
+    invoke-virtual {v0, v2, v1, v3}, Lcom/vk/identity/IdentityHelper;->a(ZLjava/util/List;I)V
 
     return-void
 .end method

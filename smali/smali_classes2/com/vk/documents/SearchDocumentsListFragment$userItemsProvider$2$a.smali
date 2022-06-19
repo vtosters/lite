@@ -3,7 +3,7 @@
 .source "SearchDocumentsListFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$o;
+.implements Lcom/vk/lists/PaginationHelper$o;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/lists/t$o<",
+        "Lcom/vk/lists/PaginationHelper$o<",
         "Lcom/vk/api/base/VkPaginationList<",
         "Lcom/vk/api/base/Document;",
         ">;>;"
@@ -50,14 +50,14 @@
 
 
 # virtual methods
-.method public a(ILcom/vk/lists/t;)Lc/a/m;
+.method public a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/api/base/VkPaginationList<",
             "Lcom/vk/api/base/Document;",
             ">;>;"
@@ -65,7 +65,7 @@
     .end annotation
 
     .line 3
-    new-instance v0, Lb/h/c/i/f;
+    new-instance v0, Lcom/vk/api/docs/DocsGetRequest;
 
     iget-object v1, p0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a;->a:Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2;
 
@@ -77,7 +77,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p2}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result p2
 
@@ -97,28 +97,28 @@
     move-result v2
 
     .line 5
-    invoke-direct {v0, v1, p1, p2, v2}, Lb/h/c/i/f;-><init>(IIII)V
+    invoke-direct {v0, v1, p1, p2, v2}, Lcom/vk/api/docs/DocsGetRequest;-><init>(IIII)V
 
     const/4 p1, 0x1
 
     const/4 p2, 0x0
 
     .line 6
-    invoke-static {v0, p2, p1, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p2, p1, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/api/base/VkPaginationList<",
             "Lcom/vk/api/base/Document;",
             ">;>;"
@@ -190,23 +190,23 @@
     :goto_0
     invoke-direct {p1, v0, v1, p2}, Lcom/vk/api/base/VkPaginationList;-><init>(Ljava/util/ArrayList;IZ)V
 
-    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "Observable.just(VkPagina\u2026 < localItemsTotalCount))"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 2
     :cond_1
-    sget-object p1, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object p1, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v0, "userDocs"
 
-    invoke-virtual {p1, v0, p2}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Z)Lc/a/m;
+    invoke-virtual {p1, v0, p2}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Z)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -214,16 +214,16 @@
     return-object p1
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/api/base/VkPaginationList<",
             "Lcom/vk/api/base/Document;",
             ">;>;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -233,7 +233,7 @@
     .line 7
     new-instance v0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;
 
-    invoke-direct {v0, p0, p3, p2}, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;-><init>(Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a;Lcom/vk/lists/t;Z)V
+    invoke-direct {v0, p0, p3, p2}, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a$a;-><init>(Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a;Lcom/vk/lists/PaginationHelper;Z)V
 
     .line 8
     iget-object p2, p0, Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2$a;->a:Lcom/vk/documents/SearchDocumentsListFragment$userItemsProvider$2;
@@ -246,17 +246,17 @@
 
     if-eqz p2, :cond_0
 
-    new-instance p3, Lcom/vk/documents/a;
+    new-instance p3, Lcom/vk/documents/SearchDocumentsListFragment1;
 
-    invoke-direct {p3, p2}, Lcom/vk/documents/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {p3, p2}, Lcom/vk/documents/SearchDocumentsListFragment1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     move-object p2, p3
 
     :cond_0
-    check-cast p2, Lc/a/z/g;
+    check-cast p2, Lio/reactivex/functions/Consumer;
 
     .line 9
-    invoke-virtual {p1, v0, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
@@ -273,7 +273,7 @@
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p2, p1}, Lcom/vk/core/fragments/b;->d(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, p1}, Lcom/vk/core/fragments/BaseFragment1;->d(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
     :cond_2
     return-void

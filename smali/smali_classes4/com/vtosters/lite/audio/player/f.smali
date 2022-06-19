@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # instance fields
@@ -30,7 +30,7 @@
 
     check-cast p1, Landroid/app/Notification;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/audio/player/PlayerService;->a(Landroid/app/Notification;)Lkotlin/m;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/audio/player/PlayerService;->a(Landroid/app/Notification;)Lkotlin/Unit;
 
     move-result-object p1
 

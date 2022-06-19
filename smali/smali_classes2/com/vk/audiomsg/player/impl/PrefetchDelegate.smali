@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static final synthetic g:[Lkotlin/u/j;
+.field static final synthetic g:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -24,16 +24,16 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lcom/vk/audiomsg/player/d;",
+            "Lcom/vk/audiomsg/player/AudioMsgTrack;",
             "Lcom/vk/audiomsg/player/impl/PrefetchDelegate$a;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
-.field private final c:Lkotlin/e;
+.field private final c:Lkotlin/Lazy2;
 
 .field private d:Z
     .annotation build Landroidx/annotation/GuardedBy;
@@ -41,9 +41,9 @@
     .end annotation
 .end field
 
-.field private final e:Lcom/vk/audiomsg/player/i/a;
+.field private final e:Lcom/vk/audiomsg/player/i/FileLoader;
 
-.field private final f:Lcom/vk/audiomsg/player/impl/b;
+.field private final f:Lcom/vk/audiomsg/player/impl/PrefetchDelegateListener;
 
 
 # direct methods
@@ -54,11 +54,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -66,9 +66,9 @@
 
     const-string v5, "getPrefetchExecutor()Ljava/util/concurrent/ExecutorService;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -76,7 +76,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -84,28 +84,28 @@
 
     const-string v4, "getMainHandler()Landroid/os/Handler;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->g:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->g:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/audiomsg/player/i/a;Lcom/vk/audiomsg/player/impl/b;)V
+.method public constructor <init>(Lcom/vk/audiomsg/player/i/FileLoader;Lcom/vk/audiomsg/player/impl/PrefetchDelegateListener;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->e:Lcom/vk/audiomsg/player/i/a;
+    iput-object p1, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->e:Lcom/vk/audiomsg/player/i/FileLoader;
 
-    iput-object p2, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->f:Lcom/vk/audiomsg/player/impl/b;
+    iput-object p2, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->f:Lcom/vk/audiomsg/player/impl/PrefetchDelegateListener;
 
     .line 2
     new-instance p1, Ljava/util/LinkedHashMap;
@@ -119,20 +119,20 @@
 
     invoke-direct {p1, p0}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$prefetchExecutor$2;-><init>(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->b:Lkotlin/Lazy2;
 
     .line 4
     sget-object p1, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$mainHandler$2;->a:Lcom/vk/audiomsg/player/impl/PrefetchDelegate$mainHandler$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->c:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->c:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -187,12 +187,12 @@
     throw v0
 .end method
 
-.method private final a(Lcom/vk/audiomsg/player/d;)V
+.method private final a(Lcom/vk/audiomsg/player/AudioMsgTrack;)V
     .locals 2
 
     .line 16
     :try_start_0
-    invoke-direct {p0, p1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->b(Lcom/vk/audiomsg/player/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->b(Lcom/vk/audiomsg/player/AudioMsgTrack;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
@@ -253,16 +253,16 @@
     throw p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/d;)V
+.method public static final synthetic a(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->a(Lcom/vk/audiomsg/player/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->a(Lcom/vk/audiomsg/player/AudioMsgTrack;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;)Z
+.method private final a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;)Z
     .locals 8
 
     .line 26
@@ -273,14 +273,14 @@
 
     new-instance v1, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$e;
 
-    invoke-direct {v1, p0, p1, p2, p3}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$e;-><init>(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;)V
+    invoke-direct {v1, p0, p1, p2, p3}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$e;-><init>(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 27
-    iget-object v0, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->e:Lcom/vk/audiomsg/player/i/a;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->e:Lcom/vk/audiomsg/player/i/FileLoader;
 
-    invoke-interface {v0, p3}, Lcom/vk/audiomsg/player/i/a;->a(Landroid/net/Uri;)Ljava/io/File;
+    invoke-interface {v0, p3}, Lcom/vk/audiomsg/player/i/FileLoader;->a(Landroid/net/Uri;)Ljava/io/File;
 
     .line 28
     invoke-static {p0}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->b(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;)Landroid/os/Handler;
@@ -289,7 +289,7 @@
 
     new-instance v1, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$f;
 
-    invoke-direct {v1, p0, p1, p2, p3}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$f;-><init>(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;)V
+    invoke-direct {v1, p0, p1, p2, p3}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$f;-><init>(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0
@@ -321,7 +321,7 @@
 
     move-object v5, p3
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$g;-><init>(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;Ljava/lang/Throwable;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$g;-><init>(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;Ljava/lang/Throwable;)V
 
     invoke-virtual {v0, v7}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -405,27 +405,27 @@
     return-object v0
 .end method
 
-.method private final b(Lcom/vk/audiomsg/player/d;)V
+.method private final b(Lcom/vk/audiomsg/player/AudioMsgTrack;)V
     .locals 3
 
     .line 18
-    invoke-virtual {p1}, Lcom/vk/audiomsg/player/d;->c()Ljava/util/Collection;
+    invoke-virtual {p1}, Lcom/vk/audiomsg/player/AudioMsgTrack;->c()Ljava/util/Collection;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 19
     sget-object v1, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$runPrefetchImpl$hasAccessibleLocalResources$1;->a:Lcom/vk/audiomsg/player/impl/PrefetchDelegate$runPrefetchImpl$hasAccessibleLocalResources$1;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 20
-    invoke-interface {v0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -471,23 +471,23 @@
 
     .line 22
     :cond_2
-    invoke-virtual {p1}, Lcom/vk/audiomsg/player/d;->c()Ljava/util/Collection;
+    invoke-virtual {p1}, Lcom/vk/audiomsg/player/AudioMsgTrack;->c()Ljava/util/Collection;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 23
     sget-object v1, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$runPrefetchImpl$1;->a:Lcom/vk/audiomsg/player/impl/PrefetchDelegate$runPrefetchImpl$1;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 24
-    invoke-interface {v0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -506,13 +506,13 @@
     check-cast v1, Landroid/net/Uri;
 
     .line 26
-    sget-object v2, Lcom/vk/audiomsg/player/g;->f:Lcom/vk/audiomsg/player/g;
+    sget-object v2, Lcom/vk/audiomsg/player/Sources;->INSTANCE:Lcom/vk/audiomsg/player/Sources;
 
-    invoke-virtual {v2}, Lcom/vk/audiomsg/player/g;->c()Lcom/vk/audiomsg/player/f;
+    invoke-virtual {v2}, Lcom/vk/audiomsg/player/Sources;->c()Lcom/vk/audiomsg/player/Source;
 
     move-result-object v2
 
-    invoke-direct {p0, v2, p1, v1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;)Z
+    invoke-direct {p0, v2, p1, v1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;)Z
 
     move-result v1
 
@@ -525,15 +525,15 @@
 .method private final c()Landroid/os/Handler;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->c:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->g:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->g:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -542,16 +542,16 @@
     return-object v0
 .end method
 
-.method public static final synthetic c(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;)Lcom/vk/audiomsg/player/impl/b;
+.method public static final synthetic c(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;)Lcom/vk/audiomsg/player/impl/PrefetchDelegateListener;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->f:Lcom/vk/audiomsg/player/impl/b;
+    iget-object p0, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->f:Lcom/vk/audiomsg/player/impl/PrefetchDelegateListener;
 
     return-object p0
 .end method
 
-.method private final declared-synchronized c(Lcom/vk/audiomsg/player/f;)V
+.method private final declared-synchronized c(Lcom/vk/audiomsg/player/Source;)V
     .locals 6
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -618,7 +618,7 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/audiomsg/player/d;
+    check-cast v4, Lcom/vk/audiomsg/player/AudioMsgTrack;
 
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -679,7 +679,7 @@
 
     new-instance v4, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$b;
 
-    invoke-direct {v4, p0, p1, v0}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$b;-><init>(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/f;Ljava/util/List;)V
+    invoke-direct {v4, p0, p1, v0}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$b;-><init>(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/Source;Ljava/util/List;)V
 
     invoke-virtual {v2, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -731,7 +731,7 @@
     return-object p0
 .end method
 
-.method private final declared-synchronized d(Lcom/vk/audiomsg/player/f;)Ljava/util/concurrent/CountDownLatch;
+.method private final declared-synchronized d(Lcom/vk/audiomsg/player/Source;)Ljava/util/concurrent/CountDownLatch;
     .locals 2
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -745,7 +745,7 @@
     if-nez v0, :cond_0
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->b(Lcom/vk/audiomsg/player/f;)V
+    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->b(Lcom/vk/audiomsg/player/Source;)V
 
     const/4 p1, 0x1
 
@@ -808,15 +808,15 @@
 .method private final d()Ljava/util/concurrent/ExecutorService;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->g:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->g:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -827,13 +827,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/audiomsg/player/f;)V
+.method public final a(Lcom/vk/audiomsg/player/Source;)V
     .locals 0
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
     .line 15
-    invoke-direct {p0, p1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->d(Lcom/vk/audiomsg/player/f;)Ljava/util/concurrent/CountDownLatch;
+    invoke-direct {p0, p1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->d(Lcom/vk/audiomsg/player/Source;)Ljava/util/concurrent/CountDownLatch;
 
     move-result-object p1
 
@@ -842,7 +842,7 @@
     return-void
 .end method
 
-.method public final declared-synchronized a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/e;Ljava/util/Collection;)V
+.method public final declared-synchronized a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/PrefetchTag;Ljava/util/Collection;)V
     .locals 4
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -850,10 +850,10 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/audiomsg/player/f;",
-            "Lcom/vk/audiomsg/player/e;",
+            "Lcom/vk/audiomsg/player/Source;",
+            "Lcom/vk/audiomsg/player/PrefetchTag;",
             "Ljava/util/Collection<",
-            "Lcom/vk/audiomsg/player/d;",
+            "Lcom/vk/audiomsg/player/AudioMsgTrack;",
             ">;)V"
         }
     .end annotation
@@ -887,7 +887,7 @@
 
     new-instance v1, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$i;
 
-    invoke-direct {v1, p0, p1, p3}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$i;-><init>(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/f;Ljava/util/Collection;)V
+    invoke-direct {v1, p0, p1, p3}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$i;-><init>(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/Source;Ljava/util/Collection;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -907,7 +907,7 @@
 
     move-result-object p3
 
-    check-cast p3, Lcom/vk/audiomsg/player/d;
+    check-cast p3, Lcom/vk/audiomsg/player/AudioMsgTrack;
 
     .line 8
     iget-object v0, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->a:Ljava/util/Map;
@@ -930,7 +930,7 @@
 
     new-instance v2, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$h;
 
-    invoke-direct {v2, p3, p0, p2}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$h;-><init>(Lcom/vk/audiomsg/player/d;Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/e;)V
+    invoke-direct {v2, p3, p0, p2}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$h;-><init>(Lcom/vk/audiomsg/player/AudioMsgTrack;Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/PrefetchTag;)V
 
     invoke-interface {v1, v2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
@@ -938,7 +938,7 @@
 
     const-string v2, "prefetchExecutor.submit { runPrefetch(track) }"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 11
     new-instance v2, Ljava/util/LinkedHashSet;
@@ -982,7 +982,7 @@
     throw p1
 .end method
 
-.method public final declared-synchronized b(Lcom/vk/audiomsg/player/f;)V
+.method public final declared-synchronized b(Lcom/vk/audiomsg/player/Source;)V
     .locals 3
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -1013,7 +1013,7 @@
 
     new-instance v2, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$j;
 
-    invoke-direct {v2, p0, p0, p1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$j;-><init>(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/f;)V
+    invoke-direct {v2, p0, p0, p1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate$j;-><init>(Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/impl/PrefetchDelegate;Lcom/vk/audiomsg/player/Source;)V
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1079,7 +1079,7 @@
     throw p1
 .end method
 
-.method public final declared-synchronized b(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/e;Ljava/util/Collection;)V
+.method public final declared-synchronized b(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/PrefetchTag;Ljava/util/Collection;)V
     .locals 2
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -1087,10 +1087,10 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/audiomsg/player/f;",
-            "Lcom/vk/audiomsg/player/e;",
+            "Lcom/vk/audiomsg/player/Source;",
+            "Lcom/vk/audiomsg/player/PrefetchTag;",
             "Ljava/util/Collection<",
-            "Lcom/vk/audiomsg/player/d;",
+            "Lcom/vk/audiomsg/player/AudioMsgTrack;",
             ">;)V"
         }
     .end annotation
@@ -1145,7 +1145,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/audiomsg/player/d;
+    check-cast v0, Lcom/vk/audiomsg/player/AudioMsgTrack;
 
     .line 7
     iget-object v1, p0, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->a:Ljava/util/Map;
@@ -1170,7 +1170,7 @@
 
     .line 8
     :cond_2
-    invoke-direct {p0, p1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->c(Lcom/vk/audiomsg/player/f;)V
+    invoke-direct {p0, p1}, Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->c(Lcom/vk/audiomsg/player/Source;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

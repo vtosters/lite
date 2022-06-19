@@ -83,7 +83,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     if-ne p1, v0, :cond_1
@@ -201,7 +201,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 .end method

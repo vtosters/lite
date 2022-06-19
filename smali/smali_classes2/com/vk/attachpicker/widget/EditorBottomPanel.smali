@@ -133,7 +133,7 @@
 
     move-result-object p1
 
-    sget-object v0, Lcom/vtosters/lite/a0;->EditorBottomPanel:[I
+    sget-object v0, Lcom/vtosters/lite/R;->EditorBottomPanel:[I
 
     const/4 v1, 0x0
 

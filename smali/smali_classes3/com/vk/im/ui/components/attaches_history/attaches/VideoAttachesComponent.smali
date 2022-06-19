@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static final synthetic M:[Lkotlin/u/j;
+.field static final synthetic M:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
 .field private J:Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;
 
-.field private final K:Lkotlin/e;
+.field private final K:Lkotlin/Lazy2;
 
 .field private final L:Landroid/content/Context;
 
@@ -23,13 +23,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -37,20 +37,20 @@
 
     const-string v4, "getPopupVc()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;->M:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;->M:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/ui/p/b;Lcom/vk/im/engine/a;Landroid/content/Context;Lcom/vk/im/engine/models/attaches/MediaType;I)V
+.method public constructor <init>(Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/engine/ImEngine;Landroid/content/Context;Lcom/vk/im/engine/models/attaches/MediaType;I)V
     .locals 6
 
     move-object v0, p0
@@ -66,7 +66,7 @@
     move v5, p5
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;-><init>(Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Landroid/content/Context;Lcom/vk/im/engine/models/attaches/MediaType;I)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;-><init>(Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Landroid/content/Context;Lcom/vk/im/engine/models/attaches/MediaType;I)V
 
     iput-object p3, p0, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;->L:Landroid/content/Context;
 
@@ -82,11 +82,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent$popupVc$2;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;->K:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;->K:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -94,15 +94,15 @@
 .method private final B()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;->K:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;->K:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;->M:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;->M:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -124,7 +124,7 @@
     .locals 3
 
     .line 18
-    new-instance v0, Lcom/vk/im/engine/i/j/a;
+    new-instance v0, Lcom/vk/im/engine/i/j/VideoAddCmd;
 
     invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/AttachVideo;->getId()I
 
@@ -134,14 +134,14 @@
 
     move-result v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/i/j/a;-><init>(II)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/i/j/VideoAddCmd;-><init>(II)V
 
     .line 19
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->u()Lcom/vk/im/engine/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->u()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -159,21 +159,21 @@
 
     invoke-direct {p1, v2}, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent$addVideo$2;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/attaches_history/attaches/j;
+    new-instance v2, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent1;
 
-    invoke-direct {v2, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/j;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     .line 22
-    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "imEngine.submitWithCance\u2026owError\n                )"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 23
-    invoke-static {p1, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {p1, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     return-void
 
@@ -181,7 +181,7 @@
     const-string p1, "vc"
 
     .line 24
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -201,7 +201,7 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/im/engine/i/j/b;
+    new-instance v0, Lcom/vk/im/engine/i/j/VideoDeleteCmd;
 
     invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/AttachVideo;->getId()I
 
@@ -211,14 +211,14 @@
 
     move-result v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/i/j/b;-><init>(II)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/i/j/VideoDeleteCmd;-><init>(II)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->u()Lcom/vk/im/engine/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->u()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -236,21 +236,21 @@
 
     invoke-direct {p1, v2}, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent$deleteVideo$2;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/attaches_history/attaches/j;
+    new-instance v2, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent1;
 
-    invoke-direct {v2, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/j;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     .line 5
-    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "imEngine.submitWithCance\u2026owError\n                )"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-static {p1, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {p1, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     return-void
 
@@ -258,7 +258,7 @@
     const-string p1, "vc"
 
     .line 7
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -305,7 +305,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
@@ -313,17 +313,17 @@
 
     move-result v2
 
-    invoke-interface {v1, v2}, Lcom/vk/bridges/f;->b(I)Z
+    invoke-interface {v1, v2}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->u()Lcom/vk/im/engine/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->u()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/a;->g()Lcom/vk/im/engine/ImConfig;
+    invoke-virtual {v1}, Lcom/vk/im/engine/ImEngine;->g()Lcom/vk/im/engine/ImConfig;
 
     move-result-object v1
 
@@ -346,11 +346,11 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->u()Lcom/vk/im/engine/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->u()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/a;->g()Lcom/vk/im/engine/ImConfig;
+    invoke-virtual {v1}, Lcom/vk/im/engine/ImEngine;->g()Lcom/vk/im/engine/ImConfig;
 
     move-result-object v1
 
@@ -387,7 +387,7 @@
     .locals 1
 
     .line 3
-    invoke-super {p0, p1}, Lcom/vk/im/ui/q/c;->a(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/vk/im/ui/q/Component;->a(Landroid/content/res/Configuration;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;->J:Lcom/vk/im/ui/components/attaches_history/attaches/vc/VideoHistoryAttachesVC;
@@ -403,7 +403,7 @@
     :cond_0
     const-string p1, "vc"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -438,7 +438,7 @@
     :cond_0
     const-string p1, "vc"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -506,23 +506,23 @@
 
     invoke-direct {p2, p0, v0}, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent$onVideoAttachMenuItemClick$1;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;Lcom/vk/im/engine/models/attaches/AttachVideo;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateAttaches;->b(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateAttaches;->b(Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
     .line 13
     :pswitch_3
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->t()Lcom/vk/im/ui/p/b;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->t()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->f()Lcom/vk/im/ui/p/p;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->f()Lcom/vk/im/ui/p/ImBridge3;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;->L:Landroid/content/Context;
 
-    invoke-interface {p1, p2, v0}, Lcom/vk/im/ui/p/p;->a(Landroid/content/Context;Lcom/vk/im/engine/models/attaches/AttachVideo;)V
+    invoke-interface {p1, p2, v0}, Lcom/vk/im/ui/p/ImBridge3;->a(Landroid/content/Context;Lcom/vk/im/engine/models/attaches/AttachVideo;)V
 
     goto :goto_0
 
@@ -540,12 +540,12 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/vk/im/ui/utils/b;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    invoke-static {p1, p2}, Lcom/vk/im/ui/utils/ClipboardUtils;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
     .line 16
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/VideoAttachesComponent;->L:Landroid/content/Context;
 
-    sget p2, Lcom/vk/im/ui/m;->vkim_link_copied:I
+    sget p2, Lcom/vk/im/ui/R4;->vkim_link_copied:I
 
     const/4 v0, 0x0
 
@@ -553,7 +553,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, p2, v0, v1, v2}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/m;
+    invoke-static {p1, p2, v0, v1, v2}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/Unit;
 
     :goto_0
     return-void
@@ -585,11 +585,11 @@
     .locals 10
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->t()Lcom/vk/im/ui/p/b;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->t()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
 
     move-result-object v1
 
@@ -617,12 +617,12 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/im/ui/p/a$b;->a(Lcom/vk/im/ui/p/a;Landroid/content/Context;Lcom/vk/im/engine/models/attaches/Attach;Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/j;Ljava/lang/Integer;Landroid/view/View;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v9}, Lcom/vk/im/ui/p/ImBridge$b;->a(Lcom/vk/im/ui/p/ImBridge1;Landroid/content/Context;Lcom/vk/im/engine/models/attaches/Attach;Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/Profile;Ljava/lang/Integer;Landroid/view/View;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public bridge synthetic v()Lcom/vk/im/ui/components/attaches_history/attaches/l/a;
+.method public bridge synthetic v()Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;
     .locals 1
 
     .line 1
@@ -642,7 +642,7 @@
     return-object v0
 .end method
 
-.method protected z()Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;
+.method protected z()Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;
     .locals 3
 
     .line 1
@@ -666,7 +666,7 @@
     :cond_0
     const-string v0, "vc"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

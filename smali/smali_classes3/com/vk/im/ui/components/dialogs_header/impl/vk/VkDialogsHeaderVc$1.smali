@@ -3,7 +3,7 @@
 .source "VkDialogsHeaderVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/MenuItem;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -55,7 +55,7 @@
     move-result p1
 
     .line 2
-    sget v0, Lcom/vk/im/ui/h;->add:I
+    sget v0, Lcom/vk/im/ui/R11;->add:I
 
     if-ne p1, v0, :cond_0
 
@@ -67,7 +67,7 @@
 
     .line 3
     :cond_0
-    sget v0, Lcom/vk/im/ui/h;->search:I
+    sget v0, Lcom/vk/im/ui/R11;->search:I
 
     if-ne p1, v0, :cond_1
 

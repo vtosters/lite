@@ -3,7 +3,7 @@
 .source "LiveView.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Long;",
         ">;"
     }
@@ -68,7 +68,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/libvideo/live/views/live/LiveView;->a(Lcom/vk/libvideo/live/views/live/LiveView;Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/libvideo/live/views/live/LiveView;->a(Lcom/vk/libvideo/live/views/live/LiveView;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

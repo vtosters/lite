@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # static fields
@@ -38,7 +38,7 @@
 
     check-cast p1, Ljava/util/List;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/n2/q0;->w(Ljava/util/List;)Lkotlin/m;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->w(Ljava/util/List;)Lkotlin/Unit;
 
     move-result-object p1
 

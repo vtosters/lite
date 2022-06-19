@@ -3,7 +3,7 @@
 .source "VkAppExperiments.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/models/e;
+.implements Lcom/vk/im/engine/models/ImExperiments;
 
 
 # annotations
@@ -21,7 +21,7 @@
 
 
 # static fields
-.field static final synthetic i:[Lkotlin/u/j;
+.field static final synthetic i:[Lkotlin/u/KProperty5;
 
 .field private static final j:J
 
@@ -42,19 +42,19 @@
 
 
 # instance fields
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
-.field private final c:Lkotlin/e;
+.field private final c:Lkotlin/Lazy2;
 
-.field private final d:Lkotlin/e;
+.field private final d:Lkotlin/Lazy2;
 
-.field private final e:Lkotlin/e;
+.field private final e:Lkotlin/Lazy2;
 
 .field private final f:Landroid/content/Context;
 
 .field private final g:Lcom/vk/toggle/FeatureManager;
 
-.field private final h:Lcom/vk/core/util/h0;
+.field private final h:Lcom/vk/core/util/GooglePlayUtils;
 
 
 # direct methods
@@ -65,11 +65,11 @@
 
     const/4 v1, 0x4
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -77,9 +77,9 @@
 
     const-string v5, "getPrefs()Landroid/content/SharedPreferences;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -87,7 +87,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v4
 
@@ -95,9 +95,9 @@
 
     const-string v6, "getDebugPrefs()Landroid/content/SharedPreferences;"
 
-    invoke-direct {v2, v4, v5, v6}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v4, v5, v6}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v4, 0x1
 
@@ -105,7 +105,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v5
 
@@ -113,9 +113,9 @@
 
     const-string v7, "getForceInstallVkMe()Z"
 
-    invoke-direct {v2, v5, v6, v7}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v5, v6, v7}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v5, 0x2
 
@@ -123,7 +123,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -131,21 +131,21 @@
 
     const-string v7, "getViewPoolType()Ljava/lang/String;"
 
-    invoke-direct {v2, v0, v6, v7}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v6, v7}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x3
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vtosters/lite/im/VkAppExperiments;->i:[Lkotlin/u/j;
+    sput-object v1, Lcom/vtosters/lite/im/VkAppExperiments;->i:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vtosters/lite/im/VkAppExperiments$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/VkAppExperiments$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/VkAppExperiments$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vtosters/lite/im/VkAppExperiments;->l:Lcom/vtosters/lite/im/VkAppExperiments$a;
 
@@ -180,15 +180,15 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/toggle/FeatureManager;Lcom/vk/core/util/h0;Lb/h/v/d;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/toggle/FeatureManager;Lcom/vk/core/util/GooglePlayUtils;Lb/h/v/RxBus;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Lcom/vk/toggle/FeatureManager;",
-            "Lcom/vk/core/util/h0;",
-            "Lb/h/v/d<",
+            "Lcom/vk/core/util/GooglePlayUtils;",
+            "Lb/h/v/RxBus<",
             "Ljava/lang/Object;",
             ">;)V"
         }
@@ -201,25 +201,25 @@
 
     iput-object p2, p0, Lcom/vtosters/lite/im/VkAppExperiments;->g:Lcom/vk/toggle/FeatureManager;
 
-    iput-object p3, p0, Lcom/vtosters/lite/im/VkAppExperiments;->h:Lcom/vk/core/util/h0;
+    iput-object p3, p0, Lcom/vtosters/lite/im/VkAppExperiments;->h:Lcom/vk/core/util/GooglePlayUtils;
 
     .line 2
     sget-object p1, Lcom/vtosters/lite/im/VkAppExperiments$prefs$2;->a:Lcom/vtosters/lite/im/VkAppExperiments$prefs$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vtosters/lite/im/VkAppExperiments;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vtosters/lite/im/VkAppExperiments;->b:Lkotlin/Lazy2;
 
     .line 3
     sget-object p1, Lcom/vtosters/lite/im/VkAppExperiments$debugPrefs$2;->a:Lcom/vtosters/lite/im/VkAppExperiments$debugPrefs$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vtosters/lite/im/VkAppExperiments;->c:Lkotlin/e;
+    iput-object p1, p0, Lcom/vtosters/lite/im/VkAppExperiments;->c:Lkotlin/Lazy2;
 
     .line 4
     sget-object p1, Lcom/vk/toggle/FeatureManager;->g:Lcom/vk/toggle/FeatureManager;
@@ -232,7 +232,7 @@
 
     const/4 p4, 0x2
 
-    invoke-static {p1, p2, p3, p4, p3}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2, p3, p4, p3}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lio/reactivex/disposables/Disposable;
 
     .line 5
     invoke-direct {p0}, Lcom/vtosters/lite/im/VkAppExperiments;->v()V
@@ -242,22 +242,22 @@
 
     invoke-direct {p1, p0}, Lcom/vtosters/lite/im/VkAppExperiments$forceInstallVkMe$2;-><init>(Lcom/vtosters/lite/im/VkAppExperiments;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vtosters/lite/im/VkAppExperiments;->d:Lkotlin/e;
+    iput-object p1, p0, Lcom/vtosters/lite/im/VkAppExperiments;->d:Lkotlin/Lazy2;
 
     .line 7
     new-instance p1, Lcom/vtosters/lite/im/VkAppExperiments$viewPoolType$2;
 
     invoke-direct {p1, p0}, Lcom/vtosters/lite/im/VkAppExperiments$viewPoolType$2;-><init>(Lcom/vtosters/lite/im/VkAppExperiments;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vtosters/lite/im/VkAppExperiments;->e:Lkotlin/e;
+    iput-object p1, p0, Lcom/vtosters/lite/im/VkAppExperiments;->e:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -382,11 +382,11 @@
     move-result-object v0
 
     .line 22
-    sget-object v1, Lb/h/q/b;->a:Ljava/util/List;
+    sget-object v1, Lb/h/q/Trackers;->a:Ljava/util/List;
 
     const-string v2, "Trackers.STATLOG_FABRIC"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/metrics/eventtracking/Event$a;->a(Ljava/util/List;)Lcom/vk/metrics/eventtracking/Event$a;
 
@@ -511,11 +511,11 @@
     return p0
 .end method
 
-.method public static final synthetic d(Lcom/vtosters/lite/im/VkAppExperiments;)Lcom/vk/core/util/h0;
+.method public static final synthetic d(Lcom/vtosters/lite/im/VkAppExperiments;)Lcom/vk/core/util/GooglePlayUtils;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/im/VkAppExperiments;->h:Lcom/vk/core/util/h0;
+    iget-object p0, p0, Lcom/vtosters/lite/im/VkAppExperiments;->h:Lcom/vk/core/util/GooglePlayUtils;
 
     return-object p0
 .end method
@@ -579,15 +579,15 @@
 .method private final o()Landroid/content/SharedPreferences;
     .locals 3
 
-    iget-object v0, p0, Lcom/vtosters/lite/im/VkAppExperiments;->c:Lkotlin/e;
+    iget-object v0, p0, Lcom/vtosters/lite/im/VkAppExperiments;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vtosters/lite/im/VkAppExperiments;->i:[Lkotlin/u/j;
+    sget-object v1, Lcom/vtosters/lite/im/VkAppExperiments;->i:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -656,15 +656,15 @@
 .method private final s()Landroid/content/SharedPreferences;
     .locals 3
 
-    iget-object v0, p0, Lcom/vtosters/lite/im/VkAppExperiments;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vtosters/lite/im/VkAppExperiments;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vtosters/lite/im/VkAppExperiments;->i:[Lkotlin/u/j;
+    sget-object v1, Lcom/vtosters/lite/im/VkAppExperiments;->i:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -697,7 +697,7 @@
 
     const-string v1, "prefs.getString(KEY_PLAY\u2026oglePlayLocale.RU.name)!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vtosters/lite/data/PurchasesManager$GooglePlayLocale;->valueOf(Ljava/lang/String;)Lcom/vtosters/lite/data/PurchasesManager$GooglePlayLocale;
 
@@ -706,7 +706,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -773,7 +773,7 @@
 
     const-string v3, ";"
 
-    invoke-static/range {v2 .. v10}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v2 .. v10}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -843,7 +843,7 @@
 
     const-string v5, "Locale.getDefault()"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v3, :cond_2
 
@@ -853,7 +853,7 @@
 
     const-string v4, "(this as java.lang.String).toUpperCase(locale)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v2, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -914,7 +914,7 @@
 
     move-result-object v8
 
-    invoke-static {v8, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v8, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v8
 
@@ -991,7 +991,7 @@
     :cond_1
     sget-object v0, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->m()Lc/a/s;
+    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->m()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
@@ -999,25 +999,25 @@
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/im/VkAppExperiments$d;-><init>(Lcom/vtosters/lite/im/VkAppExperiments;)V
 
-    invoke-virtual {v0, v1}, Lc/a/s;->a(Ljava/lang/Runnable;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Scheduler;->a(Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_1
 
     .line 5
     :cond_2
     :goto_0
-    invoke-static {}, Lcom/vtosters/lite/data/PurchasesManager;->m()Lc/a/t;
+    invoke-static {}, Lcom/vtosters/lite/data/PurchasesManager;->m()Lio/reactivex/Single;
 
     move-result-object v2
 
     .line 6
     sget-object v3, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v3}, Lcom/vk/core/concurrent/VkExecutors;->m()Lc/a/s;
+    invoke-virtual {v3}, Lcom/vk/core/concurrent/VkExecutors;->m()Lio/reactivex/Scheduler;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lc/a/t;->b(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v2, v3}, Lio/reactivex/Single;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v2
 
@@ -1030,7 +1030,7 @@
     sget-object v0, Lcom/vtosters/lite/im/VkAppExperiments$c;->a:Lcom/vtosters/lite/im/VkAppExperiments$c;
 
     .line 9
-    invoke-virtual {v2, v3, v0}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v2, v3, v0}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :goto_1
     return-void
@@ -1042,11 +1042,11 @@
     .locals 3
 
     .line 12
-    sget-object v0, Lcom/vk/core/util/h0;->a:Lcom/vk/core/util/h0;
+    sget-object v0, Lcom/vk/core/util/GooglePlayUtils;->INSTANCE:Lcom/vk/core/util/GooglePlayUtils;
 
     const-string v1, "com.vk.im"
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/util/h0;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/vk/core/util/GooglePlayUtils;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1155,15 +1155,15 @@
 .method public c()Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lcom/vtosters/lite/im/VkAppExperiments;->e:Lkotlin/e;
+    iget-object v0, p0, Lcom/vtosters/lite/im/VkAppExperiments;->e:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vtosters/lite/im/VkAppExperiments;->i:[Lkotlin/u/j;
+    sget-object v1, Lcom/vtosters/lite/im/VkAppExperiments;->i:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1175,15 +1175,15 @@
 .method public d()Z
     .locals 3
 
-    iget-object v0, p0, Lcom/vtosters/lite/im/VkAppExperiments;->d:Lkotlin/e;
+    iget-object v0, p0, Lcom/vtosters/lite/im/VkAppExperiments;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vtosters/lite/im/VkAppExperiments;->i:[Lkotlin/u/j;
+    sget-object v1, Lcom/vtosters/lite/im/VkAppExperiments;->i:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

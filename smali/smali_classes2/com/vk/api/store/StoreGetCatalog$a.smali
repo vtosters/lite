@@ -3,7 +3,7 @@
 .source "StoreGetCatalog.java"
 
 # interfaces
-.implements Lcom/vk/dto/common/data/e;
+.implements Lcom/vk/dto/common/data/Purchase1;
 
 
 # annotations
@@ -270,7 +270,7 @@
     .line 1
     sget-object v0, Lcom/vk/api/base/ApiConfig;->d:Lcom/vk/api/base/ApiConfig$a;
 
-    invoke-interface {v0}, Lb/h/h/a$a;->a()F
+    invoke-interface {v0}, Lb/h/h/ModelConfig$a;->a()F
 
     move-result v0
 

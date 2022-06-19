@@ -3,7 +3,7 @@
 .source "PosterTextDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/newsfeed/views/poster/PosterTextDelegate$PosterSpan$onClick$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -64,7 +64,7 @@
     .locals 6
 
     .line 2
-    sget-object v0, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v0, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     iget-object v1, p0, Lcom/vk/newsfeed/views/poster/PosterTextDelegate$PosterSpan$onClick$1;->$widget:Landroid/view/View;
 
@@ -86,7 +86,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     :cond_0
     return-void

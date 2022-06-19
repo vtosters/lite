@@ -3,12 +3,12 @@
 .source "FaveSearchFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Throwable;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -60,7 +60,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -73,14 +73,14 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 2
 
-    const-class v0, Lcom/vk/api/base/j;
+    const-class v0, Lcom/vk/api/base/ThrowableExt;
 
     const-string v1, "app_armUpload"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/e;
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/KDeclarationContainer;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$onNewData$2;->a(Ljava/lang/Throwable;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -3,7 +3,7 @@
 .source "ScribeFilesSender.java"
 
 # interfaces
-.implements Lcom/twitter/sdk/android/core/internal/scribe/n;
+.implements Lcom/twitter/sdk/android/core/internal/scribe/FilesSender;
 
 
 # annotations
@@ -26,25 +26,25 @@
 # instance fields
 .field private final a:Landroid/content/Context;
 
-.field private final b:Lcom/twitter/sdk/android/core/internal/scribe/r;
+.field private final b:Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;
 
 .field private final c:J
 
 .field private final d:Lcom/twitter/sdk/android/core/TwitterAuthConfig;
 
-.field private final e:Lcom/twitter/sdk/android/core/m;
+.field private final e:Lcom/twitter/sdk/android/core/SessionManager;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/twitter/sdk/android/core/m<",
+            "Lcom/twitter/sdk/android/core/SessionManager<",
             "+",
-            "Lcom/twitter/sdk/android/core/l<",
+            "Lcom/twitter/sdk/android/core/Session<",
             "Lcom/twitter/sdk/android/core/TwitterAuthToken;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private final f:Lcom/twitter/sdk/android/core/e;
+.field private final f:Lcom/twitter/sdk/android/core/GuestSessionProvider;
 
 .field private final g:Ljava/util/concurrent/atomic/AtomicReference;
     .annotation system Ldalvik/annotation/Signature;
@@ -56,7 +56,7 @@
     .end annotation
 .end field
 
-.field private final h:Lcom/twitter/sdk/android/core/u/j;
+.field private final h:Lcom/twitter/sdk/android/core/u/IdManager;
 
 
 # direct methods
@@ -97,23 +97,23 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/twitter/sdk/android/core/internal/scribe/r;JLcom/twitter/sdk/android/core/TwitterAuthConfig;Lcom/twitter/sdk/android/core/m;Lcom/twitter/sdk/android/core/e;Ljava/util/concurrent/ExecutorService;Lcom/twitter/sdk/android/core/u/j;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;JLcom/twitter/sdk/android/core/TwitterAuthConfig;Lcom/twitter/sdk/android/core/SessionManager;Lcom/twitter/sdk/android/core/GuestSessionProvider;Ljava/util/concurrent/ExecutorService;Lcom/twitter/sdk/android/core/u/IdManager;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lcom/twitter/sdk/android/core/internal/scribe/r;",
+            "Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;",
             "J",
             "Lcom/twitter/sdk/android/core/TwitterAuthConfig;",
-            "Lcom/twitter/sdk/android/core/m<",
+            "Lcom/twitter/sdk/android/core/SessionManager<",
             "+",
-            "Lcom/twitter/sdk/android/core/l<",
+            "Lcom/twitter/sdk/android/core/Session<",
             "Lcom/twitter/sdk/android/core/TwitterAuthToken;",
             ">;>;",
-            "Lcom/twitter/sdk/android/core/e;",
+            "Lcom/twitter/sdk/android/core/GuestSessionProvider;",
             "Ljava/util/concurrent/ExecutorService;",
-            "Lcom/twitter/sdk/android/core/u/j;",
+            "Lcom/twitter/sdk/android/core/u/IdManager;",
             ")V"
         }
     .end annotation
@@ -125,7 +125,7 @@
     iput-object p1, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->a:Landroid/content/Context;
 
     .line 3
-    iput-object p2, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->b:Lcom/twitter/sdk/android/core/internal/scribe/r;
+    iput-object p2, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->b:Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;
 
     .line 4
     iput-wide p3, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->c:J
@@ -134,13 +134,13 @@
     iput-object p5, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->d:Lcom/twitter/sdk/android/core/TwitterAuthConfig;
 
     .line 6
-    iput-object p6, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->e:Lcom/twitter/sdk/android/core/m;
+    iput-object p6, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->e:Lcom/twitter/sdk/android/core/SessionManager;
 
     .line 7
-    iput-object p7, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->f:Lcom/twitter/sdk/android/core/e;
+    iput-object p7, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->f:Lcom/twitter/sdk/android/core/GuestSessionProvider;
 
     .line 8
-    iput-object p9, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->h:Lcom/twitter/sdk/android/core/u/j;
+    iput-object p9, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->h:Lcom/twitter/sdk/android/core/u/IdManager;
 
     .line 9
     new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
@@ -152,26 +152,26 @@
     return-void
 .end method
 
-.method private a(J)Lcom/twitter/sdk/android/core/l;
+.method private a(J)Lcom/twitter/sdk/android/core/Session;
     .locals 1
 
     .line 30
-    iget-object v0, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->e:Lcom/twitter/sdk/android/core/m;
+    iget-object v0, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->e:Lcom/twitter/sdk/android/core/SessionManager;
 
-    invoke-interface {v0, p1, p2}, Lcom/twitter/sdk/android/core/m;->b(J)Lcom/twitter/sdk/android/core/l;
+    invoke-interface {v0, p1, p2}, Lcom/twitter/sdk/android/core/SessionManager;->b(J)Lcom/twitter/sdk/android/core/Session;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private a(Lcom/twitter/sdk/android/core/l;)Z
+.method private a(Lcom/twitter/sdk/android/core/Session;)Z
     .locals 0
 
     if-eqz p1, :cond_0
 
     .line 31
-    invoke-virtual {p1}, Lcom/twitter/sdk/android/core/l;->a()Lcom/twitter/sdk/android/core/a;
+    invoke-virtual {p1}, Lcom/twitter/sdk/android/core/Session;->a()Lcom/twitter/sdk/android/core/AuthToken;
 
     move-result-object p1
 
@@ -238,51 +238,51 @@
     .line 12
     iget-wide v0, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->c:J
 
-    invoke-direct {p0, v0, v1}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->a(J)Lcom/twitter/sdk/android/core/l;
+    invoke-direct {p0, v0, v1}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->a(J)Lcom/twitter/sdk/android/core/Session;
 
     move-result-object v0
 
     .line 13
-    invoke-direct {p0, v0}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->a(Lcom/twitter/sdk/android/core/l;)Z
+    invoke-direct {p0, v0}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->a(Lcom/twitter/sdk/android/core/Session;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 14
-    new-instance v1, Lokhttp3/x$b;
+    new-instance v1, Lokhttp3/OkHttpClient$b;
 
-    invoke-direct {v1}, Lokhttp3/x$b;-><init>()V
+    invoke-direct {v1}, Lokhttp3/OkHttpClient$b;-><init>()V
 
     .line 15
-    invoke-static {}, Lcom/twitter/sdk/android/core/u/p/c;->a()Lokhttp3/g;
+    invoke-static {}, Lcom/twitter/sdk/android/core/u/p/OkHttpClientHelper;->a()Lokhttp3/CertificatePinner;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lokhttp3/x$b;->a(Lokhttp3/g;)Lokhttp3/x$b;
+    invoke-virtual {v1, v2}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/CertificatePinner;)Lokhttp3/OkHttpClient$b;
 
     new-instance v2, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender$b;
 
-    iget-object v3, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->b:Lcom/twitter/sdk/android/core/internal/scribe/r;
+    iget-object v3, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->b:Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;
 
-    iget-object v4, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->h:Lcom/twitter/sdk/android/core/u/j;
+    iget-object v4, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->h:Lcom/twitter/sdk/android/core/u/IdManager;
 
-    invoke-direct {v2, v3, v4}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender$b;-><init>(Lcom/twitter/sdk/android/core/internal/scribe/r;Lcom/twitter/sdk/android/core/u/j;)V
+    invoke-direct {v2, v3, v4}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender$b;-><init>(Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;Lcom/twitter/sdk/android/core/u/IdManager;)V
 
     .line 16
-    invoke-virtual {v1, v2}, Lokhttp3/x$b;->a(Lokhttp3/u;)Lokhttp3/x$b;
+    invoke-virtual {v1, v2}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
 
-    new-instance v2, Lcom/twitter/sdk/android/core/u/p/b;
+    new-instance v2, Lcom/twitter/sdk/android/core/u/p/OAuth1aInterceptor;
 
     iget-object v3, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->d:Lcom/twitter/sdk/android/core/TwitterAuthConfig;
 
-    invoke-direct {v2, v0, v3}, Lcom/twitter/sdk/android/core/u/p/b;-><init>(Lcom/twitter/sdk/android/core/l;Lcom/twitter/sdk/android/core/TwitterAuthConfig;)V
+    invoke-direct {v2, v0, v3}, Lcom/twitter/sdk/android/core/u/p/OAuth1aInterceptor;-><init>(Lcom/twitter/sdk/android/core/Session;Lcom/twitter/sdk/android/core/TwitterAuthConfig;)V
 
     .line 17
-    invoke-virtual {v1, v2}, Lokhttp3/x$b;->a(Lokhttp3/u;)Lokhttp3/x$b;
+    invoke-virtual {v1, v2}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
 
     .line 18
-    invoke-virtual {v1}, Lokhttp3/x$b;->a()Lokhttp3/x;
+    invoke-virtual {v1}, Lokhttp3/OkHttpClient$b;->a()Lokhttp3/OkHttpClient;
 
     move-result-object v0
 
@@ -290,60 +290,60 @@
 
     .line 19
     :cond_0
-    new-instance v0, Lokhttp3/x$b;
+    new-instance v0, Lokhttp3/OkHttpClient$b;
 
-    invoke-direct {v0}, Lokhttp3/x$b;-><init>()V
+    invoke-direct {v0}, Lokhttp3/OkHttpClient$b;-><init>()V
 
     .line 20
-    invoke-static {}, Lcom/twitter/sdk/android/core/u/p/c;->a()Lokhttp3/g;
+    invoke-static {}, Lcom/twitter/sdk/android/core/u/p/OkHttpClientHelper;->a()Lokhttp3/CertificatePinner;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lokhttp3/x$b;->a(Lokhttp3/g;)Lokhttp3/x$b;
+    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/CertificatePinner;)Lokhttp3/OkHttpClient$b;
 
     new-instance v1, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender$b;
 
-    iget-object v2, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->b:Lcom/twitter/sdk/android/core/internal/scribe/r;
+    iget-object v2, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->b:Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;
 
-    iget-object v3, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->h:Lcom/twitter/sdk/android/core/u/j;
+    iget-object v3, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->h:Lcom/twitter/sdk/android/core/u/IdManager;
 
-    invoke-direct {v1, v2, v3}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender$b;-><init>(Lcom/twitter/sdk/android/core/internal/scribe/r;Lcom/twitter/sdk/android/core/u/j;)V
+    invoke-direct {v1, v2, v3}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender$b;-><init>(Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;Lcom/twitter/sdk/android/core/u/IdManager;)V
 
     .line 21
-    invoke-virtual {v0, v1}, Lokhttp3/x$b;->a(Lokhttp3/u;)Lokhttp3/x$b;
+    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
 
-    new-instance v1, Lcom/twitter/sdk/android/core/u/p/a;
+    new-instance v1, Lcom/twitter/sdk/android/core/u/p/GuestAuthInterceptor;
 
-    iget-object v2, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->f:Lcom/twitter/sdk/android/core/e;
+    iget-object v2, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->f:Lcom/twitter/sdk/android/core/GuestSessionProvider;
 
-    invoke-direct {v1, v2}, Lcom/twitter/sdk/android/core/u/p/a;-><init>(Lcom/twitter/sdk/android/core/e;)V
+    invoke-direct {v1, v2}, Lcom/twitter/sdk/android/core/u/p/GuestAuthInterceptor;-><init>(Lcom/twitter/sdk/android/core/GuestSessionProvider;)V
 
     .line 22
-    invoke-virtual {v0, v1}, Lokhttp3/x$b;->a(Lokhttp3/u;)Lokhttp3/x$b;
+    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
 
     .line 23
-    invoke-virtual {v0}, Lokhttp3/x$b;->a()Lokhttp3/x;
+    invoke-virtual {v0}, Lokhttp3/OkHttpClient$b;->a()Lokhttp3/OkHttpClient;
 
     move-result-object v0
 
     .line 24
     :goto_0
-    new-instance v1, Lf/m$b;
+    new-instance v1, Lretrofit2/Retrofit$b;
 
-    invoke-direct {v1}, Lf/m$b;-><init>()V
+    invoke-direct {v1}, Lretrofit2/Retrofit$b;-><init>()V
 
-    iget-object v2, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->b:Lcom/twitter/sdk/android/core/internal/scribe/r;
+    iget-object v2, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->b:Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;
 
-    iget-object v2, v2, Lcom/twitter/sdk/android/core/internal/scribe/r;->b:Ljava/lang/String;
+    iget-object v2, v2, Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;->b:Ljava/lang/String;
 
     .line 25
-    invoke-virtual {v1, v2}, Lf/m$b;->a(Ljava/lang/String;)Lf/m$b;
+    invoke-virtual {v1, v2}, Lretrofit2/Retrofit$b;->a(Ljava/lang/String;)Lretrofit2/Retrofit$b;
 
     .line 26
-    invoke-virtual {v1, v0}, Lf/m$b;->a(Lokhttp3/x;)Lf/m$b;
+    invoke-virtual {v1, v0}, Lretrofit2/Retrofit$b;->a(Lokhttp3/OkHttpClient;)Lretrofit2/Retrofit$b;
 
     .line 27
-    invoke-virtual {v1}, Lf/m$b;->a()Lf/m;
+    invoke-virtual {v1}, Lretrofit2/Retrofit$b;->a()Lretrofit2/Retrofit;
 
     move-result-object v0
 
@@ -354,7 +354,7 @@
 
     const-class v3, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender$ScribeService;
 
-    invoke-virtual {v0, v3}, Lf/m;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Lretrofit2/Retrofit;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -384,15 +384,15 @@
     throw v0
 .end method
 
-.method a(Ljava/lang/String;)Lf/l;
+.method a(Ljava/lang/String;)Lretrofit2/Response;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lf/l<",
-            "Lokhttp3/c0;",
+            "Lretrofit2/Response<",
+            "Lokhttp3/ResponseBody;",
             ">;"
         }
     .end annotation
@@ -409,9 +409,9 @@
     move-result-object v0
 
     .line 33
-    iget-object v1, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->b:Lcom/twitter/sdk/android/core/internal/scribe/r;
+    iget-object v1, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->b:Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;
 
-    iget-object v1, v1, Lcom/twitter/sdk/android/core/internal/scribe/r;->e:Ljava/lang/String;
+    iget-object v1, v1, Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;->e:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -420,15 +420,15 @@
     if-nez v1, :cond_0
 
     .line 34
-    iget-object v1, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->b:Lcom/twitter/sdk/android/core/internal/scribe/r;
+    iget-object v1, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->b:Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;
 
-    iget-object v1, v1, Lcom/twitter/sdk/android/core/internal/scribe/r;->e:Ljava/lang/String;
+    iget-object v1, v1, Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;->e:Ljava/lang/String;
 
-    invoke-interface {v0, v1, p1}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender$ScribeService;->uploadSequence(Ljava/lang/String;Ljava/lang/String;)Lf/b;
+    invoke-interface {v0, v1, p1}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender$ScribeService;->uploadSequence(Ljava/lang/String;Ljava/lang/String;)Lretrofit2/Call;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lf/b;->execute()Lf/l;
+    invoke-interface {p1}, Lretrofit2/Call;->execute()Lretrofit2/Response;
 
     move-result-object p1
 
@@ -436,18 +436,18 @@
 
     .line 35
     :cond_0
-    iget-object v1, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->b:Lcom/twitter/sdk/android/core/internal/scribe/r;
+    iget-object v1, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->b:Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;
 
-    iget-object v2, v1, Lcom/twitter/sdk/android/core/internal/scribe/r;->c:Ljava/lang/String;
+    iget-object v2, v1, Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;->c:Ljava/lang/String;
 
-    iget-object v1, v1, Lcom/twitter/sdk/android/core/internal/scribe/r;->d:Ljava/lang/String;
+    iget-object v1, v1, Lcom/twitter/sdk/android/core/internal/scribe/ScribeConfig;->d:Ljava/lang/String;
 
-    invoke-interface {v0, v2, v1, p1}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender$ScribeService;->upload(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lf/b;
+    invoke-interface {v0, v2, v1, p1}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender$ScribeService;->upload(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lretrofit2/Call;
 
     move-result-object p1
 
     .line 36
-    invoke-interface {p1}, Lf/b;->execute()Lf/l;
+    invoke-interface {p1}, Lretrofit2/Call;->execute()Lretrofit2/Response;
 
     move-result-object p1
 
@@ -483,15 +483,15 @@
     .line 3
     iget-object v1, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->a:Landroid/content/Context;
 
-    invoke-static {v1, p1}, Lcom/twitter/sdk/android/core/u/g;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/twitter/sdk/android/core/u/CommonUtils;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->a(Ljava/lang/String;)Lf/l;
+    invoke-virtual {p0, p1}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->a(Ljava/lang/String;)Lretrofit2/Response;
 
     move-result-object p1
 
     .line 5
-    invoke-virtual {p1}, Lf/l;->b()I
+    invoke-virtual {p1}, Lretrofit2/Response;->b()I
 
     move-result v1
 
@@ -509,10 +509,10 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v0, v2}, Lcom/twitter/sdk/android/core/u/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, Lcom/twitter/sdk/android/core/u/CommonUtils;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 7
-    invoke-virtual {p1}, Lf/l;->b()I
+    invoke-virtual {p1}, Lretrofit2/Response;->b()I
 
     move-result v1
 
@@ -521,7 +521,7 @@
     if-eq v1, v2, :cond_1
 
     .line 8
-    invoke-virtual {p1}, Lf/l;->b()I
+    invoke-virtual {p1}, Lretrofit2/Response;->b()I
 
     move-result p1
     :try_end_0
@@ -540,7 +540,7 @@
     .line 9
     iget-object v1, p0, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;->a:Landroid/content/Context;
 
-    invoke-static {v1, v0, p1}, Lcom/twitter/sdk/android/core/u/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, p1}, Lcom/twitter/sdk/android/core/u/CommonUtils;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -550,7 +550,7 @@
 
     const-string v0, "Cannot attempt upload at this time"
 
-    invoke-static {p1, v0}, Lcom/twitter/sdk/android/core/u/g;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/twitter/sdk/android/core/u/CommonUtils;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_3
     :goto_0
@@ -615,9 +615,9 @@
 
     .line 5
     :try_start_0
-    new-instance v4, Lcom/twitter/sdk/android/core/internal/scribe/o;
+    new-instance v4, Lcom/twitter/sdk/android/core/internal/scribe/QueueFile;
 
-    invoke-direct {v4, v2}, Lcom/twitter/sdk/android/core/internal/scribe/o;-><init>(Ljava/io/File;)V
+    invoke-direct {v4, v2}, Lcom/twitter/sdk/android/core/internal/scribe/QueueFile;-><init>(Ljava/io/File;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
@@ -627,12 +627,12 @@
 
     invoke-direct {v2, p0, v1, v0}, Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender$a;-><init>(Lcom/twitter/sdk/android/core/internal/scribe/ScribeFilesSender;[ZLjava/io/ByteArrayOutputStream;)V
 
-    invoke-virtual {v4, v2}, Lcom/twitter/sdk/android/core/internal/scribe/o;->a(Lcom/twitter/sdk/android/core/internal/scribe/o$d;)V
+    invoke-virtual {v4, v2}, Lcom/twitter/sdk/android/core/internal/scribe/QueueFile;->a(Lcom/twitter/sdk/android/core/internal/scribe/QueueFile$d;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 7
-    invoke-static {v4}, Lcom/twitter/sdk/android/core/u/g;->a(Ljava/io/Closeable;)V
+    invoke-static {v4}, Lcom/twitter/sdk/android/core/u/CommonUtils;->a(Ljava/io/Closeable;)V
 
     goto :goto_0
 
@@ -647,7 +647,7 @@
     move-object v4, v3
 
     :goto_1
-    invoke-static {v4}, Lcom/twitter/sdk/android/core/u/g;->a(Ljava/io/Closeable;)V
+    invoke-static {v4}, Lcom/twitter/sdk/android/core/u/CommonUtils;->a(Ljava/io/Closeable;)V
 
     throw p1
 

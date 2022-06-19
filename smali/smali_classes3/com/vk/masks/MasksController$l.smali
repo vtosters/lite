@@ -3,7 +3,7 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -19,12 +19,12 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "Ljava/util/List<",
         "Lcom/vk/dto/masks/MasksCatalogItem;",
         ">;",
         "Ljava/util/ArrayList<",
-        "Lcom/vk/dto/masks/a;",
+        "Lcom/vk/dto/masks/MasksListItem;",
         ">;>;"
     }
 .end annotation
@@ -51,7 +51,7 @@
             "Lcom/vk/dto/masks/MasksCatalogItem;",
             ">;)",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/masks/a;",
+            "Lcom/vk/dto/masks/MasksListItem;",
             ">;"
         }
     .end annotation
@@ -110,7 +110,7 @@
     if-nez v4, :cond_0
 
     .line 6
-    new-instance v5, Lcom/vk/dto/masks/a;
+    new-instance v5, Lcom/vk/dto/masks/MasksListItem;
 
     invoke-virtual {v3}, Lcom/vk/dto/masks/MasksCatalogItem;->t1()Ljava/util/ArrayList;
 
@@ -126,7 +126,7 @@
 
     move-result-object v7
 
-    invoke-direct {v5, v6, v7}, Lcom/vk/dto/masks/a;-><init>(Lcom/vk/dto/masks/Mask;Lcom/vk/dto/masks/MaskSection;)V
+    invoke-direct {v5, v6, v7}, Lcom/vk/dto/masks/MasksListItem;-><init>(Lcom/vk/dto/masks/Mask;Lcom/vk/dto/masks/MaskSection;)V
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -134,7 +134,7 @@
 
     .line 7
     :cond_0
-    new-instance v5, Lcom/vk/dto/masks/a;
+    new-instance v5, Lcom/vk/dto/masks/MasksListItem;
 
     invoke-virtual {v3}, Lcom/vk/dto/masks/MasksCatalogItem;->t1()Ljava/util/ArrayList;
 
@@ -148,7 +148,7 @@
 
     const/4 v7, 0x0
 
-    invoke-direct {v5, v6, v7}, Lcom/vk/dto/masks/a;-><init>(Lcom/vk/dto/masks/Mask;Lcom/vk/dto/masks/MaskSection;)V
+    invoke-direct {v5, v6, v7}, Lcom/vk/dto/masks/MasksListItem;-><init>(Lcom/vk/dto/masks/Mask;Lcom/vk/dto/masks/MaskSection;)V
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 

@@ -3,7 +3,7 @@
 .source "ObservableTimer.java"
 
 # interfaces
-.implements Lio/reactivex/disposables/b;
+.implements Lio/reactivex/disposables/Disposable;
 .implements Ljava/lang/Runnable;
 
 
@@ -20,9 +20,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/disposables/Disposable;",
         ">;",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/disposables/Disposable;",
         "Ljava/lang/Runnable;"
     }
 .end annotation
@@ -33,10 +33,10 @@
 
 
 # instance fields
-.field final downstream:Lc/a/r;
+.field final downstream:Lio/reactivex/Observer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-",
             "Ljava/lang/Long;",
             ">;"
@@ -46,12 +46,12 @@
 
 
 # direct methods
-.method constructor <init>(Lc/a/r;)V
+.method constructor <init>(Lio/reactivex/Observer;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-",
             "Ljava/lang/Long;",
             ">;)V"
@@ -62,18 +62,18 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTimer$TimerObserver;->downstream:Lc/a/r;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTimer$TimerObserver;->downstream:Lio/reactivex/Observer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->d(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->d(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -121,7 +121,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimer$TimerObserver;->downstream:Lc/a/r;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimer$TimerObserver;->downstream:Lio/reactivex/Observer;
 
     const-wide/16 v1, 0x0
 
@@ -129,7 +129,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lc/a/r;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, v1}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
 
     .line 3
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
@@ -137,9 +137,9 @@
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
     .line 4
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimer$TimerObserver;->downstream:Lc/a/r;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTimer$TimerObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {v0}, Lc/a/r;->b()V
+    invoke-interface {v0}, Lio/reactivex/Observer;->b()V
 
     :cond_0
     return-void

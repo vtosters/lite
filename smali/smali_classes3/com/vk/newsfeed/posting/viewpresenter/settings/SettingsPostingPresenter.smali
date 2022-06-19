@@ -3,7 +3,7 @@
 .source "SettingsPostingPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/posting/n;
+.implements Lcom/vk/newsfeed/posting/PostingContracts5;
 
 
 # instance fields
@@ -15,30 +15,30 @@
 
 .field private d:Lcom/vk/newsfeed/posting/viewpresenter/settings/PostingPostponeDelegate;
 
-.field private final e:Lcom/vk/newsfeed/posting/j;
+.field private final e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
-.field private final f:Lcom/vk/newsfeed/posting/o;
+.field private final f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/newsfeed/posting/j;Lcom/vk/newsfeed/posting/o;)V
+.method public constructor <init>(Lcom/vk/newsfeed/posting/PostingContracts14;Lcom/vk/newsfeed/posting/PostingContracts4;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
-    iput-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iput-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;)Lcom/vk/newsfeed/posting/j;
+.method public static final synthetic a(Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts14;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object p0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
     return-object p0
 .end method
@@ -47,41 +47,41 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/o;->M()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
-
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/o;->r0()Z
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts4;->M()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/o;->Z()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
-
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/o;->n0()Z
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts4;->r0()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/o;->I()Z
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts4;->Z()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
+
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts4;->n0()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
+
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts4;->I()Z
 
     move-result v0
 
@@ -106,21 +106,21 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
-    invoke-interface {v1}, Lcom/vk/newsfeed/posting/j;->T()Ljava/util/List;
+    invoke-interface {v1}, Lcom/vk/newsfeed/posting/PostingContracts14;->T()Ljava/util/List;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object v2, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
-    invoke-interface {v2}, Lcom/vk/newsfeed/posting/j;->V()I
+    invoke-interface {v2}, Lcom/vk/newsfeed/posting/PostingContracts14;->V()I
 
     move-result v2
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/newsfeed/posting/o;->a(Ljava/util/List;I)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/newsfeed/posting/PostingContracts4;->a(Ljava/util/List;I)V
 
     return-void
 .end method
@@ -131,11 +131,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/o;->x(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/PostingContracts4;->x(Z)V
 
     const/4 v0, 0x1
 
@@ -149,9 +149,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/o;->B2()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts4;->B2()V
 
     return-void
 .end method
@@ -160,15 +160,15 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/settings/f;->c()Z
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/settings/PostingSettingsProviders1;->c()Z
 
     move-result v1
 
     xor-int/lit8 v1, v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/settings/f;->a(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsProviders1;->a(Z)V
 
     return-void
 .end method
@@ -177,9 +177,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/o;->D2()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts4;->D2()V
 
     return-void
 .end method
@@ -188,11 +188,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/o;->v(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/PostingContracts4;->v(Z)V
 
     const/4 v0, 0x1
 
@@ -215,9 +215,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/o;->u0()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts4;->u0()V
 
     return-void
 .end method
@@ -226,9 +226,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/o;->I2()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts4;->I2()V
 
     return-void
 .end method
@@ -237,11 +237,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/o;->y(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/PostingContracts4;->y(Z)V
 
     const/4 v0, 0x1
 
@@ -255,9 +255,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/o;->L2()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts4;->L2()V
 
     return-void
 .end method
@@ -266,9 +266,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/j;->M()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts14;->M()V
 
     return-void
 .end method
@@ -277,9 +277,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/j;->N()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts14;->N()V
 
     return-void
 .end method
@@ -288,18 +288,18 @@
     .locals 2
 
     .line 6
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
     invoke-virtual {p1}, Lcom/vk/dto/newsfeed/PostTopic;->getId()I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/j;->g(I)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/PostingContracts14;->g(I)V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/o;->a(Lcom/vk/dto/newsfeed/PostTopic;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts4;->a(Lcom/vk/dto/newsfeed/PostTopic;)V
 
     return-void
 .end method
@@ -315,7 +315,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter$setPostponeDelegate$1;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/PostingPostponeDelegate;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/PostingPostponeDelegate;->a(Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -324,9 +324,9 @@
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/o;->a(Ljava/util/Date;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts4;->a(Ljava/util/Date;)V
 
     return-void
 .end method
@@ -347,16 +347,16 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
     const/4 v1, -0x1
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/j;->g(I)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/PostingContracts14;->g(I)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/o;->r()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts4;->r()V
 
     return-void
 .end method
@@ -365,9 +365,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/j;->V()I
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts14;->V()I
 
     move-result v0
 
@@ -376,9 +376,9 @@
     if-eq v0, v1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/o;->s()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts4;->s()V
 
     goto :goto_0
 
@@ -394,9 +394,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/o;->r(Z)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts4;->r(Z)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->v3()V
@@ -408,18 +408,18 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/j;->o0()Ljava/util/Date;
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts14;->o0()Ljava/util/Date;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/o;->p()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts4;->p()V
 
     goto :goto_0
 
@@ -439,9 +439,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
-    invoke-interface {v1}, Lcom/vk/newsfeed/posting/j;->o0()Ljava/util/Date;
+    invoke-interface {v1}, Lcom/vk/newsfeed/posting/PostingContracts14;->o0()Ljava/util/Date;
 
     move-result-object v1
 
@@ -455,9 +455,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/o;->u2()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts4;->u2()V
 
     return-void
 .end method
@@ -466,11 +466,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/j;->a(Ljava/util/Date;)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/PostingContracts14;->a(Ljava/util/Date;)V
 
     return-void
 .end method
@@ -484,9 +484,9 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/o;->v(Z)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts4;->v(Z)V
 
     .line 3
     :cond_0
@@ -499,22 +499,22 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
     invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->a()Z
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/o;->setVisible(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/PostingContracts4;->setVisible(Z)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
     invoke-direct {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->a()Z
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/j;->b(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/PostingContracts14;->b(Z)V
 
     return-void
 .end method
@@ -523,9 +523,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/o;->w(Z)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts4;->w(Z)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->v3()V
@@ -537,9 +537,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/j;->b0()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts14;->b0()V
 
     return-void
 .end method
@@ -553,9 +553,9 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/o;->x(Z)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts4;->x(Z)V
 
     .line 3
     :cond_0
@@ -573,9 +573,9 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/o;->y(Z)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts4;->y(Z)V
 
     .line 3
     :cond_0
@@ -588,15 +588,15 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->e:Lcom/vk/newsfeed/posting/PostingContracts14;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/j;->n0()Z
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts14;->n0()Z
 
     move-result v1
 
     xor-int/lit8 v1, v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/j;->f(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/PostingContracts14;->f(Z)V
 
     return-void
 .end method
@@ -605,9 +605,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->f:Lcom/vk/newsfeed/posting/PostingContracts4;
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/o;->z(Z)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts4;->z(Z)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;->v3()V

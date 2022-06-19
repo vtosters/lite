@@ -3,7 +3,7 @@
 .source "MsgViewContentComponent.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/models/e;
+.implements Lcom/vk/im/engine/models/ImExperiments;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private final synthetic b:Lcom/vk/im/engine/models/e;
+.field private final synthetic b:Lcom/vk/im/engine/models/ImExperiments;
 
 
 # direct methods
@@ -37,15 +37,15 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/ImUiModule;->a()Lcom/vk/im/engine/models/f;
+    invoke-virtual {p1}, Lcom/vk/im/ui/ImUiModule;->a()Lcom/vk/im/engine/models/ImExperimentsProvider;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/f;->get()Lcom/vk/im/engine/models/e;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/ImExperimentsProvider;->get()Lcom/vk/im/engine/models/ImExperiments;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/ImExperiments;
 
     return-void
 .end method
@@ -55,9 +55,9 @@
 .method public a(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/engine/models/e;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, p1}, Lcom/vk/im/engine/models/ImExperiments;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -67,9 +67,9 @@
 .method public a()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/e;->a()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/models/ImExperiments;->a()Z
 
     move-result v0
 
@@ -79,9 +79,9 @@
 .method public b()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/e;->b()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/models/ImExperiments;->b()Z
 
     move-result v0
 
@@ -91,9 +91,9 @@
 .method public c()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/e;->c()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/vk/im/engine/models/ImExperiments;->c()Ljava/lang/String;
 
     move-result-object v0
 
@@ -103,9 +103,9 @@
 .method public d()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/e;->d()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/models/ImExperiments;->d()Z
 
     move-result v0
 
@@ -115,9 +115,9 @@
 .method public e()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/e;->e()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/models/ImExperiments;->e()Z
 
     move-result v0
 
@@ -127,9 +127,9 @@
 .method public f()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/e;->f()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/models/ImExperiments;->f()Z
 
     move-result v0
 
@@ -139,9 +139,9 @@
 .method public g()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/e;->g()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/models/ImExperiments;->g()Z
 
     move-result v0
 
@@ -151,9 +151,9 @@
 .method public h()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/e;->h()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/models/ImExperiments;->h()Z
 
     move-result v0
 
@@ -163,9 +163,9 @@
 .method public i()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/e;->i()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/models/ImExperiments;->i()Z
 
     move-result v0
 
@@ -183,9 +183,9 @@
 .method public k()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$a;->b:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/e;->k()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/models/ImExperiments;->k()Z
 
     move-result v0
 

@@ -3,7 +3,7 @@
 .source "_Arrays.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/collections/k;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/collections/Iterators;",
         ">;"
     }
 .end annotation
@@ -48,20 +48,20 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0}, Lkotlin/collections/ArraysKt___ArraysKt$withIndex$8;->invoke()Lkotlin/collections/k;
+    invoke-virtual {p0}, Lkotlin/collections/ArraysKt___ArraysKt$withIndex$8;->invoke()Lkotlin/collections/Iterators;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final invoke()Lkotlin/collections/k;
+.method public final invoke()Lkotlin/collections/Iterators;
     .locals 1
 
     .line 1
     iget-object v0, p0, Lkotlin/collections/ArraysKt___ArraysKt$withIndex$8;->$this_withIndex:[Z
 
-    invoke-static {v0}, Lkotlin/jvm/internal/e;->a([Z)Lkotlin/collections/k;
+    invoke-static {v0}, Lkotlin/jvm/internal/ArrayIterators2;->a([Z)Lkotlin/collections/Iterators;
 
     move-result-object v0
 

@@ -87,7 +87,7 @@
     .locals 6
 
     .line 5
-    sget-object v5, Lcom/vk/media/gles/b;->b:[F
+    sget-object v5, Lcom/vk/media/gles/EglUtils;->b:[F
 
     move-object v0, p0
 
@@ -112,7 +112,7 @@
     if-nez p2, :cond_0
 
     .line 13
-    sget-object v1, Lcom/vk/media/gles/b;->b:[F
+    sget-object v1, Lcom/vk/media/gles/EglUtils;->b:[F
 
     move-object v3, v1
 
@@ -193,7 +193,7 @@
     if-nez p2, :cond_0
 
     .line 6
-    sget-object v1, Lcom/vk/media/gles/b;->b:[F
+    sget-object v1, Lcom/vk/media/gles/EglUtils;->b:[F
 
     move-object v3, v1
 

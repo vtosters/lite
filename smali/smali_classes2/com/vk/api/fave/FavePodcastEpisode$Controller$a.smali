@@ -68,7 +68,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/api/fave/q;
+    check-cast v1, Lcom/vk/api/fave/FavePodcastEpisode;
 
     .line 3
     iget v2, p0, Lcom/vk/api/fave/FavePodcastEpisode$Controller$a;->a:I
@@ -77,7 +77,7 @@
 
     iget-boolean v4, p0, Lcom/vk/api/fave/FavePodcastEpisode$Controller$a;->c:Z
 
-    invoke-interface {v1, v2, v3, v4}, Lcom/vk/api/fave/q;->b(IIZ)V
+    invoke-interface {v1, v2, v3, v4}, Lcom/vk/api/fave/FavePodcastEpisode;->b(IIZ)V
 
     goto :goto_0
 

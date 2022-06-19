@@ -3,7 +3,7 @@
 .source "DialogItemView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Landroid/graphics/drawable/Drawable;",
         ">;"
     }
@@ -57,9 +57,9 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v1, Lcom/vk/im/ui/f;->ic_online_mobile_vkapp_composite_16:I
+    sget v1, Lcom/vk/im/ui/R12;->ic_online_mobile_vkapp_composite_16:I
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -70,7 +70,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 

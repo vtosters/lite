@@ -3,7 +3,7 @@
 .source "ShowCollectionPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -53,14 +53,14 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Boolean;)Lc/a/m;
+.method public final a(Ljava/lang/Boolean;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Boolean;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/actionlinks/ActionLinks;",
             ">;"
         }
@@ -69,13 +69,13 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$d;->a:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/b;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->b()Lcom/vtosters/lite/actionlinks/c/a/ItemsAdapter;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$d;->b:Lcom/vtosters/lite/actionlinks/AL$a;
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/i0;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/SimpleAdapter;->a(Ljava/lang/Object;)V
 
     .line 2
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$d;->a:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
@@ -101,7 +101,7 @@
     invoke-interface {p1, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     .line 3
-    sget-object p1, Lcom/vtosters/lite/actionlinks/b/b;->a:Lcom/vtosters/lite/actionlinks/b/b;
+    sget-object p1, Lcom/vtosters/lite/actionlinks/b/ActionLinksController;->INSTANCE:Lcom/vtosters/lite/actionlinks/b/ActionLinksController;
 
     iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$d;->a:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
 
@@ -111,7 +111,7 @@
 
     const-string v1, "live"
 
-    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/actionlinks/b/b;->a(ILjava/lang/String;)Lc/a/m;
+    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/actionlinks/b/ActionLinksController;->a(ILjava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -124,7 +124,7 @@
     .line 1
     check-cast p1, Ljava/lang/Boolean;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$d;->a(Ljava/lang/Boolean;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$d;->a(Ljava/lang/Boolean;)Lio/reactivex/Observable;
 
     move-result-object p1
 

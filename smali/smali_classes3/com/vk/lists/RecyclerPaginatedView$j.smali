@@ -38,11 +38,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView$j;->a:Lcom/vk/lists/RecyclerPaginatedView;
 
-    iget-object v0, v0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/s;
+    iget-object v0, v0, Lcom/vk/lists/RecyclerPaginatedView;->K:Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/s;->H(I)Z
+    invoke-virtual {v0, p1}, Lcom/vk/lists/PaginatedRecyclerAdapter;->H(I)Z
 
     move-result v0
 

@@ -1,5 +1,5 @@
 .class final Lcom/vk/newsfeed/NewsListsAdapter$b;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "NewsListsAdapter.kt"
 
 
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
-        "Lcom/vk/newsfeed/r;",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+        "Lcom/vk/newsfeed/NewsListsAdapter2;",
         ">;"
     }
 .end annotation
@@ -37,14 +37,14 @@
     const v0, 0x7f0d03f8
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x2
 
@@ -52,7 +52,7 @@
 
     const v3, 0x7f0a0541
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -63,11 +63,11 @@
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a0d80
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -78,11 +78,11 @@
     .line 4
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f0a023e
 
-    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -93,13 +93,13 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/newsfeed/r;)V
+.method public a(Lcom/vk/newsfeed/NewsListsAdapter2;)V
     .locals 2
 
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/NewsListsAdapter$b;->d:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/r;->b()Lcom/vtosters/lite/NewsfeedList;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/NewsListsAdapter2;->b()Lcom/vtosters/lite/NewsfeedList;
 
     move-result-object v1
 
@@ -112,7 +112,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/newsfeed/NewsListsAdapter$b;->c:Landroid/widget/ImageView;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/r;->a()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/NewsListsAdapter2;->a()I
 
     move-result p1
 
@@ -121,11 +121,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/newsfeed/r;Z)V
+.method public final a(Lcom/vk/newsfeed/NewsListsAdapter2;Z)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/NewsListsAdapter$b;->e:Landroid/view/View;
@@ -139,9 +139,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/newsfeed/r;
+    check-cast p1, Lcom/vk/newsfeed/NewsListsAdapter2;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/NewsListsAdapter$b;->a(Lcom/vk/newsfeed/r;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/NewsListsAdapter$b;->a(Lcom/vk/newsfeed/NewsListsAdapter2;)V
 
     return-void
 .end method

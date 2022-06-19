@@ -15,19 +15,19 @@
 
 
 # virtual methods
-.method public abstract upload(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lf/b;
+.method public abstract upload(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lretrofit2/Call;
     .param p1    # Ljava/lang/String;
-        .annotation runtime Lf/q/q;
+        .annotation runtime Lf/q/Path;
             value = "version"
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation runtime Lf/q/q;
+        .annotation runtime Lf/q/Path;
             value = "type"
         .end annotation
     .end param
     .param p3    # Ljava/lang/String;
-        .annotation runtime Lf/q/b;
+        .annotation runtime Lf/q/Field;
             value = "log[]"
         .end annotation
     .end param
@@ -38,34 +38,34 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ")",
-            "Lf/b<",
-            "Lokhttp3/c0;",
+            "Lretrofit2/Call<",
+            "Lokhttp3/ResponseBody;",
             ">;"
         }
     .end annotation
 
-    .annotation runtime Lf/q/d;
+    .annotation runtime Lf/q/FormUrlEncoded;
     .end annotation
 
-    .annotation runtime Lf/q/i;
+    .annotation runtime Lf/q/Headers;
         value = {
             "Content-Type: application/x-www-form-urlencoded;charset=UTF-8"
         }
     .end annotation
 
-    .annotation runtime Lf/q/m;
+    .annotation runtime Lf/q/POST;
         value = "/{version}/jot/{type}"
     .end annotation
 .end method
 
-.method public abstract uploadSequence(Ljava/lang/String;Ljava/lang/String;)Lf/b;
+.method public abstract uploadSequence(Ljava/lang/String;Ljava/lang/String;)Lretrofit2/Call;
     .param p1    # Ljava/lang/String;
-        .annotation runtime Lf/q/q;
+        .annotation runtime Lf/q/Path;
             value = "sequence"
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation runtime Lf/q/b;
+        .annotation runtime Lf/q/Field;
             value = "log[]"
         .end annotation
     .end param
@@ -75,22 +75,22 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ")",
-            "Lf/b<",
-            "Lokhttp3/c0;",
+            "Lretrofit2/Call<",
+            "Lokhttp3/ResponseBody;",
             ">;"
         }
     .end annotation
 
-    .annotation runtime Lf/q/d;
+    .annotation runtime Lf/q/FormUrlEncoded;
     .end annotation
 
-    .annotation runtime Lf/q/i;
+    .annotation runtime Lf/q/Headers;
         value = {
             "Content-Type: application/x-www-form-urlencoded;charset=UTF-8"
         }
     .end annotation
 
-    .annotation runtime Lf/q/m;
+    .annotation runtime Lf/q/POST;
         value = "/scribe/{sequence}"
     .end annotation
 .end method

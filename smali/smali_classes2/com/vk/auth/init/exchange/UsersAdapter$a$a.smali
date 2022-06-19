@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/init/exchange/UsersAdapter$a;-><init>(Landroid/view/ViewGroup;Lcom/vk/auth/main/i;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/auth/init/exchange/UsersAdapter$a;-><init>(Landroid/view/ViewGroup;Lcom/vk/auth/main/AuthUiManager;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,17 +40,17 @@
     .line 1
     iget-object p1, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a$a;->a:Lcom/vk/auth/init/exchange/UsersAdapter$a;
 
-    invoke-static {p1}, Lcom/vk/auth/init/exchange/UsersAdapter$a;->b(Lcom/vk/auth/init/exchange/UsersAdapter$a;)Lkotlin/jvm/b/b;
+    invoke-static {p1}, Lcom/vk/auth/init/exchange/UsersAdapter$a;->b(Lcom/vk/auth/init/exchange/UsersAdapter$a;)Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/auth/init/exchange/UsersAdapter$a$a;->a:Lcom/vk/auth/init/exchange/UsersAdapter$a;
 
-    invoke-static {v0}, Lcom/vk/auth/init/exchange/UsersAdapter$a;->c(Lcom/vk/auth/init/exchange/UsersAdapter$a;)Lcom/vk/auth/init/exchange/c;
+    invoke-static {v0}, Lcom/vk/auth/init/exchange/UsersAdapter$a;->c(Lcom/vk/auth/init/exchange/UsersAdapter$a;)Lcom/vk/auth/init/exchange/UserItem;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

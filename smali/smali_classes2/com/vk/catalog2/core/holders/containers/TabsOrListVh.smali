@@ -3,9 +3,9 @@
 .source "TabsOrListVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/m;
-.implements Lcom/vk/catalog2/core/holders/common/j;
-.implements Lcom/vk/catalog2/core/holders/common/k;
+.implements Lcom/vk/catalog2/core/holders/common/CatalogVh;
+.implements Lcom/vk/catalog2/core/holders/common/CatalogScrollableViewHolder;
+.implements Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
 
 
 # instance fields
@@ -17,9 +17,9 @@
 
 .field private final a:Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;
 
-.field private final b:Lcom/vk/catalog2/core/holders/containers/m;
+.field private final b:Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;
 
-.field private final c:Lcom/vk/catalog2/core/presenters/b;
+.field private final c:Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
 
 .field private final d:Lcom/vk/catalog2/core/holders/common/ErrorStateVh;
 
@@ -27,13 +27,13 @@
 
 .field private f:Landroid/view/View;
 
-.field private final g:Lcom/vk/catalog2/core/holders/common/k;
+.field private final g:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
 
-.field private final h:Lcom/vk/catalog2/core/holders/common/n;
+.field private final h:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;Lcom/vk/catalog2/core/holders/common/n;ILjava/lang/Integer;Z)V
+.method public constructor <init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;ILjava/lang/Integer;Z)V
     .locals 14
     .param p4    # I
         .annotation build Landroidx/annotation/LayoutRes;
@@ -51,7 +51,7 @@
 
     move-object/from16 v1, p3
 
-    iput-object v1, v0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->h:Lcom/vk/catalog2/core/holders/common/n;
+    iput-object v1, v0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->h:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     move/from16 v1, p4
 
@@ -80,7 +80,7 @@
 
     move-object/from16 v3, p2
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v7, v0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->a:Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;
 
@@ -89,7 +89,7 @@
 
     if-nez v1, :cond_0
 
-    new-instance v1, Lcom/vk/catalog2/core/holders/containers/m;
+    new-instance v1, Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;
 
     iget-object v3, v0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->a:Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;
 
@@ -103,12 +103,12 @@
 
     move-object v2, v1
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/catalog2/core/holders/containers/m;-><init>(Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;IZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;-><init>(Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;IZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance v2, Lcom/vk/catalog2/core/holders/containers/m;
+    new-instance v2, Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;
 
     iget-object v9, v0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->a:Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;
 
@@ -124,17 +124,17 @@
 
     move-object v8, v2
 
-    invoke-direct/range {v8 .. v13}, Lcom/vk/catalog2/core/holders/containers/m;-><init>(Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;IZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v8 .. v13}, Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;-><init>(Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;IZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object v1, v2
 
     :goto_0
-    iput-object v1, v0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->b:Lcom/vk/catalog2/core/holders/containers/m;
+    iput-object v1, v0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->b:Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;
 
     .line 4
-    new-instance v1, Lcom/vk/catalog2/core/presenters/b;
+    new-instance v1, Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/catalog2/core/e;->e()Lcom/vk/catalog2/core/w/a;
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/catalog2/core/CatalogEntryPointParams;->e()Lcom/vk/catalog2/core/w/CatalogCommandsBus;
 
     move-result-object v4
 
@@ -150,9 +150,9 @@
 
     move-object v3, p1
 
-    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/presenters/b;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/w/a;Lcom/vk/catalog2/core/api/dto/d;Lcom/vk/catalog2/core/cache/a;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/w/CatalogCommandsBus;Lcom/vk/catalog2/core/api/dto/CatalogResponse;Lcom/vk/catalog2/core/cache/CatalogCache;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object v1, v0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->c:Lcom/vk/catalog2/core/presenters/b;
+    iput-object v1, v0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->c:Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
 
     .line 5
     new-instance v1, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;
@@ -161,12 +161,12 @@
 
     invoke-direct {v2, p0}, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh$errorVh$1;-><init>(Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;)V
 
-    invoke-direct {v1, p0, v2}, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;-><init>(Lcom/vk/catalog2/core/holders/common/k;Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p0, v2}, Lcom/vk/catalog2/core/holders/common/ErrorStateVh;-><init>(Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;Lkotlin/jvm/b/Functions;)V
 
     iput-object v1, v0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->d:Lcom/vk/catalog2/core/holders/common/ErrorStateVh;
 
     .line 6
-    new-instance v1, Lcom/vk/catalog2/core/holders/containers/k;
+    new-instance v1, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVh;
 
     iget-object v4, v0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->a:Lcom/vk/catalog2/core/holders/containers/ViewPagerVh;
 
@@ -174,7 +174,7 @@
 
     const/4 v7, 0x0
 
-    sget v9, Lcom/vk/catalog2/core/r;->catalog_frame_layout_with_scrolling:I
+    sget v9, Lcom/vk/catalog2/core/R7;->catalog_frame_layout_with_scrolling:I
 
     const/16 v10, 0x1a
 
@@ -182,14 +182,14 @@
 
     move-object v3, v1
 
-    invoke-direct/range {v3 .. v11}, Lcom/vk/catalog2/core/holders/containers/k;-><init>(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/holders/common/ErrorStateVh;Lcom/vk/catalog2/core/holders/common/v;Lcom/vk/catalog2/core/holders/containers/k$a;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v11}, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVh;-><init>(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/holders/common/ErrorStateVh;Lcom/vk/catalog2/core/holders/common/ProgressVh;Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVh$a;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object v1, v0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->g:Lcom/vk/catalog2/core/holders/common/k;
+    iput-object v1, v0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->g:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;Lcom/vk/catalog2/core/holders/common/n;ILjava/lang/Integer;ZILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;ILjava/lang/Integer;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 7
 
     and-int/lit8 p8, p7, 0x8
@@ -197,7 +197,7 @@
     if-eqz p8, :cond_0
 
     .line 7
-    sget p4, Lcom/vk/catalog2/core/r;->catalog_media_layout:I
+    sget p4, Lcom/vk/catalog2/core/R7;->catalog_media_layout:I
 
     :cond_0
     move v4, p4
@@ -234,16 +234,16 @@
     move-object v3, p3
 
     .line 8
-    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;Lcom/vk/catalog2/core/holders/common/n;ILjava/lang/Integer;Z)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;ILjava/lang/Integer;Z)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;)Lcom/vk/catalog2/core/presenters/b;
+.method public static final synthetic a(Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;)Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->c:Lcom/vk/catalog2/core/presenters/b;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->c:Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
 
     return-object p0
 .end method
@@ -281,16 +281,16 @@
     check-cast v0, Landroid/view/ViewGroup;
 
     .line 6
-    iget-object v2, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->g:Lcom/vk/catalog2/core/holders/common/k;
+    iget-object v2, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->g:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
 
-    invoke-interface {v2, p1, v0, p3}, Lcom/vk/catalog2/core/holders/common/n;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-interface {v2, p1, v0, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v2
 
     invoke-virtual {v0, v2, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
     .line 7
-    sget v1, Lcom/vk/catalog2/core/q;->vk_app_bar:I
+    sget v1, Lcom/vk/catalog2/core/R10;->vk_app_bar:I
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -299,9 +299,9 @@
     check-cast v1, Lcom/google/android/material/appbar/AppBarLayout;
 
     .line 8
-    iget-object v2, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->b:Lcom/vk/catalog2/core/holders/containers/m;
+    iget-object v2, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->b:Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;
 
-    invoke-virtual {v2, p1, v1, p3}, Lcom/vk/catalog2/core/holders/containers/m;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v2, p1, v1, p3}, Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v2
 
@@ -312,13 +312,13 @@
     iput-object v2, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->e:Lcom/vk/core/view/VKTabLayout;
 
     .line 9
-    iget-object v2, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->h:Lcom/vk/catalog2/core/holders/common/n;
+    iget-object v2, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->h:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     const/4 v3, 0x0
 
     if-eqz v2, :cond_0
 
-    invoke-interface {v2, p1, v1, p3}, Lcom/vk/catalog2/core/holders/common/n;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-interface {v2, p1, v1, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v2
 
@@ -331,7 +331,7 @@
     iput-object v2, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->f:Landroid/view/View;
 
     .line 10
-    sget v2, Lcom/vk/catalog2/core/q;->shadow_view:I
+    sget v2, Lcom/vk/catalog2/core/R10;->shadow_view:I
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -340,7 +340,7 @@
     check-cast v2, Lcom/vk/core/view/AppBarShadowView;
 
     .line 11
-    iget-object v4, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->h:Lcom/vk/catalog2/core/holders/common/n;
+    iget-object v4, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->h:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     if-nez v4, :cond_1
 
@@ -373,7 +373,7 @@
     goto :goto_1
 
     :cond_3
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -395,11 +395,11 @@
     .line 18
     :cond_5
     :goto_1
-    iget-object v1, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->g:Lcom/vk/catalog2/core/holders/common/k;
+    iget-object v1, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->g:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
 
-    sget-object v2, Lcom/vk/catalog2/core/holders/containers/f;->a:Lcom/vk/catalog2/core/holders/containers/f;
+    sget-object v2, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState4;->INSTANCE:Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState4;
 
-    invoke-interface {v1, v2}, Lcom/vk/catalog2/core/holders/common/k;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
+    invoke-interface {v1, v2}, Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
 
     .line 19
     new-instance v1, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh$a;
@@ -411,13 +411,13 @@
     const-string p1, "inflater.inflate(layoutI\u2026TabsOrListVh) }\n        }"
 
     .line 20
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p2
 
     .line 21
     :cond_6
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -446,27 +446,27 @@
     .locals 1
 
     .line 38
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->b:Lcom/vk/catalog2/core/holders/containers/m;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->b:Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/holders/containers/m;->a()V
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;->a()V
 
     .line 39
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->g:Lcom/vk/catalog2/core/holders/common/k;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->g:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/n;->a()V
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;->a()V
 
     .line 40
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->h:Lcom/vk/catalog2/core/holders/common/n;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->h:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/n;->a()V
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;->a()V
 
     .line 41
     :cond_0
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->c:Lcom/vk/catalog2/core/presenters/b;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->c:Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/presenters/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/presenters/CatalogCatalogPresenter;->a()V
 
     return-void
 .end method
@@ -521,15 +521,15 @@
     invoke-static {v0, v4}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 30
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->b:Lcom/vk/catalog2/core/holders/containers/m;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->b:Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;
 
-    invoke-virtual {v0, p1}, Lcom/vk/catalog2/core/holders/containers/m;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)V
+    invoke-virtual {v0, p1}, Lcom/vk/catalog2/core/holders/containers/TabLayoutVh;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)V
 
     goto :goto_0
 
     .line 31
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -563,7 +563,7 @@
     invoke-static {v1, v2}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 35
-    iget-object v1, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->h:Lcom/vk/catalog2/core/holders/common/n;
+    iget-object v1, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->h:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     if-eqz v1, :cond_6
 
@@ -577,22 +577,22 @@
 
     check-cast v0, Lcom/vk/catalog2/core/blocks/UIBlock;
 
-    invoke-interface {v1, v0}, Lcom/vk/catalog2/core/holders/common/n;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)V
+    invoke-interface {v1, v0}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)V
 
     goto :goto_0
 
     .line 36
     :cond_5
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 37
     :cond_6
     :goto_0
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->g:Lcom/vk/catalog2/core/holders/common/k;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->g:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
 
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/n;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)V
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)V
 
     return-void
 .end method
@@ -601,7 +601,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/m$a;->a(Lcom/vk/catalog2/core/holders/common/m;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogVh$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogVh;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
 
     return-void
 .end method
@@ -610,18 +610,18 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/m$a;->a(Lcom/vk/catalog2/core/holders/common/m;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogVh$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogVh;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/catalog2/core/holders/containers/l;)V
+.method public a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
     .locals 1
 
     .line 25
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->g:Lcom/vk/catalog2/core/holders/common/k;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->g:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
 
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/k;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
 
     return-void
 .end method
@@ -630,11 +630,11 @@
     .locals 1
 
     .line 24
-    new-instance v0, Lcom/vk/catalog2/core/holders/containers/d;
+    new-instance v0, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState3;
 
-    invoke-direct {v0, p1}, Lcom/vk/catalog2/core/holders/containers/d;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v0, p1}, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState3;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
+    invoke-virtual {p0, v0}, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
 
     return-void
 .end method
@@ -663,7 +663,7 @@
     :cond_0
     const-string v0, "tabsView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -686,7 +686,7 @@
 
     if-ne v0, v1, :cond_1
 
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->h:Lcom/vk/catalog2/core/holders/common/n;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->h:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     instance-of v2, v0, Lcom/vk/catalog2/core/holders/headers/ToolbarVh;
 
@@ -714,13 +714,13 @@
     return v1
 .end method
 
-.method public getState()Lcom/vk/catalog2/core/holders/containers/l;
+.method public getState()Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->g:Lcom/vk/catalog2/core/holders/common/k;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/containers/TabsOrListVh;->g:Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/k;->getState()Lcom/vk/catalog2/core/holders/containers/l;
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogStatesViewHolder;->getState()Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;
 
     move-result-object v0
 

@@ -3,7 +3,7 @@
 .source "MusicSubscriptionControlFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$onCreateView$2;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -62,13 +62,13 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$onCreateView$2;->this$0:Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    sget-object v1, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v1, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     const/4 v4, 0x0
 
@@ -78,7 +78,7 @@
 
     const-string v3, "https://pay.google.com/payments/u/0/home#settings"
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     :cond_0
     return-void

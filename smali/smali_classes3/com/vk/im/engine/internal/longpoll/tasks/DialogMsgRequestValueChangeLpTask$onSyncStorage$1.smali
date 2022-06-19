@@ -3,12 +3,12 @@
 .source "DialogMsgRequestValueChangeLpTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask;->b(Lcom/vk/im/engine/internal/longpoll/d;)V
+    value = Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask;->b(Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,18 +19,18 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/im/engine/internal/storage/models/a;",
+        "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
         ">;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $dialog:Lcom/vk/im/engine/models/dialogs/c;
+.field final synthetic $dialog:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
 .field final synthetic $incValue:I
 
@@ -38,14 +38,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask;ILcom/vk/im/engine/models/dialogs/c;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask;ILcom/vk/im/engine/models/dialogs/DialogApiModel;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask;
 
     iput p2, p0, Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask$onSyncStorage$1;->$incValue:I
 
-    iput-object p3, p0, Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask$onSyncStorage$1;->$dialog:Lcom/vk/im/engine/models/dialogs/c;
+    iput-object p3, p0, Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask$onSyncStorage$1;->$dialog:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     const/4 p1, 0x1
 
@@ -64,17 +64,17 @@
             "Lcom/vk/im/engine/internal/storage/StorageManager;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/a;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
 
     move-result-object v0
 
@@ -85,11 +85,11 @@
     invoke-virtual {v0, v1, v2}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)V
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object p1
 
@@ -110,17 +110,17 @@
     .line 3
     new-instance p1, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;
 
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask$onSyncStorage$1;->$dialog:Lcom/vk/im/engine/models/dialogs/c;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask$onSyncStorage$1;->$dialog:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
-    invoke-direct {p1, v0}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;-><init>(Lcom/vk/im/engine/models/dialogs/c;)V
+    invoke-direct {p1, v0}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;-><init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;)V
 
     iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask;
 
-    invoke-static {v0}, Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask;->b(Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask;)Lcom/vk/im/engine/d;
+    invoke-static {v0}, Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask;->b(Lcom/vk/im/engine/internal/longpoll/tasks/DialogMsgRequestValueChangeLpTask;)Lcom/vk/im/engine/ImEnvironment;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
 
     move-result-object p1
 

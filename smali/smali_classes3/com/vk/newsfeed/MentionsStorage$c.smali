@@ -3,12 +3,12 @@
 .source "MentionsStorage.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/MentionsStorage;->a(Lcom/vk/mentions/h;)V
+    value = Lcom/vk/newsfeed/MentionsStorage;->a(Lcom/vk/mentions/MentionModels2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/util/List<",
         "Lcom/vk/newsfeed/MentionsStorage$SerializableMentionProfile;",
         ">;>;"
@@ -31,14 +31,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/mentions/h;
+.field final synthetic a:Lcom/vk/mentions/MentionModels2;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/mentions/h;)V
+.method constructor <init>(Lcom/vk/mentions/MentionModels2;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/newsfeed/MentionsStorage$c;->a:Lcom/vk/mentions/h;
+    iput-object p1, p0, Lcom/vk/newsfeed/MentionsStorage$c;->a:Lcom/vk/mentions/MentionModels2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -61,14 +61,14 @@
     .line 1
     new-instance v0, Lcom/vk/newsfeed/MentionsStorage$SerializableMentionProfile;
 
-    iget-object v1, p0, Lcom/vk/newsfeed/MentionsStorage$c;->a:Lcom/vk/mentions/h;
+    iget-object v1, p0, Lcom/vk/newsfeed/MentionsStorage$c;->a:Lcom/vk/mentions/MentionModels2;
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/MentionsStorage$SerializableMentionProfile;-><init>(Lcom/vk/mentions/h;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/MentionsStorage$SerializableMentionProfile;-><init>(Lcom/vk/mentions/MentionModels2;)V
 
     const-string v1, "profilesList"
 
     .line 2
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -100,9 +100,9 @@
 
     move-result v4
 
-    iget-object v6, p0, Lcom/vk/newsfeed/MentionsStorage$c;->a:Lcom/vk/mentions/h;
+    iget-object v6, p0, Lcom/vk/newsfeed/MentionsStorage$c;->a:Lcom/vk/mentions/MentionModels2;
 
-    invoke-virtual {v6}, Lcom/vk/mentions/h;->d()I
+    invoke-virtual {v6}, Lcom/vk/mentions/MentionModels2;->d()I
 
     move-result v6
 
@@ -143,11 +143,11 @@
     .line 8
     :goto_3
     :try_start_0
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "mentionProfiles"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Ljava/util/List;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

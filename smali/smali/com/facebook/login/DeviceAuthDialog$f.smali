@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/facebook/login/DeviceAuthDialog;->a(Ljava/lang/String;Lcom/facebook/internal/r$d;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
+    value = Lcom/facebook/login/DeviceAuthDialog;->a(Ljava/lang/String;Lcom/facebook/internal/Utility$d;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 # instance fields
 .field final synthetic a:Ljava/lang/String;
 
-.field final synthetic b:Lcom/facebook/internal/r$d;
+.field final synthetic b:Lcom/facebook/internal/Utility$d;
 
 .field final synthetic c:Ljava/lang/String;
 
@@ -32,7 +32,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/login/DeviceAuthDialog;Ljava/lang/String;Lcom/facebook/internal/r$d;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
+.method constructor <init>(Lcom/facebook/login/DeviceAuthDialog;Ljava/lang/String;Lcom/facebook/internal/Utility$d;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
     .locals 0
 
     .line 1
@@ -40,7 +40,7 @@
 
     iput-object p2, p0, Lcom/facebook/login/DeviceAuthDialog$f;->a:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/facebook/login/DeviceAuthDialog$f;->b:Lcom/facebook/internal/r$d;
+    iput-object p3, p0, Lcom/facebook/login/DeviceAuthDialog$f;->b:Lcom/facebook/internal/Utility$d;
 
     iput-object p4, p0, Lcom/facebook/login/DeviceAuthDialog$f;->c:Ljava/lang/String;
 
@@ -63,7 +63,7 @@
 
     iget-object v1, p0, Lcom/facebook/login/DeviceAuthDialog$f;->a:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/facebook/login/DeviceAuthDialog$f;->b:Lcom/facebook/internal/r$d;
+    iget-object v2, p0, Lcom/facebook/login/DeviceAuthDialog$f;->b:Lcom/facebook/internal/Utility$d;
 
     iget-object v3, p0, Lcom/facebook/login/DeviceAuthDialog$f;->c:Ljava/lang/String;
 
@@ -71,7 +71,7 @@
 
     iget-object v5, p0, Lcom/facebook/login/DeviceAuthDialog$f;->e:Ljava/util/Date;
 
-    invoke-static/range {v0 .. v5}, Lcom/facebook/login/DeviceAuthDialog;->a(Lcom/facebook/login/DeviceAuthDialog;Ljava/lang/String;Lcom/facebook/internal/r$d;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
+    invoke-static/range {v0 .. v5}, Lcom/facebook/login/DeviceAuthDialog;->a(Lcom/facebook/login/DeviceAuthDialog;Ljava/lang/String;Lcom/facebook/internal/Utility$d;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
 
     return-void
 .end method

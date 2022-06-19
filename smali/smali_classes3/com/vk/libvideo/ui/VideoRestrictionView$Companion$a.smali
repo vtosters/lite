@@ -3,12 +3,12 @@
 .source "VideoRestrictionView.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Landroid/view/View;Z)V
+    value = Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Landroid/view/View;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/libvideo/y/j;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/libvideo/y/VideoEvents12;",
         ">;"
     }
 .end annotation
@@ -36,17 +36,17 @@
 
 .field final synthetic c:Lcom/vk/libvideo/ui/VideoRestrictionView;
 
-.field final synthetic d:Lkotlin/jvm/b/b;
+.field final synthetic d:Lkotlin/jvm/b/Functions2;
 
-.field final synthetic e:Lkotlin/jvm/b/a;
+.field final synthetic e:Lkotlin/jvm/b/Functions;
 
-.field final synthetic f:Lkotlin/jvm/b/b;
+.field final synthetic f:Lkotlin/jvm/b/Functions2;
 
 .field final synthetic g:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Landroid/view/View;)V
+.method constructor <init>(Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Landroid/view/View;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->a:Lcom/vk/dto/common/VideoFile;
@@ -55,11 +55,11 @@
 
     iput-object p3, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->c:Lcom/vk/libvideo/ui/VideoRestrictionView;
 
-    iput-object p4, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->d:Lkotlin/jvm/b/b;
+    iput-object p4, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->d:Lkotlin/jvm/b/Functions2;
 
-    iput-object p5, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->e:Lkotlin/jvm/b/a;
+    iput-object p5, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->e:Lkotlin/jvm/b/Functions;
 
-    iput-object p6, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->f:Lkotlin/jvm/b/b;
+    iput-object p6, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->f:Lkotlin/jvm/b/Functions2;
 
     iput-object p7, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->g:Landroid/view/View;
 
@@ -70,7 +70,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/libvideo/y/j;)V
+.method public final a(Lcom/vk/libvideo/y/VideoEvents12;)V
     .locals 11
 
     .line 1
@@ -86,13 +86,13 @@
     iget-object v3, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->c:Lcom/vk/libvideo/ui/VideoRestrictionView;
 
     .line 5
-    iget-object v4, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->d:Lkotlin/jvm/b/b;
+    iget-object v4, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->d:Lkotlin/jvm/b/Functions2;
 
     .line 6
-    iget-object v5, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->e:Lkotlin/jvm/b/a;
+    iget-object v5, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->e:Lkotlin/jvm/b/Functions;
 
     .line 7
-    iget-object v6, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->f:Lkotlin/jvm/b/b;
+    iget-object v6, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->f:Lkotlin/jvm/b/Functions2;
 
     .line 8
     iget-object v7, p0, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->g:Landroid/view/View;
@@ -104,7 +104,7 @@
     const/4 v10, 0x0
 
     .line 9
-    invoke-static/range {v0 .. v10}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Landroid/view/View;ZILjava/lang/Object;)V
+    invoke-static/range {v0 .. v10}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Landroid/view/View;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -113,9 +113,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/y/j;
+    check-cast p1, Lcom/vk/libvideo/y/VideoEvents12;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->a(Lcom/vk/libvideo/y/j;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$a;->a(Lcom/vk/libvideo/y/VideoEvents12;)V
 
     return-void
 .end method

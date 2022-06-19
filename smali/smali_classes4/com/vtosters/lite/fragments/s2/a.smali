@@ -40,7 +40,7 @@
 
     check-cast p2, Lcom/vk/dto/group/Group;
 
-    invoke-static {p1, p2}, Lcom/vtosters/lite/fragments/s2/f;->a(Lcom/vk/dto/group/Group;Lcom/vk/dto/group/Group;)I
+    invoke-static {p1, p2}, Lcom/vtosters/lite/fragments/s2/GroupsFragment1;->a(Lcom/vk/dto/group/Group;Lcom/vk/dto/group/Group;)I
 
     move-result p1
 

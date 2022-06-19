@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder;
-.super Lcom/vk/im/ui/views/adapter_delegate/d;
+.super Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;
 .source "AudioAttachViewTypeDelegate.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/views/adapter_delegate/d<",
+        "Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder<",
         "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;",
         ">;"
     }
@@ -65,14 +65,14 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder;->i:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate;
 
     .line 2
-    invoke-direct {p0, p2}, Lcom/vk/im/ui/views/adapter_delegate/d;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;-><init>(Landroid/view/View;)V
 
     iput-object p2, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder;->h:Landroid/view/View;
 
     .line 3
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder;->h:Landroid/view/View;
 
-    sget p2, Lcom/vk/im/ui/h;->vkim_audio_play_icon:I
+    sget p2, Lcom/vk/im/ui/R11;->vkim_audio_play_icon:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -80,7 +80,7 @@
 
     const-string p2, "view.findViewById(R.id.vkim_audio_play_icon)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -89,7 +89,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder;->h:Landroid/view/View;
 
-    sget p2, Lcom/vk/im/ui/h;->vkim_title:I
+    sget p2, Lcom/vk/im/ui/R11;->vkim_title:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -97,7 +97,7 @@
 
     const-string p2, "view.findViewById(R.id.vkim_title)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -106,7 +106,7 @@
     .line 5
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder;->h:Landroid/view/View;
 
-    sget p2, Lcom/vk/im/ui/h;->vkim_artist:I
+    sget p2, Lcom/vk/im/ui/R11;->vkim_artist:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -114,7 +114,7 @@
 
     const-string p2, "view.findViewById(R.id.vkim_artist)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -123,7 +123,7 @@
     .line 6
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder;->h:Landroid/view/View;
 
-    sget p2, Lcom/vk/im/ui/h;->vkim_duration:I
+    sget p2, Lcom/vk/im/ui/R11;->vkim_duration:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -131,7 +131,7 @@
 
     const-string p2, "view.findViewById(R.id.vkim_duration)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -140,7 +140,7 @@
     .line 7
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder;->h:Landroid/view/View;
 
-    sget p2, Lcom/vk/im/ui/h;->options:I
+    sget p2, Lcom/vk/im/ui/R11;->options:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -148,7 +148,7 @@
 
     const-string p2, "view.findViewById(R.id.options)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder;->e:Landroid/view/View;
 
@@ -198,7 +198,7 @@
 
     const-string v0, "view.context"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, p2}, Lcom/vk/core/util/DurationFormatter;-><init>(Landroid/content/Context;)V
 
@@ -207,52 +207,52 @@
     .line 10
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder;->a:Landroid/widget/ImageView;
 
-    new-instance p2, Lcom/vk/core/drawable/h$c;
+    new-instance p2, Lcom/vk/core/drawable/PlayingDrawable$c;
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-direct {p2, v0}, Lcom/vk/core/drawable/h$c;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, v0}, Lcom/vk/core/drawable/PlayingDrawable$c;-><init>(Landroid/content/Context;)V
 
     .line 11
-    sget v0, Lcom/vk/im/ui/i;->vkim_playing_drawable_rect_count:I
+    sget v0, Lcom/vk/im/ui/R8;->vkim_playing_drawable_rect_count:I
 
-    invoke-virtual {p2, v0}, Lcom/vk/core/drawable/h$c;->a(I)Lcom/vk/core/drawable/h$b;
+    invoke-virtual {p2, v0}, Lcom/vk/core/drawable/PlayingDrawable$c;->a(I)Lcom/vk/core/drawable/PlayingDrawable$b;
 
     .line 12
-    sget v0, Lcom/vk/im/ui/e;->vkim_playing_drawable_rect_width:I
+    sget v0, Lcom/vk/im/ui/R9;->vkim_playing_drawable_rect_width:I
 
-    invoke-virtual {p2, v0}, Lcom/vk/core/drawable/h$b;->f(I)Lcom/vk/core/drawable/h$b;
+    invoke-virtual {p2, v0}, Lcom/vk/core/drawable/PlayingDrawable$b;->f(I)Lcom/vk/core/drawable/PlayingDrawable$b;
 
     .line 13
-    sget v0, Lcom/vk/im/ui/e;->vkim_playing_drawable_rect_height:I
+    sget v0, Lcom/vk/im/ui/R9;->vkim_playing_drawable_rect_height:I
 
-    invoke-virtual {p2, v0}, Lcom/vk/core/drawable/h$b;->d(I)Lcom/vk/core/drawable/h$b;
+    invoke-virtual {p2, v0}, Lcom/vk/core/drawable/PlayingDrawable$b;->d(I)Lcom/vk/core/drawable/PlayingDrawable$b;
 
     .line 14
-    sget v0, Lcom/vk/im/ui/e;->vkim_playing_drawable_rect_min_height:I
+    sget v0, Lcom/vk/im/ui/R9;->vkim_playing_drawable_rect_min_height:I
 
-    invoke-virtual {p2, v0}, Lcom/vk/core/drawable/h$b;->e(I)Lcom/vk/core/drawable/h$b;
+    invoke-virtual {p2, v0}, Lcom/vk/core/drawable/PlayingDrawable$b;->e(I)Lcom/vk/core/drawable/PlayingDrawable$b;
 
     .line 15
-    sget v0, Lcom/vk/im/ui/d;->vkim_playing_drawable_rect:I
+    sget v0, Lcom/vk/im/ui/R10;->vkim_playing_drawable_rect:I
 
-    invoke-virtual {p2, v0}, Lcom/vk/core/drawable/h$b;->c(I)Lcom/vk/core/drawable/h$b;
+    invoke-virtual {p2, v0}, Lcom/vk/core/drawable/PlayingDrawable$b;->c(I)Lcom/vk/core/drawable/PlayingDrawable$b;
 
     .line 16
-    sget v0, Lcom/vk/im/ui/e;->vkim_playing_drawable_rect_gap:I
+    sget v0, Lcom/vk/im/ui/R9;->vkim_playing_drawable_rect_gap:I
 
-    invoke-virtual {p2, v0}, Lcom/vk/core/drawable/h$b;->b(I)Lcom/vk/core/drawable/h$b;
+    invoke-virtual {p2, v0}, Lcom/vk/core/drawable/PlayingDrawable$b;->b(I)Lcom/vk/core/drawable/PlayingDrawable$b;
 
     .line 17
-    invoke-virtual {p2}, Lcom/vk/core/drawable/h$b;->a()Lcom/vk/core/drawable/h;
+    invoke-virtual {p2}, Lcom/vk/core/drawable/PlayingDrawable$b;->a()Lcom/vk/core/drawable/PlayingDrawable;
 
     move-result-object p2
 
@@ -397,7 +397,7 @@
 
     invoke-direct {v2, p0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder$bind$1;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder;Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;)V
 
-    invoke-static {v1, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v1, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 14
     invoke-virtual {v0}, Lcom/vk/im/engine/models/attaches/AttachAudio;->f()I
@@ -479,12 +479,12 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder$bind$3;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/AudioAttachViewTypeDelegate$AudioAttachViewHolder;Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/c;)V
+.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)V
     .locals 0
 
     .line 1

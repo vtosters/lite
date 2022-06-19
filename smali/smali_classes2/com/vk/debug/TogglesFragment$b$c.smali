@@ -3,7 +3,7 @@
 .source "TogglesFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Landroid/content/DialogInterface;",
         "Ljava/lang/CharSequence;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -67,7 +67,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/debug/TogglesFragment$b$c;->a(Landroid/content/DialogInterface;Ljava/lang/CharSequence;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

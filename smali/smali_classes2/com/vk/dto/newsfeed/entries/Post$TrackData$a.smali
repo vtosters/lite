@@ -72,7 +72,7 @@
     move-object v0, v7
 
     .line 6
-    invoke-direct/range {v0 .. v6}, Lcom/vk/dto/newsfeed/entries/Post$TrackData;-><init>(Ljava/lang/String;IZLjava/lang/Boolean;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/dto/newsfeed/entries/Post$TrackData;-><init>(Ljava/lang/String;IZLjava/lang/Boolean;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v7
 .end method

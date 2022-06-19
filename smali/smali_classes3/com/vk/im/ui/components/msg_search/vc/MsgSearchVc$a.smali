@@ -46,7 +46,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$a;->a:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->e(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/f;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->e(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
 
     move-result-object v0
 
@@ -54,14 +54,14 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/f;->a(I)Lcom/vk/im/ui/components/msg_search/vc/l;
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;->a(I)Lcom/vk/im/ui/components/msg_search/vc/SearchPageData;
 
     move-result-object v0
 
     .line 2
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$a;->a:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->e(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/f;
+    invoke-static {v1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->e(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
 
     move-result-object v1
 
@@ -69,7 +69,7 @@
 
     move-result p1
 
-    invoke-virtual {v1, p1}, Lcom/vk/im/ui/components/msg_search/vc/f;->b(I)Lcom/vk/im/ui/components/msg_search/vc/m;
+    invoke-virtual {v1, p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;->b(I)Lcom/vk/im/ui/components/msg_search/vc/SearchViewHolder;
 
     move-result-object p1
 
@@ -95,11 +95,11 @@
     move-result-object v1
 
     .line 4
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/l;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/SearchPageData;->d()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -111,7 +111,7 @@
 
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$a;->a:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/l;->e()Lcom/vk/im/engine/models/SearchMode;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/SearchPageData;->e()Lcom/vk/im/engine/models/SearchMode;
 
     move-result-object v2
 
@@ -121,13 +121,13 @@
 
     .line 5
     :cond_0
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/l;->g()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/SearchPageData;->g()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/vc/m;->d()V
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/vc/SearchViewHolder;->d()V
 
     goto :goto_1
 
@@ -147,32 +147,32 @@
     :goto_0
     if-eqz v3, :cond_3
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/vc/m;->c()V
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/vc/SearchViewHolder;->c()V
 
     goto :goto_1
 
     .line 7
     :cond_3
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/vc/m;->e()V
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/vc/SearchViewHolder;->e()V
 
     .line 8
     :goto_1
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$a;->a:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->b(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/p;
+    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->b(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     move-result-object p1
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/l;->e()Lcom/vk/im/engine/models/SearchMode;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/SearchPageData;->e()Lcom/vk/im/engine/models/SearchMode;
 
     move-result-object v1
 
-    invoke-interface {p1, v1}, Lcom/vk/im/ui/components/msg_search/vc/p;->a(Lcom/vk/im/engine/models/SearchMode;)V
+    invoke-interface {p1, v1}, Lcom/vk/im/ui/components/msg_search/vc/VcCallback;->a(Lcom/vk/im/engine/models/SearchMode;)V
 
     .line 9
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$a;->a:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/l;->c()J
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_search/vc/SearchPageData;->c()J
 
     move-result-wide v0
 
@@ -197,7 +197,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc$a;->a:Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->e(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/f;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;->e(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;)Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;
 
     move-result-object v0
 
@@ -205,11 +205,11 @@
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/msg_search/vc/f;->b(I)Lcom/vk/im/ui/components/msg_search/vc/m;
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchPagerAdapter;->b(I)Lcom/vk/im/ui/components/msg_search/vc/SearchViewHolder;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/vc/m;->a()Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/vc/SearchViewHolder;->a()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object p1
 

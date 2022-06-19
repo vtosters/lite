@@ -3,7 +3,7 @@
 .source "ActivityEventHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -94,7 +94,7 @@
     const/4 v3, 0x0
 
     .line 3
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 4
     :cond_1
@@ -123,7 +123,7 @@
 
     const/16 v0, 0x8
 
-    invoke-static {p1, v0}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/newsfeed/holders/ActivityEventHolder$toggleSubscription$1;->this$0:Lcom/vk/newsfeed/holders/ActivityEventHolder;
@@ -132,11 +132,11 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {p1, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 7
     :cond_2
-    sget-object v2, Lcom/vk/newsfeed/b0;->d:Lcom/vk/newsfeed/b0;
+    sget-object v2, Lcom/vk/newsfeed/PostsAnalytics;->INSTANCE:Lcom/vk/newsfeed/PostsAnalytics;
 
     iget-object p1, p0, Lcom/vk/newsfeed/holders/ActivityEventHolder$toggleSubscription$1;->this$0:Lcom/vk/newsfeed/holders/ActivityEventHolder;
 
@@ -164,7 +164,7 @@
 
     const-string v6, "activity"
 
-    invoke-virtual/range {v2 .. v7}, Lcom/vk/newsfeed/b0;->a(IILjava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual/range {v2 .. v7}, Lcom/vk/newsfeed/PostsAnalytics;->a(IILjava/lang/String;Ljava/lang/String;Z)V
 
     return-void
 .end method
@@ -181,7 +181,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/ActivityEventHolder$toggleSubscription$1;->a(I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

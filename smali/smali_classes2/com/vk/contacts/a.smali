@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # instance fields
@@ -30,7 +30,7 @@
 
     check-cast p1, Ljava/util/List;
 
-    invoke-virtual {v0, p1}, Lcom/vk/contacts/ContactsSyncAcitvity;->c(Ljava/util/List;)Lkotlin/m;
+    invoke-virtual {v0, p1}, Lcom/vk/contacts/ContactsSyncAcitvity;->c(Ljava/util/List;)Lkotlin/Unit;
 
     move-result-object p1
 

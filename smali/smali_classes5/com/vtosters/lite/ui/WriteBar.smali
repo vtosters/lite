@@ -3,9 +3,9 @@
 .source "WriteBar.java"
 
 # interfaces
-.implements Lcom/vk/stickers/f0/a$l;
-.implements Lcom/vk/im/ui/r/a/b;
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/stickers/f0/KeyboardPopup$l;
+.implements Lcom/vk/im/ui/r/a/AudioMsgPlayerListener;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -39,7 +39,7 @@
     .end annotation
 .end field
 
-.field private B0:Lcom/vk/attachpicker/l;
+.field private B0:Lcom/vk/attachpicker/AttachmentsEditorUtils2;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -82,7 +82,7 @@
 
 .field private J:Landroid/view/View;
 
-.field private final J0:Lcom/vk/audio/c;
+.field private final J0:Lcom/vk/audio/AudioRecordObserver;
 
 .field private K:Landroid/widget/ImageView;
 
@@ -110,11 +110,11 @@
 
 .field private W:Landroid/view/ViewGroup;
 
-.field private a:Lcom/vk/navigation/a;
+.field private a:Lcom/vk/navigation/ActivityLauncher;
 
 .field private a0:Landroid/view/View;
 
-.field private b:Lcom/vk/im/ui/r/a/a;
+.field private b:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -171,19 +171,19 @@
 
 .field private final q0:Lcom/vtosters/lite/ui/WriteBar$h0;
 
-.field private final r0:Lcom/vk/audio/a;
+.field private final r0:Lcom/vk/audio/AudioMessageUtils;
 
 .field private s0:Lcom/vk/audio/AudioMessageSource;
 
 .field private final t0:Ljava/lang/String;
 
-.field private u0:Lcom/vtosters/lite/ui/widget/f;
+.field private u0:Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
 
 .field private v0:Lcom/vk/stickers/AutoSuggestStickersPopupWindow;
 
 .field private w0:Ljava/lang/Runnable;
 
-.field private x0:Lio/reactivex/disposables/b;
+.field private x0:Lio/reactivex/disposables/Disposable;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -193,7 +193,7 @@
     .end annotation
 .end field
 
-.field private z0:Lcom/vk/stickers/b0$k;
+.field private z0:Lcom/vk/stickers/StickersView$k;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -254,11 +254,11 @@
     iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->q0:Lcom/vtosters/lite/ui/WriteBar$h0;
 
     .line 9
-    invoke-static {}, Lcom/vk/audio/a;->m()Lcom/vk/audio/a;
+    invoke-static {}, Lcom/vk/audio/AudioMessageUtils;->m()Lcom/vk/audio/AudioMessageUtils;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
     .line 10
     iput-object v1, p0, Lcom/vtosters/lite/ui/WriteBar;->s0:Lcom/vk/audio/AudioMessageSource;
@@ -317,11 +317,11 @@
 
     invoke-direct {p1, p0}, Lcom/vtosters/lite/ui/WriteBar$l;-><init>(Lcom/vtosters/lite/ui/WriteBar;)V
 
-    invoke-static {p1}, Lcom/vk/audio/c$b;->a(Lcom/vk/audio/c;)Lcom/vk/audio/c;
+    invoke-static {p1}, Lcom/vk/audio/AudioRecordObserver$b;->a(Lcom/vk/audio/AudioRecordObserver;)Lcom/vk/audio/AudioRecordObserver;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->J0:Lcom/vk/audio/c;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->J0:Lcom/vk/audio/AudioRecordObserver;
 
     .line 21
     invoke-direct {p0, v1}, Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/util/AttributeSet;)V
@@ -383,11 +383,11 @@
     iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->q0:Lcom/vtosters/lite/ui/WriteBar$h0;
 
     .line 30
-    invoke-static {}, Lcom/vk/audio/a;->m()Lcom/vk/audio/a;
+    invoke-static {}, Lcom/vk/audio/AudioMessageUtils;->m()Lcom/vk/audio/AudioMessageUtils;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
     .line 31
     iput-object v1, p0, Lcom/vtosters/lite/ui/WriteBar;->s0:Lcom/vk/audio/AudioMessageSource;
@@ -446,11 +446,11 @@
 
     invoke-direct {p1, p0}, Lcom/vtosters/lite/ui/WriteBar$l;-><init>(Lcom/vtosters/lite/ui/WriteBar;)V
 
-    invoke-static {p1}, Lcom/vk/audio/c$b;->a(Lcom/vk/audio/c;)Lcom/vk/audio/c;
+    invoke-static {p1}, Lcom/vk/audio/AudioRecordObserver$b;->a(Lcom/vk/audio/AudioRecordObserver;)Lcom/vk/audio/AudioRecordObserver;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->J0:Lcom/vk/audio/c;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->J0:Lcom/vk/audio/AudioRecordObserver;
 
     .line 42
     invoke-direct {p0, p2}, Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/util/AttributeSet;)V
@@ -512,11 +512,11 @@
     iput-object p3, p0, Lcom/vtosters/lite/ui/WriteBar;->q0:Lcom/vtosters/lite/ui/WriteBar$h0;
 
     .line 51
-    invoke-static {}, Lcom/vk/audio/a;->m()Lcom/vk/audio/a;
+    invoke-static {}, Lcom/vk/audio/AudioMessageUtils;->m()Lcom/vk/audio/AudioMessageUtils;
 
     move-result-object p3
 
-    iput-object p3, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iput-object p3, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
     .line 52
     iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->s0:Lcom/vk/audio/AudioMessageSource;
@@ -575,11 +575,11 @@
 
     invoke-direct {p1, p0}, Lcom/vtosters/lite/ui/WriteBar$l;-><init>(Lcom/vtosters/lite/ui/WriteBar;)V
 
-    invoke-static {p1}, Lcom/vk/audio/c$b;->a(Lcom/vk/audio/c;)Lcom/vk/audio/c;
+    invoke-static {p1}, Lcom/vk/audio/AudioRecordObserver$b;->a(Lcom/vk/audio/AudioRecordObserver;)Lcom/vk/audio/AudioRecordObserver;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->J0:Lcom/vk/audio/c;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->J0:Lcom/vk/audio/AudioRecordObserver;
 
     .line 63
     invoke-direct {p0, p2}, Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/util/AttributeSet;)V
@@ -619,9 +619,9 @@
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->H:Landroid/widget/ImageView;
 
-    sget-object v1, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v1, Lcom/vk/stickers/Stickers;->INSTANCE:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v1}, Lcom/vk/stickers/t;->h()I
+    invoke-virtual {v1}, Lcom/vk/stickers/Stickers;->h()I
 
     move-result v1
 
@@ -718,7 +718,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;)V
+    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -743,26 +743,26 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->V:Landroid/view/ViewGroup;
 
     const/4 v2, 0x4
 
-    invoke-static {v0, v2}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {v0, v2}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 5
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->O:Landroid/view/View;
 
-    invoke-static {v0, v2}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {v0, v2}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 6
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->L:Landroid/view/View;
 
     const/16 v2, 0x8
 
-    invoke-static {v0, v2}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {v0, v2}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 7
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->N:Landroid/view/View;
@@ -804,9 +804,9 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 14
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/widget/f;->e()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->e()V
 
     .line 15
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->b0:Lcom/vk/im/ui/views/RichEditText;
@@ -857,18 +857,18 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {v0}, Lcom/vk/audio/a;->f()Z
+    invoke-virtual {v0}, Lcom/vk/audio/AudioMessageUtils;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {v0}, Lcom/vk/audio/a;->h()V
+    invoke-virtual {v0}, Lcom/vk/audio/AudioMessageUtils;->h()V
 
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->P:Landroid/view/View;
@@ -1049,11 +1049,11 @@
     return-void
 .end method
 
-.method static synthetic M(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/audio/a;
+.method static synthetic M(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/audio/AudioMessageUtils;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
     return-object p0
 .end method
@@ -1080,7 +1080,7 @@
     .locals 8
 
     .line 183
-    invoke-static {p1}, Lb/h/g/m/d;->h(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p1}, Lb/h/g/m/FileUtils;->h(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1100,7 +1100,7 @@
 
     .line 185
     :goto_0
-    invoke-static {v0}, Lb/h/p/c;->b(Ljava/lang/String;)I
+    invoke-static {v0}, Lb/h/p/MediaUtils;->b(Ljava/lang/String;)I
 
     move-result v1
 
@@ -1129,9 +1129,9 @@
     move-result-object v5
 
     .line 190
-    new-instance v4, Lb/h/g/k/a;
+    new-instance v4, Lb/h/g/k/VKProgressDialog;
 
-    invoke-direct {v4, v5}, Lb/h/g/k/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v4, v5}, Lb/h/g/k/VKProgressDialog;-><init>(Landroid/content/Context;)V
 
     .line 191
     new-instance v1, Lcom/vtosters/lite/ui/WriteBar$s;
@@ -1142,7 +1142,7 @@
 
     move-object v7, p1
 
-    invoke-direct/range {v2 .. v7}, Lcom/vtosters/lite/ui/WriteBar$s;-><init>(Lcom/vtosters/lite/ui/WriteBar;Lb/h/g/k/a;Landroid/content/Context;ILandroid/net/Uri;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vtosters/lite/ui/WriteBar$s;-><init>(Lcom/vtosters/lite/ui/WriteBar;Lb/h/g/k/VKProgressDialog;Landroid/content/Context;ILandroid/net/Uri;)V
 
     .line 192
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
@@ -1150,7 +1150,7 @@
     move-result-object p1
 
     .line 193
-    invoke-static {v0, v1, p1}, Lcom/vtosters/lite/upload/k;->a(Ljava/util/List;Lcom/vtosters/lite/upload/k$c;Landroid/content/Context;)V
+    invoke-static {v0, v1, p1}, Lcom/vtosters/lite/upload/UploadUtils;->a(Ljava/util/List;Lcom/vtosters/lite/upload/UploadUtils$c;Landroid/content/Context;)V
 
     goto :goto_1
 
@@ -1167,7 +1167,7 @@
     return-void
 .end method
 
-.method private a(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
+.method private a(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
     .locals 2
     .param p1    # Landroid/net/Uri;
         .annotation build Landroidx/annotation/NonNull;
@@ -1177,7 +1177,7 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p3    # Lkotlin/jvm/b/a;
+    .param p3    # Lkotlin/jvm/b/Functions;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1186,25 +1186,25 @@
             "(",
             "Landroid/net/Uri;",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 80
-    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
     .line 81
-    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->b()Lc/a/s;
+    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1213,25 +1213,25 @@
     invoke-direct {v1, p0}, Lcom/vtosters/lite/ui/WriteBar$q;-><init>(Lcom/vtosters/lite/ui/WriteBar;)V
 
     .line 82
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     new-instance v1, Lcom/vtosters/lite/ui/WriteBar$p;
 
-    invoke-direct {v1, p0, p3}, Lcom/vtosters/lite/ui/WriteBar$p;-><init>(Lcom/vtosters/lite/ui/WriteBar;Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p0, p3}, Lcom/vtosters/lite/ui/WriteBar$p;-><init>(Lcom/vtosters/lite/ui/WriteBar;Lkotlin/jvm/b/Functions;)V
 
     .line 83
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p3
 
     .line 84
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p3, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p3, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p3
 
@@ -1242,16 +1242,16 @@
     const-string p1, "WriteBar"
 
     .line 85
-    invoke-static {p1}, Lcom/vk/core/util/z0;->a(Ljava/lang/String;)Lc/a/z/g;
+    invoke-static {p1}, Lcom/vk/core/util/RxUtil;->a(Ljava/lang/String;)Lio/reactivex/functions/Consumer;
 
     move-result-object p1
 
     .line 86
-    invoke-virtual {p3, v0, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p3, v0, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->x0:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->x0:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1762,7 +1762,7 @@
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
     .line 70
-    invoke-static {p0}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;)V
+    invoke-static {p0}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/view/View;)V
 
     .line 71
     new-instance v0, Lcom/vtosters/lite/ui/WriteBar$e;
@@ -1799,7 +1799,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/RichEditText;->setExtraContentListener(Lcom/vk/im/ui/views/RichEditText$b;)V
 
     .line 75
-    new-instance v0, Lcom/vtosters/lite/ui/widget/f;
+    new-instance v0, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
 
     const v1, 0x7f0a0fed
 
@@ -1811,9 +1811,9 @@
 
     iget-object v3, p0, Lcom/vtosters/lite/ui/WriteBar;->q0:Lcom/vtosters/lite/ui/WriteBar$h0;
 
-    invoke-direct {v0, p1, v1, v2, v3}, Lcom/vtosters/lite/ui/widget/f;-><init>(Landroid/content/Context;Landroid/view/View;Landroid/view/View;Lcom/vtosters/lite/ui/widget/f$e;)V
+    invoke-direct {v0, p1, v1, v2, v3}, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;-><init>(Landroid/content/Context;Landroid/view/View;Landroid/view/View;Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow$e;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/f;
+    iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
 
     .line 76
     new-instance v0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;
@@ -1826,7 +1826,7 @@
 
     invoke-direct {v3, p0}, Lcom/vtosters/lite/ui/WriteBar$i;-><init>(Lcom/vtosters/lite/ui/WriteBar;)V
 
-    invoke-direct {v0, p1, v1, v2, v3}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;-><init>(Landroid/content/Context;Landroid/widget/EditText;Landroid/view/View;Lcom/vk/stickers/b0$k;)V
+    invoke-direct {v0, p1, v1, v2, v3}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;-><init>(Landroid/content/Context;Landroid/widget/EditText;Landroid/view/View;Lcom/vk/stickers/StickersView$k;)V
 
     iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->v0:Lcom/vk/stickers/AutoSuggestStickersPopupWindow;
 
@@ -1837,15 +1837,15 @@
     invoke-direct {p0}, Lcom/vtosters/lite/ui/WriteBar;->t()V
 
     .line 79
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/a;->b()V
+    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge1;->b()V
 
     return-void
 .end method
@@ -1854,7 +1854,7 @@
     .locals 1
 
     .line 245
-    invoke-static {p1}, Ld/a/a/c/e;->a(Landroid/view/View;)V
+    invoke-static {p1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;)V
 
     if-nez p2, :cond_0
 
@@ -1911,11 +1911,11 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vtosters/lite/ui/WriteBar;Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
+.method static synthetic a(Lcom/vtosters/lite/ui/WriteBar;Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 6
-    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/ui/WriteBar;->b(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/ui/WriteBar;->b(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -1980,7 +1980,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p3}, Lb/h/g/m/d;->b(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p3}, Lb/h/g/m/FileUtils;->b(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2018,7 +2018,7 @@
     invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 202
-    invoke-static {p3}, Lb/h/g/m/d;->b(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p3}, Lb/h/g/m/FileUtils;->b(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -2138,17 +2138,17 @@
 
     .line 224
     :goto_0
-    iget-object v4, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v4, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {v4}, Lcom/vk/audio/a;->d()Z
+    invoke-virtual {v4}, Lcom/vk/audio/AudioMessageUtils;->d()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    iget-object v4, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v4, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {v4}, Lcom/vk/audio/a;->e()Z
+    invoke-virtual {v4}, Lcom/vk/audio/AudioMessageUtils;->e()Z
 
     move-result v4
 
@@ -2170,16 +2170,16 @@
     move-result v5
 
     .line 226
-    iget-object v6, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v6, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {v6, v3}, Lcom/vk/audio/a;->a(Z)V
+    invoke-virtual {v6, v3}, Lcom/vk/audio/AudioMessageUtils;->a(Z)V
 
     .line 227
-    iget-object v6, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v6, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
     xor-int/lit8 v7, v0, 0x1
 
-    invoke-virtual {v6, v7}, Lcom/vk/audio/a;->b(Z)V
+    invoke-virtual {v6, v7}, Lcom/vk/audio/AudioMessageUtils;->b(Z)V
 
     if-eqz v0, :cond_3
 
@@ -2249,7 +2249,7 @@
     aput-object v8, v5, v2
 
     .line 231
-    invoke-static {v5}, Ld/a/a/c/e;->a([Landroid/view/View;)Z
+    invoke-static {v5}, Lme/grishka/appkit/utils/V;->a([Landroid/view/View;)Z
 
     move-result v5
 
@@ -2267,10 +2267,10 @@
     const/16 p1, 0x96
 
     .line 232
-    invoke-static {v6, v1, v2, p1}, Ld/a/a/c/e;->a(Landroid/view/View;IZI)V
+    invoke-static {v6, v1, v2, p1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;IZI)V
 
     .line 233
-    invoke-static {v4, v3, v2, p1}, Ld/a/a/c/e;->a(Landroid/view/View;IZI)V
+    invoke-static {v4, v3, v2, p1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;IZI)V
 
     .line 234
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->K:Landroid/widget/ImageView;
@@ -2304,7 +2304,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/h;->b(Landroid/animation/Animator;)Landroid/animation/Animator;
+    invoke-static {p1}, Lcom/vk/core/util/AnimationUtils;->b(Landroid/animation/Animator;)Landroid/animation/Animator;
 
     invoke-virtual {p1}, Landroid/animation/Animator;->start()V
 
@@ -2330,7 +2330,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/h;->b(Landroid/animation/Animator;)Landroid/animation/Animator;
+    invoke-static {p1}, Lcom/vk/core/util/AnimationUtils;->b(Landroid/animation/Animator;)Landroid/animation/Animator;
 
     invoke-virtual {p1}, Landroid/animation/Animator;->start()V
 
@@ -2455,11 +2455,11 @@
     return p0
 .end method
 
-.method static synthetic b(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vtosters/lite/ui/widget/f;
+.method static synthetic b(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/f;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
 
     return-object p0
 .end method
@@ -2477,15 +2477,15 @@
     .locals 2
 
     .line 7
-    new-instance v0, Lb/h/c/k/a;
+    new-instance v0, Lcom/vk/api/gifts/GiftGetByStickerId;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1, p1}, Lb/h/c/k/a;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/api/gifts/GiftGetByStickerId;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -2493,7 +2493,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;)Lc/a/m;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -2502,17 +2502,17 @@
     invoke-direct {v0, p0}, Lcom/vtosters/lite/ui/WriteBar$j;-><init>(Lcom/vtosters/lite/ui/WriteBar;)V
 
     .line 8
-    invoke-static {}, Lcom/vk/core/util/z0;->c()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->c()Lio/reactivex/functions/Consumer;
 
     move-result-object v1
 
     .line 9
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method private b(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
+.method private b(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
     .locals 7
     .param p1    # Landroid/net/Uri;
         .annotation build Landroidx/annotation/NonNull;
@@ -2522,7 +2522,7 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p3    # Lkotlin/jvm/b/a;
+    .param p3    # Lkotlin/jvm/b/Functions;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -2531,8 +2531,8 @@
             "(",
             "Landroid/net/Uri;",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -2553,18 +2553,18 @@
 
     new-instance v5, Lcom/vtosters/lite/ui/WriteBar$m;
 
-    invoke-direct {v5, p0, p1, p2, p3}, Lcom/vtosters/lite/ui/WriteBar$m;-><init>(Lcom/vtosters/lite/ui/WriteBar;Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
+    invoke-direct {v5, p0, p1, p2, p3}, Lcom/vtosters/lite/ui/WriteBar$m;-><init>(Lcom/vtosters/lite/ui/WriteBar;Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
 
     new-instance v6, Lcom/vtosters/lite/ui/WriteBar$n;
 
-    invoke-direct {v6, p0, p3}, Lcom/vtosters/lite/ui/WriteBar$n;-><init>(Lcom/vtosters/lite/ui/WriteBar;Lkotlin/jvm/b/a;)V
+    invoke-direct {v6, p0, p3}, Lcom/vtosters/lite/ui/WriteBar$n;-><init>(Lcom/vtosters/lite/ui/WriteBar;Lkotlin/jvm/b/Functions;)V
 
     const v3, 0x7f12139f
 
     const v4, 0x7f12139f
 
     .line 12
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method
@@ -2578,11 +2578,11 @@
     return-void
 .end method
 
-.method static synthetic b(Lcom/vtosters/lite/ui/WriteBar;Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
+.method static synthetic b(Lcom/vtosters/lite/ui/WriteBar;Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 5
-    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -2616,9 +2616,9 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 19
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/widget/f;->c()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->c()V
 
     .line 20
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->b0:Lcom/vk/im/ui/views/RichEditText;
@@ -2637,17 +2637,17 @@
     .line 22
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->V:Landroid/view/ViewGroup;
 
-    invoke-static {p1, v1}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {p1, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 23
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->S:Landroid/view/ViewGroup;
 
-    invoke-static {p1, v0}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 24
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->W:Landroid/view/ViewGroup;
 
-    invoke-static {p1, v0}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     goto :goto_0
 
@@ -2655,17 +2655,17 @@
     :cond_0
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->V:Landroid/view/ViewGroup;
 
-    invoke-static {p1, v1, v1, v1}, Ld/a/a/c/e;->a(Landroid/view/View;IZI)V
+    invoke-static {p1, v1, v1, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;IZI)V
 
     .line 26
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->S:Landroid/view/ViewGroup;
 
-    invoke-static {p1, v0, v1, v1}, Ld/a/a/c/e;->a(Landroid/view/View;IZI)V
+    invoke-static {p1, v0, v1, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;IZI)V
 
     .line 27
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->W:Landroid/view/ViewGroup;
 
-    invoke-static {p1, v0, v1, v1}, Ld/a/a/c/e;->a(Landroid/view/View;IZI)V
+    invoke-static {p1, v0, v1, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;IZI)V
 
     :cond_1
     :goto_0
@@ -2690,7 +2690,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2, p2}, Ld/a/a/c/e;->a(Landroid/view/View;IZI)V
+    invoke-static {v0, v1, v2, p2}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;IZI)V
 
     if-eqz p1, :cond_1
 
@@ -2705,7 +2705,7 @@
     :goto_1
     const/16 v0, 0x8
 
-    invoke-static {p1, v0, v2, p2}, Ld/a/a/c/e;->a(Landroid/view/View;IZI)V
+    invoke-static {p1, v0, v2, p2}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;IZI)V
 
     return-void
 .end method
@@ -2806,34 +2806,34 @@
     .line 10
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->S:Landroid/view/ViewGroup;
 
-    invoke-static {p1, v0}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 11
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->V:Landroid/view/ViewGroup;
 
-    invoke-static {p1, v3}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {p1, v3}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 12
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->W:Landroid/view/ViewGroup;
 
-    invoke-static {p1, v3}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {p1, v3}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 13
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->L:Landroid/view/View;
 
     const/16 v3, 0x96
 
-    invoke-static {p1, v2, v1, v3}, Ld/a/a/c/e;->a(Landroid/view/View;IZI)V
+    invoke-static {p1, v2, v1, v3}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;IZI)V
 
     .line 14
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->K:Landroid/widget/ImageView;
 
-    invoke-static {p1, v0, v1, v3}, Ld/a/a/c/e;->a(Landroid/view/View;IZI)V
+    invoke-static {p1, v0, v1, v3}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;IZI)V
 
     .line 15
-    iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/f;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/widget/f;->c()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->c()V
 
     goto :goto_0
 
@@ -2841,17 +2841,17 @@
     :cond_0
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->S:Landroid/view/ViewGroup;
 
-    invoke-static {p1, v0, v0, v0}, Ld/a/a/c/e;->a(Landroid/view/View;IZI)V
+    invoke-static {p1, v0, v0, v0}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;IZI)V
 
     .line 17
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->V:Landroid/view/ViewGroup;
 
-    invoke-static {p1, v3, v0, v0}, Ld/a/a/c/e;->a(Landroid/view/View;IZI)V
+    invoke-static {p1, v3, v0, v0}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;IZI)V
 
     .line 18
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->W:Landroid/view/ViewGroup;
 
-    invoke-static {p1, v3, v0, v0}, Ld/a/a/c/e;->a(Landroid/view/View;IZI)V
+    invoke-static {p1, v3, v0, v0}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;IZI)V
 
     .line 19
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->K:Landroid/widget/ImageView;
@@ -2864,9 +2864,9 @@
     invoke-direct {p0, p1, v2}, Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/view/View;I)V
 
     .line 21
-    iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/f;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/widget/f;->a()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->a()V
 
     :goto_0
     return-void
@@ -2905,11 +2905,11 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
     iget v1, p0, Lcom/vtosters/lite/ui/WriteBar;->C:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/audio/a;->a(I)Lcom/vk/audio/AudioMsgTrackByRecord;
+    invoke-virtual {v0, v1}, Lcom/vk/audio/AudioMessageUtils;->a(I)Lcom/vk/audio/AudioMsgTrackByRecord;
 
     move-result-object v0
 
@@ -3009,11 +3009,11 @@
     return-object p0
 .end method
 
-.method static synthetic q(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/navigation/a;
+.method static synthetic q(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/navigation/ActivityLauncher;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/WriteBar;->a:Lcom/vk/navigation/a;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/WriteBar;->a:Lcom/vk/navigation/ActivityLauncher;
 
     return-object p0
 .end method
@@ -3022,18 +3022,18 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {v0}, Lcom/vk/audio/a;->f()Z
+    invoke-virtual {v0}, Lcom/vk/audio/AudioMessageUtils;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {v0}, Lcom/vk/audio/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/audio/AudioMessageUtils;->a()V
 
     const/4 v0, 0x0
 
@@ -3044,9 +3044,9 @@
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {v0}, Lcom/vk/audio/a;->b()V
+    invoke-virtual {v0}, Lcom/vk/audio/AudioMessageUtils;->b()V
 
     const/4 v0, 0x1
 
@@ -3118,24 +3118,24 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 5
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->V:Landroid/view/ViewGroup;
 
-    invoke-static {v0, v1}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 6
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->S:Landroid/view/ViewGroup;
 
     const/4 v2, 0x4
 
-    invoke-static {v0, v2}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {v0, v2}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 7
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->W:Landroid/view/ViewGroup;
 
-    invoke-static {v0, v2}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {v0, v2}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 8
     new-instance v0, Lcom/vtosters/lite/ui/WriteBar$t;
@@ -3147,9 +3147,9 @@
     invoke-virtual {p0, v0, v2, v3}, Landroid/widget/LinearLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 9
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/widget/f;->c()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->c()V
 
     .line 10
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->b0:Lcom/vk/im/ui/views/RichEditText;
@@ -3317,11 +3317,11 @@
     return p0
 .end method
 
-.method static synthetic x(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/stickers/b0$k;
+.method static synthetic x(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vk/stickers/StickersView$k;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/WriteBar;->z0:Lcom/vk/stickers/b0$k;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/WriteBar;->z0:Lcom/vk/stickers/StickersView$k;
 
     return-object p0
 .end method
@@ -3356,7 +3356,7 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->b:Lcom/vk/im/ui/r/a/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->b:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
     if-nez v0, :cond_0
 
@@ -3364,12 +3364,12 @@
 
     .line 3
     :cond_0
-    invoke-interface {v0, p0}, Lcom/vk/im/ui/r/a/a;->b(Lcom/vk/im/ui/r/a/b;)V
+    invoke-interface {v0, p0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->b(Lcom/vk/im/ui/r/a/AudioMsgPlayerListener;)V
 
     const/4 v0, 0x0
 
     .line 4
-    iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->b:Lcom/vk/im/ui/r/a/a;
+    iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->b:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
     return-void
 .end method
@@ -3498,14 +3498,14 @@
     check-cast p1, Landroid/widget/ImageView;
 
     .line 267
-    new-instance v0, Lcom/vk/core/drawable/i;
+    new-instance v0, Lcom/vk/core/drawable/RecoloredDrawable;
 
     .line 268
     invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->f(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
-    invoke-direct {v0, p2, p3}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v0, p2, p3}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     .line 269
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -4277,20 +4277,20 @@
     .locals 2
 
     .line 262
-    new-instance v0, Lcom/vk/attachpicker/l;
+    new-instance v0, Lcom/vk/attachpicker/AttachmentsEditorUtils2;
 
     iget-object v1, p0, Lcom/vtosters/lite/ui/WriteBar;->c:Lcom/vtosters/lite/ui/AttachmentsEditorView;
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/attachpicker/l;-><init>(Landroid/app/Activity;Lcom/vk/attachpicker/m;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/attachpicker/AttachmentsEditorUtils2;-><init>(Landroid/app/Activity;Lcom/vk/attachpicker/AttachmentsEditorUtils1;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->B0:Lcom/vk/attachpicker/l;
+    iput-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->B0:Lcom/vk/attachpicker/AttachmentsEditorUtils2;
 
     .line 263
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->c:Lcom/vtosters/lite/ui/AttachmentsEditorView;
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->B0:Lcom/vk/attachpicker/l;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->B0:Lcom/vk/attachpicker/AttachmentsEditorUtils2;
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->setAttachmentsClickListener(Lcom/vk/attachpicker/k;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->setAttachmentsClickListener(Lcom/vk/attachpicker/AttachmentsEditorUtils;)V
 
     return-void
 .end method
@@ -4379,7 +4379,7 @@
     invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/AttachmentsEditorView;->b(Lcom/vk/dto/common/Attachment;)V
 
     .line 94
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
     iget v1, p0, Lcom/vtosters/lite/ui/WriteBar;->C:I
 
@@ -4389,7 +4389,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/audio/a;->a(ILcom/vk/audio/AudioMsgTrackByRecord;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/audio/AudioMessageUtils;->a(ILcom/vk/audio/AudioMsgTrackByRecord;)V
 
     goto :goto_0
 
@@ -4515,7 +4515,7 @@
     .line 181
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->b0:Lcom/vk/im/ui/views/RichEditText;
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     return-void
 
@@ -4527,15 +4527,15 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/im/ui/r/a/a;)V
+.method public a(Lcom/vk/im/ui/r/a/AudioMsgPlayer;)V
     .locals 5
-    .param p1    # Lcom/vk/im/ui/r/a/a;
+    .param p1    # Lcom/vk/im/ui/r/a/AudioMsgPlayer;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 270
-    invoke-interface {p1}, Lcom/vk/im/ui/r/a/a;->u0()Lcom/vk/audio/AudioMsgTrackByRecord;
+    invoke-interface {p1}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->u0()Lcom/vk/audio/AudioMsgTrackByRecord;
 
     move-result-object p1
 
@@ -4643,7 +4643,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/stickers/f0/a;)V
+.method public a(Lcom/vk/stickers/f0/KeyboardPopup;)V
     .locals 0
 
     .line 259
@@ -4826,7 +4826,7 @@
     return-void
 .end method
 
-.method public a(ZLcom/vk/stickers/f0/a;)V
+.method public a(ZLcom/vk/stickers/f0/KeyboardPopup;)V
     .locals 0
 
     if-eqz p1, :cond_0
@@ -5004,9 +5004,9 @@
     iput-boolean v0, p0, Lcom/vtosters/lite/ui/WriteBar;->i0:Z
 
     .line 14
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {v0}, Lcom/vk/audio/a;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audio/AudioMessageUtils;->e()Z
 
     move-result v0
 
@@ -5022,9 +5022,9 @@
     invoke-direct {p0}, Lcom/vtosters/lite/ui/WriteBar;->F()V
 
     .line 16
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {v0, p1}, Lcom/vk/audio/a;->a(Landroid/app/Activity;)V
+    invoke-virtual {v0, p1}, Lcom/vk/audio/AudioMessageUtils;->a(Landroid/app/Activity;)V
 
     :cond_0
     return-void
@@ -5047,13 +5047,13 @@
     .locals 3
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
     iget-object v1, p0, Lcom/vtosters/lite/ui/WriteBar;->t0:Ljava/lang/String;
 
     iget v2, p0, Lcom/vtosters/lite/ui/WriteBar;->C:I
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/audio/a;->a(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/audio/AudioMessageUtils;->a(Ljava/lang/String;I)V
 
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->c:Lcom/vtosters/lite/ui/AttachmentsEditorView;
@@ -5080,17 +5080,17 @@
     iput-boolean v0, p0, Lcom/vtosters/lite/ui/WriteBar;->i0:Z
 
     .line 8
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {v0}, Lcom/vk/audio/a;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audio/AudioMessageUtils;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {v0}, Lcom/vk/audio/a;->f()Z
+    invoke-virtual {v0}, Lcom/vk/audio/AudioMessageUtils;->f()Z
 
     move-result v0
 
@@ -5106,11 +5106,11 @@
     invoke-direct {p0}, Lcom/vtosters/lite/ui/WriteBar;->z()V
 
     .line 11
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
     iget-object v1, p0, Lcom/vtosters/lite/ui/WriteBar;->t0:Ljava/lang/String;
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/audio/a;->a(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/audio/AudioMessageUtils;->a(Landroid/app/Activity;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -5144,13 +5144,13 @@
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
     iget-object v1, p0, Lcom/vtosters/lite/ui/WriteBar;->t0:Ljava/lang/String;
 
     iget v2, p0, Lcom/vtosters/lite/ui/WriteBar;->C:I
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/audio/a;->a(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/audio/AudioMessageUtils;->a(Ljava/lang/String;I)V
 
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->c:Lcom/vtosters/lite/ui/AttachmentsEditorView;
@@ -5221,7 +5221,7 @@
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->b0:Lcom/vk/im/ui/views/RichEditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     return-void
 .end method
@@ -5381,7 +5381,7 @@
 
     const v2, 0x7f040022
 
-    invoke-static {v1, v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->b(II)Lcom/vk/core/drawable/i;
+    invoke-static {v1, v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->b(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v1
 
@@ -5491,18 +5491,18 @@
     .locals 10
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->m()Lcom/vk/dto/newsfeed/a;
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->m()Lcom/vk/dto/newsfeed/CommentRestriction;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/a;->b()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/CommentRestriction;->b()Ljava/util/List;
 
     move-result-object v1
 
@@ -5571,7 +5571,7 @@
     .line 12
     iget-object v1, p0, Lcom/vtosters/lite/ui/WriteBar;->d0:Lcom/vk/core/view/UploadProgressView;
 
-    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/a;->a()I
+    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/CommentRestriction;->a()I
 
     move-result v4
 
@@ -5630,7 +5630,7 @@
 
     iget-object v4, p0, Lcom/vtosters/lite/ui/WriteBar;->G0:Ljava/util/TimerTask;
 
-    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/a;->a()I
+    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/CommentRestriction;->a()I
 
     move-result v0
 
@@ -5665,11 +5665,11 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onAttachedToWindow()V
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
-    iget-object v1, p0, Lcom/vtosters/lite/ui/WriteBar;->J0:Lcom/vk/audio/c;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/WriteBar;->J0:Lcom/vk/audio/AudioRecordObserver;
 
-    invoke-virtual {v0, v1}, Lcom/vk/audio/a;->a(Lcom/vk/audio/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/audio/AudioMessageUtils;->a(Lcom/vk/audio/AudioRecordObserver;)V
 
     .line 3
     new-instance v0, Landroid/content/IntentFilter;
@@ -5701,9 +5701,9 @@
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v1, Lcom/vk/stickers/Stickers;->INSTANCE:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v1}, Lcom/vk/stickers/t;->h()I
+    invoke-virtual {v1}, Lcom/vk/stickers/Stickers;->h()I
 
     move-result v1
 
@@ -5747,11 +5747,11 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onDetachedFromWindow()V
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->r0:Lcom/vk/audio/AudioMessageUtils;
 
-    iget-object v1, p0, Lcom/vtosters/lite/ui/WriteBar;->J0:Lcom/vk/audio/c;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/WriteBar;->J0:Lcom/vk/audio/AudioRecordObserver;
 
-    invoke-virtual {v0, v1}, Lcom/vk/audio/a;->b(Lcom/vk/audio/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/audio/AudioMessageUtils;->b(Lcom/vk/audio/AudioRecordObserver;)V
 
     .line 3
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
@@ -5768,9 +5768,9 @@
     invoke-virtual {v0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->c()V
 
     .line 5
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/f;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->u0:Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/widget/f;->a()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->a()V
 
     .line 6
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
@@ -5794,11 +5794,11 @@
     invoke-virtual {v0, v1}, Lcom/vk/core/vc/KeyboardController;->b(Lcom/vk/core/vc/KeyboardController$a;)Z
 
     .line 9
-    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->x0:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->x0:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void
@@ -5883,9 +5883,9 @@
     .line 7
     iget-object v1, p0, Lcom/vtosters/lite/ui/WriteBar;->v0:Lcom/vk/stickers/AutoSuggestStickersPopupWindow;
 
-    sget-object v2, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v2, Lcom/vk/stickers/Stickers;->INSTANCE:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v2, v0}, Lcom/vk/stickers/t;->a(Ljava/lang/String;)Lcom/vk/dto/stickers/StickersDictionaryItem;
+    invoke-virtual {v2, v0}, Lcom/vk/stickers/Stickers;->a(Ljava/lang/String;)Lcom/vk/dto/stickers/StickersDictionaryItem;
 
     move-result-object v0
 
@@ -5914,7 +5914,7 @@
     return-void
 .end method
 
-.method public setAudioMsgPlayer(Lcom/vk/im/ui/r/a/a;)V
+.method public setAudioMsgPlayer(Lcom/vk/im/ui/r/a/AudioMsgPlayer;)V
     .locals 0
 
     if-nez p1, :cond_0
@@ -5926,12 +5926,12 @@
     invoke-direct {p0}, Lcom/vtosters/lite/ui/WriteBar;->y()V
 
     .line 2
-    iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->b:Lcom/vk/im/ui/r/a/a;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->b:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
     .line 3
-    iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->b:Lcom/vk/im/ui/r/a/a;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->b:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
-    invoke-interface {p1, p0}, Lcom/vk/im/ui/r/a/a;->a(Lcom/vk/im/ui/r/a/b;)V
+    invoke-interface {p1, p0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->a(Lcom/vk/im/ui/r/a/AudioMsgPlayerListener;)V
 
     return-void
 .end method
@@ -5981,11 +5981,11 @@
     return-void
 .end method
 
-.method public setAutoSuggestPopupListener(Lcom/vk/stickers/b0$k;)V
+.method public setAutoSuggestPopupListener(Lcom/vk/stickers/StickersView$k;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->z0:Lcom/vk/stickers/b0$k;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->z0:Lcom/vk/stickers/StickersView$k;
 
     return-void
 .end method
@@ -6141,11 +6141,11 @@
     return-void
 .end method
 
-.method public setFragment(Lcom/vk/navigation/a;)V
+.method public setFragment(Lcom/vk/navigation/ActivityLauncher;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->a:Lcom/vk/navigation/a;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->a:Lcom/vk/navigation/ActivityLauncher;
 
     return-void
 .end method

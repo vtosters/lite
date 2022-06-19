@@ -3,7 +3,7 @@
 .source "VKTabLayout.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -190,7 +190,7 @@
     if-nez v0, :cond_0
 
     .line 4
-    sget v0, Lb/h/z/b;->header_tab_inactive_text:I
+    sget v0, Lb/h/z/R5;->header_tab_inactive_text:I
 
     iput v0, p0, Lcom/vk/core/view/VKTabLayout;->t0:I
 
@@ -201,7 +201,7 @@
     if-nez v0, :cond_1
 
     .line 6
-    sget v0, Lb/h/z/b;->header_tab_active_text:I
+    sget v0, Lb/h/z/R5;->header_tab_active_text:I
 
     iput v0, p0, Lcom/vk/core/view/VKTabLayout;->u0:I
 
@@ -253,7 +253,7 @@
     if-nez p1, :cond_3
 
     .line 14
-    sget p1, Lb/h/z/b;->header_tab_active_indicator:I
+    sget p1, Lb/h/z/R5;->header_tab_active_indicator:I
 
     iput p1, p0, Lcom/vk/core/view/VKTabLayout;->w0:I
 

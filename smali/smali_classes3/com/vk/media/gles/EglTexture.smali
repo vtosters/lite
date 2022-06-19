@@ -50,7 +50,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/media/gles/b;->a:Ljava/lang/String;
+    sget-object v0, Lcom/vk/media/gles/EglUtils;->a:Ljava/lang/String;
 
     sput-object v0, Lcom/vk/media/gles/EglTexture;->o:Ljava/lang/String;
 
@@ -93,7 +93,7 @@
     const-string v0, "glGenTextures"
 
     .line 35
-    invoke-static {v0}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 36
     aget v0, v1, v2
@@ -118,7 +118,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 39
     iget v1, p0, Lcom/vk/media/gles/EglTexture;->j:I
@@ -181,7 +181,7 @@
     const-string v1, "glTexParameter"
 
     .line 45
-    invoke-static {v1}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     return v0
 .end method
@@ -334,7 +334,7 @@
     const-string v0, "precision mediump float;\nvarying vec2 vTextureCoord;\nuniform sampler2D y_texture;\nuniform sampler2D uv_texture;\nvoid main() {\n\tfloat r, g, b, y, u, v;\n\ty = texture2D(y_texture, vTextureCoord).r;\n\tu = texture2D(uv_texture, vTextureCoord).a - 0.5;\n\tv = texture2D(uv_texture, vTextureCoord).r - 0.5;\n\tr = y + 1.403 * v;\n\tg = y - 0.344 * u - 0.714 * v;\n\tb = y + 1.773 * u;\n\tgl_FragColor = vec4(r, g, b, 1.0);\n}\n"
 
     .line 4
-    invoke-static {v3, v0}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v0}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -371,7 +371,7 @@
     const-string v0, "#extension GL_OES_EGL_image_external : require\n#define KERNEL_SIZE 9\nprecision highp float;\nvarying vec2 vTextureCoord;\nuniform samplerExternalOES sTexture;\nuniform float uKernel[KERNEL_SIZE];\nuniform vec2 uTexOffset[KERNEL_SIZE];\nuniform float uColorAdjust;\nvoid main() {\n    int i = 0;\n    vec4 sum = vec4(0.0);\n    if (vTextureCoord.x < vTextureCoord.y - 0.005) {\n        for (i = 0; i < KERNEL_SIZE; i++) {\n            vec4 texc = texture2D(sTexture, vTextureCoord + uTexOffset[i]);\n            sum += texc * uKernel[i];\n        }\n    sum += uColorAdjust;\n    } else if (vTextureCoord.x > vTextureCoord.y + 0.005) {\n        sum = texture2D(sTexture, vTextureCoord);\n    } else {\n        sum.r = 1.0;\n    }\n    gl_FragColor = sum;\n}\n"
 
     .line 7
-    invoke-static {v3, v0}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v0}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -386,7 +386,7 @@
     const-string v0, "#extension GL_OES_EGL_image_external : require\nprecision mediump float;\nvarying vec2 vTextureCoord;\nuniform samplerExternalOES sTexture;\nvoid main() {\n    vec4 tc = texture2D(sTexture, vTextureCoord);\n    float color = tc.r * 0.3 + tc.g * 0.59 + tc.b * 0.11;\n    gl_FragColor = vec4(color, color, color, 1.0);\n}\n"
 
     .line 9
-    invoke-static {v3, v0}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v0}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -401,7 +401,7 @@
     const-string v0, "#extension GL_OES_EGL_image_external : require\nprecision mediump float;\nvarying vec2 vTextureCoord;\nuniform samplerExternalOES sTexture;\nvoid main() {\n    gl_FragColor = texture2D(sTexture, vTextureCoord);\n}\n"
 
     .line 11
-    invoke-static {v3, v0}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v0}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -416,7 +416,7 @@
     const-string v0, "precision mediump float;\nvarying vec2 vTextureCoord;\nuniform sampler2D sTexture;\nvoid main() {\n    gl_FragColor = texture2D(sTexture, vTextureCoord);\n}\n"
 
     .line 13
-    invoke-static {v3, v0}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v0}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -467,7 +467,7 @@
     .line 17
     iget p1, p0, Lcom/vk/media/gles/EglTexture;->h:I
 
-    invoke-static {p1, v0}, Lcom/vk/media/gles/b;->a(ILjava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vk/media/gles/EglUtils;->a(ILjava/lang/String;)V
 
     .line 18
     iget p1, p0, Lcom/vk/media/gles/EglTexture;->b:I
@@ -483,7 +483,7 @@
     .line 19
     iget p1, p0, Lcom/vk/media/gles/EglTexture;->i:I
 
-    invoke-static {p1, v0}, Lcom/vk/media/gles/b;->a(ILjava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vk/media/gles/EglUtils;->a(ILjava/lang/String;)V
 
     .line 20
     iget p1, p0, Lcom/vk/media/gles/EglTexture;->b:I
@@ -551,7 +551,7 @@
     .line 28
     iget p1, p0, Lcom/vk/media/gles/EglTexture;->f:I
 
-    invoke-static {p1, v0}, Lcom/vk/media/gles/b;->a(ILjava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vk/media/gles/EglUtils;->a(ILjava/lang/String;)V
 
     .line 29
     iget p1, p0, Lcom/vk/media/gles/EglTexture;->b:I
@@ -567,7 +567,7 @@
     .line 30
     iget p1, p0, Lcom/vk/media/gles/EglTexture;->g:I
 
-    invoke-static {p1, v0}, Lcom/vk/media/gles/b;->a(ILjava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vk/media/gles/EglUtils;->a(ILjava/lang/String;)V
 
     const/16 p1, 0x9
 
@@ -675,7 +675,7 @@
     const-string v1, "draw start"
 
     .line 51
-    invoke-static {v1}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 52
     iget v1, v0, Lcom/vk/media/gles/EglTexture;->b:I
@@ -685,7 +685,7 @@
     const-string v1, "glUseProgram"
 
     .line 53
-    invoke-static {v1}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     const v1, 0x84c0
 
@@ -713,7 +713,7 @@
     const-string v1, "glUniformMatrix4fv"
 
     .line 57
-    invoke-static {v1}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 58
     iget v4, v0, Lcom/vk/media/gles/EglTexture;->d:I
@@ -723,7 +723,7 @@
     invoke-static {v4, v2, v3, v5, v3}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
     .line 59
-    invoke-static {v1}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 60
     iget v1, v0, Lcom/vk/media/gles/EglTexture;->h:I
@@ -733,7 +733,7 @@
     const-string v1, "glEnableVertexAttribArray"
 
     .line 61
-    invoke-static {v1}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 62
     iget v4, v0, Lcom/vk/media/gles/EglTexture;->h:I
@@ -753,7 +753,7 @@
     const-string v2, "glVertexAttribPointer"
 
     .line 63
-    invoke-static {v2}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 64
     iget v4, v0, Lcom/vk/media/gles/EglTexture;->i:I
@@ -761,7 +761,7 @@
     invoke-static {v4}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
     .line 65
-    invoke-static {v1}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 66
     iget v5, v0, Lcom/vk/media/gles/EglTexture;->i:I
@@ -779,7 +779,7 @@
     invoke-static/range {v5 .. v10}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
     .line 67
-    invoke-static {v2}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 68
     iget v1, v0, Lcom/vk/media/gles/EglTexture;->e:I
@@ -820,7 +820,7 @@
     const-string v1, "glDrawArrays"
 
     .line 73
-    invoke-static {v1}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 74
     iget v1, v0, Lcom/vk/media/gles/EglTexture;->h:I
@@ -853,7 +853,7 @@
     const-string v2, "draw start"
 
     .line 78
-    invoke-static {v2}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 79
     iget v2, v0, Lcom/vk/media/gles/EglTexture;->b:I
@@ -863,7 +863,7 @@
     const-string v2, "glUseProgram"
 
     .line 80
-    invoke-static {v2}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     const v2, 0x84c0
 
@@ -889,7 +889,7 @@
     const-string v2, "glUniformMatrix4fv"
 
     .line 84
-    invoke-static {v2}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 85
     iget v5, v0, Lcom/vk/media/gles/EglTexture;->d:I
@@ -899,7 +899,7 @@
     invoke-static {v5, v3, v4, v6, v4}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
     .line 86
-    invoke-static {v2}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 87
     iget v2, v0, Lcom/vk/media/gles/EglTexture;->h:I
@@ -909,7 +909,7 @@
     const-string v2, "glEnableVertexAttribArray"
 
     .line 88
-    invoke-static {v2}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 89
     iget v5, v0, Lcom/vk/media/gles/EglTexture;->h:I
@@ -929,7 +929,7 @@
     const-string v5, "glVertexAttribPointer"
 
     .line 90
-    invoke-static {v5}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v5}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 91
     iget v6, v0, Lcom/vk/media/gles/EglTexture;->i:I
@@ -937,7 +937,7 @@
     invoke-static {v6}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
     .line 92
-    invoke-static {v2}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 93
     iget v7, v0, Lcom/vk/media/gles/EglTexture;->i:I
@@ -955,7 +955,7 @@
     invoke-static/range {v7 .. v12}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
     .line 94
-    invoke-static {v5}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v5}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 95
     iget v2, v0, Lcom/vk/media/gles/EglTexture;->e:I
@@ -1030,7 +1030,7 @@
     const-string v1, "glTexImage2D"
 
     .line 104
-    invoke-static {v1}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     :cond_1
     const/4 v1, 0x5
@@ -1045,7 +1045,7 @@
     const-string v1, "glDrawArrays"
 
     .line 106
-    invoke-static {v1}, Lcom/vk/media/gles/b;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/vk/media/gles/EglUtils;->a(Ljava/lang/String;)V
 
     .line 107
     iget v1, v0, Lcom/vk/media/gles/EglTexture;->h:I

@@ -45,7 +45,7 @@
     new-instance v1, Lcom/vk/avatarpicker/AvatarPickerActivity$ImageSource;
 
     .line 1
-    sget v2, Lcom/vk/avatarpicker/d;->img_picker_dialog_item_camera:I
+    sget v2, Lcom/vk/avatarpicker/R2;->img_picker_dialog_item_camera:I
 
     const/4 v3, 0x0
 
@@ -60,7 +60,7 @@
     new-instance v1, Lcom/vk/avatarpicker/AvatarPickerActivity$ImageSource;
 
     .line 2
-    sget v2, Lcom/vk/avatarpicker/d;->img_picker_dialog_item_gallery:I
+    sget v2, Lcom/vk/avatarpicker/R2;->img_picker_dialog_item_gallery:I
 
     const/4 v3, 0x1
 

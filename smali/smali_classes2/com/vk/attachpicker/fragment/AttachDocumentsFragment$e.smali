@@ -3,7 +3,7 @@
 .source "AttachDocumentsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vtosters/lite/api/execute/DocsGetTypes$c;",
         ">;"
     }
@@ -75,7 +75,7 @@
 
     const-string v1, "result"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/documents/list/DocumentsUtils;->a(Lcom/vtosters/lite/api/execute/DocsGetTypes$c;)Ljava/util/List;
 
@@ -123,7 +123,7 @@
     check-cast v3, Lkotlin/Pair;
 
     .line 7
-    new-instance v12, Lcom/vk/attachpicker/fragment/q;
+    new-instance v12, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment3;
 
     invoke-virtual {v3}, Lkotlin/Pair;->d()Ljava/lang/Object;
 
@@ -151,7 +151,7 @@
 
     iget-object v4, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$e;->a:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;
 
-    invoke-static {v4}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->d(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)Lcom/vk/attachpicker/base/f;
+    invoke-static {v4}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->d(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)Lcom/vk/attachpicker/base/StreamParcelableSelection;
 
     move-result-object v8
 
@@ -163,7 +163,7 @@
 
     move-object v10, v11
 
-    invoke-direct/range {v4 .. v11}, Lcom/vk/attachpicker/fragment/q;-><init>(IILcom/vk/api/base/VkPaginationList;Lcom/vk/attachpicker/base/f;Lcom/vk/core/util/k0;Lcom/vk/attachpicker/base/d;Lcom/vk/core/fragments/b;)V
+    invoke-direct/range {v4 .. v11}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment3;-><init>(IILcom/vk/api/base/VkPaginationList;Lcom/vk/attachpicker/base/StreamParcelableSelection;Lcom/vk/core/util/ItemClickListener;Lcom/vk/attachpicker/base/AttachPickerInterfaces2;Lcom/vk/core/fragments/BaseFragment1;)V
 
     invoke-virtual {v0, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -212,13 +212,13 @@
     .line 11
     iget-object p1, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$e;->a:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;
 
-    invoke-static {p1}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->e(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)Lcom/vk/attachpicker/fragment/p;
+    invoke-static {p1}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->e(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;)Lcom/vk/attachpicker/fragment/AttachDocumentsFragment1;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/attachpicker/fragment/p;->a(Ljava/util/List;Ljava/util/List;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment1;->a(Ljava/util/List;Ljava/util/List;)V
 
     .line 12
     :cond_1

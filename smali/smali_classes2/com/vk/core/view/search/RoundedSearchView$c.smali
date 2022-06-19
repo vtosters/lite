@@ -3,7 +3,7 @@
 .source "RoundedSearchView.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/c;
+.implements Lcom/vk/navigation/ActivityResulter;
 
 
 # annotations
@@ -38,7 +38,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/i;->a(IILandroid/content/Intent;)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/VoiceUtils;->a(IILandroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -49,7 +49,7 @@
 
     const-string p3, "voiceQuery"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2, p1}, Lcom/vk/core/view/search/RoundedSearchView;->setQuery(Ljava/lang/String;)V
 

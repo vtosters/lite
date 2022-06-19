@@ -38,7 +38,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/common/SearchParams$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/common/SearchParams$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/common/SearchParams;->g:Lcom/vk/dto/common/SearchParams$a;
 
@@ -167,7 +167,7 @@
 
     const-string v1, "it.name"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Lcom/vk/dto/common/SearchParams$b;->b(Ljava/lang/String;)V
 
@@ -182,7 +182,7 @@
 
     const-string v1, "it.title"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Lcom/vk/dto/common/SearchParams$b;->b(Ljava/lang/String;)V
 

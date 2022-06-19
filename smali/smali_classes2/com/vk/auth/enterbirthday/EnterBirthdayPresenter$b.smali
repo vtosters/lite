@@ -3,12 +3,12 @@
 .source "EnterBirthdayPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;->a(Lc/a/z/g;)V
+    value = Lcom/vk/auth/enterbirthday/EnterBirthdayPresenter;->a(Lio/reactivex/functions/Consumer;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "Ljava/lang/Throwable;",
         "Lkotlin/Pair<",
         "+",

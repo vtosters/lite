@@ -35,11 +35,11 @@
     invoke-direct {p0}, Lcom/vk/core/ui/VkBottomSheetBehavior$b;-><init>()V
 
     .line 2
-    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v0, "AppContextHolder.context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f080103
 
@@ -68,11 +68,11 @@
 
     iget-object v0, v0, Lcom/vk/mentions/MentionSelectViewControllerImpl$bottomSheetCallback$2;->this$0:Lcom/vk/mentions/MentionSelectViewControllerImpl;
 
-    invoke-static {v0}, Lcom/vk/mentions/MentionSelectViewControllerImpl;->a(Lcom/vk/mentions/MentionSelectViewControllerImpl;)Lcom/vk/mentions/i;
+    invoke-static {v0}, Lcom/vk/mentions/MentionSelectViewControllerImpl;->a(Lcom/vk/mentions/MentionSelectViewControllerImpl;)Lcom/vk/mentions/MentionSelectInterfaces;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/mentions/i;->p()V
+    invoke-interface {v0}, Lcom/vk/mentions/MentionSelectInterfaces;->p()V
 
     goto :goto_0
 
@@ -84,11 +84,11 @@
 
     iget-object v0, v0, Lcom/vk/mentions/MentionSelectViewControllerImpl$bottomSheetCallback$2;->this$0:Lcom/vk/mentions/MentionSelectViewControllerImpl;
 
-    invoke-static {v0}, Lcom/vk/mentions/MentionSelectViewControllerImpl;->a(Lcom/vk/mentions/MentionSelectViewControllerImpl;)Lcom/vk/mentions/i;
+    invoke-static {v0}, Lcom/vk/mentions/MentionSelectViewControllerImpl;->a(Lcom/vk/mentions/MentionSelectViewControllerImpl;)Lcom/vk/mentions/MentionSelectInterfaces;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/mentions/i;->a()V
+    invoke-interface {v0}, Lcom/vk/mentions/MentionSelectInterfaces;->a()V
 
     :cond_1
     :goto_0

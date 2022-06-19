@@ -15,10 +15,10 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/im/engine/i/c;
+.field private final a:Lcom/vk/im/engine/i/ImEngineCmd;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/i/c<",
+            "Lcom/vk/im/engine/i/ImEngineCmd<",
             "*>;"
         }
     .end annotation
@@ -28,12 +28,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/i/c;Lcom/vk/im/engine/ImEnvironmentRunner$a;)V
+.method public constructor <init>(Lcom/vk/im/engine/i/ImEngineCmd;Lcom/vk/im/engine/ImEnvironmentRunner$a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/i/c<",
+            "Lcom/vk/im/engine/i/ImEngineCmd<",
             "*>;",
             "Lcom/vk/im/engine/ImEnvironmentRunner$a;",
             ")V"
@@ -43,7 +43,7 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/ImEnvironmentRunner$b;->a:Lcom/vk/im/engine/i/c;
+    iput-object p1, p0, Lcom/vk/im/engine/ImEnvironmentRunner$b;->a:Lcom/vk/im/engine/i/ImEngineCmd;
 
     iput-object p2, p0, Lcom/vk/im/engine/ImEnvironmentRunner$b;->b:Lcom/vk/im/engine/ImEnvironmentRunner$a;
 
@@ -52,18 +52,18 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/im/engine/i/c;
+.method public final a()Lcom/vk/im/engine/i/ImEngineCmd;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/im/engine/i/c<",
+            "Lcom/vk/im/engine/i/ImEngineCmd<",
             "*>;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner$b;->a:Lcom/vk/im/engine/i/c;
+    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner$b;->a:Lcom/vk/im/engine/i/ImEngineCmd;
 
     return-object v0
 .end method

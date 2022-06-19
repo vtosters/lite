@@ -3,12 +3,12 @@
 .source "PodcastPageBottomSheetBuilder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder;->a(Landroid/content/Context;Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e;
+    value = Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder;->a(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,22 +19,22 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $dialog:Lcom/vk/core/dialogs/bottomsheet/e;
+.field final synthetic $dialog:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/dialogs/bottomsheet/e;)V
+.method constructor <init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$show$1;->$dialog:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object p1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$show$1;->$dialog:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     const/4 p1, 0x0
 
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$show$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -60,9 +60,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$show$1;->$dialog:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$show$1;->$dialog:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e;->dismissAllowingStateLoss()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismissAllowingStateLoss()V
 
     return-void
 .end method

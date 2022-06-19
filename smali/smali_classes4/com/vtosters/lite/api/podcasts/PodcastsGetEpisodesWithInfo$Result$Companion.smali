@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -74,7 +74,7 @@
 
     sget-object v4, Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result$Companion$parse$2$1;->a:Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result$Companion$parse$2$1;
 
-    invoke-direct {v3, v2, v4}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v2, v4}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_1
 
@@ -95,7 +95,7 @@
 
     sget-object v2, Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result$Companion$parse$3$1;->a:Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result$Companion$parse$3$1;
 
-    invoke-direct {v1, p1, v2}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p1, v2}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)V
 
     .line 4
     :cond_2

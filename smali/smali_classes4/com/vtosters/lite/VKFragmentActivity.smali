@@ -3,7 +3,7 @@
 .source "VKFragmentActivity.java"
 
 # interfaces
-.implements Lcom/vk/core/fragments/e;
+.implements Lcom/vk/core/fragments/FragmentManagerImplProvider;
 
 
 # instance fields

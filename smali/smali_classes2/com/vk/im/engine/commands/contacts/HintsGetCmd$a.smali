@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->a(Lcom/vk/im/engine/d;Ljava/util/Map;I)Ljava/util/List;
+    value = Lcom/vk/im/engine/commands/contacts/HintsGetCmd;->a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/Map;I)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

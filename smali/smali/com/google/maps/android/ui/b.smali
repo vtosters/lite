@@ -47,7 +47,7 @@
 
     move-result-object p1
 
-    sget v0, Lb/d/b/a/d;->amu_text_bubble:I
+    sget v0, Lb/d/b/a/R3;->amu_text_bubble:I
 
     const/4 v1, 0x0
 
@@ -75,7 +75,7 @@
     .line 6
     iget-object p1, p0, Lcom/google/maps/android/ui/b;->c:Lcom/google/maps/android/ui/RotationLayout;
 
-    sget v0, Lb/d/b/a/c;->amu_text:I
+    sget v0, Lb/d/b/a/R;->amu_text:I
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -170,13 +170,13 @@
     if-eq p0, v0, :cond_0
 
     .line 1
-    sget p0, Lb/d/b/a/e;->amu_Bubble_TextAppearance_Dark:I
+    sget p0, Lb/d/b/a/R2;->amu_Bubble_TextAppearance_Dark:I
 
     return p0
 
     .line 2
     :cond_0
-    sget p0, Lb/d/b/a/e;->amu_Bubble_TextAppearance_Light:I
+    sget p0, Lb/d/b/a/R2;->amu_Bubble_TextAppearance_Light:I
 
     return p0
 .end method
@@ -435,7 +435,7 @@
     .line 24
     iget-object p1, p0, Lcom/google/maps/android/ui/b;->c:Lcom/google/maps/android/ui/RotationLayout;
 
-    sget v0, Lb/d/b/a/c;->amu_text:I
+    sget v0, Lb/d/b/a/R;->amu_text:I
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 

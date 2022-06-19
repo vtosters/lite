@@ -8,7 +8,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/catalog2/core/ui/view/c;",
+            "Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;",
             ">;"
         }
     .end annotation
@@ -46,11 +46,11 @@
     .line 4
     iget-object v1, p0, Lcom/vk/catalog2/core/ui/view/Grid;->a:Ljava/util/ArrayList;
 
-    new-instance v2, Lcom/vk/catalog2/core/ui/view/c;
+    new-instance v2, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;
 
     mul-int v3, v0, p2
 
-    invoke-direct {v2, v3, p2, p3}, Lcom/vk/catalog2/core/ui/view/c;-><init>(III)V
+    invoke-direct {v2, v3, p2, p3}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;-><init>(III)V
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -64,7 +64,7 @@
 
 
 # virtual methods
-.method public final a(I)Lcom/vk/catalog2/core/ui/view/c;
+.method public final a(I)Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;
     .locals 1
 
     .line 1
@@ -76,9 +76,9 @@
 
     const-string v0, "columns[position]"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/vk/catalog2/core/ui/view/c;
+    check-cast p1, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;
 
     return-object p1
 .end method
@@ -110,10 +110,10 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/catalog2/core/ui/view/c;
+    check-cast v2, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;
 
     .line 5
-    invoke-virtual {v2, v0}, Lcom/vk/catalog2/core/ui/view/c;->a(I)V
+    invoke-virtual {v2, v0}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;->a(I)V
 
     goto :goto_0
 
@@ -127,7 +127,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/catalog2/core/ui/view/c;",
+            "Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;",
             ">;"
         }
     .end annotation
@@ -144,19 +144,19 @@
     .line 1
     iget-object v0, p0, Lcom/vk/catalog2/core/ui/view/Grid;->a:Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 2
     sget-object v1, Lcom/vk/catalog2/core/ui/view/Grid$height$1;->c:Lcom/vk/catalog2/core/ui/view/Grid$height$1;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 3
-    invoke-static {v0}, Lkotlin/sequences/m;->j(Lkotlin/sequences/j;)Ljava/lang/Comparable;
+    invoke-static {v0}, Lkotlin/sequences/m;->j(Lkotlin/sequences/Sequence;)Ljava/lang/Comparable;
 
     move-result-object v0
 

@@ -23,7 +23,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/exceptions/stacktrace/StopBgSyncAnrStackTraceInfoException$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/exceptions/stacktrace/StopBgSyncAnrStackTraceInfoException$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -35,7 +35,7 @@
 
     const/4 v1, 0x3
 
-    invoke-direct {p0, v0, v0, v1, v0}, Lcom/vk/im/engine/exceptions/stacktrace/StopBgSyncAnrStackTraceInfoException;-><init>(Ljava/lang/String;[Ljava/lang/StackTraceElement;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v0, v1, v0}, Lcom/vk/im/engine/exceptions/stacktrace/StopBgSyncAnrStackTraceInfoException;-><init>(Ljava/lang/String;[Ljava/lang/StackTraceElement;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;[Ljava/lang/StackTraceElement;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/String;[Ljava/lang/StackTraceElement;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p4, p3, 0x1

@@ -46,16 +46,16 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/attachpicker/adapter/e;
+    check-cast v0, Lcom/vk/attachpicker/adapter/PhotoSmallAdapter;
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/attachpicker/adapter/e;->l()Z
+    invoke-virtual {v0}, Lcom/vk/attachpicker/adapter/PhotoSmallAdapter;->l()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/adapter/e;->m()Z
+    invoke-virtual {v0}, Lcom/vk/attachpicker/adapter/PhotoSmallAdapter;->m()Z
 
     move-result v0
 

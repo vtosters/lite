@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout$c;
-.super Lcom/vk/core/widget/i$c;
+.super Lcom/vk/core/widget/ViewDragHelper$c;
 .source "SlidingUpPanelLayout.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout$c;->a:Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;
 
-    invoke-direct {p0}, Lcom/vk/core/widget/i$c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/widget/ViewDragHelper$c;-><init>()V
 
     return-void
 .end method
@@ -265,7 +265,7 @@
     :goto_0
     iget-object p3, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout$c;->a:Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;
 
-    invoke-static {p3}, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->g(Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;)Lcom/vk/core/widget/i;
+    invoke-static {p3}, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->g(Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;)Lcom/vk/core/widget/ViewDragHelper;
 
     move-result-object p3
 
@@ -273,7 +273,7 @@
 
     move-result p1
 
-    invoke-virtual {p3, p1, p2}, Lcom/vk/core/widget/i;->c(II)Z
+    invoke-virtual {p3, p1, p2}, Lcom/vk/core/widget/ViewDragHelper;->c(II)Z
 
     .line 19
     iget-object p1, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout$c;->a:Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;
@@ -415,11 +415,11 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout$c;->a:Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;
 
-    invoke-static {p1}, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->g(Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;)Lcom/vk/core/widget/i;
+    invoke-static {p1}, Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;->g(Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout;)Lcom/vk/core/widget/ViewDragHelper;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/widget/i;->f()I
+    invoke-virtual {p1}, Lcom/vk/core/widget/ViewDragHelper;->f()I
 
     move-result p1
 

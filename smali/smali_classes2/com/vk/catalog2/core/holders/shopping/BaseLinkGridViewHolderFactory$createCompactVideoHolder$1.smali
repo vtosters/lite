@@ -3,12 +3,12 @@
 .source "BaseLinkGridViewHolderFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory;->b(Landroid/view/ViewGroup;)Lcom/vk/catalog2/core/holders/shopping/q;
+    value = Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory;->b(Landroid/view/ViewGroup;)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory7;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lcom/vk/catalog2/core/holders/shopping/i;",
+        "Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory5;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/View;)Lcom/vk/catalog2/core/holders/shopping/i;
+.method public final a(Landroid/view/View;)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory5;
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vk/catalog2/core/holders/shopping/i;
+    new-instance v0, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory5;
 
-    invoke-direct {v0, p1}, Lcom/vk/catalog2/core/holders/shopping/i;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory5;-><init>(Landroid/view/View;)V
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
     .line 1
     check-cast p1, Landroid/view/View;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory$createCompactVideoHolder$1;->a(Landroid/view/View;)Lcom/vk/catalog2/core/holders/shopping/i;
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory$createCompactVideoHolder$1;->a(Landroid/view/View;)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory5;
 
     move-result-object p1
 

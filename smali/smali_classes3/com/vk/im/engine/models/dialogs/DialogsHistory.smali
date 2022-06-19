@@ -1,5 +1,5 @@
 .class public Lcom/vk/im/engine/models/dialogs/DialogsHistory;
-.super Lcom/vk/im/engine/models/d;
+.super Lcom/vk/im/engine/models/History;
 .source "DialogsHistory.java"
 
 # interfaces
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/models/d<",
+        "Lcom/vk/im/engine/models/History<",
         "Lcom/vk/im/engine/models/dialogs/Dialog;",
         "Lcom/vk/im/engine/models/dialogs/DialogsHistory;",
         ">;",
@@ -53,7 +53,7 @@
     .locals 1
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/models/d;-><init>(I)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/models/History;-><init>(I)V
 
     .line 3
     new-instance v0, Landroid/util/SparseArray;
@@ -69,12 +69,12 @@
     .locals 2
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/models/d;-><init>(Lcom/vk/im/engine/models/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/models/History;-><init>(Lcom/vk/im/engine/models/History;)V
 
     .line 5
     new-instance v0, Landroid/util/SparseArray;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/d;->size()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/History;->size()I
 
     move-result v1
 
@@ -130,7 +130,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
+    iget-object v0, p0, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -163,13 +163,13 @@
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     .line 6
-    iget-object v2, p0, Lcom/vk/im/engine/models/d;->expired:Lcom/vk/im/engine/utils/collection/c;
+    iget-object v2, p0, Lcom/vk/im/engine/models/History;->expired:Lcom/vk/im/engine/utils/collection/IntArraySet;
 
     invoke-virtual {v1}, Lcom/vk/im/engine/models/dialogs/Dialog;->getId()I
 
     move-result v1
 
-    invoke-virtual {v2, v1}, Lcom/vk/im/engine/utils/collection/c;->remove(I)Z
+    invoke-virtual {v2, v1}, Lcom/vk/im/engine/utils/collection/IntArraySet;->remove(I)Z
 
     goto :goto_0
 
@@ -179,27 +179,27 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/models/a;)V
+.method public a(Lcom/vk/im/engine/models/EntityIntMap;)V
     .locals 6
-    .param p1    # Lcom/vk/im/engine/models/a;
+    .param p1    # Lcom/vk/im/engine/models/EntityIntMap;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;)V"
         }
     .end annotation
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/a;->d()Landroid/util/SparseArray;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/EntityIntMap;->d()Landroid/util/SparseArray;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/x;->h(Landroid/util/SparseArray;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/core/extensions/SparseArrayExt1;->h(Landroid/util/SparseArray;)Ljava/util/List;
 
     move-result-object v0
 
@@ -224,7 +224,7 @@
 
     .line 4
     :goto_0
-    iget-object v3, p0, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
+    iget-object v3, p0, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -233,7 +233,7 @@
     if-ge v2, v3, :cond_0
 
     .line 5
-    iget-object v3, p0, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
+    iget-object v3, p0, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -254,32 +254,32 @@
     if-ne v4, v5, :cond_1
 
     .line 8
-    iget-object v5, p0, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
+    iget-object v5, p0, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
 
     invoke-interface {v5, v2, v1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     .line 9
-    iget-object v5, p0, Lcom/vk/im/engine/models/d;->expired:Lcom/vk/im/engine/utils/collection/c;
+    iget-object v5, p0, Lcom/vk/im/engine/models/History;->expired:Lcom/vk/im/engine/utils/collection/IntArraySet;
 
-    invoke-virtual {v5, v4}, Lcom/vk/im/engine/utils/collection/c;->remove(I)Z
+    invoke-virtual {v5, v4}, Lcom/vk/im/engine/utils/collection/IntArraySet;->remove(I)Z
 
     .line 10
-    iget-object v5, p1, Lcom/vk/im/engine/models/a;->b:Lcom/vk/im/engine/utils/collection/h;
+    iget-object v5, p1, Lcom/vk/im/engine/models/EntityIntMap;->b:Lcom/vk/im/engine/utils/collection/IntSet;
 
     invoke-virtual {v3}, Lcom/vk/im/engine/models/dialogs/Dialog;->getId()I
 
     move-result v3
 
-    invoke-interface {v5, v3}, Lcom/vk/im/engine/utils/collection/d;->a(I)Z
+    invoke-interface {v5, v3}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
     .line 11
-    iget-object v3, p0, Lcom/vk/im/engine/models/d;->expired:Lcom/vk/im/engine/utils/collection/c;
+    iget-object v3, p0, Lcom/vk/im/engine/models/History;->expired:Lcom/vk/im/engine/utils/collection/IntArraySet;
 
-    invoke-virtual {v3, v4}, Lcom/vk/im/engine/utils/collection/c;->add(I)V
+    invoke-virtual {v3, v4}, Lcom/vk/im/engine/utils/collection/IntArraySet;->add(I)V
 
     :cond_1
     add-int/lit8 v2, v2, 0x1
@@ -328,14 +328,14 @@
     .end param
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/im/engine/models/d;->a(Lcom/vk/im/engine/models/d;)V
+    invoke-super {p0, p1}, Lcom/vk/im/engine/models/History;->a(Lcom/vk/im/engine/models/History;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/engine/models/dialogs/DialogsHistory;->latestMsg:Landroid/util/SparseArray;
 
     iget-object p1, p1, Lcom/vk/im/engine/models/dialogs/DialogsHistory;->latestMsg:Landroid/util/SparseArray;
 
-    invoke-static {v0, p1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    invoke-static {v0, p1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     return-void
 .end method
@@ -344,7 +344,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/engine/models/d;->clear()V
+    invoke-super {p0}, Lcom/vk/im/engine/models/History;->clear()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/engine/models/dialogs/DialogsHistory;->latestMsg:Landroid/util/SparseArray;
@@ -367,20 +367,20 @@
     return-object v0
 .end method
 
-.method public e()Lcom/vk/im/engine/utils/collection/d;
+.method public e()Lcom/vk/im/engine/utils/collection/IntCollection;
     .locals 3
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/utils/collection/IntArrayList;
 
-    invoke-virtual {p0}, Lcom/vk/im/engine/models/d;->size()I
+    invoke-virtual {p0}, Lcom/vk/im/engine/models/History;->size()I
 
     move-result v1
 
     invoke-direct {v0, v1}, Lcom/vk/im/engine/utils/collection/IntArrayList;-><init>(I)V
 
     .line 2
-    iget-object v1, p0, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
+    iget-object v1, p0, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -451,7 +451,7 @@
 
     if-eqz v2, :cond_2
 
-    invoke-super {p0, p1}, Lcom/vk/im/engine/models/d;->equals(Ljava/lang/Object;)Z
+    invoke-super {p0, p1}, Lcom/vk/im/engine/models/History;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -474,11 +474,11 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/vk/im/engine/models/d;->hasHistoryAfterCached:Z
+    iget-boolean v0, p0, Lcom/vk/im/engine/models/History;->hasHistoryAfterCached:Z
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/vk/im/engine/models/d;->hasHistoryAfter:Z
+    iget-boolean v0, p0, Lcom/vk/im/engine/models/History;->hasHistoryAfter:Z
 
     if-eqz v0, :cond_0
 
@@ -501,11 +501,11 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/vk/im/engine/models/d;->hasHistoryBeforeCached:Z
+    iget-boolean v0, p0, Lcom/vk/im/engine/models/History;->hasHistoryBeforeCached:Z
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/vk/im/engine/models/d;->hasHistoryBefore:Z
+    iget-boolean v0, p0, Lcom/vk/im/engine/models/History;->hasHistoryBefore:Z
 
     if-eqz v0, :cond_0
 
@@ -528,7 +528,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/engine/models/d;->hashCode()I
+    invoke-super {p0}, Lcom/vk/im/engine/models/History;->hashCode()I
 
     move-result v0
 
@@ -557,7 +557,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
+    iget-object v1, p0, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
 
     .line 2
     invoke-static {v1}, Lcom/vk/im/engine/models/dialogs/DialogsHistory;->a(Ljava/util/List;)Ljava/lang/String;
@@ -570,7 +570,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/vk/im/engine/models/d;->hasHistoryAfter:Z
+    iget-boolean v1, p0, Lcom/vk/im/engine/models/History;->hasHistoryAfter:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -578,7 +578,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/vk/im/engine/models/d;->hasHistoryAfterCached:Z
+    iget-boolean v1, p0, Lcom/vk/im/engine/models/History;->hasHistoryAfterCached:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -586,7 +586,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/vk/im/engine/models/d;->hasHistoryBefore:Z
+    iget-boolean v1, p0, Lcom/vk/im/engine/models/History;->hasHistoryBefore:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -594,7 +594,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/vk/im/engine/models/d;->hasHistoryBeforeCached:Z
+    iget-boolean v1, p0, Lcom/vk/im/engine/models/History;->hasHistoryBeforeCached:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -610,7 +610,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/models/d;->expired:Lcom/vk/im/engine/utils/collection/c;
+    iget-object v1, p0, Lcom/vk/im/engine/models/History;->expired:Lcom/vk/im/engine/utils/collection/IntArraySet;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

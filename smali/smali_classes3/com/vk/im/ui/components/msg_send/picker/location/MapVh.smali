@@ -1,20 +1,20 @@
 .class public final Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;
-.super Lcom/vk/im/ui/views/adapter_delegate/d;
+.super Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;
 .source "MapVh.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/msg_send/picker/b;
-.implements Lcom/vk/im/ui/components/msg_send/picker/location/h;
+.implements Lcom/vk/im/ui/components/msg_send/picker/OnExpandListener;
+.implements Lcom/vk/im/ui/components/msg_send/picker/location/MapLifecycle;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/views/adapter_delegate/d<",
-        "Lcom/vk/im/ui/components/msg_send/picker/location/g;",
+        "Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder<",
+        "Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;",
         ">;",
-        "Lcom/vk/im/ui/components/msg_send/picker/b;",
-        "Lcom/vk/im/ui/components/msg_send/picker/location/h;"
+        "Lcom/vk/im/ui/components/msg_send/picker/OnExpandListener;",
+        "Lcom/vk/im/ui/components/msg_send/picker/location/MapLifecycle;"
     }
 .end annotation
 
@@ -26,13 +26,13 @@
 
 .field private final D:Ljava/lang/Runnable;
 
-.field private E:Lkotlin/jvm/b/b;
+.field private E:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/google/android/gms/maps/c;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -40,7 +40,7 @@
 
 .field private final F:Landroid/view/GestureDetector;
 
-.field private G:Lcom/vk/im/ui/components/msg_send/picker/location/f;
+.field private G:Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;
 
 .field private final a:I
 
@@ -48,7 +48,7 @@
 
 .field private final c:I
 
-.field private d:Lcom/vk/im/ui/components/msg_send/picker/location/g;
+.field private d:Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;
 
 .field private final e:Lcom/google/android/gms/maps/MapView;
 
@@ -60,13 +60,13 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_send/picker/location/f;)V
+.method public constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;)V
     .locals 2
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/d;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->G:Lcom/vk/im/ui/components/msg_send/picker/location/f;
+    iput-object p2, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->G:Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;
 
     .line 2
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -75,9 +75,9 @@
 
     const-string v0, "view.context"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v1, Lcom/vk/im/ui/e;->vkim_picker_map_min_height:I
+    sget v1, Lcom/vk/im/ui/R9;->vkim_picker_map_min_height:I
 
     invoke-static {p2, v1}, Lcom/vk/core/util/ContextExtKt;->b(Landroid/content/Context;I)I
 
@@ -90,9 +90,9 @@
 
     move-result-object p2
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v0, Lcom/vk/im/ui/e;->vkim_picker_content_height:I
+    sget v0, Lcom/vk/im/ui/R9;->vkim_picker_content_height:I
 
     invoke-static {p2, v0}, Lcom/vk/core/util/ContextExtKt;->b(Landroid/content/Context;I)I
 
@@ -115,7 +115,7 @@
     iput p2, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->c:I
 
     .line 6
-    sget p2, Lcom/vk/im/ui/h;->vkim_map_view:I
+    sget p2, Lcom/vk/im/ui/R11;->vkim_map_view:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -123,7 +123,7 @@
 
     const-string v0, "view.findViewById(R.id.vkim_map_view)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/google/android/gms/maps/MapView;
 
@@ -217,12 +217,12 @@
     if-eqz p1, :cond_0
 
     .line 20
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -230,7 +230,7 @@
 
     .line 21
     :cond_1
-    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->E:Lkotlin/jvm/b/b;
+    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->E:Lkotlin/jvm/b/Functions2;
 
     :goto_0
     return-void
@@ -254,11 +254,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;Lkotlin/jvm/b/b;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     .line 6
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->E:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->E:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
@@ -393,11 +393,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;)Lcom/vk/im/ui/components/msg_send/picker/location/g;
+.method public static final synthetic e(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;)Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->d:Lcom/vk/im/ui/components/msg_send/picker/location/g;
+    iget-object p0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->d:Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;
 
     if-eqz p0, :cond_0
 
@@ -406,18 +406,18 @@
     :cond_0
     const-string p0, "model"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic f(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;)Lkotlin/jvm/b/b;
+.method public static final synthetic f(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->E:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->E:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -433,11 +433,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/ui/components/msg_send/picker/location/g;)V
+.method public a(Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;)V
     .locals 8
 
     .line 8
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->d:Lcom/vk/im/ui/components/msg_send/picker/location/g;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->d:Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;
 
     .line 9
     iget-boolean v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->h:Z
@@ -445,14 +445,14 @@
     if-nez v0, :cond_0
 
     .line 10
-    sget-object p1, Lb/h/k/c;->b:Lb/h/k/c;
+    sget-object p1, Lb/h/k/IdleTaskHandler1;->INSTANCE:Lb/h/k/IdleTaskHandler1;
 
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->D:Ljava/lang/Runnable;
 
-    invoke-virtual {p1, v0}, Lb/h/k/c;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v0}, Lb/h/k/IdleTaskHandler1;->a(Ljava/lang/Runnable;)V
 
     .line 11
-    sget-object v1, Lb/h/k/c;->b:Lb/h/k/c;
+    sget-object v1, Lb/h/k/IdleTaskHandler1;->INSTANCE:Lb/h/k/IdleTaskHandler1;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->D:Ljava/lang/Runnable;
 
@@ -460,13 +460,13 @@
 
     const-wide/16 v5, 0x1f4
 
-    invoke-virtual/range {v1 .. v6}, Lb/h/k/c;->a(Ljava/lang/Runnable;JJ)V
+    invoke-virtual/range {v1 .. v6}, Lb/h/k/IdleTaskHandler1;->a(Ljava/lang/Runnable;JJ)V
 
     return-void
 
     .line 12
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/g;->a()Lcom/vk/dto/geo/GeoLocation;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;->a()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object p1
 
@@ -494,11 +494,11 @@
 
     .line 15
     :cond_1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->G:Lcom/vk/im/ui/components/msg_send/picker/location/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->G:Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/f;->a()Z
+    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;->a()Z
 
     move-result v0
 
@@ -528,13 +528,13 @@
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/c;)V
+.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)V
     .locals 0
 
     .line 7
-    check-cast p1, Lcom/vk/im/ui/components/msg_send/picker/location/g;
+    check-cast p1, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->a(Lcom/vk/im/ui/components/msg_send/picker/location/g;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->a(Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;)V
 
     return-void
 .end method
@@ -615,7 +615,7 @@
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -626,13 +626,13 @@
     .line 9
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh$onOffset$1;
 
     invoke-direct {v0, p0, v2}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh$onOffset$1;-><init>(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;I)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
@@ -640,7 +640,7 @@
     :cond_1
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, v2}, Lcom/vk/extensions/ViewExtKt;->h(Landroid/view/View;I)V
 
@@ -657,14 +657,14 @@
     if-nez v0, :cond_0
 
     .line 2
-    sget-object v0, Lb/h/k/c;->b:Lb/h/k/c;
+    sget-object v0, Lb/h/k/IdleTaskHandler1;->INSTANCE:Lb/h/k/IdleTaskHandler1;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->D:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lb/h/k/c;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lb/h/k/IdleTaskHandler1;->a(Ljava/lang/Runnable;)V
 
     .line 3
-    sget-object v2, Lb/h/k/c;->b:Lb/h/k/c;
+    sget-object v2, Lb/h/k/IdleTaskHandler1;->INSTANCE:Lb/h/k/IdleTaskHandler1;
 
     iget-object v3, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->D:Ljava/lang/Runnable;
 
@@ -672,7 +672,7 @@
 
     const-wide/16 v6, 0x1f4
 
-    invoke-virtual/range {v2 .. v7}, Lb/h/k/c;->a(Ljava/lang/Runnable;JJ)V
+    invoke-virtual/range {v2 .. v7}, Lb/h/k/IdleTaskHandler1;->a(Ljava/lang/Runnable;JJ)V
 
     :cond_0
     return-void
@@ -720,21 +720,21 @@
 
     .line 8
     :cond_0
-    sget-object v0, Lb/h/k/c;->b:Lb/h/k/c;
+    sget-object v0, Lb/h/k/IdleTaskHandler1;->INSTANCE:Lb/h/k/IdleTaskHandler1;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->D:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lb/h/k/c;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lb/h/k/IdleTaskHandler1;->a(Ljava/lang/Runnable;)V
 
     :goto_0
     return-void
 .end method
 
-.method public final e0()Lcom/vk/im/ui/components/msg_send/picker/location/f;
+.method public final e0()Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->G:Lcom/vk/im/ui/components/msg_send/picker/location/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->G:Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;
 
     return-object v0
 .end method

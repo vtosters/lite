@@ -1,5 +1,5 @@
 .class public final Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$b;
-.super Lcom/vk/core/dialogs/adapter/a;
+.super Lcom/vk/core/dialogs/adapter/ModalAdapter1;
 .source "VideoSettingsBottomSheet.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/dialogs/adapter/a<",
+        "Lcom/vk/core/dialogs/adapter/ModalAdapter1<",
         "Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$a;",
         ">;"
     }
@@ -27,23 +27,23 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/dialogs/adapter/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/dialogs/adapter/ModalAdapter1;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;)Lcom/vk/core/dialogs/adapter/b;
+.method public a(Landroid/view/View;)Lcom/vk/core/dialogs/adapter/ViewReferrer;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/core/dialogs/adapter/b;
+    new-instance v0, Lcom/vk/core/dialogs/adapter/ViewReferrer;
 
-    invoke-direct {v0}, Lcom/vk/core/dialogs/adapter/b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/dialogs/adapter/ViewReferrer;-><init>()V
 
     .line 3
-    sget v1, Lcom/vk/libvideo/g;->action_content:I
+    sget v1, Lcom/vk/libvideo/R;->action_content:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -51,12 +51,12 @@
 
     const-string v2, "itemView.findViewById(R.id.action_content)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/b;->a(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(Landroid/view/View;)V
 
     .line 4
-    sget v1, Lcom/vk/libvideo/g;->action_title:I
+    sget v1, Lcom/vk/libvideo/R;->action_title:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -64,12 +64,12 @@
 
     const-string v2, "itemView.findViewById(R.id.action_title)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/b;->a(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(Landroid/view/View;)V
 
     .line 5
-    sget v1, Lcom/vk/libvideo/g;->action_subtitle:I
+    sget v1, Lcom/vk/libvideo/R;->action_subtitle:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -77,12 +77,12 @@
 
     const-string v2, "itemView.findViewById(R.id.action_subtitle)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/b;->a(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(Landroid/view/View;)V
 
     .line 6
-    sget v1, Lcom/vk/libvideo/g;->action_icon:I
+    sget v1, Lcom/vk/libvideo/R;->action_icon:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -93,7 +93,7 @@
     check-cast v1, Landroid/widget/ImageView;
 
     .line 7
-    sget v2, Lcom/vk/libvideo/b;->action_sheet_action_foreground:I
+    sget v2, Lcom/vk/libvideo/R4;->action_sheet_action_foreground:I
 
     invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
@@ -104,20 +104,20 @@
     const-string v1, "itemView.findViewById<Im\u2026                        }"
 
     .line 8
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/b;->a(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(Landroid/view/View;)V
 
     return-object v0
 .end method
 
-.method public a(Lcom/vk/core/dialogs/adapter/b;Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$a;I)V
+.method public a(Lcom/vk/core/dialogs/adapter/ViewReferrer;Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$a;I)V
     .locals 3
 
     .line 9
-    sget p3, Lcom/vk/libvideo/g;->action_content:I
+    sget p3, Lcom/vk/libvideo/R;->action_content:I
 
-    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/b;->a(I)Landroid/view/View;
+    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(I)Landroid/view/View;
 
     move-result-object p3
 
@@ -128,9 +128,9 @@
     invoke-virtual {p3, v0}, Landroid/view/View;->setEnabled(Z)V
 
     .line 10
-    sget p3, Lcom/vk/libvideo/g;->action_title:I
+    sget p3, Lcom/vk/libvideo/R;->action_title:I
 
-    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/b;->a(I)Landroid/view/View;
+    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(I)Landroid/view/View;
 
     move-result-object p3
 
@@ -169,9 +169,9 @@
     invoke-virtual {p3, v0}, Landroid/widget/TextView;->setAlpha(F)V
 
     .line 13
-    sget p3, Lcom/vk/libvideo/g;->action_subtitle:I
+    sget p3, Lcom/vk/libvideo/R;->action_subtitle:I
 
-    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/b;->a(I)Landroid/view/View;
+    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(I)Landroid/view/View;
 
     move-result-object p3
 
@@ -202,9 +202,9 @@
     invoke-virtual {p3, v0}, Landroid/widget/TextView;->setAlpha(F)V
 
     .line 16
-    sget p3, Lcom/vk/libvideo/g;->action_icon:I
+    sget p3, Lcom/vk/libvideo/R;->action_icon:I
 
-    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/b;->a(I)Landroid/view/View;
+    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -239,13 +239,13 @@
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/core/dialogs/adapter/b;Ljava/lang/Object;I)V
+.method public bridge synthetic a(Lcom/vk/core/dialogs/adapter/ViewReferrer;Ljava/lang/Object;I)V
     .locals 0
 
     .line 1
     check-cast p2, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$a;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$b;->a(Lcom/vk/core/dialogs/adapter/b;Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$a;I)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$b;->a(Lcom/vk/core/dialogs/adapter/ViewReferrer;Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$a;I)V
 
     return-void
 .end method

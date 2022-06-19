@@ -73,10 +73,10 @@
     iput-object v0, p0, Lcom/facebook/login/LoginManager;->d:Ljava/lang/String;
 
     .line 5
-    invoke-static {}, Lcom/facebook/internal/s;->c()V
+    invoke-static {}, Lcom/facebook/internal/Validate;->c()V
 
     .line 6
-    invoke-static {}, Lcom/facebook/e;->e()Landroid/content/Context;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->e()Landroid/content/Context;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
     return-void
 .end method
 
-.method static a(Lcom/facebook/login/LoginClient$Request;Lcom/facebook/AccessToken;)Lcom/facebook/login/d;
+.method static a(Lcom/facebook/login/LoginClient$Request;Lcom/facebook/AccessToken;)Lcom/facebook/login/LoginResult;
     .locals 3
 
     .line 60
@@ -131,9 +131,9 @@
     invoke-interface {p0, v1}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
 
     .line 66
-    new-instance v0, Lcom/facebook/login/d;
+    new-instance v0, Lcom/facebook/login/LoginResult;
 
-    invoke-direct {v0, p1, v1, p0}, Lcom/facebook/login/d;-><init>(Lcom/facebook/AccessToken;Ljava/util/Set;Ljava/util/Set;)V
+    invoke-direct {v0, p1, v1, p0}, Lcom/facebook/login/LoginResult;-><init>(Lcom/facebook/AccessToken;Ljava/util/Set;Ljava/util/Set;)V
 
     return-object v0
 .end method
@@ -142,7 +142,7 @@
     .locals 0
 
     .line 44
-    invoke-static {p1}, Lcom/facebook/login/LoginManager$e;->a(Landroid/content/Context;)Lcom/facebook/login/c;
+    invoke-static {p1}, Lcom/facebook/login/LoginManager$e;->a(Landroid/content/Context;)Lcom/facebook/login/LoginLogger;
 
     move-result-object p1
 
@@ -151,7 +151,7 @@
     if-eqz p2, :cond_0
 
     .line 45
-    invoke-virtual {p1, p2}, Lcom/facebook/login/c;->a(Lcom/facebook/login/LoginClient$Request;)V
+    invoke-virtual {p1, p2}, Lcom/facebook/login/LoginLogger;->a(Lcom/facebook/login/LoginClient$Request;)V
 
     :cond_0
     return-void
@@ -176,7 +176,7 @@
     .end annotation
 
     .line 46
-    invoke-static {p1}, Lcom/facebook/login/LoginManager$e;->a(Landroid/content/Context;)Lcom/facebook/login/c;
+    invoke-static {p1}, Lcom/facebook/login/LoginManager$e;->a(Landroid/content/Context;)Lcom/facebook/login/LoginLogger;
 
     move-result-object v0
 
@@ -192,7 +192,7 @@
     const-string p2, "Unexpected call to logCompleteLogin with null pendingAuthorizationRequest."
 
     .line 47
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/login/c;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2}, Lcom/facebook/login/LoginLogger;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -229,13 +229,13 @@
     move-object v5, p4
 
     .line 51
-    invoke-virtual/range {v0 .. v5}, Lcom/facebook/login/c;->a(Ljava/lang/String;Ljava/util/Map;Lcom/facebook/login/LoginClient$Result$Code;Ljava/util/Map;Ljava/lang/Exception;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/facebook/login/LoginLogger;->a(Ljava/lang/String;Ljava/util/Map;Lcom/facebook/login/LoginClient$Result$Code;Ljava/util/Map;Ljava/lang/Exception;)V
 
     :goto_1
     return-void
 .end method
 
-.method private a(Lcom/facebook/AccessToken;Lcom/facebook/login/LoginClient$Request;Lcom/facebook/FacebookException;ZLcom/facebook/d;)V
+.method private a(Lcom/facebook/AccessToken;Lcom/facebook/login/LoginClient$Request;Lcom/facebook/FacebookException;ZLcom/facebook/FacebookCallback;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -244,8 +244,8 @@
             "Lcom/facebook/login/LoginClient$Request;",
             "Lcom/facebook/FacebookException;",
             "Z",
-            "Lcom/facebook/d<",
-            "Lcom/facebook/login/d;",
+            "Lcom/facebook/FacebookCallback<",
+            "Lcom/facebook/login/LoginResult;",
             ">;)V"
         }
     .end annotation
@@ -264,7 +264,7 @@
     if-eqz p1, :cond_1
 
     .line 69
-    invoke-static {p2, p1}, Lcom/facebook/login/LoginManager;->a(Lcom/facebook/login/LoginClient$Request;Lcom/facebook/AccessToken;)Lcom/facebook/login/d;
+    invoke-static {p2, p1}, Lcom/facebook/login/LoginManager;->a(Lcom/facebook/login/LoginClient$Request;Lcom/facebook/AccessToken;)Lcom/facebook/login/LoginResult;
 
     move-result-object p2
 
@@ -279,7 +279,7 @@
     if-eqz p2, :cond_2
 
     .line 70
-    invoke-virtual {p2}, Lcom/facebook/login/d;->b()Ljava/util/Set;
+    invoke-virtual {p2}, Lcom/facebook/login/LoginResult;->b()Ljava/util/Set;
 
     move-result-object p4
 
@@ -295,7 +295,7 @@
     if-eqz p3, :cond_3
 
     .line 71
-    invoke-interface {p5, p3}, Lcom/facebook/d;->a(Lcom/facebook/FacebookException;)V
+    invoke-interface {p5, p3}, Lcom/facebook/FacebookCallback;->a(Lcom/facebook/FacebookException;)V
 
     goto :goto_2
 
@@ -308,21 +308,21 @@
     invoke-direct {p0, p1}, Lcom/facebook/login/LoginManager;->a(Z)V
 
     .line 73
-    invoke-interface {p5, p2}, Lcom/facebook/d;->a(Ljava/lang/Object;)V
+    invoke-interface {p5, p2}, Lcom/facebook/FacebookCallback;->a(Ljava/lang/Object;)V
 
     goto :goto_2
 
     .line 74
     :cond_4
     :goto_1
-    invoke-interface {p5}, Lcom/facebook/d;->onCancel()V
+    invoke-interface {p5}, Lcom/facebook/FacebookCallback;->onCancel()V
 
     :cond_5
     :goto_2
     return-void
 .end method
 
-.method private a(Lcom/facebook/login/e;Lcom/facebook/login/LoginClient$Request;)V
+.method private a(Lcom/facebook/login/StartActivityDelegate;Lcom/facebook/login/LoginClient$Request;)V
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -331,7 +331,7 @@
     .end annotation
 
     .line 35
-    invoke-interface {p1}, Lcom/facebook/login/e;->a()Landroid/app/Activity;
+    invoke-interface {p1}, Lcom/facebook/login/StartActivityDelegate;->a()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -353,7 +353,7 @@
     invoke-static {v0, v1}, Lcom/facebook/internal/CallbackManagerImpl;->b(ILcom/facebook/internal/CallbackManagerImpl$a;)V
 
     .line 39
-    invoke-direct {p0, p1, p2}, Lcom/facebook/login/LoginManager;->b(Lcom/facebook/login/e;Lcom/facebook/login/LoginClient$Request;)Z
+    invoke-direct {p0, p1, p2}, Lcom/facebook/login/LoginManager;->b(Lcom/facebook/login/StartActivityDelegate;Lcom/facebook/login/LoginClient$Request;)Z
 
     move-result v0
 
@@ -372,7 +372,7 @@
     const/4 v6, 0x0
 
     .line 41
-    invoke-interface {p1}, Lcom/facebook/login/e;->a()Landroid/app/Activity;
+    invoke-interface {p1}, Lcom/facebook/login/StartActivityDelegate;->a()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -418,7 +418,7 @@
     .locals 2
 
     .line 52
-    invoke-static {}, Lcom/facebook/e;->e()Landroid/content/Context;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->e()Landroid/content/Context;
 
     move-result-object v0
 
@@ -534,12 +534,12 @@
     return-object v0
 .end method
 
-.method private b(Lcom/facebook/internal/i;Ljava/util/Collection;)V
+.method private b(Lcom/facebook/internal/FragmentWrapper;Ljava/util/Collection;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/internal/i;",
+            "Lcom/facebook/internal/FragmentWrapper;",
             "Ljava/util/Collection<",
             "Ljava/lang/String;",
             ">;)V"
@@ -550,7 +550,7 @@
     invoke-direct {p0, p2}, Lcom/facebook/login/LoginManager;->b(Ljava/util/Collection;)V
 
     .line 8
-    invoke-virtual {p0, p1, p2}, Lcom/facebook/login/LoginManager;->a(Lcom/facebook/internal/i;Ljava/util/Collection;)V
+    invoke-virtual {p0, p1, p2}, Lcom/facebook/login/LoginManager;->a(Lcom/facebook/internal/FragmentWrapper;Ljava/util/Collection;)V
 
     return-void
 .end method
@@ -625,7 +625,7 @@
     return-void
 .end method
 
-.method private b(Lcom/facebook/login/e;Lcom/facebook/login/LoginClient$Request;)Z
+.method private b(Lcom/facebook/login/StartActivityDelegate;Lcom/facebook/login/LoginClient$Request;)Z
     .locals 2
 
     .line 15
@@ -652,7 +652,7 @@
     move-result v0
 
     .line 18
-    invoke-interface {p1, p2, v0}, Lcom/facebook/login/e;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-interface {p1, p2, v0}, Lcom/facebook/login/StartActivityDelegate;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -699,7 +699,7 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 55
-    invoke-static {}, Lcom/facebook/e;->e()Landroid/content/Context;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->e()Landroid/content/Context;
 
     move-result-object v1
 
@@ -775,7 +775,7 @@
     iget-object v4, p0, Lcom/facebook/login/LoginManager;->d:Ljava/lang/String;
 
     .line 32
-    invoke-static {}, Lcom/facebook/e;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->f()Ljava/lang/String;
 
     move-result-object v5
 
@@ -843,7 +843,7 @@
 
     invoke-direct {v0, p1}, Lcom/facebook/login/LoginManager$c;-><init>(Landroid/app/Activity;)V
 
-    invoke-direct {p0, v0, p2}, Lcom/facebook/login/LoginManager;->a(Lcom/facebook/login/e;Lcom/facebook/login/LoginClient$Request;)V
+    invoke-direct {p0, v0, p2}, Lcom/facebook/login/LoginManager;->a(Lcom/facebook/login/StartActivityDelegate;Lcom/facebook/login/LoginClient$Request;)V
 
     return-void
 .end method
@@ -861,23 +861,23 @@
     .end annotation
 
     .line 22
-    new-instance v0, Lcom/facebook/internal/i;
+    new-instance v0, Lcom/facebook/internal/FragmentWrapper;
 
-    invoke-direct {v0, p1}, Lcom/facebook/internal/i;-><init>(Landroidx/fragment/app/Fragment;)V
+    invoke-direct {v0, p1}, Lcom/facebook/internal/FragmentWrapper;-><init>(Landroidx/fragment/app/Fragment;)V
 
-    invoke-direct {p0, v0, p2}, Lcom/facebook/login/LoginManager;->b(Lcom/facebook/internal/i;Ljava/util/Collection;)V
+    invoke-direct {p0, v0, p2}, Lcom/facebook/login/LoginManager;->b(Lcom/facebook/internal/FragmentWrapper;Ljava/util/Collection;)V
 
     return-void
 .end method
 
-.method public a(Lcom/facebook/c;Lcom/facebook/d;)V
+.method public a(Lcom/facebook/CallbackManager;Lcom/facebook/FacebookCallback;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/c;",
-            "Lcom/facebook/d<",
-            "Lcom/facebook/login/d;",
+            "Lcom/facebook/CallbackManager;",
+            "Lcom/facebook/FacebookCallback<",
+            "Lcom/facebook/login/LoginResult;",
             ">;)V"
         }
     .end annotation
@@ -899,7 +899,7 @@
 
     new-instance v1, Lcom/facebook/login/LoginManager$a;
 
-    invoke-direct {v1, p0, p2}, Lcom/facebook/login/LoginManager$a;-><init>(Lcom/facebook/login/LoginManager;Lcom/facebook/d;)V
+    invoke-direct {v1, p0, p2}, Lcom/facebook/login/LoginManager$a;-><init>(Lcom/facebook/login/LoginManager;Lcom/facebook/FacebookCallback;)V
 
     .line 4
     invoke-virtual {p1, v0, v1}, Lcom/facebook/internal/CallbackManagerImpl;->a(ILcom/facebook/internal/CallbackManagerImpl$a;)V
@@ -917,12 +917,12 @@
     throw p1
 .end method
 
-.method public a(Lcom/facebook/internal/i;Ljava/util/Collection;)V
+.method public a(Lcom/facebook/internal/FragmentWrapper;Ljava/util/Collection;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/internal/i;",
+            "Lcom/facebook/internal/FragmentWrapper;",
             "Ljava/util/Collection<",
             "Ljava/lang/String;",
             ">;)V"
@@ -937,9 +937,9 @@
     .line 24
     new-instance v0, Lcom/facebook/login/LoginManager$d;
 
-    invoke-direct {v0, p1}, Lcom/facebook/login/LoginManager$d;-><init>(Lcom/facebook/internal/i;)V
+    invoke-direct {v0, p1}, Lcom/facebook/login/LoginManager$d;-><init>(Lcom/facebook/internal/FragmentWrapper;)V
 
-    invoke-direct {p0, v0, p2}, Lcom/facebook/login/LoginManager;->a(Lcom/facebook/login/e;Lcom/facebook/login/LoginClient$Request;)V
+    invoke-direct {p0, v0, p2}, Lcom/facebook/login/LoginManager;->a(Lcom/facebook/login/StartActivityDelegate;Lcom/facebook/login/LoginClient$Request;)V
 
     return-void
 .end method
@@ -950,21 +950,21 @@
     const/4 v0, 0x0
 
     .line 6
-    invoke-virtual {p0, p1, p2, v0}, Lcom/facebook/login/LoginManager;->a(ILandroid/content/Intent;Lcom/facebook/d;)Z
+    invoke-virtual {p0, p1, p2, v0}, Lcom/facebook/login/LoginManager;->a(ILandroid/content/Intent;Lcom/facebook/FacebookCallback;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method a(ILandroid/content/Intent;Lcom/facebook/d;)Z
+.method a(ILandroid/content/Intent;Lcom/facebook/FacebookCallback;)Z
     .locals 18
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
             "Landroid/content/Intent;",
-            "Lcom/facebook/d<",
-            "Lcom/facebook/login/d;",
+            "Lcom/facebook/FacebookCallback<",
+            "Lcom/facebook/login/LoginResult;",
             ">;)Z"
         }
     .end annotation
@@ -1143,7 +1143,7 @@
     move-object/from16 v10, p3
 
     .line 18
-    invoke-direct/range {v5 .. v10}, Lcom/facebook/login/LoginManager;->a(Lcom/facebook/AccessToken;Lcom/facebook/login/LoginClient$Request;Lcom/facebook/FacebookException;ZLcom/facebook/d;)V
+    invoke-direct/range {v5 .. v10}, Lcom/facebook/login/LoginManager;->a(Lcom/facebook/AccessToken;Lcom/facebook/login/LoginClient$Request;Lcom/facebook/FacebookException;ZLcom/facebook/FacebookCallback;)V
 
     return v3
 .end method

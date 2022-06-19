@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;
-.super Lcom/vk/im/ui/q/c;
+.super Lcom/vk/im/ui/q/Component;
 .source "InstallVKMeComponent.kt"
 
 
@@ -16,12 +16,12 @@
 
 .field private final C:Landroid/app/Activity;
 
-.field private final D:Lcom/vk/im/ui/p/a;
+.field private final D:Lcom/vk/im/ui/p/ImBridge1;
 
-.field private final g:Lcom/vk/core/util/u0;
+.field private final g:Lcom/vk/core/util/Provider2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/util/u0<",
+            "Lcom/vk/core/util/Provider2<",
             "Lcom/vk/im/ui/components/install_vk_me/InstallVKMeVc;",
             ">;"
         }
@@ -32,26 +32,26 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Lcom/vk/im/ui/p/a;)V
+.method public constructor <init>(Landroid/app/Activity;Lcom/vk/im/ui/p/ImBridge1;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/q/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/q/Component;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->C:Landroid/app/Activity;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->D:Lcom/vk/im/ui/p/a;
+    iput-object p2, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->D:Lcom/vk/im/ui/p/ImBridge1;
 
     .line 2
     new-instance p1, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent$vcHolder$1;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent$vcHolder$1;-><init>(Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;)V
 
-    invoke-static {p1}, Lcom/vk/core/util/w0;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/u0;
+    invoke-static {p1}, Lcom/vk/core/util/Provider1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/Provider2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->g:Lcom/vk/core/util/u0;
+    iput-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->g:Lcom/vk/core/util/Provider2;
 
     return-void
 .end method
@@ -65,11 +65,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;)Lcom/vk/im/ui/p/a;
+.method public static final synthetic b(Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;)Lcom/vk/im/ui/p/ImBridge1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->D:Lcom/vk/im/ui/p/a;
+    iget-object p0, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->D:Lcom/vk/im/ui/p/ImBridge1;
 
     return-object p0
 .end method
@@ -80,14 +80,14 @@
     .locals 1
 
     .line 2
-    iget-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->g:Lcom/vk/core/util/u0;
+    iget-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->g:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {p1}, Lcom/vk/core/util/u0;->reset()V
+    invoke-interface {p1}, Lcom/vk/core/util/Provider2;->reset()V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->g:Lcom/vk/core/util/u0;
+    iget-object p1, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->g:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {p1}, Lcom/vk/core/util/u0;->get()Ljava/lang/Object;
+    invoke-interface {p1}, Lcom/vk/core/util/Provider2;->get()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -122,13 +122,13 @@
     return-object p1
 
     :cond_0
-    invoke-static {p4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 6
     :cond_1
-    invoke-static {p4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 .end method
@@ -137,14 +137,14 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/q/c;->o()V
+    invoke-super {p0}, Lcom/vk/im/ui/q/Component;->o()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->D:Lcom/vk/im/ui/p/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->D:Lcom/vk/im/ui/p/ImBridge1;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->C:Landroid/app/Activity;
 
-    invoke-interface {v0, v1}, Lcom/vk/im/ui/p/a;->b(Landroid/content/Context;)Z
+    invoke-interface {v0, v1}, Lcom/vk/im/ui/p/ImBridge1;->b(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -164,7 +164,7 @@
     :cond_0
     const-string v0, "vc"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

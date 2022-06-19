@@ -1,9 +1,9 @@
 .class public Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment;
-.super Ld/a/a/a/h;
+.super Lme/grishka/appkit/fragments/AppKitFragment;
 .source "StickersDetailsFragment.java"
 
 # interfaces
-.implements Lcom/vk/navigation/c;
+.implements Lcom/vk/navigation/ActivityResulter;
 .implements Landroid/view/View$OnClickListener;
 .implements Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;
 
@@ -68,7 +68,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Ld/a/a/a/h;-><init>()V
+    invoke-direct {p0}, Lme/grishka/appkit/fragments/AppKitFragment;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment$c;
@@ -136,9 +136,9 @@
     check-cast v2, Ljava/lang/String;
 
     .line 5
-    sget-object v3, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v3, Lcom/vk/stickers/Stickers;->INSTANCE:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v3}, Lcom/vk/stickers/t;->o()Z
+    invoke-virtual {v3}, Lcom/vk/stickers/Stickers;->o()Z
 
     move-result v3
 
@@ -184,24 +184,24 @@
     .locals 1
 
     .line 13
-    new-instance v0, Lcom/vk/api/store/h;
+    new-instance v0, Lcom/vk/api/store/StoreGetStickerStockItemById;
 
-    invoke-direct {v0, p0}, Lcom/vk/api/store/h;-><init>(I)V
+    invoke-direct {v0, p0}, Lcom/vk/api/store/StoreGetStickerStockItemById;-><init>(I)V
 
     new-instance p0, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment$a;
 
     invoke-direct {p0, p2, p1, p2}, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment$a;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/Context;)V
 
     .line 14
-    invoke-virtual {v0, p0}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, p0}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p0
 
     .line 15
-    invoke-virtual {p0, p2}, Lcom/vk/api/base/b;->b(Landroid/content/Context;)Lcom/vk/api/base/b;
+    invoke-virtual {p0, p2}, Lcom/vk/api/base/ApiCallbackDisposable;->b(Landroid/content/Context;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     .line 16
-    invoke-virtual {p0}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p0}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -210,24 +210,24 @@
     .locals 1
 
     .line 17
-    new-instance v0, Lcom/vk/api/store/i;
+    new-instance v0, Lcom/vk/api/store/StoreGetStickerStockItemByStickerId;
 
-    invoke-direct {v0, p0}, Lcom/vk/api/store/i;-><init>(I)V
+    invoke-direct {v0, p0}, Lcom/vk/api/store/StoreGetStickerStockItemByStickerId;-><init>(I)V
 
     new-instance p0, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment$b;
 
     invoke-direct {p0, p2, p1, p3, p2}, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment$b;-><init>(Landroid/content/Context;Ljava/lang/String;ZLandroid/content/Context;)V
 
     .line 18
-    invoke-virtual {v0, p0}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, p0}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p0
 
     .line 19
-    invoke-virtual {p0, p2}, Lcom/vk/api/base/b;->a(Landroid/content/Context;)Lcom/vk/api/base/b;
+    invoke-virtual {p0, p2}, Lcom/vk/api/base/ApiCallbackDisposable;->a(Landroid/content/Context;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     .line 20
-    invoke-virtual {p0}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p0}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -255,11 +255,11 @@
     invoke-virtual {v0, v1, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
-    new-instance p0, Lcom/vk/navigation/o;
+    new-instance p0, Lcom/vk/navigation/Navigator;
 
     const-class v1, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment;
 
-    invoke-direct {p0, v1, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
+    invoke-direct {p0, v1, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
     new-instance v0, Lcom/vtosters/lite/TabletDialogActivity$b;
 
@@ -270,7 +270,7 @@
     const/high16 v1, 0x43b40000    # 360.0f
 
     .line 6
-    invoke-static {v1}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v1}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v1
 
@@ -279,7 +279,7 @@
     const/high16 v1, 0x42000000    # 32.0f
 
     .line 7
-    invoke-static {v1}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v1}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v1
 
@@ -301,10 +301,10 @@
     invoke-virtual {v0, v1}, Lcom/vtosters/lite/TabletDialogActivity$b;->g(I)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     .line 11
-    invoke-virtual {p0, v0}, Lcom/vk/navigation/o;->a(Lcom/vk/navigation/o$a;)Lcom/vk/navigation/o;
+    invoke-virtual {p0, v0}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/navigation/Navigator$a;)Lcom/vk/navigation/Navigator;
 
     .line 12
-    invoke-virtual {p0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -402,7 +402,7 @@
 
     iget-object v3, p0, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment;->R:Landroid/view/View;
 
-    invoke-static {p1, v0, v1, v2, v3}, Lcom/vtosters/lite/fragments/stickers/d;->a(Lcom/vk/dto/stickers/StickerStockItem;Landroid/widget/TextView;Landroid/view/View;Landroid/widget/ProgressBar;Landroid/view/View;)V
+    invoke-static {p1, v0, v1, v2, v3}, Lcom/vtosters/lite/fragments/stickers/StickerStoreListHolder;->a(Lcom/vk/dto/stickers/StickerStockItem;Landroid/widget/TextView;Landroid/view/View;Landroid/widget/ProgressBar;Landroid/view/View;)V
 
     .line 29
     iget-boolean p1, p0, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment;->Z:Z
@@ -470,12 +470,12 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Ld/a/a/a/h;->onAttach(Landroid/content/Context;)V
+    invoke-super {p0, p1}, Lme/grishka/appkit/fragments/AppKitFragment;->onAttach(Landroid/content/Context;)V
 
     .line 2
-    check-cast p1, Lcom/vk/navigation/u;
+    check-cast p1, Lcom/vk/navigation/ResulterProvider;
 
-    invoke-interface {p1, p0}, Lcom/vk/navigation/u;->b(Lcom/vk/navigation/c;)V
+    invoke-interface {p1, p0}, Lcom/vk/navigation/ResulterProvider;->b(Lcom/vk/navigation/ActivityResulter;)V
 
     return-void
 .end method
@@ -513,7 +513,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
@@ -536,7 +536,7 @@
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment$e;-><init>(Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment;)V
 
-    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/data/PurchasesManager;->a(Lcom/vk/dto/common/data/e;Lcom/vtosters/lite/data/PurchasesManager$o;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/data/PurchasesManager;->a(Lcom/vk/dto/common/data/Purchase1;Lcom/vtosters/lite/data/PurchasesManager$o;)V
 
     :cond_1
     :goto_0
@@ -611,7 +611,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Ld/a/a/a/h;->onDestroyView()V
+    invoke-super {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->onDestroyView()V
 
     const/4 v0, 0x0
 
@@ -656,9 +656,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/navigation/u;
+    check-cast v0, Lcom/vk/navigation/ResulterProvider;
 
-    invoke-interface {v0, p0}, Lcom/vk/navigation/u;->a(Lcom/vk/navigation/c;)V
+    invoke-interface {v0, p0}, Lcom/vk/navigation/ResulterProvider;->a(Lcom/vk/navigation/ActivityResulter;)V
 
     .line 2
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onDetach()V
@@ -707,9 +707,9 @@
 
     move-result-object p3
 
-    check-cast p3, Lcom/vk/core/ui/infiniteviewpager/a;
+    check-cast p3, Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;
 
-    invoke-virtual {p3}, Lcom/vk/core/ui/infiniteviewpager/a;->a()I
+    invoke-virtual {p3}, Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;->a()I
 
     move-result p3
 
@@ -750,7 +750,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Ld/a/a/a/h;->onPause()V
+    invoke-super {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->onPause()V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment;->S:Lcom/vk/core/ui/infiniteviewpager/ViewPagerInfinite;
@@ -773,7 +773,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Ld/a/a/a/h;->onResume()V
+    invoke-super {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->onResume()V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment;->S:Lcom/vk/core/ui/infiniteviewpager/ViewPagerInfinite;
@@ -862,7 +862,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1, p2}, Ld/a/a/a/h;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lme/grishka/appkit/fragments/AppKitFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     const p2, 0x7f0a0c8c
 
@@ -1012,11 +1012,11 @@
     .line 17
     iget-object p1, p0, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment;->S:Lcom/vk/core/ui/infiniteviewpager/ViewPagerInfinite;
 
-    new-instance p2, Lcom/vk/core/ui/infiniteviewpager/a;
+    new-instance p2, Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment;->O:Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment$g;
 
-    invoke-direct {p2, v0}, Lcom/vk/core/ui/infiniteviewpager/a;-><init>(Landroidx/viewpager/widget/PagerAdapter;)V
+    invoke-direct {p2, v0}, Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;-><init>(Landroidx/viewpager/widget/PagerAdapter;)V
 
     invoke-virtual {p1, p2}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
@@ -1033,29 +1033,29 @@
     invoke-virtual {p1, p2}, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment$PagerDotsView;->setViewPager(Landroidx/viewpager/widget/ViewPager;)V
 
     .line 20
-    new-instance p1, Lcom/vk/core/drawable/c;
+    new-instance p1, Lcom/vk/core/drawable/CircularProgressDrawable;
 
     const/4 p2, 0x0
 
-    invoke-direct {p1, p2}, Lcom/vk/core/drawable/c;-><init>(Z)V
+    invoke-direct {p1, p2}, Lcom/vk/core/drawable/CircularProgressDrawable;-><init>(Z)V
 
     const v0, -0xf0f10
 
     const v1, -0x404041
 
     .line 21
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/drawable/c;->a(II)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/drawable/CircularProgressDrawable;->a(II)V
 
     const/high16 v0, 0x40000000    # 2.0f
 
     .line 22
-    invoke-virtual {p1, v0}, Lcom/vk/core/drawable/c;->b(F)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/drawable/CircularProgressDrawable;->b(F)V
 
     .line 23
-    invoke-virtual {p1, p2}, Lcom/vk/core/drawable/c;->b(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/core/drawable/CircularProgressDrawable;->b(Z)V
 
     .line 24
-    invoke-virtual {p1, p2}, Lcom/vk/core/drawable/c;->a(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/core/drawable/CircularProgressDrawable;->a(Z)V
 
     .line 25
     iget-object p2, p0, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment;->Q:Landroid/widget/ProgressBar;

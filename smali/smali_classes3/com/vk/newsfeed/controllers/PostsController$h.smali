@@ -3,7 +3,7 @@
 .source "PostsController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -50,9 +50,9 @@
     .locals 3
 
     .line 1
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
@@ -66,7 +66,7 @@
 
     const/high16 v2, -0x80000000
 
-    invoke-virtual {p1, v1, v2, v0}, Lb/h/g/l/d;->a(IILjava/lang/Object;)V
+    invoke-virtual {p1, v1, v2, v0}, Lb/h/g/l/NotificationCenter;->a(IILjava/lang/Object;)V
 
     .line 2
     iget p1, p0, Lcom/vk/newsfeed/controllers/PostsController$h;->a:I
@@ -87,7 +87,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     return-void
 .end method

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/c;)Lcom/vk/dto/notifications/NotificationEntity;
+.method public final a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/NotificationsResponseData;)Lcom/vk/dto/notifications/NotificationEntity;
     .locals 12
 
     .line 1
@@ -49,7 +49,7 @@
 
     const-string v0, "json.optString(\"type\")"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "object_id"
 
@@ -60,7 +60,7 @@
 
     const-string v0, "json.optString(\"object_id\")"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "action"
 
@@ -82,9 +82,9 @@
 
     const-string v4, "json.optJSONObject(\"action\")"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v3, v0, p2}, Lcom/vk/dto/notifications/NotificationAction$b;->a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/c;)Lcom/vk/dto/notifications/NotificationAction;
+    invoke-virtual {v3, v0, p2}, Lcom/vk/dto/notifications/NotificationAction$b;->a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/NotificationsResponseData;)Lcom/vk/dto/notifications/NotificationAction;
 
     move-result-object v0
 
@@ -121,7 +121,7 @@
     if-eqz v0, :cond_2
 
     .line 7
-    invoke-virtual {p2}, Lcom/vk/dto/notifications/c;->e()Ljava/util/HashMap;
+    invoke-virtual {p2}, Lcom/vk/dto/notifications/NotificationsResponseData;->e()Ljava/util/HashMap;
 
     move-result-object p1
 
@@ -156,7 +156,7 @@
     if-eqz v0, :cond_4
 
     .line 9
-    invoke-virtual {p2}, Lcom/vk/dto/notifications/c;->c()Ljava/util/HashMap;
+    invoke-virtual {p2}, Lcom/vk/dto/notifications/NotificationsResponseData;->c()Ljava/util/HashMap;
 
     move-result-object p1
 
@@ -191,7 +191,7 @@
     if-eqz v0, :cond_6
 
     .line 11
-    invoke-virtual {p2}, Lcom/vk/dto/notifications/c;->d()Ljava/util/HashMap;
+    invoke-virtual {p2}, Lcom/vk/dto/notifications/NotificationsResponseData;->d()Ljava/util/HashMap;
 
     move-result-object p1
 
@@ -226,7 +226,7 @@
     if-eqz v0, :cond_8
 
     .line 13
-    invoke-virtual {p2}, Lcom/vk/dto/notifications/c;->f()Ljava/util/HashMap;
+    invoke-virtual {p2}, Lcom/vk/dto/notifications/NotificationsResponseData;->f()Ljava/util/HashMap;
 
     move-result-object p1
 
@@ -286,7 +286,7 @@
     if-eqz p1, :cond_b
 
     .line 17
-    invoke-virtual {p2}, Lcom/vk/dto/notifications/c;->b()Ljava/util/HashMap;
+    invoke-virtual {p2}, Lcom/vk/dto/notifications/NotificationsResponseData;->b()Ljava/util/HashMap;
 
     move-result-object p1
 
@@ -327,15 +327,15 @@
 
     iget v0, v0, Lcom/vk/dto/photo/Photo;->d:I
 
-    invoke-virtual {p2}, Lcom/vk/dto/notifications/c;->e()Ljava/util/HashMap;
+    invoke-virtual {p2}, Lcom/vk/dto/notifications/NotificationsResponseData;->e()Ljava/util/HashMap;
 
     move-result-object v1
 
-    invoke-virtual {p2}, Lcom/vk/dto/notifications/c;->c()Ljava/util/HashMap;
+    invoke-virtual {p2}, Lcom/vk/dto/notifications/NotificationsResponseData;->c()Ljava/util/HashMap;
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lcom/vk/dto/notifications/a;->a(ILjava/util/HashMap;Ljava/util/HashMap;)Lcom/vk/dto/user/UserProfile;
+    invoke-static {v0, v1, v2}, Lcom/vk/dto/notifications/NotificationEntity1;->a(ILjava/util/HashMap;Ljava/util/HashMap;)Lcom/vk/dto/user/UserProfile;
 
     move-result-object v0
 
@@ -364,15 +364,15 @@
 
     iget p1, p1, Lcom/vk/dto/common/VideoFile;->a:I
 
-    invoke-virtual {p2}, Lcom/vk/dto/notifications/c;->e()Ljava/util/HashMap;
+    invoke-virtual {p2}, Lcom/vk/dto/notifications/NotificationsResponseData;->e()Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lcom/vk/dto/notifications/c;->c()Ljava/util/HashMap;
+    invoke-virtual {p2}, Lcom/vk/dto/notifications/NotificationsResponseData;->c()Ljava/util/HashMap;
 
     move-result-object p2
 
-    invoke-static {p1, v0, p2}, Lcom/vk/dto/notifications/a;->a(ILjava/util/HashMap;Ljava/util/HashMap;)Lcom/vk/dto/user/UserProfile;
+    invoke-static {p1, v0, p2}, Lcom/vk/dto/notifications/NotificationEntity1;->a(ILjava/util/HashMap;Ljava/util/HashMap;)Lcom/vk/dto/user/UserProfile;
 
     move-result-object v11
 

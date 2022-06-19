@@ -3,12 +3,12 @@
 .source "VKApiConfig.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/api/sdk/VKApiConfig;-><init>(Landroid/content/Context;ILcom/vk/api/sdk/i;Lkotlin/e;Ljava/lang/String;Lcom/vk/api/sdk/m;JJLcom/vk/api/sdk/utils/log/Logger;Lkotlin/e;Lkotlin/e;ZLkotlin/e;ILkotlin/e;Ljava/lang/String;)V
+    value = Lcom/vk/api/sdk/VKApiConfig;-><init>(Landroid/content/Context;ILcom/vk/api/sdk/VKApiValidationHandler;Lkotlin/Lazy2;Ljava/lang/String;Lcom/vk/api/sdk/VKOkHttpProvider;JJLcom/vk/api/sdk/utils/log/Logger;Lkotlin/Lazy2;Lkotlin/Lazy2;ZLkotlin/Lazy2;ILkotlin/Lazy2;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/api/sdk/utils/log/Logger$LogLevel;",
         ">;"
     }

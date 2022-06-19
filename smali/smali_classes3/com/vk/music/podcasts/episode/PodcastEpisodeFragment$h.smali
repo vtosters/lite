@@ -44,15 +44,15 @@
     .line 1
     iget-object p1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$h;->a:Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/music/podcasts/episode/b;
+    check-cast p1, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/music/podcasts/episode/b;->q()Lcom/vk/dto/podcast/PodcastPage;
+    invoke-virtual {p1}, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;->q()Lcom/vk/dto/podcast/PodcastPage;
 
     move-result-object p1
 
@@ -69,32 +69,32 @@
 
     const-string v1, "toolbar"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/sharing/m;->a(Landroid/content/Context;)Lcom/vk/sharing/m$a;
+    invoke-static {v0}, Lcom/vk/sharing/Sharing;->a(Landroid/content/Context;)Lcom/vk/sharing/Sharing$a;
 
     move-result-object v0
 
     .line 3
-    invoke-static {p1}, Lcom/vk/sharing/attachment/k;->a(Lcom/vk/dto/music/MusicTrack;)Lcom/vk/sharing/attachment/AttachmentInfo;
+    invoke-static {p1}, Lcom/vk/sharing/attachment/Attachments;->a(Lcom/vk/dto/music/MusicTrack;)Lcom/vk/sharing/attachment/AttachmentInfo;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/sharing/m$a;->a(Lcom/vk/sharing/attachment/AttachmentInfo;)Lcom/vk/sharing/m$a;
+    invoke-virtual {v0, v1}, Lcom/vk/sharing/Sharing$a;->a(Lcom/vk/sharing/attachment/AttachmentInfo;)Lcom/vk/sharing/Sharing$a;
 
     .line 4
-    invoke-static {p1}, Lcom/vk/sharing/action/a;->a(Lcom/vk/dto/music/MusicTrack;)Lcom/vk/sharing/action/ActionsInfo;
+    invoke-static {p1}, Lcom/vk/sharing/action/Actions;->a(Lcom/vk/dto/music/MusicTrack;)Lcom/vk/sharing/action/ActionsInfo;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/sharing/m$a;->a(Lcom/vk/sharing/action/ActionsInfo;)Lcom/vk/sharing/m$a;
+    invoke-virtual {v0, p1}, Lcom/vk/sharing/Sharing$a;->a(Lcom/vk/sharing/action/ActionsInfo;)Lcom/vk/sharing/Sharing$a;
 
     .line 5
-    invoke-virtual {v0}, Lcom/vk/sharing/m$a;->a()V
+    invoke-virtual {v0}, Lcom/vk/sharing/Sharing$a;->a()V
 
     :cond_0
     const/4 p1, 0x1

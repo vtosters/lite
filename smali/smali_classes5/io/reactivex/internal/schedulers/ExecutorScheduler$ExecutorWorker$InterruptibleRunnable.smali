@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/lang/Runnable;
-.implements Lio/reactivex/disposables/b;
+.implements Lio/reactivex/disposables/Disposable;
 
 
 # annotations
@@ -25,13 +25,13 @@
 # instance fields
 .field final run:Ljava/lang/Runnable;
 
-.field final tasks:Lio/reactivex/internal/disposables/a;
+.field final tasks:Lio/reactivex/internal/disposables/DisposableContainer;
 
 .field volatile thread:Ljava/lang/Thread;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Runnable;Lio/reactivex/internal/disposables/a;)V
+.method constructor <init>(Ljava/lang/Runnable;Lio/reactivex/internal/disposables/DisposableContainer;)V
     .locals 0
 
     .line 1
@@ -41,7 +41,7 @@
     iput-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker$InterruptibleRunnable;->run:Ljava/lang/Runnable;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker$InterruptibleRunnable;->tasks:Lio/reactivex/internal/disposables/a;
+    iput-object p2, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker$InterruptibleRunnable;->tasks:Lio/reactivex/internal/disposables/DisposableContainer;
 
     return-void
 .end method
@@ -52,12 +52,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker$InterruptibleRunnable;->tasks:Lio/reactivex/internal/disposables/a;
+    iget-object v0, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker$InterruptibleRunnable;->tasks:Lio/reactivex/internal/disposables/DisposableContainer;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0, p0}, Lio/reactivex/internal/disposables/a;->c(Lio/reactivex/disposables/b;)Z
+    invoke-interface {v0, p0}, Lio/reactivex/internal/disposables/DisposableContainer;->c(Lio/reactivex/disposables/Disposable;)Z
 
     :cond_0
     return-void

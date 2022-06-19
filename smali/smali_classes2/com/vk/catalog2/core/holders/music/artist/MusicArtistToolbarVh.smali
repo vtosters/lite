@@ -1,14 +1,14 @@
 .class public final Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;
-.super Lcom/vk/catalog2/core/y/b;
+.super Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;
 .source "MusicArtistToolbarVh.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field private final B:Lcom/vk/bridges/z;
+.field private final B:Lcom/vk/bridges/SharingBridge1;
 
 .field private final C:Z
 
@@ -26,24 +26,24 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/catalog2/core/util/g;Lcom/vk/bridges/z;Z)V
+.method public constructor <init>(Lcom/vk/catalog2/core/util/CatalogOnClickListener;Lcom/vk/bridges/SharingBridge1;Z)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/y/b;-><init>(Lcom/vk/catalog2/core/util/g;)V
+    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;-><init>(Lcom/vk/catalog2/core/util/CatalogOnClickListener;)V
 
-    iput-object p2, p0, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;->B:Lcom/vk/bridges/z;
+    iput-object p2, p0, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;->B:Lcom/vk/bridges/SharingBridge1;
 
     iput-boolean p3, p0, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;->C:Z
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;)Lcom/vk/bridges/z;
+.method public static final synthetic a(Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;)Lcom/vk/bridges/SharingBridge1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;->B:Lcom/vk/bridges/z;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;->B:Lcom/vk/bridges/SharingBridge1;
 
     return-object p0
 .end method
@@ -52,7 +52,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/y/b;->k()Lcom/vk/catalog2/core/blocks/UIBlock;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;->k()Lcom/vk/catalog2/core/blocks/UIBlock;
 
     move-result-object p0
 
@@ -63,7 +63,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -75,12 +75,12 @@
 
     if-eqz v0, :cond_0
 
-    sget v0, Lcom/vk/catalog2/core/l;->header_tint_alternate:I
+    sget v0, Lcom/vk/catalog2/core/R6;->header_tint_alternate:I
 
     goto :goto_0
 
     :cond_0
-    sget v0, Lcom/vk/catalog2/core/l;->header_text:I
+    sget v0, Lcom/vk/catalog2/core/R6;->header_text:I
 
     :goto_0
     return v0
@@ -92,7 +92,7 @@
     .locals 5
 
     .line 2
-    sget p3, Lcom/vk/catalog2/core/r;->catalog_artist_toolbar:I
+    sget p3, Lcom/vk/catalog2/core/R7;->catalog_artist_toolbar:I
 
     const/4 v0, 0x0
 
@@ -105,7 +105,7 @@
 
     move-result-object p2
 
-    sget p3, Lcom/vk/catalog2/core/p;->ic_back_outline_28:I
+    sget p3, Lcom/vk/catalog2/core/R1;->ic_back_outline_28:I
 
     invoke-static {p2, p3}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -118,7 +118,7 @@
 
     move-result-object p2
 
-    sget p3, Lcom/vk/catalog2/core/p;->ic_more_vertical_24:I
+    sget p3, Lcom/vk/catalog2/core/R1;->ic_more_vertical_24:I
 
     invoke-static {p2, p3}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -127,7 +127,7 @@
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;->f:Landroid/graphics/drawable/Drawable;
 
     .line 5
-    sget p2, Lcom/vk/catalog2/core/p;->ic_back_outline_28:I
+    sget p2, Lcom/vk/catalog2/core/R1;->ic_back_outline_28:I
 
     invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->c(I)Landroid/graphics/drawable/Drawable;
 
@@ -156,7 +156,7 @@
     iput-object p2, p0, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;->c:Landroid/graphics/drawable/Drawable;
 
     .line 6
-    sget p2, Lcom/vk/catalog2/core/p;->ic_more_vertical_24:I
+    sget p2, Lcom/vk/catalog2/core/R1;->ic_more_vertical_24:I
 
     invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->c(I)Landroid/graphics/drawable/Drawable;
 
@@ -218,12 +218,12 @@
     invoke-virtual {p2, p3}, Landroidx/appcompat/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 10
-    sget p3, Lcom/vk/catalog2/core/u;->accessibility_back:I
+    sget p3, Lcom/vk/catalog2/core/R9;->accessibility_back:I
 
     invoke-virtual {p2, p3}, Landroidx/appcompat/widget/Toolbar;->setNavigationContentDescription(I)V
 
     .line 11
-    invoke-virtual {p0, p0}, Lcom/vk/catalog2/core/y/b;->a(Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
+    invoke-virtual {p0, p0}, Lcom/vk/catalog2/core/y/CatalogClickableViewHolder;->a(Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
 
     move-result-object p3
 
@@ -262,7 +262,7 @@
 
     move-result-object p3
 
-    sget v1, Lcom/vk/catalog2/core/u;->share:I
+    sget v1, Lcom/vk/catalog2/core/R9;->share:I
 
     invoke-interface {p3, v1}, Landroid/view/Menu;->add(I)Landroid/view/MenuItem;
 
@@ -276,7 +276,7 @@
 
     invoke-direct {v1, p1, p0}, Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh$createView$$inlined$apply$lambda$1;-><init>(Landroid/view/View;Lcom/vk/catalog2/core/holders/music/artist/MusicArtistToolbarVh;)V
 
-    invoke-static {p2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroidx/appcompat/widget/Toolbar;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroidx/appcompat/widget/Toolbar;Lkotlin/jvm/b/Functions2;)V
 
     .line 16
     invoke-interface {p3, v0}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
@@ -287,7 +287,7 @@
     const-string p2, "inflater.inflate(R.layou\u2026e\n            }\n        }"
 
     .line 18
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -314,7 +314,7 @@
     const/4 v0, -0x1
 
     .line 20
-    invoke-static {v0, p1}, Lcom/vk/core/util/p;->b(IF)I
+    invoke-static {v0, p1}, Lcom/vk/core/util/ColorUtils;->b(IF)I
 
     move-result p1
 
@@ -396,7 +396,7 @@
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 6
-    sget p1, Lcom/vk/catalog2/core/l;->header_background:I
+    sget p1, Lcom/vk/catalog2/core/R6;->header_background:I
 
     invoke-static {v1, p1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 

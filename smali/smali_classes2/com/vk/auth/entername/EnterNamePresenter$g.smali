@@ -3,7 +3,7 @@
 .source "EnterNamePresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -86,15 +86,15 @@
     .line 4
     iget-object v0, p0, Lcom/vk/auth/entername/EnterNamePresenter$g;->a:Lcom/vk/auth/entername/EnterNamePresenter;
 
-    invoke-static {v0}, Lcom/vk/auth/entername/EnterNamePresenter;->g(Lcom/vk/auth/entername/EnterNamePresenter;)Lcom/vk/auth/entername/b;
+    invoke-static {v0}, Lcom/vk/auth/entername/EnterNamePresenter;->g(Lcom/vk/auth/entername/EnterNamePresenter;)Lcom/vk/auth/entername/EnterNameView;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0, p1}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     move-object v1, p1
 
@@ -107,7 +107,7 @@
     :cond_3
     iget-object p1, p0, Lcom/vk/auth/entername/EnterNamePresenter$g;->a:Lcom/vk/auth/entername/EnterNamePresenter;
 
-    invoke-static {p1}, Lcom/vk/auth/entername/EnterNamePresenter;->g(Lcom/vk/auth/entername/EnterNamePresenter;)Lcom/vk/auth/entername/b;
+    invoke-static {p1}, Lcom/vk/auth/entername/EnterNamePresenter;->g(Lcom/vk/auth/entername/EnterNamePresenter;)Lcom/vk/auth/entername/EnterNameView;
 
     move-result-object p1
 
@@ -115,15 +115,15 @@
 
     iget-object v0, p0, Lcom/vk/auth/entername/EnterNamePresenter$g;->a:Lcom/vk/auth/entername/EnterNamePresenter;
 
-    sget v1, Lcom/vk/auth/r/g;->vk_auth_sign_up_invalid_name:I
+    sget v1, Lcom/vk/auth/r/R;->vk_auth_sign_up_invalid_name:I
 
     invoke-static {v0, v1}, Lcom/vk/auth/entername/EnterNamePresenter;->a(Lcom/vk/auth/entername/EnterNamePresenter;I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_4
     :goto_1

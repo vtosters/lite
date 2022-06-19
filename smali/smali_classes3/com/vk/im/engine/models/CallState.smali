@@ -32,10 +32,10 @@
 
 .field public static final enum ERROR:Lcom/vk/im/engine/models/CallState;
 
-.field private static final valuesSequence:Lkotlin/sequences/j;
+.field private static final valuesSequence:Lkotlin/sequences/Sequence;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "Lcom/vk/im/engine/models/CallState;",
             ">;"
         }
@@ -113,7 +113,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/CallState$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/CallState$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/im/engine/models/CallState;->Companion:Lcom/vk/im/engine/models/CallState$a;
 
@@ -122,11 +122,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/collections/f;->c([Ljava/lang/Object;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/f;->c([Ljava/lang/Object;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/im/engine/models/CallState;->valuesSequence:Lkotlin/sequences/j;
+    sput-object v0, Lcom/vk/im/engine/models/CallState;->valuesSequence:Lkotlin/sequences/Sequence;
 
     return-void
 .end method
@@ -147,11 +147,11 @@
     return-void
 .end method
 
-.method public static final synthetic a()Lkotlin/sequences/j;
+.method public static final synthetic a()Lkotlin/sequences/Sequence;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/im/engine/models/CallState;->valuesSequence:Lkotlin/sequences/j;
+    sget-object v0, Lcom/vk/im/engine/models/CallState;->valuesSequence:Lkotlin/sequences/Sequence;
 
     return-object v0
 .end method

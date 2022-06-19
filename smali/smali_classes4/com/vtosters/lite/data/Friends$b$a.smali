@@ -3,7 +3,7 @@
 .source "Friends.java"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/base/ApiCallback<",
         "Ljava/util/ArrayList<",
         "Lcom/vk/dto/user/UserProfile;",
         ">;>;"
@@ -66,7 +66,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1, p1}, Lcom/vtosters/lite/j0/b;->a(Ljava/util/List;ZI)Ljava/util/ArrayList;
+    invoke-static {v0, v1, p1}, Lcom/vtosters/lite/j0/Cache;->a(Ljava/util/List;ZI)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -114,7 +114,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {p1, v1, v0}, Lcom/vtosters/lite/j0/b;->b(Ljava/util/List;ZI)V
+    invoke-static {p1, v1, v0}, Lcom/vtosters/lite/j0/Cache;->b(Ljava/util/List;ZI)V
 
     .line 3
     invoke-static {}, Lcom/vtosters/lite/data/Friends;->a()Lcom/vtosters/lite/data/Friends$g;

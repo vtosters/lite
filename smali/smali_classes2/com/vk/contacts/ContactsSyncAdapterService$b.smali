@@ -3,7 +3,7 @@
 .source "ContactsSyncAdapterService.java"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/base/ApiCallback<",
         "Lorg/json/JSONObject;",
         ">;"
     }
@@ -75,11 +75,11 @@
     const-string v1, "response"
 
     .line 2
-    invoke-static {p1, v1}, Lcom/vk/api/base/f;->a(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/vk/dto/common/d;
+    invoke-static {p1, v1}, Lcom/vk/api/base/ApiUtils;->a(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/vk/dto/common/JSONArrayWithCount;
 
     move-result-object p1
 
-    iget-object p1, p1, Lcom/vk/dto/common/d;->b:Lorg/json/JSONArray;
+    iget-object p1, p1, Lcom/vk/dto/common/JSONArrayWithCount;->b:Lorg/json/JSONArray;
 
     const/4 v1, 0x2
 

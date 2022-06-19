@@ -3,7 +3,7 @@
 .source "EventHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -104,13 +104,13 @@
     const v0, 0x7f120389
 
     .line 4
-    invoke-static {v0, v2, v3, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v2, v3, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 5
     :cond_1
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->this$0:Lcom/vk/newsfeed/holders/attachments/EventHolder;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object v0
 
@@ -146,7 +146,7 @@
 
     const/16 v0, 0x8
 
-    invoke-static {p1, v0}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->this$0:Lcom/vk/newsfeed/holders/attachments/EventHolder;
@@ -155,13 +155,13 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {p1, v2}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 8
     :cond_3
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
@@ -169,7 +169,7 @@
 
     iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->$attachment:Lcom/vtosters/lite/attachments/EventAttachment;
 
-    invoke-virtual {p1, v0, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v0, v1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 9
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->$item:Lcom/vk/dto/newsfeed/entries/NewsEntry;
@@ -179,7 +179,7 @@
     if-eqz v0, :cond_4
 
     .line 10
-    sget-object v1, Lcom/vk/newsfeed/b0;->d:Lcom/vk/newsfeed/b0;
+    sget-object v1, Lcom/vk/newsfeed/PostsAnalytics;->INSTANCE:Lcom/vk/newsfeed/PostsAnalytics;
 
     check-cast p1, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -201,7 +201,7 @@
 
     const-string v5, "attach"
 
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/newsfeed/b0;->a(IILjava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/newsfeed/PostsAnalytics;->a(IILjava/lang/String;Ljava/lang/String;Z)V
 
     :cond_4
     return-void
@@ -219,7 +219,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->a(I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

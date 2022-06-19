@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;
-.super Lcom/vk/im/ui/q/c;
+.super Lcom/vk/im/ui/q/Component;
 .source "ChatSettingsComponent.kt"
 
 
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static final P:Lcom/vk/im/log/a;
+.field private static final P:Lcom/vk/im/log/ImLogger;
 
 .field private static final Q:Ljava/lang/String;
 
@@ -23,37 +23,37 @@
 
 
 # instance fields
-.field private B:Lio/reactivex/disposables/b;
+.field private B:Lio/reactivex/disposables/Disposable;
 
-.field private C:Lio/reactivex/disposables/b;
+.field private C:Lio/reactivex/disposables/Disposable;
 
-.field private D:Lio/reactivex/disposables/b;
+.field private D:Lio/reactivex/disposables/Disposable;
 
-.field private E:Lio/reactivex/disposables/b;
+.field private E:Lio/reactivex/disposables/Disposable;
 
-.field private F:Lio/reactivex/disposables/b;
+.field private F:Lio/reactivex/disposables/Disposable;
 
-.field private G:Lio/reactivex/disposables/b;
+.field private G:Lio/reactivex/disposables/Disposable;
 
-.field private H:Lio/reactivex/disposables/b;
+.field private H:Lio/reactivex/disposables/Disposable;
 
-.field private I:Lio/reactivex/disposables/b;
+.field private I:Lio/reactivex/disposables/Disposable;
 
-.field private J:Lio/reactivex/disposables/b;
+.field private J:Lio/reactivex/disposables/Disposable;
 
 .field private K:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-.field private L:Lcom/vk/im/ui/components/chat_settings/c;
+.field private L:Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;
 
 .field private final M:Landroid/content/Context;
 
-.field private final N:Lcom/vk/im/engine/a;
+.field private final N:Lcom/vk/im/engine/ImEngine;
 
-.field private final O:Lcom/vk/im/ui/p/b;
+.field private final O:Lcom/vk/im/ui/p/ImBridge8;
 
-.field private final g:Lio/reactivex/disposables/a;
+.field private final g:Lio/reactivex/disposables/CompositeDisposable;
 
-.field private h:Lcom/vk/im/ui/components/chat_settings/d;
+.field private h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
 
 # direct methods
@@ -66,18 +66,18 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->R:Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$a;
 
     .line 1
-    invoke-static {v0}, Lcom/vk/im/log/b;->a(Ljava/lang/Class;)Lcom/vk/im/log/a;
+    invoke-static {v0}, Lcom/vk/im/log/ImLoggerFactory;->a(Ljava/lang/Class;)Lcom/vk/im/log/ImLogger;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    sput-object v1, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->P:Lcom/vk/im/log/a;
+    sput-object v1, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->P:Lcom/vk/im/log/ImLogger;
 
     .line 2
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -88,31 +88,31 @@
 
     const-string v1, "ChatSettingsComponent::class.java.simpleName!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->Q:Ljava/lang/String;
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 3
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/im/ui/ImUiModule;ILcom/vk/im/engine/models/Member;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/ui/ImUiModule;ILcom/vk/im/engine/models/Member;)V
     .locals 15
 
     move-object v0, p0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/q/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/q/Component;-><init>()V
 
     move-object/from16 v1, p1
 
@@ -120,21 +120,21 @@
 
     move-object/from16 v1, p2
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iput-object v1, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
     move-object/from16 v1, p3
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/b;
+    iput-object v1, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/ImBridge8;
 
     .line 2
-    new-instance v1, Lio/reactivex/disposables/a;
+    new-instance v1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {v1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {v1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->g:Lio/reactivex/disposables/a;
+    iput-object v1, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 3
-    new-instance v1, Lcom/vk/im/ui/components/chat_settings/d;
+    new-instance v1, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     .line 4
     new-instance v3, Lcom/vk/im/engine/models/dialogs/DialogExt;
@@ -145,16 +145,16 @@
 
     move/from16 v5, p5
 
-    invoke-direct {v3, v5, v2, v4, v2}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v3, v5, v2, v4, v2}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 5
-    iget-object v2, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object v2, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/a;->e()Lcom/vk/im/engine/models/e;
+    invoke-virtual {v2}, Lcom/vk/im/engine/ImEngine;->e()Lcom/vk/im/engine/models/ImExperiments;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/im/engine/models/e;->e()Z
+    invoke-interface {v2}, Lcom/vk/im/engine/models/ImExperiments;->e()Z
 
     move-result v5
 
@@ -181,9 +181,9 @@
     move-object/from16 v4, p6
 
     .line 6
-    invoke-direct/range {v2 .. v14}, Lcom/vk/im/ui/components/chat_settings/d;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/d;Ljava/lang/Throwable;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v14}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/DialogMembersList;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iput-object v1, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     return-void
 .end method
@@ -197,11 +197,11 @@
     return-object v0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)Lio/reactivex/disposables/b;
+.method public static final synthetic a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->J:Lio/reactivex/disposables/b;
+    iget-object p0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->J:Lio/reactivex/disposables/Disposable;
 
     return-object p0
 .end method
@@ -215,20 +215,20 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lcom/vk/im/ui/components/chat_settings/f$a;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lcom/vk/im/ui/components/chat_settings/LoadFullCmd$a;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->a(Lcom/vk/im/ui/components/chat_settings/f$a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->a(Lcom/vk/im/ui/components/chat_settings/LoadFullCmd$a;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/b;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 5
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->B:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->B:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -242,27 +242,27 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/ui/components/chat_settings/f$a;)V
+.method private final a(Lcom/vk/im/ui/components/chat_settings/LoadFullCmd$a;)V
     .locals 13
 
     .line 14
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     .line 15
     new-instance v1, Lcom/vk/im/engine/models/dialogs/DialogExt;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/f$a;->a()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/LoadFullCmd$a;->a()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/f$a;->c()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/LoadFullCmd$a;->c()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v3
 
     invoke-direct {v1, v2, v3}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesInfo;)V
 
     .line 16
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/f$a;->b()Lcom/vk/im/engine/models/dialogs/d;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/LoadFullCmd$a;->b()Lcom/vk/im/engine/models/dialogs/DialogMembersList;
 
     move-result-object v9
 
@@ -287,11 +287,11 @@
     const/4 v12, 0x0
 
     .line 17
-    invoke-static/range {v0 .. v12}, Lcom/vk/im/ui/components/chat_settings/d;->a(Lcom/vk/im/ui/components/chat_settings/d;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/d;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/d;
+    invoke-static/range {v0 .. v12}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/DialogMembersList;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     .line 18
     invoke-direct {p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->b0()V
@@ -311,18 +311,18 @@
     .locals 8
 
     .line 71
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->j()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->j()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 72
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->n()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->n()Z
 
     move-result v0
 
@@ -334,67 +334,67 @@
 
     .line 73
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
     .line 74
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->e()Lcom/vk/im/engine/models/dialogs/d;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->e()Lcom/vk/im/engine/models/dialogs/DialogMembersList;
 
     move-result-object v3
 
     .line 75
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->f()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->f()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v4
 
     .line 76
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->a()Lcom/vk/im/engine/models/Member;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->a()Lcom/vk/im/engine/models/Member;
 
     move-result-object v5
 
     .line 77
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->g()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->g()Z
 
     move-result v6
 
     .line 78
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->a()Z
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->a()Z
 
     move-result v7
 
     move-object v1, p1
 
     .line 79
-    invoke-virtual/range {v1 .. v7}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/dialogs/d;Lcom/vk/im/engine/models/ProfilesInfo;Lcom/vk/im/engine/models/Member;ZZ)V
+    invoke-virtual/range {v1 .. v7}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/dialogs/DialogMembersList;Lcom/vk/im/engine/models/ProfilesInfo;Lcom/vk/im/engine/models/Member;ZZ)V
 
     goto :goto_0
 
     .line 80
     :cond_1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->i()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->i()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->d()Ljava/lang/Throwable;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->d()Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -404,60 +404,60 @@
 
     .line 81
     :cond_2
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->k()Z
 
     move-result v0
 
     if-eqz v0, :cond_c
 
     .line 82
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
     .line 83
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->e()Lcom/vk/im/engine/models/dialogs/d;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->e()Lcom/vk/im/engine/models/dialogs/DialogMembersList;
 
     move-result-object v3
 
     .line 84
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->f()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->f()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v4
 
     .line 85
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->a()Lcom/vk/im/engine/models/Member;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->a()Lcom/vk/im/engine/models/Member;
 
     move-result-object v5
 
     .line 86
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->g()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->g()Z
 
     move-result v6
 
     .line 87
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->a()Z
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->a()Z
 
     move-result v7
 
     move-object v1, p1
 
     .line 88
-    invoke-virtual/range {v1 .. v7}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/dialogs/d;Lcom/vk/im/engine/models/ProfilesInfo;Lcom/vk/im/engine/models/Member;ZZ)V
+    invoke-virtual/range {v1 .. v7}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/dialogs/DialogMembersList;Lcom/vk/im/engine/models/ProfilesInfo;Lcom/vk/im/engine/models/Member;ZZ)V
 
     .line 89
     :goto_0
@@ -555,7 +555,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0, v1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->a(Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static {p1, v1, v0, v1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->a(Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     :cond_b
     return-void
@@ -575,12 +575,12 @@
     .locals 14
 
     .line 20
-    sget-object v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->P:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->P:Lcom/vk/im/log/ImLogger;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
 
     .line 21
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     const/4 v2, 0x0
 
@@ -606,11 +606,11 @@
 
     move-object v11, p1
 
-    invoke-static/range {v1 .. v13}, Lcom/vk/im/ui/components/chat_settings/d;->a(Lcom/vk/im/ui/components/chat_settings/d;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/d;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/d;
+    invoke-static/range {v1 .. v13}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/DialogMembersList;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     .line 22
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->K:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
@@ -623,11 +623,11 @@
     return-void
 .end method
 
-.method public static final synthetic a0()Lcom/vk/im/log/a;
+.method public static final synthetic a0()Lcom/vk/im/log/ImLogger;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->P:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->P:Lcom/vk/im/log/ImLogger;
 
     return-object v0
 .end method
@@ -645,18 +645,18 @@
     .locals 13
 
     .line 30
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     .line 31
     new-instance v1, Lcom/vk/im/engine/models/dialogs/DialogExt;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v3, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v3}, Lcom/vk/im/ui/components/chat_settings/d;->f()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v3}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->f()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v3
 
@@ -689,11 +689,11 @@
     const/4 v12, 0x0
 
     .line 32
-    invoke-static/range {v0 .. v12}, Lcom/vk/im/ui/components/chat_settings/d;->a(Lcom/vk/im/ui/components/chat_settings/d;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/d;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/d;
+    invoke-static/range {v0 .. v12}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/DialogMembersList;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     .line 33
     invoke-direct {p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->b0()V
@@ -713,7 +713,7 @@
     .locals 13
 
     .line 10
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     const/4 v2, 0x0
 
@@ -739,34 +739,34 @@
 
     move-object v1, p1
 
-    invoke-static/range {v0 .. v12}, Lcom/vk/im/ui/components/chat_settings/d;->a(Lcom/vk/im/ui/components/chat_settings/d;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/d;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/d;
+    invoke-static/range {v0 .. v12}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/DialogMembersList;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     .line 11
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/a;->j()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->j()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 12
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 13
-    new-instance v1, Lcom/vk/im/ui/components/chat_settings/e;
+    new-instance v1, Lcom/vk/im/ui/components/chat_settings/EventConsumerImpl;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
@@ -774,20 +774,20 @@
 
     move-result v2
 
-    invoke-direct {v1, p0, v2}, Lcom/vk/im/ui/components/chat_settings/e;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;I)V
+    invoke-direct {v1, p0, v2}, Lcom/vk/im/ui/components/chat_settings/EventConsumerImpl;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;I)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "imEngine.observeEvents()\u2026l(this, state.dialog.id))"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->g:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)V
 
     .line 15
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->K:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
@@ -798,7 +798,7 @@
 
     .line 16
     :cond_0
-    new-instance v0, Lcom/vk/im/ui/components/chat_settings/f;
+    new-instance v0, Lcom/vk/im/ui/components/chat_settings/LoadFullCmd;
 
     .line 17
     invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->t1()Lcom/vk/im/engine/models/dialogs/Dialog;
@@ -815,14 +815,14 @@
     sget-object v2, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->Q:Ljava/lang/String;
 
     .line 19
-    invoke-direct {v0, p1, v1, v2}, Lcom/vk/im/ui/components/chat_settings/f;-><init>(IZLjava/lang/Object;)V
+    invoke-direct {v0, p1, v1, v2}, Lcom/vk/im/ui/components/chat_settings/LoadFullCmd;-><init>(IZLjava/lang/Object;)V
 
     .line 20
-    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
     const-string v1, "startObserve"
 
-    invoke-static {v1}, Lcom/vk/im/engine/internal/causation/c;->a(Ljava/lang/String;)Lcom/vk/im/engine/internal/causation/e;
+    invoke-static {v1}, Lcom/vk/im/engine/internal/causation/CauseProducer1;->a(Ljava/lang/String;)Lcom/vk/im/engine/internal/causation/WithCause;
 
     move-result-object v1
 
@@ -830,48 +830,48 @@
 
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$startObserve$1;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/chat_settings/b;
+    new-instance v3, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent1;
 
-    invoke-direct {v3, v2}, Lcom/vk/im/ui/components/chat_settings/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     new-instance v2, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$startObserve$2;
 
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$startObserve$2;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    new-instance v4, Lcom/vk/im/ui/components/chat_settings/b;
+    new-instance v4, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent1;
 
-    invoke-direct {v4, v2}, Lcom/vk/im/ui/components/chat_settings/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v4, v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {p1, v1, v0, v3, v4}, Lcom/vk/im/engine/a;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v1, v0, v3, v4}, Lcom/vk/im/engine/ImEngine;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "imEngine.submitBlocking(\u2026ccess, ::onLoadInitError)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 21
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->g:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {p1, v0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)V
+    invoke-static {p1, v0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)V
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lcom/vk/im/ui/components/chat_settings/f$a;)V
+.method public static final synthetic b(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lcom/vk/im/ui/components/chat_settings/LoadFullCmd$a;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->b(Lcom/vk/im/ui/components/chat_settings/f$a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->b(Lcom/vk/im/ui/components/chat_settings/LoadFullCmd$a;)V
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/b;)V
+.method public static final synthetic b(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->D:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->D:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -885,27 +885,27 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/im/ui/components/chat_settings/f$a;)V
+.method private final b(Lcom/vk/im/ui/components/chat_settings/LoadFullCmd$a;)V
     .locals 13
 
     .line 22
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     .line 23
     new-instance v1, Lcom/vk/im/engine/models/dialogs/DialogExt;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/f$a;->a()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/LoadFullCmd$a;->a()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/f$a;->c()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/LoadFullCmd$a;->c()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v3
 
     invoke-direct {v1, v2, v3}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesInfo;)V
 
     .line 24
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/f$a;->b()Lcom/vk/im/engine/models/dialogs/d;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/LoadFullCmd$a;->b()Lcom/vk/im/engine/models/dialogs/DialogMembersList;
 
     move-result-object v9
 
@@ -930,11 +930,11 @@
     const/4 v12, 0x0
 
     .line 25
-    invoke-static/range {v0 .. v12}, Lcom/vk/im/ui/components/chat_settings/d;->a(Lcom/vk/im/ui/components/chat_settings/d;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/d;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/d;
+    invoke-static/range {v0 .. v12}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/DialogMembersList;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     .line 26
     invoke-direct {p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->b0()V
@@ -954,9 +954,9 @@
     .locals 1
 
     .line 28
-    sget-object v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->P:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->P:Lcom/vk/im/log/ImLogger;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
 
     .line 29
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->K:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
@@ -973,9 +973,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->f()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->f()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v0
 
@@ -992,11 +992,11 @@
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/b;)V
+.method public static final synthetic c(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->F:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->F:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1014,12 +1014,12 @@
     .locals 14
 
     .line 3
-    sget-object v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->P:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->P:Lcom/vk/im/log/ImLogger;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     const/4 v2, 0x0
 
@@ -1045,11 +1045,11 @@
 
     const/4 v13, 0x0
 
-    invoke-static/range {v1 .. v13}, Lcom/vk/im/ui/components/chat_settings/d;->a(Lcom/vk/im/ui/components/chat_settings/d;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/d;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/d;
+    invoke-static/range {v1 .. v13}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/DialogMembersList;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     .line 5
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->K:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
@@ -1066,7 +1066,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->J:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->J:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
@@ -1081,11 +1081,11 @@
     return v0
 .end method
 
-.method public static final synthetic d(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/b;)V
+.method public static final synthetic d(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->J:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->J:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1118,12 +1118,12 @@
     invoke-virtual {p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->z()V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->g:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->a()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->a()V
 
     .line 10
-    new-instance v0, Lcom/vk/im/ui/components/chat_settings/d;
+    new-instance v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     new-instance v2, Lcom/vk/im/engine/models/dialogs/DialogExt;
 
@@ -1133,17 +1133,17 @@
 
     const/4 v4, 0x2
 
-    invoke-direct {v2, v3, v1, v4, v1}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v2, v3, v1, v4, v1}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->a()Lcom/vk/im/engine/models/Member;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->a()Lcom/vk/im/engine/models/Member;
 
     move-result-object v3
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->h()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->h()Z
 
     move-result v4
 
@@ -1167,9 +1167,9 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v13}, Lcom/vk/im/ui/components/chat_settings/d;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/d;Ljava/lang/Throwable;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v13}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/DialogMembersList;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     .line 11
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->K:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
@@ -1182,11 +1182,11 @@
     return-void
 .end method
 
-.method public static final synthetic e(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/b;)V
+.method public static final synthetic e(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->E:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->E:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1195,9 +1195,9 @@
     .locals 14
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->m()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->m()Z
 
     move-result v0
 
@@ -1207,7 +1207,7 @@
 
     .line 2
     :cond_0
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     const/4 v2, 0x0
 
@@ -1233,68 +1233,68 @@
 
     const/4 v13, 0x0
 
-    invoke-static/range {v1 .. v13}, Lcom/vk/im/ui/components/chat_settings/d;->a(Lcom/vk/im/ui/components/chat_settings/d;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/d;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/d;
+    invoke-static/range {v1 .. v13}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/DialogMembersList;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     .line 3
-    new-instance v0, Lcom/vk/im/engine/commands/etc/g$a;
+    new-instance v0, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;
 
-    invoke-direct {v0}, Lcom/vk/im/engine/commands/etc/g$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;-><init>()V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->f()Lcom/vk/im/engine/models/ProfilesInfo;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/ProfilesInfo;->t1()Lcom/vk/im/engine/models/l;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->f()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/etc/g$a;->a(Lcom/vk/im/engine/models/l;)Lcom/vk/im/engine/commands/etc/g$a;
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/ProfilesInfo;->t1()Lcom/vk/im/engine/models/ProfilesIds1;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;->a(Lcom/vk/im/engine/models/ProfilesIds1;)Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;
 
     .line 5
     sget-object v1, Lcom/vk/im/engine/models/Source;->ACTUAL:Lcom/vk/im/engine/models/Source;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/etc/g$a;->a(Lcom/vk/im/engine/models/Source;)Lcom/vk/im/engine/commands/etc/g$a;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;->a(Lcom/vk/im/engine/models/Source;)Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;
 
     const/4 v1, 0x1
 
     .line 6
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/etc/g$a;->a(Z)Lcom/vk/im/engine/commands/etc/g$a;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;->a(Z)Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;
 
     .line 7
     sget-object v1, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->Q:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/etc/g$a;->a(Ljava/lang/Object;)Lcom/vk/im/engine/commands/etc/g$a;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;->a(Ljava/lang/Object;)Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;
 
     .line 8
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/etc/g$a;->a()Lcom/vk/im/engine/commands/etc/g;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;->a()Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs;
 
     move-result-object v0
 
     .line 9
-    new-instance v1, Lcom/vk/im/engine/commands/etc/e;
+    new-instance v1, Lcom/vk/im/engine/commands/etc/ProfilesGetCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/im/engine/commands/etc/e;-><init>(Lcom/vk/im/engine/commands/etc/g;)V
+    invoke-direct {v1, v0}, Lcom/vk/im/engine/commands/etc/ProfilesGetCmd;-><init>(Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs;)V
 
     .line 10
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 11
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -1303,66 +1303,66 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$updateInconsistentMembersInfo$1;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/chat_settings/b;
+    new-instance v2, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent1;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/chat_settings/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     new-instance v1, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$updateInconsistentMembersInfo$2;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$updateInconsistentMembersInfo$2;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/chat_settings/b;
+    new-instance v3, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent1;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/chat_settings/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v0, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "imEngine.submitWithCance\u2026nsistentMembersInfoError)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->g:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)V
-
-    return-void
-.end method
-
-.method public static final synthetic f(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/b;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->G:Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)V
 
     return-void
 .end method
 
-.method public static final synthetic g(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/b;)V
+.method public static final synthetic f(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->H:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->G:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public static final synthetic h(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/b;)V
+.method public static final synthetic g(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->C:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->H:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public static final synthetic i(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/b;)V
+.method public static final synthetic h(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->I:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->C:Lio/reactivex/disposables/Disposable;
+
+    return-void
+.end method
+
+.method public static final synthetic i(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;Lio/reactivex/disposables/Disposable;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->I:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1384,9 +1384,9 @@
     .line 2
     sget-object v1, Lcom/vk/im/ui/components/common/AvatarAction;->REMOVE:Lcom/vk/im/ui/components/common/AvatarAction;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
@@ -1402,7 +1402,7 @@
 
     xor-int/lit8 v2, v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
 
     .line 3
     iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->K:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
@@ -1416,7 +1416,7 @@
 
     .line 4
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -1427,13 +1427,13 @@
     .locals 6
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
-    new-instance v1, Lcom/vk/im/engine/commands/chats/d;
+    new-instance v1, Lcom/vk/im/engine/commands/chats/CreateCasperChatCmd;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
@@ -1447,18 +1447,18 @@
 
     const/4 v5, 0x0
 
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vk/im/engine/commands/chats/d;-><init>(IZILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vk/im/engine/commands/chats/CreateCasperChatCmd;-><init>(IZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 2
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -1467,7 +1467,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$createCasperChat$1;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -1476,7 +1476,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$b;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -1491,20 +1491,20 @@
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$d;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
     .line 7
-    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->J:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->J:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public final C()Lcom/vk/im/ui/components/chat_settings/c;
+.method public final C()Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;
 
     return-object v0
 .end method
@@ -1513,9 +1513,9 @@
     .locals 10
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v0
 
@@ -1526,17 +1526,17 @@
     if-eqz v0, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->e()Lcom/vk/bridges/i0;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->e()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->M:Landroid/content/Context;
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v0
 
@@ -1566,12 +1566,12 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -1586,9 +1586,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->B:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->B:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
@@ -1599,9 +1599,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->D:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->D:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
@@ -1612,9 +1612,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->F:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->F:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
@@ -1625,9 +1625,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->k()Z
 
     move-result v0
 
@@ -1638,9 +1638,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->E:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->E:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
@@ -1651,9 +1651,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->G:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->G:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
@@ -1664,9 +1664,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->H:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->H:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
@@ -1677,9 +1677,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->C:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->C:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
@@ -1690,9 +1690,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->I:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->I:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
@@ -1703,11 +1703,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/c;->d()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;->d()V
 
     :cond_0
     return-void
@@ -1717,9 +1717,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v0
 
@@ -1730,21 +1730,21 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/b;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v1}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v1}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->M:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v3, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v3}, Lcom/vk/im/ui/components/chat_settings/d;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v3}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v3
 
-    invoke-interface {v1, v2, v0, v3}, Lcom/vk/im/ui/p/e;->a(Landroid/content/Context;Lcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-interface {v1, v2, v0, v3}, Lcom/vk/im/ui/p/ImBridge11;->a(Landroid/content/Context;Lcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
     :cond_0
     return-void
@@ -1754,11 +1754,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/c;->a()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;->a()V
 
     :cond_0
     return-void
@@ -1768,25 +1768,25 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->l()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->l()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v0
 
     .line 3
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->f()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->f()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v1
 
@@ -1808,17 +1808,17 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->M:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
@@ -1826,7 +1826,7 @@
 
     move-result v2
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/p/e;->a(Landroid/content/Context;I)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/p/ImBridge11;->a(Landroid/content/Context;I)V
 
     return-void
 .end method
@@ -1835,21 +1835,21 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->M:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/d;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v2
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/p/e;->a(Landroid/content/Context;Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/p/ImBridge11;->a(Landroid/content/Context;Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
     return-void
 .end method
@@ -1870,9 +1870,9 @@
     :cond_0
     new-instance v0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v1
 
@@ -1887,18 +1887,18 @@
     invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;-><init>(IZLjava/lang/Object;)V
 
     .line 3
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -1907,7 +1907,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$m;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -1916,7 +1916,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$n;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -1931,11 +1931,11 @@
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$p;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
     .line 9
-    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->F:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->F:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1944,17 +1944,17 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->e()Lcom/vk/im/engine/models/dialogs/d;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->e()Lcom/vk/im/engine/models/dialogs/DialogMembersList;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/chat_settings/c;->a(Lcom/vk/im/engine/models/dialogs/d;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;->a(Lcom/vk/im/engine/models/dialogs/DialogMembersList;)V
 
     :cond_0
     return-void
@@ -1974,11 +1974,11 @@
 
     .line 2
     :cond_0
-    new-instance v0, Lcom/vk/im/engine/commands/dialogs/b0;
+    new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogsLeaveCmd;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v1
 
@@ -1990,21 +1990,21 @@
 
     sget-object v3, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->Q:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/b0;-><init>(IZLjava/lang/Object;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/DialogsLeaveCmd;-><init>(IZLjava/lang/Object;)V
 
     .line 3
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -2013,7 +2013,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$y;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -2022,7 +2022,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$z;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -2037,11 +2037,11 @@
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$b0;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
     .line 9
-    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->H:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->H:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -2066,11 +2066,11 @@
 
     .line 2
     :cond_0
-    new-instance v0, Lcom/vk/im/engine/commands/dialogs/h;
+    new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogsAvatarRemoveCmd;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v1
 
@@ -2082,21 +2082,21 @@
 
     sget-object v3, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->Q:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/h;-><init>(IZLjava/lang/Object;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/DialogsAvatarRemoveCmd;-><init>(IZLjava/lang/Object;)V
 
     .line 3
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -2105,7 +2105,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$c0;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -2114,7 +2114,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$d0;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -2129,11 +2129,11 @@
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$f0;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
     .line 9
-    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->C:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->C:Lio/reactivex/disposables/Disposable;
 
     :cond_1
     :goto_0
@@ -2154,11 +2154,11 @@
 
     .line 2
     :cond_0
-    new-instance v0, Lcom/vk/im/engine/commands/dialogs/g0;
+    new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogsReturnCmd;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v1
 
@@ -2170,21 +2170,21 @@
 
     sget-object v3, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->Q:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/g0;-><init>(IZLjava/lang/Object;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/DialogsReturnCmd;-><init>(IZLjava/lang/Object;)V
 
     .line 3
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -2193,7 +2193,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$g0;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -2202,7 +2202,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$h0;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -2217,11 +2217,11 @@
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$j0;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
     .line 9
-    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->I:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->I:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -2240,12 +2240,12 @@
 
     .line 2
     :cond_0
-    new-instance v0, Lcom/vk/im/ui/components/chat_settings/f;
+    new-instance v0, Lcom/vk/im/ui/components/chat_settings/LoadFullCmd;
 
     .line 3
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v1
 
@@ -2259,21 +2259,21 @@
     sget-object v3, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->Q:Ljava/lang/String;
 
     .line 5
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/ui/components/chat_settings/f;-><init>(IZLjava/lang/Object;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/ui/components/chat_settings/LoadFullCmd;-><init>(IZLjava/lang/Object;)V
 
     .line 6
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 7
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -2282,30 +2282,30 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$updateAllByCache$1;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/chat_settings/b;
+    new-instance v2, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent1;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/chat_settings/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     new-instance v1, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$updateAllByCache$2;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$updateAllByCache$2;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/chat_settings/b;
+    new-instance v3, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent1;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/chat_settings/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v0, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "imEngine.submitWithCance\u2026:onUpdateAllByCacheError)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->g:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)V
 
     return-void
 .end method
@@ -2314,7 +2314,7 @@
     .locals 1
 
     .line 7
-    invoke-super {p0, p1}, Lcom/vk/im/ui/q/c;->a(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/vk/im/ui/q/Component;->a(Landroid/content/res/Configuration;)V
 
     .line 8
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->K:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
@@ -2345,9 +2345,9 @@
     .locals 1
 
     .line 23
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->k()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->k()Z
 
     move-result v0
 
@@ -2357,18 +2357,18 @@
 
     .line 24
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->f()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->f()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/ProfilesInfo;->b(Lcom/vk/im/engine/models/ProfilesInfo;)Lcom/vk/im/engine/models/l;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/ProfilesInfo;->b(Lcom/vk/im/engine/models/ProfilesInfo;)Lcom/vk/im/engine/models/ProfilesIds1;
 
     move-result-object p1
 
     .line 25
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/l;->f()Z
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/ProfilesIds1;->f()Z
 
     move-result p1
 
@@ -2388,12 +2388,12 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/a;)V
+.method public final a(Lcom/vk/im/engine/models/EntityIntMap;)V
     .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;)V"
         }
@@ -2404,25 +2404,25 @@
     move-object/from16 v1, p1
 
     .line 28
-    iget-object v2, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v2, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/d;->j()Z
-
-    move-result v2
-
-    if-nez v2, :cond_6
-
-    iget-object v2, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
-
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/d;->i()Z
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->j()Z
 
     move-result v2
 
     if-nez v2, :cond_6
 
-    iget-object v2, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v2, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->i()Z
+
+    move-result v2
+
+    if-nez v2, :cond_6
+
+    iget-object v2, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
+
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
@@ -2430,7 +2430,7 @@
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/engine/models/a;->j(I)Z
+    invoke-virtual {v1, v2}, Lcom/vk/im/engine/models/EntityIntMap;->j(I)Z
 
     move-result v2
 
@@ -2440,11 +2440,11 @@
 
     .line 29
     :cond_0
-    iget-object v1, v1, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object v1, v1, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
-    iget-object v2, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v2, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
@@ -2468,9 +2468,9 @@
     if-eqz v2, :cond_5
 
     .line 31
-    iget-object v4, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v4, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v4}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v4}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v4
 
@@ -2508,17 +2508,17 @@
 
     .line 34
     :cond_1
-    iget-object v4, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v4, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     new-instance v5, Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     const-string v2, "dialog"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v2, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v2, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/d;->f()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->f()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v2
 
@@ -2546,11 +2546,11 @@
 
     const/16 v16, 0x0
 
-    invoke-static/range {v4 .. v16}, Lcom/vk/im/ui/components/chat_settings/d;->a(Lcom/vk/im/ui/components/chat_settings/d;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/d;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/d;
+    invoke-static/range {v4 .. v16}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/models/Member;ZZZZZZLcom/vk/im/engine/models/dialogs/DialogMembersList;Ljava/lang/Throwable;ILjava/lang/Object;)Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iput-object v1, v0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
     .line 35
     invoke-direct/range {p0 .. p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->b0()V
@@ -2575,13 +2575,13 @@
 
     .line 38
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 39
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
@@ -2594,9 +2594,9 @@
     .locals 1
 
     .line 10
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->l()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->l()Z
 
     move-result v0
 
@@ -2644,11 +2644,11 @@
 
     .line 63
     :cond_0
-    new-instance v0, Lcom/vk/im/engine/commands/dialogs/a0;
+    new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogsKickCmd;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v1
 
@@ -2664,21 +2664,21 @@
 
     sget-object v3, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->Q:Ljava/lang/String;
 
-    invoke-direct {v0, v1, p1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/a0;-><init>(ILcom/vk/im/engine/models/Member;ZLjava/lang/Object;)V
+    invoke-direct {v0, v1, p1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/DialogsKickCmd;-><init>(ILcom/vk/im/engine/models/Member;ZLjava/lang/Object;)V
 
     .line 64
-    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object p1
 
     .line 65
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -2687,7 +2687,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$u;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {p1, v0}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -2696,7 +2696,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$v;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {p1, v0}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -2711,22 +2711,22 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$x;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
     .line 70
-    invoke-virtual {p1, v0, v1}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->G:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->G:Lio/reactivex/disposables/Disposable;
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/chat_settings/c;)V
+.method public final a(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;)V
     .locals 0
 
     .line 6
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/c;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;
 
     return-void
 .end method
@@ -2771,12 +2771,12 @@
 
     .line 51
     :cond_0
-    new-instance v0, Lcom/vk/im/engine/commands/dialogs/z;
+    new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogsInviteCmd;
 
     .line 52
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v1
 
@@ -2796,21 +2796,21 @@
     move v4, p2
 
     .line 54
-    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/dialogs/z;-><init>(ILjava/util/List;IZLjava/lang/Object;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/dialogs/DialogsInviteCmd;-><init>(ILjava/util/List;IZLjava/lang/Object;)V
 
     .line 55
-    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object p1
 
     .line 56
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {p1, p2}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -2819,7 +2819,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$q;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {p1, p2}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {p1, p2}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -2828,7 +2828,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$r;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {p1, p2}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
+    invoke-virtual {p1, p2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -2843,11 +2843,11 @@
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$t;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
     .line 61
-    invoke-virtual {p1, p2, v0}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, v0}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->E:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->E:Lio/reactivex/disposables/Disposable;
 
     :cond_1
     :goto_0
@@ -2894,14 +2894,14 @@
 
     .line 44
     :goto_0
-    new-instance v0, Lcom/vk/im/engine/commands/dialogs/c0$b;
+    new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;
 
-    invoke-direct {v0}, Lcom/vk/im/engine/commands/dialogs/c0$b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;-><init>()V
 
     .line 45
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v1
 
@@ -2909,23 +2909,23 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/dialogs/c0$b;->a(I)Lcom/vk/im/engine/commands/dialogs/c0$b;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;->a(I)Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;
 
     .line 46
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/im/engine/commands/dialogs/c0$b;->a(ZJ)Lcom/vk/im/engine/commands/dialogs/c0$b;
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;->a(ZJ)Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;
 
     .line 47
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/commands/dialogs/c0$b;->a(Z)Lcom/vk/im/engine/commands/dialogs/c0$b;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;->a(Z)Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;
 
     .line 48
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/dialogs/c0$b;->a()Lcom/vk/im/engine/commands/dialogs/c0;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd$b;->a()Lcom/vk/im/engine/commands/dialogs/DialogsNotificationChangeViaBgCmd;
 
     move-result-object p1
 
     .line 49
-    iget-object p2, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object p2, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {p2, p1}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
+    invoke-virtual {p2, p1}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
 
     return-void
 .end method
@@ -2945,11 +2945,11 @@
 
     if-eqz p1, :cond_0
 
-    new-instance p2, Lcom/vk/im/ui/components/chat_settings/g;
+    new-instance p2, Lcom/vk/im/ui/components/chat_settings/VcCallbackImpl;
 
-    invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/g;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
+    invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/VcCallbackImpl;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->a(Lcom/vk/im/ui/components/chat_settings/vc/d;)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->a(Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;)V
 
     .line 7
     :cond_0
@@ -2972,7 +2972,7 @@
     return-object p1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -2997,9 +2997,9 @@
     .locals 10
 
     .line 39
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->e()Lcom/vk/bridges/i0;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->e()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v1
 
@@ -3025,7 +3025,7 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -3064,21 +3064,21 @@
 
     .line 37
     :cond_1
-    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/c;
+    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/chat_settings/c;->b()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;->b()V
 
     goto :goto_0
 
     .line 38
     :cond_2
-    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/c;
+    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/chat_settings/c;->c()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;->c()V
 
     :cond_3
     :goto_0
@@ -3089,11 +3089,11 @@
     .locals 1
 
     .line 40
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->L:Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/chat_settings/c;->a(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;->a(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -3103,15 +3103,15 @@
     .locals 2
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->O:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->M:Landroid/content/Context;
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/im/ui/p/e;->a(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-interface {v0, v1, p1}, Lcom/vk/im/ui/p/ImBridge11;->a(Landroid/content/Context;Ljava/lang/String;)Z
 
     return-void
 .end method
@@ -3136,11 +3136,11 @@
 
     .line 3
     :cond_0
-    new-instance v0, Lcom/vk/im/engine/commands/dialogs/g;
+    new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogsAvatarChangeCmd;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v1
 
@@ -3152,21 +3152,21 @@
 
     sget-object v3, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->Q:Ljava/lang/String;
 
-    invoke-direct {v0, v1, p1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/g;-><init>(ILjava/lang/String;ZLjava/lang/Object;)V
+    invoke-direct {v0, v1, p1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/DialogsAvatarChangeCmd;-><init>(ILjava/lang/String;ZLjava/lang/Object;)V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object p1
 
     .line 5
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -3175,7 +3175,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$e;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {p1, v0}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -3184,7 +3184,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$f;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {p1, v0}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -3199,11 +3199,11 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$h;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
     .line 10
-    invoke-virtual {p1, v0, v1}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->B:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->B:Lio/reactivex/disposables/Disposable;
 
     :cond_1
     :goto_0
@@ -3244,9 +3244,9 @@
 
     .line 5
     :cond_2
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v0
 
@@ -3260,7 +3260,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -3270,11 +3270,11 @@
 
     .line 6
     :cond_3
-    new-instance v0, Lcom/vk/im/engine/commands/dialogs/f;
+    new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogTitleChangeCmd;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/d;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v1
 
@@ -3286,21 +3286,21 @@
 
     sget-object v3, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->Q:Ljava/lang/String;
 
-    invoke-direct {v0, v1, p1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/f;-><init>(ILjava/lang/String;ZLjava/lang/Object;)V
+    invoke-direct {v0, v1, p1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/DialogTitleChangeCmd;-><init>(ILjava/lang/String;ZLjava/lang/Object;)V
 
     .line 7
-    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->N:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object p1
 
     .line 8
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -3309,7 +3309,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$i;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {p1, v0}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -3318,7 +3318,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$j;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
-    invoke-virtual {p1, v0}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -3333,17 +3333,17 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$l;-><init>(Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;)V
 
     .line 13
-    invoke-virtual {p1, v0, v1}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->D:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->D:Lio/reactivex/disposables/Disposable;
 
     return-void
 
     .line 14
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -3354,12 +3354,12 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/q/c;->m()V
+    invoke-super {p0}, Lcom/vk/im/ui/q/Component;->m()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->h:Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/d;->l()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsState;->l()Z
 
     move-result v0
 
@@ -3376,7 +3376,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/q/c;->n()V
+    invoke-super {p0}, Lcom/vk/im/ui/q/Component;->n()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->K:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
@@ -3385,7 +3385,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->a(Lcom/vk/im/ui/components/chat_settings/vc/d;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->a(Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;)V
 
     .line 3
     :cond_0
@@ -3406,11 +3406,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->B:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->B:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void
@@ -3420,11 +3420,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->D:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->D:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void
@@ -3434,11 +3434,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->F:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->F:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void
@@ -3448,11 +3448,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->E:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->E:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void
@@ -3462,11 +3462,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->G:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->G:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void
@@ -3476,11 +3476,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->H:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->H:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void
@@ -3490,11 +3490,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->C:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->C:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void
@@ -3504,11 +3504,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->I:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->I:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void

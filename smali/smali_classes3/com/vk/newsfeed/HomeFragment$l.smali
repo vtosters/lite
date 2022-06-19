@@ -44,19 +44,19 @@
 
     move-result-object p1
 
-    instance-of v0, p1, Lcom/vk/navigation/b0/b;
+    instance-of v0, p1, Lcom/vk/navigation/b0/FragmentWithAppBarOffsetListener;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vk/navigation/b0/b;
+    check-cast p1, Lcom/vk/navigation/b0/FragmentWithAppBarOffsetListener;
 
     if-eqz p1, :cond_1
 
     .line 2
-    invoke-interface {p1, p2}, Lcom/vk/navigation/b0/b;->f0(I)V
+    invoke-interface {p1, p2}, Lcom/vk/navigation/b0/FragmentWithAppBarOffsetListener;->f0(I)V
 
     :cond_1
     return-void

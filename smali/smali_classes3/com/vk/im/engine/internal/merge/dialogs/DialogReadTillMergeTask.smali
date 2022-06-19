@@ -1,12 +1,12 @@
 .class public final Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;
-.super Lcom/vk/im/engine/internal/k/a;
+.super Lcom/vk/im/engine/internal/k/MergeTask;
 .source "DialogReadTillMergeTask.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/internal/k/a<",
+        "Lcom/vk/im/engine/internal/k/MergeTask<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -28,7 +28,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/k/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/k/MergeTask;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->a:I
 
@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x2
@@ -73,11 +73,11 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;II)I
+.method private final a(Lcom/vk/im/engine/ImEnvironment;II)I
     .locals 0
 
     .line 13
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -103,34 +103,34 @@
     return p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;Lcom/vk/im/engine/d;II)I
+.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;Lcom/vk/im/engine/ImEnvironment;II)I
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->a(Lcom/vk/im/engine/d;II)I
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->a(Lcom/vk/im/engine/ImEnvironment;II)I
 
     move-result p0
 
     return p0
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;ILjava/lang/Integer;)V
+.method private final a(Lcom/vk/im/engine/ImEnvironment;ILjava/lang/Integer;)V
     .locals 0
 
     if-eqz p3, :cond_0
 
     .line 9
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
     .line 10
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object p1
 
     .line 11
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object p1
 
@@ -145,19 +145,19 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;ILjava/lang/Integer;Ljava/lang/Integer;)V
+.method private final a(Lcom/vk/im/engine/ImEnvironment;ILjava/lang/Integer;Ljava/lang/Integer;)V
     .locals 0
 
     .line 5
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object p1
 
@@ -205,20 +205,20 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;Lcom/vk/im/engine/d;ILjava/lang/Integer;)V
+.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;Lcom/vk/im/engine/ImEnvironment;ILjava/lang/Integer;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->a(Lcom/vk/im/engine/d;ILjava/lang/Integer;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->a(Lcom/vk/im/engine/ImEnvironment;ILjava/lang/Integer;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;Lcom/vk/im/engine/d;ILjava/lang/Integer;Ljava/lang/Integer;)V
+.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;Lcom/vk/im/engine/ImEnvironment;ILjava/lang/Integer;Ljava/lang/Integer;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->a(Lcom/vk/im/engine/d;ILjava/lang/Integer;Ljava/lang/Integer;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->a(Lcom/vk/im/engine/ImEnvironment;ILjava/lang/Integer;Ljava/lang/Integer;)V
 
     return-void
 .end method
@@ -245,23 +245,23 @@
     return-object p0
 .end method
 
-.method private final b(Lcom/vk/im/engine/d;ILjava/lang/Integer;)V
+.method private final b(Lcom/vk/im/engine/ImEnvironment;ILjava/lang/Integer;)V
     .locals 0
 
     if-eqz p3, :cond_0
 
     .line 11
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
     .line 12
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object p1
 
     .line 13
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object p1
 
@@ -276,32 +276,32 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;Lcom/vk/im/engine/d;ILjava/lang/Integer;)V
+.method public static final synthetic b(Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;Lcom/vk/im/engine/ImEnvironment;ILjava/lang/Integer;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->b(Lcom/vk/im/engine/d;ILjava/lang/Integer;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->b(Lcom/vk/im/engine/ImEnvironment;ILjava/lang/Integer;)V
 
     return-void
 .end method
 
-.method private final c(Lcom/vk/im/engine/d;ILjava/lang/Integer;)V
+.method private final c(Lcom/vk/im/engine/ImEnvironment;ILjava/lang/Integer;)V
     .locals 0
 
     if-eqz p3, :cond_0
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object p1
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object p1
 
@@ -316,18 +316,18 @@
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;Lcom/vk/im/engine/d;ILjava/lang/Integer;)V
+.method public static final synthetic c(Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;Lcom/vk/im/engine/ImEnvironment;ILjava/lang/Integer;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->c(Lcom/vk/im/engine/d;ILjava/lang/Integer;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->c(Lcom/vk/im/engine/ImEnvironment;ILjava/lang/Integer;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected b(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
+.method protected b(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
     .locals 10
 
     .line 4
@@ -352,13 +352,13 @@
     :cond_0
     iget v0, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->a:I
 
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->Z()Lcom/vk/im/engine/models/Member;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->Z()Lcom/vk/im/engine/models/Member;
 
     move-result-object v2
 
     const-string v3, "env.member"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v0, v2}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->a(ILcom/vk/im/engine/models/Member;)Z
 
@@ -423,7 +423,7 @@
     move-object v9, v0
 
     .line 10
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -435,9 +435,9 @@
 
     move-object v8, p1
 
-    invoke-direct/range {v4 .. v9}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask$onMerge$1;-><init>(Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;Ljava/lang/Integer;ZLcom/vk/im/engine/d;Ljava/lang/Integer;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask$onMerge$1;-><init>(Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;Ljava/lang/Integer;ZLcom/vk/im/engine/ImEnvironment;Ljava/lang/Integer;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -446,11 +446,11 @@
     return-object p1
 .end method
 
-.method public bridge synthetic b(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic b(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->b(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogReadTillMergeTask;->b(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "MusicUI.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lkotlin/Pair<",
         "+",
         "Lcom/vk/dto/music/Playlist;",
@@ -86,12 +86,12 @@
 
     if-eqz v0, :cond_0
 
-    sget v0, Lcom/vk/music/m/i;->music_toast_album_added:I
+    sget v0, Lcom/vk/music/m/R4;->music_toast_album_added:I
 
     goto :goto_0
 
     :cond_0
-    sget v0, Lcom/vk/music/m/i;->music_toast_playlist_added:I
+    sget v0, Lcom/vk/music/m/R4;->music_toast_playlist_added:I
 
     .line 2
     :goto_0
@@ -107,12 +107,12 @@
 
     if-eqz v1, :cond_1
 
-    sget v1, Lcom/vk/music/m/i;->music_toast_album_deletion_done:I
+    sget v1, Lcom/vk/music/m/R4;->music_toast_album_deletion_done:I
 
     goto :goto_1
 
     :cond_1
-    sget v1, Lcom/vk/music/m/i;->music_toast_playlist_deletion_done:I
+    sget v1, Lcom/vk/music/m/R4;->music_toast_playlist_deletion_done:I
 
     .line 3
     :goto_1

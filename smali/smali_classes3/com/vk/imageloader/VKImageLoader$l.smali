@@ -44,13 +44,13 @@
     return-void
 .end method
 
-.method public a(Lcom/facebook/cache/common/a;)V
+.method public a(Lcom/facebook/cache/common/CacheEvent;)V
     .locals 2
 
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-interface {p1}, Lcom/facebook/cache/common/a;->a()Lcom/facebook/cache/common/b;
+    invoke-interface {p1}, Lcom/facebook/cache/common/CacheEvent;->a()Lcom/facebook/cache/common/CacheKey;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/facebook/cache/common/a;->a()Lcom/facebook/cache/common/b;
+    invoke-interface {p1}, Lcom/facebook/cache/common/CacheEvent;->a()Lcom/facebook/cache/common/CacheKey;
 
     move-result-object p1
 
@@ -105,13 +105,13 @@
     return-void
 .end method
 
-.method public b(Lcom/facebook/cache/common/a;)V
+.method public b(Lcom/facebook/cache/common/CacheEvent;)V
     .locals 2
 
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-interface {p1}, Lcom/facebook/cache/common/a;->a()Lcom/facebook/cache/common/b;
+    invoke-interface {p1}, Lcom/facebook/cache/common/CacheEvent;->a()Lcom/facebook/cache/common/CacheKey;
 
     move-result-object v0
 
@@ -130,7 +130,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/facebook/cache/common/a;->a()Lcom/facebook/cache/common/b;
+    invoke-interface {p1}, Lcom/facebook/cache/common/CacheEvent;->a()Lcom/facebook/cache/common/CacheKey;
 
     move-result-object p1
 
@@ -173,13 +173,13 @@
     return-void
 .end method
 
-.method public c(Lcom/facebook/cache/common/a;)V
+.method public c(Lcom/facebook/cache/common/CacheEvent;)V
     .locals 2
 
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-interface {p1}, Lcom/facebook/cache/common/a;->a()Lcom/facebook/cache/common/b;
+    invoke-interface {p1}, Lcom/facebook/cache/common/CacheEvent;->a()Lcom/facebook/cache/common/CacheKey;
 
     move-result-object v0
 
@@ -198,7 +198,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/facebook/cache/common/a;->a()Lcom/facebook/cache/common/b;
+    invoke-interface {p1}, Lcom/facebook/cache/common/CacheEvent;->a()Lcom/facebook/cache/common/CacheKey;
 
     move-result-object p1
 
@@ -234,13 +234,13 @@
     return-void
 .end method
 
-.method public d(Lcom/facebook/cache/common/a;)V
+.method public d(Lcom/facebook/cache/common/CacheEvent;)V
     .locals 2
 
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-interface {p1}, Lcom/facebook/cache/common/a;->a()Lcom/facebook/cache/common/b;
+    invoke-interface {p1}, Lcom/facebook/cache/common/CacheEvent;->a()Lcom/facebook/cache/common/CacheKey;
 
     move-result-object v0
 
@@ -259,7 +259,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/facebook/cache/common/a;->a()Lcom/facebook/cache/common/b;
+    invoke-interface {p1}, Lcom/facebook/cache/common/CacheEvent;->a()Lcom/facebook/cache/common/CacheKey;
 
     move-result-object p1
 
@@ -295,13 +295,13 @@
     return-void
 .end method
 
-.method public e(Lcom/facebook/cache/common/a;)V
+.method public e(Lcom/facebook/cache/common/CacheEvent;)V
     .locals 2
 
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-interface {p1}, Lcom/facebook/cache/common/a;->a()Lcom/facebook/cache/common/b;
+    invoke-interface {p1}, Lcom/facebook/cache/common/CacheEvent;->a()Lcom/facebook/cache/common/CacheKey;
 
     move-result-object v0
 
@@ -320,7 +320,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/facebook/cache/common/a;->a()Lcom/facebook/cache/common/b;
+    invoke-interface {p1}, Lcom/facebook/cache/common/CacheEvent;->a()Lcom/facebook/cache/common/CacheKey;
 
     move-result-object p1
 
@@ -356,13 +356,13 @@
     return-void
 .end method
 
-.method public f(Lcom/facebook/cache/common/a;)V
+.method public f(Lcom/facebook/cache/common/CacheEvent;)V
     .locals 2
 
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-interface {p1}, Lcom/facebook/cache/common/a;->a()Lcom/facebook/cache/common/b;
+    invoke-interface {p1}, Lcom/facebook/cache/common/CacheEvent;->a()Lcom/facebook/cache/common/CacheKey;
 
     move-result-object v0
 
@@ -381,7 +381,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/facebook/cache/common/a;->a()Lcom/facebook/cache/common/b;
+    invoke-interface {p1}, Lcom/facebook/cache/common/CacheEvent;->a()Lcom/facebook/cache/common/CacheKey;
 
     move-result-object p1
 
@@ -424,13 +424,13 @@
     return-void
 .end method
 
-.method public g(Lcom/facebook/cache/common/a;)V
+.method public g(Lcom/facebook/cache/common/CacheEvent;)V
     .locals 2
 
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-interface {p1}, Lcom/facebook/cache/common/a;->a()Lcom/facebook/cache/common/b;
+    invoke-interface {p1}, Lcom/facebook/cache/common/CacheEvent;->a()Lcom/facebook/cache/common/CacheKey;
 
     move-result-object v0
 
@@ -449,7 +449,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/facebook/cache/common/a;->a()Lcom/facebook/cache/common/b;
+    invoke-interface {p1}, Lcom/facebook/cache/common/CacheEvent;->a()Lcom/facebook/cache/common/CacheKey;
 
     move-result-object p1
 

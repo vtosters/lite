@@ -3,7 +3,7 @@
 .source "EntriesListFragment.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/j;
+.implements Lcom/vk/newsfeed/NewsEntryActionsAdapter3;
 
 
 # annotations
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/core/dialogs/actionspopup/a;I)V
+.method public a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup;I)V
     .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/EntriesListFragment$l;->a:Lcom/vk/newsfeed/EntriesListFragment;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
 
     move-result-object v0
 
@@ -60,12 +60,12 @@
 
     iget-object v2, p0, Lcom/vk/newsfeed/EntriesListFragment$l;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    invoke-interface {v0, v1, p2, v2}, Lcom/vk/newsfeed/contracts/e;->a(Lcom/vk/core/fragments/FragmentImpl;ILcom/vk/dto/newsfeed/entries/NewsEntry;)V
+    invoke-interface {v0, v1, p2, v2}, Lcom/vk/newsfeed/contracts/EntriesListContract;->a(Lcom/vk/core/fragments/FragmentImpl;ILcom/vk/dto/newsfeed/entries/NewsEntry;)V
 
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
 
     .line 3
     :cond_0
@@ -73,7 +73,7 @@
 
     const/4 p2, 0x0
 
-    invoke-static {p1, p2}, Lcom/vk/newsfeed/EntriesListFragment;->a(Lcom/vk/newsfeed/EntriesListFragment;Lcom/vk/core/dialogs/actionspopup/a;)V
+    invoke-static {p1, p2}, Lcom/vk/newsfeed/EntriesListFragment;->a(Lcom/vk/newsfeed/EntriesListFragment;Lcom/vk/core/dialogs/actionspopup/ActionsPopup;)V
 
     return-void
 .end method

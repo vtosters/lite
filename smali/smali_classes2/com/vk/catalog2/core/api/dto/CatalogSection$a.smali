@@ -89,7 +89,7 @@
     check-cast v5, Lcom/vk/catalog2/core/api/dto/CatalogBadge;
 
     .line 7
-    invoke-static {p1}, Lcom/vk/core/extensions/w;->a(Lcom/vk/core/serialize/Serializer;)Ljava/util/List;
+    invoke-static {p1}, Lcom/vk/core/extensions/SerializerExt;->a(Lcom/vk/core/serialize/Serializer;)Ljava/util/List;
 
     move-result-object v6
 
@@ -159,37 +159,37 @@
 
     .line 14
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 15
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 16
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 17
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 18
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 19
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method

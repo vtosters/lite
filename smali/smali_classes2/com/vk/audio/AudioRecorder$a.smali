@@ -3,7 +3,7 @@
 .source "AudioRecorder.kt"
 
 # interfaces
-.implements Lcom/vk/audio/c;
+.implements Lcom/vk/audio/AudioRecordObserver;
 
 
 # annotations
@@ -61,11 +61,11 @@
     .line 14
     iget-object v0, p0, Lcom/vk/audio/AudioRecorder$a;->a:Lcom/vk/audio/AudioRecorder;
 
-    invoke-static {v0}, Lcom/vk/audio/AudioRecorder;->b(Lcom/vk/audio/AudioRecorder;)Lcom/vk/audio/a;
+    invoke-static {v0}, Lcom/vk/audio/AudioRecorder;->b(Lcom/vk/audio/AudioRecorder;)Lcom/vk/audio/AudioMessageUtils;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/vk/audio/a;->b(Lcom/vk/audio/c;)V
+    invoke-virtual {v0, p0}, Lcom/vk/audio/AudioMessageUtils;->b(Lcom/vk/audio/AudioRecordObserver;)V
 
     return-void
 .end method
@@ -80,7 +80,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -100,7 +100,7 @@
     if-eqz p1, :cond_0
 
     .line 8
-    sget-wide p1, Lcom/vk/audio/a;->w:D
+    sget-wide p1, Lcom/vk/audio/AudioMessageUtils;->w:D
 
     invoke-static {p1, p2}, Ljava/lang/Math;->abs(D)D
 
@@ -190,7 +190,7 @@
 
     move-object v1, p2
 
-    invoke-direct/range {v0 .. v11}, Lcom/vk/audio/AudioRecorder$b;-><init>(Ljava/io/File;ZZZJ[BLcom/vk/audio/AudioMessageSource;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v11}, Lcom/vk/audio/AudioRecorder$b;-><init>(Ljava/io/File;ZZZJ[BLcom/vk/audio/AudioMessageSource;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {p1, p3}, Lio/reactivex/subjects/PublishSubject;->b(Ljava/lang/Object;)V
 
@@ -254,7 +254,7 @@
 
     move-object/from16 v9, p8
 
-    invoke-direct/range {v2 .. v13}, Lcom/vk/audio/AudioRecorder$b;-><init>(Ljava/io/File;ZZZJ[BLcom/vk/audio/AudioMessageSource;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v13}, Lcom/vk/audio/AudioRecorder$b;-><init>(Ljava/io/File;ZZZJ[BLcom/vk/audio/AudioMessageSource;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v1, v14}, Lio/reactivex/subjects/PublishSubject;->b(Ljava/lang/Object;)V
 

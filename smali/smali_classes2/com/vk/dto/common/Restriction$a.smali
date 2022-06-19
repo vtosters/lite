@@ -1,5 +1,5 @@
 .class public final Lcom/vk/dto/common/Restriction$a;
-.super Lcom/vk/dto/common/data/c;
+.super Lcom/vk/dto/common/data/JsonParser;
 .source "JsonParser.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/dto/common/data/c<",
+        "Lcom/vk/dto/common/data/JsonParser<",
         "Lcom/vk/dto/common/Restriction;",
         ">;"
     }
@@ -27,7 +27,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/data/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/data/JsonParser;-><init>()V
 
     return-void
 .end method
@@ -57,7 +57,7 @@
 
     const-string v1, "it.getString(\"title\")"
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "text"
 
@@ -68,7 +68,7 @@
 
     const-string v1, "it.getString(\"text\")"
 
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "always_shown"
 
@@ -158,11 +158,11 @@
 
     sget-object v2, Lcom/vk/dto/common/RestrictionButton;->d:Lcom/vk/dto/common/RestrictionButton$c;
 
-    invoke-virtual {v2}, Lcom/vk/dto/common/RestrictionButton$c;->a()Lcom/vk/dto/common/data/c;
+    invoke-virtual {v2}, Lcom/vk/dto/common/RestrictionButton$c;->a()Lcom/vk/dto/common/data/JsonParser;
 
     move-result-object v2
 
-    invoke-virtual {v2, p1}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
+    invoke-virtual {v2, p1}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
 
     move-result-object p1
 

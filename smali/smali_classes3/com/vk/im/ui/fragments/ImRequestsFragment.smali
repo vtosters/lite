@@ -1,10 +1,10 @@
 .class public Lcom/vk/im/ui/fragments/ImRequestsFragment;
-.super Lcom/vk/im/ui/fragments/c;
+.super Lcom/vk/im/ui/fragments/ImFragment;
 .source "ImRequestsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/r;
-.implements Lcom/vk/navigation/b0/k;
+.implements Lcom/vk/navigation/NewIntentFragment;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
 
 
 # annotations
@@ -17,13 +17,13 @@
 
 
 # static fields
-.field static final synthetic P:[Lkotlin/u/j;
+.field static final synthetic P:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final E:Lcom/vk/im/engine/a;
+.field private final E:Lcom/vk/im/engine/ImEngine;
 
-.field private final F:Lcom/vk/im/ui/p/b;
+.field private final F:Lcom/vk/im/ui/p/ImBridge8;
 
 .field private final G:Lcom/vk/im/ui/ImUiModule;
 
@@ -31,25 +31,25 @@
 
 .field private I:Landroid/view/View;
 
-.field private J:Lcom/vk/im/ui/components/dialogs_list/c;
+.field private J:Lcom/vk/im/ui/components/dialogs_list/DialogsListPresenter;
 
-.field private K:Lcom/vk/im/ui/components/dialogs_list/vc_impl/d;
+.field private K:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVc;
 
 .field private final L:Lcom/vk/im/ui/fragments/ImRequestsFragment$b;
 
 .field private final M:Lcom/vk/im/ui/utils/WidgetDelegate;
 
-.field private final N:Lcom/vk/core/util/u0;
+.field private final N:Lcom/vk/core/util/Provider2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/util/u0<",
+            "Lcom/vk/core/util/Provider2<",
             "Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final O:Lcom/vk/core/util/u0;
+.field private final O:Lcom/vk/core/util/Provider2;
 
 
 # direct methods
@@ -58,13 +58,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/fragments/ImRequestsFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -72,15 +72,15 @@
 
     const-string v4, "getPopups()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->P:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->P:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -89,24 +89,24 @@
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/fragments/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/fragments/ImFragment;-><init>()V
 
     .line 2
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->E:Lcom/vk/im/engine/a;
+    iput-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->E:Lcom/vk/im/engine/ImEngine;
 
     .line 3
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->F:Lcom/vk/im/ui/p/b;
+    iput-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->F:Lcom/vk/im/ui/p/ImBridge8;
 
     .line 4
-    invoke-static {}, Lcom/vk/im/ui/a;->a()Lcom/vk/im/ui/ImUiModule;
+    invoke-static {}, Lcom/vk/im/ui/ImUiModule1;->a()Lcom/vk/im/ui/ImUiModule;
 
     move-result-object v0
 
@@ -122,17 +122,17 @@
     .line 6
     new-instance v0, Lcom/vk/im/ui/utils/WidgetDelegate;
 
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v2, "AppContextHolder.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/utils/WidgetDelegate;-><init>(Landroid/content/Context;Lcom/vk/im/engine/a;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/utils/WidgetDelegate;-><init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;)V
 
     iput-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->M:Lcom/vk/im/ui/utils/WidgetDelegate;
 
@@ -141,16 +141,16 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/fragments/ImRequestsFragment$popupsProvider$1;-><init>(Lcom/vk/im/ui/fragments/ImRequestsFragment;)V
 
-    invoke-static {v0}, Lcom/vk/core/util/w0;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/u0;
+    invoke-static {v0}, Lcom/vk/core/util/Provider1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/Provider2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->N:Lcom/vk/core/util/u0;
+    iput-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->N:Lcom/vk/core/util/Provider2;
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->N:Lcom/vk/core/util/u0;
+    iget-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->N:Lcom/vk/core/util/Provider2;
 
-    iput-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->O:Lcom/vk/core/util/u0;
+    iput-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->O:Lcom/vk/core/util/Provider2;
 
     return-void
 .end method
@@ -158,15 +158,15 @@
 .method private final P4()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->O:Lcom/vk/core/util/u0;
+    iget-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->O:Lcom/vk/core/util/Provider2;
 
-    sget-object v1, Lcom/vk/im/ui/fragments/ImRequestsFragment;->P:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/fragments/ImRequestsFragment;->P:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/w0;->a(Lcom/vk/core/util/u0;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/Provider1;->a(Lcom/vk/core/util/Provider2;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -179,9 +179,9 @@
     .locals 8
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->E:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->E:Lcom/vk/im/engine/ImEngine;
 
-    new-instance v7, Lcom/vk/im/engine/commands/requests/a;
+    new-instance v7, Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeForAllCmd;
 
     sget-object v2, Lcom/vk/im/engine/models/MsgRequestStatus;->REJECTED:Lcom/vk/im/engine/models/MsgRequestStatus;
 
@@ -195,9 +195,9 @@
 
     move-object v1, v7
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/requests/a;-><init>(Lcom/vk/im/engine/models/MsgRequestStatus;ZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeForAllCmd;-><init>(Lcom/vk/im/engine/models/MsgRequestStatus;ZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v0, p0, v7}, Lcom/vk/im/engine/a;->b(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/a;
+    invoke-virtual {v0, p0, v7}, Lcom/vk/im/engine/ImEngine;->b(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Completable;
 
     move-result-object v0
 
@@ -206,7 +206,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/fragments/ImRequestsFragment$launchDeclineAll$1;-><init>(Lcom/vk/im/ui/fragments/ImRequestsFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/a;->b(Lc/a/z/g;)Lc/a/a;
+    invoke-virtual {v0, v1}, Lio/reactivex/Completable;->b(Lio/reactivex/functions/Consumer;)Lio/reactivex/Completable;
 
     move-result-object v0
 
@@ -215,28 +215,28 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/fragments/ImRequestsFragment$c;-><init>(Lcom/vk/im/ui/fragments/ImRequestsFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/a;->a(Lc/a/z/a;)Lc/a/a;
+    invoke-virtual {v0, v1}, Lio/reactivex/Completable;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Completable;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Lcom/vk/im/ui/fragments/ImRequestsFragment$d;->a:Lcom/vk/im/ui/fragments/ImRequestsFragment$d;
 
-    invoke-virtual {v0, v1}, Lc/a/a;->a(Lc/a/z/g;)Lc/a/a;
+    invoke-virtual {v0, v1}, Lio/reactivex/Completable;->a(Lio/reactivex/functions/Consumer;)Lio/reactivex/Completable;
 
     move-result-object v0
 
     .line 5
-    invoke-virtual {v0}, Lc/a/a;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {v0}, Lio/reactivex/Completable;->a()Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "engine.submitCompletable\u2026             .subscribe()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-virtual {p0, v0, p0}, Lcom/vk/im/ui/fragments/c;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/fragments/c;)V
+    invoke-virtual {p0, v0, p0}, Lcom/vk/im/ui/fragments/ImFragment;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/fragments/ImFragment;)V
 
     return-void
 .end method
@@ -257,7 +257,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/fragments/ImRequestsFragment$showDeclineAllSubmit$1;-><init>(Lcom/vk/im/ui/fragments/ImRequestsFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -322,7 +322,7 @@
     sget-object v2, Lcom/vk/im/ui/fragments/ImRequestsFragment$handleCreateDialogShortcut$2;->a:Lcom/vk/im/ui/fragments/ImRequestsFragment$handleCreateDialogShortcut$2;
 
     .line 4
-    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/im/ui/utils/WidgetDelegate;->a(ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/im/ui/utils/WidgetDelegate;->a(ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -361,7 +361,7 @@
     :cond_1
     const-string p1, "declineDivider"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -369,7 +369,7 @@
     const-string p1, "declineView"
 
     .line 3
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -380,21 +380,21 @@
     if-eqz p1, :cond_0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->J:Lcom/vk/im/ui/components/dialogs_list/c;
+    iget-object p1, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->J:Lcom/vk/im/ui/components/dialogs_list/DialogsListPresenter;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/q/a;->g()V
+    invoke-virtual {p1}, Lcom/vk/im/ui/q/BasePresenter;->g()V
 
     goto :goto_0
 
     .line 2
     :cond_0
-    iget-object p1, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->J:Lcom/vk/im/ui/components/dialogs_list/c;
+    iget-object p1, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->J:Lcom/vk/im/ui/components/dialogs_list/DialogsListPresenter;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/q/a;->f()V
+    invoke-virtual {p1}, Lcom/vk/im/ui/q/BasePresenter;->f()V
 
     :cond_1
     :goto_0
@@ -407,7 +407,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/navigation/r$a;->a(Lcom/vk/navigation/r;Landroid/content/Intent;)V
+    invoke-static {p0, p1}, Lcom/vk/navigation/NewIntentFragment$a;->a(Lcom/vk/navigation/NewIntentFragment;Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -416,7 +416,7 @@
     .locals 8
 
     .line 1
-    sget p3, Lcom/vk/im/ui/j;->vkim_fragment_requests:I
+    sget p3, Lcom/vk/im/ui/R13;->vkim_fragment_requests:I
 
     const/4 v0, 0x0
 
@@ -425,7 +425,7 @@
     move-result-object p1
 
     .line 2
-    sget p2, Lcom/vk/im/ui/h;->toolbar:I
+    sget p2, Lcom/vk/im/ui/R11;->toolbar:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -441,7 +441,7 @@
     invoke-virtual {p2, p3}, Landroidx/appcompat/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 4
-    sget p2, Lcom/vk/im/ui/h;->decline:I
+    sget p2, Lcom/vk/im/ui/R11;->decline:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -449,12 +449,12 @@
 
     const-string p3, "view.findViewById(R.id.decline)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->H:Landroid/view/View;
 
     .line 5
-    sget p2, Lcom/vk/im/ui/h;->divider:I
+    sget p2, Lcom/vk/im/ui/R11;->divider:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -462,7 +462,7 @@
 
     const-string p3, "view.findViewById(R.id.divider)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->I:Landroid/view/View;
 
@@ -477,46 +477,46 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/fragments/ImRequestsFragment$onCreateView$2;-><init>(Lcom/vk/im/ui/fragments/ImRequestsFragment;)V
 
-    invoke-static {p2, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 7
     iget-object p2, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->G:Lcom/vk/im/ui/ImUiModule;
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/ImUiModule;->f()Lcom/vk/core/ui/w/a;
+    invoke-virtual {p2}, Lcom/vk/im/ui/ImUiModule;->f()Lcom/vk/core/ui/w/VkPools;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/core/ui/w/a;->b()Lcom/vk/core/ui/w/b;
+    invoke-virtual {p2}, Lcom/vk/core/ui/w/VkPools;->b()Lcom/vk/core/ui/w/VkViewPoolProvider;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/core/ui/w/b;->b()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
+    invoke-virtual {p2}, Lcom/vk/core/ui/w/VkViewPoolProvider;->b()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
 
     move-result-object p2
 
     .line 8
     iget-object v1, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->G:Lcom/vk/im/ui/ImUiModule;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/ImUiModule;->f()Lcom/vk/core/ui/w/a;
+    invoke-virtual {v1}, Lcom/vk/im/ui/ImUiModule;->f()Lcom/vk/core/ui/w/VkPools;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/core/ui/w/a;->b()Lcom/vk/core/ui/w/b;
+    invoke-virtual {v1}, Lcom/vk/core/ui/w/VkPools;->b()Lcom/vk/core/ui/w/VkViewPoolProvider;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/core/ui/w/b;->a()Landroid/view/LayoutInflater;
+    invoke-virtual {v1}, Lcom/vk/core/ui/w/VkViewPoolProvider;->a()Landroid/view/LayoutInflater;
 
     move-result-object v1
 
     .line 9
-    new-instance v2, Lcom/vk/im/ui/components/dialogs_list/vc_impl/d;
+    new-instance v2, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVc;
 
-    iget-object v3, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->F:Lcom/vk/im/ui/p/b;
+    iget-object v3, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->F:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-direct {v2, p2, v1, v3}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/d;-><init>(Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;Landroid/view/LayoutInflater;Lcom/vk/im/ui/p/b;)V
+    invoke-direct {v2, p2, v1, v3}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVc;-><init>(Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;Landroid/view/LayoutInflater;Lcom/vk/im/ui/p/ImBridge8;)V
 
-    sget p2, Lcom/vk/im/ui/h;->im_dialogs_list_stub:I
+    sget p2, Lcom/vk/im/ui/R11;->im_dialogs_list_stub:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -524,14 +524,14 @@
 
     check-cast p2, Landroid/view/ViewStub;
 
-    invoke-virtual {v2, p2}, Lcom/vk/im/ui/q/b;->a(Landroid/view/ViewStub;)Landroid/view/View;
+    invoke-virtual {v2, p2}, Lcom/vk/im/ui/q/BaseViewController;->a(Landroid/view/ViewStub;)Landroid/view/View;
 
-    iput-object v2, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->K:Lcom/vk/im/ui/components/dialogs_list/vc_impl/d;
+    iput-object v2, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->K:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVc;
 
     .line 10
-    new-instance p2, Lcom/vk/im/ui/components/dialogs_list/c;
+    new-instance p2, Lcom/vk/im/ui/components/dialogs_list/DialogsListPresenter;
 
-    new-instance v7, Lcom/vk/im/ui/components/dialogs_list/b;
+    new-instance v7, Lcom/vk/im/ui/components/dialogs_list/DialogsListConfig;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -541,13 +541,13 @@
 
     const-string v1, "activity!!"
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->E:Lcom/vk/im/engine/a;
+    iget-object v3, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->E:Lcom/vk/im/engine/ImEngine;
 
-    iget-object v4, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->F:Lcom/vk/im/ui/p/b;
+    iget-object v4, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->F:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-static {}, Lcom/vk/bridges/e0;->a()Lcom/vk/bridges/d0;
+    invoke-static {}, Lcom/vk/bridges/StoriesBridge1;->a()Lcom/vk/bridges/StoriesBridge;
 
     move-result-object v5
 
@@ -555,63 +555,63 @@
 
     move-object v1, v7
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/im/ui/components/dialogs_list/b;-><init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/bridges/d0;Lcom/vk/im/ui/components/dialogs_list/SelectionMode;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/im/ui/components/dialogs_list/DialogsListConfig;-><init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/bridges/StoriesBridge;Lcom/vk/im/ui/components/dialogs_list/SelectionMode;)V
 
-    invoke-direct {p2, v7}, Lcom/vk/im/ui/components/dialogs_list/c;-><init>(Lcom/vk/im/ui/components/dialogs_list/b;)V
+    invoke-direct {p2, v7}, Lcom/vk/im/ui/components/dialogs_list/DialogsListPresenter;-><init>(Lcom/vk/im/ui/components/dialogs_list/DialogsListConfig;)V
 
     .line 11
     iget-object v1, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->L:Lcom/vk/im/ui/fragments/ImRequestsFragment$b;
 
-    invoke-virtual {p2, v1}, Lcom/vk/im/ui/components/dialogs_list/c;->a(Lcom/vk/im/ui/components/dialogs_list/a;)V
+    invoke-virtual {p2, v1}, Lcom/vk/im/ui/components/dialogs_list/DialogsListPresenter;->a(Lcom/vk/im/ui/components/dialogs_list/DialogsListCallback;)V
 
     .line 12
-    iget-object v1, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->K:Lcom/vk/im/ui/components/dialogs_list/vc_impl/d;
+    iget-object v1, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->K:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVc;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p2, v1}, Lcom/vk/im/ui/q/a;->a(Lcom/vk/im/ui/q/b;)V
+    invoke-virtual {p2, v1}, Lcom/vk/im/ui/q/BasePresenter;->a(Lcom/vk/im/ui/q/BaseViewController;)V
 
     .line 13
-    invoke-virtual {p2, v0}, Lcom/vk/im/ui/components/dialogs_list/c;->d(Z)V
+    invoke-virtual {p2, v0}, Lcom/vk/im/ui/components/dialogs_list/DialogsListPresenter;->d(Z)V
 
     .line 14
-    invoke-virtual {p2, v0}, Lcom/vk/im/ui/components/dialogs_list/c;->e(Z)V
+    invoke-virtual {p2, v0}, Lcom/vk/im/ui/components/dialogs_list/DialogsListPresenter;->e(Z)V
 
     .line 15
     sget-object p3, Lcom/vk/im/engine/models/dialogs/DialogsFilter;->REQUESTS:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
-    invoke-virtual {p2, p3}, Lcom/vk/im/ui/components/dialogs_list/c;->c(Lcom/vk/im/engine/models/dialogs/DialogsFilter;)V
+    invoke-virtual {p2, p3}, Lcom/vk/im/ui/components/dialogs_list/DialogsListPresenter;->c(Lcom/vk/im/engine/models/dialogs/DialogsFilter;)V
 
     .line 16
-    iput-object p2, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->J:Lcom/vk/im/ui/components/dialogs_list/c;
+    iput-object p2, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->J:Lcom/vk/im/ui/components/dialogs_list/DialogsListPresenter;
 
     .line 17
-    iget-object p2, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->E:Lcom/vk/im/engine/a;
+    iget-object p2, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->E:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/a;->j()Lc/a/m;
+    invoke-virtual {p2}, Lcom/vk/im/engine/ImEngine;->j()Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 18
-    const-class p3, Lcom/vk/im/engine/events/s;
+    const-class p3, Lcom/vk/im/engine/events/OnDialogsCountUpdateEvent;
 
-    invoke-virtual {p2, p3}, Lc/a/m;->b(Ljava/lang/Class;)Lc/a/m;
+    invoke-virtual {p2, p3}, Lio/reactivex/Observable;->b(Ljava/lang/Class;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 19
     sget-object p3, Lcom/vk/im/ui/fragments/ImRequestsFragment$f;->a:Lcom/vk/im/ui/fragments/ImRequestsFragment$f;
 
-    invoke-virtual {p2, p3}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 20
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object p3
 
-    invoke-virtual {p2, p3}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -620,28 +620,28 @@
 
     invoke-direct {p3, p0}, Lcom/vk/im/ui/fragments/ImRequestsFragment$g;-><init>(Lcom/vk/im/ui/fragments/ImRequestsFragment;)V
 
-    invoke-virtual {p2, p3}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, p3}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     const-string p3, "engine.observeEvents()\n \u2026  .subscribe { finish() }"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 22
-    invoke-virtual {p0, p2, p0}, Lcom/vk/im/ui/fragments/c;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/fragments/c;)V
+    invoke-virtual {p0, p2, p0}, Lcom/vk/im/ui/fragments/ImFragment;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/fragments/ImFragment;)V
 
     return-object p1
 
     .line 23
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     .line 24
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
@@ -649,7 +649,7 @@
     const-string p1, "declineView"
 
     .line 25
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 .end method
@@ -658,43 +658,43 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/fragments/c;->onDestroyView()V
+    invoke-super {p0}, Lcom/vk/im/ui/fragments/ImFragment;->onDestroyView()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->N:Lcom/vk/core/util/u0;
+    iget-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->N:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {v0}, Lcom/vk/core/util/u0;->reset()V
+    invoke-interface {v0}, Lcom/vk/core/util/Provider2;->reset()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->J:Lcom/vk/im/ui/components/dialogs_list/c;
+    iget-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->J:Lcom/vk/im/ui/components/dialogs_list/DialogsListPresenter;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialogs_list/c;->a(Lcom/vk/im/ui/components/dialogs_list/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialogs_list/DialogsListPresenter;->a(Lcom/vk/im/ui/components/dialogs_list/DialogsListCallback;)V
 
     .line 5
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/a;->b()Lcom/vk/im/ui/q/b;
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/BasePresenter;->b()Lcom/vk/im/ui/q/BaseViewController;
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/BasePresenter;->a()V
 
     .line 7
-    iput-object v1, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->J:Lcom/vk/im/ui/components/dialogs_list/c;
+    iput-object v1, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->J:Lcom/vk/im/ui/components/dialogs_list/DialogsListPresenter;
 
     .line 8
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->K:Lcom/vk/im/ui/components/dialogs_list/vc_impl/d;
+    iget-object v0, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->K:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVc;
 
     if-eqz v0, :cond_1
 
     .line 9
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/b;->d()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/BaseViewController;->d()V
 
     .line 10
-    iput-object v1, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->K:Lcom/vk/im/ui/components/dialogs_list/vc_impl/d;
+    iput-object v1, p0, Lcom/vk/im/ui/fragments/ImRequestsFragment;->K:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVc;
 
     :cond_1
     return-void
@@ -704,7 +704,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/fragments/c;->onPause()V
+    invoke-super {p0}, Lcom/vk/im/ui/fragments/ImFragment;->onPause()V
 
     const/4 v0, 0x0
 
@@ -718,7 +718,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/fragments/c;->onResume()V
+    invoke-super {p0}, Lcom/vk/im/ui/fragments/ImFragment;->onResume()V
 
     const/4 v0, 0x1
 

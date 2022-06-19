@@ -59,7 +59,7 @@
 
     invoke-direct {v0, p0, p2}, Lcom/vk/identity/adapters/IdentityListAdapter$AddButtonHolder$$special$$inlined$let$lambda$1;-><init>(Lcom/vk/identity/adapters/IdentityListAdapter$AddButtonHolder;Landroid/view/View;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     const/16 p2, 0x10
 
@@ -97,7 +97,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/identity/b/d;)V
+.method public final a(Lcom/vk/identity/b/IdentityAdapterItem6;)V
     .locals 4
 
     .line 1
@@ -109,11 +109,11 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    sget-object v2, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
+    sget-object v2, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
 
     const-string v3, "itemView"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -123,13 +123,13 @@
 
     const-string v3, "itemView.context"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/d;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem6;->b()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v2, v0, p1}, Lcom/vk/identity/a;->b(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v0, p1}, Lcom/vk/identity/IdentityHelper;->b(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

@@ -1,11 +1,11 @@
 .class final Lcom/vk/imageloader/VKImageLoader$j;
-.super Lcom/facebook/x/e/b;
+.super Lcom/facebook/x/e/BaseBitmapDataSubscriber;
 .source "VKImageLoader.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/imageloader/VKImageLoader;->c(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;Z)Landroid/graphics/Bitmap;
+    value = Lcom/vk/imageloader/VKImageLoader;->c(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;Z)Landroid/graphics/Bitmap;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,11 +21,11 @@
 
 .field final synthetic c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field final synthetic d:Lcom/vk/imageloader/l;
+.field final synthetic d:Lcom/vk/imageloader/VKImageRequestProgress;
 
 
 # direct methods
-.method constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicBoolean;Lcom/vk/imageloader/l;)V
+.method constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicBoolean;Lcom/vk/imageloader/VKImageRequestProgress;)V
     .locals 0
 
     .line 1
@@ -35,9 +35,9 @@
 
     iput-object p3, p0, Lcom/vk/imageloader/VKImageLoader$j;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-object p4, p0, Lcom/vk/imageloader/VKImageLoader$j;->d:Lcom/vk/imageloader/l;
+    iput-object p4, p0, Lcom/vk/imageloader/VKImageLoader$j;->d:Lcom/vk/imageloader/VKImageRequestProgress;
 
-    invoke-direct {p0}, Lcom/facebook/x/e/b;-><init>()V
+    invoke-direct {p0}, Lcom/facebook/x/e/BaseBitmapDataSubscriber;-><init>()V
 
     return-void
 .end method
@@ -119,43 +119,43 @@
     throw v0
 .end method
 
-.method public d(Lcom/facebook/datasource/b;)V
+.method public d(Lcom/facebook/datasource/DataSource;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/datasource/b<",
-            "Lcom/facebook/common/references/a<",
-            "Lcom/facebook/x/g/c;",
+            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/common/references/CloseableReference<",
+            "Lcom/facebook/x/g/CloseableImage;",
             ">;>;)V"
         }
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/facebook/datasource/b;->e()F
+    invoke-interface {p1}, Lcom/facebook/datasource/DataSource;->e()F
 
     move-result p1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/imageloader/VKImageLoader$j;->d:Lcom/vk/imageloader/l;
+    iget-object v0, p0, Lcom/vk/imageloader/VKImageLoader$j;->d:Lcom/vk/imageloader/VKImageRequestProgress;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-interface {v0, p1}, Lcom/vk/imageloader/l;->a(F)V
+    invoke-interface {v0, p1}, Lcom/vk/imageloader/VKImageRequestProgress;->a(F)V
 
     :cond_0
     return-void
 .end method
 
-.method public e(Lcom/facebook/datasource/b;)V
+.method public e(Lcom/facebook/datasource/DataSource;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/datasource/b<",
-            "Lcom/facebook/common/references/a<",
-            "Lcom/facebook/x/g/c;",
+            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/common/references/CloseableReference<",
+            "Lcom/facebook/x/g/CloseableImage;",
             ">;>;)V"
         }
     .end annotation

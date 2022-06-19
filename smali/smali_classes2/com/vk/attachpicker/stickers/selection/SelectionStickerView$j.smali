@@ -235,9 +235,9 @@
     .line 12
     iget-object p1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView$j;->d:Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;
 
-    iget-object p1, p1, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->M:Lcom/vk/attachpicker/stickers/selection/d;
+    iget-object p1, p1, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->M:Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;
 
-    invoke-interface {p1}, Lcom/vk/attachpicker/stickers/selection/d;->close()V
+    invoke-interface {p1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;->close()V
 
     :cond_1
     if-eq p2, v1, :cond_2

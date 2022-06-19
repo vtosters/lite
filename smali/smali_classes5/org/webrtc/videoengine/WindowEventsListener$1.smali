@@ -40,7 +40,7 @@
     const-string v1, "onDoubleTap"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v2, p0, Lorg/webrtc/videoengine/WindowEventsListener$1;->this$0:Lorg/webrtc/videoengine/WindowEventsListener;
@@ -78,7 +78,7 @@
     const-string v1, "onDown"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v2, p0, Lorg/webrtc/videoengine/WindowEventsListener$1;->this$0:Lorg/webrtc/videoengine/WindowEventsListener;
@@ -116,7 +116,7 @@
     const-string v1, "onLongPress"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v2, p0, Lorg/webrtc/videoengine/WindowEventsListener$1;->this$0:Lorg/webrtc/videoengine/WindowEventsListener;
@@ -152,7 +152,7 @@
     const-string p3, "onScroll"
 
     .line 1
-    invoke-static {p1, p3}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/WindowEventsListener$1;->this$0:Lorg/webrtc/videoengine/WindowEventsListener;
@@ -190,7 +190,7 @@
     const-string v1, "onSingleTapConfirmed"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v2, p0, Lorg/webrtc/videoengine/WindowEventsListener$1;->this$0:Lorg/webrtc/videoengine/WindowEventsListener;
@@ -228,7 +228,7 @@
     const-string v1, "onSingleTapUp"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v2, p0, Lorg/webrtc/videoengine/WindowEventsListener$1;->this$0:Lorg/webrtc/videoengine/WindowEventsListener;

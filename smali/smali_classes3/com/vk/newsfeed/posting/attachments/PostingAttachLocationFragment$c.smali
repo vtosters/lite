@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "PostingAttachLocationFragment.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/dto/geo/GeoLocation;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -27,10 +27,10 @@
 
 
 # instance fields
-.field private final B:Lcom/vk/core/util/k0;
+.field private final B:Lcom/vk/core/util/ItemClickListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/util/k0<",
+            "Lcom/vk/core/util/ItemClickListener<",
             "Lcom/vk/dto/geo/GeoLocation;",
             ">;"
         }
@@ -51,14 +51,14 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Ljava/lang/String;Lcom/vk/core/util/k0;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Ljava/lang/String;Lcom/vk/core/util/ItemClickListener;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "Ljava/lang/String;",
-            "Lcom/vk/core/util/k0<",
+            "Lcom/vk/core/util/ItemClickListener<",
             "-",
             "Lcom/vk/dto/geo/GeoLocation;",
             ">;)V"
@@ -68,18 +68,18 @@
     const v0, 0x7f0d0453
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     iput-object p2, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;->h:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;->B:Lcom/vk/core/util/k0;
+    iput-object p3, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;->B:Lcom/vk/core/util/ItemClickListener;
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p3, 0x2
 
@@ -87,7 +87,7 @@
 
     const v1, 0x7f0a0d80
 
-    invoke-static {p1, v1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -98,11 +98,11 @@
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f0a0cf2
 
-    invoke-static {p1, v1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -113,11 +113,11 @@
     .line 4
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f0a098c
 
-    invoke-static {p1, v1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -128,11 +128,11 @@
     .line 5
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f0a0590
 
-    invoke-static {p1, p2, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -226,7 +226,7 @@
 
     iget-object v4, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -238,7 +238,7 @@
 
     move-result v6
 
-    invoke-static {v4, v5, v6}, Lcom/vk/core/util/z;->c(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+    invoke-static {v4, v5, v6}, Lcom/vk/core/util/DrawableUtils;->c(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -298,7 +298,7 @@
 
     const v3, 0x7f1206b4
 
-    invoke-virtual {p0, v3}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->m(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -328,7 +328,7 @@
 
     iget-object v5, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v5, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -336,13 +336,13 @@
 
     const-string v5, "itemView.context"
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/geo/GeoLocation;->z1()I
 
     move-result v5
 
-    invoke-static {v3, v5}, Lcom/vk/core/utils/a;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v3, v5}, Lcom/vk/core/utils/AddressesUtils;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -403,7 +403,7 @@
     const v3, 0x7f1200b9
 
     .line 17
-    invoke-virtual {p0, v3}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->m(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -456,19 +456,19 @@
     .locals 2
 
     .line 1
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;->B:Lcom/vk/core/util/k0;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;->B:Lcom/vk/core/util/ItemClickListener;
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     const-string v1, "item"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v1
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/core/util/k0;->a(Ljava/lang/Object;I)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/core/util/ItemClickListener;->a(Ljava/lang/Object;I)V
 
     return-void
 .end method

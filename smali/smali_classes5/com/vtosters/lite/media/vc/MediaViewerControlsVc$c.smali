@@ -38,7 +38,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x2

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -47,7 +47,7 @@
 
     const-string v0, "json.getString(\"type\")"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "question"
 
@@ -58,7 +58,7 @@
 
     const-string v0, "json.getString(\"question\")"
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "answers"
 
@@ -139,7 +139,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v9}, Lcom/vk/dto/newsfeed/entries/Post$Feedback;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v9}, Lcom/vk/dto/newsfeed/entries/Post$Feedback;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object p1
 .end method

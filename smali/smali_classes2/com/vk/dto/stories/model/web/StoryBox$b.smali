@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -112,9 +112,9 @@
     if-eqz v10, :cond_0
 
     .line 9
-    sget-object v11, Lcom/vk/dto/stories/model/web/b;->a:Lcom/vk/dto/stories/model/web/b;
+    sget-object v11, Lcom/vk/dto/stories/model/web/WebSticker1;->INSTANCE:Lcom/vk/dto/stories/model/web/WebSticker1;
 
-    invoke-virtual {v11, v10}, Lcom/vk/dto/stories/model/web/b;->a(Lorg/json/JSONObject;)Lcom/vk/dto/stories/model/web/WebSticker;
+    invoke-virtual {v11, v10}, Lcom/vk/dto/stories/model/web/WebSticker1;->a(Lorg/json/JSONObject;)Lcom/vk/dto/stories/model/web/WebSticker;
 
     move-result-object v10
 
@@ -169,7 +169,7 @@
     const-string v1, "none"
 
     .line 12
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -235,7 +235,7 @@
     const-string v0, "backgroundType"
 
     .line 15
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v1, p1
 

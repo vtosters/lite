@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # static fields
@@ -38,7 +38,7 @@
 
     check-cast p1, Ljava/lang/Boolean;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/q1$a;->a(Ljava/lang/Boolean;)V
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/NotificationsAdvancedSettingsFragment$a;->a(Ljava/lang/Boolean;)V
 
     return-void
 .end method

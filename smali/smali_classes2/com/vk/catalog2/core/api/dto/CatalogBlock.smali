@@ -79,7 +79,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/CatalogBlock$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/api/dto/CatalogBlock$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/catalog2/core/api/dto/CatalogBlock$a;
@@ -339,7 +339,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogBlock;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -349,7 +349,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogBlock;->c:Lcom/vk/catalog2/core/api/dto/CatalogDataType;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -359,7 +359,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogBlock;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -369,7 +369,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogBlock;->e:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -379,7 +379,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogBlock;->f:Lcom/vk/catalog2/core/api/dto/CatalogBadge;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -389,7 +389,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogBlock;->g:Lcom/vk/catalog2/core/api/dto/layout/CatalogLayout;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -399,7 +399,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogBlock;->h:Ljava/util/ArrayList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -409,7 +409,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogBlock;->B:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -419,7 +419,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/api/dto/CatalogBlock;->C:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -429,7 +429,7 @@
 
     iget-object p1, p1, Lcom/vk/catalog2/core/api/dto/CatalogBlock;->D:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

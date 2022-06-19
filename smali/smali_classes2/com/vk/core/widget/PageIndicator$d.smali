@@ -96,14 +96,14 @@
     move-result-object v0
 
     .line 4
-    sget-object v1, Lb/h/z/m;->PageIndicator:[I
+    sget-object v1, Lb/h/z/R3;->PageIndicator:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 5
-    sget p2, Lb/h/z/m;->PageIndicator_PIRadiusBig:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIRadiusBig:I
 
     const/4 v1, 0x4
 
@@ -118,7 +118,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->h:I
 
     .line 6
-    sget p2, Lb/h/z/m;->PageIndicator_PIRadiusNormal:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIRadiusNormal:I
 
     const/4 v1, 0x3
 
@@ -133,7 +133,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->i:I
 
     .line 7
-    sget p2, Lb/h/z/m;->PageIndicator_PITriangleWidth:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PITriangleWidth:I
 
     const/4 v1, 0x5
 
@@ -148,7 +148,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->j:I
 
     .line 8
-    sget p2, Lb/h/z/m;->PageIndicator_PITriangleHeight:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PITriangleHeight:I
 
     const/4 v2, 0x7
 
@@ -163,7 +163,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->k:I
 
     .line 9
-    sget p2, Lb/h/z/m;->PageIndicator_PIStepInner:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIStepInner:I
 
     const/16 v2, 0xb
 
@@ -178,7 +178,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->l:I
 
     .line 10
-    sget p2, Lb/h/z/m;->PageIndicator_PIStepOuter:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIStepOuter:I
 
     const/16 v2, 0x9
 
@@ -193,7 +193,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->m:I
 
     .line 11
-    sget p2, Lb/h/z/m;->PageIndicator_PIMaxCount:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIMaxCount:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getInteger(II)I
 
@@ -202,7 +202,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->n:I
 
     .line 12
-    sget p2, Lb/h/z/m;->PageIndicator_PIColorSelect:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIColorSelect:I
 
     const/4 v0, -0x1
 
@@ -213,7 +213,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->o:I
 
     .line 13
-    sget p2, Lb/h/z/m;->PageIndicator_PIColorNormal:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIColorNormal:I
 
     const v0, 0x66ffffff
 
@@ -224,7 +224,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->p:I
 
     .line 14
-    sget p2, Lb/h/z/m;->PageIndicator_PIDurationMillis:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIDurationMillis:I
 
     const/16 v0, 0xc8
 
@@ -235,7 +235,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->r:I
 
     .line 15
-    sget p2, Lb/h/z/m;->PageIndicator_PIDurationTriangleMillis:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIDurationTriangleMillis:I
 
     const/4 v0, 0x0
 
@@ -246,7 +246,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->s:I
 
     .line 16
-    sget p2, Lb/h/z/m;->PageIndicator_PIVerticalPadding:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIVerticalPadding:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -255,7 +255,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->t:I
 
     .line 17
-    sget p2, Lb/h/z/m;->PageIndicator_PIAlphaNormal:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIAlphaNormal:I
 
     const/16 v1, 0xff
 
@@ -266,7 +266,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->q:I
 
     .line 18
-    sget p2, Lb/h/z/m;->PageIndicator_PIShadowRadius:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIShadowRadius:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -277,7 +277,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->u:F
 
     .line 19
-    sget p2, Lb/h/z/m;->PageIndicator_PIShadowX:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIShadowX:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -288,7 +288,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->v:F
 
     .line 20
-    sget p2, Lb/h/z/m;->PageIndicator_PIShadowY:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIShadowY:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -299,7 +299,7 @@
     iput p2, p0, Lcom/vk/core/widget/PageIndicator$d;->w:F
 
     .line 21
-    sget p2, Lb/h/z/m;->PageIndicator_PIShadowColor:I
+    sget p2, Lb/h/z/R3;->PageIndicator_PIShadowColor:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getColor(II)I
 

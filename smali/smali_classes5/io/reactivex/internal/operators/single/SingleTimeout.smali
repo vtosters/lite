@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/single/SingleTimeout;
-.super Lc/a/t;
+.super Lio/reactivex/Single;
 .source "SingleTimeout.java"
 
 
@@ -15,17 +15,17 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lc/a/t<",
+        "Lio/reactivex/Single<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final a:Lc/a/x;
+.field final a:Lio/reactivex/SingleSource;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/x<",
+            "Lio/reactivex/SingleSource<",
             "TT;>;"
         }
     .end annotation
@@ -35,12 +35,12 @@
 
 .field final c:Ljava/util/concurrent/TimeUnit;
 
-.field final d:Lc/a/s;
+.field final d:Lio/reactivex/Scheduler;
 
-.field final e:Lc/a/x;
+.field final e:Lio/reactivex/SingleSource;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/x<",
+            "Lio/reactivex/SingleSource<",
             "+TT;>;"
         }
     .end annotation
@@ -48,25 +48,25 @@
 
 
 # direct methods
-.method public constructor <init>(Lc/a/x;JLjava/util/concurrent/TimeUnit;Lc/a/s;Lc/a/x;)V
+.method public constructor <init>(Lio/reactivex/SingleSource;JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;Lio/reactivex/SingleSource;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/x<",
+            "Lio/reactivex/SingleSource<",
             "TT;>;J",
             "Ljava/util/concurrent/TimeUnit;",
-            "Lc/a/s;",
-            "Lc/a/x<",
+            "Lio/reactivex/Scheduler;",
+            "Lio/reactivex/SingleSource<",
             "+TT;>;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lc/a/t;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/Single;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->a:Lc/a/x;
+    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->a:Lio/reactivex/SingleSource;
 
     .line 3
     iput-wide p2, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->b:J
@@ -75,22 +75,22 @@
     iput-object p4, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->c:Ljava/util/concurrent/TimeUnit;
 
     .line 5
-    iput-object p5, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->d:Lc/a/s;
+    iput-object p5, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->d:Lio/reactivex/Scheduler;
 
     .line 6
-    iput-object p6, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->e:Lc/a/x;
+    iput-object p6, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->e:Lio/reactivex/SingleSource;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected b(Lc/a/v;)V
+.method protected b(Lio/reactivex/SingleObserver;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/v<",
+            "Lio/reactivex/SingleObserver<",
             "-TT;>;)V"
         }
     .end annotation
@@ -98,7 +98,7 @@
     .line 1
     new-instance v6, Lio/reactivex/internal/operators/single/SingleTimeout$TimeoutMainObserver;
 
-    iget-object v2, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->e:Lc/a/x;
+    iget-object v2, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->e:Lio/reactivex/SingleSource;
 
     iget-wide v3, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->b:J
 
@@ -108,30 +108,30 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lio/reactivex/internal/operators/single/SingleTimeout$TimeoutMainObserver;-><init>(Lc/a/v;Lc/a/x;JLjava/util/concurrent/TimeUnit;)V
+    invoke-direct/range {v0 .. v5}, Lio/reactivex/internal/operators/single/SingleTimeout$TimeoutMainObserver;-><init>(Lio/reactivex/SingleObserver;Lio/reactivex/SingleSource;JLjava/util/concurrent/TimeUnit;)V
 
     .line 2
-    invoke-interface {p1, v6}, Lc/a/v;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p1, v6}, Lio/reactivex/SingleObserver;->a(Lio/reactivex/disposables/Disposable;)V
 
     .line 3
     iget-object p1, v6, Lio/reactivex/internal/operators/single/SingleTimeout$TimeoutMainObserver;->task:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->d:Lc/a/s;
+    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->d:Lio/reactivex/Scheduler;
 
     iget-wide v1, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->b:J
 
     iget-object v3, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->c:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v6, v1, v2, v3}, Lc/a/s;->a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v6, v1, v2, v3}, Lio/reactivex/Scheduler;->a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
+    invoke-static {p1, v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
 
     .line 4
-    iget-object p1, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->a:Lc/a/x;
+    iget-object p1, p0, Lio/reactivex/internal/operators/single/SingleTimeout;->a:Lio/reactivex/SingleSource;
 
-    invoke-interface {p1, v6}, Lc/a/x;->a(Lc/a/v;)V
+    invoke-interface {p1, v6}, Lio/reactivex/SingleSource;->a(Lio/reactivex/SingleObserver;)V
 
     return-void
 .end method

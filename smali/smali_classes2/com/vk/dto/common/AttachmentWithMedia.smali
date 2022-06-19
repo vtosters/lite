@@ -3,8 +3,8 @@
 .source "AttachmentWithMedia.kt"
 
 # interfaces
-.implements Lcom/vk/dto/common/k;
-.implements Lcom/vk/dto/common/j;
+.implements Lcom/vk/dto/common/WithOwner;
+.implements Lcom/vk/dto/common/WithId;
 
 
 # direct methods

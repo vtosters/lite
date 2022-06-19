@@ -67,18 +67,18 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$m;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/u;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/Player;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->f()J
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->f()J
 
     move-result-wide v0
 
     .line 3
     iget-object v2, p0, Lcom/vtosters/lite/audio/player/PlayerAdapter$m;->a:Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-virtual {v2}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/u;
+    invoke-virtual {v2}, Lcom/vtosters/lite/audio/player/PlayerAdapter;->c()Lcom/vtosters/lite/audio/player/Player;
 
     move-result-object v2
 
@@ -90,7 +90,7 @@
 
     float-to-int v0, v3
 
-    invoke-virtual {v2, v0}, Lcom/vtosters/lite/audio/player/u;->b(I)Z
+    invoke-virtual {v2, v0}, Lcom/vtosters/lite/audio/player/Player;->b(I)Z
 
     return-void
 .end method

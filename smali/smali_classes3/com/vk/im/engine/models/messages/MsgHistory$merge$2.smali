@@ -3,12 +3,12 @@
 .source "MsgHistory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/models/messages/MsgHistory;->a(Lcom/vk/im/engine/models/a;)V
+    value = Lcom/vk/im/engine/models/messages/MsgHistory;->a(Lcom/vk/im/engine/models/EntityIntMap;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/models/messages/Msg;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -28,14 +28,14 @@
 
 
 # instance fields
-.field final synthetic $msgMap:Lcom/vk/im/engine/models/a;
+.field final synthetic $msgMap:Lcom/vk/im/engine/models/EntityIntMap;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/models/a;)V
+.method constructor <init>(Lcom/vk/im/engine/models/EntityIntMap;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/engine/models/messages/MsgHistory$merge$2;->$msgMap:Lcom/vk/im/engine/models/a;
+    iput-object p1, p0, Lcom/vk/im/engine/models/messages/MsgHistory$merge$2;->$msgMap:Lcom/vk/im/engine/models/EntityIntMap;
 
     const/4 p1, 0x1
 
@@ -50,13 +50,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/models/messages/MsgHistory$merge$2;->$msgMap:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/messages/MsgHistory$merge$2;->$msgMap:Lcom/vk/im/engine/models/EntityIntMap;
 
     invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/Msg;->getLocalId()I
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/a;->c(I)Z
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/EntityIntMap;->c(I)Z
 
     move-result p1
 

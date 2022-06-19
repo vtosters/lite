@@ -3,7 +3,7 @@
 .source "BaseAuthPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/auth/api/models/AuthResult;",
         ">;"
     }
@@ -61,17 +61,17 @@
     .line 2
     iget-object v0, p0, Lcom/vk/auth/base/BaseAuthPresenter$e;->a:Lcom/vk/auth/base/BaseAuthPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/s;
+    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/SignUpModel;
 
     move-result-object v0
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/auth/base/BaseAuthPresenter$e;->b:Landroid/net/Uri;
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/auth/main/s;->a(Lcom/vk/auth/api/models/AuthResult;Landroid/net/Uri;)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/auth/main/SignUpModel;->a(Lcom/vk/auth/api/models/AuthResult;Landroid/net/Uri;)V
 
     :cond_0
     return-void

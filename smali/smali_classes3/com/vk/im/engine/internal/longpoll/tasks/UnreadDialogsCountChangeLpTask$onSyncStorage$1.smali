@@ -3,12 +3,12 @@
 .source "UnreadDialogsCountChangeLpTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/longpoll/tasks/UnreadDialogsCountChangeLpTask;->b(Lcom/vk/im/engine/internal/longpoll/d;)V
+    value = Lcom/vk/im/engine/internal/longpoll/tasks/UnreadDialogsCountChangeLpTask;->b(Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -50,25 +50,25 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->d()I
 
     move-result p1
 
     .line 3
-    new-instance v1, Lcom/vk/im/engine/internal/storage/models/b;
+    new-instance v1, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
 
     sget-object v2, Lcom/vk/im/engine/models/dialogs/DialogsFilter;->UNREAD:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
@@ -78,13 +78,13 @@
 
     move-result v3
 
-    invoke-direct {v1, v2, v3, p1}, Lcom/vk/im/engine/internal/storage/models/b;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;II)V
+    invoke-direct {v1, v2, v3, p1}, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;II)V
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/internal/storage/models/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;)V
 
     .line 5
-    new-instance v1, Lcom/vk/im/engine/internal/storage/models/b;
+    new-instance v1, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
 
     sget-object v2, Lcom/vk/im/engine/models/dialogs/DialogsFilter;->BUSINESS_NOTIFY:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
@@ -94,10 +94,10 @@
 
     move-result v3
 
-    invoke-direct {v1, v2, v3, p1}, Lcom/vk/im/engine/internal/storage/models/b;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;II)V
+    invoke-direct {v1, v2, v3, p1}, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;II)V
 
     .line 6
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/internal/storage/models/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;)V
 
     return-void
 .end method
@@ -110,7 +110,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/longpoll/tasks/UnreadDialogsCountChangeLpTask$onSyncStorage$1;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

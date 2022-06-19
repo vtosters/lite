@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/observable/ObservableFlatMap;
-.super Lio/reactivex/internal/operators/observable/a;
+.super Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;
 .source "ObservableFlatMap.java"
 
 
@@ -18,19 +18,19 @@
         "U:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/internal/operators/observable/a<",
+        "Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream<",
         "TT;TU;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final b:Lc/a/z/j;
+.field final b:Lio/reactivex/functions/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/j<",
+            "Lio/reactivex/functions/Function<",
             "-TT;+",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "+TU;>;>;"
         }
     .end annotation
@@ -44,25 +44,25 @@
 
 
 # direct methods
-.method public constructor <init>(Lc/a/p;Lc/a/z/j;ZII)V
+.method public constructor <init>(Lio/reactivex/ObservableSource;Lio/reactivex/functions/Function;ZII)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "TT;>;",
-            "Lc/a/z/j<",
+            "Lio/reactivex/functions/Function<",
             "-TT;+",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "+TU;>;>;ZII)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/a;-><init>(Lc/a/p;)V
+    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;-><init>(Lio/reactivex/ObservableSource;)V
 
     .line 2
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap;->b:Lc/a/z/j;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap;->b:Lio/reactivex/functions/Function;
 
     .line 3
     iput-boolean p3, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap;->c:Z
@@ -78,22 +78,22 @@
 
 
 # virtual methods
-.method public b(Lc/a/r;)V
+.method public b(Lio/reactivex/Observer;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TU;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/a;->a:Lc/a/p;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;->a:Lio/reactivex/ObservableSource;
 
-    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap;->b:Lc/a/z/j;
+    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap;->b:Lio/reactivex/functions/Function;
 
-    invoke-static {v0, p1, v1}, Lio/reactivex/internal/operators/observable/ObservableScalarXMap;->a(Lc/a/p;Lc/a/r;Lc/a/z/j;)Z
+    invoke-static {v0, p1, v1}, Lio/reactivex/internal/operators/observable/ObservableScalarXMap;->a(Lio/reactivex/ObservableSource;Lio/reactivex/Observer;Lio/reactivex/functions/Function;)Z
 
     move-result v0
 
@@ -103,11 +103,11 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/a;->a:Lc/a/p;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;->a:Lio/reactivex/ObservableSource;
 
     new-instance v7, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;
 
-    iget-object v3, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap;->b:Lc/a/z/j;
+    iget-object v3, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap;->b:Lio/reactivex/functions/Function;
 
     iget-boolean v4, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap;->c:Z
 
@@ -119,9 +119,9 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v1 .. v6}, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;-><init>(Lc/a/r;Lc/a/z/j;ZII)V
+    invoke-direct/range {v1 .. v6}, Lio/reactivex/internal/operators/observable/ObservableFlatMap$MergeObserver;-><init>(Lio/reactivex/Observer;Lio/reactivex/functions/Function;ZII)V
 
-    invoke-interface {v0, v7}, Lc/a/p;->a(Lc/a/r;)V
+    invoke-interface {v0, v7}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
 
     return-void
 .end method

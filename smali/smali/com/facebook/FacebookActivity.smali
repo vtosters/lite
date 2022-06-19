@@ -49,12 +49,12 @@
     move-result-object v0
 
     .line 2
-    invoke-static {v0}, Lcom/facebook/internal/n;->c(Landroid/content/Intent;)Landroid/os/Bundle;
+    invoke-static {v0}, Lcom/facebook/internal/NativeProtocol;->c(Landroid/content/Intent;)Landroid/os/Bundle;
 
     move-result-object v0
 
     .line 3
-    invoke-static {v0}, Lcom/facebook/internal/n;->a(Landroid/os/Bundle;)Lcom/facebook/FacebookException;
+    invoke-static {v0}, Lcom/facebook/internal/NativeProtocol;->a(Landroid/os/Bundle;)Lcom/facebook/FacebookException;
 
     move-result-object v0
 
@@ -66,7 +66,7 @@
     const/4 v2, 0x0
 
     .line 5
-    invoke-static {v1, v2, v0}, Lcom/facebook/internal/n;->a(Landroid/content/Intent;Landroid/os/Bundle;Lcom/facebook/FacebookException;)Landroid/content/Intent;
+    invoke-static {v1, v2, v0}, Lcom/facebook/internal/NativeProtocol;->a(Landroid/content/Intent;Landroid/os/Bundle;Lcom/facebook/FacebookException;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -113,7 +113,7 @@
     move-result-object p1
 
     .line 3
-    invoke-static {}, Lcom/facebook/e;->t()Z
+    invoke-static {}, Lcom/facebook/FacebookSdk;->t()Z
 
     move-result v0
 
@@ -124,18 +124,18 @@
 
     const-string v1, "Facebook SDK not initialized. Make sure you call sdkInitialize inside your Application\'s onCreate method."
 
-    invoke-static {v0, v1}, Lcom/facebook/internal/r;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/facebook/internal/Utility;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/facebook/e;->c(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/facebook/FacebookSdk;->c(Landroid/content/Context;)V
 
     .line 6
     :cond_0
-    sget v0, Lcom/facebook/common/c;->com_facebook_activity_layout:I
+    sget v0, Lcom/facebook/common/R1;->com_facebook_activity_layout:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setContentView(I)V
 
@@ -215,9 +215,9 @@
     if-eqz v2, :cond_0
 
     .line 5
-    new-instance v2, Lcom/facebook/internal/d;
+    new-instance v2, Lcom/facebook/internal/FacebookDialogFragment;
 
-    invoke-direct {v2}, Lcom/facebook/internal/d;-><init>()V
+    invoke-direct {v2}, Lcom/facebook/internal/FacebookDialogFragment;-><init>()V
 
     .line 6
     invoke-virtual {v2, v3}, Landroidx/fragment/app/Fragment;->setRetainInstance(Z)V
@@ -271,9 +271,9 @@
 
     .line 13
     :cond_1
-    new-instance v2, Lcom/facebook/login/b;
+    new-instance v2, Lcom/facebook/login/LoginFragment;
 
-    invoke-direct {v2}, Lcom/facebook/login/b;-><init>()V
+    invoke-direct {v2}, Lcom/facebook/login/LoginFragment;-><init>()V
 
     .line 14
     invoke-virtual {v2, v3}, Landroidx/fragment/app/Fragment;->setRetainInstance(Z)V
@@ -283,7 +283,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/facebook/common/b;->com_facebook_fragment_container:I
+    sget v1, Lcom/facebook/common/R2;->com_facebook_fragment_container:I
 
     sget-object v3, Lcom/facebook/FacebookActivity;->c:Ljava/lang/String;
 

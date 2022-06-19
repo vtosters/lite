@@ -22,10 +22,10 @@
     .end annotation
 .end field
 
-.field public static final h:Lcom/vk/dto/common/data/c;
+.field public static final h:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/common/VideoAlbum;",
             ">;"
         }
@@ -73,7 +73,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/common/VideoAlbum$b;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/common/VideoAlbum;->h:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/dto/common/VideoAlbum;->h:Lcom/vk/dto/common/data/JsonParser;
 
     return-void
 .end method
@@ -173,7 +173,7 @@
 
     const-class v1, Lcom/vk/dto/common/data/PrivacySetting$PrivacyRule;
 
-    invoke-static {p1, v0, v1}, Lb/h/h/b;->a(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/Class;)V
+    invoke-static {p1, v0, v1}, Lb/h/h/ModelUtils;->a(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/Class;)V
 
     return-void
 .end method
@@ -427,7 +427,7 @@
     .line 7
     iget-object p2, p0, Lcom/vk/dto/common/VideoAlbum;->g:Ljava/util/List;
 
-    invoke-static {p1, p2}, Lb/h/h/b;->a(Landroid/os/Parcel;Ljava/util/List;)V
+    invoke-static {p1, p2}, Lb/h/h/ModelUtils;->a(Landroid/os/Parcel;Ljava/util/List;)V
 
     return-void
 .end method

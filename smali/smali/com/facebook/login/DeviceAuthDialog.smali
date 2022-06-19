@@ -30,7 +30,7 @@
 
 .field private e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field private volatile f:Lcom/facebook/g;
+.field private volatile f:Lcom/facebook/GraphRequestAsyncTask;
 
 .field private volatile g:Ljava/util/concurrent/ScheduledFuture;
 
@@ -127,11 +127,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/facebook/GraphRequest;->b()Lcom/facebook/g;
+    invoke-virtual {v0}, Lcom/facebook/GraphRequest;->b()Lcom/facebook/GraphRequestAsyncTask;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/login/DeviceAuthDialog;->f:Lcom/facebook/g;
+    iput-object v0, p0, Lcom/facebook/login/DeviceAuthDialog;->f:Lcom/facebook/GraphRequestAsyncTask;
 
     return-void
 .end method
@@ -187,7 +187,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/facebook/s/a/a;->c(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/facebook/s/a/DeviceRequestsHelper;->c(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -231,25 +231,25 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/facebook/s/a/a;->d(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/facebook/s/a/DeviceRequestsHelper;->d(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 29
-    new-instance v0, Lcom/facebook/appevents/h;
+    new-instance v0, Lcom/facebook/appevents/InternalAppEventsLogger;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/facebook/appevents/h;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/facebook/appevents/InternalAppEventsLogger;-><init>(Landroid/content/Context;)V
 
     const-string v1, "fb_smart_login_service"
 
     .line 30
-    invoke-virtual {v0, v1}, Lcom/facebook/appevents/h;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/appevents/InternalAppEventsLogger;->a(Ljava/lang/String;)V
 
     .line 31
     :cond_0
@@ -281,20 +281,20 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/facebook/login/DeviceAuthDialog;Ljava/lang/String;Lcom/facebook/internal/r$d;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
+.method static synthetic a(Lcom/facebook/login/DeviceAuthDialog;Ljava/lang/String;Lcom/facebook/internal/Utility$d;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
     .locals 0
 
     .line 4
-    invoke-direct/range {p0 .. p6}, Lcom/facebook/login/DeviceAuthDialog;->a(Ljava/lang/String;Lcom/facebook/internal/r$d;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
+    invoke-direct/range {p0 .. p6}, Lcom/facebook/login/DeviceAuthDialog;->a(Ljava/lang/String;Lcom/facebook/internal/Utility$d;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/facebook/login/DeviceAuthDialog;Ljava/lang/String;Lcom/facebook/internal/r$d;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
+.method static synthetic a(Lcom/facebook/login/DeviceAuthDialog;Ljava/lang/String;Lcom/facebook/internal/Utility$d;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
     .locals 0
 
     .line 6
-    invoke-direct/range {p0 .. p5}, Lcom/facebook/login/DeviceAuthDialog;->a(Ljava/lang/String;Lcom/facebook/internal/r$d;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
+    invoke-direct/range {p0 .. p5}, Lcom/facebook/login/DeviceAuthDialog;->a(Ljava/lang/String;Lcom/facebook/internal/Utility$d;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
 
     return-void
 .end method
@@ -308,7 +308,7 @@
     return-void
 .end method
 
-.method private a(Ljava/lang/String;Lcom/facebook/internal/r$d;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
+.method private a(Ljava/lang/String;Lcom/facebook/internal/Utility$d;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
     .locals 12
 
     .line 34
@@ -316,7 +316,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/facebook/common/d;->com_facebook_smart_login_confirmation_title:I
+    sget v1, Lcom/facebook/common/R4;->com_facebook_smart_login_confirmation_title:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -327,7 +327,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/facebook/common/d;->com_facebook_smart_login_confirmation_continue_as:I
+    sget v2, Lcom/facebook/common/R4;->com_facebook_smart_login_confirmation_continue_as:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -338,7 +338,7 @@
 
     move-result-object v2
 
-    sget v3, Lcom/facebook/common/d;->com_facebook_smart_login_confirmation_cancel:I
+    sget v3, Lcom/facebook/common/R4;->com_facebook_smart_login_confirmation_cancel:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -392,7 +392,7 @@
 
     move-object/from16 v11, p6
 
-    invoke-direct/range {v5 .. v11}, Lcom/facebook/login/DeviceAuthDialog$f;-><init>(Lcom/facebook/login/DeviceAuthDialog;Ljava/lang/String;Lcom/facebook/internal/r$d;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
+    invoke-direct/range {v5 .. v11}, Lcom/facebook/login/DeviceAuthDialog$f;-><init>(Lcom/facebook/login/DeviceAuthDialog;Ljava/lang/String;Lcom/facebook/internal/Utility$d;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
 
     .line 41
     invoke-virtual {v0, v1, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
@@ -418,7 +418,7 @@
     return-void
 .end method
 
-.method private a(Ljava/lang/String;Lcom/facebook/internal/r$d;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
+.method private a(Ljava/lang/String;Lcom/facebook/internal/Utility$d;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
     .locals 12
 
     move-object v0, p0
@@ -427,22 +427,22 @@
     iget-object v1, v0, Lcom/facebook/login/DeviceAuthDialog;->d:Lcom/facebook/login/DeviceAuthMethodHandler;
 
     .line 55
-    invoke-static {}, Lcom/facebook/e;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->f()Ljava/lang/String;
 
     move-result-object v3
 
     .line 56
-    invoke-virtual {p2}, Lcom/facebook/internal/r$d;->c()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/facebook/internal/Utility$d;->c()Ljava/util/List;
 
     move-result-object v5
 
     .line 57
-    invoke-virtual {p2}, Lcom/facebook/internal/r$d;->a()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/facebook/internal/Utility$d;->a()Ljava/util/List;
 
     move-result-object v6
 
     .line 58
-    invoke-virtual {p2}, Lcom/facebook/internal/r$d;->b()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/facebook/internal/Utility$d;->b()Ljava/util/List;
 
     move-result-object v7
 
@@ -553,7 +553,7 @@
     new-instance v1, Lcom/facebook/AccessToken;
 
     .line 51
-    invoke-static {}, Lcom/facebook/e;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->f()Ljava/lang/String;
 
     move-result-object v12
 
@@ -599,7 +599,7 @@
     invoke-direct/range {v0 .. v5}, Lcom/facebook/GraphRequest;-><init>(Lcom/facebook/AccessToken;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;Lcom/facebook/GraphRequest$f;)V
 
     .line 53
-    invoke-virtual {v6}, Lcom/facebook/GraphRequest;->b()Lcom/facebook/g;
+    invoke-virtual {v6}, Lcom/facebook/GraphRequest;->b()Lcom/facebook/GraphRequestAsyncTask;
 
     return-void
 .end method
@@ -718,7 +718,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/facebook/s/a/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/facebook/s/a/DeviceRequestsHelper;->a(Ljava/lang/String;)V
 
     .line 4
     :cond_1
@@ -769,7 +769,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/facebook/s/a/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/facebook/s/a/DeviceRequestsHelper;->a(Ljava/lang/String;)V
 
     .line 64
     :cond_1
@@ -842,7 +842,7 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/facebook/internal/s;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/internal/Validate;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -852,7 +852,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/facebook/internal/s;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/internal/Validate;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -868,7 +868,7 @@
     invoke-virtual {v3, v0, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 16
-    invoke-static {}, Lcom/facebook/s/a/a;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/s/a/DeviceRequestsHelper;->a()Ljava/lang/String;
 
     move-result-object p1
 
@@ -895,7 +895,7 @@
     invoke-direct/range {v0 .. v5}, Lcom/facebook/GraphRequest;-><init>(Lcom/facebook/AccessToken;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;Lcom/facebook/GraphRequest$f;)V
 
     .line 19
-    invoke-virtual {p1}, Lcom/facebook/GraphRequest;->b()Lcom/facebook/g;
+    invoke-virtual {p1}, Lcom/facebook/GraphRequest;->b()Lcom/facebook/GraphRequestAsyncTask;
 
     return-void
 .end method
@@ -912,14 +912,14 @@
 
     move-result-object v0
 
-    sget v1, Lcom/facebook/common/e;->com_facebook_auth_dialog:I
+    sget v1, Lcom/facebook/common/R3;->com_facebook_auth_dialog:I
 
     invoke-direct {p1, v0, v1}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
     iput-object p1, p0, Lcom/facebook/login/DeviceAuthDialog;->B:Landroid/app/Dialog;
 
     .line 2
-    invoke-static {}, Lcom/facebook/s/a/a;->b()Z
+    invoke-static {}, Lcom/facebook/s/a/DeviceRequestsHelper;->b()Z
 
     move-result p1
 
@@ -974,10 +974,10 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/facebook/login/b;
+    check-cast p2, Lcom/facebook/login/LoginFragment;
 
     .line 4
-    invoke-virtual {p2}, Lcom/facebook/login/b;->E4()Lcom/facebook/login/LoginClient;
+    invoke-virtual {p2}, Lcom/facebook/login/LoginFragment;->E4()Lcom/facebook/login/LoginClient;
 
     move-result-object p2
 
@@ -1027,12 +1027,12 @@
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
     .line 4
-    iget-object v1, p0, Lcom/facebook/login/DeviceAuthDialog;->f:Lcom/facebook/g;
+    iget-object v1, p0, Lcom/facebook/login/DeviceAuthDialog;->f:Lcom/facebook/GraphRequestAsyncTask;
 
     if-eqz v1, :cond_0
 
     .line 5
-    iget-object v1, p0, Lcom/facebook/login/DeviceAuthDialog;->f:Lcom/facebook/g;
+    iget-object v1, p0, Lcom/facebook/login/DeviceAuthDialog;->f:Lcom/facebook/GraphRequestAsyncTask;
 
     invoke-virtual {v1, v0}, Landroid/os/AsyncTask;->cancel(Z)Z
 
@@ -1099,12 +1099,12 @@
     if-eqz p1, :cond_0
 
     .line 1
-    sget p1, Lcom/facebook/common/c;->com_facebook_smart_device_dialog_fragment:I
+    sget p1, Lcom/facebook/common/R1;->com_facebook_smart_device_dialog_fragment:I
 
     goto :goto_0
 
     :cond_0
-    sget p1, Lcom/facebook/common/c;->com_facebook_device_auth_dialog_fragment:I
+    sget p1, Lcom/facebook/common/R1;->com_facebook_device_auth_dialog_fragment:I
 
     :goto_0
     return p1
@@ -1134,7 +1134,7 @@
     move-result-object p1
 
     .line 3
-    sget v0, Lcom/facebook/common/b;->progress_bar:I
+    sget v0, Lcom/facebook/common/R2;->progress_bar:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1143,7 +1143,7 @@
     iput-object v0, p0, Lcom/facebook/login/DeviceAuthDialog;->a:Landroid/view/View;
 
     .line 4
-    sget v0, Lcom/facebook/common/b;->confirmation_code:I
+    sget v0, Lcom/facebook/common/R2;->confirmation_code:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1154,7 +1154,7 @@
     iput-object v0, p0, Lcom/facebook/login/DeviceAuthDialog;->b:Landroid/widget/TextView;
 
     .line 5
-    sget v0, Lcom/facebook/common/b;->cancel_button:I
+    sget v0, Lcom/facebook/common/R2;->cancel_button:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1170,7 +1170,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 7
-    sget v0, Lcom/facebook/common/b;->com_facebook_device_auth_instructions:I
+    sget v0, Lcom/facebook/common/R2;->com_facebook_device_auth_instructions:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1183,7 +1183,7 @@
     .line 8
     iget-object v0, p0, Lcom/facebook/login/DeviceAuthDialog;->c:Landroid/widget/TextView;
 
-    sget v1, Lcom/facebook/common/d;->com_facebook_device_auth_instructions:I
+    sget v1, Lcom/facebook/common/R4;->com_facebook_device_auth_instructions:I
 
     .line 9
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;

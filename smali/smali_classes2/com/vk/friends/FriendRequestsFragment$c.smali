@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/api/friends/l;
+.field private final a:Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse;
 
 .field private final b:Lcom/vk/dto/common/data/VKList;
     .annotation system Ldalvik/annotation/Signature;
@@ -58,17 +58,17 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/friends/FriendRequestsFragment$c;-><init>(Lcom/vk/api/friends/l;Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKFromList;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/friends/FriendRequestsFragment$c;-><init>(Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse;Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKFromList;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/api/friends/l;Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKFromList;Ljava/lang/String;)V
+.method public constructor <init>(Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse;Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKFromList;Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/api/friends/l;",
+            "Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse;",
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/user/RequestUserProfile;",
             ">;",
@@ -83,7 +83,7 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/friends/FriendRequestsFragment$c;->a:Lcom/vk/api/friends/l;
+    iput-object p1, p0, Lcom/vk/friends/FriendRequestsFragment$c;->a:Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse;
 
     iput-object p2, p0, Lcom/vk/friends/FriendRequestsFragment$c;->b:Lcom/vk/dto/common/data/VKList;
 
@@ -94,7 +94,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/api/friends/l;Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKFromList;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse;Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKFromList;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x1
@@ -128,18 +128,18 @@
 
     .line 2
     :cond_3
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/friends/FriendRequestsFragment$c;-><init>(Lcom/vk/api/friends/l;Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKFromList;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/friends/FriendRequestsFragment$c;-><init>(Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse;Lcom/vk/dto/common/data/VKList;Lcom/vk/dto/common/data/VKFromList;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/vk/api/friends/l;
+.method public final a()Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/friends/FriendRequestsFragment$c;->a:Lcom/vk/api/friends/l;
+    iget-object v0, p0, Lcom/vk/friends/FriendRequestsFragment$c;->a:Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse;
 
     return-object v0
 .end method

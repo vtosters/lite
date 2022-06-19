@@ -32,7 +32,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/List;Lkotlin/jvm/b/b;)I
+.method public final a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)I
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -41,7 +41,7 @@
             ">(",
             "Ljava/util/List<",
             "+TT;>;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;",
             "Ljava/lang/Boolean;",
             ">;)I"
@@ -63,7 +63,7 @@
 
     move-result-object v2
 
-    invoke-interface {p2, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -88,14 +88,14 @@
     return p1
 .end method
 
-.method public final a(Ljava/lang/Object;)Lkotlin/jvm/b/b;
+.method public final a(Ljava/lang/Object;)Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(TT;)",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "TT;",
             "Ljava/lang/Boolean;",
             ">;"

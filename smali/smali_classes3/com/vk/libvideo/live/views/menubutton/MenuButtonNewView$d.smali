@@ -42,12 +42,12 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;->a(Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;Lcom/vk/core/dialogs/bottomsheet/e;)V
+    invoke-static {p1, v0}, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;->a(Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView$d;->a:Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;->b(Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;)Lcom/vk/navigation/k;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;->b(Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;)Lcom/vk/navigation/ModalDialogCallback;
 
     move-result-object p1
 
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/navigation/k;->A(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/navigation/ModalDialogCallback;->A(Ljava/lang/String;)V
 
     :cond_0
     return-void

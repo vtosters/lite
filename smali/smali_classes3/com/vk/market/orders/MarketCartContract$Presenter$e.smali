@@ -3,12 +3,12 @@
 .source "MarketCartContract.kt"
 
 # interfaces
-.implements Lc/a/z/c;
+.implements Lio/reactivex/functions/BiFunction;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/orders/MarketCartContract$Presenter;->e(I)Lc/a/m;
+    value = Lcom/vk/market/orders/MarketCartContract$Presenter;->e(I)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/c<",
+        "Lio/reactivex/functions/BiFunction<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/common/Good;",
         ">;",

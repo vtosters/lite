@@ -3,12 +3,12 @@
 .source "ContactsListComponent.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lio/reactivex/disposables/a;)V
+    value = Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lio/reactivex/disposables/CompositeDisposable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -52,7 +52,7 @@
     const-string v0, "it"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -62,11 +62,11 @@
 
     iget-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$c;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->i(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/components/contacts/vc/d;
+    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->i(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/components/contacts/vc/ContactsVc;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/d;->c()V
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/ContactsVc;->c()V
 
     :cond_0
     return-void

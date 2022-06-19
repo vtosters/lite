@@ -3,12 +3,12 @@
 .source "TypedDocumentsListFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/api/base/VkPaginationList<",
         "Lcom/vk/api/base/Document;",
         ">;>;"
@@ -33,18 +33,18 @@
 # instance fields
 .field final synthetic a:Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a;
 
-.field final synthetic b:Lcom/vk/lists/t;
+.field final synthetic b:Lcom/vk/lists/PaginationHelper;
 
 .field final synthetic c:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a;Lcom/vk/lists/t;Z)V
+.method constructor <init>(Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a;Lcom/vk/lists/PaginationHelper;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a$a;->a:Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a;
 
-    iput-object p2, p0, Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a$a;->b:Lcom/vk/lists/t;
+    iput-object p2, p0, Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
 
     iput-boolean p3, p0, Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a$a;->c:Z
 
@@ -97,11 +97,11 @@
 
     move-result v0
 
-    iget-object v3, p0, Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a$a;->b:Lcom/vk/lists/t;
+    iget-object v3, p0, Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v3}, Lcom/vk/lists/t;->a()I
+    invoke-virtual {v3}, Lcom/vk/lists/PaginationHelper;->a()I
 
     move-result v3
 
@@ -126,7 +126,7 @@
 
     .line 4
     :goto_1
-    iget-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a$a;->b:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v0, :cond_2
 
@@ -134,7 +134,7 @@
 
     move-result v3
 
-    invoke-virtual {v0, v3}, Lcom/vk/lists/t;->a(I)V
+    invoke-virtual {v0, v3}, Lcom/vk/lists/PaginationHelper;->a(I)V
 
     .line 5
     :cond_2
@@ -175,7 +175,7 @@
     if-eqz v1, :cond_4
 
     .line 8
-    iget-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a$a;->b:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v0, :cond_5
 
@@ -189,17 +189,17 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/t;->b(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/PaginationHelper;->b(I)V
 
     goto :goto_3
 
     .line 9
     :cond_4
-    iget-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a$a;->b:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/documents/TypedDocumentsListFragment$dataProvider$2$a$a;->b:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0, v2}, Lcom/vk/lists/t;->b(Z)V
+    invoke-virtual {v0, v2}, Lcom/vk/lists/PaginationHelper;->b(Z)V
 
     .line 10
     :cond_5

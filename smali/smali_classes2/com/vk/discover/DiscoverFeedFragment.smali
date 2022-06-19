@@ -3,7 +3,7 @@
 .source "DiscoverFeedFragment.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/contracts/d;
+.implements Lcom/vk/newsfeed/contracts/DiscoverFeedContract1;
 
 
 # annotations
@@ -17,9 +17,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/newsfeed/EntriesListFragment<",
-        "Lcom/vk/newsfeed/contracts/c;",
+        "Lcom/vk/newsfeed/contracts/DiscoverFeedContract;",
         ">;",
-        "Lcom/vk/newsfeed/contracts/d;"
+        "Lcom/vk/newsfeed/contracts/DiscoverFeedContract1;"
     }
 .end annotation
 
@@ -29,7 +29,7 @@
 
 
 # instance fields
-.field private q0:Lcom/vk/core/util/w;
+.field private q0:Lcom/vk/core/util/Dismissable;
 
 
 # direct methods
@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/discover/DiscoverFeedFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/discover/DiscoverFeedFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/discover/DiscoverFeedFragment;->r0:Lcom/vk/discover/DiscoverFeedFragment$b;
 
@@ -132,7 +132,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v2, v4, v3, v4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v0, v2, v4, v3, v4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -168,17 +168,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFeedFragment;->q0:Lcom/vk/core/util/w;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFeedFragment;->q0:Lcom/vk/core/util/Dismissable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/core/util/w;->dismiss()V
+    invoke-interface {v0}, Lcom/vk/core/util/Dismissable;->dismiss()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/discover/DiscoverFeedFragment;->q0:Lcom/vk/core/util/w;
+    iput-object v0, p0, Lcom/vk/discover/DiscoverFeedFragment;->q0:Lcom/vk/core/util/Dismissable;
 
     .line 3
     invoke-super {p0}, Lcom/vk/newsfeed/EntriesListFragment;->M4()V
@@ -193,11 +193,11 @@
     invoke-super {p0, p1, p2}, Lcom/vk/newsfeed/EntriesListFragment;->a(II)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/discover/DiscoverFeedFragment;->q0:Lcom/vk/core/util/w;
+    iget-object p1, p0, Lcom/vk/discover/DiscoverFeedFragment;->q0:Lcom/vk/core/util/Dismissable;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/core/util/w;->dismiss()V
+    invoke-interface {p1}, Lcom/vk/core/util/Dismissable;->dismiss()V
 
     :cond_0
     return-void
@@ -210,35 +210,35 @@
     invoke-super {p0, p1}, Lcom/vk/newsfeed/EntriesListFragment;->c(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/contracts/c;
+    check-cast v0, Lcom/vk/newsfeed/contracts/DiscoverFeedContract;
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/c;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/DiscoverFeedContract;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
 
     return-void
 .end method
 
-.method public bridge synthetic c5()Lcom/vk/newsfeed/contracts/e;
+.method public bridge synthetic c5()Lcom/vk/newsfeed/contracts/EntriesListContract;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/discover/DiscoverFeedFragment;->c5()Lcom/vk/newsfeed/presenters/c;
+    invoke-virtual {p0}, Lcom/vk/discover/DiscoverFeedFragment;->c5()Lcom/vk/newsfeed/presenters/DiscoverFeedPresenter;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected c5()Lcom/vk/newsfeed/presenters/c;
+.method protected c5()Lcom/vk/newsfeed/presenters/DiscoverFeedPresenter;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/newsfeed/presenters/c;
+    new-instance v0, Lcom/vk/newsfeed/presenters/DiscoverFeedPresenter;
 
-    invoke-direct {v0, p0}, Lcom/vk/newsfeed/presenters/c;-><init>(Lcom/vk/newsfeed/contracts/d;)V
+    invoke-direct {v0, p0}, Lcom/vk/newsfeed/presenters/DiscoverFeedPresenter;-><init>(Lcom/vk/newsfeed/contracts/DiscoverFeedContract1;)V
 
     return-object v0
 .end method
@@ -277,7 +277,7 @@
 
     invoke-direct {v1, v0, p1}, Lcom/vk/discover/DiscoverFeedFragment$scrollListToActualPosition$$inlined$let$lambda$1;-><init>(Landroidx/recyclerview/widget/RecyclerView;I)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -300,10 +300,10 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/d;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
 
     move-result-object p1
 
@@ -311,18 +311,18 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/adapters/d;->b(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;->b(Z)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/d;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
 
     move-result-object p1
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/adapters/d;->c(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;->c(Z)V
 
     return-void
 .end method
@@ -331,17 +331,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/discover/DiscoverFeedFragment;->q0:Lcom/vk/core/util/w;
+    iget-object v0, p0, Lcom/vk/discover/DiscoverFeedFragment;->q0:Lcom/vk/core/util/Dismissable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/core/util/w;->dismiss()V
+    invoke-interface {v0}, Lcom/vk/core/util/Dismissable;->dismiss()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/discover/DiscoverFeedFragment;->q0:Lcom/vk/core/util/w;
+    iput-object v0, p0, Lcom/vk/discover/DiscoverFeedFragment;->q0:Lcom/vk/core/util/Dismissable;
 
     .line 3
     invoke-super {p0}, Lcom/vk/newsfeed/EntriesListFragment;->onDestroyView()V
@@ -449,7 +449,7 @@
     if-nez p1, :cond_0
 
     .line 2
-    sget-object p1, Lcom/vk/discover/e;->c:Lcom/vk/discover/e;
+    sget-object p1, Lcom/vk/discover/DiscoverExpertsHintHelper;->INSTANCE:Lcom/vk/discover/DiscoverExpertsHintHelper;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -459,11 +459,11 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/discover/e;->a(Landroid/app/Activity;Landroidx/recyclerview/widget/RecyclerView;)Lcom/vk/core/util/w;
+    invoke-virtual {p1, v0, v1}, Lcom/vk/discover/DiscoverExpertsHintHelper;->a(Landroid/app/Activity;Landroidx/recyclerview/widget/RecyclerView;)Lcom/vk/core/util/Dismissable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/discover/DiscoverFeedFragment;->q0:Lcom/vk/core/util/w;
+    iput-object p1, p0, Lcom/vk/discover/DiscoverFeedFragment;->q0:Lcom/vk/core/util/Dismissable;
 
     :cond_0
     return-void
@@ -512,7 +512,7 @@
     const-string v6, "view"
 
     .line 5
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Landroid/view/View;->getTop()I
 
@@ -546,11 +546,11 @@
     if-ltz v5, :cond_1
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/d;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->U4()Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/vk/lists/i0;->size()I
+    invoke-virtual {v6}, Lcom/vk/lists/SimpleAdapter;->size()I
 
     move-result v6
 

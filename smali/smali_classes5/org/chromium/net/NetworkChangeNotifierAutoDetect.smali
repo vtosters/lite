@@ -98,7 +98,7 @@
     new-instance p1, Lorg/chromium/net/NetworkChangeNotifierAutoDetect$b;
 
     .line 6
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
     .line 8
     new-instance p1, Lorg/chromium/net/NetworkChangeNotifierAutoDetect$h;
 
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -261,7 +261,7 @@
     if-lt v0, v1, :cond_0
 
     .line 13
-    invoke-static {p0}, Lorg/chromium/base/h/a;->a(Landroid/net/Network;)J
+    invoke-static {p0}, Lorg/chromium/base/h/ApiHelperForM;->a(Landroid/net/Network;)J
 
     move-result-wide v0
 
@@ -566,7 +566,7 @@
     .locals 2
 
     .line 1
-    sget-boolean v0, Lorg/chromium/base/c;->a:Z
+    sget-boolean v0, Lorg/chromium/base/BuildConfig;->a:Z
 
     if-eqz v0, :cond_1
 
@@ -922,7 +922,7 @@
     if-nez v0, :cond_4
 
     .line 10
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1084,7 +1084,7 @@
 
     .line 8
     :cond_2
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 

@@ -3,7 +3,7 @@
 .source "ObservableObserveOn.java"
 
 # interfaces
-.implements Lc/a/r;
+.implements Lio/reactivex/Observer;
 .implements Ljava/lang/Runnable;
 
 
@@ -24,7 +24,7 @@
         ">",
         "Lio/reactivex/internal/observers/BasicIntQueueDisposable<",
         "TT;>;",
-        "Lc/a/r<",
+        "Lio/reactivex/Observer<",
         "TT;>;",
         "Ljava/lang/Runnable;"
     }
@@ -44,10 +44,10 @@
 
 .field volatile done:Z
 
-.field final downstream:Lc/a/r;
+.field final downstream:Lio/reactivex/Observer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;"
         }
     .end annotation
@@ -57,10 +57,10 @@
 
 .field outputFused:Z
 
-.field queue:Lc/a/a0/b/k;
+.field queue:Lc/a/a0/b/SimpleQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/a0/b/k<",
+            "Lc/a/a0/b/SimpleQueue<",
             "TT;>;"
         }
     .end annotation
@@ -68,20 +68,20 @@
 
 .field sourceMode:I
 
-.field upstream:Lio/reactivex/disposables/b;
+.field upstream:Lio/reactivex/disposables/Disposable;
 
-.field final worker:Lc/a/s$c;
+.field final worker:Lio/reactivex/Scheduler$c;
 
 
 # direct methods
-.method constructor <init>(Lc/a/r;Lc/a/s$c;ZI)V
+.method constructor <init>(Lio/reactivex/Observer;Lio/reactivex/Scheduler$c;ZI)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;",
-            "Lc/a/s$c;",
+            "Lio/reactivex/Scheduler$c;",
             "ZI)V"
         }
     .end annotation
@@ -90,10 +90,10 @@
     invoke-direct {p0}, Lio/reactivex/internal/observers/BasicIntQueueDisposable;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lc/a/r;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lio/reactivex/Observer;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lc/a/s$c;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lio/reactivex/Scheduler$c;
 
     .line 4
     iput-boolean p3, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->delayError:Z
@@ -128,33 +128,33 @@
     return p1
 .end method
 
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/b;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->upstream:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
     .line 3
-    instance-of v0, p1, Lc/a/a0/b/f;
+    instance-of v0, p1, Lc/a/a0/b/QueueDisposable;
 
     if-eqz v0, :cond_1
 
     .line 4
-    check-cast p1, Lc/a/a0/b/f;
+    check-cast p1, Lc/a/a0/b/QueueDisposable;
 
     const/4 v0, 0x7
 
     .line 5
-    invoke-interface {p1, v0}, Lc/a/a0/b/g;->a(I)I
+    invoke-interface {p1, v0}, Lc/a/a0/b/QueueFuseable;->a(I)I
 
     move-result v0
 
@@ -166,15 +166,15 @@
     iput v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->sourceMode:I
 
     .line 7
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/k;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
     .line 8
     iput-boolean v1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->done:Z
 
     .line 9
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lc/a/r;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {p1, p0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p1, p0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
 
     .line 10
     invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->g()V
@@ -190,29 +190,29 @@
     iput v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->sourceMode:I
 
     .line 12
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/k;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
     .line 13
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lc/a/r;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {p1, p0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p1, p0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 
     .line 14
     :cond_1
-    new-instance p1, Lio/reactivex/internal/queue/a;
+    new-instance p1, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
     iget v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->bufferSize:I
 
-    invoke-direct {p1, v0}, Lio/reactivex/internal/queue/a;-><init>(I)V
+    invoke-direct {p1, v0}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;-><init>(I)V
 
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/k;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
     .line 15
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lc/a/r;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {p1, p0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p1, p0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
 
     :cond_2
     return-void
@@ -227,7 +227,7 @@
     if-eqz v0, :cond_0
 
     .line 17
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -246,12 +246,12 @@
     return-void
 .end method
 
-.method a(ZZLc/a/r;)Z
+.method a(ZZLio/reactivex/Observer;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ZZ",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;)Z"
         }
     .end annotation
@@ -264,9 +264,9 @@
     if-eqz v0, :cond_0
 
     .line 22
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/k;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
-    invoke-interface {p1}, Lc/a/a0/b/k;->clear()V
+    invoke-interface {p1}, Lc/a/a0/b/SimpleQueue;->clear()V
 
     return v1
 
@@ -289,19 +289,19 @@
     if-eqz p1, :cond_1
 
     .line 26
-    invoke-interface {p3, p1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p3, p1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     .line 27
     :cond_1
-    invoke-interface {p3}, Lc/a/r;->b()V
+    invoke-interface {p3}, Lio/reactivex/Observer;->b()V
 
     .line 28
     :goto_0
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lc/a/s$c;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lio/reactivex/Scheduler$c;
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     return v1
 
@@ -312,17 +312,17 @@
     iput-boolean v1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->disposed:Z
 
     .line 30
-    iget-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/k;
+    iget-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
-    invoke-interface {p2}, Lc/a/a0/b/k;->clear()V
+    invoke-interface {p2}, Lc/a/a0/b/SimpleQueue;->clear()V
 
     .line 31
-    invoke-interface {p3, p1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p3, p1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
 
     .line 32
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lc/a/s$c;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lio/reactivex/Scheduler$c;
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     return v1
 
@@ -333,12 +333,12 @@
     iput-boolean v1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->disposed:Z
 
     .line 34
-    invoke-interface {p3}, Lc/a/r;->b()V
+    invoke-interface {p3}, Lio/reactivex/Observer;->b()V
 
     .line 35
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lc/a/s$c;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lio/reactivex/Scheduler$c;
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     return v1
 
@@ -394,9 +394,9 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/k;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
-    invoke-interface {v0, p1}, Lc/a/a0/b/k;->offer(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Lc/a/a0/b/SimpleQueue;->offer(Ljava/lang/Object;)Z
 
     .line 4
     :cond_1
@@ -409,9 +409,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/k;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
-    invoke-interface {v0}, Lc/a/a0/b/k;->clear()V
+    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->clear()V
 
     return-void
 .end method
@@ -451,24 +451,24 @@
     iput-boolean v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->disposed:Z
 
     .line 6
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lc/a/r;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {v0, v3}, Lc/a/r;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v3}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
 
     .line 7
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lc/a/s$c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lio/reactivex/Scheduler$c;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     return-void
 
     .line 8
     :cond_2
-    iget-object v3, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lc/a/r;
+    iget-object v3, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lio/reactivex/Observer;
 
     const/4 v4, 0x0
 
-    invoke-interface {v3, v4}, Lc/a/r;->b(Ljava/lang/Object;)V
+    invoke-interface {v3, v4}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
 
     if-eqz v2, :cond_4
 
@@ -481,23 +481,23 @@
     if-eqz v0, :cond_3
 
     .line 11
-    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lc/a/r;
+    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {v1, v0}, Lc/a/r;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v1, v0}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     .line 12
     :cond_3
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lc/a/r;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {v0}, Lc/a/r;->b()V
+    invoke-interface {v0}, Lio/reactivex/Observer;->b()V
 
     .line 13
     :goto_0
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lc/a/s$c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lio/reactivex/Scheduler$c;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     return-void
 
@@ -527,10 +527,10 @@
     .locals 7
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/k;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
     .line 2
-    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lc/a/r;
+    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->downstream:Lio/reactivex/Observer;
 
     const/4 v2, 0x1
 
@@ -540,11 +540,11 @@
     :cond_0
     iget-boolean v4, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->done:Z
 
-    invoke-interface {v0}, Lc/a/a0/b/k;->isEmpty()Z
+    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->isEmpty()Z
 
     move-result v5
 
-    invoke-virtual {p0, v4, v5, v1}, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->a(ZZLc/a/r;)Z
+    invoke-virtual {p0, v4, v5, v1}, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->a(ZZLio/reactivex/Observer;)Z
 
     move-result v4
 
@@ -559,7 +559,7 @@
 
     .line 5
     :try_start_0
-    invoke-interface {v0}, Lc/a/a0/b/k;->poll()Ljava/lang/Object;
+    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->poll()Ljava/lang/Object;
 
     move-result-object v5
     :try_end_0
@@ -576,7 +576,7 @@
 
     .line 6
     :goto_1
-    invoke-virtual {p0, v4, v6, v1}, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->a(ZZLc/a/r;)Z
+    invoke-virtual {p0, v4, v6, v1}, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->a(ZZLio/reactivex/Observer;)Z
 
     move-result v4
 
@@ -600,7 +600,7 @@
 
     .line 8
     :cond_4
-    invoke-interface {v1, v5}, Lc/a/r;->b(Ljava/lang/Object;)V
+    invoke-interface {v1, v5}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -608,26 +608,26 @@
     move-exception v3
 
     .line 9
-    invoke-static {v3}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v3}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 10
     iput-boolean v2, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->disposed:Z
 
     .line 11
-    iget-object v2, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v2, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-interface {v2}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v2}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 12
-    invoke-interface {v0}, Lc/a/a0/b/k;->clear()V
+    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->clear()V
 
     .line 13
-    invoke-interface {v1, v3}, Lc/a/r;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v1, v3}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
 
     .line 14
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lc/a/s$c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lio/reactivex/Scheduler$c;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     return-void
 .end method
@@ -643,9 +643,9 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lc/a/s$c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lio/reactivex/Scheduler$c;
 
-    invoke-virtual {v0, p0}, Lc/a/s$c;->a(Ljava/lang/Runnable;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, p0}, Lio/reactivex/Scheduler$c;->a(Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -655,9 +655,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/k;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
-    invoke-interface {v0}, Lc/a/a0/b/k;->isEmpty()Z
+    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->isEmpty()Z
 
     move-result v0
 
@@ -678,14 +678,14 @@
     iput-boolean v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->disposed:Z
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 4
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lc/a/s$c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->worker:Lio/reactivex/Scheduler$c;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 5
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
@@ -695,9 +695,9 @@
     if-nez v0, :cond_0
 
     .line 6
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/k;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
-    invoke-interface {v0}, Lc/a/a0/b/k;->clear()V
+    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->clear()V
 
     :cond_0
     return-void
@@ -718,9 +718,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/k;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableObserveOn$ObserveOnObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
-    invoke-interface {v0}, Lc/a/a0/b/k;->poll()Ljava/lang/Object;
+    invoke-interface {v0}, Lc/a/a0/b/SimpleQueue;->poll()Ljava/lang/Object;
 
     move-result-object v0
 

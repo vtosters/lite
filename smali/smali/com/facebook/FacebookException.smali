@@ -31,7 +31,7 @@
     if-eqz p1, :cond_0
 
     .line 4
-    invoke-static {}, Lcom/facebook/e;->t()Z
+    invoke-static {}, Lcom/facebook/FacebookSdk;->t()Z
 
     move-result v1
 

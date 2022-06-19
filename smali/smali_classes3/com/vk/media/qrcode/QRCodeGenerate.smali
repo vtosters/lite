@@ -197,7 +197,7 @@
 
     move-result-object p0
 
-    sget v2, Lcom/vk/media/qrcode/a;->vklogo:I
+    sget v2, Lcom/vk/media/qrcode/R;->vklogo:I
 
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 

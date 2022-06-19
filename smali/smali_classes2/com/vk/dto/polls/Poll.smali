@@ -3,7 +3,7 @@
 .source "Poll.kt"
 
 # interfaces
-.implements Lcom/vk/core/serialize/a;
+.implements Lcom/vk/core/serialize/JSONSerialize;
 
 
 # annotations
@@ -122,7 +122,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/polls/Poll$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/polls/Poll$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/polls/Poll;->P:Lcom/vk/dto/polls/Poll$b;
 
@@ -261,7 +261,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILjava/lang/String;Ljava/util/List;Ljava/util/List;ZIZZJZZZZZILcom/vk/dto/polls/PollBackground;JLjava/util/List;Landroid/util/SparseArray;Lcom/vk/dto/polls/Owner;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IILjava/lang/String;Ljava/util/List;Ljava/util/List;ZIZZJZZZZZILcom/vk/dto/polls/PollBackground;JLjava/util/List;Landroid/util/SparseArray;Lcom/vk/dto/polls/Owner;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 25
 
     const/high16 v0, 0x10000
@@ -503,7 +503,7 @@
 
     .line 26
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -513,7 +513,7 @@
     const/4 v0, 0x0
 
     .line 27
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -521,14 +521,14 @@
     const/4 v0, 0x0
 
     .line 28
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     :cond_3
     const/4 v0, 0x0
 
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -536,7 +536,7 @@
     const/4 v0, 0x0
 
     .line 29
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -544,7 +544,7 @@
     const/4 v0, 0x0
 
     .line 30
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -1951,7 +1951,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/polls/Poll;->d:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1967,7 +1967,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/polls/Poll;->e:Ljava/util/List;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1983,7 +1983,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/polls/Poll;->f:Ljava/util/List;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2111,7 +2111,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/polls/Poll;->K:Lcom/vk/dto/polls/PollBackground;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2139,7 +2139,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/polls/Poll;->M:Ljava/util/List;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2171,7 +2171,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/polls/Poll;->O:Lcom/vk/dto/polls/Owner;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -60,11 +60,11 @@
     .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSubscribeOn$a;->b:Lio/reactivex/internal/operators/observable/ObservableSubscribeOn;
 
-    iget-object v0, v0, Lio/reactivex/internal/operators/observable/a;->a:Lc/a/p;
+    iget-object v0, v0, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;->a:Lio/reactivex/ObservableSource;
 
     iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableSubscribeOn$a;->a:Lio/reactivex/internal/operators/observable/ObservableSubscribeOn$SubscribeOnObserver;
 
-    invoke-interface {v0, v1}, Lc/a/p;->a(Lc/a/r;)V
+    invoke-interface {v0, v1}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
 
     return-void
 .end method

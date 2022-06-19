@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -75,7 +75,7 @@
 
     const-string v6, "this.getString(i)"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-interface {v2, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
@@ -123,7 +123,7 @@
 
     const-string v5, "this.getJSONObject(i)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     invoke-interface {v0, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z

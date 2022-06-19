@@ -3,12 +3,12 @@
 .source "VideoExternalEventHandlerDelegate.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate;->c()Lio/reactivex/disposables/b;
+    value = Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate;->c()Lio/reactivex/disposables/Disposable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/libvideo/y/a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/libvideo/y/VideoEvents1;",
         ">;"
     }
 .end annotation
@@ -46,21 +46,21 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/libvideo/y/a;)V
+.method public final a(Lcom/vk/libvideo/y/VideoEvents1;)V
     .locals 9
 
     .line 1
-    instance-of v0, p1, Lcom/vk/libvideo/y/i;
+    instance-of v0, p1, Lcom/vk/libvideo/y/VideoEvents7;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/vk/catalog2/core/w/e/l;
+    new-instance v0, Lcom/vk/catalog2/core/w/e/CatalogCommand7;
 
-    check-cast p1, Lcom/vk/libvideo/y/i;
+    check-cast p1, Lcom/vk/libvideo/y/VideoEvents7;
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/y/i;->a()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vk/libvideo/y/VideoEvents7;->a()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -70,9 +70,9 @@
 
     const-string v2, "videoEvent.video.videoId"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, p1}, Lcom/vk/catalog2/core/w/e/l;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand7;-><init>(Ljava/lang/String;)V
 
     move-object p1, v0
 
@@ -80,11 +80,11 @@
 
     .line 2
     :cond_0
-    instance-of v0, p1, Lcom/vk/libvideo/y/b;
+    instance-of v0, p1, Lcom/vk/libvideo/y/VideoEvents5;
 
     if-eqz v0, :cond_1
 
-    new-instance p1, Lcom/vk/catalog2/core/w/e/o;
+    new-instance p1, Lcom/vk/catalog2/core/w/e/CatalogCommand2;
 
     const/4 v4, 0x0
 
@@ -100,17 +100,17 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/w/e/o;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/w/e/CatalogCommand2;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto/16 :goto_2
 
     .line 3
     :cond_1
-    instance-of v0, p1, Lcom/vk/libvideo/y/g;
+    instance-of v0, p1, Lcom/vk/libvideo/y/VideoEvents;
 
     if-eqz v0, :cond_2
 
-    new-instance p1, Lcom/vk/catalog2/core/w/e/o;
+    new-instance p1, Lcom/vk/catalog2/core/w/e/CatalogCommand2;
 
     const/4 v4, 0x0
 
@@ -126,17 +126,17 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/w/e/o;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/w/e/CatalogCommand2;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto/16 :goto_2
 
     .line 4
     :cond_2
-    instance-of v0, p1, Lcom/vk/libvideo/y/k;
+    instance-of v0, p1, Lcom/vk/libvideo/y/VideoEvents2;
 
     if-eqz v0, :cond_3
 
-    new-instance p1, Lcom/vk/catalog2/core/w/e/o;
+    new-instance p1, Lcom/vk/catalog2/core/w/e/CatalogCommand2;
 
     const/4 v4, 0x0
 
@@ -152,17 +152,17 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/w/e/o;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/w/e/CatalogCommand2;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto/16 :goto_2
 
     .line 5
     :cond_3
-    instance-of v0, p1, Lcom/vk/libvideo/y/h;
+    instance-of v0, p1, Lcom/vk/libvideo/y/VideoEvents10;
 
     if-eqz v0, :cond_4
 
-    new-instance p1, Lcom/vk/catalog2/core/w/e/o;
+    new-instance p1, Lcom/vk/catalog2/core/w/e/CatalogCommand2;
 
     const/4 v4, 0x0
 
@@ -178,25 +178,25 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/w/e/o;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/w/e/CatalogCommand2;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_2
 
     .line 6
     :cond_4
-    instance-of v0, p1, Lcom/vk/libvideo/y/d;
+    instance-of v0, p1, Lcom/vk/libvideo/y/VideoEvents9;
 
     if-eqz v0, :cond_5
 
     goto :goto_0
 
     :cond_5
-    instance-of v0, p1, Lcom/vk/libvideo/y/f;
+    instance-of v0, p1, Lcom/vk/libvideo/y/VideoEvents11;
 
     if-eqz v0, :cond_6
 
     :goto_0
-    new-instance p1, Lcom/vk/catalog2/core/w/e/o;
+    new-instance p1, Lcom/vk/catalog2/core/w/e/CatalogCommand2;
 
     const/4 v4, 0x0
 
@@ -212,17 +212,17 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/w/e/o;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/w/e/CatalogCommand2;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_2
 
     .line 7
     :cond_6
-    instance-of v0, p1, Lcom/vk/libvideo/y/c;
+    instance-of v0, p1, Lcom/vk/libvideo/y/VideoEvents4;
 
     if-eqz v0, :cond_7
 
-    new-instance p1, Lcom/vk/catalog2/core/w/e/o;
+    new-instance p1, Lcom/vk/catalog2/core/w/e/CatalogCommand2;
 
     const/4 v4, 0x0
 
@@ -238,17 +238,17 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/w/e/o;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/w/e/CatalogCommand2;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_2
 
     .line 8
     :cond_7
-    instance-of v0, p1, Lcom/vk/libvideo/y/e;
+    instance-of v0, p1, Lcom/vk/libvideo/y/VideoEvents8;
 
     if-eqz v0, :cond_8
 
-    new-instance p1, Lcom/vk/catalog2/core/w/e/o;
+    new-instance p1, Lcom/vk/catalog2/core/w/e/CatalogCommand2;
 
     const/4 v4, 0x0
 
@@ -264,27 +264,27 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/w/e/o;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/catalog2/core/w/e/CatalogCommand2;-><init>(Ljava/lang/String;Ljava/util/Set;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_2
 
     .line 9
     :cond_8
-    instance-of v0, p1, Lcom/vk/libvideo/y/j;
+    instance-of v0, p1, Lcom/vk/libvideo/y/VideoEvents12;
 
     if-eqz v0, :cond_9
 
-    new-instance p1, Lcom/vk/catalog2/core/w/e/j;
+    new-instance p1, Lcom/vk/catalog2/core/w/e/CatalogCommand10;
 
     sget-object v0, Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate$newVideoEventsDisposable$2$catalogEvent$1;->a:Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate$newVideoEventsDisposable$2$catalogEvent$1;
 
-    invoke-direct {p1, v0}, Lcom/vk/catalog2/core/w/e/j;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {p1, v0}, Lcom/vk/catalog2/core/w/e/CatalogCommand10;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_2
 
     .line 10
     :cond_9
-    instance-of v0, p1, Lcom/vk/libvideo/y/n;
+    instance-of v0, p1, Lcom/vk/libvideo/y/VideoEvents3;
 
     if-eqz v0, :cond_a
 
@@ -292,7 +292,7 @@
 
     .line 11
     :cond_a
-    instance-of p1, p1, Lcom/vk/libvideo/y/l;
+    instance-of p1, p1, Lcom/vk/libvideo/y/VideoEvents6;
 
     if-eqz p1, :cond_c
 
@@ -305,7 +305,7 @@
     .line 12
     iget-object v0, p0, Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate$newVideoEventsDisposable$2;->a:Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate;
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/events/common/a;->a()Lcom/vk/catalog2/core/w/a;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/events/common/CatalogExternalEventsAdapter;->a()Lcom/vk/catalog2/core/w/CatalogCommandsBus;
 
     move-result-object v0
 
@@ -313,7 +313,7 @@
 
     const/4 v3, 0x2
 
-    invoke-static {v0, p1, v2, v3, v1}, Lcom/vk/catalog2/core/w/a;->a(Lcom/vk/catalog2/core/w/a;Lcom/vk/catalog2/core/w/e/b;ZILjava/lang/Object;)V
+    invoke-static {v0, p1, v2, v3, v1}, Lcom/vk/catalog2/core/w/CatalogCommandsBus;->a(Lcom/vk/catalog2/core/w/CatalogCommandsBus;Lcom/vk/catalog2/core/w/e/CatalogCommand6;ZILjava/lang/Object;)V
 
     :cond_b
     return-void
@@ -331,9 +331,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/y/a;
+    check-cast p1, Lcom/vk/libvideo/y/VideoEvents1;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate$newVideoEventsDisposable$2;->a(Lcom/vk/libvideo/y/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/events/common/VideoExternalEventHandlerDelegate$newVideoEventsDisposable$2;->a(Lcom/vk/libvideo/y/VideoEvents1;)V
 
     return-void
 .end method

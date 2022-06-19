@@ -49,14 +49,14 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 4
-    sget p2, Lcom/vk/libvideo/h;->video_error_view:I
+    sget p2, Lcom/vk/libvideo/R9;->video_error_view:I
 
     invoke-static {p1, p2, p0}, Landroid/widget/RelativeLayout;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
     .line 5
-    sget p2, Lcom/vk/libvideo/g;->retry:I
+    sget p2, Lcom/vk/libvideo/R;->retry:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -67,7 +67,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/ui/VideoErrorView;->b:Landroid/widget/Button;
 
     .line 6
-    sget p2, Lcom/vk/libvideo/g;->text:I
+    sget p2, Lcom/vk/libvideo/R;->text:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

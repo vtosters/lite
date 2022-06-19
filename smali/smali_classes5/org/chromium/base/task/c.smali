@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lorg/chromium/base/task/c;->a:Ljava/lang/Runnable;
 
-    invoke-static {v0}, Lorg/chromium/base/task/j$a;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lorg/chromium/base/task/ChromeThreadPoolExecutor$a;->a(Ljava/lang/Runnable;)V
 
     return-void
 .end method

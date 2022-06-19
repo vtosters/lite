@@ -4,15 +4,15 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
 .field private static final b:J
 
 .field private static final c:J
 
-.field private static final d:Lcom/vk/core/util/d1;
+.field private static final d:Lcom/vk/core/util/ThreadLocalDelegate;
 
-.field private static final e:Lcom/vk/core/util/d1;
+.field private static final e:Lcom/vk/core/util/ThreadLocalDelegate;
 
 .field public static final f:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;
 
@@ -25,11 +25,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -37,9 +37,9 @@
 
     const-string v5, "getTimeZone()Ljava/util/TimeZone;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -47,7 +47,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -55,15 +55,15 @@
 
     const-string v4, "getDate()Ljava/util/Date;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;->a:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;
@@ -95,20 +95,20 @@
     .line 4
     sget-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter$timeZone$2;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter$timeZone$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;->d:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;->d:Lcom/vk/core/util/ThreadLocalDelegate;
 
     .line 5
     sget-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter$date$2;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter$date$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;->e:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;->e:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-void
 .end method
@@ -125,15 +125,15 @@
 .method private final a()Ljava/util/Date;
     .locals 3
 
-    sget-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;->e:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;->e:Lcom/vk/core/util/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -145,15 +145,15 @@
 .method private final b()Ljava/util/TimeZone;
     .locals 3
 
-    sget-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;->d:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;->d:Lcom/vk/core/util/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/utils/MsgTimeFormatter;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -218,7 +218,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/util/TimeZone;->getRawOffset()I
 
@@ -228,7 +228,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Ljava/util/TimeZone;->getDSTSavings()I
 
@@ -244,7 +244,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/util/TimeZone;->getRawOffset()I
 
@@ -296,7 +296,7 @@
     if-eqz p1, :cond_1
 
     .line 13
-    sget p1, Lcom/vk/im/ui/m;->vkim_msg_edit_mark:I
+    sget p1, Lcom/vk/im/ui/R4;->vkim_msg_edit_mark:I
 
     invoke-virtual {p2, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

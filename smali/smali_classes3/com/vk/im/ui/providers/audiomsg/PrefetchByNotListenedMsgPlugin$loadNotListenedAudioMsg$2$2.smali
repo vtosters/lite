@@ -3,12 +3,12 @@
 .source "PrefetchByNotListenedMsgPlugin.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$loadNotListenedAudioMsg$2;->a(Lcom/vk/im/engine/models/a;)Ljava/util/List;
+    value = Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$loadNotListenedAudioMsg$2;->a(Lcom/vk/im/engine/models/EntityIntMap;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/models/messages/MsgFromUser;",
-        "Lcom/vk/audiomsg/player/d;",
+        "Lcom/vk/audiomsg/player/AudioMsgTrack;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/messages/MsgFromUser;)Lcom/vk/audiomsg/player/d;
+.method public final a(Lcom/vk/im/engine/models/messages/MsgFromUser;)Lcom/vk/audiomsg/player/AudioMsgTrack;
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/im/ui/utils/a;->b:Lcom/vk/im/ui/utils/a;
+    sget-object v0, Lcom/vk/im/ui/utils/AudioMsgUtils;->INSTANCE:Lcom/vk/im/ui/utils/AudioMsgUtils;
 
     invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/MsgFromUser;->V1()Lcom/vk/im/engine/models/attaches/AttachAudioMsg;
 
@@ -70,7 +70,7 @@
 
     const/4 v2, 0x2
 
-    invoke-static {v0, p1, v1, v2, v1}, Lcom/vk/im/ui/utils/a;->a(Lcom/vk/im/ui/utils/a;Lcom/vk/im/engine/models/attaches/AttachAudioMsg;Lcom/vk/im/engine/models/ProfilesInfo;ILjava/lang/Object;)Lcom/vk/audiomsg/player/d;
+    invoke-static {v0, p1, v1, v2, v1}, Lcom/vk/im/ui/utils/AudioMsgUtils;->a(Lcom/vk/im/ui/utils/AudioMsgUtils;Lcom/vk/im/engine/models/attaches/AttachAudioMsg;Lcom/vk/im/engine/models/ProfilesInfo;ILjava/lang/Object;)Lcom/vk/audiomsg/player/AudioMsgTrack;
 
     move-result-object p1
 
@@ -83,7 +83,7 @@
     .line 1
     check-cast p1, Lcom/vk/im/engine/models/messages/MsgFromUser;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$loadNotListenedAudioMsg$2$2;->a(Lcom/vk/im/engine/models/messages/MsgFromUser;)Lcom/vk/audiomsg/player/d;
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/providers/audiomsg/PrefetchByNotListenedMsgPlugin$loadNotListenedAudioMsg$2$2;->a(Lcom/vk/im/engine/models/messages/MsgFromUser;)Lcom/vk/audiomsg/player/AudioMsgTrack;
 
     move-result-object p1
 

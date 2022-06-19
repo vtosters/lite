@@ -3,16 +3,16 @@
 .source "GoodsPickerView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Object;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -43,7 +43,7 @@
     .line 1
     invoke-virtual {p0, p1}, Lcom/vk/market/picker/GoodsPickerView$adapterPickListener$1;->invoke(Ljava/lang/Object;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -54,17 +54,17 @@
     .line 2
     iget-object v0, p0, Lcom/vk/market/picker/GoodsPickerView$adapterPickListener$1;->this$0:Lcom/vk/market/picker/GoodsPickerView;
 
-    invoke-virtual {v0}, Lcom/vk/market/picker/GoodsPickerView;->getPickListener()Lkotlin/jvm/b/b;
+    invoke-virtual {v0}, Lcom/vk/market/picker/GoodsPickerView;->getPickListener()Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void

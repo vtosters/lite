@@ -3,12 +3,12 @@
 .source "PostingAttachLocationFragment.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;->b(ILcom/vk/lists/t;)Lc/a/m;
+    value = Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;->b(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,11 +24,11 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
-        "Lc/a/m<",
+        "Lio/reactivex/functions/Function<",
+        "Lio/reactivex/Observable<",
         "Ljava/lang/Throwable;",
         ">;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "*>;>;"
     }
 .end annotation
@@ -61,15 +61,15 @@
 
 
 # virtual methods
-.method public final a(Lc/a/m;)Lc/a/m;
+.method public final a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Throwable;",
             ">;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Long;",
             ">;"
         }
@@ -78,7 +78,7 @@
     .line 1
     sget-object v0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$f$a;->a:Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$f$a;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -89,9 +89,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lc/a/m;
+    check-cast p1, Lio/reactivex/Observable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$f;->a(Lc/a/m;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$f;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object p1
 

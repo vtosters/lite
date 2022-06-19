@@ -1,5 +1,5 @@
 .class public final Lcom/vtosters/lite/fragments/MyGamesListFragment;
-.super Lcom/vtosters/lite/fragments/i1;
+.super Lcom/vtosters/lite/fragments/GamesListFragment;
 .source "MyGamesListFragment.kt"
 
 
@@ -16,13 +16,13 @@
 # static fields
 .field private static final A0:Landroid/content/IntentFilter;
 
-.field static final synthetic z0:[Lkotlin/u/j;
+.field static final synthetic z0:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final w0:Lkotlin/e;
+.field private final w0:Lkotlin/Lazy2;
 
-.field private final x0:Lio/reactivex/disposables/a;
+.field private final x0:Lio/reactivex/disposables/CompositeDisposable;
 
 .field private final y0:Lcom/vtosters/lite/fragments/MyGamesListFragment$gameInstalledReceiver$1;
 
@@ -33,13 +33,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vtosters/lite/fragments/MyGamesListFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -47,21 +47,21 @@
 
     const-string v4, "getAdapter()Lcom/vtosters/lite/fragments/MyGamesListFragment$MyGamesAdapterImpl;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vtosters/lite/fragments/MyGamesListFragment;->z0:[Lkotlin/u/j;
+    sput-object v0, Lcom/vtosters/lite/fragments/MyGamesListFragment;->z0:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vtosters/lite/fragments/MyGamesListFragment$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/MyGamesListFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/MyGamesListFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Landroid/content/IntentFilter;
@@ -79,25 +79,25 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vtosters/lite/fragments/i1;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/GamesListFragment;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vtosters/lite/fragments/MyGamesListFragment$adapter$2;
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/MyGamesListFragment$adapter$2;-><init>(Lcom/vtosters/lite/fragments/MyGamesListFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment;->w0:Lkotlin/e;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment;->w0:Lkotlin/Lazy2;
 
     .line 3
-    new-instance v0, Lio/reactivex/disposables/a;
+    new-instance v0, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {v0}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {v0}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment;->x0:Lio/reactivex/disposables/a;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment;->x0:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 4
     new-instance v0, Lcom/vtosters/lite/fragments/MyGamesListFragment$gameInstalledReceiver$1;
@@ -112,15 +112,15 @@
 .method private final Y4()Lcom/vtosters/lite/fragments/MyGamesListFragment$c;
     .locals 3
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment;->w0:Lkotlin/e;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment;->w0:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vtosters/lite/fragments/MyGamesListFragment;->z0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vtosters/lite/fragments/MyGamesListFragment;->z0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -144,16 +144,16 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
+    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
 
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vtosters/lite/fragments/MyGamesListFragment;)Lio/reactivex/disposables/a;
+.method public static final synthetic c(Lcom/vtosters/lite/fragments/MyGamesListFragment;)Lio/reactivex/disposables/CompositeDisposable;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment;->x0:Lio/reactivex/disposables/a;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment;->x0:Lio/reactivex/disposables/CompositeDisposable;
 
     return-object p0
 .end method
@@ -182,7 +182,7 @@
     .locals 4
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/i1;->onAttach(Landroid/content/Context;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/GamesListFragment;->onAttach(Landroid/content/Context;)V
 
     .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -206,14 +206,14 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/i1;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/GamesListFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment;->x0:Lio/reactivex/disposables/a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment;->x0:Lio/reactivex/disposables/CompositeDisposable;
 
     sget-object v0, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;
 
-    invoke-virtual {v0}, Lcom/vk/menu/MenuCache;->f()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/menu/MenuCache;->f()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -221,11 +221,11 @@
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/fragments/MyGamesListFragment$d;-><init>(Lcom/vtosters/lite/fragments/MyGamesListFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {p1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -234,12 +234,12 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vtosters/lite/fragments/i1;->onDestroy()V
+    invoke-super {p0}, Lcom/vtosters/lite/fragments/GamesListFragment;->onDestroy()V
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment;->x0:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment;->x0:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     return-void
 .end method
@@ -254,7 +254,7 @@
 
     const-string v1, "requireContext()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 

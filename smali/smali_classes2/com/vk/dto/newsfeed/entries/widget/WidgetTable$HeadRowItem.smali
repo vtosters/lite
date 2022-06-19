@@ -51,7 +51,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/widget/WidgetTable$HeadRowItem$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/widget/WidgetTable$HeadRowItem$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-string v0, "left"
 

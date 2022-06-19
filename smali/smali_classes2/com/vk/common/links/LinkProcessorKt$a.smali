@@ -1,5 +1,5 @@
 .class public final Lcom/vk/common/links/LinkProcessorKt$a;
-.super Lcom/vtosters/lite/api/l;
+.super Lcom/vtosters/lite/api/SimpleCallback;
 .source "LinkProcessor.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/api/l<",
+        "Lcom/vtosters/lite/api/SimpleCallback<",
         "Lcom/vk/api/execute/ExecuteGetAccountSettings$Result;",
         ">;"
     }
@@ -37,7 +37,7 @@
 
     iput-object p2, p0, Lcom/vk/common/links/LinkProcessorKt$a;->d:Landroid/content/Context;
 
-    invoke-direct {p0, p3}, Lcom/vtosters/lite/api/l;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p3}, Lcom/vtosters/lite/api/SimpleCallback;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/dto/market/Variant$a;
-.super Lcom/vk/dto/common/data/c;
+.super Lcom/vk/dto/common/data/JsonParser;
 .source "JsonParser.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/dto/common/data/c<",
+        "Lcom/vk/dto/common/data/JsonParser<",
         "Lcom/vk/dto/market/Variant;",
         ">;"
     }
@@ -27,7 +27,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/data/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/data/JsonParser;-><init>()V
 
     return-void
 .end method
@@ -64,12 +64,12 @@
 
     const-string v0, "json.getString(ServerKeys.NAME)"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "item_id"
 
     .line 4
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v3
 

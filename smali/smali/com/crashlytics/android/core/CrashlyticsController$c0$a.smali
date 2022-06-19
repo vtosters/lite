@@ -3,7 +3,7 @@
 .source "CrashlyticsController.java"
 
 # interfaces
-.implements Lcom/crashlytics/android/core/h$d;
+.implements Lcom/crashlytics/android/core/CrashPromptDialog$d;
 
 
 # annotations
@@ -41,11 +41,11 @@
     .line 1
     iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$c0$a;->a:Lcom/crashlytics/android/core/CrashlyticsController$c0;
 
-    invoke-static {v0}, Lcom/crashlytics/android/core/CrashlyticsController$c0;->a(Lcom/crashlytics/android/core/CrashlyticsController$c0;)Lcom/crashlytics/android/core/h0;
+    invoke-static {v0}, Lcom/crashlytics/android/core/CrashlyticsController$c0;->a(Lcom/crashlytics/android/core/CrashlyticsController$c0;)Lcom/crashlytics/android/core/PreferenceManager;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/crashlytics/android/core/h0;->a(Z)V
+    invoke-virtual {v0, p1}, Lcom/crashlytics/android/core/PreferenceManager;->a(Z)V
 
     return-void
 .end method

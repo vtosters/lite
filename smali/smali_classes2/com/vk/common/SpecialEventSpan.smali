@@ -1,16 +1,16 @@
 .class public final Lcom/vk/common/SpecialEventSpan;
-.super Lcom/vtosters/lite/v;
+.super Lcom/vtosters/lite/LinkSpan;
 .source "SpecialEventSpan.kt"
 
 
 # static fields
-.field static final synthetic E:[Lkotlin/u/j;
+.field static final synthetic E:[Lkotlin/u/KProperty5;
 
 
 # instance fields
 .field private final C:Ljava/lang/String;
 
-.field private final D:Lkotlin/e;
+.field private final D:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -19,13 +19,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/common/SpecialEventSpan;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -33,15 +33,15 @@
 
     const-string v4, "getEvent()Lcom/vk/dto/stickers/SpecialEvent;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/common/SpecialEventSpan;->E:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/common/SpecialEventSpan;->E:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -52,7 +52,7 @@
     const-string v0, ""
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/LinkSpan;-><init>(Ljava/lang/String;)V
 
     const-string v0, "event#"
 
@@ -77,7 +77,7 @@
 
     const-string v0, "(this as java.lang.String).substring(startIndex)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_0
     iput-object p1, p0, Lcom/vk/common/SpecialEventSpan;->C:Ljava/lang/String;
@@ -87,11 +87,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/common/SpecialEventSpan$event$2;-><init>(Lcom/vk/common/SpecialEventSpan;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/common/SpecialEventSpan;->D:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/common/SpecialEventSpan;->D:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -114,30 +114,30 @@
     move-result-object p1
 
     .line 7
-    instance-of v0, p1, Lcom/vk/navigation/n;
+    instance-of v0, p1, Lcom/vk/navigation/NavigationDelegateProvider;
 
     if-eqz v0, :cond_1
 
     .line 8
-    check-cast p1, Lcom/vk/navigation/n;
+    check-cast p1, Lcom/vk/navigation/NavigationDelegateProvider;
 
-    invoke-interface {p1}, Lcom/vk/navigation/n;->E0()Lcom/vk/navigation/NavigationDelegate;
+    invoke-interface {p1}, Lcom/vk/navigation/NavigationDelegateProvider;->E0()Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object p1
 
-    instance-of v0, p1, Lcom/vk/navigation/y;
+    instance-of v0, p1, Lcom/vk/navigation/VKNavigationDelegate;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vk/navigation/y;
+    check-cast p1, Lcom/vk/navigation/VKNavigationDelegate;
 
     if-eqz p1, :cond_1
 
     .line 9
-    invoke-virtual {p1, p2}, Lcom/vk/navigation/y;->a(Lcom/vk/dto/stickers/SpecialEvent;)V
+    invoke-virtual {p1, p2}, Lcom/vk/navigation/VKNavigationDelegate;->a(Lcom/vk/dto/stickers/SpecialEvent;)V
 
     :cond_1
     return-void
@@ -183,7 +183,7 @@
     const-string v1, "media_event_click"
 
     .line 4
-    invoke-static {v1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v1}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v1
 
@@ -193,9 +193,9 @@
 
     const-string v3, "event_id"
 
-    invoke-virtual {v1, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v1, v3, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v1}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
     .line 5
     invoke-direct {p0, p1, v0}, Lcom/vk/common/SpecialEventSpan;->a(Landroid/content/Context;Lcom/vk/dto/stickers/SpecialEvent;)V
@@ -236,15 +236,15 @@
 .method public final e()Lcom/vk/dto/stickers/SpecialEvent;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/common/SpecialEventSpan;->D:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/common/SpecialEventSpan;->D:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/common/SpecialEventSpan;->E:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/common/SpecialEventSpan;->E:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

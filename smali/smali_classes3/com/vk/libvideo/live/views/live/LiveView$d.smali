@@ -3,7 +3,7 @@
 .source "LiveView.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Landroid/graphics/Bitmap;",
         ">;"
     }
@@ -82,7 +82,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/libvideo/c;->black_alpha60:I
+    sget v2, Lcom/vk/libvideo/R3;->black_alpha60:I
 
     invoke-static {v1, v2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 

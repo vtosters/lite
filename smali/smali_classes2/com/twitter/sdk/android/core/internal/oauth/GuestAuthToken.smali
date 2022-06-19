@@ -55,7 +55,7 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/twitter/sdk/android/core/a;->a:J
+    iget-wide v2, p0, Lcom/twitter/sdk/android/core/AuthToken;->a:J
 
     const-wide/32 v4, 0xa4cb80
 

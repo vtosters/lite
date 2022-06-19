@@ -1,5 +1,5 @@
 .class public final Lcom/vk/catalog2/core/ui/view/HorizontalRecyclerPaginationView$b;
-.super Lcom/vk/lists/l;
+.super Lcom/vk/lists/FooterLoadingViewProvider;
 .source "HorizontalRecyclerPaginationView.kt"
 
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/l;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/FooterLoadingViewProvider;-><init>()V
 
     return-void
 .end method
@@ -42,7 +42,7 @@
 
     move-result-object p1
 
-    sget v0, Lcom/vk/catalog2/core/r;->recycler_paginated_horizontal_list_loading:I
+    sget v0, Lcom/vk/catalog2/core/R7;->recycler_paginated_horizontal_list_loading:I
 
     const/4 v1, 0x0
 
@@ -52,7 +52,7 @@
 
     const-string p2, "LayoutInflater.from(cont\u2026                   false)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

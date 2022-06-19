@@ -8,7 +8,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper<",
-            "Lcom/vk/im/engine/internal/storage/models/b;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;",
             ">;"
         }
     .end annotation
@@ -18,23 +18,23 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper<",
-            "Lcom/vk/im/engine/internal/storage/models/d;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final c:Lcom/vk/im/engine/internal/storage/b;
+.field private final c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/internal/storage/b;)V
+.method public constructor <init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
     .locals 12
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
     .line 2
     new-instance p1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
@@ -47,11 +47,11 @@
     array-length v1, v0
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    const-class v2, Lcom/vk/im/engine/internal/storage/models/b;
+    const-class v2, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
 
-    invoke-interface {v0, v2}, Lcom/vk/im/engine/internal/storage/b;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/d;
+    invoke-interface {v0, v2}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/StorageTrigger;
 
     move-result-object v2
 
@@ -71,7 +71,7 @@
     move-object v0, p1
 
     .line 8
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;-><init>(ILcom/vk/im/engine/internal/storage/d;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;-><init>(ILcom/vk/im/engine/internal/storage/StorageTrigger;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
 
@@ -86,11 +86,11 @@
     array-length v7, v0
 
     .line 11
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    const-class v1, Lcom/vk/im/engine/internal/storage/models/d;
+    const-class v1, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
 
-    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/b;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/d;
+    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/StorageTrigger;
 
     move-result-object v8
 
@@ -110,45 +110,45 @@
     move-object v6, p1
 
     .line 15
-    invoke-direct/range {v6 .. v11}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;-><init>(ILcom/vk/im/engine/internal/storage/d;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct/range {v6 .. v11}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;-><init>(ILcom/vk/im/engine/internal/storage/StorageTrigger;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->b:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+.method private final a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/d;",
+            "Lcom/vk/im/engine/utils/collection/IntCollection;",
             ")",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/internal/storage/models/b;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;",
             ">;"
         }
     .end annotation
 
     .line 5
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/core/extensions/x;->a()Landroid/util/SparseArray;
+    invoke-static {}, Lcom/vk/core/extensions/SparseArrayExt1;->a()Landroid/util/SparseArray;
 
     move-result-object p1
 
@@ -166,7 +166,7 @@
 
     const-string v1, ","
 
-    invoke-interface {p1, v1}, Lcom/vk/im/engine/utils/collection/d;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1, v1}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -181,9 +181,9 @@
     move-result-object p1
 
     .line 7
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -224,7 +224,7 @@
     move-result v1
 
     .line 12
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Landroid/database/Cursor;)Lcom/vk/im/engine/internal/storage/models/b;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Landroid/database/Cursor;)Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
 
     move-result-object v2
 
@@ -251,20 +251,20 @@
     throw v0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;)Lcom/vk/im/engine/internal/storage/b;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;)Lcom/vk/im/engine/internal/storage/StorageEnvironment;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
     return-object p0
 .end method
 
-.method private final a(Landroid/database/Cursor;)Lcom/vk/im/engine/internal/storage/models/b;
+.method private final a(Landroid/database/Cursor;)Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
     .locals 4
 
     .line 17
-    new-instance v0, Lcom/vk/im/engine/internal/storage/models/b;
+    new-instance v0, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
 
     .line 18
     sget-object v1, Lcom/vk/im/engine/models/dialogs/DialogsFilter;->Companion:Lcom/vk/im/engine/models/dialogs/DialogsFilter$a;
@@ -294,12 +294,12 @@
     move-result p1
 
     .line 21
-    invoke-direct {v0, v1, v2, p1}, Lcom/vk/im/engine/internal/storage/models/b;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;II)V
+    invoke-direct {v0, v1, v2, p1}, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;II)V
 
     return-object v0
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;)Ljava/lang/String;
+.method private final a(Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;)Ljava/lang/String;
     .locals 4
 
     .line 42
@@ -307,9 +307,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/models/q;
+    check-cast v0, Lcom/vk/im/engine/models/Weight;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/q;->c()J
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight;->c()J
 
     move-result-wide v0
 
@@ -318,9 +318,9 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/im/engine/models/q;
+    check-cast p2, Lcom/vk/im/engine/models/Weight;
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/models/q;->c()J
+    invoke-virtual {p2}, Lcom/vk/im/engine/models/Weight;->c()J
 
     move-result-wide p2
 
@@ -365,7 +365,7 @@
     return-object p1
 .end method
 
-.method public static synthetic a(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Direction;Lcom/vk/im/engine/models/q;IILjava/lang/Object;)Ljava/util/List;
+.method public static synthetic a(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Direction;Lcom/vk/im/engine/models/Weight;IILjava/lang/Object;)Ljava/util/List;
     .locals 6
 
     and-int/lit8 p6, p6, 0x10
@@ -393,7 +393,7 @@
     move-object v4, p4
 
     .line 27
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Direction;Lcom/vk/im/engine/models/q;I)Ljava/util/List;
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Direction;Lcom/vk/im/engine/models/Weight;I)Ljava/util/List;
 
     move-result-object p0
 
@@ -409,39 +409,39 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+.method public static final synthetic b(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->b(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->b(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final b(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+.method private final b(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/d;",
+            "Lcom/vk/im/engine/utils/collection/IntCollection;",
             ")",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/internal/storage/models/d;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;",
             ">;"
         }
     .end annotation
 
     .line 5
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 6
-    invoke-static {}, Lcom/vk/core/extensions/x;->a()Landroid/util/SparseArray;
+    invoke-static {}, Lcom/vk/core/extensions/SparseArrayExt1;->a()Landroid/util/SparseArray;
 
     move-result-object p1
 
@@ -451,7 +451,7 @@
     const-string v0, ","
 
     .line 7
-    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/d;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -475,9 +475,9 @@
     move-result-object p1
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -518,7 +518,7 @@
     move-result v1
 
     .line 14
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->b(Landroid/database/Cursor;)Lcom/vk/im/engine/internal/storage/models/d;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->b(Landroid/database/Cursor;)Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
 
     move-result-object v2
 
@@ -545,11 +545,11 @@
     throw v0
 .end method
 
-.method private final b(Landroid/database/Cursor;)Lcom/vk/im/engine/internal/storage/models/d;
+.method private final b(Landroid/database/Cursor;)Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
     .locals 5
 
     .line 17
-    new-instance v0, Lcom/vk/im/engine/internal/storage/models/d;
+    new-instance v0, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
 
     .line 18
     sget-object v1, Lcom/vk/im/engine/models/dialogs/DialogsFilter;->Companion:Lcom/vk/im/engine/models/dialogs/DialogsFilter$a;
@@ -565,7 +565,7 @@
     move-result-object v1
 
     .line 19
-    new-instance v2, Lcom/vk/im/engine/models/q;
+    new-instance v2, Lcom/vk/im/engine/models/Weight;
 
     const-string v3, "oldest_weight"
 
@@ -573,7 +573,7 @@
 
     move-result-wide v3
 
-    invoke-direct {v2, v3, v4}, Lcom/vk/im/engine/models/q;-><init>(J)V
+    invoke-direct {v2, v3, v4}, Lcom/vk/im/engine/models/Weight;-><init>(J)V
 
     const-string v3, "fully_fetched"
 
@@ -590,7 +590,7 @@
     move-result p1
 
     .line 22
-    invoke-direct {v0, v1, v2, v3, p1}, Lcom/vk/im/engine/internal/storage/models/d;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/q;ZI)V
+    invoke-direct {v0, v1, v2, v3, p1}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;-><init>(Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Weight;ZI)V
 
     return-object v0
 .end method
@@ -792,7 +792,7 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/im/engine/internal/storage/models/b;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;",
             ">;)V"
         }
     .end annotation
@@ -808,9 +808,9 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -839,16 +839,16 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/im/engine/internal/storage/models/b;
+    check-cast v2, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
 
     const-string v3, "stmt"
 
     .line 4
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x1
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/b;->b()Lcom/vk/im/engine/models/dialogs/DialogsFilter;
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;->b()Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
     move-result-object v4
 
@@ -861,7 +861,7 @@
     const/4 v3, 0x2
 
     .line 5
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/b;->a()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;->a()I
 
     move-result v4
 
@@ -870,7 +870,7 @@
     const/4 v3, 0x3
 
     .line 6
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/b;->c()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;->c()I
 
     move-result v2
 
@@ -883,12 +883,12 @@
 
     .line 8
     :cond_1
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 9
-    invoke-static {v0, v1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     return-void
 
@@ -903,7 +903,7 @@
     :catchall_1
     move-exception v1
 
-    invoke-static {v0, p1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
 .end method
@@ -914,7 +914,7 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/im/engine/internal/storage/models/d;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;",
             ">;)V"
         }
     .end annotation
@@ -930,9 +930,9 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -961,16 +961,16 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/im/engine/internal/storage/models/d;
+    check-cast v2, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
 
     const-string v3, "stmt"
 
     .line 4
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x1
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/d;->a()Lcom/vk/im/engine/models/dialogs/DialogsFilter;
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->a()Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
     move-result-object v4
 
@@ -983,11 +983,11 @@
     const/4 v3, 0x2
 
     .line 5
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/d;->c()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->c()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/models/q;->c()J
+    invoke-virtual {v4}, Lcom/vk/im/engine/models/Weight;->c()J
 
     move-result-wide v4
 
@@ -996,7 +996,7 @@
     const/4 v3, 0x3
 
     .line 6
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/d;->b()Z
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->b()Z
 
     move-result v4
 
@@ -1005,7 +1005,7 @@
     const/4 v3, 0x4
 
     .line 7
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/d;->d()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->d()I
 
     move-result v2
 
@@ -1018,12 +1018,12 @@
 
     .line 9
     :cond_1
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 10
-    invoke-static {v0, v1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     return-void
 
@@ -1038,14 +1038,14 @@
     :catchall_1
     move-exception v1
 
-    invoke-static {v0, p1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/dialogs/DialogsFilter;)Lcom/vk/im/engine/internal/storage/models/b;
+.method public final a(Lcom/vk/im/engine/models/dialogs/DialogsFilter;)Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
     .locals 1
 
     .line 4
@@ -1059,29 +1059,29 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/b;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;
 
     return-object p1
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Direction;Lcom/vk/im/engine/models/q;I)Ljava/util/List;
+.method public final a(Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Direction;Lcom/vk/im/engine/models/Weight;I)Ljava/util/List;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/q;",
+            "Lcom/vk/im/engine/models/Weight;",
             "Lcom/vk/im/engine/models/dialogs/DialogsFilter;",
             "Lcom/vk/im/engine/models/Direction;",
-            "Lcom/vk/im/engine/models/q;",
+            "Lcom/vk/im/engine/models/Weight;",
             "I)",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/c;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;",
             ">;"
         }
     .end annotation
 
     .line 28
-    invoke-direct {p0, p2, p1, p4}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;)Ljava/lang/String;
+    invoke-direct {p0, p2, p1, p4}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1154,9 +1154,9 @@
     move-result-object p1
 
     .line 35
-    iget-object p2, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/b;
+    iget-object p2, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->c:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-interface {p2}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {p2}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object p2
 
@@ -1190,7 +1190,7 @@
     if-nez p3, :cond_2
 
     .line 39
-    new-instance p3, Lcom/vk/im/engine/internal/storage/models/c;
+    new-instance p3, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;
 
     const/4 p4, 0x0
 
@@ -1210,7 +1210,7 @@
 
     move-result v0
 
-    new-instance v1, Lcom/vk/im/engine/models/q;
+    new-instance v1, Lcom/vk/im/engine/models/Weight;
 
     const/4 v2, 0x3
 
@@ -1218,9 +1218,9 @@
 
     move-result-wide v2
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/im/engine/models/q;-><init>(J)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/im/engine/models/Weight;-><init>(J)V
 
-    invoke-direct {p3, p4, p5, v0, v1}, Lcom/vk/im/engine/internal/storage/models/c;-><init>(IIILcom/vk/im/engine/models/q;)V
+    invoke-direct {p3, p4, p5, v0, v1}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;-><init>(IIILcom/vk/im/engine/models/Weight;)V
 
     invoke-virtual {p2, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1245,7 +1245,7 @@
     throw p2
 .end method
 
-.method public final a(Lcom/vk/im/engine/internal/storage/models/b;)V
+.method public final a(Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;)V
     .locals 1
 
     .line 16
@@ -1282,7 +1282,7 @@
     invoke-direct {p2, p0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager$incCount$2;-><init>(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;)V
 
     .line 26
-    invoke-virtual {v0, p1, v1, p2}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(ILkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, p1, v1, p2}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(ILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -1293,7 +1293,7 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/im/engine/internal/storage/models/b;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogsCountStorageModel;",
             ">;)V"
         }
     .end annotation
@@ -1306,7 +1306,7 @@
     return-void
 .end method
 
-.method public final b(Lcom/vk/im/engine/models/dialogs/DialogsFilter;)Lcom/vk/im/engine/internal/storage/models/d;
+.method public final b(Lcom/vk/im/engine/models/dialogs/DialogsFilter;)Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
     .locals 1
 
     .line 4
@@ -1320,7 +1320,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/d;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
 
     return-object p1
 .end method
@@ -1331,7 +1331,7 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/im/engine/internal/storage/models/d;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;",
             ">;)V"
         }
     .end annotation

@@ -3,7 +3,7 @@
 .source "AbbreviationAvatarDrawable.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$a;",
@@ -78,7 +78,7 @@
 
     iget-object v2, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$dialogGradients$2;->$context:Landroid/content/Context;
 
-    sget v3, Lcom/vk/im/ui/c;->im_chat_avatar_start_color_1:I
+    sget v3, Lcom/vk/im/ui/R5;->im_chat_avatar_start_color_1:I
 
     invoke-static {v2, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -86,7 +86,7 @@
 
     iget-object v3, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$dialogGradients$2;->$context:Landroid/content/Context;
 
-    sget v4, Lcom/vk/im/ui/c;->im_chat_avatar_end_color_1:I
+    sget v4, Lcom/vk/im/ui/R5;->im_chat_avatar_end_color_1:I
 
     invoke-static {v3, v4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -103,7 +103,7 @@
 
     iget-object v2, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$dialogGradients$2;->$context:Landroid/content/Context;
 
-    sget v3, Lcom/vk/im/ui/c;->im_chat_avatar_start_color_2:I
+    sget v3, Lcom/vk/im/ui/R5;->im_chat_avatar_start_color_2:I
 
     invoke-static {v2, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -111,7 +111,7 @@
 
     iget-object v3, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$dialogGradients$2;->$context:Landroid/content/Context;
 
-    sget v4, Lcom/vk/im/ui/c;->im_chat_avatar_end_color_2:I
+    sget v4, Lcom/vk/im/ui/R5;->im_chat_avatar_end_color_2:I
 
     invoke-static {v3, v4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -128,7 +128,7 @@
 
     iget-object v2, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$dialogGradients$2;->$context:Landroid/content/Context;
 
-    sget v3, Lcom/vk/im/ui/c;->im_chat_avatar_start_color_3:I
+    sget v3, Lcom/vk/im/ui/R5;->im_chat_avatar_start_color_3:I
 
     invoke-static {v2, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -136,7 +136,7 @@
 
     iget-object v3, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$dialogGradients$2;->$context:Landroid/content/Context;
 
-    sget v4, Lcom/vk/im/ui/c;->im_chat_avatar_end_color_3:I
+    sget v4, Lcom/vk/im/ui/R5;->im_chat_avatar_end_color_3:I
 
     invoke-static {v3, v4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -153,7 +153,7 @@
 
     iget-object v2, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$dialogGradients$2;->$context:Landroid/content/Context;
 
-    sget v3, Lcom/vk/im/ui/c;->im_chat_avatar_start_color_4:I
+    sget v3, Lcom/vk/im/ui/R5;->im_chat_avatar_start_color_4:I
 
     invoke-static {v2, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -161,7 +161,7 @@
 
     iget-object v3, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$dialogGradients$2;->$context:Landroid/content/Context;
 
-    sget v4, Lcom/vk/im/ui/c;->im_chat_avatar_end_color_4:I
+    sget v4, Lcom/vk/im/ui/R5;->im_chat_avatar_end_color_4:I
 
     invoke-static {v3, v4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -178,7 +178,7 @@
 
     iget-object v2, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$dialogGradients$2;->$context:Landroid/content/Context;
 
-    sget v3, Lcom/vk/im/ui/c;->im_chat_avatar_start_color_5:I
+    sget v3, Lcom/vk/im/ui/R5;->im_chat_avatar_start_color_5:I
 
     invoke-static {v2, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -186,7 +186,7 @@
 
     iget-object v3, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$dialogGradients$2;->$context:Landroid/content/Context;
 
-    sget v4, Lcom/vk/im/ui/c;->im_chat_avatar_end_color_5:I
+    sget v4, Lcom/vk/im/ui/R5;->im_chat_avatar_end_color_5:I
 
     invoke-static {v3, v4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -203,7 +203,7 @@
 
     iget-object v2, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$dialogGradients$2;->$context:Landroid/content/Context;
 
-    sget v3, Lcom/vk/im/ui/c;->im_chat_avatar_start_color_6:I
+    sget v3, Lcom/vk/im/ui/R5;->im_chat_avatar_start_color_6:I
 
     invoke-static {v2, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -211,7 +211,7 @@
 
     iget-object v3, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$dialogGradients$2;->$context:Landroid/content/Context;
 
-    sget v4, Lcom/vk/im/ui/c;->im_chat_avatar_end_color_6:I
+    sget v4, Lcom/vk/im/ui/R5;->im_chat_avatar_end_color_6:I
 
     invoke-static {v3, v4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 

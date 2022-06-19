@@ -3,12 +3,12 @@
 .source "HttpRequestExecutorProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->c(Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;)Lcom/vk/httpexecutor/api/k/b;
+    value = Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider;->c(Lcom/vk/httpexecutor/core/HttpRequestExecutorProvider$a;)Lcom/vk/httpexecutor/api/k/LoggingInterceptor;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/lang/String;",
         "Ljava/lang/String;",
         "Ljava/lang/String;",

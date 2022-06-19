@@ -3,7 +3,7 @@
 .source "FragmentNavigationController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Lcom/vk/core/fragments/FragmentEntry;",
         "Lcom/vk/core/fragments/FragmentEntry;",
         "Ljava/lang/Boolean;",
@@ -101,7 +101,7 @@
     move-result-object v0
 
     :cond_1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

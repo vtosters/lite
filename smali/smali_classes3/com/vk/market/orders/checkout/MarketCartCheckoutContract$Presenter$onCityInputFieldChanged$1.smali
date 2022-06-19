@@ -3,12 +3,12 @@
 .source "MarketCartCheckoutContract.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Ljava/lang/String;Lcom/vk/market/orders/checkout/a;)V
+    value = Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->a(Ljava/lang/String;Lcom/vk/market/orders/checkout/DeliveryInfo1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/market/orders/checkout/DeliveryInfo;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -57,7 +57,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$onCityInputFieldChanged$1;->this$0:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->c()Lcom/vk/market/orders/checkout/n;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->c()Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
     move-result-object p1
 
@@ -67,11 +67,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/e;
+    invoke-virtual {v0}, Lcom/vk/market/orders/checkout/DeliveryInfo;->b()Lcom/vk/market/orders/checkout/DeliveryInfo12;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/market/orders/checkout/n;->a(Lcom/vk/market/orders/checkout/e;)V
+    invoke-interface {p1, v0}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->a(Lcom/vk/market/orders/checkout/DeliveryInfo12;)V
 
     return-void
 .end method
@@ -84,7 +84,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$onCityInputFieldChanged$1;->a(Lcom/vk/market/orders/checkout/DeliveryInfo;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

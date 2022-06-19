@@ -16,10 +16,10 @@
 
 .field private static final a0:[I
 
-.field public static final b0:Lcom/vk/dto/common/data/c;
+.field public static final b0:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/common/data/ApiApplication;",
             ">;"
         }
@@ -139,7 +139,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/common/data/ApiApplication$b;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/common/data/ApiApplication;->b0:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/dto/common/data/ApiApplication;->b0:Lcom/vk/dto/common/data/JsonParser;
 
     return-void
 
@@ -964,7 +964,7 @@
 
     const/16 v2, 0x80
 
-    invoke-static {v1, v2}, Lb/h/g/g/c;->b(Ljava/lang/String;I)Z
+    invoke-static {v1, v2}, Lb/h/g/g/PackageManagerHelper;->b(Ljava/lang/String;I)Z
 
     move-result v1
 

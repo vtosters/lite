@@ -3,7 +3,7 @@
 .source "MasksWrap.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,11 +57,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/masks/f;)Lcom/vk/dto/masks/Mask;
+.method public final a(Lcom/vk/api/masks/MasksResponse;)Lcom/vk/dto/masks/Mask;
     .locals 1
 
     .line 1
-    iget-object p1, p1, Lcom/vk/api/masks/f;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object p1, p1, Lcom/vk/api/masks/MasksResponse;->a:Lcom/vk/dto/common/data/VKList;
 
     const/4 v0, 0x0
 
@@ -78,9 +78,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/masks/f;
+    check-cast p1, Lcom/vk/api/masks/MasksResponse;
 
-    invoke-virtual {p0, p1}, Lcom/vk/cameraui/widgets/masks/MasksWrap$m;->a(Lcom/vk/api/masks/f;)Lcom/vk/dto/masks/Mask;
+    invoke-virtual {p0, p1}, Lcom/vk/cameraui/widgets/masks/MasksWrap$m;->a(Lcom/vk/api/masks/MasksResponse;)Lcom/vk/dto/masks/Mask;
 
     move-result-object p1
 

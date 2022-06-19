@@ -6,7 +6,7 @@
 .implements Ljava/util/List;
 .implements Ljava/io/Serializable;
 .implements Ljava/util/RandomAccess;
-.implements Lkotlin/jvm/internal/t/a;
+.implements Lkotlin/jvm/internal/t/KMarkers;
 
 
 # static fields
@@ -283,7 +283,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lkotlin/collections/v;->a:Lkotlin/collections/v;
+    sget-object v0, Lkotlin/collections/Collections1;->INSTANCE:Lkotlin/collections/Collections1;
 
     return-object v0
 .end method
@@ -314,7 +314,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lkotlin/collections/v;->a:Lkotlin/collections/v;
+    sget-object v0, Lkotlin/collections/Collections1;->INSTANCE:Lkotlin/collections/Collections1;
 
     return-object v0
 .end method
@@ -325,7 +325,7 @@
     if-nez p1, :cond_0
 
     .line 2
-    sget-object p1, Lkotlin/collections/v;->a:Lkotlin/collections/v;
+    sget-object p1, Lkotlin/collections/Collections1;->INSTANCE:Lkotlin/collections/Collections1;
 
     return-object p1
 
@@ -464,7 +464,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p0}, Lkotlin/jvm/internal/h;->a(Ljava/util/Collection;)[Ljava/lang/Object;
+    invoke-static {p0}, Lkotlin/jvm/internal/CollectionToArray;->a(Ljava/util/Collection;)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -481,7 +481,7 @@
         }
     .end annotation
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/h;->a(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/CollectionToArray;->a(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 

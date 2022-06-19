@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract a(I)Lcom/facebook/common/references/a;
+.method public abstract a(I)Lcom/facebook/common/references/CloseableReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lcom/facebook/common/references/a<",
+            "Lcom/facebook/common/references/CloseableReference<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }

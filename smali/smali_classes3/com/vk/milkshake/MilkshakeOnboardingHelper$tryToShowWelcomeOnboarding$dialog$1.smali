@@ -3,12 +3,12 @@
 .source "MilkshakeOnboardingHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/milkshake/MilkshakeOnboardingHelper;->e(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/a;)Z
+    value = Lcom/vk/milkshake/MilkshakeOnboardingHelper;->e(Landroid/view/View;Lcom/vk/milkshake/MilkshakeOnboardingHelper$b;ILkotlin/jvm/b/Functions;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -77,7 +77,7 @@
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/view/View;->setPadding(IIII)V
 
     .line 2
-    new-instance v0, Lcom/vk/core/drawable/j;
+    new-instance v0, Lcom/vk/core/drawable/SectionBackground;
 
     .line 3
     iget-object v1, p0, Lcom/vk/milkshake/MilkshakeOnboardingHelper$tryToShowWelcomeOnboarding$dialog$1;->$view:Landroid/view/View;
@@ -88,7 +88,7 @@
 
     const-string v1, "view.context"
 
-    invoke-static {v5, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v6, 0x7f0801ec
 
@@ -101,12 +101,12 @@
     move-object v4, v0
 
     .line 4
-    invoke-direct/range {v4 .. v9}, Lcom/vk/core/drawable/j;-><init>(Landroid/content/Context;IIII)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/core/drawable/SectionBackground;-><init>(Landroid/content/Context;IIII)V
 
     const/4 v1, 0x0
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/core/drawable/j;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/drawable/SectionBackground;->a(Z)V
 
     const v1, 0x7f0403e4
 
@@ -133,7 +133,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/milkshake/MilkshakeOnboardingHelper$tryToShowWelcomeOnboarding$dialog$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

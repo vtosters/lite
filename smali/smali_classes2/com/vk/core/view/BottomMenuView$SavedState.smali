@@ -27,7 +27,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/view/BottomMenuView$SavedState$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/view/BottomMenuView$SavedState$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/view/BottomMenuView$SavedState;->CREATOR:Lcom/vk/core/view/BottomMenuView$SavedState$a;
 
@@ -69,7 +69,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2

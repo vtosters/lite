@@ -3,7 +3,7 @@
 .source "DefaultVkAudioPlayerServiceProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -59,15 +59,15 @@
     .locals 1
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/bridges/a;->b()I
+    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->b()I
 
     move-result v0
 

@@ -9,19 +9,19 @@
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/vk/catalog2/core/e;",
+            "Lcom/vk/catalog2/core/CatalogEntryPointParams;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public static b:Lb/h/f/a;
+.field public static b:Lb/h/f/CatalogConfigurationFactory;
 
-.field public static c:Lcom/vk/catalog2/core/c;
+.field public static c:Lcom/vk/catalog2/core/CatalogEntryPointFactory;
 
-.field private static final d:Lcom/vk/catalog2/core/w/a;
+.field private static final d:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
 
-.field private static final e:Lcom/vk/catalog2/core/events/common/b;
+.field private static final e:Lcom/vk/catalog2/core/events/common/VkCatalogExternalEventsCompositeAdapter;
 
 .field public static final f:Lcom/vk/catalog2/core/CatalogRegistry;
 
@@ -45,24 +45,24 @@
     sput-object v0, Lcom/vk/catalog2/core/CatalogRegistry;->a:Ljava/util/Map;
 
     .line 3
-    new-instance v0, Lcom/vk/catalog2/core/w/a;
+    new-instance v0, Lcom/vk/catalog2/core/w/CatalogCommandsBus;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2, v1}, Lcom/vk/catalog2/core/w/a;-><init>(Lio/reactivex/subjects/PublishSubject;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v1}, Lcom/vk/catalog2/core/w/CatalogCommandsBus;-><init>(Lio/reactivex/subjects/PublishSubject;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    sput-object v0, Lcom/vk/catalog2/core/CatalogRegistry;->d:Lcom/vk/catalog2/core/w/a;
+    sput-object v0, Lcom/vk/catalog2/core/CatalogRegistry;->d:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
 
     .line 4
-    new-instance v0, Lcom/vk/catalog2/core/events/common/b;
+    new-instance v0, Lcom/vk/catalog2/core/events/common/VkCatalogExternalEventsCompositeAdapter;
 
-    sget-object v1, Lcom/vk/catalog2/core/CatalogRegistry;->d:Lcom/vk/catalog2/core/w/a;
+    sget-object v1, Lcom/vk/catalog2/core/CatalogRegistry;->d:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/events/common/b;-><init>(Lcom/vk/catalog2/core/w/a;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/events/common/VkCatalogExternalEventsCompositeAdapter;-><init>(Lcom/vk/catalog2/core/w/CatalogCommandsBus;)V
 
-    sput-object v0, Lcom/vk/catalog2/core/CatalogRegistry;->e:Lcom/vk/catalog2/core/events/common/b;
+    sput-object v0, Lcom/vk/catalog2/core/CatalogRegistry;->e:Lcom/vk/catalog2/core/events/common/VkCatalogExternalEventsCompositeAdapter;
 
     return-void
 .end method
@@ -76,7 +76,7 @@
     return-void
 .end method
 
-.method private final b(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/catalog2/core/e;
+.method private final b(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/catalog2/core/CatalogEntryPointParams;
     .locals 10
 
     .line 2
@@ -91,7 +91,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/catalog2/core/e;
+    check-cast v1, Lcom/vk/catalog2/core/CatalogEntryPointParams;
 
     if-eqz v1, :cond_0
 
@@ -99,11 +99,11 @@
 
     .line 4
     :cond_0
-    sget-object v1, Lcom/vk/catalog2/core/CatalogRegistry;->c:Lcom/vk/catalog2/core/c;
+    sget-object v1, Lcom/vk/catalog2/core/CatalogRegistry;->c:Lcom/vk/catalog2/core/CatalogEntryPointFactory;
 
     if-eqz v1, :cond_2
 
-    invoke-interface {v1, p2, v0}, Lcom/vk/catalog2/core/c;->a(Ljava/lang/Object;Ljava/lang/String;)Lcom/vk/catalog2/core/e;
+    invoke-interface {v1, p2, v0}, Lcom/vk/catalog2/core/CatalogEntryPointFactory;->a(Ljava/lang/Object;Ljava/lang/String;)Lcom/vk/catalog2/core/CatalogEntryPointParams;
 
     move-result-object v1
 
@@ -157,7 +157,7 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v1 .. v9}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -180,7 +180,7 @@
     const-string p1, "entryPointFactory"
 
     .line 8
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -230,11 +230,11 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/catalog2/core/e;
+.method public final a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/catalog2/core/CatalogEntryPointParams;
     .locals 1
 
     .line 4
-    invoke-direct {p0, p1, p2}, Lcom/vk/catalog2/core/CatalogRegistry;->b(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/catalog2/core/e;
+    invoke-direct {p0, p1, p2}, Lcom/vk/catalog2/core/CatalogRegistry;->b(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/catalog2/core/CatalogEntryPointParams;
 
     move-result-object p2
 
@@ -246,29 +246,29 @@
     return-object p2
 .end method
 
-.method public final a()Lcom/vk/catalog2/core/w/a;
+.method public final a()Lcom/vk/catalog2/core/w/CatalogCommandsBus;
     .locals 1
 
     .line 3
-    sget-object v0, Lcom/vk/catalog2/core/CatalogRegistry;->d:Lcom/vk/catalog2/core/w/a;
+    sget-object v0, Lcom/vk/catalog2/core/CatalogRegistry;->d:Lcom/vk/catalog2/core/w/CatalogCommandsBus;
 
     return-object v0
 .end method
 
-.method public final a(Lb/h/f/a;)V
+.method public final a(Lb/h/f/CatalogConfigurationFactory;)V
     .locals 0
 
     .line 1
-    sput-object p1, Lcom/vk/catalog2/core/CatalogRegistry;->b:Lb/h/f/a;
+    sput-object p1, Lcom/vk/catalog2/core/CatalogRegistry;->b:Lb/h/f/CatalogConfigurationFactory;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/catalog2/core/c;)V
+.method public final a(Lcom/vk/catalog2/core/CatalogEntryPointFactory;)V
     .locals 0
 
     .line 2
-    sput-object p1, Lcom/vk/catalog2/core/CatalogRegistry;->c:Lcom/vk/catalog2/core/c;
+    sput-object p1, Lcom/vk/catalog2/core/CatalogRegistry;->c:Lcom/vk/catalog2/core/CatalogEntryPointFactory;
 
     return-void
 .end method
@@ -284,11 +284,11 @@
     return-void
 .end method
 
-.method public final b()Lb/h/f/a;
+.method public final b()Lb/h/f/CatalogConfigurationFactory;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/catalog2/core/CatalogRegistry;->b:Lb/h/f/a;
+    sget-object v0, Lcom/vk/catalog2/core/CatalogRegistry;->b:Lb/h/f/CatalogConfigurationFactory;
 
     if-eqz v0, :cond_0
 
@@ -297,18 +297,18 @@
     :cond_0
     const-string v0, "configurationFactory"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public final c()Lcom/vk/catalog2/core/events/common/b;
+.method public final c()Lcom/vk/catalog2/core/events/common/VkCatalogExternalEventsCompositeAdapter;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/catalog2/core/CatalogRegistry;->e:Lcom/vk/catalog2/core/events/common/b;
+    sget-object v0, Lcom/vk/catalog2/core/CatalogRegistry;->e:Lcom/vk/catalog2/core/events/common/VkCatalogExternalEventsCompositeAdapter;
 
     return-object v0
 .end method

@@ -63,7 +63,7 @@
     move-object v1, p0
 
     .line 5
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method
@@ -151,19 +151,19 @@
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 5
-    new-instance v2, Lcom/vk/navigation/o;
+    new-instance v2, Lcom/vk/navigation/Navigator;
 
-    const-class v3, Lcom/vtosters/lite/fragments/r1;
+    const-class v3, Lcom/vtosters/lite/fragments/PhotosFragment;
 
-    invoke-direct {v2, v3, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
+    invoke-direct {v2, v3, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
     .line 6
-    invoke-virtual {v2, v1}, Lcom/vk/navigation/o;->b(Z)Lcom/vk/navigation/o;
+    invoke-virtual {v2, v1}, Lcom/vk/navigation/Navigator;->b(Z)Lcom/vk/navigation/Navigator;
 
     const/16 v0, 0x33
 
     .line 7
-    invoke-virtual {v2, p0, v0}, Lcom/vk/navigation/o;->a(Landroid/app/Activity;I)V
+    invoke-virtual {v2, p0, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/app/Activity;I)V
 
     return-void
 .end method
@@ -445,27 +445,27 @@
 
     .line 22
     :cond_4
-    invoke-static {p1}, Lb/h/g/m/a;->b(I)Z
+    invoke-static {p1}, Lb/h/g/m/CameraUtils;->b(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
     .line 23
-    invoke-static {p1}, Lb/h/g/m/a;->a(I)Ljava/io/File;
+    invoke-static {p1}, Lb/h/g/m/CameraUtils;->a(I)Ljava/io/File;
 
     move-result-object v0
 
     if-eqz v0, :cond_5
 
     .line 24
-    invoke-static {}, Lcom/vk/attachpicker/o;->a()Landroid/content/Context;
+    invoke-static {}, Lcom/vk/attachpicker/Picker;->a()Landroid/content/Context;
 
     move-result-object v3
 
     const/4 v4, 0x0
 
-    invoke-static {v3, v0, v4}, Lb/h/g/m/a;->a(Landroid/content/Context;Ljava/io/File;Landroid/media/MediaScannerConnection$OnScanCompletedListener;)V
+    invoke-static {v3, v0, v4}, Lb/h/g/m/CameraUtils;->a(Landroid/content/Context;Ljava/io/File;Landroid/media/MediaScannerConnection$OnScanCompletedListener;)V
 
     .line 25
     new-instance v3, Landroid/content/Intent;

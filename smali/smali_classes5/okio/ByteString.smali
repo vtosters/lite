@@ -322,7 +322,7 @@
     if-eqz p0, :cond_1
 
     .line 9
-    invoke-static {p0}, Lokio/b;->a(Ljava/lang/String;)[B
+    invoke-static {p0}, Lokio/Base64;->a(Ljava/lang/String;)[B
 
     move-result-object p0
 
@@ -395,7 +395,7 @@
 
     int-to-long v5, p2
 
-    invoke-static/range {v1 .. v6}, Lokio/t;->a(JJJ)V
+    invoke-static/range {v1 .. v6}, Lokio/Util;->a(JJJ)V
 
     .line 4
     new-array v0, p2, [B
@@ -572,7 +572,7 @@
     .line 1
     new-instance v0, Lokio/ByteString;
 
-    sget-object v1, Lokio/t;->a:Ljava/nio/charset/Charset;
+    sget-object v1, Lokio/Util;->a:Ljava/nio/charset/Charset;
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
@@ -779,7 +779,7 @@
     .line 8
     iget-object v0, p0, Lokio/ByteString;->data:[B
 
-    invoke-static {v0}, Lokio/b;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lokio/Base64;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -880,7 +880,7 @@
     throw p1
 .end method
 
-.method a(Lokio/c;)V
+.method a(Lokio/Buffer;)V
     .locals 3
 
     .line 28
@@ -890,7 +890,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p1, v0, v2, v1}, Lokio/c;->write([BII)Lokio/c;
+    invoke-virtual {p1, v0, v2, v1}, Lokio/Buffer;->write([BII)Lokio/Buffer;
 
     return-void
 .end method
@@ -931,7 +931,7 @@
     if-gt p3, v1, :cond_0
 
     .line 31
-    invoke-static {v0, p1, p2, p3, p4}, Lokio/t;->a([BI[BII)Z
+    invoke-static {v0, p1, p2, p3, p4}, Lokio/Util;->a([BI[BII)Z
 
     move-result p1
 
@@ -954,7 +954,7 @@
     .line 1
     iget-object v0, p0, Lokio/ByteString;->data:[B
 
-    invoke-static {v0}, Lokio/b;->b([B)Ljava/lang/String;
+    invoke-static {v0}, Lokio/Base64;->b([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1302,7 +1302,7 @@
 
     iget-object v1, p0, Lokio/ByteString;->data:[B
 
-    sget-object v2, Lokio/t;->a:Ljava/nio/charset/Charset;
+    sget-object v2, Lokio/Util;->a:Ljava/nio/charset/Charset;
 
     invoke-direct {v0, v1, v2}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 

@@ -140,13 +140,13 @@
 
     .line 6
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p2
 
-    check-cast p2, Lcom/facebook/drawee/generic/a;
+    check-cast p2, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    invoke-virtual {p2, p1}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {p2, p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     return-void
 .end method
@@ -164,24 +164,24 @@
 
 
 # virtual methods
-.method protected a(Lcom/facebook/drawee/generic/b;)V
+.method protected a(Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;)V
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/facebook/drawee/drawable/r$b;->o:Lcom/facebook/drawee/drawable/r$b;
+    sget-object v0, Lcom/facebook/drawee/drawable/ScalingUtils$b;->o:Lcom/facebook/drawee/drawable/ScalingUtils$b;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/b;->a(Lcom/facebook/drawee/drawable/r$b;)Lcom/facebook/drawee/generic/b;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
     const/high16 v0, 0x40000000    # 2.0f
 
     .line 2
-    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v1
 
     int-to-float v1, v1
 
-    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v0
 
@@ -204,7 +204,7 @@
     invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/RoundingParams;->a(I)Lcom/facebook/drawee/generic/RoundingParams;
 
     .line 5
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/b;->a(Lcom/facebook/drawee/generic/RoundingParams;)Lcom/facebook/drawee/generic/b;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a(Lcom/facebook/drawee/generic/RoundingParams;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
     return-void
 .end method
@@ -260,7 +260,7 @@
     const/high16 v0, 0x40800000    # 4.0f
 
     .line 1
-    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v0
 
@@ -269,28 +269,28 @@
     const/high16 v2, 0x41200000    # 10.0f
 
     .line 2
-    invoke-static {v2}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v2}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v2
 
     const/high16 v3, 0x40c00000    # 6.0f
 
     .line 3
-    invoke-static {v3}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v3}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v3
 
     const/high16 v4, 0x41000000    # 8.0f
 
     .line 4
-    invoke-static {v4}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v4}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v4
 
     const/high16 v5, 0x41400000    # 12.0f
 
     .line 5
-    invoke-static {v5}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v5}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v5
 

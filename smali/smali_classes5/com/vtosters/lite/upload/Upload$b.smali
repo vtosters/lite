@@ -3,12 +3,12 @@
 .source "Upload.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/j;Lkotlin/jvm/b/b;)I
+    value = Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/UploadTask;Lkotlin/jvm/b/Functions2;)I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -30,14 +30,14 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/b;
+.field final synthetic a:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vtosters/lite/upload/Upload$b;->a:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vtosters/lite/upload/Upload$b;->a:Lkotlin/jvm/b/Functions2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -114,9 +114,9 @@
     invoke-static {v0}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/upload/Upload$b;->a:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vtosters/lite/upload/Upload$b;->a:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 

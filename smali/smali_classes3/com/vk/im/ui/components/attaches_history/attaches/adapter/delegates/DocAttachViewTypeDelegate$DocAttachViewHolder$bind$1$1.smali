@@ -3,7 +3,7 @@
 .source "DocAttachViewTypeDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
         "Landroid/view/View;",
         ">;"
@@ -60,7 +60,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/im/ui/h;->vkim_doc_item_type:I
+    sget v0, Lcom/vk/im/ui/R11;->vkim_doc_item_type:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -4,11 +4,11 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
 .field private static final b:Ljava/text/DecimalFormat;
 
-.field private static final c:Lcom/vk/core/util/d1;
+.field private static final c:Lcom/vk/core/util/ThreadLocalDelegate;
 
 .field public static final d:Lcom/vk/core/util/DistanceUtils;
 
@@ -19,13 +19,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/core/util/DistanceUtils;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -33,15 +33,15 @@
 
     const-string v4, "getDistanceArray()[F"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/core/util/DistanceUtils;->a:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/core/util/DistanceUtils;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/core/util/DistanceUtils;
@@ -68,11 +68,11 @@
     .line 5
     sget-object v0, Lcom/vk/core/util/DistanceUtils$distanceArray$2;->a:Lcom/vk/core/util/DistanceUtils$distanceArray$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/util/DistanceUtils;->c:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vk/core/util/DistanceUtils;->c:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-void
 .end method
@@ -124,7 +124,7 @@
     .locals 6
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const/16 v1, 0x3e8
 
@@ -139,7 +139,7 @@
     if-ltz v1, :cond_0
 
     .line 2
-    sget v1, Lb/h/g/d;->distance_km:I
+    sget v1, Lb/h/g/R4;->distance_km:I
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -165,13 +165,13 @@
 
     const-string v0, "context.getString(R.stri\u2026distanceMeters / 1000f)))"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    sget v1, Lb/h/g/d;->distance_m:I
+    sget v1, Lb/h/g/R4;->distance_m:I
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -189,7 +189,7 @@
 
     const-string v0, "context.getString(R.stri\u2026eters.toInt().toString())"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p0
@@ -198,15 +198,15 @@
 .method private final a()[F
     .locals 3
 
-    sget-object v0, Lcom/vk/core/util/DistanceUtils;->c:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vk/core/util/DistanceUtils;->c:Lcom/vk/core/util/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vk/core/util/DistanceUtils;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/util/DistanceUtils;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 

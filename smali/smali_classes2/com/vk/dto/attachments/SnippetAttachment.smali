@@ -3,10 +3,10 @@
 .source "SnippetAttachment.java"
 
 # interfaces
-.implements Lcom/vk/dto/attachments/b;
-.implements Lcom/vk/dto/attachments/c;
+.implements Lcom/vk/dto/attachments/ImageAttachment;
+.implements Lcom/vk/dto/attachments/WebCacheAttachment;
 .implements Lcom/vk/dto/common/Image$ConvertToImage;
-.implements Lb/h/h/f/a;
+.implements Lb/h/h/f/Favable;
 
 
 # static fields
@@ -1061,9 +1061,9 @@
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/vk/core/util/p0;->b:Lcom/vk/core/util/p0;
+    sget-object v0, Lcom/vk/core/util/MediaLoadingInfo;->INSTANCE:Lcom/vk/core/util/MediaLoadingInfo;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/p0;->c()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/MediaLoadingInfo;->c()Z
 
     move-result v0
 
@@ -1084,7 +1084,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lb/h/g/i/a;->b(Ljava/lang/Iterable;)Lcom/vk/dto/common/ImageSize;
+    invoke-static {v0}, Lb/h/g/i/ImageSizeExt;->b(Ljava/lang/Iterable;)Lcom/vk/dto/common/ImageSize;
 
     move-result-object v0
 
@@ -1420,9 +1420,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    sget v1, Lb/h/h/c;->story:I
+    sget v1, Lb/h/h/R;->story:I
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1443,7 +1443,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/dto/attachments/a;->q:I
+    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->q:I
 
     return v0
 .end method

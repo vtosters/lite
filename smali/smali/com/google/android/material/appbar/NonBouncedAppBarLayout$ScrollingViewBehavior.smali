@@ -31,7 +31,7 @@
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/appbar/b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 3
-    sget-object v0, Lcom/vtosters/lite/a0;->ScrollingViewBehavior_Layout:[I
+    sget-object v0, Lcom/vtosters/lite/R;->ScrollingViewBehavior_Layout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

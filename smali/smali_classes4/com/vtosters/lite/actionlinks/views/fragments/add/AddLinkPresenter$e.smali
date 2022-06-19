@@ -3,7 +3,7 @@
 .source "AddLinkPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -61,7 +61,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

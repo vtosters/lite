@@ -3,7 +3,7 @@
 .source "ProfilerConfig.kt"
 
 # interfaces
-.implements Lcom/vk/core/serialize/a;
+.implements Lcom/vk/core/serialize/JSONSerialize;
 
 
 # annotations
@@ -50,7 +50,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/account/ProfilerConfig$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/account/ProfilerConfig$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/account/ProfilerConfig;->c:Lcom/vk/dto/account/ProfilerConfig$b;
 
@@ -74,7 +74,7 @@
 
     const/4 v2, 0x3
 
-    invoke-direct {p0, v1, v0, v2, v0}, Lcom/vk/dto/account/ProfilerConfig;-><init>(ZLjava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v1, v0, v2, v0}, Lcom/vk/dto/account/ProfilerConfig;-><init>(ZLjava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -103,14 +103,14 @@
 
     .line 8
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -127,7 +127,7 @@
     const-string v1, "api_requests"
 
     .line 9
-    invoke-static {p1, v1, v0}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
+    invoke-static {p1, v1, v0}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
 
     move-result v1
 
@@ -164,7 +164,7 @@
 
     const-string v5, "this.getJSONObject(i)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
     sget-object v5, Lcom/vk/dto/account/DownloadPattern;->e:Lcom/vk/dto/account/DownloadPattern$b;
@@ -191,7 +191,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lorg/json/JSONObject;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lorg/json/JSONObject;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -221,7 +221,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ZLjava/util/List;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ZLjava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p4, p3, 0x1
@@ -344,7 +344,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/account/ProfilerConfig;->b:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

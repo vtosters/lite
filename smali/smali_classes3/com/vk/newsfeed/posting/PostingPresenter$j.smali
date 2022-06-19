@@ -3,7 +3,7 @@
 .source "PostingPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -52,11 +52,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/posting/PostingPresenter$j;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->f(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/f;
+    invoke-static {p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->f(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts13;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/f;->s2()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/PostingContracts13;->s2()V
 
     return-void
 .end method

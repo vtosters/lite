@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Landroid/os/Parcelable;
-.implements Lcom/vk/dto/common/data/h;
+.implements Lcom/vk/dto/common/data/ServerKeys;
 
 
 # static fields

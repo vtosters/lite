@@ -131,9 +131,9 @@
     .locals 7
 
     .line 1
-    new-instance v0, Lcom/facebook/appevents/h;
+    new-instance v0, Lcom/facebook/appevents/InternalAppEventsLogger;
 
-    invoke-direct {v0, p1}, Lcom/facebook/appevents/h;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/facebook/appevents/InternalAppEventsLogger;-><init>(Landroid/content/Context;)V
 
     .line 2
     new-instance p1, Ljava/lang/StringBuilder;
@@ -228,7 +228,7 @@
 
     .line 10
     :cond_0
-    invoke-virtual {v0, p1, v1}, Lcom/facebook/appevents/h;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1, v1}, Lcom/facebook/appevents/InternalAppEventsLogger;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "ContactsListComponent.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/contacts/vc/d$a;
+.implements Lcom/vk/im/ui/components/contacts/vc/ContactsVc$a;
 
 
 # annotations
@@ -46,11 +46,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->d(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/engine/a;
+    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->d(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/im/engine/commands/contacts/i;
+    new-instance v1, Lcom/vk/im/engine/commands/contacts/ContactsSetSyncStateCmd;
 
     sget-object v2, Lcom/vk/im/engine/models/contacts/ContactSyncState;->HIDDEN:Lcom/vk/im/engine/models/contacts/ContactSyncState;
 
@@ -58,14 +58,14 @@
 
     const/4 v4, 0x2
 
-    invoke-direct {v1, v2, v3, v4, v3}, Lcom/vk/im/engine/commands/contacts/i;-><init>(Lcom/vk/im/engine/models/contacts/ContactSyncState;Ljava/lang/Object;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v2, v3, v4, v3}, Lcom/vk/im/engine/commands/contacts/ContactsSetSyncStateCmd;-><init>(Lcom/vk/im/engine/models/contacts/ContactSyncState;Ljava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/models/j;)V
+.method public a(Lcom/vk/im/engine/models/Profile;)V
     .locals 1
 
     .line 8
@@ -75,16 +75,16 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->a(Lcom/vk/im/engine/models/Profile;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/ui/components/contacts/vc/button/b;)V
+.method public a(Lcom/vk/im/ui/components/contacts/vc/button/ButtonItem;)V
     .locals 3
 
     .line 2
-    instance-of v0, p1, Lcom/vk/im/ui/components/contacts/vc/button/b$b;
+    instance-of v0, p1, Lcom/vk/im/ui/components/contacts/vc/button/ButtonItem$b;
 
     if-eqz v0, :cond_0
 
@@ -103,7 +103,7 @@
 
     .line 4
     :cond_0
-    instance-of v0, p1, Lcom/vk/im/ui/components/contacts/vc/button/b$a;
+    instance-of v0, p1, Lcom/vk/im/ui/components/contacts/vc/button/ButtonItem$a;
 
     if-eqz v0, :cond_1
 
@@ -122,7 +122,7 @@
 
     .line 6
     :cond_1
-    instance-of v0, p1, Lcom/vk/im/ui/components/contacts/vc/button/b$c;
+    instance-of v0, p1, Lcom/vk/im/ui/components/contacts/vc/button/ButtonItem$c;
 
     if-eqz v0, :cond_2
 
@@ -132,7 +132,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl$onClick$1;-><init>(Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;)V
 
-    invoke-static {p1, v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;Lkotlin/jvm/b/a;)V
+    invoke-static {p1, v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;Lkotlin/jvm/b/Functions;)V
 
     :goto_0
     return-void
@@ -167,7 +167,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/ui/views/adapter_delegate/c;",
+            "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
             ">;)V"
         }
     .end annotation
@@ -195,7 +195,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/ui/views/adapter_delegate/c;
+    check-cast v1, Lcom/vk/im/ui/views/adapter_delegate/ListItem;
 
     .line 12
     invoke-virtual {v0, v1}, Lio/reactivex/subjects/PublishSubject;->b(Ljava/lang/Object;)V
@@ -206,7 +206,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/im/ui/components/contacts/vc/contact/b;)Z
+.method public a(Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;)Z
     .locals 0
 
     .line 9
@@ -221,7 +221,7 @@
     return p1
 .end method
 
-.method public b(Lcom/vk/im/ui/components/contacts/vc/contact/b;)V
+.method public b(Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;)V
     .locals 1
 
     .line 6
@@ -231,11 +231,11 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/b;->b()Lcom/vk/im/engine/models/j;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;->b()Lcom/vk/im/engine/models/Profile;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->a(Lcom/vk/im/engine/models/Profile;)V
 
     return-void
 .end method
@@ -247,7 +247,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/engine/models/j;",
+            "Lcom/vk/im/engine/models/Profile;",
             ">;)V"
         }
     .end annotation
@@ -255,17 +255,17 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/p/b;
+    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->e()Lcom/vk/bridges/i0;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->e()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->f(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/navigation/a;
+    invoke-static {v1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->f(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/navigation/ActivityLauncher;
 
     move-result-object v1
 
@@ -297,10 +297,10 @@
     move-result-object v3
 
     .line 4
-    check-cast v3, Lcom/vk/im/engine/models/j;
+    check-cast v3, Lcom/vk/im/engine/models/Profile;
 
     .line 5
-    invoke-interface {v3}, Lcom/vk/im/engine/models/j;->f0()I
+    invoke-interface {v3}, Lcom/vk/im/engine/models/Profile;->f0()I
 
     move-result v3
 
@@ -313,7 +313,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-interface {v0, v1, v2}, Lcom/vk/bridges/i0;->a(Lcom/vk/navigation/a;Ljava/util/List;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/bridges/UsersBridge;->a(Lcom/vk/navigation/ActivityLauncher;Ljava/util/List;)V
 
     const/4 p1, 0x0
 
@@ -339,25 +339,25 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/p/b;
+    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->f(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/navigation/a;
+    invoke-static {v1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->f(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/navigation/ActivityLauncher;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/navigation/a;->a()Landroid/content/Context;
+    invoke-interface {v1}, Lcom/vk/navigation/ActivityLauncher;->a()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/im/ui/p/a;->c(Landroid/content/Context;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/ui/p/ImBridge1;->c(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -369,7 +369,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/engine/models/j;",
+            "Lcom/vk/im/engine/models/Profile;",
             ">;)V"
         }
     .end annotation
@@ -377,7 +377,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->d(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/engine/a;
+    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->d(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
@@ -387,7 +387,7 @@
 
     invoke-direct {v1, p1, v2}, Lcom/vk/im/engine/commands/contacts/ContactsHideNewVkContacts;-><init>(Ljava/util/List;Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
 
     return-void
 .end method
@@ -402,7 +402,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl$requestPermission$1;-><init>(Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;)V
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "DefaultAudioMsgPlayer.kt"
 
 # interfaces
-.implements Lcom/vk/audiomsg/player/impl/b;
+.implements Lcom/vk/audiomsg/player/impl/PrefetchDelegateListener;
 
 
 # annotations
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;)V
+.method public a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;)V
     .locals 3
 
     .line 8
@@ -84,19 +84,19 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/audiomsg/player/b;
+    check-cast v1, Lcom/vk/audiomsg/player/AudioMsgPlayerListener;
 
     const-string v2, "it"
 
     .line 12
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
     invoke-static {p0}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$f;->a(Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$f;)Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;
 
     move-result-object v2
 
-    invoke-interface {v1, v2, p1, p2, p3}, Lcom/vk/audiomsg/player/b;->b(Lcom/vk/audiomsg/player/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;)V
+    invoke-interface {v1, v2, p1, p2, p3}, Lcom/vk/audiomsg/player/AudioMsgPlayerListener;->b(Lcom/vk/audiomsg/player/AudioMsgPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;)V
 
     goto :goto_0
 
@@ -104,7 +104,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;Ljava/lang/Throwable;)V
+.method public a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;Ljava/lang/Throwable;)V
     .locals 8
 
     .line 14
@@ -136,12 +136,12 @@
 
     move-object v2, v1
 
-    check-cast v2, Lcom/vk/audiomsg/player/b;
+    check-cast v2, Lcom/vk/audiomsg/player/AudioMsgPlayerListener;
 
     const-string v1, "it"
 
     .line 18
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 19
     invoke-static {p0}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$f;->a(Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$f;)Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;
@@ -156,7 +156,7 @@
 
     move-object v7, p4
 
-    invoke-interface/range {v2 .. v7}, Lcom/vk/audiomsg/player/b;->a(Lcom/vk/audiomsg/player/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;Ljava/lang/Throwable;)V
+    invoke-interface/range {v2 .. v7}, Lcom/vk/audiomsg/player/AudioMsgPlayerListener;->a(Lcom/vk/audiomsg/player/AudioMsgPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -164,14 +164,14 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/audiomsg/player/f;Ljava/util/Collection;)V
+.method public a(Lcom/vk/audiomsg/player/Source;Ljava/util/Collection;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/audiomsg/player/f;",
+            "Lcom/vk/audiomsg/player/Source;",
             "Ljava/util/Collection<",
-            "Lcom/vk/audiomsg/player/d;",
+            "Lcom/vk/audiomsg/player/AudioMsgTrack;",
             ">;)V"
         }
     .end annotation
@@ -203,19 +203,19 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/audiomsg/player/b;
+    check-cast v1, Lcom/vk/audiomsg/player/AudioMsgPlayerListener;
 
     const-string v2, "it"
 
     .line 6
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     invoke-static {p0}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$f;->a(Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$f;)Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;
 
     move-result-object v2
 
-    invoke-interface {v1, v2, p1, p2}, Lcom/vk/audiomsg/player/b;->a(Lcom/vk/audiomsg/player/a;Lcom/vk/audiomsg/player/f;Ljava/util/Collection;)V
+    invoke-interface {v1, v2, p1, p2}, Lcom/vk/audiomsg/player/AudioMsgPlayerListener;->a(Lcom/vk/audiomsg/player/AudioMsgPlayer;Lcom/vk/audiomsg/player/Source;Ljava/util/Collection;)V
 
     goto :goto_0
 
@@ -223,7 +223,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;)V
+.method public b(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;)V
     .locals 3
 
     .line 7
@@ -253,19 +253,19 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/audiomsg/player/b;
+    check-cast v1, Lcom/vk/audiomsg/player/AudioMsgPlayerListener;
 
     const-string v2, "it"
 
     .line 11
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     invoke-static {p0}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$f;->a(Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$f;)Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;
 
     move-result-object v2
 
-    invoke-interface {v1, v2, p1, p2, p3}, Lcom/vk/audiomsg/player/b;->c(Lcom/vk/audiomsg/player/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;)V
+    invoke-interface {v1, v2, p1, p2, p3}, Lcom/vk/audiomsg/player/AudioMsgPlayerListener;->c(Lcom/vk/audiomsg/player/AudioMsgPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;)V
 
     goto :goto_0
 
@@ -273,14 +273,14 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/audiomsg/player/f;Ljava/util/Collection;)V
+.method public b(Lcom/vk/audiomsg/player/Source;Ljava/util/Collection;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/audiomsg/player/f;",
+            "Lcom/vk/audiomsg/player/Source;",
             "Ljava/util/Collection<",
-            "Lcom/vk/audiomsg/player/d;",
+            "Lcom/vk/audiomsg/player/AudioMsgTrack;",
             ">;)V"
         }
     .end annotation
@@ -312,19 +312,19 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/audiomsg/player/b;
+    check-cast v1, Lcom/vk/audiomsg/player/AudioMsgPlayerListener;
 
     const-string v2, "it"
 
     .line 5
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     invoke-static {p0}, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$f;->a(Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$f;)Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;
 
     move-result-object v2
 
-    invoke-interface {v1, v2, p1, p2}, Lcom/vk/audiomsg/player/b;->b(Lcom/vk/audiomsg/player/a;Lcom/vk/audiomsg/player/f;Ljava/util/Collection;)V
+    invoke-interface {v1, v2, p1, p2}, Lcom/vk/audiomsg/player/AudioMsgPlayerListener;->b(Lcom/vk/audiomsg/player/AudioMsgPlayer;Lcom/vk/audiomsg/player/Source;Ljava/util/Collection;)V
 
     goto :goto_0
 

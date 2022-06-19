@@ -3,7 +3,7 @@
 .source "PublishProcessor.java"
 
 # interfaces
-.implements Le/b/d;
+.implements Le/b/Subscription;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicLong;",
-        "Le/b/d;"
+        "Le/b/Subscription;"
     }
 .end annotation
 
@@ -32,10 +32,10 @@
 
 
 # instance fields
-.field final downstream:Le/b/c;
+.field final downstream:Le/b/Subscriber;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-TT;>;"
         }
     .end annotation
@@ -52,12 +52,12 @@
 
 
 # direct methods
-.method constructor <init>(Le/b/c;Lio/reactivex/processors/PublishProcessor;)V
+.method constructor <init>(Le/b/Subscriber;Lio/reactivex/processors/PublishProcessor;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-TT;>;",
             "Lio/reactivex/processors/PublishProcessor<",
             "TT;>;)V"
@@ -68,7 +68,7 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/processors/PublishProcessor$PublishSubscription;->downstream:Le/b/c;
+    iput-object p1, p0, Lio/reactivex/processors/PublishProcessor$PublishSubscription;->downstream:Le/b/Subscriber;
 
     .line 3
     iput-object p2, p0, Lio/reactivex/processors/PublishProcessor$PublishSubscription;->parent:Lio/reactivex/processors/PublishProcessor;
@@ -89,7 +89,7 @@
     if-eqz v0, :cond_0
 
     .line 10
-    invoke-static {p0, p1, p2}, Lio/reactivex/internal/util/b;->b(Ljava/util/concurrent/atomic/AtomicLong;J)J
+    invoke-static {p0, p1, p2}, Lio/reactivex/internal/util/BackpressureHelper;->b(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
     :cond_0
     return-void
@@ -124,14 +124,14 @@
     if-eqz v4, :cond_1
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/processors/PublishProcessor$PublishSubscription;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/processors/PublishProcessor$PublishSubscription;->downstream:Le/b/Subscriber;
 
-    invoke-interface {v0, p1}, Le/b/c;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Le/b/Subscriber;->b(Ljava/lang/Object;)V
 
     const-wide/16 v0, 0x1
 
     .line 3
-    invoke-static {p0, v0, v1}, Lio/reactivex/internal/util/b;->d(Ljava/util/concurrent/atomic/AtomicLong;J)J
+    invoke-static {p0, v0, v1}, Lio/reactivex/internal/util/BackpressureHelper;->d(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
     goto :goto_0
 
@@ -140,7 +140,7 @@
     invoke-virtual {p0}, Lio/reactivex/processors/PublishProcessor$PublishSubscription;->cancel()V
 
     .line 5
-    iget-object p1, p0, Lio/reactivex/processors/PublishProcessor$PublishSubscription;->downstream:Le/b/c;
+    iget-object p1, p0, Lio/reactivex/processors/PublishProcessor$PublishSubscription;->downstream:Le/b/Subscriber;
 
     new-instance v0, Lio/reactivex/exceptions/MissingBackpressureException;
 
@@ -148,7 +148,7 @@
 
     invoke-direct {v0, v1}, Lio/reactivex/exceptions/MissingBackpressureException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Le/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -169,15 +169,15 @@
     if-eqz v4, :cond_0
 
     .line 7
-    iget-object v0, p0, Lio/reactivex/processors/PublishProcessor$PublishSubscription;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/processors/PublishProcessor$PublishSubscription;->downstream:Le/b/Subscriber;
 
-    invoke-interface {v0, p1}, Le/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     .line 8
     :cond_0
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -223,9 +223,9 @@
     if-eqz v4, :cond_0
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/processors/PublishProcessor$PublishSubscription;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/processors/PublishProcessor$PublishSubscription;->downstream:Le/b/Subscriber;
 
-    invoke-interface {v0}, Le/b/c;->b()V
+    invoke-interface {v0}, Le/b/Subscriber;->b()V
 
     :cond_0
     return-void

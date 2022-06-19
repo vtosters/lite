@@ -3,12 +3,12 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a(Lcom/vk/lists/o;Ljava/util/Set;Ljava/util/Set;)V
+    value = Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a(Lcom/vk/lists/ListDataSet;Ljava/util/Set;Ljava/util/Set;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/ui/f0/b;",
-        "Lcom/vtosters/lite/ui/f0/b;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/ui/f0/PostDisplayItem;",
+        "Lcom/vtosters/lite/ui/f0/PostDisplayItem;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/ui/f0/b;)Lcom/vtosters/lite/ui/f0/b;
+.method public final a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)Lcom/vtosters/lite/ui/f0/PostDisplayItem;
     .locals 4
 
     .line 1
@@ -71,9 +71,9 @@
 
     check-cast v2, Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    iget-object v3, p1, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v3, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -92,17 +92,17 @@
     goto :goto_1
 
     :cond_2
-    iget-object v1, p1, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v1, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     const-string v0, "it.entry"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     :goto_1
-    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    iget-object v2, p1, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v2, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     if-ne v0, v2, :cond_3
 
@@ -113,46 +113,46 @@
     :cond_3
     const-string v0, "it.rootEntry"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     :goto_2
-    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
     const-string v3, "it"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->e()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->e()I
 
     move-result v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/ui/f0/PostDisplayItem;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     .line 4
-    iget v1, p1, Lcom/vtosters/lite/ui/f0/b;->d:I
+    iget v1, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->d:I
 
-    iput v1, v0, Lcom/vtosters/lite/ui/f0/b;->d:I
+    iput v1, v0, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->d:I
 
     .line 5
-    iget v1, p1, Lcom/vtosters/lite/ui/f0/b;->h:I
+    iget v1, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->h:I
 
-    iput v1, v0, Lcom/vtosters/lite/ui/f0/b;->h:I
+    iput v1, v0, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->h:I
 
     .line 6
-    iget-object v1, p1, Lcom/vtosters/lite/ui/f0/b;->i:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->i:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/vtosters/lite/ui/f0/b;->i:Ljava/lang/String;
+    iput-object v1, v0, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->i:Ljava/lang/String;
 
     .line 7
-    iget-object v1, p1, Lcom/vtosters/lite/ui/f0/b;->j:Lcom/vtosters/lite/data/PostInteract;
+    iget-object v1, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->j:Lcom/vtosters/lite/data/PostInteract;
 
-    iput-object v1, v0, Lcom/vtosters/lite/ui/f0/b;->j:Lcom/vtosters/lite/data/PostInteract;
+    iput-object v1, v0, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->j:Lcom/vtosters/lite/data/PostInteract;
 
     .line 8
-    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->k:Lcom/vtosters/lite/ui/f0/a;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->k:Lcom/vtosters/lite/ui/f0/PostDisplayContext;
 
-    iput-object p1, v0, Lcom/vtosters/lite/ui/f0/b;->k:Lcom/vtosters/lite/ui/f0/a;
+    iput-object p1, v0, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->k:Lcom/vtosters/lite/ui/f0/PostDisplayContext;
 
     return-object v0
 .end method
@@ -161,9 +161,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$updatePostDisplayItems$2;->a(Lcom/vtosters/lite/ui/f0/b;)Lcom/vtosters/lite/ui/f0/b;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$updatePostDisplayItems$2;->a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
     move-result-object p1
 

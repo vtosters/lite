@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static volatile a:Lcom/my/tracker/c;
+.field private static volatile a:Lcom/my/tracker/TrackerParams;
 
 
 # direct methods
@@ -19,11 +19,11 @@
     return-void
 .end method
 
-.method public static a(Lcom/my/tracker/c;)V
+.method public static a(Lcom/my/tracker/TrackerParams;)V
     .locals 0
 
     .line 1
-    sput-object p0, Lcom/my/tracker/campaign/CampaignService;->a:Lcom/my/tracker/c;
+    sput-object p0, Lcom/my/tracker/campaign/CampaignService;->a:Lcom/my/tracker/TrackerParams;
 
     return-void
 .end method
@@ -36,7 +36,7 @@
     const-string v0, "CampaignService created"
 
     .line 1
-    invoke-static {v0}, Lcom/my/tracker/b;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/Tracer;->a(Ljava/lang/String;)V
 
     .line 2
     invoke-super {p0}, Landroid/app/IntentService;->onCreate()V
@@ -50,7 +50,7 @@
     const-string v0, "CampaignService destroyed"
 
     .line 1
-    invoke-static {v0}, Lcom/my/tracker/b;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/Tracer;->a(Ljava/lang/String;)V
 
     .line 2
     invoke-super {p0}, Landroid/app/IntentService;->onDestroy()V
@@ -84,25 +84,25 @@
     .line 3
     :cond_0
     :try_start_0
-    sget-object v0, Lcom/my/tracker/campaign/CampaignService;->a:Lcom/my/tracker/c;
+    sget-object v0, Lcom/my/tracker/campaign/CampaignService;->a:Lcom/my/tracker/TrackerParams;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
     .line 4
-    invoke-virtual {v0}, Lcom/my/tracker/c;->r()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/my/tracker/TrackerParams;->r()Ljava/lang/String;
 
     move-result-object v1
 
     .line 5
     :cond_1
-    new-instance v2, Lcom/my/tracker/async/commands/m;
+    new-instance v2, Lcom/my/tracker/async/commands/TrackReferrerCommand;
 
-    invoke-direct {v2, v1, p1, v0, p0}, Lcom/my/tracker/async/commands/m;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/my/tracker/c;Landroid/content/Context;)V
+    invoke-direct {v2, v1, p1, v0, p0}, Lcom/my/tracker/async/commands/TrackReferrerCommand;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/my/tracker/TrackerParams;Landroid/content/Context;)V
 
     .line 6
-    invoke-interface {v2}, Lcom/my/tracker/async/commands/c;->c()Ljava/util/concurrent/Future;
+    invoke-interface {v2}, Lcom/my/tracker/async/commands/AsyncCommand;->c()Ljava/util/concurrent/Future;
 
     move-result-object p1
 
@@ -128,7 +128,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/my/tracker/b;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/Tracer;->a(Ljava/lang/String;)V
 
     :cond_2
     return-void

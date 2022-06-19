@@ -166,7 +166,7 @@
     const-string v1, "the border width cannot be < 0"
 
     .line 11
-    invoke-static {v0, v1}, Lcom/facebook/common/internal/g;->a(ZLjava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/facebook/common/internal/Preconditions;->a(ZLjava/lang/Object;)V
 
     .line 12
     iput p1, p0, Lcom/facebook/drawee/generic/RoundingParams;->e:F
@@ -258,7 +258,7 @@
     const-string v1, "the border width cannot be < 0"
 
     .line 15
-    invoke-static {v0, v1}, Lcom/facebook/common/internal/g;->a(ZLjava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/facebook/common/internal/Preconditions;->a(ZLjava/lang/Object;)V
 
     .line 16
     iput p2, p0, Lcom/facebook/drawee/generic/RoundingParams;->e:F
@@ -291,7 +291,7 @@
     .locals 4
 
     .line 7
-    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 8
     array-length v0, p1
@@ -312,7 +312,7 @@
     :goto_0
     const-string v3, "radii should have exactly 8 values"
 
-    invoke-static {v0, v3}, Lcom/facebook/common/internal/g;->a(ZLjava/lang/Object;)V
+    invoke-static {v0, v3}, Lcom/facebook/common/internal/Preconditions;->a(ZLjava/lang/Object;)V
 
     .line 9
     invoke-direct {p0}, Lcom/facebook/drawee/generic/RoundingParams;->j()[F
@@ -384,7 +384,7 @@
     const-string v1, "the padding cannot be < 0"
 
     .line 2
-    invoke-static {v0, v1}, Lcom/facebook/common/internal/g;->a(ZLjava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/facebook/common/internal/Preconditions;->a(ZLjava/lang/Object;)V
 
     .line 3
     iput p1, p0, Lcom/facebook/drawee/generic/RoundingParams;->g:F

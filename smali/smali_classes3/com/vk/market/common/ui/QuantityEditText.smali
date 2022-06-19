@@ -74,7 +74,7 @@
 
     const-string v1, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lkotlin/text/l;->a(Ljava/lang/String;)Ljava/math/BigInteger;
 

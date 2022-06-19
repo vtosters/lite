@@ -1,5 +1,5 @@
 .class public Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthCheckFragment;
-.super Lcom/vk/auth/y/a/b;
+.super Lcom/vk/auth/y/a/LibVerifyCheckFragment;
 .source "LibVerifyAuthCheckFragment.kt"
 
 
@@ -12,8 +12,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/auth/y/a/b<",
-        "Lcom/vk/auth/y/a/d;",
+        "Lcom/vk/auth/y/a/LibVerifyCheckFragment<",
+        "Lcom/vk/auth/y/a/LibVerifyView;",
         ">;"
     }
 .end annotation
@@ -37,7 +37,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthCheckFragment$Companion;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthCheckFragment$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthCheckFragment;->Companion:Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthCheckFragment$Companion;
 
@@ -48,7 +48,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/auth/y/a/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/auth/y/a/LibVerifyCheckFragment;-><init>()V
 
     return-void
 .end method
@@ -59,13 +59,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/auth/y/a/c;
+    check-cast v0, Lcom/vk/auth/y/a/LibVerifyPresenter;
 
-    invoke-interface {v0, p0}, Lcom/vk/auth/verification/base/b;->a(Lcom/vk/auth/verification/base/c;)V
+    invoke-interface {v0, p0}, Lcom/vk/auth/verification/base/CheckPresenter;->a(Lcom/vk/auth/verification/base/CheckView;)V
 
     return-void
 .end method
@@ -74,7 +74,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0}, Lcom/vk/auth/y/a/b;->J4()V
+    invoke-super {p0}, Lcom/vk/auth/y/a/LibVerifyCheckFragment;->J4()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -106,12 +106,12 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
 
-.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/auth/base/a;
+.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/auth/base/AuthPresenter;
     .locals 0
 
     .line 1
@@ -128,7 +128,7 @@
     .line 2
     new-instance p1, Lcom/vk/auth/verification/libverify/auth/LibVerifyAuthPresenter;
 
-    invoke-virtual {p0}, Lcom/vk/auth/y/a/b;->O4()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/auth/y/a/LibVerifyCheckFragment;->O4()Ljava/lang/String;
 
     move-result-object v0
 
@@ -143,7 +143,7 @@
     :cond_0
     const-string p1, "authState"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

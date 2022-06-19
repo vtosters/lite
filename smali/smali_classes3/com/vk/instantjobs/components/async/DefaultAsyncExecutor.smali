@@ -3,7 +3,7 @@
 .source "DefaultAsyncExecutor.kt"
 
 # interfaces
-.implements Lcom/vk/instantjobs/components/async/a;
+.implements Lcom/vk/instantjobs/components/async/AsyncExecutor;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # static fields
-.field static final synthetic f:[Lkotlin/u/j;
+.field static final synthetic f:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -33,13 +33,13 @@
     .end annotation
 .end field
 
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
 .field private c:Z
 
 .field private final d:Ljava/lang/String;
 
-.field private final e:Lcom/vk/instantjobs/a;
+.field private final e:Lcom/vk/instantjobs/InstantJobLogger;
 
 
 # direct methods
@@ -48,13 +48,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -62,20 +62,20 @@
 
     const-string v4, "getUnboundExecutor()Ljava/util/concurrent/ScheduledExecutorService;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->f:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->f:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lcom/vk/instantjobs/a;)V
+.method public constructor <init>(Ljava/lang/String;Lcom/vk/instantjobs/InstantJobLogger;)V
     .locals 0
 
     .line 1
@@ -83,7 +83,7 @@
 
     iput-object p1, p0, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->d:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->e:Lcom/vk/instantjobs/a;
+    iput-object p2, p0, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->e:Lcom/vk/instantjobs/InstantJobLogger;
 
     .line 2
     new-instance p1, Landroidx/collection/ArrayMap;
@@ -97,11 +97,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor$unboundExecutor$2;-><init>(Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->b:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -132,16 +132,16 @@
 
     const-string v0, "Executors.newSingleThrea\u2026cheduledExecutor(factory)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public static final synthetic b(Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;)Lcom/vk/instantjobs/a;
+.method public static final synthetic b(Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;)Lcom/vk/instantjobs/InstantJobLogger;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->e:Lcom/vk/instantjobs/a;
+    iget-object p0, p0, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->e:Lcom/vk/instantjobs/InstantJobLogger;
 
     return-object p0
 .end method
@@ -220,7 +220,7 @@
 
     const-string v1, "Executors.newScheduledThreadPool(1, factory)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -228,15 +228,15 @@
 .method private final d()Ljava/util/concurrent/ScheduledExecutorService;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->f:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;->f:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -315,7 +315,7 @@
 
     const-string p2, "executor.schedule(safeTa\u2026s, TimeUnit.MILLISECONDS)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

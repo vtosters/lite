@@ -65,14 +65,14 @@
     const v0, 0x7f040253
 
     .line 4
-    invoke-static {p1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {p1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object p1
 
     .line 5
     iget-object v0, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {v0, p1}, Lcom/vk/core/util/z;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, p1}, Lcom/vk/core/util/DrawableUtils;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     .line 6
     sget-object p1, Lcom/vk/identity/adapters/IdentityEditAdapter;->h:Lcom/vk/identity/adapters/IdentityEditAdapter$a;
@@ -106,7 +106,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder$1;-><init>(Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder;)V
 
-    invoke-static {p2, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -123,16 +123,16 @@
     .line 10
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     goto :goto_0
 
@@ -147,11 +147,11 @@
     .line 13
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
@@ -168,9 +168,9 @@
     .line 14
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     goto :goto_0
 
@@ -178,7 +178,7 @@
     :cond_1
     iget-object p2, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/identity/IdentityLabel;->t1()Ljava/lang/String;
 
@@ -189,11 +189,11 @@
     .line 16
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f04059a
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     :goto_0
     return-void
@@ -201,7 +201,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/identity/b/f;)V
+.method public final a(Lcom/vk/identity/b/IdentityAdapterItem8;)V
     .locals 3
 
     .line 1
@@ -209,34 +209,34 @@
 
     const-string v1, "titleView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/f;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem8;->c()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/identity/b/f;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem8;->b()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "label"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/f;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem8;->b()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "custom_label"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -252,7 +252,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/f;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem8;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -272,9 +272,9 @@
     .line 5
     iget-object v0, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/f;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem8;->c()Ljava/lang/String;
 
     move-result-object p1
 
@@ -283,11 +283,11 @@
     .line 6
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f04059b
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     goto :goto_1
 
@@ -295,18 +295,18 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f04059a
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     goto :goto_1
 
@@ -323,7 +323,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/f;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem8;->c()Ljava/lang/String;
 
     move-result-object p1
 

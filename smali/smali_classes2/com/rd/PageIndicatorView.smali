@@ -4,11 +4,11 @@
 
 # interfaces
 .implements Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;
-.implements Lcom/rd/a$a;
+.implements Lcom/rd/IndicatorManager$a;
 
 
 # instance fields
-.field private a:Lcom/rd/a;
+.field private a:Lcom/rd/IndicatorManager;
 
 .field private b:Landroid/database/DataSetObserver;
 
@@ -75,14 +75,14 @@
     .locals 1
 
     .line 12
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
     .line 13
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->c()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->c()I
 
     move-result v0
 
@@ -133,9 +133,9 @@
     .locals 2
 
     .line 12
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
@@ -145,7 +145,7 @@
     move-result v1
 
     .line 14
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->c()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->c()I
 
     move-result v0
 
@@ -174,19 +174,19 @@
     .locals 4
 
     .line 17
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
     .line 18
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->b()Lcom/rd/animation/type/AnimationType;
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->b()Lcom/rd/animation/type/AnimationType;
 
     move-result-object v1
 
     .line 19
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->x()Z
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->x()Z
 
     move-result v2
 
@@ -221,7 +221,7 @@
 
     move-result v1
 
-    invoke-static {v0, p1, p2, v1}, Lcom/rd/e/a;->a(Lcom/rd/draw/data/a;IFZ)Landroid/util/Pair;
+    invoke-static {v0, p1, p2, v1}, Lcom/rd/e/CoordinatesUtils;->a(Lcom/rd/draw/data/Indicator;IFZ)Landroid/util/Pair;
 
     move-result-object p1
 
@@ -257,16 +257,16 @@
     .end param
 
     .line 4
-    new-instance v0, Lcom/rd/a;
+    new-instance v0, Lcom/rd/IndicatorManager;
 
-    invoke-direct {v0, p0}, Lcom/rd/a;-><init>(Lcom/rd/a$a;)V
+    invoke-direct {v0, p0}, Lcom/rd/IndicatorManager;-><init>(Lcom/rd/IndicatorManager$a;)V
 
-    iput-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iput-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
     .line 5
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->b()Lcom/rd/c/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->b()Lcom/rd/c/DrawManager;
 
     move-result-object v0
 
@@ -274,12 +274,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, p1}, Lcom/rd/c/a;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-virtual {v0, v1, p1}, Lcom/rd/c/DrawManager;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 6
-    iget-object p1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object p1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {p1}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {p1}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object p1
 
@@ -288,31 +288,31 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/rd/draw/data/a;->f(I)V
+    invoke-virtual {p1, v0}, Lcom/rd/draw/data/Indicator;->f(I)V
 
     .line 8
     invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/rd/draw/data/a;->h(I)V
+    invoke-virtual {p1, v0}, Lcom/rd/draw/data/Indicator;->h(I)V
 
     .line 9
     invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/rd/draw/data/a;->g(I)V
+    invoke-virtual {p1, v0}, Lcom/rd/draw/data/Indicator;->g(I)V
 
     .line 10
     invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/rd/draw/data/a;->e(I)V
+    invoke-virtual {p1, v0}, Lcom/rd/draw/data/Indicator;->e(I)V
 
     .line 11
-    invoke-virtual {p1}, Lcom/rd/draw/data/a;->x()Z
+    invoke-virtual {p1}, Lcom/rd/draw/data/Indicator;->x()Z
 
     move-result p1
 
@@ -341,13 +341,13 @@
     check-cast v0, Landroid/app/Activity;
 
     .line 3
-    iget-object v1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v1}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v1}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/rd/draw/data/a;->t()I
+    invoke-virtual {v1}, Lcom/rd/draw/data/Indicator;->t()I
 
     move-result v1
 
@@ -378,13 +378,13 @@
     .line 1
     sget-object v0, Lcom/rd/PageIndicatorView$b;->a:[I
 
-    iget-object v1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v1}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v1}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/rd/draw/data/a;->m()Lcom/rd/draw/data/RtlMode;
+    invoke-virtual {v1}, Lcom/rd/draw/data/Indicator;->m()Lcom/rd/draw/data/RtlMode;
 
     move-result-object v1
 
@@ -546,7 +546,7 @@
     if-ne v0, v1, :cond_0
 
     .line 2
-    invoke-static {}, Lcom/rd/e/c;->b()I
+    invoke-static {}, Lcom/rd/e/IdUtils;->b()I
 
     move-result v0
 
@@ -585,13 +585,13 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->c()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->c()I
 
     move-result v0
 
@@ -687,40 +687,40 @@
     move-result v1
 
     .line 4
-    iget-object v2, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v2, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v2}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v2}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/rd/draw/data/a;->k(I)V
+    invoke-virtual {v2, v1}, Lcom/rd/draw/data/Indicator;->k(I)V
 
     .line 5
-    iget-object v2, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v2, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v2}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v2}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/rd/draw/data/a;->l(I)V
+    invoke-virtual {v2, v1}, Lcom/rd/draw/data/Indicator;->l(I)V
 
     .line 6
-    iget-object v2, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v2, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v2}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v2}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/rd/draw/data/a;->c(I)V
+    invoke-virtual {v2, v1}, Lcom/rd/draw/data/Indicator;->c(I)V
 
     .line 7
-    iget-object v1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v1}, Lcom/rd/a;->a()Lcom/rd/b/a;
+    invoke-virtual {v1}, Lcom/rd/IndicatorManager;->a()Lcom/rd/b/AnimationManager;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/rd/b/a;->b()V
+    invoke-virtual {v1}, Lcom/rd/b/AnimationManager;->b()V
 
     .line 8
     invoke-virtual {p0, v0}, Lcom/rd/PageIndicatorView;->setCount(I)V
@@ -734,13 +734,13 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->v()Z
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->v()Z
 
     move-result v0
 
@@ -750,13 +750,13 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->c()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->c()I
 
     move-result v0
 
@@ -808,14 +808,14 @@
     .locals 4
 
     .line 3
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->x()Z
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->x()Z
 
     move-result v1
 
@@ -825,7 +825,7 @@
 
     .line 5
     :cond_0
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->c()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->c()I
 
     move-result v1
 
@@ -876,27 +876,27 @@
     if-nez v1, :cond_6
 
     .line 6
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->p()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->p()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/rd/draw/data/a;->c(I)V
+    invoke-virtual {v0, v1}, Lcom/rd/draw/data/Indicator;->c(I)V
 
     .line 7
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->k(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->k(I)V
 
     .line 8
     :cond_6
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->l(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->l(I)V
 
     .line 9
-    iget-object p1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object p1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {p1}, Lcom/rd/a;->a()Lcom/rd/b/a;
+    invoke-virtual {p1}, Lcom/rd/IndicatorManager;->a()Lcom/rd/b/AnimationManager;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/rd/b/a;->a(F)V
+    invoke-virtual {p1, p2}, Lcom/rd/b/AnimationManager;->a(F)V
 
     return-void
 .end method
@@ -925,13 +925,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->a()J
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->a()J
 
     move-result-wide v0
 
@@ -942,13 +942,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->c()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->c()I
 
     move-result v0
 
@@ -959,13 +959,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->g()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->g()I
 
     move-result v0
 
@@ -976,13 +976,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->l()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->l()I
 
     move-result v0
 
@@ -993,13 +993,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->n()F
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->n()F
 
     move-result v0
 
@@ -1010,13 +1010,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->o()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->o()I
 
     move-result v0
 
@@ -1027,13 +1027,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->p()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->p()I
 
     move-result v0
 
@@ -1044,13 +1044,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->r()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->r()I
 
     move-result v0
 
@@ -1061,13 +1061,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->s()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->s()I
 
     move-result v0
 
@@ -1102,13 +1102,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->b()Lcom/rd/c/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->b()Lcom/rd/c/DrawManager;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/c/a;->a(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lcom/rd/c/DrawManager;->a(Landroid/graphics/Canvas;)V
 
     return-void
 .end method
@@ -1117,13 +1117,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->b()Lcom/rd/c/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->b()Lcom/rd/c/DrawManager;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lcom/rd/c/a;->a(II)Landroid/util/Pair;
+    invoke-virtual {v0, p1, p2}, Lcom/rd/c/DrawManager;->a(II)Landroid/util/Pair;
 
     move-result-object p1
 
@@ -1155,15 +1155,15 @@
     if-nez p1, :cond_0
 
     .line 1
-    iget-object p1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object p1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {p1}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {p1}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object p1
 
     iget-boolean v0, p0, Lcom/rd/PageIndicatorView;->d:Z
 
-    invoke-virtual {p1, v0}, Lcom/rd/draw/data/a;->c(Z)V
+    invoke-virtual {p1, v0}, Lcom/rd/draw/data/Indicator;->c(Z)V
 
     :cond_0
     return-void
@@ -1196,9 +1196,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
@@ -1210,21 +1210,21 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/rd/draw/data/a;->k(I)V
+    invoke-virtual {v0, v1}, Lcom/rd/draw/data/Indicator;->k(I)V
 
     .line 5
     invoke-virtual {p1}, Lcom/rd/draw/data/PositionSavedState;->H()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/rd/draw/data/a;->l(I)V
+    invoke-virtual {v0, v1}, Lcom/rd/draw/data/Indicator;->l(I)V
 
     .line 6
     invoke-virtual {p1}, Lcom/rd/draw/data/PositionSavedState;->F()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/rd/draw/data/a;->c(I)V
+    invoke-virtual {v0, v1}, Lcom/rd/draw/data/Indicator;->c(I)V
 
     .line 7
     invoke-virtual {p1}, Landroid/view/View$BaseSavedState;->getSuperState()Landroid/os/Parcelable;
@@ -1247,9 +1247,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
@@ -1263,21 +1263,21 @@
     invoke-direct {v1, v2}, Lcom/rd/draw/data/PositionSavedState;-><init>(Landroid/os/Parcelable;)V
 
     .line 3
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->p()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->p()I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Lcom/rd/draw/data/PositionSavedState;->c(I)V
 
     .line 4
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->q()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->q()I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Lcom/rd/draw/data/PositionSavedState;->d(I)V
 
     .line 5
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->e()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->e()I
 
     move-result v0
 
@@ -1295,13 +1295,13 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->b()Lcom/rd/c/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->b()Lcom/rd/c/DrawManager;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/c/a;->a(Landroid/view/MotionEvent;)V
+    invoke-virtual {v0, p1}, Lcom/rd/c/DrawManager;->a(Landroid/view/MotionEvent;)V
 
     const/4 p1, 0x1
 
@@ -1312,13 +1312,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lcom/rd/draw/data/a;->a(J)V
+    invoke-virtual {v0, p1, p2}, Lcom/rd/draw/data/Indicator;->a(J)V
 
     return-void
 .end method
@@ -1331,36 +1331,36 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/rd/a;->a(Lcom/rd/b/c/a;)V
+    invoke-virtual {v0, v1}, Lcom/rd/IndicatorManager;->a(Lcom/rd/b/c/Value;)V
 
     if-eqz p1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->a(Lcom/rd/animation/type/AnimationType;)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->a(Lcom/rd/animation/type/AnimationType;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    iget-object p1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object p1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {p1}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {p1}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object p1
 
     sget-object v0, Lcom/rd/animation/type/AnimationType;->NONE:Lcom/rd/animation/type/AnimationType;
 
-    invoke-virtual {p1, v0}, Lcom/rd/draw/data/a;->a(Lcom/rd/animation/type/AnimationType;)V
+    invoke-virtual {p1, v0}, Lcom/rd/draw/data/Indicator;->a(Lcom/rd/animation/type/AnimationType;)V
 
     .line 4
     :goto_0
@@ -1381,13 +1381,13 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->a(Z)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->a(Z)V
 
     .line 3
     invoke-direct {p0}, Lcom/rd/PageIndicatorView;->j()V
@@ -1395,21 +1395,21 @@
     return-void
 .end method
 
-.method public setClickListener(Lcom/rd/c/b/b$b;)V
+.method public setClickListener(Lcom/rd/c/b/DrawController$b;)V
     .locals 1
-    .param p1    # Lcom/rd/c/b/b$b;
+    .param p1    # Lcom/rd/c/b/DrawController$b;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->b()Lcom/rd/c/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->b()Lcom/rd/c/DrawManager;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/c/a;->a(Lcom/rd/c/b/b$b;)V
+    invoke-virtual {v0, p1}, Lcom/rd/c/DrawManager;->a(Lcom/rd/c/b/DrawController$b;)V
 
     return-void
 .end method
@@ -1420,26 +1420,26 @@
     if-ltz p1, :cond_0
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->c()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->c()I
 
     move-result v0
 
     if-eq v0, p1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->a(I)V
 
     .line 3
     invoke-direct {p0}, Lcom/rd/PageIndicatorView;->j()V
@@ -1455,13 +1455,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->b(Z)V
 
     if-eqz p1, :cond_0
 
@@ -1482,13 +1482,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->c(Z)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->c(Z)V
 
     .line 2
     iput-boolean p1, p0, Lcom/rd/PageIndicatorView;->d:Z
@@ -1506,13 +1506,13 @@
     if-eqz p1, :cond_0
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->a(Lcom/rd/draw/data/Orientation;)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->a(Lcom/rd/draw/data/Orientation;)V
 
     .line 2
     invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
@@ -1534,15 +1534,15 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
     float-to-int p1, p1
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->d(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->d(I)V
 
     .line 5
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
@@ -1559,18 +1559,18 @@
 
     .line 1
     :cond_0
-    invoke-static {p1}, Lcom/rd/e/b;->a(I)I
+    invoke-static {p1}, Lcom/rd/e/DensityUtils;->a(I)I
 
     move-result p1
 
     .line 2
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->d(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->d(I)V
 
     .line 3
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
@@ -1591,15 +1591,15 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
     float-to-int p1, p1
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->i(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->i(I)V
 
     .line 5
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
@@ -1616,18 +1616,18 @@
 
     .line 1
     :cond_0
-    invoke-static {p1}, Lcom/rd/e/b;->a(I)I
+    invoke-static {p1}, Lcom/rd/e/DensityUtils;->a(I)I
 
     move-result p1
 
     .line 2
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->i(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->i(I)V
 
     .line 3
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
@@ -1643,9 +1643,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
@@ -1654,13 +1654,13 @@
     .line 2
     sget-object p1, Lcom/rd/draw/data/RtlMode;->Off:Lcom/rd/draw/data/RtlMode;
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->a(Lcom/rd/draw/data/RtlMode;)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->a(Lcom/rd/draw/data/RtlMode;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->a(Lcom/rd/draw/data/RtlMode;)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->a(Lcom/rd/draw/data/RtlMode;)V
 
     .line 4
     :goto_0
@@ -1672,7 +1672,7 @@
 
     .line 5
     :cond_1
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->p()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->p()I
 
     move-result p1
 
@@ -1684,7 +1684,7 @@
     if-eqz v1, :cond_2
 
     .line 7
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->c()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->c()I
 
     move-result v1
 
@@ -1708,13 +1708,13 @@
     .line 10
     :cond_3
     :goto_1
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->c(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->c(I)V
 
     .line 11
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->l(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->l(I)V
 
     .line 12
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->k(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->k(I)V
 
     .line 13
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
@@ -1747,13 +1747,13 @@
     .line 1
     :cond_1
     :goto_0
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->a(F)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->a(F)V
 
     return-void
 .end method
@@ -1762,27 +1762,27 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->b()Lcom/rd/animation/type/AnimationType;
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->b()Lcom/rd/animation/type/AnimationType;
 
     move-result-object v1
 
     .line 3
     sget-object v2, Lcom/rd/animation/type/AnimationType;->NONE:Lcom/rd/animation/type/AnimationType;
 
-    invoke-virtual {v0, v2}, Lcom/rd/draw/data/a;->a(Lcom/rd/animation/type/AnimationType;)V
+    invoke-virtual {v0, v2}, Lcom/rd/draw/data/Indicator;->a(Lcom/rd/animation/type/AnimationType;)V
 
     .line 4
     invoke-virtual {p0, p1}, Lcom/rd/PageIndicatorView;->setSelection(I)V
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/rd/draw/data/a;->a(Lcom/rd/animation/type/AnimationType;)V
+    invoke-virtual {v0, v1}, Lcom/rd/draw/data/Indicator;->a(Lcom/rd/animation/type/AnimationType;)V
 
     return-void
 .end method
@@ -1791,13 +1791,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->j(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->j(I)V
 
     .line 2
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
@@ -1809,9 +1809,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
@@ -1821,13 +1821,13 @@
     move-result p1
 
     .line 3
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->p()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->p()I
 
     move-result v1
 
     if-eq p1, v1, :cond_1
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->q()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->q()I
 
     move-result v1
 
@@ -1839,29 +1839,29 @@
     const/4 v1, 0x0
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/rd/draw/data/a;->c(Z)V
+    invoke-virtual {v0, v1}, Lcom/rd/draw/data/Indicator;->c(Z)V
 
     .line 5
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->p()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->p()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/rd/draw/data/a;->c(I)V
+    invoke-virtual {v0, v1}, Lcom/rd/draw/data/Indicator;->c(I)V
 
     .line 6
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->l(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->l(I)V
 
     .line 7
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->k(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->k(I)V
 
     .line 8
-    iget-object p1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object p1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {p1}, Lcom/rd/a;->a()Lcom/rd/b/a;
+    invoke-virtual {p1}, Lcom/rd/IndicatorManager;->a()Lcom/rd/b/AnimationManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/rd/b/a;->a()V
+    invoke-virtual {p1}, Lcom/rd/b/AnimationManager;->a()V
 
     :cond_1
     :goto_0
@@ -1872,13 +1872,13 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->l()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->l()I
 
     move-result v0
 
@@ -1904,15 +1904,15 @@
     .line 2
     :cond_1
     :goto_0
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
     float-to-int p1, p1
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->m(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->m(I)V
 
     .line 3
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
@@ -1924,18 +1924,18 @@
     .locals 1
 
     .line 4
-    invoke-static {p1}, Lcom/rd/e/b;->a(I)I
+    invoke-static {p1}, Lcom/rd/e/DensityUtils;->a(I)I
 
     move-result p1
 
     .line 5
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/rd/draw/data/a;->l()I
+    invoke-virtual {v0}, Lcom/rd/draw/data/Indicator;->l()I
 
     move-result v0
 
@@ -1953,13 +1953,13 @@
     .line 6
     :cond_1
     :goto_0
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->m(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->m(I)V
 
     .line 7
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
@@ -1971,13 +1971,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v0, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v0}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v0}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rd/draw/data/a;->n(I)V
+    invoke-virtual {v0, p1}, Lcom/rd/draw/data/Indicator;->n(I)V
 
     .line 2
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
@@ -2009,9 +2009,9 @@
     invoke-virtual {p1, p0}, Landroidx/viewpager/widget/ViewPager;->addOnPageChangeListener(Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;)V
 
     .line 4
-    iget-object p1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object p1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {p1}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {p1}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object p1
 
@@ -2021,16 +2021,16 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/rd/draw/data/a;->o(I)V
+    invoke-virtual {p1, v0}, Lcom/rd/draw/data/Indicator;->o(I)V
 
     .line 5
-    iget-object p1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object p1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {p1}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {p1}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/rd/draw/data/a;->w()Z
+    invoke-virtual {p1}, Lcom/rd/draw/data/Indicator;->w()Z
 
     move-result p1
 
@@ -2060,13 +2060,13 @@
     sub-int/2addr v0, v1
 
     .line 9
-    iget-object v1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/a;
+    iget-object v1, p0, Lcom/rd/PageIndicatorView;->a:Lcom/rd/IndicatorManager;
 
-    invoke-virtual {v1}, Lcom/rd/a;->c()Lcom/rd/draw/data/a;
+    invoke-virtual {v1}, Lcom/rd/IndicatorManager;->c()Lcom/rd/draw/data/Indicator;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/rd/draw/data/a;->k(I)V
+    invoke-virtual {v1, v0}, Lcom/rd/draw/data/Indicator;->k(I)V
 
     .line 10
     :cond_1

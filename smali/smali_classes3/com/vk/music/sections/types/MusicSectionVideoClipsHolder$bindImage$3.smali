@@ -3,7 +3,7 @@
 .source "MusicSectionVideoClipsHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lio/reactivex/disposables/b;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lio/reactivex/disposables/Disposable;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,25 +46,25 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/disposables/b;)V
+.method public final a(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder$bindImage$3;->this$0:Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;
 
-    invoke-static {v0}, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;->g(Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;)Lio/reactivex/disposables/b;
+    invoke-static {v0}, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;->g(Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 2
     :cond_0
     iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder$bindImage$3;->this$0:Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;
 
-    invoke-static {v0, p1}, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;->a(Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;Lio/reactivex/disposables/b;)V
+    invoke-static {v0, p1}, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;->a(Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder;Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -73,11 +73,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lio/reactivex/disposables/b;
+    check-cast p1, Lio/reactivex/disposables/Disposable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder$bindImage$3;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/music/sections/types/MusicSectionVideoClipsHolder$bindImage$3;->a(Lio/reactivex/disposables/Disposable;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

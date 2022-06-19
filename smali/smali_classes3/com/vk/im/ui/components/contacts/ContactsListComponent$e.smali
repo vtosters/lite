@@ -3,12 +3,12 @@
 .source "ContactsListComponent.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lio/reactivex/disposables/a;)V
+    value = Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lio/reactivex/disposables/CompositeDisposable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,12 +22,12 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lkotlin/Pair<",
         "+",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/im/ui/views/adapter_delegate/c;",
+        "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
         ">;+",
         "Landroidx/recyclerview/widget/DiffUtil$DiffResult;",
         ">;>;"
@@ -61,7 +61,7 @@
             "+",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/ui/views/adapter_delegate/c;",
+            "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
             ">;+",
             "Landroidx/recyclerview/widget/DiffUtil$DiffResult;",
             ">;)V"
@@ -87,11 +87,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->c()Lcom/vk/im/ui/components/contacts/e;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->c()Lcom/vk/im/ui/components/contacts/ContactsModel1;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/contacts/e;->e()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/contacts/ContactsModel1;->e()Z
 
     move-result v1
 
@@ -100,11 +100,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$e;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->i(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/components/contacts/vc/d;
+    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->i(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/components/contacts/vc/ContactsVc;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/d;->c()V
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/ContactsVc;->c()V
 
     goto :goto_0
 
@@ -112,7 +112,7 @@
     :cond_0
     iget-object v1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$e;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->i(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/components/contacts/vc/d;
+    invoke-static {v1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->i(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/components/contacts/vc/ContactsVc;
 
     move-result-object v1
 
@@ -122,19 +122,19 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/contacts/ContactsModel;->c()Lcom/vk/im/ui/components/contacts/e;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/contacts/ContactsModel;->c()Lcom/vk/im/ui/components/contacts/ContactsModel1;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/contacts/e;->d()Lcom/vk/im/ui/components/contacts/c;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/contacts/ContactsModel1;->d()Lcom/vk/im/ui/components/contacts/ContactsListState;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/contacts/c;->h()Lcom/vk/im/ui/components/contacts/SortOrder;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/contacts/ContactsListState;->h()Lcom/vk/im/ui/components/contacts/SortOrder;
 
     move-result-object v2
 
-    invoke-virtual {v1, v0, v2, p1}, Lcom/vk/im/ui/components/contacts/vc/d;->a(Ljava/util/List;Lcom/vk/im/ui/components/contacts/SortOrder;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
+    invoke-virtual {v1, v0, v2, p1}, Lcom/vk/im/ui/components/contacts/vc/ContactsVc;->a(Ljava/util/List;Lcom/vk/im/ui/components/contacts/SortOrder;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
 
     :goto_0
     return-void

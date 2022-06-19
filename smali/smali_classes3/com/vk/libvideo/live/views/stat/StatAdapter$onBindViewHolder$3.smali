@@ -3,7 +3,7 @@
 .source "StatAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,17 +19,17 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Lcom/vk/dto/user/UserProfile;",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/libvideo/live/views/stat/b;)V
+.method constructor <init>(Lcom/vk/libvideo/live/views/stat/StatContract1;)V
     .locals 1
 
     const/4 v0, 0x2
@@ -55,7 +55,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/libvideo/live/views/stat/StatAdapter$onBindViewHolder$3;->a(Lcom/vk/dto/user/UserProfile;I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -65,10 +65,10 @@
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vk/libvideo/live/views/stat/b;
+    check-cast v0, Lcom/vk/libvideo/live/views/stat/StatContract1;
 
     .line 2
-    invoke-interface {v0, p1, p2}, Lcom/vk/libvideo/live/views/stat/b;->a(Lcom/vk/dto/user/UserProfile;I)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/libvideo/live/views/stat/StatContract1;->a(Lcom/vk/dto/user/UserProfile;I)V
 
     return-void
 .end method
@@ -81,12 +81,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
-    const-class v0, Lcom/vk/libvideo/live/views/stat/b;
+    const-class v0, Lcom/vk/libvideo/live/views/stat/StatContract1;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 

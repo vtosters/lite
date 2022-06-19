@@ -35,7 +35,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/EmptyViewForList;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/EmptyViewForList;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -55,7 +55,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/EmptyViewForList;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/EmptyViewForList;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -98,14 +98,14 @@
     if-eqz p2, :cond_0
 
     .line 7
-    sget-object v2, Lcom/vk/im/ui/o;->EmptyViewForList:[I
+    sget-object v2, Lcom/vk/im/ui/R2;->EmptyViewForList:[I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 8
-    sget p2, Lcom/vk/im/ui/o;->EmptyViewForList_icon:I
+    sget p2, Lcom/vk/im/ui/R2;->EmptyViewForList_icon:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -114,7 +114,7 @@
     iput-object p2, p0, Lcom/vk/im/ui/views/EmptyViewForList;->a:Landroid/graphics/drawable/Drawable;
 
     .line 9
-    sget p2, Lcom/vk/im/ui/o;->EmptyViewForList_icon_size:I
+    sget p2, Lcom/vk/im/ui/R2;->EmptyViewForList_icon_size:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -123,7 +123,7 @@
     iput p2, p0, Lcom/vk/im/ui/views/EmptyViewForList;->b:I
 
     .line 10
-    sget p2, Lcom/vk/im/ui/o;->EmptyViewForList_text:I
+    sget p2, Lcom/vk/im/ui/R2;->EmptyViewForList_text:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -132,7 +132,7 @@
     iput-object p2, p0, Lcom/vk/im/ui/views/EmptyViewForList;->c:Ljava/lang/CharSequence;
 
     .line 11
-    sget p2, Lcom/vk/im/ui/o;->EmptyViewForList_text_size:I
+    sget p2, Lcom/vk/im/ui/R2;->EmptyViewForList_text_size:I
 
     invoke-static {v0}, Lcom/vk/core/util/Screen;->a(I)I
 
@@ -145,7 +145,7 @@
     iput p2, p0, Lcom/vk/im/ui/views/EmptyViewForList;->d:I
 
     .line 12
-    sget p2, Lcom/vk/im/ui/o;->EmptyViewForList_text_color:I
+    sget p2, Lcom/vk/im/ui/R2;->EmptyViewForList_text_color:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -160,7 +160,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -206,7 +206,7 @@
 
     const-string v4, "context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -234,13 +234,13 @@
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 12
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -292,12 +292,12 @@
 
     sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-static {p1, p2, v0}, Lcom/vk/extensions/e;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;)V
+    invoke-static {p1, p2, v0}, Lcom/vk/extensions/ImageViewExt;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -310,7 +310,7 @@
 
     .line 6
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -339,14 +339,14 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/im/ui/j;->vkim_empty_view_for_list_include:I
+    sget v1, Lcom/vk/im/ui/R13;->vkim_empty_view_for_list_include:I
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 3
-    sget v0, Lcom/vk/im/ui/h;->empty_icon:I
+    sget v0, Lcom/vk/im/ui/R11;->empty_icon:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -354,14 +354,14 @@
 
     const-string v1, "findViewById(R.id.empty_icon)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/ImageView;
 
     iput-object v0, p0, Lcom/vk/im/ui/views/EmptyViewForList;->f:Landroid/widget/ImageView;
 
     .line 4
-    sget v0, Lcom/vk/im/ui/h;->empty_info:I
+    sget v0, Lcom/vk/im/ui/R11;->empty_info:I
 
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -369,7 +369,7 @@
 
     const-string v1, "findViewById(R.id.empty_info)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -425,19 +425,19 @@
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 10
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 11
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -445,7 +445,7 @@
     const-string v0, "iconView"
 
     .line 12
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -487,7 +487,7 @@
     :cond_0
     const-string p1, "textView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

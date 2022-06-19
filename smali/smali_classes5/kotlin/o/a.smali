@@ -1,5 +1,5 @@
 .class public final Lkotlin/o/a;
-.super Lkotlin/o/d;
+.super Lkotlin/o/_Comparisons;
 
 
 # direct methods
@@ -13,7 +13,7 @@
         }
     .end annotation
 
-    invoke-static {p0, p1}, Lkotlin/o/b;->a(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+    invoke-static {p0, p1}, Lkotlin/o/Comparisons;->a(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
 
     move-result p0
 
@@ -32,7 +32,7 @@
         }
     .end annotation
 
-    invoke-static {}, Lkotlin/o/b;->a()Ljava/util/Comparator;
+    invoke-static {}, Lkotlin/o/Comparisons;->a()Ljava/util/Comparator;
 
     move-result-object v0
 
@@ -49,7 +49,7 @@
         }
     .end annotation
 
-    invoke-static {p0, p1}, Lkotlin/o/c;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)Ljava/lang/Comparable;
+    invoke-static {p0, p1}, Lkotlin/o/_ComparisonsJvm;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)Ljava/lang/Comparable;
 
     move-result-object p0
 
@@ -66,7 +66,7 @@
         }
     .end annotation
 
-    invoke-static {p0, p1}, Lkotlin/o/c;->c(Ljava/lang/Comparable;Ljava/lang/Comparable;)Ljava/lang/Comparable;
+    invoke-static {p0, p1}, Lkotlin/o/_ComparisonsJvm;->c(Ljava/lang/Comparable;Ljava/lang/Comparable;)Ljava/lang/Comparable;
 
     move-result-object p0
 

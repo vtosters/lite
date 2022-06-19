@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd;->a(Ljava/util/List;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/util/List;
+    value = Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd;->a(Ljava/util/List;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

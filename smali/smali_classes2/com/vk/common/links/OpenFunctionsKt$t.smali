@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->c(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/f;)Z
+    value = Lcom/vk/common/links/OpenFunctionsKt;->c(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/user/UserProfileGift;",
         ">;"
     }
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Landroid/content/Context;
 
-.field final synthetic b:Lcom/vk/common/links/f;
+.field final synthetic b:Lcom/vk/common/links/OpenCallback;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Lcom/vk/common/links/f;)V
+.method constructor <init>(Landroid/content/Context;Lcom/vk/common/links/OpenCallback;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$t;->a:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/common/links/OpenFunctionsKt$t;->b:Lcom/vk/common/links/f;
+    iput-object p2, p0, Lcom/vk/common/links/OpenFunctionsKt$t;->b:Lcom/vk/common/links/OpenCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -89,26 +89,26 @@
 
     .line 3
     :cond_0
-    new-instance v0, Lcom/vtosters/lite/fragments/gifts/j$d;
+    new-instance v0, Lcom/vtosters/lite/fragments/gifts/ProfileGiftsFragment$d;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/fragments/gifts/j$d;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/gifts/ProfileGiftsFragment$d;-><init>()V
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/gifts/j$d;->a(Lcom/vk/dto/user/UserProfileGift;)Lcom/vtosters/lite/fragments/gifts/j$d;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/gifts/ProfileGiftsFragment$d;->a(Lcom/vk/dto/user/UserProfileGift;)Lcom/vtosters/lite/fragments/gifts/ProfileGiftsFragment$d;
 
     iget-object p1, p1, Lcom/vk/dto/user/UserProfileGift;->i0:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/gifts/j$d;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/gifts/j$d;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/gifts/ProfileGiftsFragment$d;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/gifts/ProfileGiftsFragment$d;
 
     iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$t;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$t;->b:Lcom/vk/common/links/f;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$t;->b:Lcom/vk/common/links/OpenCallback;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/common/links/f;->a()V
+    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->a()V
 
     :cond_1
     :goto_0

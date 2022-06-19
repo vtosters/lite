@@ -117,7 +117,7 @@
     if-ne p2, v0, :cond_3
 
     .line 9
-    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
+    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v1
 
@@ -137,7 +137,7 @@
 
     move-object v2, p1
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     :cond_3
     return-void

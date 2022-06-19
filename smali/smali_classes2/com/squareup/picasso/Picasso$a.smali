@@ -64,12 +64,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/squareup/picasso/a;
+    check-cast v1, Lcom/squareup/picasso/Action;
 
     .line 5
-    iget-object v3, v1, Lcom/squareup/picasso/a;->a:Lcom/squareup/picasso/Picasso;
+    iget-object v3, v1, Lcom/squareup/picasso/Action;->a:Lcom/squareup/picasso/Picasso;
 
-    invoke-virtual {v3, v1}, Lcom/squareup/picasso/Picasso;->b(Lcom/squareup/picasso/a;)V
+    invoke-virtual {v3, v1}, Lcom/squareup/picasso/Picasso;->b(Lcom/squareup/picasso/Action;)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -118,12 +118,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/squareup/picasso/c;
+    check-cast v1, Lcom/squareup/picasso/BitmapHunter;
 
     .line 10
-    iget-object v3, v1, Lcom/squareup/picasso/c;->b:Lcom/squareup/picasso/Picasso;
+    iget-object v3, v1, Lcom/squareup/picasso/BitmapHunter;->b:Lcom/squareup/picasso/Picasso;
 
-    invoke-virtual {v3, v1}, Lcom/squareup/picasso/Picasso;->a(Lcom/squareup/picasso/c;)V
+    invoke-virtual {v3, v1}, Lcom/squareup/picasso/Picasso;->a(Lcom/squareup/picasso/BitmapHunter;)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -133,10 +133,10 @@
     :cond_2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast p1, Lcom/squareup/picasso/a;
+    check-cast p1, Lcom/squareup/picasso/Action;
 
     .line 12
-    invoke-virtual {p1}, Lcom/squareup/picasso/a;->f()Lcom/squareup/picasso/Picasso;
+    invoke-virtual {p1}, Lcom/squareup/picasso/Action;->f()Lcom/squareup/picasso/Picasso;
 
     move-result-object v0
 
@@ -145,9 +145,9 @@
     if-eqz v0, :cond_3
 
     .line 13
-    iget-object v0, p1, Lcom/squareup/picasso/a;->b:Lcom/squareup/picasso/q;
+    iget-object v0, p1, Lcom/squareup/picasso/Action;->b:Lcom/squareup/picasso/Request;
 
-    invoke-virtual {v0}, Lcom/squareup/picasso/q;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/squareup/picasso/Request;->d()Ljava/lang/String;
 
     move-result-object v0
 
@@ -157,13 +157,13 @@
 
     const-string v3, "target got garbage collected"
 
-    invoke-static {v1, v2, v0, v3}, Lcom/squareup/picasso/a0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0, v3}, Lcom/squareup/picasso/Utils;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 14
     :cond_3
-    iget-object v0, p1, Lcom/squareup/picasso/a;->a:Lcom/squareup/picasso/Picasso;
+    iget-object v0, p1, Lcom/squareup/picasso/Action;->a:Lcom/squareup/picasso/Picasso;
 
-    invoke-virtual {p1}, Lcom/squareup/picasso/a;->j()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/squareup/picasso/Action;->j()Ljava/lang/Object;
 
     move-result-object p1
 

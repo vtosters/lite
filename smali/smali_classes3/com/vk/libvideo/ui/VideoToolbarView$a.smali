@@ -56,7 +56,7 @@
 
     if-eqz p1, :cond_0
 
-    sget v0, Lcom/vk/libvideo/g;->video_cancel_hide_ui:I
+    sget v0, Lcom/vk/libvideo/R;->video_cancel_hide_ui:I
 
     invoke-interface {p1, v0}, Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;->u(I)V
 
@@ -85,7 +85,7 @@
 
     if-eqz p1, :cond_0
 
-    sget v0, Lcom/vk/libvideo/g;->video_cancel_hide_ui:I
+    sget v0, Lcom/vk/libvideo/R;->video_cancel_hide_ui:I
 
     invoke-interface {p1, v0}, Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;->u(I)V
 

@@ -3,7 +3,7 @@
 .source "MenuCounterUpdater.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lb/h/u/b/d$b;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lb/h/u/b/UpdateCountersQueueEvent$b;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Lb/h/u/b/d$b;)V
+.method public final a(Lb/h/u/b/UpdateCountersQueueEvent$b;)V
     .locals 1
 
     .line 1
     sget-object v0, Lcom/vtosters/lite/MenuCounterUpdater;->e:Lcom/vtosters/lite/MenuCounterUpdater;
 
-    invoke-static {v0, p1}, Lcom/vtosters/lite/MenuCounterUpdater;->a(Lcom/vtosters/lite/MenuCounterUpdater;Lb/h/u/b/d$b;)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/MenuCounterUpdater;->a(Lcom/vtosters/lite/MenuCounterUpdater;Lb/h/u/b/UpdateCountersQueueEvent$b;)V
 
     return-void
 .end method
@@ -71,11 +71,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/u/b/d$b;
+    check-cast p1, Lb/h/u/b/UpdateCountersQueueEvent$b;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/MenuCounterUpdater$subscribeForCountersUpdates$2;->a(Lb/h/u/b/d$b;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/MenuCounterUpdater$subscribeForCountersUpdates$2;->a(Lb/h/u/b/UpdateCountersQueueEvent$b;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

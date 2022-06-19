@@ -1,9 +1,9 @@
 .class public final Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;
-.super Lcom/vk/lists/i0;
+.super Lcom/vk/lists/SimpleAdapter;
 .source "FriendsSuggestNearbyFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/o;
+.implements Lcom/vk/core/ui/Provider;
 
 
 # annotations
@@ -18,31 +18,31 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/i0<",
+        "Lcom/vk/lists/SimpleAdapter<",
         "Lcom/vk/dto/user/RequestUserProfile;",
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/dto/user/RequestUserProfile;",
         ">;>;",
-        "Lcom/vk/core/ui/o;"
+        "Lcom/vk/core/ui/Provider;"
     }
 .end annotation
 
 
 # instance fields
-.field private final c:Lcom/vk/common/g/g;
+.field private final c:Lcom/vk/common/g/VoidF1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/common/g/g<",
+            "Lcom/vk/common/g/VoidF1<",
             "Lcom/vk/dto/user/UserProfile;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final d:Lcom/vk/common/g/j;
+.field private final d:Lcom/vk/common/g/VoidF2Int;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/common/g/j<",
+            "Lcom/vk/common/g/VoidF2Int<",
             "Lcom/vk/dto/user/RequestUserProfile;",
             "Ljava/lang/Boolean;",
             ">;"
@@ -52,15 +52,15 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/common/g/g;Lcom/vk/common/g/j;)V
+.method public constructor <init>(Lcom/vk/common/g/VoidF1;Lcom/vk/common/g/VoidF2Int;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/common/g/g<",
+            "Lcom/vk/common/g/VoidF1<",
             "Lcom/vk/dto/user/UserProfile;",
             ">;",
-            "Lcom/vk/common/g/j<",
+            "Lcom/vk/common/g/VoidF2Int<",
             "Lcom/vk/dto/user/RequestUserProfile;",
             "Ljava/lang/Boolean;",
             ">;)V"
@@ -68,34 +68,34 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->c:Lcom/vk/common/g/g;
+    iput-object p1, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->c:Lcom/vk/common/g/VoidF1;
 
-    iput-object p2, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->d:Lcom/vk/common/g/j;
+    iput-object p2, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->d:Lcom/vk/common/g/VoidF2Int;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vtosters/lite/ui/b0/i;I)V
+.method public a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
             "Lcom/vk/dto/user/RequestUserProfile;",
             ">;I)V"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -134,7 +134,7 @@
 
     .line 1
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/lists/i0;->size()I
+    invoke-virtual {p0}, Lcom/vk/lists/SimpleAdapter;->size()I
 
     move-result v1
 
@@ -153,9 +153,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
+    check-cast p1, Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->a(Lcom/vtosters/lite/ui/b0/i;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
 
     return-void
 .end method
@@ -164,21 +164,21 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vtosters/lite/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
             "Lcom/vk/dto/user/RequestUserProfile;",
             ">;"
         }
@@ -187,28 +187,28 @@
     if-eqz p2, :cond_0
 
     .line 2
-    new-instance p2, Lcom/vtosters/lite/ui/b0/f;
+    new-instance p2, Lcom/vtosters/lite/ui/holder/FriendRequestHolder;
 
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_NEARBY:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v0}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p2, p1, v0}, Lcom/vtosters/lite/ui/b0/f;-><init>(Landroid/view/ViewGroup;Ljava/lang/String;)V
+    invoke-direct {p2, p1, v0}, Lcom/vtosters/lite/ui/holder/FriendRequestHolder;-><init>(Landroid/view/ViewGroup;Ljava/lang/String;)V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->c:Lcom/vk/common/g/g;
+    iget-object p1, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->c:Lcom/vk/common/g/VoidF1;
 
-    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->d:Lcom/vk/common/g/j;
+    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->d:Lcom/vk/common/g/VoidF2Int;
 
-    invoke-virtual {p2, p1, v0}, Lcom/vtosters/lite/ui/b0/f;->a(Lcom/vk/common/g/g;Lcom/vk/common/g/j;)Lcom/vtosters/lite/ui/b0/f;
+    invoke-virtual {p2, p1, v0}, Lcom/vtosters/lite/ui/holder/FriendRequestHolder;->a(Lcom/vk/common/g/VoidF1;Lcom/vk/common/g/VoidF2Int;)Lcom/vtosters/lite/ui/holder/FriendRequestHolder;
 
-    invoke-virtual {p2}, Lcom/vtosters/lite/ui/b0/f;->g0()Lcom/vtosters/lite/ui/b0/f;
+    invoke-virtual {p2}, Lcom/vtosters/lite/ui/holder/FriendRequestHolder;->g0()Lcom/vtosters/lite/ui/holder/FriendRequestHolder;
 
     const-string p1, "FriendRequestHolder(pare\u2026).withoutNegativeButton()"
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 

@@ -3,12 +3,12 @@
 .source "FriendsImportFragment.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,41 +49,41 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/utils/b$a;)Lc/a/m;
+.method public final a(Lcom/vk/utils/ContactImportUtils$a;)Lio/reactivex/Observable;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/utils/b$a;",
+            "Lcom/vk/utils/ContactImportUtils$a;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/api/account/s$c;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/api/account/AccountSearchContacts$c;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance v9, Lcom/vk/api/account/s;
+    new-instance v9, Lcom/vk/api/account/AccountSearchContacts;
 
     iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$h;->a:Lcom/vk/friends/recommendations/FriendsImportFragment;
 
-    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsImportFragment;->c(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/api/account/s$a;
+    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsImportFragment;->c(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/api/account/AccountSearchContacts$a;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vk/utils/b$a;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/utils/ContactImportUtils$a;->c()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lcom/vk/utils/b$a;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/utils/ContactImportUtils$a;->a()Ljava/util/List;
 
     move-result-object v3
 
-    invoke-virtual {p1}, Lcom/vk/utils/b$a;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/utils/ContactImportUtils$a;->d()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {p1}, Lcom/vk/utils/b$a;->b()Z
+    invoke-virtual {p1}, Lcom/vk/utils/ContactImportUtils$a;->b()Z
 
     move-result v5
 
@@ -95,13 +95,13 @@
 
     move-object v0, v9
 
-    invoke-direct/range {v0 .. v8}, Lcom/vk/api/account/s;-><init>(Lcom/vk/api/account/s$a;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/api/account/AccountSearchContacts;-><init>(Lcom/vk/api/account/AccountSearchContacts$a;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
-    invoke-static {v9, p1, v0, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v9, p1, v0, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -112,9 +112,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/utils/b$a;
+    check-cast p1, Lcom/vk/utils/ContactImportUtils$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/friends/recommendations/FriendsImportFragment$h;->a(Lcom/vk/utils/b$a;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/friends/recommendations/FriendsImportFragment$h;->a(Lcom/vk/utils/ContactImportUtils$a;)Lio/reactivex/Observable;
 
     move-result-object p1
 

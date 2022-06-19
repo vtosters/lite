@@ -1,12 +1,12 @@
 .class public final Lcom/vk/fave/fragments/holders/PageHeaderHolder;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "PageHeaderHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/fave/entities/FavePage;",
@@ -18,7 +18,7 @@
 # instance fields
 .field private final c:Landroidx/recyclerview/widget/RecyclerView;
 
-.field private final d:Lcom/vk/fave/fragments/adapters/h;
+.field private final d:Lcom/vk/fave/fragments/adapters/PagesAdapter;
 
 
 # direct methods
@@ -28,7 +28,7 @@
     const v0, 0x7f0d01c2
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -41,29 +41,29 @@
 
     const-string v0, "itemView.findViewById(R.id.pages_recycler_view)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
     iput-object p1, p0, Lcom/vk/fave/fragments/holders/PageHeaderHolder;->c:Landroidx/recyclerview/widget/RecyclerView;
 
     .line 3
-    new-instance p1, Lcom/vk/fave/fragments/adapters/h;
+    new-instance p1, Lcom/vk/fave/fragments/adapters/PagesAdapter;
 
     new-instance v0, Lcom/vk/fave/fragments/holders/PageHeaderHolder$adapter$1;
 
     invoke-direct {v0, p0}, Lcom/vk/fave/fragments/holders/PageHeaderHolder$adapter$1;-><init>(Lcom/vk/fave/fragments/holders/PageHeaderHolder;)V
 
-    invoke-direct {p1, v0}, Lcom/vk/fave/fragments/adapters/h;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {p1, v0}, Lcom/vk/fave/fragments/adapters/PagesAdapter;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    iput-object p1, p0, Lcom/vk/fave/fragments/holders/PageHeaderHolder;->d:Lcom/vk/fave/fragments/adapters/h;
+    iput-object p1, p0, Lcom/vk/fave/fragments/holders/PageHeaderHolder;->d:Lcom/vk/fave/fragments/adapters/PagesAdapter;
 
     .line 4
     iget-object p1, p0, Lcom/vk/fave/fragments/holders/PageHeaderHolder;->c:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance v0, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -81,7 +81,7 @@
     .line 6
     iget-object p1, p0, Lcom/vk/fave/fragments/holders/PageHeaderHolder;->c:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, p0, Lcom/vk/fave/fragments/holders/PageHeaderHolder;->d:Lcom/vk/fave/fragments/adapters/h;
+    iget-object v0, p0, Lcom/vk/fave/fragments/holders/PageHeaderHolder;->d:Lcom/vk/fave/fragments/adapters/PagesAdapter;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -124,7 +124,7 @@
 
     const-string v2, "itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -132,7 +132,7 @@
 
     const-string v2, "itemView.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, p1}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;)V
 
@@ -164,9 +164,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/fave/fragments/holders/PageHeaderHolder;->d:Lcom/vk/fave/fragments/adapters/h;
+    iget-object v0, p0, Lcom/vk/fave/fragments/holders/PageHeaderHolder;->d:Lcom/vk/fave/fragments/adapters/PagesAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     return-void
 .end method

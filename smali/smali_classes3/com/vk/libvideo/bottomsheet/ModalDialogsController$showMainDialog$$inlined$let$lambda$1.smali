@@ -3,7 +3,7 @@
 .source "ModalDialogsController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/libvideo/bottomsheet/ModalDialogsController$showMainDialog$$inlined$let$lambda$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/libvideo/g;->remove:I
+    sget v1, Lcom/vk/libvideo/R;->remove:I
 
     invoke-interface {v0, v1}, Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;->u(I)V
 

@@ -61,19 +61,19 @@
     move-object v0, v1
 
     :goto_0
-    instance-of v2, v0, Lcom/vk/fave/views/f;
+    instance-of v2, v0, Lcom/vk/fave/views/FaveEmptyListView;
 
     if-nez v2, :cond_1
 
     move-object v0, v1
 
     :cond_1
-    check-cast v0, Lcom/vk/fave/views/f;
+    check-cast v0, Lcom/vk/fave/views/FaveEmptyListView;
 
     if-eqz v0, :cond_2
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/fave/views/f;->getTitleView()Lcom/vk/core/view/links/LinkedTextView;
+    invoke-virtual {v0}, Lcom/vk/fave/views/FaveEmptyListView;->getTitleView()Lcom/vk/core/view/links/LinkedTextView;
 
     move-result-object v1
 
@@ -89,7 +89,7 @@
     const/4 v1, 0x0
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/lists/e;->setActionButtonVisible(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/DefaultListEmptyView;->setActionButtonVisible(Z)V
 
     :cond_3
     if-eqz v0, :cond_4

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/metrics/eventtracking/EventsStorage;->a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/metrics/eventtracking/EventsStorage;->a(Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,24 +20,24 @@
 # instance fields
 .field final synthetic a:Lcom/vk/metrics/eventtracking/EventsStorage;
 
-.field final synthetic b:Lkotlin/jvm/b/a;
+.field final synthetic b:Lkotlin/jvm/b/Functions;
 
 .field final synthetic c:Lcom/vk/metrics/eventtracking/Event;
 
-.field final synthetic d:Lkotlin/jvm/b/a;
+.field final synthetic d:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/metrics/eventtracking/EventsStorage;Lkotlin/jvm/b/a;Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lcom/vk/metrics/eventtracking/EventsStorage;Lkotlin/jvm/b/Functions;Lcom/vk/metrics/eventtracking/Event;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/metrics/eventtracking/EventsStorage$b;->a:Lcom/vk/metrics/eventtracking/EventsStorage;
 
-    iput-object p2, p0, Lcom/vk/metrics/eventtracking/EventsStorage$b;->b:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/metrics/eventtracking/EventsStorage$b;->b:Lkotlin/jvm/b/Functions;
 
     iput-object p3, p0, Lcom/vk/metrics/eventtracking/EventsStorage$b;->c:Lcom/vk/metrics/eventtracking/Event;
 
-    iput-object p4, p0, Lcom/vk/metrics/eventtracking/EventsStorage$b;->d:Lkotlin/jvm/b/a;
+    iput-object p4, p0, Lcom/vk/metrics/eventtracking/EventsStorage$b;->d:Lkotlin/jvm/b/Functions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,9 +50,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage$b;->b:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage$b;->b:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -86,9 +86,9 @@
     invoke-virtual {v0, v3, v1, v2}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     .line 3
-    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage$b;->d:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/metrics/eventtracking/EventsStorage$b;->d:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void

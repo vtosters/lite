@@ -3,7 +3,7 @@
 .source "BaseAuthFragment.kt"
 
 # interfaces
-.implements Lcom/vk/auth/base/b;
+.implements Lcom/vk/auth/base/AuthView;
 
 
 # annotations
@@ -16,10 +16,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<P::",
-        "Lcom/vk/auth/base/a<",
+        "Lcom/vk/auth/base/AuthPresenter<",
         "*>;>",
         "Landroidx/fragment/app/Fragment;",
-        "Lcom/vk/auth/base/b;"
+        "Lcom/vk/auth/base/AuthView;"
     }
 .end annotation
 
@@ -31,7 +31,7 @@
 
 .field private c:Landroid/widget/ImageView;
 
-.field protected d:Lcom/vk/auth/base/a;
+.field protected d:Lcom/vk/auth/base/AuthPresenter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TP;"
@@ -39,7 +39,7 @@
     .end annotation
 .end field
 
-.field protected e:Lcom/vk/auth/main/i;
+.field protected e:Lcom/vk/auth/main/AuthUiManager;
 
 
 # direct methods
@@ -59,11 +59,11 @@
 
 
 # virtual methods
-.method protected final C4()Lcom/vk/auth/main/i;
+.method protected final C4()Lcom/vk/auth/main/AuthUiManager;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->e:Lcom/vk/auth/main/i;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->e:Lcom/vk/auth/main/AuthUiManager;
 
     if-eqz v0, :cond_0
 
@@ -72,7 +72,7 @@
     :cond_0
     const-string v0, "authUiManager"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -128,9 +128,9 @@
 
     const-string v2, "requireContext()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v2, Lcom/vk/auth/r/b;->vk_header_tint_alternate:I
+    sget v2, Lcom/vk/auth/r/R3;->vk_header_tint_alternate:I
 
     invoke-virtual {v0, v1, v2}, Lcom/vk/auth/utils/AuthUtils;->a(Landroid/content/Context;I)I
 
@@ -143,9 +143,9 @@
     .locals 1
 
     .line 8
-    sget-object v0, Lcom/vk/auth/utils/c;->d:Lcom/vk/auth/utils/c;
+    sget-object v0, Lcom/vk/auth/utils/KeyboardController;->INSTANCE:Lcom/vk/auth/utils/KeyboardController;
 
-    invoke-virtual {v0, p1}, Lcom/vk/auth/utils/c;->a(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, p1}, Lcom/vk/auth/utils/KeyboardController;->a(Landroid/graphics/Rect;)V
 
     return-object p1
 .end method
@@ -241,7 +241,7 @@
     return-void
 .end method
 
-.method protected final a(Lcom/vk/auth/base/a;)V
+.method protected final a(Lcom/vk/auth/base/AuthPresenter;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -250,16 +250,16 @@
     .end annotation
 
     .line 4
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/a;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/AuthPresenter;
 
     return-void
 .end method
 
-.method protected final a(Lcom/vk/auth/main/i;)V
+.method protected final a(Lcom/vk/auth/main/AuthUiManager;)V
     .locals 0
 
     .line 5
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthFragment;->e:Lcom/vk/auth/main/i;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthFragment;->e:Lcom/vk/auth/main/AuthUiManager;
 
     return-void
 .end method
@@ -282,7 +282,7 @@
     return-void
 .end method
 
-.method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+.method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -290,15 +290,15 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -320,7 +320,7 @@
 
     move-object v7, p7
 
-    invoke-virtual/range {v0 .. v7}, Lcom/vk/auth/base/BaseAuthFragment$a$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)Lcom/vk/auth/base/BaseAuthFragment$a;
+    invoke-virtual/range {v0 .. v7}, Lcom/vk/auth/base/BaseAuthFragment$a$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)Lcom/vk/auth/base/BaseAuthFragment$a;
 
     move-result-object p1
 
@@ -336,7 +336,7 @@
     return-void
 .end method
 
-.method public abstract e(Landroid/os/Bundle;)Lcom/vk/auth/base/a;
+.method public abstract e(Landroid/os/Bundle;)Lcom/vk/auth/base/AuthPresenter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -380,7 +380,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    iget-object v1, p0, Lcom/vk/auth/base/BaseAuthFragment;->e:Lcom/vk/auth/main/i;
+    iget-object v1, p0, Lcom/vk/auth/base/BaseAuthFragment;->e:Lcom/vk/auth/main/AuthUiManager;
 
     const/4 v2, 0x0
 
@@ -388,14 +388,14 @@
 
     const-string v3, "it"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1, v0}, Lcom/vk/auth/main/i;->a(Landroid/content/Context;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-interface {v1, v0}, Lcom/vk/auth/main/AuthUiManager;->a(Landroid/content/Context;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
     .line 3
-    sget v1, Lcom/vk/auth/r/g;->vk_auth_error:I
+    sget v1, Lcom/vk/auth/r/R;->vk_auth_error:I
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -407,7 +407,7 @@
     move-result-object p1
 
     .line 5
-    sget v0, Lcom/vk/auth/r/g;->ok:I
+    sget v0, Lcom/vk/auth/r/R;->ok:I
 
     invoke-virtual {p1, v0, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -422,7 +422,7 @@
     const-string p1, "authUiManager"
 
     .line 7
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -435,25 +435,25 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/a;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/AuthPresenter;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/auth/base/a;->a(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/auth/base/AuthPresenter;->a(Ljava/lang/String;)V
 
     return-void
 
     :cond_0
     const-string p1, "presenter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method protected final getPresenter()Lcom/vk/auth/base/a;
+.method protected final getPresenter()Lcom/vk/auth/base/AuthPresenter;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -462,7 +462,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/a;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/AuthPresenter;
 
     if-eqz v0, :cond_0
 
@@ -471,7 +471,7 @@
     :cond_0
     const-string v0, "presenter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -496,11 +496,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/a;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/AuthPresenter;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/vk/auth/base/a;->onActivityResult(IILandroid/content/Intent;)Z
+    invoke-interface {v0, p1, p2, p3}, Lcom/vk/auth/base/AuthPresenter;->onActivityResult(IILandroid/content/Intent;)Z
 
     move-result v0
 
@@ -516,7 +516,7 @@
     const-string p1, "presenter"
 
     .line 3
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -530,20 +530,20 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
+    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/e;->f()Lcom/vk/auth/main/i;
+    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->f()Lcom/vk/auth/main/AuthUiManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->e:Lcom/vk/auth/main/i;
+    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->e:Lcom/vk/auth/main/AuthUiManager;
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthFragment;->e(Landroid/os/Bundle;)Lcom/vk/auth/base/a;
+    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthFragment;->e(Landroid/os/Bundle;)Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/a;
+    iput-object p1, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/AuthPresenter;
 
     return-void
 .end method
@@ -555,18 +555,18 @@
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/a;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/AuthPresenter;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/auth/base/a;->onDestroy()V
+    invoke-interface {v0}, Lcom/vk/auth/base/AuthPresenter;->onDestroy()V
 
     return-void
 
     :cond_0
     const-string v0, "presenter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -599,18 +599,18 @@
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/a;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/AuthPresenter;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/auth/base/a;->onPause()V
+    invoke-interface {v0}, Lcom/vk/auth/base/AuthPresenter;->onPause()V
 
     return-void
 
     :cond_0
     const-string v0, "presenter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -641,18 +641,18 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/a;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/AuthPresenter;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/auth/base/a;->onResume()V
+    invoke-interface {v0}, Lcom/vk/auth/base/AuthPresenter;->onResume()V
 
     return-void
 
     :cond_1
     const-string v0, "presenter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -666,18 +666,18 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/a;
+    iget-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->d:Lcom/vk/auth/base/AuthPresenter;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/auth/base/a;->a(Landroid/os/Bundle;)V
+    invoke-interface {v0, p1}, Lcom/vk/auth/base/AuthPresenter;->a(Landroid/os/Bundle;)V
 
     return-void
 
     :cond_0
     const-string p1, "presenter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -688,19 +688,19 @@
     .locals 5
 
     .line 1
-    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
+    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/e;->f()Lcom/vk/auth/main/i;
+    invoke-virtual {v0}, Lcom/vk/auth/main/AuthLib;->f()Lcom/vk/auth/main/AuthUiManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->e:Lcom/vk/auth/main/i;
+    iput-object v0, p0, Lcom/vk/auth/base/BaseAuthFragment;->e:Lcom/vk/auth/main/AuthUiManager;
 
     .line 2
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 3
-    sget p2, Lcom/vk/auth/r/e;->toolbar:I
+    sget p2, Lcom/vk/auth/r/R5;->toolbar:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -719,7 +719,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/base/BaseAuthFragment$onViewCreated$1;-><init>(Lcom/vk/auth/base/BaseAuthFragment;)V
 
-    invoke-virtual {p2, v0}, Lcom/vk/auth/ui/VkAuthToolbar;->setNavigationOnClickListener(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p2, v0}, Lcom/vk/auth/ui/VkAuthToolbar;->setNavigationOnClickListener(Lkotlin/jvm/b/Functions2;)V
 
     .line 5
     :cond_0
@@ -727,7 +727,7 @@
 
     if-eqz p2, :cond_1
 
-    sget v0, Lcom/vk/auth/r/h;->VkAuth_ToolbarTitleTextAppearance:I
+    sget v0, Lcom/vk/auth/r/R7;->VkAuth_ToolbarTitleTextAppearance:I
 
     invoke-virtual {p2, v0}, Lcom/vk/auth/ui/VkAuthToolbar;->setTitleTextAppearance(I)V
 
@@ -777,7 +777,7 @@
 
     if-eqz p2, :cond_5
 
-    iget-object v3, p0, Lcom/vk/auth/base/BaseAuthFragment;->e:Lcom/vk/auth/main/i;
+    iget-object v3, p0, Lcom/vk/auth/base/BaseAuthFragment;->e:Lcom/vk/auth/main/AuthUiManager;
 
     if-eqz v3, :cond_4
 
@@ -785,9 +785,9 @@
 
     move-result-object v4
 
-    invoke-static {v4, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v3, v4}, Lcom/vk/auth/main/i;->d(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    invoke-interface {v3, v4}, Lcom/vk/auth/main/AuthUiManager;->d(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
@@ -796,14 +796,14 @@
     goto :goto_0
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 9
     :cond_5
     :goto_0
-    sget p2, Lcom/vk/auth/r/e;->continue_btn:I
+    sget p2, Lcom/vk/auth/r/R5;->continue_btn:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -814,7 +814,7 @@
     iput-object p2, p0, Lcom/vk/auth/base/BaseAuthFragment;->b:Lcom/vk/auth/ui/VkLoadingButton;
 
     .line 10
-    sget p2, Lcom/vk/auth/r/e;->client_icon:I
+    sget p2, Lcom/vk/auth/r/R5;->client_icon:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -825,7 +825,7 @@
     iput-object p2, p0, Lcom/vk/auth/base/BaseAuthFragment;->c:Landroid/widget/ImageView;
 
     .line 11
-    iget-object p2, p0, Lcom/vk/auth/base/BaseAuthFragment;->e:Lcom/vk/auth/main/i;
+    iget-object p2, p0, Lcom/vk/auth/base/BaseAuthFragment;->e:Lcom/vk/auth/main/AuthUiManager;
 
     if-eqz p2, :cond_a
 
@@ -833,9 +833,9 @@
 
     move-result-object v1
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, v1}, Lcom/vk/auth/main/i;->c(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    invoke-interface {p2, v1}, Lcom/vk/auth/main/AuthUiManager;->c(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
@@ -856,7 +856,7 @@
 
     invoke-static {p2}, Lcom/vk/auth/utils/AuthExtensionsKt;->c(Landroid/view/View;)V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_7
     if-eqz v0, :cond_8
@@ -871,7 +871,7 @@
 
     invoke-static {p2}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;)V
 
-    sget-object p2, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p2, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     .line 15
     :cond_9
@@ -896,7 +896,7 @@
 
     .line 18
     :cond_a
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method

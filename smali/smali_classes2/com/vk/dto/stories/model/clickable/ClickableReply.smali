@@ -51,7 +51,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/clickable/ClickableReply$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/clickable/ClickableReply$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/stories/model/clickable/ClickableReply;->f:Lcom/vk/dto/stories/model/clickable/ClickableReply$b;
 
@@ -94,7 +94,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILjava/util/List;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IILjava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x1
@@ -163,7 +163,7 @@
 
     .line 9
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

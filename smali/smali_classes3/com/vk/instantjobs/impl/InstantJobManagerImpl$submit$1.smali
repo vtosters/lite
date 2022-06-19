@@ -3,7 +3,7 @@
 .source "InstantJobManagerImpl.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -59,7 +59,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$submit$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -79,7 +79,7 @@
 
     iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$submit$1;->$cause:Ljava/lang/Throwable;
 
-    invoke-static {v0, v1}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Ljava/lang/Throwable;)Lcom/vk/instantjobs/impl/a;
+    invoke-static {v0, v1}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Ljava/lang/Throwable;)Lcom/vk/instantjobs/impl/InstantJobController;
 
     move-result-object v0
 
@@ -87,7 +87,7 @@
 
     iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$submit$1;->$cause:Ljava/lang/Throwable;
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/instantjobs/impl/a;->a(Lcom/vk/instantjobs/InstantJob;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/instantjobs/impl/InstantJobController;->a(Lcom/vk/instantjobs/InstantJob;Ljava/lang/Throwable;)V
 
     return-void
 .end method

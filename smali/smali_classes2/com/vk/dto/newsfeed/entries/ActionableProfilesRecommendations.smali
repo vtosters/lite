@@ -60,7 +60,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/ActionableProfilesRecommendations$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/ActionableProfilesRecommendations$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/newsfeed/entries/ActionableProfilesRecommendations;->D:Lcom/vk/dto/newsfeed/entries/ActionableProfilesRecommendations$b;
 
@@ -262,7 +262,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -272,7 +272,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/newsfeed/entries/ActionableProfilesRecommendations;->d:Lcom/vk/dto/newsfeed/entries/ActionableProfilesRecommendations$Header;
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -413,7 +413,7 @@
 
     const-string v1, "holiday_friends"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

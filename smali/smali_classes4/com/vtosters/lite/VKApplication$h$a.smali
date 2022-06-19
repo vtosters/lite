@@ -3,7 +3,7 @@
 .source "VKApplication.kt"
 
 # interfaces
-.implements Lc/a/z/l;
+.implements Lio/reactivex/functions/Predicate;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/l<",
-        "Lcom/vk/im/engine/events/b;",
+        "Lio/reactivex/functions/Predicate<",
+        "Lcom/vk/im/engine/events/LongPollEvent;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/events/b;)Z
+.method public final a(Lcom/vk/im/engine/events/LongPollEvent;)Z
     .locals 0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/events/b;->c()Z
+    invoke-virtual {p1}, Lcom/vk/im/engine/events/LongPollEvent;->c()Z
 
     move-result p1
 
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/b;
+    check-cast p1, Lcom/vk/im/engine/events/LongPollEvent;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/VKApplication$h$a;->a(Lcom/vk/im/engine/events/b;)Z
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/VKApplication$h$a;->a(Lcom/vk/im/engine/events/LongPollEvent;)Z
 
     move-result p1
 

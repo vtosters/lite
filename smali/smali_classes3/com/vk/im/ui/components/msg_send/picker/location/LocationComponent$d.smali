@@ -97,7 +97,7 @@
     const/16 v18, 0x0
 
     .line 18
-    invoke-direct/range {v1 .. v18}, Lcom/vk/dto/geo/GeoLocation;-><init>(IIIIIDDLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v18}, Lcom/vk/dto/geo/GeoLocation;-><init>(IIIIIDDLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object/from16 v2, v19
 
@@ -108,7 +108,7 @@
     .line 19
     iget-object v1, v0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$d;->a:Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->f(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;)Lcom/vk/im/ui/components/msg_send/picker/location/d;
+    invoke-static {v1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->f(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;)Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
 
     move-result-object v1
 
@@ -118,7 +118,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->a(Lcom/vk/dto/geo/GeoLocation;)V
+    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->a(Lcom/vk/dto/geo/GeoLocation;)V
 
     .line 20
     iget-object v1, v0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$d;->a:Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;
@@ -155,7 +155,7 @@
     .line 11
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$d;->a:Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->f(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;)Lcom/vk/im/ui/components/msg_send/picker/location/d;
+    invoke-static {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->f(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;)Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
 
     move-result-object p1
 
@@ -165,7 +165,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->a(Lcom/vk/dto/geo/GeoLocation;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->a(Lcom/vk/dto/geo/GeoLocation;)V
 
     .line 12
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$d;->a:Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;

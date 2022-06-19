@@ -1,12 +1,12 @@
 .class public final Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;
-.super Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+.super Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 .source "MsgPartTwoRowSnippet.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c<",
+        "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase<",
         "Lcom/vk/im/engine/models/attaches/Attach;",
         ">;"
     }
@@ -24,7 +24,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;-><init>()V
 
     return-void
 .end method
@@ -33,16 +33,16 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->B:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->B:Lcom/vk/im/engine/models/attaches/Attach;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
+.method public static final synthetic b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->f:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->f:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
 
     return-object p0
 .end method
@@ -51,12 +51,12 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->g:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->g:Lcom/vk/im/engine/models/messages/Msg;
 
     return-object p0
 .end method
 
-.method private final c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
+.method private final c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
     .locals 1
 
     .line 2
@@ -64,7 +64,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->e(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->e(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -75,7 +75,7 @@
     :cond_0
     const-string p1, "view"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -86,16 +86,16 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->h:Lcom/vk/im/engine/models/messages/NestedMsg;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->h:Lcom/vk/im/engine/models/messages/NestedMsg;
 
     return-object p0
 .end method
 
-.method private final d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
+.method private final d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
     .locals 6
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->g(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->g(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -115,7 +115,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->f(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->f(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -133,13 +133,13 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 6
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -165,25 +165,25 @@
 
     const-string v1, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
-    invoke-static {v0}, Lcom/vk/im/ui/formatters/h;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v0}, Lcom/vk/im/ui/formatters/MentionStrip;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     .line 9
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v0}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     const-string v1, "Emoji.instance().replaceEmoji(title)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->C:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
@@ -197,7 +197,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->f(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->f(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -207,13 +207,13 @@
     return-void
 
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 12
     :cond_4
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -228,11 +228,11 @@
     throw p1
 .end method
 
-.method private final e(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)Landroid/graphics/drawable/Drawable;
+.method private final e(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)Landroid/graphics/drawable/Drawable;
     .locals 3
 
     .line 1
-    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->d:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->d:Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 2
     instance-of p1, p1, Lcom/vk/im/engine/models/attaches/AttachPoll;
@@ -253,9 +253,9 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v0, Lcom/vk/im/ui/f;->vkim_ic_attach_poll:I
+    sget v0, Lcom/vk/im/ui/R12;->vkim_ic_attach_poll:I
 
     invoke-static {p1, v0}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -266,12 +266,12 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     :cond_1
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -285,9 +285,9 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v0, Lcom/vk/im/ui/f;->vkim_ic_attach_wall_post:I
+    sget v0, Lcom/vk/im/ui/R12;->vkim_ic_attach_wall_post:I
 
     invoke-static {p1, v0}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -299,17 +299,17 @@
     return-object p1
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     :cond_4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
 
-.method private final f(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)Ljava/lang/String;
+.method private final f(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)Ljava/lang/String;
     .locals 2
 
     .line 1
@@ -322,14 +322,14 @@
     move-result-object v0
 
     .line 2
-    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->d:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->d:Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 3
     instance-of v1, p1, Lcom/vk/im/engine/models/attaches/AttachWall;
 
     if-eqz v1, :cond_0
 
-    sget p1, Lcom/vk/im/ui/m;->vkim_msg_list_wall_title_primary:I
+    sget p1, Lcom/vk/im/ui/R4;->vkim_msg_list_wall_title_primary:I
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -337,7 +337,7 @@
 
     const-string v0, "resources.getString(R.st\u2026_list_wall_title_primary)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -347,7 +347,7 @@
 
     if-eqz p1, :cond_1
 
-    sget p1, Lcom/vk/im/ui/m;->vkim_msg_list_poll_subtitle:I
+    sget p1, Lcom/vk/im/ui/R4;->vkim_msg_list_poll_subtitle:I
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -355,7 +355,7 @@
 
     const-string v0, "resources.getString(R.st\u2026m_msg_list_poll_subtitle)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -369,18 +369,18 @@
     const-string p1, "view"
 
     .line 5
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method private final g(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)Ljava/lang/String;
+.method private final g(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)Ljava/lang/String;
     .locals 1
 
     .line 1
-    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->d:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->d:Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 2
     instance-of v0, p1, Lcom/vk/im/engine/models/attaches/AttachWall;
@@ -436,7 +436,7 @@
     move-result-object v0
 
     .line 4
-    sget v1, Lcom/vk/im/ui/j;->vkim_msg_part_snippet:I
+    sget v1, Lcom/vk/im/ui/R13;->vkim_msg_part_snippet:I
 
     const/4 v2, 0x0
 
@@ -451,12 +451,12 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->C:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
 
     .line 5
-    sget p1, Lcom/vk/im/ui/m;->vkim_msg_list_wall_title_primary:I
+    sget p1, Lcom/vk/im/ui/R4;->vkim_msg_list_wall_title_primary:I
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     .line 6
-    sget p1, Lcom/vk/im/ui/m;->vkim_msg_list_wall_title_secondary:I
+    sget p1, Lcom/vk/im/ui/R4;->vkim_msg_list_wall_title_secondary:I
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -477,7 +477,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet$onCreateView$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;)V
 
-    invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->C:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
@@ -488,7 +488,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet$onCreateView$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;)V
 
-    invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 9
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->C:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
@@ -498,19 +498,19 @@
     return-object p1
 
     :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 10
     :cond_1
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 11
     :cond_2
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -533,42 +533,42 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->a(Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;Lcom/vk/im/engine/models/dialogs/BubbleColors;)V
+    invoke-virtual {p0, v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->a(Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;Lcom/vk/im/engine/models/dialogs/BubbleColors;)V
 
     return-void
 
     :cond_0
     const-string p1, "view"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method protected b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
+.method protected b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
     .locals 1
 
     .line 13
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
 
     .line 14
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
 
     .line 15
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartTwoRowSnippet;->C:Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;Lcom/vk/im/ui/views/msg/a;)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;Lcom/vk/im/ui/views/msg/WithTime;)V
 
     return-void
 
     :cond_0
     const-string p1, "view"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

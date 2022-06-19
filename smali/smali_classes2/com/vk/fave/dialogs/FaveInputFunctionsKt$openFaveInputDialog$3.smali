@@ -3,7 +3,7 @@
 .source "FaveInputFunctions.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Landroid/content/DialogInterface;",
         "Ljava/lang/CharSequence;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -60,7 +60,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/fave/dialogs/FaveInputFunctionsKt$openFaveInputDialog$3;->a(Landroid/content/DialogInterface;Ljava/lang/CharSequence;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -125,7 +125,7 @@
 
     iget-object v2, p0, Lcom/vk/fave/dialogs/FaveInputFunctionsKt$openFaveInputDialog$3;->$context:Landroid/content/Context;
 
-    invoke-virtual {v1, v2, v0, p2}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FaveTag;Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v1, v2, v0, p2}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FaveTag;Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -138,27 +138,27 @@
 
     if-eqz p1, :cond_2
 
-    new-instance v1, Lcom/vk/fave/dialogs/a;
+    new-instance v1, Lcom/vk/fave/dialogs/FaveInputFunctions;
 
-    invoke-direct {v1, p1}, Lcom/vk/fave/dialogs/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p1}, Lcom/vk/fave/dialogs/FaveInputFunctions;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     move-object p1, v1
 
     :cond_2
-    check-cast p1, Lc/a/z/g;
+    check-cast p1, Lio/reactivex/functions/Consumer;
 
-    invoke-virtual {p2, v0, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, v0, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "FaveController.editTag(c\u2026hrowable::showToastError)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     iget-object p2, p0, Lcom/vk/fave/dialogs/FaveInputFunctionsKt$openFaveInputDialog$3;->$context:Landroid/content/Context;
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_1
 
@@ -168,7 +168,7 @@
 
     iget-object v1, p0, Lcom/vk/fave/dialogs/FaveInputFunctionsKt$openFaveInputDialog$3;->$context:Landroid/content/Context;
 
-    invoke-virtual {v0, v1, p2}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v0, v1, p2}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -179,18 +179,18 @@
 
     sget-object p1, Lcom/vk/fave/dialogs/FaveInputFunctionsKt$openFaveInputDialog$3$c;->a:Lcom/vk/fave/dialogs/FaveInputFunctionsKt$openFaveInputDialog$3$c;
 
-    invoke-virtual {p2, v0, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, v0, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "FaveController.addTag(co\u2026                        }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     iget-object p2, p0, Lcom/vk/fave/dialogs/FaveInputFunctionsKt$openFaveInputDialog$3;->$context:Landroid/content/Context;
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)Lio/reactivex/disposables/Disposable;
 
     :goto_1
     return-void

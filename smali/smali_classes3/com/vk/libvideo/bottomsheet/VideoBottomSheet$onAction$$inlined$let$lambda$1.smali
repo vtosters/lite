@@ -3,12 +3,12 @@
 .source "VideoBottomSheet.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;->a(Landroid/content/Context;Lcom/vk/core/dialogs/bottomsheet/d;)V
+    value = Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;->a(Landroid/content/Context;Lcom/vk/core/dialogs/bottomsheet/MenuBottomSheetAction;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -29,18 +29,18 @@
 # instance fields
 .field final synthetic $context$inlined:Landroid/content/Context;
 
-.field final synthetic $item$inlined:Lcom/vk/core/dialogs/bottomsheet/d;
+.field final synthetic $item$inlined:Lcom/vk/core/dialogs/bottomsheet/MenuBottomSheetAction;
 
 .field final synthetic $video:Lcom/vk/dto/common/VideoFile;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/dto/common/VideoFile;Lcom/vk/core/dialogs/bottomsheet/d;Landroid/content/Context;)V
+.method constructor <init>(Lcom/vk/dto/common/VideoFile;Lcom/vk/core/dialogs/bottomsheet/MenuBottomSheetAction;Landroid/content/Context;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet$onAction$$inlined$let$lambda$1;->$video:Lcom/vk/dto/common/VideoFile;
 
-    iput-object p2, p0, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet$onAction$$inlined$let$lambda$1;->$item$inlined:Lcom/vk/core/dialogs/bottomsheet/d;
+    iput-object p2, p0, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet$onAction$$inlined$let$lambda$1;->$item$inlined:Lcom/vk/core/dialogs/bottomsheet/MenuBottomSheetAction;
 
     iput-object p3, p0, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet$onAction$$inlined$let$lambda$1;->$context$inlined:Landroid/content/Context;
 
@@ -59,7 +59,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet$onAction$$inlined$let$lambda$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -68,7 +68,7 @@
     .locals 4
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object v0
 
@@ -78,11 +78,11 @@
 
     sget-object v3, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;->i:Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;
 
-    invoke-static {v3}, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;->d(Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;)Lcom/vk/navigation/k;
+    invoke-static {v3}, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;->d(Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;)Lcom/vk/navigation/ModalDialogCallback;
 
     move-result-object v3
 
-    invoke-interface {v0, v1, v2, v3}, Lcom/vk/bridges/k0;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Lcom/vk/navigation/k;)V
+    invoke-interface {v0, v1, v2, v3}, Lcom/vk/bridges/VideoBridge1;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Lcom/vk/navigation/ModalDialogCallback;)V
 
     return-void
 .end method

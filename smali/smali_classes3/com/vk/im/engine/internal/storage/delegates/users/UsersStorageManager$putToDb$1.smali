@@ -3,7 +3,7 @@
 .source "UsersStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lio/requery/android/database/sqlite/SQLiteDatabase;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -54,9 +54,9 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/users/c;->a:Lcom/vk/im/engine/internal/storage/delegates/users/c;
+    sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;->INSTANCE:Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/delegates/users/c;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lio/requery/android/database/sqlite/SQLiteStatement;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lio/requery/android/database/sqlite/SQLiteStatement;
 
     move-result-object p1
 
@@ -83,9 +83,9 @@
     check-cast v1, Lcom/vk/im/engine/internal/storage/models/UserStorageModel;
 
     .line 4
-    sget-object v2, Lcom/vk/im/engine/internal/storage/delegates/users/c;->a:Lcom/vk/im/engine/internal/storage/delegates/users/c;
+    sget-object v2, Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;->INSTANCE:Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;
 
-    invoke-virtual {v2, p1, v1}, Lcom/vk/im/engine/internal/storage/delegates/users/c;->a(Lio/requery/android/database/sqlite/SQLiteStatement;Lcom/vk/im/engine/internal/storage/models/UserStorageModel;)V
+    invoke-virtual {v2, p1, v1}, Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;->a(Lio/requery/android/database/sqlite/SQLiteStatement;Lcom/vk/im/engine/internal/storage/models/UserStorageModel;)V
 
     .line 5
     invoke-virtual {p1}, Lio/requery/android/database/sqlite/SQLiteStatement;->executeInsert()J
@@ -94,23 +94,23 @@
 
     .line 6
     :cond_0
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 v0, 0x0
 
     .line 7
-    invoke-static {p1, v0}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$putToDb$1;->this$0:Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;
 
-    invoke-static {p1}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;)Lcom/vk/im/engine/internal/storage/b;
+    invoke-static {p1}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;)Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -136,7 +136,7 @@
     :catchall_1
     move-exception v1
 
-    invoke-static {p1, v0}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
 .end method
@@ -149,7 +149,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$putToDb$1;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -20,7 +20,7 @@
 
 .field G:Landroid/animation/ValueAnimator;
 
-.field private final a:Lcom/vk/libvideo/x/a;
+.field private final a:Lcom/vk/libvideo/x/AudioVisualizerDrawable;
 
 .field private final b:Landroid/graphics/drawable/Drawable;
 
@@ -115,14 +115,14 @@
     iput-boolean p2, p0, Lcom/vk/libvideo/ui/DurationView;->F:Z
 
     .line 9
-    sget v0, Lcom/vk/libvideo/h;->duration_view:I
+    sget v0, Lcom/vk/libvideo/R9;->duration_view:I
 
     invoke-static {p1, v0, p0}, Landroid/widget/LinearLayout;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
     .line 10
-    sget v1, Lcom/vk/libvideo/g;->icon_wrap:I
+    sget v1, Lcom/vk/libvideo/R;->icon_wrap:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -131,7 +131,7 @@
     iput-object v1, p0, Lcom/vk/libvideo/ui/DurationView;->e:Landroid/view/View;
 
     .line 11
-    sget v1, Lcom/vk/libvideo/g;->icon_play:I
+    sget v1, Lcom/vk/libvideo/R;->icon_play:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -142,7 +142,7 @@
     iput-object v1, p0, Lcom/vk/libvideo/ui/DurationView;->C:Landroid/widget/ImageView;
 
     .line 12
-    sget v1, Lcom/vk/libvideo/g;->icon_progress:I
+    sget v1, Lcom/vk/libvideo/R;->icon_progress:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -153,7 +153,7 @@
     iput-object v0, p0, Lcom/vk/libvideo/ui/DurationView;->B:Landroid/widget/ImageView;
 
     .line 13
-    sget v0, Lcom/vk/libvideo/e;->ic_play_16dp:I
+    sget v0, Lcom/vk/libvideo/R7;->ic_play_16dp:I
 
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -180,9 +180,9 @@
 
     .line 15
     :cond_0
-    new-instance v0, Lcom/vk/libvideo/x/c;
+    new-instance v0, Lcom/vk/libvideo/x/SimpleProgressDrawable;
 
-    invoke-direct {v0, p1}, Lcom/vk/libvideo/x/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vk/libvideo/x/SimpleProgressDrawable;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/vk/libvideo/ui/DurationView;->b:Landroid/graphics/drawable/Drawable;
 
@@ -199,18 +199,18 @@
     invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setSelected(Z)V
 
     .line 18
-    new-instance p1, Lcom/vk/libvideo/x/a;
+    new-instance p1, Lcom/vk/libvideo/x/AudioVisualizerDrawable;
 
-    invoke-direct {p1}, Lcom/vk/libvideo/x/a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/libvideo/x/AudioVisualizerDrawable;-><init>()V
 
     const/4 p3, -0x1
 
-    invoke-virtual {p1, p3}, Lcom/vk/libvideo/x/a;->a(I)Lcom/vk/libvideo/x/a;
+    invoke-virtual {p1, p3}, Lcom/vk/libvideo/x/AudioVisualizerDrawable;->a(I)Lcom/vk/libvideo/x/AudioVisualizerDrawable;
 
-    iput-object p1, p0, Lcom/vk/libvideo/ui/DurationView;->a:Lcom/vk/libvideo/x/a;
+    iput-object p1, p0, Lcom/vk/libvideo/ui/DurationView;->a:Lcom/vk/libvideo/x/AudioVisualizerDrawable;
 
     .line 19
-    iget-object p1, p0, Lcom/vk/libvideo/ui/DurationView;->a:Lcom/vk/libvideo/x/a;
+    iget-object p1, p0, Lcom/vk/libvideo/ui/DurationView;->a:Lcom/vk/libvideo/x/AudioVisualizerDrawable;
 
     new-instance v0, Landroid/graphics/Rect;
 
@@ -226,12 +226,12 @@
 
     invoke-direct {v0, p2, p2, v3, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/libvideo/x/a;->a(Landroid/graphics/Rect;)Lcom/vk/libvideo/x/a;
+    invoke-virtual {p1, v0}, Lcom/vk/libvideo/x/AudioVisualizerDrawable;->a(Landroid/graphics/Rect;)Lcom/vk/libvideo/x/AudioVisualizerDrawable;
 
     .line 20
     iget-object p1, p0, Lcom/vk/libvideo/ui/DurationView;->C:Landroid/widget/ImageView;
 
-    iget-object v0, p0, Lcom/vk/libvideo/ui/DurationView;->a:Lcom/vk/libvideo/x/a;
+    iget-object v0, p0, Lcom/vk/libvideo/ui/DurationView;->a:Lcom/vk/libvideo/x/AudioVisualizerDrawable;
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -269,7 +269,7 @@
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->setGravity(I)V
 
     .line 26
-    sget p1, Lcom/vk/libvideo/e;->bg_video_duration_label:I
+    sget p1, Lcom/vk/libvideo/R7;->bg_video_duration_label:I
 
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
@@ -441,7 +441,7 @@
     .line 26
     iget-object p1, p0, Lcom/vk/libvideo/ui/DurationView;->G:Landroid/animation/ValueAnimator;
 
-    invoke-static {}, Lb/h/g/g/a;->a()Z
+    invoke-static {}, Lb/h/g/g/AnimationHelper;->a()Z
 
     move-result v0
 

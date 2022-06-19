@@ -3,12 +3,12 @@
 .source "MusicPlaylistScreenAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;-><init>(ZLkotlin/jvm/b/a;Lcom/vk/music/playlist/b;Lcom/vk/music/player/d;Lcom/vk/core/ui/k;)V
+    value = Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;-><init>(ZLkotlin/jvm/b/Functions;Lcom/vk/music/playlist/ModernPlaylistModel;Lcom/vk/music/player/PlayerModel;Lcom/vk/core/ui/IdClickListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/ViewGroup;",
-        "Lcom/vk/music/playlist/modern/h/a;",
+        "Lcom/vk/music/playlist/modern/h/MusicErrorViewHolder;",
         ">;"
     }
 .end annotation
@@ -46,15 +46,15 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/a;
+.method public final a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/MusicErrorViewHolder;
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/music/playlist/modern/h/a;
+    new-instance v0, Lcom/vk/music/playlist/modern/h/MusicErrorViewHolder;
 
     iget-object v1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$errorViewAdapter$1;->this$0:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/music/playlist/modern/h/a;-><init>(Landroid/view/ViewGroup;Landroid/view/View$OnClickListener;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/music/playlist/modern/h/MusicErrorViewHolder;-><init>(Landroid/view/ViewGroup;Landroid/view/View$OnClickListener;)V
 
     return-object v0
 .end method
@@ -65,7 +65,7 @@
     .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$errorViewAdapter$1;->a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/a;
+    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$errorViewAdapter$1;->a(Landroid/view/ViewGroup;)Lcom/vk/music/playlist/modern/h/MusicErrorViewHolder;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "CommonStoriesBridge.kt"
 
 # interfaces
-.implements Lb/h/g/l/e;
+.implements Lb/h/g/l/NotificationListener;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lb/h/g/l/e<",
+        "Lb/h/g/l/NotificationListener<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -84,10 +84,10 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/bridges/f0;
+    check-cast p2, Lcom/vk/bridges/StoriesBridge2;
 
     .line 3
-    invoke-interface {p2}, Lcom/vk/bridges/f0;->a()V
+    invoke-interface {p2}, Lcom/vk/bridges/StoriesBridge2;->a()V
 
     goto :goto_0
 

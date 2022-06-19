@@ -43,11 +43,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/discover/DiscoverFragment$m;->a:Lcom/vk/discover/DiscoverFragment;
 
-    invoke-static {v0}, Lcom/vk/discover/DiscoverFragment;->b(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/discover/b;
+    invoke-static {v0}, Lcom/vk/discover/DiscoverFragment;->b(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/discover/DiscoverAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/discover/b;->I(I)I
+    invoke-virtual {v0, p1}, Lcom/vk/discover/DiscoverAdapter;->I(I)I
 
     move-result p1
 

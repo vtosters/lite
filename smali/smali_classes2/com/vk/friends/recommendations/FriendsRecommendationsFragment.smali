@@ -1,10 +1,10 @@
 .class public final Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "FriendsRecommendationsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$p;
-.implements Lcom/vk/friends/recommendations/f$a;
+.implements Lcom/vk/lists/PaginationHelper$p;
+.implements Lcom/vk/friends/recommendations/NearbyController$a;
 
 
 # annotations
@@ -18,18 +18,18 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/b;",
-        "Lcom/vk/lists/t$p<",
+        "Lcom/vk/core/fragments/BaseFragment1;",
+        "Lcom/vk/lists/PaginationHelper$p<",
         "Lcom/vk/dto/common/data/VKFromList<",
         "Lcom/vk/friends/recommendations/Item;",
         ">;>;",
-        "Lcom/vk/friends/recommendations/f$a;"
+        "Lcom/vk/friends/recommendations/NearbyController$a;"
     }
 .end annotation
 
 
 # static fields
-.field static final synthetic S:[Lkotlin/u/j;
+.field static final synthetic S:[Lkotlin/u/KProperty5;
 
 .field public static final T:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$b;
 
@@ -43,24 +43,24 @@
 
 .field private I:Z
 
-.field private final J:Lkotlin/e;
+.field private final J:Lkotlin/Lazy2;
 
-.field private K:Lb/h/g/k/a;
+.field private K:Lb/h/g/k/VKProgressDialog;
 
-.field private final L:Lcom/vk/common/g/g;
+.field private final L:Lcom/vk/common/g/VoidF1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/common/g/g<",
+            "Lcom/vk/common/g/VoidF1<",
             "Lcom/vk/dto/user/UserProfile;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final M:Lcom/vk/common/g/j;
+.field private final M:Lcom/vk/common/g/VoidF2Int;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/common/g/j<",
+            "Lcom/vk/common/g/VoidF2Int<",
             "Lcom/vk/dto/user/RequestUserProfile;",
             "Ljava/lang/Boolean;",
             ">;"
@@ -68,15 +68,15 @@
     .end annotation
 .end field
 
-.field private N:Lcom/facebook/c;
+.field private N:Lcom/facebook/CallbackManager;
 
-.field private final O:Lkotlin/e;
+.field private final O:Lkotlin/Lazy2;
 
 .field private P:Lcom/vk/lists/RecyclerPaginatedView;
 
-.field private final Q:Lkotlin/e;
+.field private final Q:Lkotlin/Lazy2;
 
-.field private final R:Lkotlin/e;
+.field private final R:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -85,13 +85,13 @@
 
     const/4 v0, 0x4
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -99,9 +99,9 @@
 
     const-string v4, "getHeaderList()Ljava/util/List;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
@@ -111,7 +111,7 @@
 
     const-class v2, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -119,9 +119,9 @@
 
     const-string v4, "getTwitterAuthClient()Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x1
 
@@ -131,7 +131,7 @@
 
     const-class v2, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -139,9 +139,9 @@
 
     const-string v4, "getAdapter()Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x2
 
@@ -151,7 +151,7 @@
 
     const-class v2, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -159,21 +159,21 @@
 
     const-string v4, "getDirtyHackActivity()Landroid/app/Activity;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->S:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->S:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->T:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$b;
 
@@ -184,7 +184,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     const/4 v0, 0x1
 
@@ -196,76 +196,76 @@
 
     invoke-direct {v0, p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$headerList$2;-><init>(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->J:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->J:Lkotlin/Lazy2;
 
     .line 4
     new-instance v0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$t;
 
     invoke-direct {v0, p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$t;-><init>(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)V
 
-    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->L:Lcom/vk/common/g/g;
+    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->L:Lcom/vk/common/g/VoidF1;
 
     .line 5
     new-instance v0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$d;
 
     invoke-direct {v0, p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$d;-><init>(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)V
 
-    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->M:Lcom/vk/common/g/j;
+    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->M:Lcom/vk/common/g/VoidF2Int;
 
     .line 6
     sget-object v0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$twitterAuthClient$2;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$twitterAuthClient$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->O:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->O:Lkotlin/Lazy2;
 
     .line 7
     new-instance v0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$adapter$2;
 
     invoke-direct {v0, p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$adapter$2;-><init>(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->Q:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->Q:Lkotlin/Lazy2;
 
     .line 8
     new-instance v0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$dirtyHackActivity$2;
 
     invoke-direct {v0, p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$dirtyHackActivity$2;-><init>(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->R:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->R:Lkotlin/Lazy2;
 
     return-void
 .end method
 
-.method private final U4()Lcom/vk/friends/recommendations/c;
+.method private final U4()Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->Q:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->Q:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->S:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->S:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/friends/recommendations/c;
+    check-cast v0, Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
 
     return-object v0
 .end method
@@ -284,15 +284,15 @@
 .method private final W4()Landroid/app/Activity;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->R:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->R:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->S:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->S:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -312,15 +312,15 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->J:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->J:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->S:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->S:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -369,7 +369,7 @@
     :goto_0
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_SEARCH:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v0}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -388,42 +388,42 @@
     return-object v0
 .end method
 
-.method public static final synthetic a(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lcom/vk/common/g/j;
+.method public static final synthetic a(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lcom/vk/common/g/VoidF2Int;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->M:Lcom/vk/common/g/j;
+    iget-object p0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->M:Lcom/vk/common/g/VoidF2Int;
 
     return-object p0
 .end method
 
-.method private final a(Landroid/accounts/Account;Lcom/vk/core/fragments/b;Landroid/app/Activity;)V
+.method private final a(Landroid/accounts/Account;Lcom/vk/core/fragments/BaseFragment1;Landroid/app/Activity;)V
     .locals 1
 
     .line 26
     new-instance v0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$j;
 
-    invoke-direct {v0, p1, p2, p3}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$j;-><init>(Landroid/accounts/Account;Lcom/vk/core/fragments/b;Landroid/app/Activity;)V
+    invoke-direct {v0, p1, p2, p3}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$j;-><init>(Landroid/accounts/Account;Lcom/vk/core/fragments/BaseFragment1;Landroid/app/Activity;)V
 
-    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 27
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 28
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -438,7 +438,7 @@
     invoke-direct {p1, p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$l;-><init>(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)V
 
     .line 31
-    invoke-virtual {p2, v0, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, v0, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -458,23 +458,23 @@
     .line 7
     iget v2, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-static {v2, v1}, Lcom/vk/api/execute/f;->a(IZ)Lcom/vk/api/execute/f;
+    invoke-static {v2, v1}, Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;->a(IZ)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Lcom/vk/api/execute/f;->d(Ljava/lang/String;)Lcom/vk/api/execute/f;
+    invoke-virtual {v2, v0}, Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;->d(Ljava/lang/String;)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
 
     goto :goto_0
 
     .line 8
     :cond_0
-    new-instance v2, Lcom/vk/api/friends/m;
+    new-instance v2, Lcom/vk/api/friends/FriendsHideSuggestion;
 
     iget v3, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v2, v3}, Lcom/vk/api/friends/m;-><init>(I)V
+    invoke-direct {v2, v3}, Lcom/vk/api/friends/FriendsHideSuggestion;-><init>(I)V
 
-    invoke-virtual {v2, v0}, Lcom/vk/api/friends/m;->d(Ljava/lang/String;)Lcom/vk/api/friends/m;
+    invoke-virtual {v2, v0}, Lcom/vk/api/friends/FriendsHideSuggestion;->d(Ljava/lang/String;)Lcom/vk/api/friends/FriendsHideSuggestion;
 
     .line 9
     :goto_0
@@ -507,13 +507,13 @@
 
     const-string v3, "track_code"
 
-    invoke-virtual {v2, v3, v0}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {v2, v3, v0}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :cond_3
     const/4 v0, 0x0
 
     .line 11
-    invoke-static {v2, v0, v1, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v2, v0, v1, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -535,7 +535,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -547,21 +547,21 @@
     sget-object p1, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$v;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$v;
 
     .line 13
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
 
-.method public static final synthetic a(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;Landroid/accounts/Account;Lcom/vk/core/fragments/b;Landroid/app/Activity;)V
+.method public static final synthetic a(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;Landroid/accounts/Account;Lcom/vk/core/fragments/BaseFragment1;Landroid/app/Activity;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Landroid/accounts/Account;Lcom/vk/core/fragments/b;Landroid/app/Activity;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Landroid/accounts/Account;Lcom/vk/core/fragments/BaseFragment1;Landroid/app/Activity;)V
 
     return-void
 .end method
@@ -584,31 +584,31 @@
     return-void
 .end method
 
-.method private final a5()Lcom/twitter/sdk/android/core/identity/h;
+.method private final a5()Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->O:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->O:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->S:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->S:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/twitter/sdk/android/core/identity/h;
+    check-cast v0, Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
 
     return-object v0
 .end method
 
-.method public static final synthetic b(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lcom/vk/friends/recommendations/c;
+.method public static final synthetic b(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->U4()Lcom/vk/friends/recommendations/c;
+    invoke-direct {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->U4()Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
 
     move-result-object p0
 
@@ -619,22 +619,22 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/w;->d()I
+    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->d()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/api/friends/o;
+    new-instance v0, Lcom/vk/api/friends/FriendsMarkNewRecommendationsAsViewed;
 
-    invoke-direct {v0}, Lcom/vk/api/friends/o;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/friends/FriendsMarkNewRecommendationsAsViewed;-><init>()V
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -644,7 +644,7 @@
     sget-object v2, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$p;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$p;
 
     .line 4
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -661,20 +661,20 @@
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lcom/vk/common/g/g;
+.method public static final synthetic d(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lcom/vk/common/g/VoidF1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->L:Lcom/vk/common/g/g;
+    iget-object p0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->L:Lcom/vk/common/g/VoidF1;
 
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lb/h/g/k/a;
+.method public static final synthetic e(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)Lb/h/g/k/VKProgressDialog;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->K:Lb/h/g/k/a;
+    iget-object p0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->K:Lb/h/g/k/VKProgressDialog;
 
     if-eqz p0, :cond_0
 
@@ -683,7 +683,7 @@
     :cond_0
     const-string p0, "progress"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -753,7 +753,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 
@@ -769,7 +769,7 @@
 
     const-string v2, "activity!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -806,7 +806,7 @@
 
     .line 9
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -817,29 +817,29 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lb/h/i/a;->a:Lb/h/i/a;
+    sget-object v0, Lb/h/i/FacebookSdkWrapper;->INSTANCE:Lb/h/i/FacebookSdkWrapper;
 
-    invoke-virtual {v0}, Lb/h/i/a;->a()V
+    invoke-virtual {v0}, Lb/h/i/FacebookSdkWrapper;->a()V
 
     .line 2
-    invoke-static {}, Lcom/facebook/c$a;->a()Lcom/facebook/c;
+    invoke-static {}, Lcom/facebook/CallbackManager$a;->a()Lcom/facebook/CallbackManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->N:Lcom/facebook/c;
+    iput-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->N:Lcom/facebook/CallbackManager;
 
     .line 3
     invoke-static {}, Lcom/facebook/login/LoginManager;->b()Lcom/facebook/login/LoginManager;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->N:Lcom/facebook/c;
+    iget-object v1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->N:Lcom/facebook/CallbackManager;
 
     new-instance v2, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$h;
 
     invoke-direct {v2, p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$h;-><init>(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/facebook/login/LoginManager;->a(Lcom/facebook/c;Lcom/facebook/d;)V
+    invoke-virtual {v0, v1, v2}, Lcom/facebook/login/LoginManager;->a(Lcom/facebook/CallbackManager;Lcom/facebook/FacebookCallback;)V
 
     .line 4
     invoke-static {}, Lcom/facebook/login/LoginManager;->b()Lcom/facebook/login/LoginManager;
@@ -887,7 +887,7 @@
 
     const-string v1, "AccountManager.get(activ\u2026ountsByType(\"com.google\")"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     array-length v1, v0
@@ -978,7 +978,7 @@
     if-ne v1, v2, :cond_5
 
     .line 8
-    iget-object v1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->K:Lb/h/g/k/a;
+    iget-object v1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->K:Lb/h/g/k/VKProgressDialog;
 
     if-eqz v1, :cond_4
 
@@ -989,7 +989,7 @@
 
     const-string v1, "accounts[0]"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -999,14 +999,14 @@
 
     const-string v2, "activity!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0, p0, v1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Landroid/accounts/Account;Lcom/vk/core/fragments/b;Landroid/app/Activity;)V
+    invoke-direct {p0, v0, p0, v1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Landroid/accounts/Account;Lcom/vk/core/fragments/BaseFragment1;Landroid/app/Activity;)V
 
     goto :goto_2
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
@@ -1014,7 +1014,7 @@
     const-string v0, "progress"
 
     .line 10
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
@@ -1110,10 +1110,10 @@
 
     const-string v2, "CBAOIQPLEBABABABA"
 
-    invoke-static {v0, v1, v2}, Lru/ok/android/sdk/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/sdk/a;
+    invoke-static {v0, v1, v2}, Lru/ok/android/sdk/Odnoklassniki;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/sdk/Odnoklassniki;
 
     .line 2
-    invoke-static {}, Lru/ok/android/sdk/a;->d()Lru/ok/android/sdk/a;
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->d()Lru/ok/android/sdk/Odnoklassniki;
 
     move-result-object v0
 
@@ -1135,7 +1135,7 @@
     const-string v4, "com.vk.vkclient://ok-oauth"
 
     .line 4
-    invoke-virtual {v0, v1, v4, v2, v3}, Lru/ok/android/sdk/a;->a(Landroid/app/Activity;Ljava/lang/String;Lru/ok/android/sdk/util/OkAuthType;[Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v4, v2, v3}, Lru/ok/android/sdk/Odnoklassniki;->a(Landroid/app/Activity;Ljava/lang/String;Lru/ok/android/sdk/util/OkAuthType;[Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1144,7 +1144,7 @@
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a5()Lcom/twitter/sdk/android/core/identity/h;
+    invoke-direct {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a5()Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
 
     move-result-object v0
 
@@ -1156,19 +1156,19 @@
 
     invoke-direct {v2, p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$m;-><init>(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/twitter/sdk/android/core/identity/h;->a(Landroid/app/Activity;Lcom/twitter/sdk/android/core/b;)V
+    invoke-virtual {v0, v1, v2}, Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;->a(Landroid/app/Activity;Lcom/twitter/sdk/android/core/Callback;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/common/data/VKFromList<",
             "Lcom/vk/friends/recommendations/Item;",
             ">;>;"
@@ -1181,22 +1181,22 @@
     iput-object p2, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->F:Ljava/lang/String;
 
     .line 15
-    invoke-virtual {p0, p2, p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+.method public a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/common/data/VKFromList<",
             "Lcom/vk/friends/recommendations/Item;",
             ">;>;"
@@ -1204,7 +1204,7 @@
     .end annotation
 
     .line 20
-    new-instance p2, Lcom/vk/api/friends/h;
+    new-instance p2, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;
 
     new-instance v0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$c;
 
@@ -1212,33 +1212,33 @@
 
     const/16 v1, 0x14
 
-    invoke-direct {p2, v0, p1, v1}, Lcom/vk/api/friends/h;-><init>(Lcom/vk/api/friends/l$a;Ljava/lang/String;I)V
+    invoke-direct {p2, v0, p1, v1}, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;-><init>(Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse$a;Ljava/lang/String;I)V
 
-    invoke-virtual {p2}, Lcom/vk/api/friends/h;->o()Lcom/vk/api/friends/h;
+    invoke-virtual {p2}, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;->o()Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;
 
     .line 21
     iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->G:Ljava/lang/String;
 
-    invoke-virtual {p2, v0}, Lcom/vk/api/friends/h;->d(Ljava/lang/String;)Lcom/vk/api/friends/h;
+    invoke-virtual {p2, v0}, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;->d(Ljava/lang/String;)Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;
 
     .line 22
     iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->F:Ljava/lang/String;
 
-    invoke-virtual {p2, v0}, Lcom/vk/api/friends/h;->f(Ljava/lang/String;)Lcom/vk/api/friends/h;
+    invoke-virtual {p2, v0}, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;->f(Ljava/lang/String;)Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;
 
     .line 23
     invoke-direct {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->Y4()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lcom/vk/api/friends/h;->e(Ljava/lang/String;)Lcom/vk/api/friends/h;
+    invoke-virtual {p2, v0}, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;->e(Ljava/lang/String;)Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     .line 24
-    invoke-static {p2, v0, v1, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p2, v0, v1, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -1247,27 +1247,27 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$n;-><init>(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;Ljava/lang/String;)V
 
-    invoke-virtual {p2, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "FriendsGetRecommendation\u2026        ret\n            }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/common/data/VKFromList<",
             "Lcom/vk/friends/recommendations/Item;",
             ">;>;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -1277,30 +1277,30 @@
     .line 16
     new-instance p2, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$r;
 
-    invoke-direct {p2, p0, p3}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$r;-><init>(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;Lcom/vk/lists/t;)V
+    invoke-direct {p2, p0, p3}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$r;-><init>(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;Lcom/vk/lists/PaginationHelper;)V
 
     .line 17
     sget-object p3, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$s;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$s;
 
     .line 18
-    invoke-virtual {p1, p2, p3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 19
-    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
 .end method
 
-.method public final a(Lcom/facebook/c;)V
+.method public final a(Lcom/facebook/CallbackManager;)V
     .locals 0
 
     .line 5
-    iput-object p1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->N:Lcom/facebook/c;
+    iput-object p1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->N:Lcom/facebook/CallbackManager;
 
     return-void
 .end method
@@ -1343,77 +1343,77 @@
 
     const-string p3, "activity!!"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, p1, p0, p2}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Landroid/accounts/Account;Lcom/vk/core/fragments/b;Landroid/app/Activity;)V
+    invoke-direct {p0, p1, p0, p2}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a(Landroid/accounts/Account;Lcom/vk/core/fragments/BaseFragment1;Landroid/app/Activity;)V
 
     goto/16 :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     .line 2
     :cond_3
-    iget-object p1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->K:Lb/h/g/k/a;
+    iget-object p1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->K:Lb/h/g/k/VKProgressDialog;
 
     if-eqz p1, :cond_4
 
-    invoke-static {p1}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/app/Dialog;)V
 
     goto :goto_0
 
     :cond_4
     const-string p1, "progress"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 3
     :cond_5
-    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->N:Lcom/facebook/c;
+    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->N:Lcom/facebook/CallbackManager;
 
     if-eqz v0, :cond_6
 
     if-eqz v0, :cond_a
 
     .line 4
-    invoke-interface {v0, p1, p2, p3}, Lcom/facebook/c;->onActivityResult(IILandroid/content/Intent;)Z
+    invoke-interface {v0, p1, p2, p3}, Lcom/facebook/CallbackManager;->onActivityResult(IILandroid/content/Intent;)Z
 
     goto :goto_0
 
     .line 5
     :cond_6
-    invoke-static {}, Lru/ok/android/sdk/a;->e()Z
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    invoke-static {}, Lru/ok/android/sdk/a;->d()Lru/ok/android/sdk/a;
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->d()Lru/ok/android/sdk/Odnoklassniki;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lru/ok/android/sdk/a;->b(I)Z
+    invoke-virtual {v0, p1}, Lru/ok/android/sdk/Odnoklassniki;->b(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
     .line 6
-    invoke-static {}, Lru/ok/android/sdk/a;->d()Lru/ok/android/sdk/a;
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->d()Lru/ok/android/sdk/Odnoklassniki;
 
     move-result-object v0
 
@@ -1421,30 +1421,30 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, p2, p3, v1}, Lru/ok/android/sdk/a;->b(IILandroid/content/Intent;Lru/ok/android/sdk/b;)Z
+    invoke-virtual {v0, p1, p2, p3, v1}, Lru/ok/android/sdk/Odnoklassniki;->b(IILandroid/content/Intent;Lru/ok/android/sdk/OkListener;)Z
 
     goto :goto_0
 
     .line 7
     :cond_7
-    invoke-static {}, Lru/ok/android/sdk/a;->e()Z
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    invoke-static {}, Lru/ok/android/sdk/a;->d()Lru/ok/android/sdk/a;
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->d()Lru/ok/android/sdk/Odnoklassniki;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lru/ok/android/sdk/a;->e(I)Z
+    invoke-virtual {v0, p1}, Lru/ok/android/sdk/Odnoklassniki;->e(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
     .line 8
-    invoke-static {}, Lru/ok/android/sdk/a;->d()Lru/ok/android/sdk/a;
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->d()Lru/ok/android/sdk/Odnoklassniki;
 
     move-result-object v0
 
@@ -1452,28 +1452,28 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, p2, p3, v1}, Lru/ok/android/sdk/a;->a(IILandroid/content/Intent;Lru/ok/android/sdk/b;)Z
+    invoke-virtual {v0, p1, p2, p3, v1}, Lru/ok/android/sdk/Odnoklassniki;->a(IILandroid/content/Intent;Lru/ok/android/sdk/OkListener;)Z
 
     goto :goto_0
 
     .line 9
     :cond_8
-    invoke-direct {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a5()Lcom/twitter/sdk/android/core/identity/h;
+    invoke-direct {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a5()Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/identity/h;->b()I
+    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;->b()I
 
     move-result v0
 
     if-ne p1, v0, :cond_9
 
     .line 10
-    invoke-direct {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a5()Lcom/twitter/sdk/android/core/identity/h;
+    invoke-direct {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->a5()Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/twitter/sdk/android/core/identity/h;->a(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;->a(IILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -1501,7 +1501,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0, v1}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/core/ui/d;
+    invoke-static {p1, v1, v0, v1}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/core/ui/CardItemDecorator;
 
     :cond_0
     return-void
@@ -1511,10 +1511,10 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    new-instance p1, Lb/h/g/k/a;
+    new-instance p1, Lb/h/g/k/VKProgressDialog;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1524,16 +1524,16 @@
 
     const-string v1, "activity!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p1, v0}, Lb/h/g/k/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v0}, Lb/h/g/k/VKProgressDialog;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->K:Lb/h/g/k/a;
+    iput-object p1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->K:Lb/h/g/k/VKProgressDialog;
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -1555,7 +1555,7 @@
     const-string p2, "view"
 
     .line 2
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x2
 
@@ -1563,7 +1563,7 @@
 
     const v1, 0x7f0a0d9d
 
-    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v1
 
@@ -1576,7 +1576,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$onCreateView$1;-><init>(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;)V
 
-    invoke-static {v1, p0, v2}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+    invoke-static {v1, p0, v2}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
 
     .line 4
     :cond_0
@@ -1611,7 +1611,7 @@
 
     if-eqz v2, :cond_2
 
-    sget-object v4, Lcom/vk/navigation/q;->e:Ljava/lang/String;
+    sget-object v4, Lcom/vk/navigation/NavigatorKeys;->e:Ljava/lang/String;
 
     invoke-virtual {v2, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1630,7 +1630,7 @@
 
     const-string v4, "authors_rec"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -1641,7 +1641,7 @@
     if-eqz v1, :cond_6
 
     .line 8
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v2
 
@@ -1710,7 +1710,7 @@
     const v2, 0x7f0a0b7a
 
     .line 14
-    invoke-static {p1, v2, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -1726,31 +1726,31 @@
     invoke-virtual {v2}, Lcom/vk/lists/AbstractPaginatedView$c;->a()V
 
     .line 16
-    invoke-direct {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->U4()Lcom/vk/friends/recommendations/c;
+    invoke-direct {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->U4()Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
 
     move-result-object v2
 
     invoke-virtual {p2, v2}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 17
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v2
 
     if-nez v2, :cond_9
 
     .line 18
-    invoke-static {p2, v0, v3, v0}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/core/ui/d;
+    invoke-static {p2, v0, v3, v0}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/core/ui/CardItemDecorator;
 
     .line 19
     :cond_9
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
-    invoke-static {}, Lme/grishka/appkit/views/a;->a()Lme/grishka/appkit/views/a;
+    invoke-static {}, Lme/grishka/appkit/views/DividerItemDecoration;->a()Lme/grishka/appkit/views/DividerItemDecoration;
 
     move-result-object v0
 
@@ -1761,7 +1761,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lme/grishka/appkit/views/a;->a(Landroid/app/Activity;)Lme/grishka/appkit/views/a;
+    invoke-static {v0}, Lme/grishka/appkit/views/DividerItemDecoration;->a(Landroid/app/Activity;)Lme/grishka/appkit/views/DividerItemDecoration;
 
     move-result-object v0
 
@@ -1777,7 +1777,7 @@
 
     invoke-direct {v3, p0, v1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$q;-><init>(Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;Landroidx/appcompat/widget/Toolbar;)V
 
-    invoke-virtual {v0, v3}, Lme/grishka/appkit/views/a;->a(Lme/grishka/appkit/views/a$a;)Lme/grishka/appkit/views/a;
+    invoke-virtual {v0, v3}, Lme/grishka/appkit/views/DividerItemDecoration;->a(Lme/grishka/appkit/views/DividerItemDecoration$a;)Lme/grishka/appkit/views/DividerItemDecoration;
 
     invoke-virtual {v2, v0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -1789,19 +1789,19 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-static {v1, v0}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 22
     :cond_c
-    invoke-static {p0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$p;)Lcom/vk/lists/t$k;
+    invoke-static {p0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$p;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object v0
 
     const-string v1, "PaginationHelper.createW\u2026sRecommendationsFragment)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, p2}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {v0, p2}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     .line 23
     invoke-virtual {p2}, Lcom/vk/lists/RecyclerPaginatedView;->getRecyclerView()Landroidx/recyclerview/widget/RecyclerView;
@@ -1849,13 +1849,13 @@
     if-eqz v0, :cond_0
 
     .line 3
-    sget-object v0, Lcom/vk/friends/recommendations/f;->f:Lcom/vk/friends/recommendations/f;
+    sget-object v0, Lcom/vk/friends/recommendations/NearbyController;->INSTANCE:Lcom/vk/friends/recommendations/NearbyController;
 
-    invoke-virtual {v0, p0}, Lcom/vk/friends/recommendations/f;->b(Lcom/vk/friends/recommendations/f$a;)V
+    invoke-virtual {v0, p0}, Lcom/vk/friends/recommendations/NearbyController;->b(Lcom/vk/friends/recommendations/NearbyController$a;)V
 
     .line 4
     :cond_0
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onPause()V
 
     return-void
 .end method
@@ -1864,7 +1864,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
 
     .line 2
     sget-object v0, Lcom/vk/stats/AppUseTime;->f:Lcom/vk/stats/AppUseTime;
@@ -1879,9 +1879,9 @@
     if-eqz v0, :cond_0
 
     .line 4
-    sget-object v0, Lcom/vk/friends/recommendations/f;->f:Lcom/vk/friends/recommendations/f;
+    sget-object v0, Lcom/vk/friends/recommendations/NearbyController;->INSTANCE:Lcom/vk/friends/recommendations/NearbyController;
 
-    invoke-virtual {v0, p0}, Lcom/vk/friends/recommendations/f;->a(Lcom/vk/friends/recommendations/f$a;)V
+    invoke-virtual {v0, p0}, Lcom/vk/friends/recommendations/NearbyController;->a(Lcom/vk/friends/recommendations/NearbyController$a;)V
 
     :cond_0
     return-void
@@ -1900,11 +1900,11 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->U4()Lcom/vk/friends/recommendations/c;
+    invoke-direct {p0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;->U4()Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/friends/recommendations/c;->m(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;->m(Ljava/util/List;)V
 
     return-void
 .end method

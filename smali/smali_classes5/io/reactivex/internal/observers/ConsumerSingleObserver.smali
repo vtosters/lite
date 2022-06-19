@@ -3,9 +3,9 @@
 .source "ConsumerSingleObserver.java"
 
 # interfaces
-.implements Lc/a/v;
-.implements Lio/reactivex/disposables/b;
-.implements Lc/a/c0/b;
+.implements Lio/reactivex/SingleObserver;
+.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/observers/DisposableObserver/LambdaConsumerIntrospection;
 
 
 # annotations
@@ -15,12 +15,12 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/disposables/Disposable;",
         ">;",
-        "Lc/a/v<",
+        "Lio/reactivex/SingleObserver<",
         "TT;>;",
-        "Lio/reactivex/disposables/b;",
-        "Lc/a/c0/b;"
+        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/observers/DisposableObserver/LambdaConsumerIntrospection;"
     }
 .end annotation
 
@@ -30,10 +30,10 @@
 
 
 # instance fields
-.field final onError:Lc/a/z/g;
+.field final onError:Lio/reactivex/functions/Consumer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/g<",
+            "Lio/reactivex/functions/Consumer<",
             "-",
             "Ljava/lang/Throwable;",
             ">;"
@@ -41,10 +41,10 @@
     .end annotation
 .end field
 
-.field final onSuccess:Lc/a/z/g;
+.field final onSuccess:Lio/reactivex/functions/Consumer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/g<",
+            "Lio/reactivex/functions/Consumer<",
             "-TT;>;"
         }
     .end annotation
@@ -52,14 +52,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lc/a/z/g;Lc/a/z/g;)V
+.method public constructor <init>(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/z/g<",
+            "Lio/reactivex/functions/Consumer<",
             "-TT;>;",
-            "Lc/a/z/g<",
+            "Lio/reactivex/functions/Consumer<",
             "-",
             "Ljava/lang/Throwable;",
             ">;)V"
@@ -70,21 +70,21 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/observers/ConsumerSingleObserver;->onSuccess:Lc/a/z/g;
+    iput-object p1, p0, Lio/reactivex/internal/observers/ConsumerSingleObserver;->onSuccess:Lio/reactivex/functions/Consumer;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/observers/ConsumerSingleObserver;->onError:Lc/a/z/g;
+    iput-object p2, p0, Lio/reactivex/internal/observers/ConsumerSingleObserver;->onError:Lio/reactivex/functions/Consumer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 5
-    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -104,9 +104,9 @@
 
     .line 7
     :try_start_0
-    iget-object v0, p0, Lio/reactivex/internal/observers/ConsumerSingleObserver;->onSuccess:Lc/a/z/g;
+    iget-object v0, p0, Lio/reactivex/internal/observers/ConsumerSingleObserver;->onSuccess:Lio/reactivex/functions/Consumer;
 
-    invoke-interface {v0, p1}, Lc/a/z/g;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lio/reactivex/functions/Consumer;->accept(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -116,10 +116,10 @@
     move-exception p1
 
     .line 8
-    invoke-static {p1}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 9
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -135,9 +135,9 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lio/reactivex/internal/observers/ConsumerSingleObserver;->onError:Lc/a/z/g;
+    iget-object v0, p0, Lio/reactivex/internal/observers/ConsumerSingleObserver;->onError:Lio/reactivex/functions/Consumer;
 
-    invoke-interface {v0, p1}, Lc/a/z/g;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lio/reactivex/functions/Consumer;->accept(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -147,7 +147,7 @@
     move-exception v0
 
     .line 3
-    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 4
     new-instance v1, Lio/reactivex/exceptions/CompositeException;
@@ -166,7 +166,7 @@
 
     invoke-direct {v1, v2}, Lio/reactivex/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
 
-    invoke-static {v1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void

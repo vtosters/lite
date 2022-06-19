@@ -3,7 +3,7 @@
 .source "FaveType.kt"
 
 # interfaces
-.implements Lcom/vk/fave/entities/g;
+.implements Lcom/vk/fave/entities/FaveType1;
 
 
 # annotations
@@ -18,7 +18,7 @@
         "Ljava/lang/Enum<",
         "Lcom/vk/fave/entities/FaveType;",
         ">;",
-        "Lcom/vk/fave/entities/g;"
+        "Lcom/vk/fave/entities/FaveType1;"
     }
 .end annotation
 
@@ -182,7 +182,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/fave/entities/FaveType$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/fave/entities/FaveType$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/fave/entities/FaveType;->Companion:Lcom/vk/fave/entities/FaveType$a;
 

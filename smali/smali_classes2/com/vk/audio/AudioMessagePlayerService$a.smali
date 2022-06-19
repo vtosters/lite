@@ -49,7 +49,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/audio/AudioMessagePlayerService$a;->a:[Ljava/lang/Boolean;
 
-    invoke-static {}, Lcom/vk/audio/a;->m()Lcom/vk/audio/a;
+    invoke-static {}, Lcom/vk/audio/AudioMessageUtils;->m()Lcom/vk/audio/AudioMessageUtils;
 
     move-result-object v1
 
@@ -59,7 +59,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/audio/a;->a(Ljava/lang/String;)I
+    invoke-virtual {v1, v2}, Lcom/vk/audio/AudioMessageUtils;->a(Ljava/lang/String;)I
 
     move-result v1
 

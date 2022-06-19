@@ -3,7 +3,7 @@
 .source "DefaultDiskStorage.java"
 
 # interfaces
-.implements Lcom/facebook/cache/disk/c$b;
+.implements Lcom/facebook/cache/disk/DiskStorage$b;
 
 
 # annotations
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)Lcom/facebook/r/a;
+.method public a(Ljava/lang/Object;)Lcom/facebook/r/BinaryResource;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -80,11 +80,11 @@
     .line 17
     iget-object v0, p0, Lcom/facebook/cache/disk/DefaultDiskStorage$e;->c:Lcom/facebook/cache/disk/DefaultDiskStorage;
 
-    invoke-static {v0}, Lcom/facebook/cache/disk/DefaultDiskStorage;->d(Lcom/facebook/cache/disk/DefaultDiskStorage;)Lcom/facebook/common/time/a;
+    invoke-static {v0}, Lcom/facebook/cache/disk/DefaultDiskStorage;->d(Lcom/facebook/cache/disk/DefaultDiskStorage;)Lcom/facebook/common/time/Clock;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/facebook/common/time/a;->now()J
+    invoke-interface {v0}, Lcom/facebook/common/time/Clock;->now()J
 
     move-result-wide v0
 
@@ -92,7 +92,7 @@
 
     .line 18
     :cond_0
-    invoke-static {p1}, Lcom/facebook/r/b;->a(Ljava/io/File;)Lcom/facebook/r/b;
+    invoke-static {p1}, Lcom/facebook/r/FileBinaryResource;->a(Ljava/io/File;)Lcom/facebook/r/FileBinaryResource;
 
     move-result-object p1
 
@@ -161,7 +161,7 @@
     throw p1
 .end method
 
-.method public a(Lcom/facebook/cache/common/h;Ljava/lang/Object;)V
+.method public a(Lcom/facebook/cache/common/WriterCallback;Ljava/lang/Object;)V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -181,18 +181,18 @@
 
     .line 2
     :try_start_1
-    new-instance v0, Lcom/facebook/common/internal/c;
+    new-instance v0, Lcom/facebook/common/internal/CountingOutputStream;
 
-    invoke-direct {v0, p2}, Lcom/facebook/common/internal/c;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {v0, p2}, Lcom/facebook/common/internal/CountingOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     .line 3
-    invoke-interface {p1, v0}, Lcom/facebook/cache/common/h;->a(Ljava/io/OutputStream;)V
+    invoke-interface {p1, v0}, Lcom/facebook/cache/common/WriterCallback;->a(Ljava/io/OutputStream;)V
 
     .line 4
     invoke-virtual {v0}, Ljava/io/FilterOutputStream;->flush()V
 
     .line 5
-    invoke-virtual {v0}, Lcom/facebook/common/internal/c;->getCount()J
+    invoke-virtual {v0}, Lcom/facebook/common/internal/CountingOutputStream;->getCount()J
 
     move-result-wide v0
     :try_end_1

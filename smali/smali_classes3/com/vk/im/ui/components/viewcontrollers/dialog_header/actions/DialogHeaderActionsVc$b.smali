@@ -50,7 +50,7 @@
 
     const-string v2, "it"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
@@ -69,11 +69,11 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v1, Lcom/vk/im/ui/reporters/e;->b:Lcom/vk/im/ui/reporters/e;
+    sget-object v1, Lcom/vk/im/ui/reporters/MsgActionReporter;->INSTANCE:Lcom/vk/im/ui/reporters/MsgActionReporter;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/im/ui/reporters/e;->a(Lcom/vk/im/ui/components/common/MsgAction;Z)V
+    invoke-virtual {v1, v0, v2}, Lcom/vk/im/ui/reporters/MsgActionReporter;->a(Lcom/vk/im/ui/components/common/MsgAction;Z)V
 
     .line 3
     :cond_0
@@ -82,61 +82,61 @@
     move-result p1
 
     .line 4
-    sget v0, Lcom/vk/im/ui/h;->action_reply:I
+    sget v0, Lcom/vk/im/ui/R11;->action_reply:I
 
     if-ne p1, v0, :cond_1
 
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc$b;->a:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;->a()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;->a()V
 
     goto :goto_0
 
     .line 5
     :cond_1
-    sget v0, Lcom/vk/im/ui/h;->action_forward:I
+    sget v0, Lcom/vk/im/ui/R11;->action_forward:I
 
     if-ne p1, v0, :cond_2
 
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc$b;->a:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;->c()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;->c()V
 
     goto :goto_0
 
     .line 6
     :cond_2
-    sget v0, Lcom/vk/im/ui/h;->action_copy:I
+    sget v0, Lcom/vk/im/ui/R11;->action_copy:I
 
     if-ne p1, v0, :cond_3
 
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc$b;->a:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;->f()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;->f()V
 
     goto :goto_0
 
     .line 7
     :cond_3
-    sget v0, Lcom/vk/im/ui/h;->action_delete:I
+    sget v0, Lcom/vk/im/ui/R11;->action_delete:I
 
     if-ne p1, v0, :cond_4
 
@@ -148,7 +148,7 @@
 
     .line 8
     :cond_4
-    sget v0, Lcom/vk/im/ui/h;->action_spam:I
+    sget v0, Lcom/vk/im/ui/R11;->action_spam:I
 
     if-ne p1, v0, :cond_5
 

@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn;
-.super Lio/reactivex/internal/operators/observable/a;
+.super Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;
 .source "ObservableUnsubscribeOn.java"
 
 
@@ -15,60 +15,60 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/internal/operators/observable/a<",
+        "Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream<",
         "TT;TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final b:Lc/a/s;
+.field final b:Lio/reactivex/Scheduler;
 
 
 # direct methods
-.method public constructor <init>(Lc/a/p;Lc/a/s;)V
+.method public constructor <init>(Lio/reactivex/ObservableSource;Lio/reactivex/Scheduler;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "TT;>;",
-            "Lc/a/s;",
+            "Lio/reactivex/Scheduler;",
             ")V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/a;-><init>(Lc/a/p;)V
+    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;-><init>(Lio/reactivex/ObservableSource;)V
 
     .line 2
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn;->b:Lc/a/s;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn;->b:Lio/reactivex/Scheduler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lc/a/r;)V
+.method public b(Lio/reactivex/Observer;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/a;->a:Lc/a/p;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;->a:Lio/reactivex/ObservableSource;
 
     new-instance v1, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;
 
-    iget-object v2, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn;->b:Lc/a/s;
+    iget-object v2, p0, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn;->b:Lio/reactivex/Scheduler;
 
-    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;-><init>(Lc/a/r;Lc/a/s;)V
+    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/observable/ObservableUnsubscribeOn$UnsubscribeObserver;-><init>(Lio/reactivex/Observer;Lio/reactivex/Scheduler;)V
 
-    invoke-interface {v0, v1}, Lc/a/p;->a(Lc/a/r;)V
+    invoke-interface {v0, v1}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
 
     return-void
 .end method

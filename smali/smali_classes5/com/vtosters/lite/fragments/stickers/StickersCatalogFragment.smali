@@ -1,11 +1,11 @@
 .class public final Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment;
-.super Lcom/vk/catalog2/core/x/b;
+.super Lcom/vk/catalog2/core/x/CatalogFragment;
 .source "StickersCatalogFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/b0/a;
-.implements Lcom/vk/catalog2/core/util/g;
-.implements Lcom/vk/navigation/v;
+.implements Lcom/vk/navigation/b0/FragmentWhiteStatusBar;
+.implements Lcom/vk/catalog2/core/util/CatalogOnClickListener;
+.implements Lcom/vk/navigation/ScrolledToTop;
 
 
 # annotations
@@ -47,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -56,7 +56,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/catalog2/core/x/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/catalog2/core/x/CatalogFragment;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$mGiftsReceiver$1;
@@ -88,7 +88,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
+    invoke-virtual {v0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
 
     move-result-object v0
 
@@ -118,7 +118,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->b(Lcom/vk/navigation/b0/a;)Z
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->b(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)Z
 
     move-result v0
 
@@ -129,15 +129,15 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/x/a;->R4()Lcom/vk/catalog2/core/holders/common/n;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/x/BaseCatalogFragment;->R4()Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/catalog2/core/holders/common/j;
+    check-cast v0, Lcom/vk/catalog2/core/holders/common/CatalogScrollableViewHolder;
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/j;->F()V
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogScrollableViewHolder;->F()V
 
     const/4 v0, 0x1
 
@@ -157,18 +157,18 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->a(Lcom/vk/navigation/b0/a;)I
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->a(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public a(Landroid/content/Context;Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;)Lcom/vk/catalog2/core/holders/common/n;
+.method public a(Landroid/content/Context;Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;)Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
     .locals 6
 
     .line 1
-    new-instance p2, Lcom/vk/catalog2/core/holders/stickers/a;
+    new-instance p2, Lcom/vk/catalog2/core/holders/stickers/StickerCatalogVh;
 
     iget-boolean v3, p0, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment;->N:Z
 
@@ -184,7 +184,7 @@
 
     const-string p1, "context.getString(R.string.stickers_catalog_title)"
 
-    invoke-static {v5, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v0, p2
 
@@ -192,16 +192,16 @@
 
     move-object v2, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/catalog2/core/holders/stickers/a;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;ZZLjava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/catalog2/core/holders/stickers/StickerCatalogVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;ZZLjava/lang/String;)V
 
     return-object p2
 .end method
 
-.method protected a(Lcom/vk/catalog2/core/w/b;)Lio/reactivex/disposables/b;
+.method protected a(Lcom/vk/catalog2/core/w/CatalogEventsBus;)Lio/reactivex/disposables/Disposable;
     .locals 2
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/b;->a()Lc/a/m;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/CatalogEventsBus;->a()Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -214,7 +214,7 @@
     sget-object v1, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$d;->a:Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$d;
 
     .line 5
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
@@ -241,7 +241,7 @@
     return-void
 .end method
 
-.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/catalog2/core/a;
+.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/catalog2/core/CatalogConfiguration;
     .locals 0
 
     .line 1
@@ -283,24 +283,24 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/x/a;->R4()Lcom/vk/catalog2/core/holders/common/n;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/x/BaseCatalogFragment;->R4()Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/catalog2/core/holders/stickers/a;
+    instance-of v1, v0, Lcom/vk/catalog2/core/holders/stickers/StickerCatalogVh;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vk/catalog2/core/holders/stickers/a;
+    check-cast v0, Lcom/vk/catalog2/core/holders/stickers/StickerCatalogVh;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/holders/stickers/a;->f()Z
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/holders/stickers/StickerCatalogVh;->f()Z
 
     move-result v0
 
@@ -435,9 +435,9 @@
     iput-object v0, p0, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment;->K:Ljava/lang/String;
 
     .line 6
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->INSTANCE:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/t;->s()V
+    invoke-virtual {v0}, Lcom/vk/stickers/Stickers;->s()V
 
     .line 7
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -460,7 +460,7 @@
 
     .line 8
     :cond_5
-    invoke-super {p0, p1}, Lcom/vk/catalog2/core/x/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/catalog2/core/x/CatalogFragment;->onCreate(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -481,7 +481,7 @@
 
     .line 2
     :cond_0
-    invoke-super {p0}, Lcom/vk/catalog2/core/x/b;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/catalog2/core/x/CatalogFragment;->onDestroy()V
 
     return-void
 .end method
@@ -513,17 +513,17 @@
 
     if-eqz p1, :cond_2
 
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stickers/bridge/k;->c()Lcom/vk/stickers/bridge/m;
+    invoke-interface {v0}, Lcom/vk/stickers/bridge/StickersBridge;->c()Lcom/vk/stickers/bridge/StickersBridge3;
 
     move-result-object v0
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment;->L:Lcom/vk/dto/stickers/StickerStockItem;
 
@@ -531,18 +531,18 @@
 
     sget-object p2, Lcom/vk/stickers/bridge/GiftData;->c:Lcom/vk/stickers/bridge/GiftData;
 
-    invoke-interface {v0, p1, v1, p2}, Lcom/vk/stickers/bridge/m;->a(Landroid/content/Context;Lcom/vk/dto/stickers/StickerStockItem;Lcom/vk/stickers/bridge/GiftData;)V
+    invoke-interface {v0, p1, v1, p2}, Lcom/vk/stickers/bridge/StickersBridge3;->a(Landroid/content/Context;Lcom/vk/dto/stickers/StickerStockItem;Lcom/vk/stickers/bridge/GiftData;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p2
 
     .line 5
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p2
 

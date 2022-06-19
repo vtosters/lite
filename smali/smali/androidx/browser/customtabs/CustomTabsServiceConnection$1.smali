@@ -19,13 +19,13 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/browser/customtabs/CustomTabsServiceConnection;La/a/a/b;Landroid/content/ComponentName;)V
+.method constructor <init>(Landroidx/browser/customtabs/CustomTabsServiceConnection;Landroid/support/customtabs/ICustomTabsService;Landroid/content/ComponentName;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Landroidx/browser/customtabs/CustomTabsServiceConnection$1;->this$0:Landroidx/browser/customtabs/CustomTabsServiceConnection;
 
-    invoke-direct {p0, p2, p3}, Landroidx/browser/customtabs/CustomTabsClient;-><init>(La/a/a/b;Landroid/content/ComponentName;)V
+    invoke-direct {p0, p2, p3}, Landroidx/browser/customtabs/CustomTabsClient;-><init>(Landroid/support/customtabs/ICustomTabsService;Landroid/content/ComponentName;)V
 
     return-void
 .end method

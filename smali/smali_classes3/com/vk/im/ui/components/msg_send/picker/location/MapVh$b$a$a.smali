@@ -56,7 +56,7 @@
 
     iget-object v0, v0, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh$b;->a:Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->f(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;)Lkotlin/jvm/b/b;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->f(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;)Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
@@ -71,7 +71,7 @@
 
     const-string v0, "it"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 

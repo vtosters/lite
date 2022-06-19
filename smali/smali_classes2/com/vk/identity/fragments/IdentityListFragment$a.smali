@@ -1,5 +1,5 @@
 .class public final Lcom/vk/identity/fragments/IdentityListFragment$a;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "IdentityListFragment.kt"
 
 
@@ -21,10 +21,10 @@
     .line 1
     const-class v0, Lcom/vk/identity/fragments/IdentityListFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "arg_source"
 
@@ -39,7 +39,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "arg_identity_context"
 

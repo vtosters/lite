@@ -52,7 +52,7 @@
     const v0, 0x7f04059b
 
     .line 4
-    invoke-static {p1, v0}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     const/4 v0, 0x1
 
@@ -90,7 +90,7 @@
 
     const-string v2, "itemView"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -106,11 +106,11 @@
 
     const/4 v5, 0x0
 
-    sget-object v6, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
+    sget-object v6, Lcom/vk/identity/IdentityHelper;->INSTANCE:Lcom/vk/identity/IdentityHelper;
 
     iget-object v7, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v7, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v7, Landroid/widget/TextView;
 
@@ -120,9 +120,9 @@
 
     const-string v7, "itemView.context"
 
-    invoke-static {v2, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v6, v2, p1}, Lcom/vk/identity/a;->d(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v6, v2, p1}, Lcom/vk/identity/IdentityHelper;->d(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -134,7 +134,7 @@
 
     const-string v2, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object p1, v4, v5
 

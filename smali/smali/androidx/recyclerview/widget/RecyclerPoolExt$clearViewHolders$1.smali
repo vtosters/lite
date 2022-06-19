@@ -3,7 +3,7 @@
 .source "RecyclerPoolExt.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -77,7 +77,7 @@
 
     const-string v1, "it.itemView"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -85,7 +85,7 @@
 
     const-string v1, "it.itemView.context"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Landroidx/recyclerview/widget/RecyclerPoolExt;->access$toActivitySafe(Landroidx/recyclerview/widget/RecyclerPoolExt;Landroid/content/Context;)Landroid/app/Activity;
 
@@ -93,7 +93,7 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerPoolExt$clearViewHolders$1;->$byActivity:Landroid/app/Activity;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

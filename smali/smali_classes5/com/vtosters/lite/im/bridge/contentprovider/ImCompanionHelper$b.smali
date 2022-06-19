@@ -59,7 +59,7 @@
     .line 2
     sget-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->d:Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;
 
-    invoke-static {v0}, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->b(Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;)Lio/reactivex/subjects/a;
+    invoke-static {v0}, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->b(Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;)Lio/reactivex/subjects/BehaviorSubject;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/subjects/a;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lio/reactivex/subjects/BehaviorSubject;->b(Ljava/lang/Object;)V
 
     return-void
 .end method

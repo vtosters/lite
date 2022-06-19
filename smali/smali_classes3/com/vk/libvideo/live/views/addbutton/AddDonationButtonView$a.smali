@@ -41,7 +41,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView$a;->a:Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a(Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;)Lcom/vk/libvideo/live/views/addbutton/a;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a(Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;)Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     move-result-object p1
 
@@ -50,11 +50,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView$a;->a:Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a(Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;)Lcom/vk/libvideo/live/views/addbutton/a;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;->a(Lcom/vk/libvideo/live/views/addbutton/AddDonationButtonView;)Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/libvideo/live/views/addbutton/a;->Z()V
+    invoke-interface {p1}, Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;->Z()V
 
     :cond_0
     return-void

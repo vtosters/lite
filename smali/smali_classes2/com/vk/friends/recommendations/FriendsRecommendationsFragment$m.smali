@@ -1,5 +1,5 @@
 .class public final Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$m;
-.super Lcom/twitter/sdk/android/core/b;
+.super Lcom/twitter/sdk/android/core/Callback;
 .source "FriendsRecommendationsFragment.kt"
 
 
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/twitter/sdk/android/core/b<",
-        "Lcom/twitter/sdk/android/core/t;",
+        "Lcom/twitter/sdk/android/core/Callback<",
+        "Lcom/twitter/sdk/android/core/TwitterSession;",
         ">;"
     }
 .end annotation
@@ -38,7 +38,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$m;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
-    invoke-direct {p0}, Lcom/twitter/sdk/android/core/b;-><init>()V
+    invoke-direct {p0}, Lcom/twitter/sdk/android/core/Callback;-><init>()V
 
     return-void
 .end method
@@ -94,19 +94,19 @@
     const p1, 0x7f120365
 
     .line 3
-    invoke-static {p1, v2, v0, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v2, v0, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :cond_3
     return-void
 .end method
 
-.method public a(Lcom/twitter/sdk/android/core/k;)V
+.method public a(Lcom/twitter/sdk/android/core/Result;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/twitter/sdk/android/core/k<",
-            "Lcom/twitter/sdk/android/core/t;",
+            "Lcom/twitter/sdk/android/core/Result<",
+            "Lcom/twitter/sdk/android/core/TwitterSession;",
             ">;)V"
         }
     .end annotation
@@ -120,15 +120,15 @@
 
     invoke-direct {v0, v2, v1}, Lcom/vk/friends/recommendations/FriendsImportFragment$b;-><init>(ILcom/vk/friends/recommendations/FriendsImportFragment$ImportType;)V
 
-    iget-object p1, p1, Lcom/twitter/sdk/android/core/k;->a:Ljava/lang/Object;
+    iget-object p1, p1, Lcom/twitter/sdk/android/core/Result;->a:Ljava/lang/Object;
 
     const-string v1, "result.data"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/twitter/sdk/android/core/t;
+    check-cast p1, Lcom/twitter/sdk/android/core/TwitterSession;
 
-    invoke-virtual {v0, p1}, Lcom/vk/friends/recommendations/FriendsImportFragment$b;->a(Lcom/twitter/sdk/android/core/t;)Lcom/vk/friends/recommendations/FriendsImportFragment$b;
+    invoke-virtual {v0, p1}, Lcom/vk/friends/recommendations/FriendsImportFragment$b;->a(Lcom/twitter/sdk/android/core/TwitterSession;)Lcom/vk/friends/recommendations/FriendsImportFragment$b;
 
     iget-object p1, p0, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$m;->a:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
@@ -136,7 +136,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

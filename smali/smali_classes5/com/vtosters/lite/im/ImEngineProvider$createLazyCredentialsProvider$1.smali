@@ -3,12 +3,12 @@
 .source "ImEngineProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/im/ImEngineProvider;->a(Lcom/vk/bridges/f;)Lcom/vk/im/engine/UserCredentialsProvider;
+    value = Lcom/vtosters/lite/im/ImEngineProvider;->a(Lcom/vk/bridges/AuthBridge3;)Lcom/vk/im/engine/UserCredentialsProvider;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/im/engine/models/credentials/UserCredentials;",
         ">;"
     }
@@ -27,14 +27,14 @@
 
 
 # instance fields
-.field final synthetic $authBridge:Lcom/vk/bridges/f;
+.field final synthetic $authBridge:Lcom/vk/bridges/AuthBridge3;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/bridges/f;)V
+.method constructor <init>(Lcom/vk/bridges/AuthBridge3;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vtosters/lite/im/ImEngineProvider$createLazyCredentialsProvider$1;->$authBridge:Lcom/vk/bridges/f;
+    iput-object p1, p0, Lcom/vtosters/lite/im/ImEngineProvider$createLazyCredentialsProvider$1;->$authBridge:Lcom/vk/bridges/AuthBridge3;
 
     const/4 p1, 0x0
 
@@ -49,27 +49,27 @@
     .locals 4
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/im/ImEngineProvider$createLazyCredentialsProvider$1;->$authBridge:Lcom/vk/bridges/f;
+    iget-object v0, p0, Lcom/vtosters/lite/im/ImEngineProvider$createLazyCredentialsProvider$1;->$authBridge:Lcom/vk/bridges/AuthBridge3;
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vtosters/lite/im/ImEngineProvider$createLazyCredentialsProvider$1;->$authBridge:Lcom/vk/bridges/f;
+    iget-object v0, p0, Lcom/vtosters/lite/im/ImEngineProvider$createLazyCredentialsProvider$1;->$authBridge:Lcom/vk/bridges/AuthBridge3;
 
     new-instance v1, Lcom/vk/im/engine/models/credentials/UserCredentials;
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v2
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->M1()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->M1()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->N1()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->N1()Ljava/lang/String;
 
     move-result-object v0
 

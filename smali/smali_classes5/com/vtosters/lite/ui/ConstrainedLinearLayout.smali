@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/vtosters/lite/a0;->ConstrainedLinearLayout:[I
+    sget-object v1, Lcom/vtosters/lite/R;->ConstrainedLinearLayout:[I
 
     const/4 v2, 0x0
 

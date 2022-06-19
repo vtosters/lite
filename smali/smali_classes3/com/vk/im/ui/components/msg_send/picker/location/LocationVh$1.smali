@@ -3,12 +3,12 @@
 .source "LocationVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_send/picker/location/b;I)V
+    value = Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_send/picker/location/LocationCallback;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,7 +52,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh$1;->this$0:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->e0()Lcom/vk/im/ui/components/msg_send/picker/location/b;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->e0()Lcom/vk/im/ui/components/msg_send/picker/location/LocationCallback;
 
     move-result-object p1
 
@@ -60,11 +60,11 @@
 
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh$1;->this$0:Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->f0()Lcom/vk/im/ui/components/msg_send/picker/location/c;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh;->f0()Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/im/ui/components/msg_send/picker/location/b;->a(Lcom/vk/im/ui/components/msg_send/picker/location/c;)V
+    invoke-interface {p1, v0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationCallback;->a(Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;)V
 
     :cond_0
     return-void
@@ -78,7 +78,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVh$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

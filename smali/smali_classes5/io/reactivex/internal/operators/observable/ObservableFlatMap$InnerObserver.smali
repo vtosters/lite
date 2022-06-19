@@ -3,7 +3,7 @@
 .source "ObservableFlatMap.java"
 
 # interfaces
-.implements Lc/a/r;
+.implements Lio/reactivex/Observer;
 
 
 # annotations
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/disposables/Disposable;",
         ">;",
-        "Lc/a/r<",
+        "Lio/reactivex/Observer<",
         "TU;>;"
     }
 .end annotation
@@ -52,10 +52,10 @@
     .end annotation
 .end field
 
-.field volatile queue:Lc/a/a0/b/k;
+.field volatile queue:Lc/a/a0/b/SimpleQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/a0/b/k<",
+            "Lc/a/a0/b/SimpleQueue<",
             "TU;>;"
         }
     .end annotation
@@ -96,28 +96,28 @@
     return-void
 .end method
 
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 2
 
     .line 1
-    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 2
-    instance-of v0, p1, Lc/a/a0/b/f;
+    instance-of v0, p1, Lc/a/a0/b/QueueDisposable;
 
     if-eqz v0, :cond_1
 
     .line 3
-    check-cast p1, Lc/a/a0/b/f;
+    check-cast p1, Lc/a/a0/b/QueueDisposable;
 
     const/4 v0, 0x7
 
     .line 4
-    invoke-interface {p1, v0}, Lc/a/a0/b/g;->a(I)I
+    invoke-interface {p1, v0}, Lc/a/a0/b/QueueFuseable;->a(I)I
 
     move-result v0
 
@@ -129,7 +129,7 @@
     iput v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->fusionMode:I
 
     .line 6
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->queue:Lc/a/a0/b/k;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
     .line 7
     iput-boolean v1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->done:Z
@@ -150,7 +150,7 @@
     iput v0, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->fusionMode:I
 
     .line 10
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->queue:Lc/a/a0/b/k;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFlatMap$InnerObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
     :cond_1
     return-void
@@ -195,7 +195,7 @@
 
     .line 16
     :cond_1
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void

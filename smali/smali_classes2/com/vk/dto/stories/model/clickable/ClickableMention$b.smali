@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -175,7 +175,7 @@
 
     move-result-object v0
 
-    invoke-static {p4, v0}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Ljava/lang/Integer;)Ljava/lang/Object;
+    invoke-static {p4, v0}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Ljava/lang/Integer;)Ljava/lang/Object;
 
     move-result-object p4
 
@@ -200,7 +200,7 @@
 
     move-result-object p4
 
-    invoke-static {p5, p4}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Ljava/lang/Integer;)Ljava/lang/Object;
+    invoke-static {p5, p4}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Ljava/lang/Integer;)Ljava/lang/Object;
 
     move-result-object p4
 
@@ -253,7 +253,7 @@
     const-string v1, ""
 
     .line 2
-    invoke-static {p1, v0, v1}, Lcom/vk/core/extensions/m;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, v1}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -352,14 +352,14 @@
 
     const/4 v3, 0x2
 
-    invoke-static {v1, p1, v2, v3, v0}, Lkotlin/text/Regex;->a(Lkotlin/text/Regex;Ljava/lang/CharSequence;IILjava/lang/Object;)Lkotlin/text/j;
+    invoke-static {v1, p1, v2, v3, v0}, Lkotlin/text/Regex;->a(Lkotlin/text/Regex;Ljava/lang/CharSequence;IILjava/lang/Object;)Lkotlin/text/MatchResult2;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 19
-    invoke-virtual {p0, p1}, Lcom/vk/dto/stories/model/clickable/ClickableMention$b;->a(Lkotlin/text/j;)Lkotlin/Pair;
+    invoke-virtual {p0, p1}, Lcom/vk/dto/stories/model/clickable/ClickableMention$b;->a(Lkotlin/text/MatchResult2;)Lkotlin/Pair;
 
     move-result-object p1
 
@@ -369,12 +369,12 @@
     return-object v0
 .end method
 
-.method public final a(Lkotlin/text/j;)Lkotlin/Pair;
+.method public final a(Lkotlin/text/MatchResult2;)Lkotlin/Pair;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/text/j;",
+            "Lkotlin/text/MatchResult2;",
             ")",
             "Lkotlin/Pair<",
             "Ljava/lang/Integer;",
@@ -384,7 +384,7 @@
     .end annotation
 
     .line 20
-    invoke-interface {p1}, Lkotlin/text/j;->a()Ljava/util/List;
+    invoke-interface {p1}, Lkotlin/text/MatchResult2;->a()Ljava/util/List;
 
     move-result-object p1
 
@@ -412,7 +412,7 @@
 
     if-eqz v2, :cond_2
 
-    invoke-static {v2}, Lcom/vk/core/extensions/z;->h(Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-static {v2}, Lcom/vk/core/extensions/StringExt;->h(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v2
 
@@ -450,7 +450,7 @@
 
     const-string v3, "id"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

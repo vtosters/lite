@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
     iget-boolean v0, p0, Lcom/vtosters/lite/data/h;->a:Z
 
-    invoke-static {v0, p1}, Lcom/vtosters/lite/data/p;->a(ZLjava/lang/Object;)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/data/Games;->a(ZLjava/lang/Object;)V
 
     return-void
 .end method

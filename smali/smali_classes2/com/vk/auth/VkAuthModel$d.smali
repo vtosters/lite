@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/VkAuthModel;->l()Lc/a/m;
+    value = Lcom/vk/auth/VkAuthModel;->l()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -68,15 +68,15 @@
     .end annotation
 
     .line 2
-    sget-object v0, Lcom/vk/auth/s/a;->c:Lcom/vk/auth/s/a;
+    sget-object v0, Lcom/vk/auth/s/CountriesHelper;->INSTANCE:Lcom/vk/auth/s/CountriesHelper;
 
     iget-object v1, p0, Lcom/vk/auth/VkAuthModel$d;->a:Lcom/vk/auth/VkAuthModel;
 
-    invoke-virtual {v1}, Lcom/vk/auth/d;->o()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/vk/auth/DefaultAuthModel;->o()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/auth/s/a;->a(Landroid/content/Context;)Ljava/util/List;
+    invoke-virtual {v0, v1}, Lcom/vk/auth/s/CountriesHelper;->a(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object v0
 

@@ -3,7 +3,7 @@
 .source "ArticleFragment.kt"
 
 # interfaces
-.implements Lb/h/g/l/e;
+.implements Lb/h/g/l/NotificationListener;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lb/h/g/l/e<",
+        "Lb/h/g/l/NotificationListener<",
         "Lcom/vk/dto/newsfeed/entries/FaveEntry;",
         ">;"
     }
@@ -54,7 +54,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/a;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/Favable;
 
     move-result-object p2
 
@@ -80,7 +80,7 @@
 
     move-result-object p3
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -105,7 +105,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/articles/ArticleFragment$d;->a:Lcom/vk/articles/ArticleFragment;
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 

@@ -12,39 +12,39 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/core/ui/w/a;
+.field private final a:Lcom/vk/core/ui/w/VkPools;
 
 .field private final b:Landroid/content/Context;
 
 .field private final c:Lcom/vk/im/ui/ImUiPrefs;
 
-.field private final d:Lcom/vk/im/engine/a;
+.field private final d:Lcom/vk/im/engine/ImEngine;
 
-.field private final e:Lcom/vk/im/ui/p/b;
+.field private final e:Lcom/vk/im/ui/p/ImBridge8;
 
-.field private final f:Lcom/vk/im/engine/reporters/k;
+.field private final f:Lcom/vk/im/engine/reporters/ImReporters;
 
 .field private final g:Lcom/vk/core/ui/themes/VKThemeHelper;
 
-.field private final h:Lcom/vk/im/ui/q/h/b$b;
+.field private final h:Lcom/vk/im/ui/q/h/VideoAutoPlayer$b;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lb/h/n/c;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/im/engine/reporters/k;Lcom/vk/core/ui/themes/VKThemeHelper;Lcom/vk/im/ui/q/h/b$b;)V
+.method public constructor <init>(Landroid/content/Context;Lb/h/n/AppLifecycleDispatcher;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/engine/reporters/ImReporters;Lcom/vk/core/ui/themes/VKThemeHelper;Lcom/vk/im/ui/q/h/VideoAutoPlayer$b;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lcom/vk/im/ui/ImUiModule;->d:Lcom/vk/im/engine/a;
+    iput-object p3, p0, Lcom/vk/im/ui/ImUiModule;->d:Lcom/vk/im/engine/ImEngine;
 
-    iput-object p4, p0, Lcom/vk/im/ui/ImUiModule;->e:Lcom/vk/im/ui/p/b;
+    iput-object p4, p0, Lcom/vk/im/ui/ImUiModule;->e:Lcom/vk/im/ui/p/ImBridge8;
 
-    iput-object p5, p0, Lcom/vk/im/ui/ImUiModule;->f:Lcom/vk/im/engine/reporters/k;
+    iput-object p5, p0, Lcom/vk/im/ui/ImUiModule;->f:Lcom/vk/im/engine/reporters/ImReporters;
 
     iput-object p6, p0, Lcom/vk/im/ui/ImUiModule;->g:Lcom/vk/core/ui/themes/VKThemeHelper;
 
-    iput-object p7, p0, Lcom/vk/im/ui/ImUiModule;->h:Lcom/vk/im/ui/q/h/b$b;
+    iput-object p7, p0, Lcom/vk/im/ui/ImUiModule;->h:Lcom/vk/im/ui/q/h/VideoAutoPlayer$b;
 
     .line 2
     sget-object p1, Lcom/vk/im/ui/ImUiPrefs;->g:Lcom/vk/im/ui/ImUiPrefs;
@@ -52,9 +52,9 @@
     iput-object p1, p0, Lcom/vk/im/ui/ImUiModule;->c:Lcom/vk/im/ui/ImUiPrefs;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/im/ui/ImUiModule;->e:Lcom/vk/im/ui/p/b;
+    iget-object p1, p0, Lcom/vk/im/ui/ImUiModule;->e:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->i()Lcom/vk/im/ui/p/f;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->i()Lcom/vk/im/ui/p/ImBridge14;
 
     move-result-object p1
 
@@ -66,20 +66,20 @@
 
     move-result p3
 
-    invoke-interface {p1, p2, p3}, Lcom/vk/im/ui/p/f;->a(Landroid/content/Context;I)Landroid/content/Context;
+    invoke-interface {p1, p2, p3}, Lcom/vk/im/ui/p/ImBridge14;->a(Landroid/content/Context;I)Landroid/content/Context;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/vk/im/ui/ImUiModule;->b:Landroid/content/Context;
 
     .line 4
-    iget-object p1, p0, Lcom/vk/im/ui/ImUiModule;->d:Lcom/vk/im/engine/a;
+    iget-object p1, p0, Lcom/vk/im/ui/ImUiModule;->d:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/a;->e()Lcom/vk/im/engine/models/e;
+    invoke-virtual {p1}, Lcom/vk/im/engine/ImEngine;->e()Lcom/vk/im/engine/models/ImExperiments;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/e;->c()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/ImExperiments;->c()Ljava/lang/String;
 
     move-result-object p1
 
@@ -149,11 +149,11 @@
 
     .line 8
     :goto_1
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/ImUiModule;->a(I)Lcom/vk/core/ui/w/a;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/ImUiModule;->a(I)Lcom/vk/core/ui/w/VkPools;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/ImUiModule;->a:Lcom/vk/core/ui/w/a;
+    iput-object p1, p0, Lcom/vk/im/ui/ImUiModule;->a:Lcom/vk/core/ui/w/VkPools;
 
     .line 9
     sget-object p1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
@@ -186,44 +186,44 @@
     return-void
 .end method
 
-.method private final a(I)Lcom/vk/core/ui/w/a;
+.method private final a(I)Lcom/vk/core/ui/w/VkPools;
     .locals 4
 
     .line 7
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/ImUiModule;->c(I)Lcom/vk/core/ui/w/b;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/ImUiModule;->c(I)Lcom/vk/core/ui/w/VkViewPoolProvider;
 
     move-result-object v0
 
     .line 8
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/ui/ImUiModule;->a(ILcom/vk/core/ui/w/b;)Lcom/vk/core/ui/w/b;
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/ui/ImUiModule;->a(ILcom/vk/core/ui/w/VkViewPoolProvider;)Lcom/vk/core/ui/w/VkViewPoolProvider;
 
     move-result-object v1
 
     .line 9
-    invoke-direct {p0, p1, v0, v1}, Lcom/vk/im/ui/ImUiModule;->a(ILcom/vk/core/ui/w/b;Lcom/vk/core/ui/w/b;)Lcom/vk/core/ui/w/b;
+    invoke-direct {p0, p1, v0, v1}, Lcom/vk/im/ui/ImUiModule;->a(ILcom/vk/core/ui/w/VkViewPoolProvider;Lcom/vk/core/ui/w/VkViewPoolProvider;)Lcom/vk/core/ui/w/VkViewPoolProvider;
 
     move-result-object v2
 
     .line 10
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/ImUiModule;->b(I)Lcom/vk/core/ui/w/b;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/ImUiModule;->b(I)Lcom/vk/core/ui/w/VkViewPoolProvider;
 
     move-result-object p1
 
     .line 11
-    new-instance v3, Lcom/vk/core/ui/w/a;
+    new-instance v3, Lcom/vk/core/ui/w/VkPools;
 
-    invoke-direct {v3, p1, v2, v1, v0}, Lcom/vk/core/ui/w/a;-><init>(Lcom/vk/core/ui/w/b;Lcom/vk/core/ui/w/b;Lcom/vk/core/ui/w/b;Lcom/vk/core/ui/w/b;)V
+    invoke-direct {v3, p1, v2, v1, v0}, Lcom/vk/core/ui/w/VkPools;-><init>(Lcom/vk/core/ui/w/VkViewPoolProvider;Lcom/vk/core/ui/w/VkViewPoolProvider;Lcom/vk/core/ui/w/VkViewPoolProvider;Lcom/vk/core/ui/w/VkViewPoolProvider;)V
 
     return-object v3
 .end method
 
-.method private final a(ILcom/vk/core/ui/w/b;)Lcom/vk/core/ui/w/b;
+.method private final a(ILcom/vk/core/ui/w/VkViewPoolProvider;)Lcom/vk/core/ui/w/VkViewPoolProvider;
     .locals 13
 
     .line 40
-    new-instance v0, Lcom/vk/core/ui/w/b;
+    new-instance v0, Lcom/vk/core/ui/w/VkViewPoolProvider;
 
-    new-instance v12, Lcom/vk/core/ui/w/b$c;
+    new-instance v12, Lcom/vk/core/ui/w/VkViewPoolProvider$c;
 
     const/4 v1, 0x0
 
@@ -238,7 +238,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -254,7 +254,7 @@
     .line 43
     new-instance v7, Lcom/vk/im/ui/ImUiModule$getCarouselViewPool$1;
 
-    invoke-direct {v7, p2}, Lcom/vk/im/ui/ImUiModule$getCarouselViewPool$1;-><init>(Lcom/vk/core/ui/w/b;)V
+    invoke-direct {v7, p2}, Lcom/vk/im/ui/ImUiModule$getCarouselViewPool$1;-><init>(Lcom/vk/core/ui/w/VkViewPoolProvider;)V
 
     const/4 v3, 0x4
 
@@ -273,14 +273,14 @@
     move v2, p1
 
     .line 44
-    invoke-direct/range {v1 .. v11}, Lcom/vk/core/ui/w/b$c;-><init>(IILjava/util/Map;Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/b;Lb/h/n/c;Lcom/vk/core/ui/themes/VKThemeHelper;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v11}, Lcom/vk/core/ui/w/VkViewPoolProvider$c;-><init>(IILjava/util/Map;Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions2;Lb/h/n/AppLifecycleDispatcher;Lcom/vk/core/ui/themes/VKThemeHelper;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-direct {v0, v12}, Lcom/vk/core/ui/w/b;-><init>(Lcom/vk/core/ui/w/b$c;)V
+    invoke-direct {v0, v12}, Lcom/vk/core/ui/w/VkViewPoolProvider;-><init>(Lcom/vk/core/ui/w/VkViewPoolProvider$c;)V
 
     return-object v0
 .end method
 
-.method private final a(ILcom/vk/core/ui/w/b;Lcom/vk/core/ui/w/b;)Lcom/vk/core/ui/w/b;
+.method private final a(ILcom/vk/core/ui/w/VkViewPoolProvider;Lcom/vk/core/ui/w/VkViewPoolProvider;)Lcom/vk/core/ui/w/VkViewPoolProvider;
     .locals 15
 
     move-object v0, p0
@@ -292,7 +292,7 @@
 
     iget-object v2, v0, Lcom/vk/im/ui/ImUiModule;->b:Landroid/content/Context;
 
-    sget v3, Lcom/vk/im/ui/e;->msg_bubble_min_height:I
+    sget v3, Lcom/vk/im/ui/R9;->msg_bubble_min_height:I
 
     invoke-static {v2, v3}, Lcom/vk/core/util/ContextExtKt;->b(Landroid/content/Context;I)I
 
@@ -301,9 +301,9 @@
     div-int/2addr v1, v2
 
     .line 13
-    new-instance v2, Lcom/vk/core/ui/w/b;
+    new-instance v2, Lcom/vk/core/ui/w/VkViewPoolProvider;
 
-    new-instance v14, Lcom/vk/core/ui/w/b$c;
+    new-instance v14, Lcom/vk/core/ui/w/VkViewPoolProvider$c;
 
     const/16 v3, 0x16
 
@@ -320,7 +320,7 @@
 
     move-result-object v1
 
-    invoke-static {v4, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v4, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -335,7 +335,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v4, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v5
 
@@ -354,7 +354,7 @@
 
     move-result-object v7
 
-    invoke-static {v5, v7}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v5, v7}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v8
 
@@ -367,7 +367,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v7}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v7}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -380,7 +380,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v7}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v7}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -395,7 +395,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v7}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v7}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -410,7 +410,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v7}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v7}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -425,7 +425,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v7}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v7}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -440,7 +440,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v7}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v7}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -449,7 +449,7 @@
     aput-object v1, v3, v6
 
     .line 23
-    invoke-static {v7, v5}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v7, v5}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -464,7 +464,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -479,7 +479,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -494,7 +494,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -509,7 +509,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -524,7 +524,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -539,7 +539,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -554,7 +554,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -569,7 +569,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -584,7 +584,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -599,7 +599,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -614,7 +614,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -629,7 +629,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -652,7 +652,7 @@
 
     move-object/from16 v3, p3
 
-    invoke-direct {v9, v1, v3}, Lcom/vk/im/ui/ImUiModule$getMessagesViewPool$1;-><init>(Lcom/vk/core/ui/w/b;Lcom/vk/core/ui/w/b;)V
+    invoke-direct {v9, v1, v3}, Lcom/vk/im/ui/ImUiModule$getMessagesViewPool$1;-><init>(Lcom/vk/core/ui/w/VkViewPoolProvider;Lcom/vk/core/ui/w/VkViewPoolProvider;)V
 
     const/4 v5, 0x1
 
@@ -671,14 +671,14 @@
     move/from16 v4, p1
 
     .line 39
-    invoke-direct/range {v3 .. v13}, Lcom/vk/core/ui/w/b$c;-><init>(IILjava/util/Map;Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/b;Lb/h/n/c;Lcom/vk/core/ui/themes/VKThemeHelper;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v13}, Lcom/vk/core/ui/w/VkViewPoolProvider$c;-><init>(IILjava/util/Map;Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions2;Lb/h/n/AppLifecycleDispatcher;Lcom/vk/core/ui/themes/VKThemeHelper;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-direct {v2, v14}, Lcom/vk/core/ui/w/b;-><init>(Lcom/vk/core/ui/w/b$c;)V
+    invoke-direct {v2, v14}, Lcom/vk/core/ui/w/VkViewPoolProvider;-><init>(Lcom/vk/core/ui/w/VkViewPoolProvider$c;)V
 
     return-object v2
 .end method
 
-.method private final b(I)Lcom/vk/core/ui/w/b;
+.method private final b(I)Lcom/vk/core/ui/w/VkViewPoolProvider;
     .locals 14
 
     .line 2
@@ -705,9 +705,9 @@
     double-to-int v0, v0
 
     .line 3
-    new-instance v1, Lcom/vk/core/ui/w/b;
+    new-instance v1, Lcom/vk/core/ui/w/VkViewPoolProvider;
 
-    new-instance v13, Lcom/vk/core/ui/w/b$c;
+    new-instance v13, Lcom/vk/core/ui/w/VkViewPoolProvider$c;
 
     const/4 v2, 0x1
 
@@ -720,7 +720,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v2, v0}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -753,20 +753,20 @@
     move v3, p1
 
     .line 7
-    invoke-direct/range {v2 .. v12}, Lcom/vk/core/ui/w/b$c;-><init>(IILjava/util/Map;Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/b;Lb/h/n/c;Lcom/vk/core/ui/themes/VKThemeHelper;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v12}, Lcom/vk/core/ui/w/VkViewPoolProvider$c;-><init>(IILjava/util/Map;Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions2;Lb/h/n/AppLifecycleDispatcher;Lcom/vk/core/ui/themes/VKThemeHelper;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-direct {v1, v13}, Lcom/vk/core/ui/w/b;-><init>(Lcom/vk/core/ui/w/b$c;)V
+    invoke-direct {v1, v13}, Lcom/vk/core/ui/w/VkViewPoolProvider;-><init>(Lcom/vk/core/ui/w/VkViewPoolProvider$c;)V
 
     return-object v1
 .end method
 
-.method private final c(I)Lcom/vk/core/ui/w/b;
+.method private final c(I)Lcom/vk/core/ui/w/VkViewPoolProvider;
     .locals 13
 
     .line 2
-    new-instance v0, Lcom/vk/core/ui/w/b;
+    new-instance v0, Lcom/vk/core/ui/w/VkViewPoolProvider;
 
-    new-instance v12, Lcom/vk/core/ui/w/b$c;
+    new-instance v12, Lcom/vk/core/ui/w/VkViewPoolProvider$c;
 
     const/4 v1, 0x0
 
@@ -781,7 +781,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -814,28 +814,28 @@
     move v2, p1
 
     .line 6
-    invoke-direct/range {v1 .. v11}, Lcom/vk/core/ui/w/b$c;-><init>(IILjava/util/Map;Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/b;Lb/h/n/c;Lcom/vk/core/ui/themes/VKThemeHelper;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v11}, Lcom/vk/core/ui/w/VkViewPoolProvider$c;-><init>(IILjava/util/Map;Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions2;Lb/h/n/AppLifecycleDispatcher;Lcom/vk/core/ui/themes/VKThemeHelper;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-direct {v0, v12}, Lcom/vk/core/ui/w/b;-><init>(Lcom/vk/core/ui/w/b$c;)V
+    invoke-direct {v0, v12}, Lcom/vk/core/ui/w/VkViewPoolProvider;-><init>(Lcom/vk/core/ui/w/VkViewPoolProvider$c;)V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/vk/im/engine/models/f;
+.method public final a()Lcom/vk/im/engine/models/ImExperimentsProvider;
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/ImUiModule;->d:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vk/im/ui/ImUiModule;->d:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/a;->f()Lcom/vk/im/engine/models/f;
+    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->f()Lcom/vk/im/engine/models/ImExperimentsProvider;
 
     move-result-object v0
 
     const-string v1, "imEngine.experimentsProvider"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -852,7 +852,7 @@
 
     const-string v1, "msgListContext.resources"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -874,7 +874,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -886,7 +886,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -896,13 +896,13 @@
     invoke-virtual {p1, v0, v1}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V
 
     .line 6
-    iget-object p1, p0, Lcom/vk/im/ui/ImUiModule;->a:Lcom/vk/core/ui/w/a;
+    iget-object p1, p0, Lcom/vk/im/ui/ImUiModule;->a:Lcom/vk/core/ui/w/VkPools;
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/w/a;->d()Lcom/vk/core/ui/w/b;
+    invoke-virtual {p1}, Lcom/vk/core/ui/w/VkPools;->d()Lcom/vk/core/ui/w/VkViewPoolProvider;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/w/b;->b()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
+    invoke-virtual {p1}, Lcom/vk/core/ui/w/VkViewPoolProvider;->b()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
 
     move-result-object p1
 
@@ -920,11 +920,11 @@
     return-object v0
 .end method
 
-.method public final c()Lcom/vk/im/engine/reporters/k;
+.method public final c()Lcom/vk/im/engine/reporters/ImReporters;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/ImUiModule;->f:Lcom/vk/im/engine/reporters/k;
+    iget-object v0, p0, Lcom/vk/im/ui/ImUiModule;->f:Lcom/vk/im/engine/reporters/ImReporters;
 
     return-object v0
 .end method
@@ -938,20 +938,20 @@
     return-object v0
 .end method
 
-.method public final e()Lcom/vk/im/ui/q/h/b$b;
+.method public final e()Lcom/vk/im/ui/q/h/VideoAutoPlayer$b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/ImUiModule;->h:Lcom/vk/im/ui/q/h/b$b;
+    iget-object v0, p0, Lcom/vk/im/ui/ImUiModule;->h:Lcom/vk/im/ui/q/h/VideoAutoPlayer$b;
 
     return-object v0
 .end method
 
-.method public final f()Lcom/vk/core/ui/w/a;
+.method public final f()Lcom/vk/core/ui/w/VkPools;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/ImUiModule;->a:Lcom/vk/core/ui/w/a;
+    iget-object v0, p0, Lcom/vk/im/ui/ImUiModule;->a:Lcom/vk/core/ui/w/VkPools;
 
     return-object v0
 .end method

@@ -1,9 +1,9 @@
 .class public final Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;
-.super Lcom/vk/music/ui/common/o;
+.super Lcom/vk/music/ui/common/MusicViewHolder;
 .source "MusicPlaylistHeaderInfoHolder.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -15,10 +15,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/music/ui/common/o<",
-        "Lcom/vk/music/playlist/modern/g;",
+        "Lcom/vk/music/ui/common/MusicViewHolder<",
+        "Lcom/vk/music/playlist/modern/PlaylistScreenData;",
         ">;",
-        "Lcom/vk/core/ui/themes/f;"
+        "Lcom/vk/core/ui/themes/Themable;"
     }
 .end annotation
 
@@ -36,17 +36,17 @@
 
 .field private D:Z
 
-.field private final E:Lcom/vk/music/player/d;
+.field private final E:Lcom/vk/music/player/PlayerModel;
 
 .field private final F:Z
 
 .field private final b:Lcom/vk/music/view/ThumbsImageView;
 
-.field private final c:Lcom/vk/imageloader/o/c;
+.field private final c:Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;
 
 .field private final d:Lcom/vk/music/view/ThumbsImageView;
 
-.field private final e:Lcom/vk/music/m/m/c;
+.field private final e:Lcom/vk/music/m/m/ScalingViewPlayerListenerImpl;
 
 .field private final f:Landroid/widget/TextView;
 
@@ -63,7 +63,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v0, 0x5
 
@@ -90,26 +90,26 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/View;Lcom/vk/core/ui/k;Lkotlin/jvm/b/a;Lcom/vk/music/player/d;Z)V
+.method public constructor <init>(Landroid/view/View;Lcom/vk/core/ui/IdClickListener;Lkotlin/jvm/b/Functions;Lcom/vk/music/player/PlayerModel;Z)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lcom/vk/core/ui/k<",
+            "Lcom/vk/core/ui/IdClickListener<",
             "*>;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Lcom/vk/dto/music/Playlist;",
             ">;",
-            "Lcom/vk/music/player/d;",
+            "Lcom/vk/music/player/PlayerModel;",
             "Z)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/music/ui/common/o;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/music/ui/common/MusicViewHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p4, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->E:Lcom/vk/music/player/d;
+    iput-object p4, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->E:Lcom/vk/music/player/PlayerModel;
 
     iput-boolean p5, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->F:Z
 
@@ -118,7 +118,7 @@
 
     const-string p1, "itemView"
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v3, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder$foregroundImage$1;->a:Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder$foregroundImage$1;
 
@@ -130,7 +130,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v0 .. v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p4
 
@@ -139,7 +139,7 @@
     iput-object p4, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->b:Lcom/vk/music/view/ThumbsImageView;
 
     .line 3
-    new-instance p4, Lcom/vk/imageloader/o/c;
+    new-instance p4, Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;
 
     .line 4
     invoke-direct {p0}, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->i0()I
@@ -154,14 +154,14 @@
     const/16 v1, 0x4b
 
     .line 6
-    invoke-direct {p4, v1, p5, v0}, Lcom/vk/imageloader/o/c;-><init>(III)V
+    invoke-direct {p4, v1, p5, v0}, Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;-><init>(III)V
 
-    iput-object p4, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->c:Lcom/vk/imageloader/o/c;
+    iput-object p4, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->c:Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;
 
     .line 7
     iget-object v2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v5, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder$blurBackgroundImage$1;
 
@@ -175,7 +175,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v2 .. v7}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p4
 
@@ -184,13 +184,13 @@
     iput-object p4, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->d:Lcom/vk/music/view/ThumbsImageView;
 
     .line 8
-    new-instance p4, Lcom/vk/music/m/m/c;
+    new-instance p4, Lcom/vk/music/m/m/ScalingViewPlayerListenerImpl;
 
     iget-object p5, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->b:Lcom/vk/music/view/ThumbsImageView;
 
-    invoke-direct {p4, p5, p3}, Lcom/vk/music/m/m/c;-><init>(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-direct {p4, p5, p3}, Lcom/vk/music/m/m/ScalingViewPlayerListenerImpl;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
-    iput-object p4, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->e:Lcom/vk/music/m/m/c;
+    iput-object p4, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->e:Lcom/vk/music/m/m/ScalingViewPlayerListenerImpl;
 
     .line 9
     iget-object p3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -234,7 +234,7 @@
     .line 12
     iget-object p3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p4, 0x7f0a09e5
 
@@ -247,7 +247,7 @@
     .line 13
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f0a0242
 
@@ -259,7 +259,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v0 .. v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -281,11 +281,11 @@
     return p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;)Lcom/vk/imageloader/o/c;
+.method public static final synthetic b(Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;)Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->c:Lcom/vk/imageloader/o/c;
+    iget-object p0, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->c:Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;
 
     return-object p0
 .end method
@@ -327,7 +327,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -335,7 +335,7 @@
 
     const-string v1, "itemView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f040095
 
@@ -354,7 +354,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -362,7 +362,7 @@
 
     const-string v1, "itemView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f040168
 
@@ -375,18 +375,18 @@
 
 
 # virtual methods
-.method protected a(Lcom/vk/music/playlist/modern/g;)V
+.method protected a(Lcom/vk/music/playlist/modern/PlaylistScreenData;)V
     .locals 8
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->b()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->b()Lcom/vk/dto/music/Playlist;
 
     move-result-object v0
 
     .line 4
     iget-object v1, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->C:Landroid/widget/ImageView;
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->i()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->i()Z
 
     move-result v2
 
@@ -399,7 +399,7 @@
     .line 5
     iget-object v1, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->B:Landroid/view/View;
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->i()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->i()Z
 
     move-result v2
 
@@ -412,30 +412,30 @@
 
     const-string v2, "title"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v2, Lcom/vk/music/ui/common/formatting/d;->a:Lcom/vk/music/ui/common/formatting/d;
+    sget-object v2, Lcom/vk/music/ui/common/formatting/PlaylistFormatter;->INSTANCE:Lcom/vk/music/ui/common/formatting/PlaylistFormatter;
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v4
 
     const v5, 0x7f04059a
 
-    invoke-virtual {v2, v4, v0, v5}, Lcom/vk/music/ui/common/formatting/d;->a(Landroid/content/Context;Lcom/vk/dto/music/Playlist;I)Ljava/lang/CharSequence;
+    invoke-virtual {v2, v4, v0, v5}, Lcom/vk/music/ui/common/formatting/PlaylistFormatter;->a(Landroid/content/Context;Lcom/vk/dto/music/Playlist;I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 7
-    sget-object v1, Lcom/vk/music/ui/common/formatting/d;->a:Lcom/vk/music/ui/common/formatting/d;
+    sget-object v1, Lcom/vk/music/ui/common/formatting/PlaylistFormatter;->INSTANCE:Lcom/vk/music/ui/common/formatting/PlaylistFormatter;
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2, v0}, Lcom/vk/music/ui/common/formatting/d;->a(Landroid/content/Context;Lcom/vk/dto/music/Playlist;)Ljava/lang/String;
+    invoke-virtual {v1, v2, v0}, Lcom/vk/music/ui/common/formatting/PlaylistFormatter;->a(Landroid/content/Context;Lcom/vk/dto/music/Playlist;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -444,7 +444,7 @@
 
     const-string v4, "owner"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -463,7 +463,7 @@
     iget-object v2, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->B:Landroid/view/View;
 
     .line 11
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->i()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->i()Z
 
     move-result v4
 
@@ -475,7 +475,7 @@
 
     .line 12
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->b()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->b()Lcom/vk/dto/music/Playlist;
 
     move-result-object v4
 
@@ -485,7 +485,7 @@
 
     if-eqz v4, :cond_1
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v4
 
@@ -503,7 +503,7 @@
 
     .line 13
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v1
 
@@ -513,7 +513,7 @@
 
     iget-object v7, v0, Lcom/vk/dto/music/Playlist;->J:Lcom/vk/dto/music/PlaylistOwner;
 
-    invoke-static {v7}, Lcom/vk/dto/music/c;->b(Lcom/vk/dto/music/PlaylistOwner;)Ljava/lang/String;
+    invoke-static {v7}, Lcom/vk/dto/music/PlaylistOwner1;->b(Lcom/vk/dto/music/PlaylistOwner;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -532,7 +532,7 @@
 
     const-string v2, "info"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/dto/music/Playlist;->u1()Z
 
@@ -541,9 +541,9 @@
     if-eqz v2, :cond_2
 
     .line 16
-    sget-object v2, Lcom/vk/music/ui/common/formatting/d;->a:Lcom/vk/music/ui/common/formatting/d;
+    sget-object v2, Lcom/vk/music/ui/common/formatting/PlaylistFormatter;->INSTANCE:Lcom/vk/music/ui/common/formatting/PlaylistFormatter;
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v4
 
@@ -551,7 +551,7 @@
 
     iget v7, v0, Lcom/vk/dto/music/Playlist;->E:I
 
-    invoke-virtual {v2, v4, v6, v7}, Lcom/vk/music/ui/common/formatting/d;->a(Landroid/content/Context;Ljava/util/List;I)Ljava/lang/CharSequence;
+    invoke-virtual {v2, v4, v6, v7}, Lcom/vk/music/ui/common/formatting/PlaylistFormatter;->a(Landroid/content/Context;Ljava/util/List;I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -559,26 +559,26 @@
 
     .line 17
     :cond_2
-    sget-object v2, Lcom/vk/music/ui/common/formatting/d;->a:Lcom/vk/music/ui/common/formatting/d;
+    sget-object v2, Lcom/vk/music/ui/common/formatting/PlaylistFormatter;->INSTANCE:Lcom/vk/music/ui/common/formatting/PlaylistFormatter;
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v4
 
     iget v6, v0, Lcom/vk/dto/music/Playlist;->N:I
 
-    invoke-virtual {v2, v4, v6}, Lcom/vk/music/ui/common/formatting/d;->a(Landroid/content/Context;I)Ljava/lang/CharSequence;
+    invoke-virtual {v2, v4, v6}, Lcom/vk/music/ui/common/formatting/PlaylistFormatter;->a(Landroid/content/Context;I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
     .line 18
     :goto_1
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
 
     .line 19
     iget-object v1, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->b:Lcom/vk/music/view/ThumbsImageView;
 
-    invoke-virtual {p0}, Lcom/vk/music/ui/common/o;->c0()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/music/ui/common/MusicViewHolder;->c0()Landroid/content/Context;
 
     move-result-object v2
 
@@ -607,7 +607,7 @@
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->j()Z
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->j()Z
 
     move-result p1
 
@@ -655,7 +655,7 @@
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setElevation(F)V
 
     .line 27
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     goto :goto_4
 
@@ -710,7 +710,7 @@
 
     .line 33
     :goto_3
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     goto :goto_4
 
@@ -747,7 +747,7 @@
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setElevation(F)V
 
     .line 38
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     :cond_e
     :goto_5
@@ -758,9 +758,9 @@
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/music/playlist/modern/g;
+    check-cast p1, Lcom/vk/music/playlist/modern/PlaylistScreenData;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->a(Lcom/vk/music/playlist/modern/g;)V
+    invoke-virtual {p0, p1}, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->a(Lcom/vk/music/playlist/modern/PlaylistScreenData;)V
 
     return-void
 .end method
@@ -769,11 +769,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->E:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->E:Lcom/vk/music/player/PlayerModel;
 
-    iget-object v1, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->e:Lcom/vk/music/m/m/c;
+    iget-object v1, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->e:Lcom/vk/music/m/m/ScalingViewPlayerListenerImpl;
 
-    invoke-interface {v0, v1}, Lcom/vk/music/player/d;->b(Lcom/vk/music/player/d$a;)V
+    invoke-interface {v0, v1}, Lcom/vk/music/player/PlayerModel;->b(Lcom/vk/music/player/PlayerModel$a;)V
 
     return-void
 .end method
@@ -782,11 +782,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->E:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->E:Lcom/vk/music/player/PlayerModel;
 
-    iget-object v1, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->e:Lcom/vk/music/m/m/c;
+    iget-object v1, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->e:Lcom/vk/music/m/m/ScalingViewPlayerListenerImpl;
 
-    invoke-interface {v0, v1}, Lcom/vk/music/player/d;->a(Lcom/vk/music/player/d$a;)V
+    invoke-interface {v0, v1}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/music/player/PlayerModel$a;)V
 
     return-void
 .end method
@@ -815,21 +815,21 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->c:Lcom/vk/imageloader/o/c;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->c:Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;
 
     .line 5
     invoke-direct {p0}, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->i0()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/o/c;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;->a(I)V
 
     .line 6
     invoke-direct {p0}, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistHeaderInfoHolder;->j0()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/o/c;->b(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;->b(I)V
 
     return-void
 .end method

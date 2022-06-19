@@ -1,11 +1,11 @@
 .class Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a$a;
-.super Lcom/twitter/sdk/android/core/b;
+.super Lcom/twitter/sdk/android/core/Callback;
 .source "OAuth2Service.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a;->a(Lcom/twitter/sdk/android/core/k;)V
+    value = Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a;->a(Lcom/twitter/sdk/android/core/Result;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/twitter/sdk/android/core/b<",
-        "Lcom/twitter/sdk/android/core/internal/oauth/a;",
+        "Lcom/twitter/sdk/android/core/Callback<",
+        "Lcom/twitter/sdk/android/core/internal/oauth/GuestTokenResponse;",
         ">;"
     }
 .end annotation
@@ -37,7 +37,7 @@
 
     iput-object p2, p0, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a$a;->a:Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Token;
 
-    invoke-direct {p0}, Lcom/twitter/sdk/android/core/b;-><init>()V
+    invoke-direct {p0}, Lcom/twitter/sdk/android/core/Callback;-><init>()V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
     .locals 3
 
     .line 4
-    invoke-static {}, Lcom/twitter/sdk/android/core/n;->g()Lcom/twitter/sdk/android/core/g;
+    invoke-static {}, Lcom/twitter/sdk/android/core/Twitter;->g()Lcom/twitter/sdk/android/core/Logger;
 
     move-result-object v0
 
@@ -56,25 +56,25 @@
 
     const-string v2, "Your app may not allow guest auth. Please talk to us regarding upgrading your consumer key."
 
-    invoke-interface {v0, v1, v2, p1}, Lcom/twitter/sdk/android/core/g;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, v2, p1}, Lcom/twitter/sdk/android/core/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 5
     iget-object v0, p0, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a$a;->b:Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a;
 
-    iget-object v0, v0, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a;->a:Lcom/twitter/sdk/android/core/b;
+    iget-object v0, v0, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a;->a:Lcom/twitter/sdk/android/core/Callback;
 
-    invoke-virtual {v0, p1}, Lcom/twitter/sdk/android/core/b;->a(Lcom/twitter/sdk/android/core/TwitterException;)V
+    invoke-virtual {v0, p1}, Lcom/twitter/sdk/android/core/Callback;->a(Lcom/twitter/sdk/android/core/TwitterException;)V
 
     return-void
 .end method
 
-.method public a(Lcom/twitter/sdk/android/core/k;)V
+.method public a(Lcom/twitter/sdk/android/core/Result;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/twitter/sdk/android/core/k<",
-            "Lcom/twitter/sdk/android/core/internal/oauth/a;",
+            "Lcom/twitter/sdk/android/core/Result<",
+            "Lcom/twitter/sdk/android/core/internal/oauth/GuestTokenResponse;",
             ">;)V"
         }
     .end annotation
@@ -95,26 +95,26 @@
 
     move-result-object v2
 
-    iget-object p1, p1, Lcom/twitter/sdk/android/core/k;->a:Ljava/lang/Object;
+    iget-object p1, p1, Lcom/twitter/sdk/android/core/Result;->a:Ljava/lang/Object;
 
-    check-cast p1, Lcom/twitter/sdk/android/core/internal/oauth/a;
+    check-cast p1, Lcom/twitter/sdk/android/core/internal/oauth/GuestTokenResponse;
 
-    iget-object p1, p1, Lcom/twitter/sdk/android/core/internal/oauth/a;->a:Ljava/lang/String;
+    iget-object p1, p1, Lcom/twitter/sdk/android/core/internal/oauth/GuestTokenResponse;->a:Ljava/lang/String;
 
     invoke-direct {v0, v1, v2, p1}, Lcom/twitter/sdk/android/core/internal/oauth/GuestAuthToken;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object p1, p0, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a$a;->b:Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a;
 
-    iget-object p1, p1, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a;->a:Lcom/twitter/sdk/android/core/b;
+    iget-object p1, p1, Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Service$a;->a:Lcom/twitter/sdk/android/core/Callback;
 
-    new-instance v1, Lcom/twitter/sdk/android/core/k;
+    new-instance v1, Lcom/twitter/sdk/android/core/Result;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v0, v2}, Lcom/twitter/sdk/android/core/k;-><init>(Ljava/lang/Object;Lf/l;)V
+    invoke-direct {v1, v0, v2}, Lcom/twitter/sdk/android/core/Result;-><init>(Ljava/lang/Object;Lretrofit2/Response;)V
 
-    invoke-virtual {p1, v1}, Lcom/twitter/sdk/android/core/b;->a(Lcom/twitter/sdk/android/core/k;)V
+    invoke-virtual {p1, v1}, Lcom/twitter/sdk/android/core/Callback;->a(Lcom/twitter/sdk/android/core/Result;)V
 
     return-void
 .end method

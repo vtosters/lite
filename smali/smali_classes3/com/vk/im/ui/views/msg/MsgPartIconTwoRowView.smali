@@ -3,7 +3,7 @@
 .source "MsgPartIconTwoRowView.java"
 
 # interfaces
-.implements Lcom/vk/im/ui/views/msg/a;
+.implements Lcom/vk/im/ui/views/msg/WithTime;
 
 
 # instance fields
@@ -92,7 +92,7 @@
     .locals 2
 
     .line 19
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_android_maxWidth:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_android_maxWidth:I
 
     const v0, 0x7fffffff
 
@@ -103,7 +103,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setMaximumWidth(I)V
 
     .line 20
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_android_maxHeight:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_android_maxHeight:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -112,7 +112,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setMaximumHeight(I)V
 
     .line 21
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_vkim_icon:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_vkim_icon:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -121,7 +121,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 22
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_vkim_iconWidth:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_vkim_iconWidth:I
 
     const/16 v0, 0x28
 
@@ -138,7 +138,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setIconWidth(I)V
 
     .line 25
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_vkim_iconHeight:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_vkim_iconHeight:I
 
     .line 26
     invoke-static {v0}, Lcom/vk/core/util/Screen;->a(I)I
@@ -153,7 +153,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setIconHeight(I)V
 
     .line 28
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_vkim_titleText:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_vkim_titleText:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -162,7 +162,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setTitleText(Ljava/lang/CharSequence;)V
 
     .line 29
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_vkim_titleTextAppearance:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_vkim_titleTextAppearance:I
 
     const/4 v0, 0x0
 
@@ -173,7 +173,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setTitleTextAppearance(I)V
 
     .line 30
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_vkim_subtitleText:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_vkim_subtitleText:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -182,7 +182,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setSubtitleText(Ljava/lang/CharSequence;)V
 
     .line 31
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_vkim_subtitleTextAppearance:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_vkim_subtitleTextAppearance:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -191,7 +191,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setSubtitleTextAppearance(I)V
 
     .line 32
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_vkim_timeText:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_vkim_timeText:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -200,7 +200,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setTimeText(Ljava/lang/CharSequence;)V
 
     .line 33
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_vkim_timeTextAppearance:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_vkim_timeTextAppearance:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -209,7 +209,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setTimeTextAppearance(I)V
 
     .line 34
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_vkim_timeTranslationY:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_vkim_timeTranslationY:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -218,7 +218,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setTimeTranslationY(I)V
 
     .line 35
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_vkim_timeSpaceX:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_vkim_timeSpaceX:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -227,7 +227,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setTimeSpaceX(I)V
 
     .line 36
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_vkim_spaceIconInfo:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_vkim_spaceIconInfo:I
 
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -236,7 +236,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->setSpaceIconInfo(I)V
 
     .line 37
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_vkim_iconTint:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_vkim_iconTint:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -245,7 +245,7 @@
     if-eqz p1, :cond_0
 
     .line 38
-    sget p1, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView_vkim_iconTint:I
+    sget p1, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView_vkim_iconTint:I
 
     const/4 v0, -0x1
 
@@ -291,7 +291,7 @@
     iput-object v0, p0, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->d:Landroid/widget/TextView;
 
     .line 5
-    sget-object v0, Lcom/vk/im/ui/o;->MsgPartIconTwoRowView:[I
+    sget-object v0, Lcom/vk/im/ui/R2;->MsgPartIconTwoRowView:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -712,7 +712,7 @@
     move-result v7
 
     .line 7
-    invoke-static {v1, v4, v6, v2}, Lcom/vk/im/ui/views/e;->a(IIII)I
+    invoke-static {v1, v4, v6, v2}, Lcom/vk/im/ui/views/MeasureUtils;->a(IIII)I
 
     move-result v8
 
@@ -722,14 +722,14 @@
     iget v10, v0, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->g:I
 
     .line 9
-    invoke-static {v10}, Lcom/vk/im/ui/views/e;->b(I)I
+    invoke-static {v10}, Lcom/vk/im/ui/views/MeasureUtils;->b(I)I
 
     move-result v10
 
     iget v11, v0, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->h:I
 
     .line 10
-    invoke-static {v11}, Lcom/vk/im/ui/views/e;->b(I)I
+    invoke-static {v11}, Lcom/vk/im/ui/views/MeasureUtils;->b(I)I
 
     move-result v11
 
@@ -767,12 +767,12 @@
     iget-object v12, v0, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->b:Lcom/vk/im/ui/views/FixTextView;
 
     .line 16
-    invoke-static {v8}, Lcom/vk/im/ui/views/e;->a(I)I
+    invoke-static {v8}, Lcom/vk/im/ui/views/MeasureUtils;->a(I)I
 
     move-result v13
 
     .line 17
-    invoke-static {}, Lcom/vk/im/ui/views/e;->a()I
+    invoke-static {}, Lcom/vk/im/ui/views/MeasureUtils;->a()I
 
     move-result v14
 
@@ -808,12 +808,12 @@
     iget-object v11, v0, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->d:Landroid/widget/TextView;
 
     .line 23
-    invoke-static {v8}, Lcom/vk/im/ui/views/e;->a(I)I
+    invoke-static {v8}, Lcom/vk/im/ui/views/MeasureUtils;->a(I)I
 
     move-result v14
 
     .line 24
-    invoke-static {}, Lcom/vk/im/ui/views/e;->a()I
+    invoke-static {}, Lcom/vk/im/ui/views/MeasureUtils;->a()I
 
     move-result v15
 
@@ -854,14 +854,14 @@
     iget-object v15, v0, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->c:Lcom/vk/im/ui/views/FixTextView;
 
     .line 30
-    invoke-static {v8}, Lcom/vk/im/ui/views/e;->a(I)I
+    invoke-static {v8}, Lcom/vk/im/ui/views/MeasureUtils;->a(I)I
 
     move-result v8
 
     move/from16 v16, v5
 
     .line 31
-    invoke-static {}, Lcom/vk/im/ui/views/e;->a()I
+    invoke-static {}, Lcom/vk/im/ui/views/MeasureUtils;->a()I
 
     move-result v5
 
@@ -929,7 +929,7 @@
     add-int/2addr v3, v5
 
     .line 41
-    invoke-static {v1, v4, v6, v2}, Lcom/vk/im/ui/views/e;->b(IIII)I
+    invoke-static {v1, v4, v6, v2}, Lcom/vk/im/ui/views/MeasureUtils;->b(IIII)I
 
     move-result v1
 
@@ -938,7 +938,7 @@
     move/from16 v4, v16
 
     .line 42
-    invoke-static {v2, v4, v7, v3}, Lcom/vk/im/ui/views/e;->b(IIII)I
+    invoke-static {v2, v4, v7, v3}, Lcom/vk/im/ui/views/MeasureUtils;->b(IIII)I
 
     move-result v2
 

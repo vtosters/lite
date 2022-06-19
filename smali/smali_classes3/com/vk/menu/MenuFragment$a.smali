@@ -3,8 +3,8 @@
 .source "MenuFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/o;
-.implements Lcom/vk/menu/c$a;
+.implements Lcom/vk/core/ui/Provider;
+.implements Lcom/vk/menu/MenuUtils$a;
 
 
 # annotations
@@ -20,23 +20,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
-        "Lcom/vtosters/lite/ui/b0/i<",
-        "Lcom/vk/menu/d;",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+        "Lcom/vk/menu/MenuViewItem;",
         ">;>;",
-        "Lcom/vk/core/ui/o;",
-        "Lcom/vk/menu/c$a;"
+        "Lcom/vk/core/ui/Provider;",
+        "Lcom/vk/menu/MenuUtils$a;"
     }
 .end annotation
 
 
 # instance fields
-.field private final a:Lcom/vk/menu/a;
+.field private final a:Lcom/vk/menu/MenuBlocksAndIndexes;
 
 .field private b:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/menu/d;",
+            "Lcom/vk/menu/MenuViewItem;",
             ">;"
         }
     .end annotation
@@ -52,7 +52,7 @@
         value = {
             "(",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/menu/d;",
+            "Lcom/vk/menu/MenuViewItem;",
             ">;)V"
         }
     .end annotation
@@ -66,14 +66,14 @@
     iput-object p2, p0, Lcom/vk/menu/MenuFragment$a;->b:Ljava/util/ArrayList;
 
     .line 3
-    new-instance p1, Lcom/vk/menu/a;
+    new-instance p1, Lcom/vk/menu/MenuBlocksAndIndexes;
 
-    invoke-direct {p1}, Lcom/vk/menu/a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/menu/MenuBlocksAndIndexes;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/a;
+    iput-object p1, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/MenuBlocksAndIndexes;
 
     .line 4
-    iget-object p1, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/a;
+    iget-object p1, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/MenuBlocksAndIndexes;
 
     iget-object p2, p0, Lcom/vk/menu/MenuFragment$a;->b:Ljava/util/ArrayList;
 
@@ -83,7 +83,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p2}, Lcom/vk/menu/a;->a(II)V
+    invoke-virtual {p1, v0, p2}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(II)V
 
     .line 5
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
@@ -102,19 +102,19 @@
 
     .line 1
     :cond_0
-    iget-object v0, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/a;
+    iget-object v0, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/MenuBlocksAndIndexes;
 
     add-int/lit8 v1, p1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/menu/a;->a(I)I
+    invoke-virtual {v0, v1}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
 
     move-result v0
 
     .line 2
     :goto_0
-    iget-object v1, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/a;
+    iget-object v1, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/MenuBlocksAndIndexes;
 
-    invoke-virtual {v1, p1}, Lcom/vk/menu/a;->a(I)I
+    invoke-virtual {v1, p1}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
 
     move-result v1
 
@@ -138,9 +138,9 @@
 
     .line 4
     :cond_1
-    iget-object v0, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/a;
+    iget-object v0, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/MenuBlocksAndIndexes;
 
-    invoke-virtual {v0, p1}, Lcom/vk/menu/a;->b(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/menu/MenuBlocksAndIndexes;->b(I)V
 
     return-void
 .end method
@@ -151,7 +151,7 @@
         value = {
             "(I",
             "Ljava/util/Collection<",
-            "Lcom/vk/menu/d;",
+            "Lcom/vk/menu/MenuViewItem;",
             ">;)V"
         }
     .end annotation
@@ -164,11 +164,11 @@
 
     .line 1
     :cond_0
-    iget-object v0, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/a;
+    iget-object v0, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/MenuBlocksAndIndexes;
 
     add-int/lit8 v1, p1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/menu/a;->a(I)I
+    invoke-virtual {v0, v1}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
 
     move-result v0
 
@@ -179,13 +179,13 @@
     invoke-virtual {v1, v0, p2}, Ljava/util/ArrayList;->addAll(ILjava/util/Collection;)Z
 
     .line 3
-    iget-object v0, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/a;
+    iget-object v0, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/MenuBlocksAndIndexes;
 
     invoke-interface {p2}, Ljava/util/Collection;->size()I
 
     move-result p2
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/menu/a;->a(II)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(II)V
 
     return-void
 .end method
@@ -220,10 +220,10 @@
 
     if-ltz v1, :cond_1
 
-    check-cast v2, Lcom/vk/menu/d;
+    check-cast v2, Lcom/vk/menu/MenuViewItem;
 
     .line 3
-    invoke-virtual {v2}, Lcom/vk/menu/d;->c()I
+    invoke-virtual {v2}, Lcom/vk/menu/MenuViewItem;->c()I
 
     move-result v2
 
@@ -256,7 +256,7 @@
         value = {
             "(I",
             "Ljava/util/Collection<",
-            "Lcom/vk/menu/d;",
+            "Lcom/vk/menu/MenuViewItem;",
             ">;)V"
         }
     .end annotation
@@ -269,11 +269,11 @@
 
     .line 1
     :cond_0
-    iget-object v0, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/a;
+    iget-object v0, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/MenuBlocksAndIndexes;
 
     add-int/lit8 v1, p1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/menu/a;->a(I)I
+    invoke-virtual {v0, v1}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(I)I
 
     move-result v0
 
@@ -291,13 +291,13 @@
     return-void
 .end method
 
-.method public a(Lcom/vtosters/lite/ui/b0/i;I)V
+.method public a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/ui/b0/i<",
-            "Lcom/vk/menu/d;",
+            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+            "Lcom/vk/menu/MenuViewItem;",
             ">;I)V"
         }
     .end annotation
@@ -309,7 +309,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -320,7 +320,7 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/menu/d;",
+            "Lcom/vk/menu/MenuViewItem;",
             ">;)V"
         }
     .end annotation
@@ -349,9 +349,9 @@
 
     move-object v4, v1
 
-    check-cast v4, Lcom/vk/menu/d;
+    check-cast v4, Lcom/vk/menu/MenuViewItem;
 
-    invoke-virtual {v4}, Lcom/vk/menu/d;->c()I
+    invoke-virtual {v4}, Lcom/vk/menu/MenuViewItem;->c()I
 
     move-result v4
 
@@ -375,7 +375,7 @@
     const/4 v1, 0x0
 
     :goto_1
-    check-cast v1, Lcom/vk/menu/d;
+    check-cast v1, Lcom/vk/menu/MenuViewItem;
 
     if-eqz v1, :cond_3
 
@@ -404,9 +404,9 @@
     sub-int/2addr p1, v2
 
     .line 9
-    iget-object v0, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/a;
+    iget-object v0, p0, Lcom/vk/menu/MenuFragment$a;->a:Lcom/vk/menu/MenuBlocksAndIndexes;
 
-    invoke-virtual {v0, v3, p1}, Lcom/vk/menu/a;->a(II)V
+    invoke-virtual {v0, v3, p1}, Lcom/vk/menu/MenuBlocksAndIndexes;->a(II)V
 
     .line 10
     iget-object p1, p0, Lcom/vk/menu/MenuFragment$a;->c:Lcom/vk/menu/MenuFragment;
@@ -417,7 +417,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-static {p1}, Lcom/vk/extensions/i;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-static {p1}, Lcom/vk/extensions/RecyclerViewExt;->b(Landroidx/recyclerview/widget/RecyclerView;)V
 
     :cond_3
     return-void
@@ -429,7 +429,7 @@
         value = {
             "(I",
             "Ljava/util/Collection<",
-            "Lcom/vk/menu/d;",
+            "Lcom/vk/menu/MenuViewItem;",
             ">;)V"
         }
     .end annotation
@@ -449,7 +449,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lcom/vk/extensions/i;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-static {p1}, Lcom/vk/extensions/RecyclerViewExt;->b(Landroidx/recyclerview/widget/RecyclerView;)V
 
     :cond_0
     return-void
@@ -478,9 +478,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/menu/d;
+    check-cast p1, Lcom/vk/menu/MenuViewItem;
 
-    invoke-virtual {p1}, Lcom/vk/menu/d;->d()I
+    invoke-virtual {p1}, Lcom/vk/menu/MenuViewItem;->d()I
 
     move-result p1
 
@@ -497,9 +497,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/menu/d;
+    check-cast p1, Lcom/vk/menu/MenuViewItem;
 
-    invoke-virtual {p1}, Lcom/vk/menu/d;->b()I
+    invoke-virtual {p1}, Lcom/vk/menu/MenuViewItem;->b()I
 
     move-result p1
 
@@ -512,7 +512,7 @@
         value = {
             "()",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/menu/d;",
+            "Lcom/vk/menu/MenuViewItem;",
             ">;"
         }
     .end annotation
@@ -527,9 +527,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
+    check-cast p1, Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/menu/MenuFragment$a;->a(Lcom/vtosters/lite/ui/b0/i;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/menu/MenuFragment$a;->a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
 
     return-void
 .end method
@@ -538,22 +538,22 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/menu/MenuFragment$a;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/menu/MenuFragment$a;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vtosters/lite/ui/b0/i<",
-            "Lcom/vk/menu/d;",
+            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+            "Lcom/vk/menu/MenuViewItem;",
             ">;"
         }
     .end annotation

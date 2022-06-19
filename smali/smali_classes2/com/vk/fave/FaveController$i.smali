@@ -3,7 +3,7 @@
 .source "FaveController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -50,7 +50,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
@@ -58,7 +58,7 @@
 
     const/16 v1, 0x4b7
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method

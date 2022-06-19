@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static final L:Lcom/vk/im/log/a;
+.field private static final L:Lcom/vk/im/log/ImLogger;
 
 .field private static final M:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field private final B:Lcom/vk/api/sdk/utils/b;
+.field private final B:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
 .field private final C:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -40,23 +40,23 @@
 
 .field private final H:Ljava/util/concurrent/CountDownLatch;
 
-.field private final I:Lcom/vk/im/engine/d;
+.field private final I:Lcom/vk/im/engine/ImEnvironment;
 
-.field private final J:Lkotlin/jvm/b/a;
+.field private final J:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final K:Lkotlin/jvm/b/a;
+.field private final K:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -70,13 +70,13 @@
 
 .field private final d:Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread$b;
 
-.field private final e:Lcom/vk/im/engine/internal/longpoll/j;
+.field private final e:Lcom/vk/im/engine/internal/longpoll/TaskLpInit;
 
-.field private final f:Lcom/vk/im/engine/internal/longpoll/h;
+.field private final f:Lcom/vk/im/engine/internal/longpoll/TaskLongPollHistory;
 
-.field private final g:Lcom/vk/im/engine/internal/longpoll/i;
+.field private final g:Lcom/vk/im/engine/internal/longpoll/TaskLongPollLive;
 
-.field private final h:Lcom/vk/api/sdk/utils/b;
+.field private final h:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
 
 # direct methods
@@ -87,16 +87,16 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-string v0, "ImLongPollSyncThread"
 
     .line 1
-    invoke-static {v0}, Lcom/vk/im/log/b;->a(Ljava/lang/String;)Lcom/vk/im/log/a;
+    invoke-static {v0}, Lcom/vk/im/log/ImLoggerFactory;->a(Ljava/lang/String;)Lcom/vk/im/log/ImLogger;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/a;
+    sput-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/ImLogger;
 
     const/4 v0, 0x2
 
@@ -132,18 +132,18 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/d;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Lcom/vk/im/engine/ImEnvironment;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -153,22 +153,22 @@
     .line 1
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/d;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/ImEnvironment;
 
-    iput-object p3, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->J:Lkotlin/jvm/b/a;
+    iput-object p3, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->J:Lkotlin/jvm/b/Functions;
 
-    iput-object p4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->K:Lkotlin/jvm/b/a;
+    iput-object p4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->K:Lkotlin/jvm/b/Functions;
 
     .line 2
-    iget-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/d;
+    iget-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object p1
 
     const-string p3, "env.apiManager"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->a:Lcom/vk/api/internal/ApiManager;
 
@@ -196,34 +196,34 @@
     iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->d:Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread$b;
 
     .line 6
-    new-instance p1, Lcom/vk/im/engine/internal/longpoll/j;
+    new-instance p1, Lcom/vk/im/engine/internal/longpoll/TaskLpInit;
 
     iget-object p4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->d:Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread$b;
 
-    invoke-direct {p1, p2, p4}, Lcom/vk/im/engine/internal/longpoll/j;-><init>(Ljava/lang/String;Lcom/vk/im/engine/internal/longpoll/b;)V
+    invoke-direct {p1, p2, p4}, Lcom/vk/im/engine/internal/longpoll/TaskLpInit;-><init>(Ljava/lang/String;Lcom/vk/im/engine/internal/longpoll/InterruptChecker;)V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->e:Lcom/vk/im/engine/internal/longpoll/j;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->e:Lcom/vk/im/engine/internal/longpoll/TaskLpInit;
 
     .line 7
-    new-instance p1, Lcom/vk/im/engine/internal/longpoll/h;
+    new-instance p1, Lcom/vk/im/engine/internal/longpoll/TaskLongPollHistory;
 
     iget-object p4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->d:Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread$b;
 
-    invoke-direct {p1, p2, p4}, Lcom/vk/im/engine/internal/longpoll/h;-><init>(Ljava/lang/String;Lcom/vk/im/engine/internal/longpoll/b;)V
+    invoke-direct {p1, p2, p4}, Lcom/vk/im/engine/internal/longpoll/TaskLongPollHistory;-><init>(Ljava/lang/String;Lcom/vk/im/engine/internal/longpoll/InterruptChecker;)V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->f:Lcom/vk/im/engine/internal/longpoll/h;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->f:Lcom/vk/im/engine/internal/longpoll/TaskLongPollHistory;
 
     .line 8
-    new-instance p1, Lcom/vk/im/engine/internal/longpoll/i;
+    new-instance p1, Lcom/vk/im/engine/internal/longpoll/TaskLongPollLive;
 
     iget-object p4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->d:Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread$b;
 
-    invoke-direct {p1, p2, p4}, Lcom/vk/im/engine/internal/longpoll/i;-><init>(Ljava/lang/String;Lcom/vk/im/engine/internal/longpoll/b;)V
+    invoke-direct {p1, p2, p4}, Lcom/vk/im/engine/internal/longpoll/TaskLongPollLive;-><init>(Ljava/lang/String;Lcom/vk/im/engine/internal/longpoll/InterruptChecker;)V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->g:Lcom/vk/im/engine/internal/longpoll/i;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->g:Lcom/vk/im/engine/internal/longpoll/TaskLongPollLive;
 
     .line 9
-    new-instance p1, Lcom/vk/api/sdk/utils/b;
+    new-instance p1, Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
     const-wide/16 v1, 0x64
 
@@ -239,18 +239,18 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v8}, Lcom/vk/api/sdk/utils/b;-><init>(JJFFILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/api/sdk/utils/ExponentialBackoff;-><init>(JJFFILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/b;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
     .line 10
-    sget-object p1, Lcom/vk/api/sdk/utils/b;->h:Lcom/vk/api/sdk/utils/b$a;
+    sget-object p1, Lcom/vk/api/sdk/utils/ExponentialBackoff;->h:Lcom/vk/api/sdk/utils/ExponentialBackoff$a;
 
-    invoke-virtual {p1}, Lcom/vk/api/sdk/utils/b$a;->a()Lcom/vk/api/sdk/utils/b;
+    invoke-virtual {p1}, Lcom/vk/api/sdk/utils/ExponentialBackoff$a;->a()Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/b;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
     .line 11
     new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -280,25 +280,25 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/internal/longpoll/f;)V
+.method private final a(Lcom/vk/im/engine/internal/longpoll/LongPollInfo;)V
     .locals 2
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/longpoll/f;->e()Z
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/longpoll/LongPollInfo;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/longpoll/f;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/longpoll/LongPollInfo;->c()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->D:Ljava/lang/String;
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/longpoll/f;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/longpoll/LongPollInfo;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -306,7 +306,7 @@
 
     .line 9
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/longpoll/f;->b()J
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/longpoll/LongPollInfo;->b()J
 
     move-result-wide v0
 
@@ -317,7 +317,7 @@
     iput-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->G:Ljava/lang/Long;
 
     .line 10
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/longpoll/f;->d()J
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/longpoll/LongPollInfo;->d()J
 
     move-result-wide v0
 
@@ -328,17 +328,17 @@
     iput-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->F:Ljava/lang/Long;
 
     .line 11
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread$updateState$1;
 
-    invoke-direct {v1, p1}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread$updateState$1;-><init>(Lcom/vk/im/engine/internal/longpoll/f;)V
+    invoke-direct {v1, p1}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread$updateState$1;-><init>(Lcom/vk/im/engine/internal/longpoll/LongPollInfo;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     .line 12
     sget-object p1, Lcom/vk/im/engine/models/ImBgSyncState;->CONNECTED:Lcom/vk/im/engine/models/ImBgSyncState;
@@ -352,16 +352,16 @@
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/d;->h0()Lcom/vk/im/engine/models/ImBgSyncState;
+    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->h0()Lcom/vk/im/engine/models/ImBgSyncState;
 
     move-result-object v0
 
     if-ne v0, p1, :cond_0
 
     .line 3
-    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/ImLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -377,13 +377,13 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/ImLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -399,12 +399,12 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/engine/d;->a(Lcom/vk/im/engine/models/ImBgSyncState;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/engine/ImEnvironment;->a(Lcom/vk/im/engine/models/ImBgSyncState;)V
 
     :goto_0
     return-void
@@ -419,17 +419,17 @@
     if-eqz v0, :cond_0
 
     .line 14
-    sget-object p2, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/a;
+    sget-object p2, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/ImLogger;
 
-    invoke-interface {p2, p1}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {p2, p1}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 15
     :cond_0
-    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/ImLogger;
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/im/log/a;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -470,15 +470,15 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/d;->h0()Lcom/vk/im/engine/models/ImBgSyncState;
+    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->h0()Lcom/vk/im/engine/models/ImBgSyncState;
 
     move-result-object v0
 
     const-string v1, "env.bgSyncState"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -492,27 +492,27 @@
     invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->a(Lcom/vk/im/engine/models/ImBgSyncState;)V
 
     .line 2
-    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/ImLogger;
 
     const-string v1, "request for lp server"
 
-    invoke-interface {v0, v1}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->e:Lcom/vk/im/engine/internal/longpoll/j;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->e:Lcom/vk/im/engine/internal/longpoll/TaskLpInit;
 
-    iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/d;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/longpoll/j;->a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/internal/longpoll/f;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/longpoll/TaskLpInit;->a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/internal/longpoll/LongPollInfo;
 
     move-result-object v0
 
     const-string v1, "this"
 
     .line 4
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->a(Lcom/vk/im/engine/internal/longpoll/f;)V
+    invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->a(Lcom/vk/im/engine/internal/longpoll/LongPollInfo;)V
 
     return-void
 .end method
@@ -521,15 +521,15 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->K:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->K:Lkotlin/jvm/b/Functions;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_0
     return-void
@@ -544,16 +544,16 @@
     invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->a(Lcom/vk/im/engine/models/ImBgSyncState;)V
 
     .line 2
-    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/ImLogger;
 
     const-string v1, "request for lp history"
 
-    invoke-interface {v0, v1}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->f:Lcom/vk/im/engine/internal/longpoll/h;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->f:Lcom/vk/im/engine/internal/longpoll/TaskLongPollHistory;
 
-    iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/d;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/ImEnvironment;
 
     iget-object v2, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->G:Ljava/lang/Long;
 
@@ -563,7 +563,7 @@
 
     move-result-wide v2
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/im/engine/internal/longpoll/h;->a(Lcom/vk/im/engine/d;J)Lcom/vk/im/engine/internal/longpoll/f;
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/im/engine/internal/longpoll/TaskLongPollHistory;->a(Lcom/vk/im/engine/ImEnvironment;J)Lcom/vk/im/engine/internal/longpoll/LongPollInfo;
 
     move-result-object v0
 
@@ -575,15 +575,15 @@
     const-string v1, "this"
 
     .line 5
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->a(Lcom/vk/im/engine/internal/longpoll/f;)V
+    invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->a(Lcom/vk/im/engine/internal/longpoll/LongPollInfo;)V
 
     return-void
 
     .line 6
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -594,15 +594,15 @@
     .locals 10
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    sget-wide v0, Lcom/vk/im/engine/internal/longpoll/i;->c:J
+    sget-wide v0, Lcom/vk/im/engine/internal/longpoll/TaskLongPollLive;->c:J
 
     :goto_0
     move-wide v8, v0
@@ -611,27 +611,27 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    sget-wide v0, Lcom/vk/im/engine/internal/longpoll/i;->c:J
+    sget-wide v0, Lcom/vk/im/engine/internal/longpoll/TaskLongPollLive;->c:J
 
     goto :goto_0
 
     .line 3
     :cond_1
-    sget-wide v0, Lcom/vk/im/engine/internal/longpoll/i;->d:J
+    sget-wide v0, Lcom/vk/im/engine/internal/longpoll/TaskLongPollLive;->d:J
 
     goto :goto_0
 
     .line 4
     :goto_1
-    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/ImLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -647,12 +647,12 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/im/log/a;->c(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/log/ImLogger;->c(Ljava/lang/String;)V
 
     .line 5
-    iget-object v2, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->g:Lcom/vk/im/engine/internal/longpoll/i;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->g:Lcom/vk/im/engine/internal/longpoll/TaskLongPollLive;
 
-    iget-object v3, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/d;
+    iget-object v3, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/ImEnvironment;
 
     iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->D:Ljava/lang/String;
 
@@ -666,22 +666,22 @@
 
     move-result-wide v6
 
-    invoke-virtual/range {v2 .. v9}, Lcom/vk/im/engine/internal/longpoll/i;->a(Lcom/vk/im/engine/d;Ljava/lang/String;Ljava/lang/String;JJ)Lcom/vk/im/engine/internal/longpoll/f;
+    invoke-virtual/range {v2 .. v9}, Lcom/vk/im/engine/internal/longpoll/TaskLongPollLive;->a(Lcom/vk/im/engine/ImEnvironment;Ljava/lang/String;Ljava/lang/String;JJ)Lcom/vk/im/engine/internal/longpoll/LongPollInfo;
 
     move-result-object v0
 
     const-string v1, "this"
 
     .line 6
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->a(Lcom/vk/im/engine/internal/longpoll/f;)V
+    invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->a(Lcom/vk/im/engine/internal/longpoll/LongPollInfo;)V
 
     return-void
 
     .line 7
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -694,11 +694,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->a:Lcom/vk/api/internal/ApiManager;
 
-    new-instance v1, Lcom/vk/im/engine/internal/f/i/a;
+    new-instance v1, Lcom/vk/im/engine/internal/f/i/ServerTimeApiCmd;
 
-    invoke-direct {v1}, Lcom/vk/im/engine/internal/f/i/a;-><init>()V
+    invoke-direct {v1}, Lcom/vk/im/engine/internal/f/i/ServerTimeApiCmd;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/a;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/ApiCommand;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -715,14 +715,14 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/b;->e()V
+    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->e()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/b;->e()V
+    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->e()V
 
     return-void
 .end method
@@ -741,34 +741,34 @@
     invoke-static {v0}, Lcom/vk/api/internal/utils/NetworkBroadcastReceiver;->a(Ljava/lang/Object;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
+    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/f/c/a;->e()Ljava/lang/Long;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->e()Ljava/lang/Long;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->G:Ljava/lang/Long;
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->I:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
+    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/f/c/a;->f()Ljava/lang/Long;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->f()Ljava/lang/Long;
 
     move-result-object v0
 
@@ -810,9 +810,9 @@
     invoke-direct {p0}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->n()V
 
     .line 8
-    iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/b;
+    iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v4}, Lcom/vk/api/sdk/utils/b;->f()Z
+    invoke-virtual {v4}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->f()Z
 
     move-result v4
 
@@ -823,9 +823,9 @@
 
     .line 10
     :cond_2
-    iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/b;
+    iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v4}, Lcom/vk/api/sdk/utils/b;->f()Z
+    invoke-virtual {v4}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->f()Z
 
     move-result v4
 
@@ -840,7 +840,7 @@
     .line 12
     invoke-direct {p0}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->g()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     const/4 v0, 0x0
 
@@ -863,15 +863,15 @@
     if-nez v4, :cond_6
 
     .line 15
-    iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->J:Lkotlin/jvm/b/a;
+    iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->J:Lkotlin/jvm/b/Functions;
 
     if-eqz v4, :cond_6
 
-    invoke-interface {v4}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v4}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lkotlin/m;
+    check-cast v4, Lkotlin/Unit;
 
     .line 16
     :cond_6
@@ -1041,9 +1041,9 @@
     if-eqz v5, :cond_f
 
     .line 26
-    iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/b;
+    iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v4}, Lcom/vk/api/sdk/utils/b;->e()V
+    invoke-virtual {v4}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->e()V
 
     .line 27
     invoke-direct {p0}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h()V
@@ -1054,17 +1054,17 @@
     if-eqz v4, :cond_10
 
     .line 28
-    iget-object v3, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/b;
+    iget-object v3, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v3}, Lcom/vk/api/sdk/utils/b;->e()V
+    invoke-virtual {v3}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->e()V
 
     goto :goto_8
 
     .line 29
     :cond_10
-    iget-object v3, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/b;
+    iget-object v3, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v3}, Lcom/vk/api/sdk/utils/b;->d()V
+    invoke-virtual {v3}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->d()V
 
     :goto_8
     const/4 v3, 0x1
@@ -1076,9 +1076,9 @@
     invoke-direct {p0, v4}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->a(Lcom/vk/im/engine/models/ImBgSyncState;)V
 
     .line 31
-    iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/b;
+    iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v4}, Lcom/vk/api/sdk/utils/b;->e()V
+    invoke-virtual {v4}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->e()V
 
     goto/16 :goto_2
 
@@ -1086,18 +1086,18 @@
     move-exception v4
 
     .line 32
-    sget-object v5, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/a;
+    sget-object v5, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/ImLogger;
 
     invoke-virtual {v4}, Ljava/io/IOException;->toString()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-interface {v5, v4}, Lcom/vk/im/log/a;->d(Ljava/lang/String;)V
+    invoke-interface {v5, v4}, Lcom/vk/im/log/ImLogger;->d(Ljava/lang/String;)V
 
     .line 33
-    iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/b;
+    iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v4}, Lcom/vk/api/sdk/utils/b;->d()V
+    invoke-virtual {v4}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->d()V
 
     .line 34
     sget-object v4, Lcom/vk/im/engine/models/ImBgSyncState;->CONNECTING:Lcom/vk/im/engine/models/ImBgSyncState;
@@ -1105,9 +1105,9 @@
     invoke-direct {p0, v4}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->a(Lcom/vk/im/engine/models/ImBgSyncState;)V
 
     .line 35
-    iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/b;
+    iget-object v4, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v4}, Lcom/vk/api/sdk/utils/b;->e()V
+    invoke-virtual {v4}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->e()V
 
     goto/16 :goto_2
 
@@ -1172,7 +1172,7 @@
     invoke-direct {p0, v0}, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->a(Lcom/vk/im/engine/models/ImBgSyncState;)V
 
     .line 2
-    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/ImLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1182,9 +1182,9 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/b;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v2}, Lcom/vk/api/sdk/utils/b;->a()J
+    invoke-virtual {v2}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->a()J
 
     move-result-wide v2
 
@@ -1198,12 +1198,12 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->h:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/b;->a()J
+    invoke-virtual {v0}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->a()J
 
     move-result-wide v0
 
@@ -1227,7 +1227,7 @@
 
     .line 3
     :try_start_0
-    sget-object v1, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/a;
+    sget-object v1, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/ImLogger;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1237,9 +1237,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/b;
+    iget-object v3, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v3}, Lcom/vk/api/sdk/utils/b;->a()J
+    invoke-virtual {v3}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->a()J
 
     move-result-wide v3
 
@@ -1253,28 +1253,28 @@
 
     move-result-object v2
 
-    invoke-interface {v1, v2}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v1, v2}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     .line 4
     iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->b:Ljava/lang/Object;
 
-    iget-object v2, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/b;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->B:Lcom/vk/api/sdk/utils/ExponentialBackoff;
 
-    invoke-virtual {v2}, Lcom/vk/api/sdk/utils/b;->a()J
+    invoke-virtual {v2}, Lcom/vk/api/sdk/utils/ExponentialBackoff;->a()J
 
     move-result-wide v2
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/Object;->wait(J)V
 
     .line 5
-    sget-object v1, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/a;
+    sget-object v1, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/ImLogger;
 
     const-string v2, "stop waiting for network..."
 
-    invoke-interface {v1, v2}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v1, v2}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     .line 6
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1319,11 +1319,11 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->L:Lcom/vk/im/log/ImLogger;
 
     const-string v1, "long poll sync thread interrupt requested"
 
-    invoke-interface {v0, v1}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;->c:Ljava/util/concurrent/atomic/AtomicBoolean;

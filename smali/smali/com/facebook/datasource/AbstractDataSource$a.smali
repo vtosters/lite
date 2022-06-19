@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/facebook/datasource/AbstractDataSource;->a(Lcom/facebook/datasource/d;Ljava/util/concurrent/Executor;ZZ)V
+    value = Lcom/facebook/datasource/AbstractDataSource;->a(Lcom/facebook/datasource/DataSubscriber;Ljava/util/concurrent/Executor;ZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 # instance fields
 .field final synthetic a:Z
 
-.field final synthetic b:Lcom/facebook/datasource/d;
+.field final synthetic b:Lcom/facebook/datasource/DataSubscriber;
 
 .field final synthetic c:Z
 
@@ -28,7 +28,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/facebook/datasource/AbstractDataSource;ZLcom/facebook/datasource/d;Z)V
+.method constructor <init>(Lcom/facebook/datasource/AbstractDataSource;ZLcom/facebook/datasource/DataSubscriber;Z)V
     .locals 0
 
     .line 1
@@ -36,7 +36,7 @@
 
     iput-boolean p2, p0, Lcom/facebook/datasource/AbstractDataSource$a;->a:Z
 
-    iput-object p3, p0, Lcom/facebook/datasource/AbstractDataSource$a;->b:Lcom/facebook/datasource/d;
+    iput-object p3, p0, Lcom/facebook/datasource/AbstractDataSource$a;->b:Lcom/facebook/datasource/DataSubscriber;
 
     iput-boolean p4, p0, Lcom/facebook/datasource/AbstractDataSource$a;->c:Z
 
@@ -56,11 +56,11 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/facebook/datasource/AbstractDataSource$a;->b:Lcom/facebook/datasource/d;
+    iget-object v0, p0, Lcom/facebook/datasource/AbstractDataSource$a;->b:Lcom/facebook/datasource/DataSubscriber;
 
     iget-object v1, p0, Lcom/facebook/datasource/AbstractDataSource$a;->d:Lcom/facebook/datasource/AbstractDataSource;
 
-    invoke-interface {v0, v1}, Lcom/facebook/datasource/d;->b(Lcom/facebook/datasource/b;)V
+    invoke-interface {v0, v1}, Lcom/facebook/datasource/DataSubscriber;->b(Lcom/facebook/datasource/DataSource;)V
 
     goto :goto_0
 
@@ -71,21 +71,21 @@
     if-eqz v0, :cond_1
 
     .line 4
-    iget-object v0, p0, Lcom/facebook/datasource/AbstractDataSource$a;->b:Lcom/facebook/datasource/d;
+    iget-object v0, p0, Lcom/facebook/datasource/AbstractDataSource$a;->b:Lcom/facebook/datasource/DataSubscriber;
 
     iget-object v1, p0, Lcom/facebook/datasource/AbstractDataSource$a;->d:Lcom/facebook/datasource/AbstractDataSource;
 
-    invoke-interface {v0, v1}, Lcom/facebook/datasource/d;->a(Lcom/facebook/datasource/b;)V
+    invoke-interface {v0, v1}, Lcom/facebook/datasource/DataSubscriber;->a(Lcom/facebook/datasource/DataSource;)V
 
     goto :goto_0
 
     .line 5
     :cond_1
-    iget-object v0, p0, Lcom/facebook/datasource/AbstractDataSource$a;->b:Lcom/facebook/datasource/d;
+    iget-object v0, p0, Lcom/facebook/datasource/AbstractDataSource$a;->b:Lcom/facebook/datasource/DataSubscriber;
 
     iget-object v1, p0, Lcom/facebook/datasource/AbstractDataSource$a;->d:Lcom/facebook/datasource/AbstractDataSource;
 
-    invoke-interface {v0, v1}, Lcom/facebook/datasource/d;->c(Lcom/facebook/datasource/b;)V
+    invoke-interface {v0, v1}, Lcom/facebook/datasource/DataSubscriber;->c(Lcom/facebook/datasource/DataSource;)V
 
     :goto_0
     return-void

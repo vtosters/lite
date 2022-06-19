@@ -3,7 +3,7 @@
 .source "OkHttpRequestExecutor.kt"
 
 # interfaces
-.implements Lcom/vk/httpexecutor/api/h;
+.implements Lcom/vk/httpexecutor/api/HttpRequestInterceptor;
 
 
 # annotations
@@ -46,19 +46,19 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/httpexecutor/api/g;Lcom/vk/httpexecutor/api/h$a;)Lcom/vk/httpexecutor/api/i;
+.method public a(Lcom/vk/httpexecutor/api/HttpRequestExecutor;Lcom/vk/httpexecutor/api/HttpRequestInterceptor$a;)Lcom/vk/httpexecutor/api/HttpResponse;
     .locals 1
 
     .line 1
     iget-object p1, p0, Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor$b;->b:Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;
 
-    invoke-interface {p2}, Lcom/vk/httpexecutor/api/h$a;->a()Lcom/vk/httpexecutor/api/e;
+    invoke-interface {p2}, Lcom/vk/httpexecutor/api/HttpRequestInterceptor$a;->a()Lcom/vk/httpexecutor/api/HttpRequest;
 
     move-result-object p2
 
     iget-object v0, p0, Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor$b;->a:Lcom/vk/httpexecutor/api/exceptions/CauseException;
 
-    invoke-static {p1, p2, v0}, Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;->a(Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;Lcom/vk/httpexecutor/api/e;Lcom/vk/httpexecutor/api/exceptions/CauseException;)Lcom/vk/httpexecutor/api/i;
+    invoke-static {p1, p2, v0}, Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;->a(Lcom/vk/httpexecutor/okhttp/OkHttpRequestExecutor;Lcom/vk/httpexecutor/api/HttpRequest;Lcom/vk/httpexecutor/api/exceptions/CauseException;)Lcom/vk/httpexecutor/api/HttpResponse;
 
     move-result-object p1
 

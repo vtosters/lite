@@ -3,7 +3,7 @@
 .source "VkSnackbar.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -30,16 +30,16 @@
 # instance fields
 .field final synthetic $btnAction$inlined:Landroid/widget/TextView;
 
-.field final synthetic $listener:Lkotlin/jvm/b/b;
+.field final synthetic $listener:Lkotlin/jvm/b/Functions2;
 
 .field final synthetic this$0:Lcom/vk/core/dialogs/snackbar/VkSnackbar;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/b;Lcom/vk/core/dialogs/snackbar/VkSnackbar;Landroid/widget/TextView;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions2;Lcom/vk/core/dialogs/snackbar/VkSnackbar;Landroid/widget/TextView;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$initDefaultView$$inlined$let$lambda$1;->$listener:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$initDefaultView$$inlined$let$lambda$1;->$listener:Lkotlin/jvm/b/Functions2;
 
     iput-object p2, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$initDefaultView$$inlined$let$lambda$1;->this$0:Lcom/vk/core/dialogs/snackbar/VkSnackbar;
 
@@ -58,11 +58,11 @@
     .locals 1
 
     .line 1
-    iget-object p1, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$initDefaultView$$inlined$let$lambda$1;->$listener:Lkotlin/jvm/b/b;
+    iget-object p1, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$initDefaultView$$inlined$let$lambda$1;->$listener:Lkotlin/jvm/b/Functions2;
 
     iget-object v0, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$initDefaultView$$inlined$let$lambda$1;->this$0:Lcom/vk/core/dialogs/snackbar/VkSnackbar;
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -75,7 +75,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$initDefaultView$$inlined$let$lambda$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

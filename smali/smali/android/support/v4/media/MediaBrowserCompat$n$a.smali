@@ -3,7 +3,7 @@
 .source "MediaBrowserCompat.java"
 
 # interfaces
-.implements Landroid/support/v4/media/a$d;
+.implements Landroid/support/v4/media/MediaBrowserCompatApi21$d;
 
 
 # annotations

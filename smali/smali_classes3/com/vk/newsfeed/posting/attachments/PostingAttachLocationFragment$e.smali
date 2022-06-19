@@ -3,12 +3,12 @@
 .source "PostingAttachLocationFragment.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;->b(ILcom/vk/lists/t;)Lc/a/m;
+    value = Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;->b(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,14 +49,14 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Boolean;)Lc/a/m;
+.method public final a(Ljava/lang/Boolean;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Boolean;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/location/Location;",
             ">;"
         }
@@ -82,16 +82,16 @@
 
     const-string v1, "activity!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/location/LocationUtils;->b(Landroid/content/Context;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lcom/vk/location/LocationUtils;->b(Landroid/content/Context;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -103,13 +103,13 @@
 
     invoke-direct {p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$BadLocationException;-><init>()V
 
-    invoke-static {p1}, Lc/a/m;->b(Ljava/lang/Throwable;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->b(Ljava/lang/Throwable;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "Observable.error(BadLocationException())"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p1
@@ -121,7 +121,7 @@
     .line 1
     check-cast p1, Ljava/lang/Boolean;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$e;->a(Ljava/lang/Boolean;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$e;->a(Ljava/lang/Boolean;)Lio/reactivex/Observable;
 
     move-result-object p1
 

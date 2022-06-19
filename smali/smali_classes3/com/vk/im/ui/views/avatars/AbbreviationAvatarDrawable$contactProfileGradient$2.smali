@@ -3,7 +3,7 @@
 .source "AbbreviationAvatarDrawable.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$a;",
         ">;"
     }
@@ -54,7 +54,7 @@
     .line 3
     iget-object v1, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$contactProfileGradient$2;->$context:Landroid/content/Context;
 
-    sget v2, Lcom/vk/im/ui/c;->im_contact_avatar_start_color:I
+    sget v2, Lcom/vk/im/ui/R5;->im_contact_avatar_start_color:I
 
     invoke-static {v1, v2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -63,7 +63,7 @@
     .line 4
     iget-object v2, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$contactProfileGradient$2;->$context:Landroid/content/Context;
 
-    sget v3, Lcom/vk/im/ui/c;->im_contact_avatar_end_color:I
+    sget v3, Lcom/vk/im/ui/R5;->im_contact_avatar_end_color:I
 
     invoke-static {v2, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 

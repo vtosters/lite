@@ -53,7 +53,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/user/VisibleStatus$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/user/VisibleStatus$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/user/VisibleStatus$a;
@@ -80,7 +80,7 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/dto/user/VisibleStatus;-><init>(JZILcom/vk/dto/user/Platform;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/dto/user/VisibleStatus;-><init>(JZILcom/vk/dto/user/Platform;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/user/VisibleStatus;->e:Lcom/vk/dto/user/VisibleStatus;
 
@@ -145,7 +145,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/dto/user/VisibleStatus;-><init>(JZILcom/vk/dto/user/Platform;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/dto/user/VisibleStatus;-><init>(JZILcom/vk/dto/user/Platform;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -156,7 +156,7 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-direct {p0, v0}, Lcom/vk/dto/user/OnlineInfo;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0}, Lcom/vk/dto/user/OnlineInfo;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-wide p1, p0, Lcom/vk/dto/user/VisibleStatus;->a:J
 
@@ -169,7 +169,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(JZILcom/vk/dto/user/Platform;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(JZILcom/vk/dto/user/Platform;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 6
 
     and-int/lit8 p7, p6, 0x1
@@ -261,7 +261,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -401,7 +401,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/user/VisibleStatus;->d:Lcom/vk/dto/user/Platform;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

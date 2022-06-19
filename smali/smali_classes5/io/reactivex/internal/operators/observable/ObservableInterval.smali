@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/observable/ObservableInterval;
-.super Lc/a/m;
+.super Lio/reactivex/Observable;
 .source "ObservableInterval.java"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lc/a/m<",
+        "Lio/reactivex/Observable<",
         "Ljava/lang/Long;",
         ">;"
     }
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field final a:Lc/a/s;
+.field final a:Lio/reactivex/Scheduler;
 
 .field final b:J
 
@@ -30,11 +30,11 @@
 
 
 # direct methods
-.method public constructor <init>(JJLjava/util/concurrent/TimeUnit;Lc/a/s;)V
+.method public constructor <init>(JJLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lc/a/m;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/Observable;-><init>()V
 
     .line 2
     iput-wide p1, p0, Lio/reactivex/internal/operators/observable/ObservableInterval;->b:J
@@ -46,19 +46,19 @@
     iput-object p5, p0, Lio/reactivex/internal/operators/observable/ObservableInterval;->d:Ljava/util/concurrent/TimeUnit;
 
     .line 5
-    iput-object p6, p0, Lio/reactivex/internal/operators/observable/ObservableInterval;->a:Lc/a/s;
+    iput-object p6, p0, Lio/reactivex/internal/operators/observable/ObservableInterval;->a:Lio/reactivex/Scheduler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lc/a/r;)V
+.method public b(Lio/reactivex/Observer;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-",
             "Ljava/lang/Long;",
             ">;)V"
@@ -68,26 +68,26 @@
     .line 1
     new-instance v7, Lio/reactivex/internal/operators/observable/ObservableInterval$IntervalObserver;
 
-    invoke-direct {v7, p1}, Lio/reactivex/internal/operators/observable/ObservableInterval$IntervalObserver;-><init>(Lc/a/r;)V
+    invoke-direct {v7, p1}, Lio/reactivex/internal/operators/observable/ObservableInterval$IntervalObserver;-><init>(Lio/reactivex/Observer;)V
 
     .line 2
-    invoke-interface {p1, v7}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p1, v7}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableInterval;->a:Lc/a/s;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableInterval;->a:Lio/reactivex/Scheduler;
 
     .line 4
-    instance-of p1, v0, Lio/reactivex/internal/schedulers/k;
+    instance-of p1, v0, Lio/reactivex/internal/schedulers/TrampolineScheduler;
 
     if-eqz p1, :cond_0
 
     .line 5
-    invoke-virtual {v0}, Lc/a/s;->a()Lc/a/s$c;
+    invoke-virtual {v0}, Lio/reactivex/Scheduler;->a()Lio/reactivex/Scheduler$c;
 
     move-result-object v0
 
     .line 6
-    invoke-virtual {v7, v0}, Lio/reactivex/internal/operators/observable/ObservableInterval$IntervalObserver;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {v7, v0}, Lio/reactivex/internal/operators/observable/ObservableInterval$IntervalObserver;->a(Lio/reactivex/disposables/Disposable;)V
 
     .line 7
     iget-wide v2, p0, Lio/reactivex/internal/operators/observable/ObservableInterval;->b:J
@@ -98,7 +98,7 @@
 
     move-object v1, v7
 
-    invoke-virtual/range {v0 .. v6}, Lc/a/s$c;->a(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/b;
+    invoke-virtual/range {v0 .. v6}, Lio/reactivex/Scheduler$c;->a(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_0
 
@@ -112,12 +112,12 @@
 
     move-object v1, v7
 
-    invoke-virtual/range {v0 .. v6}, Lc/a/s;->a(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/b;
+    invoke-virtual/range {v0 .. v6}, Lio/reactivex/Scheduler;->a(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 9
-    invoke-virtual {v7, p1}, Lio/reactivex/internal/operators/observable/ObservableInterval$IntervalObserver;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {v7, p1}, Lio/reactivex/internal/operators/observable/ObservableInterval$IntervalObserver;->a(Lio/reactivex/disposables/Disposable;)V
 
     :goto_0
     return-void

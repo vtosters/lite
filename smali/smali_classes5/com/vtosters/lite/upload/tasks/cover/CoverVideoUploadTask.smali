@@ -1,5 +1,5 @@
 .class public final Lcom/vtosters/lite/upload/tasks/cover/CoverVideoUploadTask;
-.super Lcom/vtosters/lite/upload/l/j;
+.super Lcom/vtosters/lite/upload/l/HTTPResumableUploadTask;
 .source "CoverVideoUploadTask.kt"
 
 
@@ -14,7 +14,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/upload/l/j<",
+        "Lcom/vtosters/lite/upload/l/HTTPResumableUploadTask<",
         "Landroid/os/Parcelable;",
         ">;"
     }
@@ -35,7 +35,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/upload/tasks/cover/CoverVideoUploadTask$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/upload/tasks/cover/CoverVideoUploadTask$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -51,7 +51,7 @@
     const-string v0, "stories.getVideoUploadServer"
 
     .line 2
-    invoke-direct {p0, p2, v0}, Lcom/vtosters/lite/upload/l/j;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p2, v0}, Lcom/vtosters/lite/upload/l/HTTPResumableUploadTask;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     iput p1, p0, Lcom/vtosters/lite/upload/tasks/cover/CoverVideoUploadTask;->t:I
 
@@ -62,7 +62,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/upload/l/j;->f:Ljava/lang/String;
+    iget-object p0, p0, Lcom/vtosters/lite/upload/l/HTTPResumableUploadTask;->f:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -90,16 +90,16 @@
     .locals 1
 
     .line 2
-    invoke-super {p0, p1, p2, p3}, Lcom/vtosters/lite/upload/j;->a(IIZ)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vtosters/lite/upload/UploadTask;->a(IIZ)V
 
     .line 3
-    sget-object p3, Lcom/vk/webapp/d;->b:Lcom/vk/webapp/d;
+    sget-object p3, Lcom/vk/webapp/CoverUploadEventBus;->INSTANCE:Lcom/vk/webapp/CoverUploadEventBus;
 
-    invoke-virtual {p3}, Lcom/vk/webapp/d;->a()Lb/h/v/d;
+    invoke-virtual {p3}, Lcom/vk/webapp/CoverUploadEventBus;->a()Lb/h/v/RxBus;
 
     move-result-object p3
 
-    new-instance v0, Lcom/vk/webapp/d$e;
+    new-instance v0, Lcom/vk/webapp/CoverUploadEventBus$e;
 
     int-to-float p1, p1
 
@@ -107,9 +107,9 @@
 
     div-float/2addr p1, p2
 
-    invoke-direct {v0, p1}, Lcom/vk/webapp/d$e;-><init>(F)V
+    invoke-direct {v0, p1}, Lcom/vk/webapp/CoverUploadEventBus$e;-><init>(F)V
 
-    invoke-virtual {p3, v0}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {p3, v0}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -118,7 +118,7 @@
     .locals 3
 
     .line 4
-    invoke-super {p0, p1}, Lcom/vtosters/lite/upload/l/j;->a(Landroid/os/Parcelable;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/upload/l/HTTPResumableUploadTask;->a(Landroid/os/Parcelable;)V
 
     const p1, 0x7f12063e
 
@@ -129,22 +129,22 @@
     const/4 v2, 0x0
 
     .line 5
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 6
-    sget-object p1, Lcom/vk/webapp/d;->b:Lcom/vk/webapp/d;
+    sget-object p1, Lcom/vk/webapp/CoverUploadEventBus;->INSTANCE:Lcom/vk/webapp/CoverUploadEventBus;
 
-    invoke-virtual {p1}, Lcom/vk/webapp/d;->a()Lb/h/v/d;
+    invoke-virtual {p1}, Lcom/vk/webapp/CoverUploadEventBus;->a()Lb/h/v/RxBus;
 
     move-result-object p1
 
-    new-instance v0, Lcom/vk/webapp/d$b;
+    new-instance v0, Lcom/vk/webapp/CoverUploadEventBus$b;
 
     iget-object v1, p0, Lcom/vtosters/lite/upload/tasks/cover/CoverVideoUploadTask;->s:Lorg/json/JSONObject;
 
-    invoke-direct {v0, v1}, Lcom/vk/webapp/d$b;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v0, v1}, Lcom/vk/webapp/CoverUploadEventBus$b;-><init>(Lorg/json/JSONObject;)V
 
-    invoke-virtual {p1, v0}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -166,7 +166,7 @@
     const v0, 0x7f12036d
 
     .line 8
-    invoke-static {v0, v3, v2, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v3, v2, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -174,24 +174,24 @@
     const v0, 0x7f120378
 
     .line 9
-    invoke-static {v0, v3, v2, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v3, v2, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 10
     :goto_0
-    sget-object v0, Lcom/vk/webapp/d;->b:Lcom/vk/webapp/d;
+    sget-object v0, Lcom/vk/webapp/CoverUploadEventBus;->INSTANCE:Lcom/vk/webapp/CoverUploadEventBus;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/d;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lcom/vk/webapp/CoverUploadEventBus;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/webapp/d$d;
+    new-instance v1, Lcom/vk/webapp/CoverUploadEventBus$d;
 
-    invoke-direct {v1}, Lcom/vk/webapp/d$d;-><init>()V
+    invoke-direct {v1}, Lcom/vk/webapp/CoverUploadEventBus$d;-><init>()V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     .line 11
-    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/l0/e;->a(Ljava/lang/Object;Ljava/lang/Throwable;)V
+    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/l0/VkInstantJob;->a(Ljava/lang/Object;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -239,20 +239,20 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vtosters/lite/upload/l/j;->d(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/upload/l/HTTPResumableUploadTask;->d(Ljava/lang/Object;)V
 
     .line 2
-    sget-object p1, Lcom/vk/webapp/d;->b:Lcom/vk/webapp/d;
+    sget-object p1, Lcom/vk/webapp/CoverUploadEventBus;->INSTANCE:Lcom/vk/webapp/CoverUploadEventBus;
 
-    invoke-virtual {p1}, Lcom/vk/webapp/d;->a()Lb/h/v/d;
+    invoke-virtual {p1}, Lcom/vk/webapp/CoverUploadEventBus;->a()Lb/h/v/RxBus;
 
     move-result-object p1
 
-    new-instance v0, Lcom/vk/webapp/d$a;
+    new-instance v0, Lcom/vk/webapp/CoverUploadEventBus$a;
 
-    invoke-direct {v0}, Lcom/vk/webapp/d$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/webapp/CoverUploadEventBus$a;-><init>()V
 
-    invoke-virtual {p1, v0}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -261,7 +261,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f12063d
 
@@ -271,12 +271,12 @@
 
     const-string v1, "AppContextHolder.context\u2026tring.live_cover_sending)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public p()Lcom/vk/dto/common/data/i;
+.method public p()Lcom/vk/dto/common/data/UploadServer;
     .locals 17
 
     .line 1
@@ -317,7 +317,7 @@
 
     move-object/from16 v14, v16
 
-    invoke-direct/range {v1 .. v14}, Lcom/vk/dto/stories/model/CommonUploadParams;-><init>(ZLjava/util/List;ILcom/vk/dto/stories/model/StoryEntryExtended;Lcom/vk/dto/stories/entities/StorySharingInfo;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryUploadType;Ljava/lang/Integer;ZLjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v14}, Lcom/vk/dto/stories/model/CommonUploadParams;-><init>(ZLjava/util/List;ILcom/vk/dto/stories/model/StoryEntryExtended;Lcom/vk/dto/stories/entities/StorySharingInfo;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryUploadType;Ljava/lang/Integer;ZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 3
     new-instance v1, Lcom/vk/dto/stories/model/StoryUploadParams;
@@ -335,16 +335,16 @@
     move-result-object v0
 
     .line 6
-    invoke-static {v0, v3, v2, v3}, Lcom/vk/api/base/d;->b(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v3, v2, v3}, Lcom/vk/api/base/ApiRequest;->b(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0}, Lc/a/m;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lio/reactivex/Observable;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/dto/common/data/i;
+    check-cast v0, Lcom/vk/dto/common/data/UploadServer;
 
     return-object v0
 .end method
@@ -369,7 +369,7 @@
     .locals 10
 
     .line 1
-    invoke-static {}, Lb/h/g/m/d;->x()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->x()Ljava/io/File;
 
     move-result-object v6
 
@@ -379,17 +379,17 @@
 
     .line 2
     :try_start_0
-    new-instance v9, Lb/h/p/a$a;
+    new-instance v9, Lb/h/p/MediaEncoder$a;
 
     new-instance v1, Ljava/io/File;
 
-    iget-object v0, p0, Lcom/vtosters/lite/upload/l/j;->f:Ljava/lang/String;
+    iget-object v0, p0, Lcom/vtosters/lite/upload/l/HTTPResumableUploadTask;->f:Ljava/lang/String;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     const-string v0, "outputVideo"
 
-    invoke-static {v6, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -401,27 +401,27 @@
 
     move-object v2, v6
 
-    invoke-direct/range {v0 .. v5}, Lb/h/p/a$a;-><init>(Ljava/io/File;Ljava/io/File;Lb/h/p/a$e;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lb/h/p/MediaEncoder$a;-><init>(Ljava/io/File;Ljava/io/File;Lb/h/p/MediaEncoder$e;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 3
-    sget-object v0, Lb/h/p/c;->b:Lb/h/p/c$a;
+    sget-object v0, Lb/h/p/MediaUtils;->b:Lb/h/p/MediaUtils$a;
 
-    iget-object v1, p0, Lcom/vtosters/lite/upload/l/j;->f:Ljava/lang/String;
+    iget-object v1, p0, Lcom/vtosters/lite/upload/l/HTTPResumableUploadTask;->f:Ljava/lang/String;
 
     const-string v2, "file"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lb/h/p/c$a;->a(Ljava/lang/String;Z)Lb/h/p/c$d;
+    invoke-virtual {v0, v1, v2}, Lb/h/p/MediaUtils$a;->a(Ljava/lang/String;Z)Lb/h/p/MediaUtils$d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-virtual {v0}, Lb/h/p/c$b;->c()I
+    invoke-virtual {v0}, Lb/h/p/MediaUtils$b;->c()I
 
     move-result v1
 
@@ -434,7 +434,7 @@
     if-eqz v0, :cond_1
 
     .line 5
-    invoke-virtual {v0}, Lb/h/p/c$b;->a()I
+    invoke-virtual {v0}, Lb/h/p/MediaUtils$b;->a()I
 
     move-result v0
 
@@ -466,13 +466,13 @@
 
     .line 6
     :cond_2
-    invoke-virtual {v9, v0}, Lb/h/p/a$a;->d(I)V
+    invoke-virtual {v9, v0}, Lb/h/p/MediaEncoder$a;->d(I)V
 
     .line 7
-    invoke-virtual {v9, v1}, Lb/h/p/a$a;->e(I)V
+    invoke-virtual {v9, v1}, Lb/h/p/MediaEncoder$a;->e(I)V
 
     .line 8
-    invoke-static {v9, v2, v7, v8}, Lb/h/p/a$a;->a(Lb/h/p/a$a;ZILjava/lang/Object;)Lb/h/p/a;
+    invoke-static {v9, v2, v7, v8}, Lb/h/p/MediaEncoder$a;->a(Lb/h/p/MediaEncoder$a;ZILjava/lang/Object;)Lb/h/p/MediaEncoder;
 
     move-result-object v0
     :try_end_0
@@ -480,13 +480,13 @@
 
     .line 9
     :try_start_1
-    invoke-interface {v0}, Lb/h/p/a;->b()Z
+    invoke-interface {v0}, Lb/h/p/MediaEncoder;->b()Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 10
     :try_start_2
-    invoke-interface {v0}, Lb/h/p/a;->a()V
+    invoke-interface {v0}, Lb/h/p/MediaEncoder;->a()V
 
     .line 11
     invoke-virtual {v6}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
@@ -499,7 +499,7 @@
     move-exception v1
 
     .line 12
-    invoke-interface {v0}, Lb/h/p/a;->a()V
+    invoke-interface {v0}, Lb/h/p/MediaEncoder;->a()V
 
     throw v1
     :try_end_2
@@ -509,7 +509,7 @@
     move-exception v0
 
     .line 13
-    invoke-static {v6}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
+    invoke-static {v6}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
 
     .line 14
     new-instance v1, Lcom/vtosters/lite/upload/tasks/cover/CoverVideoUploadTask$VideoCompressException;
@@ -519,7 +519,7 @@
     invoke-virtual {p0, v8, v1}, Lcom/vtosters/lite/upload/tasks/cover/CoverVideoUploadTask;->a(Ljava/lang/Object;Ljava/lang/Throwable;)V
 
     .line 15
-    invoke-virtual {p0, v7}, Lcom/vtosters/lite/upload/j;->a(Z)V
+    invoke-virtual {p0, v7}, Lcom/vtosters/lite/upload/UploadTask;->a(Z)V
 
     return-object v8
 .end method

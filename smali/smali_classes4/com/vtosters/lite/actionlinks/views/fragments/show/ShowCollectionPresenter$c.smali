@@ -1,5 +1,5 @@
 .class public final Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$c;
-.super Lc/a/c0/a;
+.super Lio/reactivex/observers/DisposableObserver/DisposableObserver;
 .source "ShowCollectionPresenter.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lc/a/c0/a<",
+        "Lio/reactivex/observers/DisposableObserver/DisposableObserver<",
         "Lcom/vk/dto/actionlinks/ActionLinks;",
         ">;"
     }
@@ -38,7 +38,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$c;->b:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
 
-    invoke-direct {p0}, Lc/a/c0/a;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/observers/DisposableObserver/DisposableObserver;-><init>()V
 
     return-void
 .end method
@@ -109,7 +109,7 @@
     .line 5
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$c;->b:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/show/b;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection1;
 
     move-result-object p1
 
@@ -121,7 +121,7 @@
 
     .line 6
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -129,7 +129,7 @@
     :cond_1
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$c;->b:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/show/b;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection1;
 
     move-result-object p1
 
@@ -143,7 +143,7 @@
     :cond_2
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$c;->b:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/show/b;
+    invoke-virtual {p1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection1;
 
     move-result-object p1
 
@@ -155,7 +155,7 @@
     :goto_0
     iget-object p1, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$c;->b:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
 
-    invoke-virtual {p1, v1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -166,11 +166,11 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$c;->b:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->e()Lio/reactivex/disposables/a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->e()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lio/reactivex/disposables/a;->a(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, p0}, Lio/reactivex/disposables/CompositeDisposable;->a(Lio/reactivex/disposables/Disposable;)Z
 
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$c;->b:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
@@ -184,7 +184,7 @@
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter$c;->b:Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/show/b;
+    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollection1;
 
     move-result-object v0
 
@@ -196,7 +196,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/actionlinks/views/fragments/show/ShowCollectionPresenter;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

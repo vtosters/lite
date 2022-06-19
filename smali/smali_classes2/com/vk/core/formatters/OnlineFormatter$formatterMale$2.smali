@@ -3,7 +3,7 @@
 .source "OnlineFormatter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/core/formatters/d/b;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/core/formatters/d/MaleStrategy;",
         ">;"
     }
 .end annotation
@@ -45,11 +45,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/core/formatters/d/b;
+.method public final invoke()Lcom/vk/core/formatters/d/MaleStrategy;
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/core/formatters/d/b;
+    new-instance v0, Lcom/vk/core/formatters/d/MaleStrategy;
 
     iget-object v1, p0, Lcom/vk/core/formatters/OnlineFormatter$formatterMale$2;->this$0:Lcom/vk/core/formatters/OnlineFormatter;
 
@@ -57,7 +57,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/core/formatters/d/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/formatters/d/MaleStrategy;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -66,7 +66,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/formatters/OnlineFormatter$formatterMale$2;->invoke()Lcom/vk/core/formatters/d/b;
+    invoke-virtual {p0}, Lcom/vk/core/formatters/OnlineFormatter$formatterMale$2;->invoke()Lcom/vk/core/formatters/d/MaleStrategy;
 
     move-result-object v0
 

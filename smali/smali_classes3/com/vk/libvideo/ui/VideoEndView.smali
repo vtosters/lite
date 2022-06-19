@@ -35,7 +35,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/ui/VideoEndView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/ui/VideoEndView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -78,20 +78,20 @@
 
     move-result-object p3
 
-    sget v0, Lcom/vk/libvideo/h;->video_end_view:I
+    sget v0, Lcom/vk/libvideo/R9;->video_end_view:I
 
     const/4 v1, 0x1
 
     invoke-virtual {p3, v0, p0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 6
-    sget p3, Lcom/vk/libvideo/g;->video_end_replay:I
+    sget p3, Lcom/vk/libvideo/R;->video_end_replay:I
 
     const/4 v0, 0x2
 
     const/4 v2, 0x0
 
-    invoke-static {p0, p3, v2, v0, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p3, v2, v0, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -100,9 +100,9 @@
     iput-object p3, p0, Lcom/vk/libvideo/ui/VideoEndView;->a:Lcom/vk/libvideo/ui/PlayButton;
 
     .line 7
-    sget p3, Lcom/vk/libvideo/g;->video_end_like:I
+    sget p3, Lcom/vk/libvideo/R;->video_end_like:I
 
-    invoke-static {p0, p3, v2, v0, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p3, v2, v0, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -111,9 +111,9 @@
     iput-object p3, p0, Lcom/vk/libvideo/ui/VideoEndView;->b:Lcom/vk/libvideo/ui/PlayButton;
 
     .line 8
-    sget p3, Lcom/vk/libvideo/g;->video_end_add:I
+    sget p3, Lcom/vk/libvideo/R;->video_end_add:I
 
-    invoke-static {p0, p3, v2, v0, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p3, v2, v0, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -122,18 +122,18 @@
     iput-object p3, p0, Lcom/vk/libvideo/ui/VideoEndView;->c:Lcom/vk/libvideo/ui/PlayButton;
 
     .line 9
-    sget p3, Lcom/vk/libvideo/g;->video_like_space:I
+    sget p3, Lcom/vk/libvideo/R;->video_like_space:I
 
-    invoke-static {p0, p3, v2, v0, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p3, v2, v0, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
     iput-object p3, p0, Lcom/vk/libvideo/ui/VideoEndView;->d:Landroid/view/View;
 
     .line 10
-    sget p3, Lcom/vk/libvideo/g;->video_add_space:I
+    sget p3, Lcom/vk/libvideo/R;->video_add_space:I
 
-    invoke-static {p0, p3, v2, v0, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p3, v2, v0, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -172,23 +172,23 @@
     aput v1, v0, p2
 
     .line 15
-    new-instance v1, Lcom/vk/core/drawable/i;
+    new-instance v1, Lcom/vk/core/drawable/RecoloredDrawable;
 
-    sget v2, Lcom/vk/libvideo/e;->ic_like_36:I
+    sget v2, Lcom/vk/libvideo/R7;->ic_like_36:I
 
     invoke-static {p1, v2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
     .line 16
-    sget v3, Lcom/vk/libvideo/c;->nice_red:I
+    sget v3, Lcom/vk/libvideo/R3;->nice_red:I
 
     invoke-static {p1, v3}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result v3
 
     .line 17
-    invoke-direct {v1, v2, v3}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     .line 18
     invoke-virtual {p3, v0, v1}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
@@ -196,9 +196,9 @@
     new-array p2, p2, [I
 
     .line 19
-    new-instance v0, Lcom/vk/core/drawable/i;
+    new-instance v0, Lcom/vk/core/drawable/RecoloredDrawable;
 
-    sget v1, Lcom/vk/libvideo/e;->ic_like_outline_36:I
+    sget v1, Lcom/vk/libvideo/R7;->ic_like_outline_36:I
 
     invoke-static {p1, v1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -206,7 +206,7 @@
 
     const/4 v1, -0x1
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     .line 20
     invoke-virtual {p3, p2, v0}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
@@ -223,7 +223,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/libvideo/ui/VideoEndView$1;-><init>(Lcom/vk/libvideo/ui/VideoEndView;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -281,11 +281,11 @@
 
     iget v0, p1, Lcom/vk/dto/common/VideoFile;->a:I
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v3}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v3
 
@@ -306,12 +306,12 @@
     if-eqz v0, :cond_2
 
     .line 7
-    sget v3, Lcom/vk/libvideo/e;->ic_check_36:I
+    sget v3, Lcom/vk/libvideo/R7;->ic_check_36:I
 
     goto :goto_2
 
     :cond_2
-    sget v3, Lcom/vk/libvideo/e;->ic_add_36:I
+    sget v3, Lcom/vk/libvideo/R7;->ic_add_36:I
 
     .line 8
     :goto_2

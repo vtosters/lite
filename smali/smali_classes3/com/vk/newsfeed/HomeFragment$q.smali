@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/HomeFragment;->a(ZLandroid/view/View;Lcom/vk/newsfeed/h$b;)V
+    value = Lcom/vk/newsfeed/HomeFragment;->a(ZLandroid/view/View;Lcom/vk/newsfeed/MilkshakeNewsHeaderDrawable$b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -44,7 +44,7 @@
 
     const-string v1, "animation"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 

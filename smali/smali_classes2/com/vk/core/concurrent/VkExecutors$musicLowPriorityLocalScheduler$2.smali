@@ -3,7 +3,7 @@
 .source "VkExecutors.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lc/a/s;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lio/reactivex/Scheduler;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
 
 
 # virtual methods
-.method public final invoke()Lc/a/s;
+.method public final invoke()Lio/reactivex/Scheduler;
     .locals 1
 
     .line 2
@@ -65,7 +65,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lc/a/f0/b;->a(Ljava/util/concurrent/Executor;)Lc/a/s;
+    invoke-static {v0}, Lio/reactivex/schedulers/Schedulers;->a(Ljava/util/concurrent/Executor;)Lio/reactivex/Scheduler;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/concurrent/VkExecutors$musicLowPriorityLocalScheduler$2;->invoke()Lc/a/s;
+    invoke-virtual {p0}, Lcom/vk/core/concurrent/VkExecutors$musicLowPriorityLocalScheduler$2;->invoke()Lio/reactivex/Scheduler;
 
     move-result-object v0
 

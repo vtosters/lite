@@ -3,7 +3,7 @@
 .source "PlayerListenersNotifyManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/music/player/c;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/music/player/PlayerListener;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/music/player/c;)V
+.method public final a(Lcom/vk/music/player/PlayerListener;)V
     .locals 0
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/music/player/c;->D()V
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerListener;->D()V
 
     return-void
 .end method
@@ -69,11 +69,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/music/player/c;
+    check-cast p1, Lcom/vk/music/player/PlayerListener;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/audio/player/PlayerListenersNotifyManager$notifyOnParametersChanged$1;->a(Lcom/vk/music/player/c;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/audio/player/PlayerListenersNotifyManager$notifyOnParametersChanged$1;->a(Lcom/vk/music/player/PlayerListener;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

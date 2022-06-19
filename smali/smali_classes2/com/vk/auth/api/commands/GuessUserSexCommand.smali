@@ -1,5 +1,5 @@
 .class public final Lcom/vk/auth/api/commands/GuessUserSexCommand;
-.super Lcom/vk/auth/api/commands/d;
+.super Lcom/vk/auth/api/commands/BaseAuthRequest;
 .source "GuessUserSexCommand.kt"
 
 
@@ -13,7 +13,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/auth/api/commands/d<",
+        "Lcom/vk/auth/api/commands/BaseAuthRequest<",
         "Lcom/vk/auth/api/commands/GuessUserSexCommand$Gender;",
         ">;"
     }
@@ -28,7 +28,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/api/commands/GuessUserSexCommand$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/api/commands/GuessUserSexCommand$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -60,14 +60,14 @@
     const-string v0, "utils.guessUserSex"
 
     .line 2
-    invoke-direct {p0, v0, p4, p5}, Lcom/vk/auth/api/commands/d;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {p0, v0, p4, p5}, Lcom/vk/auth/api/commands/BaseAuthRequest;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     if-eqz p1, :cond_0
 
     const-string p4, "first_name"
 
     .line 3
-    invoke-virtual {p0, p4, p1}, Lcom/vk/api/sdk/o/b;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/sdk/o/b;
+    invoke-virtual {p0, p4, p1}, Lcom/vk/api/sdk/o/VKRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/sdk/o/VKRequest;
 
     :cond_0
     if-eqz p2, :cond_1
@@ -75,7 +75,7 @@
     const-string p1, "last_name"
 
     .line 4
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/sdk/o/b;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/sdk/o/b;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/sdk/o/VKRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/sdk/o/VKRequest;
 
     :cond_1
     if-eqz p3, :cond_2
@@ -83,7 +83,7 @@
     const-string p1, "full_name"
 
     .line 5
-    invoke-virtual {p0, p1, p3}, Lcom/vk/api/sdk/o/b;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/sdk/o/b;
+    invoke-virtual {p0, p1, p3}, Lcom/vk/api/sdk/o/VKRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/sdk/o/VKRequest;
 
     :cond_2
     return-void

@@ -3,12 +3,12 @@
 .source "InstantJobExecutor.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/instantjobs/impl/InstantJobExecutor;->b(Lcom/vk/instantjobs/impl/b;Ljava/lang/Throwable;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
+    value = Lcom/vk/instantjobs/impl/InstantJobExecutor;->b(Lcom/vk/instantjobs/impl/InstantJobInfo;Ljava/lang/Throwable;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/instantjobs/impl/InstantJobExecutor$b;",
         "Lcom/vk/instantjobs/impl/InstantJobExecutor$b;",
         ">;"
@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field final synthetic $jobInfo:Lcom/vk/instantjobs/impl/b;
+.field final synthetic $jobInfo:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
 .field final synthetic $reason:Ljava/lang/Throwable;
 
@@ -36,14 +36,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/instantjobs/impl/InstantJobExecutor;Ljava/lang/Throwable;Lcom/vk/instantjobs/impl/b;)V
+.method constructor <init>(Lcom/vk/instantjobs/impl/InstantJobExecutor;Ljava/lang/Throwable;Lcom/vk/instantjobs/impl/InstantJobInfo;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitErrorHandler$2;->this$0:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
     iput-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitErrorHandler$2;->$reason:Ljava/lang/Throwable;
 
-    iput-object p3, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitErrorHandler$2;->$jobInfo:Lcom/vk/instantjobs/impl/b;
+    iput-object p3, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitErrorHandler$2;->$jobInfo:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
     const/4 p1, 0x1
 
@@ -85,9 +85,9 @@
     .line 3
     iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitErrorHandler$2;->this$0:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitErrorHandler$2;->$jobInfo:Lcom/vk/instantjobs/impl/b;
+    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$submitErrorHandler$2;->$jobInfo:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
-    invoke-static {v0, v1}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->g(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;)Ljava/util/concurrent/Future;
+    invoke-static {v0, v1}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->g(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;)Ljava/util/concurrent/Future;
 
     move-result-object v9
 

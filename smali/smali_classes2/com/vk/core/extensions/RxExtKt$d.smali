@@ -3,12 +3,12 @@
 .source "RxExt.kt"
 
 # interfaces
-.implements Lc/a/z/l;
+.implements Lio/reactivex/functions/Predicate;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;JLjava/util/concurrent/TimeUnit;Lkotlin/jvm/b/c;)Lc/a/m;
+    value = Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;JLjava/util/concurrent/TimeUnit;Lkotlin/jvm/b/Functions1;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/l<",
+        "Lio/reactivex/functions/Predicate<",
         "TN;>;"
     }
 .end annotation
@@ -31,7 +31,7 @@
 # instance fields
 .field final synthetic a:Lkotlin/jvm/internal/Ref$DoubleRef;
 
-.field final synthetic b:Lkotlin/jvm/b/c;
+.field final synthetic b:Lkotlin/jvm/b/Functions1;
 
 .field final synthetic c:Lkotlin/jvm/internal/Ref$LongRef;
 
@@ -43,12 +43,12 @@
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/internal/Ref$DoubleRef;Lkotlin/jvm/b/c;Lkotlin/jvm/internal/Ref$LongRef;Ljava/util/concurrent/TimeUnit;JLkotlin/jvm/internal/Ref$DoubleRef;)V
+.method constructor <init>(Lkotlin/jvm/internal/Ref$DoubleRef;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/internal/Ref$LongRef;Ljava/util/concurrent/TimeUnit;JLkotlin/jvm/internal/Ref$DoubleRef;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/core/extensions/RxExtKt$d;->a:Lkotlin/jvm/internal/Ref$DoubleRef;
 
-    iput-object p2, p0, Lcom/vk/core/extensions/RxExtKt$d;->b:Lkotlin/jvm/b/c;
+    iput-object p2, p0, Lcom/vk/core/extensions/RxExtKt$d;->b:Lkotlin/jvm/b/Functions1;
 
     iput-object p3, p0, Lcom/vk/core/extensions/RxExtKt$d;->c:Lkotlin/jvm/internal/Ref$LongRef;
 
@@ -84,13 +84,13 @@
 
     if-eqz v5, :cond_0
 
-    iget-object v5, p0, Lcom/vk/core/extensions/RxExtKt$d;->b:Lkotlin/jvm/b/c;
+    iget-object v5, p0, Lcom/vk/core/extensions/RxExtKt$d;->b:Lkotlin/jvm/b/Functions1;
 
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v1
 
-    invoke-interface {v5, v1, p1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v5, v1, p1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "ChatSettingsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/chat_settings/c;
+.implements Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponentCallback;
 
 
 # annotations
@@ -46,11 +46,11 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment$ChatSettingsComponentCallbackImpl;->a:Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->b(Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;)Lcom/vk/im/ui/p/b;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->b(Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;)Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v1
 
@@ -62,7 +62,7 @@
 
     const-string v0, "requireActivity()"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment$ChatSettingsComponentCallbackImpl;->a:Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;
 
@@ -76,7 +76,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/im/ui/p/e$b;->a(Lcom/vk/im/ui/p/e;Landroid/content/Context;Lcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/im/ui/p/ImBridge$b1;->a(Lcom/vk/im/ui/p/ImBridge11;Landroid/content/Context;Lcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -91,11 +91,11 @@
     .line 2
     iget-object v1, v0, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment$ChatSettingsComponentCallbackImpl;->a:Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;
 
-    invoke-static {v1}, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->b(Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;)Lcom/vk/im/ui/p/b;
+    invoke-static {v1}, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;->b(Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;)Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v1}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v1
 
@@ -110,7 +110,7 @@
 
     const-string v5, "requireActivity()"
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->getId()I
@@ -162,25 +162,25 @@
     const/16 v26, 0x0
 
     .line 5
-    invoke-static/range {v1 .. v26}, Lcom/vk/im/ui/p/e$b;->a(Lcom/vk/im/ui/p/e;Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListOpenMode;ZLjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/conversations/BotButton;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Class;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v26}, Lcom/vk/im/ui/p/ImBridge$b1;->a(Lcom/vk/im/ui/p/ImBridge11;Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListOpenMode;ZLjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/conversations/BotButton;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Class;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/models/dialogs/d;)V
+.method public a(Lcom/vk/im/engine/models/dialogs/DialogMembersList;)V
     .locals 4
 
     .line 6
     new-instance v0, Ljava/util/ArrayList;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/d;->a()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/DialogMembersList;->a()I
 
     move-result v1
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/d;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/DialogMembersList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
@@ -288,7 +288,7 @@
     const/4 v8, 0x0
 
     .line 5
-    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
 
     return-void
 .end method
@@ -329,7 +329,7 @@
     const/4 v8, 0x0
 
     .line 5
-    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
 
     return-void
 .end method

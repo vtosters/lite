@@ -3,12 +3,12 @@
 .source "MusicSectionHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/sections/types/MusicSectionHolder;-><init>(Landroid/view/ViewGroup;IILcom/vk/music/sections/f;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;)V
+    value = Lcom/vk/music/sections/types/MusicSectionHolder;-><init>(Landroid/view/ViewGroup;IILcom/vk/music/sections/MusicSectionsModel;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/lang/Integer;",
         "Lcom/vk/music/sections/types/MusicSectionAdapter;",
         "Lcom/vk/dto/music/MusicTrack;",

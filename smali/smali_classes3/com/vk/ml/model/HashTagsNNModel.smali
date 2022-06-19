@@ -1,5 +1,5 @@
 .class public final Lcom/vk/ml/model/HashTagsNNModel;
-.super Lcom/vk/ml/model/a/a;
+.super Lcom/vk/ml/model/a/ImageNNModel;
 .source "HashTagsNNModel.kt"
 
 
@@ -21,7 +21,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/ml/model/a/b;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/ml/model/a/ModelDtoProvider;)V
     .locals 9
 
     const/16 v0, 0xe0
@@ -31,7 +31,7 @@
     const/4 v2, 0x4
 
     .line 1
-    invoke-direct {p0, v0, v0, v1, v2}, Lcom/vk/ml/model/a/a;-><init>(IIII)V
+    invoke-direct {p0, v0, v0, v1, v2}, Lcom/vk/ml/model/a/ImageNNModel;-><init>(IIII)V
 
     const/4 v0, 0x1
 
@@ -58,7 +58,7 @@
     .line 4
     sget-object v0, Lcom/vk/ml/MLFeatures$MLFeature;->HASHTAGS:Lcom/vk/ml/MLFeatures$MLFeature;
 
-    invoke-interface {p2, v0}, Lcom/vk/ml/model/a/b;->a(Lcom/vk/ml/MLFeatures$MLFeature;)Lcom/vk/ml/c;
+    invoke-interface {p2, v0}, Lcom/vk/ml/model/a/ModelDtoProvider;->a(Lcom/vk/ml/MLFeatures$MLFeature;)Lcom/vk/ml/MLModelDto;
 
     move-result-object p2
 
@@ -67,7 +67,7 @@
     .line 5
     new-instance v0, Lorg/json/JSONObject;
 
-    invoke-virtual {p2}, Lcom/vk/ml/c;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/ml/MLModelDto;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -100,7 +100,7 @@
 
     const-string v3, "joClasses.keys()"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     :cond_0
@@ -129,7 +129,7 @@
 
     const-string v6, "context.resources"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -140,7 +140,7 @@
     const-string v6, "locale"
 
     .line 12
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
@@ -247,7 +247,7 @@
     const-string v4, "key"
 
     .line 18
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v3}, Lkotlin/text/l;->b(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -278,7 +278,7 @@
 
     new-instance v1, Ljava/io/File;
 
-    invoke-virtual {p2}, Lcom/vk/ml/c;->d()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/ml/MLModelDto;->d()Ljava/lang/String;
 
     move-result-object p2
 
@@ -295,33 +295,33 @@
     move-result-object p2
 
     .line 21
-    invoke-virtual {p0, p1, p2}, Lcom/vk/ml/model/a/c;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/nio/MappedByteBuffer;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/ml/model/a/NNModel;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/nio/MappedByteBuffer;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/ml/model/a/c;->a(Ljava/nio/MappedByteBuffer;)V
+    invoke-virtual {p0, p1}, Lcom/vk/ml/model/a/NNModel;->a(Ljava/nio/MappedByteBuffer;)V
 
     .line 22
-    new-instance p1, Lorg/tensorflow/lite/b;
+    new-instance p1, Lorg/tensorflow/lite/Interpreter;
 
-    invoke-virtual {p0}, Lcom/vk/ml/model/a/c;->a()Ljava/nio/MappedByteBuffer;
+    invoke-virtual {p0}, Lcom/vk/ml/model/a/NNModel;->a()Ljava/nio/MappedByteBuffer;
 
     move-result-object p2
 
     if-eqz p2, :cond_8
 
-    invoke-virtual {p0}, Lcom/vk/ml/model/a/c;->b()Lorg/tensorflow/lite/b$a;
+    invoke-virtual {p0}, Lcom/vk/ml/model/a/NNModel;->b()Lorg/tensorflow/lite/Interpreter$a;
 
     move-result-object v0
 
-    invoke-direct {p1, p2, v0}, Lorg/tensorflow/lite/b;-><init>(Ljava/nio/ByteBuffer;Lorg/tensorflow/lite/b$a;)V
+    invoke-direct {p1, p2, v0}, Lorg/tensorflow/lite/Interpreter;-><init>(Ljava/nio/ByteBuffer;Lorg/tensorflow/lite/Interpreter$a;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/ml/model/a/c;->a(Lorg/tensorflow/lite/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/ml/model/a/NNModel;->a(Lorg/tensorflow/lite/Interpreter;)V
 
     return-void
 
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -422,12 +422,12 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/ml/model/a/a;->b(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-virtual {p0, p1}, Lcom/vk/ml/model/a/ImageNNModel;->b(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/ml/model/a/a;->a(Landroid/graphics/Bitmap;)Ljava/nio/ByteBuffer;
+    invoke-virtual {p0, p1}, Lcom/vk/ml/model/a/ImageNNModel;->a(Landroid/graphics/Bitmap;)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
@@ -452,7 +452,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/ml/model/HashTagsNNModel;->h:[[F
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/ml/model/a/c;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/ml/model/a/NNModel;->a(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/4 p1, 0x1
 
@@ -502,14 +502,14 @@
     aget-object v0, v0, v1
 
     .line 9
-    invoke-static {v0}, Lkotlin/collections/f;->a([F)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/f;->a([F)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 10
     sget-object v3, Lcom/vk/ml/model/HashTagsNNModel$run$pairs$1;->a:Lcom/vk/ml/model/HashTagsNNModel$run$pairs$1;
 
-    invoke-static {v0, v3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Lkotlin/jvm/b/c;)Lkotlin/sequences/j;
+    invoke-static {v0, v3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions1;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -518,14 +518,14 @@
 
     invoke-direct {v3}, Lcom/vk/ml/model/HashTagsNNModel$a;-><init>()V
 
-    invoke-static {v0, v3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Ljava/util/Comparator;)Lkotlin/sequences/j;
+    invoke-static {v0, v3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Ljava/util/Comparator;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     const/4 v3, 0x3
 
     .line 12
-    invoke-static {v0, v3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;I)Lkotlin/sequences/j;
+    invoke-static {v0, v3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;I)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -534,12 +534,12 @@
 
     invoke-direct {v3, p0}, Lcom/vk/ml/model/HashTagsNNModel$run$pairs$3;-><init>(Lcom/vk/ml/model/HashTagsNNModel;)V
 
-    invoke-static {v0, v3}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v3}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 14
-    invoke-static {v0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {v0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object v0
 

@@ -18,11 +18,11 @@
 
 
 # static fields
-.field static final synthetic d:[Lkotlin/u/j;
+.field static final synthetic d:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lkotlin/e;
+.field private final a:Lkotlin/Lazy2;
 
 .field private final b:Landroid/content/Context;
 
@@ -35,13 +35,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/audiomsg/player/impl/PlayerConfig;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -49,21 +49,21 @@
 
     const-string v4, "getPrefs()Landroid/content/SharedPreferences;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/audiomsg/player/impl/PlayerConfig;->d:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/audiomsg/player/impl/PlayerConfig;->d:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/audiomsg/player/impl/PlayerConfig$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/audiomsg/player/impl/PlayerConfig$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/audiomsg/player/impl/PlayerConfig$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -83,11 +83,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/audiomsg/player/impl/PlayerConfig$prefs$2;-><init>(Lcom/vk/audiomsg/player/impl/PlayerConfig;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/audiomsg/player/impl/PlayerConfig;->a:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/audiomsg/player/impl/PlayerConfig;->a:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -113,15 +113,15 @@
 .method private final d()Landroid/content/SharedPreferences;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/audiomsg/player/impl/PlayerConfig;->a:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/impl/PlayerConfig;->a:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/audiomsg/player/impl/PlayerConfig;->d:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/audiomsg/player/impl/PlayerConfig;->d:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -153,7 +153,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 

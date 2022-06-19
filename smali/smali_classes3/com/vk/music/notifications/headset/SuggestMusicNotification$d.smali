@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/music/notifications/headset/SuggestMusicNotification;
 
-.field final synthetic b:Lcom/vk/music/notifications/headset/b;
+.field final synthetic b:Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Lcom/vk/music/notifications/headset/b;)V
+.method constructor <init>(Lcom/vk/music/notifications/headset/SuggestMusicNotification;Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification$d;->a:Lcom/vk/music/notifications/headset/SuggestMusicNotification;
 
-    iput-object p2, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification$d;->b:Lcom/vk/music/notifications/headset/b;
+    iput-object p2, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification$d;->b:Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,11 +42,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification$d;->b:Lcom/vk/music/notifications/headset/b;
+    iget-object v0, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification$d;->b:Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -54,9 +54,9 @@
 
     const-string v1, "it.context"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/notifications/headset/b;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/notifications/headset/SuggestPlayMusicNotificationModel1;->a(Landroid/content/Context;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/music/notifications/headset/SuggestMusicNotification$d;->a:Lcom/vk/music/notifications/headset/SuggestMusicNotification;

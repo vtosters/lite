@@ -88,7 +88,7 @@
     .line 3
     iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$t;->c:Lcom/crashlytics/android/core/CrashlyticsController;
 
-    invoke-static {v0}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Lcom/crashlytics/android/core/CrashlyticsController;)Lcom/crashlytics/android/core/y;
+    invoke-static {v0}, Lcom/crashlytics/android/core/CrashlyticsController;->a(Lcom/crashlytics/android/core/CrashlyticsController;)Lcom/crashlytics/android/core/LogFileManager;
 
     move-result-object v0
 
@@ -96,7 +96,7 @@
 
     iget-object v3, p0, Lcom/crashlytics/android/core/CrashlyticsController$t;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/crashlytics/android/core/y;->a(JLjava/lang/String;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/crashlytics/android/core/LogFileManager;->a(JLjava/lang/String;)V
 
     :cond_0
     const/4 v0, 0x0

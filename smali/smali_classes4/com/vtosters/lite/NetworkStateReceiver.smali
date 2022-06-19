@@ -57,7 +57,7 @@
     filled-new-array {v0, v1, v2, v3}, [Ljava/lang/String;
 
     .line 4
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "connectivity"
 
@@ -147,11 +147,11 @@
 
     if-ltz v0, :cond_1
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->b1()Z
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->b1()Z
 
     move-result v0
 
@@ -162,43 +162,43 @@
     .line 22
     :cond_0
     :try_start_0
-    new-instance v0, Lcom/vk/api/internal/g;
+    new-instance v0, Lcom/vk/api/internal/InternalGetUserNotifications;
 
     const/16 v3, 0x12e6
 
     .line 23
-    invoke-static {}, Lcom/vtosters/lite/data/n;->h()Ljava/lang/String;
+    invoke-static {}, Lcom/vtosters/lite/data/Analytics;->h()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {}, Lcom/vk/core/network/utils/e;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/core/network/utils/NetworkUtils;->b()Ljava/lang/String;
 
     move-result-object v5
 
     .line 24
-    invoke-static {}, Lcom/vk/core/network/utils/e;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/core/network/utils/NetworkUtils;->a()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {}, Lcom/vtosters/lite/utils/l;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/vtosters/lite/utils/Utils;->b()Ljava/lang/String;
 
     move-result-object v7
 
     move-object v2, v0
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/api/internal/g;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/api/internal/InternalGetUserNotifications;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vtosters/lite/NetworkStateReceiver$c;
 
     invoke-direct {v2, p0}, Lcom/vtosters/lite/NetworkStateReceiver$c;-><init>(Landroid/content/Context;)V
 
     .line 25
-    invoke-virtual {v0, v2}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, v2}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p0
 
     .line 26
-    invoke-virtual {p0}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p0}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -217,7 +217,7 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Lcom/vtosters/lite/api/execute/i$a;Z)V
+.method public static a(Landroid/content/Context;Lcom/vtosters/lite/api/execute/GetWallInfo$a;Z)V
     .locals 5
 
     .line 2
@@ -446,11 +446,11 @@
     .locals 6
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->b1()Z
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->b1()Z
 
     move-result v0
 
@@ -543,9 +543,9 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v0, Lcom/vk/core/util/DeviceState;->INSTANCE:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/v;->x()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/DeviceState;->x()Z
 
     move-result v0
 
@@ -584,11 +584,11 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->b1()Z
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->b1()Z
 
     move-result v0
 
@@ -598,7 +598,7 @@
 
     .line 2
     :cond_0
-    invoke-static {}, Lcom/vtosters/lite/api/execute/i;->o()Z
+    invoke-static {}, Lcom/vtosters/lite/api/execute/GetWallInfo;->o()Z
 
     move-result v0
 
@@ -608,24 +608,24 @@
 
     .line 3
     :cond_1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     .line 4
-    new-instance v1, Lcom/vtosters/lite/api/execute/i;
+    new-instance v1, Lcom/vtosters/lite/api/execute/GetWallInfo;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2}, Lcom/vtosters/lite/api/execute/i;-><init>(Z)V
+    invoke-direct {v1, v2}, Lcom/vtosters/lite/api/execute/GetWallInfo;-><init>(Z)V
 
     const-string v2, "network_changed"
 
-    invoke-virtual {v1, v2}, Lcom/vk/api/base/d;->c(Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {v1, v2}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
-    invoke-virtual {v1}, Lcom/vk/api/base/d;->j()Lc/a/m;
+    invoke-virtual {v1}, Lcom/vk/api/base/ApiRequest;->j()Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -637,7 +637,7 @@
 
     invoke-direct {v0}, Lcom/vtosters/lite/NetworkStateReceiver$b;-><init>()V
 
-    invoke-virtual {v1, v2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -711,11 +711,11 @@
     if-eqz p1, :cond_2
 
     .line 4
-    invoke-static {}, Lcom/vk/imageloader/e;->c()V
+    invoke-static {}, Lcom/vk/imageloader/ImageNetworkFailHandler;->c()V
 
     .line 5
     :cond_2
-    invoke-static {}, Lcom/vk/core/network/utils/e;->d()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/core/network/utils/NetworkUtils;->d()Ljava/lang/String;
 
     .line 6
     iget-boolean p2, p0, Lcom/vtosters/lite/NetworkStateReceiver;->a:Z

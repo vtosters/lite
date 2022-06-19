@@ -3,12 +3,12 @@
 .source "DialogGetMembersCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->d(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
+    value = Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->d(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
         "Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;",
         ">;"
@@ -50,20 +50,20 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->d()I
 
     move-result v0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object v1
 
@@ -84,11 +84,11 @@
     .line 3
     invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object p1
 
@@ -98,7 +98,7 @@
 
     move-result v3
 
-    invoke-virtual {p1, v3}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->d(I)Lcom/vk/im/engine/models/dialogs/d;
+    invoke-virtual {p1, v3}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->d(I)Lcom/vk/im/engine/models/dialogs/DialogMembersList;
 
     move-result-object p1
 
@@ -130,14 +130,14 @@
 
     .line 5
     :goto_2
-    new-instance v1, Lcom/vk/im/engine/models/b;
+    new-instance v1, Lcom/vk/im/engine/models/EntityValue;
 
-    invoke-direct {v1, p1, v0}, Lcom/vk/im/engine/models/b;-><init>(Ljava/lang/Object;Z)V
+    invoke-direct {v1, p1, v0}, Lcom/vk/im/engine/models/EntityValue;-><init>(Ljava/lang/Object;Z)V
 
     .line 6
     new-instance p1, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
 
-    invoke-direct {p1, v1, v2}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;-><init>(Lcom/vk/im/engine/models/b;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
+    invoke-direct {p1, v1, v2}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;-><init>(Lcom/vk/im/engine/models/EntityValue;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
     return-object p1
 .end method

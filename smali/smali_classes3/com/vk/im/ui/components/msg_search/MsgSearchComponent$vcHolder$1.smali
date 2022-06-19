@@ -3,12 +3,12 @@
 .source "MsgSearchComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;-><init>(Lcom/vk/im/engine/a;Landroid/content/Context;Lcom/vk/im/ui/components/msg_search/a;Lcom/vk/im/ui/components/msg_search/b;)V
+    value = Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;-><init>(Lcom/vk/im/engine/ImEngine;Landroid/content/Context;Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;Lcom/vk/im/ui/components/msg_search/MsgSearchReporter;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;",
         ">;"
     }
@@ -53,7 +53,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$vcHolder$1;->this$0:Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->d(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/a;
+    invoke-static {v1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->d(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;
 
     move-result-object v2
 
@@ -63,7 +63,7 @@
 
     move-result-object v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;-><init>(Lcom/vk/im/ui/components/msg_search/vc/p;Lcom/vk/im/ui/components/msg_search/a;Landroid/content/Context;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchVc;-><init>(Lcom/vk/im/ui/components/msg_search/vc/VcCallback;Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;Landroid/content/Context;)V
 
     return-object v0
 .end method

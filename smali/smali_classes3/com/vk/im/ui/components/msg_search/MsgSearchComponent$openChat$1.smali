@@ -3,7 +3,7 @@
 .source "MsgSearchComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -63,7 +63,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$openChat$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -90,19 +90,19 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$openChat$1;->this$0:Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->f(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/b;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->f(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/MsgSearchReporter;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$openChat$1;->this$0:Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->d(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/a;
+    invoke-static {v1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->d(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;
 
     move-result-object v1
 
     iget v2, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$openChat$1;->$pos:I
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/msg_search/b;->a(Lcom/vk/im/ui/components/msg_search/a;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/msg_search/MsgSearchReporter;->a(Lcom/vk/im/ui/components/msg_search/MsgSearchLayout;I)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$openChat$1;->this$0:Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;

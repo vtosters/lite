@@ -3,7 +3,7 @@
 .source "RightMenu.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/right/c;
+.implements Lcom/vk/navigation/right/RightMenu1;
 
 
 # annotations
@@ -41,7 +41,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/navigation/right/RightMenu$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/navigation/right/RightMenu$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/navigation/right/RightMenu;->g:Lcom/vk/navigation/right/RightMenu$a;
 
@@ -82,7 +82,7 @@
     :cond_0
     const-string p0, "presenter"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -130,7 +130,7 @@
 
     const-string v1, "findViewById(R.id.title)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -139,7 +139,7 @@
     .line 4
     new-instance v0, Lcom/vk/navigation/right/RightMenuPresenter;
 
-    invoke-direct {v0, p0}, Lcom/vk/navigation/right/RightMenuPresenter;-><init>(Lcom/vk/navigation/right/c;)V
+    invoke-direct {v0, p0}, Lcom/vk/navigation/right/RightMenuPresenter;-><init>(Lcom/vk/navigation/right/RightMenu1;)V
 
     iput-object v0, p0, Lcom/vk/navigation/right/RightMenu;->c:Lcom/vk/navigation/right/RightMenuPresenter;
 
@@ -150,7 +150,7 @@
     const v2, 0x7f0a07e5
 
     .line 5
-    invoke-static {p0, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -161,12 +161,12 @@
 
     invoke-direct {v3, p0}, Lcom/vk/navigation/right/RightMenu$initView$1;-><init>(Lcom/vk/navigation/right/RightMenu;)V
 
-    invoke-static {v2, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v2, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     const v2, 0x7f0a0d0d
 
     .line 7
-    invoke-static {p0, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -177,12 +177,12 @@
 
     invoke-direct {v3, p0}, Lcom/vk/navigation/right/RightMenu$initView$2;-><init>(Lcom/vk/navigation/right/RightMenu;)V
 
-    invoke-static {v2, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v2, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     const v2, 0x7f0a0693
 
     .line 9
-    invoke-static {p0, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -235,29 +235,29 @@
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 14
-    sget-object v0, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
+    sget-object v0, Lcom/vk/menu/MenuUtils;->INSTANCE:Lcom/vk/menu/MenuUtils;
 
     iget-object v1, p0, Lcom/vk/navigation/right/RightMenu;->d:Lcom/vk/navigation/right/RightMenu$b;
 
-    invoke-virtual {v0, v1}, Lcom/vk/menu/c;->a(Lcom/vk/menu/c$a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/menu/MenuUtils;->a(Lcom/vk/menu/MenuUtils$a;)V
 
     return-void
 
     .line 15
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 16
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 17
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -304,7 +304,7 @@
     :cond_1
     const-string p1, "recycler"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -338,7 +338,7 @@
     const-string v0, "presenter"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -392,7 +392,7 @@
     invoke-direct {v1, v2, v3}, Lcom/vk/hints/HintsManager$e;-><init>(Ljava/lang/String;Landroid/graphics/Rect;)V
 
     .line 7
-    invoke-virtual {v1, v0}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/w;
+    invoke-virtual {v1, v0}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/Dismissable;
 
     :cond_0
     return-void
@@ -408,7 +408,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -424,7 +424,7 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
     .line 2
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -481,11 +481,11 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
     .line 2
-    sget-object v0, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
+    sget-object v0, Lcom/vk/menu/MenuUtils;->INSTANCE:Lcom/vk/menu/MenuUtils;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/menu/c;->a(Lcom/vk/menu/c$a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/menu/MenuUtils;->a(Lcom/vk/menu/MenuUtils$a;)V
 
     .line 3
     :try_start_0
@@ -521,7 +521,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/navigation/right/b;",
+            "Lcom/vk/navigation/right/RightMenuItem;",
             ">;)V"
         }
     .end annotation
@@ -531,7 +531,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     :cond_0
     return-void
@@ -552,7 +552,7 @@
     :cond_0
     const-string p1, "title"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

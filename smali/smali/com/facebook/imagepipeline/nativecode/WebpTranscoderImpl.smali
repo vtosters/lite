@@ -7,7 +7,7 @@
 
 
 # annotations
-.annotation build Lcom/facebook/common/internal/d;
+.annotation build Lcom/facebook/common/internal/DoNotStrip;
 .end annotation
 
 
@@ -22,7 +22,7 @@
 .end method
 
 .method private static native nativeTranscodeWebpToJpeg(Ljava/io/InputStream;Ljava/io/OutputStream;I)V
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 
     .annotation system Ldalvik/annotation/Throws;
@@ -33,7 +33,7 @@
 .end method
 
 .method private static native nativeTranscodeWebpToPng(Ljava/io/InputStream;Ljava/io/OutputStream;)V
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 
     .annotation system Ldalvik/annotation/Throws;
@@ -45,11 +45,11 @@
 
 
 # virtual methods
-.method public isWebpNativelySupported(Lcom/facebook/w/c;)Z
+.method public isWebpNativelySupported(Lcom/facebook/w/ImageFormat;)Z
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/facebook/w/b;->f:Lcom/facebook/w/c;
+    sget-object v0, Lcom/facebook/w/DefaultImageFormats;->f:Lcom/facebook/w/ImageFormat;
 
     const/4 v1, 0x0
 
@@ -69,15 +69,15 @@
 
     .line 3
     :cond_1
-    sget-object v0, Lcom/facebook/w/b;->g:Lcom/facebook/w/c;
+    sget-object v0, Lcom/facebook/w/DefaultImageFormats;->g:Lcom/facebook/w/ImageFormat;
 
     if-eq p1, v0, :cond_4
 
-    sget-object v0, Lcom/facebook/w/b;->h:Lcom/facebook/w/c;
+    sget-object v0, Lcom/facebook/w/DefaultImageFormats;->h:Lcom/facebook/w/ImageFormat;
 
     if-eq p1, v0, :cond_4
 
-    sget-object v0, Lcom/facebook/w/b;->i:Lcom/facebook/w/c;
+    sget-object v0, Lcom/facebook/w/DefaultImageFormats;->i:Lcom/facebook/w/ImageFormat;
 
     if-ne p1, v0, :cond_2
 
@@ -85,7 +85,7 @@
 
     .line 4
     :cond_2
-    sget-object v0, Lcom/facebook/w/b;->j:Lcom/facebook/w/c;
+    sget-object v0, Lcom/facebook/w/DefaultImageFormats;->j:Lcom/facebook/w/ImageFormat;
 
     if-ne p1, v0, :cond_3
 
@@ -104,7 +104,7 @@
     .line 6
     :cond_4
     :goto_0
-    sget-boolean p1, Lcom/facebook/common/k/c;->b:Z
+    sget-boolean p1, Lcom/facebook/common/k/WebpSupportStatus;->b:Z
 
     return p1
 .end method
@@ -121,12 +121,12 @@
     invoke-static {}, Lcom/facebook/imagepipeline/nativecode/StaticWebpNativeLoader;->ensure()V
 
     .line 2
-    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p1, Ljava/io/InputStream;
 
     .line 3
-    invoke-static {p2}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p2, Ljava/io/OutputStream;
 
@@ -148,12 +148,12 @@
     invoke-static {}, Lcom/facebook/imagepipeline/nativecode/StaticWebpNativeLoader;->ensure()V
 
     .line 2
-    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p1, Ljava/io/InputStream;
 
     .line 3
-    invoke-static {p2}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p2, Ljava/io/OutputStream;
 

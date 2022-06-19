@@ -26,11 +26,11 @@
     .locals 1
 
     .line 10
-    invoke-virtual {p0}, Lcom/vtosters/lite/api/AppApiLogger;->a()Lkotlin/e;
+    invoke-virtual {p0}, Lcom/vtosters/lite/api/AppApiLogger;->a()Lkotlin/Lazy2;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -59,12 +59,12 @@
 
 
 # virtual methods
-.method public a()Lkotlin/e;
+.method public a()Lkotlin/Lazy2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/e<",
+            "Lkotlin/Lazy2<",
             "Lcom/vk/api/sdk/utils/log/Logger$LogLevel;",
             ">;"
         }
@@ -73,7 +73,7 @@
     .line 1
     sget-object v0, Lcom/vtosters/lite/api/AppApiLogger$logLevel$1;->a:Lcom/vtosters/lite/api/AppApiLogger$logLevel$1;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 

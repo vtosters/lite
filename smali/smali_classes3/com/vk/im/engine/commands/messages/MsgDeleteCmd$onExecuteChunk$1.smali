@@ -3,12 +3,12 @@
 .source "MsgDeleteCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/messages/MsgDeleteCmd;->f(Lcom/vk/im/engine/d;Lcom/vk/im/engine/utils/collection/d;)Z
+    value = Lcom/vk/im/engine/commands/messages/MsgDeleteCmd;->f(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/utils/collection/IntCollection;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -30,22 +30,22 @@
 # instance fields
 .field final synthetic $attachUploads:Ljava/util/List;
 
-.field final synthetic $chunkLocalIds:Lcom/vk/im/engine/utils/collection/d;
+.field final synthetic $chunkLocalIds:Lcom/vk/im/engine/utils/collection/IntCollection;
 
-.field final synthetic $env:Lcom/vk/im/engine/d;
+.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
 
 .field final synthetic this$0:Lcom/vk/im/engine/commands/messages/MsgDeleteCmd;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/commands/messages/MsgDeleteCmd;Lcom/vk/im/engine/utils/collection/d;Lcom/vk/im/engine/d;Ljava/util/List;)V
+.method constructor <init>(Lcom/vk/im/engine/commands/messages/MsgDeleteCmd;Lcom/vk/im/engine/utils/collection/IntCollection;Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1;->this$0:Lcom/vk/im/engine/commands/messages/MsgDeleteCmd;
 
-    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1;->$chunkLocalIds:Lcom/vk/im/engine/utils/collection/d;
+    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1;->$chunkLocalIds:Lcom/vk/im/engine/utils/collection/IntCollection;
 
-    iput-object p3, p0, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1;->$env:Lcom/vk/im/engine/d;
+    iput-object p3, p0, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     iput-object p4, p0, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1;->$attachUploads:Ljava/util/List;
 
@@ -62,13 +62,13 @@
     .locals 2
 
     .line 1
-    iget-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1;->$chunkLocalIds:Lcom/vk/im/engine/utils/collection/d;
+    iget-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1;->$chunkLocalIds:Lcom/vk/im/engine/utils/collection/IntCollection;
 
     new-instance v0, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1$a;
 
     invoke-direct {v0, p0}, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1$a;-><init>(Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1;)V
 
-    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/d;->a(Lcom/vk/im/engine/utils/collection/d$a;)V
+    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Lcom/vk/im/engine/utils/collection/IntCollection$a;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1;->$attachUploads:Ljava/util/List;
@@ -120,9 +120,9 @@
     move-result-object p1
 
     .line 7
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -143,7 +143,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgDeleteCmd$onExecuteChunk$1;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -473,7 +473,7 @@
     .line 9
     :goto_1
     :try_start_2
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object v3
 
@@ -493,7 +493,7 @@
 
     move-result-object p0
 
-    invoke-interface {v3, v4, p0, p1}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v3, v4, p0, p1}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -575,7 +575,7 @@
     move-exception p0
 
     .line 24
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object p1
 
@@ -583,7 +583,7 @@
 
     const-string v1, "Could not calculate hash for app icon."
 
-    invoke-interface {p1, v0, v1, p0}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0, v1, p0}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const-string p0, ""
 
@@ -690,7 +690,7 @@
     move-exception p0
 
     .line 28
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object v0
 
@@ -714,7 +714,7 @@
 
     const-string v1, "Fabric"
 
-    invoke-interface {v0, v1, p1, p0}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, p1, p0}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const-string p0, ""
 
@@ -840,13 +840,13 @@
     if-eqz p0, :cond_0
 
     .line 49
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object p0
 
     const-string p2, "Fabric"
 
-    invoke-interface {p0, p1, p2, p3}, Lio/fabric/sdk/android/k;->a(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p0, p1, p2, p3}, Lio/fabric/sdk/android/Logger;->a(ILjava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -863,13 +863,13 @@
     if-eqz p0, :cond_0
 
     .line 47
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object p0
 
     const-string p2, "Fabric"
 
-    invoke-interface {p0, p2, p1}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p0, p2, p1}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -918,13 +918,13 @@
     move-exception p0
 
     .line 67
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object v0
 
     const-string v1, "Fabric"
 
-    invoke-interface {v0, v1, p1, p0}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, p1, p0}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     :goto_0
@@ -948,13 +948,13 @@
     move-exception p0
 
     .line 69
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object v0
 
     const-string v1, "Fabric"
 
-    invoke-interface {v0, v1, p1, p0}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, p1, p0}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     :goto_0
@@ -1177,7 +1177,7 @@
 
     .line 11
     :cond_2
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object v4
 
@@ -1197,7 +1197,7 @@
 
     move-result-object v6
 
-    invoke-interface {v4, v5, v6}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v4, v5, v6}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1209,7 +1209,7 @@
 
     .line 12
     :try_start_2
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object v5
 
@@ -1229,7 +1229,7 @@
 
     move-result-object v3
 
-    invoke-interface {v5, v6, v3, v4}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v5, v6, v3, v4}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 13
     :cond_3
@@ -1519,7 +1519,7 @@
     .line 9
     :goto_1
     :try_start_2
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object v3
 
@@ -1527,7 +1527,7 @@
 
     const-string v5, "Could not calculate hash for app icon."
 
-    invoke-interface {v3, v4, v5, v2}, Lio/fabric/sdk/android/k;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v3, v4, v5, v2}, Lio/fabric/sdk/android/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -1570,13 +1570,13 @@
     if-eqz p0, :cond_0
 
     .line 3
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object p0
 
     const-string v0, "Fabric"
 
-    invoke-interface {p0, v0, p1}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p0, v0, p1}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -2042,7 +2042,7 @@
     move-result-object p0
 
     .line 4
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object v0
 
@@ -2062,7 +2062,7 @@
 
     const-string v2, "Fabric"
 
-    invoke-interface {v0, v2, v1}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 

@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # static fields
@@ -36,7 +36,7 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    invoke-static {p1}, Lcom/vk/core/util/p1/c;->a(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcom/vk/core/util/p1/PagedDataProviderWithPaginatedList;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

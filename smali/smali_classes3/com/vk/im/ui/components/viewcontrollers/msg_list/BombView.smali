@@ -3,7 +3,7 @@
 .source "BombView.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -19,7 +19,7 @@
 
 
 # static fields
-.field static final synthetic M:[Lkotlin/u/j;
+.field static final synthetic M:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -29,13 +29,13 @@
 
 .field private final D:Landroid/os/Handler;
 
-.field private final E:Lkotlin/e;
+.field private final E:Lkotlin/Lazy2;
 
-.field private final F:Lkotlin/e;
+.field private final F:Lkotlin/Lazy2;
 
-.field private final G:Lkotlin/e;
+.field private final G:Lkotlin/Lazy2;
 
-.field private final H:Lkotlin/e;
+.field private final H:Lkotlin/Lazy2;
 
 .field private final I:Landroidx/transition/TransitionSet;
 
@@ -74,13 +74,13 @@
 
     const/4 v0, 0x4
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -88,9 +88,9 @@
 
     const-string v4, "getTimerTickTask()Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$TimerTick;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
@@ -100,7 +100,7 @@
 
     const-class v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -108,9 +108,9 @@
 
     const-string v4, "getCollapseTask()Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$CollapseTask;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x1
 
@@ -120,7 +120,7 @@
 
     const-class v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -128,9 +128,9 @@
 
     const-string v4, "getTimeBlinkAnimator()Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$BlinkAnimator;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x2
 
@@ -140,7 +140,7 @@
 
     const-class v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -148,21 +148,21 @@
 
     const-string v4, "getBombBlinkAnimator()Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$BlinkAnimator;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->M:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->M:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$c;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -182,7 +182,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -202,7 +202,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -214,7 +214,7 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 2
-    sget p3, Lcom/vk/im/ui/f;->bomb_outline_12:I
+    sget p3, Lcom/vk/im/ui/R12;->bomb_outline_12:I
 
     invoke-static {p1, p3}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -228,7 +228,7 @@
 
     const-string v0, "context.getDrawableCompa\u2026mb_outline_12)!!.mutate()"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->a:Landroid/graphics/drawable/Drawable;
 
@@ -237,7 +237,7 @@
 
     move-result-object p1
 
-    sget p3, Lcom/vk/im/ui/j;->vkim_msg_bomb_view:I
+    sget p3, Lcom/vk/im/ui/R13;->vkim_msg_bomb_view:I
 
     const/4 v0, 0x0
 
@@ -250,7 +250,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->b:Landroid/view/View;
 
-    sget p3, Lcom/vk/im/ui/h;->bomb:I
+    sget p3, Lcom/vk/im/ui/R11;->bomb:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -263,7 +263,7 @@
     .line 5
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->b:Landroid/view/View;
 
-    sget p3, Lcom/vk/im/ui/h;->time:I
+    sget p3, Lcom/vk/im/ui/R11;->time:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -274,12 +274,12 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->d:Landroid/widget/TextView;
 
     .line 6
-    sget p1, Lcom/vk/im/ui/c;->destructive:I
+    sget p1, Lcom/vk/im/ui/R5;->destructive:I
 
     iput p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->e:I
 
     .line 7
-    sget p1, Lcom/vk/im/ui/c;->text_secondary:I
+    sget p1, Lcom/vk/im/ui/R5;->text_secondary:I
 
     iput p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->f:I
 
@@ -304,44 +304,44 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$timerTickTask$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->E:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->E:Lkotlin/Lazy2;
 
     .line 11
     new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$collapseTask$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$collapseTask$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->F:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->F:Lkotlin/Lazy2;
 
     .line 12
     new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$timeBlinkAnimator$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$timeBlinkAnimator$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->G:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->G:Lkotlin/Lazy2;
 
     .line 13
     new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$bombBlinkAnimator$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$bombBlinkAnimator$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->H:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->H:Lkotlin/Lazy2;
 
     .line 14
     new-instance p1, Landroidx/transition/TransitionSet;
@@ -473,20 +473,20 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;)V
 
-    invoke-static {p0, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p0, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 
     .line 33
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -522,7 +522,7 @@
 
     const-string v1, "bomb"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -533,7 +533,7 @@
 
     const-string v1, "time"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -623,7 +623,7 @@
 
     const-string v1, "bomb"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -634,7 +634,7 @@
 
     const-string v1, "time"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -665,15 +665,15 @@
 
     const-string v1, "time"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/im/ui/components/msg_send/b/a;->b:Lcom/vk/im/ui/components/msg_send/b/a;
+    sget-object v1, Lcom/vk/im/ui/components/msg_send/b/MsgTtlFormatter;->INSTANCE:Lcom/vk/im/ui/components/msg_send/b/MsgTtlFormatter;
 
     invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->getRemainTimeMs()J
 
     move-result-wide v2
 
-    invoke-virtual {v1, v2, v3}, Lcom/vk/im/ui/components/msg_send/b/a;->a(J)Ljava/lang/String;
+    invoke-virtual {v1, v2, v3}, Lcom/vk/im/ui/components/msg_send/b/MsgTtlFormatter;->a(J)Ljava/lang/String;
 
     move-result-object v1
 
@@ -702,7 +702,7 @@
 
     const-string v1, "time"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -713,7 +713,7 @@
 
     const-string v1, "bomb"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -796,15 +796,15 @@
 .method private final getBombBlinkAnimator()Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->H:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->H:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->M:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->M:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -816,15 +816,15 @@
 .method private final getCollapseTask()Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$b;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->F:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->F:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->M:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->M:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -877,15 +877,15 @@
 .method private final getTimeBlinkAnimator()Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->G:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->G:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->M:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->M:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -897,15 +897,15 @@
 .method private final getTimerTickTask()Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView$e;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->E:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->E:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->M:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->M:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -993,7 +993,7 @@
 
     const-string p2, "view"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -1098,7 +1098,7 @@
 
     const-string v1, "view"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 

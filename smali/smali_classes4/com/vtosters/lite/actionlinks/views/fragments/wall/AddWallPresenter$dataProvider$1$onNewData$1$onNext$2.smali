@@ -3,7 +3,7 @@
 .source "AddWallPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter$dataProvider$1$onNewData$1$onNext$2;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
 
     iget-object v0, v0, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter$dataProvider$1;->a:Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/wall/c;
+    invoke-virtual {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWallPresenter;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall;
 
     move-result-object v0
 
@@ -106,7 +106,7 @@
 
     const-string v2, "al"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0, v1}, Lcom/vtosters/lite/actionlinks/AL$d;->a(Lcom/vk/dto/actionlinks/ActionLink;)V
 

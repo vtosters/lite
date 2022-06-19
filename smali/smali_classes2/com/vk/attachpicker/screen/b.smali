@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # static fields
@@ -38,7 +38,7 @@
 
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {p1}, Lcom/vk/attachpicker/screen/d0$w;->a(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/attachpicker/screen/EditorScreen$w;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method

@@ -40,7 +40,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/group/GroupVh$c$a;->a:Ljava/lang/Throwable;
 
-    invoke-static {v0}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method

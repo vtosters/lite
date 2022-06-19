@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lorg/chromium/base/i/a;
+.implements Lorg/chromium/base/i/MemoryPressureCallback;
 
 
 # static fields

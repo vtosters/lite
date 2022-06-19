@@ -3,7 +3,7 @@
 .source "TipTextWindow.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,39 +19,39 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $immediateDismissAction:Lkotlin/jvm/b/b;
+.field final synthetic $immediateDismissAction:Lkotlin/jvm/b/Functions2;
 
-.field final synthetic $plainAnimation:Lcom/vk/core/tips/a;
+.field final synthetic $plainAnimation:Lcom/vk/core/tips/AnimationProperties;
 
 .field final synthetic $viewHolder:Lcom/vk/core/tips/TipTextWindow$d;
 
-.field final synthetic $windowBackground:Lcom/vk/core/tips/b;
+.field final synthetic $windowBackground:Lcom/vk/core/tips/WindowBackground;
 
 .field final synthetic this$0:Lcom/vk/core/tips/TipTextWindow;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/tips/TipTextWindow;Lcom/vk/core/tips/b;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/a;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lcom/vk/core/tips/TipTextWindow;Lcom/vk/core/tips/WindowBackground;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/AnimationProperties;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->this$0:Lcom/vk/core/tips/TipTextWindow;
 
-    iput-object p2, p0, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->$windowBackground:Lcom/vk/core/tips/b;
+    iput-object p2, p0, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->$windowBackground:Lcom/vk/core/tips/WindowBackground;
 
     iput-object p3, p0, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->$viewHolder:Lcom/vk/core/tips/TipTextWindow$d;
 
-    iput-object p4, p0, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->$plainAnimation:Lcom/vk/core/tips/a;
+    iput-object p4, p0, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->$plainAnimation:Lcom/vk/core/tips/AnimationProperties;
 
-    iput-object p5, p0, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->$immediateDismissAction:Lkotlin/jvm/b/b;
+    iput-object p5, p0, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->$immediateDismissAction:Lkotlin/jvm/b/Functions2;
 
     const/4 p1, 0x1
 
@@ -86,13 +86,13 @@
     .line 3
     iget-object v0, p0, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->this$0:Lcom/vk/core/tips/TipTextWindow;
 
-    iget-object v1, p0, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->$windowBackground:Lcom/vk/core/tips/b;
+    iget-object v1, p0, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->$windowBackground:Lcom/vk/core/tips/WindowBackground;
 
     iget-object v2, p0, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->$viewHolder:Lcom/vk/core/tips/TipTextWindow$d;
 
-    iget-object v3, p0, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->$plainAnimation:Lcom/vk/core/tips/a;
+    iget-object v3, p0, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->$plainAnimation:Lcom/vk/core/tips/AnimationProperties;
 
-    invoke-virtual {v3}, Lcom/vk/core/tips/a;->l()Lcom/vk/core/tips/a;
+    invoke-virtual {v3}, Lcom/vk/core/tips/AnimationProperties;->l()Lcom/vk/core/tips/AnimationProperties;
 
     move-result-object v3
 
@@ -100,7 +100,7 @@
 
     invoke-direct {v4, p0, p1}, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1$1;-><init>(Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;I)V
 
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/vk/core/tips/TipTextWindow;->a(Lcom/vk/core/tips/TipTextWindow;Lcom/vk/core/tips/b;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/a;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/vk/core/tips/TipTextWindow;->a(Lcom/vk/core/tips/TipTextWindow;Lcom/vk/core/tips/WindowBackground;Lcom/vk/core/tips/TipTextWindow$d;Lcom/vk/core/tips/AnimationProperties;Lkotlin/jvm/b/Functions;)V
 
     :cond_0
     return-void
@@ -118,7 +118,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/core/tips/TipTextWindow$showAsView$dismissAction$1;->a(I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

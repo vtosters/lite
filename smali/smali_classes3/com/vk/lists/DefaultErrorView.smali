@@ -1,5 +1,5 @@
 .class public Lcom/vk/lists/DefaultErrorView;
-.super Lcom/vk/lists/a;
+.super Lcom/vk/lists/AbstractErrorView;
 .source "DefaultErrorView.java"
 
 
@@ -18,7 +18,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/lists/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/vk/lists/AbstractErrorView;-><init>(Landroid/content/Context;)V
 
     const-wide/16 v0, 0x0
 
@@ -35,7 +35,7 @@
     .locals 2
 
     .line 4
-    invoke-direct {p0, p1, p2}, Lcom/vk/lists/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/lists/AbstractErrorView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const-wide/16 v0, 0x0
 
@@ -52,7 +52,7 @@
     .locals 0
 
     .line 7
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/lists/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/lists/AbstractErrorView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const-wide/16 p2, 0x0
 
@@ -115,7 +115,7 @@
     invoke-virtual {p0, p1, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 5
-    sget p1, Lcom/vk/lists/c0;->error_text:I
+    sget p1, Lcom/vk/lists/R5;->error_text:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
     iput-object p1, p0, Lcom/vk/lists/DefaultErrorView;->e:Landroid/widget/TextView;
 
     .line 6
-    sget p1, Lcom/vk/lists/c0;->error_button:I
+    sget p1, Lcom/vk/lists/R5;->error_button:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -156,7 +156,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/lists/DefaultErrorView;->e:Landroid/widget/TextView;
 
-    sget v1, Lcom/vk/lists/e0;->liblists_err_text:I
+    sget v1, Lcom/vk/lists/R3;->liblists_err_text:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -216,7 +216,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/lists/d0;->view_default_error:I
+    sget v0, Lcom/vk/lists/R2;->view_default_error:I
 
     return v0
 .end method
@@ -265,7 +265,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/lists/DefaultErrorView;->f:Landroid/widget/TextView;
 
-    invoke-static {v0, p1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, p1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     return-void
 .end method

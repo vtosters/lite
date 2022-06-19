@@ -3,7 +3,7 @@
 .source "TabletUiHelper.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/o;
+.implements Lcom/vk/core/ui/Provider;
 
 
 # annotations

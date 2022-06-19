@@ -3,21 +3,21 @@
 .source "LivePlayerActivity.java"
 
 # interfaces
-.implements Lcom/vk/navigation/u;
-.implements Lcom/vk/libvideo/a0/d;
+.implements Lcom/vk/navigation/ResulterProvider;
+.implements Lcom/vk/libvideo/a0/LiveCloseProvider;
 .implements Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout$e;
 
 
 # instance fields
 .field private G:Lcom/vk/dto/video/VideoOwner;
 
-.field private H:Lcom/vk/libvideo/live/views/liveswipe/e;
+.field private H:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;
 
 .field private I:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/navigation/c;",
+            "Lcom/vk/navigation/ActivityResulter;",
             ">;"
         }
     .end annotation
@@ -33,11 +33,11 @@
 
 .field private N:Z
 
-.field private O:Lcom/vk/libvideo/live/base/f;
+.field private O:Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;
 
 .field private P:Z
 
-.field private Q:Lcom/vk/core/utils/e;
+.field private Q:Lcom/vk/core/utils/OrientationListener;
 
 .field private R:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
     .annotation build Landroidx/annotation/NonNull;
@@ -264,11 +264,11 @@
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/live/LiveView;->getPresenter()Lcom/vk/libvideo/live/views/live/a;
+    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/live/LiveView;->getPresenter()Lcom/vk/libvideo/live/views/live/LiveContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/a;->J()Lcom/vk/libvideo/live/views/live/LiveVideoState;
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract;->J()Lcom/vk/libvideo/live/views/live/LiveVideoState;
 
     move-result-object v0
 
@@ -296,11 +296,11 @@
     move-result-object v0
 
     .line 5
-    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/live/LiveView;->getPresenter()Lcom/vk/libvideo/live/views/live/a;
+    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/live/LiveView;->getPresenter()Lcom/vk/libvideo/live/views/live/LiveContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/a;->J()Lcom/vk/libvideo/live/views/live/LiveVideoState;
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract;->J()Lcom/vk/libvideo/live/views/live/LiveVideoState;
 
     move-result-object v0
 
@@ -391,7 +391,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/navigation/c;)V
+.method public a(Lcom/vk/navigation/ActivityResulter;)V
     .locals 1
 
     .line 2
@@ -406,7 +406,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/navigation/c;)V
+.method public b(Lcom/vk/navigation/ActivityResulter;)V
     .locals 1
 
     .line 1
@@ -608,14 +608,14 @@
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setTheme(I)V
 
     .line 3
-    new-instance v0, Lcom/vk/core/utils/e;
+    new-instance v0, Lcom/vk/core/utils/OrientationListener;
 
-    invoke-direct {v0, p0}, Lcom/vk/core/utils/e;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, p0}, Lcom/vk/core/utils/OrientationListener;-><init>(Landroid/app/Activity;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->Q:Lcom/vk/core/utils/e;
+    iput-object v0, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->Q:Lcom/vk/core/utils/OrientationListener;
 
     .line 4
-    new-instance v0, Lcom/vk/libvideo/live/base/f;
+    new-instance v0, Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
@@ -631,9 +631,9 @@
 
     check-cast v2, Landroid/view/ViewGroup;
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/vk/libvideo/live/base/f;-><init>(Landroid/app/Activity;Landroid/view/Window;Landroid/view/View;)V
+    invoke-direct {v0, p0, v1, v2}, Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;-><init>(Landroid/app/Activity;Landroid/view/Window;Landroid/view/View;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->O:Lcom/vk/libvideo/live/base/f;
+    iput-object v0, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->O:Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;
 
     .line 5
     invoke-virtual {p0, p0}, Lcom/vtosters/lite/live/LivePlayerActivity;->a(Landroid/app/Activity;)V
@@ -803,7 +803,7 @@
 
     move-result-object v2
 
-    invoke-static {p0, v2}, Lcom/vk/libvideo/a0/a;->a(Landroid/app/Activity;Landroid/view/Window;)Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+    invoke-static {p0, v2}, Lcom/vk/libvideo/a0/KeyboardControllerHelper;->a(Landroid/app/Activity;Landroid/view/Window;)Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
     move-result-object v2
 
@@ -911,7 +911,7 @@
     invoke-virtual {p1, v1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->setWindow(Landroid/view/Window;)V
 
     .line 33
-    new-instance p1, Lcom/vk/libvideo/live/views/liveswipe/e;
+    new-instance p1, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;
 
     iget-object v1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->K:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;
 
@@ -922,47 +922,47 @@
     iget-object v5, v0, Lcom/vk/dto/video/VideoOwner;->b:Ljava/lang/String;
 
     :cond_5
-    invoke-direct {p1, v1, v5}, Lcom/vk/libvideo/live/views/liveswipe/e;-><init>(Lcom/vk/libvideo/live/views/liveswipe/c;Ljava/lang/String;)V
+    invoke-direct {p1, v1, v5}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;-><init>(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->H:Lcom/vk/libvideo/live/views/liveswipe/e;
+    iput-object p1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->H:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;
 
     .line 34
-    iget-object p1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->H:Lcom/vk/libvideo/live/views/liveswipe/e;
+    iget-object p1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->H:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vk/libvideo/live/views/liveswipe/e;->b(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;->b(Z)V
 
     .line 35
-    iget-object p1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->H:Lcom/vk/libvideo/live/views/liveswipe/e;
+    iget-object p1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->H:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;
 
-    invoke-virtual {p1, p0}, Lcom/vk/libvideo/live/views/liveswipe/e;->a(Lcom/vk/libvideo/a0/d;)V
+    invoke-virtual {p1, p0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;->a(Lcom/vk/libvideo/a0/LiveCloseProvider;)V
 
     .line 36
-    iget-object p1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->H:Lcom/vk/libvideo/live/views/liveswipe/e;
+    iget-object p1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->H:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;
 
     iget-object v0, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->J:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/libvideo/live/views/liveswipe/e;->a(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;->a(Ljava/lang/String;)V
 
     .line 37
     iget-object p1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->K:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;
 
-    iget-object v0, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->H:Lcom/vk/libvideo/live/views/liveswipe/e;
+    iget-object v0, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->H:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;
 
-    invoke-virtual {p1, v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->setPresenter(Lcom/vk/libvideo/live/views/liveswipe/b;)V
+    invoke-virtual {p1, v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->setPresenter(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;)V
 
     .line 38
-    iget-object p1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->H:Lcom/vk/libvideo/live/views/liveswipe/e;
+    iget-object p1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->H:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;
 
     iget-object v0, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->G:Lcom/vk/dto/video/VideoOwner;
 
-    invoke-virtual {p1, v0}, Lcom/vk/libvideo/live/views/liveswipe/e;->a(Lcom/vk/dto/video/VideoOwner;)V
+    invoke-virtual {p1, v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;->a(Lcom/vk/dto/video/VideoOwner;)V
 
     .line 39
-    iget-object p1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->H:Lcom/vk/libvideo/live/views/liveswipe/e;
+    iget-object p1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->H:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/liveswipe/e;->start()V
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipePresenter;->start()V
 
     return-void
 .end method
@@ -1059,7 +1059,7 @@
     invoke-virtual {v0, v2}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     .line 5
-    iget-object v2, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->O:Lcom/vk/libvideo/live/base/f;
+    iget-object v2, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->O:Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;
 
     invoke-virtual {v0, v2}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
@@ -1067,7 +1067,7 @@
     invoke-virtual {p0, v1, v1}, Landroid/app/Activity;->overridePendingTransition(II)V
 
     .line 7
-    iget-object v0, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->Q:Lcom/vk/core/utils/e;
+    iget-object v0, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->Q:Lcom/vk/core/utils/OrientationListener;
 
     invoke-virtual {v0}, Landroid/view/OrientationEventListener;->disable()V
 
@@ -1116,12 +1116,12 @@
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     .line 7
-    iget-object v1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->O:Lcom/vk/libvideo/live/base/f;
+    iget-object v1, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->O:Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     .line 8
-    iget-object v0, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->Q:Lcom/vk/core/utils/e;
+    iget-object v0, p0, Lcom/vtosters/lite/live/LivePlayerActivity;->Q:Lcom/vk/core/utils/OrientationListener;
 
     invoke-virtual {v0}, Landroid/view/OrientationEventListener;->enable()V
 

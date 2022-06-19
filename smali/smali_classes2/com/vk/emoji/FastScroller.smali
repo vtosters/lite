@@ -23,7 +23,7 @@
 
 .field private D:Landroidx/recyclerview/widget/RecyclerView;
 
-.field private E:Lcom/vk/emoji/z;
+.field private E:Lcom/vk/emoji/ScrollPositionProvider;
 
 .field private final F:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
 
@@ -351,7 +351,7 @@
     const/high16 v0, 0x41000000    # 8.0f
 
     .line 7
-    invoke-static {v0, p1}, Lcom/vk/emoji/c0;->a(FLandroid/content/Context;)F
+    invoke-static {v0, p1}, Lcom/vk/emoji/Utils;->a(FLandroid/content/Context;)F
 
     move-result v0
 
@@ -362,7 +362,7 @@
     const/high16 v0, 0x3f800000    # 1.0f
 
     .line 8
-    invoke-static {v0, p1}, Lcom/vk/emoji/c0;->a(FLandroid/content/Context;)F
+    invoke-static {v0, p1}, Lcom/vk/emoji/Utils;->a(FLandroid/content/Context;)F
 
     move-result v0
 
@@ -373,7 +373,7 @@
     const/high16 v0, 0x40400000    # 3.0f
 
     .line 9
-    invoke-static {v0, p1}, Lcom/vk/emoji/c0;->a(FLandroid/content/Context;)F
+    invoke-static {v0, p1}, Lcom/vk/emoji/Utils;->a(FLandroid/content/Context;)F
 
     move-result v0
 
@@ -384,7 +384,7 @@
     const/high16 v0, 0x42000000    # 32.0f
 
     .line 10
-    invoke-static {v0, p1}, Lcom/vk/emoji/c0;->a(FLandroid/content/Context;)F
+    invoke-static {v0, p1}, Lcom/vk/emoji/Utils;->a(FLandroid/content/Context;)F
 
     move-result v0
 
@@ -395,7 +395,7 @@
     const/high16 v0, 0x3fc00000    # 1.5f
 
     .line 11
-    invoke-static {v0, p1}, Lcom/vk/emoji/c0;->a(FLandroid/content/Context;)F
+    invoke-static {v0, p1}, Lcom/vk/emoji/Utils;->a(FLandroid/content/Context;)F
 
     move-result p1
 
@@ -477,7 +477,7 @@
 
 
 # virtual methods
-.method public a(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/emoji/z;)V
+.method public a(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/emoji/ScrollPositionProvider;)V
     .locals 2
 
     .line 14
@@ -502,7 +502,7 @@
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
     .line 18
-    iput-object p2, p0, Lcom/vk/emoji/FastScroller;->E:Lcom/vk/emoji/z;
+    iput-object p2, p0, Lcom/vk/emoji/FastScroller;->E:Lcom/vk/emoji/ScrollPositionProvider;
 
     return-void
 .end method
@@ -690,7 +690,7 @@
 
     const/high16 v0, 0x41a00000    # 20.0f
 
-    invoke-static {v0, p1}, Lcom/vk/emoji/c0;->a(FLandroid/content/Context;)F
+    invoke-static {v0, p1}, Lcom/vk/emoji/Utils;->a(FLandroid/content/Context;)F
 
     move-result p1
 
@@ -784,7 +784,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/emoji/FastScroller;->setProgress(F)V
 
     .line 8
-    iget-object p1, p0, Lcom/vk/emoji/FastScroller;->E:Lcom/vk/emoji/z;
+    iget-object p1, p0, Lcom/vk/emoji/FastScroller;->E:Lcom/vk/emoji/ScrollPositionProvider;
 
     if-eqz p1, :cond_5
 
@@ -808,14 +808,14 @@
 
     check-cast p1, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    iget-object v0, p0, Lcom/vk/emoji/FastScroller;->E:Lcom/vk/emoji/z;
+    iget-object v0, p0, Lcom/vk/emoji/FastScroller;->E:Lcom/vk/emoji/ScrollPositionProvider;
 
     .line 11
     invoke-virtual {p0}, Lcom/vk/emoji/FastScroller;->getProgress()F
 
     move-result v3
 
-    invoke-interface {v0, v3}, Lcom/vk/emoji/z;->a(F)I
+    invoke-interface {v0, v3}, Lcom/vk/emoji/ScrollPositionProvider;->a(F)I
 
     move-result v0
 

@@ -18,19 +18,19 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/b;
+.field final synthetic a:Lkotlin/jvm/b/Functions2;
 
-.field final synthetic b:Lkotlin/jvm/b/b;
+.field final synthetic b:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/core/tips/TipTextWindow$h;->a:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/core/tips/TipTextWindow$h;->a:Lkotlin/jvm/b/Functions2;
 
-    iput-object p2, p0, Lcom/vk/core/tips/TipTextWindow$h;->b:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/core/tips/TipTextWindow$h;->b:Lkotlin/jvm/b/Functions2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -52,17 +52,17 @@
     if-eqz p1, :cond_0
 
     .line 2
-    iget-object p1, p0, Lcom/vk/core/tips/TipTextWindow$h;->a:Lkotlin/jvm/b/b;
+    iget-object p1, p0, Lcom/vk/core/tips/TipTextWindow$h;->a:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     .line 3
     :cond_0
-    iget-object p1, p0, Lcom/vk/core/tips/TipTextWindow$h;->b:Lkotlin/jvm/b/b;
+    iget-object p1, p0, Lcom/vk/core/tips/TipTextWindow$h;->b:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_0
     return-void

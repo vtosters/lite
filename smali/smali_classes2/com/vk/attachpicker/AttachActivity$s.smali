@@ -85,11 +85,11 @@
     .line 4
     iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity$s;->a:Lcom/vk/attachpicker/AttachActivity;
 
-    invoke-static {v0}, Lcom/vk/attachpicker/AttachActivity;->b(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/p;
+    invoke-static {v0}, Lcom/vk/attachpicker/AttachActivity;->b(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/SelectionContext;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/p;->g()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/SelectionContext;->g()I
 
     move-result v0
 
@@ -129,11 +129,11 @@
     .line 8
     iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity$s;->a:Lcom/vk/attachpicker/AttachActivity;
 
-    invoke-static {v0}, Lcom/vk/attachpicker/AttachActivity;->f(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/adapter/f;
+    invoke-static {v0}, Lcom/vk/attachpicker/AttachActivity;->f(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/adapter/TabsAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/adapter/f;->j()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/adapter/TabsAdapter;->j()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -141,10 +141,10 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/attachpicker/adapter/f$b;
+    check-cast p1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;
 
     .line 9
-    iget v0, p1, Lcom/vk/attachpicker/adapter/f$b;->a:I
+    iget v0, p1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;->a:I
 
     const v3, 0x7f0808e4
 
@@ -170,7 +170,7 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     .line 11
-    iput-boolean v1, p1, Lcom/vk/attachpicker/adapter/f$b;->e:Z
+    iput-boolean v1, p1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;->e:Z
 
     .line 12
     :cond_1

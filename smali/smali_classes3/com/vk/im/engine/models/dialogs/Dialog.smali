@@ -3,7 +3,7 @@
 .source "Dialog.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/models/w;
+.implements Lcom/vk/im/engine/models/WithWeight;
 .implements Ljava/lang/Comparable;
 .implements Ljava/io/Serializable;
 
@@ -18,7 +18,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;",
-        "Lcom/vk/im/engine/models/w;",
+        "Lcom/vk/im/engine/models/WithWeight;",
         "Ljava/lang/Comparable<",
         "Lcom/vk/im/engine/models/dialogs/Dialog;",
         ">;",
@@ -98,7 +98,7 @@
 
 .field private theme:Lcom/vk/im/engine/models/dialogs/DialogTheme;
 
-.field private themeId:Lcom/vk/im/engine/models/dialogs/f;
+.field private themeId:Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
 .field private type:I
 
@@ -112,7 +112,7 @@
     .end annotation
 .end field
 
-.field private weight:Lcom/vk/im/engine/models/q;
+.field private weight:Lcom/vk/im/engine/models/Weight;
 
 .field private writePermission:Lcom/vk/im/engine/models/WritePermission;
 
@@ -125,7 +125,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/dialogs/Dialog$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/dialogs/Dialog$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/dialogs/Dialog$a;
@@ -145,13 +145,13 @@
     invoke-direct {p0}, Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;-><init>()V
 
     .line 3
-    sget-object v0, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v0, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/q$a;->b()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight$a;->b()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->weight:Lcom/vk/im/engine/models/q;
+    iput-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->weight:Lcom/vk/im/engine/models/Weight;
 
     .line 4
     sget-object v0, Lcom/vk/im/engine/models/WritePermission;->ENABLED:Lcom/vk/im/engine/models/WritePermission;
@@ -168,9 +168,9 @@
     iput-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->draftMsg:Lcom/vk/im/engine/models/messages/DraftMsg;
 
     .line 6
-    sget-object v0, Lcom/vk/im/engine/models/dialogs/f$b;->d:Lcom/vk/im/engine/models/dialogs/f$b;
+    sget-object v0, Lcom/vk/im/engine/models/dialogs/DialogThemeName$b;->INSTANCE:Lcom/vk/im/engine/models/dialogs/DialogThemeName$b;
 
-    iput-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/f;
+    iput-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
     .line 7
     sget-object v0, Lcom/vk/im/engine/models/dialogs/DialogTheme;->d:Lcom/vk/im/engine/models/dialogs/DialogTheme$b;
@@ -212,7 +212,7 @@
     return-void
 .end method
 
-.method public constructor <init>(IIIJZIIIZZZLcom/vk/im/engine/models/messages/PinnedMsg;ZLcom/vk/im/engine/models/messages/DraftMsg;Lcom/vk/im/engine/models/dialogs/ConversationBar;Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/dialogs/DialogTheme;Lcom/vk/im/engine/models/dialogs/f;Lcom/vk/im/engine/models/conversations/BotKeyboard;ZLcom/vk/im/engine/models/MsgRequestStatus;JLcom/vk/im/engine/models/Member;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;Z)V
+.method public constructor <init>(IIIJZIIIZZZLcom/vk/im/engine/models/messages/PinnedMsg;ZLcom/vk/im/engine/models/messages/DraftMsg;Lcom/vk/im/engine/models/dialogs/ConversationBar;Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/dialogs/DialogTheme;Lcom/vk/im/engine/models/dialogs/DialogThemeName;Lcom/vk/im/engine/models/conversations/BotKeyboard;ZLcom/vk/im/engine/models/MsgRequestStatus;JLcom/vk/im/engine/models/Member;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;Z)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -223,7 +223,7 @@
             "Lcom/vk/im/engine/models/dialogs/ConversationBar;",
             "Lcom/vk/im/engine/models/dialogs/ChatSettings;",
             "Lcom/vk/im/engine/models/dialogs/DialogTheme;",
-            "Lcom/vk/im/engine/models/dialogs/f;",
+            "Lcom/vk/im/engine/models/dialogs/DialogThemeName;",
             "Lcom/vk/im/engine/models/conversations/BotKeyboard;",
             "Z",
             "Lcom/vk/im/engine/models/MsgRequestStatus;",
@@ -246,13 +246,13 @@
     invoke-direct {p0}, Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;-><init>()V
 
     .line 52
-    sget-object v1, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v1, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/q$a;->b()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/Weight$a;->b()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/vk/im/engine/models/dialogs/Dialog;->weight:Lcom/vk/im/engine/models/q;
+    iput-object v1, v0, Lcom/vk/im/engine/models/dialogs/Dialog;->weight:Lcom/vk/im/engine/models/Weight;
 
     .line 53
     sget-object v1, Lcom/vk/im/engine/models/WritePermission;->ENABLED:Lcom/vk/im/engine/models/WritePermission;
@@ -269,9 +269,9 @@
     iput-object v1, v0, Lcom/vk/im/engine/models/dialogs/Dialog;->draftMsg:Lcom/vk/im/engine/models/messages/DraftMsg;
 
     .line 55
-    sget-object v1, Lcom/vk/im/engine/models/dialogs/f$b;->d:Lcom/vk/im/engine/models/dialogs/f$b;
+    sget-object v1, Lcom/vk/im/engine/models/dialogs/DialogThemeName$b;->INSTANCE:Lcom/vk/im/engine/models/dialogs/DialogThemeName$b;
 
-    iput-object v1, v0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/f;
+    iput-object v1, v0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
     .line 56
     sget-object v1, Lcom/vk/im/engine/models/dialogs/DialogTheme;->d:Lcom/vk/im/engine/models/dialogs/DialogTheme$b;
@@ -396,7 +396,7 @@
     move-object/from16 v1, p19
 
     .line 78
-    iput-object v1, v0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/f;
+    iput-object v1, v0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
     move-object/from16 v1, p20
 
@@ -593,7 +593,7 @@
     check-cast v20, Lcom/vk/im/engine/models/dialogs/DialogTheme;
 
     .line 105
-    sget-object v1, Lcom/vk/im/engine/models/dialogs/f;->c:Lcom/vk/im/engine/models/dialogs/f$a;
+    sget-object v1, Lcom/vk/im/engine/models/dialogs/DialogThemeName;->c:Lcom/vk/im/engine/models/dialogs/DialogThemeName$a;
 
     move/from16 v21, v15
 
@@ -603,7 +603,7 @@
 
     if-eqz v15, :cond_3
 
-    invoke-virtual {v1, v15}, Lcom/vk/im/engine/models/dialogs/f$a;->a(Ljava/lang/String;)Lcom/vk/im/engine/models/dialogs/f;
+    invoke-virtual {v1, v15}, Lcom/vk/im/engine/models/dialogs/DialogThemeName$a;->a(Ljava/lang/String;)Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
     move-result-object v22
 
@@ -725,7 +725,7 @@
     move-object/from16 v28, v32
 
     .line 115
-    invoke-direct/range {v1 .. v30}, Lcom/vk/im/engine/models/dialogs/Dialog;-><init>(IIIJZIIIZZZLcom/vk/im/engine/models/messages/PinnedMsg;ZLcom/vk/im/engine/models/messages/DraftMsg;Lcom/vk/im/engine/models/dialogs/ConversationBar;Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/dialogs/DialogTheme;Lcom/vk/im/engine/models/dialogs/f;Lcom/vk/im/engine/models/conversations/BotKeyboard;ZLcom/vk/im/engine/models/MsgRequestStatus;JLcom/vk/im/engine/models/Member;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;Z)V
+    invoke-direct/range {v1 .. v30}, Lcom/vk/im/engine/models/dialogs/Dialog;-><init>(IIIJZIIIZZZLcom/vk/im/engine/models/messages/PinnedMsg;ZLcom/vk/im/engine/models/messages/DraftMsg;Lcom/vk/im/engine/models/dialogs/ConversationBar;Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/dialogs/DialogTheme;Lcom/vk/im/engine/models/dialogs/DialogThemeName;Lcom/vk/im/engine/models/conversations/BotKeyboard;ZLcom/vk/im/engine/models/MsgRequestStatus;JLcom/vk/im/engine/models/Member;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;Z)V
 
     return-void
 
@@ -747,30 +747,30 @@
 
     .line 118
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v16
 
     .line 119
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v16
 
     .line 120
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v16
 
     .line 121
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v16
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -786,13 +786,13 @@
     invoke-direct {p0}, Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;-><init>()V
 
     .line 13
-    sget-object v0, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v0, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/q$a;->b()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight$a;->b()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->weight:Lcom/vk/im/engine/models/q;
+    iput-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->weight:Lcom/vk/im/engine/models/Weight;
 
     .line 14
     sget-object v0, Lcom/vk/im/engine/models/WritePermission;->ENABLED:Lcom/vk/im/engine/models/WritePermission;
@@ -809,9 +809,9 @@
     iput-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->draftMsg:Lcom/vk/im/engine/models/messages/DraftMsg;
 
     .line 16
-    sget-object v0, Lcom/vk/im/engine/models/dialogs/f$b;->d:Lcom/vk/im/engine/models/dialogs/f$b;
+    sget-object v0, Lcom/vk/im/engine/models/dialogs/DialogThemeName$b;->INSTANCE:Lcom/vk/im/engine/models/dialogs/DialogThemeName$b;
 
-    iput-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/f;
+    iput-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
     .line 17
     sget-object v0, Lcom/vk/im/engine/models/dialogs/DialogTheme;->d:Lcom/vk/im/engine/models/dialogs/DialogTheme$b;
@@ -863,11 +863,11 @@
     iput v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->type:I
 
     .line 24
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/Dialog;->Q1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/Dialog;->Q1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/vk/im/engine/models/dialogs/Dialog;->a(Lcom/vk/im/engine/models/q;)V
+    invoke-virtual {p0, v0}, Lcom/vk/im/engine/models/dialogs/Dialog;->a(Lcom/vk/im/engine/models/Weight;)V
 
     .line 25
     iget v0, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->countUnread:I
@@ -950,9 +950,9 @@
     iput-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->theme:Lcom/vk/im/engine/models/dialogs/DialogTheme;
 
     .line 41
-    iget-object v0, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/f;
+    iget-object v0, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
-    iput-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/f;
+    iput-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
     .line 42
     iget-object v0, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->keyboard:Lcom/vk/im/engine/models/conversations/BotKeyboard;
@@ -1110,7 +1110,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/w$a;->a(Lcom/vk/im/engine/models/w;)Z
+    invoke-static {p0}, Lcom/vk/im/engine/models/WithWeight$a;->a(Lcom/vk/im/engine/models/WithWeight;)Z
 
     move-result v0
 
@@ -1134,7 +1134,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vk/im/engine/utils/e;->c(I)I
+    invoke-static {v0}, Lcom/vk/im/engine/utils/ImDialogsUtils;->c(I)I
 
     move-result v0
 
@@ -1149,7 +1149,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vk/im/engine/utils/e;->d(I)Lcom/vk/im/engine/models/PeerType;
+    invoke-static {v0}, Lcom/vk/im/engine/utils/ImDialogsUtils;->d(I)Lcom/vk/im/engine/models/PeerType;
 
     move-result-object v0
 
@@ -1218,11 +1218,11 @@
     return-object v0
 .end method
 
-.method public Q1()Lcom/vk/im/engine/models/q;
+.method public Q1()Lcom/vk/im/engine/models/Weight;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->weight:Lcom/vk/im/engine/models/q;
+    iget-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->weight:Lcom/vk/im/engine/models/Weight;
 
     return-object v0
 .end method
@@ -1428,15 +1428,15 @@
     .locals 1
 
     .line 17
-    invoke-virtual {p0}, Lcom/vk/im/engine/models/dialogs/Dialog;->Q1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p0}, Lcom/vk/im/engine/models/dialogs/Dialog;->Q1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/Dialog;->Q1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/Dialog;->Q1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/q;->a(Lcom/vk/im/engine/models/q;)I
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/Weight;->a(Lcom/vk/im/engine/models/Weight;)I
 
     move-result p1
 
@@ -1534,9 +1534,9 @@
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
     .line 35
-    iget-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/f;
+    iget-object v0, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/f;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/DialogThemeName;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1657,11 +1657,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/dialogs/f;)V
+.method public final a(Lcom/vk/im/engine/models/dialogs/DialogThemeName;)V
     .locals 0
 
     .line 7
-    iput-object p1, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/f;
+    iput-object p1, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
     return-void
 .end method
@@ -1684,11 +1684,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/models/q;)V
+.method public a(Lcom/vk/im/engine/models/Weight;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->weight:Lcom/vk/im/engine/models/q;
+    iput-object p1, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->weight:Lcom/vk/im/engine/models/Weight;
 
     return-void
 .end method
@@ -2237,15 +2237,15 @@
 
     .line 4
     :cond_3
-    invoke-virtual {p0}, Lcom/vk/im/engine/models/dialogs/Dialog;->Q1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p0}, Lcom/vk/im/engine/models/dialogs/Dialog;->Q1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/Dialog;->Q1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/Dialog;->Q1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2391,7 +2391,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->pinnedMsg:Lcom/vk/im/engine/models/messages/PinnedMsg;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2417,7 +2417,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->bar:Lcom/vk/im/engine/models/dialogs/ConversationBar;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2433,7 +2433,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->chatSettings:Lcom/vk/im/engine/models/dialogs/ChatSettings;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2449,7 +2449,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->theme:Lcom/vk/im/engine/models/dialogs/DialogTheme;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2461,11 +2461,11 @@
 
     .line 22
     :cond_15
-    iget-object v1, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/f;
+    iget-object v1, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
-    iget-object v3, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/f;
+    iget-object v3, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2481,7 +2481,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->keyboard:Lcom/vk/im/engine/models/conversations/BotKeyboard;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2529,7 +2529,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->msgRequestInviter:Lcom/vk/im/engine/models/Member;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2545,7 +2545,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->unreadMentionMsgVkIds:Ljava/util/List;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2561,7 +2561,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->expireMsgVkIds:Ljava/util/List;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2577,7 +2577,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/dialogs/Dialog;->businessNotifyInfo:Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2664,11 +2664,11 @@
     mul-int/lit8 v0, v0, 0x1f
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/im/engine/models/dialogs/Dialog;->Q1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p0}, Lcom/vk/im/engine/models/dialogs/Dialog;->Q1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/q;->hashCode()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/Weight;->hashCode()I
 
     move-result v1
 
@@ -2898,7 +2898,7 @@
     mul-int/lit8 v0, v0, 0x1f
 
     .line 21
-    iget-object v1, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/f;
+    iget-object v1, p0, Lcom/vk/im/engine/models/dialogs/Dialog;->themeId:Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -3159,7 +3159,7 @@
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/im/engine/models/dialogs/Dialog;->Q1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p0}, Lcom/vk/im/engine/models/dialogs/Dialog;->Q1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v2
 

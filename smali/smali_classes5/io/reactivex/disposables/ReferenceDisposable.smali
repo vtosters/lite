@@ -3,7 +3,7 @@
 .source "ReferenceDisposable.java"
 
 # interfaces
-.implements Lio/reactivex/disposables/b;
+.implements Lio/reactivex/disposables/Disposable;
 
 
 # annotations
@@ -14,7 +14,7 @@
         ">",
         "Ljava/util/concurrent/atomic/AtomicReference<",
         "TT;>;",
-        "Lio/reactivex/disposables/b;"
+        "Lio/reactivex/disposables/Disposable;"
     }
 .end annotation
 
@@ -35,7 +35,7 @@
     const-string v0, "value is null"
 
     .line 1
-    invoke-static {p1, v0}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     invoke-direct {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 

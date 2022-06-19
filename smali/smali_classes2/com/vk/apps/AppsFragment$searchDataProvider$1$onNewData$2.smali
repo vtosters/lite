@@ -3,12 +3,12 @@
 .source "AppsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/apps/AppsFragment$searchDataProvider$1;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/apps/AppsFragment$searchDataProvider$1;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Throwable;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -63,7 +63,7 @@
     invoke-static {p1}, Lcom/vk/log/L;->a(Ljava/lang/Throwable;)V
 
     .line 2
-    invoke-static {p1}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -76,7 +76,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/apps/AppsFragment$searchDataProvider$1$onNewData$2;->a(Ljava/lang/Throwable;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

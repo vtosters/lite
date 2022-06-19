@@ -3,7 +3,7 @@
 .source "PrefetchByNotListenedMsgPlugin.kt"
 
 # interfaces
-.implements Lcom/vk/audiomsg/player/f;
+.implements Lcom/vk/audiomsg/player/Source;
 
 
 # annotations

@@ -1,5 +1,5 @@
 .class public Lcom/vk/core/ui/infiniteviewpager/ViewPagerInfinite;
-.super Lcom/vk/core/ui/infiniteviewpager/c;
+.super Lcom/vk/core/ui/infiniteviewpager/ViewPagerRatio;
 .source "ViewPagerInfinite.java"
 
 # interfaces
@@ -26,7 +26,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/core/ui/infiniteviewpager/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/vk/core/ui/infiniteviewpager/ViewPagerRatio;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .locals 1
 
     .line 8
-    invoke-direct {p0, p1, p2}, Lcom/vk/core/ui/infiniteviewpager/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/core/ui/infiniteviewpager/ViewPagerRatio;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 v0, 0x0
 
@@ -78,7 +78,7 @@
     iput v0, p0, Lcom/vk/core/ui/infiniteviewpager/ViewPagerInfinite;->h:I
 
     .line 15
-    sget-object v0, Lb/h/z/m;->ViewPagerInfinite:[I
+    sget-object v0, Lb/h/z/R3;->ViewPagerInfinite:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -87,7 +87,7 @@
     if-eqz p1, :cond_0
 
     .line 16
-    sget p2, Lb/h/z/m;->ViewPagerInfinite_nextPeriodSec:I
+    sget p2, Lb/h/z/R3;->ViewPagerInfinite_nextPeriodSec:I
 
     iget v0, p0, Lcom/vk/core/ui/infiniteviewpager/ViewPagerInfinite;->c:I
 
@@ -98,7 +98,7 @@
     iput p2, p0, Lcom/vk/core/ui/infiniteviewpager/ViewPagerInfinite;->c:I
 
     .line 17
-    sget p2, Lb/h/z/m;->ViewPagerInfinite_pageMargin:I
+    sget p2, Lb/h/z/R3;->ViewPagerInfinite_pageMargin:I
 
     iget v0, p0, Lcom/vk/core/ui/infiniteviewpager/ViewPagerInfinite;->d:I
 

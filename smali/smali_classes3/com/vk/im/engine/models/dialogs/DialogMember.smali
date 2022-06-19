@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/dialogs/DialogMember$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/dialogs/DialogMember$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/dialogs/DialogMember$a;
@@ -79,7 +79,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v9}, Lcom/vk/im/engine/models/dialogs/DialogMember;-><init>(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/Member;JZZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/im/engine/models/dialogs/DialogMember;-><init>(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/Member;JZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -152,18 +152,18 @@
 
     .line 13
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 14
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -193,7 +193,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/Member;JZZZILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/Member;JZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 5
 
     and-int/lit8 p9, p8, 0x1
@@ -356,7 +356,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/dialogs/DialogMember;->a:Lcom/vk/im/engine/models/Member;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -366,7 +366,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/models/dialogs/DialogMember;->b:Lcom/vk/im/engine/models/Member;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

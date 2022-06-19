@@ -25,13 +25,13 @@
 
 .field private e:Ljava/lang/CharSequence;
 
-.field private f:Lkotlin/jvm/b/b;
+.field private f:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/core/dialogs/snackbar/VkSnackbar;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -45,11 +45,11 @@
 
 .field private j:Ljava/lang/Integer;
 
-.field private k:Lkotlin/jvm/b/a;
+.field private k:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -90,7 +90,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;ZILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -117,7 +117,7 @@
     return-object p0
 .end method
 
-.method public final a(ILkotlin/jvm/b/b;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
+.method public final a(ILkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
     .locals 1
     .param p1    # I
         .annotation build Landroidx/annotation/StringRes;
@@ -126,10 +126,10 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/core/dialogs/snackbar/VkSnackbar;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)",
             "Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;"
         }
@@ -144,9 +144,9 @@
 
     const-string v0, "context.getString(buttonText)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Ljava/lang/CharSequence;Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 
     return-object p0
 .end method
@@ -200,16 +200,16 @@
     return-object p0
 .end method
 
-.method public final a(Ljava/lang/CharSequence;Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
+.method public final a(Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/core/dialogs/snackbar/VkSnackbar;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)",
             "Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;"
         }
@@ -219,7 +219,7 @@
     iput-object p1, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->e:Ljava/lang/CharSequence;
 
     .line 8
-    iput-object p2, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->f:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->f:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -253,20 +253,20 @@
     return-object p0
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
+.method public final a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
             "Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;"
         }
     .end annotation
 
     .line 12
-    iput-object p1, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->k:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->k:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method
@@ -286,12 +286,12 @@
 
     if-eqz v1, :cond_0
 
-    sget v1, Lb/h/z/c;->gray_800:I
+    sget v1, Lb/h/z/R4;->gray_800:I
 
     goto :goto_0
 
     :cond_0
-    sget v1, Lb/h/z/b;->modal_card_background:I
+    sget v1, Lb/h/z/R5;->modal_card_background:I
 
     invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->g(I)I
 
@@ -343,7 +343,7 @@
     iget-object v9, v0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->e:Ljava/lang/CharSequence;
 
     .line 26
-    iget-object v10, v0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->f:Lkotlin/jvm/b/b;
+    iget-object v10, v0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->f:Lkotlin/jvm/b/Functions2;
 
     .line 27
     iget-wide v11, v0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->g:J
@@ -355,7 +355,7 @@
     iget-object v14, v0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->i:Landroid/view/View;
 
     .line 30
-    iget-object v2, v0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->k:Lkotlin/jvm/b/a;
+    iget-object v2, v0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->k:Lkotlin/jvm/b/Functions;
 
     const/16 v17, 0x0
 
@@ -364,13 +364,13 @@
     move-object v2, v1
 
     .line 31
-    invoke-direct/range {v2 .. v17}, Lcom/vk/core/dialogs/snackbar/VkSnackbar;-><init>(Landroid/content/Context;ZILandroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lkotlin/jvm/b/b;JLandroid/view/View;Landroid/view/View;ILkotlin/jvm/b/a;Lkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v17}, Lcom/vk/core/dialogs/snackbar/VkSnackbar;-><init>(Landroid/content/Context;ZILandroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions2;JLandroid/view/View;Landroid/view/View;ILkotlin/jvm/b/Functions;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v1
 
     .line 32
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v1, 0x0
 
@@ -434,7 +434,7 @@
 
     const-string v0, "context.getString(message)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 

@@ -3,7 +3,7 @@
 .source "VideoAttachesModel.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesState;",
         "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesState;",
         ">;"
@@ -91,7 +91,7 @@
 
     iget-object v4, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/video/VideoAttachesModel$setVideoDeleted$1;->$attachVideo:Lcom/vk/im/engine/models/attaches/AttachVideo;
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 

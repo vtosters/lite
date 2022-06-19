@@ -1,5 +1,5 @@
 .class final Lcom/vk/discover/ThemedFeedFragment$TabAdapter;
-.super Lcom/vk/core/fragments/h;
+.super Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;
 .source "ThemedFeedFragment.kt"
 
 
@@ -39,7 +39,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-direct {p0, p1, v0}, Lcom/vk/core/fragments/h;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;Z)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;Z)V
 
     const/4 p1, -0x1
 
@@ -128,7 +128,7 @@
     const-string p1, "(customView\n            \u2026(position))\n            }"
 
     .line 10
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p2
 .end method
@@ -336,26 +336,26 @@
     if-eq v4, p2, :cond_2
 
     .line 6
-    instance-of v2, v0, Lcom/vk/navigation/b0/c;
+    instance-of v2, v0, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
     if-eqz v2, :cond_1
 
     .line 7
     move-object v2, v0
 
-    check-cast v2, Lcom/vk/navigation/b0/c;
+    check-cast v2, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
-    invoke-interface {v2}, Lcom/vk/navigation/b0/c;->q()V
+    invoke-interface {v2}, Lcom/vk/navigation/b0/FragmentWithAutoPlay;->q()V
 
     .line 8
     :cond_1
-    instance-of v2, v1, Lcom/vk/navigation/b0/c;
+    instance-of v2, v1, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
     if-eqz v2, :cond_2
 
     if-eqz v0, :cond_2
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -366,17 +366,17 @@
     .line 9
     move-object v0, v1
 
-    check-cast v0, Lcom/vk/navigation/b0/c;
+    check-cast v0, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
     new-instance v2, Lcom/vk/discover/ThemedFeedFragment$TabAdapter$setPrimaryItem$1;
 
     invoke-direct {v2, v1}, Lcom/vk/discover/ThemedFeedFragment$TabAdapter$setPrimaryItem$1;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
 
-    invoke-interface {v0, v2}, Lcom/vk/navigation/b0/c;->d(Lkotlin/jvm/b/a;)V
+    invoke-interface {v0, v2}, Lcom/vk/navigation/b0/FragmentWithAutoPlay;->d(Lkotlin/jvm/b/Functions;)V
 
     .line 10
     :cond_2
-    invoke-super {p0, p1, p2, p3}, Lcom/vk/core/fragments/h;->setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
 
     if-eq v4, p2, :cond_5
 
@@ -404,7 +404,7 @@
     if-le p1, p2, :cond_5
 
     .line 12
-    sget-object v0, Lcom/vk/newsfeed/b0;->d:Lcom/vk/newsfeed/b0;
+    sget-object v0, Lcom/vk/newsfeed/PostsAnalytics;->INSTANCE:Lcom/vk/newsfeed/PostsAnalytics;
 
     iget-object p1, p0, Lcom/vk/discover/ThemedFeedFragment$TabAdapter;->j:Ljava/util/ArrayList;
 
@@ -446,7 +446,7 @@
 
     move v5, p2
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/b0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/PostsAnalytics;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
 
     :cond_5
     :goto_1

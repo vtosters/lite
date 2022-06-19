@@ -17,7 +17,7 @@
 
 .field private final d:Landroid/view/View;
 
-.field private e:Lcom/vk/im/ui/components/dialog_business_notify/vc/a;
+.field private e:Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVcCallback;
 
 
 # direct methods
@@ -28,7 +28,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    sget v0, Lcom/vk/im/ui/j;->vkim_dialog_business_notify:I
+    sget v0, Lcom/vk/im/ui/R13;->vkim_dialog_business_notify:I
 
     const/4 v1, 0x0
 
@@ -43,7 +43,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;->a:Landroid/view/View;
 
-    sget p2, Lcom/vk/im/ui/h;->label:I
+    sget p2, Lcom/vk/im/ui/R11;->label:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -56,7 +56,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;->a:Landroid/view/View;
 
-    sget p2, Lcom/vk/im/ui/h;->open:I
+    sget p2, Lcom/vk/im/ui/R11;->open:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -67,7 +67,7 @@
     .line 5
     iget-object p1, p0, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;->a:Landroid/view/View;
 
-    sget p2, Lcom/vk/im/ui/h;->hide:I
+    sget p2, Lcom/vk/im/ui/R11;->hide:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -94,43 +94,43 @@
 
     const-string p2, "openView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc$3;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc$3;-><init>(Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 9
     iget-object p1, p0, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;->d:Landroid/view/View;
 
     const-string p2, "hideView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc$4;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc$4;-><init>(Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 
     .line 10
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;)Lcom/vk/im/ui/components/dialog_business_notify/vc/a;
+.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;)Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVcCallback;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;->e:Lcom/vk/im/ui/components/dialog_business_notify/vc/a;
+    iget-object p0, p0, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;->e:Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVcCallback;
 
     return-object p0
 .end method
@@ -151,7 +151,7 @@
 
     const-string v1, "labelView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
@@ -172,7 +172,7 @@
     :goto_0
     iget-object v4, p0, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;->b:Landroid/widget/TextView;
 
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -181,7 +181,7 @@
 
     const-string v5, "openView"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4, v3}, Landroid/view/View;->setVisibility(I)V
 
@@ -190,7 +190,7 @@
 
     const-string v5, "hideView"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4, v3}, Landroid/view/View;->setVisibility(I)V
 
@@ -199,14 +199,14 @@
     .line 7
     iget-object v3, p0, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;->b:Landroid/widget/TextView;
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/im/ui/formatters/a;->a:Lcom/vk/im/ui/formatters/a;
+    sget-object v1, Lcom/vk/im/ui/formatters/BusinessNotifyCountFormatter;->INSTANCE:Lcom/vk/im/ui/formatters/BusinessNotifyCountFormatter;
 
     const-string v4, "context"
 
     .line 8
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p1, :cond_1
 
@@ -223,7 +223,7 @@
 
     .line 10
     :cond_1
-    invoke-virtual {v1, v0, v2}, Lcom/vk/im/ui/formatters/a;->a(Landroid/content/Context;I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v0, v2}, Lcom/vk/im/ui/formatters/BusinessNotifyCountFormatter;->a(Landroid/content/Context;I)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -233,11 +233,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/dialog_business_notify/vc/a;)V
+.method public final a(Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVcCallback;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;->e:Lcom/vk/im/ui/components/dialog_business_notify/vc/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVc;->e:Lcom/vk/im/ui/components/dialog_business_notify/vc/DialogBusinessNotifyVcCallback;
 
     return-void
 .end method
@@ -246,7 +246,7 @@
     .locals 0
 
     .line 11
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method

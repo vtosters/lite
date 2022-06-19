@@ -3,7 +3,7 @@
 .source "Groups.java"
 
 # interfaces
-.implements Lcom/vk/common/g/e;
+.implements Lcom/vk/common/g/Predicate;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/e<",
+        "Lcom/vk/common/g/Predicate<",
         "Lcom/vk/dto/group/Group;",
         ">;"
     }

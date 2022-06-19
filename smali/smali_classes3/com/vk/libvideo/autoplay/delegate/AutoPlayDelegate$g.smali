@@ -3,7 +3,7 @@
 .source "AutoPlayDelegate.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/libvideo/y/j;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/libvideo/y/VideoEvents12;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/libvideo/y/j;)V
+.method public final a(Lcom/vk/libvideo/y/VideoEvents12;)V
     .locals 3
 
     .line 1
@@ -67,9 +67,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/y/j;
+    check-cast p1, Lcom/vk/libvideo/y/VideoEvents12;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$g;->a(Lcom/vk/libvideo/y/j;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$g;->a(Lcom/vk/libvideo/y/VideoEvents12;)V
 
     return-void
 .end method

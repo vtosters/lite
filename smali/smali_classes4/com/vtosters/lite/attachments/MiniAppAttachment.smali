@@ -3,7 +3,7 @@
 .source "MiniAppAttachment.kt"
 
 # interfaces
-.implements Lcom/vk/dto/attachments/b;
+.implements Lcom/vk/dto/attachments/ImageAttachment;
 
 
 # annotations
@@ -25,9 +25,9 @@
     .end annotation
 .end field
 
-.field private static final E:Lkotlin/e;
+.field private static final E:Lkotlin/Lazy2;
 
-.field private static final F:Lkotlin/e;
+.field private static final F:Lkotlin/Lazy2;
 
 .field public static final G:Lcom/vtosters/lite/attachments/MiniAppAttachment$b;
 
@@ -56,7 +56,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/attachments/MiniAppAttachment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/attachments/MiniAppAttachment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vtosters/lite/attachments/MiniAppAttachment;->G:Lcom/vtosters/lite/attachments/MiniAppAttachment$b;
 
@@ -71,20 +71,20 @@
     .line 3
     sget-object v0, Lcom/vtosters/lite/attachments/MiniAppAttachment$Companion$WIDE_WIDTH$2;->a:Lcom/vtosters/lite/attachments/MiniAppAttachment$Companion$WIDE_WIDTH$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vtosters/lite/attachments/MiniAppAttachment;->E:Lkotlin/e;
+    sput-object v0, Lcom/vtosters/lite/attachments/MiniAppAttachment;->E:Lkotlin/Lazy2;
 
     .line 4
     sget-object v0, Lcom/vtosters/lite/attachments/MiniAppAttachment$Companion$SQUARE_WIDTH$2;->a:Lcom/vtosters/lite/attachments/MiniAppAttachment$Companion$SQUARE_WIDTH$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vtosters/lite/attachments/MiniAppAttachment;->F:Lkotlin/e;
+    sput-object v0, Lcom/vtosters/lite/attachments/MiniAppAttachment;->F:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -106,7 +106,7 @@
     iput-object p5, p0, Lcom/vtosters/lite/attachments/MiniAppAttachment;->D:Lcom/vk/dto/common/NotificationImage;
 
     .line 2
-    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const p2, 0x7f1210c0
 
@@ -116,7 +116,7 @@
 
     const-string p2, "AppContextHolder.context\u2026etString(R.string.vk_app)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vtosters/lite/attachments/MiniAppAttachment;->e:Ljava/lang/String;
 
@@ -128,20 +128,20 @@
     return-void
 .end method
 
-.method public static final synthetic C1()Lkotlin/e;
+.method public static final synthetic C1()Lkotlin/Lazy2;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/attachments/MiniAppAttachment;->F:Lkotlin/e;
+    sget-object v0, Lcom/vtosters/lite/attachments/MiniAppAttachment;->F:Lkotlin/Lazy2;
 
     return-object v0
 .end method
 
-.method public static final synthetic D1()Lkotlin/e;
+.method public static final synthetic D1()Lkotlin/Lazy2;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/attachments/MiniAppAttachment;->E:Lkotlin/e;
+    sget-object v0, Lcom/vtosters/lite/attachments/MiniAppAttachment;->E:Lkotlin/Lazy2;
 
     return-object v0
 .end method

@@ -3,11 +3,11 @@
 .source "AddButtonView.java"
 
 # interfaces
-.implements Lcom/vk/libvideo/live/views/addbutton/b;
+.implements Lcom/vk/libvideo/live/views/addbutton/AddButtonContract1;
 
 
 # instance fields
-.field private a:Lcom/vk/libvideo/live/views/addbutton/a;
+.field private a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
 .field private b:Z
 
@@ -28,7 +28,7 @@
     .locals 1
 
     .line 2
-    sget v0, Lcom/vk/libvideo/k;->Widget_AppCompat_Button_Colored:I
+    sget v0, Lcom/vk/libvideo/R2;->Widget_AppCompat_Button_Colored:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -79,11 +79,11 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/libvideo/live/views/addbutton/AddButtonView;)Lcom/vk/libvideo/live/views/addbutton/a;
+.method static synthetic a(Lcom/vk/libvideo/live/views/addbutton/AddButtonView;)Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
+    iget-object p0, p0, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     return-object p0
 .end method
@@ -120,12 +120,12 @@
 
     if-eqz v0, :cond_0
 
-    sget v0, Lcom/vk/libvideo/c;->white:I
+    sget v0, Lcom/vk/libvideo/R3;->white:I
 
     goto :goto_0
 
     :cond_0
-    sget v0, Lcom/vk/libvideo/c;->header_blue:I
+    sget v0, Lcom/vk/libvideo/R3;->header_blue:I
 
     :goto_0
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -149,12 +149,12 @@
 
     if-eqz p3, :cond_1
 
-    sget p3, Lcom/vk/libvideo/c;->header_blue:I
+    sget p3, Lcom/vk/libvideo/R3;->header_blue:I
 
     goto :goto_1
 
     :cond_1
-    sget p3, Lcom/vk/libvideo/c;->white:I
+    sget p3, Lcom/vk/libvideo/R3;->white:I
 
     :goto_1
     invoke-static {p1, p3}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -248,12 +248,12 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->a()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->a()V
 
     :cond_0
     return-void
@@ -328,22 +328,22 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->e()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->e()V
 
     :cond_0
     return-void
 .end method
 
-.method public getPresenter()Lcom/vk/libvideo/live/views/addbutton/a;
+.method public getPresenter()Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     return-object v0
 .end method
@@ -352,18 +352,18 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->getPresenter()Lcom/vk/libvideo/live/views/addbutton/a;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->getPresenter()Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public setPresenter(Lcom/vk/libvideo/live/views/addbutton/a;)V
+.method public setPresenter(Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     return-void
 .end method
@@ -372,9 +372,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/live/views/addbutton/a;
+    check-cast p1, Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->setPresenter(Lcom/vk/libvideo/live/views/addbutton/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->setPresenter(Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;)V
 
     return-void
 .end method
@@ -407,12 +407,12 @@
     iput-boolean v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->b:Z
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/addbutton/AddButtonView;->a:Lcom/vk/libvideo/live/views/addbutton/AddButtonContract;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->t()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->t()V
 
     :cond_0
     return-void

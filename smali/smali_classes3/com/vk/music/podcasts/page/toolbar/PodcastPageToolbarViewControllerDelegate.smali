@@ -1,5 +1,5 @@
 .class public final Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;
-.super Lcom/vk/music/podcasts/page/toolbar/b;
+.super Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewController;
 .source "PodcastPageToolbarViewControllerDelegate.kt"
 
 
@@ -10,13 +10,13 @@
 
 .field private final D:Lcom/vk/music/view/ThumbsImageView;
 
-.field private final E:Lcom/vk/imageloader/o/c;
+.field private final E:Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;
 
 .field private final F:Landroid/animation/LayoutTransition;
 
 .field private final G:Landroid/view/View;
 
-.field private final H:Lcom/vk/music/podcasts/page/e;
+.field private final H:Lcom/vk/music/podcasts/page/PodcastScreenContract;
 
 .field private final I:Z
 
@@ -38,15 +38,15 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lcom/vk/music/podcasts/page/e;Z)V
+.method public constructor <init>(Landroid/view/View;Lcom/vk/music/podcasts/page/PodcastScreenContract;Z)V
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/music/podcasts/page/toolbar/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewController;-><init>()V
 
     iput-object p1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->G:Landroid/view/View;
 
-    iput-object p2, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/e;
+    iput-object p2, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/PodcastScreenContract;
 
     iput-boolean p3, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->I:Z
 
@@ -124,7 +124,7 @@
 
     const v0, 0x7f0a048d
 
-    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -137,7 +137,7 @@
 
     const v0, 0x7f0a0496
 
-    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -150,7 +150,7 @@
 
     const v0, 0x7f0a0494
 
-    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -174,7 +174,7 @@
 
     const v0, 0x7f0a09de
 
-    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -187,7 +187,7 @@
 
     const v0, 0x7f0a0897
 
-    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -196,7 +196,7 @@
     iput-object p1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->D:Lcom/vk/music/view/ThumbsImageView;
 
     .line 13
-    new-instance p1, Lcom/vk/imageloader/o/c;
+    new-instance p1, Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;
 
     .line 14
     invoke-direct {p0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->b()I
@@ -211,9 +211,9 @@
     const/16 v1, 0x4b
 
     .line 16
-    invoke-direct {p1, v1, p3, v0}, Lcom/vk/imageloader/o/c;-><init>(III)V
+    invoke-direct {p1, v1, p3, v0}, Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;-><init>(III)V
 
-    iput-object p1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->E:Lcom/vk/imageloader/o/c;
+    iput-object p1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->E:Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;
 
     .line 17
     new-instance p1, Landroid/animation/LayoutTransition;
@@ -227,31 +227,31 @@
 
     const-string p3, "subscribeButton"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p3, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate$1;
 
     invoke-direct {p3, p0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate$1;-><init>(Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;)V
 
-    invoke-static {p1, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 19
     iget-object p1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->e:Landroid/widget/CheckedTextView;
 
     const-string p3, "notificationsButton"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p3, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate$2;
 
     invoke-direct {p3, p0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate$2;-><init>(Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;)V
 
-    invoke-static {p1, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 20
     iget-object p1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->h:Lcom/vk/core/view/PhotoStripView;
 
-    invoke-static {p2}, Lcom/vk/core/extensions/r;->a(I)I
+    invoke-static {p2}, Lcom/vk/core/extensions/NumberExt;->a(I)I
 
     move-result p2
 
@@ -270,45 +270,45 @@
     const/high16 p2, 0x41000000    # 8.0f
 
     .line 23
-    invoke-static {p2}, Lcom/vk/core/extensions/r;->a(F)F
+    invoke-static {p2}, Lcom/vk/core/extensions/NumberExt;->a(F)F
 
     move-result p3
 
-    invoke-static {p2}, Lcom/vk/core/extensions/r;->a(F)F
+    invoke-static {p2}, Lcom/vk/core/extensions/NumberExt;->a(F)F
 
     move-result v0
 
-    invoke-static {p2}, Lcom/vk/core/extensions/r;->a(F)F
+    invoke-static {p2}, Lcom/vk/core/extensions/NumberExt;->a(F)F
 
     move-result v1
 
-    invoke-static {p2}, Lcom/vk/core/extensions/r;->a(F)F
+    invoke-static {p2}, Lcom/vk/core/extensions/NumberExt;->a(F)F
 
     move-result v2
 
     invoke-virtual {p1, p3, v0, v1, v2}, Lcom/vk/music/view/ThumbsImageView;->a(FFFF)V
 
     .line 24
-    invoke-static {p2}, Lcom/vk/core/extensions/r;->a(F)F
+    invoke-static {p2}, Lcom/vk/core/extensions/NumberExt;->a(F)F
 
     move-result p2
 
     invoke-virtual {p1, p2}, Lcom/vk/music/view/ThumbsImageView;->setOutlineProvider(F)V
 
     .line 25
-    invoke-virtual {p1}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p1}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/drawee/generic/a;
+    check-cast p1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     const-string p2, "hierarchy"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 p3, 0x96
 
-    invoke-virtual {p1, p3}, Lcom/facebook/drawee/generic/a;->a(I)V
+    invoke-virtual {p1, p3}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(I)V
 
     .line 26
     iget-object p1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->D:Lcom/vk/music/view/ThumbsImageView;
@@ -316,9 +316,9 @@
     if-eqz p1, :cond_0
 
     .line 27
-    iget-object p3, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->E:Lcom/vk/imageloader/o/c;
+    iget-object p3, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->E:Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;
 
-    invoke-virtual {p1, p3}, Lcom/vk/music/view/ThumbsImageView;->setPostProcessorForSingle(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {p1, p3}, Lcom/vk/music/view/ThumbsImageView;->setPostProcessorForSingle(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 28
     invoke-direct {p0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->c()I
@@ -335,17 +335,17 @@
     invoke-virtual {p1, p3}, Lcom/vk/music/view/ThumbsImageView;->setBackground(I)V
 
     .line 30
-    invoke-virtual {p1}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p1}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p3
 
-    check-cast p3, Lcom/facebook/drawee/generic/a;
+    check-cast p3, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    invoke-static {p3, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x0
 
-    invoke-virtual {p3, p2}, Lcom/facebook/drawee/generic/a;->a(I)V
+    invoke-virtual {p3, p2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(I)V
 
     .line 31
     iget-object p2, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->C:Lcom/vk/music/view/ThumbsImageView;
@@ -371,9 +371,9 @@
     .locals 1
 
     .line 24
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v0, p1}, Lcom/vk/api/base/f;->a(Landroid/content/Context;Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lcom/vk/api/base/ApiUtils;->a(Landroid/content/Context;Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -400,7 +400,7 @@
 
     const-string v0, "rootView.resources.getString(id)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -413,11 +413,11 @@
 
     const-string v1, "notificationsButton"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/e;
+    iget-object v2, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/PodcastScreenContract;
 
-    invoke-direct {p0, v2}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->b(Lcom/vk/music/podcasts/page/e;)Z
+    invoke-direct {p0, v2}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->b(Lcom/vk/music/podcasts/page/PodcastScreenContract;)Z
 
     move-result v2
 
@@ -426,28 +426,28 @@
     .line 19
     iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->e:Landroid/widget/CheckedTextView;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/e;
+    iget-object v1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/PodcastScreenContract;
 
-    invoke-direct {p0, v1}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->c(Lcom/vk/music/podcasts/page/e;)Z
+    invoke-direct {p0, v1}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->c(Lcom/vk/music/podcasts/page/PodcastScreenContract;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/e;
+    iget-object v1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/PodcastScreenContract;
 
-    invoke-direct {p0, v1}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->a(Lcom/vk/music/podcasts/page/e;)Z
+    invoke-direct {p0, v1}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->a(Lcom/vk/music/podcasts/page/PodcastScreenContract;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
     :cond_0
-    iget-object v1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/e;
+    iget-object v1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/PodcastScreenContract;
 
-    invoke-direct {p0, v1}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->b(Lcom/vk/music/podcasts/page/e;)Z
+    invoke-direct {p0, v1}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->b(Lcom/vk/music/podcasts/page/PodcastScreenContract;)Z
 
     move-result v1
 
@@ -518,7 +518,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/music/podcasts/page/e;)Z
+.method private final a(Lcom/vk/music/podcasts/page/PodcastScreenContract;)Z
     .locals 1
 
     const/4 v0, 0x1
@@ -526,7 +526,7 @@
     if-eqz p1, :cond_0
 
     .line 25
-    invoke-interface {p1}, Lcom/vk/music/podcasts/page/e;->e1()Z
+    invoke-interface {p1}, Lcom/vk/music/podcasts/page/PodcastScreenContract;->e1()Z
 
     move-result p1
 
@@ -555,7 +555,7 @@
 
     const-string v1, "rootView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f040095
 
@@ -674,7 +674,7 @@
 
     const/16 v4, 0x20
 
-    invoke-static {v4}, Lcom/vk/core/extensions/r;->a(I)I
+    invoke-static {v4}, Lcom/vk/core/extensions/NumberExt;->a(I)I
 
     move-result v4
 
@@ -709,9 +709,9 @@
     :goto_5
     iget-object p1, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->f:Landroid/view/ViewGroup;
 
-    iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/e;
+    iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/PodcastScreenContract;
 
-    invoke-direct {p0, v0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->c(Lcom/vk/music/podcasts/page/e;)Z
+    invoke-direct {p0, v0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->c(Lcom/vk/music/podcasts/page/PodcastScreenContract;)Z
 
     move-result v0
 
@@ -731,7 +731,7 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/music/podcasts/page/e;)Z
+.method private final b(Lcom/vk/music/podcasts/page/PodcastScreenContract;)Z
     .locals 1
 
     const/4 v0, 0x1
@@ -739,7 +739,7 @@
     if-eqz p1, :cond_0
 
     .line 15
-    invoke-interface {p1}, Lcom/vk/music/podcasts/page/e;->o1()Z
+    invoke-interface {p1}, Lcom/vk/music/podcasts/page/PodcastScreenContract;->o1()Z
 
     move-result p1
 
@@ -768,7 +768,7 @@
 
     const-string v1, "rootView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f040168
 
@@ -823,7 +823,7 @@
     return p1
 .end method
 
-.method private final c(Lcom/vk/music/podcasts/page/e;)Z
+.method private final c(Lcom/vk/music/podcasts/page/PodcastScreenContract;)Z
     .locals 1
 
     const/4 v0, 0x1
@@ -831,7 +831,7 @@
     if-eqz p1, :cond_0
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/music/podcasts/page/e;->S0()Z
+    invoke-interface {p1}, Lcom/vk/music/podcasts/page/PodcastScreenContract;->S0()Z
 
     move-result p1
 
@@ -863,14 +863,14 @@
 
     const-string v1, "notificationsButton"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckedTextView;->setEnabled(Z)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/e;
+    iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/PodcastScreenContract;
 
     if-eqz v0, :cond_0
 
@@ -884,7 +884,7 @@
     invoke-direct {v2, p0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate$toggleNotifications$2;-><init>(Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;)V
 
     .line 5
-    invoke-interface {v0, v1, v2}, Lcom/vk/music/podcasts/page/e;->b(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/music/podcasts/page/PodcastScreenContract;->b(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     :cond_0
     return-void
@@ -903,9 +903,9 @@
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/e;
+    iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/PodcastScreenContract;
 
-    invoke-direct {p0, v0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->c(Lcom/vk/music/podcasts/page/e;)Z
+    invoke-direct {p0, v0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->c(Lcom/vk/music/podcasts/page/PodcastScreenContract;)Z
 
     move-result v0
 
@@ -916,7 +916,7 @@
 
     const-string v1, "subscribeButton"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -924,7 +924,7 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/e;
+    iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/PodcastScreenContract;
 
     if-eqz v0, :cond_1
 
@@ -938,7 +938,7 @@
     invoke-direct {v2, p0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate$toggleSubscription$2;-><init>(Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;)V
 
     .line 6
-    invoke-interface {v0, v1, v2}, Lcom/vk/music/podcasts/page/e;->a(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/music/podcasts/page/PodcastScreenContract;->a(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     :cond_1
     return-void
@@ -999,7 +999,7 @@
 
     const-string v1, "title"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/podcast/PodcastInfo;->A1()Ljava/lang/String;
 
@@ -1012,7 +1012,7 @@
 
     const-string v1, "category"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/podcast/PodcastInfo;->v1()Ljava/lang/String;
 
@@ -1023,7 +1023,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->b:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/podcast/PodcastInfo;->v1()Ljava/lang/String;
 
@@ -1060,7 +1060,7 @@
 
     const-string v1, "buttonsContainer"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -1071,18 +1071,18 @@
 
     const-string v1, "subscribeButton"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v2}, Landroid/widget/CheckedTextView;->setEnabled(Z)V
 
     .line 9
     iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->d:Landroid/widget/CheckedTextView;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/e;
+    iget-object v2, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->H:Lcom/vk/music/podcasts/page/PodcastScreenContract;
 
-    invoke-direct {p0, v2}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->c(Lcom/vk/music/podcasts/page/e;)Z
+    invoke-direct {p0, v2}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->c(Lcom/vk/music/podcasts/page/PodcastScreenContract;)Z
 
     move-result v2
 
@@ -1091,7 +1091,7 @@
     .line 10
     iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->d:Landroid/widget/CheckedTextView;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->a(Landroid/widget/CheckedTextView;)V
 
@@ -1139,7 +1139,7 @@
 
     const/high16 v1, 0x40a00000    # 5.0f
 
-    invoke-static {v1}, Lcom/vk/core/extensions/r;->a(F)F
+    invoke-static {v1}, Lcom/vk/core/extensions/NumberExt;->a(F)F
 
     move-result v1
 
@@ -1159,7 +1159,7 @@
 
     const-string v1, "separator"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->c(Lcom/vk/dto/podcast/PodcastInfo;)Z
 
@@ -1194,28 +1194,28 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->E:Lcom/vk/imageloader/o/c;
+    iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->E:Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;
 
     .line 5
     invoke-direct {p0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->b()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/o/c;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;->a(I)V
 
     .line 6
     invoke-direct {p0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->c()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/o/c;->b(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/o/MusicPlaylistHeaderBlurTransform;->b(I)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->d:Landroid/widget/CheckedTextView;
 
     const-string v1, "subscribeButton"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f080901
 
@@ -1243,7 +1243,7 @@
     .line 9
     iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->d:Landroid/widget/CheckedTextView;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f080900
 
@@ -1251,14 +1251,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/a0;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/TextViewExt;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     .line 10
     iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageToolbarViewControllerDelegate;->e:Landroid/widget/CheckedTextView;
 
     const-string v1, "notificationsButton"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f0808fc
 
@@ -1266,7 +1266,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/a0;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/TextViewExt;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method

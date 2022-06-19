@@ -3,7 +3,7 @@
 .source "PollBackgrounds.kt"
 
 # interfaces
-.implements Lcom/vk/core/serialize/a;
+.implements Lcom/vk/core/serialize/JSONSerialize;
 
 
 # annotations
@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/polls/GradientPoint$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/polls/GradientPoint$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/polls/GradientPoint$a;
@@ -164,7 +164,7 @@
 
     const-string v4, "java.lang.Long.toString(this, checkRadix(radix))"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0

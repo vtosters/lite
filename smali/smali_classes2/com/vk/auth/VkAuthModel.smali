@@ -1,13 +1,13 @@
 .class public Lcom/vk/auth/VkAuthModel;
-.super Lcom/vk/auth/d;
+.super Lcom/vk/auth/DefaultAuthModel;
 .source "VkAuthModel.kt"
 
 
 # instance fields
-.field private final g:Lkotlin/jvm/b/a;
+.field private final g:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Lcom/vk/api/internal/ApiManager;",
             ">;"
         }
@@ -16,13 +16,13 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Lcom/vk/api/internal/ApiManager;",
             ">;)V"
         }
@@ -33,9 +33,9 @@
 
     sget-object v1, Lcom/vk/api/base/ApiConfig;->b:Ljava/lang/String;
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/vk/auth/d;-><init>(Landroid/content/Context;ILjava/lang/String;)V
+    invoke-direct {p0, p1, v0, v1}, Lcom/vk/auth/DefaultAuthModel;-><init>(Landroid/content/Context;ILjava/lang/String;)V
 
-    iput-object p2, p0, Lcom/vk/auth/VkAuthModel;->g:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/auth/VkAuthModel;->g:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -49,11 +49,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/VkAuthModel;Lcom/vk/auth/api/models/AuthResult;Lcom/vtosters/lite/api/execute/i$a;)V
+.method public static final synthetic a(Lcom/vk/auth/VkAuthModel;Lcom/vk/auth/api/models/AuthResult;Lcom/vtosters/lite/api/execute/GetWallInfo$a;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/auth/api/models/AuthResult;Lcom/vtosters/lite/api/execute/i$a;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/auth/api/models/AuthResult;Lcom/vtosters/lite/api/execute/GetWallInfo$a;)V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
     .line 33
     sget-object v0, Lcom/vk/auth/VkAuthModel$onLogin$1;->a:Lcom/vk/auth/VkAuthModel$onLogin$1;
 
-    invoke-static {v0}, Lcom/vk/utils/AppUtils;->b(Lkotlin/jvm/b/a;)V
+    invoke-static {v0}, Lcom/vk/utils/AppUtils;->b(Lkotlin/jvm/b/Functions;)V
 
     .line 34
     sget-object v0, Lcom/vk/api/base/persistent/PersistentRequestManager;->e:Lcom/vk/api/base/persistent/PersistentRequestManager;
@@ -106,24 +106,24 @@
     move-result-object p1
 
     .line 38
-    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
     .line 39
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/ImConfig;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/ImConfig;)V
 
     .line 40
-    invoke-virtual {p0}, Lcom/vk/auth/d;->o()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/auth/DefaultAuthModel;->o()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/im/bridge/c;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/vtosters/lite/im/bridge/ImBridgesToVkApp;->a(Landroid/content/Context;)V
 
     .line 41
-    sget-object p1, Lcom/vtosters/lite/sync/online/h;->b:Lcom/vtosters/lite/sync/online/h;
+    sget-object p1, Lcom/vtosters/lite/sync/online/VkOnlineServiceManager;->INSTANCE:Lcom/vtosters/lite/sync/online/VkOnlineServiceManager;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/sync/online/h;->a()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/sync/online/VkOnlineServiceManager;->a()V
 
     :cond_0
     const/4 p1, 0x0
@@ -135,9 +135,9 @@
     invoke-static {p1}, Lcom/vtosters/lite/data/Groups;->b(Z)V
 
     .line 44
-    sget-object p1, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object p1, Lcom/vk/stickers/Stickers;->INSTANCE:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/t;->a()V
+    invoke-virtual {p1}, Lcom/vk/stickers/Stickers;->a()V
 
     .line 45
     invoke-static {}, Lcom/vtosters/lite/MenuCounterUpdater;->d()V
@@ -145,7 +145,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/auth/api/models/AuthResult;Lcom/vtosters/lite/api/execute/i$a;)V
+.method private final a(Lcom/vk/auth/api/models/AuthResult;Lcom/vtosters/lite/api/execute/GetWallInfo$a;)V
     .locals 5
 
     .line 18
@@ -164,35 +164,35 @@
     move-result-object v2
 
     .line 21
-    new-instance v3, Lb/h/h/d/c;
+    new-instance v3, Lcom/vk/auth/api/VKAccount;
 
-    invoke-direct {v3}, Lb/h/h/d/c;-><init>()V
+    invoke-direct {v3}, Lcom/vk/auth/api/VKAccount;-><init>()V
 
     .line 22
-    invoke-virtual {v3, v0}, Lb/h/h/d/c;->s(I)V
+    invoke-virtual {v3, v0}, Lcom/vk/auth/api/VKAccount;->s(I)V
 
     .line 23
-    invoke-virtual {v3, v1}, Lb/h/h/d/c;->a(Ljava/lang/String;)V
+    invoke-virtual {v3, v1}, Lcom/vk/auth/api/VKAccount;->a(Ljava/lang/String;)V
 
     .line 24
-    invoke-virtual {v3, v2}, Lb/h/h/d/c;->i(Ljava/lang/String;)V
+    invoke-virtual {v3, v2}, Lcom/vk/auth/api/VKAccount;->i(Ljava/lang/String;)V
 
     .line 25
     invoke-virtual {p1}, Lcom/vk/auth/api/models/AuthResult;->K()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lb/h/h/d/c;->o(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Lcom/vk/auth/api/VKAccount;->o(Ljava/lang/String;)V
 
     .line 26
     invoke-virtual {p1}, Lcom/vk/auth/api/models/AuthResult;->M()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lb/h/h/d/c;->p(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Lcom/vk/auth/api/VKAccount;->p(Ljava/lang/String;)V
 
     .line 27
-    invoke-static {}, Lcom/vk/core/util/i1;->b()I
+    invoke-static {}, Lcom/vk/core/util/TimeUtils;->b()I
 
     move-result v4
 
@@ -202,7 +202,7 @@
 
     add-int/2addr v4, p1
 
-    invoke-virtual {v3, v4}, Lb/h/h/d/c;->v(I)V
+    invoke-virtual {v3, v4}, Lcom/vk/auth/api/VKAccount;->v(I)V
 
     .line 28
     sget-object p1, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
@@ -210,7 +210,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(I)V
 
     .line 29
-    invoke-static {v3, p2}, Lcom/vtosters/lite/i0/c;->a(Lb/h/h/d/c;Lcom/vtosters/lite/api/execute/i$a;)V
+    invoke-static {v3, p2}, Lcom/vtosters/lite/auth/VKAccountManager;->a(Lcom/vk/auth/api/VKAccount;Lcom/vtosters/lite/api/execute/GetWallInfo$a;)V
 
     .line 30
     sget-object p1, Lcom/vtosters/lite/api/ApiWrapper;->a:Lcom/vtosters/lite/api/ApiWrapper;
@@ -218,33 +218,33 @@
     invoke-virtual {p1, v1, v2}, Lcom/vtosters/lite/api/ApiWrapper;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 31
-    invoke-static {}, Lcom/vtosters/lite/c0;->c()Lcom/vtosters/lite/c0;
+    invoke-static {}, Lcom/vtosters/lite/ShortcutManagerWrapper;->c()Lcom/vtosters/lite/ShortcutManagerWrapper;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/auth/d;->o()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/auth/DefaultAuthModel;->o()Landroid/content/Context;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/c0;->b(Landroid/content/Context;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ShortcutManagerWrapper;->b(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(Lcom/vk/api/sdk/internal/a;Lcom/vk/api/internal/ApiManager;)Lc/a/m;
+.method protected final a(Lcom/vk/api/sdk/internal/ApiCommand;Lcom/vk/api/internal/ApiManager;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/vk/api/sdk/internal/a<",
+            "Lcom/vk/api/sdk/internal/ApiCommand<",
             "TT;>;",
             "Lcom/vk/api/internal/ApiManager;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;"
         }
     .end annotation
@@ -252,47 +252,47 @@
     .line 46
     new-instance v0, Lcom/vk/auth/VkAuthModel$f;
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/auth/VkAuthModel$f;-><init>(Lcom/vk/api/sdk/internal/a;Lcom/vk/api/internal/ApiManager;)V
+    invoke-direct {v0, p1, p2}, Lcom/vk/auth/VkAuthModel$f;-><init>(Lcom/vk/api/sdk/internal/ApiCommand;Lcom/vk/api/internal/ApiManager;)V
 
-    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 47
     sget-object p2, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {p2}, Lcom/vk/core/concurrent/VkExecutors;->m()Lc/a/s;
+    invoke-virtual {p2}, Lcom/vk/core/concurrent/VkExecutors;->m()Lio/reactivex/Scheduler;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 48
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "Observable.fromCallable \u2026dSchedulers.mainThread())"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand;)Lc/a/m;
+.method public a(Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Void;",
             ">;"
         }
@@ -303,21 +303,21 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/api/sdk/internal/a;Lcom/vk/api/internal/ApiManager;)Lc/a/m;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/api/sdk/internal/ApiCommand;Lcom/vk/api/internal/ApiManager;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/auth/api/commands/a;)Lc/a/m;
+.method public a(Lcom/vk/auth/api/commands/AuthByExchangeTokenCommand;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/auth/api/commands/a;",
+            "Lcom/vk/auth/api/commands/AuthByExchangeTokenCommand;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/auth/api/models/AuthResult;",
             ">;"
         }
@@ -328,21 +328,21 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/api/sdk/internal/a;Lcom/vk/api/internal/ApiManager;)Lc/a/m;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/api/sdk/internal/ApiCommand;Lcom/vk/api/internal/ApiManager;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/auth/api/commands/b;)Lc/a/m;
+.method public a(Lcom/vk/auth/api/commands/AuthCommand;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/auth/api/commands/b;",
+            "Lcom/vk/auth/api/commands/AuthCommand;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/auth/api/models/AuthResult;",
             ">;"
         }
@@ -353,21 +353,21 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/api/sdk/internal/a;Lcom/vk/api/internal/ApiManager;)Lc/a/m;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/api/sdk/internal/ApiCommand;Lcom/vk/api/internal/ApiManager;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/auth/api/commands/f;)Lc/a/m;
+.method public a(Lcom/vk/auth/api/commands/CheckPhoneCommand;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/auth/api/commands/f;",
+            "Lcom/vk/auth/api/commands/CheckPhoneCommand;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -378,22 +378,22 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/api/sdk/internal/a;Lcom/vk/api/internal/ApiManager;)Lc/a/m;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/api/sdk/internal/ApiCommand;Lcom/vk/api/internal/ApiManager;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/auth/api/commands/h;)Lc/a/m;
+.method public a(Lcom/vk/auth/api/commands/GetExchangeTokenInfoCommand;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/auth/api/commands/h;",
+            "Lcom/vk/auth/api/commands/GetExchangeTokenInfoCommand;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/auth/api/models/c;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/auth/api/models/ExchangeTokenInfo;",
             ">;"
         }
     .end annotation
@@ -403,21 +403,21 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/api/sdk/internal/a;Lcom/vk/api/internal/ApiManager;)Lc/a/m;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/api/sdk/internal/ApiCommand;Lcom/vk/api/internal/ApiManager;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/auth/api/commands/j;)Lc/a/m;
+.method public a(Lcom/vk/auth/api/commands/ValidatePhoneCommand;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/auth/api/commands/j;",
+            "Lcom/vk/auth/api/commands/ValidatePhoneCommand;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/auth/api/models/ValidatePhoneResult;",
             ">;"
         }
@@ -428,33 +428,33 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/api/sdk/internal/a;Lcom/vk/api/internal/ApiManager;)Lc/a/m;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/api/sdk/internal/ApiCommand;Lcom/vk/api/internal/ApiManager;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/auth/api/models/AuthResult;Lcom/vk/auth/api/commands/g;)Lc/a/m;
+.method public a(Lcom/vk/auth/api/models/AuthResult;Lcom/vk/auth/api/commands/GetExchangeLoginDataCommand;)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/auth/api/models/AuthResult;",
-            "Lcom/vk/auth/api/commands/g;",
+            "Lcom/vk/auth/api/commands/GetExchangeLoginDataCommand;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/auth/api/models/b;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/auth/api/models/ExchangeLoginData;",
             ">;"
         }
     .end annotation
 
     .line 5
-    new-instance p2, Lcom/vtosters/lite/api/execute/i;
+    new-instance p2, Lcom/vtosters/lite/api/execute/GetWallInfo;
 
     const/4 v0, 0x1
 
-    invoke-direct {p2, v0}, Lcom/vtosters/lite/api/execute/i;-><init>(Z)V
+    invoke-direct {p2, v0}, Lcom/vtosters/lite/api/execute/GetWallInfo;-><init>(Z)V
 
     .line 6
     invoke-virtual {p1}, Lcom/vk/auth/api/models/AuthResult;->F()Ljava/lang/String;
@@ -465,23 +465,23 @@
 
     move-result-object v2
 
-    invoke-virtual {p2, v1, v2}, Lcom/vk/api/base/d;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p2, v1, v2}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     const/4 v1, 0x0
 
     .line 7
-    invoke-static {p2, v1, v0, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p2, v1, v0, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 8
     sget-object v0, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->b()Lc/a/s;
+    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->b()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -490,46 +490,46 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/auth/VkAuthModel$a;-><init>(Lcom/vk/auth/VkAuthModel;Lcom/vk/auth/api/models/AuthResult;)V
 
-    invoke-virtual {p2, v0}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 10
     sget-object p2, Lcom/vk/auth/VkAuthModel$b;->a:Lcom/vk/auth/VkAuthModel$b;
 
-    invoke-virtual {p1, p2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 11
     sget-object p2, Lcom/vk/auth/VkAuthModel$c;->a:Lcom/vk/auth/VkAuthModel$c;
 
-    invoke-virtual {p1, p2}, Lc/a/m;->f(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 12
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "GetWallInfo(true)\n      \u2026dSchedulers.mainThread())"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public a()Lc/a/t;
+.method public a()Lio/reactivex/Single;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/t<",
+            "Lio/reactivex/Single<",
             "Lcom/vk/auth/enterphone/choosecountry/Country;",
             ">;"
         }
@@ -540,21 +540,21 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/VkAuthModel$e;-><init>(Lcom/vk/auth/VkAuthModel;)V
 
-    invoke-static {v0}, Lc/a/t;->b(Ljava/util/concurrent/Callable;)Lc/a/t;
+    invoke-static {v0}, Lio/reactivex/Single;->b(Ljava/util/concurrent/Callable;)Lio/reactivex/Single;
 
     move-result-object v0
 
     const-string v1, "Single.fromCallable { Co\u2026ountryBySim(appContext) }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->b()Lc/a/s;
+    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {p0, v0, v1}, Lcom/vk/auth/d;->a(Lc/a/t;Lc/a/s;)Lc/a/t;
+    invoke-virtual {p0, v0, v1}, Lcom/vk/auth/DefaultAuthModel;->a(Lio/reactivex/Single;Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -565,7 +565,7 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/d;->o()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/auth/DefaultAuthModel;->o()Landroid/content/Context;
 
     move-result-object v0
 
@@ -585,24 +585,24 @@
     return v0
 .end method
 
-.method public bridge synthetic e()Lcom/vk/auth/main/f$a;
+.method public bridge synthetic e()Lcom/vk/auth/main/AuthModel$a;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/VkAuthModel;->e()Lcom/vk/auth/v/a;
+    invoke-virtual {p0}, Lcom/vk/auth/VkAuthModel;->e()Lcom/vk/auth/v/FacebookModelImpl;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public e()Lcom/vk/auth/v/a;
+.method public e()Lcom/vk/auth/v/FacebookModelImpl;
     .locals 7
 
     .line 2
-    new-instance v6, Lcom/vk/auth/v/a;
+    new-instance v6, Lcom/vk/auth/v/FacebookModelImpl;
 
-    invoke-virtual {p0}, Lcom/vk/auth/d;->o()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/auth/DefaultAuthModel;->o()Landroid/content/Context;
 
     move-result-object v1
 
@@ -620,7 +620,7 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/v/a;-><init>(Landroid/content/Context;Ljava/util/concurrent/Executor;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/v/FacebookModelImpl;-><init>(Landroid/content/Context;Ljava/util/concurrent/Executor;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v6
 .end method
@@ -640,7 +640,7 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/d;->o()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/auth/DefaultAuthModel;->o()Landroid/content/Context;
 
     move-result-object v0
 
@@ -668,12 +668,12 @@
     return-object v0
 .end method
 
-.method public l()Lc/a/m;
+.method public l()Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/auth/enterphone/choosecountry/Country;",
             ">;>;"
@@ -685,21 +685,21 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/VkAuthModel$d;-><init>(Lcom/vk/auth/VkAuthModel;)V
 
-    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "Observable.fromCallable \u2026adCountries(appContext) }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->b()Lc/a/s;
+    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {p0, v0, v1}, Lcom/vk/auth/d;->a(Lc/a/m;Lc/a/s;)Lc/a/m;
+    invoke-virtual {p0, v0, v1}, Lcom/vk/auth/DefaultAuthModel;->a(Lio/reactivex/Observable;Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -718,9 +718,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/VkAuthModel;->g:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/auth/VkAuthModel;->g:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 

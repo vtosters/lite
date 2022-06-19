@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -103,12 +103,12 @@
 
     const-string v7, "this.getJSONObject(i)"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    sget-object v7, Lcom/vk/dto/stories/model/clickable/a;->a:Lcom/vk/dto/stories/model/clickable/a;
+    sget-object v7, Lcom/vk/dto/stories/model/clickable/ClickableStickerFactory;->INSTANCE:Lcom/vk/dto/stories/model/clickable/ClickableStickerFactory;
 
-    invoke-virtual {v7, v6, p2, p3}, Lcom/vk/dto/stories/model/clickable/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;Landroid/util/SparseArray;)Lcom/vk/dto/stories/model/clickable/ClickableSticker;
+    invoke-virtual {v7, v6, p2, p3}, Lcom/vk/dto/stories/model/clickable/ClickableStickerFactory;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;Landroid/util/SparseArray;)Lcom/vk/dto/stories/model/clickable/ClickableSticker;
 
     move-result-object v6
 

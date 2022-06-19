@@ -3,7 +3,7 @@
 .source "PostingAttachGalleryPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/attachpicker/p$a;
+.implements Lcom/vk/attachpicker/SelectionContext$a;
 
 
 # annotations
@@ -40,16 +40,16 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$c;->a:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->d(Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;)Lcom/vk/newsfeed/posting/attachments/gallery/d;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->d(Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;)Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->o4()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->o4()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$c;->a:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->d(Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;)Lcom/vk/newsfeed/posting/attachments/gallery/d;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->d(Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;)Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
 
     move-result-object v0
 
@@ -63,16 +63,16 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->p0(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->p0(Z)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter$c;->a:Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->d(Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;)Lcom/vk/newsfeed/posting/attachments/gallery/d;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;->d(Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryPresenter;)Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/attachments/gallery/d;->i0(I)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryContract1;->i0(I)V
 
     return-void
 .end method

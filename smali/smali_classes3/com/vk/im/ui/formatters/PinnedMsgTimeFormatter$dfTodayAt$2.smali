@@ -3,7 +3,7 @@
 .source "PinnedMsgTimeFormatter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/text/SimpleDateFormat;",
         ">;"
     }
@@ -68,7 +68,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/formatters/PinnedMsgTimeFormatter$dfTodayAt$2;->$context:Landroid/content/Context;
 
-    sget v2, Lcom/vk/im/ui/m;->vkim_pinned_msg_time_today:I
+    sget v2, Lcom/vk/im/ui/R4;->vkim_pinned_msg_time_today:I
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

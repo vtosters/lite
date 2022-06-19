@@ -42,13 +42,13 @@
 
     iget-object v0, v0, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView$c;->a:Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;->a(Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;->a(Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e;->dismiss()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismiss()V
 
     .line 2
     :cond_0
@@ -58,7 +58,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;->a(Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;Lcom/vk/core/dialogs/bottomsheet/e;)V
+    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;->a(Lcom/vk/libvideo/live/views/menubutton/MenuButtonNewView;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
 
     return-void
 .end method

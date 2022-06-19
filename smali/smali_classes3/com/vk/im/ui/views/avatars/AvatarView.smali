@@ -3,7 +3,7 @@
 .source "AvatarView.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic K:[Lkotlin/u/j;
+.field static final synthetic K:[Lkotlin/u/KProperty5;
 
 .field private static final L:Lcom/vk/im/ui/views/avatars/CirclePostprocessor;
 
@@ -29,7 +29,7 @@
 
 .field private C:Landroid/graphics/drawable/Drawable;
 
-.field private final D:Lkotlin/e;
+.field private final D:Lkotlin/Lazy2;
 
 .field private E:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -49,17 +49,17 @@
 
 .field private I:Z
 
-.field private J:Lcom/facebook/drawee/controller/c;
+.field private J:Lcom/facebook/drawee/controller/ControllerListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/facebook/drawee/controller/c<",
-            "Lcom/facebook/x/g/f;",
+            "Lcom/facebook/drawee/controller/ControllerListener<",
+            "Lcom/facebook/x/g/ImageInfo;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final g:Lcom/facebook/u/b/a/e;
+.field private final g:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
 .field private h:Landroid/graphics/drawable/Drawable;
 
@@ -70,13 +70,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/views/avatars/AvatarView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -84,21 +84,21 @@
 
     const-string v4, "getAbbreviationAvatarDrawable()Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/views/avatars/AvatarView;->K:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/views/avatars/AvatarView;->K:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/im/ui/views/avatars/AvatarView$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/avatars/AvatarView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/avatars/AvatarView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     sget-object v0, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->e:Lcom/vk/im/ui/views/avatars/CirclePostprocessor;
@@ -141,7 +141,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/AvatarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/AvatarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -161,7 +161,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/AvatarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/AvatarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -175,22 +175,22 @@
     .line 2
     sget-object p3, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {p3}, Lcom/vk/imageloader/FrescoWrapper;->d()Lcom/facebook/u/b/a/e;
+    invoke-virtual {p3}, Lcom/vk/imageloader/FrescoWrapper;->d()Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     move-result-object p3
 
-    iput-object p3, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->g:Lcom/facebook/u/b/a/e;
+    iput-object p3, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->g:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 3
     new-instance p3, Lcom/vk/im/ui/views/avatars/AvatarView$abbreviationAvatarDrawable$2;
 
     invoke-direct {p3, p1}, Lcom/vk/im/ui/views/avatars/AvatarView$abbreviationAvatarDrawable$2;-><init>(Landroid/content/Context;)V
 
-    invoke-static {p3}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p3}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p3
 
-    iput-object p3, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->D:Lkotlin/e;
+    iput-object p3, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->D:Lkotlin/Lazy2;
 
     .line 4
     new-instance p3, Ljava/util/ArrayList;
@@ -202,31 +202,31 @@
     iput-object p3, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->E:Ljava/util/List;
 
     .line 5
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p3
 
-    check-cast p3, Lcom/facebook/drawee/generic/a;
+    check-cast p3, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     const-string v0, "hierarchy"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {}, Lcom/facebook/drawee/generic/RoundingParams;->i()Lcom/facebook/drawee/generic/RoundingParams;
 
     move-result-object v0
 
-    invoke-virtual {p3, v0}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {p3, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     .line 6
-    sget-object p3, Lcom/vk/im/ui/o;->AvatarView:[I
+    sget-object p3, Lcom/vk/im/ui/R2;->AvatarView:[I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
     .line 7
-    sget p3, Lcom/vk/im/ui/o;->AvatarView_av_fadeDuration:I
+    sget p3, Lcom/vk/im/ui/R2;->AvatarView_av_fadeDuration:I
 
     const/16 v0, 0x12c
 
@@ -237,7 +237,7 @@
     invoke-virtual {p0, p3}, Lcom/vk/im/ui/views/avatars/AvatarView;->setFadeDuration(I)V
 
     .line 8
-    sget p3, Lcom/vk/im/ui/o;->AvatarView_av_dividerSize:I
+    sget p3, Lcom/vk/im/ui/R2;->AvatarView_av_dividerSize:I
 
     const/4 v0, 0x2
 
@@ -252,7 +252,7 @@
     invoke-virtual {p0, p3}, Lcom/vk/im/ui/views/avatars/AvatarView;->setDividerSize(I)V
 
     .line 9
-    sget p3, Lcom/vk/im/ui/o;->AvatarView_av_tintColor:I
+    sget p3, Lcom/vk/im/ui/R2;->AvatarView_av_tintColor:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -261,7 +261,7 @@
     if-eqz p3, :cond_0
 
     .line 10
-    sget p3, Lcom/vk/im/ui/o;->AvatarView_av_tintColor:I
+    sget p3, Lcom/vk/im/ui/R2;->AvatarView_av_tintColor:I
 
     const/high16 v0, -0x1000000
 
@@ -277,7 +277,7 @@
 
     .line 11
     :cond_0
-    sget p3, Lcom/vk/im/ui/o;->AvatarView_av_combine:I
+    sget p3, Lcom/vk/im/ui/R2;->AvatarView_av_combine:I
 
     const/4 v0, 0x0
 
@@ -291,7 +291,7 @@
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 13
-    sget p2, Lcom/vk/im/ui/f;->user_placeholder:I
+    sget p2, Lcom/vk/im/ui/R12;->user_placeholder:I
 
     invoke-static {p1, p2}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -304,7 +304,7 @@
     iput-object p2, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->h:Landroid/graphics/drawable/Drawable;
 
     .line 14
-    sget p2, Lcom/vk/im/ui/f;->group_placeholder:I
+    sget p2, Lcom/vk/im/ui/R12;->group_placeholder:I
 
     invoke-static {p1, p2}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -320,43 +320,43 @@
     iput-object p1, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->C:Landroid/graphics/drawable/Drawable;
 
     .line 16
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/drawee/generic/a;
+    check-cast p1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     iget-object p2, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->h:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/a;->e(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->e(Landroid/graphics/drawable/Drawable;)V
 
     .line 17
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/drawee/generic/a;
+    check-cast p1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     iget-object p2, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->h:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/a;->c(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->c(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 
     .line 18
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     .line 19
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -458,16 +458,16 @@
     return-object p1
 .end method
 
-.method private final a(Lcom/facebook/u/b/a/e;Ljava/util/List;)Lcom/facebook/u/b/a/e;
+.method private final a(Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;Ljava/util/List;)Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/u/b/a/e;",
+            "Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;",
             "Ljava/util/List<",
             "Lcom/vk/im/engine/models/ImageList;",
             ">;)",
-            "Lcom/facebook/u/b/a/e;"
+            "Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;"
         }
     .end annotation
 
@@ -477,7 +477,7 @@
     invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->b(Ljava/lang/Object;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     .line 50
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/common/internal/j;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/common/internal/Supplier;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     if-nez p2, :cond_0
 
@@ -578,7 +578,7 @@
 
     .line 61
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -638,7 +638,7 @@
     .line 65
     sget-object v0, Lcom/vk/im/ui/views/avatars/AvatarView;->L:Lcom/vk/im/ui/views/avatars/CirclePostprocessor;
 
-    invoke-virtual {p2, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p2, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/Postprocessor;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 66
     sget-object v0, Lcom/facebook/imagepipeline/request/ImageRequest$CacheChoice;->SMALL:Lcom/facebook/imagepipeline/request/ImageRequest$CacheChoice;
@@ -712,7 +712,7 @@
 
     invoke-direct {v1, v0, p0, p2}, Lcom/vk/im/ui/views/avatars/AvatarView$b;-><init>(Ljava/util/List;Lcom/vk/im/ui/views/avatars/AvatarView;Ljava/util/List;)V
 
-    invoke-virtual {p1, v1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/common/internal/j;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {p1, v1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/common/internal/Supplier;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     goto :goto_7
 
@@ -744,12 +744,12 @@
     .end annotation
 
     .line 74
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 75
-    invoke-static {p1, p3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;I)Lkotlin/sequences/j;
+    invoke-static {p1, p3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;I)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
@@ -758,12 +758,12 @@
 
     invoke-direct {p3, p2}, Lcom/vk/im/ui/views/avatars/AvatarView$getAvatars$1;-><init>(Lcom/vk/im/engine/models/ProfilesInfo;)V
 
-    invoke-static {p1, p3}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {p1, p3}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 77
-    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object p1
 
@@ -787,12 +787,12 @@
     .end annotation
 
     .line 78
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 79
-    invoke-static {p1, p3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;I)Lkotlin/sequences/j;
+    invoke-static {p1, p3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;I)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
@@ -801,12 +801,12 @@
 
     invoke-direct {p3, p2}, Lcom/vk/im/ui/views/avatars/AvatarView$getAvatars$2;-><init>(Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
-    invoke-static {p1, p3}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {p1, p3}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 81
-    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object p1
 
@@ -965,7 +965,7 @@
     .line 39
     iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->E:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1018,49 +1018,49 @@
 
     .line 43
     :cond_3
-    iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->g:Lcom/facebook/u/b/a/e;
+    iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->g:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 44
     invoke-virtual {v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->j()Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast v0, Lcom/facebook/u/b/a/e;
+    check-cast v0, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 45
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getController()Lcom/facebook/u/e/a;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getController()Lcom/facebook/u/e/DraweeController;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast v0, Lcom/facebook/u/b/a/e;
+    check-cast v0, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 46
-    iget-object v1, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->J:Lcom/facebook/drawee/controller/c;
+    iget-object v1, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->J:Lcom/facebook/drawee/controller/ControllerListener;
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/drawee/controller/c;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/drawee/controller/ControllerListener;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     const-string v1, "controllerBuilder\n      \u2026tener(controllerListener)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, Lcom/facebook/u/b/a/e;
+    check-cast v0, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 47
-    invoke-direct {p0, v0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/facebook/u/b/a/e;Ljava/util/List;)Lcom/facebook/u/b/a/e;
+    invoke-direct {p0, v0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;Ljava/util/List;)Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 48
-    invoke-virtual {v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/a;
+    invoke-virtual {v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/AbstractDraweeController;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/DraweeView;->setController(Lcom/facebook/u/e/a;)V
+    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/DraweeView;->setController(Lcom/facebook/u/e/DraweeController;)V
 
     :cond_4
     :goto_1
     return-void
 .end method
 
-.method private final b(Lcom/vk/im/engine/models/j;)Landroid/graphics/drawable/Drawable;
+.method private final b(Lcom/vk/im/engine/models/Profile;)Landroid/graphics/drawable/Drawable;
     .locals 3
 
     .line 1
@@ -1070,7 +1070,7 @@
 
     if-nez v0, :cond_3
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->g0()Lcom/vk/im/engine/models/ImageList;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->g0()Lcom/vk/im/engine/models/ImageList;
 
     move-result-object v0
 
@@ -1081,7 +1081,7 @@
     if-eqz v0, :cond_3
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->S()Lcom/vk/im/engine/models/MemberType;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->S()Lcom/vk/im/engine/models/MemberType;
 
     move-result-object v0
 
@@ -1120,7 +1120,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->a(Lcom/vk/im/engine/models/Profile;)V
 
     goto :goto_0
 
@@ -1130,7 +1130,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->a(Lcom/vk/im/engine/models/Profile;)V
 
     :goto_0
     move-object p1, v0
@@ -1139,7 +1139,7 @@
 
     .line 7
     :cond_3
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->S()Lcom/vk/im/engine/models/MemberType;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->S()Lcom/vk/im/engine/models/MemberType;
 
     move-result-object p1
 
@@ -1169,15 +1169,15 @@
 .method private final getAbbreviationAvatarDrawable()Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->D:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->D:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/views/avatars/AvatarView;->K:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/views/avatars/AvatarView;->K:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1192,7 +1192,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->C:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1204,22 +1204,22 @@
     iput-object p1, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->C:Landroid/graphics/drawable/Drawable;
 
     .line 3
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/a;->e(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->e(Landroid/graphics/drawable/Drawable;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/a;->c(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->c(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
     return-void
@@ -1268,11 +1268,11 @@
 
     .line 27
     :cond_1
-    invoke-virtual {p2, p1}, Lcom/vk/im/engine/models/ProfilesInfo;->d(Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/j;
+    invoke-virtual {p2, p1}, Lcom/vk/im/engine/models/ProfilesInfo;->d(Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/Profile;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/Profile;)V
 
     :goto_0
     return-void
@@ -1298,11 +1298,11 @@
 
     .line 30
     :cond_1
-    invoke-virtual {p2, p1}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->d(Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/j;
+    invoke-virtual {p2, p1}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->d(Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/Profile;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/Profile;)V
 
     :goto_0
     return-void
@@ -1543,7 +1543,7 @@
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/im/engine/models/ProfilesInfo;->get(I)Lcom/vk/im/engine/models/j;
+    invoke-virtual {p2, p1}, Lcom/vk/im/engine/models/ProfilesInfo;->get(I)Lcom/vk/im/engine/models/Profile;
 
     move-result-object p1
 
@@ -1553,7 +1553,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/Profile;)V
 
     :goto_1
     return-void
@@ -1597,7 +1597,7 @@
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->get(I)Lcom/vk/im/engine/models/j;
+    invoke-virtual {p2, p1}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->get(I)Lcom/vk/im/engine/models/Profile;
 
     move-result-object p1
 
@@ -1607,13 +1607,13 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/Profile;)V
 
     :goto_1
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/j;)V
+.method public final a(Lcom/vk/im/engine/models/Profile;)V
     .locals 8
 
     const/4 v0, 0x0
@@ -1621,7 +1621,7 @@
     if-eqz p1, :cond_0
 
     .line 5
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->g0()Lcom/vk/im/engine/models/ImageList;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->g0()Lcom/vk/im/engine/models/ImageList;
 
     move-result-object v1
 
@@ -1637,7 +1637,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->b(Lcom/vk/im/engine/models/j;)Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->b(Lcom/vk/im/engine/models/Profile;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -1708,19 +1708,19 @@
     return v0
 .end method
 
-.method public final getControllerListener()Lcom/facebook/drawee/controller/c;
+.method public final getControllerListener()Lcom/facebook/drawee/controller/ControllerListener;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/facebook/drawee/controller/c<",
-            "Lcom/facebook/x/g/f;",
+            "Lcom/facebook/drawee/controller/ControllerListener<",
+            "Lcom/facebook/x/g/ImageInfo;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->J:Lcom/facebook/drawee/controller/c;
+    iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->J:Lcom/facebook/drawee/controller/ControllerListener;
 
     return-object v0
 .end method
@@ -1738,17 +1738,17 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     const-string v1, "hierarchy"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/generic/a;->b()I
+    invoke-virtual {v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->b()I
 
     move-result v0
 
@@ -1832,19 +1832,19 @@
     return-void
 .end method
 
-.method public final setControllerListener(Lcom/facebook/drawee/controller/c;)V
+.method public final setControllerListener(Lcom/facebook/drawee/controller/ControllerListener;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/drawee/controller/c<",
-            "Lcom/facebook/x/g/f;",
+            "Lcom/facebook/drawee/controller/ControllerListener<",
+            "Lcom/facebook/x/g/ImageInfo;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->J:Lcom/facebook/drawee/controller/c;
+    iput-object p1, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->J:Lcom/facebook/drawee/controller/ControllerListener;
 
     return-void
 .end method
@@ -1868,17 +1868,17 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     const-string v1, "hierarchy"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/a;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(I)V
 
     return-void
 .end method
@@ -1946,22 +1946,22 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/a;->c(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->c(Landroid/graphics/drawable/Drawable;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/a;->e(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->e(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -1973,17 +1973,17 @@
     iput-object p1, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->H:Ljava/lang/Integer;
 
     .line 2
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     invoke-direct {p0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Ljava/lang/Integer;)Landroid/graphics/ColorFilter;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/a;->a(Landroid/graphics/ColorFilter;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Landroid/graphics/ColorFilter;)V
 
     return-void
 .end method
@@ -2005,7 +2005,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->h:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2016,9 +2016,9 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v3, Lcom/vk/im/ui/f;->user_placeholder:I
+    sget v3, Lcom/vk/im/ui/R12;->user_placeholder:I
 
     invoke-static {v1, v3}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -2035,9 +2035,9 @@
 
     move-result-object v1
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget v2, Lcom/vk/im/ui/f;->group_placeholder:I
+    sget v2, Lcom/vk/im/ui/R12;->group_placeholder:I
 
     invoke-static {v1, v2}, Lcom/vk/core/util/ContextExtKt;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -2061,38 +2061,38 @@
     iput-object v0, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->C:Landroid/graphics/drawable/Drawable;
 
     .line 5
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     iget-object v1, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->C:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/a;->e(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->e(Landroid/graphics/drawable/Drawable;)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/facebook/drawee/view/DraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     iget-object v1, p0, Lcom/vk/im/ui/views/avatars/AvatarView;->C:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/a;->c(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->c(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 
     .line 7
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 8
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 .end method

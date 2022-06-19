@@ -3,7 +3,7 @@
 .source "MarketOrderSettings.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,16 +19,16 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lorg/json/JSONObject;",
-        "Lcom/vk/dto/market/cart/a;",
+        "Lcom/vk/dto/market/cart/MarketOrderSettings1;",
         ">;"
     }
 .end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/dto/market/cart/a$b;)V
+.method constructor <init>(Lcom/vk/dto/market/cart/MarketOrderSettings$b2;)V
     .locals 1
 
     const/4 v0, 0x1
@@ -40,15 +40,15 @@
 
 
 # virtual methods
-.method public final a(Lorg/json/JSONObject;)Lcom/vk/dto/market/cart/a;
+.method public final a(Lorg/json/JSONObject;)Lcom/vk/dto/market/cart/MarketOrderSettings1;
     .locals 1
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vk/dto/market/cart/a$b;
+    check-cast v0, Lcom/vk/dto/market/cart/MarketOrderSettings$b2;
 
     .line 1
-    invoke-virtual {v0, p1}, Lcom/vk/dto/market/cart/a$b;->a(Lorg/json/JSONObject;)Lcom/vk/dto/market/cart/a;
+    invoke-virtual {v0, p1}, Lcom/vk/dto/market/cart/MarketOrderSettings$b2;->a(Lorg/json/JSONObject;)Lcom/vk/dto/market/cart/MarketOrderSettings1;
 
     move-result-object p1
 
@@ -63,12 +63,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
-    const-class v0, Lcom/vk/dto/market/cart/a$b;
+    const-class v0, Lcom/vk/dto/market/cart/MarketOrderSettings$b2;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -89,7 +89,7 @@
     .line 1
     check-cast p1, Lorg/json/JSONObject;
 
-    invoke-virtual {p0, p1}, Lcom/vk/dto/market/cart/MarketDeliveryOption$Companion$parse$1;->a(Lorg/json/JSONObject;)Lcom/vk/dto/market/cart/a;
+    invoke-virtual {p0, p1}, Lcom/vk/dto/market/cart/MarketDeliveryOption$Companion$parse$1;->a(Lorg/json/JSONObject;)Lcom/vk/dto/market/cart/MarketOrderSettings1;
 
     move-result-object p1
 

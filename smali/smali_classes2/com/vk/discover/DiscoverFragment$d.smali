@@ -3,7 +3,7 @@
 .source "DiscoverFragment.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/adapters/g;
+.implements Lcom/vk/newsfeed/adapters/RecyclerViewObserver;
 
 
 # annotations
@@ -66,11 +66,11 @@
     return-void
 .end method
 
-.method public a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vtosters/lite/ui/f0/b;)V
+.method public a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/newsfeed/adapters/g$a;->a(Lcom/vk/newsfeed/adapters/g;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vtosters/lite/ui/f0/b;)V
+    invoke-static {p0, p1, p2}, Lcom/vk/newsfeed/adapters/RecyclerViewObserver$a;->a(Lcom/vk/newsfeed/adapters/RecyclerViewObserver;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
 
     return-void
 .end method

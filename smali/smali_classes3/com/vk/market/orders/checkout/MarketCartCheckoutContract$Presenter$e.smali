@@ -3,7 +3,7 @@
 .source "MarketCartCheckoutContract.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -52,14 +52,14 @@
     .line 1
     iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$e;->a:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->c()Lcom/vk/market/orders/checkout/n;
+    invoke-virtual {p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;->c()Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/market/orders/checkout/n;->O3()V
+    invoke-interface {p1}, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract;->O3()V
 
     .line 2
-    new-instance p1, Lb/h/o/a/f;
+    new-instance p1, Lb/h/o/a/MarketEvents5;
 
     iget-object v0, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter$e;->a:Lcom/vk/market/orders/checkout/MarketCartCheckoutContract$Presenter;
 
@@ -67,9 +67,9 @@
 
     move-result v0
 
-    invoke-direct {p1, v0}, Lb/h/o/a/f;-><init>(I)V
+    invoke-direct {p1, v0}, Lb/h/o/a/MarketEvents5;-><init>(I)V
 
-    invoke-static {p1}, Lb/h/o/a/g;->a(Lb/h/o/a/a;)V
+    invoke-static {p1}, Lb/h/o/a/MarketEventBus;->a(Lb/h/o/a/MarketEvents;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "GraffitiAttachment.java"
 
 # interfaces
-.implements Lcom/vk/dto/attachments/b;
+.implements Lcom/vk/dto/attachments/ImageAttachment;
 
 
 # static fields
@@ -17,10 +17,10 @@
     .end annotation
 .end field
 
-.field private static final D:Lcom/vtosters/lite/j0/e;
+.field private static final D:Lcom/vtosters/lite/j0/LruCache;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vtosters/lite/j0/e<",
+            "Lcom/vtosters/lite/j0/LruCache<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;"
@@ -50,13 +50,13 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/j0/e;
+    new-instance v0, Lcom/vtosters/lite/j0/LruCache;
 
     const/16 v1, 0xa
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/j0/e;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/j0/LruCache;-><init>(I)V
 
-    sput-object v0, Lcom/vtosters/lite/attachments/GraffitiAttachment;->D:Lcom/vtosters/lite/j0/e;
+    sput-object v0, Lcom/vtosters/lite/attachments/GraffitiAttachment;->D:Lcom/vtosters/lite/j0/LruCache;
 
     .line 2
     invoke-static {}, Lcom/vk/core/util/Screen;->h()I
@@ -281,7 +281,7 @@
     .locals 2
 
     .line 4
-    sget-object v0, Lcom/vtosters/lite/attachments/GraffitiAttachment;->D:Lcom/vtosters/lite/j0/e;
+    sget-object v0, Lcom/vtosters/lite/attachments/GraffitiAttachment;->D:Lcom/vtosters/lite/j0/LruCache;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -299,7 +299,7 @@
 
     move-result-object p0
 
-    invoke-virtual {v0, p0}, Lcom/vtosters/lite/j0/e;->c(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Lcom/vtosters/lite/j0/LruCache;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -335,7 +335,7 @@
 
     .line 3
     :cond_0
-    sget-object v0, Lcom/vtosters/lite/attachments/GraffitiAttachment;->D:Lcom/vtosters/lite/j0/e;
+    sget-object v0, Lcom/vtosters/lite/attachments/GraffitiAttachment;->D:Lcom/vtosters/lite/j0/LruCache;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -353,7 +353,7 @@
 
     move-result-object p0
 
-    invoke-virtual {v0, p0, p2}, Lcom/vtosters/lite/j0/e;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, p2}, Lcom/vtosters/lite/j0/LruCache;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -466,7 +466,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f120a9c
 
@@ -481,7 +481,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/dto/attachments/a;->f:I
+    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->f:I
 
     return v0
 .end method

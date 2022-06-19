@@ -3,20 +3,20 @@
 .source "EmptyCompletableObserver.java"
 
 # interfaces
-.implements Lc/a/c;
-.implements Lio/reactivex/disposables/b;
-.implements Lc/a/c0/b;
+.implements Lio/reactivex/CompletableObserver;
+.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/observers/DisposableObserver/LambdaConsumerIntrospection;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/disposables/Disposable;",
         ">;",
-        "Lc/a/c;",
-        "Lio/reactivex/disposables/b;",
-        "Lc/a/c0/b;"
+        "Lio/reactivex/CompletableObserver;",
+        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/observers/DisposableObserver/LambdaConsumerIntrospection;"
     }
 .end annotation
 
@@ -37,11 +37,11 @@
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 3
-    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -59,7 +59,7 @@
 
     invoke-direct {v0, p1}, Lio/reactivex/exceptions/OnErrorNotImplementedException;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-static {v0}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     return-void
 .end method

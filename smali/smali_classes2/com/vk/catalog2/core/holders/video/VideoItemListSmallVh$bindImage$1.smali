@@ -3,7 +3,7 @@
 .source "VideoItemListSmallVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/common/VideoFile;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -97,13 +97,13 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/catalog2/core/p;->default_placeholder_6:I
+    sget v1, Lcom/vk/catalog2/core/R1;->default_placeholder_6:I
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/catalog2/core/holders/video/VideoItemListSmallVh$bindImage$1;->this$0:Lcom/vk/catalog2/core/holders/video/VideoItemListSmallVh;
@@ -122,7 +122,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/catalog2/core/p;->video_placeholder_64:I
+    sget v1, Lcom/vk/catalog2/core/R1;->video_placeholder_64:I
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -155,7 +155,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/vk/catalog2/core/o;->video_catalog_small_content_item_width:I
+    sget v2, Lcom/vk/catalog2/core/R3;->video_catalog_small_content_item_width:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -190,7 +190,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/video/VideoItemListSmallVh$bindImage$1;->a(Lcom/vk/dto/common/VideoFile;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

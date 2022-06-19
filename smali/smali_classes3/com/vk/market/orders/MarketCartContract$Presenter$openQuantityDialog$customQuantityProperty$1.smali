@@ -3,7 +3,7 @@
 .source "MarketCartContract.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/market/orders/MarketCartContract$Presenter$openQuantityDialog$customQuantityProperty$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -66,13 +66,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$openQuantityDialog$customQuantityProperty$1;->this$0:Lcom/vk/market/orders/MarketCartContract$Presenter;
 
-    invoke-static {v0}, Lcom/vk/market/orders/MarketCartContract$Presenter;->b(Lcom/vk/market/orders/MarketCartContract$Presenter;)Lcom/vk/market/orders/c;
+    invoke-static {v0}, Lcom/vk/market/orders/MarketCartContract$Presenter;->b(Lcom/vk/market/orders/MarketCartContract$Presenter;)Lcom/vk/market/orders/MarketCartContract;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/market/orders/MarketCartContract$Presenter$openQuantityDialog$customQuantityProperty$1;->$good:Lcom/vk/dto/common/Good;
 
-    invoke-interface {v0, v1}, Lcom/vk/market/orders/c;->b(Lcom/vk/dto/common/Good;)V
+    invoke-interface {v0, v1}, Lcom/vk/market/orders/MarketCartContract;->b(Lcom/vk/dto/common/Good;)V
 
     return-void
 .end method

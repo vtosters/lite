@@ -3,7 +3,7 @@
 .source "AudioContentProvider.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/audio/contentprovider/a;
+.implements Lcom/vtosters/lite/audio/contentprovider/AudioContentProviderConstants;
 
 
 # static fields
@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field private a:Lcom/vtosters/lite/data/v/a;
+.field private a:Lcom/vtosters/lite/data/v/Database;
 
 
 # direct methods
@@ -154,7 +154,7 @@
     move-result-object p0
 
     .line 3
-    sget-object v0, Lcom/vtosters/lite/audio/contentprovider/a;->x:[Ljava/lang/String;
+    sget-object v0, Lcom/vtosters/lite/audio/contentprovider/AudioContentProviderConstants;->x:[Ljava/lang/String;
 
     array-length v1, v0
 
@@ -201,7 +201,7 @@
 
     .line 1
     :try_start_0
-    invoke-static {p0, v0}, Lb/h/g/g/c;->a(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    invoke-static {p0, v0}, Lb/h/g/g/PackageManagerHelper;->a(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object p0
 
@@ -408,11 +408,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vtosters/lite/data/v/a;->a(Landroid/content/Context;)Lcom/vtosters/lite/data/v/a;
+    invoke-static {v0}, Lcom/vtosters/lite/data/v/Database;->a(Landroid/content/Context;)Lcom/vtosters/lite/data/v/Database;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vtosters/lite/audio/contentprovider/AudioContentProvider;->a:Lcom/vtosters/lite/data/v/a;
+    iput-object v0, p0, Lcom/vtosters/lite/audio/contentprovider/AudioContentProvider;->a:Lcom/vtosters/lite/data/v/Database;
 
     const/4 v0, 0x1
 
@@ -550,7 +550,7 @@
     move-object v4, p3
 
     .line 8
-    iget-object p1, p0, Lcom/vtosters/lite/audio/contentprovider/AudioContentProvider;->a:Lcom/vtosters/lite/data/v/a;
+    iget-object p1, p0, Lcom/vtosters/lite/audio/contentprovider/AudioContentProvider;->a:Lcom/vtosters/lite/data/v/Database;
 
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
@@ -558,7 +558,7 @@
 
     const/4 v1, 0x1
 
-    sget-object v3, Lcom/vtosters/lite/audio/contentprovider/a;->y:[Ljava/lang/String;
+    sget-object v3, Lcom/vtosters/lite/audio/contentprovider/AudioContentProviderConstants;->y:[Ljava/lang/String;
 
     const/4 v6, 0x0
 

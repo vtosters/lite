@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # instance fields
@@ -36,7 +36,7 @@
 
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {v0, v1, p1}, Lcom/vtosters/lite/fragments/q1;->a(Landroidx/preference/Preference;ZLjava/lang/Throwable;)V
+    invoke-static {v0, v1, p1}, Lcom/vtosters/lite/fragments/NotificationsAdvancedSettingsFragment;->a(Landroidx/preference/Preference;ZLjava/lang/Throwable;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "ImDraftsHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/util/List<",
         "Lcom/vk/dto/common/Attachment;",
         ">;>;"
@@ -116,13 +116,13 @@
     if-ge v4, v3, :cond_1
 
     .line 6
-    invoke-static {v2}, Lcom/vtosters/lite/attachments/a;->a(Ljava/io/DataInputStream;)Lcom/vk/dto/common/Attachment;
+    invoke-static {v2}, Lcom/vtosters/lite/attachments/AttachmentUtils;->a(Ljava/io/DataInputStream;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v5
 
     const-string v6, "AttachmentUtils.deserialize(dis)"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -132,12 +132,12 @@
 
     .line 7
     :cond_1
-    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v3, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 8
-    invoke-static {v2, v1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v2, v1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     return-object v0
 
@@ -152,7 +152,7 @@
     :catchall_1
     move-exception v1
 
-    invoke-static {v2, v0}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v2, v0}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
 .end method

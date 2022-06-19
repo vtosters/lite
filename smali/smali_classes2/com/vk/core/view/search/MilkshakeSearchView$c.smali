@@ -3,7 +3,7 @@
 .source "MilkshakeSearchView.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/c;
+.implements Lcom/vk/navigation/ActivityResulter;
 
 
 # annotations
@@ -44,7 +44,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/i;->a(IILandroid/content/Intent;)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/VoiceUtils;->a(IILandroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -58,17 +58,17 @@
     .line 3
     iget-object p2, p0, Lcom/vk/core/view/search/MilkshakeSearchView$c;->a:Lcom/vk/core/view/search/MilkshakeSearchView;
 
-    invoke-static {p2}, Lcom/vk/core/view/search/MilkshakeSearchView;->e(Lcom/vk/core/view/search/MilkshakeSearchView;)Lkotlin/jvm/b/b;
+    invoke-static {p2}, Lcom/vk/core/view/search/MilkshakeSearchView;->e(Lcom/vk/core/view/search/MilkshakeSearchView;)Lkotlin/jvm/b/Functions2;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void

@@ -3,7 +3,7 @@
 .source "PopupVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/im/ui/components/viewcontrollers/popup/b;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateContacts;",
         ">;"
     }
 .end annotation
@@ -49,21 +49,21 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/ui/components/viewcontrollers/popup/b;
+.method public final invoke()Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateContacts;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/popup/b;
+    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateContacts;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc$contacts$2;->$context:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc$contacts$2;->this$0:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
 
-    invoke-static {v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;)Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+    invoke-static {v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;)Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/b;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/f;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateContacts;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;)V
 
     return-object v0
 .end method
@@ -72,7 +72,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc$contacts$2;->invoke()Lcom/vk/im/ui/components/viewcontrollers/popup/b;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc$contacts$2;->invoke()Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateContacts;
 
     move-result-object v0
 

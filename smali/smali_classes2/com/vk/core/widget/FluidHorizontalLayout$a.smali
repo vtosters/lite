@@ -43,14 +43,14 @@
     if-eqz p2, :cond_0
 
     .line 2
-    sget-object v1, Lb/h/g/f;->FluidHorizontalLayout_Layout:[I
+    sget-object v1, Lb/h/g/R5;->FluidHorizontalLayout_Layout:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 3
-    sget p2, Lb/h/g/f;->FluidHorizontalLayout_Layout_vk_layout_isFluid:I
+    sget p2, Lb/h/g/R5;->FluidHorizontalLayout_Layout_vk_layout_isFluid:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -59,7 +59,7 @@
     iput-boolean p2, p0, Lcom/vk/core/widget/FluidHorizontalLayout$a;->a:Z
 
     .line 4
-    sget p2, Lb/h/g/f;->FluidHorizontalLayout_Layout_vk_layout_isExpandable:I
+    sget p2, Lb/h/g/R5;->FluidHorizontalLayout_Layout_vk_layout_isExpandable:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -68,7 +68,7 @@
     iput-boolean p2, p0, Lcom/vk/core/widget/FluidHorizontalLayout$a;->b:Z
 
     .line 5
-    sget p2, Lb/h/g/f;->FluidHorizontalLayout_Layout_android_layout_gravity:I
+    sget p2, Lb/h/g/R5;->FluidHorizontalLayout_Layout_android_layout_gravity:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 

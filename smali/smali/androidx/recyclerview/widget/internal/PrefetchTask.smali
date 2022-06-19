@@ -93,7 +93,7 @@
 
     iget p1, p1, Landroidx/recyclerview/widget/internal/PrefetchTask;->priority:I
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(II)I
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(II)I
 
     move-result p1
 
@@ -170,7 +170,7 @@
 
     iget-object v1, p1, Landroidx/recyclerview/widget/internal/PrefetchTask;->callback:Landroidx/recyclerview/widget/internal/Prefetcher$Callback;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

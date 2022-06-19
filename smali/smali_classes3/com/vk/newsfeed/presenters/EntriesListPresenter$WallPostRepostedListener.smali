@@ -3,7 +3,7 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lb/h/g/l/e;
+.implements Lb/h/g/l/NotificationListener;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lb/h/g/l/e<",
-        "Lb/h/g/l/b;",
+        "Lb/h/g/l/NotificationListener<",
+        "Lb/h/g/l/EventWallPostReposted;",
         ">;"
     }
 .end annotation
@@ -49,18 +49,18 @@
 
 
 # virtual methods
-.method public a(IILb/h/g/l/b;)V
+.method public a(IILb/h/g/l/EventWallPostReposted;)V
     .locals 2
 
     .line 2
     new-instance p1, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$filter$1;
 
-    invoke-direct {p1, p3}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$filter$1;-><init>(Lb/h/g/l/b;)V
+    invoke-direct {p1, p3}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$filter$1;-><init>(Lb/h/g/l/EventWallPostReposted;)V
 
     .line 3
     new-instance p2, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$updater$1;
 
-    invoke-direct {p2, p3}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$updater$1;-><init>(Lb/h/g/l/b;)V
+    invoke-direct {p2, p3}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$updater$1;-><init>(Lb/h/g/l/EventWallPostReposted;)V
 
     .line 4
     iget-object p3, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener;->a:Lcom/vk/newsfeed/presenters/EntriesListPresenter;
@@ -84,7 +84,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -106,7 +106,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-interface {p2, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz v0, :cond_2
 
@@ -122,9 +122,9 @@
     .locals 0
 
     .line 1
-    check-cast p3, Lb/h/g/l/b;
+    check-cast p3, Lb/h/g/l/EventWallPostReposted;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener;->a(IILb/h/g/l/b;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener;->a(IILb/h/g/l/EventWallPostReposted;)V
 
     return-void
 .end method

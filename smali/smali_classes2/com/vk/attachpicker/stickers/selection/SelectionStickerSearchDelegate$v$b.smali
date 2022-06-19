@@ -3,12 +3,12 @@
 .source "SelectionStickerSearchDelegate.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$v;->a(Ljava/lang/String;)Lc/a/m;
+    value = Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$v;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "Ljava/lang/Throwable;",
         "Lcom/vk/dto/stories/model/GifWithQueryData;",
         ">;"

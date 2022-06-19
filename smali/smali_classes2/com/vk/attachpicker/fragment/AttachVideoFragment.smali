@@ -3,7 +3,7 @@
 .source "AttachVideoFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/util/k0;
+.implements Lcom/vk/core/util/ItemClickListener;
 
 
 # annotations
@@ -20,7 +20,7 @@
         "Lcom/vk/dto/common/VideoFile;",
         "Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;",
         ">;",
-        "Lcom/vk/core/util/k0<",
+        "Lcom/vk/core/util/ItemClickListener<",
         "Lcom/vk/dto/common/VideoFile;",
         ">;"
     }
@@ -37,11 +37,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/attachpicker/fragment/AttachVideoFragment;)Lcom/vk/attachpicker/base/a;
+.method public static final synthetic a(Lcom/vk/attachpicker/fragment/AttachVideoFragment;)Lcom/vk/attachpicker/base/AttachPickerAdapter;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->P4()Lcom/vk/attachpicker/base/a;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->P4()Lcom/vk/attachpicker/base/AttachPickerAdapter;
 
     move-result-object p0
 
@@ -77,14 +77,14 @@
     return-object v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;
+.method public a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/StreamParcelableSelection;)Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I",
-            "Lcom/vk/attachpicker/base/f<",
+            "Lcom/vk/attachpicker/base/StreamParcelableSelection<",
             "Lcom/vk/dto/common/VideoFile;",
             ">;)",
             "Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;"
@@ -96,7 +96,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-direct {p2, p1, p3, p0}, Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/attachpicker/base/f;Lcom/vk/core/util/k0;)V
+    invoke-direct {p2, p1, p3, p0}, Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/attachpicker/base/StreamParcelableSelection;Lcom/vk/core/util/ItemClickListener;)V
 
     return-object p2
 
@@ -110,25 +110,25 @@
     throw p1
 .end method
 
-.method public bridge synthetic a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vtosters/lite/ui/b0/i;
+.method public bridge synthetic a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/StreamParcelableSelection;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/attachpicker/fragment/AttachVideoFragment;->a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/attachpicker/fragment/AttachVideoFragment;->a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/StreamParcelableSelection;)Lcom/vk/attachpicker/fragment/AttachVideoFragment$ViewHolder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected b(ILcom/vk/lists/t;)Lc/a/m;
+.method protected b(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/api/base/VkPaginationList<",
             "Lcom/vk/dto/common/VideoFile;",
             ">;>;"
@@ -144,7 +144,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p2}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result p2
 
@@ -173,7 +173,7 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-static {v6, v0, p2, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v6, v0, p2, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -182,25 +182,25 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/attachpicker/fragment/AttachVideoFragment$b;-><init>(Lcom/vk/attachpicker/fragment/AttachVideoFragment;I)V
 
-    invoke-virtual {p2, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "VideoRequest(currentSear\u2026 it\n                    }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method protected c(ILcom/vk/lists/t;)Lc/a/m;
+.method protected c(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/api/base/VkPaginationList<",
             "Lcom/vk/dto/common/VideoFile;",
             ">;>;"
@@ -212,7 +212,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p2}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result p2
 
@@ -229,7 +229,7 @@
     const/4 p2, 0x0
 
     .line 2
-    invoke-static {v0, p2, p1, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p2, p1, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 

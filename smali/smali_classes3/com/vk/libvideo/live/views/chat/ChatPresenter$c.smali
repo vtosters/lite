@@ -1,5 +1,5 @@
 .class Lcom/vk/libvideo/live/views/chat/ChatPresenter$c;
-.super Lc/a/c0/a;
+.super Lio/reactivex/observers/DisposableObserver/DisposableObserver;
 .source "ChatPresenter.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lc/a/c0/a<",
+        "Lio/reactivex/observers/DisposableObserver/DisposableObserver<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -41,7 +41,7 @@
 
     iput-boolean p3, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter$c;->c:Z
 
-    invoke-direct {p0}, Lc/a/c0/a;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/observers/DisposableObserver/DisposableObserver;-><init>()V
 
     return-void
 .end method
@@ -72,7 +72,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a(Lcom/vk/libvideo/live/views/chat/ChatPresenter;Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a(Lcom/vk/libvideo/live/views/chat/ChatPresenter;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
     .line 4
     iget-boolean p1, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter$c;->c:Z
@@ -80,9 +80,9 @@
     if-nez p1, :cond_0
 
     .line 5
-    sget p1, Lcom/vk/libvideo/j;->error:I
+    sget p1, Lcom/vk/libvideo/R11;->error:I
 
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     :cond_0
     return-void
@@ -96,7 +96,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a(Lcom/vk/libvideo/live/views/chat/ChatPresenter;Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/chat/ChatPresenter;->a(Lcom/vk/libvideo/live/views/chat/ChatPresenter;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
     .line 3
     iget-boolean v0, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter$c;->c:Z
@@ -104,9 +104,9 @@
     if-nez v0, :cond_0
 
     .line 4
-    sget v0, Lcom/vk/libvideo/j;->live_comment_deleted:I
+    sget v0, Lcom/vk/libvideo/R11;->live_comment_deleted:I
 
-    invoke-static {v0}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     .line 5
     :cond_0

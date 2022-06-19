@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field public final C:Lcom/vk/music/dto/a;
+.field public final C:Lcom/vk/music/dto/PlayerInfo;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
@@ -54,29 +54,29 @@
 
 .field private M:Z
 
-.field public N:Lcom/vk/music/common/e;
+.field public N:Lcom/vk/music/common/MusicTrackModel;
 
-.field public O:Lcom/vk/music/player/d;
+.field public O:Lcom/vk/music/player/PlayerModel;
 
-.field private P:Lcom/vk/music/view/w/a;
+.field private P:Lcom/vk/music/view/w/AudioPlayerFixedSpeedScrollerHelper;
 
-.field private Q:Lcom/vk/music/view/w/a;
+.field private Q:Lcom/vk/music/view/w/AudioPlayerFixedSpeedScrollerHelper;
 
 .field private R:Ljava/lang/Boolean;
 
-.field private S:Lcom/vk/music/common/e$b;
+.field private S:Lcom/vk/music/common/MusicTrackModel$b;
 
-.field private T:Lcom/vk/music/player/d$a;
+.field private T:Lcom/vk/music/player/PlayerModel$a;
 
-.field private U:Lcom/vk/music/player/c;
+.field private U:Lcom/vk/music/player/PlayerListener;
 
-.field private V:Lcom/vk/bridges/f;
+.field private V:Lcom/vk/bridges/AuthBridge3;
 
-.field private W:Lcom/vk/music/stats/d;
+.field private W:Lcom/vk/music/stats/MusicStatsTracker;
 
-.field private X:Lcom/vk/music/restriction/h;
+.field private X:Lcom/vk/music/restriction/MusicRestrictionManager;
 
-.field public Y:Lcom/vk/music/view/v/a;
+.field public Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
 .field private Z:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -97,11 +97,11 @@
     invoke-direct {p0}, Lcom/vk/core/fragments/FragmentImpl;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/music/dto/a;
+    new-instance v0, Lcom/vk/music/dto/PlayerInfo;
 
-    invoke-direct {v0}, Lcom/vk/music/dto/a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/music/dto/PlayerInfo;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->C:Lcom/vk/music/dto/a;
+    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->C:Lcom/vk/music/dto/PlayerInfo;
 
     const/4 v0, 0x0
 
@@ -128,41 +128,41 @@
 
     invoke-direct {v0, p0, v1}, Lcom/vk/music/fragment/AudioPlayerFragment$d;-><init>(Lcom/vk/music/fragment/AudioPlayerFragment;Lcom/vk/music/fragment/AudioPlayerFragment$a;)V
 
-    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->S:Lcom/vk/music/common/e$b;
+    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->S:Lcom/vk/music/common/MusicTrackModel$b;
 
     .line 8
     new-instance v0, Lcom/vk/music/fragment/AudioPlayerFragment$f;
 
     invoke-direct {v0, p0, v1}, Lcom/vk/music/fragment/AudioPlayerFragment$f;-><init>(Lcom/vk/music/fragment/AudioPlayerFragment;Lcom/vk/music/fragment/AudioPlayerFragment$a;)V
 
-    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->T:Lcom/vk/music/player/d$a;
+    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->T:Lcom/vk/music/player/PlayerModel$a;
 
     .line 9
     new-instance v0, Lcom/vk/music/fragment/AudioPlayerFragment$e;
 
     invoke-direct {v0, p0, v1}, Lcom/vk/music/fragment/AudioPlayerFragment$e;-><init>(Lcom/vk/music/fragment/AudioPlayerFragment;Lcom/vk/music/fragment/AudioPlayerFragment$a;)V
 
-    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->U:Lcom/vk/music/player/c;
+    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->U:Lcom/vk/music/player/PlayerListener;
 
     .line 10
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->V:Lcom/vk/bridges/f;
+    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->V:Lcom/vk/bridges/AuthBridge3;
 
     .line 11
-    sget-object v0, Lcom/vk/music/common/c$a;->h:Lcom/vk/music/stats/d;
+    sget-object v0, Lcom/vk/music/common/Music$a;->h:Lcom/vk/music/stats/MusicStatsTracker;
 
-    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->W:Lcom/vk/music/stats/d;
+    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->W:Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 12
-    sget-object v0, Lcom/vk/music/common/c$a;->e:Lcom/vk/music/restriction/h;
+    sget-object v0, Lcom/vk/music/common/Music$a;->e:Lcom/vk/music/restriction/MusicRestrictionManager;
 
-    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->X:Lcom/vk/music/restriction/h;
+    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->X:Lcom/vk/music/restriction/MusicRestrictionManager;
 
     .line 13
-    iput-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iput-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
     .line 14
     iput-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Z:Ljava/util/List;
@@ -248,7 +248,7 @@
 
     invoke-direct {v0}, Lcom/vk/music/fragment/AudioPlayerFragment$c;-><init>()V
 
-    invoke-virtual {v0, p0}, Lcom/vk/navigation/o;->b(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v0, p0}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object p0
 
@@ -456,9 +456,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->M0()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->M0()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v0
 
@@ -475,9 +475,9 @@
     .locals 6
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    iget-boolean v0, v0, Lcom/vk/music/view/v/a;->H:Z
+    iget-boolean v0, v0, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->H:Z
 
     .line 2
     iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->G:Landroidx/viewpager/widget/ViewPager;
@@ -507,9 +507,9 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/music/view/v/a;->b()Z
+    invoke-virtual {v0}, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->b()Z
 
     move-result v0
 
@@ -534,9 +534,9 @@
     invoke-virtual {p0, v2}, Lcom/vk/music/fragment/AudioPlayerFragment;->x0(Z)V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/music/view/v/a;->d()Z
+    invoke-virtual {v0}, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->d()Z
 
     move-result v0
 
@@ -551,9 +551,9 @@
     if-eqz v4, :cond_6
 
     .line 8
-    iget-object v4, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v4, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    iget-boolean v4, v4, Lcom/vk/music/view/v/a;->H:Z
+    iget-boolean v4, v4, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->H:Z
 
     .line 9
     iget-boolean v5, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->M:Z
@@ -594,7 +594,7 @@
     .line 12
     iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->G:Landroidx/viewpager/widget/ViewPager;
 
-    iget-object v3, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v3, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
     invoke-virtual {v0, v3}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
@@ -660,22 +660,22 @@
     if-eqz p1, :cond_1
 
     .line 3
-    iget-object p2, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/e;
+    iget-object p2, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/MusicTrackModel;
 
-    invoke-interface {p2}, Lcom/vk/music/common/e;->k0()Lcom/vk/dto/music/MusicTrack;
+    invoke-interface {p2}, Lcom/vk/music/common/MusicTrackModel;->k0()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object p2
 
     if-eqz p2, :cond_1
 
     .line 4
-    iget-object p3, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/e;
+    iget-object p3, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/MusicTrackModel;
 
     invoke-virtual {p0}, Lcom/vk/music/fragment/AudioPlayerFragment;->P4()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v0
 
-    invoke-interface {p3, p2, p1, v0}, Lcom/vk/music/common/e;->a(Lcom/vk/dto/music/MusicTrack;Lcom/vk/dto/music/Playlist;Lcom/vk/music/stats/c;)V
+    invoke-interface {p3, p2, p1, v0}, Lcom/vk/music/common/MusicTrackModel;->a(Lcom/vk/dto/music/MusicTrack;Lcom/vk/dto/music/Playlist;Lcom/vk/music/stats/MusicStatsRefer;)V
 
     :cond_1
     :goto_0
@@ -706,17 +706,17 @@
 
     .line 2
     :cond_0
-    iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {p1}, Lcom/vk/music/player/d;->C0()V
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->C0()V
 
     goto :goto_0
 
     .line 3
     :cond_1
-    iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {p1}, Lcom/vk/music/player/d;->I0()V
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->I0()V
 
     goto :goto_0
 
@@ -743,16 +743,16 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
+    iget-object v0, v0, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->D:Lcom/vk/music/view/x/ControlsHolder;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0, p1}, Lcom/vk/music/view/x/p;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/view/x/ControlsHolder;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     :cond_0
     return-void
@@ -769,7 +769,7 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -790,7 +790,7 @@
 
     const v2, 0x7f080721
 
-    invoke-static {v1, v2, v0}, Lcom/vk/core/util/z;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1, v2, v0}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -803,84 +803,84 @@
 
     const v2, 0x7f080722
 
-    invoke-static {v1, v2, v0}, Lcom/vk/core/util/z;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1, v2, v0}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->K:Landroid/graphics/drawable/Drawable;
 
     .line 5
-    sget-object v0, Lcom/vk/music/common/c$a;->a:Lcom/vk/music/common/c$c;
+    sget-object v0, Lcom/vk/music/common/Music$a;->a:Lcom/vk/music/common/Music$c;
 
-    invoke-interface {v0}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+    invoke-interface {v0}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
     .line 6
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->T:Lcom/vk/music/player/d$a;
+    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->T:Lcom/vk/music/player/PlayerModel$a;
 
-    invoke-interface {v0, v1}, Lcom/vk/music/player/d;->b(Lcom/vk/music/player/d$a;)V
+    invoke-interface {v0, v1}, Lcom/vk/music/player/PlayerModel;->b(Lcom/vk/music/player/PlayerModel$a;)V
 
     .line 7
-    sget-object v5, Lcom/vk/music/common/c$a;->d:Lcom/vk/music/common/BoomModel;
+    sget-object v5, Lcom/vk/music/common/Music$a;->d:Lcom/vk/music/common/BoomModel;
 
     .line 8
-    new-instance v0, Lcom/vk/music/model/v/a;
+    new-instance v0, Lcom/vk/music/model/v/MusicTrackModelImpl;
 
-    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    iget-object v2, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->V:Lcom/vk/bridges/f;
+    iget-object v2, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->V:Lcom/vk/bridges/AuthBridge3;
 
-    iget-object v3, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->W:Lcom/vk/music/stats/d;
+    iget-object v3, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->W:Lcom/vk/music/stats/MusicStatsTracker;
 
-    invoke-direct {v0, v1, v5, v2, v3}, Lcom/vk/music/model/v/a;-><init>(Lcom/vk/music/player/d;Lcom/vk/music/common/BoomModel;Lcom/vk/bridges/f;Lcom/vk/music/stats/d;)V
+    invoke-direct {v0, v1, v5, v2, v3}, Lcom/vk/music/model/v/MusicTrackModelImpl;-><init>(Lcom/vk/music/player/PlayerModel;Lcom/vk/music/common/BoomModel;Lcom/vk/bridges/AuthBridge3;Lcom/vk/music/stats/MusicStatsTracker;)V
 
-    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/e;
+    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/MusicTrackModel;
 
     .line 9
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/e;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/MusicTrackModel;
 
-    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->S:Lcom/vk/music/common/e$b;
+    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->S:Lcom/vk/music/common/MusicTrackModel$b;
 
-    invoke-interface {v0, v1}, Lcom/vk/music/common/e;->b(Lcom/vk/music/common/e$b;)V
+    invoke-interface {v0, v1}, Lcom/vk/music/common/MusicTrackModel;->b(Lcom/vk/music/common/MusicTrackModel$b;)V
 
     if-eqz p1, :cond_1
 
     const/4 v0, 0x2
 
-    new-array v0, v0, [Lcom/vk/music/common/a;
+    new-array v0, v0, [Lcom/vk/music/common/ActiveModel;
 
     const/4 v1, 0x0
 
     .line 10
-    iget-object v2, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/e;
+    iget-object v2, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/MusicTrackModel;
 
     aput-object v2, v0, v1
 
-    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    invoke-static {p1, v0}, Lcom/vtosters/lite/utils/f;->a(Landroid/os/Bundle;[Lcom/vk/music/common/a;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/utils/ModelHelper;->a(Landroid/os/Bundle;[Lcom/vk/music/common/ActiveModel;)V
 
     .line 11
     iput-boolean v2, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->M:Z
 
     .line 12
     :cond_1
-    new-instance p1, Lcom/vk/music/view/v/a;
+    new-instance p1, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    iget-object v3, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/e;
+    iget-object v3, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/MusicTrackModel;
 
-    iget-object v4, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v4, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    iget-object v6, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->C:Lcom/vk/music/dto/a;
+    iget-object v6, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->C:Lcom/vk/music/dto/PlayerInfo;
 
     new-instance v7, Lcom/vk/music/fragment/AudioPlayerFragment$h;
 
@@ -888,15 +888,15 @@
 
     invoke-direct {v7, p0, v0}, Lcom/vk/music/fragment/AudioPlayerFragment$h;-><init>(Lcom/vk/music/fragment/AudioPlayerFragment;Lcom/vk/music/fragment/AudioPlayerFragment$a;)V
 
-    iget-object v8, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->X:Lcom/vk/music/restriction/h;
+    iget-object v8, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->X:Lcom/vk/music/restriction/MusicRestrictionManager;
 
-    iget-object v9, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->W:Lcom/vk/music/stats/d;
+    iget-object v9, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->W:Lcom/vk/music/stats/MusicStatsTracker;
 
     move-object v2, p1
 
-    invoke-direct/range {v2 .. v9}, Lcom/vk/music/view/v/a;-><init>(Lcom/vk/music/common/e;Lcom/vk/music/player/d;Lcom/vk/music/common/BoomModel;Lcom/vk/music/dto/a;Lcom/vk/music/fragment/AudioPlayerFragment$g;Lcom/vk/music/restriction/h;Lcom/vk/music/stats/d;)V
+    invoke-direct/range {v2 .. v9}, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;-><init>(Lcom/vk/music/common/MusicTrackModel;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/common/BoomModel;Lcom/vk/music/dto/PlayerInfo;Lcom/vk/music/fragment/AudioPlayerFragment$g;Lcom/vk/music/restriction/MusicRestrictionManager;Lcom/vk/music/stats/MusicStatsTracker;)V
 
-    iput-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iput-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
     return-void
 .end method
@@ -1001,7 +1001,7 @@
     .line 11
     iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->G:Landroidx/viewpager/widget/ViewPager;
 
-    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
     invoke-virtual {v0, v1}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
@@ -1022,26 +1022,26 @@
     invoke-virtual {v0, v1}, Landroidx/viewpager/widget/ViewPager;->setCurrentItem(I)V
 
     .line 14
-    new-instance v0, Lcom/vk/music/view/w/a;
+    new-instance v0, Lcom/vk/music/view/w/AudioPlayerFixedSpeedScrollerHelper;
 
     invoke-virtual {p1}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-direct {v0, v2, p3}, Lcom/vk/music/view/w/a;-><init>(Landroid/content/Context;Z)V
+    invoke-direct {v0, v2, p3}, Lcom/vk/music/view/w/AudioPlayerFixedSpeedScrollerHelper;-><init>(Landroid/content/Context;Z)V
 
-    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Q:Lcom/vk/music/view/w/a;
+    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Q:Lcom/vk/music/view/w/AudioPlayerFixedSpeedScrollerHelper;
 
     .line 15
-    new-instance v0, Lcom/vk/music/view/w/a;
+    new-instance v0, Lcom/vk/music/view/w/AudioPlayerFixedSpeedScrollerHelper;
 
     invoke-virtual {p1}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-direct {v0, v2, v1}, Lcom/vk/music/view/w/a;-><init>(Landroid/content/Context;Z)V
+    invoke-direct {v0, v2, v1}, Lcom/vk/music/view/w/AudioPlayerFixedSpeedScrollerHelper;-><init>(Landroid/content/Context;Z)V
 
-    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->P:Lcom/vk/music/view/w/a;
+    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->P:Lcom/vk/music/view/w/AudioPlayerFixedSpeedScrollerHelper;
 
     .line 16
     invoke-virtual {p0, p3}, Lcom/vk/music/fragment/AudioPlayerFragment;->y0(Z)V
@@ -1092,7 +1092,7 @@
     const v0, 0x7f0808f7
 
     .line 22
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
@@ -1128,7 +1128,7 @@
 
     const v3, 0x7f08076f
 
-    invoke-static {v2, v3, p3}, Lcom/vk/core/util/z;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+    invoke-static {v2, v3, p3}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -1164,7 +1164,7 @@
 
     const v2, 0x7f080721
 
-    invoke-static {p1, v2, p3}, Lcom/vk/core/util/z;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v2, p3}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -1176,9 +1176,9 @@
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
     .line 31
-    iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->U:Lcom/vk/music/player/c;
+    iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->U:Lcom/vk/music/player/PlayerListener;
 
-    invoke-interface {p1}, Lcom/vk/music/player/c;->D()V
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerListener;->D()V
 
     return-object p2
 
@@ -1194,37 +1194,37 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/e;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/MusicTrackModel;
 
-    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->S:Lcom/vk/music/common/e$b;
+    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->S:Lcom/vk/music/common/MusicTrackModel$b;
 
-    invoke-interface {v0, v1}, Lcom/vk/music/common/e;->a(Lcom/vk/music/common/e$b;)V
+    invoke-interface {v0, v1}, Lcom/vk/music/common/MusicTrackModel;->a(Lcom/vk/music/common/MusicTrackModel$b;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->T:Lcom/vk/music/player/d$a;
+    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->T:Lcom/vk/music/player/PlayerModel$a;
 
-    invoke-interface {v0, v1}, Lcom/vk/music/player/d;->a(Lcom/vk/music/player/d$a;)V
+    invoke-interface {v0, v1}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/music/player/PlayerModel$a;)V
 
     const/4 v0, 0x2
 
-    new-array v0, v0, [Lcom/vk/music/common/a;
+    new-array v0, v0, [Lcom/vk/music/common/ActiveModel;
 
     .line 3
-    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/e;
+    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/MusicTrackModel;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lcom/vtosters/lite/utils/f;->b([Lcom/vk/music/common/a;)V
+    invoke-static {v0}, Lcom/vtosters/lite/utils/ModelHelper;->b([Lcom/vk/music/common/ActiveModel;)V
 
     .line 4
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
@@ -1236,9 +1236,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/music/view/v/a;->c()V
+    invoke-virtual {v0}, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->c()V
 
     const/4 v0, 0x0
 
@@ -1257,9 +1257,9 @@
     iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->I:Landroid/view/View;
 
     .line 6
-    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Q:Lcom/vk/music/view/w/a;
+    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Q:Lcom/vk/music/view/w/AudioPlayerFixedSpeedScrollerHelper;
 
-    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->P:Lcom/vk/music/view/w/a;
+    iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->P:Lcom/vk/music/view/w/AudioPlayerFixedSpeedScrollerHelper;
 
     .line 7
     iput-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Z:Ljava/util/List;
@@ -1286,19 +1286,19 @@
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setVolumeControlStream(I)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->U:Lcom/vk/music/player/c;
+    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->U:Lcom/vk/music/player/PlayerListener;
 
-    invoke-interface {v0, v1}, Lcom/vk/music/player/d;->a(Lcom/vk/music/player/c;)V
+    invoke-interface {v0, v1}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/music/player/PlayerListener;)V
 
     .line 4
     invoke-static {}, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->h()V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    invoke-static {v0}, Lcom/vtosters/lite/audio/player/y;->a(Lcom/vk/music/player/d;)V
+    invoke-static {v0}, Lcom/vtosters/lite/audio/player/PodcastStatSender;->a(Lcom/vk/music/player/PlayerModel;)V
 
     return-void
 .end method
@@ -1319,9 +1319,9 @@
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setVolumeControlStream(I)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->S()Lcom/vk/dto/music/MusicTrack;
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->S()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v0
 
@@ -1338,18 +1338,18 @@
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->U:Lcom/vk/music/player/c;
+    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->U:Lcom/vk/music/player/PlayerListener;
 
     const/4 v2, 0x1
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/music/player/d;->a(Lcom/vk/music/player/c;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/music/player/PlayerListener;Z)V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
-    invoke-static {v0}, Lcom/vtosters/lite/audio/player/y;->b(Lcom/vk/music/player/d;)V
+    invoke-static {v0}, Lcom/vtosters/lite/audio/player/PodcastStatSender;->b(Lcom/vk/music/player/PlayerModel;)V
 
     .line 7
     invoke-static {}, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->b()V
@@ -1393,22 +1393,22 @@
 
     const/4 v0, 0x2
 
-    new-array v0, v0, [Lcom/vk/music/common/a;
+    new-array v0, v0, [Lcom/vk/music/common/ActiveModel;
 
     .line 2
-    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/e;
+    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->N:Lcom/vk/music/common/MusicTrackModel;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
+    iget-object v1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/PlayerModel;
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    invoke-static {p1, v0}, Lcom/vtosters/lite/utils/f;->b(Landroid/os/Bundle;[Lcom/vk/music/common/a;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/utils/ModelHelper;->b(Landroid/os/Bundle;[Lcom/vk/music/common/ActiveModel;)V
 
     return-void
 .end method
@@ -1417,16 +1417,16 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
+    iget-object v0, v0, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->D:Lcom/vk/music/view/x/ControlsHolder;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/music/view/x/p;->v()V
+    invoke-virtual {v0}, Lcom/vk/music/view/x/ControlsHolder;->v()V
 
     :cond_0
     const/4 v0, 0x1
@@ -1484,12 +1484,12 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->P:Lcom/vk/music/view/w/a;
+    iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->P:Lcom/vk/music/view/w/AudioPlayerFixedSpeedScrollerHelper;
 
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Q:Lcom/vk/music/view/w/a;
+    iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->Q:Lcom/vk/music/view/w/AudioPlayerFixedSpeedScrollerHelper;
 
     :goto_0
     invoke-virtual {v0, v1, p1}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V

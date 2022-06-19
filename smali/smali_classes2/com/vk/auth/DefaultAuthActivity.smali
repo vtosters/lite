@@ -13,7 +13,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<C:",
-        "Lcom/vk/auth/main/q;",
+        "Lcom/vk/auth/main/SignUpConfig;",
         ">",
         "Landroidx/fragment/app/FragmentActivity;"
     }
@@ -32,7 +32,7 @@
 
 
 # instance fields
-.field protected a:Lcom/vk/auth/main/q;
+.field protected a:Lcom/vk/auth/main/SignUpConfig;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TC;"
@@ -49,7 +49,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/DefaultAuthActivity$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/DefaultAuthActivity$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -73,7 +73,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/vk/auth/u/a;->vk_is_tablet:I
+    sget v1, Lcom/vk/auth/u/R;->vk_is_tablet:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -108,7 +108,7 @@
     return-void
 .end method
 
-.method protected abstract a(Landroid/os/Bundle;I)Lcom/vk/auth/main/q;
+.method protected abstract a(Landroid/os/Bundle;I)Lcom/vk/auth/main/SignUpConfig;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -122,29 +122,29 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/auth/u/c;->fragment_container:I
+    sget v0, Lcom/vk/auth/u/R1;->fragment_container:I
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/DefaultAuthActivity;->a(Landroid/os/Bundle;I)Lcom/vk/auth/main/q;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/auth/DefaultAuthActivity;->a(Landroid/os/Bundle;I)Lcom/vk/auth/main/SignUpConfig;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/auth/DefaultAuthActivity;->a:Lcom/vk/auth/main/q;
+    iput-object p1, p0, Lcom/vk/auth/DefaultAuthActivity;->a:Lcom/vk/auth/main/SignUpConfig;
 
     .line 2
-    sget-object p1, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
+    sget-object p1, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
 
-    iget-object v0, p0, Lcom/vk/auth/DefaultAuthActivity;->a:Lcom/vk/auth/main/q;
+    iget-object v0, p0, Lcom/vk/auth/DefaultAuthActivity;->a:Lcom/vk/auth/main/SignUpConfig;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0}, Lcom/vk/auth/main/e;->a(Lcom/vk/auth/main/q;)V
+    invoke-virtual {p1, v0}, Lcom/vk/auth/main/AuthLib;->a(Lcom/vk/auth/main/SignUpConfig;)V
 
     return-void
 
     :cond_0
     const-string p1, "authConfig"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -179,7 +179,7 @@
     invoke-direct {v0, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
     .line 3
-    sget v1, Lcom/vk/auth/u/c;->fragment_container:I
+    sget v1, Lcom/vk/auth/u/R1;->fragment_container:I
 
     invoke-virtual {p1, v1}, Landroid/widget/FrameLayout;->setId(I)V
 
@@ -237,13 +237,13 @@
 
     .line 9
     :cond_1
-    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
+    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
 
-    invoke-virtual {p0}, Lcom/vk/auth/DefaultAuthActivity;->u1()Lcom/vk/auth/main/b;
+    invoke-virtual {p0}, Lcom/vk/auth/DefaultAuthActivity;->u1()Lcom/vk/auth/main/AuthCallback;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/auth/main/e;->a(Lcom/vk/auth/main/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/auth/main/AuthLib;->a(Lcom/vk/auth/main/AuthCallback;)V
 
     .line 10
     invoke-virtual {p0, p1}, Lcom/vk/auth/DefaultAuthActivity;->b(Landroid/os/Bundle;)V
@@ -267,13 +267,13 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
+    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
 
-    invoke-virtual {p0}, Lcom/vk/auth/DefaultAuthActivity;->u1()Lcom/vk/auth/main/b;
+    invoke-virtual {p0}, Lcom/vk/auth/DefaultAuthActivity;->u1()Lcom/vk/auth/main/AuthCallback;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/auth/main/e;->b(Lcom/vk/auth/main/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/auth/main/AuthLib;->b(Lcom/vk/auth/main/AuthCallback;)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/auth/DefaultAuthActivity;->z1()V
@@ -281,7 +281,7 @@
     .line 3
     sget-object v0, Lcom/vk/auth/DefaultAuthActivity;->b:Lcom/vk/auth/DefaultAuthActivity;
 
-    invoke-static {v0, p0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -306,17 +306,17 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 2
-    sget-object v0, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
+    sget-object v0, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
 
-    invoke-virtual {v0, p1}, Lcom/vk/auth/main/e;->a(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Lcom/vk/auth/main/AuthLib;->a(Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method protected abstract u1()Lcom/vk/auth/main/b;
+.method protected abstract u1()Lcom/vk/auth/main/AuthCallback;
 .end method
 
-.method protected final v1()Lcom/vk/auth/main/q;
+.method protected final v1()Lcom/vk/auth/main/SignUpConfig;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -325,7 +325,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/DefaultAuthActivity;->a:Lcom/vk/auth/main/q;
+    iget-object v0, p0, Lcom/vk/auth/DefaultAuthActivity;->a:Lcom/vk/auth/main/SignUpConfig;
 
     if-eqz v0, :cond_0
 
@@ -334,7 +334,7 @@
     :cond_0
     const-string v0, "authConfig"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -345,7 +345,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/auth/u/e;->VkAuth_DefaultTheme_Light:I
+    sget v0, Lcom/vk/auth/u/R3;->VkAuth_DefaultTheme_Light:I
 
     return v0
 .end method
@@ -362,24 +362,24 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/DefaultAuthActivity;->a:Lcom/vk/auth/main/q;
+    iget-object v0, p0, Lcom/vk/auth/DefaultAuthActivity;->a:Lcom/vk/auth/main/SignUpConfig;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/auth/main/d;->f()Lcom/vk/auth/main/g;
+    invoke-virtual {v0}, Lcom/vk/auth/main/AuthConfig;->f()Lcom/vk/auth/main/AuthRouter;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/auth/main/t;
+    check-cast v0, Lcom/vk/auth/main/SignUpRouter;
 
-    invoke-interface {v0}, Lcom/vk/auth/main/g;->e()V
+    invoke-interface {v0}, Lcom/vk/auth/main/AuthRouter;->e()V
 
     return-void
 
     :cond_0
     const-string v0, "authConfig"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -390,23 +390,23 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/DefaultAuthActivity;->a:Lcom/vk/auth/main/q;
+    iget-object v0, p0, Lcom/vk/auth/DefaultAuthActivity;->a:Lcom/vk/auth/main/SignUpConfig;
 
     if-eqz v0, :cond_1
 
     .line 2
-    sget-object v1, Lcom/vk/auth/main/e;->b:Lcom/vk/auth/main/e;
+    sget-object v1, Lcom/vk/auth/main/AuthLib;->INSTANCE:Lcom/vk/auth/main/AuthLib;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v0}, Lcom/vk/auth/main/e;->b(Lcom/vk/auth/main/q;)V
+    invoke-virtual {v1, v0}, Lcom/vk/auth/main/AuthLib;->b(Lcom/vk/auth/main/SignUpConfig;)V
 
     goto :goto_0
 
     :cond_0
     const-string v0, "authConfig"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

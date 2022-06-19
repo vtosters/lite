@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/lang/Iterable;
-.implements Lkotlin/jvm/internal/t/a;
+.implements Lkotlin/jvm/internal/t/KMarkers;
 
 
 # annotations
@@ -20,7 +20,7 @@
         "Ljava/lang/Iterable<",
         "Lcom/vk/im/engine/models/Image;",
         ">;",
-        "Lkotlin/jvm/internal/t/a;"
+        "Lkotlin/jvm/internal/t/KMarkers;"
     }
 .end annotation
 
@@ -59,7 +59,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/ImageList$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/ImageList$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/im/engine/models/ImageList;->b:Lcom/vk/im/engine/models/ImageList$b;
 
@@ -81,7 +81,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v1, v0}, Lcom/vk/im/engine/models/ImageList;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -103,14 +103,14 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -170,7 +170,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -380,7 +380,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/models/ImageList;->a:Ljava/util/List;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -513,7 +513,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/engine/models/ImageList;->a:Ljava/util/List;
 
-    invoke-static {v0}, Lcom/vk/im/engine/models/g;->a(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
+    invoke-static {v0}, Lcom/vk/im/engine/models/ImageList1;->a(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
 
     move-result-object v0
 
@@ -570,7 +570,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/engine/models/ImageList;->a:Ljava/util/List;
 
-    invoke-static {v0}, Lcom/vk/im/engine/models/g;->b(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
+    invoke-static {v0}, Lcom/vk/im/engine/models/ImageList1;->b(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
 
     move-result-object v0
 

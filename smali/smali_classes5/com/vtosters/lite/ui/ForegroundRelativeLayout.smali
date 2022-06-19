@@ -75,7 +75,7 @@
     if-eqz p2, :cond_1
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/a0;->FrameLayout:[I
+    sget-object v0, Lcom/vtosters/lite/R;->FrameLayout:[I
 
     const/4 v1, 0x0
 

@@ -3,7 +3,7 @@
 .source "DocumentsUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/documents/list/DocumentsUtils$download$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -79,7 +79,7 @@
 
     const-string v3, "uri"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/documents/list/DocumentsUtils$download$1;->$document:Lcom/vk/api/base/Document;
 
@@ -95,7 +95,7 @@
 
     iget-object v2, v2, Lcom/vk/api/base/Document;->C:Ljava/lang/String;
 
-    invoke-static {v1, v0, v2}, Lcom/vk/core/util/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0, v2}, Lcom/vk/core/util/DownloadUtils;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

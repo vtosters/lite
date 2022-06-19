@@ -3,7 +3,7 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lb/h/g/l/e;
+.implements Lb/h/g/l/NotificationListener;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lb/h/g/l/e<",
+        "Lb/h/g/l/NotificationListener<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         ">;"
     }

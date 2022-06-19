@@ -3,7 +3,7 @@
 .source "ImContentProvider.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/im/bridge/contentprovider/a;
+.implements Lcom/vtosters/lite/im/bridge/contentprovider/ImContentProviderConstants;
 
 
 # annotations
@@ -26,7 +26,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/bridge/contentprovider/ImContentProvider$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/bridge/contentprovider/ImContentProvider$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Landroid/content/UriMatcher;
@@ -64,7 +64,7 @@
     .locals 10
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/c;->a:Lcom/vtosters/lite/im/bridge/contentprovider/c;
+    sget-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImPreferencesFactory;->INSTANCE:Lcom/vtosters/lite/im/bridge/contentprovider/ImPreferencesFactory;
 
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
@@ -74,29 +74,29 @@
 
     const-string v2, "context!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/im/bridge/contentprovider/c;->a(Landroid/content/Context;)Lcom/vtosters/lite/im/bridge/contentprovider/b;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/im/bridge/contentprovider/ImPreferencesFactory;->a(Landroid/content/Context;)Lcom/vtosters/lite/im/bridge/contentprovider/ImPreferences;
 
     move-result-object v0
 
     .line 2
-    invoke-interface {v0}, Lcom/vtosters/lite/im/bridge/contentprovider/b;->b()I
+    invoke-interface {v0}, Lcom/vtosters/lite/im/bridge/contentprovider/ImPreferences;->b()I
 
     move-result v1
 
     .line 3
-    invoke-interface {v0}, Lcom/vtosters/lite/im/bridge/contentprovider/b;->a()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/vtosters/lite/im/bridge/contentprovider/ImPreferences;->a()Ljava/lang/String;
 
     move-result-object v2
 
     .line 4
-    invoke-interface {v0}, Lcom/vtosters/lite/im/bridge/contentprovider/b;->getName()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/vtosters/lite/im/bridge/contentprovider/ImPreferences;->getName()Ljava/lang/String;
 
     move-result-object v3
 
     .line 5
-    invoke-interface {v0}, Lcom/vtosters/lite/im/bridge/contentprovider/b;->c()Z
+    invoke-interface {v0}, Lcom/vtosters/lite/im/bridge/contentprovider/ImPreferences;->c()Z
 
     move-result v0
 
@@ -204,7 +204,7 @@
 
     .line 14
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -227,7 +227,7 @@
 
     .line 16
     :try_start_0
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     if-nez v0, :cond_0
 
@@ -236,11 +236,11 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sput-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     .line 18
     :cond_0
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -338,13 +338,13 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
+    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->INSTANCE:Lcom/vk/metrics/reporters/PerformanceReporter;
 
-    invoke-virtual {v0}, Lcom/vk/metrics/reporters/a;->a()Lb/h/q/c/a/a;
+    invoke-virtual {v0}, Lcom/vk/metrics/reporters/PerformanceReporter;->a()Lb/h/q/c/a/AppStartDurationChecker;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/q/c/a/a;->b()V
+    invoke-virtual {v0}, Lb/h/q/c/a/AppStartDurationChecker;->b()V
 
     .line 2
     invoke-direct {p0}, Lcom/vtosters/lite/im/bridge/contentprovider/ImContentProvider;->a()V
@@ -358,13 +358,13 @@
     .locals 0
 
     .line 1
-    sget-object p3, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
+    sget-object p3, Lcom/vk/metrics/reporters/PerformanceReporter;->INSTANCE:Lcom/vk/metrics/reporters/PerformanceReporter;
 
-    invoke-virtual {p3}, Lcom/vk/metrics/reporters/a;->a()Lb/h/q/c/a/a;
+    invoke-virtual {p3}, Lcom/vk/metrics/reporters/PerformanceReporter;->a()Lb/h/q/c/a/AppStartDurationChecker;
 
     move-result-object p3
 
-    invoke-virtual {p3}, Lb/h/q/c/a/a;->c()V
+    invoke-virtual {p3}, Lb/h/q/c/a/AppStartDurationChecker;->c()V
 
     .line 2
     sget-object p3, Lcom/vtosters/lite/im/bridge/contentprovider/ImContentProvider;->a:Landroid/content/UriMatcher;

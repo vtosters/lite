@@ -32,10 +32,10 @@
     .end annotation
 .end field
 
-.field private final b:Lorg/chromium/base/f;
+.field private final b:Lorg/chromium/base/ObserverList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lorg/chromium/base/f<",
+            "Lorg/chromium/base/ObserverList<",
             "Lorg/chromium/net/NetworkChangeNotifier$b;",
             ">;"
         }
@@ -69,14 +69,14 @@
     iput-object v0, p0, Lorg/chromium/net/NetworkChangeNotifier;->a:Ljava/util/ArrayList;
 
     .line 4
-    new-instance v0, Lorg/chromium/base/f;
+    new-instance v0, Lorg/chromium/base/ObserverList;
 
-    invoke-direct {v0}, Lorg/chromium/base/f;-><init>()V
+    invoke-direct {v0}, Lorg/chromium/base/ObserverList;-><init>()V
 
-    iput-object v0, p0, Lorg/chromium/net/NetworkChangeNotifier;->b:Lorg/chromium/base/f;
+    iput-object v0, p0, Lorg/chromium/net/NetworkChangeNotifier;->b:Lorg/chromium/base/ObserverList;
 
     .line 5
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -154,9 +154,9 @@
 
     .line 18
     :cond_0
-    iget-object p2, p0, Lorg/chromium/net/NetworkChangeNotifier;->b:Lorg/chromium/base/f;
+    iget-object p2, p0, Lorg/chromium/net/NetworkChangeNotifier;->b:Lorg/chromium/base/ObserverList;
 
-    invoke-virtual {p2}, Lorg/chromium/base/f;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p2}, Lorg/chromium/base/ObserverList;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
 
@@ -306,9 +306,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lorg/chromium/net/p;
+    new-instance v1, Lorg/chromium/net/RegistrationPolicyApplicationStatus;
 
-    invoke-direct {v1}, Lorg/chromium/net/p;-><init>()V
+    invoke-direct {v1}, Lorg/chromium/net/RegistrationPolicyApplicationStatus;-><init>()V
 
     invoke-direct {v0, p0, v1}, Lorg/chromium/net/NetworkChangeNotifier;->a(ZLorg/chromium/net/NetworkChangeNotifierAutoDetect$g;)V
 
@@ -364,7 +364,7 @@
     :cond_2
     iget-object v0, p0, Lorg/chromium/net/NetworkChangeNotifier;->c:Landroid/net/ConnectivityManager;
 
-    invoke-static {v0}, Lorg/chromium/base/h/a;->b(Landroid/net/ConnectivityManager;)Landroid/net/Network;
+    invoke-static {v0}, Lorg/chromium/base/h/ApiHelperForM;->b(Landroid/net/ConnectivityManager;)Landroid/net/Network;
 
     move-result-object v0
 
@@ -384,9 +384,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lorg/chromium/net/o;
+    new-instance v1, Lorg/chromium/net/RegistrationPolicyAlwaysRegister;
 
-    invoke-direct {v1}, Lorg/chromium/net/o;-><init>()V
+    invoke-direct {v1}, Lorg/chromium/net/RegistrationPolicyAlwaysRegister;-><init>()V
 
     const/4 v2, 0x1
 

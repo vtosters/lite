@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lcom/vk/common/g/b;
+.implements Lcom/vk/common/g/F1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;ZLcom/vk/common/links/f;Ljava/lang/Integer;)V
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;ZLcom/vk/common/links/OpenCallback;Ljava/lang/Integer;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/b<",
+        "Lcom/vk/common/g/F1<",
         "Ljava/lang/Void;",
         "Lcom/vk/dto/common/VideoFile;",
         ">;"
@@ -33,7 +33,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/common/links/f;
+.field final synthetic a:Lcom/vk/common/links/OpenCallback;
 
 .field final synthetic b:Ljava/lang/Integer;
 
@@ -51,10 +51,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/common/links/f;Ljava/lang/Integer;Landroid/content/Context;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;Z)V
+.method constructor <init>(Lcom/vk/common/links/OpenCallback;Ljava/lang/Integer;Landroid/content/Context;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$s0;->a:Lcom/vk/common/links/f;
+    iput-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$s0;->a:Lcom/vk/common/links/OpenCallback;
 
     iput-object p2, p0, Lcom/vk/common/links/OpenFunctionsKt$s0;->b:Ljava/lang/Integer;
 
@@ -95,7 +95,7 @@
     if-nez p1, :cond_0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$s0;->a:Lcom/vk/common/links/f;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$s0;->a:Lcom/vk/common/links/OpenCallback;
 
     if-eqz p1, :cond_4
 
@@ -103,7 +103,7 @@
 
     invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
 
-    invoke-interface {p1, v0}, Lcom/vk/common/links/f;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0}, Lcom/vk/common/links/OpenCallback;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
@@ -115,11 +115,11 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/k0;->a(Lcom/vk/dto/common/VideoFile;)Z
+    invoke-interface {v0, p1}, Lcom/vk/bridges/VideoBridge1;->a(Lcom/vk/dto/common/VideoFile;)Z
 
     move-result v0
 
@@ -129,11 +129,11 @@
 
     .line 3
     :cond_1
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$s0;->a:Lcom/vk/common/links/f;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$s0;->a:Lcom/vk/common/links/OpenCallback;
 
     if-eqz p1, :cond_4
 
-    invoke-interface {p1}, Lcom/vk/common/links/f;->b()V
+    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->b()V
 
     goto :goto_1
 
@@ -145,11 +145,11 @@
     if-eqz v0, :cond_3
 
     .line 5
-    invoke-static {}, Lcom/vk/bridges/x;->a()Lcom/vk/bridges/w;
+    invoke-static {}, Lcom/vk/bridges/PostsBridge1;->a()Lcom/vk/bridges/PostsBridge2;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/w;->a(Lcom/vk/dto/common/VideoFile;)Lcom/vk/bridges/y;
+    invoke-interface {v0, p1}, Lcom/vk/bridges/PostsBridge2;->a(Lcom/vk/dto/common/VideoFile;)Lcom/vk/bridges/PostsBridge;
 
     move-result-object p1
 
@@ -159,13 +159,13 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/bridges/y;->c(I)Lcom/vk/bridges/y;
+    invoke-virtual {p1, v0}, Lcom/vk/bridges/PostsBridge;->c(I)Lcom/vk/bridges/PostsBridge;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/common/links/OpenFunctionsKt$s0;->c:Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     goto :goto_1
 
@@ -183,7 +183,7 @@
 
     iget-boolean v7, p0, Lcom/vk/common/links/OpenFunctionsKt$s0;->h:Z
 
-    iget-object v8, p0, Lcom/vk/common/links/OpenFunctionsKt$s0;->a:Lcom/vk/common/links/f;
+    iget-object v8, p0, Lcom/vk/common/links/OpenFunctionsKt$s0;->a:Lcom/vk/common/links/OpenCallback;
 
     const/4 v9, 0x0
 
@@ -193,7 +193,7 @@
 
     move-object v2, p1
 
-    invoke-static/range {v1 .. v11}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;ZLcom/vk/common/links/f;Ljava/lang/Integer;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v11}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;ZLcom/vk/common/links/OpenCallback;Ljava/lang/Integer;ILjava/lang/Object;)V
 
     :cond_4
     :goto_1

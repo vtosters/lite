@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;
-.super Lcom/vk/im/engine/internal/k/a;
+.super Lcom/vk/im/engine/internal/k/MergeTask;
 .source "MsgHistoryFromServerMergeTask.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/internal/k/a<",
+        "Lcom/vk/im/engine/internal/k/MergeTask<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/im/engine/models/messages/Msg;",
@@ -50,14 +50,14 @@
     .locals 5
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/k/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/k/MergeTask;-><init>()V
 
     .line 2
     invoke-virtual {p1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$a;->c()I
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vk/im/engine/internal/e;->b(I)Z
+    invoke-static {v0}, Lcom/vk/im/engine/internal/Validation;->b(I)Z
 
     move-result v0
 
@@ -68,7 +68,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vk/im/engine/internal/e;->f(I)Z
+    invoke-static {v0}, Lcom/vk/im/engine/internal/Validation;->f(I)Z
 
     move-result v0
 
@@ -350,7 +350,7 @@
     throw v0
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$a;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$a;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 23
@@ -389,11 +389,11 @@
     return p0
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;III)V
+.method private final a(Lcom/vk/im/engine/ImEnvironment;III)V
     .locals 0
 
     .line 32
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -408,11 +408,11 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;)V
+.method private final a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;)V
     .locals 7
 
     .line 29
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -434,17 +434,17 @@
     move-object v3, p4
 
     .line 31
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;IZZ)V
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;IZZ)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;ILjava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;ZZ)V
+.method private final a(Lcom/vk/im/engine/ImEnvironment;ILjava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;ZZ)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             "I",
             "Ljava/util/List<",
             "+",
@@ -524,7 +524,7 @@
     if-ne p3, v3, :cond_6
 
     .line 10
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object p3
 
@@ -535,7 +535,7 @@
     .line 11
     sget-object v3, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->a:Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;
 
-    invoke-virtual {v3, p1, p2, p3}, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;)Lcom/vk/im/engine/internal/merge/messages/SpaceUtils$a;
+    invoke-virtual {v3, p1, p2, p3}, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;)Lcom/vk/im/engine/internal/merge/messages/SpaceUtils$a;
 
     move-result-object p1
 
@@ -559,7 +559,7 @@
     .line 14
     sget-object v4, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->a:Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;
 
-    invoke-virtual {v4, p1, p2, p3}, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->c(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;)Z
+    invoke-virtual {v4, p1, p2, p3}, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->c(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;)Z
 
     move-result p1
 
@@ -573,7 +573,7 @@
     .line 15
     sget-object v4, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->a:Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;
 
-    invoke-virtual {v4, p1, p2, p3}, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->b(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;)Z
+    invoke-virtual {v4, p1, p2, p3}, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->b(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;)Z
 
     move-result p1
 
@@ -585,11 +585,11 @@
     .line 16
     sget-object p3, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->a:Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v4
 
-    invoke-virtual {p3, p1, p2, v4}, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->c(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;)Z
+    invoke-virtual {p3, p1, p2, v4}, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->c(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;)Z
 
     move-result p3
 
@@ -604,11 +604,11 @@
     .line 17
     sget-object v3, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->a:Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v4
 
-    invoke-virtual {v3, p1, p2, v4}, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->b(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;)Z
+    invoke-virtual {v3, p1, p2, v4}, Lcom/vk/im/engine/internal/merge/messages/SpaceUtils;->b(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;)Z
 
     move-result p1
 
@@ -674,16 +674,16 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;IZI)V
+.method private final a(Lcom/vk/im/engine/ImEnvironment;IZI)V
     .locals 1
 
     .line 25
-    new-instance v0, Lcom/vk/im/engine/models/messages/d;
+    new-instance v0, Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;
 
-    invoke-direct {v0, p2, p3, p4}, Lcom/vk/im/engine/models/messages/d;-><init>(IZI)V
+    invoke-direct {v0, p2, p3, p4}, Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;-><init>(IZI)V
 
     .line 26
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -693,17 +693,17 @@
     move-result-object p1
 
     .line 28
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(Lcom/vk/im/engine/models/messages/d;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;Ljava/util/List;)V
+.method private final a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             "Ljava/util/List<",
             "+",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -712,7 +712,7 @@
     .end annotation
 
     .line 22
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -727,47 +727,47 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;III)V
+.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;III)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/d;III)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/ImEnvironment;III)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;)V
+.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;)V
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;ILjava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;ZZ)V
+.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;ILjava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;ZZ)V
     .locals 0
 
     .line 1
-    invoke-direct/range {p0 .. p7}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/d;ILjava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;ZZ)V
+    invoke-direct/range {p0 .. p7}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/ImEnvironment;ILjava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;ZZ)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;IZI)V
+.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;IZI)V
     .locals 0
 
     .line 5
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/d;IZI)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/ImEnvironment;IZI)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;Ljava/util/List;)V
+.method public static final synthetic a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;)V
     .locals 0
 
     .line 6
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/d;Ljava/util/List;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;)V
 
     return-void
 .end method
@@ -790,12 +790,12 @@
     return-object p0
 .end method
 
-.method private final c(Lcom/vk/im/engine/d;)Ljava/util/List;
+.method private final c(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             ")",
             "Ljava/util/List<",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -804,15 +804,15 @@
     .end annotation
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeEmptyList$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeEmptyList$1;-><init>(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeEmptyList$1;-><init>(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     .line 3
     invoke-static {}, Lkotlin/collections/l;->a()Ljava/util/List;
@@ -831,12 +831,12 @@
     return-object p0
 .end method
 
-.method private final d(Lcom/vk/im/engine/d;)Ljava/util/List;
+.method private final d(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             ")",
             "Ljava/util/List<",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -857,15 +857,15 @@
     move-result-object v0
 
     .line 4
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v1
 
     new-instance v2, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;
 
-    invoke-direct {v2, p0, p1, v0}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;-><init>(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;Ljava/util/List;)V
+    invoke-direct {v2, p0, p1, v0}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;-><init>(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -894,23 +894,23 @@
 
 
 # virtual methods
-.method public bridge synthetic b(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic b(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->b(Lcom/vk/im/engine/d;)Ljava/util/List;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->b(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected b(Lcom/vk/im/engine/d;)Ljava/util/List;
+.method protected b(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             ")",
             "Ljava/util/List<",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -928,14 +928,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->c(Lcom/vk/im/engine/d;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->c(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
 
     move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->d(Lcom/vk/im/engine/d;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->d(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
 
     move-result-object p1
     :try_end_0
@@ -948,11 +948,11 @@
     move-exception v0
 
     .line 4
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->c0()Lcom/vk/im/engine/ImConfig;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->c0()Lcom/vk/im/engine/ImConfig;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/ImConfig;->P()Lcom/vk/metrics/eventtracking/c;
+    invoke-virtual {p1}, Lcom/vk/im/engine/ImConfig;->P()Lcom/vk/metrics/eventtracking/Tracker;
 
     move-result-object p1
 
@@ -962,7 +962,7 @@
 
     invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-interface {p1, v1}, Lcom/vk/metrics/eventtracking/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v1}, Lcom/vk/metrics/eventtracking/Tracker;->a(Ljava/lang/Throwable;)V
 
     .line 5
     throw v0

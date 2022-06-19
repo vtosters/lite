@@ -3,12 +3,12 @@
 .source "PlaylistBottomSheetClickListener.kt"
 
 # interfaces
-.implements Lc/a/z/a;
+.implements Lio/reactivex/functions/Action;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetClickListener;->a(Lcom/vk/music/bottomsheets/a/a;Lcom/vk/dto/music/Playlist;)Z
+    value = Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetClickListener;->a(Lcom/vk/music/bottomsheets/a/MusicAction;Lcom/vk/dto/music/Playlist;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -42,7 +42,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetClickListener;->a(Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetClickListener;Lio/reactivex/disposables/b;)V
+    invoke-static {v0, v1}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetClickListener;->a(Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetClickListener;Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

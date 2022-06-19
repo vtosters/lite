@@ -29,17 +29,17 @@
     .end annotation
 .end field
 
-.field private final e:Lcom/vk/catalog2/core/analytics/b;
+.field private final e:Lcom/vk/catalog2/core/analytics/CatalogAnalytics;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/catalog2/core/analytics/b;)V
+.method public constructor <init>(Lcom/vk/catalog2/core/analytics/CatalogAnalytics;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;->e:Lcom/vk/catalog2/core/analytics/b;
+    iput-object p1, p0, Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;->e:Lcom/vk/catalog2/core/analytics/CatalogAnalytics;
 
     const-string p1, "friends"
 
@@ -95,7 +95,7 @@
     move-result-object p1
 
     .line 9
-    iget-object p2, p0, Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;->e:Lcom/vk/catalog2/core/analytics/b;
+    iget-object p2, p0, Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;->e:Lcom/vk/catalog2/core/analytics/CatalogAnalytics;
 
     const/4 v0, 0x2
 
@@ -117,7 +117,7 @@
 
     const-string v0, "hide_block"
 
-    invoke-interface {p2, v0, p1}, Lcom/vk/catalog2/core/analytics/b;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-interface {p2, v0, p1}, Lcom/vk/catalog2/core/analytics/CatalogAnalytics;->a(Ljava/lang/String;Ljava/util/List;)V
 
     return-void
 .end method
@@ -126,7 +126,7 @@
     .locals 1
 
     .line 12
-    invoke-static {}, Lcom/vk/core/util/i1;->b()I
+    invoke-static {}, Lcom/vk/core/util/TimeUtils;->b()I
 
     move-result v0
 
@@ -181,7 +181,7 @@
     move-result-object p1
 
     .line 10
-    iget-object p2, p0, Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;->e:Lcom/vk/catalog2/core/analytics/b;
+    iget-object p2, p0, Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;->e:Lcom/vk/catalog2/core/analytics/CatalogAnalytics;
 
     const/4 v0, 0x2
 
@@ -203,7 +203,7 @@
 
     const-string v0, "view_block"
 
-    invoke-interface {p2, v0, p1}, Lcom/vk/catalog2/core/analytics/b;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-interface {p2, v0, p1}, Lcom/vk/catalog2/core/analytics/CatalogAnalytics;->a(Ljava/lang/String;Ljava/util/List;)V
 
     return-void
 .end method
@@ -343,7 +343,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -421,7 +421,7 @@
 
     const-string v2, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object p1, v0, v1
 
@@ -496,11 +496,11 @@
     move-result-object p1
 
     .line 13
-    iget-object p2, p0, Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;->e:Lcom/vk/catalog2/core/analytics/b;
+    iget-object p2, p0, Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;->e:Lcom/vk/catalog2/core/analytics/CatalogAnalytics;
 
     const-string p3, "search"
 
-    invoke-interface {p2, p3, p1}, Lcom/vk/catalog2/core/analytics/b;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-interface {p2, p3, p1}, Lcom/vk/catalog2/core/analytics/CatalogAnalytics;->a(Ljava/lang/String;Ljava/util/List;)V
 
     goto :goto_0
 
@@ -562,7 +562,7 @@
     move-result-object p1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;->e:Lcom/vk/catalog2/core/analytics/b;
+    iget-object v0, p0, Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;->e:Lcom/vk/catalog2/core/analytics/CatalogAnalytics;
 
     const/4 v1, 0x2
 
@@ -584,7 +584,7 @@
 
     const-string v1, "open_user"
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/catalog2/core/analytics/b;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/catalog2/core/analytics/CatalogAnalytics;->a(Ljava/lang/String;Ljava/util/List;)V
 
     return-void
 .end method
@@ -694,7 +694,7 @@
     move-result-object p1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;->e:Lcom/vk/catalog2/core/analytics/b;
+    iget-object v0, p0, Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;->e:Lcom/vk/catalog2/core/analytics/CatalogAnalytics;
 
     const/4 v1, 0x2
 
@@ -716,7 +716,7 @@
 
     const-string v1, "show_user_rec"
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/catalog2/core/analytics/b;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/catalog2/core/analytics/CatalogAnalytics;->a(Ljava/lang/String;Ljava/util/List;)V
 
     return-void
 .end method

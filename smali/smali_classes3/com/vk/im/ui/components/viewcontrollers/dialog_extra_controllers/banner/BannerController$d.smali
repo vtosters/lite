@@ -3,7 +3,7 @@
 .source "BannerController.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/audio_msg_player/a$a;
+.implements Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent$a;
 
 
 # annotations
@@ -46,11 +46,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController$d;->a:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->c(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;)Lcom/vk/im/ui/components/audio_msg_player/a;
+    invoke-static {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->c(Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;)Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/audio_msg_player/a;->t()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;->t()Z
 
     move-result v1
 
@@ -59,19 +59,19 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/models/attaches/a;)V
+.method public a(Lcom/vk/im/engine/models/attaches/AttachRelatedEntities;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController$d;->a:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->c()Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerController;->c()Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;->a(Lcom/vk/im/engine/models/attaches/a;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;->a(Lcom/vk/im/engine/models/attaches/AttachRelatedEntities;)V
 
     :cond_0
     return-void

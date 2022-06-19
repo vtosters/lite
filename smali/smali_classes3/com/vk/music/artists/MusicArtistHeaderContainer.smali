@@ -3,7 +3,7 @@
 .source "MusicArtistHeaderContainer.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -57,7 +57,7 @@
 
 .field private final W:Lcom/vk/music/artists/MusicArtistHeaderContainer$h;
 
-.field private final a0:Lcom/vk/music/sections/f;
+.field private final a0:Lcom/vk/music/sections/MusicSectionsModel;
 
 .field private final b0:Z
 
@@ -70,12 +70,12 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/artists/MusicArtistHeaderContainer$d;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/artists/MusicArtistHeaderContainer$d;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/sections/f;Z)V
+.method public constructor <init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/sections/MusicSectionsModel;Z)V
     .locals 8
 
     .line 1
@@ -85,7 +85,7 @@
 
     invoke-direct {p0, v0}, Lcom/google/android/material/appbar/AppBarLayout;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->a0:Lcom/vk/music/sections/f;
+    iput-object p2, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->a0:Lcom/vk/music/sections/MusicSectionsModel;
 
     iput-boolean p3, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->b0:Z
 
@@ -110,7 +110,7 @@
     if-eqz p3, :cond_8
 
     .line 4
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v2
 
@@ -125,7 +125,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v2, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -137,7 +137,7 @@
     const-string v2, "ContextCompat.getDrawabl\u2026ternate))\n        }\n    }"
 
     .line 6
-    invoke-static {p3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->N:Landroid/graphics/drawable/Drawable;
 
@@ -155,7 +155,7 @@
     if-eqz p3, :cond_7
 
     .line 8
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v6
 
@@ -166,7 +166,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v6, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -176,7 +176,7 @@
 
     .line 10
     :cond_1
-    invoke-static {p3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->O:Landroid/graphics/drawable/Drawable;
 
@@ -193,7 +193,7 @@
 
     const-string v0, "ContextCompat.getDrawabl\u2026ble.ic_back_outline_28)!!"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->P:Landroid/graphics/drawable/Drawable;
 
@@ -210,7 +210,7 @@
 
     const-string v0, "ContextCompat.getDrawabl\u2026le.ic_more_vertical_24)!!"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->Q:Landroid/graphics/drawable/Drawable;
 
@@ -235,13 +235,13 @@
 
     const v3, 0x7f060035
 
-    invoke-static {v0, v2, v3}, Lcom/vk/core/util/z;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v2, v3}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     const-string v2, "DrawableUtils.tint(conte\u2026c_play_24, R.color.black)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->U:Landroid/graphics/drawable/Drawable;
 
@@ -263,7 +263,7 @@
     const/4 v2, 0x2
 
     .line 17
-    invoke-static {p0, v0, v1, v2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, v0, v1, v2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -280,14 +280,14 @@
 
     const-string v3, "findViewById(R.id.artist_header_background)"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->G:Landroid/view/View;
 
     const v0, 0x7f0a0d9d
 
     .line 19
-    invoke-static {p0, v0, v1, v2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, v0, v1, v2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -377,7 +377,7 @@
     const p1, 0x7f0a00bc
 
     .line 30
-    invoke-static {p0, p1, v1, v2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, v1, v2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -388,7 +388,7 @@
     const p1, 0x7f0a00bf
 
     .line 31
-    invoke-static {p0, p1, v1, v2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, v1, v2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -399,13 +399,13 @@
 
     invoke-direct {p2, p0}, Lcom/vk/music/artists/MusicArtistHeaderContainer$$special$$inlined$apply$lambda$4;-><init>(Lcom/vk/music/artists/MusicArtistHeaderContainer;)V
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 33
     iput-object p1, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->K:Landroid/widget/ImageView;
 
     .line 34
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p1
 
@@ -415,7 +415,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f04022d
 
@@ -427,7 +427,7 @@
     const p1, 0x7f0a0264
 
     .line 35
-    invoke-static {p0, p1, v1, v2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, p1, v1, v2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -502,25 +502,25 @@
 
     .line 44
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 45
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 46
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 47
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -583,7 +583,7 @@
     .locals 1
 
     .line 2
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -621,9 +621,9 @@
     move-object/from16 v0, p0
 
     .line 2
-    iget-object v1, v0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->a0:Lcom/vk/music/sections/f;
+    iget-object v1, v0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->a0:Lcom/vk/music/sections/MusicSectionsModel;
 
-    invoke-interface {v1}, Lcom/vk/music/sections/f;->e0()Ljava/util/ArrayList;
+    invoke-interface {v1}, Lcom/vk/music/sections/MusicSectionsModel;->e0()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -736,7 +736,7 @@
 
     const/16 v16, 0x0
 
-    invoke-static/range {v8 .. v16}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v8 .. v16}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -782,7 +782,7 @@
 
     const-string v9, "collapsingLayout.context"
 
-    invoke-static {v8, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v8, v4}, Lcom/vk/core/util/ContextExtKt;->b(Landroid/content/Context;I)I
 
@@ -850,7 +850,7 @@
     .line 19
     iget-object v2, v0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->F:Lcom/vk/imageloader/view/VKImageView;
 
-    new-instance v6, Lb/h/g/n/b/a;
+    new-instance v6, Lb/h/g/n/b/BlurTransform;
 
     const/16 v8, 0x4b
 
@@ -862,9 +862,9 @@
 
     move-result v4
 
-    invoke-direct {v6, v8, v4}, Lb/h/g/n/b/a;-><init>(II)V
+    invoke-direct {v6, v8, v4}, Lb/h/g/n/b/BlurTransform;-><init>(II)V
 
-    invoke-virtual {v2, v6}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v2, v6}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     goto :goto_6
 
@@ -960,11 +960,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic i(Lcom/vk/music/artists/MusicArtistHeaderContainer;)Lcom/vk/music/sections/f;
+.method public static final synthetic i(Lcom/vk/music/artists/MusicArtistHeaderContainer;)Lcom/vk/music/sections/MusicSectionsModel;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->a0:Lcom/vk/music/sections/f;
+    iget-object p0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->a0:Lcom/vk/music/sections/MusicSectionsModel;
 
     return-object p0
 .end method
@@ -1014,22 +1014,22 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onAttachedToWindow()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->a0:Lcom/vk/music/sections/f;
+    iget-object v0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->a0:Lcom/vk/music/sections/MusicSectionsModel;
 
     iget-object v1, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->W:Lcom/vk/music/artists/MusicArtistHeaderContainer$h;
 
-    invoke-interface {v0, v1}, Lcom/vk/music/sections/f;->a(Lcom/vk/music/sections/f$a;)V
+    invoke-interface {v0, v1}, Lcom/vk/music/sections/MusicSectionsModel;->a(Lcom/vk/music/sections/MusicSectionsModel$a;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->a0:Lcom/vk/music/sections/f;
+    iget-object v0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->a0:Lcom/vk/music/sections/MusicSectionsModel;
 
-    invoke-interface {v0}, Lcom/vk/music/sections/f;->r0()Lcom/vk/music/player/d;
+    invoke-interface {v0}, Lcom/vk/music/sections/MusicSectionsModel;->r0()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->V:Lcom/vk/music/artists/MusicArtistHeaderContainer$g;
 
-    invoke-interface {v0, v1}, Lcom/vk/music/player/d;->b(Lcom/vk/music/player/d$a;)V
+    invoke-interface {v0, v1}, Lcom/vk/music/player/PlayerModel;->b(Lcom/vk/music/player/PlayerModel$a;)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/music/artists/MusicArtistHeaderContainer;->f()V
@@ -1041,7 +1041,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->f(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -1053,7 +1053,7 @@
 
     const-string v1, "LifecycleHandler.install\u2026ntext.toActivityUnsafe())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->S:Lcom/vk/core/widget/LifecycleHandler;
 
@@ -1064,14 +1064,14 @@
 
     iget-object v1, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->T:Lcom/vk/music/artists/MusicArtistHeaderContainer$f;
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/widget/LifecycleHandler;->a(Lcom/vk/core/widget/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/widget/LifecycleHandler;->a(Lcom/vk/core/widget/LifecycleListener;)V
 
     return-void
 
     :cond_0
     const-string v0, "lifecycleHandler"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1085,22 +1085,22 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onDetachedFromWindow()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->a0:Lcom/vk/music/sections/f;
+    iget-object v0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->a0:Lcom/vk/music/sections/MusicSectionsModel;
 
     iget-object v1, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->W:Lcom/vk/music/artists/MusicArtistHeaderContainer$h;
 
-    invoke-interface {v0, v1}, Lcom/vk/music/sections/f;->b(Lcom/vk/music/sections/f$a;)V
+    invoke-interface {v0, v1}, Lcom/vk/music/sections/MusicSectionsModel;->b(Lcom/vk/music/sections/MusicSectionsModel$a;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->a0:Lcom/vk/music/sections/f;
+    iget-object v0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->a0:Lcom/vk/music/sections/MusicSectionsModel;
 
-    invoke-interface {v0}, Lcom/vk/music/sections/f;->r0()Lcom/vk/music/player/d;
+    invoke-interface {v0}, Lcom/vk/music/sections/MusicSectionsModel;->r0()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->V:Lcom/vk/music/artists/MusicArtistHeaderContainer$g;
 
-    invoke-interface {v0, v1}, Lcom/vk/music/player/d;->a(Lcom/vk/music/player/d$a;)V
+    invoke-interface {v0, v1}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/music/player/PlayerModel$a;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->S:Lcom/vk/core/widget/LifecycleHandler;
@@ -1109,14 +1109,14 @@
 
     iget-object v1, p0, Lcom/vk/music/artists/MusicArtistHeaderContainer;->T:Lcom/vk/music/artists/MusicArtistHeaderContainer$f;
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/widget/LifecycleHandler;->b(Lcom/vk/core/widget/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/widget/LifecycleHandler;->b(Lcom/vk/core/widget/LifecycleListener;)V
 
     return-void
 
     :cond_0
     const-string v0, "lifecycleHandler"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1135,7 +1135,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f040231
 
@@ -1152,7 +1152,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 
@@ -1161,7 +1161,7 @@
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
     .line 3
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -1171,7 +1171,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f04022d
 

@@ -3,7 +3,7 @@
 .source "MarketCartFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/market/orders/MarketCartFragment$onCreateView$6;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -60,7 +60,7 @@
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vtosters/lite/fragments/market/u$f;
+    new-instance v0, Lcom/vtosters/lite/fragments/market/MarketFragment$f;
 
     iget-object v1, p0, Lcom/vk/market/orders/MarketCartFragment$onCreateView$6;->this$0:Lcom/vk/market/orders/MarketCartFragment;
 
@@ -70,7 +70,7 @@
 
     neg-int v1, v1
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/market/u$f;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/market/MarketFragment$f;-><init>(I)V
 
     iget-object v1, p0, Lcom/vk/market/orders/MarketCartFragment$onCreateView$6;->this$0:Lcom/vk/market/orders/MarketCartFragment;
 
@@ -78,7 +78,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

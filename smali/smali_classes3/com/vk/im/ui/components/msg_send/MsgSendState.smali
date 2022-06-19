@@ -27,10 +27,10 @@
 # instance fields
 .field private a:Lcom/vk/im/ui/components/msg_send/MsgSendState$c;
 
-.field private b:Lcom/vk/im/engine/models/c;
+.field private b:Lcom/vk/im/engine/models/EntityWithId;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/models/c<",
+            "Lcom/vk/im/engine/models/EntityWithId<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;"
         }
@@ -46,7 +46,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_send/MsgSendState$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_send/MsgSendState$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/ui/components/msg_send/MsgSendState$a;
@@ -80,16 +80,16 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/msg_send/MsgSendState$c;-><init>(Lcom/vk/im/ui/components/msg_send/MsgDraft;Lcom/vk/im/ui/components/msg_send/MsgShare;Lcom/vk/im/ui/components/msg_send/MsgEdit;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/msg_send/MsgSendState$c;-><init>(Lcom/vk/im/ui/components/msg_send/MsgDraft;Lcom/vk/im/ui/components/msg_send/MsgShare;Lcom/vk/im/ui/components/msg_send/MsgEdit;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v6, p0, Lcom/vk/im/ui/components/msg_send/MsgSendState;->a:Lcom/vk/im/ui/components/msg_send/MsgSendState$c;
 
     .line 3
-    new-instance v0, Lcom/vk/im/engine/models/c;
+    new-instance v0, Lcom/vk/im/engine/models/EntityWithId;
 
-    invoke-direct {v0, p1}, Lcom/vk/im/engine/models/c;-><init>(I)V
+    invoke-direct {v0, p1}, Lcom/vk/im/engine/models/EntityWithId;-><init>(I)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/MsgSendState;->b:Lcom/vk/im/engine/models/c;
+    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/MsgSendState;->b:Lcom/vk/im/engine/models/EntityWithId;
 
     return-void
 .end method
@@ -105,7 +105,7 @@
     invoke-direct {p0, v0}, Lcom/vk/im/ui/components/msg_send/MsgSendState;-><init>(I)V
 
     .line 6
-    new-instance v0, Lcom/vk/im/engine/models/c;
+    new-instance v0, Lcom/vk/im/engine/models/EntityWithId;
 
     .line 7
     invoke-virtual {p1}, Lcom/vk/core/serialize/Serializer;->n()I
@@ -123,7 +123,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/im/engine/models/u;
+    check-cast v2, Lcom/vk/im/engine/models/WithId;
 
     .line 9
     invoke-virtual {p1}, Lcom/vk/core/serialize/Serializer;->g()Z
@@ -131,9 +131,9 @@
     move-result v3
 
     .line 10
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/models/c;-><init>(ILcom/vk/im/engine/models/u;Z)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/models/EntityWithId;-><init>(ILcom/vk/im/engine/models/WithId;Z)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/MsgSendState;->b:Lcom/vk/im/engine/models/c;
+    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/MsgSendState;->b:Lcom/vk/im/engine/models/EntityWithId;
 
     .line 11
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/MsgSendState;->a:Lcom/vk/im/ui/components/msg_send/MsgSendState$c;
@@ -192,14 +192,14 @@
 
     .line 14
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 4
@@ -214,18 +214,18 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/MsgSendState;->b:Lcom/vk/im/engine/models/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/MsgSendState;->b:Lcom/vk/im/engine/models/EntityWithId;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/c;->h()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityWithId;->h()I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(I)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/MsgSendState;->b:Lcom/vk/im/engine/models/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/MsgSendState;->b:Lcom/vk/im/engine/models/EntityWithId;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/c;->b()Lcom/vk/im/engine/models/u;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityWithId;->b()Lcom/vk/im/engine/models/WithId;
 
     move-result-object v0
 
@@ -234,9 +234,9 @@
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/MsgSendState;->b:Lcom/vk/im/engine/models/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/MsgSendState;->b:Lcom/vk/im/engine/models/EntityWithId;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/b;->d()Z
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityValue;->d()Z
 
     move-result v0
 

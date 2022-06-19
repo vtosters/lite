@@ -3,7 +3,7 @@
 .source "BaseLinkGridViewHolderFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -64,7 +64,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder$setupClickTarget$1;->this$0:Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder;
 
-    invoke-static {v0}, Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder;->a(Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder;)Lcom/vk/catalog2/core/analytics/g/a;
+    invoke-static {v0}, Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder;->a(Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder;)Lcom/vk/catalog2/core/analytics/g/CatalogUIClickTracker;
 
     move-result-object v0
 
@@ -72,10 +72,10 @@
 
     iget-object v2, p0, Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder$setupClickTarget$1;->$item:Lcom/vk/dto/tags/TagLink;
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/catalog2/core/analytics/g/a;->a(ILcom/vk/dto/tags/TagLink;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/catalog2/core/analytics/g/CatalogUIClickTracker;->a(ILcom/vk/dto/tags/TagLink;)V
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/s;->a()Lcom/vk/bridges/r;
+    invoke-static {}, Lcom/vk/bridges/LinksBridge1;->a()Lcom/vk/bridges/LinksBridge;
 
     move-result-object v3
 
@@ -85,7 +85,7 @@
 
     const-string p1, "it.context"
 
-    invoke-static {v4, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder$setupClickTarget$1;->$item:Lcom/vk/dto/tags/TagLink;
 
@@ -99,7 +99,7 @@
 
     const-string p1, "Uri.parse(item.url)"
 
-    invoke-static {v5, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v7, p0, Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder$setupClickTarget$1;->$ref:Ljava/lang/String;
 
@@ -117,7 +117,7 @@
 
     const/4 v13, 0x0
 
-    invoke-static/range {v3 .. v13}, Lcom/vk/bridges/r$a;->a(Lcom/vk/bridges/r;Landroid/content/Context;Landroid/net/Uri;ZLjava/lang/String;Landroid/os/Bundle;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;ILjava/lang/Object;)Z
+    invoke-static/range {v3 .. v13}, Lcom/vk/bridges/LinksBridge$a;->a(Lcom/vk/bridges/LinksBridge;Landroid/content/Context;Landroid/net/Uri;ZLjava/lang/String;Landroid/os/Bundle;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Z
 
     return-void
 .end method
@@ -130,7 +130,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/shopping/BaseViewHolder$setupClickTarget$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

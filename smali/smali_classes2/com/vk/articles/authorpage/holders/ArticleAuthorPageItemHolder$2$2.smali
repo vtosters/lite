@@ -3,7 +3,7 @@
 .source "ArticleAuthorPageItemHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lb/h/h/f/a;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lb/h/h/f/Favable;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lb/h/h/f/a;)V
+.method public final a(Lb/h/h/f/Favable;)V
     .locals 1
 
     .line 1
@@ -58,17 +58,17 @@
 
     iget-object p1, p1, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$2;->this$0:Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;
 
-    invoke-static {p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;->e(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;)Lcom/vk/articles/authorpage/g/a;
+    invoke-static {p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;->e(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;)Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/articles/authorpage/g/a;->c()Lcom/vk/dto/articles/Article;
+    invoke-virtual {p1}, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;->c()Lcom/vk/dto/articles/Article;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$2$2;->$requestArticle:Lcom/vk/dto/articles/Article;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -89,11 +89,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/h/f/a;
+    check-cast p1, Lb/h/h/f/Favable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$2$2;->a(Lb/h/h/f/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$2$2;->a(Lb/h/h/f/Favable;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

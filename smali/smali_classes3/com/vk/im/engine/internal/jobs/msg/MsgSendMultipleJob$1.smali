@@ -3,7 +3,7 @@
 .source "MsgSendMultipleJob.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/models/attaches/Attach;",
         "Ljava/lang/String;",
         ">;"
@@ -60,9 +60,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/im/engine/internal/api_commands/messages/c0;->a:Lcom/vk/im/engine/internal/api_commands/messages/c0;
+    sget-object v0, Lcom/vk/im/engine/internal/api_commands/messages/MsgSendApiHelper;->INSTANCE:Lcom/vk/im/engine/internal/api_commands/messages/MsgSendApiHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/api_commands/messages/c0;->a(Lcom/vk/im/engine/models/attaches/Attach;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/api_commands/messages/MsgSendApiHelper;->a(Lcom/vk/im/engine/models/attaches/Attach;)Ljava/lang/String;
 
     move-result-object p1
 

@@ -3,12 +3,12 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/masks/MasksController$u;->a(Lcom/vk/dto/masks/Mask;)Lc/a/p;
+    value = Lcom/vk/masks/MasksController$u;->a(Lcom/vk/dto/masks/Mask;)Lio/reactivex/ObservableSource;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/core/network/RxFileDownloader$c;",
         ">;"
     }
@@ -68,7 +68,7 @@
 
     iget-object p1, p1, Lcom/vk/masks/MasksController$u;->b:Lcom/vk/masks/MasksController;
 
-    invoke-static {p1}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/d;
+    invoke-static {p1}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/MasksStorage;
 
     move-result-object p1
 
@@ -79,12 +79,12 @@
     iget-object v1, p0, Lcom/vk/masks/MasksController$u$b;->a:Ljava/lang/String;
 
     .line 3
-    invoke-static {v1}, Lcom/vk/media/camera/l/a;->c(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/vk/media/camera/l/CameraMasksUtils;->c(Ljava/lang/String;)I
 
     move-result v1
 
     .line 4
-    invoke-virtual {p1, v0, v1}, Lcom/vk/masks/d;->a(Lcom/vk/dto/masks/Mask;I)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/masks/MasksStorage;->a(Lcom/vk/dto/masks/Mask;I)V
 
     :cond_0
     return-void

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate$PhotoAttachViewHolder;
-.super Lcom/vk/im/ui/views/adapter_delegate/d;
+.super Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;
 .source "PhotoAttachViewTypeDelegate.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/views/adapter_delegate/d<",
+        "Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder<",
         "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachListItem;",
         ">;"
     }
@@ -42,10 +42,10 @@
     .line 1
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate$PhotoAttachViewHolder;->b:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate;
 
-    invoke-direct {p0, p2}, Lcom/vk/im/ui/views/adapter_delegate/d;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;-><init>(Landroid/view/View;)V
 
     .line 2
-    sget p1, Lcom/vk/im/ui/h;->photo_image_view:I
+    sget p1, Lcom/vk/im/ui/R11;->photo_image_view:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -53,7 +53,7 @@
 
     const-string p2, "view.findViewById(R.id.photo_image_view)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/FrescoImageView;
 
@@ -96,7 +96,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate$PhotoAttachViewHolder$bind$1;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate$PhotoAttachViewHolder;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate$PhotoAttachViewHolder;->a:Lcom/vk/im/ui/views/FrescoImageView;
@@ -105,7 +105,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate$PhotoAttachViewHolder$bind$2;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate$PhotoAttachViewHolder;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/PhotoAttachViewTypeDelegate$PhotoAttachViewHolder;->a:Lcom/vk/im/ui/views/FrescoImageView;
@@ -149,7 +149,7 @@
     throw p1
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/c;)V
+.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)V
     .locals 0
 
     .line 1

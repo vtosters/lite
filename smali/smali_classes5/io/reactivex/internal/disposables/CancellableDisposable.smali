@@ -3,16 +3,16 @@
 .source "CancellableDisposable.java"
 
 # interfaces
-.implements Lio/reactivex/disposables/b;
+.implements Lio/reactivex/disposables/Disposable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lc/a/z/f;",
+        "Lio/reactivex/functions/Cancellable;",
         ">;",
-        "Lio/reactivex/disposables/b;"
+        "Lio/reactivex/disposables/Disposable;"
     }
 .end annotation
 
@@ -22,7 +22,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lc/a/z/f;)V
+.method public constructor <init>(Lio/reactivex/functions/Cancellable;)V
     .locals 0
 
     .line 1
@@ -71,13 +71,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lc/a/z/f;
+    check-cast v0, Lio/reactivex/functions/Cancellable;
 
     if-eqz v0, :cond_0
 
     .line 3
     :try_start_0
-    invoke-interface {v0}, Lc/a/z/f;->cancel()V
+    invoke-interface {v0}, Lio/reactivex/functions/Cancellable;->cancel()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -87,10 +87,10 @@
     move-exception v0
 
     .line 4
-    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 5
-    invoke-static {v0}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :cond_0
     :goto_0

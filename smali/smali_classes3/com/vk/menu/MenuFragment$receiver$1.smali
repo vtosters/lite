@@ -58,7 +58,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/menu/MenuFragment$receiver$1;->a:Lcom/vk/menu/MenuFragment;
 
-    invoke-virtual {p1}, Lcom/vk/menu/MenuFragment;->c1()Lkotlin/m;
+    invoke-virtual {p1}, Lcom/vk/menu/MenuFragment;->c1()Lkotlin/Unit;
 
     :cond_1
     return-void

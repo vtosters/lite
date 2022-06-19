@@ -1,5 +1,5 @@
 .class final Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder$a;
-.super Lcom/facebook/drawee/controller/b;
+.super Lcom/facebook/drawee/controller/BaseControllerListener;
 .source "AbstractDraweeControllerBuilder.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/facebook/drawee/controller/b<",
+        "Lcom/facebook/drawee/controller/BaseControllerListener<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -27,7 +27,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/facebook/drawee/controller/b;-><init>()V
+    invoke-direct {p0}, Lcom/facebook/drawee/controller/BaseControllerListener;-><init>()V
 
     return-void
 .end method

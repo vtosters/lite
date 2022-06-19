@@ -3,7 +3,7 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -98,9 +98,9 @@
     invoke-virtual {p1, v0}, Lcom/vk/dto/newsfeed/Flags;->i(I)V
 
     .line 5
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
@@ -108,7 +108,7 @@
 
     const/16 v2, 0x66
 
-    invoke-virtual {p1, v2, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v2, v1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$h;->a:Lcom/vk/newsfeed/presenters/EntriesListPresenter;
@@ -148,7 +148,7 @@
     .line 9
     iget-object v6, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$h;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -223,13 +223,13 @@
     invoke-virtual {v3, v0, v4}, Lcom/vk/dto/newsfeed/Flags;->c(IZ)V
 
     .line 12
-    sget-object v3, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v3, Lcom/vk/newsfeed/controllers/NewsfeedController;->INSTANCE:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v3}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v3}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v3
 
-    invoke-virtual {v3, v2, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v3, v2, v1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     goto :goto_1
 

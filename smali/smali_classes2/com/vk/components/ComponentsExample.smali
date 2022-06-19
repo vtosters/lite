@@ -40,12 +40,12 @@
 
 
 # instance fields
-.field private final creator:Lkotlin/jvm/b/b;
+.field private final creator:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Landroid/view/ViewGroup;",
-            "Lcom/vtosters/lite/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
             "*>;>;"
         }
     .end annotation
@@ -73,7 +73,7 @@
 
     const v5, 0x7f12026d
 
-    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/b;)V
+    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/Functions2;)V
 
     sput-object v1, Lcom/vk/components/ComponentsExample;->BASE:Lcom/vk/components/ComponentsExample;
 
@@ -90,7 +90,7 @@
 
     const v5, 0x7f120277
 
-    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/b;)V
+    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/Functions2;)V
 
     sput-object v1, Lcom/vk/components/ComponentsExample;->TEXT:Lcom/vk/components/ComponentsExample;
 
@@ -107,7 +107,7 @@
 
     const v5, 0x7f120271
 
-    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/b;)V
+    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/Functions2;)V
 
     sput-object v1, Lcom/vk/components/ComponentsExample;->INPUT_FIELDS:Lcom/vk/components/ComponentsExample;
 
@@ -124,7 +124,7 @@
 
     const v5, 0x7f12026f
 
-    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/b;)V
+    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/Functions2;)V
 
     sput-object v1, Lcom/vk/components/ComponentsExample;->BUTTONS:Lcom/vk/components/ComponentsExample;
 
@@ -141,7 +141,7 @@
 
     const v5, 0x7f12026c
 
-    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/b;)V
+    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/Functions2;)V
 
     sput-object v1, Lcom/vk/components/ComponentsExample;->ACTIONS_POPUP:Lcom/vk/components/ComponentsExample;
 
@@ -158,7 +158,7 @@
 
     const v5, 0x7f120279
 
-    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/b;)V
+    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/Functions2;)V
 
     sput-object v1, Lcom/vk/components/ComponentsExample;->TOOLTIPS:Lcom/vk/components/ComponentsExample;
 
@@ -175,7 +175,7 @@
 
     const v5, 0x7f120273
 
-    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/b;)V
+    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/Functions2;)V
 
     sput-object v1, Lcom/vk/components/ComponentsExample;->LOADERS:Lcom/vk/components/ComponentsExample;
 
@@ -192,7 +192,7 @@
 
     const v5, 0x7f120270
 
-    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/b;)V
+    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/Functions2;)V
 
     sput-object v1, Lcom/vk/components/ComponentsExample;->DIALOGS:Lcom/vk/components/ComponentsExample;
 
@@ -209,7 +209,7 @@
 
     const v5, 0x7f120275
 
-    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/b;)V
+    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/Functions2;)V
 
     sput-object v1, Lcom/vk/components/ComponentsExample;->SNACKBAR:Lcom/vk/components/ComponentsExample;
 
@@ -226,7 +226,7 @@
 
     const v5, 0x7f120274
 
-    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/b;)V
+    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/Functions2;)V
 
     sput-object v1, Lcom/vk/components/ComponentsExample;->PLACEHOLDER:Lcom/vk/components/ComponentsExample;
 
@@ -243,7 +243,7 @@
 
     const v5, 0x7f12026e
 
-    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/b;)V
+    invoke-direct {v1, v4, v3, v5, v2}, Lcom/vk/components/ComponentsExample;-><init>(Ljava/lang/String;IILkotlin/jvm/b/Functions2;)V
 
     sput-object v1, Lcom/vk/components/ComponentsExample;->BOTTOM_CONFIRM_BTN:Lcom/vk/components/ComponentsExample;
 
@@ -254,7 +254,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;IILkotlin/jvm/b/b;)V
+.method private constructor <init>(Ljava/lang/String;IILkotlin/jvm/b/Functions2;)V
     .locals 0
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/StringRes;
@@ -263,11 +263,11 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/view/ViewGroup;",
             "+",
-            "Lcom/vtosters/lite/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
             "*>;>;)V"
         }
     .end annotation
@@ -277,7 +277,7 @@
 
     iput p3, p0, Lcom/vk/components/ComponentsExample;->title:I
 
-    iput-object p4, p0, Lcom/vk/components/ComponentsExample;->creator:Lkotlin/jvm/b/b;
+    iput-object p4, p0, Lcom/vk/components/ComponentsExample;->creator:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
@@ -312,20 +312,20 @@
 
 
 # virtual methods
-.method public final a()Lkotlin/jvm/b/b;
+.method public final a()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Landroid/view/ViewGroup;",
-            "Lcom/vtosters/lite/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
             "*>;>;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/components/ComponentsExample;->creator:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/components/ComponentsExample;->creator:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method

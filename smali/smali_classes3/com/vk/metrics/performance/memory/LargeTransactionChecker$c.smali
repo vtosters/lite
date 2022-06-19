@@ -1,5 +1,5 @@
 .class public final Lcom/vk/metrics/performance/memory/LargeTransactionChecker$c;
-.super Lb/h/n/b;
+.super Lb/h/n/ActivityLifecycleListenerAdapter;
 .source "LargeTransactionChecker.kt"
 
 
@@ -43,7 +43,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$c;->c:Lcom/vk/metrics/performance/memory/LargeTransactionChecker;
 
-    invoke-direct {p0}, Lb/h/n/b;-><init>()V
+    invoke-direct {p0}, Lb/h/n/ActivityLifecycleListenerAdapter;-><init>()V
 
     .line 2
     new-instance p1, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$b;
@@ -138,7 +138,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4, v3}, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$a;->a(Ljava/lang/String;)Ljava/lang/String;
 
@@ -223,7 +223,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4, v3}, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$a;->a(Ljava/lang/String;)Ljava/lang/String;
 
@@ -258,7 +258,7 @@
 
     const-string v2, "bundle.javaClass.simpleName"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, p1}, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$a;->a(Ljava/lang/String;)Ljava/lang/String;
 
@@ -278,7 +278,7 @@
 
     const-string v2, "result.toString()"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, v1, v0}, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$LargeTransactionException;-><init>(Lcom/vk/metrics/performance/memory/LargeTransactionChecker;Ljava/lang/String;)V
 
@@ -623,7 +623,7 @@
 
     const-string v1, "activity.javaClass.simpleName"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0, p2, p1}, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$c;->a(Lcom/vk/metrics/performance/memory/LargeTransactionChecker$Type;Landroid/os/Bundle;Ljava/lang/String;)V
 
@@ -655,7 +655,7 @@
 
     const-string v2, "activity.javaClass.simpleName"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, v1, v0, p1}, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$c;->a(Lcom/vk/metrics/performance/memory/LargeTransactionChecker$Type;Landroid/os/Bundle;Ljava/lang/String;)V
 

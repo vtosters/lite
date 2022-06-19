@@ -48,7 +48,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$a;->a:Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;
 
-    invoke-static {v0}, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->a(Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;)Lcom/vk/audiomsg/player/fileloader/impl/b;
+    invoke-static {v0}, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;->a(Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;)Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListener;
 
     move-result-object v0
 
@@ -58,7 +58,7 @@
 
     iget-object v2, p0, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate$a;->c:Ljava/lang/Throwable;
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/audiomsg/player/fileloader/impl/b;->a(Landroid/net/Uri;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListener;->a(Landroid/net/Uri;Ljava/lang/Throwable;)V
 
     :cond_0
     return-void

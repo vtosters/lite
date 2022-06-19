@@ -1,11 +1,11 @@
 .class public final Lcom/vk/music/search/MusicSearchContainer$c;
-.super Lcom/vk/core/widget/a;
+.super Lcom/vk/core/widget/LifecycleListener;
 .source "MusicSearchContainer.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/search/MusicSearchContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/search/c;)V
+    value = Lcom/vk/music/search/MusicSearchContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/search/MusicSearchModelImpl;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/music/search/MusicSearchContainer$c;->c:Lcom/vk/music/search/MusicSearchContainer;
 
-    invoke-direct {p0}, Lcom/vk/core/widget/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/widget/LifecycleListener;-><init>()V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p2, p3, p4}, Lcom/vk/core/utils/i;->a(IILandroid/content/Intent;)Ljava/lang/String;
+    invoke-static {p2, p3, p4}, Lcom/vk/core/utils/VoiceUtils;->a(IILandroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -71,7 +71,7 @@
 
     const-string p3, "this"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2, p1}, Lcom/vk/core/view/search/ModernSearchView;->setQuery(Ljava/lang/String;)V
 

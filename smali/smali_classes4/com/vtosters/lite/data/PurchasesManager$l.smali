@@ -3,12 +3,12 @@
 .source "PurchasesManager.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/data/PurchasesManager;->a(Lcom/android/vending/billing/IInAppBillingService;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lb/h/g/k/a;)V
+    value = Lcom/vtosters/lite/data/PurchasesManager;->a(Lcom/android/vending/billing/IInAppBillingService;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lb/h/g/k/VKProgressDialog;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -27,19 +27,19 @@
 
 
 # instance fields
-.field final synthetic a:Lb/h/g/k/a;
+.field final synthetic a:Lb/h/g/k/VKProgressDialog;
 
 .field final synthetic b:Lcom/vtosters/lite/data/PurchasesManager;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/data/PurchasesManager;Lb/h/g/k/a;)V
+.method constructor <init>(Lcom/vtosters/lite/data/PurchasesManager;Lb/h/g/k/VKProgressDialog;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/data/PurchasesManager$l;->b:Lcom/vtosters/lite/data/PurchasesManager;
 
-    iput-object p2, p0, Lcom/vtosters/lite/data/PurchasesManager$l;->a:Lb/h/g/k/a;
+    iput-object p2, p0, Lcom/vtosters/lite/data/PurchasesManager$l;->a:Lb/h/g/k/VKProgressDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -102,7 +102,7 @@
 
     iget-object v1, p0, Lcom/vtosters/lite/data/PurchasesManager$l;->b:Lcom/vtosters/lite/data/PurchasesManager;
 
-    invoke-static {v1}, Lcom/vtosters/lite/data/PurchasesManager;->h(Lcom/vtosters/lite/data/PurchasesManager;)Lcom/vk/dto/common/data/e;
+    invoke-static {v1}, Lcom/vtosters/lite/data/PurchasesManager;->h(Lcom/vtosters/lite/data/PurchasesManager;)Lcom/vk/dto/common/data/Purchase1;
 
     move-result-object v1
 
@@ -130,7 +130,7 @@
 
     check-cast p1, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;
 
-    invoke-static {v0, p1}, Lcom/vk/api/base/f;->b(Landroid/content/Context;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-static {v0, p1}, Lcom/vk/api/base/ApiUtils;->b(Landroid/content/Context;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     goto :goto_0
 
@@ -138,13 +138,13 @@
     const p1, 0x7f12037b
 
     .line 8
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     .line 9
     :goto_0
-    iget-object p1, p0, Lcom/vtosters/lite/data/PurchasesManager$l;->a:Lb/h/g/k/a;
+    iget-object p1, p0, Lcom/vtosters/lite/data/PurchasesManager$l;->a:Lb/h/g/k/VKProgressDialog;
 
-    invoke-static {p1}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/app/Dialog;)V
 
     return-void
 .end method

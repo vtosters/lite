@@ -3,7 +3,7 @@
 .source "ProfileFragment.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/profile/ui/header/BaseHeaderView;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/profile/ui/header/BaseHeaderView;)Lkotlin/m;
+.method public a(Lcom/vk/profile/ui/header/BaseHeaderView;)Lkotlin/Unit;
     .locals 1
 
     .line 1
@@ -61,7 +61,7 @@
     invoke-static {v0, p1}, Lcom/vtosters/lite/fragments/ProfileFragment;->a(Lcom/vtosters/lite/fragments/ProfileFragment;Lcom/vk/profile/ui/header/BaseHeaderView;)Lcom/vk/profile/ui/header/BaseHeaderView;
 
     .line 3
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -72,7 +72,7 @@
     .line 1
     check-cast p1, Lcom/vk/profile/ui/header/BaseHeaderView;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/ProfileFragment$c;->a(Lcom/vk/profile/ui/header/BaseHeaderView;)Lkotlin/m;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/ProfileFragment$c;->a(Lcom/vk/profile/ui/header/BaseHeaderView;)Lkotlin/Unit;
 
     move-result-object p1
 

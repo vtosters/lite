@@ -65,7 +65,7 @@
     const-string v0, "You should call MyTracker.initTracker method first"
 
     .line 2
-    invoke-static {v0}, Lcom/my/tracker/b;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/Tracer;->a(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -107,11 +107,11 @@
 
     sget-object p1, Lcom/my/tracker/MyTracker;->a:Lcom/my/tracker/Tracker;
 
-    invoke-interface {p1}, Lcom/my/tracker/Tracker;->getParams()Lcom/my/tracker/c;
+    invoke-interface {p1}, Lcom/my/tracker/Tracker;->getParams()Lcom/my/tracker/TrackerParams;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/my/tracker/MyTrackerParams;-><init>(Lcom/my/tracker/c;)V
+    invoke-direct {p0, p1}, Lcom/my/tracker/MyTrackerParams;-><init>(Lcom/my/tracker/TrackerParams;)V
 
     sput-object p0, Lcom/my/tracker/MyTracker;->b:Lcom/my/tracker/MyTrackerParams;
 
@@ -170,7 +170,7 @@
     const-string v1, "You should call MyTracker.createTracker method first"
 
     .line 2
-    invoke-static {v1}, Lcom/my/tracker/b;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/my/tracker/Tracer;->a(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -206,7 +206,7 @@
     .end annotation
 
     .line 1
-    sget-boolean v0, Lcom/my/tracker/b;->a:Z
+    sget-boolean v0, Lcom/my/tracker/Tracer;->a:Z
 
     return v0
 .end method
@@ -366,13 +366,13 @@
     .line 2
     sget-object v0, Lcom/my/tracker/MyTracker;->a:Lcom/my/tracker/Tracker;
 
-    invoke-interface {v0}, Lcom/my/tracker/Tracker;->getParams()Lcom/my/tracker/c;
+    invoke-interface {v0}, Lcom/my/tracker/Tracker;->getParams()Lcom/my/tracker/TrackerParams;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p0, v1}, Lcom/my/tracker/c;->a(Lcom/my/tracker/MyTracker$AttributionListener;Landroid/os/Handler;)V
+    invoke-virtual {v0, p0, v1}, Lcom/my/tracker/TrackerParams;->a(Lcom/my/tracker/MyTracker$AttributionListener;Landroid/os/Handler;)V
 
     :cond_0
     return-void
@@ -399,11 +399,11 @@
     .line 4
     sget-object v0, Lcom/my/tracker/MyTracker;->a:Lcom/my/tracker/Tracker;
 
-    invoke-interface {v0}, Lcom/my/tracker/Tracker;->getParams()Lcom/my/tracker/c;
+    invoke-interface {v0}, Lcom/my/tracker/Tracker;->getParams()Lcom/my/tracker/TrackerParams;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0, p1}, Lcom/my/tracker/c;->a(Lcom/my/tracker/MyTracker$AttributionListener;Landroid/os/Handler;)V
+    invoke-virtual {v0, p0, p1}, Lcom/my/tracker/TrackerParams;->a(Lcom/my/tracker/MyTracker$AttributionListener;Landroid/os/Handler;)V
 
     :cond_0
     return-void
@@ -415,7 +415,7 @@
     .end annotation
 
     .line 1
-    sput-boolean p0, Lcom/my/tracker/b;->a:Z
+    sput-boolean p0, Lcom/my/tracker/Tracer;->a:Z
 
     return-void
 .end method
@@ -452,7 +452,7 @@
     .end annotation
 
     .line 1
-    sput-object p0, Lcom/my/tracker/b;->b:Lcom/my/tracker/LogHandler;
+    sput-object p0, Lcom/my/tracker/Tracer;->b:Lcom/my/tracker/LogHandler;
 
     return-void
 .end method

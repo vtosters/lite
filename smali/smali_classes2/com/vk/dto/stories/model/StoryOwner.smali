@@ -210,9 +210,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lb/h/h/a;->b:Lb/h/h/a$a;
+    sget-object v0, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
 
-    invoke-interface {v0}, Lb/h/h/a$a;->c()I
+    invoke-interface {v0}, Lb/h/h/ModelConfig$a;->c()I
 
     move-result v0
 

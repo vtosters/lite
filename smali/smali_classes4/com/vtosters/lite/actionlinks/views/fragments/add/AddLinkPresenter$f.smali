@@ -3,7 +3,7 @@
 .source "AddLinkPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/a;
+.implements Lio/reactivex/functions/Action;
 
 
 # annotations
@@ -42,7 +42,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

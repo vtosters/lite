@@ -42,9 +42,9 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2, v1}, Landroidx/recyclerview/widget/internal/IdlePrefetcher;-><init>(Landroidx/recyclerview/widget/internal/DrawTimeProvider;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v1}, Landroidx/recyclerview/widget/internal/IdlePrefetcher;-><init>(Landroidx/recyclerview/widget/internal/DrawTimeProvider;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-direct {p0, v0, v1}, Landroidx/recyclerview/widget/PoolMode;-><init>(Landroidx/recyclerview/widget/internal/Prefetcher;Lkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v1}, Landroidx/recyclerview/widget/PoolMode;-><init>(Landroidx/recyclerview/widget/internal/Prefetcher;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method

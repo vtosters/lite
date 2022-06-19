@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -39,33 +39,33 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {v0, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 2
-    invoke-virtual {v0, p2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v0, p2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->g()Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->g()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 4
-    invoke-virtual {p2}, Lcom/vk/account/verify/views/PhoneErrorView;->getListener()Lcom/vk/core/dialogs/bottomsheet/h$c;
+    invoke-virtual {p2}, Lcom/vk/account/verify/views/PhoneErrorView;->getListener()Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$c;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$c;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 p1, 0x0
 
     const/4 v1, 0x1
 
     .line 5
-    invoke-static {v0, p1, v1, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v0, p1, v1, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/account/verify/views/PhoneErrorView;->setDialog(Lcom/vk/core/dialogs/bottomsheet/e;)V
+    invoke-virtual {p2, p1}, Lcom/vk/account/verify/views/PhoneErrorView;->setDialog(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
 
     return-void
 .end method

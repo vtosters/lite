@@ -35,7 +35,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/libvideo/live/widgets/LiveShine;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/libvideo/live/widgets/LiveShine;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -57,7 +57,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/libvideo/live/widgets/LiveShine;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/libvideo/live/widgets/LiveShine;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     move v3, p3
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/libvideo/live/widgets/LiveShine;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/libvideo/live/widgets/LiveShine;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -112,14 +112,14 @@
     iput-object v0, p0, Lcom/vk/libvideo/live/widgets/LiveShine;->f:Landroid/graphics/Path;
 
     .line 6
-    sget-object v0, Lcom/vk/libvideo/l;->LiveShine:[I
+    sget-object v0, Lcom/vk/libvideo/R5;->LiveShine:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
     .line 7
-    sget p3, Lcom/vk/libvideo/l;->LiveShine_android_layout_width:I
+    sget p3, Lcom/vk/libvideo/R5;->LiveShine_android_layout_width:I
 
     const/high16 p4, 0x42000000    # 32.0f
 
@@ -134,7 +134,7 @@
     iput p3, p0, Lcom/vk/libvideo/live/widgets/LiveShine;->c:I
 
     .line 8
-    sget p3, Lcom/vk/libvideo/l;->LiveShine_android_layout_height:I
+    sget p3, Lcom/vk/libvideo/R5;->LiveShine_android_layout_height:I
 
     const/high16 p4, 0x41a00000    # 20.0f
 
@@ -149,7 +149,7 @@
     iput p3, p0, Lcom/vk/libvideo/live/widgets/LiveShine;->d:I
 
     .line 9
-    sget p3, Lcom/vk/libvideo/l;->LiveShine_shine_clipRadius:I
+    sget p3, Lcom/vk/libvideo/R5;->LiveShine_shine_clipRadius:I
 
     const/high16 p4, 0x40e00000    # 7.0f
 
@@ -170,15 +170,15 @@
 
     const-string p4, "ta"
 
-    invoke-static {p2, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget p4, Lcom/vk/libvideo/l;->LiveShine_android_src:I
+    sget p4, Lcom/vk/libvideo/R5;->LiveShine_android_src:I
 
     new-instance v0, Lcom/vk/libvideo/live/widgets/LiveShine$1;
 
     invoke-direct {v0, p1}, Lcom/vk/libvideo/live/widgets/LiveShine$1;-><init>(Landroid/content/Context;)V
 
-    invoke-static {p2, p4, v0}, Lcom/vk/core/extensions/b0;->a(Landroid/content/res/TypedArray;ILkotlin/jvm/b/a;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p2, p4, v0}, Lcom/vk/core/extensions/TypedArrayExt;->a(Landroid/content/res/TypedArray;ILkotlin/jvm/b/Functions;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -226,7 +226,7 @@
     .line 16
     iget-object p1, p0, Lcom/vk/libvideo/live/widgets/LiveShine;->b:Landroid/view/View;
 
-    sget p2, Lcom/vk/libvideo/e;->bg_badge_live_shine:I
+    sget p2, Lcom/vk/libvideo/R7;->bg_badge_live_shine:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -238,7 +238,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x2

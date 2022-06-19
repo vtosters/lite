@@ -3,12 +3,12 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener;->a(IILb/h/g/l/b;)V
+    value = Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener;->a(IILb/h/g/l/EventWallPostReposted;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $payload:Lb/h/g/l/b;
+.field final synthetic $payload:Lb/h/g/l/EventWallPostReposted;
 
 
 # direct methods
-.method constructor <init>(Lb/h/g/l/b;)V
+.method constructor <init>(Lb/h/g/l/EventWallPostReposted;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$updater$1;->$payload:Lb/h/g/l/b;
+    iput-object p1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$updater$1;->$payload:Lb/h/g/l/EventWallPostReposted;
 
     const/4 p1, 0x1
 
@@ -50,34 +50,34 @@
     .locals 2
 
     .line 1
-    instance-of v0, p1, Lcom/vk/dto/newsfeed/c;
+    instance-of v0, p1, Lcom/vk/dto/newsfeed/Likable;
 
     if-eqz v0, :cond_1
 
     .line 2
-    check-cast p1, Lcom/vk/dto/newsfeed/c;
+    check-cast p1, Lcom/vk/dto/newsfeed/Likable;
 
-    iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$updater$1;->$payload:Lb/h/g/l/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$updater$1;->$payload:Lb/h/g/l/EventWallPostReposted;
 
-    invoke-virtual {v0}, Lb/h/g/l/b;->a()I
+    invoke-virtual {v0}, Lb/h/g/l/EventWallPostReposted;->a()I
 
     move-result v0
 
-    invoke-interface {p1, v0}, Lcom/vk/dto/newsfeed/c;->b(I)V
+    invoke-interface {p1, v0}, Lcom/vk/dto/newsfeed/Likable;->b(I)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$updater$1;->$payload:Lb/h/g/l/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$updater$1;->$payload:Lb/h/g/l/EventWallPostReposted;
 
-    invoke-virtual {v0}, Lb/h/g/l/b;->d()I
+    invoke-virtual {v0}, Lb/h/g/l/EventWallPostReposted;->d()I
 
     move-result v0
 
-    invoke-interface {p1, v0}, Lcom/vk/dto/newsfeed/c;->e(I)V
+    invoke-interface {p1, v0}, Lcom/vk/dto/newsfeed/Likable;->e(I)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$updater$1;->$payload:Lb/h/g/l/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$updater$1;->$payload:Lb/h/g/l/EventWallPostReposted;
 
-    invoke-virtual {v0}, Lb/h/g/l/b;->e()Z
+    invoke-virtual {v0}, Lb/h/g/l/EventWallPostReposted;->e()Z
 
     move-result v0
 
@@ -86,20 +86,20 @@
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-interface {p1, v1}, Lcom/vk/dto/newsfeed/c;->e(Z)V
+    invoke-interface {p1, v1}, Lcom/vk/dto/newsfeed/Likable;->e(Z)V
 
     .line 6
     :cond_0
-    iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$updater$1;->$payload:Lb/h/g/l/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$updater$1;->$payload:Lb/h/g/l/EventWallPostReposted;
 
-    invoke-virtual {v0}, Lb/h/g/l/b;->f()Z
+    invoke-virtual {v0}, Lb/h/g/l/EventWallPostReposted;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 7
-    invoke-interface {p1, v1}, Lcom/vk/dto/newsfeed/c;->i(Z)V
+    invoke-interface {p1, v1}, Lcom/vk/dto/newsfeed/Likable;->i(Z)V
 
     :cond_1
     return-void
@@ -113,7 +113,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$WallPostRepostedListener$onNotification$updater$1;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object p1
 .end method

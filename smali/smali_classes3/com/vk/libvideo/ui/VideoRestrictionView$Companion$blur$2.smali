@@ -3,7 +3,7 @@
 .source "VideoRestrictionView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/facebook/x/i/a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;",
         ">;"
     }
 .end annotation
@@ -55,17 +55,17 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/facebook/x/i/a;
+.method public final invoke()Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/facebook/x/i/a;
+    new-instance v0, Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
 
     const/4 v1, 0x2
 
     const/16 v2, 0x1e
 
-    invoke-direct {v0, v1, v2}, Lcom/facebook/x/i/a;-><init>(II)V
+    invoke-direct {v0, v1, v2}, Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;-><init>(II)V
 
     return-object v0
 .end method
@@ -74,7 +74,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$blur$2;->invoke()Lcom/facebook/x/i/a;
+    invoke-virtual {p0}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion$blur$2;->invoke()Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
 
     move-result-object v0
 

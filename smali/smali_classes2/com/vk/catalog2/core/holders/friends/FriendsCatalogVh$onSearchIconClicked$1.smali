@@ -3,12 +3,12 @@
 .source "FriendsCatalogVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;Ljava/lang/String;Z)V
+    value = Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;Ljava/lang/String;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh$onSearchIconClicked$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -75,14 +75,14 @@
     .line 3
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh$onSearchIconClicked$1;->this$0:Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;
 
-    sget-object v1, Lcom/vk/catalog2/core/holders/containers/i;->a:Lcom/vk/catalog2/core/holders/containers/i;
+    sget-object v1, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState2;->INSTANCE:Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState2;
 
-    invoke-virtual {v0, v1}, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
+    invoke-virtual {v0, v1}, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh$onSearchIconClicked$1;->this$0:Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;
 
-    invoke-static {v0}, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;->d(Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;)Lcom/vk/catalog2/core/y/d/b;
+    invoke-static {v0}, Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;->d(Lcom/vk/catalog2/core/holders/friends/FriendsCatalogVh;)Lcom/vk/catalog2/core/y/d/SearchResultsVh;
 
     move-result-object v0
 
@@ -114,7 +114,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v3, v2, v3}, Lcom/vk/catalog2/core/y/d/b;->a(Lcom/vk/catalog2/core/y/d/b;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v3, v2, v3}, Lcom/vk/catalog2/core/y/d/SearchResultsVh;->a(Lcom/vk/catalog2/core/y/d/SearchResultsVh;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
 
     :cond_1
     return-void

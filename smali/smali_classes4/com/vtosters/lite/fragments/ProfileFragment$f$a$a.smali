@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/fragments/ProfileFragment$f$a$a;
-.super Lcom/vtosters/lite/api/k;
+.super Lcom/vtosters/lite/api/ResultlessCallback;
 .source "ProfileFragment.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/fragments/ProfileFragment$f$a$a;->c:Lcom/vtosters/lite/fragments/ProfileFragment$f$a;
 
-    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/k;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/ResultlessCallback;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method
