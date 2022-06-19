@@ -1,6 +1,8 @@
 package ru.vtosters.lite.utils;
 
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+import static com.vk.core.ui.themes.VKThemeHelper.k;
+import static com.vk.core.ui.themes.VKThemeHelper.l;
 import static com.vk.im.ui.themes.ImTheme.VKAPP_AMOLED;
 import static com.vk.im.ui.themes.ImTheme.VKAPP_DARK;
 import static com.vk.im.ui.themes.ImTheme.VKAPP_LIGHT;
@@ -8,6 +10,7 @@ import static com.vk.im.ui.themes.ImTheme.VKME_AMOLED;
 import static com.vk.im.ui.themes.ImTheme.VKME_DARK;
 import static com.vk.im.ui.themes.ImTheme.VKME_LIGHT;
 import static ru.vtosters.lite.utils.Globals.edit;
+import static ru.vtosters.lite.utils.Globals.getCenterScreenCoords;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getResources;
@@ -33,11 +36,14 @@ import android.widget.ImageButton;
 
 import androidx.core.graphics.ColorUtils;
 
+import com.vk.articles.preload.WebCachePreloader;
 import com.vk.core.drawable.RecoloredDrawable;
+import com.vk.core.ui.themes.MilkshakeHelper;
 import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.im.ui.themes.ImTheme;
 import com.vtosters.lite.R;
+import com.vtosters.lite.data.ThemeTracker;
 
 import java.util.Arrays;
 import java.util.List;
@@ -47,39 +53,42 @@ public class Themes {
             "5692d7", "528bcc", "7aa0cc", "518bcc", "6296d0", "2f68aa", "638ebf", "5181b8", "71aaeb", "4774a8", "5baaf4", "4186c8", "add3ff", "4774a8", "718198", "5a9eff", "99a2ad", "74a2d6", "e9eef3", "dfe3e7", "eff1f3", "5c9ce6", "4986cc", "4680c2"
     );
 
-    public static void applyTheme(VKTheme theme, ImTheme imtheme) {
+    public static void applyTheme(VKTheme theme) {
         // TODO
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
     public static void setTheme(Activity activity) {
-        VKThemeHelper.a(activity); // apply changed theme
+        VKThemeHelper.b(activity, getCenterScreenCoords());
+        ThemeTracker.a();
+        WebCachePreloader.e(); // apply changed theme
     }
+
     public static boolean isDarkTheme() {
-        return !VKThemeHelper.d();
+        return VKThemeHelper.r();
     }
 
     public static int getAccentColor() {
-        return VKThemeHelper.a(R.attr.accent);
+        return getColorFromAttr(R.attr.accent);
     } // Color accent
 
     public static int getTextAttr() {
-        return VKThemeHelper.a(R.attr.text_primary);
+        return getColorFromAttr(R.attr.text_primary);
     } // Text Primary color
 
     public static int getSTextAttr() {
-        return VKThemeHelper.a(R.attr.text_secondary);
+        return getColorFromAttr(R.attr.text_secondary);
     } // Text Secondary color
 
     public static int getTabbarBackground() {
-        return VKThemeHelper.a(R.attr.tabbar_background);
+        return getColorFromAttr(R.attr.tabbar_background);
     } // Tabbar/Navbar background
 
     public static int getBackgroundContent() {
-        return VKThemeHelper.a(R.attr.background_content);
+        return getColorFromAttr(R.attr.background_content);
     } // Background color in app
 
     public static int getHeaderBackground() {
-        return VKThemeHelper.a(R.attr.header_background);
+        return getColorFromAttr(R.attr.header_background);
     } // Toolbar/Header background
 
     public static int getHeaderText() {
@@ -113,55 +122,57 @@ public class Themes {
     } // Set white/dark statusbar/navbar icons
 
     public static int getNeededColorStatusbar() {
-        return VKThemeHelper.d() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S ? 8192 : 0;
+        return !isDarkTheme() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S ? 8192 : 0;
     }
 
     public static int getNeededColorNavbar() {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? VKThemeHelper.d() ? SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR : 0 : 0;
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? isDarkTheme() ? SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR : 0 : 0;
     }
 
     public static int getNeededColorStatusbarFix() {
-        return VKThemeHelper.d() ? 8192 : 0;
+        return VKThemeHelper.r() ? 8192 : 0;
     }
 
     public static VKTheme getDarkTheme() {
         switch (getPrefsValue("darktheme")) {
-            case "amoled":
-                return VKTheme.AMOLED;
+            //case "amoled":
+                //return VKTheme.AMOLED;
             default:
-                return VKTheme.DARK;
-        }
-    } // Return needed theme for theme changer
-
-    public static ImTheme getImDarkTheme() {
-        switch (getPrefsValue("darktheme")) {
-            case "amoled":
-                return roundedmsgs() ? VKME_AMOLED : VKAPP_AMOLED;
-            default:
-                return roundedmsgs() ? VKME_DARK : VKAPP_DARK;
+                return VKTheme.VKAPP_DARK;
         }
     } // Return needed theme for theme changer
 
     public static VKTheme getLightTheme() {
         switch (getPrefsValue("lighttheme")) {
             default:
-                return VKTheme.DEFAULT_LIGHT;
+                return VKTheme.VKAPP_LIGHT;
         }
     } // Return needed theme for theme changer
 
-    public static ImTheme getImLightTheme() {
+    public static VKTheme getDarkMilkTheme() {
+        switch (getPrefsValue("darktheme")) {
+            default:
+                return VKTheme.VKAPP_MILK_DARK;
+        }
+    } // Return needed theme for theme changer
+
+    public static VKTheme getLightMilkTheme() {
         switch (getPrefsValue("lighttheme")) {
             default:
-                return roundedmsgs() ? VKME_LIGHT : VKAPP_LIGHT;
+                return VKTheme.VKAPP_MILK_LIGHT;
         }
     } // Return needed theme for theme changer
 
     public static int getColorFromAttr(int attr) {
-        return VKThemeHelper.a(attr);
+        return VKThemeHelper.d(attr);
     } // Get needed attr color
 
     public static boolean isAndroidMonet() {
         return color_grishka() && Build.VERSION.SDK_INT >= 31;
+    }
+
+    public static boolean isMilkshake() {
+        return MilkshakeHelper.e();
     }
 
     public static boolean isColorRefAccented(int color) {

@@ -7,6 +7,7 @@ import static ru.vtosters.lite.utils.About.getCommitLink;
 import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
 import static ru.vtosters.lite.utils.Globals.drawableFromUrl;
 import static ru.vtosters.lite.utils.Globals.edit;
+import static ru.vtosters.lite.utils.Globals.getCenterScreenCoords;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getUserId;
@@ -30,23 +31,30 @@ import static ru.vtosters.lite.utils.Themes.setTheme;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
+import com.vk.articles.preload.WebCachePreloader;
+import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.identity.fragments.IdentityListFragment;
 import com.vk.navigation.Navigator;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
 import com.vtosters.lite.auth.VKAccountManager;
+import com.vtosters.lite.data.ThemeTracker;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.fragments.SettingsAccountFragment;
 import com.vtosters.lite.fragments.SettingsGeneralFragment;
 import com.vtosters.lite.fragments.money.music.control.subscription.MusicSubscriptionControlFragment;
 import com.vtosters.lite.fragments.n2.SettingsDebugFragment;
 import com.vtosters.lite.fragments.w2.BlacklistFragment;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
@@ -98,16 +106,15 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             boolean value = (boolean) o;
 
             if(value){
-                applyTheme(getLightTheme(), getImLightTheme());
+                applyTheme(getLightTheme());
             } else {
-                applyTheme(getDarkTheme(), getImDarkTheme());
+                applyTheme(getDarkTheme());
             }
 
             edit().putBoolean("isdark", value).commit();
 
             setTheme(this.getActivity());
 
-            restartApplicationWithTimer();
             return true;
         });
 
@@ -377,6 +384,19 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         if(disableSettingsSumms()) return "";
 
         return Globals.getString("vtltgssumm") + ": " + TelegramStickersService.getInstance(Globals.getContext()).getPacksListReference().size();
+    }
+
+    public static SharedPreferences getCurrentAccount() {
+        return Globals.getContext().getSharedPreferences("pref_account_manager", Context.MODE_PRIVATE);
+    }
+
+    public static String withRegex(String base, String regex, String def) {
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(base);
+        if (matcher.find()) {
+            return matcher.group(1);
+        }
+        return def;
     }
 
     @Override
