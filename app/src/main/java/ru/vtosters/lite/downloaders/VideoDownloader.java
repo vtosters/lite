@@ -36,17 +36,17 @@ public class VideoDownloader {
             list.add("720p");
             urls.add(videoFile.h);
         }
-        if (!Objects.equals(videoFile.i, "")) {
+        if (!Objects.equals(videoFile.B, "")) {
             list.add("1080p");
-            urls.add(videoFile.i);
+            urls.add(videoFile.B);
         }
-        if (!Objects.equals(videoFile.j, "")) {
+        if (!Objects.equals(videoFile.C, "")) {
             list.add("1440p");
-            urls.add(videoFile.j);
+            urls.add(videoFile.C);
         }
-        if (!Objects.equals(videoFile.k, "")) {
+        if (!Objects.equals(videoFile.D, "")) {
             list.add("2160p");
-            urls.add(videoFile.k);
+            urls.add(videoFile.D);
         }
 
         if (list.isEmpty()) {
