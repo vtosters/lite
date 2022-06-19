@@ -4,7 +4,6 @@ import static android.os.Build.VERSION;
 import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.f0x1d.VTVerifications.hasPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
-import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.migrate;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
 import static ru.vtosters.lite.utils.Globals.fixGapps;

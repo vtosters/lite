@@ -2,9 +2,6 @@ package ru.vtosters.lite.ui.fragments;
 
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isIntegrationEnabled;
 import static ru.vtosters.lite.f0x1d.VTVerifications.vtverif;
-import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.getCurrentAccount;
-import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.withRegex;
-import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.workingAccounts;
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.About.getCommitLink;
 import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
@@ -55,7 +52,6 @@ import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.dockbar.DockBarFragment;
 import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
-import ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountFragment;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.CacheUtils;
 import ru.vtosters.lite.utils.Globals;
@@ -81,7 +77,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         String interfacesumm = getValAsString("vtlinterfacesumm", shortinfo());
         String proxysumm = getValAsString("vtlproxysumm", !getPrefsValue("proxy").equals("noproxy"));
         String othersumm = getValAsString("vtlothersumm", vtverif());
-        String multiaccsumm = getMultiAccsumm();
         String ssfs = getSSFSsumm();
         String about = "Commit: " + getBuildNumber();
 
@@ -91,18 +86,11 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         if (vkme()) {
             PreferencesUtil.addPreferenceDrawable(this, "", name, id, drawableFromUrl(avatarUrl), preference -> {
                 Context context = getContext();
-                Intent a2 = new Navigator(MultiAccountFragment.class).b(context);
+                Intent a2 = new Navigator(SettingsAccountFragment.class).b(context);
                 context.startActivity(a2);
                 return false;
             });
         } else {
-            PreferencesUtil.addPreference(this, "", Globals.getString("accounts"), multiaccsumm, "ic_user_24", preference -> {
-                Context context = getContext();
-                Intent a2 = new Navigator(MultiAccountFragment.class).b(context);
-                context.startActivity(a2);
-                return false;
-            });
-
             PreferencesUtil.addPreferenceCategory(this, Globals.getString("vtsettdarktheme"));
         }
 
@@ -389,12 +377,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         if(disableSettingsSumms()) return "";
 
         return Globals.getString("vtltgssumm") + ": " + TelegramStickersService.getInstance(Globals.getContext()).getPacksListReference().size();
-    }
-
-    public static String getMultiAccsumm() {
-        if(disableSettingsSumms() || workingAccounts() <= 1) return "";
-
-        return Globals.getString("vtlmultiaccsumm") + ": " + workingAccounts();
     }
 
     @Override
